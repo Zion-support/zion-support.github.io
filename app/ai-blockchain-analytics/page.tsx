@@ -1,108 +1,100 @@
-import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
-import { Shield, BarChart3, TrendingUp, Target, Zap, CheckCircle, ArrowRight, Star, Globe, Play, Mail, Phone, MapPin } from 'lucide-react'
-=======
-import { Shield, BarChart3, TrendingUp, Target, Zap, CheckCircle, ArrowRight, Star, Globe, Play, Mail, Phone, MapPin } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import React  from 'react';
-=======
+import { Helmet    } from 'react-helmet-async'
+import { Shield, BarChart3, TrendingUp, Target, Zap, CheckCircle, ArrowRight, Star, Globe, Play, Mail, Phone, MapPin    } from 'lucide-react'
+import { Link    } from 'react-router-dom'
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowRight    } from 'lucide-react';
+import { Link    } from 'react-router-dom';
 
-const AIBlockchainAnalyticsPage: React.FC = () => {
-  const features = [
+constAIBlockchainAnalyticsPage: React.FC = () => {
+  constfeatures = [
     {
-      icon: <Shield className="w-8h-8text-cyan-400" />,
-      title: 'Smart Contract Analysis',
-      description: 'AI-powered analysis of smart contracts with vulnerability detection and security scoring.',
+      icon: <ShieldclassName="w-8h-8t e xt-cyan-400" />,
+      title: 'SmartContractAnalysis',
+      description: 'AI-poweredanalysisofsmartcontractswithvulnerabilitydetectionandsecurityscoring.',
       price: '$399/month',
-      benefits: ['Vulnerability detection', 'Security scoring', 'Code optimization', 'Gas analysis']
+      benefits: ['Vulnerabilitydetection', 'Securityscoring', 'Codeoptimization', 'Gasanalysis']
     },
     {
-      icon: <BarChart3 className="w-8h-8text-emerald-400" />,
-      title: 'DeFi Analytics',
-      description: 'Comprehensive DeFi protocol analysis with yield farming optimization and risk assessment.',
+      icon: <BarChart3 className="w-8h-8t e xt-emerald-400" />,
+      title: 'DeFiAnalytics',
+      description: 'ComprehensiveDeFiprotocolanalysiswithyieldfarmingoptimizationandriskassessment.',
       price: '$299/month',
-      benefits: ['Yield optimization', 'Risk assessment', 'Protocol analysis', 'APY tracking']
+      benefits: ['Yieldoptimization', 'Riskassessment', 'Protocolanalysis', 'APYtracking']
     },
     {
-      icon: <TrendingUp className="w-8h-8text-purple-400" />,
-      title: 'Trading Intelligence',
-      description: 'Advanced trading signals and market analysis powered by machine learning algorithms.',
+      icon: <TrendingUpclassName="w-8h-8t e xt-purple-400" />,
+      title: 'TradingIntelligence',
+      description: 'Advancedtradingsignalsandmarketanalysispoweredbymachinelearningalgorithms.',
       price: '$199/month',
-      benefits: ['Trading signals', 'Market analysis', 'Price prediction', 'Portfolio optimization']
+      benefits: ['Tradingsignals', 'Marketanalysis', 'Priceprediction', 'Portfoliooptimization']
     },
     {
-      icon: <Target className="w-8h-8text-orange-400" />,
-      title: 'NFT Analytics',
-      description: 'Comprehensive NFT market analysis with rarity scoring and valuation models.',
+      icon: <TargetclassName="w-8h-8t e xt-orange-400" />,
+      title: 'NFTAnalytics',
+      description: 'ComprehensiveNFTmarketanalysiswithrarityscoringandvaluationmodels.',
       price: '$149/month',
-      benefits: ['Rarity scoring', 'Valuation models', 'Market trends', 'Collection analysis']
+      benefits: ['Rarityscoring', 'Valuationmodels', 'Markettrends', 'Collectionanalysis']
     },
     {
-      icon: <Zap className="w-8h-8text-pink-400" />,
-      title: 'Real-time Monitoring',
-      description: 'Live blockchain monitoring with instant alerts and anomaly detection.',
+      icon: <ZapclassName="w-8h-8t e xt-pink-400" />,
+      title: 'Real-timeMonitoring',
+      description: 'Liveblockchainmonitoringwithinstantalertsandanomalydetection.',
       price: '$179/month',
-      benefits: ['Live monitoring', 'Instant alerts', 'Anomaly detection', 'Real-time data']
+      benefits: ['Livemonitoring', 'Instantalerts', 'Anomalydetection', 'Real-timedata']
     },
     {
-      icon: <Globe className="w-8h-8text-yellow-400" />,
-      title: 'Cross-Chain Analysis',
-      description: 'Multi-blockchain analysis supporting Ethereum, BSC, Polygon, and other major chains.',
+      icon: <GlobeclassName="w-8h-8t e xt-yellow-400" />,
+      title: 'Cross-ChainAnalysis',
+      description: 'Multi-blockchainanalysissupportingEthereum, BSC, Polygon, andothermajorchains.',
       price: '$249/month',
-      benefits: ['Multi-chain support', 'Cross-chain tracking', 'Bridge analysis', 'Interoperability insights']
+      benefits: ['Multi-chainsupport', 'Cross-chaintracking', 'Bridgeanalysis', 'Interoperabilityinsights']
     }
   ]
 
-  const analyticsTypes = [
+  constanalyticsTypes = [
     {
-      title: 'DeFi Protocol Analysis',
-      description: 'Comprehensive analysis of DeFi protocols including TVL, yield rates, and risk metrics.',
-      icon: <BarChart3 className="w-6h-6text-cyan-400" />,
-      metrics: ['95% accuracy', 'Real-time data', '50+ protocols'],
-      features: ['TVL tracking', 'Yield analysis', 'Risk scoring', 'Liquidity analysis']
+      title: 'DeFiProtocolAnalysis',
+      description: 'ComprehensiveanalysisofDeFiprotocolsincludingTVL, yieldrates, andriskmetrics.',
+      icon: <BarChart3 className="w-6h-6t e xt-cyan-400" />,
+      metrics: ['95% accuracy', 'Real-timedata', '50+ protocols'],
+      features: ['TVLtracking', 'Yieldanalysis', 'Riskscoring', 'Liquidityanalysis']
     },
     {
-      title: 'Smart Contract Security',
-      description: 'Advanced security analysis with vulnerability detection and code optimization recommendations.',
-      icon: <Shield className="w-6h-6text-emerald-400" />,
-      metrics: ['99% detection rate', 'Zero false positives', '24/7 monitoring'],
-      features: ['Vulnerability scanning', 'Code review', 'Security scoring', 'Audit reports']
+      title: 'SmartContractSecurity',
+      description: 'Advancedsecurityanalysiswithvulnerabilitydetectionandcodeoptimizationrecommendations.',
+      icon: <ShieldclassName="w-6h-6t e xt-emerald-400" />,
+      metrics: ['99% detectionrate', 'Zerofalsepositives', '24/7 monitoring'],
+      features: ['Vulnerabilityscanning', 'Codereview', 'Securityscoring', 'Auditreports']
     },
     {
       title: 'Trading & Investment',
-      description: 'AI-powered trading signals and portfolio optimization for crypto investments.',
-      icon: <TrendingUp className="w-6h-6text-purple-400" />,
-      metrics: ['40% better returns', 'Risk reduction', 'Automated trading'],
-      features: ['Trading signals', 'Portfolio optimization', 'Risk management', 'Backtesting']
+      description: 'AI-poweredtradingsignalsandportfoliooptimizationforcryptoinvestments.',
+      icon: <TrendingUpclassName="w-6h-6t e xt-purple-400" />,
+      metrics: ['40% betterreturns', 'Riskreduction', 'Automatedtrading'],
+      features: ['Tradingsignals', 'Portfoliooptimization', 'Riskmanagement', 'Backtesting']
     },
     {
-      title: 'NFT Market Intelligence',
-      description: 'Comprehensive NFT analysis with rarity scoring and market trend predictions.',
-      icon: <Target className="w-6h-6text-orange-400" />,
-      metrics: ['85% accuracy', 'Real-time pricing', 'Trend prediction'],
-      features: ['Rarity analysis', 'Price prediction', 'Market trends', 'Collection insights']
+      title: 'NFTMarketIntelligence',
+      description: 'ComprehensiveNFTanalysiswithrarityscoringandmarkettrendpredictions.',
+      icon: <TargetclassName="w-6h-6t e xt-orange-400" />,
+      metrics: ['85% accuracy', 'Real-timepricing', 'Trendprediction'],
+      features: ['Rarityanalysis', 'Priceprediction', 'Markettrends', 'Collectioninsights']
     }
   ]
 
-  const pricing = [
+  constpricing = [
     {
       name: 'Starter',
       price: '$199',
       period: '/month',
-      description: 'Perfect for individual traders and small projects',
+      description: 'Perfectforindividualtradersandsmallprojects',
       features: [
-        'Basic analytics dashboard',
-        '5 blockchain networks',
-        'Email support',
-        'Standard alerts',
-        'Basic reporting',
-        '1 user account'
+        'Basicanalyticsdashboard',
+        '5 blockchainnetworks',
+        'Emailsupport',
+        'Standardalerts',
+        'Basicreporting',
+        '1 useraccount'
       ],
       popular: false
     },
@@ -110,16 +102,16 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
       name: 'Professional',
       price: '$499',
       period: '/month',
-      description: 'Advanced features for growing crypto businesses',
+      description: 'Advancedfeaturesforgrowingcryptobusinesses',
       features: [
-        'Advanced analytics suite',
-        '20+ blockchain networks',
-        'Priority support',
-        'Custom alerts',
-        'Advanced reporting',
-        '5 user accounts',
-        'API access',
-        'Custom integrations'
+        'Advancedanalyticssuite',
+        '20+ blockchainnetworks',
+        'Prioritysupport',
+        'Customalerts',
+        'Advancedreporting',
+        '5 useraccounts',
+        'APIaccess',
+        'Customintegrations'
       ],
       popular: true
     },
@@ -127,43 +119,43 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
       name: 'Enterprise',
       price: '$999',
       period: '/month',
-      description: 'Complete solution for large organizations and institutions',
+      description: 'Completesolutionforlargeorganizationsandinstitutions',
       features: [
-        'Full analytics platform',
-        'Unlimited networks',
-        '24/7 dedicated support',
-        'White-label solution',
-        'Custom development',
-        'Unlimited users',
-        'Advanced security',
-        'SLA guarantee'
+        'Fullanalyticsplatform',
+        'Unlimitednetworks',
+        '24/7 dedicatedsupport',
+        'White-labelsolution',
+        'Customdevelopment',
+        'Unlimitedusers',
+        'Advancedsecurity',
+        'SLAguarantee'
       ],
       popular: false
     }
   ]
 
-  const testimonials = [
+  consttestimonials = [
     {
-      name: 'Alex Thompson',
-      company: 'CryptoFund Capital',
-      role: 'Portfolio Manager',
-      content: 'AI Blockchain Analytics helped us optimize our DeFi strategies and increase returns by 40%. The insights are incredibly accurate and actionable.',
+      name: 'AlexThompson',
+      company: 'CryptoFundCapital',
+      role: 'PortfolioManager',
+      content: 'AIBlockchainAnalyticshelpedusoptimizeourDeFistrategiesandincreasereturnsby 40%. Theinsightsareincrediblyaccurateandactionable.',
       rating: 5,
       avatar: 'AT'
     },
     {
-      name: 'Sarah Kim',
-      company: 'Blockchain Security Labs',
-      role: 'Security Analyst',
-      content: 'The smart contract analysis tools are outstanding. We've identified vulnerabilities that other tools missed, saving our clients millions.',
+      name: 'SarahKim',
+      company: 'BlockchainSecurityLabs',
+      role: 'SecurityAnalyst',
+      content: 'Thesmartcontractanalysistoolsareoutstanding. We'veidentifiedvulnerabilitiesthatothertoolsmissed, savingourclientsmillions.',
       rating: 5,
       avatar: 'SK'
     },
     {
-      name: 'Michael Rodriguez',
-      company: 'NFT Marketplace Pro',
-      role: 'Data Scientist',
-      content: 'The NFT analytics platform provides incredible insights into market trends and pricing. Our users love the rarity scoring and valuation models.',
+      name: 'MichaelRodriguez',
+      company: 'NFTMarketplacePro',
+      role: 'DataScientist',
+      content: 'TheNFTanalyticsplatformprovidesincredibleinsightsintomarkettrendsandpricing. Ouruserslovetherarityscoringandvaluationmodels.',
       rating: 5,
       avatar: 'MR'
     }
@@ -173,420 +165,222 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
     <>
     <>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>5GDataAnalytics - ZionTechGroup</title>
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
       </Helmet>
-        <title>AI Blockchain Analytics - DeFi & Crypto Intelligence | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered blockchain analytics for DeFi, smart contracts, and crypto trading. Real-time insights, security analysis, and trading intelligence with 95% accuracy." / / />
-        <meta name="keywords" content="AI blockchain analytics, DeFi analytics, smart contract analysis, crypto trading intelligence, NFT analytics, blockchain security, Zion Tech Group" / / />
-        <meta name="robots" content="index, follow" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-blockchain-analytics" />
+        <title>AIBlockchainAnalytics - DeFi & CryptoIntelligence | ZionTechGroup</title>
+        <metaname="description" content="AdvancedAI-poweredblockchainanalyticsforDeFi, smartcontracts, andcryptotrading. Real-timeinsights, securityanalysis, andtradingintelligencewith 95% accuracy." / / />
+        <metaname="keywords" content="AIblockchainanalytics, DeFianalytics, smartcontractanalysis, cryptotradingintelligence, NFTanalytics, blockchainsecurity, ZionTechGroup" / / />
+        <metaname="robots" content="index, follow" / / />
+        <linkrel="canonical" href="https://ziontechgroup.com/ai-blockchain-analytics" />
       </Helmet>
     </>
 
-      {/* Hero Section */}
+      {/* HeroSection */}
     <>
-      <section className="relative py-20px-4overflow-hidden" />
-        <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)]animate-pulse" />
-        <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
-<<<<<<< HEAD
-        <div className="relative max-w-7xlmx-autotext-center">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-            <Shield className="w-4h-4" />
-            <span   />AI-Powered Blockchain Intelligence</span>
-=======
-        <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-        </div>
-            <Shield className="w-4h-4" / />
-            <span>AI-Powered Blockchain Intelligence</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <sectionclassName="r e lativepy-20px-4overflow-hidden" />
+        <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)]animate-pulse" />
+        <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
+        <divclassName="r e lativemax-w-7xlmx-autotext-center">
+          <divclassName="i n line-flexitems-centerspace-x-2 bg-gradient-to-rfrom-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-fulltext-smfont-mediummb-8borderborder-cyan-400/30">
+            <ShieldclassName="w-4h-4" />
+            <span   />AI-PoweredBlockchainIntelligence</span>
           </div>
     </>
           
-          <h1 className="text-6 xl md:text-8 xl font-bold text-white mb-8leading-tight" />
-            AI Blockchain
+          <h1 className="t e xt-6 xlmd:text-8 xlfont-boldtext-whitemb-8leading-tight" />
+            AIBlockchain
     <>
             <br / />
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-texttext-transparentanimate-pulse">Analytics
+            <spanclassName="b g-gradient-to-rfrom-cyan-400 via-purple-400 to-pink-400 bg-clip-texttext-transparentanimate-pulse">Analytics
             </span>
           </h1>
     </>
           
-          <p className="text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
-              Advanced AI-powered analytics for DeFi, smart contracts, and crypto trading. 
-            Get real-time insights, security analysis, and trading intelligence with 95% accuracy.
+          <pclassName="t e xt-2 xltext-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
+              AdvancedAI-poweredanalyticsforDeFi, smartcontracts, andcryptotrading. 
+            Getreal-timeinsights, securityanalysis, andtradingintelligencewith 95% accuracy.
     <>
             <br / />
-            <span className="text-cyan-400font-semibold">Navigate the blockchain with confidence and intelligence.</span>
+            <spanclassName="t e xt-cyan-400font-semibold">Navigatetheblockchainwithconfidenceandintelligence.</span>
           </p>
     </>
           
-<<<<<<< HEAD
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" >
-           
+          <divclassName="f l exflex-colsm:flex-rowgap-6justify-centermb-16">
+            <Linkto="/contact" className="g r oupbg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-10 py-4 rounded-xlfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-centerspace-x-2 shadow-lgshadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105">
           <span    />
-        </Link>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+        </Link>StartFreeTrial</span>
+              <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
             </Link>
-            <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
+            <Linkto="/demo" className="g r oupborder-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xlfont-semiboldhover:bg-cyan-400 hover:text-gray-900 transition-allduration-300 flexitems-centerjustify-centerspace-x-2backdrop-blur-sm">
           <span    />
-        </Link>View Demo</span>
-              <Play className="w-5 h-5group-hover:translate-x-1transition-transform" />
-=======
-    <>
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-        </div>
-            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
-              <span>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-            <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-              <span>View Demo</span>
-              <Play className="w-5 h-5group-hover:translate-x-1transition-transform" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        </Link>ViewDemo</span>
+              <PlayclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
             </Link>
           </div>
       </section>
     </>
 
-      {/* Features Section */}
+      {/* FeaturesSection */}
     <>
-      <section className="py-20px-4relative" />
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Advanced <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Blockchain Intelligence</span>
+      <sectionclassName="p y-20px-4relative" />
+        <divclassName="a b soluteinset-0 bg-gradient-to-brfrom-purple-500/5via-cyan-500/5to-pink-500/5" />
+        <divclassName="r e lativemax-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+              Advanced <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />BlockchainIntelligence</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-=======
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" / />
-        <div className="relative max-w-7xlmx-auto">
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Advanced <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Blockchain Intelligence</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Comprehensive AI-powered analytics that provide deep insights into blockchain networks, 
-              DeFi protocols, and crypto markets for informed decision-making.
+            <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">
+              ComprehensiveAI-poweredanalyticsthatprovidedeepinsightsintoblockchainnetworks, 
+              DeFiprotocols, andcryptomarketsforinformeddecision-making.
     <>
             </p>
           </div>
     </>
           
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
             {features.map((feature, index) => (
     <>
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
+              <divkey="{index}" className="g r oupbg-white/10 backdrop-blur-lgrounded-2 xlp-8 borderborder-white/20 hover:bg-white/20 transition-allduration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                <divclassName="f l exitems-centerjustify-centerw-16 h-16 bg-gradient-to-rfrom-cyan-500 to-purple-600 rounded-2 xlmb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
                 </div>
-<<<<<<< HEAD
-                <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{feature.title}
+                <h3 className="t e xt-2 xlfont-boldtext-whitemb-4group-hover:text-cyan-400 transition-colors"  />{feature.title}
                 </h3>
-                <p className="text-gray-300 mb-6leading-relaxed">
-              {feature.description}
-                </p>
-                <div className="space-y-2mb-6">
-=======
-                <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title}
-                </h3>
-                <p className="text-gray-300mb-6leading-relaxed" />
-    </>
-                  {feature.description}
-    <>
-                </p>
-                <div className="space-y-2mb-6">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <pclassName="t e xt-gray-300 mb-6leading-relaxed">{feature.description}</p>
+                <divclassName="s p ace-y-2mb-6">
                   {feature.benefits.map((benefit, benefitIndex) => (
     <>
-                    <div key="{benefitIndex}" className="flex items-center space-x-2text-gray-400text-sm" />
-<<<<<<< HEAD
-                      <CheckCircle className="w-4h-4text-green-400" />
+                    <divkey="{benefitIndex}" className="f l exitems-centerspace-x-2text-gray-400text-sm" />
+                      <CheckCircleclassName="w-4h-4t e xt-green-400" />
                       <span   />{benefit}</span>
-=======
-                      <CheckCircle className="w-4h-4text-green-400" / />
-                      <span>{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                     </div>
     </>
                   ))}
     <>
                 </div>
-<<<<<<< HEAD
-                <div className="flex items-centerjustify-between">
-                  <span className="text-cyan-400font-semiboldtext-lg"  />{feature.price}
+                <divclassName="f l exitems-centerjustify-between">
+                  <spanclassName="t e xt-cyan-400font-semiboldtext-lg"  />{feature.price}
                   </span>
-                  <Link to="/contact" className="group/link flex items-center space-x-2 text-cyan-400hover:text-cyan-300transition-colors" >
-           
-          <span className="text-smfont-medium"    />
-        </Link>Learn More</span>
-                    <ArrowRight className="w-4 h-4group-hover/link:translate-x-1transition-transform" />
+                  <Linkto="/contact" className="g r oup/linkflexitems-centerspace-x-2 text-cyan-400hover:text-cyan-300transition-colors">
+          <spanclassName="t e xt-smfont-medium"    />
+        </Link>LearnMore</span>
+                    <ArrowRightclassName="w-4 h-4g r oup-hover/link:translate-x-1transition-transform" />
                   </Link>
                 </div>
-=======
-                <div className="flexitems-centerjustify-between" />
-                  <span className="text-cyan-400font-semiboldtext-lg">{feature.price}
-                  </span>
-                  <Link to="/contact" className="group/link flex items-center space-x-2 text-cyan-400hover:text-cyan-300transition-colors" />
-                    <span className="text-smfont-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4group-hover/link:translate-x-1transition-transform" />
-                  </Link>
-                </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             ))}
     <>
           </div>
       </section>
     </>
 
-      {/* Analytics Types Section */}
+      {/* AnalyticsTypesSection */}
     <>
-      <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
-<<<<<<< HEAD
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-centermb-16">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-6borderborder-cyan-400/30">
+      <sectionclassName="p y-20 px-4 bg-gradient-to-brfrom-slate-800/50to-purple-900/50relative" />
+        <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
+        <divclassName="r e lativemax-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <divclassName="i n line-flexitems-centerspace-x-2 bg-gradient-to-rfrom-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-fulltext-smfont-mediummb-6borderborder-cyan-400/30">
               <BarChart3 className="w-4h-4" />
-              <span   />Analytics Solutions</span>
+              <span   />AnalyticsSolutions</span>
             </div>
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Comprehensive <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Analytics Suite</span>
+            <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+              Comprehensive <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />AnalyticsSuite</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-=======
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.1)_0%,transparent_50%)]" / />
-        <div className="relative max-w-7xlmx-auto">
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-6borderborder-cyan-400/30">
-        </div>
-              <BarChart3 className="w-4h-4" / />
-              <span>Analytics Solutions</span>
-            </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Comprehensive <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Analytics Suite</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              From DeFi protocols to NFT markets, our AI-powered analytics cover every aspect 
-              of the blockchain ecosystem with unmatched accuracy and depth.
+            <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">
+              FromDeFiprotocolstoNFTmarkets, ourAI-poweredanalyticscovereveryaspectoftheblockchainecosystemwithunmatchedaccuracyanddepth.
     <>
             </p>
           </div>
     </>
           
-          <div className="grid grid-cols-1md:grid-cols-2gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1md:grid-cols-2gap-8">
             {analyticsTypes.map((type, index) => (
     <>
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                <div className="flex items-centerspace-x-4mb-6">
-<<<<<<< HEAD
-                  <div className="p-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl group-hover:scale-110transition-transformduration-300"  />{type.icon}
+              <divkey="{index}" className="g r oupbg-white/10 backdrop-blur-lgrounded-2 xlp-8 borderborder-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
+                <divclassName="f l exitems-centerspace-x-4mb-6">
+                  <divclassName="p-3 b g-gradient-to-rfrom-cyan-500 to-purple-600 rounded-xlgroup-hover:scale-110transition-transformduration-300"  />{type.icon}
                   </div>
-                  <h3 className="text-2 xl font-bold text-whitegroup-hover:text-cyan-400 transition-colors"  />{type.title}
+                  <h3 className="t e xt-2 xlfont-boldtext-whitegroup-hover:text-cyan-400 transition-colors"  />{type.title}
                   </h3>
                 </div>
-                <p className="text-gray-300 mb-6leading-relaxed">
-              {type.description}
-                </p>
-                
-                <div className="space-y-3mb-6">
-                  <h4 className="text-lgfont-semiboldtext-cyan-400"   />Key Metrics:</h4>
-=======
-        </div>
-                  <div className="p-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl group-hover:scale-110transition-transformduration-300">{type.icon}
-                  </div>
-                  <h3 className="text-2 xl font-bold text-whitegroup-hover:text-cyan-400transition-colors">{type.title}
-                  </h3>
-                </div>
-                <p className="text-gray-300mb-6leading-relaxed" />
-    </>
-                  {type.description}
-                </p>
-                
-    <>
-                <div className="space-y-3mb-6">
-        </div>
-                  <h4 className="text-lgfont-semiboldtext-cyan-400">Key Metrics:</h4>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <pclassName="t e xt-gray-300 mb-6leading-relaxed">{type.description}</p>
+                <divclassName="s p ace-y-3mb-6">
+                  <h4 className="t e xt-lgfont-semiboldtext-cyan-400"   />KeyMetrics:</h4>
                   {type.metrics.map((metric, metricIndex) => (
     <>
-                    <div key="{metricIndex}" className="flex items-center space-x-2text-cyan-400font-semibold" />
-<<<<<<< HEAD
-                      <TrendingUp className="w-4h-4" />
+                    <divkey="{metricIndex}" className="f l exitems-centerspace-x-2text-cyan-400font-semibold" />
+                      <TrendingUpclassName="w-4h-4" />
                       <span   />{metric}</span>
-=======
-                      <TrendingUp className="w-4h-4" / />
-                      <span>{metric}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                     </div>
     </>
                   ))}
                 </div>
-                
-<<<<<<< HEAD
-                <div className="space-y-2">
-                  <h4 className="text-lgfont-semiboldtext-purple-400"   />Core Features:</h4>
-                  <div className="flexflex-wrapgap-2">
+                <divclassName="s p ace-y-2">
+                  <h4 className="t e xt-lgfont-semiboldtext-purple-400"   />CoreFeatures:</h4>
+                  <divclassName="f l exflex-wrapgap-2">
                     {type.features.map((feature, featureIndex) => (
-                      <span key="{featureIndex}" className="px-3 py-1 bg-purple-500/20 text-purple-300rounded-fulltext-sm"  />{feature}
+                      <spankey="{featureIndex}" className="p x-3 py-1 bg-purple-500/20 text-purple-300rounded-fulltext-sm"  />{feature}
                       </span>
                     ))}
                   </div>
               </div>
             ))}
-=======
-    <>
-                <div className="space-y-2">
-        </div>
-                  <h4 className="text-lgfont-semiboldtext-purple-400">Core Features:</h4>
-                  <div className="flexflex-wrapgap-2">
-        </div>
-    </>
-                    {type.features.map((feature, featureIndex) => (
-    <>
-                      <span key="{featureIndex}" className="px-3 py-1 bg-purple-500/20 text-purple-300rounded-fulltext-sm">{feature}
-                      </span>
-    </>
-                    ))}
-    <>
-                  </div>
-              </div>
-    </>
-            ))}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
           </div>
       </section>
     </>
 
-      {/* Pricing Section */}
+      {/* PricingSection */}
     <>
-      <section className="py-20px-4relative" />
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5via-purple-500/5to-pink-500/5" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>
+      <sectionclassName="p y-20px-4relative" />
+        <divclassName="a b soluteinset-0 bg-gradient-to-rfrom-cyan-500/5via-purple-500/5to-pink-500/5" />
+        <divclassName="r e lativemax-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+              Simple <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-=======
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5via-purple-500/5to-pink-500/5" / />
-        <div className="relative max-w-7xlmx-auto">
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Choose the perfect plan for your blockchain analytics needs. All plans include our core features 
-              with no hidden fees or setup costs.
+            <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">
+              Choosetheperfectplanforyourblockchainanalyticsneeds. Allplansincludeourcorefeatureswithnohiddenfeesorsetupcosts.
     <>
             </p>
           </div>
     </>
           
-          <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
             {pricing.map((plan, index) => (
-              <div key="{index}" className="{`relative" group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
+              <divkey="{index}" className="{`r e lative" groupbg-white/10 backdrop-blur-lgrounded-2 xlp-8 bordertransition-allduration-300 hover:scale-105 ${
                 plan.popular 
-                  ? 'border-cyan-400/50 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
+                  ? 'border-cyan-400/50 bg-gradient-to-brfrom-cyan-500/10 to-purple-500/10' 
                   : 'border-white/20 hover: bg-white/20'
               }`} />
                 {plan.popular && (
-<<<<<<< HEAD
-                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold"  />Most Popular
+                  <divclassName="a b solute -top-4 left-1/2transform-translate-x-1/2">
+                    <divclassName="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-6 py-2 rounded-fulltext-smfont-semibold"  />MostPopular
                     </div>
                 )}
                 
-                <div className="text-centermb-8">
-                  <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                  <p className="text-gray-300text-smmb-4">
-              {plan.description}</p>
-                  <div className="flex items-baselinejustify-center">
-                    <span className="text-5 xlfont-bold text-white"   />{plan.price}</span>
-                    <span className="text-gray-400ml-2"   />{plan.period}</span>
+                <divclassName="t e xt-centermb-8">
+                  <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"   />{plan.name}</h3>
+                  <pclassName="t e xt-gray-300text-smmb-4">{plan.description}</p>
+                  <divclassName="f l exitems-baselinejustify-center">
+                    <spanclassName="t e xt-5 xlfont-boldtext-white"   />{plan.price}</span>
+                    <spanclassName="t e xt-gray-400ml-2"   />{plan.period}</span>
                   </div>
-                
-                <div className="space-y-4mb-8">
+                <divclassName="s p ace-y-4mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <div key="{featureIndex}" className="flex items-centerspace-x-3" />
-                      <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" />
-                      <span className="text-gray-300"   />{feature}</span>
-=======
-    <>
-                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-        </div>
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
-                    </div>
-    </>
-                )}
-                
-    <>
-                <div className="text-centermb-8">
-        </div>
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300text-smmb-4">{plan.description}</p>
-                  <div className="flexitems-baselinejustify-center" />
-                    <span className="text-5 xlfont-boldtext-white">{plan.price}</span>
-                    <span className="text-gray-400ml-2">{plan.period}</span>
-                  </div>
-    </>
-                
-                <div className="space-y-4mb-8">
-        </div>
-                  {plan.features.map((feature, featureIndex) => (
-    <>
-                    <div key="{featureIndex}" className="flexitems-centerspace-x-3" />
-                      <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
-                      <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <divkey="{featureIndex}" className="f l exitems-centerspace-x-3" />
+                      <CheckCircleclassName="w-5 h-5t e xt-green-400flex-shrink-0" />
+                      <spanclassName="t e xt-gray-300"   />{feature}</span>
                     </div>
     </>
                   ))}
                 </div>
-                
-                <Link 
-                  to="/contact"
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                <Linkto="/contact"
+                  className="{`b l ock" w-fulltext-centerpy-3 rounded-xlfont-semiboldtransition-allduration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
+                      ? 'bg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitehover:from-cyan-600 hover:to-purple-700 shadow-lgshadow-cyan-500/25'
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
                   }`}
-                  />Get Started
+                  />GetStarted
     <>
                 </Link>
               </div>
@@ -597,84 +391,40 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
       </section>
     </>
 
-      {/* Testimonials Section */}
+      {/* TestimonialsSection */}
     <>
-      <section className="py-20 px-4 bg-gradient-to-br from-purple-900/50to-pink-900/50relative" />
-<<<<<<< HEAD
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_70%_30%,rgba(236,72,153,0.1)_0%,transparent_50%)]" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              What Our <span className="bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent"   />Customers Say</span>
+      <sectionclassName="p y-20 px-4 bg-gradient-to-brfrom-purple-900/50to-pink-900/50relative" />
+        <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_70%_30%,rgba(236,72,153,0.1)_0%,transparent_50%)]" />
+        <divclassName="r e lativemax-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+              WhatOur <spanclassName="b g-gradient-to-rfrom-purple-400 to-pink-400bg-clip-texttext-transparent"   />CustomersSay</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-=======
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_70%_30%,rgba(236,72,153,0.1)_0%,transparent_50%)]" / />
-        <div className="relative max-w-7xlmx-auto">
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              What Our <span className="bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent">Customers Say</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Join leading crypto companies and institutions that trust AI Blockchain Analytics for critical insights and decision-making.
+            <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">
+              JoinleadingcryptocompaniesandinstitutionsthattrustAIBlockchainAnalyticsforcriticalinsightsanddecision-making.
     <>
             </p>
           </div>
     </>
           
-          <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
             {testimonials.map((testimonial, index) => (
     <>
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                <div className="flex items-centerspace-x-4mb-6">
-<<<<<<< HEAD
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-centertext-whitefont-bold"  />{testimonial.avatar}
+              <divkey="{index}" className="g r oupbg-white/10 backdrop-blur-lgrounded-2 xlp-8 borderborder-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
+                <divclassName="f l exitems-centerspace-x-4mb-6">
+                  <divclassName="w-12 h-12 b g-gradient-to-rfrom-cyan-500 to-purple-600 rounded-fullflexitems-centerjustify-centertext-whitefont-bold"  />{testimonial.avatar}
                   </div>
                   <div>
-            <h4 className="text-lgfont-semiboldtext-white"   />{testimonial.name}</h4>
-                    <p className="text-gray-400text-sm">
-              {testimonial.role}</p>
-                    <p className="text-gray-500text-sm">
-              {testimonial.company}</p>
+            <h4 className="t e xt-lgfont-semiboldtext-white"   />{testimonial.name}</h4>
+                    <pclassName="t e xt-gray-400text-sm">{testimonial.role}</p>
+                    <pclassName="t e xt-gray-500text-sm">{testimonial.company}</p>
                   </div>
-                
-                <div className="flex items-centerspace-x-1mb-4">
-=======
-        </div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-centertext-whitefont-bold">{testimonial.avatar}
-                  </div>
-                  <div />
-                    <h4 className="text-lgfont-semiboldtext-white">{testimonial.name}</h4>
-                    <p className="text-gray-400text-sm">{testimonial.role}</p>
-                    <p className="text-gray-500text-sm">{testimonial.company}</p>
-                  </div>
-    </>
-                
-                <div className="flex items-centerspace-x-1mb-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <divclassName="f l exitems-centerspace-x-1mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
+                    <Starkey="{i}" className="w-5 h-5t e xt-yellow-400fill-current" />
                   ))}
                 </div>
-                
-<<<<<<< HEAD
-                <p className="text-gray-300leading-relaxeditalic">
-              "{testimonial.content}"
-=======
-                <p className="text-gray-300leading-relaxeditalic" />
-                  "{testimonial.content}"
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </p>
+                <pclassName="t e xt-gray-300leading-relaxeditalic">"{testimonial.content}"</p>
               </div>
     </>
             ))}
@@ -683,102 +433,46 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
       </section>
     </>
 
-      {/* CTA Section */}
+      {/* CTASection */}
     <>
-      <section className="py-20px-4relative" />
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
-              <div className="relativez-10">
-                <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" />
-                  Ready to Master the <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Blockchain?</span>
-=======
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" / />
-        <div className="relative max-w-7xlmx-auto">
-        </div>
-          <div className="text-center" />
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
-        </div>
-              <div className="relativez-10">
-        </div>
-                <h2 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-whitemb-6leading-tight" />
-                  Ready to Master the <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">Blockchain?</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <sectionclassName="p y-20px-4relative" />
+        <divclassName="a b soluteinset-0 bg-gradient-to-rfrom-cyan-500/10via-purple-500/10to-pink-500/10" />
+        <divclassName="r e lativemax-w-7xlmx-auto">
+          <divclassName="t e xt-center">
+            <divclassName="b g-gradient-to-rfrom-cyan-600 via-purple-600 to-pink-600 rounded-3 xlp-8 sm:p-12 lg:p-16relativeoverflow-hidden">
+              <divclassName="r e lativez-10">
+                <h2 className="t e xt-4xlsm:text-5 xlmd:text-6 xlfont-boldtext-whitemb-6leading-tight" />
+                  ReadytoMasterthe <spanclassName="b g-gradient-to-rfrom-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Blockchain?</span>
                 </h2>
     </>
                 
-                <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
-<<<<<<< HEAD
-              Start your free trial today and gain the intelligence you need to navigate 
-                  the complex world of blockchain and DeFi with confidence.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-6justify-centermb-8">
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
-           
+                <pclassName="t e xt-xlsm:text-2 xltext-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">StartyourfreetrialtodayandgaintheintelligenceyouneedtonavigatethecomplexworldofblockchainandDeFiwithconfidence.</p>
+                <divclassName="f l exflex-colsm:flex-rowgap-6justify-centermb-8">
+                  <Linkto="/contact" className="g r oupbg-whitetext-cyan-600 px-10 py-4 rounded-xlfont-boldtext-lghover:bg-gray-100 transition-allduration-300 flexitems-centerjustify-centerspace-x-2 shadow-lghover:shadow-xltransformhover:scale-105">
           <span    />
-        </Link>Start Free Trial</span>
-                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+        </Link>StartFreeTrial</span>
+                    <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
                   </Link>
-                  <Link to="/demo" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
+                  <Linkto="/demo" className="g r oupborder-2 border-whitetext-whitepx-10 py-4 rounded-xlfont-boldtext-lghover:bg-white/10 transition-allduration-300 flexitems-centerjustify-centerspace-x-2backdrop-blur-sm">
           <span    />
-        </Link>View Demo</span>
-                    <BarChart3 className="w-5 h-5group-hover:translate-x-1transition-transform" />
-=======
-                  Start your free trial today and gain the intelligence you need to navigate 
-                  the complex world of blockchain and DeFi with confidence.
-                </p>
-                
-    <>
-                <div className="flex flex-col sm:flex-row gap-6justify-centermb-8">
-        </div>
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
-                    <span>Start Free Trial</span>
-                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                  </Link>
-                  <Link to="/demo" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                    <span>View Demo</span>
-                    <BarChart3 className="w-5 h-5group-hover:translate-x-1transition-transform" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        </Link>ViewDemo</span>
+                    <BarChart3 className="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
                   </Link>
                 </div>
     </>
                 
-<<<<<<< HEAD
-                <div className="grid grid-cols-1 md:grid-cols-3gap-6text-white/80">
-                  <div className="flex items-centerjustify-centerspace-x-3">
-                    <Phone className="w-5h-5text-cyan-300" />
-                    <span className="text-sm"   />+1 302 464 0950</span>
+                <divclassName="g r idgrid-cols-1 md:grid-cols-3gap-6text-white/80">
+                  <divclassName="f l exitems-centerjustify-centerspace-x-3">
+                    <PhoneclassName="w-5h-5t e xt-cyan-300" />
+                    <spanclassName="t e xt-sm"   />+1 302 464 0950</span>
                   </div>
-                  <div className="flex items-centerjustify-centerspace-x-3">
-                    <Mail className="w-5h-5text-purple-300" />
-                    <span className="text-sm"   />kleber@ziontechgroup.com</span>
+                  <divclassName="f l exitems-centerjustify-centerspace-x-3">
+                    <MailclassName="w-5h-5t e xt-purple-300" />
+                    <spanclassName="t e xt-sm"   />kleber@ziontechgroup.com</span>
                   </div>
-                  <div className="flex items-centerjustify-centerspace-x-3">
-                    <MapPin className="w-5h-5text-pink-300" />
-                    <span className="text-sm"   />Middletown DE 19709</span>
-=======
-    <>
-                <div className="grid grid-cols-1 md:grid-cols-3gap-6text-white/80">
-        </div>
-                  <div className="flex items-centerjustify-centerspace-x-3">
-        </div>
-                    <Phone className="w-5h-5text-cyan-300" / />
-                    <span className="text-sm">+1 302 464 0950</span>
-                  </div>
-                  <div className="flex items-centerjustify-centerspace-x-3">
-        </div>
-                    <Mail className="w-5h-5text-purple-300" / />
-                    <span className="text-sm">kleber@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-centerjustify-centerspace-x-3">
-        </div>
-                    <MapPin className="w-5h-5text-pink-300" / />
-                    <span className="text-sm">Middletown DE 19709</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <divclassName="f l exitems-centerjustify-centerspace-x-3">
+                    <MapPinclassName="w-5h-5t e xt-pink-300" />
+                    <spanclassName="t e xt-sm"   />MiddletownDE 19709</span>
                   </div>
               </div>
           </div>
@@ -787,5 +481,5 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
   );
 };
 
-export default AIBlockchainAnalyticsPage;
+exportdefaultAIBlockchainAnalyticsPage;
     </>

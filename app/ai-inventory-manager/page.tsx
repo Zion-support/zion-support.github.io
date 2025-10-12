@@ -1,70 +1,62 @@
-import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
-import { Package, TrendingUp, BarChart3, AlertTriangle, Zap, CheckCircle, ArrowRight, Star, Brain, Database, Shield, DollarSign } from 'lucide-react'
-=======
-import { Package, TrendingUp, BarChart3, AlertTriangle, Zap, CheckCircle, ArrowRight, Star, Brain, Database, Shield, DollarSign } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import React  from 'react';
-=======
+import { Helmet    } from 'react-helmet-async'
+import { Package, TrendingUp, BarChart3, AlertTriangle, Zap, CheckCircle, ArrowRight, Star, Brain, Database, Shield, DollarSign    } from 'lucide-react'
+import { Link    } from 'react-router-dom'
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowRight, Bot, RotateCcw, RotateCw, Receipt    } from 'lucide-react';
+import { Link    } from 'react-router-dom';
 
-const AIInventoryManagerPage: React.FC = () => {
-  const features = [
+constAIInventoryManagerPage: React.FC = () => {
+  constfeatures = [
     {
-      icon: <Brain className="w-8h-8text-cyan-400" />,
-      title: 'AI Demand Forecasting',
-      description: 'Predict inventory needs with 95% accuracy using machine learning algorithms that analyze sales patterns, seasonality, and market trends.',
-      benefits: ['95% accuracy rate', 'Seasonal predictions', 'Market trend analysis', 'Automated reorder points']
+      icon: <BrainclassName="w-8h-8t e xt-cyan-400" />,
+      title: 'AIDemandForecasting',
+      description: 'Predictinventoryneedswith 95% accuracyusingmachinelearningalgorithmsthatanalyzesalespatterns, seasonality, andmarkettrends.',
+      benefits: ['95% accuracyrate', 'Seasonalpredictions', 'Markettrendanalysis', 'Automatedreorderpoints']
     },
     {
-      icon: <Package className="w-8h-8text-emerald-400" />,
-      title: 'Smart Stock Optimization',
-      description: 'AI automatically optimizes stock levels to minimize carrying costs while preventing stockouts and overstock situations.',
-      benefits: ['Cost optimization', 'Stockout prevention', 'Overstock reduction', 'Dynamic reordering']
+      icon: <PackageclassName="w-8h-8t e xt-emerald-400" />,
+      title: 'SmartStockOptimization',
+      description: 'AIautomaticallyoptimizesstocklevelstominimizecarryingcostswhilepreventingstockoutsandoverstocksituations.',
+      benefits: ['Costoptimization', 'Stockoutprevention', 'Overstockreduction', 'Dynamicreordering']
     },
     {
-      icon: <BarChart3 className="w-8h-8text-purple-400" />,
-      title: 'Real-time Analytics',
-      description: 'Comprehensive dashboards with real-time inventory insights, performance metrics, and predictive analytics.',
-      benefits: ['Live dashboards', 'Performance metrics', 'Trend analysis', 'Custom reports']
+      icon: <BarChart3 className="w-8h-8t e xt-purple-400" />,
+      title: 'Real-timeAnalytics',
+      description: 'Comprehensivedashboardswithreal-timeinventoryinsights, performancemetrics, andpredictiveanalytics.',
+      benefits: ['Livedashboards', 'Performancemetrics', 'Trendanalysis', 'Customreports']
     },
     {
-      icon: <AlertTriangle className="w-8h-8text-red-400" />,
-      title: 'Intelligent Alerts',
-      description: 'Smart notifications for low stock, expiring items, unusual demand patterns, and supply chain disruptions.',
-      benefits: ['Low stock alerts', 'Expiry warnings', 'Anomaly detection', 'Supply chain monitoring']
+      icon: <AlertTriangleclassName="w-8h-8t e xt-red-400" />,
+      title: 'IntelligentAlerts',
+      description: 'Smartnotificationsforlowstock, expiringitems, unusualdemandpatterns, andsupplychaindisruptions.',
+      benefits: ['Lowstockalerts', 'Expirywarnings', 'Anomalydetection', 'Supplychainmonitoring']
     },
     {
-      icon: <Zap className="w-8h-8text-orange-400" />,
-      title: 'Automated Reordering',
-      description: 'AI-powered automatic purchase orders based on demand forecasts, supplier performance, and cost optimization.',
-      benefits: ['Auto purchase orders', 'Supplier optimization', 'Cost analysis', 'Lead time tracking']
+      icon: <ZapclassName="w-8h-8t e xt-orange-400" />,
+      title: 'AutomatedReordering',
+      description: 'AI-poweredautomaticpurchaseordersbasedondemandforecasts, supplierperformance, andcostoptimization.',
+      benefits: ['Autopurchaseorders', 'Supplieroptimization', 'Costanalysis', 'Leadtimetracking']
     },
     {
-      icon: <Shield className="w-8h-8text-pink-400" />,
-      title: 'Multi-location Sync',
-      description: 'Seamlessly manage inventory across multiple warehouses, stores, and distribution centers with real-time synchronization.',
-      benefits: ['Multi-warehouse support', 'Real-time sync', 'Location tracking', 'Transfer management']
+      icon: <ShieldclassName="w-8h-8t e xt-pink-400" />,
+      title: 'Multi-locationSync',
+      description: 'Seamlesslymanageinventoryacrossmultiplewarehouses, stores, anddistributioncenterswithreal-timesynchronization.',
+      benefits: ['Multi-warehousesupport', 'Real-timesync', 'Locationtracking', 'Transfermanagement']
     }
   ]
 
-  const pricingPlans = [
+  constpricingPlans = [
     {
       name: 'Starter',
       price: '$49',
       period: '/month',
-      description: 'Perfect for small businesses with basic inventory needs',
+      description: 'Perfectforsmallbusinesseswithbasicinventoryneeds',
       features: [
-        'Up to 1,000 SKUs',
-        'Basic AI forecasting',
-        'Mobile app access',
-        'Standard reports',
-        'Email support'
+        'Upto 1,000 SKUs',
+        'BasicAIforecasting',
+        'Mobileappaccess',
+        'Standardreports',
+        'Emailsupport'
       ],
       popular: false
     },
@@ -72,14 +64,14 @@ const AIInventoryManagerPage: React.FC = () => {
       name: 'Professional',
       price: '$149',
       period: '/month',
-      description: 'Ideal for growing businesses with complex inventory',
+      description: 'Idealforgrowingbusinesseswithcomplexinventory',
       features: [
-        'Up to 10,000 SKUs',
-        'Advanced AI forecasting',
-        'Multi-location support',
-        'API integrations',
-        'Priority support',
-        'Custom dashboards'
+        'Upto 10,000 SKUs',
+        'AdvancedAIforecasting',
+        'Multi-locationsupport',
+        'APIintegrations',
+        'Prioritysupport',
+        'Customdashboards'
       ],
       popular: true
     },
@@ -87,359 +79,213 @@ const AIInventoryManagerPage: React.FC = () => {
       name: 'Enterprise',
       price: '$399',
       period: '/month',
-      description: 'For large organizations with extensive inventory needs',
+      description: 'Forlargeorganizationswithextensiveinventoryneeds',
       features: [
-        'Unlimited SKUs',
-        'Full AI suite',
-        'Custom integrations',
-        'Dedicated support',
-        'Advanced analytics',
-        'White-label options'
+        'UnlimitedSKUs',
+        'FullAIsuite',
+        'Customintegrations',
+        'Dedicatedsupport',
+        'Advancedanalytics',
+        'White-labeloptions'
       ],
       popular: false
     }
   ]
 
-  const testimonials = [
+  consttestimonials = [
     {
-      name: 'David Kim',
-      company: 'Retail Chain',
-      content: 'AI Inventory Manager reduced our stockouts by 80% and cut carrying costs by 35%. The demand forecasting is incredibly accurate.',
+      name: 'DavidKim',
+      company: 'RetailChain',
+      content: 'AIInventoryManagerreducedourstockoutsby 80% andcutcarryingcostsby 35%. Thedemandforecastingisincrediblyaccurate.',
       rating: 5,
       avatar: 'DK'
     },
     {
-      name: 'Lisa Martinez',
-      company: 'E-commerce Store',
-      content: 'The automated reordering feature saved us countless hours. We never run out of popular items anymore.',
+      name: 'LisaMartinez',
+      company: 'E-commerceStore',
+      content: 'Theautomatedreorderingfeaturesaveduscountlesshours. Weneverrunoutofpopularitemsanymore.',
       rating: 5,
       avatar: 'LM'
     },
     {
-      name: 'James Wilson',
-      company: 'Manufacturing Co.',
-      content: 'Multi-location sync is a game-changer. We can now manage all our warehouses from one platform.',
+      name: 'JamesWilson',
+      company: 'ManufacturingCo.',
+      content: 'Multi-locationsyncisagame-changer. Wecannowmanageallourwarehousesfromoneplatform.',
       rating: 5,
       avatar: 'JW'
     }
   ]
 
-  const stats = [
-<<<<<<< HEAD
-    { number: '95%', label: 'Forecast Accuracy', icon: <TrendingUp className="w-6h-6text-cyan-400" /> },
-    { number: '35%', label: 'Cost Reduction', icon: <DollarSign className="w-6h-6text-emerald-400" /> },
-    { number: '80%', label: 'Stockout Reduction', icon: <Package className="w-6h-6text-purple-400" /> },
-    { number: '50 K+', label: 'SKUs Managed', icon: <Database className="w-6h-6text-orange-400" /> }
-=======
-    <>
-    { number: '95%', label: 'Forecast Accuracy', icon: <TrendingUp className="w-6h-6text-cyan-400" / /> },
-    { number: '35%', label: 'Cost Reduction', icon: <DollarSign className="w-6h-6text-emerald-400" / /> },
-    { number: '80%', label: 'Stockout Reduction', icon: <Package className="w-6h-6text-purple-400" / /> },
-    { number: '50 K+', label: 'SKUs Managed', icon: <Database className="w-6h-6text-orange-400" / /> }
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+  conststats = [
+    { number: '95%', label: 'ForecastAccuracy', icon: <TrendingUpclassName="w-6h-6t e xt-cyan-400" /> },
+    { number: '35%', label: 'CostReduction', icon: <DollarSignclassName="w-6h-6t e xt-emerald-400" /> },
+    { number: '80%', label: 'StockoutReduction', icon: <PackageclassName="w-6h-6t e xt-purple-400" /> },
+    { number: '50 K+', label: 'SKUsManaged', icon: <DatabaseclassName="w-6h-6t e xt-orange-400" /> }
   ]
 
   return (
     <>
     <>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>5GDataAnalytics - ZionTechGroup</title>
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
       </Helmet>
-        <title>AI Inventory Manager - Smart Stock Management | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered inventory management with demand forecasting, automated reordering, and real-time analytics. Reduce costs by 35% and stockouts by 80%." / / />
-        <meta name="keywords" content="AI inventory management, demand forecasting, stock optimization, automated reordering, inventory analytics, supply chain management" / / />
-        <meta name="robots" content="index, follow" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-inventory-manager" />
+        <title>AIInventoryManager - SmartStockManagement | ZionTechGroup</title>
+        <metaname="description" content="RevolutionaryAI-poweredinventorymanagementwithdemandforecasting, automatedreordering, andreal-timeanalytics. Reducecostsby 35% andstockoutsby 80%." / / />
+        <metaname="keywords" content="AIinventorymanagement, demandforecasting, stockoptimization, automatedreordering, inventoryanalytics, supplychainmanagement" / / />
+        <metaname="robots" content="index, follow" / / />
+        <linkrel="canonical" href="https://ziontechgroup.com/ai-inventory-manager" />
       </Helmet>
     </>
 
-      {/* Hero Section */}
+      {/* HeroSection */}
     <>
-      <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900via-emerald-900to-slate-900" />
-<<<<<<< HEAD
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(16,185,129,0.3)_0%,transparent_50%)]" />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.3)_0%,transparent_50%)]" />
-        <div className="relative max-w-7xlmx-autotext-center">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 text-emerald-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-emerald-400/30">
-            <Package className="w-4h-4" />
-            <span   />AI-Powered Inventory Management</span>
-=======
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(16,185,129,0.3)_0%,transparent_50%)]" / />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.3)_0%,transparent_50%)]" / />
-        <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 text-emerald-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-emerald-400/30">
-        </div>
-            <Package className="w-4h-4" / />
-            <span>AI-Powered Inventory Management</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <sectionclassName="r e lativepy-20 px-4 overflow-hiddenbg-gradient-to-brfrom-slate-900via-emerald-900to-slate-900" />
+        <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(16,185,129,0.3)_0%,transparent_50%)]" />
+        <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.3)_0%,transparent_50%)]" />
+        <divclassName="r e lativemax-w-7xlmx-autotext-center">
+          <divclassName="i n line-flexitems-centerspace-x-2 bg-gradient-to-rfrom-emerald-500/20 to-cyan-500/20 text-emerald-400 px-6 py-3 rounded-fulltext-smfont-mediummb-8borderborder-emerald-400/30">
+            <PackageclassName="w-4h-4" />
+            <span   />AI-PoweredInventoryManagement</span>
           </div>
     </>
           
-          <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
-            AI Inventory
+          <h1 className="t e xt-4xlsm:text-6 xlmd:text-7 xlfont-boldtext-whitemb-8leading-tight" />
+            AIInventory
     <>
             <br / />
-            <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400bg-clip-texttext-transparent">Manager Pro
+            <spanclassName="b g-gradient-to-rfrom-emerald-400 via-cyan-400 to-blue-400bg-clip-texttext-transparent">ManagerPro
             </span>
           </h1>
     </>
           
-          <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
-<<<<<<< HEAD
-              Transform your inventory management with AI-powered demand forecasting, 
-            automated reordering, and intelligent stock optimization that reduces costs by 35%.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-            <Link to="/contact" className="group bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-emerald-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40transformhover:scale-105" >
-           
+          <pclassName="t e xt-lgsm:text-xlmd:text-2 xltext-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">TransformyourinventorymanagementwithAI-powereddemandforecasting, 
+            automatedreordering, andintelligentstockoptimizationthatreducescostsby 35%.</p>
+          <divclassName="f l exflex-colsm:flex-rowgap-6justify-centermb-16">
+            <Linkto="/contact" className="g r oupbg-gradient-to-rfrom-emerald-500 to-cyan-600 text-whitepx-10 py-4 rounded-xlfont-semiboldhover:from-emerald-600 hover:to-cyan-700 transition-allduration-300 flexitems-centerjustify-centerspace-x-2 shadow-lgshadow-emerald-500/25 hover:shadow-emerald-500/40transformhover:scale-105">
           <span    />
-        </Link>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+        </Link>StartFreeTrial</span>
+              <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
             </Link>
-            <Link to="#demo" className="group border-2 border-emerald-400 text-emerald-400 px-10 py-4 rounded-xl font-semibold hover:bg-emerald-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
+            <Linkto="#demo" className="g r oupborder-2 border-emerald-400 text-emerald-400 px-10 py-4 rounded-xlfont-semiboldhover:bg-emerald-400 hover:text-gray-900 transition-allduration-300 flexitems-centerjustify-centerspace-x-2backdrop-blur-sm">
           <span    />
-        </Link>Watch Demo</span>
-=======
-            Transform your inventory management with AI-powered demand forecasting, 
-            automated reordering, and intelligent stock optimization that reduces costs by 35%.
-          </p>
-          
-    <>
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-        </div>
-            <Link to="/contact" className="group bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-emerald-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40transformhover:scale-105" />
-              <span>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-            <Link to="#demo" className="group border-2 border-emerald-400 text-emerald-400 px-10 py-4 rounded-xl font-semibold hover:bg-emerald-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-              <span>Watch Demo</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+        </Link>WatchDemo</span>
+              <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
             </Link>
           </div>
       </section>
     </>
 
-      {/* Stats Section */}
+      {/* StatsSection */}
     <>
-      <section className="py-20px-4bg-gray-900" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="grid grid-cols-2md:grid-cols-4gap-8">
+      <sectionclassName="p y-20px-4bg-gray-900" />
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="g r idgrid-cols-2md:grid-cols-4gap-8">
             {stats.map((stat, index) => (
-              <div key="{index}" className="text-center bg-white/5 backdrop-blur-sm rounded-2 xl p-6borderborder-white/10" />
-                <div className="flexjustify-centermb-4"  />{stat.icon}
+              <divkey="{index}" className="t e xt-centerbg-white/5 backdrop-blur-smrounded-2 xlp-6borderborder-white/10" />
+                <divclassName="f l exjustify-centermb-4"  />{stat.icon}
                 </div>
-                <div className="text-3 xl md:text-4xl font-bold text-white mb-2"  />{stat.number}
+                <divclassName="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-2"  />{stat.number}
                 </div>
-                <div className="text-gray-300text-sm"  />{stat.label}
+                <divclassName="t e xt-gray-300text-sm"  />{stat.label}
                 </div>
             ))}
-=======
-        </div>
-          <div className="grid grid-cols-2md:grid-cols-4gap-8">
-        </div>
-    </>
-            {stats.map((stat, index) => (
-    <>
-              <div key="{index}" className="text-center bg-white/5 backdrop-blur-sm rounded-2 xl p-6borderborder-white/10" />
-                <div className="flexjustify-centermb-4">{stat.icon}
-                </div>
-                <div className="text-3 xl md:text-4 xl font-boldtext-whitemb-2">{stat.number}
-                </div>
-                <div className="text-gray-300text-sm">{stat.label}
-                </div>
-    </>
-            ))}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
           </div>
       </section>
     </>
 
-      {/* Features Section */}
+      {/* FeaturesSection */}
     <>
-      <section className="py-20 px-4 bg-gradient-to-brfrom-slate-800/50to-emerald-900/50" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Intelligent <span className="bg-gradient-to-r from-emerald-400 to-cyan-400bg-clip-texttext-transparent"   />Features</span>
+      <sectionclassName="p y-20 px-4 bg-gradient-to-brfrom-slate-800/50to-emerald-900/50" />
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+              Intelligent <spanclassName="b g-gradient-to-rfrom-emerald-400 to-cyan-400bg-clip-texttext-transparent"   />Features</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Intelligent <span className="bg-gradient-to-r from-emerald-400 to-cyan-400bg-clip-texttext-transparent">Features</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Our AI-powered inventory management system uses advanced machine learning to optimize 
-              your stock levels, predict demand, and automate critical inventory processes.
+            <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">
+              OurAI-poweredinventorymanagementsystemusesadvancedmachinelearningtooptimizeyourstocklevels, predictdemand, andautomatecriticalinventoryprocesses.
     <>
             </p>
           </div>
     </>
           
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
             {features.map((feature, index) => (
     <>
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-cyan-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
+              <divkey="{index}" className="g r oupbg-white/10 backdrop-blur-lgrounded-2 xlp-8 borderborder-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
+                <divclassName="f l exitems-centerjustify-centerw-16 h-16 bg-gradient-to-rfrom-emerald-500 to-cyan-600 rounded-2 xlmb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
                 </div>
-                <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-emerald-400transition-colors">{feature.title}
+                <h3 className="t e xt-2 xlfont-boldtext-whitemb-4group-hover:text-emerald-400transition-colors">{feature.title}
                 </h3>
-<<<<<<< HEAD
-                <p className="text-gray-300 mb-6leading-relaxed">
-              {feature.description}
-                </p>
-                <div className="space-y-2">
-=======
-                <p className="text-gray-300mb-6leading-relaxed" />
-    </>
-                  {feature.description}
-    <>
-                </p>
-                <div className="space-y-2">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <pclassName="t e xt-gray-300 mb-6leading-relaxed">{feature.description}</p>
+                <divclassName="s p ace-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
     <>
-                    <div key="{benefitIndex}" className="flex items-center space-x-2text-gray-400text-sm" />
-<<<<<<< HEAD
-                      <CheckCircle className="w-4h-4text-green-400" />
+                    <divkey="{benefitIndex}" className="f l exitems-centerspace-x-2text-gray-400text-sm" />
+                      <CheckCircleclassName="w-4h-4t e xt-green-400" />
                       <span   />{benefit}</span>
-=======
-                      <CheckCircle className="w-4h-4text-green-400" / />
-                      <span>{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                     </div>
     </>
                   ))}
     <>
                 </div>
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             ))}
     <>
           </div>
       </section>
     </>
 
-      {/* Pricing Section */}
+      {/* PricingSection */}
     <>
-      <section className="py-20px-4bg-gray-900" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Flexible <span className="bg-gradient-to-r from-emerald-400 to-cyan-400bg-clip-texttext-transparent"   />Pricing</span>
+      <sectionclassName="p y-20px-4bg-gray-900" />
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+              Flexible <spanclassName="b g-gradient-to-rfrom-emerald-400 to-cyan-400bg-clip-texttext-transparent"   />Pricing</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Flexible <span className="bg-gradient-to-r from-emerald-400 to-cyan-400bg-clip-texttext-transparent">Pricing</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Choose the perfect plan for your inventory management needs. All plans include our core AI features 
-              with scalable options for businesses of all sizes.
+            <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">
+              Choosetheperfectplanforyourinventorymanagementneeds. AllplansincludeourcoreAIfeatureswithscalableoptionsforbusinessesofallsizes.
     <>
             </p>
           </div>
     </>
           
-          <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
+              <divkey="{index}" className="{`r e lative" bg-white/10 backdrop-blur-lgrounded-2 xlp-8 bordertransition-allduration-300 hover:scale-105 ${
                 plan.popular 
-                  ? 'border-emerald-400/50 shadow-2 xl shadow-emerald-500/20' 
+                  ? 'border-emerald-400/50 shadow-2 xlshadow-emerald-500/20' 
                   : 'border-white/20 hover: border-white/40'
               }`} />
                 {plan.popular && (
-<<<<<<< HEAD
-                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-                    <div className="bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold"  />Most Popular
+                  <divclassName="a b solute -top-4 left-1/2transform-translate-x-1/2">
+                    <divclassName="b g-gradient-to-rfrom-emerald-500 to-cyan-600 text-whitepx-6 py-2 rounded-fulltext-smfont-semibold"  />MostPopular
                     </div>
                 )}
                 
-                <div className="text-centermb-8">
-                  <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">
-              {plan.description}</p>
-                  <div className="flex items-baselinejustify-center">
-                    <span className="text-5 xlfont-bold text-white"   />{plan.price}</span>
-                    <span className="text-gray-400ml-2"   />{plan.period}</span>
+                <divclassName="t e xt-centermb-8">
+                  <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"   />{plan.name}</h3>
+                  <pclassName="t e xt-gray-300 mb-4">{plan.description}</p>
+                  <divclassName="f l exitems-baselinejustify-center">
+                    <spanclassName="t e xt-5 xlfont-boldtext-white"   />{plan.price}</span>
+                    <spanclassName="t e xt-gray-400ml-2"   />{plan.period}</span>
                   </div>
-                
-                <div className="space-y-4mb-8">
+                <divclassName="s p ace-y-4mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <div key="{featureIndex}" className="flex items-centerspace-x-3" />
-                      <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" />
-                      <span className="text-gray-300"   />{feature}</span>
-=======
-    <>
-                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-        </div>
-                    <div className="bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
-                    </div>
-    </>
-                )}
-                
-    <>
-                <div className="text-centermb-8">
-        </div>
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300mb-4">{plan.description}</p>
-                  <div className="flexitems-baselinejustify-center" />
-                    <span className="text-5 xlfont-boldtext-white">{plan.price}</span>
-                    <span className="text-gray-400ml-2">{plan.period}</span>
-                  </div>
-    </>
-                
-                <div className="space-y-4mb-8">
-        </div>
-                  {plan.features.map((feature, featureIndex) => (
-    <>
-                    <div key="{featureIndex}" className="flexitems-centerspace-x-3" />
-                      <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
-                      <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <divkey="{featureIndex}" className="f l exitems-centerspace-x-3" />
+                      <CheckCircleclassName="w-5 h-5t e xt-green-400flex-shrink-0" />
+                      <spanclassName="t e xt-gray-300"   />{feature}</span>
                     </div>
     </>
                   ))}
                 </div>
-                
-                <Link 
-                  to="/contact" 
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                <Linkto="/contact" 
+                  className="{`b l ock" w-fulltext-centerpy-3 rounded-xlfont-semiboldtransition-allduration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-emerald-500 to-cyan-600 text-white hover:from-emerald-600 hover:to-cyan-700 shadow-lg shadow-emerald-500/25'
+                      ? 'bg-gradient-to-rfrom-emerald-500 to-cyan-600 text-whitehover:from-emerald-600 hover:to-cyan-700 shadow-lgshadow-emerald-500/25'
                       : 'border-2 border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-gray-900'
                   }`}
-                  />Get Started
+                  />GetStarted
     <>
                 </Link>
               </div>
@@ -450,74 +296,39 @@ const AIInventoryManagerPage: React.FC = () => {
       </section>
     </>
 
-      {/* Testimonials Section */}
+      {/* TestimonialsSection */}
     <>
-      <section className="py-20 px-4 bg-gradient-to-brfrom-emerald-900/50to-cyan-900/50" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Trusted by <span className="bg-gradient-to-r from-emerald-400 to-cyan-400bg-clip-texttext-transparent"   />Industry Leaders</span>
+      <sectionclassName="p y-20 px-4 bg-gradient-to-brfrom-emerald-900/50to-cyan-900/50" />
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+              Trustedby <spanclassName="b g-gradient-to-rfrom-emerald-400 to-cyan-400bg-clip-texttext-transparent"   />IndustryLeaders</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Trusted by <span className="bg-gradient-to-r from-emerald-400 to-cyan-400bg-clip-texttext-transparent">Industry Leaders</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              See how AI Inventory Manager is transforming inventory management for businesses worldwide.
+            <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">
+              SeehowAIInventoryManageristransforminginventorymanagementforbusinessesworldwide.
     <>
             </p>
           </div>
     </>
           
-          <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
             {testimonials.map((testimonial, index) => (
     <>
-              <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8borderborder-white/20" />
-<<<<<<< HEAD
-                <div className="flex items-centermb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-cyan-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4"  />{testimonial.avatar}
+              <divkey="{index}" className="b g-white/10 backdrop-blur-lgrounded-2 xlp-8borderborder-white/20" />
+                <divclassName="f l exitems-centermb-4">
+                  <divclassName="w-12 h-12 b g-gradient-to-rfrom-emerald-500 to-cyan-600 rounded-fullflexitems-centerjustify-centertext-whitefont-boldmr-4"  />{testimonial.avatar}
                   </div>
                   <div>
-            <h4 className="text-whitefont-semibold"   />{testimonial.name}</h4>
-                    <p className="text-gray-400text-sm">
-              {testimonial.company}</p>
+            <h4 className="t e xt-whitefont-semibold"   />{testimonial.name}</h4>
+                    <pclassName="t e xt-gray-400text-sm">{testimonial.company}</p>
                   </div>
-                <div className="flex items-centermb-4">
-=======
-                <div className="flexitems-centermb-4">
-        </div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-cyan-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar}
-                  </div>
-                  <div />
-                    <h4 className="text-whitefont-semibold">{testimonial.name}</h4>
-                    <p className="text-gray-400text-sm">{testimonial.company}</p>
-                  </div>
-                <div className="flexitems-centermb-4">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <divclassName="f l exitems-centermb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
+                    <Starkey="{i}" className="w-5 h-5t e xt-yellow-400fill-current" />
                   ))}
     <>
                 </div>
-<<<<<<< HEAD
-                <p className="text-gray-300italic">
-              "{testimonial.content}"</p>
-=======
-                <p className="text-gray-300italic">"{testimonial.content}"</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <pclassName="t e xt-gray-300italic">"{testimonial.content}"</p>
               </div>
     </>
             ))}
@@ -526,57 +337,32 @@ const AIInventoryManagerPage: React.FC = () => {
       </section>
     </>
 
-      {/* CTA Section */}
+      {/* CTASection */}
     <>
-      <section className="py-20 px-4 bg-gradient-to-r from-emerald-600via-cyan-600to-blue-600" />
-<<<<<<< HEAD
-        <div className="max-w-7xlmx-autotext-center">
-          <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6" />
-=======
-        <div className="max-w-7 xlmx-autotext-center">
-        </div>
-          <h2 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            Ready to Optimize Your
+      <sectionclassName="p y-20 px-4 bg-gradient-to-rfrom-emerald-600via-cyan-600to-blue-600" />
+        <divclassName="m a x-w-7xlmx-autotext-center">
+          <h2 className="t e xt-4xlsm:text-5 xlmd:text-6 xlfont-boldtext-whitemb-6" />
+            ReadytoOptimizeYour
     <>
             <br / />
-            <span className="bg-gradient-to-r from-emerald-300 to-cyan-300bg-clip-texttext-transparent">Inventory Management?
+            <spanclassName="b g-gradient-to-rfrom-emerald-300 to-cyan-300bg-clip-texttext-transparent">InventoryManagement?
             </span>
           </h2>
-<<<<<<< HEAD
-          <p className="text-xl sm:text-2 xl text-white/90 mb-8 max-w-4xlmx-auto">
-              Join thousands of businesses already reducing costs and improving efficiency with AI Inventory Manager. 
-=======
-          <p className="text-xl sm:text-2 xl text-white/90 mb-8 max-w-4xlmx-auto" />
-    </>
-            Join thousands of businesses already reducing costs and improving efficiency with AI Inventory Manager. 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            Start your free trial today - no setup fees required.
+          <pclassName="t e xt-xlsm:text-2 xltext-white/90 mb-8 max-w-4xlmx-auto">
+              JointhousandsofbusinessesalreadyreducingcostsandimprovingefficiencywithAIInventoryManager. 
+            Startyourfreetrialtoday - nosetupfeesrequired.
     <>
           </p>
-          <div className="flex flex-col sm:flex-rowgap-6justify-center">
-<<<<<<< HEAD
-            <Link to="/contact" className="group bg-white text-emerald-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
-           
+          <divclassName="f l exflex-colsm:flex-rowgap-6justify-center">
+            <Linkto="/contact" className="g r oupbg-whitetext-emerald-600 px-10 py-4 rounded-xlfont-boldtext-lghover:bg-gray-100 transition-allduration-300 flexitems-centerjustify-centerspace-x-2 shadow-lghover:shadow-xltransformhover:scale-105">
           <span    />
-        </Link>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+        </Link>StartFreeTrial</span>
+              <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
             </Link>
-            <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
+            <Linkto="/pricing" className="g r oupborder-2 border-whitetext-whitepx-10 py-4 rounded-xlfont-boldtext-lghover:bg-white/10 transition-allduration-300 flexitems-centerjustify-centerspace-x-2backdrop-blur-sm">
           <span    />
-        </Link>View All Plans</span>
-=======
-        </div>
-            <Link to="/contact" className="group bg-white text-emerald-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
-              <span>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-            <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-              <span>View All Plans</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+        </Link>ViewAllPlans</span>
+              <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
             </Link>
           </div>
       </section>
@@ -584,5 +370,5 @@ const AIInventoryManagerPage: React.FC = () => {
   )
 }
 
-export default AIInventoryManagerPage;
+exportdefaultAIInventoryManagerPage;
     </>

@@ -1,42 +1,38 @@
-'use client';
-import { useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import {;
+'useclient';
+import { useState, useEffect  } from 'react';
+import { Link   } from 'react-router-dom';
+import { ;
   ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
   BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
-  Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
+  Settings, Heart, Eye, Mic, Workflow, LinkasLinkIcon, Wifi, Package, 
   TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
   Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock
-} from 'lucide-react';
-import { ArrowRight, ShoppingCart } from 'lucide-react';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Link as LinkIcon, Package, TrendingUp, Calendar, Globe, Database, Monitor, Mail } from 'lucide-react';
-=======
-import { ArrowRight, CheckCircle, Star, Users, Shield, Cloud, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Link as LinkIcon, Database, Mail } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
+  } from 'lucide-react';
+import { ArrowRight, ShoppingCart   } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, LinkasLinkIcon, Package, TrendingUp, Calendar, Globe, Database, Monitor, Mail   } from 'lucide-react';
 
-const MicroSaasPage: React.FC = () => {
+constMicroSaasPage: React.FC = () => {
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const microSaasProducts = [
+  constmicroSaasProducts = [
     {
       id: 'zion-analytics-pro',
-      title: 'Zion Analytics Pro',
-      description: 'Advanced business intelligence platform with AI-powered insights and real-time dashboards',
+      title: 'ZionAnalyticsPro',
+      description: 'AdvancedbusinessintelligenceplatformwithAI-poweredinsightsandreal-timedashboards',
       price: '$99/month',
       originalPrice: '$149/month',
       features: [
-        'Real-time analytics dashboard',
-        'AI-powered predictive insights',
-        'Custom report generation',
-        'Team collaboration tools',
-        'API integrations',
-        'Mobile app access',
-        'Data visualization tools',
-        'Export to multiple formats'
+        'Real-timeanalyticsdashboard',
+        'AI-poweredpredictiveinsights',
+        'Customreportgeneration',
+        'Teamcollaborationtools',
+        'APIintegrations',
+        'Mobileappaccess',
+        'Datavisualizationtools',
+        'Exporttomultipleformats'
       ],
       icon: BarChart,
       color: 'from-blue-500 to-purple-500',
@@ -47,42 +43,42 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-chat-ai',
-      title: 'Zion Chat AI',
-      description: 'Intelligent customer support chatbot with natural language processing and multi-channel support',
+      title: 'ZionChatAI',
+      description: 'Intelligentcustomersupportchatbotwithnaturallanguageprocessingandmulti-channelsupport',
       price: '$79/month',
       originalPrice: '$119/month',
       features: [
-        'Multi-language support',
-        'Sentiment analysis',
-        'Escalation management',
-        'Performance analytics',
-        'Custom training',
-        'Integration APIs',
-        'Live chat handoff',
-        'Knowledge base management'
+        'Multi-languagesupport',
+        'Sentimentanalysis',
+        'Escalationmanagement',
+        'Performanceanalytics',
+        'Customtraining',
+        'IntegrationAPIs',
+        'Livechathandoff',
+        'Knowledgebasemanagement'
       ],
       icon: MessageCircle,
       color: 'from-green-500 to-teal-500',
-      category: 'Customer Support',
+      category: 'CustomerSupport',
       rating: 4.8,
       reviews: 89,
       popular: false
     },
     {
       id: 'zion-security-shield',
-      title: 'Zion Security Shield',
-      description: 'Comprehensive cybersecurity monitoring and threat detection for small to medium businesses',
+      title: 'ZionSecurityShield',
+      description: 'Comprehensivecybersecuritymonitoringandthreatdetectionforsmalltomediumbusinesses',
       price: '$149/month',
       originalPrice: '$199/month',
       features: [
-        'Real-time threat detection',
-        'Vulnerability scanning',
-        'Incident response automation',
-        'Compliance reporting',
-        'Security awareness training',
+        'Real-timethreatdetection',
+        'Vulnerabilityscanning',
+        'Incidentresponseautomation',
+        'Compliancereporting',
+        'Securityawarenesstraining',
         '24/7 monitoring',
-        'Mobile device management',
-        'Firewall management'
+        'Mobiledevicemanagement',
+        'Firewallmanagement'
       ],
       icon: Shield,
       color: 'from-red-500 to-orange-500',
@@ -93,19 +89,19 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-cloud-vault',
-      title: 'Zion Cloud Vault',
-      description: 'Secure cloud backup and disaster recovery solution with automated backups and instant restore',
+      title: 'ZionCloudVault',
+      description: 'Securecloudbackupanddisasterrecoverysolutionwithautomatedbackupsandinstantrestore',
       price: '$59/month',
       originalPrice: '$89/month',
       features: [
-        'Automated daily backups',
-        'Instant file recovery',
-        'Version history tracking',
-        'Cross-platform sync',
-        'End-to-end encryption',
-        'Compliance certifications',
-        'Unlimited storage',
-        'Mobile access'
+        'Automateddailybackups',
+        'Instantfilerecovery',
+        'Versionhistorytracking',
+        'Cross-platformsync',
+        'End-to-endencryption',
+        'Compliancecertifications',
+        'Unlimitedstorage',
+        'Mobileaccess'
       ],
       icon: Cloud,
       color: 'from-cyan-500 to-blue-500',
@@ -116,42 +112,42 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-content-studio',
-      title: 'Zion Content Studio',
-      description: 'AI-powered content creation and management platform for blogs, social media, and marketing',
+      title: 'ZionContentStudio',
+      description: 'AI-poweredcontentcreationandmanagementplatformforblogs, socialmedia, andmarketing',
       price: '$69/month',
       originalPrice: '$99/month',
       features: [
-        'AI content generation',
-        'Multi-platform publishing',
-        'Brand voice training',
-        'Content calendar',
-        'SEO optimization',
-        'Image generation',
-        'Video creation tools',
-        'Performance tracking'
+        'AIcontentgeneration',
+        'Multi-platformpublishing',
+        'Brandvoicetraining',
+        'Contentcalendar',
+        'SEOoptimization',
+        'Imagegeneration',
+        'Videocreationtools',
+        'Performancetracking'
       ],
       icon: FileText,
       color: 'from-purple-500 to-pink-500',
-      category: 'Content Creation',
+      category: 'ContentCreation',
       rating: 4.6,
       reviews: 94,
       popular: false
     },
     {
       id: 'zion-crm-intelligence',
-      title: 'Zion CRM Intelligence',
-      description: 'Smart customer relationship management with AI insights and automated workflows',
+      title: 'ZionCRMIntelligence',
+      description: 'SmartcustomerrelationshipmanagementwithAIinsightsandautomatedworkflows',
       price: '$89/month',
       originalPrice: '$129/month',
       features: [
-        'Lead scoring automation',
-        'Sales forecasting',
-        'Customer insights',
-        'Automation workflows',
-        'Email marketing',
-        'Pipeline management',
-        'Team collaboration',
-        'Mobile CRM access'
+        'Leadscoringautomation',
+        'Salesforecasting',
+        'Customerinsights',
+        'Automationworkflows',
+        'Emailmarketing',
+        'Pipelinemanagement',
+        'Teamcollaboration',
+        'MobileCRMaccess'
       ],
       icon: Users,
       color: 'from-indigo-500 to-purple-500',
@@ -162,42 +158,42 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-data-sync',
-      title: 'Zion Data Sync',
-      description: 'Automated data synchronization across multiple platforms and databases',
+      title: 'ZionDataSync',
+      description: 'Automateddatasynchronizationacrossmultipleplatformsanddatabases',
       price: '$49/month',
       originalPrice: '$79/month',
       features: [
-        'Real-time data sync',
-        'Multiple platform support',
-        'Data transformation',
-        'Error handling',
-        'Scheduled syncs',
-        'Data validation',
-        'API integrations',
-        'Monitoring dashboard'
+        'Real-timedatasync',
+        'Multipleplatformsupport',
+        'Datatransformation',
+        'Errorhandling',
+        'Scheduledsyncs',
+        'Datavalidation',
+        'APIintegrations',
+        'Monitoringdashboard'
       ],
       icon: Database,
       color: 'from-emerald-500 to-green-500',
-      category: 'Data Management',
+      category: 'DataManagement',
       rating: 4.5,
       reviews: 67,
       popular: false
     },
     {
       id: 'zion-lead-magnet',
-      title: 'Zion Lead Magnet',
-      description: 'Lead generation and nurturing platform with automated email sequences and landing pages',
+      title: 'ZionLeadMagnet',
+      description: 'Leadgenerationandnurturingplatformwithautomatedemailsequencesandlandingpages',
       price: '$79/month',
       originalPrice: '$119/month',
       features: [
-        'Landing page builder',
-        'Email automation',
-        'Lead scoring',
-        'A/B testing',
-        'Analytics dashboard',
-        'CRM integration',
-        'Form builder',
-        'Social media integration'
+        'Landingpagebuilder',
+        'Emailautomation',
+        'Leadscoring',
+        'A/Btesting',
+        'Analyticsdashboard',
+        'CRMintegration',
+        'Formbuilder',
+        'Socialmediaintegration'
       ],
       icon: Target,
       color: 'from-yellow-500 to-orange-500',
@@ -208,65 +204,65 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-project-master',
-      title: 'Zion Project Master',
-      description: 'Advanced project management with AI-powered insights and team collaboration tools',
+      title: 'ZionProjectMaster',
+      description: 'AdvancedprojectmanagementwithAI-poweredinsightsandteamcollaborationtools',
       price: '$99/month',
       originalPrice: '$149/month',
       features: [
-        'Gantt charts',
-        'Resource management',
-        'Time tracking',
-        'Budget monitoring',
-        'Team collaboration',
-        'File sharing',
-        'Progress reporting',
-        'Mobile app'
+        'Ganttcharts',
+        'Resourcemanagement',
+        'Timetracking',
+        'Budgetmonitoring',
+        'Teamcollaboration',
+        'Filesharing',
+        'Progressreporting',
+        'Mobileapp'
       ],
       icon: CheckSquare,
       color: 'from-violet-500 to-purple-500',
-      category: 'Project Management',
+      category: 'ProjectManagement',
       rating: 4.8,
       reviews: 175,
       popular: true
     },
     {
       id: 'zion-email-automation',
-      title: 'Zion Email Automation',
-      description: 'Intelligent email marketing platform with AI-powered personalization and automation',
+      title: 'ZionEmailAutomation',
+      description: 'IntelligentemailmarketingplatformwithAI-poweredpersonalizationandautomation',
       price: '$59/month',
       originalPrice: '$89/month',
       features: [
-        'Email templates',
-        'Automation workflows',
-        'Personalization engine',
-        'A/B testing',
-        'Analytics tracking',
-        'List management',
-        'Drip campaigns',
-        'Integration APIs'
+        'Emailtemplates',
+        'Automationworkflows',
+        'Personalizationengine',
+        'A/Btesting',
+        'Analyticstracking',
+        'Listmanagement',
+        'Dripcampaigns',
+        'IntegrationAPIs'
       ],
       icon: Mail,
       color: 'from-pink-500 to-rose-500',
-      category: 'Email Marketing',
+      category: 'EmailMarketing',
       rating: 4.6,
       reviews: 89,
       popular: false
     },
     {
       id: 'zion-inventory-smart',
-      title: 'Zion Inventory Smart',
-      description: 'AI-powered inventory management with demand forecasting and automated reordering',
+      title: 'ZionInventorySmart',
+      description: 'AI-poweredinventorymanagementwithdemandforecastingandautomatedreordering',
       price: '$89/month',
       originalPrice: '$129/month',
       features: [
-        'Demand forecasting',
-        'Automated reordering',
-        'Stock level monitoring',
-        'Supplier management',
-        'Barcode scanning',
-        'Multi-location support',
-        'Reporting dashboard',
-        'Mobile app'
+        'Demandforecasting',
+        'Automatedreordering',
+        'Stocklevelmonitoring',
+        'Suppliermanagement',
+        'Barcodescanning',
+        'Multi-locationsupport',
+        'Reportingdashboard',
+        'Mobileapp'
       ],
       icon: Box,
       color: 'from-teal-500 to-cyan-500',
@@ -277,19 +273,19 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-invoice-genius',
-      title: 'Zion Invoice Genius',
-      description: 'Automated invoicing and payment processing with AI-powered expense categorization',
+      title: 'ZionInvoiceGenius',
+      description: 'AutomatedinvoicingandpaymentprocessingwithAI-poweredexpensecategorization',
       price: '$49/month',
       originalPrice: '$79/month',
       features: [
-        'Automated invoicing',
-        'Payment processing',
-        'Expense categorization',
-        'Tax calculations',
-        'Client portal',
-        'Recurring billing',
-        'Financial reporting',
-        'Multi-currency support'
+        'Automatedinvoicing',
+        'Paymentprocessing',
+        'Expensecategorization',
+        'Taxcalculations',
+        'Clientportal',
+        'Recurringbilling',
+        'Financialreporting',
+        'Multi-currencysupport'
       ],
       icon: DollarSign,
       color: 'from-green-500 to-emerald-500',
@@ -300,42 +296,42 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-video-editor',
-      title: 'Zion AI Video Editor',
-      description: 'AI-powered video editing with automatic scene detection, color correction, and smart transitions',
+      title: 'ZionAIVideoEditor',
+      description: 'AI-poweredvideoeditingwithautomaticscenedetection, colorcorrection, andsmarttransitions',
       price: '$89/month',
       originalPrice: '$129/month',
       features: [
-        'Auto scene detection',
-        'Smart color correction',
-        'AI-generated transitions',
-        'Voice-over generation',
-        'Background removal',
+        'Autoscenedetection',
+        'Smartcolorcorrection',
+        'AI-generatedtransitions',
+        'Voice-overgeneration',
+        'Backgroundremoval',
         'Text-to-video',
-        'Multi-format export',
-        'Cloud rendering'
+        'Multi-formatexport',
+        'Cloudrendering'
       ],
       icon: Monitor,
       color: 'from-purple-500 to-pink-500',
-      category: 'Video Production',
+      category: 'VideoProduction',
       rating: 4.7,
       reviews: 98,
       popular: false
     },
     {
       id: 'zion-ai-translator-pro',
-      title: 'Zion AI Translator Pro',
-      description: 'Advanced AI translation with context awareness and industry-specific terminology support',
+      title: 'ZionAITranslatorPro',
+      description: 'AdvancedAItranslationwithcontextawarenessandindustry-specificterminologysupport',
       price: '$69/month',
       originalPrice: '$99/month',
       features: [
-        '100+ language support',
-        'Context-aware translation',
-        'Industry terminology',
-        'Real-time translation',
-        'Document translation',
-        'Voice translation',
-        'API integration',
-        'Quality scoring'
+        '100+ languagesupport',
+        'Context-awaretranslation',
+        'Industryterminology',
+        'Real-timetranslation',
+        'Documenttranslation',
+        'Voicetranslation',
+        'APIintegration',
+        'Qualityscoring'
       ],
       icon: Globe,
       color: 'from-blue-500 to-cyan-500',
@@ -346,19 +342,19 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-code-reviewer',
-      title: 'Zion AI Code Reviewer',
-      description: 'Intelligent code review with automated bug detection, security analysis, and performance optimization',
+      title: 'ZionAICodeReviewer',
+      description: 'Intelligentcodereviewwithautomatedbugdetection, securityanalysis, andperformanceoptimization',
       price: '$149/month',
       originalPrice: '$199/month',
       features: [
-        'Automated code review',
-        'Bug detection',
-        'Security vulnerability scan',
-        'Performance optimization',
-        'Code quality metrics',
-        'Best practice suggestions',
-        'Multi-language support',
-        'Git integration'
+        'Automatedcodereview',
+        'Bugdetection',
+        'Securityvulnerabilityscan',
+        'Performanceoptimization',
+        'Codequalitymetrics',
+        'Bestpracticesuggestions',
+        'Multi-languagesupport',
+        'Gitintegration'
       ],
       icon: Code,
       color: 'from-indigo-500 to-purple-500',
@@ -369,19 +365,19 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-customer-insights',
-      title: 'Zion Customer Insights',
-      description: 'AI-powered customer behavior analysis with predictive insights and personalized recommendations',
+      title: 'ZionCustomerInsights',
+      description: 'AI-poweredcustomerbehavioranalysiswithpredictiveinsightsandpersonalizedrecommendations',
       price: '$119/month',
       originalPrice: '$159/month',
       features: [
-        'Customer segmentation',
-        'Behavior prediction',
-        'Churn analysis',
-        'Personalization engine',
-        'Sentiment analysis',
-        'Lifetime value prediction',
-        'Recommendation system',
-        'Real-time insights'
+        'Customersegmentation',
+        'Behaviorprediction',
+        'Churnanalysis',
+        'Personalizationengine',
+        'Sentimentanalysis',
+        'Lifetimevalueprediction',
+        'Recommendationsystem',
+        'Real-timeinsights'
       ],
       icon: Users,
       color: 'from-teal-500 to-cyan-500',
@@ -392,19 +388,19 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-email-assistant',
-      title: 'Zion AI Email Assistant',
-      description: 'Smart email management with AI-powered responses, scheduling, and priority classification',
+      title: 'ZionAIEmailAssistant',
+      description: 'SmartemailmanagementwithAI-poweredresponses, scheduling, andpriorityclassification',
       price: '$59/month',
       originalPrice: '$89/month',
       features: [
-        'AI email responses',
-        'Smart scheduling',
-        'Priority classification',
-        'Spam filtering',
-        'Email templates',
-        'Follow-up automation',
-        'Sentiment analysis',
-        'Calendar integration'
+        'AIemailresponses',
+        'Smartscheduling',
+        'Priorityclassification',
+        'Spamfiltering',
+        'Emailtemplates',
+        'Follow-upautomation',
+        'Sentimentanalysis',
+        'Calendarintegration'
       ],
       icon: Mail,
       color: 'from-orange-500 to-red-500',
@@ -415,19 +411,19 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-meeting-assistant',
-      title: 'Zion AI Meeting Assistant',
-      description: 'Intelligent meeting management with transcription, action items, and follow-up automation',
+      title: 'ZionAIMeetingAssistant',
+      description: 'Intelligentmeetingmanagementwithtranscription, actionitems, andfollow-upautomation',
       price: '$79/month',
       originalPrice: '$119/month',
       features: [
-        'Real-time transcription',
-        'Action item extraction',
-        'Meeting summaries',
-        'Follow-up automation',
-        'Voice recognition',
-        'Multi-language support',
-        'Calendar integration',
-        'Team collaboration'
+        'Real-timetranscription',
+        'Actionitemextraction',
+        'Meetingsummaries',
+        'Follow-upautomation',
+        'Voicerecognition',
+        'Multi-languagesupport',
+        'Calendarintegration',
+        'Teamcollaboration'
       ],
       icon: Calendar,
       color: 'from-green-500 to-emerald-500',
@@ -438,19 +434,19 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-seo-optimizer',
-      title: 'Zion AI SEO Optimizer',
-      description: 'AI-powered SEO optimization with content analysis, keyword research, and ranking predictions',
+      title: 'ZionAISEOOptimizer',
+      description: 'AI-poweredSEOoptimizationwithcontentanalysis, keywordresearch, andrankingpredictions',
       price: '$99/month',
       originalPrice: '$149/month',
       features: [
-        'Content optimization',
-        'Keyword research',
-        'Ranking predictions',
-        'Competitor analysis',
-        'Technical SEO audit',
-        'Link building suggestions',
-        'Performance tracking',
-        'Automated reports'
+        'Contentoptimization',
+        'Keywordresearch',
+        'Rankingpredictions',
+        'Competitoranalysis',
+        'TechnicalSEOaudit',
+        'Linkbuildingsuggestions',
+        'Performancetracking',
+        'Automatedreports'
       ],
       icon: TrendingUp,
       color: 'from-yellow-500 to-orange-500',
@@ -461,42 +457,42 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-data-cleaner',
-      title: 'Zion AI Data Cleaner',
-      description: 'Intelligent data cleaning and validation with automated error detection and correction',
+      title: 'ZionAIDataCleaner',
+      description: 'Intelligentdatacleaningandvalidationwithautomatederrordetectionandcorrection',
       price: '$89/month',
       originalPrice: '$129/month',
       features: [
-        'Automated data cleaning',
-        'Error detection',
-        'Duplicate removal',
-        'Data validation',
-        'Format standardization',
-        'Missing data imputation',
-        'Quality scoring',
-        'API integration'
+        'Automateddatacleaning',
+        'Errordetection',
+        'Duplicateremoval',
+        'Datavalidation',
+        'Formatstandardization',
+        'Missingdataimputation',
+        'Qualityscoring',
+        'APIintegration'
       ],
       icon: Database,
       color: 'from-gray-500 to-slate-500',
-      category: 'Data Management',
+      category: 'DataManagement',
       rating: 4.6,
       reviews: 89,
       popular: false
     },
     {
       id: 'zion-ai-contract-analyzer',
-      title: 'Zion AI Contract Analyzer',
-      description: 'AI-powered contract analysis with risk assessment, clause extraction, and compliance checking',
+      title: 'ZionAIContractAnalyzer',
+      description: 'AI-poweredcontractanalysiswithriskassessment, clauseextraction, andcompliancechecking',
       price: '$199/month',
       originalPrice: '$299/month',
       features: [
-        'Contract analysis',
-        'Risk assessment',
-        'Clause extraction',
-        'Compliance checking',
-        'Version comparison',
-        'Automated summaries',
-        'Legal insights',
-        'Document management'
+        'Contractanalysis',
+        'Riskassessment',
+        'Clauseextraction',
+        'Compliancechecking',
+        'Versioncomparison',
+        'Automatedsummaries',
+        'Legalinsights',
+        'Documentmanagement'
       ],
       icon: FileText,
       color: 'from-violet-500 to-purple-500',
@@ -507,19 +503,19 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-survey-builder',
-      title: 'Zion AI Survey Builder',
-      description: 'Intelligent survey creation with AI-generated questions, response analysis, and insights',
+      title: 'ZionAISurveyBuilder',
+      description: 'IntelligentsurveycreationwithAI-generatedquestions, responseanalysis, andinsights',
       price: '$69/month',
       originalPrice: '$99/month',
       features: [
-        'AI question generation',
-        'Response analysis',
-        'Sentiment analysis',
-        'Data visualization',
-        'Custom themes',
-        'Multi-platform distribution',
-        'Real-time analytics',
-        'Export capabilities'
+        'AIquestiongeneration',
+        'Responseanalysis',
+        'Sentimentanalysis',
+        'Datavisualization',
+        'Customthemes',
+        'Multi-platformdistribution',
+        'Real-timeanalytics',
+        'Exportcapabilities'
       ],
       icon: CheckSquare,
       color: 'from-pink-500 to-rose-500',
@@ -530,19 +526,19 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-accounting-assistant',
-      title: 'Zion AI Accounting Assistant',
-      description: 'Smart accounting automation with expense categorization, tax preparation, and financial insights',
+      title: 'ZionAIAccountingAssistant',
+      description: 'Smartaccountingautomationwithexpensecategorization, taxpreparation, andfinancialinsights',
       price: '$129/month',
       originalPrice: '$179/month',
       features: [
-        'Expense categorization',
-        'Tax preparation',
-        'Financial insights',
-        'Receipt scanning',
-        'Invoice matching',
-        'Compliance monitoring',
-        'Reporting automation',
-        'Multi-currency support'
+        'Expensecategorization',
+        'Taxpreparation',
+        'Financialinsights',
+        'Receiptscanning',
+        'Invoicematching',
+        'Compliancemonitoring',
+        'Reportingautomation',
+        'Multi-currencysupport'
       ],
       icon: DollarSign,
       color: 'from-emerald-500 to-green-500',
@@ -553,19 +549,19 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-recruitment-pro',
-      title: 'Zion AI Recruitment Pro',
-      description: 'AI-powered recruitment with resume screening, candidate matching, and interview scheduling',
+      title: 'ZionAIRecruitmentPro',
+      description: 'AI-poweredrecruitmentwithresumescreening, candidatematching, andinterviewscheduling',
       price: '$179/month',
       originalPrice: '$249/month',
       features: [
-        'Resume screening',
-        'Candidate matching',
-        'Interview scheduling',
-        'Skill assessment',
-        'Background checks',
-        'Onboarding automation',
-        'Performance tracking',
-        'Integration capabilities'
+        'Resumescreening',
+        'Candidatematching',
+        'Interviewscheduling',
+        'Skillassessment',
+        'Backgroundchecks',
+        'Onboardingautomation',
+        'Performancetracking',
+        'Integrationcapabilities'
       ],
       icon: Users,
       color: 'from-blue-500 to-indigo-500',
@@ -576,19 +572,19 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-content-moderation',
-      title: 'Zion AI Content Moderation',
-      description: 'Automated content moderation with AI-powered detection of inappropriate content and spam',
+      title: 'ZionAIContentModeration',
+      description: 'AutomatedcontentmoderationwithAI-powereddetectionofinappropriatecontentandspam',
       price: '$149/month',
       originalPrice: '$199/month',
       features: [
-        'Content filtering',
-        'Spam detection',
-        'Image analysis',
-        'Text analysis',
-        'Video moderation',
-        'Real-time processing',
-        'Custom rules',
-        'API integration'
+        'Contentfiltering',
+        'Spamdetection',
+        'Imageanalysis',
+        'Textanalysis',
+        'Videomoderation',
+        'Real-timeprocessing',
+        'Customrules',
+        'APIintegration'
       ],
       icon: Shield,
       color: 'from-red-500 to-orange-500',
@@ -599,19 +595,19 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-predictive-maintenance',
-      title: 'Zion AI Predictive Maintenance',
-      description: 'AI-powered equipment monitoring with predictive maintenance and failure prevention',
+      title: 'ZionAIPredictiveMaintenance',
+      description: 'AI-poweredequipmentmonitoringwithpredictivemaintenanceandfailureprevention',
       price: '$299/month',
       originalPrice: '$399/month',
       features: [
-        'Equipment monitoring',
-        'Failure prediction',
-        'Maintenance scheduling',
-        'Performance analytics',
-        'Alert system',
-        'Cost optimization',
-        'IoT integration',
-        'Custom dashboards'
+        'Equipmentmonitoring',
+        'Failureprediction',
+        'Maintenancescheduling',
+        'Performanceanalytics',
+        'Alertsystem',
+        'Costoptimization',
+        'IoTintegration',
+        'Customdashboards'
       ],
       icon: Settings,
       color: 'from-cyan-500 to-blue-500',
@@ -622,19 +618,19 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-energy-manager',
-      title: 'Zion AI Energy Manager',
-      description: 'Smart energy management with consumption optimization and cost reduction recommendations',
+      title: 'ZionAIEnergyManager',
+      description: 'Smartenergymanagementwithconsumptionoptimizationandcostreductionrecommendations',
       price: '$199/month',
       originalPrice: '$279/month',
       features: [
-        'Energy monitoring',
-        'Consumption optimization',
-        'Cost analysis',
-        'Predictive modeling',
-        'Automated controls',
-        'Sustainability tracking',
-        'Reporting dashboard',
-        'IoT integration'
+        'Energymonitoring',
+        'Consumptionoptimization',
+        'Costanalysis',
+        'Predictivemodeling',
+        'Automatedcontrols',
+        'Sustainabilitytracking',
+        'Reportingdashboard',
+        'IoTintegration'
       ],
       icon: Zap,
       color: 'from-yellow-500 to-orange-500',
@@ -645,42 +641,42 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-supply-chain-optimizer',
-      title: 'Zion AI Supply Chain Optimizer',
-      description: 'AI-powered supply chain optimization with demand forecasting and inventory management',
+      title: 'ZionAISupplyChainOptimizer',
+      description: 'AI-poweredsupplychainoptimizationwithdemandforecastingandinventorymanagement',
       price: '$249/month',
       originalPrice: '$349/month',
       features: [
-        'Demand forecasting',
-        'Inventory optimization',
-        'Route optimization',
-        'Supplier analysis',
-        'Risk assessment',
-        'Cost optimization',
-        'Real-time tracking',
-        'Integration capabilities'
+        'Demandforecasting',
+        'Inventoryoptimization',
+        'Routeoptimization',
+        'Supplieranalysis',
+        'Riskassessment',
+        'Costoptimization',
+        'Real-timetracking',
+        'Integrationcapabilities'
       ],
       icon: Package,
       color: 'from-indigo-500 to-purple-500',
-      category: 'Supply Chain',
+      category: 'SupplyChain',
       rating: 4.8,
       reviews: 112,
       popular: true
     },
     {
       id: 'zion-ai-fraud-detector',
-      title: 'Zion AI Fraud Detector',
-      description: 'Advanced fraud detection with machine learning models and real-time transaction monitoring',
+      title: 'ZionAIFraudDetector',
+      description: 'Advancedfrauddetectionwithmachinelearningmodelsandreal-timetransactionmonitoring',
       price: '$179/month',
       originalPrice: '$249/month',
       features: [
-        'Real-time monitoring',
-        'Pattern recognition',
-        'Risk scoring',
-        'Transaction analysis',
-        'Alert system',
-        'Machine learning models',
-        'API integration',
-        'Compliance reporting'
+        'Real-timemonitoring',
+        'Patternrecognition',
+        'Riskscoring',
+        'Transactionanalysis',
+        'Alertsystem',
+        'Machinelearningmodels',
+        'APIintegration',
+        'Compliancereporting'
       ],
       icon: Shield,
       color: 'from-red-500 to-pink-500',
@@ -691,42 +687,42 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-customer-service-pro',
-      title: 'Zion AI Customer Service Pro',
-      description: 'Advanced AI customer service with multi-channel support and intelligent routing',
+      title: 'ZionAICustomerServicePro',
+      description: 'AdvancedAIcustomerservicewithmulti-channelsupportandintelligentrouting',
       price: '$159/month',
       originalPrice: '$219/month',
       features: [
-        'Multi-channel support',
-        'Intelligent routing',
-        'Sentiment analysis',
-        'Escalation management',
-        'Knowledge base',
-        'Performance analytics',
-        'Integration capabilities',
-        'Custom training'
+        'Multi-channelsupport',
+        'Intelligentrouting',
+        'Sentimentanalysis',
+        'Escalationmanagement',
+        'Knowledgebase',
+        'Performanceanalytics',
+        'Integrationcapabilities',
+        'Customtraining'
       ],
       icon: MessageCircle,
       color: 'from-green-500 to-teal-500',
-      category: 'Customer Support',
+      category: 'CustomerSupport',
       rating: 4.7,
       reviews: 167,
       popular: true
     },
     {
       id: 'zion-ai-marketing-automation',
-      title: 'Zion AI Marketing Automation',
-      description: 'Intelligent marketing automation with personalized campaigns and customer journey optimization',
+      title: 'ZionAIMarketingAutomation',
+      description: 'Intelligentmarketingautomationwithpersonalizedcampaignsandcustomerjourneyoptimization',
       price: '$139/month',
       originalPrice: '$189/month',
       features: [
-        'Campaign automation',
-        'Personalization engine',
-        'Customer journey mapping',
-        'A/B testing',
-        'Performance analytics',
-        'Lead scoring',
-        'Email marketing',
-        'Social media integration'
+        'Campaignautomation',
+        'Personalizationengine',
+        'Customerjourneymapping',
+        'A/Btesting',
+        'Performanceanalytics',
+        'Leadscoring',
+        'Emailmarketing',
+        'Socialmediaintegration'
       ],
       icon: Target,
       color: 'from-purple-500 to-pink-500',
@@ -737,97 +733,75 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-document-ai',
-      title: 'Zion AI Document AI',
-      description: 'Advanced document processing with OCR, data extraction, and intelligent document analysis',
+      title: 'ZionAIDocumentAI',
+      description: 'AdvanceddocumentprocessingwithOCR, dataextraction, andintelligentdocumentanalysis',
       price: '$119/month',
       originalPrice: '$159/month',
       features: [
-        'OCR technology',
-        'Data extraction',
-        'Document classification',
-        'Form processing',
-        'Text analysis',
-        'Version control',
-        'Search capabilities',
-        'API integration'
+        'OCRtechnology',
+        'Dataextraction',
+        'Documentclassification',
+        'Formprocessing',
+        'Textanalysis',
+        'Versioncontrol',
+        'Searchcapabilities',
+        'APIintegration'
       ],
       icon: FileText,
       color: 'from-gray-500 to-slate-500',
-      category: 'Document Management',
+      category: 'DocumentManagement',
       rating: 4.7,
       reviews: 123,
       popular: false
     }
   ];
-  const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'CRM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance', 'Video Production', 'Translation', 'Development', 'Productivity', 'Research', 'HR', 'IoT', 'Sustainability', 'Supply Chain', 'Legal', 'Document Management'];
+  constcategories = ['All', 'Analytics', 'CustomerSupport', 'Security', 'Backup & Recovery', 'ContentCreation', 'CRM', 'DataManagement', 'Marketing', 'ProjectManagement', 'EmailMarketing', 'Inventory', 'Finance', 'VideoProduction', 'Translation', 'Development', 'Productivity', 'Research', 'HR', 'IoT', 'Sustainability', 'SupplyChain', 'Legal', 'DocumentManagement'];
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const filteredProducts = selectedCategory === 'All' 
+  constfilteredProducts = selectedCategory === 'All' 
     ? microSaasProducts 
     : microSaasProducts.filter(product => product.category === selectedCategory);
   return (
     <>
     <>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>5GDataAnalytics - ZionTechGroup</title>
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
       </Helmet>
-        <title>Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
-        <meta const name = "description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." / / />
-        <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" / / />
+        <title>MicroSAASProducts - ZionTechGroup | AI-PoweredBusinessSolutions</title>
+        <metaconstname = "description" content="DiscoverourcomprehensivesuiteofmicroSAASproductsdesignedtosolvespecificbusinesschallenges. FromAIanalyticstocybersecurity, wehavethetoolsyouneedtosucceed." / / />
+        <metaname="keywords" content="microsaas, businesssoftware, AItools, analytics, CRM, projectmanagement, cybersecurity, automation" / / />
       </Helmet>
     </>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        {/* Hero Section */}
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
+        {/* HeroSection */}
     <>
-        <section className="relative overflow-hiddenpt-20pb-16" />
-<<<<<<< HEAD
-          <div className="absoluteinset-0opacity-20" />
-          <div className="relative max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-            <div className="text-center">
-=======
-          <div className="absoluteinset-0opacity-20" / />
-          <div className="relative max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
-            <div className="text-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+        <sectionclassName="r e lativeoverflow-hiddenpt-20pb-16" />
+          <divclassName="a b soluteinset-0opacity-20" />
+          <divclassName="r e lativemax-w-7xlmx-autopx-4sm:px-6lg:px-8">
+            <divclassName="t e xt-center">
+              <h1 className="{`t e xt-4" xlmd: text-6 xlfont-boldtext-whitemb-6 transition-allduration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
     </>
-                Micro SAAS
+                MicroSAAS
     <>
-                <span className="block bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent">Business Solutions
+                <spanclassName="b l ockbg-gradient-to-rfrom-purple-400 to-pink-400bg-clip-texttext-transparent">BusinessSolutions
                 </span>
               </h1>
-              <p className="{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+              <pclassName="{`t e xt-xl" text-gray-300 mb-8 max-w-3 xlmx-autotransition-allduration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
     </>
-                Powerful, ready-to-use software solutions designed to solve specific business challenges. 
-                No complex setup, no lengthy implementations - just instant value.
+                Powerful, ready-to-usesoftwaresolutionsdesignedtosolvespecificbusinesschallenges. 
+                Nocomplexsetup, nolengthyimplementations - justinstantvalue.
     <>
               </p>
-              <div className="{`flex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-<<<<<<< HEAD
-                <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" >
-          Start Free Trial
+              <divclassName="{`f l ex" flex-colsm: flex-rowgap-4 justify-centertransition-allduration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+                <Linkto="/contact" className="i n line-flexitems-centerpx-8 py-4 bg-gradient-to-rfrom-purple-600 to-pink-600 text-whitefont-semiboldrounded-lghover:from-purple-700 hover:to-pink-700 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-xl">
+          StartFreeTrial
                   
-          <ArrowRight className="ml-2h-5w-5"  />
+          <ArrowRightclassName="m l-2h-5w-5"  />
         </Link>
-=======
-                <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
-    </>
-                  Start Free Trial
-    <>
-                  <ArrowRight className="ml-2h-5w-5" />
-                </Link>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
+                <ahref="tel:+13024640950"
+                  className="i n line-flexitems-centerpx-8 py-4 border-2 border-purple-400 text-purple-400 font-semiboldrounded-lghover:bg-purple-400 hover:text-whitetransition-allduration-300transformhover:scale-105" />
                   Call +1 302 464 0950
     <>
                 </a>
@@ -836,26 +810,17 @@ const MicroSaasPage: React.FC = () => {
         </section>
     </>
 
-        {/* Category Filter */}
+        {/* CategoryFilter */}
     <>
-        <section className="py-8bg-gray-900/50" />
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-            <div className="flex flex-wrapjustify-centergap-4">
-=======
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
-            <div className="flex flex-wrapjustify-centergap-4">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <sectionclassName="p y-8bg-gray-900/50" />
+          <divclassName="m a x-w-7xlmx-autopx-4sm:px-6lg:px-8">
+            <divclassName="f l exflex-wrapjustify-centergap-4">
               {categories.map((category) => (
-                <button
-                  key="{category}"
+                <buttonkey="{category}"
                   onClick="{()" =>setSelectedCategory(category)}
-                  className="{`px-6" py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  className="{`p x-6" py-3 rounded-lgfont-semiboldtransition-allduration-300 ${
                     selectedCategory === category
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                      ? 'bg-gradient-to-rfrom-purple-600 to-pink-600 text-whiteshadow-lg'
                       : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'
                   }`}
                 >
@@ -867,67 +832,34 @@ const MicroSaasPage: React.FC = () => {
         </section>
     </>
 
-        {/* Products Grid */}
+        {/* ProductsGrid */}
     <>
-        <section className="py-16" />
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
-=======
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <sectionclassName="p y-16" />
+          <divclassName="m a x-w-7xlmx-autopx-4sm:px-6lg:px-8">
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
               {filteredProducts.map((product, index) => (
-                <div
-                  key="{product.id}"
-                  className="{`group" relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-purple-500 ${
+                <divkey="{product.id}"
+                  className="{`g r oup" relativebg-gray-800 rounded-xlp-6 hover:bg-gray-700 transition-allduration-300 transformhover:scale-105 borderborder-gray-700 hover:border-purple-500 ${
                     product.popular ? 'ring-2 ring-purple-500' : ''
                   }`} />
                   {product.popular && (
-<<<<<<< HEAD
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
-=======
-    <>
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-        </div>
-                      <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <divclassName="a b solute -top-3 left-1/2transform-translate-x-1/2">
+                      <spanclassName="b g-gradient-to-rfrom-purple-600 to-pink-600 text-whitepx-4 py-1 rounded-fulltext-smfont-semibold"  />MostPopular
                       </span>
                     </div>
     </>
                   )}
                   
-<<<<<<< HEAD
-                  <div className="text-centermb-6">
-=======
-    <>
-                  <div className="text-centermb-6">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    <div className="{`inline-flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl mb-4`} />
-                      <product.icon className="h-8w-8text-white" />
+                  <divclassName="t e xt-centermb-6">
+                    <divclassName="{`i n line-flex" items-centerjustify-centerw-16 h-16 bg-gradient-to-r ${product.color} rounded-xlmb-4`} />
+                      <product.iconclassName="h-8w-8t e xt-white" />
                     </div>
-<<<<<<< HEAD
-                    <h3 className="text-xl font-bold text-white mb-2"   />{product.title}</h3>
-                    <p className="text-gray-300text-smmb-4">
-              {product.description}</p>
-                    <div className="flex items-center justify-centerspace-x-2mb-4">
-                      <div className="flex items-center">
-=======
-                    <h3 className="text-xl font-boldtext-whitemb-2">{product.title}</h3>
-                    <p className="text-gray-300text-smmb-4">{product.description}</p>
-                    <div className="flex items-center justify-centerspace-x-2mb-4">
-        </div>
-                      <div className="flexitems-center" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <h3 className="t e xt-xlfont-boldtext-whitemb-2"   />{product.title}</h3>
+                    <pclassName="t e xt-gray-300text-smmb-4">{product.description}</p>
+                    <divclassName="f l exitems-centerjustify-centerspace-x-2mb-4">
+                      <divclassName="f l exitems-center">
                         {[...Array(5)].map((_, i) => (
-                          <Star
-                            key="{i}"
+                          <Starkey="{i}"
                             className="{`h-4" w-4 ${
                               i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'
                             }`}
@@ -935,141 +867,75 @@ const MicroSaasPage: React.FC = () => {
                         ))}
     <>
                       </div>
-                      <span className="text-smtext-gray-400">({product.reviews} reviews)</span>
+                      <spanclassName="t e xt-smtext-gray-400">({product.reviews} reviews)</span>
                     </div>
-<<<<<<< HEAD
-
-                  <div className="text-centermb-6">
-                    <div className="flex items-center justify-centerspace-x-2mb-2">
-                      <span className="text-3 xlfont-bold text-white"   />{product.price}</span>
-                      <span className="text-lgtext-gray-400line-through"   />{product.originalPrice}</span>
-=======
-    </>
-
-    <>
-                  <div className="text-centermb-6">
-        </div>
-                    <div className="flex items-center justify-centerspace-x-2mb-2">
-        </div>
-                      <span className="text-3 xlfont-boldtext-white">{product.price}</span>
-                      <span className="text-lgtext-gray-400line-through">{product.originalPrice}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <divclassName="t e xt-centermb-6">
+                    <divclassName="f l exitems-centerjustify-centerspace-x-2mb-2">
+                      <spanclassName="t e xt-3 xlfont-boldtext-white"   />{product.price}</span>
+                      <spanclassName="t e xt-lgtext-gray-400line-through"   />{product.originalPrice}</span>
                     </div>
-                    <span className="text-smtext-green-400font-semibold">Save {Math.round((1 - parseInt(product.price.replace('$', '')) / parseInt(product.originalPrice.replace('$', ''))) * 100)}%
+                    <spanclassName="t e xt-smtext-green-400font-semibold">Save {Math.round((1 - parseInt(product.price.replace('$', '')) / parseInt(product.originalPrice.replace('$', ''))) * 100)}%
                     </span>
                   </div>
     </>
 
-                  <div className="space-y-3mb-6">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <divclassName="s p ace-y-3mb-6">
                     {product.features.slice(0, 4).map((feature, idx) => (
     <>
-                      <div key="{idx}" className="flex items-centertext-smtext-gray-300" />
-<<<<<<< HEAD
-                        <CheckCircle className="h-4 w-4 text-green-400mr-3flex-shrink-0" />
+                      <divkey="{idx}" className="f l exitems-centertext-smtext-gray-300" />
+                        <CheckCircleclassName="h-4 w-4 t e xt-green-400mr-3flex-shrink-0" />
                         <span   />{feature}</span>
-=======
-                        <CheckCircle className="h-4 w-4 text-green-400mr-3flex-shrink-0" / />
-                        <span>{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                       </div>
     </>
                     ))}
                     {product.features.length > 4 && (
     <>
-                      <div className="text-smtext-gray-400text-center">+{product.features.length - 4} more features
+                      <divclassName="t e xt-smtext-gray-400text-center">+{product.features.length - 4} morefeatures
                       </div>
     </>
                     )}
                   </div>
-
-<<<<<<< HEAD
-                  <div className="space-y-3">
-                    <Link to="{`/${product.id}`}" className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" >
-          View Details
+                  <divclassName="s p ace-y-3">
+                    <Linkto="{`/${product.id}`}" className="w-f u llinline-flexitems-centerjustify-centerpx-4 py-3 bg-gradient-to-rfrom-purple-600 to-pink-600 text-whitefont-semiboldrounded-lghover:from-purple-700 hover:to-pink-700 transition-allduration-300transformhover:scale-105">
+          ViewDetails
                       
-          <ArrowRight className="ml-2h-4w-4"  />
+          <ArrowRightclassName="m l-2h-4w-4"  />
         </Link>
-                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300">Start Free Trial
+                    <Linkto="/contact" className="w-f u llinline-flexitems-centerjustify-centerpx-4 py-3 borderborder-purple-400 text-purple-400 font-semiboldrounded-lghover:bg-purple-400 hover:text-whitetransition-allduration-300">StartFreeTrial
                     </Link>
                   </div>
-=======
-    <>
-                  <div className="space-y-3">
-        </div>
-                    <Link to="{`/${product.id}`}" className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
-    </>
-                      View Details
-    <>
-                      <ArrowRight className="ml-2h-4w-4" />
-                    </Link>
-                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300">Start Free Trial
-                    </Link>
-                  </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               ))}
     <>
             </div>
         </section>
     </>
 
-        {/* CTA Section */}
+        {/* CTASection */}
     <>
-        <section className="py-20 bg-gradient-to-brfrom-gray-900to-purple-900" />
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4 sm:px-6lg:px-8text-center">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Transform Your Business?
+        <sectionclassName="p y-20 bg-gradient-to-brfrom-gray-900to-purple-900" />
+          <divclassName="m a x-w-7xlmx-autopx-4 sm:px-6lg:px-8text-center">
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />ReadytoTransformYourBusiness?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
-=======
-          <div className="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Join thousands of businesses already using our micro SAAS solutions to streamline operations, 
-              increase productivity, and drive growth.
+            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">
+              JointhousandsofbusinessesalreadyusingourmicroSAASsolutionstostreamlineoperations, 
+              increaseproductivity, anddrivegrowth.
     <>
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" >
-          Get Started Today
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+              <Linkto="/contact" className="i n line-flexitems-centerpx-8 py-4 bg-gradient-to-rfrom-purple-600 to-pink-600 text-whitefont-semiboldrounded-lghover:from-purple-700 hover:to-pink-700 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-xl">
+          GetStartedToday
                 
-          <ArrowRight className="ml-2h-5w-5"  />
+          <ArrowRightclassName="m l-2h-5w-5"  />
         </Link>
-=======
-        </div>
-              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
-    </>
-                Get Started Today
-    <>
-                <ArrowRight className="ml-2h-5w-5" />
-              </Link>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
+              <ahref="tel:+13024640950"
+                className="i n line-flexitems-centerpx-8 py-4 border-2 border-purple-400 text-purple-400 font-semiboldrounded-lghover:bg-purple-400 hover:text-whitetransition-allduration-300transformhover:scale-105" />
                 Call +1 302 464 0950
     <>
               </a>
             </div>
-            <div className="mt-8text-gray-400">
-<<<<<<< HEAD
+            <divclassName="m t-8text-gray-400">
               <p />Email: kleber@ziontechgroup.com</p>
-              <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-=======
-        </div>
-              <p>Email: kleber@ziontechgroup.com</p>
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              <p />Address: 364 EMainStSTE 1008, MiddletownDE 19709</p>
             </div>
         </section>
       </div>
@@ -1090,9 +956,4 @@ const MicroSaasPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default MicroSaasPage;
-=======
-export default MicroSaasPage;
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+exportdefaultMicroSaasPage;

@@ -1,4 +1,4 @@
-  children: ReactNode;
+children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableErrorReporting?: boolean;
@@ -10,7 +10,7 @@
   errorId?: string;
   retryCount: number;
 }
-  private maxRetries: number;
+  privatemaxRetries: number;
     super(props);
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
@@ -21,43 +21,37 @@
   }
       errorInfo
     });
-    // Log error to console in development
-      console.error('Error caught by boundary:', error, errorInfo);
+    // Logerrortoconsoleindevelopmentconsole.error('Errorcaughtbyboundary:', error, errorInfo);
     }
-    // Call custom error handler if provided
-      this.props.onError(error, errorInfo);
+    // Callcustomerrorhandlerifprovidedthis.props.onError(error, errorInfo);
     }
-    // Enhanced error reporting
-      this.reportError(error, errorInfo);
+    // Enhancederrorreportingthis.reportError(error, errorInfo);
     }
   }
-    // Enhanced error reporting logic
+    // Enhancederrorreportinglogic
     
     };
-    // Log to console in development
-      console.group('🚨 Error Boundary Caught Error');
-      console.error('Error Report:', errorReport);
+    // Logtoconsoleindevelopmentconsole.group('🚨 ErrorBoundaryCaughtError');
+      console.error('ErrorReport:', errorReport);
       console.groupEnd();
     }
-    // Send to error reporting service (implement as needed)
-      // In a real app, you would send this to your error reporting service
-      // For now, we'll just log it
-      console.log('Error report prepared:', errorReport);
+    // Sendtoerrorreportingservice (implementasneeded)
+      // Inarealapp, youwouldsendthistoyourerrorreportingservice
+      // Fornow, we'lljustlogitconsole.log('Errorreportprepared:', errorReport);
        
-      // Example: Send to error reporting service
+      // Example: Sendtoerrorreportingservice
       //   body: JSON.stringify(errorReport)
       // });
-      console.error('Failed to report error:', reportingError);
+      console.error('Failedtoreporterror:', reportingError);
     }
   };
-    // Get user ID from localStorage, cookies, or context
-    return localStorage.getItem('userId') || null;
+    // GetuserIDfromlocalStorage, cookies, orcontextreturnlocalStorage.getItem('userId') || null;
   };
-    let sessionId = sessionStorage.getItem('sessionId');
+    letsessionId = sessionStorage.getItem('sessionId');
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
     }
-    return sessionId;
+    returnsessionId;
   };
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
@@ -68,25 +62,23 @@
     
     };
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
-        // Show success message
-        const button = document.getElementById('copy-error-details');
-          const originalText = button.textContent;
+        // Showsuccessmessageconstbutton = document.getElementById('copy-error-details');
+          constoriginalText = button.textContent;
           button.textContent = 'Copied!';
             button.textContent = originalText;
           }, 2000);
         }
       })
-        console.error('Failed to copy error details:', error);
+        console.error('Failedtocopyerrordetails:', error);
       });
   };
-      // Custom fallback UI
-        return this.props.fallback;
+      // CustomfallbackUIreturnthis.props.fallback;
       }
       const { retryCount, error } = this.state;
       
       );
     }
-    return this.props.children;
+    returnthis.props.children;
   }
 }
-export default EnhancedErrorBoundary;
+exportdefaultEnhancedErrorBoundary;

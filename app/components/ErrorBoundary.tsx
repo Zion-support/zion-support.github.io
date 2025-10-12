@@ -1,60 +1,45 @@
-import { Component, ErrorInfo, ReactNode} from 'react';
+import { Component, ErrorInfo, ReactNode  } from 'react';
 
-interface Props {
+interfaceProps {
   children: ReactNode;
 }
 
-interface State {
+interfaceState {
   hasError: boolean;
   error?: Error;
 }
 
-class ErrorBoundary extends Component<Props, State /> {
-  public state: const State = {,
+classErrorBoundaryextendsComponent<Props, State /> {
+  publicstate: constState = {,
   hasError: false
   };
-  public static getDerivedStateFromError(error: Error): State {
+  publicstaticgetDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error: ', error, errorInfo);
+  publiccomponentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundarycaughtanerror: ', error, errorInfo);
   }
 
-  public render() {
+  publicrender() {
     if (this.state.hasError) {
       return (
-<<<<<<< HEAD
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-centerjustify-center">
-          <div className="text-center">
-            <h1 className="text-6 xl font-bold text-white mb-4"  >Oops!</h1>
-            <p className="text-xltext-gray-300 mb-8">Something went wrong.</p>
-=======
-    <>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flexitems-centerjustify-center">
-        </div>
-          <div className="text-center" />
-            <h1 className="text-6 xl font-boldtext-whitemb-4">Oops!</h1>
-            <p className="text-xltext-gray-300mb-8">Something went wrong.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            <button
-              onClick="{()" =  />this.setState({ hasError: false, error: undefined })}
-              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300"
-            >
-              Try Again
+        <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 flexitems-centerjustify-center">
+          <divclassName="t e xt-center">
+            <h1 className="t e xt-6 xlfont-boldtext-whitemb-4">Oops!</h1>
+            <pclassName="t e xt-xltext-gray-300 mb-8">Somethingwentwrong.</p>
+            <buttononClick="{()" =  />this.setState({ hasError: false, error: undefined })}
+              className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-600transition-allduration-300">
+              TryAgain
     <>
             </button>
           </div>
-<<<<<<< HEAD
   );
-=======
-      );
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
     }
 
-    return this.props.children;
+    returnthis.props.children;
   }
 }
 
-export default ErrorBoundary;
+exportdefaultErrorBoundary;
     </>

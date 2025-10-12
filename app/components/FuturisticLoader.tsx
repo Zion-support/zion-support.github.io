@@ -1,24 +1,17 @@
-<<<<<<< HEAD
-import React  from 'react';
-import { motion } from 'framer-motion';
-=======
-'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface FuturisticLoaderProps {
+import { motion    } from 'framer-motion';
+interfaceFuturisticLoaderProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'cyan' | 'purple' | 'pink' | 'green';
   text?: string;
 }
 
-export default function FuturisticLoader({ 
-  const size = 'md', 
+exportdefaultfunctionFuturisticLoader({ 
+  constsize = 'md', 
   color = 'cyan',
   text = 'Loading...' 
 }: FuturisticLoaderProps) {
-  const getSizeClasses = () => {
+  constgetSizeClasses = () => {
     switch (size) {
       case 'sm': return 'w-8 h-8';
       case 'lg': return 'w-16 h-16';
@@ -26,7 +19,7 @@ export default function FuturisticLoader({
     }
   };
 
-  const getColorClasses = () => {
+  constgetColorClasses = () => {
     switch (color) {
       case 'purple': return 'border-purple-500 text-purple-400';
       case 'pink': return 'border-pink-500 text-pink-400';
@@ -36,44 +29,31 @@ export default function FuturisticLoader({
   };
 
   return (
-<<<<<<< HEAD
-    <div className="flex flex-col items-centerjustify-centerspace-y-4">
-      <div className="relative">
-=======
-    <>
-    <div className="flex flex-col items-centerjustify-centerspace-y-4">
-        </div>
-      <div className="relative" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        {/* Outer rotating ring */}
-        <motion.div
-          className="{`"
+    <divclassName="f l exflex-colitems-centerjustify-centerspace-y-4">
+      <divclassName="r e lative">
+        {/* Outerrotatingring */}
+        <motion.divclassName="{`"
             ${getSizeClasses()} 
-            border-4 border-transparent 
-            border-t-4 ${getColorClasses().split(' ')[1]}
+            border-4 border-transparentborder-t-4 ${getColorClasses().split(' ')[1]}
             rounded-full
           `}
           animate="{{" rotate: 360 }}
           transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
         / />
-        {/* Inner pulsing ring */}
-        <motion.div
-          className="{`"
-            absolute inset-2 
-            border-2 border-transparent 
-            border-r-2 ${getColorClasses().split(' ')[1]}
+        {/* Innerpulsingring */}
+        <motion.divclassName="{`"
+            absoluteinset-2 
+            border-2 border-transparentborder-r-2 ${getColorClasses().split(' ')[1]}
             rounded-full
           `}
           animate="{{" rotate: -360 }}
           transition="{{" duration: 1.5, repeat: Infinity, ease: 'linear' }}
         / />
-        {/* Center pulsing dot */}
-        <motion.div
-          className="{`"
-            absolute top-1/2 left-1/2 w-2 h-2 
+        {/* Centerpulsingdot */}
+        <motion.divclassName="{`"
+            absolutetop-1/2 left-1/2 w-2 h-2 
             ${getColorClasses().split(' ')[1]} 
-            rounded-full
-            transform -translate-x-1/2 -translate-y-1/2
+            rounded-fulltransform -translate-x-1/2 -translate-y-1/2
           `}
           animate="{{" 
             scale: [1, 1.5, 1],
@@ -85,14 +65,11 @@ export default function FuturisticLoader({
             ease: 'easeInOut' 
           }}
         / />
-        {/* Glow effect */}
-        <motion.div
-          className="{`"
-            absolute inset-0 
+        {/* Gloweffect */}
+        <motion.divclassName="{`"
+            absoluteinset-0 
             ${getColorClasses().split(' ')[1]} 
-            rounded-full
-            blur-md
-            opacity-30
+            rounded-fullblur-mdopacity-30
           `}
           animate="{{" 
             scale: [1, 1.2, 1],
@@ -105,10 +82,8 @@ export default function FuturisticLoader({
           }}
         / />
       </div>
-      
       {text && (
-        <motion.p
-          className="{`text-sm" ${getColorClasses().split(' ')[1]} font-medium`}
+        <motion.pclassName="{`t e xt-sm" ${getColorClasses().split(' ')[1]} font-medium`}
           animate="{{" opacity: [0.5, 1, 0.5] }}
           transition="{{" 
             duration: 1.5, 

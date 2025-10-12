@@ -1,70 +1,65 @@
-  const [currentCost, setCurrentCost] = useState(100000);
+const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
   
-    const annualSavings = (currentCost * efficiencyGain) / 100;
-    const totalSavings = annualSavings * (timeframe / 12);
-    const roi = ((totalSavings - currentCost) / currentCost) * 100;
-    return Math.max(0, roi);
+    constannualSavings = (currentCost * efficiencyGain) / 100;
+    consttotalSavings = annualSavings * (timeframe / 12);
+    constroi = ((totalSavings - currentCost) / currentCost) * 100;
+    returnMath.max(0, roi);
   };
-  const roi = calculateROI();
-    <section className='bg-white py-16 rounded-2xl shadow-lg'>
-      <div className='container mx-auto px-4'>
-        <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
-          AI ROI Calculator
+  constroi = calculateROI();
+    <sectionclassName='bg-whitepy-16 rounded-2xlshadow-lg'>
+      <divclassName='containermx-autopx-4'>
+        <h2 className='text-4xlfont-boldtext-centertext-gray-900 mb-8'>
+          AIROICalculator
         </h2>
-        <div className='max-w-4xl mx-auto'>
-          <div className='grid md:grid-cols-2 gap-8'>
-            <div className='space-y-6'>
+        <divclassName='max-w-4xlmx-auto'>
+          <divclassName='gridmd:grid-cols-2 gap-8'>
+            <divclassName='space-y-6'>
               <div>
-                <label className='block text-sm font-medium text-gray-700 mb-2'>
-                  Current Annual Cost ($)
+                <labelclassName='blocktext-smfont-mediumtext-gray-700 mb-2'>
+                  CurrentAnnualCost ($)
                 </label>
-                
                   onChange={e => setCurrentCost(Number(e.target.value))}
-                  className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                  className='w-fullpx-4 py-2 borderborder-gray-300 rounded-lgfocus:ring-2 focus:ring-blue-500 focus:border-transparent'
                 />
               </div>
               <div>
-                <label className='block text-sm font-medium text-gray-700 mb-2'>
-                  Expected Efficiency Gain (%)
+                <labelclassName='blocktext-smfont-mediumtext-gray-700 mb-2'>
+                  ExpectedEfficiencyGain (%)
                 </label>
-                
                   onChange={e => setEfficiencyGain(Number(e.target.value))}
                   className='w-full'
                 />
-                <div className='text-center text-sm text-gray-600'>
+                <divclassName='text-centertext-smtext-gray-600'>
                   {efficiencyGain}%
                 </div>
               <div>
-                <label className='block text-sm font-medium text-gray-700 mb-2'>
-                  Implementation Timeframe (months)
+                <labelclassName='blocktext-smfont-mediumtext-gray-700 mb-2'>
+                  ImplementationTimeframe (months)
                 </label>
-                
                   onChange={e => setTimeframe(Number(e.target.value))}
-                  className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                  className='w-fullpx-4 py-2 borderborder-gray-300 rounded-lgfocus:ring-2 focus:ring-blue-500 focus:border-transparent'
                 >
-                  <option value={6}>6 months</option>
-                  <option value={12}>12 months</option>
-                  <option value={18}>18 months</option>
-                  <option value={24}>24 months</option>
+                  <optionvalue={6}>6 months</option>
+                  <optionvalue={12}>12 months</option>
+                  <optionvalue={18}>18 months</option>
+                  <optionvalue={24}>24 months</option>
                 </select>
               </div>
-            <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl'>
-              <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
-                Your ROI Projection
+            <divclassName='bg-gradient-to-brfrom-blue-50 to-purple-50 p-8 rounded-2xl'>
+              <h3 className='text-2xlfont-boldtext-gray-900 mb-6 text-center'>
+                YourROIProjection
               </h3>
-              <div className='text-center'>
-                <div className='text-6xl font-bold text-blue-600 mb-4'>
+              <divclassName='text-center'>
+                <divclassName='text-6xlfont-boldtext-blue-600 mb-4'>
                   {roi.toFixed(0)}%
                 </div>
-                <p className='text-gray-600 text-sm'>
-                  Expected return on investment over {timeframe} months
-                </p>
+                <pclassName='text-gray-600 text-sm'>Expectedreturnoninvestmentover {timeframe} months</p>
               </div>
           </div>
       </div>
     </section>
   );
 };
-export default InteractiveAIROICalculator;
+exportdefaultInteractiveAIROICalculator;

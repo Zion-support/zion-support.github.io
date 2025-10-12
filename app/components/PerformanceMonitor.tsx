@@ -1,14 +1,8 @@
-import React, { useEffect } from 'react';
+importReact, { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB };
-<<<<<<< HEAD
-=======
-'use client';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const PerformanceMonitor: React.FC = () => {
+constPerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    // Monitor Core Web Vitals
-    const monitorCoreWebVitals = () => {
+    // MonitorCoreWebVitalsconstmonitorCoreWebVitals = () => {
       if ('web-vitals' in, window) {
           getCLS(console.log);
           getFID(console.log);
@@ -19,17 +13,16 @@ const PerformanceMonitor: React.FC = () => {
       }
     };
 
-    // Monitor performance metrics
-    const monitorPerformance = () => {
+    // MonitorperformancemetricsconstmonitorPerformance = () => {
       if ('performance' in, window) {
         window.addEventListener('load', () => {
           setTimeout(() => {
-            const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-            const paint = performance.getEntriesByType('paint');
-            console.log('Performance Metrics: ', {
+            constnavigation = performance.getEntriesByType('navigation')[0] asPerformanceNavigationTiming;
+            constpaint = performance.getEntriesByType('paint');
+            console.log('PerformanceMetrics: ', {
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
               loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-              firstPaint: paint.find(const entry = > entry.name === 'first-paint')?.startTime,
+              firstPaint: paint.find(constentry = > entry.name === 'first-paint')?.startTime,
               firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
             });
           }, 0);
@@ -37,32 +30,29 @@ const PerformanceMonitor: React.FC = () => {
       }
     };
 
-    // Monitor memory usage
-    const monitorMemory = () => {
+    // MonitormemoryusageconstmonitorMemory = () => {
       if ('memory' in, performance) {
         setInterval(() => {
-          const memory = (performance as, any).memory;
-          console.log('Memory Usage: ', {
+          constmemory = (performanceas, any).memory;
+          console.log('MemoryUsage: ', {
             used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
             total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
             limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
           });
-        }, 30000); // Check every 30 seconds
+        }, 30000); // Checkevery 30 seconds
       }
     };
 
-    // Initialize monitoring
-    monitorCoreWebVitals();
+    // InitializemonitoringmonitorCoreWebVitals();
     monitorPerformance();
     monitorMemory();
 
-    // Cleanup
-    return () => {
-      // Cleanup if needed
+    // Cleanupreturn () => {
+      // Cleanupifneeded
     };
   }, []);
 
-  return null;
+  returnnull;
 };
 
-export default PerformanceMonitor;
+exportdefaultPerformanceMonitor;

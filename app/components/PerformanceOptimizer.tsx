@@ -1,8 +1,8 @@
-'use client';
-import React, { useEffect, useState } from 'react';
-import { ArrowRight, Zap } from 'lucide-react';
+'useclient';
+importReact, { useEffect, useState } from 'react';
+import { ArrowRight, Zap   } from 'lucide-react';
 
-interface PerformanceMetrics {
+interfacePerformanceMetrics {
   lcp: number | null;
   fid: number | null;
   cls: number | null;
@@ -10,7 +10,7 @@ interface PerformanceMetrics {
   ttfb: number | null;
 }
 
-const PerformanceOptimizer: React.FC = () => {
+constPerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
@@ -20,16 +20,15 @@ const PerformanceOptimizer: React.FC = () => {
   });
 
   useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalResources = [
+    // PreloadcriticalresourcesconstpreloadCriticalResources = () => {
+      constcriticalResources = [
         '/fonts/inter.woff2',
         '/images/hero-bg.jpg',
         '/images/logo.png'
       ];
 
       criticalResources.forEach(resource => {
-        const link = document.createElement('link');
+        constlink = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
         link.as = resource.endsWith('.woff2') ? 'font' : 'image';
@@ -40,9 +39,8 @@ const PerformanceOptimizer: React.FC = () => {
       });
     };
 
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
+    // OptimizeimagesconstoptimizeImages = () => {
+      constimages = document.querySelectorAll('img');
       images.forEach(img => {
         if (!img.loading) {
           img.loading = 'lazy';
@@ -53,77 +51,70 @@ const PerformanceOptimizer: React.FC = () => {
       });
     };
 
-    // Initialize optimizations
-    preloadCriticalResources();
+    // InitializeoptimizationspreloadCriticalResources();
     optimizeImages();
   }, []);
 
-  const features = [
+  constfeatures = [
     {
-      title: "Image Optimization",
-      description: "Automatic image compression and lazy loading"
+      title: "ImageOptimization",
+      description: "Automaticimagecompressionandlazyloading"
     },
     {
-      title: "Resource Preloading",
-      description: "Critical resource preloading for faster initial load"
+      title: "ResourcePreloading",
+      description: "Criticalresourcepreloadingforfasterinitialload"
     },
     {
-      title: "Code Splitting",
-      description: "Automatic code splitting for optimal bundle sizes"
+      title: "CodeSplitting",
+      description: "Automaticcodesplittingforoptimalbundlesizes"
     },
     {
-      title: "Caching Strategy",
-      description: "Intelligent caching for improved performance"
+      title: "CachingStrategy",
+      description: "Intelligentcachingforimprovedperformance"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Performance Optimizer
+    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
+      {/* HeroSection */}
+      <sectionclassName="r e lativepy-20 px-4 sm:px-6 lg:px-8">
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="t e xt-center">
+            <h1 className="t e xt-4xlmd:text-6xlfont-boldtext-whitemb-6">
+              <spanclassName="b g-gradient-to-rfrom-purple-400 to-blue-400 bg-clip-texttext-transparent">
+                PerformanceOptimizer
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Optimize your application's performance with our advanced optimization tools and techniques.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">Optimizeyourapplication'sperformancewithouradvancedoptimizationtoolsandtechniques.</p>
+            <divclassName="f l exflex-colsm:flex-rowgap-4 justify-center">
+              <buttonclassName="b g-gradient-to-rfrom-purple-500 to-blue-600 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-purple-600 hover:to-blue-700 transition-allduration-300 flexitems-center">
+                GetStarted
+                <ArrowRightclassName="m l-2 h-5 w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
+              <buttonclassName="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-gray-900 transition-allduration-300">
+                LearnMore
               </button>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Features
+      {/* FeaturesSection */}
+      <sectionclassName="p y-20 px-4 sm:px-6 lg:px-8">
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-3xlmd:text-4xlfont-boldtext-whitemb-4">
+              OurFeatures
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the powerful features that make our performance optimizer solutions stand out.
-            </p>
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Discoverthepowerfulfeaturesthatmakeourperformanceoptimizersolutionsstandout.</p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <divclassName="g r idgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <Zap className="h-6 w-6 text-white" />
+              <divkey={index} className="b g-gray-800/50 backdrop-blur-xlrounded-xlp-6 borderborder-gray-700 hover:border-purple-500 transition-allduration-300">
+                <divclassName="f l exitems-centerjustify-centerw-12 h-12 bg-gradient-to-rfrom-purple-500 to-blue-600 rounded-lgmb-4">
+                  <ZapclassName="h-6 w-6 t e xt-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="t e xt-xlfont-boldtext-whitemb-2">{feature.title}</h3>
+                <pclassName="t e xt-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -133,19 +124,18 @@ const PerformanceOptimizer: React.FC = () => {
   );
 };
 
-export default PerformanceOptimizer;
+exportdefaultPerformanceOptimizer;
       cleanupScroll()
     }
   }, [])
 
-  // Log performance metrics in development
-  useEffect(() => {
+  // LogperformancemetricsindevelopmentuseEffect(() => {
     if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(val => val !== null)) {
-      console.log('Performance Metrics:', metrics)
+      console.log('PerformanceMetrics:', metrics)
     }
   }, [metrics])
 
-  return null
+  returnnull
 }
 
-export default PerformanceOptimizer
+exportdefaultPerformanceOptimizer

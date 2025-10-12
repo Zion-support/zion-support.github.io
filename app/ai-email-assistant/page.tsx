@@ -1,189 +1,114 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React  from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings } from 'lucide-react';
-import React  from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Star, Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings} from 'lucide-react';
-=======
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings } from 'lucide-react';
+import { Helmet    } from 'react-helmet-async';
+import { Link    } from 'react-router-dom';
+import { Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings    } from 'lucide-react';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Star, Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings} from 'lucide-react';
-'use client';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Mail, Brain, Zap, CheckCircle, Users, Award, Star, Globe, Settings } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
+import { Helmet    } from 'react-helmet-async';
+import { Link    } from 'react-router-dom';
+import { Star, Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings   } from 'lucide-react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const AIEmailAssistantPage: React.FC = () => {
-  const features = [
+constAIEmailAssistantPage: React.FC = () => {
+  constfeatures = [
     {
       icon: Mail,
-      title: 'Smart Classification',
-      description: 'Automatically categorize and prioritize emails based on content and sender.'
+      title: 'SmartClassification',
+      description: 'Automaticallycategorizeandprioritizeemailsbasedoncontentandsender.'
     },
     {
       icon: MessageSquare,
       title: 'Auto-Responses',
-      description: 'Generate intelligent responses using AI to handle common inquiries.'
+      description: 'GenerateintelligentresponsesusingAItohandlecommoninquiries.'
     },
     {
       icon: Brain,
-      title: 'Sentiment Analysis',
-      description: 'Analyze email tone and sentiment to provide better customer service.'
+      title: 'SentimentAnalysis',
+      description: 'Analyzeemailtoneandsentimenttoprovidebettercustomerservice.'
     },
     {
       icon: Settings,
-      title: 'Workflow Automation',
-      description: 'Create automated workflows to streamline your email management.'
+      title: 'WorkflowAutomation',
+      description: 'Createautomatedworkflowstostreamlineyouremailmanagement.'
     }
   ];
-  const useCases = [
+  constuseCases = [
     {
-      title: 'Customer Support',
-      description: 'Automate responses to common customer inquiries and support tickets.',
+      title: 'CustomerSupport',
+      description: 'Automateresponsestocommoncustomerinquiriesandsupporttickets.',
       icon: Users
     },
     {
-      title: 'Sales Follow-up',
-      description: 'Automatically follow up with leads and prospects based on their behavior.',
+      title: 'SalesFollow-up',
+      description: 'Automaticallyfollowupwithleadsandprospectsbasedontheirbehavior.',
       icon: BarChart3
     },
     {
-      title: 'Email Marketing',
-      description: 'Personalize and optimize email campaigns for better engagement.',
+      title: 'EmailMarketing',
+      description: 'Personalizeandoptimizeemailcampaignsforbetterengagement.',
       icon: Zap
     },
     {
-      title: 'Internal Communication',
-      description: 'Streamline internal email workflows and team communication.',
+      title: 'InternalCommunication',
+      description: 'Streamlineinternalemailworkflowsandteamcommunication.',
       icon: Shield
     }
   ];
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
   return (
     <>
     <>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>5GDataAnalytics - ZionTechGroup</title>
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
       </Helmet>
-        <title>AI Email Assistant - Zion Tech Group</title>
-        <meta const name = "description" content="Transform your email management with our AI Email Assistant. Smart classification, auto-responses, sentiment analysis, and automated workflows." / / />
-        <meta name="keywords" content="AI email assistant, email automation, smart email management, auto-responses, email classification" / / />
+        <title>AIEmailAssistant - ZionTechGroup</title>
+        <metaconstname = "description" content="TransformyouremailmanagementwithourAIEmailAssistant. Smartclassification, auto-responses, sentimentanalysis, andautomatedworkflows." / / />
+        <metaname="keywords" content="AIemailassistant, emailautomation, smartemailmanagement, auto-responses, emailclassification" / / />
       </Helmet>
     </>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        {/* Hero Section */}
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
+        {/* HeroSection */}
     <>
-        <section className="pt-32pb-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-center max-w-4xlmx-auto">
-              <h1 className="text-5 xl md:text-6 xl font-bold text-white mb-6" />
-                AI <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Email Assistant</span>
+        <sectionclassName="p t-32pb-20" />
+          <divclassName="c o ntainermx-autopx-4">
+            <divclassName="t e xt-centermax-w-4xlmx-auto">
+              <h1 className="t e xt-5 xlmd:text-6 xlfont-boldtext-whitemb-6" />
+                AI <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />EmailAssistant</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8leading-relaxed">
-              Transform your email management with intelligent automation, smart classification, 
-=======
-        </div>
-            <div className="text-center max-w-4xlmx-auto">
-        </div>
-              <h1 className="text-5 xl md:text-6 xl font-boldtext-whitemb-6" />
-                AI <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Email Assistant</span>
-              </h1>
-              <p className="text-xl text-gray-300mb-8leading-relaxed" />
-    </>
-                Transform your email management with intelligent automation, smart classification, 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                and AI-powered responses that save time and improve productivity.
+              <pclassName="t e xt-xltext-gray-300 mb-8leading-relaxed">
+              Transformyouremailmanagementwithintelligentautomation, smartclassification, 
+                andAI-poweredresponsesthatsavetimeandimproveproductivity.
     <>
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building
+              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+                <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300transformhover:scale-105">StartBuilding
                 </Link>
-                <Link to="/ai-services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All AI Services
+                <Linkto="/ai-services" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105">ViewAllAIServices
                 </Link>
               </div>
           </div>
         </section>
     </>
 
-        {/* Features Section */}
+        {/* FeaturesSection */}
     <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Features</span>
+        <sectionclassName="p y-20" />
+          <divclassName="c o ntainermx-autopx-4">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6" />
+                Powerful <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Features</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Everything you need to automate and optimize your email management
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6" />
-                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Features</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
-                Everything you need to automate and optimize your email management
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Everythingyouneedtoautomateandoptimizeyouremailmanagement</p>
             </div>
     </>
 
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="text-centergroup" />
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
+                <divkey={index} className="t e xt-centergroup" />
+                  <divclassName="w-20 h-20 b g-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-fullflexitems-centerjustify-centermx-automb-6 group-hover:scale-110transition-transformduration-300">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4"   />{feature.title}</h3>
-                  <p className="text-gray-300leading-relaxed">
-              {feature.description}</p>
-=======
-        </div>
-              {features.map((feature, index) => (
-    <>
-                <div key={index} className="text-centergroup" />
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
-        </div>
-    </>
-                    {feature.icon}
-    <>
-                  </div>
-                  <h3 className="text-xl font-boldtext-whitemb-4">{feature.title}</h3>
-                  <p className="text-gray-300leading-relaxed">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <h3 className="t e xt-xlfont-boldtext-whitemb-4"   />{feature.title}</h3>
+                  <pclassName="t e xt-gray-300leading-relaxed">{feature.description}</p>
                 </div>
     </>
               ))}
@@ -192,63 +117,27 @@ const AIEmailAssistantPage: React.FC = () => {
         </section>
     </>
 
-        {/* Use Cases Section */}
+        {/* UseCasesSection */}
     <>
-        <section className="py-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-                Use <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Cases</span>
+        <sectionclassName="p y-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />
+          <divclassName="c o ntainermx-autopx-4">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6" />
+                Use <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Cases</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Discover how our AI email assistant can transform your communication workflows
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6" />
-                Use <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Cases</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
-                Discover how our AI email assistant can transform your communication workflows
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">DiscoverhowourAIemailassistantcantransformyourcommunicationworkflows</p>
             </div>
     </>
 
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110transition-transformduration-300">
+                <divkey={index} className="b g-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-smborderborder-gray-700/50 rounded-xlp-6 hover:border-cyan-400/40 transition-allduration-300 grouphover:transformhover:scale-105" />
+                  <divclassName="w-12 h-12 b g-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-lgflexitems-centerjustify-centermb-4 group-hover:scale-110transition-transformduration-300">
                     {useCase.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3group-hover:text-cyan-400 transition-colors"  />{useCase.title}
+                  <h3 className="t e xt-lgfont-boldtext-whitemb-3group-hover:text-cyan-400 transition-colors"  />{useCase.title}
                   </h3>
-                  <p className="text-gray-300text-smleading-relaxed">
-              {useCase.description}
-=======
-        </div>
-              {useCases.map((useCase, index) => (
-    <>
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110transition-transformduration-300">
-        </div>
-    </>
-                    {useCase.icon}
-    <>
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-3group-hover:text-cyan-400transition-colors">{useCase.title}
-                  </h3>
-                  <p className="text-gray-300text-smleading-relaxed" />
-    </>
-                    {useCase.description}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </p>
+                  <pclassName="t e xt-gray-300text-smleading-relaxed">{useCase.description}</p>
                 </div>
     </>
               ))}
@@ -257,35 +146,18 @@ const AIEmailAssistantPage: React.FC = () => {
         </section>
     </>
 
-        {/* CTA Section */}
+        {/* CTASection */}
     <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center">
-              <h2 className="text-4xl font-bold text-white mb-6"  />Ready to Transform Your Email Management?
+        <sectionclassName="p y-20" />
+          <divclassName="c o ntainermx-autopx-4">
+            <divclassName="b g-gradient-to-rfrom-cyan-900/50 to-purple-900/50 backdrop-blur-smborderborder-cyan-500/20 rounded-2 xlp-12text-center">
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6"  />ReadytoTransformYourEmailManagement?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto">
-              Start automating your email workflows and boost productivity with AI-powered assistance.
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-        </div>
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6">Ready to Transform Your Email Management?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
-    </>
-                Start automating your email workflows and boost productivity with AI-powered assistance.
-    <>
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building Now
+              <pclassName="t e xt-xltext-gray-300 mb-8 max-w-2xlmx-auto">StartautomatingyouremailworkflowsandboostproductivitywithAI-poweredassistance.</p>
+              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+                <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300transformhover:scale-105">StartBuildingNow
                 </Link>
-                <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
+                <Linkto="/about" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105">LearnMoreAboutUs
                 </Link>
               </div>
           </div>
@@ -308,5 +180,5 @@ const AIEmailAssistantPage: React.FC = () => {
   );
 };
 
-export default AIEmailAssistantPage;
+exportdefaultAIEmailAssistantPage;
     </>

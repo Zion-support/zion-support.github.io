@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { Link    } from 'react-router-dom';
+import { ArrowRight    } from 'lucide-react';
 
-
-interface ServicePageProps {
+interfaceServicePageProps {
   title: string,
   description: string,
   icon: React.ReactNode,
@@ -30,126 +25,56 @@ interface ServicePageProps {
   seoKeywords
 }: ServicePageProps) {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900pt-20">
       <Helmet>
-=======
-    <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900 pt-20">
-        </div>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
         <title>{seoTitle}</title>
-        <meta name="description" content="{seoDescription}" / / />
-        <meta name="keywords" content="{seoKeywords}" / / />
+        <metaname="description" content="{seoDescription}" / / />
+        <metaname="keywords" content="{seoKeywords}" / / />
       </Helmet>
-
-<<<<<<< HEAD
-      <div className="max-w-7xl mx-auto px-4 sm:px-6lg:px-8py-16">
-        <div className="text-centermb-16">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20rounded-fullmb-6"  />{icon}
+      <divclassName="m a x-w-7xlmx-autopx-4 sm:px-6lg:px-8py-16">
+        <divclassName="t e xt-centermb-16">
+          <divclassName="i n line-flexitems-centerjustify-centerw-20 h-20 bg-gradient-to-rfrom-cyan-500/20 to-purple-500/20rounded-fullmb-6"  />{icon}
           </div>
-          <h1 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6"  />{title}
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8">
-              {description}
-          </p>
-          <div className="flex flex-col sm:flex-rowgap-4justify-center">
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-center" >
-          Get Started
+          <h1 className="t e xt-4xlsm:text-5 xlmd:text-6 xlfont-boldtext-whitemb-6"  />{title}</h1>
+          <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-3 xlmx-automb-8">{description}</p>
+          <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+            <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-center">
+          GetStarted
               
-          <ArrowRight className="w-5h-5ml-2"  />
+          <ArrowRightclassName="w-5h-5m l-2"  />
         </Link>
-=======
-    <>
-      <div className="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8py-16">
-        </div>
-        <div className="text-centermb-16">
-        </div>
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20rounded-fullmb-6">{icon}
-          </div>
-          <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6">{title}
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8" />
-            {description}
-    <>
-          </p>
-          <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
-              Get Started
-    <>
-              <ArrowRight className="w-5h-5ml-2" />
-            </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
+            <Linkto="/about" className="b o rder-2 border-whitetext-whitepx-8 py-4 rounded-lgfont-semiboldhover:bg-white/10transition-colors">LearnMore
             </Link>
           </div>
-
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 lg:grid-cols-2gap-12mb-16">
+        <divclassName="g r idgrid-cols-1 lg:grid-cols-2gap-12mb-16">
           <div />
-            <h2 className="text-3 xl font-bold text-white mb-6"  >Key Benefits</h2>
-            <ul className="space-y-4" />
+            <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >KeyBenefits</h2>
+            <ulclassName="s p ace-y-4" />
               {benefits.map((benefit, index) => (
-                <li key="{index}" className="flex items-start" />
-                  <CheckCircle className="w-6 h-6 text-green-400 mr-3mt-1flex-shrink-0" />
-                  <span className="text-gray-300"  >{benefit}</span>
-=======
-    <>
-        <div className="grid grid-cols-1 lg:grid-cols-2gap-12mb-16">
-        </div>
-          <div />
-            <h2 className="text-3 xl font-boldtext-whitemb-6">Key Benefits</h2>
-            <ul className="space-y-4" />
-              {benefits.map((benefit, index) => (
-    <>
-                <li key="{index}" className="flexitems-start" />
-                  <CheckCircle className="w-6 h-6 text-green-400 mr-3mt-1flex-shrink-0" / />
-                  <span className="text-gray-300">{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <likey="{index}" className="f l exitems-start" />
+                  <CheckCircleclassName="w-6 h-6 t e xt-green-400 mr-3mt-1flex-shrink-0" />
+                  <spanclassName="t e xt-gray-300"  >{benefit}</span>
                 </li>
               ))}
     <>
             </ul>
           </div>
           <div />
-<<<<<<< HEAD
-            <h2 className="text-3 xl font-bold text-white mb-6"  >Features</h2>
-            <ul className="space-y-4" />
+            <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >Features</h2>
+            <ulclassName="s p ace-y-4" />
               {features.map((feature, index) => (
-                <li key="{index}" className="flex items-start" />
-                  <CheckCircle className="w-6 h-6 text-cyan-400 mr-3mt-1flex-shrink-0" />
-                  <span className="text-gray-300"  >{feature}</span>
-=======
-            <h2 className="text-3 xl font-boldtext-whitemb-6">Features</h2>
-            <ul className="space-y-4" />
-              {features.map((feature, index) => (
-    <>
-                <li key="{index}" className="flexitems-start" />
-                  <CheckCircle className="w-6 h-6 text-cyan-400 mr-3mt-1flex-shrink-0" / />
-                  <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <likey="{index}" className="f l exitems-start" />
+                  <CheckCircleclassName="w-6 h-6 t e xt-cyan-400 mr-3mt-1flex-shrink-0" />
+                  <spanclassName="t e xt-gray-300"  >{feature}</span>
                 </li>
               ))}
     <>
             </ul>
           </div>
-
-<<<<<<< HEAD
-        <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-8 borderborder-cyan-500/30text-center">
-          <h2 className="text-3 xl font-bold text-white mb-4"  >Pricing</h2>
-=======
-    <>
-        <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-8 borderborder-cyan-500/30text-center">
-        </div>
-          <h2 className="text-3 xl font-boldtext-whitemb-4">Pricing</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          <p className="text-2 xl font-boldtext-cyan-400mb-6">{pricing}</p>
-          <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300">Contact Us for Details
+        <divclassName="b g-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-2 xlp-8 borderborder-cyan-500/30text-center">
+          <h2 className="t e xt-3 xlfont-boldtext-whitemb-4"  >Pricing</h2>
+          <pclassName="t e xt-2 xlfont-boldtext-cyan-400mb-6">{pricing}</p>
+          <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700transition-allduration-300">ContactUsforDetails
           </Link>
         </div>
     </div>

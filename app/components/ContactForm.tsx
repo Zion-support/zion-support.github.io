@@ -1,12 +1,7 @@
-'use client';
-import { useState } from 'react';
-import { MessageSquare } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface FormData {
+'useclient';
+import { useState   } from 'react';
+import { MessageSquare   } from 'lucide-react';
+interfaceFormData {
   name: string;,
   email: string;,
   phone: string;,
@@ -26,25 +21,23 @@ interface FormData {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement />) => {
+  consthandleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement />) => {
     const { name, value } = e.target;
-    setFormData(const prev = > ({
+    setFormData(constprev = > ({
       ...prev,
       [name]: value
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  consthandleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(const resolve = > setTimeout(resolve, 1000));
+    // SimulateformsubmissionawaitnewPromise(constresolve = > setTimeout(resolve, 1000));
     setIsSubmitting(false);
     setIsSubmitted(true);
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
+    // Resetformafter 3 secondssetTimeout(() => {
       setIsSubmitted(false);
       setFormData({
         name: '',
@@ -59,236 +52,139 @@ interface FormData {
 
   if (isSubmitted) {
     return (
-<<<<<<< HEAD
-    <div className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 borderborder-white/20text-center">
-        <CheckCircle className="w-16 h-16 text-green-400mx-automb-4" />
-        <h3 className="text-2 xl font-bold text-white mb-2"  >Message Sent!</h3>
-=======
-    <>
-    <div className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 borderborder-white/20text-center">
-        </div>
-        <CheckCircle className="w-16 h-16 text-green-400mx-automb-4" / />
-        <h3 className="text-2 xl font-boldtext-whitemb-2">Message Sent!</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>
+    <divclassName="b g-white/10 backdrop-blur-lgrounded-2 xlp-8 borderborder-white/20text-center">
+        <CheckCircleclassName="w-16 h-16 t e xt-green-400mx-automb-4" />
+        <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"  >MessageSent!</h3>
+        <pclassName="t e xt-gray-300">Thankyouforyourmessage. We'llgetbacktoyousoon.</p>
       </div>
   );
   }
 
   return (
-<<<<<<< HEAD
-    <div className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8borderborder-white/20">
-      <div className="text-centermb-8">
-        <h2 className="text-3 xl font-bold text-white mb-4"  >Get In Touch</h2>
-=======
-    <>
-    <div className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8borderborder-white/20">
-        </div>
-      <div className="text-centermb-8">
-        </div>
-        <h2 className="text-3 xl font-boldtext-whitemb-4">Get In Touch</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <p className="text-gray-300">Ready to transform your business? Let's discuss your project.</p>
+    <divclassName="b g-white/10 backdrop-blur-lgrounded-2 xlp-8borderborder-white/20">
+      <divclassName="t e xt-centermb-8">
+        <h2 className="t e xt-3 xlfont-boldtext-whitemb-4"  >GetInTouch</h2>
+        <pclassName="t e xt-gray-300">Readytotransformyourbusiness? Let'sdiscussyourproject.</p>
       </div>
-
     <>
-      <form onSubmit="{handleSubmit}" className="space-y-6" />
-        <div className="grid grid-cols-1md:grid-cols-2gap-6">
-<<<<<<< HEAD
+      <formonSubmit="{handleSubmit}" className="s p ace-y-6" />
+        <divclassName="g r idgrid-cols-1md:grid-cols-2gap-6">
           <div />
-            <label htmlFor="name" className="block text-sm font-mediumtext-gray-300 mb-2"  />Full Name *
-=======
-        </div>
-          <div />
-            <label htmlFor="name" className="block text-sm font-mediumtext-gray-300mb-2">Full Name *
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <labelhtmlFor="name" className="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />FullName *
             </label>
-            <input
-              type="text"
+            <inputtype="text"
               id="name"
               name="name"
               value="{formData.name}"
               onChange="{handleChange}"
-              required
-              className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"
-              placeholder="Your full name"
+              requiredclassName="w-f u llpx-4 py-3 bg-gray-800/50 borderborder-gray-700 rounded-lgtext-whiteplaceholder-gray-400 focus:outline-nonefocus:ring-2focus:ring-purple-500focus:border-transparent"
+              placeholder="Yourfullname"
             / />
           </div>
-
     <>
           <div />
-<<<<<<< HEAD
-            <label htmlFor="email" className="block text-sm font-mediumtext-gray-300 mb-2"  />Email Address *
-=======
-            <label htmlFor="email" className="block text-sm font-mediumtext-gray-300mb-2">Email Address *
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <labelhtmlFor="email" className="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />EmailAddress *
             </label>
-            <input
-              type="email"
+            <inputtype="email"
               id="email"
               name="email"
               value="{formData.email}"
               onChange="{handleChange}"
-              required
-              className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"
+              requiredclassName="w-f u llpx-4 py-3 bg-gray-800/50 borderborder-gray-700 rounded-lgtext-whiteplaceholder-gray-400 focus:outline-nonefocus:ring-2focus:ring-purple-500focus:border-transparent"
               placeholder="your@email.com"
             / />
     <>
           </div>
-
-<<<<<<< HEAD
-        <div className="grid grid-cols-1md:grid-cols-2gap-6">
+        <divclassName="g r idgrid-cols-1md:grid-cols-2gap-6">
           <div />
-            <label htmlFor="phone" className="block text-sm font-mediumtext-gray-300 mb-2"  />Phone Number
-=======
-    <>
-        <div className="grid grid-cols-1md:grid-cols-2gap-6">
-        </div>
-          <div />
-            <label htmlFor="phone" className="block text-sm font-mediumtext-gray-300mb-2">Phone Number
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <labelhtmlFor="phone" className="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />PhoneNumber
             </label>
-            <input
-              type="tel"
+            <inputtype="tel"
               id="phone"
               name="phone"
               value="{formData.phone}"
               onChange="{handleChange}"
-              className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"
+              className="w-f u llpx-4 py-3 bg-gray-800/50 borderborder-gray-700 rounded-lgtext-whiteplaceholder-gray-400 focus:outline-nonefocus:ring-2focus:ring-purple-500focus:border-transparent"
               placeholder="+1 (555) 123-4567"
             / />
           </div>
-
     <>
           <div />
-<<<<<<< HEAD
-            <label htmlFor="company" className="block text-sm font-mediumtext-gray-300 mb-2"  />Company
-=======
-            <label htmlFor="company" className="block text-sm font-mediumtext-gray-300mb-2">Company
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <labelhtmlFor="company" className="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />Company
             </label>
-            <input
-              type="text"
+            <inputtype="text"
               id="company"
               name="company"
               value="{formData.company}"
               onChange="{handleChange}"
-              className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"
-              placeholder="Your company name"
+              className="w-f u llpx-4 py-3 bg-gray-800/50 borderborder-gray-700 rounded-lgtext-whiteplaceholder-gray-400 focus:outline-nonefocus:ring-2focus:ring-purple-500focus:border-transparent"
+              placeholder="Yourcompanyname"
             / />
     <>
           </div>
-
     <>
         <div />
-<<<<<<< HEAD
-          <label htmlFor="service" className="block text-sm font-mediumtext-gray-300 mb-2"  />Service Interest
-=======
-          <label htmlFor="service" className="block text-sm font-mediumtext-gray-300mb-2">Service Interest
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <labelhtmlFor="service" className="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />ServiceInterest
           </label>
-          <select
-            id="service"
+          <selectid="service"
             name="service"
             value="{formData.service}"
             onChange="{handleChange}"
-            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent" />
+            className="w-f u llpx-4 py-3 bg-gray-800/50 borderborder-gray-700 rounded-lgtext-whitefocus:outline-nonefocus:ring-2focus:ring-purple-500focus:border-transparent" />
     <>
-            <option value="">Select a service</option>
-            <option value="ai-services">AI Services</option>
-            <option value="it-services">IT Services</option>
-            <option value="5 g-solutions">5 G Solutions</option>
-            <option value="micro-saas">Micro SAAS</option>
-            <option value="consulting">Consulting</option>
+            <optionvalue="">Selectaservice</option>
+            <optionvalue="ai-services">AIServices</option>
+            <optionvalue="it-services">ITServices</option>
+            <optionvalue="5 g-solutions">5 GSolutions</option>
+            <optionvalue="micro-saas">MicroSAAS</option>
+            <optionvalue="consulting">Consulting</option>
           </select>
         </div>
-
     <>
         <div />
-<<<<<<< HEAD
-          <label htmlFor="message" className="block text-sm font-mediumtext-gray-300 mb-2"  />Message *
-=======
-          <label htmlFor="message" className="block text-sm font-mediumtext-gray-300mb-2">Message *
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <labelhtmlFor="message" className="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />Message *
           </label>
-          <textarea
-            id="message"
+          <textareaid="message"
             name="message"
             value="{formData.message}"
             onChange="{handleChange}"
-            required
-            rows="{5}"
-            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500focus:border-transparentresize-none"
-            placeholder="Tell us about your project..."
+            requiredrows="{5}"
+            className="w-f u llpx-4 py-3 bg-gray-800/50 borderborder-gray-700 rounded-lgtext-whiteplaceholder-gray-400 focus:outline-nonefocus:ring-2 focus:ring-purple-500focus:border-transparentresize-none"
+            placeholder="Tellusaboutyourproject..."
           / />
         </div>
-
-        <button
-          type="submit"
+        <buttontype="submit"
           disabled="{isSubmitting}"
-          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-centerdisabled:opacity-50disabled:cursor-not-allowed" />
+          className="w-f u llbg-gradient-to-rfrom-blue-600 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-blue-700 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-centerdisabled:opacity-50disabled:cursor-not-allowed" />
           {isSubmitting ? (
     <>
             <>
-<<<<<<< HEAD
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2border-whitemr-2"></div>
-=======
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2border-whitemr-2">
-        </div></div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              <divclassName="a n imate-spinrounded-fullh-5 w-5 border-b-2border-whitemr-2"></div>
               Sending...
           ) : (
     <>
             <>
-<<<<<<< HEAD
-              <Send className="w-5h-5mr-2" />
-=======
-              <Send className="w-5h-5mr-2" / />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Send Message
+              <SendclassName="w-5h-5m r-2" />
+              SendMessage
           )}
     <>
         </button>
       </form>
-
-<<<<<<< HEAD
-      <div className="mt-8 pt-6border-tborder-white/10">
-        <div className="grid grid-cols-1 md:grid-cols-3gap-6text-center">
-          <div className="flex items-centerjustify-center">
-            <Mail className="w-5 h-5text-cyan-400mr-2" />
-            <span className="text-gray-300"  >kleber@ziontechgroup.com</span>
+      <divclassName="m t-8 pt-6border-tborder-white/10">
+        <divclassName="g r idgrid-cols-1 md:grid-cols-3gap-6text-center">
+          <divclassName="f l exitems-centerjustify-center">
+            <MailclassName="w-5 h-5t e xt-cyan-400mr-2" />
+            <spanclassName="t e xt-gray-300"  >kleber@ziontechgroup.com</span>
           </div>
-          <div className="flex items-centerjustify-center">
-            <Phone className="w-5 h-5text-purple-400mr-2" />
-            <span className="text-gray-300"  >+1 (302) 464-0950</span>
+          <divclassName="f l exitems-centerjustify-center">
+            <PhoneclassName="w-5 h-5t e xt-purple-400mr-2" />
+            <spanclassName="t e xt-gray-300"  >+1 (302) 464-0950</span>
           </div>
-          <div className="flex items-centerjustify-center">
-            <MessageSquare className="w-5 h-5text-green-400mr-2" />
-            <span className="text-gray-300"  >24/7 Support</span>
+          <divclassName="f l exitems-centerjustify-center">
+            <MessageSquareclassName="w-5 h-5t e xt-green-400mr-2" />
+            <spanclassName="t e xt-gray-300"  >24/7 Support</span>
           </div>
     </div>
-=======
-    <>
-      <div className="mt-8 pt-6border-tborder-white/10">
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3gap-6text-center">
-        </div>
-          <div className="flexitems-centerjustify-center" />
-            <Mail className="w-5 h-5text-cyan-400mr-2" / />
-            <span className="text-gray-300">kleber@ziontechgroup.com</span>
-          </div>
-          <div className="flexitems-centerjustify-center" />
-            <Phone className="w-5 h-5text-purple-400mr-2" / />
-            <span className="text-gray-300">+1 (302) 464-0950</span>
-          </div>
-          <div className="flexitems-centerjustify-center" />
-            <MessageSquare className="w-5 h-5text-green-400mr-2" / />
-            <span className="text-gray-300">24/7 Support</span>
-          </div>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
   );
 }
     </>

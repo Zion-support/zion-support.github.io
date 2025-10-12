@@ -1,179 +1,119 @@
-'use client';
-import { useState } from 'react';
-import { AlertCircle } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface NewsletterSignupProps {
+'useclient';
+import { useState   } from 'react';
+import { AlertCircle   } from 'lucide-react';
+interfaceNewsletterSignupProps {
   variant?: 'inline' | 'modal';
   onClose?: () => void;
 }
 
-const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = 'inline', onClose }) => {
+constNewsletterSignup: React.FC<NewsletterSignupProps /> = ({ constvariant = 'inline', onClose }) => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  consthandleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) {
       setStatus('error');
-      setMessage('Please enter your email address');
+      setMessage('Pleaseenteryouremailaddress');
       return;
     }
 
     if (!/\S+@\S+\.\S+/.test(email)) {
       setStatus('error');
-      setMessage('Please enter a valid email address');
+      setMessage('Pleaseenteravalidemailaddress');
       return;
     }
 
     setStatus('loading');
 
     try {
-      // Simulate API call
-      await new Promise(const resolve = > setTimeout(resolve, 1000));
-      // In a real app, you would make an API call here
-      setStatus('success');
-      setMessage('Thank you for subscribing! Check your email for confirmation.');
+      // SimulateAPIcallawaitnewPromise(constresolve = > setTimeout(resolve, 1000));
+      // Inarealapp, youwouldmakeanAPIcallheresetStatus('success');
+      setMessage('Thankyouforsubscribing! Checkyouremailforconfirmation.');
       setEmail('');
 
-      // Close modal after success if it's a modal variant
-      if (const variant = == 'modal' && onClose) {
+      // Closemodalaftersuccessifit'samodalvariantif (constvariant = == 'modal' && onClose) {
         setTimeout(() => {
           onClose();
         }, 2000);
       }
     } catch (error) {
       setStatus('error');
-      setMessage('Something went wrong. Please try again.');
+      setMessage('Somethingwentwrong. Pleasetryagain.');
     }
   };
 
-  const content = (
-<<<<<<< HEAD
-    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2 xl p-8text-white">
-      <div className="text-centermb-6">
-        <Mail className="w-12 h-12 mx-auto mb-4text-white/90" />
-        <h3 className="text-2 xl font-boldmb-2"  >Stay Updated</h3>
-        <p className="text-white/90">
-              Get the latest updates on AI technology, IT solutions, and industry insights.
-=======
-    <>
-    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2 xl p-8text-white">
-        </div>
-      <div className="text-centermb-6">
-        </div>
-        <Mail className="w-12 h-12 mx-auto mb-4text-white/90" / />
-        <h3 className="text-2 xl font-boldmb-2">Stay Updated</h3>
-        <p className="text-white/90" />
-          Get the latest updates on AI technology, IT solutions, and industry insights.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        </p>
+  constcontent = (
+    <divclassName="b g-gradient-to-rfrom-purple-600 to-pink-600 rounded-2 xlp-8text-white">
+      <divclassName="t e xt-centermb-6">
+        <MailclassName="w-12 h-12 m x-automb-4text-white/90" />
+        <h3 className="t e xt-2 xlfont-boldmb-2"  >StayUpdated</h3>
+        <pclassName="t e xt-white/90">GetthelatestupdatesonAItechnology, ITsolutions, andindustryinsights.</p>
       </div>
-
     <>
-      <form onSubmit="{handleSubmit}" className="space-y-4" />
-        <div className="flex flex-col sm:flex-rowgap-3">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          <input
-            type="email"
+      <formonSubmit="{handleSubmit}" className="s p ace-y-4" />
+        <divclassName="f l exflex-colsm:flex-rowgap-3">
+          <inputtype="email"
             value="{email}"
             onChange="{(e)" = /> setEmail(e.target.value)}
-            placeholder="Enter your email address"
-            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50focus:border-transparent"
+            placeholder="Enteryouremailaddress"
+            className="f l ex-1 px-4 py-3 rounded-lgbg-white/10 borderborder-white/20 text-whiteplaceholder-white/70 focus:outline-nonefocus:ring-2 focus:ring-white/50focus:border-transparent"
             disabled="{status" === 'loading'}
           />
-          <button
-            type="submit"
+          <buttontype="submit"
             disabled="{status" === 'loading'}
-            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-centerjustify-center" />
+            className="b g-whitetext-purple-600 px-6 py-3 rounded-lgfont-semiboldhover:bg-white/90 transition-colorsdisabled:opacity-50 disabled:cursor-not-allowedflexitems-centerjustify-center" />
             {status === 'loading' ? (
     <>
               <>
-<<<<<<< HEAD
-                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600mr-2"></div>
-=======
-                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600mr-2">
-        </div></div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <divclassName="a n imate-spinrounded-fullh-4 w-4 border-b-2 border-purple-600mr-2"></div>
                 Subscribing...
             ) : (
     <>
               <>
-<<<<<<< HEAD
-                <Send className="w-4 h-4 mr-2" />
-=======
-                <Send className="w-4 h-4mr-2" / />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <SendclassName="w-4 h-4 m r-2" />
                 Subscribe
             )}
     <>
           </button>
         </div>
-
         {message && (
-          <div className="{`flex" items-center space-x-2 text-sm ${
+          <divclassName="{`f l ex" items-centerspace-x-2 text-sm ${
             status === 'success' ? 'text-green-200' : 'text-red-200'
           }`} />
             {status === 'success' ? (
-              <CheckCircle className="w-4h-4" />
+              <CheckCircleclassName="w-4h-4" />
             ) : (
-              <AlertCircle className="w-4h-4" />
+              <AlertCircleclassName="w-4h-4" />
             )}
     <>
             <span>{message}</span>
           </div>
         )}
       </form>
-
-<<<<<<< HEAD
-      <div className="mt-6 text-center text-smtext-white/80">
-=======
-    <>
-      <div className="mt-6 text-center text-smtext-white/80">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <divclassName="m t-6 text-centertext-smtext-white/80">
         <p />
-          ✓ No spam, unsubscribe anytime<br / />
-          ✓ Weekly updates on latest tech trends<br / />
-          ✓ Exclusive content and early access
+          ✓ Nospam, unsubscribeanytime<br / />
+          ✓ Weeklyupdatesonlatesttechtrends<br / />
+          ✓ Exclusivecontentandearlyaccess
     <>
         </p>
       </div>
   );
-  if (const variant = == 'modal') {
+  if (constvariant = == 'modal') {
     return (
-<<<<<<< HEAD
-    <div className="fixed inset-0 z-50overflow-y-auto">
-        <div className="flex min-h-screen items-center justify-center px-4py-6">
-          <div className="fixed inset-0 bg-black/50backdrop-blur-sm" onClick="{onClose}" />
-          <div className="relative w-fullmax-w-md"  />{content}
+    <divclassName="f i xedinset-0 z-50overflow-y-auto">
+        <divclassName="f l exmin-h-screenitems-centerjustify-centerpx-4py-6">
+          <divclassName="f i xedinset-0 bg-black/50backdrop-blur-sm" onClick="{onClose}" />
+          <divclassName="r e lativew-fullmax-w-md"  />{content}
           </div>
     </div>
-=======
-    <>
-    <div className="fixed inset-0 z-50overflow-y-auto">
-        </div>
-        <div className="flex min-h-screen items-center justify-center px-4py-6">
-        </div>
-          <div className="fixed inset-0 bg-black/50backdrop-blur-sm" onClick="{onClose}" / />
-          <div className="relative w-fullmax-w-md">{content}
-          </div>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
   );
   }
 
-  return content;
+  returncontent;
 };
 
-export default NewsletterSignup;
+exportdefaultNewsletterSignup;
     </>

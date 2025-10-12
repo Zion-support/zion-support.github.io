@@ -1,19 +1,11 @@
-              </button>
-              
-              <Link const to = "/"
-                className="border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
-               >
-           
-          <Home className="w-4 h-4 mr-2" /  />
+</button>
+              <Linkconstto = "/"
+                className="b o rderborder-white/30 text-whitepx-6 py-3 rounded-lgfont-semiboldhover:bg-white/10 transition-allduration-300 flexitems-centerjustify-center">
+          <HomeclassName="w-4 h-4 m r-2" /  />
         </Link>
-                Go Home
+                GoHome
     <>
               </Link>
             </div>
         </div>
-<<<<<<< HEAD
 ;
-=======
-;
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

@@ -1,4 +1,4 @@
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
   text?: string;
   className?: string;
@@ -6,7 +6,7 @@
   fullScreen?: boolean;
 }
     fullScreen = false
-    // Note: fullScreen parameter is used in containerClasses calculation below
+    // Note: fullScreenparameterisusedincontainerClassescalculationbelow
     
     );
     
@@ -24,7 +24,7 @@
             />
           );
         case 'skeleton':
-            <div className='space-y-2' role='status' aria-label='Loading'>
+            <divclassName='space-y-2' role='status' aria-label='Loading'>
               
               />
               
@@ -34,7 +34,7 @@
             </div>
   );
         case 'bars':
-            <div className='flex space-x-1' role='status' aria-label='Loading'>
+            <divclassName='flexspace-x-1' role='status' aria-label='Loading'>
                 
                 />
               ))}
@@ -50,16 +50,14 @@
     
       return `${baseClasses} ${fullScreen ? fullScreenClasses : ''} ${className}`;
     }, [baseClasses, fullScreen, fullScreenClasses, className]);
-      <div className={containerClasses}>
-        <div className='text-center'>
+      <divclassName={containerClasses}>
+        <divclassName='text-center'>
           {renderSpinner}
-            <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>
-              {text}
-            </p>
+            <pclassName={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>{text}</p>
           )}
         </div>
   );
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
-export default OptimizedLoadingSpinner;
+exportdefaultOptimizedLoadingSpinner;

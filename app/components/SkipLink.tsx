@@ -1,18 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-'use client';
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const SkipLink: React.FC = () => {
+constSkipLink: React.FC = () => {
   return (
-    <a
-      href="#main-content"
-      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500">
-      Skip to main content
+    <ahref="#main-content"
+      className="s r-onlyfocus:not-sr-onlyfocus:absolutefocus:top-4 focus:left-4 bg-purple-600 text-whitepx-4 py-2 rounded-lgz-50 transition-allduration-200 focus:outline-nonefocus:ring-2 focus:ring-purple-500">
+      Skiptomaincontent
     </a>
   );
 };
 
-export default SkipLink;
+exportdefaultSkipLink;

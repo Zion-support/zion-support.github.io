@@ -1,70 +1,62 @@
-import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
-import { Calendar, Share2, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Clock, Globe, Brain } from 'lucide-react'
-=======
-import { Calendar, Share2, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Clock, Globe, Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import React  from 'react';
-=======
+import { Helmet    } from 'react-helmet-async'
+import { Calendar, Share2, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Clock, Globe, Brain    } from 'lucide-react'
+import { Link    } from 'react-router-dom'
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { Share2, ArrowRight} from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Share2, ArrowRight   } from 'lucide-react';
+import { Link    } from 'react-router-dom';
 
-const AISocialSchedulerPage: React.FC = () => {
-  const features = [
+constAISocialSchedulerPage: React.FC = () => {
+  constfeatures = [
     {
-      icon: <Brain className="w-8h-8text-cyan-400" />,
-      title: 'AI Content Generation',
-      description: 'Generate engaging social media posts using AI that understands your brand voice and audience preferences.',
-      benefits: ['Brand voice training', 'Audience analysis', 'Content optimization', 'Multi-platform adaptation']
+      icon: <BrainclassName="w-8h-8t e xt-cyan-400" />,
+      title: 'AIContentGeneration',
+      description: 'GenerateengagingsocialmediapostsusingAIthatunderstandsyourbrandvoiceandaudiencepreferences.',
+      benefits: ['Brandvoicetraining', 'Audienceanalysis', 'Contentoptimization', 'Multi-platformadaptation']
     },
     {
-      icon: <Calendar className="w-8h-8text-emerald-400" />,
-      title: 'Smart Scheduling',
-      description: 'AI determines optimal posting times based on your audience activity patterns and engagement data.',
-      benefits: ['Optimal timing', 'Audience insights', 'Engagement prediction', 'Cross-platform sync']
+      icon: <CalendarclassName="w-8h-8t e xt-emerald-400" />,
+      title: 'SmartScheduling',
+      description: 'AIdeterminesoptimalpostingtimesbasedonyouraudienceactivitypatternsandengagementdata.',
+      benefits: ['Optimaltiming', 'Audienceinsights', 'Engagementprediction', 'Cross-platformsync']
     },
     {
-      icon: <TrendingUp className="w-8h-8text-purple-400" />,
-      title: 'Performance Analytics',
-      description: 'Comprehensive analytics with AI-powered insights to improve your social media strategy.',
-      benefits: ['Engagement metrics', 'ROI tracking', 'Trend analysis', 'Competitor insights']
+      icon: <TrendingUpclassName="w-8h-8t e xt-purple-400" />,
+      title: 'PerformanceAnalytics',
+      description: 'ComprehensiveanalyticswithAI-poweredinsightstoimproveyoursocialmediastrategy.',
+      benefits: ['Engagementmetrics', 'ROItracking', 'Trendanalysis', 'Competitorinsights']
     },
     {
-      icon: <Share2 className="w-8h-8text-red-400" />,
-      title: 'Multi-Platform Management',
-      description: 'Manage all your social media accounts from one dashboard with platform-specific optimization.',
-      benefits: ['Unified dashboard', 'Platform optimization', 'Bulk posting', 'Content adaptation']
+      icon: <Share2 className="w-8h-8t e xt-red-400" />,
+      title: 'Multi-PlatformManagement',
+      description: 'Manageallyoursocialmediaaccountsfromonedashboardwithplatform-specificoptimization.',
+      benefits: ['Unifieddashboard', 'Platformoptimization', 'Bulkposting', 'Contentadaptation']
     },
     {
-      icon: <Zap className="w-8h-8text-orange-400" />,
-      title: 'Automated Engagement',
-      description: 'AI-powered auto-responses and engagement tools to maintain active social media presence.',
-      benefits: ['Auto-responses', 'Comment management', 'Hashtag optimization', 'Community building']
+      icon: <ZapclassName="w-8h-8t e xt-orange-400" />,
+      title: 'AutomatedEngagement',
+      description: 'AI-poweredauto-responsesandengagementtoolstomaintainactivesocialmediapresence.',
+      benefits: ['Auto-responses', 'Commentmanagement', 'Hashtagoptimization', 'Communitybuilding']
     },
     {
-      icon: <BarChart3 className="w-8h-8text-pink-400" />,
-      title: 'Campaign Management',
-      description: 'Plan, execute, and track social media campaigns with AI-driven recommendations.',
-      benefits: ['Campaign planning', 'A/B testing', 'Performance tracking', 'Budget optimization']
+      icon: <BarChart3 className="w-8h-8t e xt-pink-400" />,
+      title: 'CampaignManagement',
+      description: 'Plan, execute, andtracksocialmediacampaignswithAI-drivenrecommendations.',
+      benefits: ['Campaignplanning', 'A/Btesting', 'Performancetracking', 'Budgetoptimization']
     }
   ]
 
-  const pricingPlans = [
+  constpricingPlans = [
     {
       name: 'Starter',
       price: '$39',
       period: '/month',
-      description: 'Perfect for individuals and small businesses',
+      description: 'Perfectforindividualsandsmallbusinesses',
       features: [
-        'Up to 3 social accounts',
-        '50 posts per month',
-        'Basic AI content generation',
-        'Standard analytics',
-        'Email support'
+        'Upto 3 socialaccounts',
+        '50 postspermonth',
+        'BasicAIcontentgeneration',
+        'Standardanalytics',
+        'Emailsupport'
       ],
       popular: false
     },
@@ -72,14 +64,14 @@ const AISocialSchedulerPage: React.FC = () => {
       name: 'Professional',
       price: '$99',
       period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+      description: 'Idealforgrowingbusinessesandagencies',
       features: [
-        'Up to 10 social accounts',
-        'Unlimited posts',
-        'Advanced AI features',
-        'Team collaboration',
-        'Priority support',
-        'API access'
+        'Upto 10 socialaccounts',
+        'Unlimitedposts',
+        'AdvancedAIfeatures',
+        'Teamcollaboration',
+        'Prioritysupport',
+        'APIaccess'
       ],
       popular: true
     },
@@ -87,359 +79,214 @@ const AISocialSchedulerPage: React.FC = () => {
       name: 'Enterprise',
       price: '$299',
       period: '/month',
-      description: 'For large organizations and agencies',
+      description: 'Forlargeorganizationsandagencies',
       features: [
-        'Unlimited accounts',
-        'White-label options',
-        'Custom integrations',
-        'Dedicated support',
-        'Advanced analytics',
-        'Custom AI training'
+        'Unlimitedaccounts',
+        'White-labeloptions',
+        'Customintegrations',
+        'Dedicatedsupport',
+        'Advancedanalytics',
+        'CustomAItraining'
       ],
       popular: false
     }
   ]
 
-  const testimonials = [
+  consttestimonials = [
     {
-      name: 'Maria Garcia',
-      company: 'Digital Marketing Agency',
-      content: 'AI Social Scheduler increased our client engagement by 150%. The AI content generation is incredibly effective.',
+      name: 'MariaGarcia',
+      company: 'DigitalMarketingAgency',
+      content: 'AISocialSchedulerincreasedourclientengagementby 150%. TheAIcontentgenerationisincrediblyeffective.',
       rating: 5,
       avatar: 'MG'
     },
     {
-      name: 'Tom Anderson',
-      company: 'E-commerce Brand',
-      content: 'The optimal timing feature alone increased our reach by 200%. Best social media tool we've ever used.',
+      name: 'TomAnderson',
+      company: 'E-commerceBrand',
+      content: 'Theoptimaltimingfeaturealoneincreasedourreachby 200%. Bestsocialmediatoolwe'veeverused.',
       rating: 5,
       avatar: 'TA'
     },
     {
-      name: 'Sarah Kim',
-      company: 'Content Creator',
-      content: 'Saves me 10+ hours per week on content planning. The AI understands my brand voice perfectly.',
+      name: 'SarahKim',
+      company: 'ContentCreator',
+      content: 'Savesme 10+ hoursperweekoncontentplanning. TheAIunderstandsmybrandvoiceperfectly.',
       rating: 5,
       avatar: 'SK'
     }
   ]
 
-  const stats = [
-<<<<<<< HEAD
-    { number: '150%', label: 'Engagement Increase', icon: <TrendingUp className="w-6h-6text-cyan-400" /> },
-    { number: '200%', label: 'Reach Improvement', icon: <Globe className="w-6h-6text-emerald-400" /> },
-    { number: '10 hrs', label: 'Time Saved/Week', icon: <Clock className="w-6h-6text-purple-400" /> },
-    { number: '50 K+', label: 'Posts Scheduled', icon: <Calendar className="w-6h-6text-orange-400" /> }
-=======
-    <>
-    { number: '150%', label: 'Engagement Increase', icon: <TrendingUp className="w-6h-6text-cyan-400" / /> },
-    { number: '200%', label: 'Reach Improvement', icon: <Globe className="w-6h-6text-emerald-400" / /> },
-    { number: '10 hrs', label: 'Time Saved/Week', icon: <Clock className="w-6h-6text-purple-400" / /> },
-    { number: '50 K+', label: 'Posts Scheduled', icon: <Calendar className="w-6h-6text-orange-400" / /> }
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+  conststats = [
+    { number: '150%', label: 'EngagementIncrease', icon: <TrendingUpclassName="w-6h-6t e xt-cyan-400" /> },
+    { number: '200%', label: 'ReachImprovement', icon: <GlobeclassName="w-6h-6t e xt-emerald-400" /> },
+    { number: '10 hrs', label: 'TimeSaved/Week', icon: <ClockclassName="w-6h-6t e xt-purple-400" /> },
+    { number: '50 K+', label: 'PostsScheduled', icon: <CalendarclassName="w-6h-6t e xt-orange-400" /> }
   ]
 
   return (
     <>
     <>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>5GDataAnalytics - ZionTechGroup</title>
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
       </Helmet>
-        <title>AI Social Scheduler - Smart Social Media Management | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered social media management with content generation, smart scheduling, and performance analytics. Increase engagement by 150% and save 10+ hours per week." / / />
-        <meta name="keywords" content="AI social media scheduler, social media automation, content generation, social media analytics, social media management, AI content creation" / / />
-        <meta name="robots" content="index, follow" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-social-scheduler" />
+        <title>AISocialScheduler - SmartSocialMediaManagement | ZionTechGroup</title>
+        <metaname="description" content="RevolutionaryAI-poweredsocialmediamanagementwithcontentgeneration, smartscheduling, andperformanceanalytics. Increaseengagementby 150% andsave 10+ hoursperweek." / / />
+        <metaname="keywords" content="AIsocialmediascheduler, socialmediaautomation, contentgeneration, socialmediaanalytics, socialmediamanagement, AIcontentcreation" / / />
+        <metaname="robots" content="index, follow" / / />
+        <linkrel="canonical" href="https://ziontechgroup.com/ai-social-scheduler" />
       </Helmet>
     </>
 
-      {/* Hero Section */}
+      {/* HeroSection */}
     <>
-      <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900via-pink-900to-slate-900" />
-<<<<<<< HEAD
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(236,72,153,0.3)_0%,transparent_50%)]" />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.3)_0%,transparent_50%)]" />
-        <div className="relative max-w-7xlmx-autotext-center">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-pink-500/20 to-cyan-500/20 text-pink-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-pink-400/30">
+      <sectionclassName="r e lativepy-20 px-4 overflow-hiddenbg-gradient-to-brfrom-slate-900via-pink-900to-slate-900" />
+        <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(236,72,153,0.3)_0%,transparent_50%)]" />
+        <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.3)_0%,transparent_50%)]" />
+        <divclassName="r e lativemax-w-7xlmx-autotext-center">
+          <divclassName="i n line-flexitems-centerspace-x-2 bg-gradient-to-rfrom-pink-500/20 to-cyan-500/20 text-pink-400 px-6 py-3 rounded-fulltext-smfont-mediummb-8borderborder-pink-400/30">
             <Share2 className="w-4h-4" />
-            <span   />AI-Powered Social Media Management</span>
-=======
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(236,72,153,0.3)_0%,transparent_50%)]" / />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.3)_0%,transparent_50%)]" / />
-        <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-pink-500/20 to-cyan-500/20 text-pink-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-pink-400/30">
-        </div>
-            <Share2 className="w-4h-4" / />
-            <span>AI-Powered Social Media Management</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <span   />AI-PoweredSocialMediaManagement</span>
           </div>
     </>
           
-          <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
-            AI Social
+          <h1 className="t e xt-4xlsm:text-6 xlmd:text-7 xlfont-boldtext-whitemb-8leading-tight" />
+            AISocial
     <>
             <br / />
-            <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400bg-clip-texttext-transparent">Scheduler Pro
+            <spanclassName="b g-gradient-to-rfrom-pink-400 via-purple-400 to-cyan-400bg-clip-texttext-transparent">SchedulerPro
             </span>
           </h1>
     </>
           
-          <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
-<<<<<<< HEAD
-              Transform your social media presence with AI-powered content generation, 
-            smart scheduling, and performance analytics that increase engagement by 150%.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-            <Link to="/contact" className="group bg-gradient-to-r from-pink-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-pink-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-pink-500/25 hover:shadow-pink-500/40transformhover:scale-105" >
-           
+          <pclassName="t e xt-lgsm:text-xlmd:text-2 xltext-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">TransformyoursocialmediapresencewithAI-poweredcontentgeneration, 
+            smartscheduling, andperformanceanalyticsthatincreaseengagementby 150%.</p>
+          <divclassName="f l exflex-colsm:flex-rowgap-6justify-centermb-16">
+            <Linkto="/contact" className="g r oupbg-gradient-to-rfrom-pink-500 to-cyan-600 text-whitepx-10 py-4 rounded-xlfont-semiboldhover:from-pink-600 hover:to-cyan-700 transition-allduration-300 flexitems-centerjustify-centerspace-x-2 shadow-lgshadow-pink-500/25 hover:shadow-pink-500/40transformhover:scale-105">
           <span    />
-        </Link>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+        </Link>StartFreeTrial</span>
+              <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
             </Link>
-            <Link to="#demo" className="group border-2 border-pink-400 text-pink-400 px-10 py-4 rounded-xl font-semibold hover:bg-pink-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
+            <Linkto="#demo" className="g r oupborder-2 border-pink-400 text-pink-400 px-10 py-4 rounded-xlfont-semiboldhover:bg-pink-400 hover:text-gray-900 transition-allduration-300 flexitems-centerjustify-centerspace-x-2backdrop-blur-sm">
           <span    />
-        </Link>Watch Demo</span>
-=======
-            Transform your social media presence with AI-powered content generation, 
-            smart scheduling, and performance analytics that increase engagement by 150%.
-          </p>
-          
-    <>
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-        </div>
-            <Link to="/contact" className="group bg-gradient-to-r from-pink-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-pink-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-pink-500/25 hover:shadow-pink-500/40transformhover:scale-105" />
-              <span>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-            <Link to="#demo" className="group border-2 border-pink-400 text-pink-400 px-10 py-4 rounded-xl font-semibold hover:bg-pink-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-              <span>Watch Demo</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+        </Link>WatchDemo</span>
+              <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
             </Link>
           </div>
       </section>
     </>
 
-      {/* Stats Section */}
+      {/* StatsSection */}
     <>
-      <section className="py-20px-4bg-gray-900" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="grid grid-cols-2md:grid-cols-4gap-8">
+      <sectionclassName="p y-20px-4bg-gray-900" />
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="g r idgrid-cols-2md:grid-cols-4gap-8">
             {stats.map((stat, index) => (
-              <div key="{index}" className="text-center bg-white/5 backdrop-blur-sm rounded-2 xl p-6borderborder-white/10" />
-                <div className="flexjustify-centermb-4"  />{stat.icon}
+              <divkey="{index}" className="t e xt-centerbg-white/5 backdrop-blur-smrounded-2 xlp-6borderborder-white/10" />
+                <divclassName="f l exjustify-centermb-4"  />{stat.icon}
                 </div>
-                <div className="text-3 xl md:text-4xl font-bold text-white mb-2"  />{stat.number}
+                <divclassName="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-2"  />{stat.number}
                 </div>
-                <div className="text-gray-300text-sm"  />{stat.label}
+                <divclassName="t e xt-gray-300text-sm"  />{stat.label}
                 </div>
             ))}
-=======
-        </div>
-          <div className="grid grid-cols-2md:grid-cols-4gap-8">
-        </div>
-    </>
-            {stats.map((stat, index) => (
-    <>
-              <div key="{index}" className="text-center bg-white/5 backdrop-blur-sm rounded-2 xl p-6borderborder-white/10" />
-                <div className="flexjustify-centermb-4">{stat.icon}
-                </div>
-                <div className="text-3 xl md:text-4 xl font-boldtext-whitemb-2">{stat.number}
-                </div>
-                <div className="text-gray-300text-sm">{stat.label}
-                </div>
-    </>
-            ))}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
           </div>
       </section>
     </>
 
-      {/* Features Section */}
+      {/* FeaturesSection */}
     <>
-      <section className="py-20 px-4 bg-gradient-to-brfrom-slate-800/50to-pink-900/50" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Powerful <span className="bg-gradient-to-r from-pink-400 to-cyan-400bg-clip-texttext-transparent"   />Features</span>
+      <sectionclassName="p y-20 px-4 bg-gradient-to-brfrom-slate-800/50to-pink-900/50" />
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+              Powerful <spanclassName="b g-gradient-to-rfrom-pink-400 to-cyan-400bg-clip-texttext-transparent"   />Features</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Powerful <span className="bg-gradient-to-r from-pink-400 to-cyan-400bg-clip-texttext-transparent">Features</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Our AI-powered social media scheduler uses advanced machine learning to create, 
-              schedule, and optimize your social media content across all platforms.
+            <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">
+              OurAI-poweredsocialmediaschedulerusesadvancedmachinelearningtocreate, 
+              schedule, andoptimizeyoursocialmediacontentacrossallplatforms.
     <>
             </p>
           </div>
     </>
           
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
             {features.map((feature, index) => (
     <>
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-pink-500 to-cyan-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
+              <divkey="{index}" className="g r oupbg-white/10 backdrop-blur-lgrounded-2 xlp-8 borderborder-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
+                <divclassName="f l exitems-centerjustify-centerw-16 h-16 bg-gradient-to-rfrom-pink-500 to-cyan-600 rounded-2 xlmb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
                 </div>
-                <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-pink-400transition-colors">{feature.title}
+                <h3 className="t e xt-2 xlfont-boldtext-whitemb-4group-hover:text-pink-400transition-colors">{feature.title}
                 </h3>
-<<<<<<< HEAD
-                <p className="text-gray-300 mb-6leading-relaxed">
-              {feature.description}
-                </p>
-                <div className="space-y-2">
-=======
-                <p className="text-gray-300mb-6leading-relaxed" />
-    </>
-                  {feature.description}
-    <>
-                </p>
-                <div className="space-y-2">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <pclassName="t e xt-gray-300 mb-6leading-relaxed">{feature.description}</p>
+                <divclassName="s p ace-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
     <>
-                    <div key="{benefitIndex}" className="flex items-center space-x-2text-gray-400text-sm" />
-<<<<<<< HEAD
-                      <CheckCircle className="w-4h-4text-green-400" />
+                    <divkey="{benefitIndex}" className="f l exitems-centerspace-x-2text-gray-400text-sm" />
+                      <CheckCircleclassName="w-4h-4t e xt-green-400" />
                       <span   />{benefit}</span>
-=======
-                      <CheckCircle className="w-4h-4text-green-400" / />
-                      <span>{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                     </div>
     </>
                   ))}
     <>
                 </div>
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             ))}
     <>
           </div>
       </section>
     </>
 
-      {/* Pricing Section */}
+      {/* PricingSection */}
     <>
-      <section className="py-20px-4bg-gray-900" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Affordable <span className="bg-gradient-to-r from-pink-400 to-cyan-400bg-clip-texttext-transparent"   />Pricing</span>
+      <sectionclassName="p y-20px-4bg-gray-900" />
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+              Affordable <spanclassName="b g-gradient-to-rfrom-pink-400 to-cyan-400bg-clip-texttext-transparent"   />Pricing</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Affordable <span className="bg-gradient-to-r from-pink-400 to-cyan-400bg-clip-texttext-transparent">Pricing</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Choose the perfect plan for your social media management needs. All plans include our core AI features 
-              with flexible options for businesses of all sizes.
+            <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">
+              Choosetheperfectplanforyoursocialmediamanagementneeds. AllplansincludeourcoreAIfeatureswithflexibleoptionsforbusinessesofallsizes.
     <>
             </p>
           </div>
     </>
           
-          <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
+              <divkey="{index}" className="{`r e lative" bg-white/10 backdrop-blur-lgrounded-2 xlp-8 bordertransition-allduration-300 hover:scale-105 ${
                 plan.popular 
-                  ? 'border-pink-400/50 shadow-2 xl shadow-pink-500/20' 
+                  ? 'border-pink-400/50 shadow-2 xlshadow-pink-500/20' 
                   : 'border-white/20 hover: border-white/40'
               }`} />
                 {plan.popular && (
-<<<<<<< HEAD
-                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-                    <div className="bg-gradient-to-r from-pink-500 to-cyan-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold"  />Most Popular
+                  <divclassName="a b solute -top-4 left-1/2transform-translate-x-1/2">
+                    <divclassName="b g-gradient-to-rfrom-pink-500 to-cyan-600 text-whitepx-6 py-2 rounded-fulltext-smfont-semibold"  />MostPopular
                     </div>
                 )}
                 
-                <div className="text-centermb-8">
-                  <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">
-              {plan.description}</p>
-                  <div className="flex items-baselinejustify-center">
-                    <span className="text-5 xlfont-bold text-white"   />{plan.price}</span>
-                    <span className="text-gray-400ml-2"   />{plan.period}</span>
+                <divclassName="t e xt-centermb-8">
+                  <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"   />{plan.name}</h3>
+                  <pclassName="t e xt-gray-300 mb-4">{plan.description}</p>
+                  <divclassName="f l exitems-baselinejustify-center">
+                    <spanclassName="t e xt-5 xlfont-boldtext-white"   />{plan.price}</span>
+                    <spanclassName="t e xt-gray-400ml-2"   />{plan.period}</span>
                   </div>
-                
-                <div className="space-y-4mb-8">
+                <divclassName="s p ace-y-4mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <div key="{featureIndex}" className="flex items-centerspace-x-3" />
-                      <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" />
-                      <span className="text-gray-300"   />{feature}</span>
-=======
-    <>
-                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-        </div>
-                    <div className="bg-gradient-to-r from-pink-500 to-cyan-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
-                    </div>
-    </>
-                )}
-                
-    <>
-                <div className="text-centermb-8">
-        </div>
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300mb-4">{plan.description}</p>
-                  <div className="flexitems-baselinejustify-center" />
-                    <span className="text-5 xlfont-boldtext-white">{plan.price}</span>
-                    <span className="text-gray-400ml-2">{plan.period}</span>
-                  </div>
-    </>
-                
-                <div className="space-y-4mb-8">
-        </div>
-                  {plan.features.map((feature, featureIndex) => (
-    <>
-                    <div key="{featureIndex}" className="flexitems-centerspace-x-3" />
-                      <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
-                      <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <divkey="{featureIndex}" className="f l exitems-centerspace-x-3" />
+                      <CheckCircleclassName="w-5 h-5t e xt-green-400flex-shrink-0" />
+                      <spanclassName="t e xt-gray-300"   />{feature}</span>
                     </div>
     </>
                   ))}
                 </div>
-                
-                <Link 
-                  to="/contact" 
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                <Linkto="/contact" 
+                  className="{`b l ock" w-fulltext-centerpy-3 rounded-xlfont-semiboldtransition-allduration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-pink-500 to-cyan-600 text-white hover:from-pink-600 hover:to-cyan-700 shadow-lg shadow-pink-500/25'
+                      ? 'bg-gradient-to-rfrom-pink-500 to-cyan-600 text-whitehover:from-pink-600 hover:to-cyan-700 shadow-lgshadow-pink-500/25'
                       : 'border-2 border-pink-400 text-pink-400 hover: bg-pink-400 hover:text-gray-900'
                   }`}
-                  />Get Started
+                  />GetStarted
     <>
                 </Link>
               </div>
@@ -450,74 +297,39 @@ const AISocialSchedulerPage: React.FC = () => {
       </section>
     </>
 
-      {/* Testimonials Section */}
+      {/* TestimonialsSection */}
     <>
-      <section className="py-20 px-4 bg-gradient-to-brfrom-pink-900/50to-purple-900/50" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Loved by <span className="bg-gradient-to-r from-pink-400 to-purple-400bg-clip-texttext-transparent"   />Marketers</span>
+      <sectionclassName="p y-20 px-4 bg-gradient-to-brfrom-pink-900/50to-purple-900/50" />
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+              Lovedby <spanclassName="b g-gradient-to-rfrom-pink-400 to-purple-400bg-clip-texttext-transparent"   />Marketers</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Loved by <span className="bg-gradient-to-r from-pink-400 to-purple-400bg-clip-texttext-transparent">Marketers</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              See how AI Social Scheduler is transforming social media management for businesses and creators worldwide.
+            <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">
+              SeehowAISocialScheduleristransformingsocialmediamanagementforbusinessesandcreatorsworldwide.
     <>
             </p>
           </div>
     </>
           
-          <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
             {testimonials.map((testimonial, index) => (
     <>
-              <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8borderborder-white/20" />
-<<<<<<< HEAD
-                <div className="flex items-centermb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-cyan-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4"  />{testimonial.avatar}
+              <divkey="{index}" className="b g-white/10 backdrop-blur-lgrounded-2 xlp-8borderborder-white/20" />
+                <divclassName="f l exitems-centermb-4">
+                  <divclassName="w-12 h-12 b g-gradient-to-rfrom-pink-500 to-cyan-600 rounded-fullflexitems-centerjustify-centertext-whitefont-boldmr-4"  />{testimonial.avatar}
                   </div>
                   <div>
-            <h4 className="text-whitefont-semibold"   />{testimonial.name}</h4>
-                    <p className="text-gray-400text-sm">
-              {testimonial.company}</p>
+            <h4 className="t e xt-whitefont-semibold"   />{testimonial.name}</h4>
+                    <pclassName="t e xt-gray-400text-sm">{testimonial.company}</p>
                   </div>
-                <div className="flex items-centermb-4">
-=======
-                <div className="flexitems-centermb-4">
-        </div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-cyan-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar}
-                  </div>
-                  <div />
-                    <h4 className="text-whitefont-semibold">{testimonial.name}</h4>
-                    <p className="text-gray-400text-sm">{testimonial.company}</p>
-                  </div>
-                <div className="flexitems-centermb-4">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <divclassName="f l exitems-centermb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
+                    <Starkey="{i}" className="w-5 h-5t e xt-yellow-400fill-current" />
                   ))}
     <>
                 </div>
-<<<<<<< HEAD
-                <p className="text-gray-300italic">
-              "{testimonial.content}"</p>
-=======
-                <p className="text-gray-300italic">"{testimonial.content}"</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <pclassName="t e xt-gray-300italic">"{testimonial.content}"</p>
               </div>
     </>
             ))}
@@ -526,57 +338,32 @@ const AISocialSchedulerPage: React.FC = () => {
       </section>
     </>
 
-      {/* CTA Section */}
+      {/* CTASection */}
     <>
-      <section className="py-20 px-4 bg-gradient-to-r from-pink-600via-purple-600to-cyan-600" />
-<<<<<<< HEAD
-        <div className="max-w-7xlmx-autotext-center">
-          <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6" />
-=======
-        <div className="max-w-7 xlmx-autotext-center">
-        </div>
-          <h2 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            Ready to Transform Your
+      <sectionclassName="p y-20 px-4 bg-gradient-to-rfrom-pink-600via-purple-600to-cyan-600" />
+        <divclassName="m a x-w-7xlmx-autotext-center">
+          <h2 className="t e xt-4xlsm:text-5 xlmd:text-6 xlfont-boldtext-whitemb-6" />
+            ReadytoTransformYour
     <>
             <br / />
-            <span className="bg-gradient-to-r from-pink-300 to-cyan-300bg-clip-texttext-transparent">Social Media Strategy?
+            <spanclassName="b g-gradient-to-rfrom-pink-300 to-cyan-300bg-clip-texttext-transparent">SocialMediaStrategy?
             </span>
           </h2>
-<<<<<<< HEAD
-          <p className="text-xl sm:text-2 xl text-white/90 mb-8 max-w-4xlmx-auto">
-              Join thousands of marketers already increasing engagement and saving time with AI Social Scheduler. 
-=======
-          <p className="text-xl sm:text-2 xl text-white/90 mb-8 max-w-4xlmx-auto" />
-    </>
-            Join thousands of marketers already increasing engagement and saving time with AI Social Scheduler. 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            Start your free trial today - no credit card required.
+          <pclassName="t e xt-xlsm:text-2 xltext-white/90 mb-8 max-w-4xlmx-auto">
+              JointhousandsofmarketersalreadyincreasingengagementandsavingtimewithAISocialScheduler. 
+            Startyourfreetrialtoday - nocreditcardrequired.
     <>
           </p>
-          <div className="flex flex-col sm:flex-rowgap-6justify-center">
-<<<<<<< HEAD
-            <Link to="/contact" className="group bg-white text-pink-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
-           
+          <divclassName="f l exflex-colsm:flex-rowgap-6justify-center">
+            <Linkto="/contact" className="g r oupbg-whitetext-pink-600 px-10 py-4 rounded-xlfont-boldtext-lghover:bg-gray-100 transition-allduration-300 flexitems-centerjustify-centerspace-x-2 shadow-lghover:shadow-xltransformhover:scale-105">
           <span    />
-        </Link>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+        </Link>StartFreeTrial</span>
+              <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
             </Link>
-            <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
+            <Linkto="/pricing" className="g r oupborder-2 border-whitetext-whitepx-10 py-4 rounded-xlfont-boldtext-lghover:bg-white/10 transition-allduration-300 flexitems-centerjustify-centerspace-x-2backdrop-blur-sm">
           <span    />
-        </Link>View All Plans</span>
-=======
-        </div>
-            <Link to="/contact" className="group bg-white text-pink-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
-              <span>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-            <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-              <span>View All Plans</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+        </Link>ViewAllPlans</span>
+              <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
             </Link>
           </div>
       </section>
@@ -584,5 +371,5 @@ const AISocialSchedulerPage: React.FC = () => {
   )
 }
 
-export default AISocialSchedulerPage;
+exportdefaultAISocialSchedulerPage;
     </>

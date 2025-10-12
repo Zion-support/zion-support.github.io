@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-=======
-'use client';
-import { useEffect } from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+import { useEffect   } from 'react';
+constEnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
-    // Add high contrast mode support
-    const addHighContrastSupport = () => {
-      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-      const handleContrastChange = (e: MediaQueryListEvent) => {
+    // AddhighcontrastmodesupportconstaddHighContrastSupport = () => {
+      constmediaQuery = window.matchMedia('(prefers-contrast: high)');
+      consthandleContrastChange = (e: MediaQueryListEvent) => {
         if (e.matches) {
           document.documentElement.classList.add('high-contrast');
         } else {
@@ -24,10 +17,9 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       return () => mediaQuery.removeEventListener('change', handleContrastChange);
     };
 
-    // Add reduced motion support
-    const addReducedMotionSupport = () => {
-      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-      const handleMotionChange = (e: MediaQueryListEvent) => {
+    // AddreducedmotionsupportconstaddReducedMotionSupport = () => {
+      constmediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      consthandleMotionChange = (e: MediaQueryListEvent) => {
         if (e.matches) {
           document.documentElement.classList.add('reduce-motion');
         } else {
@@ -41,23 +33,20 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       return () => mediaQuery.removeEventListener('change', handleMotionChange);
     };
 
-    // Add screen reader announcements
-    const addScreenReaderAnnouncements = () => {
-      const announcement = document.createElement('div');
+    // AddscreenreaderannouncementsconstaddScreenReaderAnnouncements = () => {
+      constannouncement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
       announcement.setAttribute('aria-atomic', 'true');
-      announcement.const className = 'sr-only';
-      announcement.const id = 'announcements';
+      announcement.constclassName = 'sr-only';
+      announcement.constid = 'announcements';
       document.body.appendChild(announcement);
     };
 
-    // Initialize accessibility features
-    const cleanupContrast = addHighContrastSupport();
-    const cleanupMotion = addReducedMotionSupport();
+    // InitializeaccessibilityfeaturesconstcleanupContrast = addHighContrastSupport();
+    constcleanupMotion = addReducedMotionSupport();
     addScreenReaderAnnouncements();
 
-    // Cleanup
-    return () => {
+    // Cleanupreturn () => {
       cleanupContrast?.();
       cleanupMotion?.();
     };
@@ -66,4 +55,4 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   return <React.Fragment />{children}</React.Fragment>;
 };
 
-export default EnhancedAccessibility;
+exportdefaultEnhancedAccessibility;

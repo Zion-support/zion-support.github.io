@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-import React  from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Phone, Mail } from 'lucide-react';
-=======
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Phone, Mail } from 'lucide-react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface GenericServicePageProps {
+import { Helmet    } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Phone, Mail    } from 'lucide-react';
+interfaceGenericServicePageProps {
   title: string;,
   description: string;,
   icon: React.ComponentType<any />;,
@@ -20,7 +12,7 @@ interface GenericServicePageProps {
   color: string;
 }
 
-const GenericServicePage: React.FC<GenericServicePageProps /> = ({
+constGenericServicePage: React.FC<GenericServicePageProps /> = ({
   title,
   description,
   icon: Icon,
@@ -30,85 +22,56 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
   category,
   color
 }) => {
-  const categoryColors = {
+  constcategoryColors = {
     AI: 'from-purple-500 to-pink-600',
     IT: 'from-blue-500 to-cyan-600',
     MicroSAAS: 'from-green-500 to-emerald-600',
     Emerging: 'from-orange-500 to-red-600'
   };
-  const categoryColor = categoryColors[category] || 'from-cyan-500 to-purple-600';
+  constcategoryColor = categoryColors[category] || 'from-cyan-500 to-purple-600';
   return (
     <>
     <>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>5GDataAnalytics - ZionTechGroup</title>
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
       </Helmet>
-        <title>{title} | Zion Tech Group</title>
-        <meta const name = "description" content="{description}" / / />
-        <meta name="keywords" content="{`${title.toLowerCase()}," AI solutions, IT services, ${category.toLowerCase()}`} / / />
+        <title>{title} | ZionTechGroup</title>
+        <metaconstname = "description" content="{description}" / / />
+        <metaname="keywords" content="{`${title.toLowerCase()}," AIsolutions, ITservices, ${category.toLowerCase()}`} / / />
       </Helmet>
     </>
 
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-=======
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <main className="container mx-auto px-4py-16pt-24" />
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
+        <mainclassName="c o ntainermx-autopx-4py-16pt-24" />
     </>
-          {/* Hero Section */}
+          {/* HeroSection */}
     <>
-          <section className="text-centermb-16" />
-            <div className="max-w-4xlmx-auto">
-<<<<<<< HEAD
-              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-2 xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300shadow-lgshadow-cyan-500/25">
-                <Icon className="w-10h-10text-white" />
+          <sectionclassName="t e xt-centermb-16" />
+            <divclassName="m a x-w-4xlmx-auto">
+              <divclassName="w-20 h-20 b g-gradient-to-rfrom-cyan-500 via-purple-600 to-pink-600 rounded-2 xlflexitems-centerjustify-centermx-automb-6 group-hover:scale-110 transition-transformduration-300shadow-lgshadow-cyan-500/25">
+                <IconclassName="w-10h-10t e xt-white" />
               </div>
-              <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent"  />{title}
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3 xlmx-autoleading-relaxed">
-              {description}
-=======
-        </div>
-              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-2 xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300shadow-lgshadow-cyan-500/25">
-        </div>
-                <Icon className="w-10h-10text-white" / />
-              </div>
-              <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">{title}
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3 xlmx-autoleading-relaxed" />
-    </>
-                {description}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-              
+              <h1 className="t e xt-4xlmd:text-6 xlfont-boldtext-whitemb-6 bg-gradient-to-rfrom-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent"  />{title}</h1>
+              <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3 xlmx-autoleading-relaxed">{description}</p>
               {pricing && (
     <>
-                <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full text-cyan-400font-semiboldmb-8">Starting at {pricing}
+                <divclassName="i n line-blockpx-6 py-3 bg-gradient-to-rfrom-cyan-500/20 to-purple-500/20 borderborder-cyan-500/30 rounded-fulltext-cyan-400font-semiboldmb-8">Startingat {pricing}
                 </div>
     </>
               )}
               
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <a 
-                  href="/contact" 
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" />
-                  Get Started Today
+              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+                <ahref="/contact" 
+                  className="p x-8 py-4 bg-gradient-to-rfrom-cyan-500 to-purple-500 text-whiterounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-600 transition-allduration-300 flexitems-centerjustify-centergroupshadow-lgshadow-cyan-500/25 hover:shadow-xlhover:shadow-cyan-500/40transformhover:scale-105" />
+                  GetStartedToday
     <>
-                  <ArrowRight className="w-5 h-5 ml-2group-hover:translate-x-1transition-transform" />
+                  <ArrowRightclassName="w-5 h-5 m l-2group-hover:translate-x-1transition-transform" />
                 </a>
     </>
-                <a 
-                  href="tel:+13024640950" 
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup" />
-                  <Phone className="w-5h-5mr-2" />
+                <ahref="tel:+13024640950" 
+                  className="p x-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lgfont-semiboldhover:bg-cyan-400 hover:text-slate-900 transition-allduration-300 flexitems-centerjustify-centergroup" />
+                  <PhoneclassName="w-5h-5m r-2" />
                   Call (302) 464-0950
     <>
                 </a>
@@ -116,191 +79,96 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
           </section>
     </>
 
-          {/* Features Section */}
+          {/* FeaturesSection */}
     <>
-          <section className="mb-16" />
-            <div className="text-centermb-12">
-<<<<<<< HEAD
-              <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Key Features
+          <sectionclassName="m b-16" />
+            <divclassName="t e xt-centermb-12">
+              <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />KeyFeatures
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              Comprehensive {title.toLowerCase()} solutions designed to drive your business forward
-              </p>
+              <pclassName="t e xt-lgtext-gray-300 max-w-2xlmx-auto">Comprehensive {title.toLowerCase()} solutionsdesignedtodriveyourbusinessforward</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">
-=======
-        </div>
-              <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Key Features
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
-    </>
-                Comprehensive {title.toLowerCase()} solutions designed to drive your business forward
-    <>
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">
               {features.map((feature, index) => (
     <>
-                <div key="{index}" className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30transition-allduration-300" />
-<<<<<<< HEAD
-                  <div className="flex items-centermb-4">
-                    <CheckCircle className="w-6 h-6 text-green-400mr-3flex-shrink-0" />
-                    <h3 className="text-lgfont-semiboldtext-white"   />{feature}</h3>
+                <divkey="{index}" className="b g-white/5 backdrop-blur-lgrounded-xlp-6 borderborder-white/10 hover:border-cyan-400/30transition-allduration-300" />
+                  <divclassName="f l exitems-centermb-4">
+                    <CheckCircleclassName="w-6 h-6 t e xt-green-400mr-3flex-shrink-0" />
+                    <h3 className="t e xt-lgfont-semiboldtext-white"   />{feature}</h3>
                   </div>
-=======
-                  <div className="flexitems-centermb-4">
-        </div>
-                    <CheckCircle className="w-6 h-6 text-green-400mr-3flex-shrink-0" / />
-                    <h3 className="text-lgfont-semiboldtext-white">{feature}</h3>
-                  </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               ))}
     <>
             </div>
           </section>
     </>
 
-          {/* Benefits Section */}
+          {/* BenefitsSection */}
     <>
-          <section className="mb-16" />
-            <div className="text-centermb-12">
-<<<<<<< HEAD
-              <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Why Choose Our {title}?
+          <sectionclassName="m b-16" />
+            <divclassName="t e xt-centermb-12">
+              <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />WhyChooseOur {title}?
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              Experience the difference with our proven expertise and cutting-edge technology
-              </p>
+              <pclassName="t e xt-lgtext-gray-300 max-w-2xlmx-auto">Experiencethedifferencewithourprovenexpertiseandcutting-edgetechnology</p>
             </div>
-            <div className="grid grid-cols-1md:grid-cols-2gap-8">
+            <divclassName="g r idgrid-cols-1md:grid-cols-2gap-8">
               {benefits.map((benefit, index) => (
-                <div key="{index}" className="flex items-startspace-x-4" />
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-centerflex-shrink-0mt-1">
-                    <Star className="w-4h-4text-white" />
+                <divkey="{index}" className="f l exitems-startspace-x-4" />
+                  <divclassName="w-8 h-8 b g-gradient-to-rfrom-cyan-500 to-purple-500 rounded-lgflexitems-centerjustify-centerflex-shrink-0mt-1">
+                    <StarclassName="w-4h-4t e xt-white" />
                   </div>
                   <div>
-            <h3 className="text-lg font-semiboldtext-white mb-2"   />{benefit}</h3>
-                    <p className="text-gray-300">
-              Leverage our expertise to maximize your business potential with {title.toLowerCase()}
-                    </p>
+            <h3 className="t e xt-lgfont-semiboldtext-whitemb-2"   />{benefit}</h3>
+                    <pclassName="t e xt-gray-300">Leverageourexpertisetomaximizeyourbusinesspotentialwith {title.toLowerCase()}</p>
                   </div>
-=======
-        </div>
-              <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Why Choose Our {title}?
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
-    </>
-                Experience the difference with our proven expertise and cutting-edge technology
-    <>
-              </p>
-            </div>
-            <div className="grid grid-cols-1md:grid-cols-2gap-8">
-        </div>
-    </>
-              {benefits.map((benefit, index) => (
-    <>
-                <div key="{index}" className="flexitems-startspace-x-4" />
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-centerflex-shrink-0mt-1">
-        </div>
-                    <Star className="w-4h-4text-white" / />
-                  </div>
-                  <div />
-                    <h3 className="text-lg font-semiboldtext-whitemb-2">{benefit}</h3>
-                    <p className="text-gray-300" />
-    </>
-                      Leverage our expertise to maximize your business potential with {title.toLowerCase()}
-    <>
-                    </p>
-                  </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               ))}
     <>
             </div>
           </section>
     </>
 
-          {/* Stats Section */}
+          {/* StatsSection */}
     <>
-          <section className="mb-16" />
-            <div className="bg-gradient-to-r from-slate-800/50 to-purple-900/50 rounded-2 xl p-8borderborder-cyan-500/20">
-<<<<<<< HEAD
-              <div className="grid grid-cols-2 md:grid-cols-4gap-8text-center">
+          <sectionclassName="m b-16" />
+            <divclassName="b g-gradient-to-rfrom-slate-800/50 to-purple-900/50 rounded-2 xlp-8borderborder-cyan-500/20">
+              <divclassName="g r idgrid-cols-2 md:grid-cols-4gap-8text-center">
                 <div />
-                  <div className="text-3 xl font-boldtext-cyan-400mb-2"   />500+</div>
-                  <div className="text-gray-300text-sm"   />Happy Clients</div>
+                  <divclassName="t e xt-3 xlfont-boldtext-cyan-400mb-2"   />500+</div>
+                  <divclassName="t e xt-gray-300text-sm"   />HappyClients</div>
                 <div />
-                  <div className="text-3 xl font-boldtext-purple-400mb-2"   />99%</div>
-                  <div className="text-gray-300text-sm"   />Success Rate</div>
+                  <divclassName="t e xt-3 xlfont-boldtext-purple-400mb-2"   />99%</div>
+                  <divclassName="t e xt-gray-300text-sm"   />SuccessRate</div>
                 <div />
-                  <div className="text-3 xl font-boldtext-pink-400mb-2"   />24/7</div>
-                  <div className="text-gray-300text-sm"   />Support</div>
+                  <divclassName="t e xt-3 xlfont-boldtext-pink-400mb-2"   />24/7</div>
+                  <divclassName="t e xt-gray-300text-sm"   />Support</div>
                 <div />
-                  <div className="text-3 xl font-boldtext-green-400mb-2"   />10+</div>
-                  <div className="text-gray-300text-sm"   />Years Experience</div>
-=======
-        </div>
-              <div className="grid grid-cols-2 md:grid-cols-4gap-8text-center">
-        </div>
-                <div />
-                  <div className="text-3 xl font-boldtext-cyan-400mb-2">500+</div>
-                  <div className="text-gray-300text-sm">Happy Clients</div>
-                <div />
-                  <div className="text-3 xl font-boldtext-purple-400mb-2">99%</div>
-                  <div className="text-gray-300text-sm">Success Rate</div>
-                <div />
-                  <div className="text-3 xl font-boldtext-pink-400mb-2">24/7</div>
-                  <div className="text-gray-300text-sm">Support</div>
-                <div />
-                  <div className="text-3 xl font-boldtext-green-400mb-2">10+</div>
-                  <div className="text-gray-300text-sm">Years Experience</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <divclassName="t e xt-3 xlfont-boldtext-green-400mb-2"   />10+</div>
+                  <divclassName="t e xt-gray-300text-sm"   />YearsExperience</div>
               </div>
           </section>
     </>
 
-          {/* CTA Section */}
+          {/* CTASection */}
     <>
-          <section className="text-center" />
-            <div className="bg-gradient-to-r from-slate-800/50 to-purple-900/50 rounded-3 xl p-12borderborder-cyan-500/20">
-<<<<<<< HEAD
-              <h2 className="text-3 xl md:text-4xl font-bold text-white mb-6"  />Ready to Get Started?
+          <sectionclassName="t e xt-center" />
+            <divclassName="b g-gradient-to-rfrom-slate-800/50 to-purple-900/50 rounded-3 xlp-12borderborder-cyan-500/20">
+              <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-6"  />ReadytoGetStarted?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
-              Join hundreds of companies that trust Zion Tech Group for their {title.toLowerCase()} needs. 
-=======
-        </div>
-              <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-6">Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
-    </>
-                Join hundreds of companies that trust Zion Tech Group for their {title.toLowerCase()} needs. 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Get a free consultation today.
+              <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">
+              JoinhundredsofcompaniesthattrustZionTechGroupfortheir {title.toLowerCase()} needs. 
+                Getafreeconsultationtoday.
     <>
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-=======
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <a 
-                  href="/contact" 
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" />
-                  Get Free Consultation
+              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+                <ahref="/contact" 
+                  className="p x-8 py-4 bg-gradient-to-rfrom-cyan-500 to-purple-500 text-whiterounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-600 transition-allduration-300 flexitems-centerjustify-centergroupshadow-lgshadow-cyan-500/25 hover:shadow-xlhover:shadow-cyan-500/40transformhover:scale-105" />
+                  GetFreeConsultation
     <>
-                  <ArrowRight className="w-5 h-5 ml-2group-hover:translate-x-1transition-transform" />
+                  <ArrowRightclassName="w-5 h-5 m l-2group-hover:translate-x-1transition-transform" />
                 </a>
     </>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup" />
-                  <Mail className="w-5h-5mr-2" />
-                  Email Us
+                <ahref="mailto:kleber@ziontechgroup.com" 
+                  className="p x-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lgfont-semiboldhover:bg-cyan-400 hover:text-slate-900 transition-allduration-300 flexitems-centerjustify-centergroup" />
+                  <MailclassName="w-5h-5m r-2" />
+                  EmailUs
     <>
                 </a>
               </div>
@@ -324,5 +192,5 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
   );
 };
 
-export default GenericServicePage;
+exportdefaultGenericServicePage;
     </>

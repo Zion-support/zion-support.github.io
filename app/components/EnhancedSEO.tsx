@@ -1,26 +1,13 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 
-interface SEOProps {
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object
-  noindex?: boolean
-  nofollow?: boolean
+interfaceSEOProps {
+  title?: stringdescription?: stringkeywords?: stringcanonical?: stringogImage?: stringogType?: stringtwitterCard?: stringstructuredData?: objectnoindex?: booleannofollow?: boolean
 }
 
-const EnhancedSEO: React.FC<SEOProps /> = ({
-  const title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered solutions, IT services, 5 G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
-  keywords = 'AI solutions, artificial intelligence, IT services, 5 G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
+constEnhancedSEO: React.FC<SEOProps /> = ({
+  consttitle = 'ZionTechGroup - AdvancedAIandITSolutions',
+  description = 'LeadingproviderofAI-poweredsolutions, ITservices, 5 Gimplementation, andmicroSAASplatforms. 99.8% clientsatisfaction, 24/7 support.',
+  keywords = 'AIsolutions, artificialintelligence, ITservices, 5 Gimplementation, microSAAS, cloudmigration, cybersecurity, mobiledevelopment, machinelearning, enterprisetechnology, digitaltransformation, ZionTechGroup, Delawaretechnologycompany',
   canonical,
   ogImage = 'https: //ziontechgroup.com/og-image.jpg',
   ogType = 'website',
@@ -29,21 +16,21 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
   noindex = false,
   nofollow = false
 }) => {
-  const defaultStructuredData = {
+  constdefaultStructuredData = {
     "@context": "https: //schema.org",
     "@type": "Organization",
-    "name": "Zion Tech Group",
+    "name": "ZionTechGroup",
     "url": "https: //ziontechgroup.com",
     "logo": "https: //ziontechgroup.com/logo.png",
     "description": description,
     "foundingDate": "2020",
     "founder": {
       "@type": "Person",
-      "name": "Dr. Kleber Santos"
+      "name": "Dr. KleberSantos"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
+      "streetAddress": "364 EMainStSTE 1008",
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
@@ -52,7 +39,7 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
+      "contactType": "customerservice",
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
@@ -69,78 +56,69 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
     }
   }
 
-  const finalStructuredData = structuredData || defaultStructuredData
-  const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
+  constfinalStructuredData = structuredData || defaultStructuredDataconstcanonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
 
   return (
     <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>5GDataAnalytics - ZionTechGroup</title>
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
       </Helmet>
-      {/* Basic Meta Tags */}
+      {/* BasicMetaTags */}
     <>
       <title>{title}</title>
-        <meta name="description" content="{description}" / / />
-      <meta name="keywords" content="{keywords}" / / />
-      <meta name="robots" content="{`${noindex" ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-image-preview: large, max-snippet: -1, max-video-preview: -1`} / / />
-      <meta name="author" content="Zion Tech Group" / / />
-      <meta name="viewport" content="width="device-width," initial-scale="1.0," viewport-fit=cover" / / />
-      <meta name="theme-color" content="#8 b5 cf6" / / />
-      <meta name="color-scheme" content="dark light" / / />
-      <meta name="format-detection" content="telephone=no,address=no,email=no" / / />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" / / />
-      {/* Canonical URL */}
-      <link rel="canonical" href="{canonicalUrl}" />
-      {/* Open Graph Meta Tags */}
+        <metaname="description" content="{description}" / / />
+      <metaname="keywords" content="{keywords}" / / />
+      <metaname="robots" content="{`${noindex" ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-image-preview: large, max-snippet: -1, max-video-preview: -1`} / / />
+      <metaname="author" content="ZionTechGroup" / / />
+      <metaname="viewport" content="width="device-width," initial-scale="1.0," viewport-fit=cover" / / />
+      <metaname="theme-color" content="#8 b5 cf6" / / />
+      <metaname="color-scheme" content="darklight" / / />
+      <metaname="format-detection" content="telephone=no,address=no,email=no" / / />
+      <metahttpEquiv="X-UA-Compatible" content="IE=edge" / / />
+      {/* CanonicalURL */}
+      <linkrel="canonical" href="{canonicalUrl}" />
+      {/* OpenGraphMetaTags */}
     <>
-      <meta property="og: title" content="{title}" / / />
-      <meta property="og: description" content="{description}" / / />
-      <meta property="og: type" content="{ogType}" / / />
-      <meta property="og: url" content="{canonicalUrl}" / / />
-      <meta property="og: image" content="{ogImage}" / / />
-      <meta property="og:image:width" content="1200" / / />
-      <meta property="og:image:height" content="630" / / />
-      <meta property="og: image:alt" content="{title}" / / />
-      <meta property="og:image:type" content="image/jpeg" / / />
-      <meta property="og: image:secure_url" content="{ogImage}" / / />
-      <meta property="og:site_name" content="Zion Tech Group" / / />
-      <meta property="og:locale" content="en_US" / / />
-      {/* Twitter Card Meta Tags */}
+      <metaproperty="og: title" content="{title}" / / />
+      <metaproperty="og: description" content="{description}" / / />
+      <metaproperty="og: type" content="{ogType}" / / />
+      <metaproperty="og: url" content="{canonicalUrl}" / / />
+      <metaproperty="og: image" content="{ogImage}" / / />
+      <metaproperty="og:image:width" content="1200" / / />
+      <metaproperty="og:image:height" content="630" / / />
+      <metaproperty="og: image:alt" content="{title}" / / />
+      <metaproperty="og:image:type" content="image/jpeg" / / />
+      <metaproperty="og: image:secure_url" content="{ogImage}" / / />
+      <metaproperty="og:site_name" content="ZionTechGroup" / / />
+      <metaproperty="og:locale" content="en_US" / / />
+      {/* TwitterCardMetaTags */}
     <>
-      <meta name="twitter: card" content="{twitterCard}" / / />
-      <meta name="twitter: title" content="{title}" / / />
-      <meta name="twitter: description" content="{description}" / / />
-      <meta name="twitter: image" content="{ogImage}" / / />
-      <meta name="twitter: image:alt" content="{title}" / / />
-      <meta name="twitter:image:width" content="1200" / / />
-      <meta name="twitter:image:height" content="630" / / />
-      <meta name="twitter:site" content="@ziontechgroup" / / />
-      <meta name="twitter:creator" content="@ziontechgroup" / / />
-      {/* Additional SEO Meta Tags */}
+      <metaname="twitter: card" content="{twitterCard}" / / />
+      <metaname="twitter: title" content="{title}" / / />
+      <metaname="twitter: description" content="{description}" / / />
+      <metaname="twitter: image" content="{ogImage}" / / />
+      <metaname="twitter: image:alt" content="{title}" / / />
+      <metaname="twitter:image:width" content="1200" / / />
+      <metaname="twitter:image:height" content="630" / / />
+      <metaname="twitter:site" content="@ziontechgroup" / / />
+      <metaname="twitter:creator" content="@ziontechgroup" / / />
+      {/* AdditionalSEOMetaTags */}
     <>
-      <meta name="google-site-verification" content="your-google-verification-code" / / />
-      <meta name="msvalidate.01" content="your-bing-verification-code" / / />
-      <meta name="yandex-verification" content="your-yandex-verification-code" / / />
-      {/* Performance Hints */}
-<<<<<<< HEAD
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-=======
+      <metaname="google-site-verification" content="your-google-verification-code" / / />
+      <metaname="msvalidate.01" content="your-bing-verification-code" / / />
+      <metaname="yandex-verification" content="your-yandex-verification-code" / / />
+      {/* PerformanceHints */}
+      <linkrel="dns-prefetch" href="//fonts.googleapis.com" />
+      <linkrel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+      <linkrel="preconnect" href="https://fonts.googleapis.com" />
+      <linkrel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      {/* StructuredData */}
     <>
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" / />
-      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" / />
-      <link rel="preconnect" href="https://fonts.googleapis.com" / />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-      {/* Structured Data */}
-    <>
-      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
+      <scripttype="application/ld+json">{JSON.stringify(finalStructuredData)}
       </script>
     </Helmet>
   )
 }
 
-export default EnhancedSEO;
+exportdefaultEnhancedSEO;
     </>

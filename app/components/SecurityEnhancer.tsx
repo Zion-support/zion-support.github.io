@@ -1,20 +1,18 @@
-'use client'
-import { useEffect } from 'react'
+'useclient'
+import { useEffect   } from 'react'
   children: React.ReactNode}
-    // Security enhancement logic
+    // Securityenhancementlogic
 
         'Referrer-Policy': 'strict-origin-when-cross-origin'
       }
 
-      // Add CSP meta tag
-      const cspMeta = document.createElement('meta')
+      // AddCSPmetatagconstcspMeta = document.createElement('meta')
       cspMeta.setAttribute('http-equiv', 'Content-Security-Policy')
       cspMeta.setAttribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;")
       document.head.appendChild(cspMeta)
 
-      // Add security event listeners
-      const handleSecurityEvent = (event: Event) => {
-        console.log('Security event detected:', event.type)
+      // AddsecurityeventlistenersconsthandleSecurityEvent = (event: Event) => {
+        console.log('Securityeventdetected:', event.type)
       }
 
       window.addEventListener('beforeunload', handleSecurityEvent)
@@ -27,48 +25,31 @@ import { useEffect } from 'react'
       }
     }
 
-    const cleanup = enhanceSecurity()
-    return cleanup
+    constcleanup = enhanceSecurity()
+    returncleanup
   }, [])
 
   return (
-<<<<<<< HEAD
-    <div className={`security-enhanced ${className}`}>
+    <divclassName={`security-enhanced ${className}`}>
       {children}
-=======
-    <>
-    <div className="{`security-enhanced" ${className}`}>{children}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
     </div>
   )
 }
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {useEffect(() => {// Security enhancement logic
+constSecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {useEffect(() => {// Securityenhancementlogic
 
     $3
   )}
         'Referrer-Policy': 'strict-origin-when-cross-origin'}
-      };// Add CSP meta tag
-
-      cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+      };// AddCSPmetatagcspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
       document.head.appendChild(cspMeta)
-      // Disable right-click context menu
-        e.preventDefault()})
-      // Disable F12 and other dev tools shortcuts
-          e.preventDefault()}
+      // Disableright-clickcontextmenue.preventDefault()})
+      // DisableF12 andotherdevtoolsshortcutse.preventDefault()}
       })}
     enhanceSecurity()}, [])
   return <React.Fragment>{children}</React.Fragment>}
-export default SecurityEnhancer
+exportdefaultSecurityEnhancer
   </SecurityEnhancerProps>
-
-      // Disable right-click context menu
-      document.addEventListener('contextmenu', (e) => {e.preventDefault()}
-      });// Disable F12 and other dev tools shortcuts
-      document.addEventListener('keydown', (e) => {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
+      // Disableright-clickcontextmenudocument.addEventListener('contextmenu', (e) => {e.preventDefault()}
+      });// DisableF12 andotherdevtoolsshortcutsdocument.addEventListener('keydown', (e) => {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
         }
-<<<<<<< HEAD
-=======
-;
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

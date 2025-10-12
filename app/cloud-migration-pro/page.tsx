@@ -1,126 +1,64 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React  from 'react';
-=======
-'use client';
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { Helmet    } from 'react-helmet-async';
+import { Link    } from 'react-router-dom';
+import { ArrowRight    } from 'lucide-react';
 
-const Page: React.FC = () => {
+constPage: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
       <Helmet />
-        <title /> - Zion Tech Group</title>
-=======
-    <>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-        <title> - Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <meta name="description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
-        <meta property="og:title" content=" - Zion Tech Group" />
-        <meta property="og:description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/cloud-migration-pro" />
+        <title /> - ZionTechGroup</title>
+        <metaname="description" content="ProfessionalservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds." />
+        <metaname="keywords" content="AIsolutions, ITservices, ZionTechGroup" />
+        <metaproperty="og:title" content=" - ZionTechGroup" />
+        <metaproperty="og:description" content="ProfessionalservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds." />
+        <metaproperty="og:type" content="website" />
+        <metaproperty="og:url" content="https://ziontechgroup.com/cloud-migration-pro" />
       </Helmet>
     </>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16">
-<<<<<<< HEAD
-        {/* Hero Section */}
-        <section className="py-20" />
-          <div className="container mx-autopx-4text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent" />
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900pt-16">
+        {/* HeroSection */}
+        <sectionclassName="p y-20" />
+          <divclassName="c o ntainermx-autopx-4text-center">
+            <h1 className="t e xt-5xlmd:text-6xlfont-boldtext-whitemb-6" />
+              <spanclassName="b g-gradient-to-rfrom-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent" />
             </h1>
-            <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
-              Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4justify-centermb-12">
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" >
-          Get Started
+            <pclassName="t e xt-xltext-gray-300 mb-8max-w-3xlmx-auto">ProfessionalservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds.</p>
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-centermb-12">
+              <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105 shadow-lghover:shadow-cyan-500/25 flexitems-centerjustify-centergroup">
+          GetStarted
                 
-          <ArrowRight className="ml-2group-hover:translate-x-1transition-transform"  />
+          <ArrowRightclassName="m l-2group-hover:translate-x-1transition-transform"  />
         </Link>
-=======
-        </div>
-        {/* Hero Section */}
-    <>
-        <section className="py-20" />
-          <div className="container mx-autopx-4text-center">
-        </div>
-            <h1 className="text-5xl md:text-6xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent" / />
-            </h1>
-            <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto" />
+              <Linkto="/contact" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105" />
     </>
-              Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
-    <>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4justify-centermb-12">
-        </div>
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" />
-    </>
-                Get Started
-    <>
-                <ArrowRight className="ml-2group-hover:translate-x-1transition-transform" />
-              </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
-    </>
-                Learn More
+                LearnMore
     <>
               </Link>
             </div>
         </section>
     </>
 
-        {/* CTA Section */}
+        {/* CTASection */}
     <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xlp-12text-center">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-=======
-        </div>
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xlp-12text-center">
-        </div>
-              <h2 className="text-4xl font-boldtext-whitemb-6" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Ready to Get Started?
+        <sectionclassName="p y-20" />
+          <divclassName="c o ntainermx-autopx-4">
+            <divclassName="b g-gradient-to-rfrom-cyan-900/50 to-purple-900/50 backdrop-blur-smborderborder-cyan-500/20 rounded-2xlp-12text-center">
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6" />
+                ReadytoGetStarted?
     <>
               </h2>
-<<<<<<< HEAD
-              <p className="text-xl text-gray-300 mb-8max-w-2xlmx-auto">
-              Contact us to learn more about our solutions and how we can help your business.
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-              <p className="text-xl text-gray-300 mb-8max-w-2xlmx-auto" />
+              <pclassName="t e xt-xltext-gray-300 mb-8max-w-2xlmx-auto">Contactustolearnmoreaboutoursolutionsandhowwecanhelpyourbusiness.</p>
+              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+                <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-cyan-500/25" />
     </>
-                Contact us to learn more about our solutions and how we can help your business.
-    <>
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
-    </>
-                  Contact Us
+                  ContactUs
     <>
                 </Link>
-                <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
+                <Linkto="/services" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105" />
     </>
-                  View All Services
+                  ViewAllServices
     <>
                 </Link>
               </div>
@@ -144,36 +82,31 @@ const Page: React.FC = () => {
   );
 };
 
-export default Page;
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
+exportdefaultPage;
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import { Helmet    } from 'react-helmet-async'
+import { Link    } from 'react-router-dom'
+import { ArrowRight    } from 'lucide-react'
 
-export default function CloudMigrationProPage() {
+exportdefaultfunctionCloudMigrationProPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title>Cloud Migration Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional cloud migration services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>CloudMigrationPro - ZionTechGroup</title>
+        <metaname="description" content="ProfessionalcloudmigrationservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
       </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">Cloud Migration Pro</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional cloud migration services coming soon.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
+      <divclassName="m a x-w-7xlmx-autopx-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="t e xt-4xlfont-boldtext-whitemb-6">CloudMigrationPro</h1>
+        <pclassName="t e xt-lgtext-gray-300 mb-8">Professionalcloudmigrationservicescomingsoon.</p>
+        <Linkto="/contact"
+          className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-centermx-autow-fit">
+          ContactUs
+          <ArrowRightclassName="w-5 h-5 m l-2" />
         </Link>
       </div>
     </div>
   );
+    </>
+    </>
+    </>
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-33de

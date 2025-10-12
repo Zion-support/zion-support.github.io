@@ -1,288 +1,246 @@
-<<<<<<< HEAD
-import React  from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, AlertCircle, Building2, Bug } from 'lucide-react';
-import { ArrowRight, AlertCircle, Building2, Bug} from 'lucide-react';
-=======
-'use client';
 import React from 'react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, AlertCircle, Building2, Bug } from 'lucide-react';
-import { ArrowRight, AlertCircle, Building2, Bug} from 'lucide-react';
+import { Link    } from 'react-router-dom';
+import { ArrowRight, AlertCircle, Building2, Bug    } from 'lucide-react';
+import { ArrowRight, AlertCircle, Building2, Bug   } from 'lucide-react';
+exportdefaultfunctionAiCybersecurityMonitorProPage() {
+import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network, Clock    } from 'lucide-react';
 
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-export default function AiCybersecurityMonitorProPage() {
-=======
-import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network, Clock } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-
-  const features = [
+  constfeatures = [
     {
-      icon: <Brain className="w-8h-8text-cyan-400" />,
-      title: 'AI Threat Detection',
-      description: 'Advanced machine learning algorithms detect and prevent cyber threats in real-time',
-      benefits: ['Behavioral analysis', 'Anomaly detection', 'Threat prediction', 'Zero-day protection']
+      icon: <BrainclassName="w-8h-8t e xt-cyan-400" />,
+      title: 'AIThreatDetection',
+      description: 'Advancedmachinelearningalgorithmsdetectandpreventcyberthreatsinreal-time',
+      benefits: ['Behavioralanalysis', 'Anomalydetection', 'Threatprediction', 'Zero-dayprotection']
     },
     {
-      icon: <Shield className="w-8h-8text-green-400" />,
+      icon: <ShieldclassName="w-8h-8t e xt-green-400" />,
       title: '24/7 Monitoring',
-      description: 'Continuous security monitoring with instant threat response and automated remediation',
-      benefits: ['Real-time alerts', 'Automated response', 'Incident management', 'Threat hunting']
+      description: 'Continuoussecuritymonitoringwithinstantthreatresponseandautomatedremediation',
+      benefits: ['Real-timealerts', 'Automatedresponse', 'Incidentmanagement', 'Threathunting']
     },
     {
-      icon: <Eye className="w-8h-8text-purple-400" />,
-      title: 'Network Visibility',
-      description: 'Complete visibility into your network infrastructure with advanced traffic analysis',
-      benefits: ['Network mapping', 'Traffic analysis', 'Device discovery', 'Vulnerability scanning']
+      icon: <EyeclassName="w-8h-8t e xt-purple-400" />,
+      title: 'NetworkVisibility',
+      description: 'Completevisibilityintoyournetworkinfrastructurewithadvancedtrafficanalysis',
+      benefits: ['Networkmapping', 'Trafficanalysis', 'Devicediscovery', 'Vulnerabilityscanning']
     },
     {
-      icon: <Lock className="w-8h-8text-orange-400" />,
-      title: 'Compliance Management',
-      description: 'Automated compliance monitoring for GDPR, HIPAA, SOX, and other regulatory standards',
-      benefits: ['Regulatory compliance', 'Audit trails', 'Policy enforcement', 'Risk assessment']
+      icon: <LockclassName="w-8h-8t e xt-orange-400" />,
+      title: 'ComplianceManagement',
+      description: 'AutomatedcompliancemonitoringforGDPR, HIPAA, SOX, andotherregulatorystandards',
+      benefits: ['Regulatorycompliance', 'Audittrails', 'Policyenforcement', 'Riskassessment']
     },
     {
-      icon: <Zap className="w-8h-8text-red-400" />,
-      title: 'Automated Response',
-      description: 'Intelligent incident response with automated threat containment and remediation',
-      benefits: ['Auto-quarantine', 'Threat isolation', 'System restoration', 'Forensic analysis']
+      icon: <ZapclassName="w-8h-8t e xt-red-400" />,
+      title: 'AutomatedResponse',
+      description: 'Intelligentincidentresponsewithautomatedthreatcontainmentandremediation',
+      benefits: ['Auto-quarantine', 'Threatisolation', 'Systemrestoration', 'Forensicanalysis']
     },
     {
-      icon: <Globe className="w-8h-8text-blue-400" />,
-      title: 'Global Threat Intelligence',
-      description: 'Access to global threat intelligence feeds and security research databases',
-      benefits: ['Threat intelligence', 'IOC feeds', 'Malware analysis', 'Attack patterns']
+      icon: <GlobeclassName="w-8h-8t e xt-blue-400" />,
+      title: 'GlobalThreatIntelligence',
+      description: 'Accesstoglobalthreatintelligencefeedsandsecurityresearchdatabases',
+      benefits: ['Threatintelligence', 'IOCfeeds', 'Malwareanalysis', 'Attackpatterns']
     }
   ];
-  const securityCapabilities = [
+  constsecurityCapabilities = [
     {
-      category: 'Threat Detection',
-      icon: <AlertTriangle className="w-6h-6text-red-400" />,
+      category: 'ThreatDetection',
+      icon: <AlertTriangleclassName="w-6h-6t e xt-red-400" />,
       items: [
-        'Malware detection',
-        'Phishing prevention',
-        'Ransomware protection',
-        'Advanced persistent threats',
-        'Insider threat detection'
+        'Malwaredetection',
+        'Phishingprevention',
+        'Ransomwareprotection',
+        'Advancedpersistentthreats',
+        'Insiderthreatdetection'
       ]
     },
     {
-      category: 'Network Security',
-      icon: <Network className="w-6h-6text-blue-400" />,
+      category: 'NetworkSecurity',
+      icon: <NetworkclassName="w-6h-6t e xt-blue-400" />,
       items: [
-        'Firewall management',
-        'Intrusion detection',
-        'Network segmentation',
-        'VPN monitoring',
-        'Wireless security'
+        'Firewallmanagement',
+        'Intrusiondetection',
+        'Networksegmentation',
+        'VPNmonitoring',
+        'Wirelesssecurity'
       ]
     },
     {
-      category: 'Endpoint Protection',
-      icon: <Monitor className="w-6h-6text-green-400" />,
+      category: 'EndpointProtection',
+      icon: <MonitorclassName="w-6h-6t e xt-green-400" />,
       items: [
-        'Device monitoring',
-        'Application control',
-        'USB protection',
-        'Mobile device security',
-        'Patch management'
+        'Devicemonitoring',
+        'Applicationcontrol',
+        'USBprotection',
+        'Mobiledevicesecurity',
+        'Patchmanagement'
       ]
     },
     {
-      category: 'Data Protection',
-      icon: <Database className="w-6h-6text-purple-400" />,
+      category: 'DataProtection',
+      icon: <DatabaseclassName="w-6h-6t e xt-purple-400" />,
       items: [
-        'Data encryption',
-        'Access controls',
-        'Data loss prevention',
-        'Backup monitoring',
-        'Privacy compliance'
+        'Dataencryption',
+        'Accesscontrols',
+        'Datalossprevention',
+        'Backupmonitoring',
+        'Privacycompliance'
       ]
     },
     {
-      category: 'Incident Response',
-      icon: <AlertCircle className="w-6h-6text-orange-400" />,
+      category: 'IncidentResponse',
+      icon: <AlertCircleclassName="w-6h-6t e xt-orange-400" />,
       items: [
-        'Automated response',
-        'Incident tracking',
-        'Forensic analysis',
-        'Recovery procedures',
-        'Communication tools'
+        'Automatedresponse',
+        'Incidenttracking',
+        'Forensicanalysis',
+        'Recoveryprocedures',
+        'Communicationtools'
       ]
     },
     {
-      category: 'Security Analytics',
-      icon: <BarChart3 className="w-6h-6text-cyan-400" />,
+      category: 'SecurityAnalytics',
+      icon: <BarChart3 className="w-6h-6t e xt-cyan-400" />,
       items: [
-        'Security dashboards',
-        'Risk assessment',
-        'Compliance reporting',
-        'Trend analysis',
-        'Performance metrics'
+        'Securitydashboards',
+        'Riskassessment',
+        'Compliancereporting',
+        'Trendanalysis',
+        'Performancemetrics'
       ]
     }
   ];
-  const pricingPlans = [
+  constpricingPlans = [
     {
       name: 'Essential',
       price: '$299',
       period: '/month',
-      description: 'Perfect for small businesses and startups',
+      description: 'Perfectforsmallbusinessesandstartups',
       features: [
-        'Up to 50 devices',
-        'Basic threat detection',
-        'Email support',
-        'Standard reports',
-        'Basic compliance',
-        '1 TB log storage'
+        'Upto 50 devices',
+        'Basicthreatdetection',
+        'Emailsupport',
+        'Standardreports',
+        'Basiccompliance',
+        '1 TBlogstorage'
       ],
       popular: false,
-      cta: 'Start Free Trial'
+      cta: 'StartFreeTrial'
     },
     {
       name: 'Professional',
       price: '$799',
       period: '/month',
-      description: 'Ideal for growing businesses and security teams',
+      description: 'Idealforgrowingbusinessesandsecurityteams',
       features: [
-        'Up to 500 devices',
-        'Advanced AI detection',
-        'Priority support',
-        'Custom dashboards',
-        'Full compliance suite',
-        '10 TB log storage',
-        'Automated response',
-        'Threat intelligence'
+        'Upto 500 devices',
+        'AdvancedAIdetection',
+        'Prioritysupport',
+        'Customdashboards',
+        'Fullcompliancesuite',
+        '10 TBlogstorage',
+        'Automatedresponse',
+        'Threatintelligence'
       ],
       popular: true,
-      cta: 'Get Started'
+      cta: 'GetStarted'
     },
     {
       name: 'Enterprise',
       price: '$1,999',
       period: '/month',
-      description: 'For large organizations with complex security needs',
+      description: 'Forlargeorganizationswithcomplexsecurityneeds',
       features: [
-        'Unlimited devices',
-        'Custom AI models',
-        'Dedicated support',
-        'White-label options',
-        'Unlimited storage',
-        'API access',
-        'On-premise deployment',
-        'Custom integrations'
+        'Unlimiteddevices',
+        'CustomAImodels',
+        'Dedicatedsupport',
+        'White-labeloptions',
+        'Unlimitedstorage',
+        'APIaccess',
+        'On-premisedeployment',
+        'Customintegrations'
       ],
       popular: false,
-      cta: 'Contact Sales'
+      cta: 'ContactSales'
     }
   ];
-  const testimonials = [
+  consttestimonials = [
     {
-      name: 'Michael Torres',
-      company: 'SecureTech Solutions',
+      name: 'MichaelTorres',
+      company: 'SecureTechSolutions',
       role: 'CISO',
-      content: 'AI Cybersecurity Monitor Pro has revolutionized our security posture. The AI detection capabilities have prevented multiple sophisticated attacks that traditional tools missed.',
+      content: 'AICybersecurityMonitorProhasrevolutionizedoursecurityposture. TheAIdetectioncapabilitieshavepreventedmultiplesophisticatedattacksthattraditionaltoolsmissed.',
       rating: 5,
       avatar: 'MT',
-      results: '99.7% threat detection rate'
+      results: '99.7% threatdetectionrate'
     },
     {
-      name: 'Sarah Chen',
-      company: 'Global Finance Corp',
-      role: 'Security Director',
-      content: 'The automated response capabilities have reduced our incident response time by 80%. Our security team can now focus on strategic initiatives instead of manual monitoring.',
+      name: 'SarahChen',
+      company: 'GlobalFinanceCorp',
+      role: 'SecurityDirector',
+      content: 'Theautomatedresponsecapabilitieshavereducedourincidentresponsetimeby 80%. Oursecurityteamcannowfocusonstrategicinitiativesinsteadofmanualmonitoring.',
       rating: 5,
       avatar: 'SC',
-      results: '80% faster incident response'
+      results: '80% fasterincidentresponse'
     },
     {
-      name: 'David Rodriguez',
-      company: 'Healthcare Systems',
-      role: 'IT Security Manager',
-      content: 'The compliance management features have made our HIPAA audits seamless. We maintain continuous compliance with automated monitoring and reporting.',
+      name: 'DavidRodriguez',
+      company: 'HealthcareSystems',
+      role: 'ITSecurityManager',
+      content: 'ThecompliancemanagementfeatureshavemadeourHIPAAauditsseamless. Wemaintaincontinuouscompliancewithautomatedmonitoringandreporting.',
       rating: 5,
       avatar: 'DR',
-      results: '100% compliance score'
+      results: '100% compliancescore'
     }
   ];
-  const stats = [
-<<<<<<< HEAD
-    { number: '1 M+', label: 'Threats Blocked', icon: <Shield className="w-6h-6" /> },
-    { number: '500+', label: 'Enterprise Clients', icon: <Building2 className="w-6h-6" /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Activity className="w-6h-6" /> },
-    { number: '24/7', label: 'Security Monitoring', icon: <Eye className="w-6h-6" /> }
+  conststats = [
+    { number: '1 M+', label: 'ThreatsBlocked', icon: <ShieldclassName="w-6h-6" /> },
+    { number: '500+', label: 'EnterpriseClients', icon: <Building2 className="w-6h-6" /> },
+    { number: '99.9%', label: 'UptimeGuarantee', icon: <ActivityclassName="w-6h-6" /> },
+    { number: '24/7', label: 'SecurityMonitoring', icon: <EyeclassName="w-6h-6" /> }
   ];
-  const threatTypes = [
-    { name: 'Malware', icon: <Bug className="w-6h-6" />, category: 'Malicious Software' },
-    { name: 'Phishing', icon: <Target className="w-6h-6" />, category: 'Social Engineering' },
-    { name: 'Ransomware', icon: <Lock className="w-6h-6" />, category: 'Data Encryption' },
-    { name: 'DDoS', icon: <Network className="w-6h-6" />, category: 'Network Attacks' },
-    { name: 'Insider Threats', icon: <Users className="w-6h-6" />, category: 'Internal Risks' },
-    { name: 'Zero-Day', icon: <AlertCircle className="w-6h-6" />, category: 'Unknown Vulnerabilities' },
-    { name: 'APTs', icon: <Search className="w-6h-6" />, category: 'Advanced Persistent Threats' },
-    { name: 'IoT Attacks', icon: <Smartphone className="w-6h-6" />, category: 'Device Vulnerabilities' }
+  constthreatTypes = [
+    { name: 'Malware', icon: <BugclassName="w-6h-6" />, category: 'MaliciousSoftware' },
+    { name: 'Phishing', icon: <TargetclassName="w-6h-6" />, category: 'SocialEngineering' },
+    { name: 'Ransomware', icon: <LockclassName="w-6h-6" />, category: 'DataEncryption' },
+    { name: 'DDoS', icon: <NetworkclassName="w-6h-6" />, category: 'NetworkAttacks' },
+    { name: 'InsiderThreats', icon: <UsersclassName="w-6h-6" />, category: 'InternalRisks' },
+    { name: 'Zero-Day', icon: <AlertCircleclassName="w-6h-6" />, category: 'UnknownVulnerabilities' },
+    { name: 'APTs', icon: <SearchclassName="w-6h-6" />, category: 'AdvancedPersistentThreats' },
+    { name: 'IoTAttacks', icon: <SmartphoneclassName="w-6h-6" />, category: 'DeviceVulnerabilities' }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900pt-20">
       <Helmet />
-        <title   />AI Cybersecurity Monitor Pro - Zion Tech Group | Advanced Security Intelligence Platform</title>
-=======
+        <title   />AICybersecurityMonitorPro - ZionTechGroup | AdvancedSecurityIntelligencePlatform</title>
+        <metaname="description" content="ProtectyourbusinesswithAICybersecurityMonitorPro. Advancedthreatdetection, 24/7 monitoring, andautomatedresponseforenterprise-gradesecurity. Startyourfreetrialtoday." / / />
+        <metaname="keywords" content="AIcybersecurity, threatdetection, securitymonitoring, cyberdefense, enterprisesecurity, ZionTechGroup" / / />
+        <metaname="robots" content="index, follow" / / />
+        <metaname="author" content="ZionTechGroup" / / />
+        <metaname="viewport" content="width="device-width," initial-scale=1.0" / / />
+        <metaname="theme-color" content="#8 b5 cf6" / / />
+        {/* OpenGraphMetaTags */}
     <>
-    { number: '1 M+', label: 'Threats Blocked', icon: <Shield className="w-6h-6" / /> },
-    { number: '500+', label: 'Enterprise Clients', icon: <Building2 className="w-6h-6" / /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Activity className="w-6h-6" / /> },
-    { number: '24/7', label: 'Security Monitoring', icon: <Eye className="w-6h-6" / /> }
-  ];
-  const threatTypes = [
+        <metaproperty="og:title" content="AICybersecurityMonitorPro - AdvancedSecurityIntelligencePlatform" / / />
+        <metaproperty="og: description" content="ProtectyourbusinesswithAI-poweredthreatdetection, 24/7 monitoring, andautomatedresponseforenterprise-gradesecurity." / / />
+        <metaproperty="og:type" content="website" / / />
+        <metaproperty="og:url" content="https://ziontechgroup.com/ai-cybersecurity-monitor-pro" / / />
+        <metaproperty="og:image" content="https://ziontechgroup.com/og-ai-cybersecurity.jpg" / / />
+        <metaproperty="og:site_name" content="ZionTechGroup" / / />
+        {/* TwitterCardMetaTags */}
     <>
-    { name: 'Malware', icon: <Bug className="w-6h-6" / />, category: 'Malicious Software' },
-    { name: 'Phishing', icon: <Target className="w-6h-6" / />, category: 'Social Engineering' },
-    { name: 'Ransomware', icon: <Lock className="w-6h-6" / />, category: 'Data Encryption' },
-    { name: 'DDoS', icon: <Network className="w-6h-6" / />, category: 'Network Attacks' },
-    { name: 'Insider Threats', icon: <Users className="w-6h-6" / />, category: 'Internal Risks' },
-    { name: 'Zero-Day', icon: <AlertCircle className="w-6h-6" / />, category: 'Unknown Vulnerabilities' },
-    { name: 'APTs', icon: <Search className="w-6h-6" / />, category: 'Advanced Persistent Threats' },
-    { name: 'IoT Attacks', icon: <Smartphone className="w-6h-6" / />, category: 'Device Vulnerabilities' }
-  ];
-  return (
-    <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900 pt-20">
-        </div>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-        <title>AI Cybersecurity Monitor Pro - Zion Tech Group | Advanced Security Intelligence Platform</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <meta name="description" content="Protect your business with AI Cybersecurity Monitor Pro. Advanced threat detection, 24/7 monitoring, and automated response for enterprise-grade security. Start your free trial today." / / />
-        <meta name="keywords" content="AI cybersecurity, threat detection, security monitoring, cyber defense, enterprise security, Zion Tech Group" / / />
-        <meta name="robots" content="index, follow" / / />
-        <meta name="author" content="Zion Tech Group" / / />
-        <meta name="viewport" content="width="device-width," initial-scale=1.0" / / />
-        <meta name="theme-color" content="#8 b5 cf6" / / />
-        {/* Open Graph Meta Tags */}
-    <>
-        <meta property="og:title" content="AI Cybersecurity Monitor Pro - Advanced Security Intelligence Platform" / / />
-        <meta property="og: description" content="Protect your business with AI-powered threat detection, 24/7 monitoring, and automated response for enterprise-grade security." / / />
-        <meta property="og:type" content="website" / / />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-cybersecurity-monitor-pro" / / />
-        <meta property="og:image" content="https://ziontechgroup.com/og-ai-cybersecurity.jpg" / / />
-        <meta property="og:site_name" content="Zion Tech Group" / / />
-        {/* Twitter Card Meta Tags */}
-    <>
-        <meta name="twitter:card" content="summary_large_image" / / />
-        <meta name="twitter:title" content="AI Cybersecurity Monitor Pro - Advanced Security Intelligence Platform" / / />
-        <meta name="twitter: description" content="Protect your business with AI-powered threat detection, 24/7 monitoring, and automated response." / / />
-        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-ai-cybersecurity.jpg" / / />
-        <meta name="twitter:site" content="@ziontechgroup" / / />
-        {/* Structured Data */}
-        <script type="application/ld+json"  />{JSON.stringify({
+        <metaname="twitter:card" content="summary_large_image" / / />
+        <metaname="twitter:title" content="AICybersecurityMonitorPro - AdvancedSecurityIntelligencePlatform" / / />
+        <metaname="twitter: description" content="ProtectyourbusinesswithAI-poweredthreatdetection, 24/7 monitoring, andautomatedresponse." / / />
+        <metaname="twitter:image" content="https://ziontechgroup.com/twitter-ai-cybersecurity.jpg" / / />
+        <metaname="twitter:site" content="@ziontechgroup" / / />
+        {/* StructuredData */}
+        <scripttype="application/ld+json"  />{JSON.stringify({
             "@context": "https: //schema.org",
             "@type": "SoftwareApplication",
-            "name": "AI Cybersecurity Monitor Pro",
-            "description": "Advanced AI-powered cybersecurity platform with threat detection, 24/7 monitoring, and automated response for enterprise-grade security.",
+            "name": "AICybersecurityMonitorPro",
+            "description": "AdvancedAI-poweredcybersecurityplatformwiththreatdetection, 24/7 monitoring, andautomatedresponseforenterprise-gradesecurity.",
             "url": "https: //ziontechgroup.com/ai-cybersecurity-monitor-pro",
             "applicationCategory": "SecurityApplication",
             "operatingSystem": "Web, iOS, Android",
@@ -299,137 +257,79 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
             },
             "provider": {
               "@type": "Organization",
-              "name": "Zion Tech Group",
+              "name": "ZionTechGroup",
               "url": "https: //ziontechgroup.com"
             }
           })}
     <>
         </script>
       </Helmet>
-
-<<<<<<< HEAD
-      <div className="max-w-7xl mx-auto px-4 sm:px-6lg:px-8py-16">
-        {/* Hero Section */}
-        <div className="text-centermb-16">
-          <h1 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6" />
-=======
-      <div className="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8py-16">
-        </div>
-        {/* Hero Section */}
+      <divclassName="m a x-w-7xlmx-autopx-4 sm:px-6lg:px-8py-16">
+        {/* HeroSection */}
+        <divclassName="t e xt-centermb-16">
+          <h1 className="t e xt-4xlsm:text-5 xlmd:text-6 xlfont-boldtext-whitemb-6" />
+            AICybersecurityMonitor{' '}
     <>
-        <div className="text-centermb-16">
-        </div>
-          <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            AI Cybersecurity Monitor{' '}
-    <>
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500bg-clip-texttext-transparent">Pro
+            <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-500bg-clip-texttext-transparent">Pro
             </span>
           </h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-4 xlmx-automb-8">
-              Protect your business with AI-powered threat detection, 24/7 monitoring, 
-            and automated response. Enterprise-grade security powered by artificial intelligence.
+          <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-4 xlmx-automb-8">
+              ProtectyourbusinesswithAI-poweredthreatdetection, 24/7 monitoring, 
+            andautomatedresponse. Enterprise-gradesecuritypoweredbyartificialintelligence.
     <>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4justify-centermb-8">
-<<<<<<< HEAD
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-center" >
-          Start Free Trial
+          <divclassName="f l exflex-colsm:flex-rowgap-4justify-centermb-8">
+            <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-center">
+          StartFreeTrial
               
-          <ArrowRight className="w-5h-5ml-2"  />
+          <ArrowRightclassName="w-5h-5m l-2"  />
         </Link>
-            <Link to="/ai-services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-centerjustify-center">View All AI Services
-=======
-        </div>
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
-              Start Free Trial
-    <>
-              <ArrowRight className="w-5h-5ml-2" />
-            </Link>
-            <Link to="/ai-services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flexitems-centerjustify-center">View All AI Services
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <Linkto="/ai-services" className="b o rder-2 border-whitetext-whitepx-8 py-4 rounded-lgfont-semiboldhover:bg-white/10 transition-colorsflexitems-centerjustify-center">ViewAllAIServices
             </Link>
           </div>
-          <div className="text-smtext-gray-400">✓ 14-day free trial • ✓ No setup fees • ✓ 24/7 security monitoring
+          <divclassName="t e xt-smtext-gray-400">✓ 14-dayfreetrial • ✓ Nosetupfees • ✓ 24/7 securitymonitoring
           </div>
-
-        {/* Stats Section */}
+        {/* StatsSection */}
     <>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xlmb-16" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="grid grid-cols-2md:grid-cols-4gap-8">
-=======
-        </div>
-            <div className="grid grid-cols-2md:grid-cols-4gap-8">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <sectionclassName="p y-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-smrounded-2xlmb-16" />
+          <divclassName="m a x-w-7xlmx-auto">
+            <divclassName="g r idgrid-cols-2md:grid-cols-4gap-8">
               {stats.map((stat, index) => (
     <>
-                <div key="{index}" className="text-center" />
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-fullmx-automb-4">
-<<<<<<< HEAD
-                    <stat.icon className="h-8w-8text-white" />
+                <divkey="{index}" className="t e xt-center" />
+                  <divclassName="f l exitems-centerjustify-centerw-16 h-16 bg-gradient-to-rfrom-purple-500 to-blue-600 rounded-fullmx-automb-4">
+                    <stat.iconclassName="h-8w-8t e xt-white" />
                   </div>
-                  <div className="text-3 xl md: text-4xl font-bold text-white mb-2"   />{stat.number}</div>
-                  <div className="text-gray-300"   />{stat.label}</div>
-=======
-        </div>
-                    <stat.icon className="h-8w-8text-white" / />
-                  </div>
-                  <div className="text-3 xl md: text-4 xl font-boldtext-whitemb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <divclassName="t e xt-3 xlmd: text-4xlfont-boldtext-whitemb-2"   />{stat.number}</div>
+                  <divclassName="t e xt-gray-300"   />{stat.label}</div>
               ))}
     <>
             </div>
         </section>
-
-        {/* Features Section */}
+        {/* FeaturesSection */}
     <>
-        <section className="mb-16" />
-          <div className="text-centermb-12">
-<<<<<<< HEAD
-            <h2 className="text-3 xl font-bold text-white mb-4"   />Advanced Security Features</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto">
-=======
-        </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Advanced Security Features</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Our AI Cybersecurity Monitor Pro leverages cutting-edge artificial intelligence 
-              to provide comprehensive protection against evolving cyber threats.
+        <sectionclassName="m b-16" />
+          <divclassName="t e xt-centermb-12">
+            <h2 className="t e xt-3 xlfont-boldtext-whitemb-4"   />AdvancedSecurityFeatures</h2>
+            <pclassName="t e xt-lgtext-gray-300 max-w-3xlmx-auto">
+              OurAICybersecurityMonitorProleveragescutting-edgeartificialintelligencetoprovidecomprehensiveprotectionagainstevolvingcyberthreats.
     <>
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
             {features.map((feature, index) => (
     <>
-              <div key="{index}" className="bg-slate-800/50 rounded-2 xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-allduration-300group" />
-                <div className="mb-6">
-<<<<<<< HEAD
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4group-hover:scale-110transition-transform"  />{feature.icon}
+              <divkey="{index}" className="b g-slate-800/50 rounded-2 xlp-8 borderborder-slate-700 hover:border-cyan-500/30 transition-allduration-300group" />
+                <divclassName="m b-6">
+                  <divclassName="f l exitems-centerjustify-centerw-16 h-16 bg-gradient-to-rfrom-cyan-500 to-purple-600 rounded-xlmx-automb-4group-hover:scale-110transition-transform"  />{feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3text-center"   />{feature.title}</h3>
-                  <p className="text-gray-300 mb-4text-center">
-              {feature.description}</p>
-=======
-        </div>
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4group-hover:scale-110transition-transform">{feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-whitemb-3text-center">{feature.title}</h3>
-                  <p className="text-gray-300mb-4text-center">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  <ul className="space-y-2" />
+                  <h3 className="t e xt-xlfont-semiboldtext-whitemb-3text-center"   />{feature.title}</h3>
+                  <pclassName="t e xt-gray-300 mb-4text-center">{feature.description}</p>
+                  <ulclassName="s p ace-y-2" />
                     {feature.benefits.map((benefit, benefitIndex) => (
     <>
-                      <li key="{benefitIndex}" className="flex items-centertext-smtext-gray-300" />
-                        <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" />
+                      <likey="{benefitIndex}" className="f l exitems-centertext-smtext-gray-300" />
+                        <CheckCircleclassName="w-4 h-4 t e xt-green-400mr-2flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
@@ -440,47 +340,30 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
     <>
           </div>
         </section>
-
-        {/* Security Capabilities Section */}
+        {/* SecurityCapabilitiesSection */}
     <>
-        <section className="mb-16" />
-          <div className="text-centermb-12">
-<<<<<<< HEAD
-            <h2 className="text-3 xl font-bold text-white mb-4"   />Comprehensive Security Coverage</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto">
-=======
-        </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Comprehensive Security Coverage</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Protect every aspect of your digital infrastructure with our comprehensive security capabilities.
+        <sectionclassName="m b-16" />
+          <divclassName="t e xt-centermb-12">
+            <h2 className="t e xt-3 xlfont-boldtext-whitemb-4"   />ComprehensiveSecurityCoverage</h2>
+            <pclassName="t e xt-lgtext-gray-300 max-w-3xlmx-auto">
+              Protecteveryaspectofyourdigitalinfrastructurewithourcomprehensivesecuritycapabilities.
     <>
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">
             {securityCapabilities.map((capability, index) => (
     <>
-              <div key="{index}" className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30transition-allduration-300" />
-<<<<<<< HEAD
-                <div className="flex items-centermb-4">
-=======
-                <div className="flexitems-centermb-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              <divkey="{index}" className="b g-slate-800/50 rounded-xlp-6 borderborder-slate-700 hover:border-cyan-500/30transition-allduration-300" />
+                <divclassName="f l exitems-centermb-4">
                   {capability.icon}
     <>
-                  <h3 className="text-lg font-semiboldtext-whiteml-3">{capability.category}</h3>
+                  <h3 className="t e xt-lgfont-semiboldtext-whiteml-3">{capability.category}</h3>
                 </div>
-                <ul className="space-y-2" />
+                <ulclassName="s p ace-y-2" />
                   {capability.items.map((item, itemIndex) => (
     <>
-                    <li key="{itemIndex}" className="flex items-centertext-smtext-gray-300" />
-                      <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" />
+                    <likey="{itemIndex}" className="f l exitems-centertext-smtext-gray-300" />
+                      <CheckCircleclassName="w-4 h-4 t e xt-green-400mr-2flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -491,274 +374,177 @@ import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network
     <>
           </div>
         </section>
-
-        {/* Threat Types Section */}
+        {/* ThreatTypesSection */}
     <>
-        <section className="mb-16" />
-          <div className="text-centermb-12">
-<<<<<<< HEAD
-            <h2 className="text-3 xl font-bold text-white mb-4"   />Threat Protection</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto">
-=======
-        </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Threat Protection</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Advanced AI detection and prevention for all types of cyber threats and attacks.
+        <sectionclassName="m b-16" />
+          <divclassName="t e xt-centermb-12">
+            <h2 className="t e xt-3 xlfont-boldtext-whitemb-4"   />ThreatProtection</h2>
+            <pclassName="t e xt-lgtext-gray-300 max-w-3xlmx-auto">
+              AdvancedAIdetectionandpreventionforalltypesofcyberthreatsandattacks.
     <>
             </p>
           </div>
-          
-          <div className="grid grid-cols-2md:grid-cols-4gap-6">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-2md:grid-cols-4gap-6">
             {threatTypes.map((threat, index) => (
     <>
-              <div key="{index}" className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300text-centergroup" />
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-3group-hover:scale-110transition-transform">{threat.icon}
+              <divkey="{index}" className="b g-slate-800/50 rounded-xlp-6 borderborder-slate-700 hover:border-cyan-500/30 transition-allduration-300text-centergroup" />
+                <divclassName="f l exitems-centerjustify-centerw-12 h-12 bg-gradient-to-rfrom-cyan-500 to-purple-600 rounded-lgmx-automb-3group-hover:scale-110transition-transform">{threat.icon}
                 </div>
-<<<<<<< HEAD
-                <h3 className="text-whitefont-semiboldmb-1"   />{threat.name}</h3>
-                <p className="text-gray-400text-sm">
-              {threat.category}</p>
-=======
-                <h3 className="text-whitefont-semiboldmb-1">{threat.name}</h3>
-                <p className="text-gray-400text-sm">{threat.category}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <h3 className="t e xt-whitefont-semiboldmb-1"   />{threat.name}</h3>
+                <pclassName="t e xt-gray-400text-sm">{threat.category}</p>
               </div>
             ))}
     <>
           </div>
         </section>
-
-        {/* Pricing Section */}
+        {/* PricingSection */}
     <>
-        <section className="mb-16" />
-          <div className="text-centermb-12">
-<<<<<<< HEAD
-            <h2 className="text-3 xl font-bold text-white mb-4"   />Choose Your Security Plan</h2>
-            <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-=======
-        </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Choose Your Security Plan</h2>
-            <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Flexible pricing plans designed to protect businesses of all sizes.
+        <sectionclassName="m b-16" />
+          <divclassName="t e xt-centermb-12">
+            <h2 className="t e xt-3 xlfont-boldtext-whitemb-4"   />ChooseYourSecurityPlan</h2>
+            <pclassName="t e xt-lgtext-gray-300 max-w-2xlmx-auto">
+              Flexiblepricingplansdesignedtoprotectbusinessesofallsizes.
     <>
             </p>
           </div>
-          
-          <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key="{index}" className="{`bg-slate-800/50" rounded-2 xl p-8 border transition-all duration-300 relative ${
+              <divkey="{index}" className="{`b g-slate-800/50" rounded-2 xlp-8 bordertransition-allduration-300 relative ${
                 plan.popular ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' : 'border-slate-700 hover: border-cyan-500/30'
               }`} />
                 {plan.popular && (
-<<<<<<< HEAD
-                  <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
-=======
-    <>
-                  <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-        </div>
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <divclassName="a b solute -top-3 left-1/2transform-translate-x-1/2">
+                    <spanclassName="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-4 py-1 rounded-fulltext-smfont-semibold"  />MostPopular
                     </span>
                   </div>
                 )}
                 
-<<<<<<< HEAD
-                <div className="text-centermb-6">
-                  <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                  <div className="flex items-baselinejustify-centermb-2">
-                    <span className="text-4xlfont-boldtext-cyan-400"   />{plan.price}</span>
-                    <span className="text-gray-400ml-1"   />{plan.period}</span>
+                <divclassName="t e xt-centermb-6">
+                  <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"   />{plan.name}</h3>
+                  <divclassName="f l exitems-baselinejustify-centermb-2">
+                    <spanclassName="t e xt-4xlfont-boldtext-cyan-400"   />{plan.price}</span>
+                    <spanclassName="t e xt-gray-400ml-1"   />{plan.period}</span>
                   </div>
-                  <p className="text-gray-300">
-              {plan.description}</p>
-=======
-    <>
-                <div className="text-centermb-6">
-        </div>
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <div className="flex items-baselinejustify-centermb-2">
-        </div>
-                    <span className="text-4 xlfont-boldtext-cyan-400">{plan.price}</span>
-                    <span className="text-gray-400ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300">{plan.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <pclassName="t e xt-gray-300">{plan.description}</p>
                 </div>
-                
-                <ul className="space-y-3mb-8" />
+                <ulclassName="s p ace-y-3mb-8" />
                   {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-                    <li key="{featureIndex}" className="flex items-center text-gray-300" />
-                      <CheckCircle className="w-5 h-5 text-green-400mr-3flex-shrink-0" />
-=======
-    <>
-                    <li key="{featureIndex}" className="flexitems-centertext-gray-300" />
-                      <CheckCircle className="w-5 h-5 text-green-400mr-3flex-shrink-0" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <likey="{featureIndex}" className="f l exitems-centertext-gray-300" />
+                      <CheckCircleclassName="w-5 h-5 t e xt-green-400mr-3flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                
-                <Link to="/contact"
-                  className="{`w-full" py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
+                <Linkto="/contact"
+                  className="{`w-f u ll" py-3 rounded-lgfont-semiboldtransition-allduration-300 flexitems-centerjustify-center ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                      ? 'bg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitehover:from-cyan-600 hover:to-purple-700'
                       : 'border-2 border-cyan-500 text-cyan-400 hover: bg-cyan-500 hover:text-white'
-<<<<<<< HEAD
-                  }`} >
+                  }`}>
           {plan.cta}
                   
-          <ArrowRight className="w-4h-4ml-2"  />
+          <ArrowRightclassName="w-4h-4m l-2"  />
         </Link>
-=======
-                  }`} />
-                  {plan.cta}
-    <>
-                  <ArrowRight className="w-4h-4ml-2" />
-                </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               </div>
             ))}
     <>
           </div>
         </section>
-
         {/* Testimonials */}
     <>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xlmb-16" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-12">
-              <h2 className="text-3 xl font-bold text-white mb-4"   />What Our Customers Say</h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              Join hundreds of security professionals who trust AI Cybersecurity Monitor Pro.
-=======
-        </div>
-            <div className="text-centermb-12">
-        </div>
-              <h2 className="text-3 xl font-boldtext-whitemb-4">What Our Customers Say</h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
-                Join hundreds of security professionals who trust AI Cybersecurity Monitor Pro.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+        <sectionclassName="p y-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-smrounded-2xlmb-16" />
+          <divclassName="m a x-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-12">
+              <h2 className="t e xt-3 xlfont-boldtext-whitemb-4"   />WhatOurCustomersSay</h2>
+              <pclassName="t e xt-lgtext-gray-300 max-w-2xlmx-auto">JoinhundredsofsecurityprofessionalswhotrustAICybersecurityMonitorPro.</p>
             </div>
-            
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
               {testimonials.map((testimonial, index) => (
     <>
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-<<<<<<< HEAD
-                  <div className="flex items-centermb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4"  />{testimonial.avatar}
+                <divkey="{index}" className="b g-slate-800/50 rounded-xlp-6borderborder-slate-700" />
+                  <divclassName="f l exitems-centermb-4">
+                    <divclassName="w-12 h-12 b g-gradient-to-rfrom-cyan-500 to-purple-600 rounded-fullflexitems-centerjustify-centertext-whitefont-boldmr-4"  />{testimonial.avatar}
                     </div>
                     <div>
-            <h4 className="text-whitefont-semibold"   />{testimonial.name}</h4>
-                      <p className="text-gray-400text-sm">
-              {testimonial.role}</p>
-                      <p className="text-cyan-400text-smfont-semibold">
-              {testimonial.company}</p>
+            <h4 className="t e xt-whitefont-semibold"   />{testimonial.name}</h4>
+                      <pclassName="t e xt-gray-400text-sm">{testimonial.role}</p>
+                      <pclassName="t e xt-cyan-400text-smfont-semibold">{testimonial.company}</p>
                     </div>
-                  <div className="flex items-centermb-3">
-=======
-                  <div className="flexitems-centermb-4">
-        </div>
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar}
-                    </div>
-                    <div />
-                      <h4 className="text-whitefont-semibold">{testimonial.name}</h4>
-                      <p className="text-gray-400text-sm">{testimonial.role}</p>
-                      <p className="text-cyan-400text-smfont-semibold">{testimonial.company}</p>
-                    </div>
-                  <div className="flexitems-centermb-3">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <divclassName="f l exitems-centermb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-4 h-4text-yellow-400fill-current" />
+                      <Starkey="{i}" className="w-4 h-4t e xt-yellow-400fill-current" />
                     ))}
     <>
                   </div>
-<<<<<<< HEAD
-                  <p className="text-gray-300italicmb-3">
-              "{testimonial.content}"</p>
-                  <div className="text-cyan-400font-semiboldtext-sm"  />Result: {testimonial.results}
-=======
-                  <p className="text-gray-300italicmb-3">"{testimonial.content}"</p>
-                  <div className="text-cyan-400font-semiboldtext-sm">Result: {testimonial.results}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <pclassName="t e xt-gray-300italicmb-3">"{testimonial.content}"</p>
+                  <divclassName="t e xt-cyan-400font-semiboldtext-sm"  />Result: {testimonial.results}
                   </div>
               ))}
     <>
             </div>
         </section>
-
-        {/* CTA Section */}
+        {/* CTASection */}
     <>
-        <section className="text-center" />
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-12borderborder-cyan-500/30">
-<<<<<<< HEAD
-            <h2 className="text-3 xl font-bold text-white mb-4"  />Ready to Secure Your Business?
-=======
-        </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Ready to Secure Your Business?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <sectionclassName="t e xt-center" />
+          <divclassName="b g-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-2 xlp-12borderborder-cyan-500/30">
+            <h2 className="t e xt-3 xlfont-boldtext-whitemb-4"  />ReadytoSecureYourBusiness?
             </h2>
-            <p className="text-lg text-gray-300 mb-8 max-w-3xlmx-auto">
-              Start your free trial today and experience enterprise-grade security powered by AI. 
-              Join hundreds of organizations already protected by our advanced threat detection.
+            <pclassName="t e xt-lgtext-gray-300 mb-8 max-w-3xlmx-auto">
+              Startyourfreetrialtodayandexperienceenterprise-gradesecuritypoweredbyAI. 
+              Joinhundredsoforganizationsalreadyprotectedbyouradvancedthreatdetection.
     <>
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-centerjustify-center" >
-          Start Free Trial
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+              <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 inline-flexitems-centerjustify-center">
+          StartFreeTrial
                 
-          <Sparkles className="w-5h-5ml-2" /  />
+          <SparklesclassName="w-5h-5m l-2" /  />
         </Link>
-              <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-centerjustify-center" >
-          Learn More
+              <Linkto="/about" className="b o rder-2 border-whitetext-whitepx-8 py-4 rounded-lgfont-semiboldhover:bg-white/10 transition-colorsinline-flexitems-centerjustify-center">
+          LearnMore
                 
-          <Shield className="w-5h-5ml-2" /  />
+          <ShieldclassName="w-5h-5m l-2" /  />
         </Link>
             </div>
-            <div className="mt-8text-white/80text-sm">
-              <p />✓ 14-day free trial • ✓ No setup fees • ✓ 24/7 monitoring • ✓ Cancel anytime</p>
-=======
-        </div>
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flexitems-centerjustify-center" />
-                Start Free Trial
-    <>
-                <Sparkles className="w-5h-5ml-2" / />
-              </Link>
-              <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flexitems-centerjustify-center" />
-                Learn More
-    <>
-                <Shield className="w-5h-5ml-2" / />
-              </Link>
-            </div>
-            <div className="mt-8text-white/80text-sm">
-        </div>
-              <p>✓ 14-day free trial • ✓ No setup fees • ✓ 24/7 monitoring • ✓ Cancel anytime</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="m t-8text-white/80text-sm">
+              <p />✓ 14-dayfreetrial • ✓ Nosetupfees • ✓ 24/7 monitoring • ✓ Cancelanytime</p>
             </div>
         </section>
       </div>
   );
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
 }
     </>

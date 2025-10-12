@@ -1,4 +1,4 @@
-  loadTime: number;
+loadTime: number;
   renderTime: number;
   memoryUsage: number;
   fps: number;
@@ -13,21 +13,19 @@
   });
   const [isVisible, setIsVisible] = useState(false);
     
-      )[0] as PerformanceNavigationTiming;
+      )[0] asPerformanceNavigationTiming;
       
         : 0;
-      // Measure render time
-      const renderStart = performance.now();
-      const renderTime = performance.now() - renderStart;
-      // Measure memory usage
-      let memoryUsage = 0;
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+      // MeasurerendertimeconstrenderStart = performance.now();
+      constrenderTime = performance.now() - renderStart;
+      // MeasurememoryusageletmemoryUsage = 0;
+        constmemory = (performanceas { memory?: { usedJSHeapSize: number } }).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
       }
-      // Measure FPS (simplified)
-      let fps = 0;
-        let lastTime = performance.now();
-        let frameCount = 0;
+      // MeasureFPS (simplified)
+      letfps = 0;
+        letlastTime = performance.now();
+        letframeCount = 0;
         
           frameCount++;
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
@@ -42,56 +40,52 @@
       });
     };
     updateMetrics();
-    // Update metrics every 5 seconds
-    const interval = setInterval(updateMetrics, 5000);
+    // Updatemetricsevery 5 secondsconstinterval = setInterval(updateMetrics, 5000);
     return () => clearInterval(interval);
   }, []);
       
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
-      >
-        Show Performance
+        className="f i xedbottom-4 right-4 bg-blue-600 text-whitepx-4 py-2 rounded-lgshadow-lghover:bg-blue-700 transition-colors">
+        ShowPerformance
       </button>
     );
   }
-    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
-      <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
-        
+    <divclassName="f i xedbottom-4 right-4 bg-whiteborderborder-gray-300 rounded-lgshadow-lgp-4 w-80 max-h-96 overflow-y-auto">
+      <divclassName="f l exjustify-betweenitems-centermb-4">
+        <h3 className="t e xt-lgfont-semiboldtext-gray-800">PerformanceDashboard</h3>
           onClick={() => setIsVisible(false)}
-          className="text-gray-500 hover:text-gray-700"
-        >
+          className="t e xt-gray-500 hover:text-gray-700">
           ×
         </button>
       </div>
-      <div className="space-y-3">
-        <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Load Time:</span>
-          <span className="text-sm font-mono">
+      <divclassName="s p ace-y-3">
+        <divclassName="f l exjustify-between">
+          <spanclassName="t e xt-smtext-gray-600">LoadTime:</span>
+          <spanclassName="t e xt-smfont-mono">
             {metrics.loadTime.toFixed(2)}ms
           </span>
         </div>
-        <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Render Time:</span>
-          <span className="text-sm font-mono">
+        <divclassName="f l exjustify-between">
+          <spanclassName="t e xt-smtext-gray-600">RenderTime:</span>
+          <spanclassName="t e xt-smfont-mono">
             {metrics.renderTime.toFixed(2)}ms
           </span>
         </div>
-        <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Memory Usage:</span>
-          <span className="text-sm font-mono">
+        <divclassName="f l exjustify-between">
+          <spanclassName="t e xt-smtext-gray-600">MemoryUsage:</span>
+          <spanclassName="t e xt-smfont-mono">
             {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
           </span>
         </div>
-        <div className="flex justify-between">
-          <span className="text-sm text-gray-600">FPS:</span>
-          <span className="text-sm font-mono">{metrics.fps}</span>
+        <divclassName="f l exjustify-between">
+          <spanclassName="t e xt-smtext-gray-600">FPS:</span>
+          <spanclassName="t e xt-smfont-mono">{metrics.fps}</span>
         </div>
-        <div className="pt-2 border-t border-gray-200">
-          <div className="text-xs text-gray-500">
-            Last updated: {new Date().toLocaleTimeString()}
+        <divclassName="p t-2 border-tborder-gray-200">
+          <divclassName="t e xt-xstext-gray-500">
+            Lastupdated: {newDate().toLocaleTimeString()}
           </div>
     </div>
   );
 };
-export default PerformanceDashboard;
+exportdefaultPerformanceDashboard;

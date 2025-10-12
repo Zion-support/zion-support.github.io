@@ -1,173 +1,166 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React  from 'react';
-=======
+import { Helmet    } from 'react-helmet-async'
+import { Link    } from 'react-router-dom'
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Palette, Brain, Users, Type, Copy} from 'lucide-react';
-=======
-import { ArrowRight, Brain, FileText, CheckCircle, Star, Clock, Users, BarChart3, Sparkles, Target, Globe, Shield, MessageCircle, Mail, Phone, MapPin, Play, Copy, Share, Palette, Type } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
+import { Helmet    } from 'react-helmet-async';
+import { Link    } from 'react-router-dom';
+import { ArrowRight, Palette, Brain, Users, Type, Copy   } from 'lucide-react';
+import { ArrowRight, Brain, FileText, CheckCircle, Star, Clock, Users, BarChart3, Sparkles, Target, Globe, Shield, MessageCircle, Mail, Phone, MapPin, Play, Copy, Share, Palette, Type    } from 'lucide-react';
 
-export default function AIContentGeneratorPage() {
+exportdefaultfunctionAIContentGeneratorPage() {
 
-  const features = [
+  constfeatures = [
     {
-      icon: <Brain className="w-6h-6text-cyan-400" />,
-      title: 'AI-Powered Writing',
-      description: 'Advanced GPT-4 and Claude-3 powered content generation with 99.9% accuracy and human-like quality.',
-      benefits: ['Natural language processing', 'Context-aware generation', 'Multi-language support', 'Brand voice adaptation']
+      icon: <BrainclassName="w-6h-6t e xt-cyan-400" />,
+      title: 'AI-PoweredWriting',
+      description: 'AdvancedGPT-4 andClaude-3 poweredcontentgenerationwith 99.9% accuracyandhuman-likequality.',
+      benefits: ['Naturallanguageprocessing', 'Context-awaregeneration', 'Multi-languagesupport', 'Brandvoiceadaptation']
     },
     {
-      icon: <FileText className="w-6h-6text-emerald-400" />,
-      title: 'Content Templates',
-      description: '500+ professionally designed templates for blogs, social media, emails, ads, and more.',
-      benefits: ['Industry-specific templates', 'Customizable layouts', 'SEO-optimized structure', 'Mobile-responsive design']
+      icon: <FileTextclassName="w-6h-6t e xt-emerald-400" />,
+      title: 'ContentTemplates',
+      description: '500+ professionallydesignedtemplatesforblogs, socialmedia, emails, ads, andmore.',
+      benefits: ['Industry-specifictemplates', 'Customizablelayouts', 'SEO-optimizedstructure', 'Mobile-responsivedesign']
     },
     {
-      icon: <BarChart3 className="w-6h-6text-purple-400" />,
-      title: 'SEO Optimization',
-      description: 'Built-in SEO tools with keyword research, density analysis, and readability scoring.',
-      benefits: ['Keyword optimization', 'Meta tag generation', 'Readability analysis', 'Competitor analysis']
+      icon: <BarChart3 className="w-6h-6t e xt-purple-400" />,
+      title: 'SEOOptimization',
+      description: 'Built-inSEOtoolswithkeywordresearch, densityanalysis, andreadabilityscoring.',
+      benefits: ['Keywordoptimization', 'Metataggeneration', 'Readabilityanalysis', 'Competitoranalysis']
     },
     {
-      icon: <Palette className="w-6h-6text-pink-400" />,
-      title: 'Brand Voice Training',
-      description: 'Train AI to match your unique brand voice and tone across all content types.',
-      benefits: ['Voice consistency', 'Tone adaptation', 'Style guidelines', 'Brand personality']
+      icon: <PaletteclassName="w-6h-6t e xt-pink-400" />,
+      title: 'BrandVoiceTraining',
+      description: 'TrainAItomatchyouruniquebrandvoiceandtoneacrossallcontenttypes.',
+      benefits: ['Voiceconsistency', 'Toneadaptation', 'Styleguidelines', 'Brandpersonality']
     },
     {
-      icon: <Globe className="w-6h-6text-orange-400" />,
-      title: 'Multi-Language Support',
-      description: 'Generate content in 50+ languages with native-level quality and cultural adaptation.',
-      benefits: ['50+ languages', 'Cultural adaptation', 'Local SEO optimization', 'Regional preferences']
+      icon: <GlobeclassName="w-6h-6t e xt-orange-400" />,
+      title: 'Multi-LanguageSupport',
+      description: 'Generatecontentin 50+ languageswithnative-levelqualityandculturaladaptation.',
+      benefits: ['50+ languages', 'Culturaladaptation', 'LocalSEOoptimization', 'Regionalpreferences']
     },
     {
-      icon: <Shield className="w-6h-6text-red-400" />,
-      title: 'Plagiarism Detection',
-      description: 'Built-in plagiarism checker with 99.8% accuracy and originality scoring.',
-      benefits: ['Real-time checking', 'Originality reports', 'Citation suggestions', 'Copyright compliance']
+      icon: <ShieldclassName="w-6h-6t e xt-red-400" />,
+      title: 'PlagiarismDetection',
+      description: 'Built-inplagiarismcheckerwith 99.8% accuracyandoriginalityscoring.',
+      benefits: ['Real-timechecking', 'Originalityreports', 'Citationsuggestions', 'Copyrightcompliance']
     }
   ]
 
-  const pricingPlans = [
+  constpricingPlans = [
     {
       name: 'Starter',
       price: '$29',
       period: '/month',
-      description: 'Perfect for individuals and small businesses',
+      description: 'Perfectforindividualsandsmallbusinesses',
       features: [
         '10,000 words/month',
-        '50+ content templates',
-        'Basic SEO tools',
-        '5 brand voices',
+        '50+ contenttemplates',
+        'BasicSEOtools',
+        '5 brandvoices',
         '3 languages',
-        'Email support',
-        'Basic analytics'
+        'Emailsupport',
+        'Basicanalytics'
       ],
       popular: false,
-      cta: 'Start Free Trial'
+      cta: 'StartFreeTrial'
     },
     {
       name: 'Professional',
       price: '$99',
       period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+      description: 'Idealforgrowingbusinessesandagencies',
       features: [
         '100,000 words/month',
-        '500+ content templates',
-        'Advanced SEO suite',
-        'Unlimited brand voices',
+        '500+ contenttemplates',
+        'AdvancedSEOsuite',
+        'Unlimitedbrandvoices',
         '20 languages',
-        'Priority support',
-        'Advanced analytics',
-        'Team collaboration',
-        'API access',
-        'Custom templates'
+        'Prioritysupport',
+        'Advancedanalytics',
+        'Teamcollaboration',
+        'APIaccess',
+        'Customtemplates'
       ],
       popular: true,
-      cta: 'Start Free Trial'
+      cta: 'StartFreeTrial'
     },
     {
       name: 'Enterprise',
       price: '$299',
       period: '/month',
-      description: 'For large organizations with custom needs',
+      description: 'Forlargeorganizationswithcustomneeds',
       features: [
-        'Unlimited words',
-        'All templates + custom',
-        'Full SEO suite + AI insights',
-        'Unlimited everything',
+        'Unlimitedwords',
+        'Alltemplates + custom',
+        'FullSEOsuite + AIinsights',
+        'Unlimitedeverything',
         'All 50+ languages',
-        '24/7 dedicated support',
-        'Enterprise analytics',
-        'Advanced team features',
-        'Full API access',
-        'White-label options',
-        'Custom integrations',
-        'Dedicated account manager'
+        '24/7 dedicatedsupport',
+        'Enterpriseanalytics',
+        'Advancedteamfeatures',
+        'FullAPIaccess',
+        'White-labeloptions',
+        'Customintegrations',
+        'Dedicatedaccountmanager'
       ],
       popular: false,
-      cta: 'Contact Sales'
+      cta: 'ContactSales'
     }
   ]
 
-  const testimonials = [
+  consttestimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'Content Marketing Manager',
-      company: 'TechFlow Inc.',
-      content: 'Zion's AI Content Generator has revolutionized our content strategy. We've increased our content output by 300% while maintaining quality.',
+      name: 'SarahJohnson',
+      role: 'ContentMarketingManager',
+      company: 'TechFlowInc.',
+      content: 'Zion'sAIContentGeneratorhasrevolutionizedourcontentstrategy. We'veincreasedourcontentoutputby 300% whilemaintainingquality.',
       rating: 5,
       avatar: 'SJ'
     },
     {
-      name: 'Michael Chen',
+      name: 'MichaelChen',
       role: 'Founder',
       company: 'StartupHub',
-      content: 'The brand voice training feature is incredible. Our content now sounds exactly like our brand, saving us hours of editing.',
+      content: 'Thebrandvoicetrainingfeatureisincredible. Ourcontentnowsoundsexactlylikeourbrand, savingushoursofediting.',
       rating: 5,
       avatar: 'MC'
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'SEO Specialist',
-      company: 'Digital Marketing Pro',
-      content: 'The SEO optimization tools are game-changing. Our content ranks 40% higher since using this platform.',
+      name: 'EmilyRodriguez',
+      role: 'SEOSpecialist',
+      company: 'DigitalMarketingPro',
+      content: 'TheSEOoptimizationtoolsaregame-changing. Ourcontentranks 40% highersinceusingthisplatform.',
       rating: 5,
       avatar: 'ER'
     }
   ]
 
-  const useCases = [
+  constuseCases = [
     {
-      title: 'Blog Content',
-      description: 'Generate engaging blog posts with SEO optimization and brand voice consistency.',
-      icon: <FileText className="w-8h-8text-cyan-400" />,
-      examples: ['How-to guides', 'Industry insights', 'Product reviews', 'Thought leadership']
+      title: 'BlogContent',
+      description: 'GenerateengagingblogpostswithSEOoptimizationandbrandvoiceconsistency.',
+      icon: <FileTextclassName="w-8h-8t e xt-cyan-400" />,
+      examples: ['How-toguides', 'Industryinsights', 'Productreviews', 'Thoughtleadership']
     },
     {
-      title: 'Social Media',
-      description: 'Create compelling social media posts for all platforms with optimal engagement.',
-      icon: <Share className="w-8h-8text-emerald-400" />,
-      examples: ['Facebook posts', 'Twitter threads', 'LinkedIn articles', 'Instagram captions']
+      title: 'SocialMedia',
+      description: 'Createcompellingsocialmediapostsforallplatformswithoptimalengagement.',
+      icon: <ShareclassName="w-8h-8t e xt-emerald-400" />,
+      examples: ['Facebookposts', 'Twitterthreads', 'LinkedInarticles', 'Instagramcaptions']
     },
     {
-      title: 'Email Marketing',
-      description: 'Generate personalized email campaigns that convert and engage your audience.',
-      icon: <Mail className="w-8h-8text-purple-400" />,
-      examples: ['Newsletters', 'Promotional emails', 'Welcome sequences', 'Follow-up campaigns']
+      title: 'EmailMarketing',
+      description: 'Generatepersonalizedemailcampaignsthatconvertandengageyouraudience.',
+      icon: <MailclassName="w-8h-8t e xt-purple-400" />,
+      examples: ['Newsletters', 'Promotionalemails', 'Welcomesequences', 'Follow-upcampaigns']
     },
     {
-      title: 'Ad Copy',
-      description: 'Create high-converting ad copy for Google, Facebook, and other advertising platforms.',
-      icon: <Target className="w-8h-8text-pink-400" />,
-      examples: ['Google Ads', 'Facebook Ads', 'LinkedIn Ads', 'Display banners']
+      title: 'AdCopy',
+      description: 'Createhigh-convertingadcopyforGoogle, Facebook, andotheradvertisingplatforms.',
+      icon: <TargetclassName="w-8h-8t e xt-pink-400" />,
+      examples: ['GoogleAds', 'FacebookAds', 'LinkedInAds', 'Displaybanners']
     }
   ]
 
@@ -175,401 +168,208 @@ export default function AIContentGeneratorPage() {
     <>
     <>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>5GDataAnalytics - ZionTechGroup</title>
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
       </Helmet>
-        <title>AI Content Generator - Advanced AI Writing Assistant | Zion Tech Group</title>
-        <meta name="description" content="Transform your content creation with our AI Content Generator. Generate high-quality, SEO-optimized content in 50+ languages. Starting at $29/month. Free trial available." / / />
-        <meta name="keywords" content="AI content generator, content writing, SEO content, blog writing, social media content, email marketing, content automation, AI writing assistant" / / />
-        <meta name="robots" content="index, follow" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-content-generator" />
+        <title>AIContentGenerator - AdvancedAIWritingAssistant | ZionTechGroup</title>
+        <metaname="description" content="TransformyourcontentcreationwithourAIContentGenerator. Generatehigh-quality, SEO-optimizedcontentin 50+ languages. Startingat $29/month. Freetrialavailable." / / />
+        <metaname="keywords" content="AIcontentgenerator, contentwriting, SEOcontent, blogwriting, socialmediacontent, emailmarketing, contentautomation, AIwritingassistant" / / />
+        <metaname="robots" content="index, follow" / / />
+        <linkrel="canonical" href="https://ziontechgroup.com/ai-content-generator" />
       </Helmet>
     </>
 
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
-        {/* Hero Section */}
-        <section className="relative py-20px-4overflow-hidden" />
-          {/* Animated Background */}
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)]animate-pulse" />
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900 pt-20">
-        </div>
-        {/* Hero Section */}
-        <section className="relative py-20px-4overflow-hidden" />
-          {/* Animated Background */}
-    <>
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)]animate-pulse" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900pt-20">
+        {/* HeroSection */}
+        <sectionclassName="r e lativepy-20px-4overflow-hidden" />
+          {/* AnimatedBackground */}
+          <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)]animate-pulse" />
+          <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
     </>
-          {/* Floating Elements */}
+          {/* FloatingElements */}
     <>
-          <div className="absolute top-20 left-10 w-16 h-16 bg-cyan-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '0.5 s' }} / />
-          <div className="absolute top-40 right-20 w-12 h-12 bg-purple-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '1.5 s' }} / />
-          <div className="absolute bottom-20 left-1/4 w-8 h-8 bg-pink-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '2.5 s' }} / />
-<<<<<<< HEAD
-          <div className="relative max-w-7xlmx-autotext-center">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-              <Sparkles className="w-4h-4" />
-              <span   />AI-Powered Content Creation</span>
-=======
-          <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-        </div>
-              <Sparkles className="w-4h-4" / />
-              <span>AI-Powered Content Creation</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="a b solutetop-20 left-10 w-16 h-16 bg-cyan-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '0.5 s' }} / />
+          <divclassName="a b solutetop-40 right-20 w-12 h-12 bg-purple-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '1.5 s' }} / />
+          <divclassName="a b solutebottom-20 left-1/4 w-8 h-8 bg-pink-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '2.5 s' }} / />
+          <divclassName="r e lativemax-w-7xlmx-autotext-center">
+            <divclassName="i n line-flexitems-centerspace-x-2 bg-gradient-to-rfrom-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-fulltext-smfont-mediummb-8borderborder-cyan-400/30">
+              <SparklesclassName="w-4h-4" />
+              <span   />AI-PoweredContentCreation</span>
             </div>
     </>
             
-            <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
-              AI Content
+            <h1 className="t e xt-4xlsm:text-6 xlmd:text-7 xlfont-boldtext-whitemb-8leading-tight" />
+              AIContent
     <>
               <br / />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">Generator
+              <spanclassName="b g-gradient-to-rfrom-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">Generator
               </span>
             </h1>
     </>
             
-            <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
-              Create high-quality, SEO-optimized content in seconds with our advanced AI writing assistant. 
+            <pclassName="t e xt-lgsm:text-xlmd:text-2 xltext-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
+              Createhigh-quality, SEO-optimizedcontentinsecondswithouradvancedAIwritingassistant. 
     <>
               <br / />
-              <span className="text-cyan-400font-semibold">50+ languages • 500+ templates • 99.9% accuracy</span>
+              <spanclassName="t e xt-cyan-400font-semibold">50+ languages • 500+ templates • 99.9% accuracy</span>
             </p>
     </>
             
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-=======
-    <>
-            <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <button className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
-                <span>Start Free Trial</span>
-                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+            <divclassName="f l exflex-colsm:flex-rowgap-6justify-centermb-16">
+              <buttonclassName="g r oupbg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-10 py-4 rounded-xlfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-centerspace-x-2 shadow-lgshadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
+                <span>StartFreeTrial</span>
+                <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
               </button>
-              <button className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-<<<<<<< HEAD
-                <Play className="w-5h-5" />
-                <span   />Watch Demo</span>
-=======
-                <Play className="w-5h-5" / />
-                <span>Watch Demo</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              <buttonclassName="g r oupborder-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xlfont-semiboldhover:bg-cyan-400 hover:text-gray-900 transition-allduration-300 flexitems-centerjustify-centerspace-x-2backdrop-blur-sm" />
+                <PlayclassName="w-5h-5" />
+                <span   />WatchDemo</span>
               </button>
             </div>
     </>
             
-            {/* Trust Indicators */}
-<<<<<<< HEAD
-            <div className="flex flex-wrap justify-center items-center gap-8text-gray-400text-sm">
-              <div className="flex items-centerspace-x-2">
-                <CheckCircle className="w-4h-4text-green-400" />
-                <span   />10,000+ Active Users</span>
+            {/* TrustIndicators */}
+            <divclassName="f l exflex-wrapjustify-centeritems-centergap-8text-gray-400text-sm">
+              <divclassName="f l exitems-centerspace-x-2">
+                <CheckCircleclassName="w-4h-4t e xt-green-400" />
+                <span   />10,000+ ActiveUsers</span>
               </div>
-              <div className="flex items-centerspace-x-2">
-                <Star className="w-4h-4text-yellow-400" />
+              <divclassName="f l exitems-centerspace-x-2">
+                <StarclassName="w-4h-4t e xt-yellow-400" />
                 <span   />4.9/5 Rating</span>
               </div>
-              <div className="flex items-centerspace-x-2">
-                <Shield className="w-4h-4text-blue-400" />
-                <span   />Enterprise Security</span>
+              <divclassName="f l exitems-centerspace-x-2">
+                <ShieldclassName="w-4h-4t e xt-blue-400" />
+                <span   />EnterpriseSecurity</span>
               </div>
-              <div className="flex items-centerspace-x-2">
-                <Clock className="w-4h-4text-purple-400" />
+              <divclassName="f l exitems-centerspace-x-2">
+                <ClockclassName="w-4h-4t e xt-purple-400" />
                 <span   />24/7 Support</span>
-=======
-    <>
-            <div className="flex flex-wrap justify-center items-center gap-8text-gray-400text-sm">
-        </div>
-              <div className="flexitems-centerspace-x-2">
-        </div>
-                <CheckCircle className="w-4h-4text-green-400" / />
-                <span>10,000+ Active Users</span>
-              </div>
-              <div className="flexitems-centerspace-x-2">
-        </div>
-                <Star className="w-4h-4text-yellow-400" / />
-                <span>4.9/5 Rating</span>
-              </div>
-              <div className="flexitems-centerspace-x-2">
-        </div>
-                <Shield className="w-4h-4text-blue-400" / />
-                <span>Enterprise Security</span>
-              </div>
-              <div className="flexitems-centerspace-x-2">
-        </div>
-                <Clock className="w-4h-4text-purple-400" / />
-                <span>24/7 Support</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               </div>
           </div>
         </section>
     </>
 
-        {/* Features Section */}
+        {/* FeaturesSection */}
     <>
-        <section className="py-20px-4relative" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/5to-purple-500/5" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Powerful Features for <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Content Creators</span>
+        <sectionclassName="p y-20px-4relative" />
+          <divclassName="a b soluteinset-0 bg-gradient-to-rfrom-cyan-500/5to-purple-500/5" />
+          <divclassName="r e lativemax-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+                PowerfulFeaturesfor <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />ContentCreators</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Everything you need to create, optimize, and scale your content marketing efforts with AI.
-=======
-          <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/5to-purple-500/5" / />
-          <div className="relative max-w-7xlmx-auto">
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Powerful Features for <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Content Creators</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                Everything you need to create, optimize, and scale your content marketing efforts with AI.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">Everythingyouneedtocreate, optimize, andscaleyourcontentmarketingeffortswithAI.</p>
             </div>
     </>
             
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
               {features.map((feature, index) => (
     <>
-                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
+                <divkey="{index}" className="g r oupbg-white/10 backdrop-blur-lgrounded-2 xlp-8 borderborder-white/20 hover:bg-white/20 transition-allduration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                  <divclassName="f l exitems-centerjustify-centerw-16 h-16 bg-gradient-to-rfrom-cyan-500 to-purple-600 rounded-2 xlmb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
                   </div>
-<<<<<<< HEAD
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{feature.title}
+                  <h3 className="t e xt-2 xlfont-boldtext-whitemb-4group-hover:text-cyan-400 transition-colors"  />{feature.title}
                   </h3>
-                  <p className="text-gray-300 mb-6leading-relaxed">
-              {feature.description}
-                  </p>
-                  <div className="space-y-2">
-=======
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title}
-                  </h3>
-                  <p className="text-gray-300mb-6leading-relaxed" />
-    </>
-                    {feature.description}
-    <>
-                  </p>
-                  <div className="space-y-2">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <pclassName="t e xt-gray-300 mb-6leading-relaxed">{feature.description}</p>
+                  <divclassName="s p ace-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
     <>
-                      <div key="{benefitIndex}" className="flex items-center space-x-2text-gray-400text-sm" />
-<<<<<<< HEAD
-                        <CheckCircle className="w-4h-4text-green-400" />
+                      <divkey="{benefitIndex}" className="f l exitems-centerspace-x-2text-gray-400text-sm" />
+                        <CheckCircleclassName="w-4h-4t e xt-green-400" />
                         <span   />{benefit}</span>
-=======
-                        <CheckCircle className="w-4h-4text-green-400" / />
-                        <span>{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                       </div>
     </>
                     ))}
     <>
                   </div>
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               ))}
     <>
             </div>
         </section>
     </>
 
-        {/* Use Cases Section */}
+        {/* UseCasesSection */}
     <>
-        <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
-<<<<<<< HEAD
-          <div className="absoluteinset-0bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Perfect for Every <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Content Type</span>
+        <sectionclassName="p y-20 px-4 bg-gradient-to-brfrom-slate-800/50to-purple-900/50relative" />
+          <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
+          <divclassName="r e lativemax-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+                PerfectforEvery <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />ContentType</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              From blog posts to social media, create engaging content that converts across all platforms.
-=======
-          <div className="absoluteinset-0bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.1)_0%,transparent_50%)]" / />
-          <div className="relative max-w-7xlmx-auto">
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Perfect for Every <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Content Type</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                From blog posts to social media, create engaging content that converts across all platforms.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">Fromblogpoststosocialmedia, createengagingcontentthatconvertsacrossallplatforms.</p>
             </div>
     </>
             
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
               {useCases.map((useCase, index) => (
     <>
-                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{useCase.icon}
+                <divkey="{index}" className="g r oupbg-white/10 backdrop-blur-lgrounded-2 xlp-6 borderborder-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
+                  <divclassName="f l exitems-centerjustify-centerw-16 h-16 bg-gradient-to-rfrom-cyan-500 to-purple-600 rounded-2 xlmb-6 group-hover:scale-110transition-transformduration-300">{useCase.icon}
                   </div>
-<<<<<<< HEAD
-                  <h3 className="text-xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{useCase.title}
+                  <h3 className="t e xt-xlfont-boldtext-whitemb-4group-hover:text-cyan-400 transition-colors"  />{useCase.title}
                   </h3>
-                  <p className="text-gray-300 mb-4leading-relaxed">
-              {useCase.description}
-                  </p>
-                  <div className="space-y-1">
-=======
-                  <h3 className="text-xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{useCase.title}
-                  </h3>
-                  <p className="text-gray-300mb-4leading-relaxed" />
-    </>
-                    {useCase.description}
-    <>
-                  </p>
-                  <div className="space-y-1">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <pclassName="t e xt-gray-300 mb-4leading-relaxed">{useCase.description}</p>
+                  <divclassName="s p ace-y-1">
                     {useCase.examples.map((example, exampleIndex) => (
     <>
-                      <div key="{exampleIndex}" className="text-cyan-400text-sm">• {example}
+                      <divkey="{exampleIndex}" className="t e xt-cyan-400text-sm">• {example}
                       </div>
     </>
                     ))}
     <>
                   </div>
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               ))}
     <>
             </div>
         </section>
     </>
 
-        {/* Pricing Section */}
+        {/* PricingSection */}
     <>
-        <section className="py-20px-4relative" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5via-cyan-500/5to-pink-500/5" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Simple, Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>
+        <sectionclassName="p y-20px-4relative" />
+          <divclassName="a b soluteinset-0 bg-gradient-to-rfrom-purple-500/5via-cyan-500/5to-pink-500/5" />
+          <divclassName="r e lativemax-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+                Simple, Transparent <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Choose the perfect plan for your content needs. All plans include our core AI features.
-=======
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5via-cyan-500/5to-pink-500/5" / />
-          <div className="relative max-w-7xlmx-auto">
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Simple, Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                Choose the perfect plan for your content needs. All plans include our core AI features.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">Choosetheperfectplanforyourcontentneeds. AllplansincludeourcoreAIfeatures.</p>
             </div>
     </>
             
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
               {pricingPlans.map((plan, index) => (
-                <div key="{index}" className="{`group" relative bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
+                <divkey="{index}" className="{`g r oup" relativebg-white/10 backdrop-blur-lgrounded-2 xlp-8 bordertransition-allduration-300 hover:scale-105 ${
                   plan.popular 
-                    ? 'border-cyan-400/50 shadow-2 xl shadow-cyan-500/20' 
+                    ? 'border-cyan-400/50 shadow-2 xlshadow-cyan-500/20' 
                     : 'border-white/20 hover: border-cyan-400/30'
                 }`} />
                   {plan.popular && (
-<<<<<<< HEAD
-                    <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold"  />Most Popular
+                    <divclassName="a b solute -top-4 left-1/2transform-translate-x-1/2">
+                      <divclassName="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-6 py-2 rounded-fulltext-smfont-semibold"  />MostPopular
                       </div>
                   )}
                   
-                  <div className="text-centermb-8">
-                    <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                    <p className="text-gray-300 mb-6">
-              {plan.description}</p>
-                    <div className="flex items-baselinejustify-center">
-                      <span className="text-5 xlfont-bold text-white"   />{plan.price}</span>
-                      <span className="text-gray-400ml-2"   />{plan.period}</span>
+                  <divclassName="t e xt-centermb-8">
+                    <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"   />{plan.name}</h3>
+                    <pclassName="t e xt-gray-300 mb-6">{plan.description}</p>
+                    <divclassName="f l exitems-baselinejustify-center">
+                      <spanclassName="t e xt-5 xlfont-boldtext-white"   />{plan.price}</span>
+                      <spanclassName="t e xt-gray-400ml-2"   />{plan.period}</span>
                     </div>
-                  
-                  <div className="space-y-4mb-8">
+                  <divclassName="s p ace-y-4mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <div key="{featureIndex}" className="flex items-centerspace-x-3" />
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" />
-                        <span className="text-gray-300"   />{feature}</span>
-=======
-    <>
-                    <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-        </div>
-                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
-                      </div>
-    </>
-                  )}
-                  
-    <>
-                  <div className="text-centermb-8">
-        </div>
-                    <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                    <p className="text-gray-300mb-6">{plan.description}</p>
-                    <div className="flexitems-baselinejustify-center" />
-                      <span className="text-5 xlfont-boldtext-white">{plan.price}</span>
-                      <span className="text-gray-400ml-2">{plan.period}</span>
-                    </div>
-    </>
-                  
-                  <div className="space-y-4mb-8">
-        </div>
-                    {plan.features.map((feature, featureIndex) => (
-    <>
-                      <div key="{featureIndex}" className="flexitems-centerspace-x-3" />
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
-                        <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                      <divkey="{featureIndex}" className="f l exitems-centerspace-x-3" />
+                        <CheckCircleclassName="w-5 h-5t e xt-green-400flex-shrink-0" />
+                        <spanclassName="t e xt-gray-300"   />{feature}</span>
                       </div>
     </>
                     ))}
                   </div>
-                  
-                  <button className="{`w-full" py-4 rounded-xl font-semibold transition-all duration-300 ${
+                  <buttonclassName="{`w-f u ll" py-4 rounded-xlfont-semiboldtransition-allduration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
+                      ? 'bg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitehover:from-cyan-600 hover:to-purple-700 shadow-lgshadow-cyan-500/25'
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
                   }`}  />{plan.cta}
     <>
@@ -582,180 +382,85 @@ export default function AIContentGeneratorPage() {
         </section>
     </>
 
-        {/* Testimonials Section */}
+        {/* TestimonialsSection */}
     <>
-        <section className="py-20 px-4 bg-gradient-to-br from-purple-900/50to-pink-900/50relative" />
-<<<<<<< HEAD
-          <div className="absoluteinset-0bg-[radial-gradient(circle_at_70%_30%,rgba(236,72,153,0.1)_0%,transparent_50%)]" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Trusted by <span className="bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent"   />10,000+ Users</span>
+        <sectionclassName="p y-20 px-4 bg-gradient-to-brfrom-purple-900/50to-pink-900/50relative" />
+          <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_70%_30%,rgba(236,72,153,0.1)_0%,transparent_50%)]" />
+          <divclassName="r e lativemax-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+                Trustedby <spanclassName="b g-gradient-to-rfrom-purple-400 to-pink-400bg-clip-texttext-transparent"   />10,000+ Users</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              See what our customers say about their experience with our AI Content Generator.
-=======
-          <div className="absoluteinset-0bg-[radial-gradient(circle_at_70%_30%,rgba(236,72,153,0.1)_0%,transparent_50%)]" / />
-          <div className="relative max-w-7xlmx-auto">
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Trusted by <span className="bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent">10,000+ Users</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                See what our customers say about their experience with our AI Content Generator.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">SeewhatourcustomerssayabouttheirexperiencewithourAIContentGenerator.</p>
             </div>
     </>
             
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
               {testimonials.map((testimonial, index) => (
     <>
-                <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
-<<<<<<< HEAD
-                  <div className="flex items-centermb-4">
-=======
-                  <div className="flexitems-centermb-4">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <divkey="{index}" className="b g-white/10 backdrop-blur-lgrounded-2 xlp-8 borderborder-white/20 hover:bg-white/20transition-allduration-300" />
+                  <divclassName="f l exitems-centermb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
+                      <Starkey="{i}" className="w-5 h-5t e xt-yellow-400fill-current" />
                     ))}
     <>
                   </div>
-<<<<<<< HEAD
-                  <p className="text-gray-300 mb-6leading-relaxed">
-              "{testimonial.content}"</p>
-                  <div className="flex items-centerspace-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-centertext-whitefont-bold"  />{testimonial.avatar}
+                  <pclassName="t e xt-gray-300 mb-6leading-relaxed">"{testimonial.content}"</p>
+                  <divclassName="f l exitems-centerspace-x-4">
+                    <divclassName="w-12 h-12 b g-gradient-to-rfrom-cyan-500 to-purple-600 rounded-fullflexitems-centerjustify-centertext-whitefont-bold"  />{testimonial.avatar}
                     </div>
                     <div />
-                      <div className="font-semiboldtext-white"   />{testimonial.name}</div>
-                      <div className="text-gray-400text-sm"   />{testimonial.role}, {testimonial.company}</div>
+                      <divclassName="f o nt-semiboldtext-white"   />{testimonial.name}</div>
+                      <divclassName="t e xt-gray-400text-sm"   />{testimonial.role}, {testimonial.company}</div>
                   </div>
-=======
-                  <p className="text-gray-300mb-6leading-relaxed">"{testimonial.content}"</p>
-                  <div className="flexitems-centerspace-x-4">
-        </div>
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-centertext-whitefont-bold">{testimonial.avatar}
-                    </div>
-                    <div />
-                      <div className="font-semiboldtext-white">{testimonial.name}</div>
-                      <div className="text-gray-400text-sm">{testimonial.role}, {testimonial.company}</div>
-                  </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               ))}
     <>
             </div>
         </section>
     </>
 
-        {/* CTA Section */}
+        {/* CTASection */}
     <>
-        <section className="py-20px-4relative" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-fullbg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.1)_0%,transparent_50%)]animate-pulse" />
-                <div className="relativez-10">
-                  <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" />
-                    Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Content Strategy?</span>
-=======
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" / />
-          <div className="relative max-w-7xlmx-auto">
-        </div>
-            <div className="text-center" />
-              <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
-        </div>
-                <div className="absolute top-0 left-0 w-full h-fullbg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.1)_0%,transparent_50%)]animate-pulse" / />
-                <div className="relativez-10">
-        </div>
-                  <h2 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-whitemb-6leading-tight" />
-                    Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">Content Strategy?</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <sectionclassName="p y-20px-4relative" />
+          <divclassName="a b soluteinset-0 bg-gradient-to-rfrom-cyan-500/10via-purple-500/10to-pink-500/10" />
+          <divclassName="r e lativemax-w-7xlmx-auto">
+            <divclassName="t e xt-center">
+              <divclassName="b g-gradient-to-rfrom-cyan-600 via-purple-600 to-pink-600 rounded-3 xlp-8 sm:p-12 lg:p-16relativeoverflow-hidden">
+                <divclassName="a b solutetop-0 left-0 w-fullh-fullbg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.1)_0%,transparent_50%)]animate-pulse" />
+                <divclassName="r e lativez-10">
+                  <h2 className="t e xt-4xlsm:text-5 xlmd:text-6 xlfont-boldtext-whitemb-6leading-tight" />
+                    ReadytoTransformYour <spanclassName="b g-gradient-to-rfrom-cyan-300 to-pink-300bg-clip-texttext-transparent"   />ContentStrategy?</span>
                   </h2>
     </>
                   
-                  <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
-<<<<<<< HEAD
-              Join thousands of content creators who are already using our AI to scale their content production. 
-                    Start your free trial today - no credit card required.
-                  </p>
-                  
-                  <div className="flex flex-col sm:flex-row gap-6justify-centermb-8">
-=======
-                    Join thousands of content creators who are already using our AI to scale their content production. 
-                    Start your free trial today - no credit card required.
-                  </p>
-                  
-    <>
-                  <div className="flex flex-col sm:flex-row gap-6justify-centermb-8">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    <button className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
-                      <span>Start Free Trial</span>
-                      <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+                  <pclassName="t e xt-xlsm:text-2 xltext-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">JointhousandsofcontentcreatorswhoarealreadyusingourAItoscaletheircontentproduction. 
+                    Startyourfreetrialtoday - nocreditcardrequired.</p>
+                  <divclassName="f l exflex-colsm:flex-rowgap-6justify-centermb-8">
+                    <buttonclassName="g r oupbg-whitetext-cyan-600 px-10 py-4 rounded-xlfont-boldtext-lghover:bg-gray-100 transition-allduration-300 flexitems-centerjustify-centerspace-x-2 shadow-lghover:shadow-xltransformhover:scale-105" />
+                      <span>StartFreeTrial</span>
+                      <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
                     </button>
-<<<<<<< HEAD
-                    <Link to="/contact" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
+                    <Linkto="/contact" className="g r oupborder-2 border-whitetext-whitepx-10 py-4 rounded-xlfont-boldtext-lghover:bg-white/10 transition-allduration-300 flexitems-centerjustify-centerspace-x-2backdrop-blur-sm">
           <span    />
-        </Link>Contact Sales</span>
-                      <MessageCircle className="w-5 h-5group-hover:scale-110transition-transform" />
-=======
-                    <Link to="/contact" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                      <span>Contact Sales</span>
-                      <MessageCircle className="w-5 h-5group-hover:scale-110transition-transform" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        </Link>ContactSales</span>
+                      <MessageCircleclassName="w-5 h-5g r oup-hover:scale-110transition-transform" />
                     </Link>
                   </div>
     </>
                   
-                  {/* Contact Information */}
-<<<<<<< HEAD
-                  <div className="grid grid-cols-1 md:grid-cols-3gap-6text-white/80">
-                    <div className="flex items-centerjustify-centerspace-x-3">
-                      <Phone className="w-5h-5text-cyan-300" />
-                      <span className="text-sm"   />+1 302 464 0950</span>
+                  {/* ContactInformation */}
+                  <divclassName="g r idgrid-cols-1 md:grid-cols-3gap-6text-white/80">
+                    <divclassName="f l exitems-centerjustify-centerspace-x-3">
+                      <PhoneclassName="w-5h-5t e xt-cyan-300" />
+                      <spanclassName="t e xt-sm"   />+1 302 464 0950</span>
                     </div>
-                    <div className="flex items-centerjustify-centerspace-x-3">
-                      <Mail className="w-5h-5text-purple-300" />
-                      <span className="text-sm"   />kleber@ziontechgroup.com</span>
+                    <divclassName="f l exitems-centerjustify-centerspace-x-3">
+                      <MailclassName="w-5h-5t e xt-purple-300" />
+                      <spanclassName="t e xt-sm"   />kleber@ziontechgroup.com</span>
                     </div>
-                    <div className="flex items-centerjustify-centerspace-x-3">
-                      <MapPin className="w-5h-5text-pink-300" />
-                      <span className="text-sm"   />Middletown DE 19709</span>
-=======
-    <>
-                  <div className="grid grid-cols-1 md:grid-cols-3gap-6text-white/80">
-        </div>
-                    <div className="flex items-centerjustify-centerspace-x-3">
-        </div>
-                      <Phone className="w-5h-5text-cyan-300" / />
-                      <span className="text-sm">+1 302 464 0950</span>
-                    </div>
-                    <div className="flex items-centerjustify-centerspace-x-3">
-        </div>
-                      <Mail className="w-5h-5text-purple-300" / />
-                      <span className="text-sm">kleber@ziontechgroup.com</span>
-                    </div>
-                    <div className="flex items-centerjustify-centerspace-x-3">
-        </div>
-                      <MapPin className="w-5h-5text-pink-300" / />
-                      <span className="text-sm">Middletown DE 19709</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <divclassName="f l exitems-centerjustify-centerspace-x-3">
+                      <MapPinclassName="w-5h-5t e xt-pink-300" />
+                      <spanclassName="t e xt-sm"   />MiddletownDE 19709</span>
                     </div>
                 </div>
             </div>
@@ -776,5 +481,16 @@ export default function AIContentGeneratorPage() {
       </div>
     </>
   );
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
+    </>
 }
     </>

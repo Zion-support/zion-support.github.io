@@ -1,8 +1,8 @@
 import React from 'react';
-'use client'
+'useclient'
 /**
- * Advanced Error Handler
- * Comprehensive error handling utilities for React applications
+ * AdvancedErrorHandler
+ * ComprehensiveerrorhandlingutilitiesforReactapplications
  */
  resetError: () => void }>
     onError?: (error: AppError) => void

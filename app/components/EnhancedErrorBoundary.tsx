@@ -1,29 +1,25 @@
-'use client';
-import { Component, ErrorInfo, ReactNode} from 'react';
-import { Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface Props {
+'useclient';
+import { Component, ErrorInfo, ReactNode  } from 'react';
+import { Home   } from 'lucide-react';
+import { Link   } from 'react-router-dom';
+interfaceProps {
   children: ReactNode;
   fallback?: ReactNode;
 }
 
-interface State {
+interfaceState {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
 
-class EnhancedErrorBoundary extends Component<Props, State /> {
+classEnhancedErrorBoundaryextendsComponent<Props, State /> {
   constructor(props: Props) {
     super(props);
-    this.const state = { hasError: false };
+    this.conststate = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  staticgetDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
@@ -33,144 +29,76 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
       errorInfo
     });
 
-    // Log error to monitoring service
-    console.error('Error caught by boundary: ', error, errorInfo);
+    // Logerrortomonitoringserviceconsole.error('Errorcaughtbyboundary: ', error, errorInfo);
   }
 
-  const handleRetry = () => {
+  consthandleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        returnthis.props.fallback;
       }
 
       return (
-<<<<<<< HEAD
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-centerjustify-centerpx-4">
-          <div className="max-w-md w-full bg-gray-800 rounded-xl p-8 text-centerborderborder-gray-700">
-            <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-automb-6">
-              <AlertTriangle className="h-8w-8text-white" />
+        <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-red-900 to-slate-900 flexitems-centerjustify-centerpx-4">
+          <divclassName="m a x-w-mdw-fullbg-gray-800 rounded-xlp-8 text-centerborderborder-gray-700">
+            <divclassName="w-16 h-16 b g-gradient-to-rfrom-red-500 to-orange-500 rounded-fullflexitems-centerjustify-centermx-automb-6">
+              <AlertTriangleclassName="h-8w-8t e xt-white" />
             </div>
-            
-            <h1 className="text-2 xl font-bold text-white mb-4"  />Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-300 mb-6">
-=======
-    <>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-centerjustify-centerpx-4">
-        </div>
-          <div className="max-w-md w-full bg-gray-800 rounded-xl p-8 text-centerborderborder-gray-700">
-        </div>
-            <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-centermx-automb-6">
-        </div>
-              <AlertTriangle className="h-8w-8text-white" / />
-            </div>
-            
-    <>
-            <h1 className="text-2 xl font-boldtext-whitemb-4">Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-300mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              We encountered an unexpected error. Don't worry, our team has been notified and we're working to fix it.
-            </p>
-
+            <h1 className="t e xt-2 xlfont-boldtext-whitemb-4"  />Oops! Somethingwentwrong</h1>
+            <pclassName="t e xt-gray-300 mb-6">Weencounteredanunexpectederror. Don'tworry, ourteamhasbeennotifiedandwe'reworkingtofixit.</p>
             {process.env.NODE_ENV === 'development' && this.state.error && (
-<<<<<<< HEAD
-              <div className="bg-gray-900 rounded-lg p-4mb-6text-left">
-                <h3 className="text-red-400font-semiboldmb-2"  >Error Details:</h3>
-                <pre className="text-xstext-gray-300overflow-auto"  />{this.state.error.toString()}
-=======
-    <>
-              <div className="bg-gray-900 rounded-lg p-4mb-6text-left">
-        </div>
-                <h3 className="text-red-400font-semiboldmb-2">Error Details:</h3>
-                <pre className="text-xstext-gray-300overflow-auto">{this.state.error.toString()}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              <divclassName="b g-gray-900 rounded-lgp-4mb-6text-left">
+                <h3 className="t e xt-red-400font-semiboldmb-2"  >ErrorDetails:</h3>
+                <preclassName="t e xt-xstext-gray-300overflow-auto"  />{this.state.error.toString()}
                 </pre>
                 {this.state.errorInfo && (
     <>
-                  <pre className="text-xs text-gray-400mt-2overflow-auto">{this.state.errorInfo.componentStack}
+                  <preclassName="t e xt-xstext-gray-400mt-2overflow-auto">{this.state.errorInfo.componentStack}
                   </pre>
                 )}
               </div>
             )}
 
-            <div className="space-y-3">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <button
-                onClick="{this.handleRetry}"
-                className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
-                <RefreshCw className="h-4w-4mr-2" />
-                Try Again
+            <divclassName="s p ace-y-3">
+              <buttononClick="{this.handleRetry}"
+                className="w-f u llinline-flexitems-centerjustify-centerpx-6 py-3 bg-gradient-to-rfrom-purple-600 to-pink-600 text-whitefont-semiboldrounded-lghover:from-purple-700 hover:to-pink-700 transition-allduration-300transformhover:scale-105" />
+                <RefreshCwclassName="h-4w-4m r-2" />
+                TryAgain
               </button>
-              
-<<<<<<< HEAD
-              <Link to="/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-allduration-300" >
-           
-          <Home className="h-4w-4mr-2" /  />
+              <Linkto="/" className="w-f u llinline-flexitems-centerjustify-centerpx-6 py-3 borderborder-gray-600 text-gray-300 font-semiboldrounded-lghover:bg-gray-700 hover:text-whitetransition-allduration-300">
+          <HomeclassName="h-4w-4m r-2" /  />
         </Link>
-=======
-    <>
-              <Link to="/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-allduration-300" />
-                <Home className="h-4w-4mr-2" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Go Home
+                GoHome
     <>
               </Link>
             </div>
-
-<<<<<<< HEAD
-            <div className="mt-8 pt-6border-tborder-gray-700">
-              <p className="text-smtext-gray-400mb-4">
-              Still having issues? Contact our support team:
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-2justify-center">
-=======
-    <>
-            <div className="mt-8 pt-6border-tborder-gray-700">
-        </div>
-              <p className="text-smtext-gray-400mb-4" />
-                Still having issues? Contact our support team:
-    <>
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-2justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300transition-colors" />
-                  <Mail className="h-4w-4mr-1" />
+            <divclassName="m t-8 pt-6border-tborder-gray-700">
+              <pclassName="t e xt-smtext-gray-400mb-4">Stillhavingissues? Contactoursupportteam:</p>
+              <divclassName="f l exflex-colsm:flex-rowgap-2justify-center">
+                <ahref="mailto:kleber@ziontechgroup.com"
+                  className="i n line-flexitems-centertext-smtext-purple-400hover:text-purple-300transition-colors" />
+                  <MailclassName="h-4w-4m r-1" />
                   kleber@ziontechgroup.com
     <>
                 </a>
-                <span className="hiddensm:inlinetext-gray-500">•</span>
-                <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300transition-colors" />
+                <spanclassName="h i ddensm:inlinetext-gray-500">•</span>
+                <ahref="tel:+13024640950"
+                  className="i n line-flexitems-centertext-smtext-purple-400hover:text-purple-300transition-colors" />
     <>
                   <span>+1 302 464 0950</span>
                 </a>
               </div>
-<<<<<<< HEAD
     </div>
   );
-=======
-          </div>
-      );
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
     }
 
-    return this.props.children;
+    returnthis.props.children;
   }
 }
 
-export default EnhancedErrorBoundary;
+exportdefaultEnhancedErrorBoundary;
     </>

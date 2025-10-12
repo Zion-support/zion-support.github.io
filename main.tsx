@@ -1,6 +1,6 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
+importReactDOMfrom 'react-dom/client'
+importAppfrom './App'
 import './app/globals.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -9,15 +9,14 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   </React.StrictMode>
 );
 
-// Register service worker for PWA functionality
-if ('serviceWorker' in navigator) {
+// RegisterserviceworkerforPWAfunctionalityif ('serviceWorker' innavigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
-        console.log('SW registered: ', registration);
+        console.log('SWregistered: ', registration);
       })
       .catch((registrationError) => {
-        console.log('SW registration failed: ', registrationError);
+        console.log('SWregistrationfailed: ', registrationError);
       });
   });
 }

@@ -1,223 +1,175 @@
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Link   } from 'react-router-dom';
+import { Helmet   } from 'react-helmet-async';
 
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight   } from 'lucide-react';
 
-export default function Ai3dGenerationPage() {
+exportdefaultfunctionAi3dGenerationPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI 3D Generation - Zion Tech Group</title>
-        <meta name="description" content="Create stunning 3D models with AI-powered generation. Transform text descriptions and images into detailed 3D assets instantly." />
-        <meta name="keywords" content="AI 3D generation, 3D modeling, text-to-3D, image-to-3D, 3D assets, AI modeling" />
+        <title>AI 3DGeneration - ZionTechGroup</title>
+        <metaname="description" content="Createstunning 3DmodelswithAI-poweredgeneration. Transformtextdescriptionsandimagesintodetailed 3Dassetsinstantly." />
+        <metaname="keywords" content="AI 3Dgeneration, 3Dmodeling, text-to-3D, image-to-3D, 3Dassets, AImodeling" />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              AI 3D Generation
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your ideas into stunning 3D models with our advanced AI-powered generation technology.
-              Create detailed 3D assets from text descriptions or 2D images in seconds.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
+      {/* HeroSection */}
+      <sectionclassName="r e lativepy-20 px-4 sm:px-6 lg:px-8">
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h1 className="t e xt-4xlsm:text-5xlmd:text-6xlfont-boldtext-whitemb-6">AI 3DGeneration</h1>
+            <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-3xlmx-automb-8">Transformyourideasintostunning 3DmodelswithouradvancedAI-poweredgenerationtechnology.
+              Createdetailed 3Dassetsfromtextdescriptionsor 2Dimagesinseconds.</p>
+            <divclassName="f l exflex-colsm:flex-rowgap-4 justify-center">
+              <Linkto="/contact"
+                className="b g-gradient-to-rfrom-purple-500 to-blue-600 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-purple-600 hover:to-blue-700 transition-allduration-300 flexitems-centerjustify-center">
+                GetStarted
+                <ArrowRightclassName="m l-2 w-5 h-5" />
               </Link>
-              <Link
-                to="/demo"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-              >
-                Try Demo
+              <Linkto="/demo"
+                className="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-gray-900 transition-allduration-300">
+                TryDemo
               </Link>
             </div>
         </div>
       </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful 3D Generation Features
+      {/* FeaturesSection */}
+      <sectionclassName="p y-20 px-4 sm:px-6 lg:px-8">
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-3xlmd:text-4xlfont-boldtext-whitemb-4">
+              Powerful 3DGenerationFeatures
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to create professional 3D models with AI assistance.
-            </p>
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Everythingyouneedtocreateprofessional 3DmodelswithAIassistance.</p>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <divclassName="g r idgrid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+              <divkey={index} className="b g-white/10 backdrop-blur-lgrounded-2xlp-8 borderborder-white/20 hover:bg-white/15 transition-allduration-300">
+                <divclassName="m b-4">{feature.icon}</div>
+                <h3 className="t e xt-xlfont-semiboldtext-whitemb-4">{feature.title}</h3>
+                <pclassName="t e xt-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
       </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect For
+      {/* UseCasesSection */}
+      <sectionclassName="p y-20 px-4 sm:px-6 lg:px-8">
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="b g-white/10 backdrop-blur-lgrounded-2xlp-8 lg:p-12 borderborder-white/20">
+            <divclassName="t e xt-centermb-12">
+              <h2 className="t e xt-3xlmd:text-4xlfont-boldtext-whitemb-4">
+                PerfectFor
               </h2>
-              <p className="text-xl text-gray-300">
-                Our AI 3D generation technology excels in various industries and applications
-              </p>
+              <pclassName="t e xt-xltext-gray-300">OurAI 3Dgenerationtechnologyexcelsinvariousindustriesandapplications</p>
             </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <divclassName="g r idgrid-cols-2 md:grid-cols-4 gap-6">
               {useCases.map((useCase, index) => (
-                <div key={index} className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-sm">{useCase}</span>
+                <divkey={index} className="f l exitems-centertext-gray-300">
+                  <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3 flex-shrink-0" />
+                  <spanclassName="t e xt-sm">{useCase}</span>
                 </div>
               ))}
             </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Create Amazing 3D Models?
+      {/* CTASection */}
+      <sectionclassName="p y-20 px-4 sm:px-6 lg:px-8">
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="b g-gradient-to-rfrom-purple-600 to-pink-600 rounded-3xlp-6 sm:p-8 lg:p-12 text-center">
+            <h2 className="t e xt-2xlsm:text-3xlmd:text-4xlfont-boldtext-whitemb-4">
+              ReadytoCreateAmazing 3DModels?
             </h2>
-            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Start generating professional 3D models with our AI-powered technology today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-              >
-                Get Started Today
+            <pclassName="t e xt-lgsm:text-xltext-white/90 mb-8 max-w-2xlmx-auto">Startgeneratingprofessional 3DmodelswithourAI-poweredtechnologytoday.</p>
+            <divclassName="f l exflex-colsm:flex-rowgap-4 justify-center">
+              <Linkto="/contact"
+                className="b g-whitetext-purple-600 px-8 py-3 rounded-lgfont-semiboldhover:bg-gray-100 transition-allduration-300">
+                GetStartedToday
               </Link>
-              <Link
-                to="/ai-services"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
-              >
-                View All AI Services
+              <Linkto="/ai-services"
+                className="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-purple-600 transition-allduration-300">
+                ViewAllAIServices
               </Link>
             </div>
         </div>
-      </section>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      </section>    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI 3D Generation - Zion Tech Group</title>
-        <meta name="description" content="Create stunning 3D models with AI-powered generation. Transform text descriptions and images into detailed 3D assets instantly." />
-        <meta name="keywords" content="AI 3D generation, 3D modeling, text-to-3D, image-to-3D, 3D assets, AI modeling" />
+        <title>AI 3DGeneration - ZionTechGroup</title>
+        <metaname="description" content="Createstunning 3DmodelswithAI-poweredgeneration. Transformtextdescriptionsandimagesintodetailed 3Dassetsinstantly." />
+        <metaname="keywords" content="AI 3Dgeneration, 3Dmodeling, text-to-3D, image-to-3D, 3Dassets, AImodeling" />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              AI 3D Generation
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your ideas into stunning 3D models with our advanced AI-powered generation technology.
-              Create detailed 3D assets from text descriptions or 2D images in seconds.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
+      {/* HeroSection */}
+      <sectionclassName="r e lativepy-20 px-4 sm:px-6 lg:px-8">
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h1 className="t e xt-4xlsm:text-5xlmd:text-6xlfont-boldtext-whitemb-6">AI 3DGeneration</h1>
+            <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-3xlmx-automb-8">Transformyourideasintostunning 3DmodelswithouradvancedAI-poweredgenerationtechnology.
+              Createdetailed 3Dassetsfromtextdescriptionsor 2Dimagesinseconds.</p>
+            <divclassName="f l exflex-colsm:flex-rowgap-4 justify-center">
+              <Linkto="/contact"
+                className="b g-gradient-to-rfrom-purple-500 to-blue-600 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-purple-600 hover:to-blue-700 transition-allduration-300 flexitems-centerjustify-center">
+                GetStarted
+                <ArrowRightclassName="m l-2 w-5 h-5" />
               </Link>
-              <Link
-                to="/demo"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-              >
-                Try Demo
+              <Linkto="/demo"
+                className="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-gray-900 transition-allduration-300">
+                TryDemo
               </Link>
             </div>
         </div>
       </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful 3D Generation Features
+      {/* FeaturesSection */}
+      <sectionclassName="p y-20 px-4 sm:px-6 lg:px-8">
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-3xlmd:text-4xlfont-boldtext-whitemb-4">
+              Powerful 3DGenerationFeatures
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to create professional 3D models with AI assistance.
-            </p>
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Everythingyouneedtocreateprofessional 3DmodelswithAIassistance.</p>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <divclassName="g r idgrid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+              <divkey={index} className="b g-white/10 backdrop-blur-lgrounded-2xlp-8 borderborder-white/20 hover:bg-white/15 transition-allduration-300">
+                <divclassName="m b-4">{feature.icon}</div>
+                <h3 className="t e xt-xlfont-semiboldtext-whitemb-4">{feature.title}</h3>
+                <pclassName="t e xt-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
       </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect For
+      {/* UseCasesSection */}
+      <sectionclassName="p y-20 px-4 sm:px-6 lg:px-8">
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="b g-white/10 backdrop-blur-lgrounded-2xlp-8 lg:p-12 borderborder-white/20">
+            <divclassName="t e xt-centermb-12">
+              <h2 className="t e xt-3xlmd:text-4xlfont-boldtext-whitemb-4">
+                PerfectFor
               </h2>
-              <p className="text-xl text-gray-300">
-                Our AI 3D generation technology excels in various industries and applications
-              </p>
+              <pclassName="t e xt-xltext-gray-300">OurAI 3Dgenerationtechnologyexcelsinvariousindustriesandapplications</p>
             </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <divclassName="g r idgrid-cols-2 md:grid-cols-4 gap-6">
               {useCases.map((useCase, index) => (
-                <div key={index} className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-sm">{useCase}</span>
+                <divkey={index} className="f l exitems-centertext-gray-300">
+                  <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3 flex-shrink-0" />
+                  <spanclassName="t e xt-sm">{useCase}</span>
                 </div>
               ))}
             </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Create Amazing 3D Models?
+      {/* CTASection */}
+      <sectionclassName="p y-20 px-4 sm:px-6 lg:px-8">
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="b g-gradient-to-rfrom-purple-600 to-pink-600 rounded-3xlp-6 sm:p-8 lg:p-12 text-center">
+            <h2 className="t e xt-2xlsm:text-3xlmd:text-4xlfont-boldtext-whitemb-4">
+              ReadytoCreateAmazing 3DModels?
             </h2>
-            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Start generating professional 3D models with our AI-powered technology today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-              >
-                Get Started Today
+            <pclassName="t e xt-lgsm:text-xltext-white/90 mb-8 max-w-2xlmx-auto">Startgeneratingprofessional 3DmodelswithourAI-poweredtechnologytoday.</p>
+            <divclassName="f l exflex-colsm:flex-rowgap-4 justify-center">
+              <Linkto="/contact"
+                className="b g-whitetext-purple-600 px-8 py-3 rounded-lgfont-semiboldhover:bg-gray-100 transition-allduration-300">
+                GetStartedToday
               </Link>
-              <Link
-                to="/ai-services"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
-              >
-                View All AI Services
+              <Linkto="/ai-services"
+                className="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-purple-600 transition-allduration-300">
+                ViewAllAIServices
               </Link>
             </div>
         </div>

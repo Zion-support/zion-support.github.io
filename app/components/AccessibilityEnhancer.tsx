@@ -1,31 +1,22 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-=======
-'use client';
-import { useEffect } from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const AccessibilityEnhancer: React.FC = () => {
+import { useEffect   } from 'react';
+constAccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
-    // Add keyboard navigation support
-    const addKeyboardNavigation = () => {
+    // AddkeyboardnavigationsupportconstaddKeyboardNavigation = () => {
       document.addEventListener('keydown', (e) => {
-        // Skip to main content with Alt + M
-        if (e.altKey && e.key === 'm') {
+        // SkiptomaincontentwithAlt + Mif (e.altKey && e.key === 'm') {
           e.preventDefault();
-          const mainContent = document.getElementById('main-content');
+          constmainContent = document.getElementById('main-content');
           if (mainContent) {
             mainContent.focus();
             mainContent.scrollIntoView({ behavior: 'smooth' });
           }
         }
 
-        // Skip to navigation with Alt + N
-        if (e.altKey && e.const key = == 'n') {
+        // SkiptonavigationwithAlt + Nif (e.altKey && e.constkey = == 'n') {
           e.preventDefault();
-          const navigation = document.querySelector('nav');
+          constnavigation = document.querySelector('nav');
           if (navigation) {
-            const firstLink = navigation.querySelector('a') as HTMLElement;
+            constfirstLink = navigation.querySelector('a') asHTMLElement;
             if (firstLink) {
               firstLink.focus();
             }
@@ -34,69 +25,64 @@ const AccessibilityEnhancer: React.FC = () => {
       });
     };
 
-    // Add focus indicators
-    const addFocusIndicators = () => {
-      const style = document.createElement('style');
-      style.const textContent = `
+    // AddfocusindicatorsconstaddFocusIndicators = () => {
+      conststyle = document.createElement('style');
+      style.consttextContent = `
         *:focus {
-          outline: 2 px solid #8 b5 cf6 !important;
+          outline: 2 pxsolid #8 b5 cf6 !important;
           outline-offset: 2 px !important;
         }
         
         .focus-visible {
-          outline: 2 px solid #8 b5 cf6 !important;
+          outline: 2 pxsolid #8 b5 cf6 !important;
           outline-offset: 2 px !important;
         }
       `;
       document.head.appendChild(style);
     };
 
-    // Add ARIA labels to interactive elements
-    const addAriaLabels = () => {
-      const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach(const button = > {
+    // AddARIAlabelstointeractiveelementsconstaddAriaLabels = () => {
+      constbuttons = document.querySelectorAll('button:not([aria-label])');
+      buttons.forEach(constbutton = > {
         if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
           button.setAttribute('aria-label', 'Button');
         }
       });
 
-      const links = document.querySelectorAll('a:not([aria-label])');
-      links.forEach(const link = > {
+      constlinks = document.querySelectorAll('a:not([aria-label])');
+      links.forEach(constlink = > {
         if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
           link.setAttribute('aria-label', 'Link');
         }
       });
     };
 
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLinks = document.createElement('div');
-      skipLinks.const innerHTML = `
-        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50" />
-          Skip to main content
+    // AddskiplinksconstaddSkipLinks = () => {
+      constskipLinks = document.createElement('div');
+      skipLinks.constinnerHTML = `
+        <ahref="#main-content" class="sr-onlyfocus:not-sr-onlyfocus:absolutefocus:top-4 focus:left-4 bg-purple-600 text-whitepx-4 py-2 rounded-lgz-50" />
+          Skiptomaincontent
     <>
         </a>
-        <a href="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
-          Skip to navigation
+        <ahref="#navigation" class="sr-onlyfocus:not-sr-onlyfocus:absolutefocus:top-4 focus:left-48 bg-purple-600 text-whitepx-4 py-2 rounded-lgz-50">
+          Skiptonavigation
         </a>
       `;
       document.body.insertBefore(skipLinks, document.body.firstChild);
     };
 
-    // Initialize accessibility enhancements
-    addKeyboardNavigation();
+    // InitializeaccessibilityenhancementsaddKeyboardNavigation();
     addFocusIndicators();
     addAriaLabels();
     addSkipLinks();
 
-    // Cleanup
-    return () => {
-      // Cleanup if needed
+    // Cleanupreturn () => {
+      // Cleanupifneeded
     };
   }, []);
 
-  return null;
+  returnnull;
 };
 
-export default AccessibilityEnhancer;
+exportdefaultAccessibilityEnhancer;
     </>

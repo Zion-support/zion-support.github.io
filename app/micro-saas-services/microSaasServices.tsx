@@ -1,221 +1,150 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-'use client'
-import { Helmet } from 'react-helmet-async';
+'useclient'
+import { Helmet    } from 'react-helmet-async';
 
-import { ArrowRight, Mail, Brain } from 'lucide-react';
-const MicroSaasServicesPage: React.FC = () => {
-  const features = [
+import { ArrowRight, Mail, Brain    } from 'lucide-react';
+constMicroSaasServicesPage: React.FC = () => {
+  constfeatures = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
+      title: 'AI-PoweredSolutions',
+      description: 'AdvancedAItechnologytotransformyourbusinessoperationsandimproveefficiency',
     },
     {
       icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
+      title: 'HighPerformance',
+      description: 'Lightning-fastprocessingandreal-timeanalyticsforoptimalresults',
     },
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
+      title: 'EnterpriseSecurity',
+      description: 'Bank-levelsecuritywithencryptionandcompliancestandards',
     },
     {
       icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
+      title: 'GlobalReach',
+      description: 'Worldwidedeploymentandsupportforinternationalbusinesses',
     }
   ];
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+  constbenefits = [
+    'AdvancedAItechnologyintegration',
+    'Real-timeprocessingandanalytics',
+    'Enterprise-gradesecurityandcompliance',
+    'Scalableandflexiblesolutions',
+    '24/7 technicalsupport',
+    'Easyintegrationwithexistingsystems',
+    'Cost-effectivepricingplans',
+    'Proventrackrecordofsuccess'
   ];
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-=======
-    <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>MicroSaasServices | ZionTechGroup</title>
+        <metaname="description" content="ProfessionalMicroSaasServicesservicesbyZionTechGroup. AdvancedAIandITsolutionsforyourbusiness." />
+        <metaname="keywords" content="microSaasServices, AIsolutions, ITservices, ZionTechGroup, microsaasservices" />
       </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>MicroSaasServices | Zion Tech Group</title>
-        <meta name="description" content="Professional MicroSaasServices services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="microSaasServices, AI solutions, IT services, Zion Tech Group, microsaasservices" />
-      </Helmet>
-      {/* Hero Section */}
+      {/* HeroSection */}
     <>
-      <section className="relative py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" />
-=======
-        </div>
-          <div className="text-center" />
-            <h1 className="text-4xl md:text-6xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent" />
+      <sectionclassName="r e lativepy-20 px-4sm:px-6lg:px-8" />
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="t e xt-center">
+            <h1 className="t e xt-4xlmd:text-6xlfont-boldtext-whitemb-6" />
+              <spanclassName="b g-gradient-to-rfrom-purple-400 to-blue-400bg-clip-texttext-transparent" />
                 MicroSaasServices
 
     <>
-              <span className="text-white">Solutions</span>
+              <spanclassName="t e xt-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
-              Transform your business with our advanced microsaasservices solutions.
-              Powered by cutting-edge AI technology and industry expertise.
+            <pclassName="t e xt-xltext-gray-300 mb-8max-w-3xlmx-auto">
+              Transformyourbusinesswithouradvancedmicrosaasservicessolutions.
+              Poweredbycutting-edgeAItechnologyandindustryexpertise.
     <>
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" />
-=======
-        </div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Get Started
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+              <buttonclassName="b g-gradient-to-rfrom-purple-500 to-blue-600 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-purple-600 hover:to-blue-700 transition-allduration-300flexitems-center" />
+                GetStarted
     <>
-                <ArrowRight className="ml-2h-5w-5" />
+                <ArrowRightclassName="m l-2h-5w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
-                Learn More
+              <buttonclassName="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-gray-900transition-allduration-300" />
+                LearnMore
   </
     <>
             </div>
         </div>
       </section>
-      {/* Features Section */}
+      {/* FeaturesSection */}
     <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" />
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3xl md:text-4xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Why Choose Our MicroSaasServices?
+      <sectionclassName="p y-20 px-4sm:px-6lg:px-8" />
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-3xlmd:text-4xlfont-boldtext-whitemb-4" />
+              WhyChooseOurMicroSaasServices?
     <>
             </h2>
-            <p className="text-xl text-gray-300max-w-3xlmx-auto">
-              Our microsaasservices solutions deliver unmatched performance, security, and scalability.
+            <pclassName="t e xt-xltext-gray-300max-w-3xlmx-auto">
+              Ourmicrosaasservicessolutionsdeliverunmatchedperformance, security, andscalability.
     <>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
             {features.map((feature, index) => (
     <>
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  <feature.icon className="h-6w-6text-white" />
+              <divkey={index} className="b g-white/10 backdrop-blur-smrounded-xlp-6 borderborder-white/20 hover:bg-white/20transition-allduration-300" />
+                <divclassName="f l exitems-centerjustify-centerw-12 h-12 bg-gradient-to-rfrom-purple-500 to-blue-600rounded-lgmb-4">
+                  <feature.iconclassName="h-6w-6t e xt-white" />
                 </div>
-                <h3 className="text-xl font-semiboldtext-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="t e xt-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
+                <pclassName="t e xt-gray-300">{feature.description}</p>
               </div>
             ))}
     <>
           </div>
       </section>
-      {/* Benefits Section */}
+      {/* BenefitsSection */}
     <>
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" />
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3xl md:text-4xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Key Benefits
+      <sectionclassName="p y-20 px-4 sm:px-6lg:px-8bg-white/5" />
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-3xlmd:text-4xlfont-boldtext-whitemb-4" />
+              KeyBenefits
   </
-            <p className="text-xl text-gray-300max-w-3xlmx-auto">
-              Experience the power of our microsaasservices solutions for your business.
+            <pclassName="t e xt-xltext-gray-300max-w-3xlmx-auto">
+              Experiencethepowerofourmicrosaasservicessolutionsforyourbusiness.
     <>
             </p>
           </div>
-          <div className="grid grid-cols-1md:grid-cols-2gap-6">
-<<<<<<< HEAD
+          <divclassName="g r idgrid-cols-1md:grid-cols-2gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-startspace-x-3" />
-=======
-        </div>
-            {benefits.map((benefit, index) => (
-    <>
-              <div key={index} className="flexitems-startspace-x-3" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <CheckCircle className="h-6 w-6 text-purple-400mt-1flex-shrink-0" />
-                <p className="text-gray-300text-lg">{benefit}</p>
+              <divkey={index} className="f l exitems-startspace-x-3" />
+                <CheckCircleclassName="h-6 w-6 t e xt-purple-400mt-1flex-shrink-0" />
+                <pclassName="t e xt-gray-300text-lg">{benefit}</p>
               </div>
             ))}
     <>
           </div>
       </section>
-      {/* CTA Section */}
+      {/* CTASection */}
     <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-4xlmx-autotext-center">
-<<<<<<< HEAD
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xlp-8md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" />
-=======
-        </div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xlp-8md:p-12">
-        </div>
-            <h2 className="text-3xl md:text-4xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Ready to Get Started?
+      <sectionclassName="p y-20 px-4sm:px-6lg:px-8" />
+        <divclassName="m a x-w-4xlmx-autotext-center">
+          <divclassName="b g-gradient-to-rfrom-purple-600 to-blue-600 rounded-2xlp-8md:p-12">
+            <h2 className="t e xt-3xlmd:text-4xlfont-boldtext-whitemb-4" />
+              ReadytoGetStarted?
     <>
             </h2>
-            <p className="text-xltext-purple-100mb-8">
-              Contact our experts to discuss your microsaasservices needs and get a customized solution.
+            <pclassName="t e xt-xltext-purple-100mb-8">
+              Contactourexpertstodiscussyourmicrosaasservicesneedsandgetacustomizedsolution.
     <>
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-centerjustify-center" />
-                <Phone className="mr-2h-5w-5" />
-                Call Now
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+              <buttonclassName="b g-whitetext-purple-600 px-8 py-3 rounded-lgfont-semiboldhover:bg-gray-100 transition-allduration-300 flexitems-centerjustify-center" />
+                <PhoneclassName="m r-2h-5w-5" />
+                CallNow
   </
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-centerjustify-center" />
-=======
-        </div>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flexitems-centerjustify-center" />
-                <Phone className="mr-2h-5w-5" />
-                Call Now
-  </
-    <>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flexitems-centerjustify-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Mail className="mr-2h-5w-5" />
-                Email Us
+              <buttonclassName="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-purple-600 transition-allduration-300 flexitems-centerjustify-center" />
+                <MailclassName="m r-2h-5w-5" />
+                EmailUs
   </
     <>
             </div>
@@ -223,211 +152,144 @@ const MicroSaasServicesPage: React.FC = () => {
       </section>
     </div>
   )}
-export default MicroSaasServicesPage
+exportdefaultMicroSaasServicesPage
     <>
   </button>
   </button>
   </h2>
   </button>
   </span>
-
     {icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'}
+      title: 'AI-PoweredSolutions',
+      description: 'AdvancedAItechnologytotransformyourbusinessoperationsandimproveefficiency'}
     },
     {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'}
+      title: 'HighPerformance',
+      description: 'Lightning-fastprocessingandreal-timeanalyticsforoptimalresults'}
     },
     {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'}
+      title: 'EnterpriseSecurity',
+      description: 'Bank-levelsecuritywithencryptionandcompliancestandards'}
     },
     {icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'}
+      title: 'GlobalReach',
+      description: 'Worldwidedeploymentandsupportforinternationalbusinesses'}
     }
-  ];const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-<<<<<<< HEAD
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"></div>
+  ];constbenefits = [
+    'AdvancedAItechnologyintegration',
+    'Real-timeprocessingandanalytics',
+    'Enterprise-gradesecurityandcompliance',
+    'Scalableandflexiblesolutions',
+    '24/7 technicalsupport',
+    'Easyintegrationwithexistingsystems',
+    'Cost-effectivepricingplans',
+    'Proventrackrecordofsuccess'
+  ];return (<divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
-=======
-    <>
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div></div>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>MicroSaasServices | ZionTechGroup</title>
+        <metaname="description" content="ProfessionalMicroSaasServicesservicesbyZionTechGroup. AdvancedAIandITsolutionsforyourbusiness." />
+        <metaname="keywords" content="microSaasServices, AIsolutions, ITservices, ZionTechGroup, microsaasservices" />
       </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>MicroSaasServices | Zion Tech Group</title>
-        <meta name="description" content="Professional MicroSaasServices services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="microSaasServices, AI solutions, IT services, Zion Tech Group, microsaasservices" />
-      </Helmet>
-      {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="relative py-20 px-4sm:px-6lg:px-8"></section>
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" />
-=======
-    <>
-      <section className="relative py-20 px-4sm:px-6lg:px-8" /></section>
-        <div className="max-w-7xlmx-auto">
-        </div></div>
-          <div className="text-center" /></div>
-            <h1 className="text-4xl md:text-6xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent" />
+      {/* HeroSection */}
+      <sectionclassName="r e lativepy-20 px-4sm:px-6lg:px-8"></section>
+        <divclassName="m a x-w-7xlmx-auto"></div>
+          <divclassName="t e xt-center"></div>
+            <h1 className="t e xt-4xlmd:text-6xlfont-boldtext-whitemb-6" />
+              <spanclassName="b g-gradient-to-rfrom-purple-400 to-blue-400bg-clip-texttext-transparent" />
                 MicroSaasServices
     <>
               </span>
               <br />
-              <span className="text-white">Solutions</span>
+              <spanclassName="t e xt-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
-              Transform your business with our advanced microsaasservices solutions.
-              Powered by cutting-edge AI technology and industry expertise.
+            <pclassName="t e xt-xltext-gray-300 mb-8max-w-3xlmx-auto">
+              Transformyourbusinesswithouradvancedmicrosaasservicessolutions.
+              Poweredbycutting-edgeAItechnologyandindustryexpertise.
     <>
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-rowgap-4justify-center"></div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" />
-=======
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div></div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Get Started
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center"></div>
+              <buttonclassName="b g-gradient-to-rfrom-purple-500 to-blue-600 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-purple-600 hover:to-blue-700 transition-allduration-300flexitems-center" />
+                GetStarted
     <>
-                <ArrowRight className="ml-2h-5w-5" />
+                <ArrowRightclassName="m l-2h-5w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
-                Learn More
+              <buttonclassName="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-gray-900transition-allduration-300" />
+                LearnMore
     <>
               </button>
             </div>
         </div>
       </section>
-      {/* Features Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4sm:px-6lg:px-8"></section>
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-centermb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" />
-=======
-    <>
-      <section className="py-20 px-4sm:px-6lg:px-8" /></section>
-        <div className="max-w-7xlmx-auto">
-        </div></div>
-          <div className="text-centermb-16">
-        </div></div>
-            <h2 className="text-3xl md:text-4xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Why Choose Our MicroSaasServices?
+      {/* FeaturesSection */}
+      <sectionclassName="p y-20 px-4sm:px-6lg:px-8"></section>
+        <divclassName="m a x-w-7xlmx-auto"></div>
+          <divclassName="t e xt-centermb-16"></div>
+            <h2 className="t e xt-3xlmd:text-4xlfont-boldtext-whitemb-4" />
+              WhyChooseOurMicroSaasServices?
     <>
             </h2>
-            <p className="text-xl text-gray-300max-w-3xlmx-auto">
-              Our microsaasservices solutions deliver unmatched performance, security, and scalability.
+            <pclassName="t e xt-xltext-gray-300max-w-3xlmx-auto">
+              Ourmicrosaasservicessolutionsdeliverunmatchedperformance, security, andscalability.
     <>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+          <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
         </div></div>
             {features.map((feature, index) => (}
     <>
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" /></div>
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4">
+              <divkey={index} className="b g-white/10 backdrop-blur-smrounded-xlp-6 borderborder-white/20 hover:bg-white/20transition-allduration-300" /></div>
+                <divclassName="f l exitems-centerjustify-centerw-12 h-12 bg-gradient-to-rfrom-purple-500 to-blue-600rounded-lgmb-4">
         </div></div>
-                  <feature.icon className="h-6w-6text-white" />
+                  <feature.iconclassName="h-6w-6t e xt-white" />
                 </div>
-                <h3 className="text-xl font-semiboldtext-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="t e xt-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
+                <pclassName="t e xt-gray-300">{feature.description}</p>
               </div>))}
           </div>
       </section>
-      {/* Benefits Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5"></section>
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-centermb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" />
-=======
-    <>
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" /></section>
-        <div className="max-w-7xlmx-auto">
-        </div></div>
-          <div className="text-centermb-16">
-        </div></div>
-            <h2 className="text-3xl md:text-4xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Key Benefits
+      {/* BenefitsSection */}
+      <sectionclassName="p y-20 px-4 sm:px-6lg:px-8bg-white/5"></section>
+        <divclassName="m a x-w-7xlmx-auto"></div>
+          <divclassName="t e xt-centermb-16"></div>
+            <h2 className="t e xt-3xlmd:text-4xlfont-boldtext-whitemb-4" />
+              KeyBenefits
     <>
             </h2>
-            <p className="text-xl text-gray-300max-w-3xlmx-auto">
-              Experience the power of our microsaasservices solutions for your business.
+            <pclassName="t e xt-xltext-gray-300max-w-3xlmx-auto">
+              Experiencethepowerofourmicrosaasservicessolutionsforyourbusiness.
     <>
             </p>
           </div>
-          <div className="grid grid-cols-1md:grid-cols-2gap-6">
+          <divclassName="g r idgrid-cols-1md:grid-cols-2gap-6">
         </div></div>
             {benefits.map((benefit, index) => (}
-<<<<<<< HEAD
-              <div key={index} className="flex items-startspace-x-3"></div>
-=======
-    <>
-              <div key={index} className="flexitems-startspace-x-3" /></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <CheckCircle className="h-6 w-6 text-purple-400mt-1flex-shrink-0" />
-                <p className="text-gray-300text-lg">{benefit}</p>
+              <divkey={index} className="f l exitems-startspace-x-3"></div>
+                <CheckCircleclassName="h-6 w-6 t e xt-purple-400mt-1flex-shrink-0" />
+                <pclassName="t e xt-gray-300text-lg">{benefit}</p>
               </div>))}
           </div>
       </section>
-      {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4sm:px-6lg:px-8"></section>
-        <div className="max-w-4xlmx-autotext-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xlp-8md:p-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" />
-=======
-    <>
-      <section className="py-20 px-4sm:px-6lg:px-8" /></section>
-        <div className="max-w-4xlmx-autotext-center">
-        </div></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xlp-8md:p-12">
-        </div></div>
-            <h2 className="text-3xl md:text-4xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Ready to Get Started?
+      {/* CTASection */}
+      <sectionclassName="p y-20 px-4sm:px-6lg:px-8"></section>
+        <divclassName="m a x-w-4xlmx-autotext-center"></div>
+          <divclassName="b g-gradient-to-rfrom-purple-600 to-blue-600 rounded-2xlp-8md:p-12"></div>
+            <h2 className="t e xt-3xlmd:text-4xlfont-boldtext-whitemb-4" />
+              ReadytoGetStarted?
     <>
             </h2>
-            <p className="text-xltext-purple-100mb-8">
-              Contact our experts to discuss your microsaasservices needs and get a customized solution.
+            <pclassName="t e xt-xltext-purple-100mb-8">
+              Contactourexpertstodiscussyourmicrosaasservicesneedsandgetacustomizedsolution.
     <>
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-rowgap-4justify-center"></div>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-centerjustify-center" />
-=======
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div></div>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flexitems-centerjustify-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Phone className="mr-2h-5w-5" />
-                Call Now
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center"></div>
+              <buttonclassName="b g-whitetext-purple-600 px-8 py-3 rounded-lgfont-semiboldhover:bg-gray-100 transition-allduration-300 flexitems-centerjustify-center" />
+                <PhoneclassName="m r-2h-5w-5" />
+                CallNow
     <>
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-centerjustify-center" />
-                <Mail className="mr-2h-5w-5" />
-                Email Us
+              <buttonclassName="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-purple-600 transition-allduration-300 flexitems-centerjustify-center" />
+                <MailclassName="m r-2h-5w-5" />
+                EmailUs
     <>
               </button>
             </div>

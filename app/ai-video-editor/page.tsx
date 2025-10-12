@@ -1,75 +1,65 @@
-<<<<<<< HEAD
-import React  from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-=======
-'use client';
 import React from 'react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
+import { Link    } from 'react-router-dom';
+import { ArrowRight    } from 'lucide-react';
+constPage: React.FC = () => {
+import { ArrowRight, Brain, Cloud    } from 'lucide-react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const Page: React.FC = () => {
-=======
-import { ArrowRight, Brain, Cloud } from 'lucide-react';
-
-export default function AIVideoEditor() {
-  const features = [
+exportdefaultfunctionAIVideoEditor() {
+  constfeatures = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI-Powered Editing',
-      description: 'Automatically edit videos with intelligent scene detection, color correction, and audio enhancement'
+      icon: <BrainclassName="w-6 h-6 t e xt-cyan-400" />,
+      title: 'AI-PoweredEditing',
+      description: 'Automaticallyeditvideoswithintelligentscenedetection, colorcorrection, andaudioenhancement'
     },
     {
-      icon: <Scissors className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Cut Detection',
-      description: 'AI automatically identifies the best moments and creates seamless cuts and transitions'
+      icon: <ScissorsclassName="w-6 h-6 t e xt-purple-400" />,
+      title: 'SmartCutDetection',
+      description: 'AIautomaticallyidentifiesthebestmomentsandcreatesseamlesscutsandtransitions'
     },
     {
-      icon: <Play className="w-6 h-6 text-yellow-400" />,
-      title: 'Auto-Generated Content',
-      description: 'Create engaging videos from text, images, and audio with AI-generated animations and effects'
+      icon: <PlayclassName="w-6 h-6 t e xt-yellow-400" />,
+      title: 'Auto-GeneratedContent',
+      description: 'Createengagingvideosfromtext, images, andaudiowithAI-generatedanimationsandeffects'
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-green-400" />,
-      title: 'Performance Analytics',
-      description: 'Track video performance, engagement metrics, and optimize content for better results'
+      icon: <TrendingUpclassName="w-6 h-6 t e xt-green-400" />,
+      title: 'PerformanceAnalytics',
+      description: 'Trackvideoperformance, engagementmetrics, andoptimizecontentforbetterresults'
     }
   ]
 
-  const editingFeatures = [
+  consteditingFeatures = [
     {
-      category: 'AI Editing',
-      items: ['Auto Scene Detection', 'Smart Cuts', 'Color Correction', 'Audio Enhancement', 'Stabilization', 'Background Removal']
+      category: 'AIEditing',
+      items: ['AutoSceneDetection', 'SmartCuts', 'ColorCorrection', 'AudioEnhancement', 'Stabilization', 'BackgroundRemoval']
     },
     {
-      category: 'Content Creation',
-      items: ['Text to Video', 'Image Animation', 'Voice Synthesis', 'Music Generation', 'Template Library', 'Custom Branding']
+      category: 'ContentCreation',
+      items: ['TexttoVideo', 'ImageAnimation', 'VoiceSynthesis', 'MusicGeneration', 'TemplateLibrary', 'CustomBranding']
     },
     {
       category: 'Export & Sharing',
-      items: ['Multiple Formats', 'Social Media Optimization', 'Cloud Storage', 'Direct Publishing', 'Collaboration Tools', 'Version Control']
+      items: ['MultipleFormats', 'SocialMediaOptimization', 'CloudStorage', 'DirectPublishing', 'CollaborationTools', 'VersionControl']
     },
     {
       category: 'Analytics',
-      items: ['View Metrics', 'Engagement Tracking', 'A/B Testing', 'Performance Reports', 'Audience Insights', 'ROI Analysis']
+      items: ['ViewMetrics', 'EngagementTracking', 'A/BTesting', 'PerformanceReports', 'AudienceInsights', 'ROIAnalysis']
     }
   ]
 
-  const pricingPlans = [
+  constpricingPlans = [
     {
       name: 'Creator',
       price: '$29',
       period: '/month',
-      description: 'Perfect for content creators and influencers',
+      description: 'Perfectforcontentcreatorsandinfluencers',
       features: [
-        'Up to 10 hours of video/month',
-        'Basic AI features',
-        'Standard templates',
-        'Email support',
-        'Basic analytics',
-        'Mobile app access'
+        'Upto 10 hoursofvideo/month',
+        'BasicAIfeatures',
+        'Standardtemplates',
+        'Emailsupport',
+        'Basicanalytics',
+        'Mobileappaccess'
       ],
       popular: false
     },
@@ -77,15 +67,15 @@ export default function AIVideoEditor() {
       name: 'Professional',
       price: '$79',
       period: '/month',
-      description: 'Ideal for businesses and agencies',
+      description: 'Idealforbusinessesandagencies',
       features: [
-        'Up to 50 hours of video/month',
-        'Advanced AI features',
-        'Custom templates',
-        'Priority support',
-        'Advanced analytics',
-        'Team collaboration',
-        'API access'
+        'Upto 50 hoursofvideo/month',
+        'AdvancedAIfeatures',
+        'Customtemplates',
+        'Prioritysupport',
+        'Advancedanalytics',
+        'Teamcollaboration',
+        'APIaccess'
       ],
       popular: true
     },
@@ -93,141 +83,99 @@ export default function AIVideoEditor() {
       name: 'Enterprise',
       price: '$199',
       period: '/month',
-      description: 'For large organizations',
+      description: 'Forlargeorganizations',
       features: [
-        'Unlimited video processing',
-        'Custom AI training',
-        'White-label solution',
-        'Dedicated support',
-        'Custom integrations',
-        'Advanced analytics',
-        'SLA guarantee'
+        'Unlimitedvideoprocessing',
+        'CustomAItraining',
+        'White-labelsolution',
+        'Dedicatedsupport',
+        'Customintegrations',
+        'Advancedanalytics',
+        'SLAguarantee'
       ],
       popular: false
     }
   ]
 
-  const testimonials = [
+  consttestimonials = [
     {
-      name: 'Alex Rodriguez',
-      company: 'YouTube Creator',
-      content: 'AI Video Editor cut my editing time by 70%. The auto-generated content is incredibly engaging.',
+      name: 'AlexRodriguez',
+      company: 'YouTubeCreator',
+      content: 'AIVideoEditorcutmyeditingtimeby 70%. Theauto-generatedcontentisincrediblyengaging.',
       rating: 5
     },
     {
-      name: 'Sarah Kim',
-      company: 'Marketing Agency',
-      content: 'Creating professional videos for clients is now effortless. The AI quality is outstanding.',
+      name: 'SarahKim',
+      company: 'MarketingAgency',
+      content: 'Creatingprofessionalvideosforclientsisnoweffortless. TheAIqualityisoutstanding.',
       rating: 5
     },
     {
-      name: 'Mike Johnson',
-      company: 'E-learning Platform',
-      content: 'The analytics help us understand what content performs best. Our engagement increased by 150%.',
+      name: 'MikeJohnson',
+      company: 'E-learningPlatform',
+      content: 'Theanalyticshelpusunderstandwhatcontentperformsbest. Ourengagementincreasedby 150%.',
       rating: 5
     }
   ]
 
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
   return (
     <>
     <>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>5GDataAnalytics - ZionTechGroup</title>
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
       </Helmet>
-        <title>- Zion Tech Group</title>
-        <meta const name = "description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." / / />
-        <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" / / />
-        <meta property="og:title" content=" - Zion Tech Group" / / />
-        <meta property="og:description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." / / />
-        <meta property="og:type" content="website" / / />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-video-editor" / / />
+        <title>- ZionTechGroup</title>
+        <metaconstname = "description" content="ProfessionalservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds." / / />
+        <metaname="keywords" content="AIsolutions, ITservices, ZionTechGroup" / / />
+        <metaproperty="og:title" content=" - ZionTechGroup" / / />
+        <metaproperty="og:description" content="ProfessionalservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds." / / />
+        <metaproperty="og:type" content="website" / / />
+        <metaproperty="og:url" content="https://ziontechgroup.com/ai-video-editor" / / />
       </Helmet>
     </>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        {/* Hero Section */}
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900pt-16">
+        {/* HeroSection */}
     <>
-        <section className="py-20" />
-          <div className="container mx-autopx-4text-center">
-<<<<<<< HEAD
-            <h1 className="text-5 xl md:text-6 xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent"   / />
+        <sectionclassName="p y-20" />
+          <divclassName="c o ntainermx-autopx-4text-center">
+            <h1 className="t e xt-5 xlmd:text-6 xlfont-boldtext-whitemb-6" />
+              <spanclassName="b g-gradient-to-rfrom-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent"   / />
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
-=======
-        </div>
-            <h1 className="text-5 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent"   / />
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
+            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">
+              ProfessionalservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds.
     <>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4justify-centermb-12">
-<<<<<<< HEAD
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" >
-          Get Started
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-centermb-12">
+              <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105 shadow-lghover:shadow-cyan-500/25 flexitems-centerjustify-centergroup">
+          GetStarted
                 
-          <ArrowRight className="ml-2group-hover:translate-x-1transition-transform"  />
+          <ArrowRightclassName="m l-2group-hover:translate-x-1transition-transform"  />
         </Link>
-=======
-        </div>
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" />
-    </>
-                Get Started
-    <>
-                <ArrowRight className="ml-2group-hover:translate-x-1transition-transform" />
-              </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More
+              <Linkto="/contact" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105">LearnMore
               </Link>
             </div>
         </section>
     </>
 
-        {/* CTA Section */}
+        {/* CTASection */}
     <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center">
-              <h2 className="text-4xl font-bold text-white mb-6"  />Ready to Get Started?
+        <sectionclassName="p y-20" />
+          <divclassName="c o ntainermx-autopx-4">
+            <divclassName="b g-gradient-to-rfrom-cyan-900/50 to-purple-900/50 backdrop-blur-smborderborder-cyan-500/20 rounded-2 xlp-12text-center">
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6"  />ReadytoGetStarted?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto">
-              Contact us to learn more about our solutions and how we can help your business.
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-        </div>
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6">Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
-    </>
-                Contact us to learn more about our solutions and how we can help your business.
-    <>
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Contact Us
+              <pclassName="t e xt-xltext-gray-300 mb-8 max-w-2xlmx-auto">Contactustolearnmoreaboutoursolutionsandhowwecanhelpyourbusiness.</p>
+              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+                <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-cyan-500/25">ContactUs
                 </Link>
-                <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All Services
+                <Linkto="/services" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105">ViewAllServices
                 </Link>
               </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
         </div>
       </div>
           </div>
@@ -245,12 +193,11 @@ export default function AIVideoEditor() {
   );
 };
 
-export default Page;
+exportdefaultPage;
 ;
-<<<<<<< HEAD
-=======
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
+    </>
+    </>
+    </>
+    </>
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-33de

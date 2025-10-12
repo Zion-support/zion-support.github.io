@@ -1,12 +1,7 @@
-'use client';
-import { useState, useEffect} from 'react';
-import { ChevronLeft, ChevronRight} from 'lucide-react';
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface Slide {
+'useclient';
+import { useState, useEffect  } from 'react';
+import { ChevronLeft, ChevronRight  } from 'lucide-react';
+interfaceSlide {
   id: number;,
   title: string;,
   description: string;,
@@ -14,37 +9,37 @@ interface Slide {
   features: string[];
 }
 
-interface ContentCarouselProps {
+interfaceContentCarouselProps {
   slides?: Slide[];
   autoPlay?: boolean;
   interval?: number;
 }
 
-const defaultSlides: Slide[] = [
+constdefaultSlides: Slide[] = [
   {
     id: 1,
-    title: 'AI-Powered Solutions',
-    description: 'Transform your business with cutting-edge artificial intelligence technologies.',
+    title: 'AI-PoweredSolutions',
+    description: 'Transformyourbusinesswithcutting-edgeartificialintelligencetechnologies.',
     image: '/api/placeholder/600/400',
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision']
+    features: ['MachineLearning', 'NaturalLanguageProcessing', 'ComputerVision']
   },
   {
     id: 2,
-    title: 'Cloud Infrastructure',
-    description: 'Scalable and secure cloud solutions for modern businesses.',
+    title: 'CloudInfrastructure',
+    description: 'Scalableandsecurecloudsolutionsformodernbusinesses.',
     image: '/api/placeholder/600/400',
-    features: ['Scalable Architecture', '99.9% Uptime', 'Global CDN']
+    features: ['ScalableArchitecture', '99.9% Uptime', 'GlobalCDN']
   },
   {
     id: 3,
     title: 'Cybersecurity',
-    description: 'Protect your business with comprehensive security solutions.',
+    description: 'Protectyourbusinesswithcomprehensivesecuritysolutions.',
     image: '/api/placeholder/600/400',
-    features: ['Threat Detection', 'Security Audits', 'Compliance Management']
+    features: ['ThreatDetection', 'SecurityAudits', 'ComplianceManagement']
   }
 ];
 
-  const slides = defaultSlides, 
+  constslides = defaultSlides, 
   autoPlay = true, 
   interval = 5000 
 }: ContentCarouselProps) {
@@ -53,146 +48,87 @@ const defaultSlides: Slide[] = [
 
   useEffect(() => {
     if (isPlaying) {
-      const timer = setInterval(() => {
+      consttimer = setInterval(() => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
       }, interval);
       return () => clearInterval(timer);
     }
   }, [isPlaying, slides.length, interval]);
 
-  const nextSlide = () => {
+  constnextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
   };
 
-  const prevSlide = () => {
+  constprevSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
   };
 
-  const togglePlayPause = () => {
+  consttogglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
 
-  const goToSlide = (index: number) => {
+  constgoToSlide = (index: number) => {
     setCurrentSlide(index);
   };
 
   return (
-    <div className="relative w-full max-w-4xlmx-auto">
-<<<<<<< HEAD
-      {/* Main Carousel */}
-      <div className="relative overflow-hidden rounded-2 xl bg-white/10 backdrop-blur-lgborderborder-white/20">
-=======
-        </div>
-      {/* Main Carousel */}
-      <div className="relative overflow-hidden rounded-2 xl bg-white/10 backdrop-blur-lgborderborder-white/20">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <div 
-          className="flex transition-transformduration-500ease-in-out"
+    <divclassName="r e lativew-fullmax-w-4xlmx-auto">
+      {/* MainCarousel */}
+      <divclassName="r e lativeoverflow-hiddenrounded-2 xlbg-white/10 backdrop-blur-lgborderborder-white/20">
+        <divclassName="f l extransition-transformduration-500ease-in-out"
           style="{{" transform: `translateX(-${currentSlide * 100}%)` }} />
           {slides.map((slide) => (
     <>
-            <div key="{slide.id}" className="w-fullflex-shrink-0" />
-              <div className="grid grid-cols-1 lg:grid-cols-2gap-8p-8">
-<<<<<<< HEAD
-                <div className="space-y-6">
-                  <h3 className="text-3 xlfont-bold text-white"  >{slide.title}</h3>
-                  <p className="text-lg text-gray-300">{slide.description}</p>
-                  <ul className="space-y-3" />
+            <divkey="{slide.id}" className="w-f u llflex-shrink-0" />
+              <divclassName="g r idgrid-cols-1 lg:grid-cols-2gap-8p-8">
+                <divclassName="s p ace-y-6">
+                  <h3 className="t e xt-3 xlfont-boldtext-white"  >{slide.title}</h3>
+                  <pclassName="t e xt-lgtext-gray-300">{slide.description}</p>
+                  <ulclassName="s p ace-y-3" />
                     {slide.features.map((feature, index) => (
-                      <li key="{index}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5 text-green-400mr-3flex-shrink-0" />
-=======
-        </div>
-                <div className="space-y-6">
-        </div>
-                  <h3 className="text-3 xlfont-boldtext-white">{slide.title}</h3>
-                  <p className="text-lgtext-gray-300">{slide.description}</p>
-                  <ul className="space-y-3" />
-                    {slide.features.map((feature, index) => (
-    <>
-                      <li key="{index}" className="flexitems-centertext-gray-300" />
-                        <CheckCircle className="w-5 h-5 text-green-400mr-3flex-shrink-0" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                      <likey="{index}" className="f l exitems-centertext-gray-300" />
+                        <CheckCircleclassName="w-5 h-5 t e xt-green-400mr-3flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
     <>
                   </ul>
                 </div>
-<<<<<<< HEAD
-                <div className="flex items-centerjustify-center">
-                  <div className="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-centerjustify-center">
-                    <Cloud className="w-24 h-24text-whiteopacity-50" />
-=======
-                <div className="flexitems-centerjustify-center" />
-                  <div className="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flexitems-centerjustify-center">
-        </div>
-                    <Cloud className="w-24 h-24text-whiteopacity-50" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <divclassName="f l exitems-centerjustify-center">
+                  <divclassName="w-f u llh-64 bg-gradient-to-brfrom-purple-500 to-pink-500 rounded-lgflexitems-centerjustify-center">
+                    <CloudclassName="w-24 h-24t e xt-whiteopacity-50" />
                   </div>
               </div>
           ))}
         </div>
-
-        {/* Navigation Arrows */}
-        <button
-          onClick="{prevSlide}"
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-fulltransition-colors"
-          aria-label="Previous slide" />
-<<<<<<< HEAD
-          <ChevronLeft className="w-6h-6" />
-=======
-    <>
-          <ChevronLeft className="w-6h-6" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        {/* NavigationArrows */}
+        <buttononClick="{prevSlide}"
+          className="a b soluteleft-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-whitep-2rounded-fulltransition-colors"
+          aria-label="Previousslide" />
+          <ChevronLeftclassName="w-6h-6" />
         </button>
-        <button
-          onClick="{nextSlide}"
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-fulltransition-colors"
-          aria-label="Next slide" />
-<<<<<<< HEAD
-          <ChevronRight className="w-6h-6" />
-=======
-    <>
-          <ChevronRight className="w-6h-6" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <buttononClick="{nextSlide}"
+          className="a b soluteright-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-whitep-2rounded-fulltransition-colors"
+          aria-label="Nextslide" />
+          <ChevronRightclassName="w-6h-6" />
         </button>
       </div>
-
       {/* Controls */}
-      <div className="flex items-center justify-centermt-6space-x-4">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <button
-          onClick="{togglePlayPause}"
-          className="bg-white/20 hover:bg-white/30 text-white p-2rounded-fulltransition-colors"
+      <divclassName="f l exitems-centerjustify-centermt-6space-x-4">
+        <buttononClick="{togglePlayPause}"
+          className="b g-white/20 hover:bg-white/30 text-whitep-2rounded-fulltransition-colors"
           aria-label="{isPlaying" ? 'Pause' : 'Play'} />
-<<<<<<< HEAD
-          {isPlaying ? <Pause className="w-5h-5" /> : <Play className="w-5h-5" />}
+          {isPlaying ? <PauseclassName="w-5h-5" /> : <PlayclassName="w-5h-5" />}
         </button>
-
-        {/* Slide Indicators */}
-        <div className="flex space-x-2">
-=======
-    <>
-          {isPlaying ? <Pause className="w-5h-5" / /> : <Play className="w-5h-5" / />}
-        </button>
-
-        {/* Slide Indicators */}
-        <div className="flexspace-x-2">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        {/* SlideIndicators */}
+        <divclassName="f l exspace-x-2">
           {slides.map((_, index) => (
-            <button
-              key="{index}"
+            <buttonkey="{index}"
               onClick="{()" = /> goToSlide(index)}
-              className="{`w-3" h-3 rounded-full transition-colors ${
+              className="{`w-3" h-3 rounded-fulltransition-colors ${
                 index === currentSlide ? 'bg-white' : 'bg-white/30'
               }`}
-              aria-label="{`Go" to slide ${index + 1}`}
+              aria-label="{`Go" toslide ${index + 1}`}
             />
           ))}
     <>

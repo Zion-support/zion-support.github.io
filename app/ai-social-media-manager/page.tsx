@@ -1,83 +1,73 @@
-<<<<<<< HEAD
-import React  from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-=======
-'use client';
 import React from 'react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
+import { Link    } from 'react-router-dom';
+import { ArrowRight    } from 'lucide-react';
+constPage: React.FC = () => {
+import { ArrowRight, Users, Brain    } from 'lucide-react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const Page: React.FC = () => {
-=======
-import { ArrowRight, Users, Brain } from 'lucide-react';
-
-export default function AISocialMediaManager() {
-  const features = [
+exportdefaultfunctionAISocialMediaManager() {
+  constfeatures = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI Content Creation',
-      description: 'Generate engaging posts, captions, and hashtags using advanced AI algorithms'
+      icon: <BrainclassName="w-6 h-6 t e xt-cyan-400" />,
+      title: 'AIContentCreation',
+      description: 'Generateengagingposts, captions, andhashtagsusingadvancedAIalgorithms'
     },
     {
-      icon: <Calendar className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Scheduling',
-      description: 'Optimize posting times based on audience engagement patterns and analytics'
+      icon: <CalendarclassName="w-6 h-6 t e xt-purple-400" />,
+      title: 'SmartScheduling',
+      description: 'Optimizepostingtimesbasedonaudienceengagementpatternsandanalytics'
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-yellow-400" />,
-      title: 'Performance Analytics',
-      description: 'Track engagement, reach, and ROI with detailed analytics and insights'
+      icon: <TrendingUpclassName="w-6 h-6 t e xt-yellow-400" />,
+      title: 'PerformanceAnalytics',
+      description: 'Trackengagement, reach, andROIwithdetailedanalyticsandinsights'
     },
     {
-      icon: <Users className="w-6 h-6 text-green-400" />,
-      title: 'Audience Insights',
-      description: 'Understand your audience demographics, interests, and behavior patterns'
+      icon: <UsersclassName="w-6 h-6 t e xt-green-400" />,
+      title: 'AudienceInsights',
+      description: 'Understandyouraudiencedemographics, interests, andbehaviorpatterns'
     }
   ]
 
-  const platformFeatures = [
+  constplatformFeatures = [
     {
       platform: 'Instagram',
-      features: ['Story Templates', 'Reels Optimization', 'Hashtag Research', 'IGTV Scheduling', 'Stories Analytics', 'Shopping Integration']
+      features: ['StoryTemplates', 'ReelsOptimization', 'HashtagResearch', 'IGTVScheduling', 'StoriesAnalytics', 'ShoppingIntegration']
     },
     {
       platform: 'Facebook',
-      features: ['Page Management', 'Event Promotion', 'Group Management', 'Live Streaming', 'Ad Integration', 'Community Building']
+      features: ['PageManagement', 'EventPromotion', 'GroupManagement', 'LiveStreaming', 'AdIntegration', 'CommunityBuilding']
     },
     {
       platform: 'Twitter',
-      features: ['Thread Creation', 'Trend Monitoring', 'Hashtag Tracking', 'Reply Management', 'Moment Creation', 'Engagement Optimization']
+      features: ['ThreadCreation', 'TrendMonitoring', 'HashtagTracking', 'ReplyManagement', 'MomentCreation', 'EngagementOptimization']
     },
     {
       platform: 'LinkedIn',
-      features: ['Professional Content', 'Company Updates', 'Article Publishing', 'Event Promotion', 'Lead Generation', 'B2B Analytics']
+      features: ['ProfessionalContent', 'CompanyUpdates', 'ArticlePublishing', 'EventPromotion', 'LeadGeneration', 'B2BAnalytics']
     },
     {
       platform: 'TikTok',
-      features: ['Video Optimization', 'Trend Analysis', 'Sound Selection', 'Effect Recommendations', 'Challenge Participation', 'Viral Content Strategy']
+      features: ['VideoOptimization', 'TrendAnalysis', 'SoundSelection', 'EffectRecommendations', 'ChallengeParticipation', 'ViralContentStrategy']
     },
     {
       platform: 'YouTube',
-      features: ['Video SEO', 'Thumbnail Optimization', 'Title Generation', 'Description Writing', 'Tag Research', 'Analytics Tracking']
+      features: ['VideoSEO', 'ThumbnailOptimization', 'TitleGeneration', 'DescriptionWriting', 'TagResearch', 'AnalyticsTracking']
     }
   ]
 
-  const pricingPlans = [
+  constpricingPlans = [
     {
       name: 'Starter',
       price: '$49',
       period: '/month',
-      description: 'Perfect for small businesses and influencers',
+      description: 'Perfectforsmallbusinessesandinfluencers',
       features: [
-        'Up to 3 social accounts',
-        'Basic AI content generation',
-        'Standard scheduling',
-        'Basic analytics',
-        'Email support',
-        'Mobile app access'
+        'Upto 3 socialaccounts',
+        'BasicAIcontentgeneration',
+        'Standardscheduling',
+        'Basicanalytics',
+        'Emailsupport',
+        'Mobileappaccess'
       ],
       popular: false
     },
@@ -85,15 +75,15 @@ export default function AISocialMediaManager() {
       name: 'Professional',
       price: '$99',
       period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+      description: 'Idealforgrowingbusinessesandagencies',
       features: [
-        'Up to 10 social accounts',
-        'Advanced AI features',
-        'Smart scheduling',
-        'Detailed analytics',
-        'Priority support',
-        'Team collaboration',
-        'Custom templates'
+        'Upto 10 socialaccounts',
+        'AdvancedAIfeatures',
+        'Smartscheduling',
+        'Detailedanalytics',
+        'Prioritysupport',
+        'Teamcollaboration',
+        'Customtemplates'
       ],
       popular: true
     },
@@ -101,141 +91,99 @@ export default function AISocialMediaManager() {
       name: 'Enterprise',
       price: '$199',
       period: '/month',
-      description: 'For large organizations and agencies',
+      description: 'Forlargeorganizationsandagencies',
       features: [
-        'Unlimited social accounts',
-        'Custom AI training',
-        'White-label solution',
-        'Advanced analytics',
-        'Dedicated support',
-        'API access',
-        'Custom integrations'
+        'Unlimitedsocialaccounts',
+        'CustomAItraining',
+        'White-labelsolution',
+        'Advancedanalytics',
+        'Dedicatedsupport',
+        'APIaccess',
+        'Customintegrations'
       ],
       popular: false
     }
   ]
 
-  const testimonials = [
+  consttestimonials = [
     {
-      name: 'Sarah Johnson',
-      company: 'Fashion Brand Co.',
-      content: 'AI Social Media Manager increased our engagement by 150% and saved us 20 hours per week on content creation.',
+      name: 'SarahJohnson',
+      company: 'FashionBrandCo.',
+      content: 'AISocialMediaManagerincreasedourengagementby 150% andsavedus 20 hoursperweekoncontentcreation.',
       rating: 5
     },
     {
-      name: 'Mike Chen',
-      company: 'Tech Startup',
-      content: 'The AI content suggestions are spot-on. Our social media presence has never been stronger.',
+      name: 'MikeChen',
+      company: 'TechStartup',
+      content: 'TheAIcontentsuggestionsarespot-on. Oursocialmediapresencehasneverbeenstronger.',
       rating: 5
     },
     {
-      name: 'Emily Rodriguez',
-      company: 'Marketing Agency',
-      content: 'Managing multiple client accounts is now effortless. The analytics insights are incredibly valuable.',
+      name: 'EmilyRodriguez',
+      company: 'MarketingAgency',
+      content: 'Managingmultipleclientaccountsisnoweffortless. Theanalyticsinsightsareincrediblyvaluable.',
       rating: 5
     }
   ]
 
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
   return (
     <>
     <>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>5GDataAnalytics - ZionTechGroup</title>
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
       </Helmet>
-        <title>- Zion Tech Group</title>
-        <meta const name = "description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." / / />
-        <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" / / />
-        <meta property="og:title" content=" - Zion Tech Group" / / />
-        <meta property="og:description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." / / />
-        <meta property="og:type" content="website" / / />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-social-media-manager" / / />
+        <title>- ZionTechGroup</title>
+        <metaconstname = "description" content="ProfessionalservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds." / / />
+        <metaname="keywords" content="AIsolutions, ITservices, ZionTechGroup" / / />
+        <metaproperty="og:title" content=" - ZionTechGroup" / / />
+        <metaproperty="og:description" content="ProfessionalservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds." / / />
+        <metaproperty="og:type" content="website" / / />
+        <metaproperty="og:url" content="https://ziontechgroup.com/ai-social-media-manager" / / />
       </Helmet>
     </>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        {/* Hero Section */}
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900pt-16">
+        {/* HeroSection */}
     <>
-        <section className="py-20" />
-          <div className="container mx-autopx-4text-center">
-<<<<<<< HEAD
-            <h1 className="text-5 xl md:text-6 xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent"   / />
+        <sectionclassName="p y-20" />
+          <divclassName="c o ntainermx-autopx-4text-center">
+            <h1 className="t e xt-5 xlmd:text-6 xlfont-boldtext-whitemb-6" />
+              <spanclassName="b g-gradient-to-rfrom-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent"   / />
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
-=======
-        </div>
-            <h1 className="text-5 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent"   / />
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
+            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">
+              ProfessionalservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds.
     <>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4justify-centermb-12">
-<<<<<<< HEAD
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" >
-          Get Started
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-centermb-12">
+              <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105 shadow-lghover:shadow-cyan-500/25 flexitems-centerjustify-centergroup">
+          GetStarted
                 
-          <ArrowRight className="ml-2group-hover:translate-x-1transition-transform"  />
+          <ArrowRightclassName="m l-2group-hover:translate-x-1transition-transform"  />
         </Link>
-=======
-        </div>
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" />
-    </>
-                Get Started
-    <>
-                <ArrowRight className="ml-2group-hover:translate-x-1transition-transform" />
-              </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More
+              <Linkto="/contact" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105">LearnMore
               </Link>
             </div>
         </section>
     </>
 
-        {/* CTA Section */}
+        {/* CTASection */}
     <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center">
-              <h2 className="text-4xl font-bold text-white mb-6"  />Ready to Get Started?
+        <sectionclassName="p y-20" />
+          <divclassName="c o ntainermx-autopx-4">
+            <divclassName="b g-gradient-to-rfrom-cyan-900/50 to-purple-900/50 backdrop-blur-smborderborder-cyan-500/20 rounded-2 xlp-12text-center">
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6"  />ReadytoGetStarted?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto">
-              Contact us to learn more about our solutions and how we can help your business.
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-        </div>
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6">Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
-    </>
-                Contact us to learn more about our solutions and how we can help your business.
-    <>
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Contact Us
+              <pclassName="t e xt-xltext-gray-300 mb-8 max-w-2xlmx-auto">Contactustolearnmoreaboutoursolutionsandhowwecanhelpyourbusiness.</p>
+              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+                <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-cyan-500/25">ContactUs
                 </Link>
-                <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All Services
+                <Linkto="/services" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105">ViewAllServices
                 </Link>
               </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
         </div>
       </div>
           </div>
@@ -253,12 +201,11 @@ export default function AISocialMediaManager() {
   );
 };
 
-export default Page;
+exportdefaultPage;
 ;
-<<<<<<< HEAD
-=======
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
+    </>
+    </>
+    </>
+    </>
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-33de

@@ -1,63 +1,30 @@
-import { Link } from 'react';
-import { Home, ArrowLeft} from 'lucide-react';
+import { Link   } from 'react';
+import { Home, ArrowLeft  } from 'lucide-react';
 
-
-const NotFound: React.FC = () => {
+constNotFound: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-centerp-4">
-      <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2 xl p-8text-center">
-        <div className="flex justify-centermb-6">
-          <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-centerjustify-center">
-            <span className="text-4xl"  >404</span>
+    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 flexitems-centerjustify-centerp-4">
+      <divclassName="m a x-w-mdw-fullbg-gray-800 rounded-xlshadow-2 xlp-8text-center">
+        <divclassName="f l exjustify-centermb-6">
+          <divclassName="w-16 h-16 b g-red-500/20 rounded-fullflexitems-centerjustify-center">
+            <spanclassName="t e xt-4xl"  >404</span>
           </div>
-        <h1 className="text-2 xl font-bold text-white mb-4"  />Page Not Found
-        </h1>
-        <p className="text-gray-300 mb-6">
-              Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
-        </p>
-        <div className="flex flex-col sm:flex-rowgap-3">
-          <Link to="/" className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lgtransition-colors" >
-           
-          <Home className="w-4 h-4 mr-2" /  />
+        <h1 className="t e xt-2 xlfont-boldtext-whitemb-4"  />PageNotFound</h1>
+        <pclassName="t e xt-gray-300 mb-6">Sorry, wecouldn'tfindthepageyou'relookingfor. Itmighthavebeenmoved, deleted, ordoesn'texist.</p>
+        <divclassName="f l exflex-colsm:flex-rowgap-3">
+          <Linkto="/" className="f l exitems-centerjustify-centerpx-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-whitefont-mediumrounded-lgtransition-colors">
+          <HomeclassName="w-4 h-4 m r-2" /  />
         </Link>
-=======
-    <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-centerp-4">
-        </div>
-      <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2 xl p-8text-center">
-        </div>
-        <div className="flex justify-centermb-6">
-        </div>
-          <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-centerjustify-center">
-        </div>
-            <span className="text-4xl">404</span>
-          </div>
-        <h1 className="text-2 xl font-bold text-whitemb-4">Page Not Found
-        </h1>
-        <p className="text-gray-300mb-6" />
-          Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
-    <>
-        </p>
-        <div className="flex flex-col sm:flex-rowgap-3">
-        </div>
-          <Link to="/" className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lgtransition-colors" />
-            <Home className="w-4 h-4mr-2" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            Go Home
+            GoHome
           </Link>
-          <button
-            onClick="{()" = /> window.history.back()}
-            className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lgtransition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Go Back
+          <buttononClick="{()" = /> window.history.back()}
+            className="f l exitems-centerjustify-centerpx-6 py-3 bg-gray-600 hover:bg-gray-700 text-whitefont-mediumrounded-lgtransition-colors">
+            <ArrowLeftclassName="w-4 h-4 m r-2" />
+            GoBack
           </button>
-          <button
-            onClick="{()" = /> window.location.reload()}
-            className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lgtransition-colors"
-          >
-            <RefreshCw className="w-4 h-4 mr-2" />
+          <buttononClick="{()" = /> window.location.reload()}
+            className="f l exitems-centerjustify-centerpx-6 py-3 bg-blue-600 hover:bg-blue-700 text-whitefont-mediumrounded-lgtransition-colors">
+            <RefreshCwclassName="w-4 h-4 m r-2" />
             Refresh
     <>
           </button>

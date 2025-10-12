@@ -1,26 +1,21 @@
 /**
- * System Monitor Component
- * Real-time monitoring dashboard for performance, errors, and system health
+ * SystemMonitorComponent
+ * Real-timemonitoringdashboardforperformance, errors, andsystemhealth
  */
-import React, { useState, useEffect, useCallback } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
-import { errorHandler } from '../utils/enhancedErrorHandler';
-// Removed unused collectPerformanceMetrics function
-// Helper functions
-
-  const metrics = performanceOptimizer.getMetrics();
+importReact, { useState, useEffect, useCallback } from 'react';
+import { performanceOptimizer   } from '../utils/performanceOptimizer';
+import { errorHandler   } from '../utils/enhancedErrorHandler';
+// RemovedunusedcollectPerformanceMetricsfunction
+// Helperfunctionsconstmetrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
-  let score = 100;
-  // Deduct points for slow load times
-  if (metrics.loadTime > 3000) score -= 20;
+  letscore = 100;
+  // Deductpointsforslowloadtimesif (metrics.loadTime > 3000) score -= 20;
   if (metrics.loadTime > 5000) score -= 30;
-  // Deduct points for slow paint times
-  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
+  // Deductpointsforslowpainttimesif (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
-  return Math.max(0, score);
+  returnMath.max(0, score);
 };
-// Network connection interface
-  effectiveType?: string;
+// NetworkconnectioninterfaceeffectiveType?: string;
   downlink?: number;
   rtt?: number;
   saveData?: boolean;
@@ -63,285 +58,258 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
   const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
-  // Update metrics
-  
-      const performanceMetrics = performanceOptimizer.getMetrics();
-      const performanceScore = calculatePerformanceScore();
-      const errorStats = errorHandler.getErrorStatistics();
-      // Get memory info
-      const memoryInfo = getMemoryInfo();
-      // Get network info
-      const networkInfo = getNetworkInfo();
-          largestContentfulPaint: 0, // Not available in current metrics
-          firstInputDelay: 0, // Not available in current metrics
-          cumulativeLayoutShift: 0, // Not available in current metrics
-            timestamp: error.context.timestamp
+  // UpdatemetricsconstperformanceMetrics = performanceOptimizer.getMetrics();
+      constperformanceScore = calculatePerformanceScore();
+      consterrorStats = errorHandler.getErrorStatistics();
+      // GetmemoryinfoconstmemoryInfo = getMemoryInfo();
+      // GetnetworkinfoconstnetworkInfo = getNetworkInfo();
+          largestContentfulPaint: 0, // NotavailableincurrentmetricsfirstInputDelay: 0, // NotavailableincurrentmetricscumulativeLayoutShift: 0, // Notavailableincurrentmetricstimestamp: error.context.timestamp
           }))
         network: networkInfo
       };
       setMetrics(newMetrics);
-      setLastUpdate(new Date());
-      console.error('Failed to update metrics:', error);
+      setLastUpdate(newDate());
+      console.error('Failedtoupdatemetrics:', error);
     }
   }, []);
-  // Initialize monitoring
-    
-      setIsMonitoring(true);
+  // InitializemonitoringsetIsMonitoring(true);
       updateMetrics();
     };
     initializeMonitoring();
-      // Stop monitoring (placeholder - implement as needed)
+      // Stopmonitoring (placeholder - implementasneeded)
       setIsMonitoring(false);
     };
   }, [updateMetrics]);
-  // Update metrics periodically
-    if (!isMonitoring) return;
-    const interval = setInterval(updateMetrics, refreshInterval);
+  // Updatemetricsperiodicallyif (!isMonitoring) return;
+    constinterval = setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
-  // Get memory information
-  
-      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      const used = memory.usedJSHeapSize / 1024 / 1024; // MB
-      const total = memory.totalJSHeapSize / 1024 / 1024; // MB
-      const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
-      const percentage = (used / limit) * 100;
+  // Getmemoryinformationconstmemory = (performanceasPerformance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      constused = memory.usedJSHeapSize / 1024 / 1024; // MBconsttotal = memory.totalJSHeapSize / 1024 / 1024; // MBconstlimit = memory.jsHeapSizeLimit / 1024 / 1024; // MBconstpercentage = (used / limit) * 100;
       return { used, total, limit, percentage };
     }
     return { used: 0, total: 0, limit: 0, percentage: 0 };
   };
-  // Get network information
-  
-      const nav = navigator as NavigatorWithConnection;
-      const connection = nav.connection;
+  // Getnetworkinformationconstnav = navigatorasNavigatorWithConnection;
+      constconnection = nav.connection;
         saveData: connection?.saveData || false
       };
     }
       saveData: false
     };
   };
-  // Export data
-  
-    if (!metrics) return;
+  // Exportdataif (!metrics) return;
     
     };
     
     });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    consturl = URL.createObjectURL(blob);
+    consta = document.createElement('a');
     a.href = url;
-    a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;
+    a.download = `system-metrics-${newDate().toISOString().split('T')[0]}.json`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
-  // Get performance score color
-  
-    if (score >= 90) return 'text-green-600';
+  // Getperformancescorecolorif (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
     return 'text-red-600';
   };
-  // Get severity color
-  
-      case 'critical': return 'text-red-600 bg-red-100';
+  // Getseveritycolorcase 'critical': return 'text-red-600 bg-red-100';
       case 'high': return 'text-red-500 bg-red-50';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
       case 'low': return 'text-green-600 bg-green-100';
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-      <div className={`p-4 bg-gray-100 rounded-lg ${className}`}>
-        <div className="flex items-center justify-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-          <span className="ml-2 text-gray-600">Loading system metrics...</span>
+      <divclassName={`p-4 bg-gray-100 rounded-lg ${className}`}>
+        <divclassName="f l exitems-centerjustify-center">
+          <divclassName="a n imate-spinrounded-fullh-8 w-8 border-b-2 border-blue-600"></div>
+          <spanclassName="m l-2 text-gray-600">Loadingsystemmetrics...</span>
         </div>
   );
   }
-    <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>
-        <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-2">
-            <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
-            <span className="text-sm text-gray-600">
+    <divclassName={`bg-whiterounded-lgshadow-lgp-6 ${className}`}>
+      <divclassName="f l exitems-centerjustify-betweenmb-6">
+        <h2 className="t e xt-2xlfont-boldtext-gray-900">SystemMonitor</h2>
+        <divclassName="f l exitems-centerspace-x-4">
+          <divclassName="f l exitems-centerspace-x-2">
+            <divclassName={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
+            <spanclassName="t e xt-smtext-gray-600">
               {isMonitoring ? 'Monitoring' : 'Stopped'}
             </span>
           </div>
-            
             >
-              Export Data
+              ExportData
             </button>
           )}
         </div>
-        <p className="text-sm text-gray-500 mb-4">
-          Last updated: {lastUpdate.toLocaleTimeString()}
-        </p>
+        <pclassName="t e xt-smtext-gray-500 mb-4">Lastupdated: {lastUpdate.toLocaleTimeString()}</p>
       )}
-      {/* Performance Metrics */}
-      <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">Performance Score</span>
-              <span className={`text-2xl font-bold ${getPerformanceScoreColor(metrics.performance.score)}`}>
+      {/* PerformanceMetrics */}
+      <divclassName="m b-8">
+        <h3 className="t e xt-lgfont-semiboldtext-gray-900 mb-4">Performance</h3>
+        <divclassName="g r idgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <divclassName="b g-gray-50 p-4 rounded-lg">
+            <divclassName="f l exitems-centerjustify-between">
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">PerformanceScore</span>
+              <spanclassName={`text-2xlfont-bold ${getPerformanceScoreColor(metrics.performance.score)}`}>
                 {metrics.performance.score}
               </span>
             </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">Load Time</span>
-              <span className="text-lg font-semibold text-gray-900">
+          <divclassName="b g-gray-50 p-4 rounded-lg">
+            <divclassName="f l exitems-centerjustify-between">
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">LoadTime</span>
+              <spanclassName="t e xt-lgfont-semiboldtext-gray-900">
                 {metrics.performance.loadTime.toFixed(0)}ms
               </span>
             </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">FCP</span>
-              <span className="text-lg font-semibold text-gray-900">
+          <divclassName="b g-gray-50 p-4 rounded-lg">
+            <divclassName="f l exitems-centerjustify-between">
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">FCP</span>
+              <spanclassName="t e xt-lgfont-semiboldtext-gray-900">
                 {metrics.performance.firstContentfulPaint.toFixed(0)}ms
               </span>
             </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">LCP</span>
-              <span className="text-lg font-semibold text-gray-900">
+          <divclassName="b g-gray-50 p-4 rounded-lg">
+            <divclassName="f l exitems-centerjustify-between">
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">LCP</span>
+              <spanclassName="t e xt-lgfont-semiboldtext-gray-900">
                 {metrics.performance.largestContentfulPaint.toFixed(0)}ms
               </span>
             </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">FID</span>
-              <span className="text-lg font-semibold text-gray-900">
+          <divclassName="b g-gray-50 p-4 rounded-lg">
+            <divclassName="f l exitems-centerjustify-between">
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">FID</span>
+              <spanclassName="t e xt-lgfont-semiboldtext-gray-900">
                 {metrics.performance.firstInputDelay.toFixed(0)}ms
               </span>
             </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">CLS</span>
-              <span className="text-lg font-semibold text-gray-900">
+          <divclassName="b g-gray-50 p-4 rounded-lg">
+            <divclassName="f l exitems-centerjustify-between">
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">CLS</span>
+              <spanclassName="t e xt-lgfont-semiboldtext-gray-900">
                 {metrics.performance.cumulativeLayoutShift.toFixed(3)}
               </span>
             </div>
         </div>
-      {/* Error Metrics */}
-      <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Errors</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">Total Errors</span>
-              <span className="text-2xl font-bold text-red-600">
+      {/* ErrorMetrics */}
+      <divclassName="m b-8">
+        <h3 className="t e xt-lgfont-semiboldtext-gray-900 mb-4">Errors</h3>
+        <divclassName="g r idgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <divclassName="b g-gray-50 p-4 rounded-lg">
+            <divclassName="f l exitems-centerjustify-between">
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">TotalErrors</span>
+              <spanclassName="t e xt-2xlfont-boldtext-red-600">
                 {metrics.errors.total}
               </span>
             </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">Critical</span>
-              <span className="text-lg font-semibold text-red-600">
+          <divclassName="b g-gray-50 p-4 rounded-lg">
+            <divclassName="f l exitems-centerjustify-between">
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">Critical</span>
+              <spanclassName="t e xt-lgfont-semiboldtext-red-600">
                 {metrics.errors.bySeverity.critical || 0}
               </span>
             </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">High</span>
-              <span className="text-lg font-semibold text-red-500">
+          <divclassName="b g-gray-50 p-4 rounded-lg">
+            <divclassName="f l exitems-centerjustify-between">
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">High</span>
+              <spanclassName="t e xt-lgfont-semiboldtext-red-500">
                 {metrics.errors.bySeverity.high || 0}
               </span>
             </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">Medium</span>
-              <span className="text-lg font-semibold text-yellow-600">
+          <divclassName="b g-gray-50 p-4 rounded-lg">
+            <divclassName="f l exitems-centerjustify-between">
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">Medium</span>
+              <spanclassName="t e xt-lgfont-semiboldtext-yellow-600">
                 {metrics.errors.bySeverity.medium || 0}
               </span>
             </div>
         </div>
-      {/* Memory and Network */}
-      <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">System Resources</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h4 className="text-sm font-medium text-gray-600 mb-2">Memory Usage</h4>
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
+      {/* MemoryandNetwork */}
+      <divclassName="m b-8">
+        <h3 className="t e xt-lgfont-semiboldtext-gray-900 mb-4">SystemResources</h3>
+        <divclassName="g r idgrid-cols-1 md:grid-cols-2 gap-4">
+          <divclassName="b g-gray-50 p-4 rounded-lg">
+            <h4 className="t e xt-smfont-mediumtext-gray-600 mb-2">MemoryUsage</h4>
+            <divclassName="s p ace-y-2">
+              <divclassName="f l exjustify-betweentext-sm">
                 <span>Used</span>
                 <span>{metrics.memory.used.toFixed(2)} MB</span>
               </div>
-              <div className="flex justify-between text-sm">
+              <divclassName="f l exjustify-betweentext-sm">
                 <span>Total</span>
                 <span>{metrics.memory.total.toFixed(2)} MB</span>
               </div>
-              <div className="flex justify-between text-sm">
+              <divclassName="f l exjustify-betweentext-sm">
                 <span>Limit</span>
                 <span>{metrics.memory.limit.toFixed(2)} MB</span>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                
+              <divclassName="w-f u llbg-gray-200 rounded-fullh-2">
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
                   }`}
                   style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
                 ></div>
             </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h4 className="text-sm font-medium text-gray-600 mb-2">Network</h4>
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
+          <divclassName="b g-gray-50 p-4 rounded-lg">
+            <h4 className="t e xt-smfont-mediumtext-gray-600 mb-2">Network</h4>
+            <divclassName="s p ace-y-2">
+              <divclassName="f l exjustify-betweentext-sm">
                 <span>Connection</span>
                 <span>{metrics.network.effectiveType}</span>
               </div>
-              <div className="flex justify-between text-sm">
+              <divclassName="f l exjustify-betweentext-sm">
                 <span>Downlink</span>
                 <span>{metrics.network.downlink} Mbps</span>
               </div>
-              <div className="flex justify-between text-sm">
+              <divclassName="f l exjustify-betweentext-sm">
                 <span>RTT</span>
                 <span>{metrics.network.rtt} ms</span>
               </div>
-              <div className="flex justify-between text-sm">
-                <span>Save Data</span>
+              <divclassName="f l exjustify-betweentext-sm">
+                <span>SaveData</span>
                 <span>{metrics.network.saveData ? 'Yes' : 'No'}</span>
               </div>
           </div>
       </div>
-      {/* Recent Errors */}
-        <div className="mb-8">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>
-          <div className="space-y-2 max-h-64 overflow-y-auto">
-              <div key={error.id} className="bg-gray-50 p-3 rounded-lg">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-900">{error.message}</span>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}>
+      {/* RecentErrors */}
+        <divclassName="m b-8">
+          <h3 className="t e xt-lgfont-semiboldtext-gray-900 mb-4">RecentErrors</h3>
+          <divclassName="s p ace-y-2 max-h-64 overflow-y-auto">
+              <divkey={error.id} className="b g-gray-50 p-3 rounded-lg">
+                <divclassName="f l exitems-centerjustify-betweenmb-2">
+                  <spanclassName="t e xt-smfont-mediumtext-gray-900">{error.message}</span>
+                  <spanclassName={`px-2 py-1 rounded-fulltext-xsfont-medium ${getSeverityColor(error.severity)}`}>
                     {error.severity}
                   </span>
                 </div>
-                <div className="flex items-center justify-between text-xs text-gray-500">
+                <divclassName="f l exitems-centerjustify-betweentext-xstext-gray-500">
                   <span>{error.type}</span>
-                  <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
+                  <span>{newDate(error.timestamp).toLocaleTimeString()}</span>
                 </div>
             ))}
           </div>
       )}
-      {/* Error Distribution */}
-        <div className="mb-8">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Distribution</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="text-sm font-medium text-gray-600 mb-2">By Type</h4>
-              <div className="space-y-1">
-                  <div key={type} className="flex justify-between text-sm">
-                    <span className="capitalize">{type}</span>
+      {/* ErrorDistribution */}
+        <divclassName="m b-8">
+          <h3 className="t e xt-lgfont-semiboldtext-gray-900 mb-4">ErrorDistribution</h3>
+          <divclassName="g r idgrid-cols-1 md:grid-cols-2 gap-4">
+            <divclassName="b g-gray-50 p-4 rounded-lg">
+              <h4 className="t e xt-smfont-mediumtext-gray-600 mb-2">ByType</h4>
+              <divclassName="s p ace-y-1">
+                  <divkey={type} className="f l exjustify-betweentext-sm">
+                    <spanclassName="c a pitalize">{type}</span>
                     <span>{count}</span>
                   </div>
                 ))}
               </div>
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="text-sm font-medium text-gray-600 mb-2">By Category</h4>
-              <div className="space-y-1">
-                  <div key={category} className="flex justify-between text-sm">
-                    <span className="capitalize">{category}</span>
+            <divclassName="b g-gray-50 p-4 rounded-lg">
+              <h4 className="t e xt-smfont-mediumtext-gray-600 mb-2">ByCategory</h4>
+              <divclassName="s p ace-y-1">
+                  <divkey={category} className="f l exjustify-betweentext-sm">
+                    <spanclassName="c a pitalize">{category}</span>
                     <span>{count}</span>
                   </div>
                 ))}
@@ -351,4 +319,4 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
     </div>
   );
 };
-export default SystemMonitor;
+exportdefaultSystemMonitor;

@@ -1,42 +1,38 @@
-'use client'
+'useclient'
 import React from 'react'
 
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-=======
-import { Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-const SEOEnhancer: React.FC = () => {
-  const features = [
+import { ArrowRight    } from 'lucide-react';
+constSEOEnhancer: React.FC = () => {
+  constfeatures = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      title: 'AI-PoweredSolutions',
+      description: 'AdvancedAItechnologytotransformyourbusinessoperationsandimproveefficiency'
     },
     {
       icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      title: 'HighPerformance',
+      description: 'Lightning-fastprocessingandreal-timeanalyticsforoptimalresults'
     },
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      title: 'EnterpriseSecurity',
+      description: 'Bank-levelsecuritywithencryptionandcompliancestandards'
     },
     {
       icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      title: 'GlobalReach',
+      description: 'Worldwidedeploymentandsupportforinternationalbusinesses'
     }
   ];
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+  constbenefits = [
+    'AdvancedAItechnologyintegration',
+    'Real-timeprocessingandanalytics',
+    'Enterprise-gradesecurityandcompliance',
+    'Scalableandflexiblesolutions',
+    '24/7 technicalsupport',
+    'Easyintegrationwithexistingsystems',
+    'Cost-effectivepricingplans',
+    'Proventrackrecordofsuccess'
   ];
   return (

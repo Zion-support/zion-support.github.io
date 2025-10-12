@@ -1,162 +1,98 @@
-import { ArrowRight } from 'lucide-react';
-'use client'
+import { ArrowRight   } from 'lucide-react';
+'useclient'
 
-<<<<<<< HEAD
-=======
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-
-  const features = [
+  constfeatures = [
     {
       title: "Feature 1",
-      description: "Description of feature 1"
+      description: "Descriptionoffeature 1"
     },
     {
       title: "Feature 2",
-      description: "Description of feature 2"
+      description: "Descriptionoffeature 2"
     }
   ];
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+  constbenefits = [
+    'AdvancedAItechnologyintegration',
+    'Real-timeprocessingandanalytics',
+    'Enterprise-gradesecurityandcompliance',
+    'Scalableandflexiblesolutions',
+    '24/7 technicalsupport',
+    'Easyintegrationwithexistingsystems',
+    'Cost-effectivepricingplans',
+    'Proventrackrecordofsuccess'
   ];
   return (
     <>
-    <div const className = {`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 ${className}`} />
-      <div className="flex items-centerjustify-betweenmb-6">
-<<<<<<< HEAD
-        <div className="flex items-centerspace-x-3">
-          <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-centerjustify-center">
-            <Zap className="w-5h-5text-white" />
+    <divconstclassName = {`bg-white/10 backdrop-blur-smrounded-xlp-6 borderborder-white/20 ${className}`} />
+      <divclassName="f l exitems-centerjustify-betweenmb-6">
+        <divclassName="f l exitems-centerspace-x-3">
+          <divclassName="w-10 h-10 b g-gradient-to-rfrom-blue-600 to-purple-600 rounded-lgflexitems-centerjustify-center">
+            <ZapclassName="w-5h-5t e xt-white" />
           </div>
           <div>
-            <h3 className="text-whitefont-semibold"  >Performance Enhancer</h3>
-=======
-        </div>
-        <div className="flexitems-centerspace-x-3">
-        </div>
-          <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flexitems-centerjustify-center">
-        </div>
-            <Zap className="w-5h-5text-white" / />
+            <h3 className="t e xt-whitefont-semibold"  >PerformanceEnhancer</h3>
+            <pclassName="t e xt-gray-300text-sm">Monitorandoptimizeyourapp'sperformance</p>
           </div>
-          <div />
-            <h3 className="text-whitefont-semibold">Performance Enhancer</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            <p className="text-gray-300text-sm">Monitor and optimize your app's performance</p>
-          </div>
-        <button
-          onClick="{optimizePerformance}"
+        <buttononClick="{optimizePerformance}"
           disabled="{isOptimizing}"
-          className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-centerspace-x-2" />
+          className="b g-gradient-to-rfrom-blue-600 to-purple-600 text-whitepx-4 py-2 rounded-lgfont-semiboldhover:from-blue-700 hover:to-purple-700 transition-allduration-300 disabled:opacity-50 disabled:cursor-not-allowedflexitems-centerspace-x-2" />
           {isOptimizing ? (
     <>
             <>
-<<<<<<< HEAD
-              <div className="w-4 h-4 border-2 border-white border-t-transparentrounded-fullanimate-spin" />
+              <divclassName="w-4 h-4 b o rder-2 border-whiteborder-t-transparentrounded-fullanimate-spin" />
               <span  >Optimizing...</span>
-=======
-              <div className="w-4 h-4 border-2 border-white border-t-transparentrounded-fullanimate-spin" / />
-              <span>Optimizing...</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             </>
           ) : (
     <>
             <>
-<<<<<<< HEAD
-              <Zap className="w-4h-4" />
+              <ZapclassName="w-4h-4" />
               <span  >Optimize</span>
-=======
-              <Zap className="w-4h-4" / />
-              <span>Optimize</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             </>
           )}
     <>
         </button>
       </div>
-
-      {/* Performance Metrics */}
-<<<<<<< HEAD
-      <div className="grid grid-cols-2 md:grid-cols-4gap-4mb-6">
-        <div className="text-center">
-          <div className="text-2 xl font-bold text-white mb-1"  />{metrics.loadTime.toFixed(0)}ms
+      {/* PerformanceMetrics */}
+      <divclassName="g r idgrid-cols-2 md:grid-cols-4gap-4mb-6">
+        <divclassName="t e xt-center">
+          <divclassName="t e xt-2 xlfont-boldtext-whitemb-1"  />{metrics.loadTime.toFixed(0)}ms
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-=======
-    <>
-      <div className="grid grid-cols-2 md:grid-cols-4gap-4mb-6">
-        </div>
-        <div className="text-center" />
-          <div className="text-2 xl font-boldtext-whitemb-1">{metrics.loadTime.toFixed(0)}ms
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
             {features.map((feature, index) => (
               {features.map((feature, index) => (
 
     <>
-                <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4">
-<<<<<<< HEAD
-                  <feature.icon className="h-6w-6text-white" />
+                <divkey="{index}" className="b g-white/10 backdrop-blur-smrounded-xlp-6 borderborder-white/20 hover:bg-white/20transition-allduration-300" />
+                <divclassName="f l exitems-centerjustify-centerw-12 h-12 bg-gradient-to-rfrom-purple-500 to-blue-600rounded-lgmb-4">
+                  <feature.iconclassName="h-6w-6t e xt-white" />
                 </div>
-                <h3 className="text-xl font-semiboldtext-white mb-3"  >{feature.title}</h3>
-=======
-        </div>
-                  <feature.icon className="h-6w-6text-white" / />
-                </div>
-                <h3 className="text-xl font-semiboldtext-whitemb-3">{feature.title}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="t e xt-xlfont-semiboldtext-whitemb-3"  >{feature.title}</h3>
+                <pclassName="t e xt-gray-300">{feature.description}</p>
               </div>
             ))}
     <>
           </div>
       </section>
-      {/* Benefits Section */}
+      {/* BenefitsSection */}
     <>
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4" />
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Key Benefits
+      <sectionclassName="p y-20 px-4 sm:px-6lg:px-8bg-white/5" />
+        <divclassName="m a x-w-7xlmx-auto">
+          <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4" />
+              KeyBenefits
   </
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Experience the power of our performanceenhancer solutions for your business.
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">
+              Experiencethepowerofourperformanceenhancersolutionsforyourbusiness.
     <>
             </p>
           </div>
-          <div className="grid grid-cols-1md:grid-cols-2gap-6">
-<<<<<<< HEAD
+          <divclassName="g r idgrid-cols-1md:grid-cols-2gap-6">
             {benefits.map((benefit, index) => (
               {features.map((feature, index) => (
 
-                <div key="{index}" className="flex items-startspace-x-3" />
-                <CheckCircle className="h-6 w-6 text-purple-400mt-1flex-shrink-0" />
-=======
-        </div>
-            {benefits.map((benefit, index) => (
-              {features.map((feature, index) => (
-
-    <>
-                <div key="{index}" className="flexitems-startspace-x-3" />
-                <CheckCircle className="h-6 w-6 text-purple-400mt-1flex-shrink-0" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <p className="text-gray-300text-lg">{benefit}</p>
+                <divkey="{index}" className="f l exitems-startspace-x-3" />
+                <CheckCircleclassName="h-6 w-6 t e xt-purple-400mt-1flex-shrink-0" />
+                <pclassName="t e xt-gray-300text-lg">{benefit}</p>
               </div>
             ))}
     <>
@@ -169,163 +105,94 @@ import { ArrowRight } from 'lucide-react';
   </span>
   </div>
 };
-  ];const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+  ];constbenefits = [
+    'AdvancedAItechnologyintegration',
+    'Real-timeprocessingandanalytics',
+    'Enterprise-gradesecurityandcompliance',
+    'Scalableandflexiblesolutions',
+    '24/7 technicalsupport',
+    'Easyintegrationwithexistingsystems',
+    'Cost-effectivepricingplans',
+    'Proventrackrecordofsuccess'
 ;
-<<<<<<< HEAD
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"></div>
+  ];return (<divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
-=======
-    <>
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div></div>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>PerformanceEnhancer | ZionTechGroup</title>
+        <metaname="description" content="ProfessionalPerformanceEnhancerservicesbyZionTechGroup. AdvancedAIandITsolutionsforyourbusiness." / / />
+        <metaname="keywords" content="PerformanceEnhancer, AIsolutions, ITservices, ZionTechGroup, performanceenhancer" / / />
       </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>PerformanceEnhancer | Zion Tech Group</title>
-        <meta name="description" content="Professional PerformanceEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
-        <meta name="keywords" content="PerformanceEnhancer, AI solutions, IT services, Zion Tech Group, performanceenhancer" / / />
-      </Helmet>
-      {/* Hero Section */}
+      {/* HeroSection */}
     <>
-      <section className="relative py-20 px-4sm:px-6lg:px-8" /></section>
-<<<<<<< HEAD
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent"  />PerformanceEnhancer
-=======
-        <div className="max-w-7xlmx-auto">
-        </div></div>
-          <div className="text-center" /></div>
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent">PerformanceEnhancer
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <sectionclassName="r e lativepy-20 px-4sm:px-6lg:px-8" /></section>
+        <divclassName="m a x-w-7xlmx-auto"></div>
+          <divclassName="t e xt-center"></div>
+            <h1 className="t e xt-4xlmd:text-6 xlfont-boldtext-whitemb-6" />
+              <spanclassName="b g-gradient-to-rfrom-purple-400 to-blue-400bg-clip-texttext-transparent"  />PerformanceEnhancer
               </span>
               <br / />
-              <span className="text-white">Solutions</span>
+              <spanclassName="t e xt-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
-              Transform your business with our advanced performanceenhancer solutions.
-              Powered by cutting-edge AI technology and industry expertise.
+            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">
+              Transformyourbusinesswithouradvancedperformanceenhancersolutions.
+              Poweredbycutting-edgeAItechnologyandindustryexpertise.
     <>
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-rowgap-4justify-center"></div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" />
-=======
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div></div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Get Started
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center"></div>
+              <buttonclassName="b g-gradient-to-rfrom-purple-500 to-blue-600 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-purple-600 hover:to-blue-700 transition-allduration-300flexitems-center" />
+                GetStarted
     <>
-                <ArrowRight className="ml-2h-5w-5" />
+                <ArrowRightclassName="m l-2h-5w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Learn More
+              <buttonclassName="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-gray-900transition-allduration-300">LearnMore
               </button>
             </div>
         </div>
       </section>
-      {/* Features Section */}
+      {/* FeaturesSection */}
     <>
-      <section className="py-20 px-4sm:px-6lg:px-8" /></section>
-<<<<<<< HEAD
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-centermb-16"></div>
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Why Choose Our PerformanceEnhancer?
-=======
-        <div className="max-w-7xlmx-auto">
-        </div></div>
-          <div className="text-centermb-16">
-        </div></div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Why Choose Our PerformanceEnhancer?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <sectionclassName="p y-20 px-4sm:px-6lg:px-8" /></section>
+        <divclassName="m a x-w-7xlmx-auto"></div>
+          <divclassName="t e xt-centermb-16"></div>
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />WhyChooseOurPerformanceEnhancer?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Our performanceenhancer solutions deliver unmatched performance, security, and scalability.
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">
+              Ourperformanceenhancersolutionsdeliverunmatchedperformance, security, andscalability.
     <>
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8"></div>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8"></div>
             {features.map((feature, index) => (}
               {features.map((feature, index) => (
 
     <>
-                <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" /></div>
-<<<<<<< HEAD
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4"></div>
-                  <feature.icon className="h-6w-6text-white" />
+                <divkey="{index}" className="b g-white/10 backdrop-blur-smrounded-xlp-6 borderborder-white/20 hover:bg-white/20transition-allduration-300" /></div>
+                <divclassName="f l exitems-centerjustify-centerw-12 h-12 bg-gradient-to-rfrom-purple-500 to-blue-600rounded-lgmb-4"></div>
+                  <feature.iconclassName="h-6w-6t e xt-white" />
                 </div>
-                <h3 className="text-xl font-semiboldtext-white mb-3"  >{feature.title}</h3>
-=======
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4">
-        </div></div>
-                  <feature.icon className="h-6w-6text-white" / />
-                </div>
-                <h3 className="text-xl font-semiboldtext-whitemb-3">{feature.title}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="t e xt-xlfont-semiboldtext-whitemb-3"  >{feature.title}</h3>
+                <pclassName="t e xt-gray-300">{feature.description}</p>
               </div>))}
           </div>
       </section>
-      {/* Benefits Section */}
+      {/* BenefitsSection */}
     <>
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" /></section>
-<<<<<<< HEAD
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-centermb-16"></div>
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Key Benefits
-=======
-        <div className="max-w-7xlmx-auto">
-        </div></div>
-          <div className="text-centermb-16">
-        </div></div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Key Benefits
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <sectionclassName="p y-20 px-4 sm:px-6lg:px-8bg-white/5" /></section>
+        <divclassName="m a x-w-7xlmx-auto"></div>
+          <divclassName="t e xt-centermb-16"></div>
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />KeyBenefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Experience the power of our performanceenhancer solutions for your business.
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">
+              Experiencethepowerofourperformanceenhancersolutionsforyourbusiness.
     <>
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1md:grid-cols-2gap-6"></div>
+          <divclassName="g r idgrid-cols-1md:grid-cols-2gap-6"></div>
             {benefits.map((benefit, index) => (}
               {features.map((feature, index) => (
 
-                <div key="{index}" className="flex items-startspace-x-3" /></div>
-                <CheckCircle className="h-6 w-6 text-purple-400mt-1flex-shrink-0" />
-                <p className="text-gray-300text-lg">{benefit}</p>
+                <divkey="{index}" className="f l exitems-startspace-x-3" /></div>
+                <CheckCircleclassName="h-6 w-6 t e xt-purple-400mt-1flex-shrink-0" />
+                <pclassName="t e xt-gray-300text-lg">{benefit}</p>
               </div>))}
           </div>
 };
-=======
-          <div className="grid grid-cols-1md:grid-cols-2gap-6">
-        </div></div>
-            {benefits.map((benefit, index) => (}
-              {features.map((feature, index) => (
-
-    <>
-                <div key="{index}" className="flexitems-startspace-x-3" /></div>
-                <CheckCircle className="h-6 w-6 text-purple-400mt-1flex-shrink-0" / />
-                <p className="text-gray-300text-lg">{benefit}</p>
-              </div>))}
-          </div>
-};
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

@@ -1,91 +1,42 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-import { ArrowRight } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { ArrowRight    } from 'lucide-react';
+import { Helmet    } from 'react-helmet-async';
+import { Link    } from 'react-router-dom';
 
-export default function InfrastructureManagementPage() {
+exportdefaultfunctionInfrastructureManagementPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screenbg-gray-50">
+    <divclassName="m i n-h-screenbg-gray-50">
       <Helmet />
-        <title   />Infrastructure Management Services - Zion Tech Group</title>
-=======
-    <>
-    <div className="min-h-screenbg-gray-50">
-        </div>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title   />InfrastructureManagementServices - ZionTechGroup</title>
+        <metaname="description" content="CompleteITinfrastructuresetup, management, andoptimizationservices." / / />
       </Helmet>
-        <title>Infrastructure Management Services - Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <meta name="description" content="Complete IT infrastructure setup, management, and optimization services." / / />
-      </Helmet>
-      
     <>
-      <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
-<<<<<<< HEAD
-        <div className="max-w-7xlmx-autotext-center">
-          <h1 className="text-3 xl sm:text-4xl md:text-5 xl font-bold text-white mb-4"  />Infrastructure Management
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8">
-              Complete IT infrastructure setup, management, and optimization services.
-          </p>
-          <div className="flex flex-col sm:flex-rowgap-4justify-center">
-            <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-center" >
-          Get Started
+      <sectionclassName="p t-20 px-4 py-12 sm:py-16 lg:py-20 bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900" />
+        <divclassName="m a x-w-7xlmx-autotext-center">
+          <h1 className="t e xt-3 xlsm:text-4xlmd:text-5 xlfont-boldtext-whitemb-4"  />InfrastructureManagement</h1>
+          <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-3 xlmx-automb-8">CompleteITinfrastructuresetup, management, andoptimizationservices.</p>
+          <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+            <Linkto="/contact" className="b g-gradient-to-rfrom-blue-600 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-blue-700 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-center">
+          GetStarted
               
-          <ArrowRight className="w-5h-5ml-2"  />
+          <ArrowRightclassName="w-5h-5m l-2"  />
         </Link>
-=======
-        <div className="max-w-7 xlmx-autotext-center">
-        </div>
-          <h1 className="text-3 xl sm:text-4 xl md:text-5 xl font-boldtext-whitemb-4">Infrastructure Management
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8" />
-            Complete IT infrastructure setup, management, and optimization services.
-    <>
-          </p>
-          <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
-            <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
-              Get Started
-    <>
-              <ArrowRight className="w-5h-5ml-2" />
-            </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            <Link to="/it-services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">All IT Services
+            <Linkto="/it-services" className="b o rder-2 border-whitetext-whitepx-8 py-4 rounded-lgfont-semiboldhover:bg-white/10transition-colors">AllITServices
             </Link>
           </div>
       </section>
-
     <>
-      <section className="py-20px-4" />
-        <div className="max-w-4 xlmx-autotext-center">
-<<<<<<< HEAD
-          <h2 className="text-3 xl font-boldtext-gray-900mb-6"   />Coming Soon</h2>
-          <p className="text-xltext-gray-600mb-8">
-              We're developing comprehensive infrastructure management services. Contact us to discuss your infrastructure needs.
-=======
-        </div>
-          <h2 className="text-3 xl font-boldtext-gray-900mb-6">Coming Soon</h2>
-          <p className="text-xltext-gray-600mb-8" />
-            We're developing comprehensive infrastructure management services. Contact us to discuss your infrastructure needs.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          </p>
-          <Link to="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700transition-allduration-300">Contact Us
+      <sectionclassName="p y-20px-4" />
+        <divclassName="m a x-w-4 xlmx-autotext-center">
+          <h2 className="t e xt-3 xlfont-boldtext-gray-900mb-6"   />ComingSoon</h2>
+          <pclassName="t e xt-xltext-gray-600mb-8">We'redevelopingcomprehensiveinfrastructuremanagementservices. Contactustodiscussyourinfrastructureneeds.</p>
+          <Linkto="/contact" className="b g-gradient-to-rfrom-purple-600 to-pink-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-purple-700 hover:to-pink-700transition-allduration-300">ContactUs
           </Link>
         </div>
       </section>
     </div>
   );
+    </>
+    </>
 }
     </>

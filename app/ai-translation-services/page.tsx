@@ -1,86 +1,78 @@
-import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
-import { Globe, Zap, Shield, Users, CheckCircle, ArrowRight, BarChart3, Brain, FileText, Mic } from 'lucide-react'
-=======
-import { Globe, Zap, Shield, Users, CheckCircle, ArrowRight, BarChart3, Brain, FileText, Mic } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import React  from 'react';
-=======
+import { Helmet    } from 'react-helmet-async'
+import { Globe, Zap, Shield, Users, CheckCircle, ArrowRight, BarChart3, Brain, FileText, Mic    } from 'lucide-react'
+import { Link    } from 'react-router-dom'
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowRight    } from 'lucide-react';
+import { Link    } from 'react-router-dom';
 
-const AITranslationServicesPage: React.FC = () => {
-  const features = [
+constAITranslationServicesPage: React.FC = () => {
+  constfeatures = [
     {
-      icon: <Globe className="w-6h-6text-cyan-400" />,
+      icon: <GlobeclassName="w-6h-6t e xt-cyan-400" />,
       title: '100+ Languages',
-      description: 'Support for over 100 languages with native-level accuracy and cultural context.'
+      description: 'Supportforover 100 languageswithnative-levelaccuracyandculturalcontext.'
     },
     {
-      icon: <Zap className="w-6h-6text-emerald-400" />,
-      title: 'Real-time Translation',
-      description: 'Instant translation for live conversations, meetings, and customer support.'
+      icon: <ZapclassName="w-6h-6t e xt-emerald-400" />,
+      title: 'Real-timeTranslation',
+      description: 'Instanttranslationforliveconversations, meetings, andcustomersupport.'
     },
     {
-      icon: <Brain className="w-6h-6text-purple-400" />,
-      title: 'AI-Powered Context',
-      description: 'Advanced AI understands context, tone, and cultural nuances for accurate translations.'
+      icon: <BrainclassName="w-6h-6t e xt-purple-400" />,
+      title: 'AI-PoweredContext',
+      description: 'AdvancedAIunderstandscontext, tone, andculturalnuancesforaccuratetranslations.'
     },
     {
-      icon: <FileText className="w-6h-6text-orange-400" />,
-      title: 'Document Translation',
-      description: 'Translate documents, websites, and content while preserving formatting and structure.'
+      icon: <FileTextclassName="w-6h-6t e xt-orange-400" />,
+      title: 'DocumentTranslation',
+      description: 'Translatedocuments, websites, andcontentwhilepreservingformattingandstructure.'
     },
     {
-      icon: <Mic className="w-6h-6text-pink-400" />,
-      title: 'Voice Translation',
-      description: 'Convert speech to text and translate in real-time with natural voice synthesis.'
+      icon: <MicclassName="w-6h-6t e xt-pink-400" />,
+      title: 'VoiceTranslation',
+      description: 'Convertspeechtotextandtranslateinreal-timewithnaturalvoicesynthesis.'
     },
     {
-      icon: <Shield className="w-6h-6text-blue-400" />,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption for sensitive business communications.'
+      icon: <ShieldclassName="w-6h-6t e xt-blue-400" />,
+      title: 'EnterpriseSecurity',
+      description: 'Bank-levelsecuritywithend-to-endencryptionforsensitivebusinesscommunications.'
     }
   ]
 
-  const useCases = [
+  constuseCases = [
     {
-      title: 'Global Customer Support',
-      description: 'Provide support in any language with instant translation and cultural adaptation.',
-      icon: <Users className="w-8h-8text-cyan-400" />
+      title: 'GlobalCustomerSupport',
+      description: 'Providesupportinanylanguagewithinstanttranslationandculturaladaptation.',
+      icon: <UsersclassName="w-8h-8t e xt-cyan-400" />
     },
     {
-      title: 'Multilingual Content',
-      description: 'Translate websites, apps, and marketing materials for global audiences.',
-      icon: <FileText className="w-8h-8text-emerald-400" />
+      title: 'MultilingualContent',
+      description: 'Translatewebsites, apps, andmarketingmaterialsforglobalaudiences.',
+      icon: <FileTextclassName="w-8h-8t e xt-emerald-400" />
     },
     {
-      title: 'International Meetings',
-      description: 'Break down language barriers in real-time during video conferences and calls.',
-      icon: <Globe className="w-8h-8text-purple-400" />
+      title: 'InternationalMeetings',
+      description: 'Breakdownlanguagebarriersinreal-timeduringvideoconferencesandcalls.',
+      icon: <GlobeclassName="w-8h-8t e xt-purple-400" />
     },
     {
-      title: 'E-commerce Expansion',
-      description: 'Expand to new markets with localized product descriptions and customer communications.',
-      icon: <BarChart3 className="w-8h-8text-orange-400" />
+      title: 'E-commerceExpansion',
+      description: 'Expandtonewmarketswithlocalizedproductdescriptionsandcustomercommunications.',
+      icon: <BarChart3 className="w-8h-8t e xt-orange-400" />
     }
   ]
 
-  const pricingPlans = [
+  constpricingPlans = [
     {
       name: 'Starter',
       price: '$49',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfectforsmallbusinesses',
       features: [
-        'Up to 50,000 words/month',
+        'Upto 50,000 words/month',
         '50+ languages',
-        'Basic API access',
-        'Email support'
+        'BasicAPIaccess',
+        'Emailsupport'
       ],
       popular: false
     },
@@ -88,13 +80,13 @@ const AITranslationServicesPage: React.FC = () => {
       name: 'Professional',
       price: '$149',
       period: '/month',
-      description: 'Ideal for growing companies',
+      description: 'Idealforgrowingcompanies',
       features: [
-        'Up to 500,000 words/month',
+        'Upto 500,000 words/month',
         '100+ languages',
-        'Real-time translation',
-        'Priority support',
-        'Custom integrations'
+        'Real-timetranslation',
+        'Prioritysupport',
+        'Customintegrations'
       ],
       popular: true
     },
@@ -102,13 +94,13 @@ const AITranslationServicesPage: React.FC = () => {
       name: 'Enterprise',
       price: '$499',
       period: '/month',
-      description: 'For large organizations',
+      description: 'Forlargeorganizations',
       features: [
-        'Unlimited words',
-        'All languages',
-        'Custom AI training',
-        'Dedicated support',
-        'White-label options'
+        'Unlimitedwords',
+        'Alllanguages',
+        'CustomAItraining',
+        'Dedicatedsupport',
+        'White-labeloptions'
       ],
       popular: false
     }
@@ -118,141 +110,72 @@ const AITranslationServicesPage: React.FC = () => {
     <>
     <>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>5GDataAnalytics - ZionTechGroup</title>
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
       </Helmet>
-        <title>AI Translation Services - Multilingual Communication | Zion Tech Group</title>
-        <meta name="description" content="Break language barriers with AI-powered translation services. Real-time translation, document processing, and multilingual support for global businesses." / / />
-        <meta name="keywords" content="AI translation, multilingual, language services, real-time translation, document translation, global communication" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-translation-services" />
+        <title>AITranslationServices - MultilingualCommunication | ZionTechGroup</title>
+        <metaname="description" content="BreaklanguagebarrierswithAI-poweredtranslationservices. Real-timetranslation, documentprocessing, andmultilingualsupportforglobalbusinesses." / / />
+        <metaname="keywords" content="AItranslation, multilingual, languageservices, real-timetranslation, documenttranslation, globalcommunication" / / />
+        <linkrel="canonical" href="https://ziontechgroup.com/ai-translation-services" />
       </Helmet>
     </>
 
-      <div className="min-h-screenbg-gray-900text-white">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        {/* Hero Section */}
+      <divclassName="m i n-h-screenbg-gray-900text-white">
+        {/* HeroSection */}
     <>
-        <section className="relative py-20px-4overflow-hidden" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/10to-purple-500/10" />
-          <div className="relative max-w-7xlmx-autotext-center">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-              <Globe className="w-4h-4" />
-              <span   />AI Translation Services</span>
-=======
-          <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/10to-purple-500/10" / />
-          <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-        </div>
-              <Globe className="w-4h-4" / />
-              <span>AI Translation Services</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <sectionclassName="r e lativepy-20px-4overflow-hidden" />
+          <divclassName="a b soluteinset-0 bg-gradient-to-rfrom-cyan-500/10to-purple-500/10" />
+          <divclassName="r e lativemax-w-7xlmx-autotext-center">
+            <divclassName="i n line-flexitems-centerspace-x-2 bg-gradient-to-rfrom-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-fulltext-smfont-mediummb-8borderborder-cyan-400/30">
+              <GlobeclassName="w-4h-4" />
+              <span   />AITranslationServices</span>
             </div>
     </>
             
-<<<<<<< HEAD
-            <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
-              Break Language <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Barriers</span>
-=======
-    <>
-            <h1 className="text-4 xl sm:text-6 xl md:text-7 xl font-bold text-whitemb-8leading-tight" />
-              Break Language <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Barriers</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <h1 className="t e xt-4xlsm:text-6 xlmd:text-7 xlfont-boldtext-whitemb-8leading-tight" />
+              BreakLanguage <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Barriers</span>
             </h1>
     </>
             
-            <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
-              Connect with global audiences using AI-powered translation services. 
-              Real-time translation, document processing, and multilingual support for businesses worldwide.
-            </p>
-            
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-              <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" >
-           
+            <pclassName="t e xt-lgsm:text-xlmd:text-2 xltext-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">ConnectwithglobalaudiencesusingAI-poweredtranslationservices. 
+              Real-timetranslation, documentprocessing, andmultilingualsupportforbusinessesworldwide.</p>
+            <divclassName="f l exflex-colsm:flex-rowgap-6justify-centermb-16">
+              <Linkto="/contact" className="g r oupbg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-10 py-4 rounded-xlfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-centerspace-x-2 shadow-lgshadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105">
           <span    />
-        </Link>Start Free Trial</span>
-                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+        </Link>StartFreeTrial</span>
+                <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
               </Link>
-              <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
+              <Linkto="/demo" className="g r oupborder-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xlfont-semiboldhover:bg-cyan-400 hover:text-gray-900 transition-allduration-300 flexitems-centerjustify-centerspace-x-2backdrop-blur-sm">
           <span    />
-        </Link>View Demo</span>
-=======
-    <>
-            <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-        </div>
-              <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
-                <span>Start Free Trial</span>
-                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-              </Link>
-              <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                <span>View Demo</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+        </Link>ViewDemo</span>
+                <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
               </Link>
             </div>
         </section>
     </>
 
-        {/* Features Section */}
+        {/* FeaturesSection */}
     <>
-        <section className="py-20px-4relative" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Translation Features</span>
+        <sectionclassName="p y-20px-4relative" />
+          <divclassName="a b soluteinset-0 bg-gradient-to-brfrom-purple-500/5via-cyan-500/5to-pink-500/5" />
+          <divclassName="r e lativemax-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+                Powerful <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />TranslationFeatures</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Everything you need to communicate effectively across languages and cultures.
-=======
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" / />
-          <div className="relative max-w-7xlmx-auto">
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Translation Features</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                Everything you need to communicate effectively across languages and cultures.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">Everythingyouneedtocommunicateeffectivelyacrosslanguagesandcultures.</p>
             </div>
     </>
             
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
               {features.map((feature, index) => (
     <>
-                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
+                <divkey="{index}" className="g r oupbg-white/10 backdrop-blur-lgrounded-2 xlp-8 borderborder-white/20 hover:bg-white/20 transition-allduration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                  <divclassName="f l exitems-centerjustify-centerw-16 h-16 bg-gradient-to-rfrom-cyan-500 to-purple-600 rounded-2 xlmb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
                   </div>
-<<<<<<< HEAD
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{feature.title}
+                  <h3 className="t e xt-2 xlfont-boldtext-whitemb-4group-hover:text-cyan-400 transition-colors"  />{feature.title}
                   </h3>
-                  <p className="text-gray-300leading-relaxed">
-              {feature.description}
-=======
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title}
-                  </h3>
-                  <p className="text-gray-300leading-relaxed" />
-    </>
-                    {feature.description}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </p>
+                  <pclassName="t e xt-gray-300leading-relaxed">{feature.description}</p>
                 </div>
     </>
               ))}
@@ -261,63 +184,29 @@ const AITranslationServicesPage: React.FC = () => {
         </section>
     </>
 
-        {/* Use Cases Section */}
+        {/* UseCasesSection */}
     <>
-        <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
-          <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Perfect for <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Every Business</span>
+        <sectionclassName="p y-20 px-4 bg-gradient-to-brfrom-slate-800/50to-purple-900/50relative" />
+          <divclassName="r e lativemax-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+                Perfectfor <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />EveryBusiness</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Discover how AI translation can transform your business operations and global reach.
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Perfect for <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Every Business</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                Discover how AI translation can transform your business operations and global reach.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">DiscoverhowAItranslationcantransformyourbusinessoperationsandglobalreach.</p>
             </div>
     </>
             
-            <div className="grid grid-cols-1md:grid-cols-2gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1md:grid-cols-2gap-8">
               {useCases.map((useCase, index) => (
     <>
-                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                  <div className="flex items-centerspace-x-4mb-6">
-<<<<<<< HEAD
-                    <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl group-hover:scale-110transition-transformduration-300"  />{useCase.icon}
+                <divkey="{index}" className="g r oupbg-white/10 backdrop-blur-lgrounded-2 xlp-8 borderborder-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
+                  <divclassName="f l exitems-centerspace-x-4mb-6">
+                    <divclassName="f l exitems-centerjustify-centerw-16 h-16 bg-gradient-to-rfrom-cyan-500 to-purple-600 rounded-2 xlgroup-hover:scale-110transition-transformduration-300"  />{useCase.icon}
                     </div>
-                    <h3 className="text-2 xl font-bold text-whitegroup-hover:text-cyan-400 transition-colors"  />{useCase.title}
+                    <h3 className="t e xt-2 xlfont-boldtext-whitegroup-hover:text-cyan-400 transition-colors"  />{useCase.title}
                     </h3>
                   </div>
-                  <p className="text-gray-300leading-relaxed">
-              {useCase.description}
-=======
-        </div>
-                    <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl group-hover:scale-110transition-transformduration-300">{useCase.icon}
-                    </div>
-                    <h3 className="text-2 xl font-bold text-whitegroup-hover:text-cyan-400transition-colors">{useCase.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300leading-relaxed" />
-    </>
-                    {useCase.description}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </p>
+                  <pclassName="t e xt-gray-300leading-relaxed">{useCase.description}</p>
                 </div>
     </>
               ))}
@@ -326,105 +215,54 @@ const AITranslationServicesPage: React.FC = () => {
         </section>
     </>
 
-        {/* Pricing Section */}
+        {/* PricingSection */}
     <>
-        <section className="py-20px-4relative" />
-          <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>
+        <sectionclassName="p y-20px-4relative" />
+          <divclassName="r e lativemax-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+                Simple <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Choose the plan that fits your translation needs. All plans include a 14-day free trial.
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
-                Choose the plan that fits your translation needs. All plans include a 14-day free trial.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Choosetheplanthatfitsyourtranslationneeds. Allplansincludea 14-dayfreetrial.</p>
             </div>
     </>
             
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
               {pricingPlans.map((plan, index) => (
-                <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
+                <divkey="{index}" className="{`r e lative" bg-white/10 backdrop-blur-lgrounded-2 xlp-8 bordertransition-allduration-300 hover:scale-105 ${
                   plan.popular 
-                    ? 'border-cyan-400/50 shadow-2 xl shadow-cyan-500/20' 
+                    ? 'border-cyan-400/50 shadow-2 xlshadow-cyan-500/20' 
                     : 'border-white/20 hover: border-cyan-400/30'
                 }`} />
                   {plan.popular && (
-<<<<<<< HEAD
-                    <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold"  />Most Popular
+                    <divclassName="a b solute -top-4 left-1/2transform-translate-x-1/2">
+                      <divclassName="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-6 py-2 rounded-fulltext-smfont-semibold"  />MostPopular
                       </div>
                   )}
                   
-                  <div className="text-centermb-8">
-                    <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">
-              {plan.description}</p>
-                    <div className="flex items-baselinejustify-center">
-                      <span className="text-5 xlfont-bold text-white"   />{plan.price}</span>
-                      <span className="text-gray-400ml-2"   />{plan.period}</span>
+                  <divclassName="t e xt-centermb-8">
+                    <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"   />{plan.name}</h3>
+                    <pclassName="t e xt-gray-300 mb-4">{plan.description}</p>
+                    <divclassName="f l exitems-baselinejustify-center">
+                      <spanclassName="t e xt-5 xlfont-boldtext-white"   />{plan.price}</span>
+                      <spanclassName="t e xt-gray-400ml-2"   />{plan.period}</span>
                     </div>
-                  
-                  <ul className="space-y-4mb-8" />
+                  <ulclassName="s p ace-y-4mb-8" />
                     {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-centerspace-x-3" />
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" />
-                        <span className="text-gray-300"   />{feature}</span>
-=======
-    <>
-                    <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-        </div>
-                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
-                      </div>
-    </>
-                  )}
-                  
-    <>
-                  <div className="text-centermb-8">
-        </div>
-                    <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                    <p className="text-gray-300mb-4">{plan.description}</p>
-                    <div className="flexitems-baselinejustify-center" />
-                      <span className="text-5 xlfont-boldtext-white">{plan.price}</span>
-                      <span className="text-gray-400ml-2">{plan.period}</span>
-                    </div>
-    </>
-                  
-                  <ul className="space-y-4mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-    <>
-                      <li key="{featureIndex}" className="flexitems-centerspace-x-3" />
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
-                        <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                      <likey="{featureIndex}" className="f l exitems-centerspace-x-3" />
+                        <CheckCircleclassName="w-5 h-5t e xt-green-400flex-shrink-0" />
+                        <spanclassName="t e xt-gray-300"   />{feature}</span>
                       </li>
     </>
                     ))}
                   </ul>
-                  
-                  <Link 
-                    to="/contact" 
-                    className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  <Linkto="/contact" 
+                    className="{`b l ock" w-fulltext-centerpy-3 rounded-xlfont-semiboldtransition-allduration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                        ? 'bg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitehover:from-cyan-600 hover:to-purple-700'
                         : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
                     }`}
-                    />Get Started
+                    />GetStarted
     <>
                   </Link>
                 </div>
@@ -435,60 +273,29 @@ const AITranslationServicesPage: React.FC = () => {
         </section>
     </>
 
-        {/* CTA Section */}
+        {/* CTASection */}
     <>
-        <section className="py-20px-4relative" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" />
-          <div className="relative max-w-7xlmx-autotext-center">
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8sm:p-12lg:p-16">
-              <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" />
-                Ready to Go <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Global?</span>
-=======
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" / />
-          <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8sm:p-12lg:p-16">
-        </div>
-              <h2 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-whitemb-6leading-tight" />
-                Ready to Go <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">Global?</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <sectionclassName="p y-20px-4relative" />
+          <divclassName="a b soluteinset-0 bg-gradient-to-rfrom-cyan-500/10via-purple-500/10to-pink-500/10" />
+          <divclassName="r e lativemax-w-7xlmx-autotext-center">
+            <divclassName="b g-gradient-to-rfrom-cyan-600 via-purple-600 to-pink-600 rounded-3 xlp-8sm:p-12lg:p-16">
+              <h2 className="t e xt-4xlsm:text-5 xlmd:text-6 xlfont-boldtext-whitemb-6leading-tight" />
+                ReadytoGo <spanclassName="b g-gradient-to-rfrom-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Global?</span>
               </h2>
     </>
               
-              <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
-<<<<<<< HEAD
-              Break down language barriers and connect with global audiences. 
-                Start your free trial today and experience the power of AI translation.
-              </p>
-              
-              <div className="flex flex-col sm:flex-rowgap-6justify-center">
-                <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
-           
+              <pclassName="t e xt-xlsm:text-2 xltext-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">Breakdownlanguagebarriersandconnectwithglobalaudiences. 
+                StartyourfreetrialtodayandexperiencethepowerofAItranslation.</p>
+              <divclassName="f l exflex-colsm:flex-rowgap-6justify-center">
+                <Linkto="/contact" className="g r oupbg-whitetext-cyan-600 px-10 py-4 rounded-xlfont-boldtext-lghover:bg-gray-100 transition-allduration-300 flexitems-centerjustify-centerspace-x-2 shadow-lghover:shadow-xltransformhover:scale-105">
           <span    />
-        </Link>Start Free Trial</span>
-                  <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+        </Link>StartFreeTrial</span>
+                  <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
                 </Link>
-                <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
+                <Linkto="/pricing" className="g r oupborder-2 border-whitetext-whitepx-10 py-4 rounded-xlfont-boldtext-lghover:bg-white/10 transition-allduration-300 flexitems-centerjustify-centerspace-x-2backdrop-blur-sm">
           <span    />
-        </Link>View All Plans</span>
-=======
-                Break down language barriers and connect with global audiences. 
-                Start your free trial today and experience the power of AI translation.
-              </p>
-              
-    <>
-              <div className="flex flex-col sm:flex-rowgap-6justify-center">
-        </div>
-                <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
-                  <span>Start Free Trial</span>
-                  <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                </Link>
-                <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                  <span>View All Plans</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+        </Link>ViewAllPlans</span>
+                  <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
                 </Link>
               </div>
           </div>
@@ -511,5 +318,5 @@ const AITranslationServicesPage: React.FC = () => {
   )
 }
 
-export default AITranslationServicesPage;
+exportdefaultAITranslationServicesPage;
     </>

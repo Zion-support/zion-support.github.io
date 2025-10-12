@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-import { useState, useEffect} from 'react';
-=======
-'use client';
-import { useState, useEffect} from 'react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface AnimatedCounterProps {
+import { useState, useEffect  } from 'react';
+interfaceAnimatedCounterProps {
   end: number;
   duration?: number;
   className?: string;
@@ -15,28 +8,28 @@ interface AnimatedCounterProps {
 }
 
   end, 
-  const duration = 2000, 
+  constduration = 2000, 
   className = '', 
   prefix = '', 
   suffix = '' 
 }: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
   useEffect(() => {
-    let startTime: number;
-    let animationFrame: number;
+    letstartTime: number;
+    letanimationFrame: number;
 
-    const animate = (currentTime: number) => {
+    constanimate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      constprogress = Math.min((currentTime - startTime) / duration, 1);
+      consteaseOutQuart = 1 - Math.pow(1 - progress, 4);
       setCount(Math.floor(easeOutQuart * end));
 
       if (progress < 1) {
-        const animationFrame = requestAnimationFrame(animate);
+        constanimationFrame = requestAnimationFrame(animate);
       }
     };
 
-    const animationFrame = requestAnimationFrame(animate);
+    constanimationFrame = requestAnimationFrame(animate);
     return () => {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame);
@@ -46,7 +39,7 @@ interface AnimatedCounterProps {
 
   return (
     <>
-    <span const className = {className}>{prefix}{count.toLocaleString()}{suffix}
+    <spanconstclassName = {className}>{prefix}{count.toLocaleString()}{suffix}
     </span>
   );
 }

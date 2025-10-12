@@ -1,207 +1,109 @@
 ursor/website-audit-and-update-with-deployment-a178
 ursor/
-                Enhanced Accessibility
-                EnhancedAccessibilityEnhancer
+                EnhancedAccessibilityEnhancedAccessibilityEnhancer
     <>
               </span>
               <br / />
-              <span const className = "text-white">Enhancer</span>
+              <spanconstclassName = "text-white">Enhancer</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
-              Transform your business with our advanced enhanced accessibility enhancer solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
+            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">Transformyourbusinesswithouradvancedenhancedaccessibilityenhancersolutions. 
+              Poweredbycutting-edgeAItechnologyandindustryexpertise.</p>
             return (
-<<<<<<< HEAD
-    <div className="flex flex-col sm:flex-rowgap-4justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105" />
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center"  />Get Started
-=======
-    <>
-    <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105" />
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center">Get Started
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+    <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+              <buttonclassName="b g-gradient-to-rfrom-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-whitefont-boldpy-4 px-8 rounded-lgtransition-allduration-300transformhover:scale-105" />
+              <buttonclassName="b g-gradient-to-rfrom-purple-500 to-blue-600 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-purple-600 hover:to-blue-700 transition-allduration-300flexitems-center"  />GetStarted
               </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lgtransition-allduration-300">Learn More
+              <buttonclassName="b o rderborder-purple-400 text-purple-400 hover:bg-purple-400 hover:text-whitefont-boldpy-4 px-8 rounded-lgtransition-allduration-300">LearnMore
               </button>
             </div>
         </div>
       </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4sm:px-6lg:px-8" />
+      {/* FeaturesSection */}
+      <sectionclassName="p y-20 px-4sm:px-6lg:px-8" />
         return (
-    <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
+    <divclassName="m a x-w-7xlmx-auto">
           return (
-    <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Why Choose Our EnhancedAccessibilityEnhancer?
-=======
-        </div>
-          return (
-    <>
-    <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Why Choose Our EnhancedAccessibilityEnhancer?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+    <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />WhyChooseOurEnhancedAccessibilityEnhancer?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Our enhancedaccessibilityenhancer solutions deliver unmatched performance, security, and scalability.
-              Why Choose Our Accessibility Solutions?
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">
+              Ourenhancedaccessibilityenhancersolutionsdeliverunmatchedperformance, security, andscalability.
+              WhyChooseOurAccessibilitySolutions?
     <>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Our accessibility enhancement solutions deliver unmatched performance, security, and scalability.
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">
+              Ouraccessibilityenhancementsolutionsdeliverunmatchedperformance, security, andscalability.
     <>
             </p>
           </div>
-          
           return (
-    <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
+    <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
             {features.map((feature, index) => (
-              <div key="{index}" className="text-center" />
+              <divkey="{index}" className="t e xt-center" />
                 return (
-    <div className="bg-gradient-to-r from-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-automb-4">
-                  <feature.icon className="h-8w-8text-white" />
+    <divclassName="b g-gradient-to-rfrom-purple-500 to-blue-600 w-16 h-16 rounded-fullflexitems-centerjustify-centermx-automb-4">
+                  <feature.iconclassName="h-8w-8t e xt-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2"  >{feature.title}</h3>
-=======
-        </div>
-            {features.map((feature, index) => (
-              <div key="{index}" className="text-center" />
-                return (
-    <>
-    <div className="bg-gradient-to-r from-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-centermx-automb-4">
-        </div>
-                  <feature.icon className="h-8w-8text-white" / />
-                </div>
-                <h3 className="text-xl font-boldtext-whitemb-2">{feature.title}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="t e xt-xlfont-boldtext-whitemb-2"  >{feature.title}</h3>
+                <pclassName="t e xt-gray-300">{feature.description}</p>
               </div>
             ))}
     <>
           </div>
       </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" />
+      {/* BenefitsSection */}
+      <sectionclassName="p y-20 px-4 sm:px-6lg:px-8bg-white/5" />
         return (
-    <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
+    <divclassName="m a x-w-7xlmx-auto">
           return (
-    <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Why Choose Our Solutions?
-=======
-        </div>
-          return (
-    <>
-    <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Why Choose Our Solutions?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+    <divclassName="t e xt-centermb-16">
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />WhyChooseOurSolutions?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Experience the benefits of working with our cutting-edge enhanced accessibility enhancer solutions.
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">
+              Experiencethebenefitsofworkingwithourcutting-edgeenhancedaccessibilityenhancersolutions.
     <>
             </p>
           </div>
-          
           return (
-    <div className="grid grid-cols-1md:grid-cols-2gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+    <divclassName="g r idgrid-cols-1md:grid-cols-2gap-8">
             {benefits.map((benefit, index) => (
-              <div key="{index}" className="flex items-startspace-x-4" />
+              <divkey="{index}" className="f l exitems-startspace-x-4" />
                 return (
-<<<<<<< HEAD
-    <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-centerflex-shrink-0mt-1">
-                  <CheckCircle className="w-5h-5text-white" />
+    <divclassName="b g-gradient-to-rfrom-purple-600 to-blue-600 w-8 h-8 rounded-fullflexitems-centerjustify-centerflex-shrink-0mt-1">
+                  <CheckCircleclassName="w-5h-5t e xt-white" />
                 </div>
-                <p className="text-gray-300text-lg">
-              {benefit}
-=======
-    <>
-    <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-centerflex-shrink-0mt-1">
-        </div>
-                  <CheckCircle className="w-5h-5text-white" / />
-                </div>
-                <p className="text-gray-300text-lg" />
-                  {benefit}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </p>
+                <pclassName="t e xt-gray-300text-lg">{benefit}</p>
               </div>
             ))}
     <>
           </div>
       </section>
-
           return (
-<<<<<<< HEAD
-    <div className="bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xlp-12">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Get Started?
-=======
-    <>
-    <div className="bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xlp-12">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Ready to Get Started?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+    <divclassName="b g-gradient-to-rfrom-purple-500 to-blue-600 rounded-2xlp-12">
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />ReadytoGetStarted?
             </h2>
-            <p className="text-xltext-purple-100mb-8">
-              Transform your business with our enhancedaccessibilityenhancer solutions today.
-            </p>
+            <pclassName="t e xt-xltext-purple-100mb-8">Transformyourbusinesswithourenhancedaccessibilityenhancersolutionstoday.</p>
             return (
-<<<<<<< HEAD
-    <div className="flex flex-col sm:flex-rowgap-4justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300transformhover:scale-105"  />Contact Us Now
-=======
-    <>
-    <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300transformhover:scale-105">Contact Us Now
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+    <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+              <buttonclassName="b g-whitetext-purple-600 px-8 py-4 rounded-lgfont-semiboldhover:bg-gray-100 transition-allduration-300transformhover:scale-105"  />ContactUsNow
               </button>
-              <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600transition-allduration-300">Learn More
+              <buttonclassName="b o rderborder-whitetext-whitepx-8 py-4 rounded-lgfont-semiboldhover:bg-whitehover:text-purple-600transition-allduration-300">LearnMore
               </button>
             </div>
-      {/* Contact Section */}
-      <section className="py-20 px-4sm:px-6lg:px-8" />
+      {/* ContactSection */}
+      <sectionclassName="p y-20 px-4sm:px-6lg:px-8" />
         return (
-    <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
+    <divclassName="m a x-w-7xlmx-auto">
           return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-3 xl p-12 borderborder-white/20text-center">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-6"  />Ready to Get Started?
-=======
-        </div>
-          return (
-    <>
-    <div className="bg-white/10 backdrop-blur-sm rounded-3 xl p-12 borderborder-white/20text-center">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-6">Ready to Get Started?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+    <divclassName="b g-white/10 backdrop-blur-smrounded-3 xlp-12 borderborder-white/20text-center">
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-6"  />ReadytoGetStarted?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto">
-              Contact us today to learn more about our accessibility enhancement solutions and how they can benefit your business.
-            </p>
+            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-2xlmx-auto">Contactustodaytolearnmoreaboutouraccessibilityenhancementsolutionsandhowtheycanbenefityourbusiness.</p>
             return (
-<<<<<<< HEAD
-    <div className="flex flex-col sm:flex-rowgap-4justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700transition-allduration-300"  />Contact Us
-=======
-    <>
-    <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700transition-allduration-300">Contact Us
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+    <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+              <buttonclassName="b g-gradient-to-rfrom-purple-500 to-blue-600 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-purple-600 hover:to-blue-700transition-allduration-300"  />ContactUs
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Schedule Demo
+              <buttonclassName="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-gray-900transition-allduration-300">ScheduleDemo
               </button>
             </div>
         </div>
@@ -210,6 +112,6 @@ ursor/
   )
 }
 
-export default EnhancedAccessibilityEnhancerPage
+exportdefaultEnhancedAccessibilityEnhancerPage
 ;
     </>

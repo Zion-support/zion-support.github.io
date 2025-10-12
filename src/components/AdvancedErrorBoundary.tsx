@@ -1,6 +1,4 @@
-// Simple logger implementation
-
-      console.error(message, context);
+// Simpleloggerimplementationconsole.error(message, context);
     }
   }
 };
@@ -27,9 +25,8 @@
   userId: string | null;
   sessionId: string;
 }
-class AdvancedErrorBoundary extends Component
-  private retryCount = 0;
-  private maxRetries = 3;
+classAdvancedErrorBoundaryextendsComponentprivateretryCount = 0;
+  privatemaxRetries = 3;
     super(props);
       errorId: null
     };
@@ -39,39 +36,33 @@ class AdvancedErrorBoundary extends Component
   }
       errorInfo
     });
-    // Log error to console in development
-        errorInfo 
+    // LogerrortoconsoleindevelopmenterrorInfo 
       });
     }
-    // Call custom error handler
-      this.props.onError(error, errorInfo);
+    // Callcustomerrorhandlerthis.props.onError(error, errorInfo);
     }
-    // Report error to external service
-      this.reportError(error, errorInfo);
+    // Reporterrortoexternalservicethis.reportError(error, errorInfo);
     }
   }
       sessionId: this.getSessionId()
     };
-    // Send to error reporting service
-    this.sendErrorReport(errorReport);
+    // Sendtoerrorreportingservicethis.sendErrorReport(errorReport);
   };
-    // Try to get user ID from localStorage or other sources
-      return localStorage.getItem('userId') || null;
-      return null;
+    // TrytogetuserIDfromlocalStorageorothersourcesreturnlocalStorage.getItem('userId') || null;
+      returnnull;
     }
   };
-    // Generate or retrieve session ID
-      let sessionId = sessionStorage.getItem('sessionId');
+    // GenerateorretrievesessionIDletsessionId = sessionStorage.getItem('sessionId');
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         sessionStorage.setItem('sessionId', sessionId);
       }
-      return sessionId;
+      returnsessionId;
       return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     }
   };
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   };
-      // Send to your error reporting service
+      // Sendtoyourerrorreportingservice
           'Content-Type': 'application/json'
         body: JSON.stringify(errorReport)
       });
@@ -79,84 +70,75 @@ class AdvancedErrorBoundary extends Component
       });
     }
   };
-    if (this.retryCount 
-    window.location.reload();
+    if (this.retryCountwindow.location.reload();
   };
     window.location.href = '/';
   };
-      // Custom fallback UI
-        return this.props.fallback;
+      // CustomfallbackUIreturnthis.props.fallback;
       }
-      // Default error UI
-        <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
-          <div className='sm:mx-auto sm:w-full sm:max-w-md'>
-            <div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'>
-              <div className='text-center'>
-                <div className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100'>
+      // DefaulterrorUI
+        <divclassName='min-h-screenbg-gray-50 flexflex-coljustify-centerpy-12 sm:px-6 lg:px-8'>
+          <divclassName='sm:mx-autosm:w-fullsm:max-w-md'>
+            <divclassName='bg-whitepy-8 px-4 shadowsm:rounded-lgsm:px-10'>
+              <divclassName='text-center'>
+                <divclassName='mx-autoflexitems-centerjustify-centerh-12 w-12 rounded-fullbg-red-100'>
                   
                   >
                     
                     />
                   </svg>
                 </div>
-                <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>
-                  Oops! Something went wrong
+                <h2 className='mt-6 text-3xlfont-extraboldtext-gray-900'>
+                  Oops! Somethingwentwrong
                 </h2>
-                <p className='mt-2 text-sm text-gray-600'>
-                  We&apos;re sorry, but something unexpected happened. Our team
-                  has been notified.
-                </p>
+                <pclassName='mt-2 text-smtext-gray-600'>We&apos;resorry, butsomethingunexpectedhappened. Ourteamhasbeennotified.</p>
               </div>
-                <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
-                  <h3 className='text-sm font-medium text-red-800'>
-                    Error Details:
+                <divclassName='mt-6 bg-red-50 borderborder-red-200 rounded-mdp-4'>
+                  <h3 className='text-smfont-mediumtext-red-800'>
+                    ErrorDetails:
                   </h3>
-                  <div className='mt-2 text-sm text-red-700'>
+                  <divclassName='mt-2 text-smtext-red-700'>
                     <p>
-                      <strong>Error ID:</strong> {this.state.errorId}
+                      <strong>ErrorID:</strong> {this.state.errorId}
                     </p>
                     <p>
                       <strong>Message:</strong> {this.state.error?.message}
                     </p>
-                    <details className='mt-2'>
-                      <summary className='cursor-pointer font-medium'>
-                        Stack Trace
+                    <detailsclassName='mt-2'>
+                      <summaryclassName='cursor-pointerfont-medium'>
+                        StackTrace
                       </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>
+                      <preclassName='mt-2 text-xsoverflow-auto'>
                         {this.state.error?.stack}
                       </pre>
                     </details>
-                    <details className='mt-2'>
-                      <summary className='cursor-pointer font-medium'>
-                        Component Stack
+                    <detailsclassName='mt-2'>
+                      <summaryclassName='cursor-pointerfont-medium'>
+                        ComponentStack
                       </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>
+                      <preclassName='mt-2 text-xsoverflow-auto'>
                         {this.state.errorInfo?.componentStack}
                       </pre>
                     </details>
                   </div>
               )}
-              <div className='mt-6 space-y-3'>
+              <divclassName='mt-6 space-y-3'>
                 {this.props.enableRetry &&
-                  this.retryCount 
-                    >
-                      Try Again ({this.maxRetries - this.retryCount} attempts
-                      left)
+                  this.retryCount>
+                      TryAgain ({this.maxRetries - this.retryCount} attemptsleft)
                     </button>
                   )}
                 
                 >
-                  Reload Page
+                  ReloadPage
                 </button>
-                
                 >
-                  Go to Homepage
+                  GotoHomepage
                 </button>
               </div>
-              <div className='mt-6 text-center'>
-                <p className='text-xs text-gray-500'>
-                  If this problem persists, please contact our support team
-                  at&nbsp;
+              <divclassName='mt-6 text-center'>
+                <pclassName='text-xstext-gray-500'>
+                  Ifthisproblempersists, pleasecontactoursupportteamat&nbsp;
                   
                   >
                     kleber@ziontechgroup.com
@@ -166,7 +148,7 @@ class AdvancedErrorBoundary extends Component
     </div>
   );
     }
-    return this.props.children;
+    returnthis.props.children;
   }
 }
-export default AdvancedErrorBoundary;
+exportdefaultAdvancedErrorBoundary;

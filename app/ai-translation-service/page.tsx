@@ -1,75 +1,67 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-=======
-import { Languages, ArrowRight, CheckCircle, Brain, Star, Target, Clock, FileText } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-import Layout from '../layout'
-<<<<<<< HEAD
-import React  from 'react';
-=======
+import { Link    } from 'react-router-dom'
+importLayoutfrom '../layout'
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { Link } from 'react-router-dom';
-import { Languages, ArrowRight} from 'lucide-react';
-import Layout from '../layout';
+import { Link    } from 'react-router-dom';
+import { Languages, ArrowRight   } from 'lucide-react';
+importLayoutfrom '../layout';
 
-export default function AITranslationService() {
-  const features = [
+exportdefaultfunctionAITranslationService() {
+  constfeatures = [
     {
-      icon: <Brain className="w-6h-6text-cyan-400" />,
-      title: 'Neural Machine Translation',
-      description: 'Advanced AI models provide contextually accurate translations in 100+ languages'
+      icon: <BrainclassName="w-6h-6t e xt-cyan-400" />,
+      title: 'NeuralMachineTranslation',
+      description: 'AdvancedAImodelsprovidecontextuallyaccuratetranslationsin 100+ languages'
     },
     {
-      icon: <FileText className="w-6h-6text-purple-400" />,
-      title: 'Document Translation',
-      description: 'Translate entire documents while preserving formatting, layout, and structure'
+      icon: <FileTextclassName="w-6h-6t e xt-purple-400" />,
+      title: 'DocumentTranslation',
+      description: 'Translateentiredocumentswhilepreservingformatting, layout, andstructure'
     },
     {
-      icon: <Clock className="w-6h-6text-yellow-400" />,
-      title: 'Real-time Translation',
-      description: 'Instant translation for live conversations, meetings, and customer support'
+      icon: <ClockclassName="w-6h-6t e xt-yellow-400" />,
+      title: 'Real-timeTranslation',
+      description: 'Instanttranslationforliveconversations, meetings, andcustomersupport'
     },
     {
-      icon: <Target className="w-6h-6text-green-400" />,
-      title: 'Industry-Specific Translation',
-      description: 'Specialized translation models for legal, medical, technical, and business content'
+      icon: <TargetclassName="w-6h-6t e xt-green-400" />,
+      title: 'Industry-SpecificTranslation',
+      description: 'Specializedtranslationmodelsforlegal, medical, technical, andbusinesscontent'
     }
   ]
 
-  const translationFeatures = [
+  consttranslationFeatures = [
     {
-      category: 'Translation Types',
-      items: ['Text Translation', 'Document Translation', 'Website Translation', 'Audio Translation', 'Video Subtitles', 'Live Translation']
+      category: 'TranslationTypes',
+      items: ['TextTranslation', 'DocumentTranslation', 'WebsiteTranslation', 'AudioTranslation', 'VideoSubtitles', 'LiveTranslation']
     },
     {
       category: 'Languages',
-      items: ['100+ Languages', 'Regional Dialects', 'Rare Languages', 'Sign Language', 'Technical Jargon', 'Cultural Adaptation']
+      items: ['100+ Languages', 'RegionalDialects', 'RareLanguages', 'SignLanguage', 'TechnicalJargon', 'CulturalAdaptation']
     },
     {
-      category: 'Quality Assurance',
-      items: ['Human Review', 'Quality Scoring', 'Consistency Checks', 'Terminology Management', 'Style Guides', 'Proofreading']
+      category: 'QualityAssurance',
+      items: ['HumanReview', 'QualityScoring', 'ConsistencyChecks', 'TerminologyManagement', 'StyleGuides', 'Proofreading']
     },
     {
       category: 'Integration',
-      items: ['API Access', 'CMS Integration', 'Website Widgets', 'Mobile Apps', 'Desktop Software', 'Cloud Storage']
+      items: ['APIAccess', 'CMSIntegration', 'WebsiteWidgets', 'MobileApps', 'DesktopSoftware', 'CloudStorage']
     }
   ]
 
-  const pricingPlans = [
+  constpricingPlans = [
     {
       name: 'Starter',
       price: '$29',
       period: '/month',
-      description: 'Perfect for small businesses and freelancers',
+      description: 'Perfectforsmallbusinessesandfreelancers',
       features: [
-        'Up to 10,000 words/month',
+        'Upto 10,000 words/month',
         '50+ languages',
-        'Basic document translation',
-        'Email support',
-        'Standard quality',
-        'API access'
+        'Basicdocumenttranslation',
+        'Emailsupport',
+        'Standardquality',
+        'APIaccess'
       ],
       popular: false
     },
@@ -77,15 +69,15 @@ export default function AITranslationService() {
       name: 'Professional',
       price: '$99',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Idealforgrowingbusinesses',
       features: [
-        'Up to 100,000 words/month',
+        'Upto 100,000 words/month',
         '100+ languages',
-        'Advanced document translation',
-        'Priority support',
-        'High quality',
-        'Human review',
-        'Custom terminology'
+        'Advanceddocumenttranslation',
+        'Prioritysupport',
+        'Highquality',
+        'Humanreview',
+        'Customterminology'
       ],
       popular: true
     },
@@ -93,199 +85,115 @@ export default function AITranslationService() {
       name: 'Enterprise',
       price: '$299',
       period: '/month',
-      description: 'For large organizations',
+      description: 'Forlargeorganizations',
       features: [
-        'Unlimited words',
-        'All languages',
-        'Custom translation models',
-        'Dedicated support',
-        'Premium quality',
-        'White-label solution',
-        'SLA guarantee'
+        'Unlimitedwords',
+        'Alllanguages',
+        'Customtranslationmodels',
+        'Dedicatedsupport',
+        'Premiumquality',
+        'White-labelsolution',
+        'SLAguarantee'
       ],
       popular: false
     }
   ]
 
-  const testimonials = [
+  consttestimonials = [
     {
-      name: 'Maria Santos',
-      company: 'Global Marketing Agency',
-      content: 'AI Translation Service helped us expand to 15 new markets. The quality is exceptional and cost-effective.',
+      name: 'MariaSantos',
+      company: 'GlobalMarketingAgency',
+      content: 'AITranslationServicehelpedusexpandto 15 newmarkets. Thequalityisexceptionalandcost-effective.',
       rating: 5
     },
     {
-      name: 'James Wilson',
-      company: 'E-learning Platform',
-      content: 'Translating our courses into 8 languages was seamless. The educational content translation is spot-on.',
+      name: 'JamesWilson',
+      company: 'E-learningPlatform',
+      content: 'Translatingourcoursesinto 8 languageswasseamless. Theeducationalcontenttranslationisspot-on.',
       rating: 5
     },
     {
-      name: 'Lisa Chen',
-      company: 'Legal Firm',
-      content: 'The legal translation accuracy is impressive. Our international clients are very satisfied with the service.',
+      name: 'LisaChen',
+      company: 'LegalFirm',
+      content: 'Thelegaltranslationaccuracyisimpressive. Ourinternationalclientsareverysatisfiedwiththeservice.',
       rating: 5
     }
   ]
 
   return (
-    <Layout
-      title="AI Translation Service - Professional Translation Solutions | Zion Tech Group"
-      description="Transform your global communication with AI-powered translation in 100+ languages. Professional quality, real-time translation, and industry-specific solutions. Start your free trial today."
-      keywords="AI translation, machine translation, document translation, multilingual content, translation API, language services" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        {/* Hero Section */}
+    <Layouttitle="AITranslationService - ProfessionalTranslationSolutions | ZionTechGroup"
+      description="TransformyourglobalcommunicationwithAI-poweredtranslationin 100+ languages. Professionalquality, real-timetranslation, andindustry-specificsolutions. Startyourfreetrialtoday."
+      keywords="AItranslation, machinetranslation, documenttranslation, multilingualcontent, translationAPI, languageservices" />
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
+        {/* HeroSection */}
     <>
-        <section className="pt-20 pb-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-amber-500/20 rounded-full text-amber-400 text-smfont-mediummb-6">
-                <Languages className="w-4h-4mr-2" />
-=======
-        </div>
-            <div className="text-center" />
-              <div className="inline-flex items-center px-4 py-2 bg-amber-500/20 rounded-full text-amber-400 text-smfont-mediummb-6">
-        </div>
-                <Languages className="w-4h-4mr-2" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                AI-Powered Translation
+        <sectionclassName="p t-20 pb-16 px-4sm:px-6lg:px-8" />
+          <divclassName="m a x-w-7xlmx-auto">
+            <divclassName="t e xt-center">
+              <divclassName="i n line-flexitems-centerpx-4 py-2 bg-amber-500/20 rounded-fulltext-amber-400 text-smfont-mediummb-6">
+                <LanguagesclassName="w-4h-4m r-2" />
+                AI-PoweredTranslation
     <>
               </div>
-<<<<<<< HEAD
-              <h1 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6"  />AI Translation Service
-=======
-              <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6">AI Translation Service
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </h1>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8">
-              Transform your global communication with AI-powered translation in 100+ languages. 
-                Professional quality, real-time translation, and industry-specific solutions.
+              <h1 className="t e xt-4xlsm:text-5 xlmd:text-6 xlfont-boldtext-whitemb-6"  />AITranslationService</h1>
+              <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-3 xlmx-automb-8">
+              TransformyourglobalcommunicationwithAI-poweredtranslationin 100+ languages. 
+                Professionalquality, real-timetranslation, andindustry-specificsolutions.
     <>
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-                <Link to="/contact" className="bg-gradient-to-r from-amber-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-center" >
-          Start Free Trial
+              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+                <Linkto="/contact" className="b g-gradient-to-rfrom-amber-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-amber-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-center">
+          StartFreeTrial
                   
-          <ArrowRight className="w-5h-5ml-2"  />
+          <ArrowRightclassName="w-5h-5m l-2"  />
         </Link>
-=======
-        </div>
-                <Link to="/contact" className="bg-gradient-to-r from-amber-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
-                  Start Free Trial
-    <>
-                  <ArrowRight className="w-5h-5ml-2" />
-                </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Try Demo
+                <Linkto="#demo" className="b o rder-2 border-whitetext-whitepx-8 py-4 rounded-lgfont-semiboldhover:bg-white/10transition-colors">TryDemo
                 </Link>
               </div>
           </div>
         </section>
-
-        {/* Features Section */}
+        {/* FeaturesSection */}
     <>
-        <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-3 xl sm:text-4xl font-bold text-white mb-4"  />Intelligent Translation Solutions
+        <sectionclassName="p y-16 px-4sm:px-6lg:px-8" />
+          <divclassName="m a x-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-3 xlsm:text-4xlfont-boldtext-whitemb-4"  />IntelligentTranslationSolutions
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              AI-powered features that break down language barriers and enable global communication
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Intelligent Translation Solutions
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
-                AI-powered features that break down language barriers and enable global communication
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-lgtext-gray-300 max-w-2xlmx-auto">AI-poweredfeaturesthatbreakdownlanguagebarriersandenableglobalcommunication</p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
               {features.map((feature, index) => (
     <>
-                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-amber-500/20 hover:border-amber-400/40transition-allduration-300" />
-<<<<<<< HEAD
-                  <div className="flex items-centermb-4">
-=======
-                  <div className="flexitems-centermb-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <divkey="{index}" className="b g-gradient-to-brfrom-slate-800/50 to-purple-900/30 rounded-xlp-6 borderborder-amber-500/20 hover:border-amber-400/40transition-allduration-300" />
+                  <divclassName="f l exitems-centermb-4">
                     {feature.icon}
     <>
-                    <h3 className="text-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
+                    <h3 className="t e xt-xlfont-semiboldtext-whiteml-3">{feature.title}</h3>
                   </div>
-<<<<<<< HEAD
-                  <p className="text-gray-300">
-              {feature.description}</p>
-=======
-                  <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <pclassName="t e xt-gray-300">{feature.description}</p>
                 </div>
               ))}
     <>
             </div>
         </section>
-
-        {/* Translation Features */}
+        {/* TranslationFeatures */}
     <>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-3 xl sm:text-4xl font-bold text-white mb-4"  />Complete Translation Platform
+        <sectionclassName="p y-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
+          <divclassName="m a x-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-3 xlsm:text-4xlfont-boldtext-whitemb-4"  />CompleteTranslationPlatform
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              Everything you need to translate content across languages and cultures
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Complete Translation Platform
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
-                Everything you need to translate content across languages and cultures
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-lgtext-gray-300 max-w-2xlmx-auto">Everythingyouneedtotranslatecontentacrosslanguagesandcultures</p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
               {translationFeatures.map((feature, index) => (
     <>
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-<<<<<<< HEAD
-                  <h3 className="text-xl font-semiboldtext-white mb-4"   />{feature.category}</h3>
-                  <ul className="space-y-2" />
+                <divkey="{index}" className="b g-slate-800/50 rounded-xlp-6borderborder-slate-700" />
+                  <h3 className="t e xt-xlfont-semiboldtext-whitemb-4"   />{feature.category}</h3>
+                  <ulclassName="s p ace-y-2" />
                     {feature.items.map((item, itemIndex) => (
-                      <li key="{itemIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-4 h-4text-amber-400mr-2" />
-=======
-                  <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.category}</h3>
-                  <ul className="space-y-2" />
-                    {feature.items.map((item, itemIndex) => (
-    <>
-                      <li key="{itemIndex}" className="flexitems-centertext-gray-300" />
-                        <CheckCircle className="w-4 h-4text-amber-400mr-2" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                      <likey="{itemIndex}" className="f l exitems-centertext-gray-300" />
+                        <CheckCircleclassName="w-4 h-4t e xt-amber-400mr-2" />
                         {item}
                       </li>
                     ))}
@@ -296,93 +204,49 @@ export default function AITranslationService() {
     <>
             </div>
         </section>
-
-        {/* Pricing Section */}
+        {/* PricingSection */}
     <>
-        <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-3 xl sm:text-4xl font-bold text-white mb-4"  />Flexible Pricing Plans
+        <sectionclassName="p y-16 px-4sm:px-6lg:px-8" />
+          <divclassName="m a x-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-3 xlsm:text-4xlfont-boldtext-whitemb-4"  />FlexiblePricingPlans
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              Choose the plan that fits your translation needs
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Flexible Pricing Plans
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
-                Choose the plan that fits your translation needs
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-lgtext-gray-300 max-w-2xlmx-auto">Choosetheplanthatfitsyourtranslationneeds</p>
             </div>
-            
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
               {pricingPlans.map((plan, index) => (
-                <div key="{index}" className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
+                <divkey="{index}" className="{`b g-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xlp-8 bordertransition-allduration-300 ${
                   plan.popular 
-                    ? 'border-amber-400/40 scale-105 shadow-2 xl shadow-amber-500/20' 
+                    ? 'border-amber-400/40 scale-105 shadow-2 xlshadow-amber-500/20' 
                     : 'border-amber-500/20 hover: border-amber-400/40'
                 }`} />
                   {plan.popular && (
-<<<<<<< HEAD
-                    <div className="inline-flex items-center px-3 py-1 bg-amber-500/20 rounded-full text-amber-400 text-smfont-mediummb-4">
-                      <Star className="w-4h-4mr-1" />
-                      Most Popular
+                    <divclassName="i n line-flexitems-centerpx-3 py-1 bg-amber-500/20 rounded-fulltext-amber-400 text-smfont-mediummb-4">
+                      <StarclassName="w-4h-4m r-1" />
+                      MostPopular
                     </div>
                   )}
-                  <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                  <p className="text-gray-300 mb-6">
-              {plan.description}</p>
-                  <div className="mb-6">
-                    <span className="text-4xlfont-bold text-white"   />{plan.price}</span>
-                    <span className="text-gray-400"   />{plan.period}</span>
+                  <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"   />{plan.name}</h3>
+                  <pclassName="t e xt-gray-300 mb-6">{plan.description}</p>
+                  <divclassName="m b-6">
+                    <spanclassName="t e xt-4xlfont-boldtext-white"   />{plan.price}</span>
+                    <spanclassName="t e xt-gray-400"   />{plan.period}</span>
                   </div>
-                  <ul className="space-y-3mb-8" />
+                  <ulclassName="s p ace-y-3mb-8" />
                     {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5text-amber-400mr-3" />
-=======
-    <>
-                    <div className="inline-flex items-center px-3 py-1 bg-amber-500/20 rounded-full text-amber-400 text-smfont-mediummb-4">
-        </div>
-                      <Star className="w-4h-4mr-1" / />
-                      Most Popular
-                    </div>
-                  )}
-    <>
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300mb-6">{plan.description}</p>
-                  <div className="mb-6">
-        </div>
-                    <span className="text-4 xlfont-boldtext-white">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
-                  </div>
-                  <ul className="space-y-3mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-    <>
-                      <li key="{featureIndex}" className="flexitems-centertext-gray-300" />
-                        <CheckCircle className="w-5 h-5text-amber-400mr-3" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                      <likey="{featureIndex}" className="f l exitems-centertext-gray-300" />
+                        <CheckCircleclassName="w-5 h-5t e xt-amber-400mr-3" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    to="/contact"
-                    className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  <Linkto="/contact"
+                    className="{`w-f u ll" blocktext-centerpy-3 px-6 rounded-lgfont-semiboldtransition-allduration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-amber-500 to-purple-600 text-white hover:from-amber-600 hover:to-purple-700'
+                        ? 'bg-gradient-to-rfrom-amber-500 to-purple-600 text-whitehover:from-amber-600 hover:to-purple-700'
                         : 'border-2 border-amber-400 text-amber-400 hover: bg-amber-400/10'
                     }`}
-                    />Get Started
+                    />GetStarted
     <>
                   </Link>
                 </div>
@@ -390,94 +254,46 @@ export default function AITranslationService() {
     <>
             </div>
         </section>
-
         {/* Testimonials */}
     <>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-12">
-              <h2 className="text-3 xl font-bold text-white mb-4"  />Trusted by Global Businesses
+        <sectionclassName="p y-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
+          <divclassName="m a x-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-12">
+              <h2 className="t e xt-3 xlfont-boldtext-whitemb-4"  />TrustedbyGlobalBusinesses
               </h2>
-              <p className="text-gray-300">
-              See how our AI Translation Service enables global communication
-              </p>
+              <pclassName="t e xt-gray-300">SeehowourAITranslationServiceenablesglobalcommunication</p>
             </div>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-=======
-        </div>
-            <div className="text-centermb-12">
-        </div>
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Trusted by Global Businesses
-              </h2>
-              <p className="text-gray-300" />
-                See how our AI Translation Service enables global communication
-    <>
-              </p>
-            </div>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
               {testimonials.map((testimonial, index) => (
     <>
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-<<<<<<< HEAD
-                  <div className="flex items-centermb-4">
-=======
-                  <div className="flexitems-centermb-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <divkey="{index}" className="b g-slate-800/50 rounded-xlp-6borderborder-slate-700" />
+                  <divclassName="f l exitems-centermb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
+                      <Starkey="{i}" className="w-5 h-5t e xt-yellow-400fill-current" />
                     ))}
     <>
                   </div>
-<<<<<<< HEAD
-                  <p className="text-gray-300 mb-4">
-              "{testimonial.content}"</p>
+                  <pclassName="t e xt-gray-300 mb-4">"{testimonial.content}"</p>
                   <div />
-                    <div className="font-semiboldtext-white"   />{testimonial.name}</div>
-                    <div className="text-smtext-gray-400"   />{testimonial.company}</div>
-=======
-                  <p className="text-gray-300mb-4">"{testimonial.content}"</p>
-                  <div />
-                    <div className="font-semiboldtext-white">{testimonial.name}</div>
-                    <div className="text-smtext-gray-400">{testimonial.company}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <divclassName="f o nt-semiboldtext-white"   />{testimonial.name}</div>
+                    <divclassName="t e xt-smtext-gray-400"   />{testimonial.company}</div>
                 </div>
               ))}
     <>
             </div>
         </section>
-
-        {/* CTA Section */}
+        {/* CTASection */}
     <>
-        <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-4 xlmx-autotext-center">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-amber-500/20 to-purple-500/20 rounded-2 xl p-8borderborder-amber-500/30">
-              <h2 className="text-3 xl font-bold text-white mb-4"  />Break Down Language Barriers Today
+        <sectionclassName="p y-16 px-4sm:px-6lg:px-8" />
+          <divclassName="m a x-w-4 xlmx-autotext-center">
+            <divclassName="b g-gradient-to-rfrom-amber-500/20 to-purple-500/20 rounded-2 xlp-8borderborder-amber-500/30">
+              <h2 className="t e xt-3 xlfont-boldtext-whitemb-4"  />BreakDownLanguageBarriersToday
               </h2>
-              <p className="text-lg text-gray-300 mb-8">
-              Join thousands of businesses using AI Translation Service to reach global audiences
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-        </div>
-            <div className="bg-gradient-to-r from-amber-500/20 to-purple-500/20 rounded-2 xl p-8borderborder-amber-500/30">
-        </div>
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Break Down Language Barriers Today
-              </h2>
-              <p className="text-lgtext-gray-300mb-8" />
-                Join thousands of businesses using AI Translation Service to reach global audiences
-    <>
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-amber-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
+              <pclassName="t e xt-lgtext-gray-300 mb-8">JointhousandsofbusinessesusingAITranslationServicetoreachglobalaudiences</p>
+              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
+                <Linkto="/contact" className="b g-gradient-to-rfrom-amber-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-amber-600 hover:to-purple-700transition-allduration-300">StartYourFreeTrial
                 </Link>
-                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
+                <Linkto="/about" className="b o rder-2 border-whitetext-whitepx-8 py-4 rounded-lgfont-semiboldhover:bg-white/10transition-colors">LearnMore
                 </Link>
               </div>
           </div>

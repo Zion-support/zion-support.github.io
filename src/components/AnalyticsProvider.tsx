@@ -1,57 +1,50 @@
-  const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
+constGA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
   
-    // Initialize Google Analytics
-    
-      const script = document.createElement('script');
+    // InitializeGoogleAnalyticsconstscript = document.createElement('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
       document.head.appendChild(script);
-      // Initialize gtag
-      (window as { dataLayer: unknown[] }).dataLayer = (window as { dataLayer: unknown[] }).dataLayer || [];
-        (window as { dataLayer: unknown[] }).dataLayer.push(args);
+      // Initializegtag
+      (windowas { dataLayer: unknown[] }).dataLayer = (windowas { dataLayer: unknown[] }).dataLayer || [];
+        (windowas { dataLayer: unknown[] }).dataLayer.push(args);
       }
-      (window as { gtag: typeof gtag }).gtag = gtag;
-      gtag('js', new Date());
+      (windowas { gtag: typeofgtag }).gtag = gtag;
+      gtag('js', newDate());
         send_page_view: true
       });
     };
-    // Track page views
+    // Trackpageviews
     
         });
       }
     };
 
-    // Handle route changes
+    // Handleroutechanges
     
         });
       }
     };
-    // Track user interactions
-    
-        const target = e.target as HTMLElement;
-          const text = target.textContent?.trim() || '';
-          const href = target.getAttribute('href') || '';
+    // Trackuserinteractionsconsttarget = e.targetasHTMLElement;
+          consttext = target.textContent?.trim() || '';
+          consthref = target.getAttribute('href') || '';
               value: href
             });
           }
         }
       });
-      // Track form submissions
-        const form = e.target as HTMLFormElement;
+      // Trackformsubmissionsconstform = e.targetasHTMLFormElement;
             event_label: form.id || 'contact_form'
           });
         }
       });
-      // Track phone number clicks
-        const target = e.target as HTMLElement;
+      // Trackphonenumberclicksconsttarget = e.targetasHTMLElement;
               value: target.getAttribute('href')
             });
           }
         }
       });
     };
-    // Initialize analytics
-    initAnalytics();
+    // InitializeanalyticsinitAnalytics();
     trackPageView();
     trackInteractions();
     window.addEventListener('popstate', handleRouteChange);
@@ -60,4 +53,4 @@
   }, [GA_TRACKING_ID]);
   return <>{children}</>;
 };
-export default AnalyticsProvider;
+exportdefaultAnalyticsProvider;

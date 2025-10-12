@@ -1,5 +1,5 @@
-'use client'
-'use client';import React
+'useclient'
+'useclient';importReact
 , { useState, useCallback } from 'react'
 
   CheckCircle}
@@ -10,8 +10,7 @@
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   });const [isSubmitting, setIsSubmitting] = useState(false)
-    setSubmitStatus('idle');try {// Simulate form submission
-      await new Promise(const resolve = > setTimeout(resolve, 1000))
+    setSubmitStatus('idle');try {// SimulateformsubmissionawaitnewPromise(constresolve = > setTimeout(resolve, 1000))
       setSubmitStatus('success')
         message: ''}
       })} catch (error) {setSubmitStatus('error')}
@@ -23,283 +22,157 @@
     <>
   ];return (<React.Fragment /></React.Fragment>
       <Helmet>
-<<<<<<< HEAD
-=======
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>ContactUs - ZionTechGroup | GetinTouch</title>
+        <metaconstname = "description" content="GetintouchwithZionTechGroupforAIandITsolutions. Contactusforconsultations, support, ortodiscussyourprojectneeds." / / />
+        <metaname="keywords" content="contactus, ZionTechGroup, AIconsultation, ITsupport, getintouch" / / />
       </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta const name = "description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." / / />
-        <meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" / / />
-      </Helmet>
-<<<<<<< HEAD
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900py-20"></div>
-        <div className="containermx-autopx-4"></div>
+<divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900py-20"></div>
+        <divclassName="c o ntainermx-autopx-4"></div>
           {/* Header */}
-          <div className="text-centermb-16"></div>
-            <h1 className="text-5 xl lg:text-7 xl font-bold text-white mb-6" />
-=======
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900py-20">
-        </div></div>
-        <div className="containermx-autopx-4">
-        </div></div>
-          {/* Header */}
+          <divclassName="t e xt-centermb-16"></div>
+            <h1 className="t e xt-5 xllg:text-7 xlfont-boldtext-whitemb-6" />
+              Getin
     <>
-          <div className="text-centermb-16">
-        </div></div>
-            <h1 className="text-5 xl lg:text-7 xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Get in
-    <>
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-500bg-clip-texttext-transparent">{' '}Touch
+              <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-500bg-clip-texttext-transparent">{' '}Touch
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Ready to transform your business? Let's discuss your project and explore
-              how our AI and IT solutions can help you achieve your goals.
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">
+              Readytotransformyourbusiness? Let'sdiscussyourprojectandexplorehowourAIandITsolutionscanhelpyouachieveyourgoals.
     <>
             </p>
           </div>
         </section>
-<<<<<<< HEAD
-<div className="grid grid-cols-1lg:grid-cols-2gap-12"></div>
-            {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2 xl p-8borderborder-white/10"></div>
-              <h2 className="text-3 xl font-bold text-white mb-6"  >Send us a Message</h2>
-              {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-centergap-3"></div>
-                  <CheckCircle className="w-5h-5text-green-400" />
-                  <span className="text-green-400"  >Message sent successfully! We'll get back to you soon.</span>
+<divclassName="g r idgrid-cols-1lg:grid-cols-2gap-12"></div>
+            {/* ContactForm */}
+            <divclassName="b g-white/5 backdrop-blur-lgrounded-2 xlp-8borderborder-white/10"></div>
+              <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >SendusaMessage</h2>
+              {submitStatus === 'success' && (<divclassName="m b-6 p-4 bg-green-500/20 borderborder-green-500/50 rounded-lgflexitems-centergap-3"></div>
+                  <CheckCircleclassName="w-5h-5t e xt-green-400" />
+                  <spanclassName="t e xt-green-400"  >Messagesentsuccessfully! We'llgetbacktoyousoon.</span>
                 </div>}
               )}
 
-              {submitStatus === 'error' && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-centergap-3"></div>
-                  <span className="text-red-400"  >Failed to send message. Please try again.</span>
-=======
-<div className="grid grid-cols-1lg:grid-cols-2gap-12">
-        </div></div>
-            {/* Contact Form */}
-    <>
-            <div className="bg-white/5 backdrop-blur-lg rounded-2 xl p-8borderborder-white/10">
-        </div></div>
-              <h2 className="text-3 xl font-boldtext-whitemb-6">Send us a Message</h2>
-              {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flexitems-centergap-3">
-        </div></div>
-                  <CheckCircle className="w-5h-5text-green-400" / />
-                  <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
+              {submitStatus === 'error' && (<divclassName="m b-6 p-4 bg-red-500/20 borderborder-red-500/50 rounded-lgflexitems-centergap-3"></div>
+                  <spanclassName="t e xt-red-400"  >Failedtosendmessage. Pleasetryagain.</span>
                 </div>}
               )}
 
     <>
-              {submitStatus === 'error' && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flexitems-centergap-3">
-        </div></div>
-                  <span className="text-red-400">Failed to send message. Please try again.</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>}
-              )}
-
-    <>
-              <form onSubmit="{handleSubmit}" className="space-y-6" />
-<<<<<<< HEAD
-                <div className="grid grid-cols-1md:grid-cols-2gap-6"></div>
+              <formonSubmit="{handleSubmit}" className="s p ace-y-6" />
+                <divclassName="g r idgrid-cols-1md:grid-cols-2gap-6"></div>
                   <div /></div>
-                    <label className="block text-sm font-mediumtext-gray-300 mb-2"  />Full Name *
-=======
-                <div className="grid grid-cols-1md:grid-cols-2gap-6">
-        </div></div>
-                  <div /></div>
-                    <label className="block text-sm font-mediumtext-gray-300mb-2">Full Name *
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />FullName *
                     </label>
-                    <div className="relative"></div>
-                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
+                    <divclassName="r e lative"></div>
+                      <UserclassName="a b soluteleft-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
                       />
     <>
                     </div>
                   <div /></div>
-<<<<<<< HEAD
-                    <label className="block text-sm font-mediumtext-gray-300 mb-2"  />Email Address *
-=======
-                    <label className="block text-sm font-mediumtext-gray-300mb-2">Email Address *
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />EmailAddress *
                     </label>
-                    <div className="relative"></div>
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
+                    <divclassName="r e lative"></div>
+                      <MailclassName="a b soluteleft-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
                       />
     <>
                     </div>
                 </div>
-<<<<<<< HEAD
-                <div className="grid grid-cols-1md:grid-cols-2gap-6"></div>
+                <divclassName="g r idgrid-cols-1md:grid-cols-2gap-6"></div>
                   <div /></div>
-                    <label className="block text-sm font-mediumtext-gray-300 mb-2"  />Company
-=======
-                <div className="grid grid-cols-1md:grid-cols-2gap-6">
-        </div></div>
-                  <div /></div>
-                    <label className="block text-sm font-mediumtext-gray-300mb-2">Company
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />Company
                     </label>
-                    <div className="relative"></div>
-                      <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
+                    <divclassName="r e lative"></div>
+                      <BuildingclassName="a b soluteleft-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
                       />
     <>
                     </div>
                   <div /></div>
-<<<<<<< HEAD
-                    <label className="block text-sm font-mediumtext-gray-300 mb-2"  />Phone Number
-=======
-                    <label className="block text-sm font-mediumtext-gray-300mb-2">Phone Number
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />PhoneNumber
                     </label>
-                    <div className="relative"></div>
-                      <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
+                    <divclassName="r e lative"></div>
+                      <PhoneclassName="a b soluteleft-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
                       />
     <>
                     </div>
                 </div>
                 <div /></div>
-<<<<<<< HEAD
-                  <label className="block text-sm font-mediumtext-gray-300 mb-2"  />Service Interest
-=======
-                  <label className="block text-sm font-mediumtext-gray-300mb-2">Service Interest
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />ServiceInterest
                   </label>
-                  <div className="relative"></div>
-                    <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
-                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-whitefocus:outline-nonefocus:border-cyan-500">
-                      <option value="">Select a service</option>
+                  <divclassName="r e lative"></div>
+                    <GlobeclassName="a b soluteleft-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
+                      className="w-f u llpl-10 pr-4 py-3 bg-slate-800 borderborder-slate-700 rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-500">
+                      <optionvalue="">Selectaservice</option>
                       {services.map((service) => (}
     <>
-                        <option key="{service}" value="{service}">{service}
+                        <optionkey="{service}" value="{service}">{service}
                         </option>))}
                     </select>
                   </div>
                 <div />
-<<<<<<< HEAD
-                  <label className="block text-sm font-mediumtext-gray-300 mb-2"  />Message *
-=======
-                  <label className="block text-sm font-mediumtext-gray-300mb-2">Message *
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />Message *
                   </label>
-                  <div className="relative">
-                    <MessageCircle className="absolute left-3 top-3 w-5h-5text-gray-400" />
+                  <divclassName="r e lative">
+                    <MessageCircleclassName="a b soluteleft-3 top-3 w-5h-5text-gray-400" />
                     </select>
                   </div>
                 <div /></div>
-<<<<<<< HEAD
-                  <label className="block text-sm font-mediumtext-gray-300 mb-2"  />Message *
-=======
-                  <label className="block text-sm font-mediumtext-gray-300mb-2">Message *
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />Message *
                   </label>
-                  <div className="relative"></div>
-                    <MessageCircle className="absolute left-3 top-3 w-5h-5text-gray-400" />
+                  <divclassName="r e lative"></div>
+                    <MessageCircleclassName="a b soluteleft-3 top-3 w-5h-5text-gray-400" />
                     />
     <>
                   </div>
-
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-centerjustify-centerspace-x-2">
+                  className="w-f u llbg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 disabled:opacity-50 disabled:cursor-not-allowedflexitems-centerjustify-centerspace-x-2">
     <>
                     <React.Fragment />
-<<<<<<< HEAD
-                      <div className="w-5 h-5 border-2 border-white border-t-transparentrounded-fullanimate-spin"></div>
+                      <divclassName="w-5 h-5 b o rder-2 border-whiteborder-t-transparentrounded-fullanimate-spin"></div>
                       <span  >Sending...</span>
                     </React.Fragment>
                     <React.Fragment />
-                      <Send className="w-5h-5" />
-                      <span  >Send Message</span>
-=======
-                      <div className="w-5 h-5 border-2 border-white border-t-transparentrounded-fullanimate-spin">
-        </div></div>
-                      <span>Sending...</span>
-                    </React.Fragment>
-                    <React.Fragment />
-                      <Send className="w-5h-5" / />
-                      <span>Send Message</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                      <SendclassName="w-5h-5" />
+                      <span  >SendMessage</span>
                     </React.Fragment>
                   )}
     <>
                 </button>
               </form>
             </div>
-            {/* Contact Information */}
-<<<<<<< HEAD
-            <div className="space-y-8">
+            {/* ContactInformation */}
+            <divclassName="s p ace-y-8">
               <div />
-                <h2 className="text-3 xl font-bold text-white mb-6"  >Contact Information</h2>
-                <p className="text-lg text-gray-300 mb-8">
-              We're here to help! Reach out to us through any of these channels
-=======
-    <>
-            <div className="space-y-8">
-        </div>
-              <div />
-                <h2 className="text-3 xl font-boldtext-whitemb-6">Contact Information</h2>
-                <p className="text-lgtext-gray-300mb-8" />
-                  We're here to help! Reach out to us through any of these channels
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  and we'll get back to you as soon as possible.
+                <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >ContactInformation</h2>
+                <pclassName="t e xt-lgtext-gray-300 mb-8">
+              We'reheretohelp! Reachouttousthroughanyofthesechannelsandwe'llgetbacktoyouassoonaspossible.
     <>
                 </p>
               </div>
-              {/* Contact Information */}
-<<<<<<< HEAD
-              <div className="space-y-8">
+              {/* ContactInformation */}
+              <divclassName="s p ace-y-8">
                 <div />
-                  <h2 className="text-3 xl font-bold text-white mb-6"  >Get in Touch</h2>
-                  <p className="text-gray-300 mb-8">
-              We're here to help you transform your business with cutting-edge AI and technology solutions.
-                  </p>
+                  <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >GetinTouch</h2>
+                  <pclassName="t e xt-gray-300 mb-8">We'reheretohelpyoutransformyourbusinesswithcutting-edgeAIandtechnologysolutions.</p>
                 </div>
-                <div className="space-y-6">
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-centerjustify-centermr-4">
-                      <Phone className="w-6h-6text-white" />
-=======
-    <>
-              <div className="space-y-8">
-        </div>
-                <div />
-                  <h2 className="text-3 xl font-boldtext-whitemb-6">Get in Touch</h2>
-                  <p className="text-gray-300mb-8" />
-                    We're here to help you transform your business with cutting-edge AI and technology solutions.
-    <>
-                  </p>
-                </div>
-                <div className="space-y-6">
-        </div>
-                  <div className="flexitems-center" />
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-centerjustify-centermr-4">
-        </div>
-                      <Phone className="w-6h-6text-white" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <divclassName="s p ace-y-6">
+                  <divclassName="f l exitems-center">
+                    <divclassName="w-12 h-12 b g-cyan-500 rounded-lgflexitems-centerjustify-centermr-4">
+                      <PhoneclassName="w-6h-6t e xt-white" />
                     </div>
                     <div>
-            <h3 className="text-lg font-semiboldtext-white mb-1" />
-                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-nonefocus:border-cyan-500resize-none"
-                      placeholder="Tell us about your project, goals, or any questions you have..."
+            <h3 className="t e xt-lgfont-semiboldtext-whitemb-1" />
+                      className="w-f u llpl-10 pr-4 py-3 bg-slate-800 borderborder-slate-700 rounded-lgtext-whiteplaceholder-gray-400 focus:outline-nonefocus:border-cyan-500resize-none"
+                      placeholder="Tellusaboutyourproject, goals, oranyquestionsyouhave..."
                     />
     <>
                   </div>
-
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-centerjustify-centerspace-x-2">
+                  className="w-f u llbg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 disabled:opacity-50 disabled:cursor-not-allowedflexitems-centerjustify-centerspace-x-2">
     <>
                   {isSubmitting ? (<React.Fragment /></React.Fragment>
-<<<<<<< HEAD
-                      <div className="w-5 h-5 border-2 border-white border-t-transparentrounded-fullanimate-spin"></div>
+                      <divclassName="w-5 h-5 b o rder-2 border-whiteborder-t-transparentrounded-fullanimate-spin"></div>
                       <span  >Sending...</span>
                     </>) : (<React.Fragment /></React.Fragment>
-                      <Send className="w-5h-5" />
-                      <span  >Send Message</span>
-=======
-                      <div className="w-5 h-5 border-2 border-white border-t-transparentrounded-fullanimate-spin">
-        </div></div>
-                      <span>Sending...</span>
-                      <Send className="w-5h-5" / />
-                      <span>Send Message</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                      <SendclassName="w-5h-5" />
+                      <span  >SendMessage</span>
                     </>}
     </>
                   )}
@@ -307,137 +180,62 @@
                 </button>
               </form>
             </div>
-            {/* Contact Information */}
-<<<<<<< HEAD
-            <div className="space-y-8"></div>
+            {/* ContactInformation */}
+            <divclassName="s p ace-y-8"></div>
               <div /></div>
-                <h2 className="text-3 xl font-bold text-white mb-6"  >Contact Information</h2>
-                <p className="text-lg text-gray-300 mb-8">
-              We're here to help! Reach out to us through any of these channels
-=======
-    <>
-            <div className="space-y-8">
-        </div></div>
-              <div /></div>
-                <h2 className="text-3 xl font-boldtext-whitemb-6">Contact Information</h2>
-                <p className="text-lgtext-gray-300mb-8" />
-                  We're here to help! Reach out to us through any of these channels
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  and we'll get back to you as soon as possible.
+                <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >ContactInformation</h2>
+                <pclassName="t e xt-lgtext-gray-300 mb-8">
+              We'reheretohelp! Reachouttousthroughanyofthesechannelsandwe'llgetbacktoyouassoonaspossible.
     <>
                 </p>
               </div>
-              {/* Contact Information */}
-<<<<<<< HEAD
-              <div className="space-y-8"></div>
+              {/* ContactInformation */}
+              <divclassName="s p ace-y-8"></div>
                 <div /></div>
-                  <h2 className="text-3 xl font-bold text-white mb-6"  >Get in Touch</h2>
-                  <p className="text-gray-300 mb-8">
-              We're here to help you transform your business with cutting-edge AI and technology solutions.
-                  </p>
+                  <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >GetinTouch</h2>
+                  <pclassName="t e xt-gray-300 mb-8">We'reheretohelpyoutransformyourbusinesswithcutting-edgeAIandtechnologysolutions.</p>
                 </div>
-                <div className="space-y-6"></div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-centerjustify-centermr-4"></div>
-                      <Phone className="w-6h-6text-white" />
+                <divclassName="s p ace-y-6"></div>
+                  <divclassName="f l exitems-center"></div>
+                    <divclassName="w-12 h-12 b g-cyan-500 rounded-lgflexitems-centerjustify-centermr-4"></div>
+                      <PhoneclassName="w-6h-6t e xt-white" />
                     </div>
                     <div /></div>
-<h3 className="text-lg font-semiboldtext-white mb-1"  />{info.title}
+<h3 className="t e xt-lgfont-semiboldtext-whitemb-1"  />{info.title}
                       </h3>
-                      <p className="text-cyan-400font-mediummb-1">
-              {info.details}
-                      </p>
-                      <p className="text-gray-300text-sm">
-              {info.description}
-                      </p>
+                      <pclassName="t e xt-cyan-400font-mediummb-1">{info.details}</p>
+                      <pclassName="t e xt-gray-300text-sm">{info.description}</p>
                     </div>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-centerjustify-centermr-4">
-                      <Mail className="w-6h-6text-white" />
+                  <divclassName="f l exitems-center">
+                    <divclassName="w-12 h-12 b g-purple-500 rounded-lgflexitems-centerjustify-centermr-4">
+                      <MailclassName="w-6h-6t e xt-white" />
                     </div>
                     <div>
-            <h3 className="text-lgfont-semiboldtext-white"  >Email</h3>
-                      <p className="text-gray-300">info@ziontechgroup.com</p>
+            <h3 className="t e xt-lgfont-semiboldtext-white"  >Email</h3>
+                      <pclassName="t e xt-gray-300">info@ziontechgroup.com</p>
                     </div>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-centerjustify-centermr-4">
-                      <MapPin className="w-6h-6text-white" />
-                    </div>
-                    <div>
-            <h3 className="text-lgfont-semiboldtext-white"  >Address</h3>
-                      <p className="text-gray-300">123 Tech Street<br / />San Francisco, CA 94105</p>
-                    </div>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-centerjustify-centermr-4">
-                      <Clock className="w-6h-6text-white" />
+                  <divclassName="f l exitems-center">
+                    <divclassName="w-12 h-12 b g-pink-500 rounded-lgflexitems-centerjustify-centermr-4">
+                      <MapPinclassName="w-6h-6t e xt-white" />
                     </div>
                     <div>
-            <h3 className="text-lgfont-semiboldtext-white"  >Business Hours</h3>
-                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br / />Sat: 10:00 AM - 4:00 PM</p>
-=======
-    <>
-              <div className="space-y-8">
-        </div></div>
-                <div /></div>
-                  <h2 className="text-3 xl font-boldtext-whitemb-6">Get in Touch</h2>
-                  <p className="text-gray-300mb-8" />
-                    We're here to help you transform your business with cutting-edge AI and technology solutions.
-    <>
-                  </p>
-                </div>
-                <div className="space-y-6">
-        </div></div>
-                  <div className="flexitems-center" /></div>
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-centerjustify-centermr-4">
-        </div></div>
-                      <Phone className="w-6h-6text-white" / />
+            <h3 className="t e xt-lgfont-semiboldtext-white"  >Address</h3>
+                      <pclassName="t e xt-gray-300">123 TechStreet<br / />SanFrancisco, CA 94105</p>
                     </div>
-                    <div /></div>
-<h3 className="text-lg font-semiboldtext-whitemb-1">{info.title}
-                      </h3>
-                      <p className="text-cyan-400font-mediummb-1" />
-                        {info.details}
-    <>
-                      </p>
-                      <p className="text-gray-300text-sm" />
-                        {info.description}
-    <>
-                      </p>
+                  <divclassName="f l exitems-center">
+                    <divclassName="w-12 h-12 b g-green-500 rounded-lgflexitems-centerjustify-centermr-4">
+                      <ClockclassName="w-6h-6t e xt-white" />
                     </div>
-                  <div className="flexitems-center" />
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-centerjustify-centermr-4">
-        </div>
-                      <Mail className="w-6h-6text-white" / />
-                    </div>
-                    <div />
-                      <h3 className="text-lgfont-semiboldtext-white">Email</h3>
-                      <p className="text-gray-300">info@ziontechgroup.com</p>
-                    </div>
-                  <div className="flexitems-center" />
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-centerjustify-centermr-4">
-        </div>
-                      <MapPin className="w-6h-6text-white" / />
-                    </div>
-                    <div />
-                      <h3 className="text-lgfont-semiboldtext-white">Address</h3>
-                      <p className="text-gray-300" />123 Tech Street<br / />San Francisco, CA 94105</p>
-                    </div>
-                  <div className="flexitems-center" />
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-centerjustify-centermr-4">
-        </div>
-                      <Clock className="w-6h-6text-white" / />
-                    </div>
-                    <div />
-                      <h3 className="text-lgfont-semiboldtext-white">Business Hours</h3>
-                      <p className="text-gray-300" />Mon - Fri: 9:00 AM - 6:00 PM<br / />Sat: 10:00 AM - 4:00 PM</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <div>
+            <h3 className="t e xt-lgfont-semiboldtext-white"  >BusinessHours</h3>
+                      <pclassName="t e xt-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br / />Sat: 10:00 AM - 4:00 PM</p>
                     </div>
                 </div>
             </div>
         </section>
       </div>
   )}
-export default ContactPage
+exportdefaultContactPage
     <>
   </textarea>
   </label>
@@ -447,50 +245,29 @@ export default ContactPage
   </HTMLInputElement>
                       </p>
                     </div>
-<<<<<<< HEAD
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-centerjustify-centermr-4"></div>
-                      <Mail className="w-6h-6text-white" />
-=======
-                  <div className="flexitems-center" /></div>
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-centerjustify-centermr-4">
-        </div></div>
-                      <Mail className="w-6h-6text-white" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <divclassName="f l exitems-center"></div>
+                    <divclassName="w-12 h-12 b g-purple-500 rounded-lgflexitems-centerjustify-centermr-4"></div>
+                      <MailclassName="w-6h-6t e xt-white" />
                     </div>
                     <div /></div>
-                      <h3 className="text-lgfont-semiboldtext-white">Email</h3>
-                      <p className="text-gray-300">info@ziontechgroup.com</p>
+                      <h3 className="t e xt-lgfont-semiboldtext-white">Email</h3>
+                      <pclassName="t e xt-gray-300">info@ziontechgroup.com</p>
                     </div>
-<<<<<<< HEAD
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-centerjustify-centermr-4"></div>
-                      <MapPin className="w-6h-6text-white" />
-=======
-                  <div className="flexitems-center" /></div>
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-centerjustify-centermr-4">
-        </div></div>
-                      <MapPin className="w-6h-6text-white" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <divclassName="f l exitems-center"></div>
+                    <divclassName="w-12 h-12 b g-pink-500 rounded-lgflexitems-centerjustify-centermr-4"></div>
+                      <MapPinclassName="w-6h-6t e xt-white" />
                     </div>
                     <div /></div>
-                      <h3 className="text-lgfont-semiboldtext-white">Address</h3>
-                      <p className="text-gray-300" />123 Tech Street<br / />San Francisco, CA 94105</p>
+                      <h3 className="t e xt-lgfont-semiboldtext-white">Address</h3>
+                      <pclassName="t e xt-gray-300" />123 TechStreet<br / />SanFrancisco, CA 94105</p>
                     </div>
-<<<<<<< HEAD
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-centerjustify-centermr-4"></div>
-                      <Clock className="w-6h-6text-white" />
-=======
-                  <div className="flexitems-center" /></div>
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-centerjustify-centermr-4">
-        </div></div>
-                      <Clock className="w-6h-6text-white" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <divclassName="f l exitems-center"></div>
+                    <divclassName="w-12 h-12 b g-green-500 rounded-lgflexitems-centerjustify-centermr-4"></div>
+                      <ClockclassName="w-6h-6t e xt-white" />
                     </div>
                     <div /></div>
-                      <h3 className="text-lgfont-semiboldtext-white">Business Hours</h3>
-                      <p className="text-gray-300" />Mon - Fri: 9:00 AM - 6:00 PM<br / />Sat: 10:00 AM - 4:00 PM</p>
+                      <h3 className="t e xt-lgfont-semiboldtext-white">BusinessHours</h3>
+                      <pclassName="t e xt-gray-300" />Mon - Fri: 9:00 AM - 6:00 PM<br / />Sat: 10:00 AM - 4:00 PM</p>
                     </div>
                 </div>
             </div>

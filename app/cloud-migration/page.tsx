@@ -1,208 +1,204 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight, HardDrive, Laptop, Tablet, Router } from 'lucide-react';
-=======
-import { ArrowRight, Zap, Cloud, CheckCircle, Star, Clock, BarChart3, Sparkles, Target, Shield, MessageCircle, Mail, Phone, MapPin, Play, Settings, Database, Search, Server, Network, Database as DatabaseIcon } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
+import { useState   } from 'react'
+import { Link   } from 'react-router-dom'
+import { Link   } from 'react-router-dom';
+import { ArrowRight, HardDrive, Laptop, Tablet, Router   } from 'lucide-react';
 
-export default function CloudMigrationPage() {
+exportdefaultfunctionCloudMigrationPage() {
 
-  const features = [
+  constfeatures = [
     {
-      icon: <Cloud className="w-6h-6text-cyan-400" />,
-      title: 'Multi-Cloud Strategy',
-      description: 'Comprehensive cloud migration strategy supporting AWS, Azure, Google Cloud, and hybrid environments.',
-      benefits: ['AWS expertise', 'Azure migration', 'Google Cloud setup', 'Hybrid cloud solutions']
+      icon: <CloudclassName="w-6h-6t e xt-cyan-400" />,
+      title: 'Multi-CloudStrategy',
+      description: 'ComprehensivecloudmigrationstrategysupportingAWS, Azure, GoogleCloud, andhybridenvironments.',
+      benefits: ['AWSexpertise', 'Azuremigration', 'GoogleCloudsetup', 'Hybridcloudsolutions']
     },
     {
-      icon: <Shield className="w-6h-6text-emerald-400" />,
-      title: 'Security-First Approach',
-      description: 'Enterprise-grade security with zero-downtime migration and comprehensive compliance validation.',
-      benefits: ['Zero-downtime migration', 'Security compliance', 'Data encryption', 'Access controls']
+      icon: <ShieldclassName="w-6h-6t e xt-emerald-400" />,
+      title: 'Security-FirstApproach',
+      description: 'Enterprise-gradesecuritywithzero-downtimemigrationandcomprehensivecompliancevalidation.',
+      benefits: ['Zero-downtimemigration', 'Securitycompliance', 'Dataencryption', 'Accesscontrols']
     },
     {
-      icon: <BarChart3 className="w-6h-6text-purple-400" />,
-      title: 'Cost Optimization',
-      description: 'Intelligent resource allocation and cost monitoring to reduce cloud expenses by up to 40%.',
-      benefits: ['Cost analysis', 'Resource optimization', 'Auto-scaling', 'Budget monitoring']
+      icon: <BarChart3 className="w-6h-6t e xt-purple-400" />,
+      title: 'CostOptimization',
+      description: 'Intelligentresourceallocationandcostmonitoringtoreducecloudexpensesbyupto 40%.',
+      benefits: ['Costanalysis', 'Resourceoptimization', 'Auto-scaling', 'Budgetmonitoring']
     },
     {
-      icon: <Zap className="w-6h-6text-pink-400" />,
-      title: 'Performance Enhancement',
-      description: 'Optimize application performance with advanced monitoring, caching, and load balancing.',
-      benefits: ['Performance monitoring', 'Load balancing', 'Caching strategies', 'Auto-scaling']
+      icon: <ZapclassName="w-6h-6t e xt-pink-400" />,
+      title: 'PerformanceEnhancement',
+      description: 'Optimizeapplicationperformancewithadvancedmonitoring, caching, andloadbalancing.',
+      benefits: ['Performancemonitoring', 'Loadbalancing', 'Cachingstrategies', 'Auto-scaling']
     },
     {
-      icon: <Database className="w-6h-6text-orange-400" />,
-      title: 'Database Migration',
-      description: 'Seamless database migration with minimal downtime and data integrity guarantees.',
-      benefits: ['Zero data loss', 'Schema migration', 'Data validation', 'Backup strategies']
+      icon: <DatabaseclassName="w-6h-6t e xt-orange-400" />,
+      title: 'DatabaseMigration',
+      description: 'Seamlessdatabasemigrationwithminimaldowntimeanddataintegrityguarantees.',
+      benefits: ['Zerodataloss', 'Schemamigration', 'Datavalidation', 'Backupstrategies']
     },
     {
-      icon: <Network className="w-6h-6text-red-400" />,
-      title: 'Network Architecture',
-      description: 'Design and implement robust cloud network architecture with high availability and scalability.',
-      benefits: ['VPC design', 'Load balancing', 'CDN setup', 'Global distribution']
+      icon: <NetworkclassName="w-6h-6t e xt-red-400" />,
+      title: 'NetworkArchitecture',
+      description: 'Designandimplementrobustcloudnetworkarchitecturewithhighavailabilityandscalability.',
+      benefits: ['VPCdesign', 'Loadbalancing', 'CDNsetup', 'Globaldistribution']
     }
   ]
 
-  const pricingPlans = [
+  constpricingPlans = [
     {
       name: 'Assessment',
       price: '$2,500',
       period: 'one-time',
-      description: 'Comprehensive cloud readiness assessment and migration planning',
+      description: 'Comprehensivecloudreadinessassessmentandmigrationplanning',
       features: [
-        'Current infrastructure audit',
-        'Cloud readiness assessment',
-        'Migration strategy planning',
-        'Cost analysis and optimization',
-        'Security compliance review',
-        'Timeline and roadmap creation',
-        'Risk assessment and mitigation',
-        'Detailed migration report'
+        'Currentinfrastructureaudit',
+        'Cloudreadinessassessment',
+        'Migrationstrategyplanning',
+        'Costanalysisandoptimization',
+        'Securitycompliancereview',
+        'Timelineandroadmapcreation',
+        'Riskassessmentandmitigation',
+        'Detailedmigrationreport'
       ],
       popular: false,
-      cta: 'Get Assessment'
+      cta: 'GetAssessment'
     },
     {
-      name: 'Standard Migration',
+      name: 'StandardMigration',
       price: '$15,000',
       period: 'project',
-      description: 'Complete cloud migration for small to medium businesses',
+      description: 'Completecloudmigrationforsmalltomediumbusinesses',
       features: [
-        'Full infrastructure migration',
-        'Application modernization',
-        'Database migration',
-        'Security implementation',
-        'Performance optimization',
-        '30 days post-migration support',
-        'Documentation and training',
-        'Monitoring setup'
+        'Fullinfrastructuremigration',
+        'Applicationmodernization',
+        'Databasemigration',
+        'Securityimplementation',
+        'Performanceoptimization',
+        '30 dayspost-migrationsupport',
+        'Documentationandtraining',
+        'Monitoringsetup'
       ],
       popular: true,
-      cta: 'Start Migration'
+      cta: 'StartMigration'
     },
     {
-      name: 'Enterprise Migration',
+      name: 'EnterpriseMigration',
       price: 'Custom',
       period: 'project',
-      description: 'Large-scale enterprise cloud transformation with dedicated support',
+      description: 'Large-scaleenterprisecloudtransformationwithdedicatedsupport',
       features: [
-        'Complex multi-cloud migration',
-        'Legacy system modernization',
-        'Custom application development',
-        'Advanced security implementation',
-        '24/7 dedicated support',
-        'Unlimited post-migration support',
-        'Custom integrations',
-        'White-label solutions',
-        'Dedicated project manager',
-        'SLA guarantees'
+        'Complexmulti-cloudmigration',
+        'Legacysystemmodernization',
+        'Customapplicationdevelopment',
+        'Advancedsecurityimplementation',
+        '24/7 dedicatedsupport',
+        'Unlimitedpost-migrationsupport',
+        'Customintegrations',
+        'White-labelsolutions',
+        'Dedicatedprojectmanager',
+        'SLAguarantees'
       ],
       popular: false,
-      cta: 'Contact Sales'
+      cta: 'ContactSales'
     }
   ]
 
-  const testimonials = [
+  consttestimonials = [
     {
-      name: 'Maria Rodriguez',
+      name: 'MariaRodriguez',
       role: 'CTO',
-      company: 'TechFlow Solutions',
-      content: 'Zion's cloud migration reduced our infrastructure costs by 45% while improving performance by 60%. The zero-downtime migration was flawless.',
+      company: 'TechFlowSolutions',
+      content: 'Zion'scloudmigrationreducedourinfrastructurecostsby 45% whileimprovingperformanceby 60%. Thezero-downtimemigrationwasflawless.',
       rating: 5,
       avatar: 'MR'
     },
     {
-      name: 'James Wilson',
-      role: 'IT Director',
-      company: 'Enterprise Corp',
-      content: 'The migration team was exceptional. They handled our complex legacy systems with expertise and delivered ahead of schedule.',
+      name: 'JamesWilson',
+      role: 'ITDirector',
+      company: 'EnterpriseCorp',
+      content: 'Themigrationteamwasexceptional. Theyhandledourcomplexlegacysystemswithexpertiseanddeliveredaheadofschedule.',
       rating: 5,
       avatar: 'JW'
     },
     {
-      name: 'Lisa Chen',
-      role: 'VP of Engineering',
+      name: 'LisaChen',
+      role: 'VPofEngineering',
       company: 'StartupHub',
-      content: 'Our applications now run 3 x faster in the cloud. The cost savings alone paid for the migration in 6 months.',
+      content: 'Ourapplicationsnowrun 3 xfasterinthecloud. Thecostsavingsalonepaidforthemigrationin 6 months.',
       rating: 5,
       avatar: 'LC'
     }
   ]
 
-  const migrationSteps = [
+  constmigrationSteps = [
     {
       step: '01',
       title: 'Assessment & Planning',
-      description: 'Comprehensive analysis of your current infrastructure and cloud readiness assessment.',
-      icon: <Search className="w-8h-8text-cyan-400" />,
+      description: 'Comprehensiveanalysisofyourcurrentinfrastructureandcloudreadinessassessment.',
+      icon: <SearchclassName="w-8h-8t e xt-cyan-400" />,
       duration: '1-2 weeks'
     },
     {
       step: '02',
-      title: 'Strategy Design',
-      description: 'Custom migration strategy tailored to your business needs and technical requirements.',
-      icon: <Target className="w-8h-8text-emerald-400" />,
+      title: 'StrategyDesign',
+      description: 'Custommigrationstrategytailoredtoyourbusinessneedsandtechnicalrequirements.',
+      icon: <TargetclassName="w-8h-8t e xt-emerald-400" />,
       duration: '1 week'
     },
     {
       step: '03',
-      title: 'Pre-Migration Setup',
-      description: 'Cloud environment preparation, security configuration, and testing environment setup.',
-      icon: <Settings className="w-8h-8text-purple-400" />,
+      title: 'Pre-MigrationSetup',
+      description: 'Cloudenvironmentpreparation, securityconfiguration, andtestingenvironmentsetup.',
+      icon: <SettingsclassName="w-8h-8t e xt-purple-400" />,
       duration: '2-3 weeks'
     },
     {
       step: '04',
-      title: 'Data Migration',
-      description: 'Secure data transfer with zero data loss guarantee and real-time validation.',
-      icon: <Database className="w-8h-8text-pink-400" />,
+      title: 'DataMigration',
+      description: 'Securedatatransferwithzerodatalossguaranteeandreal-timevalidation.',
+      icon: <DatabaseclassName="w-8h-8t e xt-pink-400" />,
       duration: '1-2 weeks'
     },
     {
       step: '05',
-      title: 'Application Migration',
-      description: 'Application deployment, configuration, and optimization in the cloud environment.',
-      icon: <Server className="w-8h-8text-orange-400" />,
+      title: 'ApplicationMigration',
+      description: 'Applicationdeployment, configuration, andoptimizationinthecloudenvironment.',
+      icon: <ServerclassName="w-8h-8t e xt-orange-400" />,
       duration: '2-4 weeks'
     },
     {
       step: '06',
       title: 'Testing & Optimization',
-      description: 'Comprehensive testing, performance optimization, and security validation.',
-      icon: <CheckCircle className="w-8h-8text-red-400" />,
+      description: 'Comprehensivetesting, performanceoptimization, andsecurityvalidation.',
+      icon: <CheckCircleclassName="w-8h-8t e xt-red-400" />,
       duration: '1-2 weeks'
     }
   ]
 
-  const cloudProviders = [
+  constcloudProviders = [
     {
-      name: 'Amazon Web Services',
-      icon: <Cloud className="w-8h-8text-orange-400" />,
-      description: 'Leading cloud platform with comprehensive services and global reach',
-      features: ['EC2, S3, RDS', 'Lambda functions', 'CloudFront CDN', 'Auto Scaling']
+      name: 'AmazonWebServices',
+      icon: <CloudclassName="w-8h-8t e xt-orange-400" />,
+      description: 'Leadingcloudplatformwithcomprehensiveservicesandglobalreach',
+      features: ['EC2, S3, RDS', 'Lambdafunctions', 'CloudFrontCDN', 'AutoScaling']
     },
     {
-      name: 'Microsoft Azure',
-      icon: <Cloud className="w-8h-8text-blue-400" />,
-      description: 'Enterprise-focused cloud platform with strong Microsoft integration',
-      features: ['Virtual Machines', 'Azure SQL', 'App Service', 'Active Directory']
+      name: 'MicrosoftAzure',
+      icon: <CloudclassName="w-8h-8t e xt-blue-400" />,
+      description: 'Enterprise-focusedcloudplatformwithstrongMicrosoftintegration',
+      features: ['VirtualMachines', 'AzureSQL', 'AppService', 'ActiveDirectory']
     },
     {
-      name: 'Google Cloud Platform',
-      icon: <Cloud className="w-8h-8text-green-400" />,
-      description: 'AI and machine learning focused cloud with advanced analytics',
-      features: ['Compute Engine', 'BigQuery', 'AI/ML services', 'Kubernetes Engine']
+      name: 'GoogleCloudPlatform',
+      icon: <CloudclassName="w-8h-8t e xt-green-400" />,
+      description: 'AIandmachinelearningfocusedcloudwithadvancedanalytics',
+      features: ['ComputeEngine', 'BigQuery', 'AI/MLservices', 'KubernetesEngine']
     },
     {
-      name: 'Hybrid Cloud',
-      icon: <Network className="w-8h-8text-purple-400" />,
-      description: 'Best of both worlds with on-premises and cloud integration',
-      features: ['Hybrid connectivity', 'Data synchronization', 'Unified management', 'Flexible deployment']
+      name: 'HybridCloud',
+      icon: <NetworkclassName="w-8h-8t e xt-purple-400" />,
+      description: 'Bestofbothworldswithon-premisesandcloudintegration',
+      features: ['Hybridconnectivity', 'Datasynchronization', 'Unifiedmanagement', 'Flexibledeployment']
     }
   ]
 
@@ -210,473 +206,240 @@ export default function CloudMigrationPage() {
     <>
     <>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>5GDataAnalytics - ZionTechGroup</title>
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
       </Helmet>
-        <title>Cloud Migration Services - Expert Cloud Transformation | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with our expert cloud migration services. AWS, Azure, Google Cloud migration with zero downtime. Starting at $2,500. Free consultation available." / / />
-        <meta name="keywords" content="cloud migration, AWS migration, Azure migration, Google Cloud migration, cloud transformation, cloud consulting, infrastructure migration" / / />
-        <meta name="robots" content="index, follow" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/cloud-migration" />
+        <title>CloudMigrationServices - ExpertCloudTransformation | ZionTechGroup</title>
+        <metaname="description" content="Transformyourbusinesswithourexpertcloudmigrationservices. AWS, Azure, GoogleCloudmigrationwithzerodowntime. Startingat $2,500. Freeconsultationavailable." / / />
+        <metaname="keywords" content="cloudmigration, AWSmigration, Azuremigration, GoogleCloudmigration, cloudtransformation, cloudconsulting, infrastructuremigration" / / />
+        <metaname="robots" content="index, follow" / / />
+        <linkrel="canonical" href="https://ziontechgroup.com/cloud-migration" />
       </Helmet>
     </>
 
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
-        {/* Hero Section */}
-        <section className="relative py-20px-4overflow-hidden" />
-          {/* Animated Background */}
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)]animate-pulse" />
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900 pt-20">
-        </div>
-        {/* Hero Section */}
-        <section className="relative py-20px-4overflow-hidden" />
-          {/* Animated Background */}
-    <>
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)]animate-pulse" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900pt-20">
+        {/* HeroSection */}
+        <sectionclassName="r e lativepy-20px-4overflow-hidden" />
+          {/* AnimatedBackground */}
+          <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)]animate-pulse" />
+          <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
     </>
-          {/* Floating Elements */}
+          {/* FloatingElements */}
     <>
-          <div className="absolute top-20 left-10 w-16 h-16 bg-cyan-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '0.5 s' }} / />
-          <div className="absolute top-40 right-20 w-12 h-12 bg-purple-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '1.5 s' }} / />
-          <div className="absolute bottom-20 left-1/4 w-8 h-8 bg-pink-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '2.5 s' }} / />
-<<<<<<< HEAD
-          <div className="relative max-w-7xlmx-autotext-center">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-              <Sparkles className="w-4h-4" />
-              <span   />Expert Cloud Transformation</span>
-=======
-          <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-        </div>
-              <Sparkles className="w-4h-4" / />
-              <span>Expert Cloud Transformation</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="a b solutetop-20 left-10 w-16 h-16 bg-cyan-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '0.5 s' }} / />
+          <divclassName="a b solutetop-40 right-20 w-12 h-12 bg-purple-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '1.5 s' }} / />
+          <divclassName="a b solutebottom-20 left-1/4 w-8 h-8 bg-pink-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '2.5 s' }} / />
+          <divclassName="r e lativemax-w-7xlmx-autotext-center">
+            <divclassName="i n line-flexitems-centerspace-x-2 bg-gradient-to-rfrom-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-fulltext-smfont-mediummb-8borderborder-cyan-400/30">
+              <SparklesclassName="w-4h-4" />
+              <span   />ExpertCloudTransformation</span>
             </div>
     </>
             
-            <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
+            <h1 className="t e xt-4xlsm:text-6 xlmd:text-7 xlfont-boldtext-whitemb-8leading-tight" />
               Cloud
     <>
               <br / />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">Migration
+              <spanclassName="b g-gradient-to-rfrom-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">Migration
               </span>
             </h1>
     </>
             
-            <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
-              Transform your business with expert cloud migration services. 
+            <pclassName="t e xt-lgsm:text-xlmd:text-2 xltext-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
+              Transformyourbusinesswithexpertcloudmigrationservices. 
     <>
               <br / />
-              <span className="text-cyan-400font-semibold">Zero downtime • 40% cost reduction • 99.9% uptime • Enterprise security</span>
+              <spanclassName="t e xt-cyan-400font-semibold">Zerodowntime • 40% costreduction • 99.9% uptime • Enterprisesecurity</span>
             </p>
     </>
             
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-=======
-    <>
-            <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <button className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
-                <span>Get Free Assessment</span>
-                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+            <divclassName="f l exflex-colsm:flex-rowgap-6justify-centermb-16">
+              <buttonclassName="g r oupbg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-10 py-4 rounded-xlfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-centerspace-x-2 shadow-lgshadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
+                <span>GetFreeAssessment</span>
+                <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
               </button>
-              <button className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-<<<<<<< HEAD
-                <Play className="w-5h-5" />
-                <span   />Watch Case Study</span>
-=======
-                <Play className="w-5h-5" / />
-                <span>Watch Case Study</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              <buttonclassName="g r oupborder-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xlfont-semiboldhover:bg-cyan-400 hover:text-gray-900 transition-allduration-300 flexitems-centerjustify-centerspace-x-2backdrop-blur-sm" />
+                <PlayclassName="w-5h-5" />
+                <span   />WatchCaseStudy</span>
               </button>
             </div>
     </>
             
-            {/* Trust Indicators */}
-<<<<<<< HEAD
-            <div className="flex flex-wrap justify-center items-center gap-8text-gray-400text-sm">
-              <div className="flex items-centerspace-x-2">
-                <CheckCircle className="w-4h-4text-green-400" />
+            {/* TrustIndicators */}
+            <divclassName="f l exflex-wrapjustify-centeritems-centergap-8text-gray-400text-sm">
+              <divclassName="f l exitems-centerspace-x-2">
+                <CheckCircleclassName="w-4h-4t e xt-green-400" />
                 <span   />500+ Migrations</span>
               </div>
-              <div className="flex items-centerspace-x-2">
-                <Star className="w-4h-4text-yellow-400" />
+              <divclassName="f l exitems-centerspace-x-2">
+                <StarclassName="w-4h-4t e xt-yellow-400" />
                 <span   />4.9/5 Rating</span>
               </div>
-              <div className="flex items-centerspace-x-2">
-                <Shield className="w-4h-4text-blue-400" />
-                <span   />Zero Data Loss</span>
+              <divclassName="f l exitems-centerspace-x-2">
+                <ShieldclassName="w-4h-4t e xt-blue-400" />
+                <span   />ZeroDataLoss</span>
               </div>
-              <div className="flex items-centerspace-x-2">
-                <Clock className="w-4h-4text-purple-400" />
+              <divclassName="f l exitems-centerspace-x-2">
+                <ClockclassName="w-4h-4t e xt-purple-400" />
                 <span   />24/7 Support</span>
-=======
-    <>
-            <div className="flex flex-wrap justify-center items-center gap-8text-gray-400text-sm">
-        </div>
-              <div className="flexitems-centerspace-x-2">
-        </div>
-                <CheckCircle className="w-4h-4text-green-400" / />
-                <span>500+ Migrations</span>
-              </div>
-              <div className="flexitems-centerspace-x-2">
-        </div>
-                <Star className="w-4h-4text-yellow-400" / />
-                <span>4.9/5 Rating</span>
-              </div>
-              <div className="flexitems-centerspace-x-2">
-        </div>
-                <Shield className="w-4h-4text-blue-400" / />
-                <span>Zero Data Loss</span>
-              </div>
-              <div className="flexitems-centerspace-x-2">
-        </div>
-                <Clock className="w-4h-4text-purple-400" / />
-                <span>24/7 Support</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               </div>
           </div>
         </section>
     </>
 
-        {/* Features Section */}
+        {/* FeaturesSection */}
     <>
-        <section className="py-20px-4relative" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/5to-purple-500/5" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Comprehensive <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Migration Services</span>
+        <sectionclassName="p y-20px-4relative" />
+          <divclassName="a b soluteinset-0 bg-gradient-to-rfrom-cyan-500/5to-purple-500/5" />
+          <divclassName="r e lativemax-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+                Comprehensive <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />MigrationServices</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              From assessment to optimization, we handle every aspect of your cloud migration journey.
-=======
-          <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/5to-purple-500/5" / />
-          <div className="relative max-w-7xlmx-auto">
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Comprehensive <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Migration Services</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                From assessment to optimization, we handle every aspect of your cloud migration journey.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">Fromassessmenttooptimization, wehandleeveryaspectofyourcloudmigrationjourney.</p>
             </div>
     </>
             
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
               {features.map((feature, index) => (
     <>
-                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
+                <divkey="{index}" className="g r oupbg-white/10 backdrop-blur-lgrounded-2 xlp-8 borderborder-white/20 hover:bg-white/20 transition-allduration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                  <divclassName="f l exitems-centerjustify-centerw-16 h-16 bg-gradient-to-rfrom-cyan-500 to-purple-600 rounded-2 xlmb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
                   </div>
-<<<<<<< HEAD
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{feature.title}
+                  <h3 className="t e xt-2 xlfont-boldtext-whitemb-4group-hover:text-cyan-400 transition-colors"  />{feature.title}
                   </h3>
-                  <p className="text-gray-300 mb-6leading-relaxed">
-              {feature.description}
-                  </p>
-                  <div className="space-y-2">
-=======
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title}
-                  </h3>
-                  <p className="text-gray-300mb-6leading-relaxed" />
-    </>
-                    {feature.description}
-    <>
-                  </p>
-                  <div className="space-y-2">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <pclassName="t e xt-gray-300 mb-6leading-relaxed">{feature.description}</p>
+                  <divclassName="s p ace-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
     <>
-                      <div key="{benefitIndex}" className="flex items-center space-x-2text-gray-400text-sm" />
-<<<<<<< HEAD
-                        <CheckCircle className="w-4h-4text-green-400" />
+                      <divkey="{benefitIndex}" className="f l exitems-centerspace-x-2text-gray-400text-sm" />
+                        <CheckCircleclassName="w-4h-4t e xt-green-400" />
                         <span   />{benefit}</span>
-=======
-                        <CheckCircle className="w-4h-4text-green-400" / />
-                        <span>{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                       </div>
     </>
                     ))}
     <>
                   </div>
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               ))}
     <>
             </div>
         </section>
     </>
 
-        {/* Migration Process Section */}
+        {/* MigrationProcessSection */}
     <>
-        <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
-<<<<<<< HEAD
-          <div className="absoluteinset-0bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Our Proven <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Migration Process</span>
+        <sectionclassName="p y-20 px-4 bg-gradient-to-brfrom-slate-800/50to-purple-900/50relative" />
+          <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
+          <divclassName="r e lativemax-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+                OurProven <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />MigrationProcess</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              A systematic approach that ensures successful cloud migration with minimal risk and maximum value.
-=======
-          <div className="absoluteinset-0bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.1)_0%,transparent_50%)]" / />
-          <div className="relative max-w-7xlmx-auto">
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Our Proven <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Migration Process</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                A systematic approach that ensures successful cloud migration with minimal risk and maximum value.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">Asystematicapproachthatensuressuccessfulcloudmigrationwithminimalriskandmaximumvalue.</p>
             </div>
     </>
             
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
               {migrationSteps.map((step, index) => (
     <>
-                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                  <div className="flex items-centerjustify-betweenmb-4">
-<<<<<<< HEAD
-                    <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl group-hover:scale-110transition-transformduration-300"  />{step.icon}
+                <divkey="{index}" className="g r oupbg-white/10 backdrop-blur-lgrounded-2 xlp-6 borderborder-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
+                  <divclassName="f l exitems-centerjustify-betweenmb-4">
+                    <divclassName="f l exitems-centerjustify-centerw-16 h-16 bg-gradient-to-rfrom-cyan-500 to-purple-600 rounded-2 xlgroup-hover:scale-110transition-transformduration-300"  />{step.icon}
                     </div>
-                    <div className="text-3 xlfont-boldtext-cyan-400"   />{step.step}</div>
-                  <h3 className="text-xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{step.title}
+                    <divclassName="t e xt-3 xlfont-boldtext-cyan-400"   />{step.step}</div>
+                  <h3 className="t e xt-xlfont-boldtext-whitemb-4group-hover:text-cyan-400 transition-colors"  />{step.title}
                   </h3>
-                  <p className="text-gray-300 mb-4leading-relaxed">
-              {step.description}
-=======
-        </div>
-                    <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl group-hover:scale-110transition-transformduration-300">{step.icon}
-                    </div>
-                    <div className="text-3 xlfont-boldtext-cyan-400">{step.step}</div>
-                  <h3 className="text-xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{step.title}
-                  </h3>
-                  <p className="text-gray-300mb-4leading-relaxed" />
-    </>
-                    {step.description}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </p>
-                  <div className="text-cyan-400text-smfont-semibold">Duration: {step.duration}
+                  <pclassName="t e xt-gray-300 mb-4leading-relaxed">{step.description}</p>
+                  <divclassName="t e xt-cyan-400text-smfont-semibold">Duration: {step.duration}
                   </div>
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               ))}
     <>
             </div>
         </section>
     </>
 
-        {/* Cloud Providers Section */}
+        {/* CloudProvidersSection */}
     <>
-        <section className="py-20px-4relative" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5via-cyan-500/5to-pink-500/5" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Multi-Cloud <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Expertise</span>
+        <sectionclassName="p y-20px-4relative" />
+          <divclassName="a b soluteinset-0 bg-gradient-to-rfrom-purple-500/5via-cyan-500/5to-pink-500/5" />
+          <divclassName="r e lativemax-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+                Multi-Cloud <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Expertise</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Certified experts in all major cloud platforms with deep experience in complex migrations.
-=======
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5via-cyan-500/5to-pink-500/5" / />
-          <div className="relative max-w-7xlmx-auto">
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Multi-Cloud <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Expertise</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                Certified experts in all major cloud platforms with deep experience in complex migrations.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">Certifiedexpertsinallmajorcloudplatformswithdeepexperienceincomplexmigrations.</p>
             </div>
     </>
             
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
               {cloudProviders.map((provider, index) => (
     <>
-                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{provider.icon}
+                <divkey="{index}" className="g r oupbg-white/10 backdrop-blur-lgrounded-2 xlp-6 borderborder-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
+                  <divclassName="f l exitems-centerjustify-centerw-16 h-16 bg-gradient-to-rfrom-cyan-500 to-purple-600 rounded-2 xlmb-6 group-hover:scale-110transition-transformduration-300">{provider.icon}
                   </div>
-<<<<<<< HEAD
-                  <h3 className="text-xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{provider.name}
+                  <h3 className="t e xt-xlfont-boldtext-whitemb-4group-hover:text-cyan-400 transition-colors"  />{provider.name}
                   </h3>
-                  <p className="text-gray-300 mb-4leading-relaxed">
-              {provider.description}
-                  </p>
-                  <div className="space-y-1">
-=======
-                  <h3 className="text-xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{provider.name}
-                  </h3>
-                  <p className="text-gray-300mb-4leading-relaxed" />
-    </>
-                    {provider.description}
-    <>
-                  </p>
-                  <div className="space-y-1">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <pclassName="t e xt-gray-300 mb-4leading-relaxed">{provider.description}</p>
+                  <divclassName="s p ace-y-1">
                     {provider.features.map((feature, featureIndex) => (
     <>
-                      <div key="{featureIndex}" className="text-cyan-400text-sm">• {feature}
+                      <divkey="{featureIndex}" className="t e xt-cyan-400text-sm">• {feature}
                       </div>
     </>
                     ))}
     <>
                   </div>
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               ))}
     <>
             </div>
         </section>
     </>
 
-        {/* Pricing Section */}
+        {/* PricingSection */}
     <>
-        <section className="py-20px-4relative" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5via-cyan-500/5to-pink-500/5" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>
+        <sectionclassName="p y-20px-4relative" />
+          <divclassName="a b soluteinset-0 bg-gradient-to-rfrom-purple-500/5via-cyan-500/5to-pink-500/5" />
+          <divclassName="r e lativemax-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+                Transparent <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Choose the migration package that fits your needs. All packages include our core migration services.
-=======
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5via-cyan-500/5to-pink-500/5" / />
-          <div className="relative max-w-7xlmx-auto">
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                Choose the migration package that fits your needs. All packages include our core migration services.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">Choosethemigrationpackagethatfitsyourneeds. Allpackagesincludeourcoremigrationservices.</p>
             </div>
     </>
             
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
               {pricingPlans.map((plan, index) => (
-                <div key="{index}" className="{`group" relative bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
+                <divkey="{index}" className="{`g r oup" relativebg-white/10 backdrop-blur-lgrounded-2 xlp-8 bordertransition-allduration-300 hover:scale-105 ${
                   plan.popular 
-                    ? 'border-cyan-400/50 shadow-2 xl shadow-cyan-500/20' 
+                    ? 'border-cyan-400/50 shadow-2 xlshadow-cyan-500/20' 
                     : 'border-white/20 hover: border-cyan-400/30'
                 }`} />
                   {plan.popular && (
-<<<<<<< HEAD
-                    <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold"  />Most Popular
+                    <divclassName="a b solute -top-4 left-1/2transform-translate-x-1/2">
+                      <divclassName="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-6 py-2 rounded-fulltext-smfont-semibold"  />MostPopular
                       </div>
                   )}
                   
-                  <div className="text-centermb-8">
-                    <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                    <p className="text-gray-300 mb-6">
-              {plan.description}</p>
-                    <div className="flex items-baselinejustify-center">
-                      <span className="text-5 xlfont-bold text-white"   />{plan.price}</span>
-                      <span className="text-gray-400ml-2"   />{plan.period}</span>
+                  <divclassName="t e xt-centermb-8">
+                    <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"   />{plan.name}</h3>
+                    <pclassName="t e xt-gray-300 mb-6">{plan.description}</p>
+                    <divclassName="f l exitems-baselinejustify-center">
+                      <spanclassName="t e xt-5 xlfont-boldtext-white"   />{plan.price}</span>
+                      <spanclassName="t e xt-gray-400ml-2"   />{plan.period}</span>
                     </div>
-                  
-                  <div className="space-y-4mb-8">
+                  <divclassName="s p ace-y-4mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <div key="{featureIndex}" className="flex items-centerspace-x-3" />
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" />
-                        <span className="text-gray-300"   />{feature}</span>
-=======
-    <>
-                    <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-        </div>
-                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
-                      </div>
-    </>
-                  )}
-                  
-    <>
-                  <div className="text-centermb-8">
-        </div>
-                    <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                    <p className="text-gray-300mb-6">{plan.description}</p>
-                    <div className="flexitems-baselinejustify-center" />
-                      <span className="text-5 xlfont-boldtext-white">{plan.price}</span>
-                      <span className="text-gray-400ml-2">{plan.period}</span>
-                    </div>
-    </>
-                  
-                  <div className="space-y-4mb-8">
-        </div>
-                    {plan.features.map((feature, featureIndex) => (
-    <>
-                      <div key="{featureIndex}" className="flexitems-centerspace-x-3" />
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
-                        <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                      <divkey="{featureIndex}" className="f l exitems-centerspace-x-3" />
+                        <CheckCircleclassName="w-5 h-5t e xt-green-400flex-shrink-0" />
+                        <spanclassName="t e xt-gray-300"   />{feature}</span>
                       </div>
     </>
                     ))}
                   </div>
-                  
-                  <button className="{`w-full" py-4 rounded-xl font-semibold transition-all duration-300 ${
+                  <buttonclassName="{`w-f u ll" py-4 rounded-xlfont-semiboldtransition-allduration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
+                      ? 'bg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitehover:from-cyan-600 hover:to-purple-700 shadow-lgshadow-cyan-500/25'
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
                   }`}  />{plan.cta}
     <>
@@ -689,180 +452,85 @@ export default function CloudMigrationPage() {
         </section>
     </>
 
-        {/* Testimonials Section */}
+        {/* TestimonialsSection */}
     <>
-        <section className="py-20 px-4 bg-gradient-to-br from-purple-900/50to-pink-900/50relative" />
-<<<<<<< HEAD
-          <div className="absoluteinset-0bg-[radial-gradient(circle_at_70%_30%,rgba(236,72,153,0.1)_0%,transparent_50%)]" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Trusted by <span className="bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent"   />500+ Companies</span>
+        <sectionclassName="p y-20 px-4 bg-gradient-to-brfrom-purple-900/50to-pink-900/50relative" />
+          <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_70%_30%,rgba(236,72,153,0.1)_0%,transparent_50%)]" />
+          <divclassName="r e lativemax-w-7xlmx-auto">
+            <divclassName="t e xt-centermb-16">
+              <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
+                Trustedby <spanclassName="b g-gradient-to-rfrom-purple-400 to-pink-400bg-clip-texttext-transparent"   />500+ Companies</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              See what our clients say about their cloud migration experience with Zion Tech Group.
-=======
-          <div className="absoluteinset-0bg-[radial-gradient(circle_at_70%_30%,rgba(236,72,153,0.1)_0%,transparent_50%)]" / />
-          <div className="relative max-w-7xlmx-auto">
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Trusted by <span className="bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent">500+ Companies</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                See what our clients say about their cloud migration experience with Zion Tech Group.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
+              <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">SeewhatourclientssayabouttheircloudmigrationexperiencewithZionTechGroup.</p>
             </div>
     </>
             
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
               {testimonials.map((testimonial, index) => (
     <>
-                <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
-<<<<<<< HEAD
-                  <div className="flex items-centermb-4">
-=======
-                  <div className="flexitems-centermb-4">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <divkey="{index}" className="b g-white/10 backdrop-blur-lgrounded-2 xlp-8 borderborder-white/20 hover:bg-white/20transition-allduration-300" />
+                  <divclassName="f l exitems-centermb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
+                      <Starkey="{i}" className="w-5 h-5t e xt-yellow-400fill-current" />
                     ))}
     <>
                   </div>
-<<<<<<< HEAD
-                  <p className="text-gray-300 mb-6leading-relaxed">
-              "{testimonial.content}"</p>
-                  <div className="flex items-centerspace-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-centertext-whitefont-bold"  />{testimonial.avatar}
+                  <pclassName="t e xt-gray-300 mb-6leading-relaxed">"{testimonial.content}"</p>
+                  <divclassName="f l exitems-centerspace-x-4">
+                    <divclassName="w-12 h-12 b g-gradient-to-rfrom-cyan-500 to-purple-600 rounded-fullflexitems-centerjustify-centertext-whitefont-bold"  />{testimonial.avatar}
                     </div>
                     <div />
-                      <div className="font-semiboldtext-white"   />{testimonial.name}</div>
-                      <div className="text-gray-400text-sm"   />{testimonial.role}, {testimonial.company}</div>
+                      <divclassName="f o nt-semiboldtext-white"   />{testimonial.name}</div>
+                      <divclassName="t e xt-gray-400text-sm"   />{testimonial.role}, {testimonial.company}</div>
                   </div>
-=======
-                  <p className="text-gray-300mb-6leading-relaxed">"{testimonial.content}"</p>
-                  <div className="flexitems-centerspace-x-4">
-        </div>
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-centertext-whitefont-bold">{testimonial.avatar}
-                    </div>
-                    <div />
-                      <div className="font-semiboldtext-white">{testimonial.name}</div>
-                      <div className="text-gray-400text-sm">{testimonial.role}, {testimonial.company}</div>
-                  </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               ))}
     <>
             </div>
         </section>
     </>
 
-        {/* CTA Section */}
+        {/* CTASection */}
     <>
-        <section className="py-20px-4relative" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-fullbg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.1)_0%,transparent_50%)]animate-pulse" />
-                <div className="relativez-10">
-                  <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" />
-                    Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Infrastructure?</span>
-=======
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" / />
-          <div className="relative max-w-7xlmx-auto">
-        </div>
-            <div className="text-center" />
-              <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
-        </div>
-                <div className="absolute top-0 left-0 w-full h-fullbg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.1)_0%,transparent_50%)]animate-pulse" / />
-                <div className="relativez-10">
-        </div>
-                  <h2 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-whitemb-6leading-tight" />
-                    Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">Infrastructure?</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <sectionclassName="p y-20px-4relative" />
+          <divclassName="a b soluteinset-0 bg-gradient-to-rfrom-cyan-500/10via-purple-500/10to-pink-500/10" />
+          <divclassName="r e lativemax-w-7xlmx-auto">
+            <divclassName="t e xt-center">
+              <divclassName="b g-gradient-to-rfrom-cyan-600 via-purple-600 to-pink-600 rounded-3 xlp-8 sm:p-12 lg:p-16relativeoverflow-hidden">
+                <divclassName="a b solutetop-0 left-0 w-fullh-fullbg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.1)_0%,transparent_50%)]animate-pulse" />
+                <divclassName="r e lativez-10">
+                  <h2 className="t e xt-4xlsm:text-5 xlmd:text-6 xlfont-boldtext-whitemb-6leading-tight" />
+                    ReadytoTransformYour <spanclassName="b g-gradient-to-rfrom-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Infrastructure?</span>
                   </h2>
     </>
                   
-                  <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
-<<<<<<< HEAD
-              Join hundreds of companies who have successfully migrated to the cloud with our expert guidance. 
-                    Get your free cloud readiness assessment today.
-                  </p>
-                  
-                  <div className="flex flex-col sm:flex-row gap-6justify-centermb-8">
-=======
-                    Join hundreds of companies who have successfully migrated to the cloud with our expert guidance. 
-                    Get your free cloud readiness assessment today.
-                  </p>
-                  
-    <>
-                  <div className="flex flex-col sm:flex-row gap-6justify-centermb-8">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    <button className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
-                      <span>Get Free Assessment</span>
-                      <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+                  <pclassName="t e xt-xlsm:text-2 xltext-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">Joinhundredsofcompanieswhohavesuccessfullymigratedtothecloudwithourexpertguidance. 
+                    Getyourfreecloudreadinessassessmenttoday.</p>
+                  <divclassName="f l exflex-colsm:flex-rowgap-6justify-centermb-8">
+                    <buttonclassName="g r oupbg-whitetext-cyan-600 px-10 py-4 rounded-xlfont-boldtext-lghover:bg-gray-100 transition-allduration-300 flexitems-centerjustify-centerspace-x-2 shadow-lghover:shadow-xltransformhover:scale-105" />
+                      <span>GetFreeAssessment</span>
+                      <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
                     </button>
-<<<<<<< HEAD
-                    <Link to="/contact" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
+                    <Linkto="/contact" className="g r oupborder-2 border-whitetext-whitepx-10 py-4 rounded-xlfont-boldtext-lghover:bg-white/10 transition-allduration-300 flexitems-centerjustify-centerspace-x-2backdrop-blur-sm">
           <span    />
-        </Link>Contact Expert</span>
-                      <MessageCircle className="w-5 h-5group-hover:scale-110transition-transform" />
-=======
-                    <Link to="/contact" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                      <span>Contact Expert</span>
-                      <MessageCircle className="w-5 h-5group-hover:scale-110transition-transform" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        </Link>ContactExpert</span>
+                      <MessageCircleclassName="w-5 h-5g r oup-hover:scale-110transition-transform" />
                     </Link>
                   </div>
     </>
                   
-                  {/* Contact Information */}
-<<<<<<< HEAD
-                  <div className="grid grid-cols-1 md:grid-cols-3gap-6text-white/80">
-                    <div className="flex items-centerjustify-centerspace-x-3">
-                      <Phone className="w-5h-5text-cyan-300" />
-                      <span className="text-sm"   />+1 302 464 0950</span>
+                  {/* ContactInformation */}
+                  <divclassName="g r idgrid-cols-1 md:grid-cols-3gap-6text-white/80">
+                    <divclassName="f l exitems-centerjustify-centerspace-x-3">
+                      <PhoneclassName="w-5h-5t e xt-cyan-300" />
+                      <spanclassName="t e xt-sm"   />+1 302 464 0950</span>
                     </div>
-                    <div className="flex items-centerjustify-centerspace-x-3">
-                      <Mail className="w-5h-5text-purple-300" />
-                      <span className="text-sm"   />kleber@ziontechgroup.com</span>
+                    <divclassName="f l exitems-centerjustify-centerspace-x-3">
+                      <MailclassName="w-5h-5t e xt-purple-300" />
+                      <spanclassName="t e xt-sm"   />kleber@ziontechgroup.com</span>
                     </div>
-                    <div className="flex items-centerjustify-centerspace-x-3">
-                      <MapPin className="w-5h-5text-pink-300" />
-                      <span className="text-sm"   />Middletown DE 19709</span>
-=======
-    <>
-                  <div className="grid grid-cols-1 md:grid-cols-3gap-6text-white/80">
-        </div>
-                    <div className="flex items-centerjustify-centerspace-x-3">
-        </div>
-                      <Phone className="w-5h-5text-cyan-300" / />
-                      <span className="text-sm">+1 302 464 0950</span>
-                    </div>
-                    <div className="flex items-centerjustify-centerspace-x-3">
-        </div>
-                      <Mail className="w-5h-5text-purple-300" / />
-                      <span className="text-sm">kleber@ziontechgroup.com</span>
-                    </div>
-                    <div className="flex items-centerjustify-centerspace-x-3">
-        </div>
-                      <MapPin className="w-5h-5text-pink-300" / />
-                      <span className="text-sm">Middletown DE 19709</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <divclassName="f l exitems-centerjustify-centerspace-x-3">
+                      <MapPinclassName="w-5h-5t e xt-pink-300" />
+                      <spanclassName="t e xt-sm"   />MiddletownDE 19709</span>
                     </div>
                 </div>
             </div>

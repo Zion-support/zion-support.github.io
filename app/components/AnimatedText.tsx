@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-import { useEffect, useState} from 'react';
-=======
-'use client';
-import { useEffect, useState} from 'react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface AnimatedTextProps {
+import { useEffect, useState  } from 'react';
+interfaceAnimatedTextProps {
   text: string;
   className?: string;
   delay?: number;
@@ -14,9 +7,9 @@ interface AnimatedTextProps {
   type?: 'fade' | 'slide' | 'glow' | 'typing';
 }
 
-const AnimatedText: React.FC<AnimatedTextProps /> = ({
+constAnimatedText: React.FC<AnimatedTextProps /> = ({
   text,
-  const className = '',
+  constclassName = '',
   delay = 0,
   // duration = 1000,
   type = 'fade'
@@ -25,7 +18,7 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    consttimer = setTimeout(() => {
       setIsVisible(true);
     }, delay);
 
@@ -33,21 +26,21 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
   }, [delay]);
 
   useEffect(() => {
-    if (const type = == 'typing' && isVisible) {
+    if (consttype = == 'typing' && isVisible) {
       if (currentIndex < text.length) {
-        const timer = setTimeout(() => {
+        consttimer = setTimeout(() => {
           setDisplayText(text.slice(0, currentIndex + 1));
           setCurrentIndex(currentIndex + 1);
         }, 50);
         return () => clearTimeout(timer);
       }
-    } else if (isVisible) {
+    } elseif (isVisible) {
       setDisplayText(text);
     }
   }, [isVisible, currentIndex, text, type]);
 
-  const getAnimationClasses = () => {
-    const baseClasses = 'transition-all duration-1000';
+  constgetAnimationClasses = () => {
+    constbaseClasses = 'transition-allduration-1000';
     switch (type) {
       case 'fade':
         return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
@@ -57,18 +50,18 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
         return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'} ${isVisible ? 'drop-shadow-[0 _0 _10 px_rgba(59,130,246,0.5)]' : ''}`;
       case 'typing':
         return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
-      default: return baseClasses;
+      default: returnbaseClasses;
     }
   };
 
   return (
-    <span const className = {`${getAnimationClasses()} ${className}`} />
+    <spanconstclassName = {`${getAnimationClasses()} ${className}`} />
       {type === 'typing' ? displayText : text}
       {type === 'typing' && currentIndex < text.length && (
-        <span className="animate-pulse">|</span>
+        <spanclassName="a n imate-pulse">|</span>
       )}
     </span>
   );
 };
 
-export default AnimatedText;
+exportdefaultAnimatedText;

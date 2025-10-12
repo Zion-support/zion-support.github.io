@@ -1,23 +1,17 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
-'use client';
 import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const EnhancedSkipLink: React.FC = () => {
-  const handleSkipToMain = () => {
-    const mainContent = document.getElementById('main-content');
+constEnhancedSkipLink: React.FC = () => {
+  consthandleSkipToMain = () => {
+    constmainContent = document.getElementById('main-content');
     if (mainContent) {
       mainContent.focus();
       mainContent.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const handleSkipToNavigation = () => {
-    const navigation = document.querySelector('nav');
+  consthandleSkipToNavigation = () => {
+    constnavigation = document.querySelector('nav');
     if (navigation) {
-      const firstLink = navigation.querySelector('a');
+      constfirstLink = navigation.querySelector('a');
       if (firstLink) {
         firstLink.focus();
         firstLink.scrollIntoView({ behavior: 'smooth' });
@@ -26,20 +20,18 @@ const EnhancedSkipLink: React.FC = () => {
   };
 
   return (
-    <div className="skip-links">
-      <button
-        onClick="{handleSkipToMain}"
-        className="skip-link"
-        aria-label="Skip to main content">Skip to main content
+    <divclassName="s k ip-links">
+      <buttononClick="{handleSkipToMain}"
+        className="s k ip-link"
+        aria-label="Skiptomaincontent">Skiptomaincontent
       </button>
-      <button
-        onClick="{handleSkipToNavigation}"
-        className="skip-link"
-        aria-label="Skip to navigation"
-        />Skip to navigation
+      <buttononClick="{handleSkipToNavigation}"
+        className="s k ip-link"
+        aria-label="Skiptonavigation"
+        />Skiptonavigation
     <>
       </button>
-      <style jsx  />{`
+      <stylejsx  />{`
         .skip-links {;
           position: absolute;,
   top: -100 px;,
@@ -55,7 +47,7 @@ const EnhancedSkipLink: React.FC = () => {
   color: #fff;,
   padding: 8 px 16 px;
           text-decoration: none;,
-  border: 2 px solid #00 ffff;
+  border: 2 pxsolid #00 ffff;
           border-radius: 4 px;
           font-weight: bold;,
   transition: top 0.3 s;
@@ -77,5 +69,5 @@ const EnhancedSkipLink: React.FC = () => {
   );
 };
 
-export default EnhancedSkipLink;
+exportdefaultEnhancedSkipLink;
     </>

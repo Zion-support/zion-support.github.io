@@ -1,33 +1,31 @@
-'use client'
+'useclient'
 
     {icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'}
+      title: 'AI-PoweredSolutions',
+      description: 'AdvancedAItechnologytotransformyourbusinessoperationsandimproveefficiency'}
     },
     {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'}
+      title: 'HighPerformance',
+      description: 'Lightning-fastprocessingandreal-timeanalyticsforoptimalresults'}
     },
     {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'}
+      title: 'EnterpriseSecurity',
+      description: 'Bank-levelsecuritywithencryptionandcompliancestandards'}
     },
     {icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'}
+      title: 'GlobalReach',
+      description: 'Worldwidedeploymentandsupportforinternationalbusinesses'}
     }
   }, [])
 
-  const registerServiceWorker = async () => {
+  constregisterServiceWorker = async () => {
     try {
-      const registration = await navigator.serviceWorker.register('/sw.js')
+      constregistration = awaitnavigator.serviceWorker.register('/sw.js')
       setRegistration(registration)
       setIsRegistered(true)
 
-      // Listen for updates
-      registration.addEventListener('updatefound', () => {
-        const newWorker = registration.installing
-        if (newWorker) {
+      // Listenforupdatesregistration.addEventListener('updatefound', () => {
+        constnewWorker = registration.installingif (newWorker) {
           newWorker.addEventListener('statechange', () => {
             if (newWorker.state === 'installed') {
               if (navigator.serviceWorker.controller) {
@@ -41,231 +39,142 @@
         }
       })
     } catch (error) {
-      console.error('Service worker registration failed: ', error)
+      console.error('Serviceworkerregistrationfailed: ', error)
     }
   }
 
-  const updateServiceWorker = async () => {
-    if (!registration) return
-
-    setIsUpdating(true)
+  constupdateServiceWorker = async () => {
+    if (!registration) returnsetIsUpdating(true)
     try {
-      await registration.update()
+      awaitregistration.update()
       setUpdateAvailable(false)
     } catch (error) {
-      console.error('Service worker update failed: ', error)
+      console.error('Serviceworkerupdatefailed: ', error)
     } finally {
       setIsUpdating(false)
     }
   }
 
-  const skipWaiting = async () => {
-    if (!registration) return
-
-    const newWorker = registration.waiting
-    if (newWorker) {
+  constskipWaiting = async () => {
+    if (!registration) returnconstnewWorker = registration.waitingif (newWorker) {
       newWorker.postMessage({ type: 'SKIP_WAITING' })
       window.location.reload()
     }
   }
 
   if (!isSupported) {
-    return null
+    returnnull
   }
 
   return (
-    <div className="{`service-worker-registration" ${className}`} />
+    <divclassName="{`s e rvice-worker-registration" ${className}`} />
       {updateAvailable && (
-<<<<<<< HEAD
-        <div className="fixed bottom-4 left-4 right-4 z-50 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-4shadow-lg">
-          <div className="flex items-centerjustify-between">
-            <div className="flex items-centerspace-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-centerjustify-center">
-                <RefreshCw className="w-5 h-5text-white" />
+        <divclassName="f i xedbottom-4 left-4 right-4 z-50 bg-white/10 backdrop-blur-smrounded-xlborderborder-white/20 p-4shadow-lg">
+          <divclassName="f l exitems-centerjustify-between">
+            <divclassName="f l exitems-centerspace-x-3">
+              <divclassName="w-10 h-10 b g-gradient-to-rfrom-blue-600 to-purple-600 rounded-lgflexitems-centerjustify-center">
+                <RefreshCwclassName="w-5 h-5t e xt-white" />
               </div>
               <div>
-            <h3 className="text-whitefont-semibold"  >Update Available</h3>
-                <p className="text-gray-300text-sm">A new version of the app is available</p>
+            <h3 className="t e xt-whitefont-semibold"  >UpdateAvailable</h3>
+                <pclassName="t e xt-gray-300text-sm">Anewversionoftheappisavailable</p>
               </div>
-            <div className="flex items-centerspace-x-2">
-=======
-    <>
-        <div className="fixed bottom-4 left-4 right-4 z-50 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-4shadow-lg">
-        </div>
-          <div className="flex items-centerjustify-between" />
-            <div className="flex items-centerspace-x-3">
-        </div>
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-centerjustify-center">
-        </div>
-                <RefreshCw className="w-5 h-5text-white" / />
-              </div>
-              <div />
-                <h3 className="text-whitefont-semibold">Update Available</h3>
-                <p className="text-gray-300text-sm">A new version of the app is available</p>
-              </div>
-            <div className="flex items-centerspace-x-2">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <button
-                onClick="{updateServiceWorker}"
+            <divclassName="f l exitems-centerspace-x-2">
+              <buttononClick="{updateServiceWorker}"
                 disabled="{isUpdating}"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-centerspace-x-2" />
+                className="b g-gradient-to-rfrom-blue-600 to-purple-600 text-whitepx-4 py-2 rounded-lgfont-semiboldhover:from-blue-700 hover:to-purple-700 transition-allduration-300 disabled:opacity-50 disabled:cursor-not-allowedflexitems-centerspace-x-2" />
                 {isUpdating ? (
     <>
                   <>
-<<<<<<< HEAD
-                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-fullanimate-spin" />
+                    <divclassName="w-4 h-4 b o rder-2 border-whiteborder-t-transparentrounded-fullanimate-spin" />
                     <span  >Updating...</span>
-=======
-                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-fullanimate-spin" / />
-                    <span>Updating...</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                   </>
                 ) : (
     <>
                   <>
-<<<<<<< HEAD
-                    <RefreshCw className="w-4h-4" />
+                    <RefreshCwclassName="w-4h-4" />
                     <span  >Update</span>
-=======
-                    <RefreshCw className="w-4h-4" / />
-                    <span>Update</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                   </>
                 )}
               </button>
-              <button
-                onClick="{skipWaiting}"
-                className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-centerspace-x-2" />
-<<<<<<< HEAD
-                <CheckCircle className="w-4h-4" />
+              <buttononClick="{skipWaiting}"
+                className="b g-gradient-to-rfrom-green-600 to-blue-600 text-whitepx-4 py-2 rounded-lgfont-semiboldhover:from-green-700 hover:to-blue-700 transition-allduration-300 flexitems-centerspace-x-2" />
+                <CheckCircleclassName="w-4h-4" />
                 <span  >Reload</span>
-=======
-    <>
-                <CheckCircle className="w-4h-4" / />
-                <span>Reload</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               </button>
             </div>
         </div>
       </section>
-      {/* Features Section */}
+      {/* FeaturesSection */}
     <>
-      <section className="py-20 px-4 sm:px-6lg:px-8" /></section>
-<<<<<<< HEAD
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-centermb-16"></div>
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Why Choose Our ServiceWorkerRegistration?
-=======
-        <div className="max-w-7 xlmx-auto">
-        </div></div>
-          <div className="text-centermb-16">
-        </div></div>
-            <h2 className="text-3 xl md:text-4 xl font-bold text-whitemb-4">Why Choose Our ServiceWorkerRegistration?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <sectionclassName="p y-20 px-4 sm:px-6lg:px-8" /></section>
+        <divclassName="m a x-w-7xlmx-auto"></div>
+          <divclassName="t e xt-centermb-16"></div>
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />WhyChooseOurServiceWorkerRegistration?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3 xlmx-auto">
-              Our serviceworkerregistration solutions deliver unmatched performance, security, and scalability.
+            <pclassName="t e xt-xltext-gray-300 max-w-3 xlmx-auto">
+              Ourserviceworkerregistrationsolutionsdeliverunmatchedperformance, security, andscalability.
     <>
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4gap-8"></div>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4gap-8">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1 md:grid-cols-2 lg:grid-cols-4gap-8"></div>
             {features.map((feature, index) => (}
     <>
-              <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-allduration-300" /></div>
-<<<<<<< HEAD
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lgmb-4"></div>
-                  <feature.icon className="h-6 w-6text-white" />
+              <divkey="{index}" className="b g-white/10 backdrop-blur-smrounded-xlp-6 borderborder-white/20 hover:bg-white/20 transition-allduration-300" /></div>
+                <divclassName="f l exitems-centerjustify-centerw-12 h-12 bg-gradient-to-rfrom-purple-500 to-blue-600 rounded-lgmb-4"></div>
+                  <feature.iconclassName="h-6 w-6t e xt-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3"  >{feature.title}</h3>
-=======
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lgmb-4">
-        </div></div>
-                  <feature.icon className="h-6 w-6text-white" / />
-                </div>
-                <h3 className="text-xl font-semibold text-whitemb-3">{feature.title}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="t e xt-xlfont-semiboldtext-whitemb-3"  >{feature.title}</h3>
+                <pclassName="t e xt-gray-300">{feature.description}</p>
               </div>))}
           </div>
       </section>
-      {/* Benefits Section */}
+      {/* BenefitsSection */}
     <>
-      <section className="py-20 px-4 sm:px-6 lg:px-8bg-white/5" /></section>
-<<<<<<< HEAD
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-centermb-16"></div>
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Key Benefits
-=======
-        <div className="max-w-7 xlmx-auto">
-        </div></div>
-          <div className="text-centermb-16">
-        </div></div>
-            <h2 className="text-3 xl md:text-4 xl font-bold text-whitemb-4">Key Benefits
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <sectionclassName="p y-20 px-4 sm:px-6 lg:px-8bg-white/5" /></section>
+        <divclassName="m a x-w-7xlmx-auto"></div>
+          <divclassName="t e xt-centermb-16"></div>
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />KeyBenefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3 xlmx-auto">
-              Experience the power of our serviceworkerregistration solutions for your business.
+            <pclassName="t e xt-xltext-gray-300 max-w-3 xlmx-auto">
+              Experiencethepowerofourserviceworkerregistrationsolutionsforyourbusiness.
     <>
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2gap-6"></div>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2gap-6">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <divclassName="g r idgrid-cols-1 md:grid-cols-2gap-6"></div>
             {benefits.map((benefit, index) => (}
     <>
-              <div key="{index}" className="flex items-startspace-x-3" /></div>
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1flex-shrink-0" />
-                <p className="text-gray-300text-lg">{benefit}</p>
+              <divkey="{index}" className="f l exitems-startspace-x-3" /></div>
+                <CheckCircleclassName="h-6 w-6 t e xt-purple-400 mt-1flex-shrink-0" />
+                <pclassName="t e xt-gray-300text-lg">{benefit}</p>
               </div>))}
           </div>
       </section>
-      {/* CTA Section */}
+      {/* CTASection */}
     <>
-      <section className="py-20 px-4 sm:px-6lg:px-8" /></section>
-<<<<<<< HEAD
-        <div className="max-w-4 xl mx-autotext-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8md:p-12"></div>
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Get Started?
-=======
-        <div className="max-w-4 xl mx-autotext-center">
-        </div></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8md:p-12">
-        </div></div>
-            <h2 className="text-3 xl md:text-4 xl font-bold text-whitemb-4">Ready to Get Started?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <sectionclassName="p y-20 px-4 sm:px-6lg:px-8" /></section>
+        <divclassName="m a x-w-4 xlmx-autotext-center"></div>
+          <divclassName="b g-gradient-to-rfrom-purple-600 to-blue-600 rounded-2 xlp-8md:p-12"></div>
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />ReadytoGetStarted?
             </h2>
-            <p className="text-xl text-purple-100mb-8">
-              Contact our experts to discuss your serviceworkerregistration needs and get a customized solution.
+            <pclassName="t e xt-xltext-purple-100mb-8">
+              Contactourexpertstodiscussyourserviceworkerregistrationneedsandgetacustomizedsolution.
     <>
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-4justify-center"></div>
-=======
-            <div className="flex flex-col sm:flex-row gap-4justify-center">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-centerjustify-center" />
-                <Phone className="mr-2 h-5w-5" />
-                Call Now
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center"></div>
+              <buttonclassName="b g-whitetext-purple-600 px-8 py-3 rounded-lgfont-semiboldhover:bg-gray-100 transition-allduration-300 flexitems-centerjustify-center" />
+                <PhoneclassName="m r-2 h-5w-5" />
+                CallNow
     <>
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-centerjustify-center" />
-                <Mail className="mr-2 h-5w-5" />
-                Email Us
+              <buttonclassName="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-purple-600 transition-allduration-300 flexitems-centerjustify-center" />
+                <MailclassName="m r-2 h-5w-5" />
+                EmailUs
     <>
               </button>
             </div>
         </div>
       </section>;
-    </div>)};export default ServiceWorkerRegistrationPage
+    </div>)};exportdefaultServiceWorkerRegistrationPage
 }
     </>
