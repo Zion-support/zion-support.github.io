@@ -1,55 +1,8 @@
-ursor/analyze-improve-and-deploy-application-c354
-
-      // Measure Time to First Byte (TTFB)
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'navigation') {
-              setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }))
-            }
-          }
-        })
-        observer.observe({ entryTypes: ['navigation'] })
-      }
-    }
-
-    // Start measuring after a short delay to ensure page is loaded
-    const timeoutId = setTimeout(measurePerformance, 1000)
-
-    return () => {
-      clearTimeout(timeoutId)
-    }
-  }, [])
-
-  // Send metrics to analytics (if available)
-  useEffect(() => {
-    if (Object.keys(metrics).length > 0 && typeof window !== 'undefined') {
-      // Send to Google Analytics or other analytics service
-      if (typeof window.gtag !== 'undefined') {
-        window.gtag('event', 'performance_metrics', {
-          event_category: 'Performance',
-          event_label: 'Core Web Vitals',
-          value: Math.round(metrics.lcp || 0),
-          custom_map: {
-            fcp: metrics.fcp,
-            lcp: metrics.lcp,
-            fid: metrics.fid,
-            cls: metrics.cls,
-            ttfb: metrics.ttfb
-          }
-        })
-      }
-    }
-  }, [metrics])
-
-  // Don't render anything visible
-  return null
-}
-
-export default PerformanceMonitor
-import React, { useEffect, useState } from 'react';
+'use client'
+import React, { useEffect, useState } from 'react'
 
 interface PerformanceMetrics {
+  fcp?: number
   lcp?: number
   fid?: number
   cls?: number
@@ -58,74 +11,65 @@ interface PerformanceMetrics {
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({})
+
   useEffect(() => {
     // Monitor Core Web Vitals
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Largest Contentful Paint (LCP)
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-            // Send to analytics
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'web_vitals', {
-                name: 'LCP',
-                value: Math.round(entry.startTime),
-                event_category: 'Web Vitals'
-              });
+          if (entry.entryType === 'paint') {
+            if (entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }))
+            }
+          } else if (entry.entryType === 'largest-contentful-paint') {
+            setMetrics(prev => ({ ...prev, lcp: entry.startTime }))
+          } else if (entry.entryType === 'first-input') {
+            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))
+          } else if (entry.entryType === 'layout-shift') {
+            if (!entry.hadRecentInput) {
+              setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }))
             }
           }
         }
-      });
-      
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      })
 
-      // Monitor First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          console.log('FID:', entry.processingStart - entry.startTime);
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'web_vitals', {
-              name: 'FID',
-              value: Math.round(entry.processingStart - entry.startTime),
-              event_category: 'Web Vitals'
-            });
-          }
-        }
-      });
-      
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Monitor Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
-          }
-        }
-        console.log('CLS:', clsValue);
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'web_vitals', {
-            name: 'CLS',
-            value: Math.round(clsValue * 1000),
-            event_category: 'Web Vitals'
-          });
-        }
-      });
-      
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      // Cleanup observers
-      return () => {
-        observer.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
+      try {
+        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] })
+      } catch (e) {
+        // Fallback for browsers that don't support all entry types
+        observer.observe({ entryTypes: ['navigation'] })
+      }
     }
-  }, []);
 
-  return null;
-};
+    // Start measuring after a short delay to ensure page is loaded
+    const timeout = setTimeout(() => {
+      if (typeof window !== 'undefined' && window.performance) {
+        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        if (navigation) {
+          setMetrics(prev => ({
+            ...prev,
+            ttfb: navigation.responseStart - navigation.requestStart
+          }))
+        }
+      }
+    }, 1000)
 
-export default PerformanceMonitor;
+    return () => {
+      clearTimeout(timeout)
+      if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+        observer.disconnect()
+      }
+    }
+  }, [])
+
+  // Log metrics for debugging (only in development)
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && Object.keys(metrics).length > 0) {
+      console.log('Performance Metrics:', metrics)
+    }
+  }, [metrics])
+
+  return null
+}
+
+export default PerformanceMonitor
