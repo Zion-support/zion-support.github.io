@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
-import ErrorBoundary from './app/components/ErrorBoundary'
+import GlobalErrorBoundary from './app/components/GlobalErrorBoundary'
 import OptimizedLoading from './app/components/OptimizedLoading'
+import PerformanceMonitor from './app/components/PerformanceMonitor'
 import HomePage from './app/page'
 import AboutPage from './app/about/page'
 import ContactPage from './app/contact/page'
@@ -58,12 +59,12 @@ import FiveGImplementationPage from './app/5g-implementation/page'
 const App: React.FC = () => {
   return (
     <HelmetProvider>
-      <ErrorBoundary>
+      <GlobalErrorBoundary>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <Navigation />
             <main className="min-h-screen">
-              <Suspense fallback={<OptimizedLoading />}>
+              <Suspense fallback={<OptimizedLoading fullScreen showLogo text="Loading Zion Tech Group..." />}>
                 <Routes>
                   {/* Main Pages */}
                   <Route path="/" element={<HomePage />} />
@@ -129,9 +130,10 @@ const App: React.FC = () => {
               </Suspense>
             </main>
             <Footer />
+            <PerformanceMonitor />
           </div>
         </Router>
-      </ErrorBoundary>
+      </GlobalErrorBoundary>
     </HelmetProvider>
   )
 }

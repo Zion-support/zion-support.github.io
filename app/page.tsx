@@ -96,8 +96,62 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Zion Tech Group - AI & IT Solutions for the Future</title>
-        <meta name="description" content="Leading provider of AI, cloud services, cybersecurity, and 5G solutions. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, cloud services, cybersecurity, 5G, IT consulting, data analytics" />
+        <meta name="description" content="Leading provider of AI, cloud services, cybersecurity, and 5G solutions. Transform your business with cutting-edge technology. 1,200+ projects completed with 99.8% client satisfaction." />
+        <meta name="keywords" content="AI solutions, cloud services, cybersecurity, 5G, IT consulting, data analytics, artificial intelligence, machine learning, cloud computing, digital transformation" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/" />
+        <meta property="og:title" content="Zion Tech Group - AI & IT Solutions for the Future" />
+        <meta property="og:description" content="Leading provider of AI, cloud services, cybersecurity, and 5G solutions. Transform your business with cutting-edge technology." />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://ziontechgroup.com/" />
+        <meta property="twitter:title" content="Zion Tech Group - AI & IT Solutions for the Future" />
+        <meta property="twitter:description" content="Leading provider of AI, cloud services, cybersecurity, and 5G solutions. Transform your business with cutting-edge technology." />
+        <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://ziontechgroup.com/" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/logo.png",
+            "description": "Leading provider of AI, cloud services, cybersecurity, and 5G solutions. Transform your business with cutting-edge technology.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "364 E Main St STE 1008",
+              "addressLocality": "Middletown",
+              "addressRegion": "DE",
+              "postalCode": "19709",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-302-464-0950",
+              "contactType": "customer service",
+              "email": "contact@ziontechgroup.com"
+            },
+            "sameAs": [
+              "https://twitter.com/ziontechgroup",
+              "https://linkedin.com/company/ziontechgroup"
+            ],
+            "foundingDate": "2020",
+            "numberOfEmployees": "150+",
+            "areaServed": "Worldwide"
+          })}
+        </script>
       </Helmet>
 
       <Navigation />

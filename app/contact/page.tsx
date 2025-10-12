@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Mail, Phone, MapPin, Send, MessageCircle, CheckCircle } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, MessageCircle, CheckCircle, Clock } from 'lucide-react'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -42,13 +42,13 @@ export default function ContactPage() {
     {
       icon: <Phone className="w-6 h-6 text-purple-400" />,
       title: 'Phone',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9am-6pm PST'
+      details: '+1 (302) 464-0950',
+      description: 'Mon-Fri 9am-6pm EST'
     },
     {
       icon: <MapPin className="w-6 h-6 text-green-400" />,
       title: 'Office',
-      details: 'San Francisco, CA',
+      details: '364 E Main St STE 1008, Middletown, DE 19709',
       description: 'Visit our headquarters'
     }
   ]
