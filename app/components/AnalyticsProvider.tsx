@@ -1,17 +1,14 @@
-import { createContext, useContext, useEffect} from 'react';
 'use client';
 
-<<<<<<< HEAD
-=======
-import { createContext, useContext, useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any />) => void;
+  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
   trackPageView: (pageName: string) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
 export function useAnalytics() {
   const context = useContext(AnalyticsContext);
   if (!context) {
@@ -24,13 +21,12 @@ interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
 
-export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   useEffect(() => {
     // Initialize analytics
     // Analytics initialization logic here
   }, []);
 
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown />) => {
+  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
     }
@@ -45,12 +41,13 @@ export default function AnalyticsProvider({ children }: AnalyticsProviderProps) 
     }
   };
 
-  const value: const AnalyticsContextType = {
+  const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
   };
+
   return (
-    <AnalyticsContext.Provider const value = {value} />
+    <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );

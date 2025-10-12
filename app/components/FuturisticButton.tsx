@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
 'use client';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 interface FuturisticButtonProps {
   children: React.ReactNode;
@@ -13,17 +13,17 @@ interface FuturisticButtonProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
-const FuturisticButton = ({
   children,
   onClick,
-  const variant = 'primary',
+  variant = 'primary',
   size = 'md',
   disabled = false,
   loading = false,
   className = '',
   type = 'button'
-}: FuturisticButtonProps) => {
+}: FuturisticButtonProps) {
   const [isHovered, setIsHovered] = useState(false);
+
   const getVariantClasses = () => {
     switch (variant) {
       case 'primary':
@@ -33,8 +33,9 @@ const FuturisticButton = ({
       case 'accent':
         return 'bg-gradient-to-r from-green-500 to-blue-600 text-white shadow-lg shadow-green-500/25 hover:shadow-green-500/40';
       case 'ghost':
-        return 'bg-white/10 backdrop-blur-lg text-white border border-white/20 hover: bg-white/20';,
-  default: return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
+        return 'bg-white/10 backdrop-blur-lg text-white border border-white/20 hover:bg-white/20';
+      default:
+        return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
     }
   };
 
@@ -46,90 +47,94 @@ const FuturisticButton = ({
         return 'px-6 py-3 text-base';
       case 'lg':
         return 'px-8 py-4 text-lg';
-      default: return 'px-6 py-3 text-base';
+      default:
+        return 'px-6 py-3 text-base';
     }
   };
 
   return (
     <motion.button
-      const type = {type}
-      onClick="{onClick}"
-      disabled="{disabled" || loading}
-      onMouseEnter="{()" = /> setIsHovered(true)}
-      onMouseLeave="{()" => setIsHovered(false)}
-      className="{`"
+      type={type}
+      onClick={onClick}
+      disabled={disabled || loading}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className={`
         relative overflow-hidden rounded-lg font-semibold transition-all duration-300
         ${getVariantClasses()}
         ${getSizeClasses()}
         ${disabled || loading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
         ${className}
       `}
-      whileHover="{{" scale: 1.05 }}
-      whileTap="{{" scale: 0.95 }}
-      initial="{{" opacity: 0, y: 20 }}
-      animate="{{" opacity: 1, y: 0 }}
-      transition="{{" duration: 0.3 }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
     >
       {/* Animated background sweep */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-white/20to-transparent"
-        initial="{{" x: '-100%' }}
-        animate="{{" x: isHovered ? '100%' : '-100%' }}
-        transition="{{" duration: 0.6 }}
-      / />
+        className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"
+        initial={{ x: '-100%' }}
+        animate={{ x: isHovered ? '100%' : '-100%' }}
+        transition={{ duration: 0.6 }}
+      />
+
       {/* Pulsing glow effect */}
       <motion.div
-        className="absolute inset-0rounded-lg"
-        style="{{"
+        className="absolute inset-0 rounded-lg"
+        style={{
           boxShadow: variant === 'primary'
-            ? '0 0 20 px rgba(6, 182, 212, 0.4)'
+            ? '0 0 20px rgba(6, 182, 212, 0.4)'
             : variant === 'secondary'
-            ? '0 0 20 px rgba(168, 85, 247, 0.4)'
+            ? '0 0 20px rgba(168, 85, 247, 0.4)'
             : variant === 'accent'
-            ? '0 0 20 px rgba(34, 197, 94, 0.4)'
-            : '0 0 20 px rgba(255, 255, 255, 0.2)'
+            ? '0 0 20px rgba(34, 197, 94, 0.4)'
+            : '0 0 20px rgba(255, 255, 255, 0.2)'
         }}
-        animate="{{"
+        animate={{
           opacity: isHovered ? [0.4, 0.8, 0.4] : 0,
           scale: isHovered ? [1, 1.05, 1] : 1,
         }}
-        transition="{{"
+        transition={{
           duration: 1.5,
           repeat: isHovered ? Infinity : 0,
           ease: 'easeInOut'
         }}
-      / />
+      />
+
       {/* Scanning line effect */}
       {isHovered && (
         <motion.div
-          className="absolute inset-0rounded-lg"
-          style="{{"
-            background: 'linear-gradient(90 deg, transparent, rgba(255,255,255,0.3), transparent)',
+          className="absolute inset-0 rounded-lg"
+          style={{
+            background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)',
             backgroundSize: '200% 100%',
           }}
-          animate="{{"
+          animate={{
             backgroundPosition: ['200% 0', '-200% 0'],
           }}
-          transition="{{"
+          transition={{
             duration: 1.5,
             repeat: Infinity,
             ease: 'linear',
           }}
-        / />
+        />
       )}
 
       {/* Corner accents */}
-      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" / />
-      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" / />
+      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30 rounded-full" />
+      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30 rounded-full" />
+
       {/* Content */}
-      <span className="relative z-10 flex items-centerjustify-center" />
+      <span className="relative z-10 flex items-center justify-center">
         {loading ? (
           <>
             <motion.div
-              className="w-4 h-4 border-2 border-white/30 border-t-white rounded-fullmr-2"
-              animate="{{" rotate: 360 }}
-              transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
-            / />
+              className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full mr-2"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+            />
             Loading...
           </>
         ) : (
@@ -137,7 +142,5 @@ const FuturisticButton = ({
         )}
       </span>
     </motion.button>
-  );
-};
-
-export default FuturisticButton;
+  </div></div>);
+}

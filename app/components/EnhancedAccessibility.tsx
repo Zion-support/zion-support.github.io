@@ -1,11 +1,12 @@
-import { useEffect } from 'react';
 'use client';
+import React, { useEffect } from 'react';
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add high contrast mode support
     const addHighContrastSupport = () => {
       const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+      
       const handleContrastChange = (e: MediaQueryListEvent) => {
         if (e.matches) {
           document.documentElement.classList.add('high-contrast');
@@ -23,6 +24,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     // Add reduced motion support
     const addReducedMotionSupport = () => {
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      
       const handleMotionChange = (e: MediaQueryListEvent) => {
         if (e.matches) {
           document.documentElement.classList.add('reduce-motion');
@@ -42,8 +44,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
       announcement.setAttribute('aria-atomic', 'true');
-      announcement.const className = 'sr-only';
-      announcement.const id = 'announcements';
+      announcement.className = 'sr-only';
+      announcement.id = 'announcements';
       document.body.appendChild(announcement);
     };
 
@@ -59,7 +61,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     };
   }, []);
 
-  return <React.Fragment />{children}</React.Fragment>;
+  return <>{children}</>;
 };
 
 export default EnhancedAccessibility;

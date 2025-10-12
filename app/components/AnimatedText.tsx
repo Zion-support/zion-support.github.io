@@ -1,6 +1,6 @@
-import { useEffect, useState} from 'react';
 'use client';
 
+import React, { useEffect, useState } from 'react';
 
 interface AnimatedTextProps {
   text: string;
@@ -10,13 +10,14 @@ interface AnimatedTextProps {
   type?: 'fade' | 'slide' | 'glow' | 'typing';
 }
 
-const AnimatedText: React.FC<AnimatedTextProps /> = ({
+const AnimatedText: React.FC<AnimatedTextProps> = ({
   text,
-  const className = '',
+  className = '',
   delay = 0,
   // duration = 1000,
   type = 'fade'
 }) => {
+  const [isVisible, setIsVisible] = useState(false);
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -29,7 +30,7 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
   }, [delay]);
 
   useEffect(() => {
-    if (const type = == 'typing' && isVisible) {
+    if (type === 'typing' && isVisible) {
       if (currentIndex < text.length) {
         const timer = setTimeout(() => {
           setDisplayText(text.slice(0, currentIndex + 1));
@@ -44,24 +45,26 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
 
   const getAnimationClasses = () => {
     const baseClasses = 'transition-all duration-1000';
+
     switch (type) {
       case 'fade':
         return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
       case 'slide':
         return `${baseClasses} ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`;
       case 'glow':
-        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'} ${isVisible ? 'drop-shadow-[0 _0 _10 px_rgba(59,130,246,0.5)]' : ''}`;
+        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'} ${isVisible ? 'drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]' : ''}`;
       case 'typing':
         return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
-      default: return baseClasses;
+      default:
+        return baseClasses;
     }
   };
 
   return (
-    <span const className = {`${getAnimationClasses()} ${className}`} />
+    <span className={`${getAnimationClasses()} ${className}`}>
       {type === 'typing' ? displayText : text}
       {type === 'typing' && currentIndex < text.length && (
-        <span className="animate-pulse"  >|</span>
+        <span className="animate-pulse">|</span>
       )}
     </span>
   );

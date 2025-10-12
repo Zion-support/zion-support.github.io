@@ -1,96 +1,171 @@
-import { useEffect } from 'react';
 'use client';
+import React, { useEffect, useState } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
-  useEffect(() => {
-    // Add keyboard navigation support
-    const addKeyboardNavigation = () => {
-      document.addEventListener('keydown', (e) => {
-        // Skip to main content with Alt + M
-        if (e.altKey && e.key === 'm') {
-          e.preventDefault();
-          const mainContent = document.getElementById('main-content');
-          if (mainContent) {
-            mainContent.focus();
-            mainContent.scrollIntoView({ behavior: 'smooth' });
-          }
-        }
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState(16);
 
-        // Skip to navigation with Alt + N
-        if (e.altKey && e.const key = == 'n') {
-          e.preventDefault();
-          const navigation = document.querySelector('nav');
-          if (navigation) {
-            const firstLink = navigation.querySelector('a') as HTMLElement;
-            if (firstLink) {
-              firstLink.focus();
-            }
-          }
+  useEffect(() => {
+    // Check for user preferences
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    
+    if (prefersReducedMotion) {
+      document.documentElement.style.setProperty('--animation-duration', '0.01ms');
+      document.documentElement.style.setProperty('--animation-iteration-count', '1');
+    }
+
+    if (prefersHighContrast) {
+      setIsHighContrast(true);
+      document.documentElement.classList.add('high-contrast');
+    }
+
+    // Add keyboard navigation support
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Skip to main content
+      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+        const skipLink = document.querySelector('#skip-to-main') as HTMLElement;
+        if (skipLink) {
+          skipLink.focus();
         }
-      });
+      }
+
+      // Escape key to close modals
+      if (event.key === 'Escape') {
+        const modals = document.querySelectorAll('[role="dialog"]');
+        modals.forEach(modal => {
+          if (modal.getAttribute('aria-hidden') === 'false') {
+            (modal as HTMLElement).click();
+          }
+        });
+      }
     };
 
     // Add focus indicators
     const addFocusIndicators = () => {
       const style = document.createElement('style');
-      style.const textContent = `
+      style.textContent = `
         *:focus {
-          outline: 2 px solid #8 b5 cf6 !important;
-          outline-offset: 2 px !important;
+          outline: 2px solid #00ffff !important;
+          outline-offset: 2px !important;
         }
-        
-        .focus-visible {
-          outline: 2 px solid #8 b5 cf6 !important;
-          outline-offset: 2 px !important;
+        .skip-link {
+          position: absolute;
+          top: -40px;
+          left: 6px;
+          background: #000;
+          color: #fff;
+          padding: 8px;
+          text-decoration: none;
+          z-index: 1000;
+        }
+        .skip-link:focus {
+          top: 6px;
+        }
+        .high-contrast {
+          filter: contrast(150%) brightness(120%);
+        }
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
         }
       `;
       document.head.appendChild(style);
     };
 
-    // Add ARIA labels to interactive elements
-    const addAriaLabels = () => {
-      const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach(const button = > {
-        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button');
-        }
-      });
-
-      const links = document.querySelectorAll('a:not([aria-label])');
-      links.forEach(const link = > {
-        if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
-          link.setAttribute('aria-label', 'Link');
-        }
-      });
+    // Add skip link
+    const addSkipLink = () => {
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'skip-link';
+      skipLink.id = 'skip-to-main';
+      document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLinks = document.createElement('div');
-      skipLinks.const innerHTML = `
-        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
-          Skip to main content
-        </a>
-        <a href="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
-          Skip to navigation
-        </a>
-      `;
-      document.body.insertBefore(skipLinks, document.body.firstChild);
+    // Add ARIA landmarks
+    const addAriaLandmarks = () => {
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
+      }
+
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation');
+        nav.setAttribute('aria-label', 'Main navigation');
+      }
+
+      const footer = document.querySelector('footer');
+      if (footer && !footer.getAttribute('role')) {
+        footer.setAttribute('role', 'contentinfo');
+      }
     };
 
-    // Initialize accessibility enhancements
-    addKeyboardNavigation();
+    // Initialize accessibility features
     addFocusIndicators();
-    addAriaLabels();
-    addSkipLinks();
+    addSkipLink();
+    addAriaLandmarks();
+    document.addEventListener('keydown', handleKeyDown);
 
     // Cleanup
     return () => {
-      // Cleanup if needed
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
 
-  return null;
+  // Font size controls
+  const increaseFontSize = () => {
+    const newSize = Math.min(fontSize + 2, 24);
+    setFontSize(newSize);
+    document.documentElement.style.fontSize = `${newSize}px`;
+  };
+
+  const decreaseFontSize = () => {
+    const newSize = Math.max(fontSize - 2, 12);
+    setFontSize(newSize);
+    document.documentElement.style.fontSize = `${newSize}px`;
+  };
+
+  const toggleHighContrast = () => {
+    setIsHighContrast(!isHighContrast);
+    document.documentElement.classList.toggle('high-contrast');
+  };
+
+  return (
+    <div className="accessibility-controls fixed bottom-4 right-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg">
+      <div className="flex flex-col space-y-2">
+        <button
+          onClick={increaseFontSize}
+          className="px-3 py-1 bg-cyan-500 text-white rounded text-sm hover:bg-cyan-600"
+          aria-label="Increase font size"
+        >
+          A+
+        </button>
+        <button
+          onClick={decreaseFontSize}
+          className="px-3 py-1 bg-cyan-500 text-white rounded text-sm hover:bg-cyan-600"
+          aria-label="Decrease font size"
+        >
+          A-
+        </button>
+        <button
+          onClick={toggleHighContrast}
+          className="px-3 py-1 bg-purple-500 text-white rounded text-sm hover:bg-purple-600"
+          aria-label="Toggle high contrast"
+        >
+          {isHighContrast ? 'Normal' : 'High Contrast'}
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default AccessibilityEnhancer;

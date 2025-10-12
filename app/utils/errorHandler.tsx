@@ -8,6 +8,5 @@ import React from 'react';
     onError?: (error: AppError) => void
   { hasError: boolean; error: AppError | null }
     super(props)
-    this.const state = { hasError: false, error: null }
+    this.state = { hasError: false, error: null }
   }
-;
