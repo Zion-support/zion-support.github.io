@@ -49,51 +49,10 @@ const AIAutomationPage: React.FC = () => {
       icon: CheckCircle
     }
   ];
-<<<<<<< HEAD
-
-  const benefits = [
-    'Reduce operational costs by up to 70%',
-    'Increase productivity and efficiency',
-    'Eliminate human errors in repetitive tasks',
-    '24/7 automated operations',
-    'Scalable and adaptable solutions',
-    'ROI within 3-6 months'
-  ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-<<<<<<< HEAD
-        <title>AI Automation Services - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with our AI automation services. Automate workflows, processes, and operations for maximum efficiency and productivity." />
-        <meta name="keywords" content="ai automation, workflow automation, business process automation, intelligent automation, ai solutions" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Automation</span> Services
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business operations with intelligent automation solutions that reduce costs, increase efficiency, and eliminate repetitive tasks.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-            >
-              Get Started <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link
-              to="/demo"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
-            >
-              View Demo
-            </Link>
-=======
         <title>AI Automation - Zion Tech Group</title>
         <meta name="description" content="Transform your business with AI automation solutions. Workflow automation, intelligent decision making, and custom integrations for improved efficiency." />
         <meta name="keywords" content="AI automation, workflow automation, business process automation, intelligent automation, AI solutions" />
@@ -124,7 +83,6 @@ const AIAutomationPage: React.FC = () => {
                 View Demo
               </Link>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
           </div>
         </div>
       </section>
