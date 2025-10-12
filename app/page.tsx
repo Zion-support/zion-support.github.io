@@ -1,19 +1,20 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
-=======
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Cloud, Database } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsVisible(true);
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+      setIsLoading(false);
+    }, 100);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   const stats = [
@@ -49,6 +50,19 @@ const HomePage: React.FC = () => {
       color: 'from-green-500 to-emerald-500'
     }
   ];
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 animate-pulse">
+            <Brain className="w-8 h-8 text-white" />
+          </div>
+          <div className="text-white text-xl font-semibold">Loading...</div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>

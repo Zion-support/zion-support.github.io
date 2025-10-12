@@ -1,73 +1,49 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
+'use client';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Props {
-  children: ReactNode
-  fallback?: ReactNode
+  children: ReactNode;
+  fallback?: ReactNode;
 }
 
 interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props)
-    this.state = { hasError: false }
+    super(props);
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    })
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo)
-    }
-
-    // Log error to analytics service in production
-    if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
-      // Send error to analytics service
-      if (window.gtag) {
-        window.gtag('event', 'exception', {
-          description: error.message,
-          fatal: false,
-          custom_map: {
-            error_stack: error.stack,
-            component_stack: errorInfo.componentStack
-          }
-        })
-      }
-    }
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    this.setState({ error, errorInfo });
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
-  }
-
-  handleGoHome = () => {
-    window.location.href = '/'
-  }
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback
+        return this.props.fallback;
       }
 
       return (
-        <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
-          <div className="max-w-md w-full bg-gray-800 rounded-lg p-8 text-center">
-            <div className="flex justify-center mb-6">
-              <AlertTriangle className="w-16 h-16 text-red-400" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-8 h-8 text-white" />
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4">
@@ -80,56 +56,38 @@ class ErrorBoundary extends Component<Props, State> {
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="bg-gray-700 p-4 rounded text-xs text-gray-300 overflow-auto max-h-40">
-                  <div className="font-mono">
-                    <div className="text-red-400 font-bold">Error:</div>
-                    <div className="mb-2">{this.state.error.message}</div>
-                    <div className="text-red-400 font-bold">Stack:</div>
-                    <div className="whitespace-pre-wrap">{this.state.error.stack}</div>
-                  </div>
-                </div>
+                <summary className="text-red-400 cursor-pointer mb-2">Error Details (Development)</summary>
+                <pre className="text-xs text-gray-400 bg-slate-900/50 p-3 rounded overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
               </details>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3">
               <button
                 onClick={this.handleRetry}
-                className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                className="flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
               >
-                <RefreshCw className="w-4 h-4" />
-                <span>Try Again</span>
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Try Again
               </button>
               
-              <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center space-x-2 bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+              <Link
+                to="/"
+                className="flex items-center justify-center px-4 py-2 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
               >
-                <Home className="w-4 h-4" />
-                <span>Go Home</span>
-              </button>
-            </div>
-
-            <div className="mt-6 text-sm text-gray-400">
-              <p>If this problem continues, please contact our support team:</p>
-              <p className="mt-2">
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
-                  className="text-cyan-400 hover:text-cyan-300"
-                >
-                  kleber@ziontechgroup.com
-                </a>
-              </p>
+                <Home className="w-4 h-4 mr-2" />
+                Go Home
+              </Link>
             </div>
           </div>
         </div>
-      )
+      );
     }
 
-    return this.props.children
+    return this.props.children;
   }
 }
 
-export default ErrorBoundary
+export default ErrorBoundary;
