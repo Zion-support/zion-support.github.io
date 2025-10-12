@@ -41,14 +41,14 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
     ];
 
     // Create particles
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 100; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2 + 1,
-        opacity: Math.random() * 0.5 + 0.2,
+        vx: (Math.random() - 0.5) * 1.5,
+        vy: (Math.random() - 0.5) * 1.5,
+        size: Math.random() * 3 + 1,
+        opacity: Math.random() * 0.8 + 0.2,
         color: colors[Math.floor(Math.random() * colors.length)]
       });
     }
@@ -80,12 +80,12 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
             const dy = particle.y - otherParticle.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
 
-            if (distance < 100) {
+            if (distance < 150) {
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.strokeStyle = particle.color + Math.floor((1 - distance / 100) * 50).toString(16).padStart(2, '0');
-              ctx.lineWidth = 0.5;
+              ctx.strokeStyle = particle.color + Math.floor((1 - distance / 150) * 80).toString(16).padStart(2, '0');
+              ctx.lineWidth = 1;
               ctx.stroke();
             }
           }

@@ -89,7 +89,7 @@ export default function FuturisticCard({
     <motion.div
       ref={cardRef}
       className={`
-        relative rounded-2xl p-6 transition-all duration-300 cursor-pointer
+        relative rounded-2xl p-6 transition-all duration-500 cursor-pointer overflow-hidden
         ${getVariantClasses()}
         ${getGlowEffect()}
         ${getNeonEffect()}
@@ -100,25 +100,64 @@ export default function FuturisticCard({
       onMouseLeave={() => setIsHovered(false)}
       onMouseMove={handleMouseMove}
       onClick={onClick}
-      whileHover={{ y: -5 }}
-      whileTap={{ scale: 0.98 }}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      whileHover={{ 
+        y: -8,
+        scale: 1.02,
+        rotateY: 5,
+        transition: { duration: 0.3, ease: "easeOut" }
+      }}
+      whileTap={{ scale: 0.95 }}
+      initial={{ opacity: 0, y: 30, rotateX: -10 }}
+      animate={{ opacity: 1, y: 0, rotateX: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       {/* Animated border */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      <motion.div 
+        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isHovered ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+      />
+      
+      {/* Animated background pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-purple-500/10 animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]" />
+      </div>
       
       {/* Mouse follow effect */}
       {isHovered && (
-        <div
-          className="absolute pointer-events-none rounded-full bg-gradient-to-r from-cyan-400/20 to-purple-400/20 blur-xl"
+        <motion.div
+          className="absolute pointer-events-none rounded-full bg-gradient-to-r from-cyan-400/30 to-purple-400/30 blur-xl"
           style={{
             left: mousePosition.x - 50,
             top: mousePosition.y - 50,
             width: 100,
             height: 100,
             transform: 'translate(-50%, -50%)',
+          }}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0, opacity: 0 }}
+          transition={{ duration: 0.2 }}
+        />
+      )}
+
+      {/* Scanning line effect */}
+      {isHovered && (
+        <motion.div
+          className="absolute inset-0 rounded-2xl"
+          style={{
+            background: 'linear-gradient(90deg, transparent, rgba(6,182,212,0.3), transparent)',
+            backgroundSize: '200% 100%',
+          }}
+          animate={{
+            backgroundPosition: ['200% 0', '-200% 0'],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: 'linear',
           }}
         />
       )}

@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Shield, 
-  Lock, 
+  Building2, 
+  Wifi, 
   BarChart3, 
   Zap, 
   CheckCircle, 
@@ -15,7 +15,7 @@ import {
   Target, 
   TrendingUp, 
   Clock, 
-  AlertTriangle,
+  Shield,
   Globe,
   Smartphone,
   Server,
@@ -29,135 +29,140 @@ import {
   Settings,
   Database,
   Network,
-  Key
+  Key,
+  Car,
+  Lightbulb,
+  Trash2,
+  Droplets,
+  Wind
 } from 'lucide-react';
 
-export default function AICybersecuritySuitePage() {
+export default function AISmartCitySolutionsPage() {
   const [selectedPlan, setSelectedPlan] = useState('pro');
 
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: 'AI Threat Detection',
-      description: 'Advanced machine learning algorithms detect and prevent cyber threats in real-time',
-      benefits: ['Real-time monitoring', 'Behavioral analysis', 'Anomaly detection']
+      title: 'AI-Powered Analytics',
+      description: 'Advanced AI algorithms analyze city data to optimize operations and services',
+      benefits: ['Real-time insights', 'Predictive analytics', 'Automated decision making']
     },
     {
-      icon: <Shield className="w-8 h-8 text-green-400" />,
-      title: 'Zero Trust Security',
-      description: 'Implement zero trust architecture with continuous verification and access control',
-      benefits: ['Identity verification', 'Device trust scoring', 'Least privilege access']
+      icon: <Wifi className="w-8 h-8 text-green-400" />,
+      title: '5G Infrastructure',
+      description: 'Ultra-fast 5G networks enable real-time communication and data processing',
+      benefits: ['Low latency', 'High bandwidth', 'Massive IoT connectivity']
     },
     {
-      icon: <Lock className="w-8 h-8 text-purple-400" />,
-      title: 'Advanced Encryption',
-      description: 'End-to-end encryption with quantum-resistant algorithms for maximum security',
-      benefits: ['AES-256 encryption', 'Quantum-safe protocols', 'Key management']
+      icon: <Activity className="w-8 h-8 text-purple-400" />,
+      title: 'IoT Integration',
+      description: 'Connect and manage thousands of sensors and devices across the city',
+      benefits: ['Sensor networks', 'Device management', 'Data collection']
     },
     {
-      icon: <Activity className="w-8 h-8 text-orange-400" />,
-      title: 'Security Analytics',
-      description: 'Comprehensive security analytics and reporting with AI-powered insights',
-      benefits: ['Threat intelligence', 'Risk assessment', 'Compliance reporting']
+      icon: <BarChart3 className="w-8 h-8 text-orange-400" />,
+      title: 'Smart Analytics Dashboard',
+      description: 'Comprehensive dashboard for monitoring and managing city operations',
+      benefits: ['Real-time monitoring', 'Performance metrics', 'Trend analysis']
     },
     {
       icon: <Zap className="w-8 h-8 text-red-400" />,
-      title: 'Automated Response',
-      description: 'Automatically respond to security incidents with AI-driven remediation',
-      benefits: ['Incident response', 'Threat containment', 'Recovery automation']
+      title: 'Automated Systems',
+      description: 'Automate city services and infrastructure for improved efficiency',
+      benefits: ['Traffic management', 'Energy optimization', 'Waste management']
     },
     {
-      icon: <Eye className="w-8 h-8 text-yellow-400" />,
-      title: 'Continuous Monitoring',
-      description: '24/7 monitoring of your entire infrastructure with AI-powered surveillance',
-      benefits: ['Network monitoring', 'Endpoint protection', 'Cloud security']
+      icon: <Shield className="w-8 h-8 text-yellow-400" />,
+      title: 'Cybersecurity',
+      description: 'Protect critical city infrastructure with advanced security measures',
+      benefits: ['Network security', 'Data protection', 'Threat monitoring']
     }
   ];
 
-  const securityServices = [
+  const smartCityModules = [
     {
-      service: 'Penetration Testing',
-      icon: <Target className="w-6 h-6 text-cyan-400" />,
-      description: 'Comprehensive security testing to identify vulnerabilities',
-      benefits: ['Vulnerability assessment', 'Exploit testing', 'Security recommendations']
+      module: 'Smart Traffic Management',
+      icon: <Car className="w-6 h-6 text-cyan-400" />,
+      description: 'AI-powered traffic optimization and congestion management',
+      benefits: ['Traffic flow optimization', 'Accident prevention', 'Emission reduction']
     },
     {
-      service: 'Security Audits',
-      icon: <FileText className="w-6 h-6 text-green-400" />,
-      description: 'Thorough security audits to ensure compliance and best practices',
-      benefits: ['Compliance checking', 'Policy review', 'Risk evaluation']
+      module: 'Smart Energy Grid',
+      icon: <Lightbulb className="w-6 h-6 text-green-400" />,
+      description: 'Intelligent energy distribution and consumption management',
+      benefits: ['Load balancing', 'Renewable integration', 'Cost optimization']
     },
     {
-      service: 'Incident Response',
-      icon: <AlertTriangle className="w-6 h-6 text-purple-400" />,
-      description: 'Rapid response to security incidents and data breaches',
-      benefits: ['24/7 support', 'Forensic analysis', 'Recovery planning']
+      module: 'Smart Waste Management',
+      icon: <Trash2 className="w-6 h-6 text-purple-400" />,
+      description: 'Automated waste collection and recycling optimization',
+      benefits: ['Route optimization', 'Fill level monitoring', 'Recycling tracking']
     },
     {
-      service: 'Security Training',
-      icon: <Users className="w-6 h-6 text-orange-400" />,
-      description: 'Comprehensive security training for your team',
-      benefits: ['Phishing simulation', 'Security awareness', 'Best practices']
+      module: 'Smart Water Management',
+      icon: <Droplets className="w-6 h-6 text-orange-400" />,
+      description: 'Intelligent water distribution and quality monitoring',
+      benefits: ['Leak detection', 'Quality monitoring', 'Consumption tracking']
     },
     {
-      service: 'Compliance Management',
-      icon: <CheckCircle className="w-6 h-6 text-red-400" />,
-      description: 'Ensure compliance with industry standards and regulations',
-      benefits: ['GDPR compliance', 'SOC 2 certification', 'ISO 27001']
+      module: 'Smart Air Quality',
+      icon: <Wind className="w-6 h-6 text-red-400" />,
+      description: 'Real-time air quality monitoring and pollution control',
+      benefits: ['Pollution tracking', 'Health alerts', 'Emission monitoring']
     },
     {
-      service: 'Cloud Security',
-      icon: <Cloud className="w-6 h-6 text-yellow-400" />,
-      description: 'Secure your cloud infrastructure and applications',
-      benefits: ['Cloud monitoring', 'Access control', 'Data protection']
+      module: 'Smart Public Safety',
+      icon: <Shield className="w-6 h-6 text-yellow-400" />,
+      description: 'AI-powered surveillance and emergency response systems',
+      benefits: ['Crime prevention', 'Emergency response', 'Public safety']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Essential',
-      price: '$199',
-      period: '/month',
-      description: 'Perfect for small businesses and startups',
+      name: 'Pilot Program',
+      price: '$50,000',
+      period: '/project',
+      description: 'Perfect for small cities and pilot implementations',
       features: [
-        'Up to 50 users',
-        'Basic threat detection',
-        'Email security',
-        'Firewall protection',
-        'Email support',
-        'Monthly reports'
+        'Up to 1,000 sensors',
+        'Basic AI analytics',
+        'Single module implementation',
+        '6-month support',
+        'Training included',
+        'Basic reporting'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$499',
-      period: '/month',
-      description: 'Ideal for growing businesses and enterprises',
+      name: 'City Implementation',
+      price: '$250,000',
+      period: '/project',
+      description: 'Ideal for medium-sized cities and comprehensive deployments',
       features: [
-        'Up to 500 users',
+        'Up to 10,000 sensors',
         'Advanced AI features',
-        '24/7 monitoring',
-        'Incident response',
-        'Priority support',
-        'Compliance tools',
+        'Multiple modules',
+        '12-month support',
+        'Dedicated team',
+        'Advanced analytics',
         'API access'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$1,299',
-      period: '/month',
-      description: 'For large organizations with complex security needs',
+      name: 'Metropolitan Solution',
+      price: '$1,000,000',
+      period: '/project',
+      description: 'For large metropolitan areas and mega-cities',
       features: [
-        'Unlimited users',
-        'All security features',
-        'Custom AI training',
-        'Dedicated support',
+        'Unlimited sensors',
+        'All AI features',
+        'Complete city integration',
+        '24/7 support',
+        'Custom development',
         'White-label solution',
-        'Advanced analytics',
-        'Custom integrations'
+        'Advanced security'
       ],
       popular: false
     }
@@ -165,69 +170,69 @@ export default function AICybersecuritySuitePage() {
 
   const testimonials = [
     {
-      name: 'David Martinez',
-      company: 'Financial Services',
-      content: 'The AI Cybersecurity Suite has protected us from 15+ sophisticated attacks this year. The AI threat detection is incredibly accurate and has saved us millions in potential damages.',
+      name: 'Mayor Sarah Williams',
+      company: 'City of Techville',
+      content: 'The AI Smart City Solutions have transformed our city operations. Traffic congestion is down 40%, energy consumption reduced by 25%, and citizen satisfaction has increased significantly.',
       rating: 5,
-      avatar: 'DM'
+      avatar: 'SW'
     },
     {
-      name: 'Sarah Johnson',
-      company: 'Healthcare Provider',
-      content: 'Compliance with HIPAA and other regulations was a nightmare until we implemented this suite. Now we have complete visibility and automated compliance reporting.',
-      rating: 5,
-      avatar: 'SJ'
-    },
-    {
-      name: 'Michael Chen',
-      company: 'E-commerce Platform',
-      content: 'The automated incident response has reduced our mean time to resolution by 80%. Our security team can now focus on strategic initiatives instead of firefighting.',
+      name: 'Dr. Michael Chen',
+      company: 'Urban Planning Director',
+      content: 'The predictive analytics help us make data-driven decisions for city planning. We can now anticipate infrastructure needs and optimize resource allocation like never before.',
       rating: 5,
       avatar: 'MC'
+    },
+    {
+      name: 'Lisa Rodriguez',
+      company: 'City Manager',
+      content: 'The automated systems have reduced operational costs by 30% while improving service quality. Our citizens are happier and our city is more sustainable.',
+      rating: 5,
+      avatar: 'LR'
     }
   ];
 
   const stats = [
-    { number: '99.9%', label: 'Threat Detection Accuracy', icon: <Target className="w-6 h-6" /> },
-    { number: '80%', label: 'Faster Incident Response', icon: <Zap className="w-6 h-6" /> },
-    { number: '100%', label: 'Compliance Coverage', icon: <CheckCircle className="w-6 h-6" /> },
-    { number: '24/7', label: 'Security Monitoring', icon: <Eye className="w-6 h-6" /> }
+    { number: '40%', label: 'Reduction in Traffic Congestion', icon: <Car className="w-6 h-6" /> },
+    { number: '25%', label: 'Energy Consumption Reduction', icon: <Lightbulb className="w-6 h-6" /> },
+    { number: '30%', label: 'Operational Cost Savings', icon: <DollarSign className="w-6 h-6" /> },
+    { number: '95%', label: 'Citizen Satisfaction Rate', icon: <Users className="w-6 h-6" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title>AI Cybersecurity Suite - Zion Tech Group | Advanced Security Solutions</title>
-        <meta name="description" content="Protect your business with our AI-powered Cybersecurity Suite. Advanced threat detection, zero trust security, and automated response. 99.9% threat detection accuracy." />
-        <meta name="keywords" content="AI cybersecurity, threat detection, zero trust security, security automation, Zion Tech Group" />
+        <title>AI Smart City Solutions - Zion Tech Group | Intelligent Urban Infrastructure</title>
+        <meta name="description" content="Transform your city with our AI-powered Smart City Solutions. Reduce traffic by 40%, save 25% energy, and improve citizen satisfaction with intelligent urban infrastructure." />
+        <meta name="keywords" content="AI smart city, smart city solutions, urban infrastructure, IoT, 5G, Zion Tech Group" />
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Cybersecurity{' '}
+            AI Smart City{' '}
             <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Suite
+              Solutions
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Protect your business with our AI-powered Cybersecurity Suite. Advanced threat detection, 
-            zero trust security, and automated response with 99.9% accuracy.
+            Transform your city with our AI-powered Smart City Solutions. Reduce traffic by 40%, 
+            save 25% energy, and improve citizen satisfaction with intelligent urban infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
-              Get Security Assessment
+              Get City Assessment
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link 
-              to="/it-services" 
+              to="/5g-implementation" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
-              View All IT Services
+              View 5G Services
             </Link>
           </div>
         </div>
@@ -252,10 +257,10 @@ export default function AICybersecuritySuitePage() {
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Advanced Security Features</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Advanced Smart City Features</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Our AI Cybersecurity Suite provides comprehensive protection with cutting-edge 
-              artificial intelligence and machine learning technologies.
+              Our AI Smart City Solutions provide comprehensive urban infrastructure management 
+              with cutting-edge artificial intelligence and IoT technologies.
             </p>
           </div>
           
@@ -282,25 +287,25 @@ export default function AICybersecuritySuitePage() {
           </div>
         </section>
 
-        {/* Security Services Section */}
+        {/* Smart City Modules Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Comprehensive Security Services</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Smart City Modules</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Complete security solutions to protect your business from all angles.
+              Comprehensive modules to transform every aspect of urban life.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {securityServices.map((service, index) => (
+            {smartCityModules.map((module, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
                 <div className="flex items-center mb-4">
-                  {service.icon}
-                  <h3 className="text-lg font-semibold text-white ml-3">{service.service}</h3>
+                  {module.icon}
+                  <h3 className="text-lg font-semibold text-white ml-3">{module.module}</h3>
                 </div>
-                <p className="text-gray-300 mb-4">{service.description}</p>
+                <p className="text-gray-300 mb-4">{module.description}</p>
                 <div className="space-y-1">
-                  {service.benefits.map((benefit, benefitIndex) => (
+                  {module.benefits.map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className="text-sm text-gray-400">
                       • {benefit}
                     </div>
@@ -314,9 +319,9 @@ export default function AICybersecuritySuitePage() {
         {/* Pricing Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Choose Your Security Plan</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Choose Your Implementation</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Flexible pricing plans designed to provide the right level of security for your business.
+              Flexible implementation options designed for cities of all sizes.
             </p>
           </div>
           
@@ -371,9 +376,9 @@ export default function AICybersecuritySuitePage() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xl mb-16">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">What Our Customers Say</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">What City Leaders Say</h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Join thousands of satisfied customers who trust us with their security.
+                Join cities worldwide that have transformed their urban infrastructure.
               </p>
             </div>
             
@@ -405,11 +410,11 @@ export default function AICybersecuritySuitePage() {
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 border border-cyan-500/30">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Secure Your Business?
+              Ready to Transform Your City?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get a free security assessment and see how our AI Cybersecurity Suite 
-              can protect your business from evolving threats.
+              Get a free city assessment and see how our AI Smart City Solutions 
+              can revolutionize your urban infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -417,7 +422,7 @@ export default function AICybersecuritySuitePage() {
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center"
               >
                 Get Free Assessment
-                <Shield className="w-5 h-5 ml-2" />
+                <Building2 className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/about"

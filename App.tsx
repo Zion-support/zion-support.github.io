@@ -52,13 +52,18 @@ const AIClimateSolutionsProPage = React.lazy(() => import('./app/ai-climate-solu
 // Additional AI Services Pages
 const AIMeetingAssistantPage = React.lazy(() => import('./app/ai-meeting-assistant/page'))
 const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'))
+const AICRMAssistantPage = React.lazy(() => import('./app/ai-crm-assistant/page'))
+const AISocialMediaManagerPage = React.lazy(() => import('./app/ai-social-media-manager/page'))
+const AIEmailMarketingAutomationPage = React.lazy(() => import('./app/ai-email-marketing-automation/page'))
 
 // Additional IT Services Pages
 const BlockchainPage = React.lazy(() => import('./app/blockchain/page'))
 const QuantumComputingSolutionsPage = React.lazy(() => import('./app/quantum-computing-solutions/page'))
+const AICybersecuritySuitePage = React.lazy(() => import('./app/ai-cybersecurity-suite/page'))
 
 // Additional 5G Services Pages
 const FiveGDataAnalyticsPage = React.lazy(() => import('./app/5g-data-analytics/page'))
+const AISmartCitySolutionsPage = React.lazy(() => import('./app/ai-smart-city-solutions/page'))
 
 // Legal and Support Pages
 const PrivacyPage = React.lazy(() => import('./app/privacy/page'))
@@ -132,13 +137,18 @@ function App() {
                 {/* Additional AI Services Routes */}
                 <Route path="/ai-meeting-assistant" element={<AIMeetingAssistantPage />} />
                 <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
+                <Route path="/ai-crm-assistant" element={<AICRMAssistantPage />} />
+                <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
+                <Route path="/ai-email-marketing-automation" element={<AIEmailMarketingAutomationPage />} />
                 
                 {/* Additional IT Services Routes */}
                 <Route path="/blockchain" element={<BlockchainPage />} />
                 <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
+                <Route path="/ai-cybersecurity-suite" element={<AICybersecuritySuitePage />} />
                 
                 {/* Additional 5G Services Routes */}
                 <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
+                <Route path="/ai-smart-city-solutions" element={<AISmartCitySolutionsPage />} />
                 
                 {/* Legal and Support Routes */}
                 <Route path="/privacy" element={<PrivacyPage />} />

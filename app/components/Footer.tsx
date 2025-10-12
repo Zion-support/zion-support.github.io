@@ -10,7 +10,7 @@ export default function Footer() {
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
     { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
+    { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
     { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
     { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
     { name: 'AI Automation Suite', path: '/ai-automation' },
@@ -26,6 +26,7 @@ export default function Footer() {
     { name: 'Data Analytics', path: '/data-analytics' },
     { name: 'Cloud Services', path: '/cloud-services' },
     { name: 'Cybersecurity', path: '/cybersecurity' },
+    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
     { name: 'Blockchain Solutions', path: '/blockchain' },
     { name: 'Quantum Computing', path: '/quantum-computing-solutions' }
   ];
@@ -50,7 +51,8 @@ export default function Footer() {
     { name: '5G Edge Computing', path: '/5g-edge-computing' },
     { name: '5G Private Networks', path: '/5g-private-networks' },
     { name: '5G Mobile Applications', path: '/5g-mobile-applications' },
-    { name: '5G Data Analytics', path: '/5g-data-analytics' }
+    { name: '5G Data Analytics', path: '/5g-data-analytics' },
+    { name: 'AI Smart City Solutions', path: '/ai-smart-city-solutions' }
   ];
 
   const companyLinks = [

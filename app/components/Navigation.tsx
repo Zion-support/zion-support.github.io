@@ -46,7 +46,7 @@ export default function Navigation() {
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
     { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
+    { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
     { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
     { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
     { name: 'AI Business Intelligence Pro', path: '/ai-business-intelligence-pro' },
@@ -62,7 +62,8 @@ export default function Navigation() {
     { name: 'DevOps', path: '/devops', icon: <Server className="w-4 h-4" /> },
     { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Cloud Services', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> }
+    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite', icon: <Shield className="w-4 h-4" /> }
   ];
 
   const fiveGServices = [
@@ -71,7 +72,8 @@ export default function Navigation() {
     { name: '5G IoT Solutions', path: '/5g-iot-solutions', icon: <Smartphone className="w-4 h-4" /> },
     { name: '5G Edge Computing', path: '/5g-edge-computing', icon: <Cpu className="w-4 h-4" /> },
     { name: '5G Private Networks', path: '/5g-private-networks', icon: <Shield className="w-4 h-4" /> },
-    { name: '5G Mobile Applications', path: '/5g-mobile-applications', icon: <Smartphone className="w-4 h-4" /> }
+    { name: '5G Mobile Applications', path: '/5g-mobile-applications', icon: <Smartphone className="w-4 h-4" /> },
+    { name: 'AI Smart City Solutions', path: '/ai-smart-city-solutions', icon: <Database className="w-4 h-4" /> }
   ];
 
   const microSaasServices = [
