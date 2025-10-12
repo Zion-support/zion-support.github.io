@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -41,30 +42,42 @@ const ItServicesPage: React.FC = () => {
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       category: 'Security'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
 
 const ITServicesPage: React.FC = () => {
   const services = [
     {
       icon: Cloud,
+<<<<<<< HEAD
       title: 'Cloud Migration',
       description: 'Seamlessly migrate your infrastructure to the cloud with AWS, Azure, and Google Cloud expertise.',
       features: ['AWS Migration', 'Azure Migration', 'Google Cloud Setup', 'Hybrid Cloud Solutions'],
       price: 'Starting at $2,500',
       color: 'from-cyan-500 to-blue-500',
       link: '/cloud-migration'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
     },
     {
       icon: Shield,
       title: 'Cybersecurity Solutions',
+<<<<<<< HEAD
       description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
       features: ['Security Audits', 'Penetration Testing', 'Compliance Management', 'Incident Response'],
       price: 'Starting at $1,500',
       color: 'from-red-500 to-orange-500',
       link: '/cybersecurity-solutions'
+=======
+      description: 'Comprehensive security solutions to protect your digital assets',
+      features: ['Security audits', 'Penetration testing', 'Compliance management', '24/7 monitoring'],
+      price: 'Starting at $1,800/month'
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
     },
     {
       icon: Code,
       title: 'Web Development',
+<<<<<<< HEAD
       description: 'Modern, responsive web applications built to scale',
       price: 'Starting at $8,000',
       features: [
@@ -393,6 +406,8 @@ const ITServicesPage: React.FC = () => {
     : itServices.filter(service => service.category === selectedCategory);
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
       description: 'Modern web applications built with cutting-edge technologies',
       features: ['React/Next.js', 'Node.js backend', 'Database design', 'API development'],
       price: 'Starting at $3,000/project'
@@ -426,11 +441,15 @@ const ITServicesPage: React.FC = () => {
     { number: '99%', label: 'Client Satisfaction', icon: Star },
     { number: '24/7', label: 'Support Available', icon: Award },
   ];
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
 
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>IT Services - Zion Tech Group | Comprehensive IT Solutions</title>
         <meta name="description" content="Professional IT services including cloud infrastructure, cybersecurity, web development, mobile apps, and DevOps. Transform your business with our expert IT solutions." />
         <meta name="keywords" content="IT services, cloud computing, cybersecurity, web development, mobile development, DevOps, database management, IT support" />
@@ -549,10 +568,13 @@ const ITServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Let our expert team help you build, secure, and optimize your technology infrastructure 
               for maximum performance and security.
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact"
+<<<<<<< HEAD
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Get Started Today
@@ -571,10 +593,13 @@ const ITServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Services Grid */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -584,6 +609,8 @@ const ITServicesPage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 End-to-end IT services designed to modernize your infrastructure and accelerate your digital transformation
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
               </p>
             </div>
 
@@ -591,6 +618,7 @@ const ITServicesPage: React.FC = () => {
               {services.map((service, index) => (
                 <div 
                   key={index}
+<<<<<<< HEAD
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -608,11 +636,14 @@ const ITServicesPage: React.FC = () => {
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
 
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
@@ -623,12 +654,15 @@ const ITServicesPage: React.FC = () => {
                       Learn More <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                   </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Process Section */}
         <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
           <div className="container mx-auto px-4">
@@ -710,11 +744,16 @@ const ITServicesPage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Let's discuss your IT needs and create a customized solution that drives your business forward.
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact"
+<<<<<<< HEAD
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
                 >
                   Start Your Project
                 </Link>
@@ -733,8 +772,12 @@ const ITServicesPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ItServicesPage;
 <<<<<<< HEAD
 =======
 export default ITServicesPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+export default ITServicesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0

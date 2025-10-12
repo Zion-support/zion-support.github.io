@@ -1,5 +1,6 @@
 'use client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 =======
 import { useEffect } from 'react';
@@ -64,6 +65,8 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB }
     };
   }, []);
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
   return null;
 };
 

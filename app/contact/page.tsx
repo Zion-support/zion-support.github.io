@@ -1,5 +1,6 @@
 'use client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
@@ -12,12 +13,39 @@ const ContactPage: React.FC = () => {
 'use client';
 import { useState } from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { 
+  ArrowRight, Mail, Phone, MapPin, Clock, MessageCircle, Send, CheckCircle, 
+  AlertCircle, User, Building, FileText, Calendar, Zap, Shield, Globe, Award, 
+  Star, TrendingUp, Users, Brain, Cpu, Rocket, Target, Lightbulb, Monitor, 
+  Server, CircuitBoard, Atom, Satellite, Wrench, BarChart, PieChart, LineChart, 
+  Activity, Eye, Search, Filter, Download, Upload, Share, Timer, Battery, Wifi2, 
+  Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, 
+  Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, 
+  Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, 
+  Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, 
+  Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, 
+  Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, 
+  Kiss, Tongue, Package, DollarSign
+} from 'lucide-react';
+
+const ContactPage: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+'use client';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
+<<<<<<< HEAD
     phone: '',
     service: '',
     message: ''
@@ -43,6 +71,8 @@ const ContactPage: React.FC = () => {
 <<<<<<< HEAD
       setIsSubmitting(false);
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -50,6 +80,7 @@ const ContactPage: React.FC = () => {
     });
   };
 
+<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
@@ -59,6 +90,8 @@ const ContactPage: React.FC = () => {
     setTimeout(() => {
       setIsSubmitted(false);
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
       setFormData({
         name: '',
         email: '',
@@ -100,9 +133,12 @@ const ContactPage: React.FC = () => {
     <>
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for a free consultation and project discussion." />
         <meta name="keywords" content="contact zion tech group, AI consultation, IT services contact, business inquiry" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -369,11 +405,15 @@ const ContactPage: React.FC = () => {
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
                   </p>
                 </div>
 
                 <div className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div className="flex items-start">
                     <div className="flex-shrink-0">
@@ -429,10 +469,22 @@ const ContactPage: React.FC = () => {
                       <p className="text-gray-300">Middletown, DE 19709</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
                       <p className="text-sm text-gray-400">United States</p>
+=======
+                  <div className="flex items-start space-x-4">
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
                     </div>
                   </div>
                 </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-6 border border-cyan-500/20">
                   <h3 className="text-lg font-semibold text-white mb-3">Why Choose Us?</h3>
@@ -440,12 +492,15 @@ const ContactPage: React.FC = () => {
                 <div className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6">
                   <h3 className="text-xl font-bold text-white mb-3">Why Choose Us?</h3>
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
                   <ul className="space-y-2 text-gray-300">
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       Expert AI and IT professionals
                     </li>
                     <li className="flex items-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       Proven track record of success
@@ -463,6 +518,9 @@ const ContactPage: React.FC = () => {
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       Expert team with proven track record
+=======
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
@@ -482,6 +540,9 @@ const ContactPage: React.FC = () => {
 
 <<<<<<< HEAD
 export default ContactPage;
+<<<<<<< HEAD
 =======
 export default ContactPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0

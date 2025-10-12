@@ -154,6 +154,7 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
                   </div>
                   <p className="text-gray-600">{plan.description}</p>
                 </div>
+<<<<<<< HEAD
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -170,10 +171,15 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
                 </Link>
               </div>
             ))}
+=======
+              ))}
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -205,3 +211,11 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
 };
 
 export default AiEcommerceOptimizerProPage;
+=======
+        {/* CTA Section */}
+            </div>
+          </div>
+        </section>
+      </div>
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0

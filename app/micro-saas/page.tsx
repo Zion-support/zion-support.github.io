@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
   BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
@@ -764,10 +765,13 @@ const MicroSaasPage: React.FC = () => {
   const filteredProducts = selectedCategory === 'All' 
     ? microSaasProducts 
     : microSaasProducts.filter(product => product.category === selectedCategory);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
 
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
         <meta name="description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." />
         <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" />
@@ -804,10 +808,13 @@ const MicroSaasPage: React.FC = () => {
                   Call +1 302 464 0950
                 </a>
               </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Category Filter */}
         <section className="py-8 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -908,6 +915,8 @@ const MicroSaasPage: React.FC = () => {
                       Start Free Trial
                     </Link>
                   </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
                 </div>
               ))}
             </div>
@@ -915,6 +924,7 @@ const MicroSaasPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-br from-gray-900 to-purple-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -942,6 +952,8 @@ const MicroSaasPage: React.FC = () => {
             <div className="mt-8 text-gray-400">
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
             </div>
           </div>
         </section>

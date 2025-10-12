@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 <<<<<<< HEAD
 import React, { useState } from 'react';
@@ -124,10 +125,13 @@ const AiServicesPage: React.FC = () => {
     ? aiServices 
     : aiServices.filter(service => service.category === activeTab);
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
   return (
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
+<<<<<<< HEAD
         <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and automation. Transform your business with cutting-edge AI technology." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI automation, AI consulting" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
@@ -190,12 +194,15 @@ const AiServicesPage: React.FC = () => {
               >
                 <span>View AI Demo</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
               </Link>
             </div>
           </div>
         </section>
 
         {/* Stats Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5" />
           <div className="relative max-w-7xl mx-auto">
@@ -213,6 +220,8 @@ const AiServicesPage: React.FC = () => {
                   </div>
                 </div>
               ))}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
         <meta name="description" content="Transform your business with cutting-edge AI services including machine learning, natural language processing, computer vision, and automation. Expert AI solutions for enterprises." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI automation, business intelligence, AI consulting" />
         <meta property="og:title" content="AI Services - Zion Tech Group" />
@@ -253,7 +262,10 @@ const AiServicesPage: React.FC = () => {
                 </a>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -266,19 +278,26 @@ const AiServicesPage: React.FC = () => {
                   <div className="text-gray-400 text-sm">{stat.label}</div>
                 </div>
               ))}
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* AI Services Tabs */}
         <section className="py-20 px-4 relative">
           <div className="relative max-w-7xl mx-auto">
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Services</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
                 Comprehensive AI solutions designed to solve real business challenges
               </p>
             </div>
@@ -345,6 +364,8 @@ const AiServicesPage: React.FC = () => {
                       className="block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                     >
                       Learn More
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
               </p>
             </div>
 
@@ -352,6 +373,7 @@ const AiServicesPage: React.FC = () => {
               {services.map((service, index) => (
                 <div 
                   key={index}
+<<<<<<< HEAD
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -369,11 +391,14 @@ const AiServicesPage: React.FC = () => {
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
 
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
@@ -383,6 +408,8 @@ const AiServicesPage: React.FC = () => {
                     >
                       Learn More <ArrowRight className="w-4 h-4 ml-1" />
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
         {/* Stats Section */}
         <section className="py-16 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -493,8 +520,11 @@ const AiServicesPage: React.FC = () => {
                       className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
                     >
                       Get Quote
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
                     </Link>
                   </div>
                 </div>
@@ -515,7 +545,10 @@ const AiServicesPage: React.FC = () => {
 
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
                   <div className="text-cyan-400 font-semibold text-sm mb-4">
                     {service.price}
                   </div>
@@ -527,12 +560,16 @@ const AiServicesPage: React.FC = () => {
                   </Link>
                 </div>
               ))}
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
@@ -541,11 +578,16 @@ const AiServicesPage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Let's discuss how our AI solutions can automate your processes, enhance customer experiences, and drive growth.
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact"
+<<<<<<< HEAD
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
                 >
                   Start Your AI Journey
                 </Link>
@@ -582,6 +624,10 @@ const AiServicesPage: React.FC = () => {
             <div className="mt-8 text-gray-400">
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+<<<<<<< HEAD
+=======
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
             </div>
           </div>
         </section>

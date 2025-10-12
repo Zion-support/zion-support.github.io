@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 'use client';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ShoppingCart, Zap, Brain, CheckCircle, Users, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Heart, Eye, Mic, Workflow, Wifi, Package, TrendingUp, Calendar, Sparkles, Cpu, Globe, Database, Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock, Play } from 'lucide-react';
 
 const AiChatbotBuilderPage: React.FC = () => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
   const features = [
     {
       title: 'No-Code Builder',
@@ -38,47 +44,17 @@ const AiChatbotBuilderPage: React.FC = () => {
       color: 'from-orange-500 to-red-500'
     },
     {
-<<<<<<< HEAD
-      title: 'AI Training',
-      description: 'Train your chatbot with your own data and knowledge base for personalized responses',
-=======
       title: 'AI-Powered Responses',
       description: 'Natural language processing and machine learning for intelligent, contextual conversations',
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
       icon: Brain,
       color: 'from-yellow-500 to-orange-500'
     }
   ];
 
-  const useCases = [
-    {
-      title: 'Customer Support',
-      description: '24/7 automated customer support with instant responses and issue resolution',
-      icon: Users,
-      benefits: ['Reduce support tickets by 60%', 'Instant response time', 'Multilingual support']
-    },
-    {
-      title: 'Lead Generation',
-      description: 'Qualify and nurture leads automatically with intelligent conversation flows',
-      icon: Target,
-      benefits: ['Increase lead conversion by 40%', 'Automated follow-ups', 'Lead scoring']
-    },
-    {
-      title: 'E-commerce Assistant',
-      description: 'Help customers find products, process orders, and handle returns seamlessly',
-      icon: ShoppingCart,
-      benefits: ['Boost sales by 25%', 'Reduce cart abandonment', 'Personalized recommendations']
-    },
-    {
-      title: 'HR Assistant',
-      description: 'Handle employee queries, schedule interviews, and provide company information',
-      icon: Users,
-      benefits: ['Reduce HR workload by 50%', 'Faster response times', 'Consistent information']
-    }
-  ];
-
-<<<<<<< HEAD
-=======
   const useCases = [
     {
       title: 'Customer Support',
@@ -106,7 +82,10 @@ const AiChatbotBuilderPage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
   const pricingPlans = [
     {
       name: 'Starter',
@@ -131,10 +110,14 @@ const AiChatbotBuilderPage: React.FC = () => {
         'Up to 10,000 conversations/month',
         'Advanced chatbot builder',
         'Priority support',
-        'All integrations',
+        'Custom integrations',
         'Advanced analytics',
+<<<<<<< HEAD
         'Custom branding',
         'API access'
+=======
+        'Multi-language support'
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
       ],
       popular: true
     },
@@ -147,28 +130,20 @@ const AiChatbotBuilderPage: React.FC = () => {
         'Unlimited conversations',
         'White-label solution',
         'Dedicated support',
-        'Custom integrations',
+        'Custom development',
         'Advanced security',
-        'SLA guarantee',
-        'On-premise deployment'
+        'SLA guarantee'
       ],
       popular: false
     }
-  ];
-
-  const stats = [
-    { number: '10,000+', label: 'Chatbots Created', icon: MessageCircle },
-    { number: '50M+', label: 'Conversations Handled', icon: Users },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
-    { number: '24/7', label: 'Support Available', icon: Clock }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>AI Chatbot Builder - Zion Tech Group</title>
-        <meta name="description" content="Build intelligent chatbots without coding. Our AI chatbot builder helps you create, deploy, and manage chatbots for customer support, lead generation, and more." />
-        <meta name="keywords" content="ai chatbot builder, chatbot platform, no-code chatbot, customer support bot, lead generation bot" />
+        <meta name="description" content="Build intelligent chatbots without coding. Our AI chatbot builder offers no-code solutions, multi-language support, and enterprise-grade security." />
+        <meta name="keywords" content="ai chatbot builder, no-code chatbot, conversational ai, chatbot platform, ai assistant" />
       </Helmet>
 
       {/* Hero Section */}
@@ -178,7 +153,8 @@ const AiChatbotBuilderPage: React.FC = () => {
             AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Chatbot Builder</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Create intelligent, conversational chatbots without coding. Deploy across multiple channels and watch your customer engagement soar.
+            Create intelligent, conversational AI chatbots without any coding knowledge. 
+            Deploy across multiple channels and scale your customer engagement.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -191,12 +167,13 @@ const AiChatbotBuilderPage: React.FC = () => {
               to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
-              Try Demo
+              View Demo
             </Link>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -214,13 +191,15 @@ const AiChatbotBuilderPage: React.FC = () => {
         </div>
       </section>
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Powerful Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to build, deploy, and manage intelligent chatbots that deliver exceptional user experiences.
+              Everything you need to build, deploy, and manage intelligent chatbots
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -243,7 +222,7 @@ const AiChatbotBuilderPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Use Cases</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how businesses are using our chatbot builder to transform customer interactions and drive growth.
+              Discover how AI chatbots can transform your business operations
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -255,12 +234,12 @@ const AiChatbotBuilderPage: React.FC = () => {
                       <useCase.icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
-                  <div className="flex-1">
+                  <div>
                     <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                     <p className="text-gray-300 mb-4">{useCase.description}</p>
                     <ul className="space-y-2">
-                      {useCase.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center space-x-2">
+                      {useCase.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center space-x-2">
                           <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                           <span className="text-gray-300 text-sm">{benefit}</span>
                         </li>
@@ -280,15 +259,15 @@ const AiChatbotBuilderPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Simple Pricing</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your needs. All plans include our core features with no hidden fees.
+              Choose the plan that fits your business needs
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-gradient-to-r from-slate-800/50 to-purple-800/50 rounded-xl p-8 backdrop-blur-sm border ${plan.popular ? 'border-cyan-400/50' : 'border-white/10'} transition-all duration-300`}>
+              <div key={index} className={`bg-gradient-to-r from-slate-800/50 to-purple-800/50 rounded-xl p-8 backdrop-blur-sm border ${plan.popular ? 'border-cyan-400/50' : 'border-white/10'} relative`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -302,8 +281,8 @@ const AiChatbotBuilderPage: React.FC = () => {
                   </div>
                 </div>
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
@@ -328,9 +307,9 @@ const AiChatbotBuilderPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your Chatbot?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your AI Chatbot?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of businesses already using our platform to create intelligent chatbots that drive results.
+            Start creating intelligent conversations that engage your customers and drive business growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -343,7 +322,7 @@ const AiChatbotBuilderPage: React.FC = () => {
               to="/pricing"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
-              View All Plans
+              View Pricing
             </Link>
           </div>
         </div>

@@ -89,6 +89,7 @@ const AIAutomationPage: React.FC = () => {
             >
               View Demo
             </Link>
+<<<<<<< HEAD
 =======
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -115,6 +116,8 @@ const AIAutomationPage: React.FC = () => {
               </Link>
             </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
           </div>
         </div>
       </section>
@@ -198,6 +201,7 @@ const AIAutomationPage: React.FC = () => {
                   <div className="text-4xl font-bold text-white mb-2">24/7</div>
                   <div className="text-gray-300">Automated Operations</div>
                 </div>
+<<<<<<< HEAD
 =======
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -263,6 +267,8 @@ const AIAutomationPage: React.FC = () => {
               <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 4
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bce0
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Optimization</h3>
               <p className="text-gray-600">
