@@ -11,22 +11,22 @@ import LoadingSpinner from './components/LoadingSpinner';
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
+
+// Main Services
 const ServicesPage = lazy(() => import('./services/page'));
 const PricingPage = lazy(() => import('./pricing/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
 const BlogPage = lazy(() => import('./blog/page'));
 const TeamPage = lazy(() => import('./team/page'));
 const CareersPage = lazy(() => import('./careers/page'));
+
+// Legal Pages
 const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
 
 // AI Services
 const AiServicesPage = lazy(() => import('./ai-services/page'));
-const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
-const AiAutomationPage = lazy(() => import('./ai-automation/page'));
-const AiHealthcarePage = lazy(() => import('./ai-healthcare/page'));
-const AiFintechPage = lazy(() => import('./ai-fintech/page'));
 const AiContentGenerationPage = lazy(() => import('./ai-content-generation/page'));
 const AiDataAnalyticsPage = lazy(() => import('./ai-data-analytics/page'));
 const AiCybersecurityPage = lazy(() => import('./ai-cybersecurity/page'));
@@ -42,6 +42,19 @@ const ItSupportPage = lazy(() => import('./it-support/page'));
 const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'));
 const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
 
+// Cloud Services
+const CloudServicesPage = lazy(() => import('./cloud-services/page'));
+const CloudMigrationPage = lazy(() => import('./cloud-migration/page'));
+
+// 5G Implementation
+const FiveGImplementationPage = lazy(() => import('./5g-implementation/page'));
+
+// Digital Transformation
+const DigitalTransformationPage = lazy(() => import('./digital-transformation/page'));
+
+// Micro SaaS
+const MicroSaasPage = lazy(() => import('./micro-saas/page'));
+
 // Emerging Technologies
 const BlockchainPage = lazy(() => import('./blockchain/page'));
 const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
@@ -49,16 +62,15 @@ const IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
 const ARVRSolutionsPage = lazy(() => import('./ar-vr-solutions/page'));
 const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
 
-// Micro SaaS
-const MicroSaasPage = lazy(() => import('./micro-saas/page'));
-const AIContentWriterProPage = lazy(() => import('./micro-saas/ai-content-writer-pro/page'));
-
 // Support Pages
 const DocsPage = lazy(() => import('./docs/page'));
 const ApiDocsPage = lazy(() => import('./api-docs/page'));
 const SupportPage = lazy(() => import('./support/page'));
 const StatusPage = lazy(() => import('./status/page'));
 const ConsultationPage = lazy(() => import('./consultation/page'));
+
+// Dynamic Page Component for all other pages
+const DynamicPage = lazy(() => import('./components/DynamicPage'));
 
 // Loading component
 const AppLoadingSpinner = () => (
@@ -89,16 +101,14 @@ const App: React.FC = () => {
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/team" element={<TeamPage />} />
                 <Route path="/careers" element={<CareersPage />} />
+                
+                {/* Legal Pages */}
                 <Route path="/privacy" element={<PrivacyPage />} />
                 <Route path="/terms" element={<TermsPage />} />
                 <Route path="/cookies" element={<CookiesPage />} />
                 
                 {/* AI Services */}
                 <Route path="/ai-services" element={<AiServicesPage />} />
-                <Route path="/ai-marketing" element={<AiMarketingPage />} />
-                <Route path="/ai-automation" element={<AiAutomationPage />} />
-                <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
-                <Route path="/ai-fintech" element={<AiFintechPage />} />
                 <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
                 <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
                 <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
@@ -114,6 +124,19 @@ const App: React.FC = () => {
                 <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                 <Route path="/cybersecurity" element={<CybersecurityPage />} />
                 
+                {/* Cloud Services */}
+                <Route path="/cloud-services" element={<CloudServicesPage />} />
+                <Route path="/cloud-migration" element={<CloudMigrationPage />} />
+                
+                {/* 5G Implementation */}
+                <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                
+                {/* Digital Transformation */}
+                <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                
+                {/* Micro SaaS */}
+                <Route path="/micro-saas" element={<MicroSaasPage />} />
+                
                 {/* Emerging Technologies */}
                 <Route path="/blockchain" element={<BlockchainPage />} />
                 <Route path="/quantum-computing" element={<QuantumComputingPage />} />
@@ -121,15 +144,15 @@ const App: React.FC = () => {
                 <Route path="/ar-vr-solutions" element={<ARVRSolutionsPage />} />
                 <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
                 
-                {/* Micro SaaS */}
-                <Route path="/micro-saas" element={<MicroSaasPage />} />
-                <Route path="/micro-saas/ai-content-writer-pro" element={<AIContentWriterProPage />} />
                 {/* Support Pages */}
                 <Route path="/docs" element={<DocsPage />} />
                 <Route path="/api-docs" element={<ApiDocsPage />} />
                 <Route path="/support" element={<SupportPage />} />
                 <Route path="/status" element={<StatusPage />} />
                 <Route path="/consultation" element={<ConsultationPage />} />
+                
+                {/* Dynamic Routes for all other pages */}
+                <Route path="/*" element={<DynamicPage />} />
               </Routes>
             </Suspense>
           </div>
