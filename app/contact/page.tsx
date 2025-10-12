@@ -1,38 +1,10 @@
-<<<<<<< HEAD
 'use client';
 
-import React from 'react';
-=======
 import React, { useState } from 'react';
 import { CheckCircle, Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
 import { Helmet } from 'react-helmet-async';
 
 export default function ContactPage() {
-<<<<<<< HEAD
-  return (
-    <>
-      <Helmet>
-        <title>Contact - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Contact</h1>
-          <p className="text-xl text-gray-300 mb-8">Get in touch with Zion Tech Group for AI and IT solutions</p>
-          <a
-            href="/"
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-          >
-            Go Home
-          </a>
-        </div>
-      </div>
-    </>
-  );
-}
-=======
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -331,4 +303,3 @@ export default function ContactPage() {
     </div>
   );
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac

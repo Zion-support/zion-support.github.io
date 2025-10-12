@@ -1,4 +1,67 @@
-ursor/analyze-improve-and-deploy-application-c354
+import React, { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+}
+
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('performance' in window)) return;
+
+    const measurePerformance = () => {
+      // Measure First Contentful Paint (FCP)
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }))
+            }
+          }
+        })
+        observer.observe({ entryTypes: ['paint'] })
+      }
+
+      // Measure Largest Contentful Paint (LCP)
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries()
+          const lastEntry = entries[entries.length - 1]
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))
+        })
+        observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      }
+
+      // Measure First Input Delay (FID)
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'first-input') {
+              setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }))
+            }
+          }
+        })
+        observer.observe({ entryTypes: ['first-input'] })
+      }
+
+      // Measure Cumulative Layout Shift (CLS)
+      if ('PerformanceObserver' in window) {
+        let clsValue = 0
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value
+              setMetrics(prev => ({ ...prev, cls: clsValue }))
+            }
+          }
+        })
+        observer.observe({ entryTypes: ['layout-shift'] })
+      }
 
       // Measure Time to First Byte (TTFB)
       if ('PerformanceObserver' in window) {

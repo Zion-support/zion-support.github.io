@@ -1,10 +1,12 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
 import ErrorBoundary from './app/components/ErrorBoundary'
 import SEOHead from './app/components/SEOHead'
+import LoadingSpinner from './app/components/LoadingSpinner'
+import PerformanceMonitor from './app/components/PerformanceMonitor'
 
 // Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./app/page'))
@@ -23,18 +25,53 @@ const TermsOfServicePage = React.lazy(() => import('./app/terms-of-service/page'
 // Loading component for Suspense
 const PageLoader = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
-    <span className="ml-3 text-white text-lg">Loading page...</span>
+    <LoadingSpinner />
   </div>
 )
 
 function App() {
+  useEffect(() => {
+    // Performance monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Track page load performance
+      window.addEventListener('load', () => {
+        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (perfData) {
+          console.log('Page Load Performance:', {
+            domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+            loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
+            totalTime: perfData.loadEventEnd - perfData.fetchStart
+          });
+        }
+      });
+    }
+
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      const criticalImages = [
+        '/og-image.svg',
+        '/logo192.png'
+      ];
+      
+      criticalImages.forEach(src => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
+      });
+    };
+
+    preloadCriticalResources();
+  }, []);
+
   return (
     <HelmetProvider>
       <ErrorBoundary>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <SEOHead />
+            <PerformanceMonitor />
             <Navigation />
             <Suspense fallback={<PageLoader />}>
               <Routes>
