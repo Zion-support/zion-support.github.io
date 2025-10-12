@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X, ChevronDown } from './Icons'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)

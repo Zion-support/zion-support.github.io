@@ -1,197 +1,166 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Bug, Mail, ArrowLeft } from 'lucide-react';
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
+  children: ReactNode
+  fallback?: ReactNode
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string;
-  retryCount: number;
+  hasError: boolean
+  error: Error | null
+  errorInfo: ErrorInfo | null
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  private maxRetries = 3;
-
   constructor(props: Props) {
-    super(props);
-    this.state = { 
-      hasError: false, 
-      retryCount: 0 
-    };
+    super(props)
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null
+    }
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return { 
-      hasError: true, 
+  static getDerivedStateFromError(error: Error): State {
+    return {
+      hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+      errorInfo: null
+    }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Enhanced error logging
-    const errorDetails = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      errorId: this.state.errorId,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href
-    };
+    this.setState({
+      error,
+      errorInfo
+    })
 
-    // Send to monitoring service
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
-        description: error.message,
-        fatal: true,
-        custom_map: {
-          error_id: this.state.errorId,
-          retry_count: this.state.retryCount
-        }
-      });
+    // Log error to monitoring service
+    console.error('Error caught by boundary:', error, errorInfo)
+    
+    // In production, send to error tracking service
+    if (process.env.NODE_ENV === 'production') {
+      // Example: Sentry.captureException(error, { extra: errorInfo })
     }
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    this.setState({ errorInfo });
   }
 
   handleRetry = () => {
-    if (this.state.retryCount < this.maxRetries) {
-      this.setState(prevState => ({
-        hasError: false,
-        error: undefined,
-        errorInfo: undefined,
-        retryCount: prevState.retryCount + 1
-      }));
-    } else {
-      // Reset retry count and show error
-      this.setState({ retryCount: 0 });
-    }
-  };
-
-  handleGoBack = () => {
-    window.history.back();
-  };
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null
+    })
+  }
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-          <div className="max-w-lg w-full bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-red-500/30 text-center">
-            <div className="flex items-center justify-center w-16 h-16 bg-red-500/20 rounded-full mb-6 mx-auto">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
-            </div>
-            
-            <h1 className="text-2xl font-bold text-white mb-4">
-              {this.state.retryCount > 0 ? 'Retry Failed' : 'Something went wrong'}
-            </h1>
-            
-            <p className="text-gray-300 mb-6">
-              {this.state.retryCount > 0 
-                ? `We've tried ${this.state.retryCount} times but couldn't recover. Please try refreshing the page.`
-                : "We're sorry, but something unexpected happened. Please try refreshing the page."
-              }
-            </p>
-            
-            {this.state.errorId && (
-              <div className="mb-6 p-3 bg-slate-700/50 rounded-lg">
-                <p className="text-sm text-gray-400">Error ID: {this.state.errorId}</p>
-                {this.state.retryCount > 0 && (
-                  <p className="text-sm text-gray-400 mt-1">Retry attempts: {this.state.retryCount}</p>
-                )}
+        <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
+          <div className="max-w-md w-full text-center">
+            <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+              {/* Error Icon */}
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center">
+                  <AlertTriangle className="w-8 h-8 text-red-400" />
+                </div>
               </div>
-            )}
-            
-            <div className="space-y-3">
-              {this.state.retryCount < this.maxRetries && (
+
+              {/* Error Title */}
+              <h1 className="text-2xl font-bold text-white mb-4">
+                Oops! Something went wrong
+              </h1>
+
+              {/* Error Description */}
+              <p className="text-gray-300 mb-6">
+                We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              </p>
+
+              {/* Error Details (Development Only) */}
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <details className="mb-6 text-left">
+                  <summary className="text-sm text-gray-400 cursor-pointer hover:text-white transition-colors">
+                    Error Details (Development)
+                  </summary>
+                  <div className="mt-2 p-4 bg-gray-900 rounded-lg text-xs text-red-300 font-mono overflow-auto">
+                    <div className="mb-2">
+                      <strong>Error:</strong> {this.state.error.message}
+                    </div>
+                    <div className="mb-2">
+                      <strong>Stack:</strong>
+                      <pre className="mt-1 whitespace-pre-wrap">
+                        {this.state.error.stack}
+                      </pre>
+                    </div>
+                    {this.state.errorInfo && (
+                      <div>
+                        <strong>Component Stack:</strong>
+                        <pre className="mt-1 whitespace-pre-wrap">
+                          {this.state.errorInfo.componentStack}
+                        </pre>
+                      </div>
+                    )}
+                  </div>
+                </details>
+              )}
+
+              {/* Action Buttons */}
+              <div className="space-y-3">
                 <button
                   onClick={this.handleRetry}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
-                  aria-label="Try to recover from the error"
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
                 >
-                  <RefreshCw className="w-5 h-5 mr-2" />
-                  Try Again ({this.maxRetries - this.state.retryCount} attempts left)
+                  <RefreshCw className="w-4 h-4" />
+                  <span>Try Again</span>
                 </button>
-              )}
-              
-              <button
-                onClick={() => window.location.reload()}
-                className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-blue-500/50"
-                aria-label="Refresh the page to try again"
-              >
-                <RefreshCw className="w-5 h-5 mr-2" />
-                Refresh Page
-              </button>
-              
-              <button
-                onClick={this.handleGoBack}
-                className="w-full border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-white/50"
-                aria-label="Go back to the previous page"
-              >
-                <ArrowLeft className="w-5 h-5 mr-2" />
-                Go Back
-              </button>
-              
-              <button
-                onClick={() => window.location.href = '/'}
-                className="w-full border-2 border-gray-500 text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-700/50 transition-colors flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-gray-500/50"
-                aria-label="Go back to the homepage"
-              >
-                <Home className="w-5 h-5 mr-2" />
-                Go Home
-              </button>
-              
-              <a
-                href={`mailto:kleber@ziontechgroup.com?subject=Error Report&body=Error ID: ${this.state.errorId}%0A%0APlease describe what you were doing when this error occurred:`}
-                className="w-full border-2 border-cyan-500 text-cyan-300 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700/50 transition-colors flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
-                aria-label="Report this error via email"
-              >
-                <Mail className="w-5 h-5 mr-2" />
-                Report Error
-              </a>
-            </div>
-            
-            {this.props.showDetails && this.state.error && (
-              <details className="mt-6 text-left">
-                <summary className="text-red-400 cursor-pointer font-medium flex items-center">
-                  <Bug className="w-4 h-4 mr-2" />
-                  Error Details
-                </summary>
-                <div className="mt-2 space-y-2">
-                  <pre className="text-xs text-gray-400 bg-slate-900/50 p-3 rounded overflow-auto">
-                    {this.state.error.toString()}
-                  </pre>
-                  {this.state.errorInfo && (
-                    <pre className="text-xs text-gray-400 bg-slate-900/50 p-3 rounded overflow-auto">
-                      {this.state.errorInfo.componentStack}
-                    </pre>
-                  )}
+
+                <div className="flex space-x-3">
+                  <Link
+                    to="/"
+                    className="flex-1 bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors flex items-center justify-center space-x-2"
+                  >
+                    <Home className="w-4 h-4" />
+                    <span>Go Home</span>
+                  </Link>
+
+                  <button
+                    onClick={() => window.history.back()}
+                    className="flex-1 bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors flex items-center justify-center space-x-2"
+                  >
+                    <ArrowLeft className="w-4 h-4" />
+                    <span>Go Back</span>
+                  </button>
                 </div>
-              </details>
-            )}
+              </div>
+
+              {/* Contact Information */}
+              <div className="mt-8 pt-6 border-t border-gray-700">
+                <p className="text-sm text-gray-400 mb-2">
+                  Still having trouble? Contact our support team:
+                </p>
+                <div className="text-sm text-cyan-400">
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors">
+                    kleber@ziontechgroup.com
+                  </a>
+                  <span className="mx-2">•</span>
+                  <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors">
+                    +1 (302) 464-0950
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary

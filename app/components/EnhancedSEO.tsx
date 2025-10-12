@@ -1,152 +1,139 @@
-'use client';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
-import React, { useEffect } from 'react';
-import { ArrowRight, Brain } from 'lucide-react';
-
-interface SEOFeature {
-  icon: React.ComponentType<{ className?: string }>;
-  title: string;
-  description: string;
-  status: 'implemented' | 'pending' | 'optimized';
+interface SEOProps {
+  title: string
+  description: string
+  keywords?: string[]
+  canonical?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: object
+  noindex?: boolean
+  nofollow?: boolean
 }
 
-interface EnhancedSEOProps {
-  className?: string;
-}
-
-const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className = '' }) => {
-  const seoFeatures: SEOFeature[] = [
-    {
-      icon: Globe,
-      title: 'Meta Tags Optimization',
-      description: 'Comprehensive meta tags for better search engine visibility',
-      status: 'implemented'
-    },
-    {
-      icon: Brain,
-      title: 'Structured Data',
-      description: 'Rich snippets and structured data for enhanced search results',
-      status: 'implemented'
-    },
-    {
-      icon: Zap,
-      title: 'Performance SEO',
-      description: 'Core Web Vitals optimization for better search rankings',
-      status: 'optimized'
-    },
-    {
-      icon: Shield,
-      title: 'Security Headers',
-      description: 'HTTPS and security headers for SEO compliance',
-      status: 'implemented'
-    }
-  ];
-
-  useEffect(() => {
-    // Add structured data
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com",
-      "description": "Leading provider of AI-powered solutions, IT services, and digital transformation",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://ziontechgroup.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'implemented':
-        return 'text-green-400 bg-green-400/10';
-      case 'optimized':
-        return 'text-cyan-400 bg-cyan-400/10';
-      case 'pending':
-        return 'text-yellow-400 bg-yellow-400/10';
-      default:
-        return 'text-gray-400 bg-gray-400/10';
-    }
-  };
-
-  const getStatusText = (status: string) => {
-    switch (status) {
-      case 'implemented':
-        return 'Implemented';
-      case 'optimized':
-        return 'Optimized';
-      case 'pending':
-        return 'Pending';
-      default:
-        return 'Unknown';
-    }
-  };
+const EnhancedSEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  keywords = [],
+  canonical,
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData,
+  noindex = false,
+  nofollow = false
+}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const fullDescription = description || 'Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.'
+  const keywordsString = keywords.length > 0 ? keywords.join(', ') : 'AI solutions, artificial intelligence, IT services, 5G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group'
+  
+  const robotsContent = [
+    noindex ? 'noindex' : 'index',
+    nofollow ? 'nofollow' : 'follow',
+    'max-image-preview:large',
+    'max-snippet:-1',
+    'max-video-preview:-1'
+  ].join(', ')
 
   return (
-    <div className={`bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/20 ${className}`}>
-      <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-          <Brain className="w-5 h-5 text-white" />
-        </div>
-        <div>
-          <h3 className="text-xl font-semibold text-white">SEO Optimization</h3>
-          <p className="text-gray-400 text-sm">Search engine optimization features</p>
-        </div>
-      </div>
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={fullDescription} />
+      <meta name="keywords" content={keywordsString} />
+      <meta name="robots" content={robotsContent} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+      <meta name="theme-color" content="#8b5cf6" />
+      <meta name="color-scheme" content="dark light" />
+      <meta name="format-detection" content="telephone=no,address=no,email=no" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      
+      {/* Canonical URL */}
+      {canonical && <link rel="canonical" href={canonical} />}
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={fullDescription} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={fullTitle} />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:image:secure_url" content={ogImage} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={fullDescription} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image:alt" content={fullTitle} />
+      <meta name="twitter:image:width" content="1200" />
+      <meta name="twitter:image:height" content="630" />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="distribution" content="global" />
+      <meta name="rating" content="general" />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
+      
+      {/* Default Organization Structured Data */}
+      {!structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/logo.png",
+            "description": "Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms.",
+            "foundingDate": "2020",
+            "founder": {
+              "@type": "Person",
+              "name": "Dr. Kleber Santos"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "364 E Main St STE 1008",
+              "addressLocality": "Middletown",
+              "addressRegion": "DE",
+              "postalCode": "19709",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-302-464-0950",
+              "contactType": "customer service",
+              "email": "kleber@ziontechgroup.com"
+            },
+            "sameAs": [
+              "https://linkedin.com/company/ziontechgroup",
+              "https://twitter.com/ziontechgroup",
+              "https://github.com/ziontechgroup"
+            ]
+          })}
+        </script>
+      )}
+    </Helmet>
+  )
+}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {seoFeatures.map((feature, index) => {
-          const IconComponent = feature.icon;
-          return (
-            <div
-              key={index}
-              className="bg-white/5 rounded-lg p-4 border border-white/10 hover:border-white/20 transition-colors"
-            >
-              <div className="flex items-start gap-3">
-                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <IconComponent className="w-4 h-4 text-white" />
-                </div>
-                
-                <div className="flex-1">
-                  <div className="flex items-center justify-between mb-2">
-                    <h4 className="text-white font-medium">{feature.title}</h4>
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(feature.status)}`}>
-                      {getStatusText(feature.status)}
-                    </span>
-                  </div>
-                  
-                  <p className="text-gray-400 text-sm">{feature.description}</p>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-
-      <div className="mt-6 pt-4 border-t border-white/10">
-        <div className="flex items-center justify-between">
-          <div className="text-sm text-gray-400">
-            SEO Score: <span className="text-green-400 font-semibold">95/100</span>
-          </div>
-          <button className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center gap-1">
-            View Details
-            <ArrowRight className="w-3 h-3" />
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default EnhancedSEO;
+export default EnhancedSEO

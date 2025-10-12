@@ -33,11 +33,40 @@ export default defineConfig({
     cssCodeSplit: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react'],
-          helmet: ['react-helmet-async'],
+        manualChunks: (id) => {
+          // Core React libraries
+          if (id.includes('react') || id.includes('react-dom')) {
+            return 'react-vendor'
+          }
+          // Router
+          if (id.includes('react-router')) {
+            return 'router'
+          }
+          // UI libraries
+          if (id.includes('framer-motion')) {
+            return 'animations'
+          }
+          if (id.includes('lucide-react')) {
+            return 'icons'
+          }
+          // SEO and meta
+          if (id.includes('react-helmet')) {
+            return 'seo'
+          }
+          // Charts and data visualization
+          if (id.includes('recharts')) {
+            return 'charts'
+          }
+          // Utility libraries
+          if (id.includes('clsx') || id.includes('tailwind-merge')) {
+            return 'utils'
+          }
+          // Large page components (lazy load)
+          if (id.includes('/app/') && id.includes('/page.tsx')) {
+            return 'pages'
+          }
+          // Default chunk for other modules
+          return 'vendor'
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -45,7 +74,9 @@ export default defineConfig({
       },
     },
     // Optimize bundle size
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
+    // Enable tree shaking
+    treeshake: true,
   },
   server: {
     port: 3000,
