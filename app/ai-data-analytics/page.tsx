@@ -1,27 +1,21 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
+'use client';
+import React from 'react';
+import GenericServicePage from '../components/GenericServicePage';
+import { BarChart } from 'lucide-react';
 
-import { ArrowRight } from 'lucide-react'
-
-export default function AiDataAnalyticsPage() {
+const AiDataAnalyticsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>Ai Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional ai data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">Ai Data Analytics</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional ai data analytics services coming soon.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </div>
-  )
-}
+    <GenericServicePage
+      title="AI Data Analytics"
+      description="Advanced AI-powered data analytics platform that transforms raw data into actionable business insights and predictive intelligence."
+      icon={BarChart}
+      features={["Real-time Analytics","Predictive Modeling","Custom Dashboards","Automated Reporting","Data Visualization","Machine Learning Insights"]}
+      benefits={["Data-Driven Decisions","Predict Future Trends","Automated Insights","Competitive Advantage"]}
+      pricing="$399/month"
+      category="AI"
+      color="from-blue-500 to-cyan-600"
+    />
+  );
+};
+
+export default AiDataAnalyticsPage;

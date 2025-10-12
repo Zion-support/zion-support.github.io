@@ -1,10 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-
+import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 
-export default function FiveGPrivateNetworksPage() {
+export default function 5GprivatenetworksPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
@@ -23,5 +22,5 @@ export default function FiveGPrivateNetworksPage() {
         </Link>
       </div>
     </div>
-  )
+  );
 }

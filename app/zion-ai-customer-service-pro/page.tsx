@@ -1,27 +1,21 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
+'use client';
+import React from 'react';
+import GenericServicePage from '../components/GenericServicePage';
+import { MessageSquare } from 'lucide-react';
 
-import { ArrowRight } from 'lucide-react'
-
-export default function ZionAiCustomerServiceProPage() {
+const ZionAiCustomerServiceProPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>Zion Ai Customer Service Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional zion ai customer service pro services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">Zion Ai Customer Service Pro</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional zion ai customer service pro services coming soon.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </div>
-  )
-}
+    <GenericServicePage
+      title="Zion AI Customer Service Pro"
+      description="Advanced AI customer service platform with intelligent routing and response automation."
+      icon={MessageSquare}
+      features={["Intelligent Routing","Response Automation","Sentiment Analysis","Multi-channel Support","Analytics Dashboard","Integration APIs"]}
+      benefits={["Better Service","Faster Response","Higher Satisfaction","Cost Reduction"]}
+      pricing="$299/month"
+      category="MicroSAAS"
+      color="from-blue-500 to-cyan-600"
+    />
+  );
+};
+
+export default ZionAiCustomerServiceProPage;

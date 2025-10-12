@@ -1,27 +1,21 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
+'use client';
+import React from 'react';
+import GenericServicePage from '../components/GenericServicePage';
+import { Zap } from 'lucide-react';
 
-import { ArrowRight } from 'lucide-react'
-
-export default function ZionAiEnergyManagerPage() {
+const ZionAiEnergyManagerPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>Zion Ai Energy Manager - Zion Tech Group</title>
-        <meta name="description" content="Professional zion ai energy manager services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">Zion Ai Energy Manager</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional zion ai energy manager services coming soon.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </div>
-  )
-}
+    <GenericServicePage
+      title="Zion AI Energy Manager"
+      description="Intelligent energy management platform with optimization and cost reduction features."
+      icon={Zap}
+      features={["Energy Monitoring","Usage Optimization","Cost Analysis","Renewable Integration","Predictive Analytics","Automated Controls"]}
+      benefits={["Energy Savings","Cost Reduction","Better Efficiency","Environmental Impact"]}
+      pricing="$229/month"
+      category="MicroSAAS"
+      color="from-yellow-500 to-orange-600"
+    />
+  );
+};
+
+export default ZionAiEnergyManagerPage;

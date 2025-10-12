@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 
 export default function PressPage() {
@@ -22,5 +22,5 @@ export default function PressPage() {
         </Link>
       </div>
     </div>
-  )
+  );
 }
