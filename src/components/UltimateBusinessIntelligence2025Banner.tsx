@@ -1,5 +1,3 @@
-'use client';
-
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible] = useState(true);
   
@@ -20,7 +18,6 @@
         ></div>
         
         ></div>
-      </div>
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div className="text-center mb-16">
@@ -62,7 +59,6 @@
                   />
                 </svg>
               </div>
-            </div>
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
                 <div key={key} className="text-center bg-white/5 rounded-xl p-4">
@@ -70,7 +66,6 @@
                   <div className="text-sm text-gray-300 capitalize">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
                   </div>
-                </div>
               ))}
             </div>
             {/* Tags */}
@@ -95,7 +90,6 @@
                 <span>Call +1 302 464 0950</span>
               </a>
             </div>
-          </div>
           {/* Slide Indicators */}
           <div className="flex justify-center mt-8 space-x-2">
               
@@ -106,14 +100,12 @@
               />
             ))}
           </div>
-        </div>
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             <div key={index} className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
-            </div>
           ))}
         </div>
     </section>

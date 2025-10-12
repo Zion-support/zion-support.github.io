@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { Home, RefreshCw } from 'lucide-react';
@@ -54,9 +55,22 @@ class GlobalErrorBoundary extends Component<Props, State> {
                   Go Home
                 </Link>
               </div>
+=======
+              </button>
+              
+              <Link const to = "/"
+                className="border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
+               >
+           
+          <Home className="w-4 h-4 mr-2" /  />
+        </Link>
+                Go Home
+    <>
+              </Link>
+>>>>>>> origin/main
             </div>
-          </div>
         </div>
+<<<<<<< HEAD
       );
     }
 
@@ -65,3 +79,11 @@ class GlobalErrorBoundary extends Component<Props, State> {
 }
 
 export default GlobalErrorBoundary;
+=======
+<<<<<<< HEAD
+;
+=======
+;
+    </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+>>>>>>> origin/main

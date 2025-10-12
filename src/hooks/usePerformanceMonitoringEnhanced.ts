@@ -1,4 +1,3 @@
-'use client';
 import { useEffect, useCallback } from 'react';
     const body = JSON.stringify(metric);
     const url = '/api/analytics';

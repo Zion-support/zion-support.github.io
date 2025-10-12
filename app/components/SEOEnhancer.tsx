@@ -3,6 +3,14 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, Zap, Shield, Globe, CheckCircle } from 'lucide-react';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { ArrowRight } from 'lucide-react';
+=======
+import { Brain } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
+>>>>>>> origin/main
 const SEOEnhancer: React.FC = () => {
   const features = [
     {

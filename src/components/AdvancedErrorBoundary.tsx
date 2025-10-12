@@ -1,5 +1,3 @@
-'use client';
-
 // Simple logger implementation
 
       console.error(message, context);
@@ -137,7 +135,6 @@ class AdvancedErrorBoundary extends Component
                       </pre>
                     </details>
                   </div>
-                </div>
               )}
               <div className='mt-6 space-y-3'>
                 {this.props.enableRetry &&
@@ -166,10 +163,8 @@ class AdvancedErrorBoundary extends Component
                   </a>
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      );
+    </div>
+  );
     }
     return this.props.children;
   }

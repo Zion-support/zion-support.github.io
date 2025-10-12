@@ -1,12 +1,15 @@
+<<<<<<< HEAD
+import { useEffect } from 'react';
+=======
 'use client';
-
 import { useEffect } from 'react';
 
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface AnalyticsProps {
   children: React.ReactNode;
 }
 
-export default function Analytics({ children }: AnalyticsProps) {
   useEffect(() => {
     // Initialize analytics tracking
     const initAnalytics = () => {
@@ -22,7 +25,7 @@ export default function Analytics({ children }: AnalyticsProps) {
     initAnalytics();
   }, []);
 
-  return <>{children}</>;
+  return <React.Fragment />{children}</React.Fragment>;
 }
 
 // Extend Window interface for gtag

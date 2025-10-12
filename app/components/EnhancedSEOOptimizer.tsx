@@ -36,122 +36,199 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
     'Proven track record of success'
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
       <Helmet>
+=======
+    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        </div>
+      <Helmet>
+        <title>5G Data Analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
         <title>Enhanced SEO Optimizer | Zion Tech Group</title>
-        <meta name="description" content="Professional SEO optimization services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="SEO optimizer, AI solutions, IT services, Zion Tech Group, search engine optimization" />
-        <meta name="description" content="Professional Enhanced SEO Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="SEO optimizer, search engine optimization, AI solutions, IT services, Zion Tech Group" />
+        <meta name="description" content="Professional SEO optimization services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
+        <meta name="keywords" content="SEO optimizer, AI solutions, IT services, Zion Tech Group, search engine optimization" / / />
+        <meta name="description" content="Professional Enhanced SEO Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
+        <meta name="keywords" content="SEO optimizer, search engine optimization, AI solutions, IT services, Zion Tech Group" / / />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+    <>
+      <section className="relative py-20 px-4sm:px-6lg:px-8" />
+        <div className="max-w-7xlmx-auto">
+<<<<<<< HEAD
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Enhanced SEO
+            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
+=======
+        </div>
+          <div className="text-center" />
+            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent"  />Enhanced SEO
                 Enhanced SEO Optimizer
+    <>
               </span>
-              <br />
+              <br / />
               <span className="text-white">Optimizer</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
               Transform your business with our advanced SEO optimization solutions.
               Powered by cutting-edge AI technology and industry expertise.
               Optimize your website for search engines with our advanced AI-powered SEO optimization solutions.
               Improve rankings and drive more organic traffic.
+    <>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+            <div className="flex flex-col sm:flex-rowgap-4justify-center">
+<<<<<<< HEAD
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" />
+=======
+        </div>
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+    <>
+                <ArrowRight className="ml-2h-5w-5" />
               </button>
-              <button className="border border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
+              <button className="border border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Learn More
               </button>
             </div>
-          </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Features
+    <>
+      <section className="py-20 px-4sm:px-6lg:px-8" />
+        <div className="max-w-7xlmx-auto">
+<<<<<<< HEAD
+          <div className="text-centermb-16">
+            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Our Features
+=======
+        </div>
+          <div className="text-centermb-16">
+        </div>
+            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Our Features
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
               Discover the powerful features that make our enhanced SEO optimizer solutions stand out.
+    <>
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+<<<<<<< HEAD
+=======
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+    <>
+              <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300borderborder-white/20" />
+                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-12 h-12 rounded-lg flex items-centerjustify-centermb-4">
+<<<<<<< HEAD
+                  <feature.icon className="w-6h-6text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {feature.title}
+                <h3 className="text-xl font-bold text-white mb-2"  />{feature.title}
                 </h3>
                 <p className="text-gray-300">
+              {feature.description}
+=======
+        </div>
+                  <feature.icon className="w-6h-6text-white" / />
+                </div>
+                <h3 className="text-xl font-boldtext-whitemb-2">{feature.title}
+                </h3>
+                <p className="text-gray-300" />
                   {feature.description}
+    <>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                 </p>
               </div>
             ))}
+    <>
           </div>
-        </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Solutions?
+    <>
+      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" />
+        <div className="max-w-7xlmx-auto">
+<<<<<<< HEAD
+          <div className="text-centermb-16">
+            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Why Choose Our Solutions?
+=======
+        </div>
+          <div className="text-centermb-16">
+        </div>
+            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Why Choose Our Solutions?
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
               Experience the benefits of working with our cutting-edge enhanced SEO optimizer solutions.
+    <>
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1md:grid-cols-2gap-8">
+<<<<<<< HEAD
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-4">
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <CheckCircle className="w-5 h-5 text-white" />
+              <div key="{index}" className="flex items-startspace-x-4" />
+                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-centerflex-shrink-0mt-1">
+                  <CheckCircle className="w-5h-5text-white" />
                 </div>
-                <p className="text-gray-300 text-lg">
+                <p className="text-gray-300text-lg">
+              {benefit}
+=======
+        </div>
+            {benefits.map((benefit, index) => (
+    <>
+              <div key="{index}" className="flexitems-startspace-x-4" />
+                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-centerflex-shrink-0mt-1">
+        </div>
+                  <CheckCircle className="w-5h-5text-white" / />
+                </div>
+                <p className="text-gray-300text-lg" />
                   {benefit}
+    <>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                 </p>
               </div>
             ))}
+    <>
           </div>
-        </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
+    <>
+      <section className="py-20 px-4sm:px-6lg:px-8" />
+        <div className="max-w-7xlmx-auto">
+<<<<<<< HEAD
+          <div className="bg-white/10 backdrop-blur-sm rounded-3 xl p-12 borderborder-white/20text-center">
+            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-6"  />Ready to Get Started?
+=======
+        </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-3 xl p-12 borderborder-white/20text-center">
+        </div>
+            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-6">Ready to Get Started?
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto">
               Contact us today to learn more about our SEO optimization solutions and how they can benefit your business.
+    <>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
-                Contact Us
+            <div className="flex flex-col sm:flex-rowgap-4justify-center">
+<<<<<<< HEAD
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700transition-allduration-300"  />Contact Us
+=======
+        </div>
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700transition-allduration-300">Contact Us
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Schedule Demo
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Schedule Demo
               </button>
             </div>
-          </div>
         </div>
       </section>
     </div>
@@ -159,3 +236,5 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
 }
 
 export default EnhancedSEOOptimizerPage
+;
+    </>

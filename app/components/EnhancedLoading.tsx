@@ -1,4 +1,8 @@
-import React from 'react'
+<<<<<<< HEAD
+import React  from 'react';
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg'
@@ -7,8 +11,8 @@ interface LoadingProps {
   color?: string
 }
 
-const EnhancedLoading: React.FC<LoadingProps> = ({
-  size = 'md',
+const EnhancedLoading: React.FC<LoadingProps /> = ({
+  const size = 'md',
   text = 'Loading...',
   fullScreen = false,
   color = 'cyan'
@@ -28,11 +32,17 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
   }
 
   const spinner = (
-    <div className="flex flex-col items-center justify-center space-y-4">
-      <div className={`${sizeClasses[size]} ${colorClasses[color as keyof typeof colorClasses]} border-2 border-t-transparent rounded-full animate-spin`} />
+<<<<<<< HEAD
+    <div className="flex flex-col items-center justify-centerspace-y-4">
+=======
+    <>
+    <div className="flex flex-col items-center justify-centerspace-y-4">
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`} / />
       {text && (
-        <div className="text-sm text-gray-300 animate-pulse">
-          {text}
+    <>
+        <div className="text-sm text-gray-300animate-pulse">{text}
         </div>
       )}
     </div>
@@ -40,8 +50,8 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
 
   if (fullScreen) {
     return (
-      <div className="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-center z-50">
-        {spinner}
+    <>
+      <div className="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-centerz-50">{spinner}
       </div>
     )
   }
@@ -49,4 +59,5 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
   return spinner
 }
 
-export default EnhancedLoading
+export default EnhancedLoading;
+    </>

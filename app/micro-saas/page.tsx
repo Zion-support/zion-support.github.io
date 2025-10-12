@@ -1,6 +1,23 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import {;
+=======
+import { 
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
+  ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
+  BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
+  Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
+  TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
+  Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock
+} from 'lucide-react';
+import { ArrowRight, ShoppingCart } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Link as LinkIcon, Package, TrendingUp, Calendar, Globe, Database, Monitor, Mail } from 'lucide-react';
+=======
+import { ArrowRight, CheckCircle, Star, Users, Shield, Cloud, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Link as LinkIcon, Database, Mail } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 const MicroSaasPage: React.FC = () => {
 
@@ -746,197 +763,340 @@ const MicroSaasPage: React.FC = () => {
       popular: false
     }
   ];
-
   const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'CRM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance', 'Video Production', 'Translation', 'Development', 'Productivity', 'Research', 'HR', 'IoT', 'Sustainability', 'Supply Chain', 'Legal', 'Document Management'];
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredProducts = selectedCategory === 'All' 
     ? microSaasProducts 
     : microSaasProducts.filter(product => product.category === selectedCategory);
-
   return (
     <>
+    <>
       <Helmet>
-        <title>Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
-        <meta name="description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." />
-        <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" />
+        <title>5G Data Analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
+        <title>Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
+        <meta const name = "description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." / / />
+        <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" / / />
+      </Helmet>
+    </>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+<<<<<<< HEAD
+=======
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
         {/* Hero Section */}
-        <section className="relative overflow-hidden pt-20 pb-16">
-          <div className="absolute inset-0 opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+        <section className="relative overflow-hiddenpt-20pb-16" />
+<<<<<<< HEAD
+          <div className="absoluteinset-0opacity-20" />
+          <div className="relative max-w-7xl mx-auto px-4sm:px-6lg:px-8">
             <div className="text-center">
-              <h1 className={`text-4xl md:text-6xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+=======
+          <div className="absoluteinset-0opacity-20" / />
+          <div className="relative max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+        </div>
+            <div className="text-center" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+    </>
                 Micro SAAS
-                <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Business Solutions
+    <>
+                <span className="block bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent">Business Solutions
                 </span>
               </h1>
-              <p className={`text-xl text-gray-300 mb-8 max-w-3xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <p className="{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+    </>
                 Powerful, ready-to-use software solutions designed to solve specific business challenges. 
                 No complex setup, no lengthy implementations - just instant value.
+    <>
               </p>
-              <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                >
+              <div className="{`flex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+<<<<<<< HEAD
+                <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" >
+          Start Free Trial
+                  
+          <ArrowRight className="ml-2h-5w-5"  />
+        </Link>
+=======
+                <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
+    </>
                   Start Free Trial
-                  <ArrowRight className="ml-2 h-5 w-5" />
+    <>
+                  <ArrowRight className="ml-2h-5w-5" />
                 </Link>
+    </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                 <a
                   href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
-                >
+                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
                   Call +1 302 464 0950
+    <>
                 </a>
               </div>
-            </div>
           </div>
         </section>
+    </>
 
         {/* Category Filter */}
-        <section className="py-8 bg-gray-900/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap justify-center gap-4">
+    <>
+        <section className="py-8bg-gray-900/50" />
+<<<<<<< HEAD
+          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
+            <div className="flex flex-wrapjustify-centergap-4">
+=======
+          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+        </div>
+            <div className="flex flex-wrapjustify-centergap-4">
+        </div>
+    </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               {categories.map((category) => (
                 <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  key="{category}"
+                  onClick="{()" =>setSelectedCategory(category)}
+                  className="{`px-6" py-3 rounded-lg font-semibold transition-all duration-300 ${
                     selectedCategory === category
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
+                      : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'
                   }`}
                 >
                   {category}
                 </button>
               ))}
+    <>
             </div>
-          </div>
         </section>
+    </>
 
         {/* Products Grid */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+    <>
+        <section className="py-16" />
+<<<<<<< HEAD
+          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
+=======
+          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+        </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
+        </div>
+    </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               {filteredProducts.map((product, index) => (
                 <div
-                  key={product.id}
-                  className={`group relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-purple-500 ${
+                  key="{product.id}"
+                  className="{`group" relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-purple-500 ${
                     product.popular ? 'ring-2 ring-purple-500' : ''
-                  }`}
-                >
+                  }`} />
                   {product.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
+<<<<<<< HEAD
+                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
+                      <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
+=======
+    <>
+                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
+        </div>
+                      <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                       </span>
                     </div>
+    </>
                   )}
                   
-                  <div className="text-center mb-6">
-                    <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl mb-4`}>
-                      <product.icon className="h-8 w-8 text-white" />
+<<<<<<< HEAD
+                  <div className="text-centermb-6">
+=======
+    <>
+                  <div className="text-centermb-6">
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <div className="{`inline-flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl mb-4`} />
+                      <product.icon className="h-8w-8text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">{product.title}</h3>
-                    <p className="text-gray-300 text-sm mb-4">{product.description}</p>
-                    <div className="flex items-center justify-center space-x-2 mb-4">
+<<<<<<< HEAD
+                    <h3 className="text-xl font-bold text-white mb-2"   />{product.title}</h3>
+                    <p className="text-gray-300text-smmb-4">
+              {product.description}</p>
+                    <div className="flex items-center justify-centerspace-x-2mb-4">
                       <div className="flex items-center">
+=======
+                    <h3 className="text-xl font-boldtext-whitemb-2">{product.title}</h3>
+                    <p className="text-gray-300text-smmb-4">{product.description}</p>
+                    <div className="flex items-center justify-centerspace-x-2mb-4">
+        </div>
+                      <div className="flexitems-center" />
+    </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                         {[...Array(5)].map((_, i) => (
                           <Star
-                            key={i}
-                            className={`h-4 w-4 ${
+                            key="{i}"
+                            className="{`h-4" w-4 ${
                               i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'
                             }`}
-                          />
+                          / />
                         ))}
+    <>
                       </div>
-                      <span className="text-sm text-gray-400">({product.reviews} reviews)</span>
+                      <span className="text-smtext-gray-400">({product.reviews} reviews)</span>
                     </div>
-                  </div>
+<<<<<<< HEAD
 
-                  <div className="text-center mb-6">
-                    <div className="flex items-center justify-center space-x-2 mb-2">
-                      <span className="text-3xl font-bold text-white">{product.price}</span>
-                      <span className="text-lg text-gray-400 line-through">{product.originalPrice}</span>
+                  <div className="text-centermb-6">
+                    <div className="flex items-center justify-centerspace-x-2mb-2">
+                      <span className="text-3 xlfont-bold text-white"   />{product.price}</span>
+                      <span className="text-lgtext-gray-400line-through"   />{product.originalPrice}</span>
+=======
+    </>
+
+    <>
+                  <div className="text-centermb-6">
+        </div>
+                    <div className="flex items-center justify-centerspace-x-2mb-2">
+        </div>
+                      <span className="text-3 xlfont-boldtext-white">{product.price}</span>
+                      <span className="text-lgtext-gray-400line-through">{product.originalPrice}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                     </div>
-                    <span className="text-sm text-green-400 font-semibold">
-                      Save {Math.round((1 - parseInt(product.price.replace('$', '')) / parseInt(product.originalPrice.replace('$', ''))) * 100)}%
+                    <span className="text-smtext-green-400font-semibold">Save {Math.round((1 - parseInt(product.price.replace('$', '')) / parseInt(product.originalPrice.replace('$', ''))) * 100)}%
                     </span>
                   </div>
+    </>
 
-                  <div className="space-y-3 mb-6">
+                  <div className="space-y-3mb-6">
+<<<<<<< HEAD
+=======
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                     {product.features.slice(0, 4).map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-3 flex-shrink-0" />
+    <>
+                      <div key="{idx}" className="flex items-centertext-smtext-gray-300" />
+<<<<<<< HEAD
+                        <CheckCircle className="h-4 w-4 text-green-400mr-3flex-shrink-0" />
+                        <span   />{feature}</span>
+=======
+                        <CheckCircle className="h-4 w-4 text-green-400mr-3flex-shrink-0" / />
                         <span>{feature}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                       </div>
+    </>
                     ))}
                     {product.features.length > 4 && (
-                      <div className="text-sm text-gray-400 text-center">
-                        +{product.features.length - 4} more features
+    <>
+                      <div className="text-smtext-gray-400text-center">+{product.features.length - 4} more features
                       </div>
+    </>
                     )}
                   </div>
 
+<<<<<<< HEAD
                   <div className="space-y-3">
-                    <Link
-                      to={`/${product.id}`}
-                      className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-                    >
-                      View Details
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-                    >
-                      Start Free Trial
+                    <Link to="{`/${product.id}`}" className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" >
+          View Details
+                      
+          <ArrowRight className="ml-2h-4w-4"  />
+        </Link>
+                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300">Start Free Trial
                     </Link>
                   </div>
-                </div>
+=======
+    <>
+                  <div className="space-y-3">
+        </div>
+                    <Link to="{`/${product.id}`}" className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
+    </>
+                      View Details
+    <>
+                      <ArrowRight className="ml-2h-4w-4" />
+                    </Link>
+                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300">Start Free Trial
+                    </Link>
+                  </div>
+    </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               ))}
+    <>
             </div>
-          </div>
         </section>
+    </>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-gray-900 to-purple-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
+    <>
+        <section className="py-20 bg-gradient-to-brfrom-gray-900to-purple-900" />
+<<<<<<< HEAD
+          <div className="max-w-7xl mx-auto px-4 sm:px-6lg:px-8text-center">
+            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
+=======
+          <div className="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center">
+        </div>
+            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
+    </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               Join thousands of businesses already using our micro SAAS solutions to streamline operations, 
               increase productivity, and drive growth.
+    <>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
+            <div className="flex flex-col sm:flex-rowgap-4justify-center">
+<<<<<<< HEAD
+              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" >
+          Get Started Today
+                
+          <ArrowRight className="ml-2h-5w-5"  />
+        </Link>
+=======
+        </div>
+              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
+    </>
                 Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
+    <>
+                <ArrowRight className="ml-2h-5w-5" />
               </Link>
+    </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
-              >
+                className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
                 Call +1 302 464 0950
+    <>
               </a>
             </div>
-            <div className="mt-8 text-gray-400">
+            <div className="mt-8text-gray-400">
+<<<<<<< HEAD
+              <p />Email: kleber@ziontechgroup.com</p>
+              <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+=======
+        </div>
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             </div>
-          </div>
         </section>
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
       </div>
     </>
   );
 };
 
+<<<<<<< HEAD
 export default MicroSaasPage;
+=======
+export default MicroSaasPage;
+    </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

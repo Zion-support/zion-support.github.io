@@ -38,7 +38,6 @@ export default function AiDrugDiscoveryProPage() {
                 Request Demo
               </Link>
             </div>
-          </div>
         </div>
       </section>
 
@@ -63,7 +62,6 @@ export default function AiDrugDiscoveryProPage() {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Applications Section */}
@@ -87,7 +85,6 @@ export default function AiDrugDiscoveryProPage() {
                 </div>
               ))}
             </div>
-          </div>
         </div>
       </section>
 
@@ -115,7 +112,6 @@ export default function AiDrugDiscoveryProPage() {
                 View All AI Services
               </Link>
             </div>
-          </div>
         </div>
       </section>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -150,7 +146,6 @@ export default function AiDrugDiscoveryProPage() {
                 Request Demo
               </Link>
             </div>
-          </div>
         </div>
       </section>
 
@@ -175,7 +170,6 @@ export default function AiDrugDiscoveryProPage() {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Applications Section */}
@@ -199,7 +193,6 @@ export default function AiDrugDiscoveryProPage() {
                 </div>
               ))}
             </div>
-          </div>
         </div>
       </section>
 
@@ -227,7 +220,6 @@ export default function AiDrugDiscoveryProPage() {
                 View All AI Services
               </Link>
             </div>
-          </div>
         </div>
       </section>
     </div>

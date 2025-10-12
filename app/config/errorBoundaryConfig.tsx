@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+import React  from 'react';
+=======
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+>>>>>>> origin/main
 /**
  * Error Boundary Configuration
  * Centralized configuration for error handling across the application
@@ -22,6 +29,7 @@ export interface ErrorBoundaryConfig {
    */
   reportingEndpoint?: string;
   /**
+<<<<<<< HEAD
    * Whether to show error overlay in development
    */
   showErrorOverlay: boolean;
@@ -43,6 +51,16 @@ export interface ErrorBoundaryConfig {
   };
 }
 
+=======
+   * Custom error messages by error type*/
+  customMessages: Record<string, string />;/**
+   * Fallback UI components*/
+  fallbackComponents: {}
+    <>
+    default: React.ComponentType<{ error: Error; resetError: () => void }>
+    network: React.ComponentType<{ error: Error; resetError: () => void }>
+    notFound: React.ComponentType<{ error: Error; resetError: () => void }>}}
+>>>>>>> origin/main
 /**
  * Default error messages
  */
@@ -55,6 +73,7 @@ export const DEFAULT_ERROR_MESSAGES: Record<string, string> = {
   'default': 'An unexpected error occurred. Please refresh the page.',
 };
 
+<<<<<<< HEAD
 /**
  * Default fallback components
  */
@@ -74,12 +93,65 @@ export const DEFAULT_FALLBACK_COMPONENTS = {
               strokeLinejoin="round"
               strokeWidth={2}
               d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+=======
+<<<<<<< HEAD
+    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
+      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
+        <div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full"></div>
+=======
+    <>
+    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
+        </div></div>
+      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
+        </div></div>
+        <div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full">
+        </div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+          >
+
             />
+    <>
           </svg>
         </div>
-        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
+        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900" />
           Oops! Something went wrong
+
+        <p className="mt-2text-centertext-gray-600">
+              /**
+ * Default error messages*/
+;
+};/**
+ * Get error boundary configuration based on environment*/
+      notFound: NotFoundFallback,}
+    },}}
+
+/**
+ * Default error fallback component*/
+<<<<<<< HEAD
+function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
+      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
+        <div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full"></div>
+=======
+    <>
+function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
+        </div></div>
+      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
+        </div></div>
+        <div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full">
+        </div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+            viewBox="0 0 24 24">
+
+>>>>>>> origin/main
+            />
+    <>
+          </svg>
+        </div>
+        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900">Oops! Something went wrong
         </h2>
+<<<<<<< HEAD
         <p className="mt-2 text-center text-gray-600">
           {error.message || 'An unexpected error occurred.'}
         </p>
@@ -96,9 +168,36 @@ export const DEFAULT_FALLBACK_COMPONENTS = {
           >
             Refresh Page
           </button>
+=======
+        <p className="mt-2text-centertext-gray-600">
+<<<<<<< HEAD
+              {error.message || 'An unexpected error occurred'}
+        </p>
+        {process.env['NODE_ENV'] === 'development' && (}
+          <pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto"  >{error.stack}</pre>)}
+        <div className="mt-6flexgap-4"></div>
+=======
+          {error.message || 'An unexpected error occurred'}
+        </p>
+        {process.env['NODE_ENV'] === 'development' && (}
+    <>
+          <pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto">{error.stack}</pre>)}
+        <div className="mt-6flexgap-4">
+        </div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors">
+            Try Again
+
+            onClick="{()" => (window.location.href = '/')}
+            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lghover:bg-gray-300transition-colors">
+            Go Home
+
+    <>
+>>>>>>> origin/main
         </div>
-      </div>
     </div>
+<<<<<<< HEAD
   ),
   network: ({ error, resetError }: { error: Error; resetError: () => void }) => (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
@@ -115,9 +214,63 @@ export const DEFAULT_FALLBACK_COMPONENTS = {
               strokeLinejoin="round"
               strokeWidth={2}
               d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+=======
+  )}
+/**
+ * Network error fallback component
+ */
+<<<<<<< HEAD
+    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
+      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
+        <div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full"></div>
+=======
+    <>
+    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
+        </div></div>
+      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
+        </div></div>
+        <div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full">
+        </div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+          >
+
+            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors">
+            Try Again
+          </button>
+
+            onClick="{()" => (window.location.href = '/')}
+            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lghover:bg-gray-300transition-colors">
+            Go Home
+    <>
+          </button>
+        </div>
+    </div>)}
+
+/**
+ * Network error fallback component*/;
+<<<<<<< HEAD
+function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
+      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
+        <div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full"></div>
+=======
+    <>
+function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
+        </div></div>
+      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
+        </div></div>
+        <div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full">
+        </div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+            viewBox="0 0 24 24">
+
+>>>>>>> origin/main
             />
+    <>
           </svg>
         </div>
+<<<<<<< HEAD
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
           Network Error
         </h2>
@@ -131,9 +284,31 @@ export const DEFAULT_FALLBACK_COMPONENTS = {
           >
             Try Again
           </button>
+=======
+<<<<<<< HEAD
+        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900"  >Connection Issue</h2>
+        <p className="mt-2text-centertext-gray-600">
+              Unable to connect to the server. Please check your internet connection and try again.
+        </p>
+        <div className="mt-6"></div>
+=======
+        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900">Connection Issue</h2>
+        <p className="mt-2text-centertext-gray-600" />
+          Unable to connect to the server. Please check your internet connection and try again.
+    <>
+        </p>
+        <div className="mt-6">
+        </div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors">
+            Retry Connection
+
+    <>
+>>>>>>> origin/main
         </div>
-      </div>
     </div>
+<<<<<<< HEAD
   ),
   notFound: ({ error, resetError }: { error: Error; resetError: () => void }) => (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
@@ -172,8 +347,46 @@ export const DEFAULT_FALLBACK_COMPONENTS = {
           >
             Go Home
           </button>
+=======
+  )}
+/**
+ * Not found error fallback component
+ */
+<<<<<<< HEAD
+    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
+      <div className="max-w-mdw-fulltext-center"></div>
+        <h1 className="text-6 xlfont-boldtext-gray-900"  >404</h1>
+        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900"  >Page Not Found</h2>
+        <p className="mt-2text-gray-600">
+              The page you're looking for doesn't exist or has been moved.
+        </p>
+        <div className="mt-6 flexgap-4justify-center"></div>
+=======
+    <>
+    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
+        </div></div>
+      <div className="max-w-mdw-fulltext-center" /></div>
+        <h1 className="text-6 xlfont-boldtext-gray-900">404</h1>
+        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900">Page Not Found</h2>
+        <p className="mt-2text-gray-600" />
+          The page you're looking for doesn't exist or has been moved.
+    <>
+        </p>
+        <div className="mt-6 flexgap-4justify-center">
+        </div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+            onClick="{()" => (window.location.href = '/')}
+            className="bg-blue-600 text-white px-6 py-2 rounded-lghover:bg-blue-700transition-colors">
+            Go Home
+
+            onClick="{()" => window.history.back()}
+            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lghover:bg-gray-300transition-colors">
+            Go Back
+
+    <>
+>>>>>>> origin/main
         </div>
-      </div>
     </div>
   ),
 };
@@ -181,6 +394,7 @@ export const DEFAULT_FALLBACK_COMPONENTS = {
 /**
  * Default error boundary configuration
  */
+<<<<<<< HEAD
 export const DEFAULT_ERROR_BOUNDARY_CONFIG: ErrorBoundaryConfig = {
   logToConsole: true,
   showDetailedErrors: process.env.NODE_ENV === 'development',
@@ -191,3 +405,87 @@ export const DEFAULT_ERROR_BOUNDARY_CONFIG: ErrorBoundaryConfig = {
   customMessages: DEFAULT_ERROR_MESSAGES,
   fallbackComponents: DEFAULT_FALLBACK_COMPONENTS,
 };
+=======
+    return 'network'
+            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors">
+            Retry Connection
+    <>
+          </button>
+        </div>
+    </div>)}
+
+/**
+ * Not found error fallback component*/
+<<<<<<< HEAD
+function NotFoundFallback(): JSX.Element {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
+      <div className="max-w-mdw-fulltext-center"></div>
+        <h1 className="text-6 xlfont-boldtext-gray-900"  >404</h1>
+        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900"  >Page Not Found</h2>
+        <p className="mt-2text-gray-600">
+              The page you're looking for doesn't exist or has been moved.
+        </p>
+        <div className="mt-6 flexgap-4justify-center"></div>
+=======
+    <>
+function NotFoundFallback(): JSX.Element {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
+        </div></div>
+      <div className="max-w-mdw-fulltext-center" /></div>
+        <h1 className="text-6 xlfont-boldtext-gray-900">404</h1>
+        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900">Page Not Found</h2>
+        <p className="mt-2text-gray-600" />
+          The page you're looking for doesn't exist or has been moved.
+    <>
+        </p>
+        <div className="mt-6 flexgap-4justify-center">
+        </div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+            onClick="{()" => (window.location.href = '/')}
+            className="bg-blue-600 text-white px-6 py-2 rounded-lghover:bg-blue-700transition-colors">
+            Go Home
+          </button>
+
+            onClick="{()" => window.history.back()}
+            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lghover:bg-gray-300transition-colors">
+            Go Back
+    <>
+          </button>
+        </div>
+    </div>)}
+
+/**
+ * Get error type from error object*/
+export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {if (error.message.includes('Network') || error.message.includes('fetch')) {return 'network'}
+  }
+  if (error.message.includes('404') || error.message.includes('not found')) {return 'notFound'}
+  }
+  if (error.message.includes('timeout')) {return 'timeout'}
+  }
+  if (error.message.includes('500') || error.message.includes('server')) {return 'serverError'}
+  }
+  if (error.message.includes('validation')) {return 'validation'}
+  }
+  return 'default'}
+/**
+ * Format error for logging
+ */
+  }}
+export default getErrorBoundaryConfig
+    <>
+  </button>
+  </button>
+  </button>
+  </path>
+  </button>
+  </button>
+  </h2>
+  </path>
+
+/**
+ * Format error for logging*/
+    url: typeof window !== 'undefined' ? window.location.href : 'unknown',}
+  }}
+
+;
+    </>
+>>>>>>> origin/main

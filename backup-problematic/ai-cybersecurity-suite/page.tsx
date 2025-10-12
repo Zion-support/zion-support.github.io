@@ -38,9 +38,7 @@ export default function AICybersecuritySuitePage() {
                 View Pricing
               </Link>
             </div>
-          </div>
         </div>
-      </div>
 
       {/* Features Section */}
       <div className="py-20">
@@ -132,9 +130,7 @@ export default function AICybersecuritySuitePage() {
                 </li>
               </ul>
             </div>
-          </div>
         </div>
-      </div>
 
       {/* CTA Section */}
       <div className="py-20 bg-slate-800/30">
@@ -159,8 +155,6 @@ export default function AICybersecuritySuitePage() {
             >
               View Pricing
             </Link>
-          </div>
-        </div>
       </div>
     </div>
   );

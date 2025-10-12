@@ -1,12 +1,15 @@
 'use client';
+import { useState, useEffect} from 'react';
+import { ArrowRight, ChevronLeft, ChevronRight} from 'lucide-react';
+<<<<<<< HEAD
+=======
 
-import { useState, useEffect } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface ContentItem {
-  id: string;
-  title: string;
-  description: string;
+  id: string;,
+  title: string;,
+  description: string;,
   icon: React.ComponentType<{ className?: string }>;
   features: string[];
   price?: string;
@@ -20,8 +23,8 @@ interface DynamicContentShowcaseProps {
   className?: string;
 }
 
-const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
-  items = [
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
+  const items = [
     {
       id: 'ai-content',
       title: 'AI Content Generation',
@@ -81,103 +84,159 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
 
   const currentItem = items[currentIndex];
   const IconComponent = currentItem.icon;
-
   return (
-    <div className={`relative ${className}`}>
+    <div const className = {`relative ${className}`} />
       {/* Controls */}
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-4">
+<<<<<<< HEAD
+      <div className="flex items-centerjustify-betweenmb-6">
+        <div className="flex items-centergap-4">
+=======
+    <>
+      <div className="flex items-centerjustify-betweenmb-6">
+        </div>
+        <div className="flexitems-centergap-4">
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
           <button
-            onClick={prevItem}
-            className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-            aria-label="Previous item"
-          >
-            <ChevronLeft className="w-5 h-5 text-white" />
+            onClick="{prevItem}"
+            className="p-2 rounded-full bg-white/10hover:bg-white/20transition-colors"
+            aria-label="Previous item" />
+<<<<<<< HEAD
+            <ChevronLeft className="w-5h-5text-white" />
+=======
+    <>
+            <ChevronLeft className="w-5h-5text-white" / />
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
           </button>
 
           <button
-            onClick={togglePlayPause}
-            className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-            aria-label={isPlaying ? 'Pause' : 'Play'}
-          >
+            onClick="{togglePlayPause}"
+            className="p-2 rounded-full bg-white/10hover:bg-white/20transition-colors"
+            aria-label="{isPlaying" ? 'Pause' : 'Play'} />
             {isPlaying ? (
-              <Pause className="w-5 h-5 text-white" />
+              <Pause className="w-5h-5text-white" />
             ) : (
-              <Play className="w-5 h-5 text-white" />
+              <Play className="w-5h-5text-white" />
             )}
           </button>
 
           <button
-            onClick={nextItem}
-            className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-            aria-label="Next item"
-          >
-            <ChevronRight className="w-5 h-5 text-white" />
+            onClick="{nextItem}"
+            className="p-2 rounded-full bg-white/10hover:bg-white/20transition-colors"
+            aria-label="Next item" />
+<<<<<<< HEAD
+            <ChevronRight className="w-5h-5text-white" />
           </button>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-centergap-2">
+=======
+    <>
+            <ChevronRight className="w-5h-5text-white" / />
+          </button>
+        </div>
+
+        <div className="flexitems-centergap-2">
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
           {items.map((_, index) => (
             <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-colors ${
+              key="{index}"
+              onClick="{()" = /> setCurrentIndex(index)}
+              className="{`w-2" h-2 rounded-full transition-colors ${
                 index === currentIndex ? 'bg-cyan-400' : 'bg-white/30'
               }`}
-              aria-label={`Go to item ${index + 1}`}
+              aria-label="{`Go" to item ${index + 1}`}
             />
           ))}
+    <>
         </div>
-      </div>
 
       {/* Content Card */}
-      <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/30 transition-all duration-300">
-        <div className="flex items-start gap-6">
+<<<<<<< HEAD
+      <div className="bg-white/5 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:border-white/30transition-allduration-300">
+        <div className="flex items-startgap-6">
           <div className="flex-shrink-0">
-            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
-              <IconComponent className="w-8 h-8 text-white" />
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-centerjustify-center">
+              <IconComponent className="w-8h-8text-white" />
             </div>
-          </div>
 
           <div className="flex-1">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-sm text-cyan-400 font-medium">{currentItem.category}</span>
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                ))}
-              </div>
+            <div className="flex items-centergap-2mb-2">
+              <span className="text-smtext-cyan-400font-medium"  >{currentItem.category}</span>
+              <div className="flex items-centergap-1">
+=======
+    <>
+      <div className="bg-white/5 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:border-white/30transition-allduration-300">
+        </div>
+        <div className="flexitems-startgap-6">
+        </div>
+          <div className="flex-shrink-0">
+        </div>
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flexitems-centerjustify-center">
+        </div>
+              <IconComponent className="w-8h-8text-white" / />
             </div>
 
-            <h3 className="text-2xl font-bold text-white mb-3">{currentItem.title}</h3>
+    <>
+          <div className="flex-1">
+        </div>
+            <div className="flex items-centergap-2mb-2">
+        </div>
+              <span className="text-smtext-cyan-400font-medium">{currentItem.category}</span>
+              <div className="flexitems-centergap-1">
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                {[...Array(5)].map((_, i) => (
+                  <Star key="{i}" className="w-4 h-4text-yellow-400fill-current" />
+                ))}
+    <>
+              </div>
+
+<<<<<<< HEAD
+            <h3 className="text-2 xl font-bold text-white mb-3"  >{currentItem.title}</h3>
             <p className="text-gray-300 mb-4">{currentItem.description}</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2gap-2mb-6">
+=======
+    <>
+            <h3 className="text-2 xl font-boldtext-whitemb-3">{currentItem.title}</h3>
+            <p className="text-gray-300mb-4">{currentItem.description}</p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2gap-2mb-6">
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               {currentItem.features.map((feature, index) => (
-                <div key={index} className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+    <>
+                <div key="{index}" className="flex items-centertext-smtext-gray-300" />
+<<<<<<< HEAD
+                  <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" />
+                  <span  >{feature}</span>
+=======
+                  <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" / />
                   <span>{feature}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                 </div>
               ))}
             </div>
 
-            <div className="flex items-center justify-between">
+            <div className="flex items-centerjustify-between">
               {currentItem.price && (
-                <div className="text-cyan-400 font-semibold text-lg">
-                  {currentItem.price}
+    <>
+                <div className="text-cyan-400font-semiboldtext-lg">{currentItem.price}
                 </div>
               )}
 
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center gap-2">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-centergap-2" />
                 Learn More
-                <ArrowRight className="w-4 h-4" />
+    <>
+                <ArrowRight className="w-4h-4" />
               </button>
             </div>
-          </div>
         </div>
-      </div>
     </div>
   );
 };
 
 export default DynamicContentShowcase;
+    </>

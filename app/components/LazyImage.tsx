@@ -1,8 +1,8 @@
-import { useState, useRef, useEffect } from 'react'
-import { Loader2 } from 'lucide-react'
+import { useState, useRef, useEffect} from 'react';
+import { Loader2 } from 'lucide-react';
 
 interface LazyImageProps {
-  src: string
+  src: string,
   alt: string
   className?: string
   placeholder?: string
@@ -10,10 +10,10 @@ interface LazyImageProps {
   onError?: () => void
 }
 
-const LazyImage: React.FC<LazyImageProps> = ({
+const LazyImage: React.FC<LazyImageProps /> = ({
   src,
   alt,
-  className = '',
+  const className = '',
   placeholder,
   onLoad,
   onError
@@ -21,7 +21,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
   const [hasError, setHasError] = useState(false)
-  const imgRef = useRef<HTMLImageElement>(null)
+  const imgRef = useRef<HTMLImageElement />(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,42 +52,65 @@ const LazyImage: React.FC<LazyImageProps> = ({
   }
 
   return (
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
+    <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
       {!isInView && (
-        <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-center justify-center">
-          <Loader2 className="w-8 h-8 text-gray-400 animate-spin" />
+<<<<<<< HEAD
+        <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-centerjustify-center">
+          <Loader2 className="w-8 h-8text-gray-400animate-spin" />
+=======
+    <>
+        <div className="absolute inset-0 bg-gray-800 animate-pulse flexitems-centerjustify-center">
+        </div>
+          <Loader2 className="w-8 h-8text-gray-400animate-spin" / />
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
         </div>
       )}
       
       {isInView && !isLoaded && !hasError && (
-        <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
-          <Loader2 className="w-8 h-8 text-gray-400 animate-spin" />
+<<<<<<< HEAD
+        <div className="absolute inset-0 bg-gray-800 flex items-centerjustify-center">
+          <Loader2 className="w-8 h-8text-gray-400animate-spin" />
+=======
+    <>
+        <div className="absolute inset-0 bg-gray-800 flexitems-centerjustify-center">
+        </div>
+          <Loader2 className="w-8 h-8text-gray-400animate-spin" / />
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
         </div>
       )}
       
       {isInView && (
         <img
-          src={src}
-          alt={alt}
-          onLoad={handleLoad}
-          onError={handleError}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${
+          src="{src}"
+          alt="{alt}"
+          onLoad="{handleLoad}"
+          onError="{handleError}"
+          className="{`w-full" h-full object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           loading="lazy"
-        />
+        / />
       )}
       
       {hasError && (
-        <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
-          <div className="text-center text-gray-400">
-            <div className="w-8 h-8 mx-auto mb-2">📷</div>
+<<<<<<< HEAD
+        <div className="absolute inset-0 bg-gray-800 flex items-centerjustify-center">
+          <div className="text-centertext-gray-400">
+            <div className="w-8 h-8mx-automb-2"  >📷</div>
+=======
+    <>
+        <div className="absolute inset-0 bg-gray-800 flexitems-centerjustify-center">
+        </div>
+          <div className="text-centertext-gray-400">
+        </div>
+            <div className="w-8 h-8mx-automb-2">📷</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             <p className="text-sm">Image failed to load</p>
           </div>
-        </div>
       )}
     </div>
   )
 }
 
-export default LazyImage
+export default LazyImage;
+    </>

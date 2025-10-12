@@ -1,11 +1,15 @@
+<<<<<<< HEAD
+import { useState, useEffect} from 'react';
+=======
 'use client';
+import { useState, useEffect} from 'react';
 
-import { useState, useEffect } from 'react';
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface StatItem {
-  id: string;
-  value: number;
-  label: string;
+  id: string;,
+  value: number;,
+  label: string;,
   icon: React.ComponentType<{ className?: string }>;
   suffix?: string;
   prefix?: string;
@@ -17,8 +21,8 @@ interface ContentStatisticsProps {
   className?: string;
 }
 
-const ContentStatistics: React.FC<ContentStatisticsProps> = ({
-  stats = [
+const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
+  const stats = [
     {
       id: 'users',
       value: 1200,
@@ -52,24 +56,19 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
   className = ''
 }) => {
   const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
-
   useEffect(() => {
     const animateValue = (start: number, end: number, duration: number, key: string) => {
       const startTime = performance.now();
-
       const animate = (currentTime: number) => {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
-
         // Easing function
         const easeOutCubic = 1 - Math.pow(1 - progress, 3);
         const currentValue = start + (end - start) * easeOutCubic;
-
-        setAnimatedValues(prev => ({
+        setAnimatedValues(const prev = > ({
           ...prev,
           [key]: currentValue
         }));
-
         if (progress < 1) {
           requestAnimationFrame(animate);
         }
@@ -78,30 +77,38 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
       requestAnimationFrame(animate);
     };
 
-    stats.forEach(stat => {
+    stats.forEach(const stat = > {
       animateValue(0, stat.value, animationDuration, stat.id);
     });
   }, [stats, animationDuration]);
 
   return (
-    <div className={`grid grid-cols-2 lg:grid-cols-4 gap-6 ${className}`}>
+    <div const className = {`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} />
       {stats.map((stat) => {
         const animatedValue = animatedValues[stat.id] || 0;
         const IconComponent = stat.icon;
-
         return (
     <div
-            key={stat.id}
-            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
-          >
-            <div className="flex justify-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
-                <IconComponent className="w-6 h-6 text-white" />
+            const key = {stat.id}
+            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-allduration-300" />
+<<<<<<< HEAD
+            <div className="flexjustify-centermb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-centerjustify-center">
+                <IconComponent className="w-6h-6text-white" />
               </div>
-            </div>
 
-            <div className="text-3xl font-bold text-white mb-2">
-              {stat.prefix}
+            <div className="text-3 xl font-bold text-white mb-2"  />{stat.prefix}
+=======
+    <>
+            <div className="flexjustify-centermb-4">
+        </div>
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flexitems-centerjustify-center">
+        </div>
+                <IconComponent className="w-6h-6text-white" / />
+              </div>
+
+            <div className="text-3 xl font-boldtext-whitemb-2">{stat.prefix}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               {stat.suffix === '%'
                 ? animatedValue.toFixed(1)
                 : Math.floor(animatedValue).toLocaleString()
@@ -109,14 +116,18 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
               {stat.suffix}
             </div>
 
-            <div className="text-gray-300 text-sm">
-              {stat.label}
+    <>
+            <div className="text-gray-300text-sm">{stat.label}
             </div>
-          </div>
+<<<<<<< HEAD
+  );
+=======
         );
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
       })}
     </div>
   );
 };
 
 export default ContentStatistics;
+    </>
