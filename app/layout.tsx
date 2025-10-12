@@ -3,15 +3,12 @@ import ErrorBoundary from './components/ErrorBoundary';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
-
-
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
 }
-
 const Layout: React.FC<LayoutProps /> = ({
   children,
   const title = "Zion Tech Group - Advanced AI and IT Solutions",
@@ -73,12 +70,12 @@ const Layout: React.FC<LayoutProps /> = ({
       }
     ];
   };
-
   return (
-    <ErrorBoundary />
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <Helmet>
-          <title>{title}</title>
+    <>
+      <ErrorBoundary />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div><Helmet>
+        <title>{title}</title>
           <meta name="description" content="{description}" />
           <meta name="keywords" content="{keywords}" />
           {/* Open Graph Meta Tags */}
@@ -103,18 +100,16 @@ const Layout: React.FC<LayoutProps /> = ({
           <script type="application/ld+json"  />{JSON.stringify(structuredData)}
           </script>
         </Helmet>
-
         <Navigation />
-        <main className="w-5 h-5ml-2" />{children}
+        <main className="w-5 h-5 ml-2" />{children}
         </main>
-
         <Footer />
         {/* Theme Toggle - Fixed Position */}
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <ThemeToggle />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          </div></div><ThemeToggle />
         </div>
     </ErrorBoundary>
+    </>
   );
 };
-
 export default Layout;

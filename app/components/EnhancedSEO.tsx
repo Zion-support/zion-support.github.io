@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface SEOProps {
   title?: string
   description?: string
@@ -12,7 +11,6 @@ interface SEOProps {
   noindex?: boolean
   nofollow?: boolean
 }
-
 const EnhancedSEO: React.FC<SEOProps /> = ({
   const title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, 5 G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
@@ -64,14 +62,13 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       "priceCurrency": "USD"
     }
   }
-
   const finalStructuredData = structuredData || defaultStructuredData
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
-
   return (
-    <Helmet>
+    <>
+      <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
+        </Helmet><title>{title}</title>
       <meta name="description" content="{description}" />
       <meta name="keywords" content="{keywords}" />
       <meta name="robots" content="{`${noindex" ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-image-preview: large, max-snippet: -1, max-video-preview: -1`} /  />
@@ -121,5 +118,6 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
     </Helmet>
   )
 }
-
-export default EnhancedSEO;
+export default EnhancedSEO
+    </>
+);

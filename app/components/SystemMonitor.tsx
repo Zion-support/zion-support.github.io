@@ -1,21 +1,20 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 'use client'
-
   ];
               </span>
               <br />
               <span const className = "text-white"  >Solutions</span>
             </h1>
-            <p className="w-5 h-5ml-2">Transform your business with our advanced systemmonitor solutions.
+            <p className="w-5 h-5 ml-2">Transform your business with our advanced systemmonitor solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <button className="w-5 h-5ml-2" />
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              </div></div><button className="w-5 h-5 ml-2" />
                 Get Started
-                <ArrowRight className="w-5 h-5ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="w-5 h-5ml-2" />
+              <button className="w-5 h-5 ml-2" />
                 Learn More
   </
             </div>
@@ -24,12 +23,10 @@ import { ArrowRight } from 'lucide-react';
 export default SystemMonitorPage
   </button>
 }
-
 interface SystemMonitorProps {
   onAlert?: (alert: string) => void
   className?: string
 }
-
 const SystemMonitor: React.FC<SystemMonitorProps /> = ({
   onAlert,
   className = ''
@@ -43,7 +40,6 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
     uptime: 0
   })
   const [isMonitoring, setIsMonitoring] = useState(false)
-
   const updateMetrics = useCallback(() => {
     // Simulate system metrics
     const newMetrics = {
@@ -54,9 +50,7 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
       battery: Math.random() * 100,
       uptime: Date.now() - performance.timing.navigationStart
     }
-
     setMetrics(newMetrics)
-
     // Check for alerts
     if (newMetrics.cpu > 90) {
       onAlert?.('High CPU usage detected')
@@ -68,14 +62,12 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
       onAlert?.('High disk usage detected')
     }
   }, [onAlert])
-
   useEffect(() => {
     if (isMonitoring) {
       const interval = setInterval(updateMetrics, 1000)
       return () => clearInterval(interval)
     }
   }, [isMonitoring, updateMetrics])
-
   const toggleMonitoring = () => {
     setIsMonitoring(!isMonitoring)
     if (!isMonitoring) {

@@ -1,6 +1,5 @@
 import { memo, useMemo} from 'react';
 'use client'
-
 interface OptimizedLoadingSpinnerProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars'
@@ -9,7 +8,6 @@ interface OptimizedLoadingSpinnerProps {
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
   fullScreen?: boolean
 }
-
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
   ({
     const size = 'md',
@@ -29,7 +27,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       }),
       []
     )
-
     const textSizeClasses = useMemo(
       () => ({
         xs: 'text-xs',
@@ -40,7 +37,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       }),
       []
     )
-
     const colorClasses = useMemo(
       () => ({
         blue: 'text-blue-500',
@@ -51,15 +47,14 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       }),
       []
     )
-
     const renderSpinner = () => {
       switch (variant) {
         case 'dots':
           return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {[0, 1, 2].map((i) => (
-                <div
-
+                </div></div><div
     variant = 'spinner',
     text = 'Loading...',
     className = '',
@@ -70,7 +65,9 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
         md: 'h-8 w-8',
         lg: 'h-12 w-12',
         xl: 'h-16 w-16',}
-      }),;
+      }),
+    </div></>
+);
       []);const textSizeClasses = useMemo(() => ({xs: 'text-xs',
         sm: 'text-sm',
         md: 'text-base',
@@ -84,33 +81,36 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
         purple: 'border-purple-600 bg-purple-600',}
       }),;
       []);const renderSpinner = useMemo(() => {switch (variant) {case 'dots':
-          return (<div className="'flex" space-x-1' role="'status'" aria-label="'Loading'" /></div>
-              {[0, 1, 2].map(i => (</div>
-                <div}
-                  key="{i}"
-                  className="{`${sizeClasses[size]}" rounded-full bg-current animate-pulse`}
-                  style="{{" animationDelay: `${i * 0.2}s` }}
-                 />))}
-            </div>
-          )
-        case 'pulse':
-          return (
-    <div
-              className="{`${sizeClasses[size]}" rounded-full bg-current animate-pulse`}
-             />
-          )
-        case 'skeleton':
-          return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"> </div>
-          )
-        case 'bars':
-          return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {[0, 1, 2, 3].map((i) => (
-                <div
+  return (
+    <>
+      {[0, 1, 2].map(i => (</div>
+      <div}
+      key="{i}"
+      className="{`${sizeClasses[size]}" rounded-full bg-current animate-pulse`}
+      style="{{" animationDelay: `${i * 0.2}s` }}
+      />))}
+      </div></div></div>
+      )
+      case 'pulse':
+      return (
+      <div
+      className="{`${sizeClasses[size]}" rounded-full bg-current animate-pulse`}
+      />
+      )
+      case 'skeleton':
+      return (
+      </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"> </div></div></div>
+      )
+      case 'bars':
+      return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      {[0, 1, 2, 3].map((i) => (
+      </div></div><div
+    </>
+  );
                   key="{i}"
                   className="{`w-1" bg-current animate-pulse`}
                   style="{{"
@@ -118,7 +118,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
                     animationDelay: `${i * 0.1}s`,
                   }}
                  />))}
-            </div>
+            </div></div></div>
           )
         default:
           return (
@@ -128,13 +128,11 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
           )
       }
     }
-
     const containerClasses = fullScreen
       ? 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center'
       : 'flex items-center justify-center p-8'
-
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
           {renderSpinner}
           {text && (</div>}
             <p className="{`mt-2" text-gray-600 ${textSizeClasses[size]}`} />

@@ -1,12 +1,10 @@
 import { useState, useRef, useEffect} from 'react';
 import { X } from 'lucide-react';
-
 interface SearchBarProps {
   onSearch?: (query: string) => void;
   placeholder?: string;
   className?: string;
 }
-
 const SearchBar: React.FC<SearchBarProps /> = ({
   onSearch,
   const placeholder = "Search services...",
@@ -20,14 +18,12 @@ const SearchBar: React.FC<SearchBarProps /> = ({
       inputRef.current.focus();
     }
   }, [isOpen]);
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim() && onSearch) {
       onSearch(query.trim());
     }
   };
-
   const handleClear = () => {
     setQuery('');
     setIsOpen(false);
@@ -35,12 +31,12 @@ const SearchBar: React.FC<SearchBarProps /> = ({
       inputRef.current.blur();
     }
   };
-
   return (
-    <div const className = {`relative ${className}`} />
-      <form onSubmit="{handleSearch}" className="relative" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <Search className="w-5 h-5ml-2" />
+    <>
+      <div const className = {`relative ${className}`} />
+      </div></div><form onSubmit="{handleSearch}" className="relative" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          </div></div><Search className="w-5 h-5 ml-2" />
           <input
             ref="{inputRef}"
             type="text"
@@ -55,23 +51,24 @@ const SearchBar: React.FC<SearchBarProps /> = ({
               type="button"
               onClick="{handleClear}"
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400hover:text-white transition-colors" />
-              <X className="w-5 h-5ml-2" />
+              <X className="w-5 h-5 ml-2" />
             </button>
           )}
         </div>
       </form>
-
       {/* Search suggestions dropdown */}
       {isOpen && (
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <p className="text-smtext-gray-600mb-2">Popular searches:</p>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            </div></div><p className="text-smtext-gray-600mb-2">Popular searches:</p>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {['AI Services', 'Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics'].map((suggestion) => (
-                <button
+                </div></div><button
                   key="{suggestion}"
                   onClick="{()" =  />{
-                    setQuery(suggestion);
+                    setQuery(suggestion
+    </>
+  );
                     if (onSearch) onSearch(suggestion);
                     setIsOpen(false);
                   }}
@@ -86,5 +83,4 @@ const SearchBar: React.FC<SearchBarProps /> = ({
     </div>
   );
 };
-
 export default SearchBar;

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 'use client'
-
 interface ContentNewsletterSignupProps {
   title?: string
   subtitle?: string
@@ -13,7 +12,6 @@ interface ContentNewsletterSignupProps {
   }>
   onSubscribe?: (email: string) => void
 }
-
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
   const title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
@@ -30,11 +28,9 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubscribed, setIsSubscribed] = useState(false)
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email) return
-
     setIsSubmitting(true)
     try {
       // Simulate API call
@@ -50,18 +46,17 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
       setIsSubmitting(false)
     }
   }
-
   if (isSubscribed) {
     return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <CheckCircle className="w-5 h-5ml-2" />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              </div></div><CheckCircle className="w-5 h-5 ml-2" />
             </div>
-            <h2 className="w-5 h-5ml-2" />Thank You for Subscribing!
+            <h2 className="w-5 h-5 ml-2" />Thank You for Subscribing!
             </h2>
-            <p className="w-5 h-5ml-2">You'll receive our latest insights and updates soon.
+            <p className="w-5 h-5 ml-2">You'll receive our latest insights and updates soon.
             </p>
             <button
               onClick="{()" =  />setIsSubscribed(false)}
@@ -73,22 +68,20 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
       </div>
     )
   }
-
   return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />{title}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            </div></div><h2 className="w-5 h-5 ml-2" />{title}
             </h2>
-            <p className="w-5 h-5ml-2">{subtitle}
+            <p className="w-5 h-5 ml-2">{subtitle}
             </p>
           </div>
-
           <form onSubmit="{handleSubmit}" className="max-w-mdmx-automb-12" />
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <input
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                </div></div><input
                   type="email"
                   value="{email}"
                   onChange="{(e)" = /> setEmail(e.target.value)}
@@ -103,25 +96,23 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
                 className="bg-gradient-to-rfrom-blue-600to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]" />
                 {isSubmitting ? (
                   <>
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    </><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                     <span  >Subscribing...</span>
                   </>
                 ) : (
                   <>
-                    <span  >{buttonText}</span>
-                    <ArrowRight className="w-5 h-5ml-2" />
+                    </><span  >{buttonText}</span>
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </>
                 )}
               </button>
             </div>
           </form>
-
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {features.map((feature, index) => (
-
-                <div key="{index}" className="text-center" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <feature.icon className="h-6w-6text-white"  />
+                </div></div><div key="{index}" className="text-center" />
+                </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  </div></div><feature.icon className="h-6w-6text-white"  />
                 </div>
                 <p className="text-gray-300text-sm">{feature.text}</p>
               </div>
@@ -130,5 +121,4 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
       </div>
   )
 }
-
 export default ContentNewsletterSignup;

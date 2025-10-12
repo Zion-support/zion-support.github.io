@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-
 interface SEOOptimizerProps {
   title?: string
   description?: string
@@ -8,7 +7,6 @@ interface SEOOptimizerProps {
   ogImage?: string
   structuredData?: object
 }
-
 const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
   const title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, 5 G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
@@ -24,13 +22,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       script.type = 'application/ld+json'
       script.text = JSON.stringify(structuredData)
       document.head.appendChild(script)
-      
-      return () => {
+      return (
+    <>
+      ) => {
         document.head.removeChild(script)
       }
     }
   }, [structuredData])
-
   // Generate breadcrumb structured data
   const generateBreadcrumbStructuredData = () => {
     const pathSegments = window.location.pathname.split('/').filter(Boolean)
@@ -40,7 +38,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
       item: `https://ziontechgroup.com/${pathSegments.slice(0, index + 1).join('/')}`
     }))
-
     return {
       '@context': 'https: //schema.org',
       '@type': 'BreadcrumbList',
@@ -55,7 +52,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       ]
     }
   }
-
   // Generate FAQ structured data
   const generateFAQStructuredData = () => {
     return {
@@ -89,15 +85,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       ]
     }
   }
-
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
   const breadcrumbData = generateBreadcrumbStructuredData()
   const faqData = generateFAQStructuredData()
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
+        </Helmet><title>{title}</title>
       <meta name="description" content="{description}" />
       <meta name="keywords" content="{keywords}" />
       <meta name="robots" content="index, follow, max-image-preview: large, max-snippet: -1, max-video-preview:-1" />
@@ -153,5 +147,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
     </Helmet>
   )
 }
-
-export default SEOOptimizer;
+export default SEOOptimizer
+    </>
+);

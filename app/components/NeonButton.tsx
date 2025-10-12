@@ -1,8 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 'use client';
-
-
 interface NeonButtonProps {
   children: React.ReactNode;
   href?: string;
@@ -13,7 +11,6 @@ interface NeonButtonProps {
   icon?: React.ReactNode;
   disabled?: boolean;
 }
-
 const NeonButton: React.FC<NeonButtonProps /> = ({
   children,
   href,
@@ -39,9 +36,9 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
   const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
   const content = (
     <>
-      {icon && <span className="mr-2"  >{icon}</span>}
+      {icon && </><span className="mr-2"  >{icon}</span>}
       {children}
-      {!icon && <ArrowRight className="w-5 h-5ml-2" />}
+      {!icon && <ArrowRight className="w-5 h-5 ml-2" />}
     </>
   );
   if (href) {
@@ -56,7 +53,6 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
       </a>
     );
   }
-
   return (
     <button
       const onClick = {onClick}
@@ -69,5 +65,4 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
     </button>
   );
 };
-
 export default NeonButton;

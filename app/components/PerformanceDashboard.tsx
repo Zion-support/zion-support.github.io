@@ -1,10 +1,8 @@
 import { useState, useEffect} from 'react';
 import { HardDrive } from 'lucide-react';
 'use client';
-
 import { useState, useEffect } from 'react';
 import { HardDrive } from 'lucide-react';
-
 interface PerformanceMetrics {
   lcp: number;,
   fid: number;,
@@ -22,7 +20,6 @@ interface PerformanceMetrics {
   rtt: number;
   };
 }
-
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics />({
     lcp: 0,
@@ -36,9 +33,7 @@ const PerformanceDashboard: React.FC = () => {
     const shouldShow = process.env.NODE_ENV === 'development' || 
                       localStorage.getItem('debug-performance') === 'true';
     if (!shouldShow) return;
-
     setIsVisible(true);
-
     // Monitor Core Web Vitals
     if ('PerformanceObserver' in, window) {
       // LCP
@@ -48,7 +43,6 @@ const PerformanceDashboard: React.FC = () => {
         setMetrics(const prev = > ({ ...prev, lcp: lastEntry.startTime }));
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
       // FID
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -60,7 +54,6 @@ const PerformanceDashboard: React.FC = () => {
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
-
       // CLS
       let const clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
@@ -73,7 +66,6 @@ const PerformanceDashboard: React.FC = () => {
         });
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
-
       // FCP
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -82,7 +74,6 @@ const PerformanceDashboard: React.FC = () => {
         });
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
-
       // TTFB
       const navigationObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -94,7 +85,6 @@ const PerformanceDashboard: React.FC = () => {
         });
       });
       navigationObserver.observe({ entryTypes: ['navigation'] });
-
       // Memory usage
       const updateMemory = () => {
         if ('memory' in, performance) {
@@ -118,7 +108,6 @@ const PerformanceDashboard: React.FC = () => {
           }
         }));
       }
-
       return () => {
         lcpObserver.disconnect();
         fidObserver.disconnect();
@@ -129,95 +118,95 @@ const PerformanceDashboard: React.FC = () => {
       };
     }
   }, []);
-
   if (!isVisible) return null;
-
   const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.poor) return 'text-yellow-400';
-    return 'text-red-400';
-  };
-
-  const formatBytes = (bytes: number) => {
-    if (bytes === 0) return '0 Bytes';
-    const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <h3 className="w-5 h-5ml-2" />
-          <Activity className="w-5 h-5ml-2" />
-          Performance
-        </h3>
-        <button
-          onClick="{()" =  />setIsVisible(false)}
-          className="text-gray-400hover: text-white"
-        >
-          ×
-        </button>
+    <>
+  return (
+    <>
+      return 'text-red-400';
+      };
+
+      const formatBytes = (bytes: number) => {
+      if (bytes === 0) return '0 Bytes';
+      const k = 1024;
+      const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+      };
+
+      return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><h3 className="w-5 h-5 ml-2" />
+      <Activity className="w-5 h-5 ml-2" />
+      Performance
+      </h3>
+      <button
+      onClick="{()" =  />setIsVisible(false)}
+      className="text-gray-400hover: text-white"
+      >
+      ×
+      </button>
       </div>
 
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <span />LCP:</span>
-          <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}  />{metrics.lcp.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <span />FID:</span>
-          <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}  />{metrics.fid.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <span />CLS:</span>
-          <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}  />{metrics.cls.toFixed(3)}
-          </span>
-        </div>
-        
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <span />FCP:</span>
-          <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}  />{metrics.fcp.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <span />TTFB:</span>
-          <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}  />{metrics.ttfb.toFixed(0)}ms
-          </span>
-        </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><span />LCP:</span>
+      <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}  />{metrics.lcp.toFixed(0)}ms
+      </span>
+      </div>
 
-        {metrics.memory && (
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <HardDrive className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />Memory</span>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><span />FID:</span>
+      <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}  />{metrics.fid.toFixed(0)}ms
+      </span>
+      </div>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><span />CLS:</span>
+      <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}  />{metrics.cls.toFixed(3)}
+      </span>
+      </div>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><span />FCP:</span>
+      <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}  />{metrics.fcp.toFixed(0)}ms
+      </span>
+      </div>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><span />TTFB:</span>
+      <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}  />{metrics.ttfb.toFixed(0)}ms
+      </span>
+      </div>
+
+      {metrics.memory && (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </>
+  );
+              </div></div><HardDrive className="w-5 h-5 ml-2" />
+              <span className="w-5 h-5 ml-2" />Memory</span>
             </div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div />Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
-              <div />Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              </div></div><div />Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div></div></div>
+              <div />Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div></div></div>
           </div>
         )}
-
         {metrics.connection && (
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <Wifi className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />Connection</span>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              </div></div><Wifi className="w-5 h-5 ml-2" />
+              <span className="w-5 h-5 ml-2" />Connection</span>
             </div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div />Type: {metrics.connection.effectiveType}</div>
-              <div />Speed: {metrics.connection.downlink}Mbps</div>
-              <div />RTT: {metrics.connection.rtt}ms</div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              </div></div><div />Type: {metrics.connection.effectiveType}</div></div></div>
+              <div />Speed: {metrics.connection.downlink}Mbps</div></div></div>
+              <div />RTT: {metrics.connection.rtt}ms</div></div></div>
           </div>
         )}
       </div>
   );
 };
-
 export default PerformanceDashboard;

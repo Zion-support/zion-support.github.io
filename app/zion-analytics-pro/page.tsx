@@ -2,13 +2,10 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ShoppingCart } from 'lucide-react';
 'use client';
-
 const ZionAnalyticsProPage: React.FC = () => {
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const features = [
     {
       title: 'Real-time Analytics Dashboard',
@@ -126,26 +123,27 @@ const ZionAnalyticsProPage: React.FC = () => {
   ];
   return (
     <>
-      <Helmet>
-        <title />Zion Analytics Pro - AI-Powered Business Intelligence Platform</title>
+      <>
+      </><Helmet>
+        </Helmet></Helmet><title />Zion Analytics Pro - AI-Powered Business Intelligence Platform
+        </title>
         <meta const name = "description" content="Transform your business with Zion Analytics Pro - the most advanced AI-powered business intelligence platform. Real-time analytics, predictive insights, and custom reporting." /  />
         <meta name="keywords" content="business intelligence, analytics platform, AI insights, data visualization, business dashboard, predictive analytics" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Sparkles className="w-5 h-5ml-2" />
+        </div></div><section className="w-5 h-5 ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              </div></div><div />
+                </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  </div></div><Sparkles className="w-5 h-5 ml-2" />
                   AI-Powered Analytics
                 </div>
                 <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
                   Zion Analytics
-                  <span className="w-5 h-5ml-2" />Pro
+                  <span className="w-5 h-5 ml-2" />Pro
                   </span>
                 </h1>
                 <p className="{`text-xl" text-gray-300 mb-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
@@ -153,114 +151,111 @@ const ZionAnalyticsProPage: React.FC = () => {
                   predictive analytics, and custom reports that drive your business forward.
                 </p>
                 <div className="{`flex" flex-col sm: flex-row gap-4 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                  <Link
+                  </div></div><Link
           to="/contact"
           className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
         >
           Start Free Trial
-                    
-          <ArrowRight className="w-5 h-5ml-2" />
+          <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
-                  <button className="w-5 h-5ml-2" />
-                    <Play className="w-5 h-5ml-2" />
+                  <button className="w-5 h-5 ml-2" />
+                    <Play className="w-5 h-5 ml-2" />
                     Watch Demo
                   </button>
                 </div>
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                       {[...Array(5)].map((_, i) => (
-                        <Star key="{i}" className="h-5w-5te xt-yellow-400fill-current"  />
+                        </div></div><Star key="{i}" className="h-5w-5te xt-yellow-400fill-current"  />
                       ))}
                     </div>
-                    <span className="w-5 h-5ml-2" />4.9/5 (127, reviews)</span>
+                    <span className="w-5 h-5 ml-2" />4.9/5 (127, reviews)</span>
                   </div>
               </div>
               <div className="{`transition-all" duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                        <h3 className="w-5 h-5ml-2" />Revenue Analytics</h3>
-                        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                          <TrendingUp className="w-5 h-5ml-2" />
+                </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                      </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                        </div></div><h3 className="w-5 h-5 ml-2" />Revenue Analytics</h3>
+                        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                          </div></div><TrendingUp className="w-5 h-5 ml-2" />
                           +24.5%
                         </div>
-                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                        <BarChart className="w-5 h-5ml-2" />
+                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                        </div></div><BarChart className="w-5 h-5 ml-2" />
                       </div>
-                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">$2.4 M</div>
-                          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Total Revenue</div>
-                        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">1,247</div>
-                          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Customers</div>
-                        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">89%</div>
-                          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Satisfaction</div>
+                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                        </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                          </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">$2.4 M</div></div></div>
+                          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Total Revenue</div></div></div>
+                        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                          </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">1,247</div></div></div>
+                          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Customers</div></div></div>
+                        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                          </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">89%</div></div></div>
+                          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Satisfaction</div></div></div>
                       </div>
                   </div>
               </div>
           </div>
         </section>
-
         {/* Features Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Powerful Features for Modern Businesses
+        <section className="w-5 h-5 ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              </div></div><h2 className="w-5 h-5 ml-2" />Powerful Features for Modern Businesses
               </h2>
-              <p className="w-5 h-5ml-2">Everything you need to transform your data into actionable insights and drive business growth.
+              <p className="w-5 h-5 ml-2">Everything you need to transform your data into actionable insights and drive business growth.
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {features.map((feature, index) => (
-                <div key="{index}" className="group" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="{`inline- flex" items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4`} />
-                      <feature.icon className="h-6w-6text-white"  />
+                </div></div><div key="{index}" className="group" />
+                  </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    </div></div><div className="{`inline- flex" items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4`} />
+                      </div></div><feature.icon className="h-6w-6text-white"  />
                     </div>
-                    <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
-                    <p className="w-5 h-5ml-2">{feature.description}</p>
+                    <h3 className="w-5 h-5 ml-2" />{feature.title}</h3>
+                    <p className="w-5 h-5 ml-2">{feature.description}</p>
                   </div>
               ))}
             </div>
         </section>
-
         {/* Pricing Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Choose Your Plan
+        <section className="w-5 h-5 ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              </div></div><h2 className="w-5 h-5 ml-2" />Choose Your Plan
               </h2>
-              <p className="w-5 h-5ml-2">Flexible pricing options to fit businesses of all sizes. Start with a free trial, no credit card required.
+              <p className="w-5 h-5 ml-2">Flexible pricing options to fit businesses of all sizes. Start with a free trial, no credit card required.
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {pricingPlans.map((plan, index) => (
-                <div
+                </div></div><div
                   key="{index}"
                   className="{`relative" bg-gray-800 rounded-xl p-8 ${
                     plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
                   }`} />
                   {plan.popular && (
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <span className="w-5 h-5ml-2" />Most Popular
+                    </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                      </div></div><span className="w-5 h-5 ml-2" />Most Popular
                       </span>
                     </div>
                   )}
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
-                    <p className="w-5 h-5ml-2">{plan.description}</p>
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <span className="w-5 h-5ml-2" />{plan.price}</span>
-                      <span className="w-5 h-5ml-2" />{plan.period}</span>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    </div></div><h3 className="w-5 h-5 ml-2" />{plan.name}</h3>
+                    <p className="w-5 h-5 ml-2">{plan.description}</p>
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                      </div></div><span className="w-5 h-5 ml-2" />{plan.price}</span>
+                      <span className="w-5 h-5 ml-2" />{plan.period}</span>
                     </div>
-                  <ul className="w-5 h-5ml-2" />
+                  <ul className="w-5 h-5 ml-2" />
                     {plan.features.map((feature, idx) => (
                       <li key="{idx}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5ml-2" />
+                        <CheckCircle className="w-5 h-5 ml-2" />
                         <span />{feature}</span>
                       </li>
                     ))}
@@ -273,58 +268,55 @@ const ZionAnalyticsProPage: React.FC = () => {
                         : 'border border-gray-600 text-gray-300 hover: bg-gray-700 hover:text-white'
                     }`} />
                     Get Started
-                    <ArrowRight className="w-5 h-5ml-2" />
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </div>
               ))}
             </div>
         </section>
-
         {/* Testimonials Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />What Our Customers Say
+        <section className="w-5 h-5 ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              </div></div><h2 className="w-5 h-5 ml-2" />What Our Customers Say
               </h2>
-              <p className="w-5 h-5ml-2">Join thousands of businesses already using Zion Analytics Pro to drive growth.
+              <p className="w-5 h-5 ml-2">Join thousands of businesses already using Zion Analytics Pro to drive growth.
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {testimonials.map((testimonial, index) => (
-                <div key="{index}" className="bg-gray-800 rounded-xl p-6borderborder-gray-700" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
-                    </div>
+                </div></div><div key="{index}" className="bg-gray-800 rounded-xl p-6borderborder-gray-700" />
+                  </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
+                    </div></div></div>
                     <div />
-                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
-                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.role}, {testimonial.company}</div>
+                      </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div></div></div>
+                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.role}, {testimonial.company}</div></div></div>
                   </div>
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="h-4w-4te xt-yellow-400fill-current"  />
+                      </div></div><Star key="{i}" className="h-4w-4te xt-yellow-400fill-current"  />
                     ))}
                   </div>
-                  <p className="w-5 h-5ml-2">"{testimonial.content}"</p>
+                  <p className="w-5 h-5 ml-2">"{testimonial.content}"</p>
                 </div>
               ))}
             </div>
         </section>
-
         {/* CTA Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />Ready to Transform Your Analytics?
+        <section className="w-5 h-5 ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            </div></div><h2 className="w-5 h-5 ml-2" />Ready to Transform Your Analytics?
             </h2>
-            <p className="w-5 h-5ml-2">Start your free trial today and see how Zion Analytics Pro can revolutionize your business intelligence.
+            <p className="w-5 h-5 ml-2">Start your free trial today and see how Zion Analytics Pro can revolutionize your business intelligence.
             </p>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <Link
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              </div></div><Link
           to="/contact"
           className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
         >
           Start Free Trial
-                
-          <ArrowRight className="w-5 h-5ml-2" />
+          <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
               <a
                 href="tel:+13024640950"
@@ -332,14 +324,14 @@ const ZionAnalyticsProPage: React.FC = () => {
                 Call +1 302 464 0950
               </a>
             </div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <p />Email: kleber@ziontechgroup.com</p>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              </div></div><p />Email: kleber@ziontechgroup.com</p>
               <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
         </section>
       </div>
     </>
+    </>
   );
 };
-
 export default ZionAnalyticsProPage;

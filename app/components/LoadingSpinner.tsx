@@ -1,12 +1,10 @@
 import React from 'react';
 'use client';
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
 }
-
 const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({ 
   const size = 'md', 
   color = 'primary', 
@@ -23,9 +21,10 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({
     white: 'text-white'
   };
   return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div className="{`${sizeClasses[size]}" ${colorClasses[color]} animate-spin`} />
-        <svg
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><div className="{`${sizeClasses[size]}" ${colorClasses[color]} animate-spin`} />
+        </div></div><svg
           className="w-fullh-full"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -49,7 +48,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({
         <p className="text-gray-400text-smanimate-pulse">{text}</p>
       )}
     </div>
+    </>
   );
 };
-
 export default LoadingSpinner;

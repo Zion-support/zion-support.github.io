@@ -1,15 +1,7 @@
-<<<<<<< HEAD
 import { useEffect } from 'react';
-=======
-'use client';
-import { useEffect } from 'react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface AnalyticsProps {
   children: React.ReactNode;
 }
-
   useEffect(() => {
     // Initialize analytics tracking
     const initAnalytics = () => {
@@ -21,16 +13,15 @@ interface AnalyticsProps {
         });
       }
     };
-
     initAnalytics();
   }, []);
+  return (
+    <>
+      }
 
-  return <React.Fragment >{children}</React.Fragment ></React.Fragment>;
-}
-
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag: (...args: unknown[]) => void;
-  }
-}
+      // Extend Window interface for gtag
+      declare global {
+      interface Window {
+      gtag: (...args: unknown[]) => void;
+      }
+      }

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
-=======
-'use client';
-import React, { useEffect, useState } from 'react';
-import { ArrowRight, Zap } from 'lucide-react';
->>>>>>> origin/main
-
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -13,37 +6,23 @@ interface PerformanceMetrics {
   fcp: number | null;
   ttfb: number | null;
 }
-
 const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
     cls: null,
     fcp: null,
-<<<<<<< HEAD
     ttfb: null,
-=======
-    ttfb: null
->>>>>>> origin/main
   });
-
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalResources = [
         '/fonts/inter.woff2',
         '/images/hero-bg.jpg',
-<<<<<<< HEAD
         '/images/logo.png',
       ];
-
       criticalResources.forEach((resource) => {
-=======
-        '/images/logo.png'
-      ];
-
-      criticalResources.forEach(resource => {
->>>>>>> origin/main
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
@@ -54,10 +33,8 @@ const PerformanceOptimizer: React.FC = () => {
         document.head.appendChild(link);
       });
     };
-
     // Optimize images
     const optimizeImages = () => {
-<<<<<<< HEAD
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -69,10 +46,8 @@ const PerformanceOptimizer: React.FC = () => {
           }
         });
       });
-
       images.forEach((img) => imageObserver.observe(img));
     };
-
     // Lazy load components
     const lazyLoadComponents = () => {
       const observer = new IntersectionObserver((entries) => {
@@ -84,11 +59,9 @@ const PerformanceOptimizer: React.FC = () => {
           }
         });
       });
-
       const lazyElements = document.querySelectorAll('[data-lazy]');
       lazyElements.forEach((el) => observer.observe(el));
     };
-
     // Monitor Core Web Vitals
     const monitorWebVitals = () => {
       import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
@@ -101,11 +74,9 @@ const PerformanceOptimizer: React.FC = () => {
         // Silently fail if web-vitals is not available
       });
     };
-
     // Optimize scroll performance
     const optimizeScroll = () => {
       let ticking = false;
-
       const updateScrollPosition = () => {
         if (!ticking) {
           requestAnimationFrame(() => {
@@ -115,128 +86,26 @@ const PerformanceOptimizer: React.FC = () => {
           ticking = true;
         }
       };
-
       window.addEventListener('scroll', updateScrollPosition, { passive: true });
-
       return () => window.removeEventListener('scroll', updateScrollPosition);
-=======
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
-      });
->>>>>>> origin/main
     };
-
     // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
-<<<<<<< HEAD
     lazyLoadComponents();
     monitorWebVitals();
     const cleanupScroll = optimizeScroll();
-
     // Cleanup
     return () => {
       cleanupScroll();
     };
   }, []);
-=======
-  }, []);
-
-  const features = [
-    {
-      title: "Image Optimization",
-      description: "Automatic image compression and lazy loading"
-    },
-    {
-      title: "Resource Preloading",
-      description: "Critical resource preloading for faster initial load"
-    },
-    {
-      title: "Code Splitting",
-      description: "Automatic code splitting for optimal bundle sizes"
-    },
-    {
-      title: "Caching Strategy",
-      description: "Intelligent caching for improved performance"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relativepy-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xlmd:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-rfrom-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Performance Optimizer
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Optimize your application's performance with our advanced optimization tools and techniques.
-            </p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2h-5 w-5" />
-              </button>
-              <button className="borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
-              Our Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the powerful features that make our performance optimizer solutions stand out.
-            </p>
-          </div>
-          
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50backdrop-blur-xl rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <Zap className="h-6w-6 text-white" />
-                </div>
-                <h3 className="text-xlfont-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default PerformanceOptimizer;
-      cleanupScroll()
-    }
-  }, [])
->>>>>>> origin/main
-
   // Log performance metrics in development
   useEffect(() => {
     if (process.env.NODE_ENV === 'development' && Object.values(metrics).some((val) => val !== null)) {
       console.log('Performance Metrics:', metrics);
     }
   }, [metrics]);
-
   return null;
 };
-
 export default PerformanceOptimizer;

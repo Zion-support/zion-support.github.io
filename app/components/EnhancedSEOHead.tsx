@@ -1,6 +1,5 @@
 import React from 'react';
 'use client';
-
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -11,7 +10,6 @@ interface SEOHeadProps {
   twitterCard?: string;
   structuredData?: object;
 }
-
 const SEOHead: React.FC<SEOHeadProps /> = ({
   const title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.',
@@ -61,9 +59,10 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
   };
   const finalStructuredData = structuredData || defaultStructuredData;
   return (
-    <Helmet>
+    <>
+      <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
+        </Helmet><title>{title}</title>
       <meta const name = "description" content="{description}" /  />
       <meta name="keywords" content="{keywords}" />
       <meta name="author" content="Zion Tech Group" />
@@ -110,7 +109,6 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
       {/* Structured Data */}
       <script type="application/ld+json"  />{JSON.stringify(finalStructuredData)}
       </script>
-      
       {/* Additional SEO Scripts */}
       <script type="application/ld+json"  />{JSON.stringify({
           "@context": "https: //schema.org",
@@ -124,16 +122,16 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
           }
         })}
       </script>
-      
       {/* Performance Hints */}
       <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous"  />
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" /  />
-      <meta httpEquiv="X-Frame-Options" content="DENY" /  />;
+      <meta httpEquiv="X-Frame-Options" content="DENY" /  />
+    </>
+);
       <meta httpEquiv="X-XSS-Protection" content="1; const mode = block" /  />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" /  />
     </Helmet>
   );
 };
-
 export default SEOHead;

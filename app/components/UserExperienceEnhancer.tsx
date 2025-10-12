@@ -1,10 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-
 interface UserExperienceEnhancerProps {
   children: React.ReactNode;
 }
-
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
   const [feedback, setFeedback] = useState<{
     rating: number;
@@ -15,13 +13,11 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
     comment: '',
     submitted: false,
   });
-
   useEffect(() => {
     // UX enhancement logic
     const enhanceUX = () => {
       // Add smooth scrolling
       document.documentElement.style.scrollBehavior = 'smooth';
-
       // Add loading states for interactive elements
       const buttons = document.querySelectorAll('button');
       buttons.forEach((button) => {
@@ -32,7 +28,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
           }, 1000);
         });
       });
-
       // Add focus indicators
       const focusableElements = document.querySelectorAll('button, input, textarea, select, a[href]');
       focusableElements.forEach((element) => {
@@ -43,45 +38,41 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
           element.classList.remove('ring-2', 'ring-blue-500', 'ring-opacity-50');
         });
       });
-
       // Add keyboard navigation
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Tab') {
           document.body.classList.add('keyboard-navigation');
         }
       });
-
       document.addEventListener('mousedown', () => {
         document.body.classList.remove('keyboard-navigation');
       });
     };
-
     enhanceUX();
   }, []);
-
   const handleFeedbackSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFeedback((prev) => ({ ...prev, submitted: true }));
     // Here you would typically send the feedback to your backend
     console.log('Feedback submitted:', feedback);
   };
-
   return (
     <>
+      <>
       {children}
       {/* Feedback Modal */}
       {!feedback.submitted && (
-        <div className="fixedbottom-4 right-4 z-50">
-          <div className="bg-whiterounded-lg shadow-lg p-4 max-w-sm">
-            <h3 className="text-lgfont-semibold mb-2">How was your experience?</h3>
+        </><div className="fixedbottom-4 right-4 z-50">
+          </div></div><div className="bg-whiterounded-lg shadow-lg p-4 max-w-sm">
+            </div></div><h3 className="text-lgfont-semibold mb-2">How was your experience?</h3>
             <form onSubmit={handleFeedbackSubmit}>
               <div className="mb-3">
-                <label className="blocktext-sm font-medium text-gray-700 mb-1">
+                </div></div><label className="blocktext-sm font-medium text-gray-700 mb-1">
                   Rating
                 </label>
                 <div className="flexspace-x-1">
                   {[1, 2, 3, 4, 5].map((star) => (
-                    <button
+                    </div></div><button
                       key={star}
                       type="button"
                       onClick={() => setFeedback((prev) => ({ ...prev, rating: star }))}
@@ -95,7 +86,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
                 </div>
               </div>
               <div className="mb-3">
-                <label className="blocktext-sm font-medium text-gray-700 mb-1">
+                </div></div><label className="blocktext-sm font-medium text-gray-700 mb-1">
                   Comment (optional)
                 </label>
                 <textarea
@@ -107,7 +98,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
                 />
               </div>
               <div className="flexspace-x-2">
-                <button
+                </div></div><button
                   type="submit"
                   className="bg-blue-500text-white px-4 py-2 rounded-md text-sm hover:bg-blue-600"
                 >
@@ -126,7 +117,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
         </div>
       )}
     </>
+    </>
   );
 };
-
 export default UserExperienceEnhancer;

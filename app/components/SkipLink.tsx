@@ -1,6 +1,5 @@
 import React from 'react';
 'use client';
-
 const SkipLink: React.FC = () => {
   return (
     <a
@@ -11,5 +10,4 @@ const SkipLink: React.FC = () => {
     </a>
   );
 };
-
 export default SkipLink;

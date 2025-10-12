@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect} from 'react';
 import { Loader2 } from 'lucide-react';
-
 interface LazyImageProps {
   src: string,
   alt: string
@@ -9,7 +8,6 @@ interface LazyImageProps {
   onLoad?: () => void
   onError?: () => void
 }
-
 const LazyImage: React.FC<LazyImageProps /> = ({
   src,
   alt,
@@ -22,7 +20,6 @@ const LazyImage: React.FC<LazyImageProps /> = ({
   const [isInView, setIsInView] = useState(false)
   const [hasError, setHasError] = useState(false)
   const imgRef = useRef<HTMLImageElement />(null)
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -33,38 +30,33 @@ const LazyImage: React.FC<LazyImageProps /> = ({
       },
       { threshold: 0.1 }
     )
-
     if (imgRef.current) {
       observer.observe(imgRef.current)
     }
-
-    return () => observer.disconnect()
+    return (
+    <>
+      ) => observer.disconnect()
   }, [])
-
   const handleLoad = () => {
     setIsLoaded(true)
     onLoad?.()
   }
-
   const handleError = () => {
     setHasError(true)
     onError?.()
   }
-
   return (
     <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
       {!isInView && (
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <Loader2 className="w-5 h-5ml-2" />
+        </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          </div></div><Loader2 className="w-5 h-5 ml-2" />
         </div>
       )}
-      
       {isInView && !isLoaded && !hasError && (
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <Loader2 className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          </div></div><Loader2 className="w-5 h-5 ml-2" />
         </div>
       )}
-      
       {isInView && (
         <img
           src="{src}"
@@ -77,16 +69,16 @@ const LazyImage: React.FC<LazyImageProps /> = ({
           loading="lazy"
          />
       )}
-      
       {hasError && (
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="w-8h-8mx-a utomb-2"  >📷</div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            </div></div><div className="w-8h-8mx-a utomb-2"  >📷</div></div></div>
             <p className="text-sm">Image failed to load</p>
           </div>
       )}
     </div>
   )
 }
-
-export default LazyImage;
+export default LazyImage
+    </>
+);

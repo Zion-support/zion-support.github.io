@@ -1,170 +1,113 @@
 #!/usr/bin/env python3
-"""
-Script to fix JSX syntax errors:
-1. Fix missing closing tags
-2. Fix malformed className attributes
-3. Fix JSX fragment issues
-4. Fix missing parent elements
-"""
-
 import os
 import re
 import glob
-from pathlib import Path
 
-def fix_jsx_fragments(content):
-    """Fix JSX fragment issues"""
-    # Fix unclosed JSX fragments
-    content = re.sub(r'<>\s*$', '<>', content, flags=re.MULTILINE)
-    
-    # Ensure proper closing of fragments
-    lines = content.split('\n')
-    result = []
-    open_fragments = 0
-    
-    for line in lines:
-        # Count opening fragments
-        open_fragments += line.count('<>')
-        open_fragments -= line.count('</>')
-        
-        # If we have unclosed fragments at the end, close them
-        if line.strip() and open_fragments > 0 and not line.strip().endswith('</>'):
-            # Check if this is the last meaningful line
-            if line.strip() and not line.strip().startswith('//') and not line.strip().startswith('/*'):
-                # Add closing fragment if needed
-                if not line.strip().endswith('>') or line.strip().endswith('/>'):
-                    line = line.rstrip() + '\n  </>'
-                open_fragments -= 1
-        
-        result.append(line)
-    
-    return '\n'.join(result)
-
-def fix_classname_attributes(content):
-    """Fix malformed className attributes"""
-    # Fix className with numeric literals
-    content = re.sub(r'className="([^"]*?)(\d+)([^"]*?)"', r'className="\1\2\3"', content)
-    
-    # Fix className with missing quotes
-    content = re.sub(r'className=([^"\s][^>\s]*)', r'className="\1"', content)
-    
-    # Fix className with spaces before pt-20
-    content = re.sub(r'className="([^"]*?)\s+pt-20"', r'className="\1 pt-20"', content)
-    
-    return content
-
-def fix_jsx_parent_elements(content):
-    """Fix JSX expressions that need parent elements"""
-    lines = content.split('\n')
-    result = []
-    i = 0
-    
-    while i < len(lines):
-        line = lines[i]
-        
-        # Check if this line has JSX that needs wrapping
-        if ('<' in line and '>' in line and 
-            not line.strip().startswith('//') and 
-            not line.strip().startswith('/*') and
-            not line.strip().startswith('*') and
-            not line.strip().startswith('*/')):
-            
-            # Check if we need to wrap multiple JSX elements
-            if i + 1 < len(lines):
-                next_line = lines[i + 1]
-                if (next_line.strip() and 
-                    '<' in next_line and '>' in next_line and
-                    not next_line.strip().startswith('//') and
-                    not next_line.strip().startswith('/*') and
-                    not next_line.strip().startswith('*') and
-                    not next_line.strip().startswith('*/')):
-                    
-                    # Wrap in fragment
-                    result.append('    <>')
-                    result.append(line)
-                    i += 1
-                    
-                    # Add subsequent JSX lines
-                    while (i < len(lines) and 
-                           lines[i].strip() and 
-                           '<' in lines[i] and '>' in lines[i] and
-                           not lines[i].strip().startswith('//') and
-                           not lines[i].strip().startswith('/*') and
-                           not lines[i].strip().startswith('*') and
-                           not lines[i].strip().startswith('*/')):
-                        result.append(lines[i])
-                        i += 1
-                    
-                    result.append('    </>')
-                    continue
-        
-        result.append(line)
-        i += 1
-    
-    return '\n'.join(result)
-
-def fix_specific_jsx_errors(content):
-    """Fix specific JSX syntax errors"""
-    # Fix missing closing tags in Helmet
-    content = re.sub(r'<Helmet\s*/>', '<Helmet>\n        <title>Page Title</title>\n      </Helmet>', content)
-    
-    # Fix malformed div tags
-    content = re.sub(r'<div className="([^"]*?)(\d+)([^"]*?)" />', r'<div className="\1\2\3">\n        </div>', content)
-    
-    # Fix missing closing tags for common elements
-    content = re.sub(r'<(\w+)([^>]*?)(?<!/)>\s*$', r'<\1\2>\n        </\1>', content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_import_statements(content):
-    """Fix import statement issues"""
-    # Fix 'use client' directive placement
-    if "'use client';" in content:
-        lines = content.split('\n')
-        if "'use client';" in lines:
-            lines.remove("'use client';")
-            lines.insert(0, "'use client';")
-        content = '\n'.join(lines)
-    
-    return content
-
-def process_file(file_path):
-    """Process a single file to fix JSX errors"""
+def fix_jsx_errors(file_path):
+    """Fix JSX syntax errors in a file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Apply fixes
-        content = fix_import_statements(content)
-        content = fix_classname_attributes(content)
-        content = fix_jsx_fragments(content)
-        content = fix_jsx_parent_elements(content)
-        content = fix_specific_jsx_errors(content)
+        # Fix JSX expressions must have one parent element
+        # Wrap multiple top-level elements in a fragment
+        lines = content.split('\n')
+        in_jsx = False
+        jsx_start = -1
+        brace_count = 0
+        paren_count = 0
         
-        # Only write if content changed
+        for i, line in enumerate(lines):
+            stripped = line.strip()
+            
+            # Skip imports and other non-JSX lines
+            if stripped.startswith('import ') or stripped.startswith('export ') or stripped.startswith('const ') or stripped.startswith('function ') or stripped.startswith('interface ') or stripped.startswith('type '):
+                continue
+            
+            # Check if we're in JSX
+            if '<' in line and not stripped.startswith('//'):
+                if not in_jsx:
+                    in_jsx = True
+                    jsx_start = i
+                
+                # Count braces and parentheses
+                brace_count += line.count('{') - line.count('}')
+                paren_count += line.count('(') - line.count(')')
+                
+                # If we have a complete JSX block and the next line starts a new element
+                if brace_count == 0 and paren_count == 0 and i > jsx_start:
+                    # Check if next line starts a new JSX element
+                    if i + 1 < len(lines):
+                        next_line = lines[i + 1].strip()
+                        if next_line.startswith('<') and not next_line.startswith('</'):
+                            # We have multiple top-level elements, wrap in fragment
+                            # Find the end of the current JSX block
+                            end_line = i
+                            for j in range(i + 1, len(lines)):
+                                if lines[j].strip() and not lines[j].strip().startswith('<'):
+                                    end_line = j - 1
+                                    break
+                            
+                            # Wrap in fragment
+                            lines[jsx_start] = '<>' + lines[jsx_start]
+                            lines[end_line] = lines[end_line] + '</>'
+                            break
+        
+        # Fix unclosed JSX tags
+        content = '\n'.join(lines)
+        
+        # Fix specific patterns
+        fixes = [
+            # Fix unclosed Helmet tags
+            (r'<Helmet>([^<]*)', r'<Helmet>\1</Helmet>'),
+            # Fix unclosed BrowserRouter tags
+            (r'<BrowserRouter>([^<]*)', r'<BrowserRouter>\1</BrowserRouter>'),
+            # Fix unclosed div tags (basic pattern)
+            (r'<div([^>]*)>([^<]*)', r'<div\1>\2</div>'),
+            # Fix missing semicolons after imports
+            (r'import ([^;]+)\n', r'import \1;\n'),
+            # Fix missing closing fragments
+            (r'<>([^<]*)', r'<>\1</>'),
+            # Fix JSX expressions must have one parent element
+            (r'return\s+<([^>]+)>', r'return <>\n    <\1>'),
+            (r'</([^>]+)>\s*$', r'</\1>\n  </>'),
+        ]
+        
+        for pattern, replacement in fixes:
+            content = re.sub(pattern, replacement, content, flags=re.MULTILINE)
+        
+        # Fix specific JSX structure issues
+        # Look for multiple top-level elements and wrap them
+        if 'return' in content and '<' in content:
+            # Find the return statement and its content
+            return_match = re.search(r'return\s+([^;]+);?', content, re.DOTALL)
+            if return_match:
+                return_content = return_match.group(1).strip()
+                # Check if there are multiple top-level elements
+                elements = re.findall(r'<[^/][^>]*>', return_content)
+                if len(elements) > 1:
+                    # Wrap in fragment
+                    content = content.replace(return_content, f'<>\n    {return_content}\n  </>')
+        
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed JSX errors in: {file_path}")
             return True
-        else:
-            print(f"No JSX changes needed: {file_path}")
-            return False
-            
+        
+        return False
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        print(f"Error fixing JSX in {file_path}: {e}")
         return False
 
 def main():
-    """Main function to process all TypeScript/TSX files"""
-    # Get all TypeScript and TSX files
+    # Find all TypeScript/JavaScript files
     patterns = [
         'app/**/*.tsx',
         'app/**/*.ts',
-        '*.tsx',
-        '*.ts'
+        'components/**/*.tsx',
+        'components/**/*.ts'
     ]
     
     files_processed = 0
@@ -174,11 +117,12 @@ def main():
         for file_path in glob.glob(pattern, recursive=True):
             if os.path.isfile(file_path):
                 files_processed += 1
-                if process_file(file_path):
+                print(f"Processing: {file_path}")
+                
+                if fix_jsx_errors(file_path):
                     files_fixed += 1
     
-    print(f"\nProcessed {files_processed} files")
-    print(f"Fixed JSX errors in {files_fixed} files")
+    print(f"Processed {files_processed} files, fixed {files_fixed} files")
 
 if __name__ == "__main__":
     main()

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 'use client';
-
 interface FuturisticButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
@@ -12,7 +11,6 @@ interface FuturisticButtonProps {
   className?: string;
   type?: 'button' | 'submit' | 'reset';
 }
-
   children,
   onClick,
   const variant = 'primary',
@@ -36,7 +34,6 @@ interface FuturisticButtonProps {
   default: return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
     }
   };
-
   const getSizeClasses = () => {
     switch (size) {
       case 'sm':
@@ -48,7 +45,6 @@ interface FuturisticButtonProps {
       default: return 'px-6 py-3 text-base';
     }
   };
-
   return (
     <motion.button
       const type = {type}
@@ -116,15 +112,14 @@ interface FuturisticButtonProps {
           }}
          />
       )}
-
       {/* Corner accents */}
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       {/* Content */}
-      <span className="w-5 h-5ml-2" />
+      </div></div><span className="w-5 h-5 ml-2" />
         {loading ? (
           <>
-            <motion.div
+            </><motion.div
               className="w-4h-4b o rder-2 border-white/30 border-t-white rounded-full mr-2"
               animate="{{" rotate: 360 }}
               transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
