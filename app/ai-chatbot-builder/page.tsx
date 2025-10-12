@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -106,7 +105,6 @@ const AiChatbotBuilderPage: React.FC = () => {
         'Dedicated account manager'
       ],
       popular: false
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -156,14 +154,12 @@ const AIChatbotBuilderPage: React.FC = () => {
       title: 'FAQ Automation',
       description: 'Instantly answer common questions and reduce support workload.',
       icon: MessageSquare
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
     }
   ];
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>AI Chatbot Builder - Zion Tech Group | No-Code Chatbot Platform</title>
         <meta name="description" content="Build intelligent chatbots without coding using our AI-powered platform. Multi-language support, advanced analytics, and enterprise security included." />
         <meta name="keywords" content="AI chatbot, chatbot builder, no-code, conversational AI, customer support, automation" />
@@ -254,7 +250,6 @@ const AIChatbotBuilderPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-=======
         <title>AI Chatbot Builder - Zion Tech Group</title>
         <meta name="description" content="Build intelligent chatbots with our AI Chatbot Builder. Natural language processing, multi-language support, and easy integration for better customer engagement." />
         <meta name="keywords" content="AI chatbot builder, conversational AI, customer support automation, natural language processing, chatbot development" />
@@ -285,14 +280,12 @@ const AIChatbotBuilderPage: React.FC = () => {
                 >
                   View All AI Services
                 </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
               </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -313,7 +306,6 @@ const AIChatbotBuilderPage: React.FC = () => {
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300">{feature.description}</p>
                   </div>
-=======
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -333,13 +325,11 @@ const AIChatbotBuilderPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* Pricing Section */}
         <section className="py-20">
@@ -430,7 +420,6 @@ const AIChatbotBuilderPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
 
         {/* Use Cases Section */}
         <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
@@ -605,14 +594,10 @@ const AIChatbotBuilderPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
       </div>
     </>
   );
 };
 
-<<<<<<< HEAD
 export default AiChatbotBuilderPage;
-=======
 export default AIChatbotBuilderPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
