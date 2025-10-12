@@ -7,41 +7,33 @@ const Footer = () => {
     { name: 'AI Content Generator', path: '/ai-content-generator' },
     { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
-    { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
-    { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
-    { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
-    { name: 'AI Automation Suite', path: '/ai-automation' },
-    { name: 'AI Project Manager', path: '/ai-project-manager' },
-    { name: 'AI 3D Generation', path: '/ai-3d-generation' },
+    { name: 'AI Customer Insights', path: '/ai-customer-insights' },
+    { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
+    { name: 'AI Blockchain Analytics', path: '/ai-blockchain-analytics' },
     { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
   ];
 
   const itServices = [
     { name: 'Web Development', path: '/web-development' },
     { name: 'Mobile Development', path: '/mobile-development' },
-    { name: 'DevOps', path: '/devops' },
     { name: 'Cloud Migration', path: '/cloud-migration' },
     { name: 'API Development', path: '/api-development' },
     { name: 'Database Management', path: '/database-management' },
     { name: 'Network Infrastructure', path: '/network-infrastructure' },
-    { name: 'Cybersecurity', path: '/cybersecurity' },
-    { name: 'System Integration', path: '/system-integration' },
-    { name: 'Data Analytics', path: '/data-analytics' },
-    { name: 'IoT Solutions', path: '/iot-solutions' },
-    { name: 'Blockchain Development', path: '/blockchain-development' }
+    { name: 'DevOps Solutions', path: '/devops-solutions' },
+    { name: 'System Integration', path: '/system-integration' }
   ];
 
   const microSaasServices = [
-    { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard' },
-    { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler' },
-    { name: 'Chat Analytics', path: '/micro-saas/chat-analytics' },
-    { name: 'Content Generator', path: '/micro-saas/content-generator' },
-    { name: 'Document Processor', path: '/micro-saas/document-processor' },
-    { name: 'Email Marketing', path: '/micro-saas/email-marketing' },
-    { name: 'Expense Tracker', path: '/micro-saas/expense-tracker' },
-    { name: 'Inventory Management', path: '/micro-saas/inventory-management' }
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
+    { name: 'AI Inventory Manager', path: '/ai-inventory-manager' },
+    { name: 'AI Social Scheduler', path: '/ai-social-scheduler' },
+    { name: 'AI Email Automation', path: '/ai-email-automation' },
+    { name: 'AI Time Tracker', path: '/ai-time-tracker' },
+    { name: 'AI Lead Scoring', path: '/ai-lead-scoring' },
+    { name: 'AI Customer Insights', path: '/ai-customer-insights' },
+    { name: 'AI Workflow Automation', path: '/ai-workflow-automation' }
   ];
 
   const fiveGServices = [
@@ -56,7 +48,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -69,7 +61,7 @@ const Footer = () => {
               Leading the future of technology with cutting-edge AI solutions, 
               robust IT infrastructure, and innovative digital transformation services.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mb-6">
               <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
@@ -79,6 +71,21 @@ const Footer = () => {
               <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Github className="w-5 h-5" />
               </a>
+            </div>
+            {/* Contact Info */}
+            <div className="space-y-2 text-sm">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4 text-cyan-400" />
+                <span className="text-gray-300">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4 text-purple-400" />
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-4 h-4 text-pink-400" />
+                <span className="text-gray-300">Middletown DE 19709</span>
+              </div>
             </div>
           </div>
 
@@ -151,23 +158,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Contact Info */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-cyan-400" />
-              <span className="text-gray-300">+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-purple-400" />
-              <span className="text-gray-300">kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-pink-400" />
-              <span className="text-gray-300">Middletown DE 19709</span>
-            </div>
-          </div>
-        </div>
 
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">

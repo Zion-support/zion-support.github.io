@@ -21,14 +21,14 @@ export default function Navigation() {
       name: 'AI Services',
       path: '/ai-services',
       dropdown: [
-        { name: 'AI Customer Insights', path: '/ai-customer-insights' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-        { name: 'AI Blockchain Analytics', path: '/ai-blockchain-analytics' },
         { name: 'AI Content Generator', path: '/ai-content-generator' },
         { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
-        { name: 'AI Email Assistant', path: '/ai-email-assistant' }
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+        { name: 'AI Customer Insights', path: '/ai-customer-insights' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
+        { name: 'AI Blockchain Analytics', path: '/ai-blockchain-analytics' },
+        { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
       ]
     },
     {
@@ -37,26 +37,38 @@ export default function Navigation() {
       dropdown: [
         { name: 'Web Development', path: '/web-development' },
         { name: 'Mobile Development', path: '/mobile-development' },
-        { name: 'DevOps', path: '/devops' },
         { name: 'Cloud Migration', path: '/cloud-migration' },
         { name: 'API Development', path: '/api-development' },
         { name: 'Database Management', path: '/database-management' },
         { name: 'Network Infrastructure', path: '/network-infrastructure' },
-        { name: 'Cybersecurity', path: '/cybersecurity' }
+        { name: 'DevOps Solutions', path: '/devops-solutions' },
+        { name: 'System Integration', path: '/system-integration' }
       ]
     },
     {
       name: 'Micro SaaS',
       path: '/micro-saas-services',
       dropdown: [
-        { name: 'AI Customer Insights', path: '/ai-customer-insights' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-        { name: 'AI Blockchain Analytics', path: '/ai-blockchain-analytics' },
-        { name: 'Smart Appointment Scheduler', path: '/micro-saas/appointment-scheduler' },
-        { name: 'AI Chat Analytics', path: '/micro-saas/chat-analytics' },
-        { name: 'AI Content Generator', path: '/micro-saas/content-generator' },
-        { name: 'Document Processor', path: '/micro-saas/document-processor' }
+        { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
+        { name: 'AI Inventory Manager', path: '/ai-inventory-manager' },
+        { name: 'AI Social Scheduler', path: '/ai-social-scheduler' },
+        { name: 'AI Email Automation', path: '/ai-email-automation' },
+        { name: 'AI Time Tracker', path: '/ai-time-tracker' },
+        { name: 'AI Lead Scoring', path: '/ai-lead-scoring' },
+        { name: 'AI Project Management', path: '/ai-project-management' },
+        { name: 'AI Customer Support', path: '/ai-customer-support' }
+      ]
+    },
+    {
+      name: '5G Solutions',
+      path: '/5g-solutions',
+      dropdown: [
+        { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
+        { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
+        { name: '5G Edge Computing', path: '/5g-edge-computing' },
+        { name: '5G Private Networks', path: '/5g-private-networks' },
+        { name: '5G Mobile Applications', path: '/5g-mobile-applications' },
+        { name: '5G Data Analytics', path: '/5g-data-analytics' }
       ]
     },
     { name: 'About', path: '/about' },
@@ -131,19 +143,19 @@ export default function Navigation() {
         {/* Enhanced Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-lg rounded-xl mt-2 border border-cyan-400/20 shadow-2xl shadow-cyan-500/20">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-lg rounded-xl mt-2 border border-cyan-400/20 shadow-2xl shadow-cyan-500/20 max-h-96 overflow-y-auto">
               {navigationItems.map((item, index) => (
-                <div key={index}>
+                <div key={index} className="border-b border-gray-700/50 last:border-b-0">
                   <Link
                     to={item.path}
-                    className="block px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 rounded-lg"
+                    className="block px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 rounded-lg font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
                   </Link>
                   {item.dropdown && (
-                    <div className="pl-4 space-y-1 mt-2">
-                      {item.dropdown.map((subItem, subIndex) => (
+                    <div className="pl-4 space-y-1 mt-1 mb-2">
+                      {item.dropdown.slice(0, 4).map((subItem, subIndex) => (
                         <Link
                           key={subIndex}
                           to={subItem.path}
@@ -153,6 +165,11 @@ export default function Navigation() {
                           {subItem.name}
                         </Link>
                       ))}
+                      {item.dropdown.length > 4 && (
+                        <div className="px-4 py-2 text-xs text-gray-500">
+                          +{item.dropdown.length - 4} more services
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>

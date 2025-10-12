@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, TrendingUp, Sparkles, Layers, Target, Award, Lightbulb, Monitor, Server, CircuitBoard, Atom, Satellite, Wrench, BarChart, PieChart, LineChart, Activity, Eye, Search, Filter, Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10, FileText, Package } from 'lucide-react'
+import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, TrendingUp, Sparkles, Layers, Target, Award, Lightbulb, Monitor, Server, CircuitBoard, Atom, Satellite, Wrench, BarChart, PieChart, LineChart, Activity, Eye, Search, Filter, Download, Upload, Share, Share2, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10, FileText, Package } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const HomePage: React.FC = () => {
@@ -64,7 +64,55 @@ const HomePage: React.FC = () => {
 
   const microSaasServices = [
     {
-      icon: <BarChart3 className="w-6 h-6 text-cyan-400" />,
+      icon: <DollarSign className="w-6 h-6 text-cyan-400" />,
+      title: 'AI Expense Tracker',
+      description: 'Revolutionary AI-powered expense tracking with smart receipt scanning and predictive analytics.',
+      price: '$29/month',
+      features: ['Smart receipt scanning', 'AI categorization', 'Predictive analytics', 'Fraud detection'],
+      link: '/ai-expense-tracker'
+    },
+    {
+      icon: <Package className="w-6 h-6 text-emerald-400" />,
+      title: 'AI Inventory Manager',
+      description: 'Smart inventory management with demand forecasting and automated reordering.',
+      price: '$49/month',
+      features: ['95% forecast accuracy', 'Auto reordering', 'Multi-location sync', 'Cost optimization'],
+      link: '/ai-inventory-manager'
+    },
+    {
+      icon: <Share2 className="w-6 h-6 text-blue-400" />,
+      title: 'AI Social Scheduler',
+      description: 'AI-powered social media management with content generation and optimal timing.',
+      price: '$39/month',
+      features: ['AI content generation', 'Smart scheduling', 'Performance analytics', 'Multi-platform'],
+      link: '/ai-social-scheduler'
+    },
+    {
+      icon: <Mail className="w-6 h-6 text-purple-400" />,
+      title: 'AI Email Automation',
+      description: 'Advanced email marketing automation with AI content generation and lead scoring.',
+      price: '$59/month',
+      features: ['AI email generation', 'Smart automation', 'Lead scoring', 'Deliverability optimization'],
+      link: '/ai-email-automation'
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-indigo-400" />,
+      title: 'AI Time Tracker',
+      description: 'Smart time tracking with AI activity recognition and productivity analytics.',
+      price: '$19/month',
+      features: ['AI activity recognition', 'Smart tracking', 'Productivity analytics', 'Automated reporting'],
+      link: '/ai-time-tracker'
+    },
+    {
+      icon: <Target className="w-6 h-6 text-teal-400" />,
+      title: 'AI Lead Scoring',
+      description: 'Intelligent lead scoring with AI intent detection and conversion analytics.',
+      price: '$79/month',
+      features: ['AI lead scoring', 'Intent detection', 'Conversion analytics', 'CRM integration'],
+      link: '/ai-lead-scoring'
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6 text-orange-400" />,
       title: 'AI Customer Insights',
       description: 'Transform customer data into actionable insights with AI-powered analytics and churn prediction.',
       price: '$299/month',
@@ -72,7 +120,7 @@ const HomePage: React.FC = () => {
       link: '/ai-customer-insights'
     },
     {
-      icon: <Zap className="w-6 h-6 text-emerald-400" />,
+      icon: <Zap className="w-6 h-6 text-pink-400" />,
       title: 'AI Workflow Automation',
       description: 'Automate complex business processes with intelligent AI that learns and adapts to your workflow.',
       price: '$299/month',
@@ -80,7 +128,7 @@ const HomePage: React.FC = () => {
       link: '/ai-workflow-automation'
     },
     {
-      icon: <Mic className="w-6 h-6 text-blue-400" />,
+      icon: <Mic className="w-6 h-6 text-green-400" />,
       title: 'AI Voice Assistant',
       description: 'Create intelligent voice assistants with natural language processing and human-like speech synthesis.',
       price: '$299/month',
@@ -88,44 +136,12 @@ const HomePage: React.FC = () => {
       link: '/ai-voice-assistant'
     },
     {
-      icon: <Shield className="w-6 h-6 text-purple-400" />,
+      icon: <Shield className="w-6 h-6 text-indigo-400" />,
       title: 'AI Blockchain Analytics',
       description: 'Advanced AI-powered analytics for DeFi, smart contracts, and crypto trading with 95% accuracy.',
       price: '$499/month',
       features: ['DeFi analytics', 'Smart contract analysis', 'Trading intelligence', 'Cross-chain support'],
       link: '/ai-blockchain-analytics'
-    },
-    {
-      icon: <Calendar className="w-6 h-6 text-orange-400" />,
-      title: 'Smart Appointment Scheduler',
-      description: 'Intelligent scheduling system with automated reminders and calendar integration.',
-      price: '$79/month',
-      features: ['Auto-scheduling', 'Calendar sync', 'SMS/Email reminders', 'Payment processing'],
-      link: '/micro-saas/appointment-scheduler'
-    },
-    {
-      icon: <MessageCircle className="w-6 h-6 text-pink-400" />,
-      title: 'AI Chat Analytics',
-      description: 'Advanced chat analytics with sentiment analysis and customer insights.',
-      price: '$129/month',
-      features: ['Sentiment analysis', 'Response optimization', 'Customer insights', 'Live monitoring'],
-      link: '/micro-saas/chat-analytics'
-    },
-    {
-      icon: <Edit className="w-6 h-6 text-green-400" />,
-      title: 'AI Content Generator',
-      description: 'Generate high-quality content for blogs, social media, and marketing campaigns.',
-      price: '$99/month',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice training', 'Content templates'],
-      link: '/micro-saas/content-generator'
-    },
-    {
-      icon: <FileText className="w-6 h-6 text-indigo-400" />,
-      title: 'Document Processor',
-      description: 'Automated document processing with OCR and intelligent data extraction.',
-      price: '$179/month',
-      features: ['OCR technology', 'Data extraction', 'Format conversion', 'Batch processing'],
-      link: '/micro-saas/document-processor'
     }
   ]
 
@@ -398,16 +414,16 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div key={index} className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                <div className="flex justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2 group-hover:text-cyan-400 transition-colors">
                   {stat.number}
                 </div>
-                <div className="text-gray-300 text-sm group-hover:text-white transition-colors">
+                <div className="text-gray-300 text-xs sm:text-sm group-hover:text-white transition-colors">
                   {stat.label}
                 </div>
               </div>
@@ -430,20 +446,20 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 lg:p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
+                <div className="flex items-center justify-center w-14 h-14 lg:w-16 lg:h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                <h3 className="text-xl lg:text-2xl font-bold text-white mb-3 lg:mb-4 group-hover:text-cyan-400 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
+                <p className="text-gray-300 mb-4 lg:mb-6 leading-relaxed text-sm lg:text-base">
                   {feature.description}
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-cyan-400 font-semibold text-lg">
+                  <span className="text-cyan-400 font-semibold text-base lg:text-lg">
                     {feature.price}
                   </span>
                   <Link 
@@ -478,15 +494,15 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {microSaasServices.map((service, index) => (
-              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
+              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-5 lg:p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-3">
                     <div className="p-2 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg group-hover:scale-110 transition-transform duration-300">
                       {service.icon}
                     </div>
-                    <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
+                    <h3 className="text-base lg:text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
                       {service.title}
                     </h3>
                   </div>
@@ -495,7 +511,7 @@ const HomePage: React.FC = () => {
                   {service.description}
                 </p>
                 <div className="space-y-3">
-                  <div className="text-2xl font-bold text-cyan-400 mb-2">
+                  <div className="text-xl lg:text-2xl font-bold text-cyan-400 mb-2">
                     {service.price}
                   </div>
                   <div className="space-y-1">
@@ -508,7 +524,7 @@ const HomePage: React.FC = () => {
                   </div>
                   <Link 
                     to={service.link}
-                    className="block w-full mt-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+                    className="block w-full mt-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25 text-sm"
                   >
                     Get Started
                   </Link>

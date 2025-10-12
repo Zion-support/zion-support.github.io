@@ -52,6 +52,14 @@ import AISocialMediaManagerPage from './app/ai-social-media-manager/page'
 import AIProjectManagementPage from './app/ai-project-management/page'
 import AICustomerSupportPage from './app/ai-customer-support/page'
 import AIInvoiceGeneratorPage from './app/ai-invoice-generator/page'
+import AIExpenseTrackerPage from './app/ai-expense-tracker/page'
+import AIInventoryManagerPage from './app/ai-inventory-manager/page'
+import AISocialSchedulerPage from './app/ai-social-scheduler/page'
+import AIEmailAutomationPage from './app/ai-email-automation/page'
+import AITimeTrackerPage from './app/ai-time-tracker/page'
+import AILeadScoringPage from './app/ai-lead-scoring/page'
+import PrivacyPolicyPage from './app/privacy/page'
+import TermsOfServicePage from './app/terms/page'
 
 // Company Pages
 import TeamPage from './app/team/page'
@@ -125,6 +133,14 @@ const App: React.FC = () => {
                 <Route path="/ai-project-management" element={<AIProjectManagementPage />} />
                 <Route path="/ai-customer-support" element={<AICustomerSupportPage />} />
                 <Route path="/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
+                <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
+                <Route path="/ai-inventory-manager" element={<AIInventoryManagerPage />} />
+                <Route path="/ai-social-scheduler" element={<AISocialSchedulerPage />} />
+                <Route path="/ai-email-automation" element={<AIEmailAutomationPage />} />
+                <Route path="/ai-time-tracker" element={<AITimeTrackerPage />} />
+                <Route path="/ai-lead-scoring" element={<AILeadScoringPage />} />
+                <Route path="/privacy" element={<PrivacyPolicyPage />} />
+                <Route path="/terms" element={<TermsOfServicePage />} />
                 
                 {/* Company Pages */}
                 <Route path="/team" element={<TeamPage />} />
