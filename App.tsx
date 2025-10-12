@@ -4,9 +4,14 @@ import { HelmetProvider } from 'react-helmet-async'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
 import ErrorBoundary from './app/components/ErrorBoundary'
+<<<<<<< HEAD
 import PerformanceOptimizer from './app/components/PerformanceOptimizer'
 import SEOOptimizer from './app/components/SEOOptimizer'
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
+=======
+import Breadcrumb from './app/components/Breadcrumb'
+import CookieConsent from './app/components/CookieConsent'
+>>>>>>> cursor/analyze-improve-and-deploy-application-1d94
 
 // Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./app/page'))
@@ -89,6 +94,7 @@ function App() {
       <ErrorBoundary>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
             <PerformanceOptimizer />
             <SEOOptimizer 
               title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -181,12 +187,93 @@ function App() {
                           Go Home
                         </a>
                       </div>
+=======
+            <Header />
+            <Breadcrumb />
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                
+                {/* AI Services Routes */}
+                <Route path="/ai-services" element={<AIServicesPage />} />
+                <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
+                <Route path="/ai-email-assistant" element={<AIEmailAssistantPage />} />
+                <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                <Route path="/ai-automation" element={<AIAutomationPage />} />
+                <Route path="/ai-3d-generation" element={<AI3DGenerationPage />} />
+                <Route path="/ai-drug-discovery-pro" element={<AIDrugDiscoveryProPage />} />
+                
+                {/* IT Services Routes */}
+                <Route path="/it-services" element={<ITServicesPage />} />
+                <Route path="/web-development" element={<WebDevelopmentPage />} />
+                <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                <Route path="/devops" element={<DevOpsPage />} />
+                <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                <Route path="/cloud-services" element={<CloudServicesPage />} />
+                <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                
+                {/* 5G Services Routes */}
+                <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
+                <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
+                <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
+                <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
+                <Route path="/5g-mobile-applications" element={<FiveGMobileApplicationsPage />} />
+                
+                {/* Micro SAAS Routes */}
+                <Route path="/ai-task-manager" element={<AITaskManagerPage />} />
+                <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
+                <Route path="/ai-password-manager" element={<AIPasswordManagerPage />} />
+                <Route path="/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
+                <Route path="/ai-health-tracker" element={<AIHealthTrackerPage />} />
+                <Route path="/ai-smart-calendar" element={<AISmartCalendarPage />} />
+                <Route path="/ai-climate-solutions-pro" element={<AIClimateSolutionsProPage />} />
+                
+                {/* Additional AI Services Routes */}
+                <Route path="/ai-meeting-assistant" element={<AIMeetingAssistantPage />} />
+                <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
+                
+                {/* Additional IT Services Routes */}
+                <Route path="/blockchain" element={<BlockchainPage />} />
+                <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
+                
+                {/* Additional 5G Services Routes */}
+                <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
+                
+                {/* Legal and Support Routes */}
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/cookies" element={<CookiesPage />} />
+                <Route path="/help" element={<HelpPage />} />
+                <Route path="/docs" element={<DocsPage />} />
+                <Route path="/support" element={<SupportPage />} />
+                <Route path="/status" element={<StatusPage />} />
+                <Route path="/sla" element={<SLAPage />} />
+                
+                {/* 404 Route */}
+                <Route path="*" element={
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+                    <div className="text-center">
+                      <h1 className="text-6xl font-bold text-white mb-4">404</h1>
+                      <p className="text-xl text-gray-300 mb-8">Page not found</p>
+                      <a 
+                        href="/" 
+                        className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+                      >
+                        Go Home
+                      </a>
+>>>>>>> cursor/analyze-improve-and-deploy-application-1d94
                     </div>
                   } />
                 </Routes>
               </Suspense>
             </main>
             <Footer />
+            <CookieConsent />
           </div>
         </Router>
       </ErrorBoundary>
