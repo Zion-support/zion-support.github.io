@@ -235,6 +235,9 @@ export default function AITranslationService() {
 
       {/* Translation Features Section */}
       <section className="py-20 bg-black">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
               <div key={index} className="bg-gray-800 p-6 rounded-lg">
                 <div className="flex items-center mb-4">
                   {feature.icon}
@@ -261,7 +264,7 @@ export default function AITranslationService() {
       </div>
 
       {/* Translation Features Grid */}
-      <div className="py-20 bg-slate-900">
+      <section className="py-20 bg-slate-900">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
             Comprehensive Translation Solutions
@@ -269,15 +272,6 @@ export default function AITranslationService() {
           <p className="text-gray-300 text-center mb-12">
             Everything you need for professional translation services
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {translationFeatures.map((category, index) => (
-              <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
-                <ul className="space-y-2">
-                  {category.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="text-gray-300 flex items-center">
-                      <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                      <Languages className="w-4 h-4 text-blue-400 mr-2" />
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {translationFeatures.map((category, index) => (
               <div key={index} className="bg-gray-900 p-6 rounded-lg">
@@ -313,7 +307,10 @@ export default function AITranslationService() {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-      </div>
+                      Most Popular
+                    </span>
+                  </div>
+                )}
 
       {/* Pricing Section */}
       <div className="py-20 bg-gray-900">
@@ -330,7 +327,10 @@ export default function AITranslationService() {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
-      </section>
+                      Most Popular
+                    </span>
+                  </div>
+                )}
 
       {/* Pricing Section */}
       <section className="py-20 bg-gray-900">
@@ -370,19 +370,11 @@ export default function AITranslationService() {
                   ))}
                 </ul>
                 <Link 
-                  to="#contact" 
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
-                    plan.popular 
-                      ? 'bg-cyan-500 text-white hover:bg-cyan-600' 
-                      : 'bg-gray-700 text-white hover:bg-gray-600'
-                <Link
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
                       : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10'
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
                   }`}
                 >
                   Get Started
