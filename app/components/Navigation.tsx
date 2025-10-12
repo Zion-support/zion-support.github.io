@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart, BookOpen, HelpCircle } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +10,7 @@ const Navigation: React.FC = () => {
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
 
   // Handle scroll effect
   useEffect(() => {
@@ -61,51 +62,75 @@ const Navigation: React.FC = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
+    setResourcesOpen(false);
   }, [microSaasOpen]);
 
+  const toggleResources = useCallback(() => {
+    setResourcesOpen(!resourcesOpen);
+    setServicesOpen(false);
+    setAiServicesOpen(false);
+    setItServicesOpen(false);
+    setMicroSaasOpen(false);
+  }, [resourcesOpen]);
+
   const aiServices = [
-    { name: 'AI Analytics', url: '/ai-analytics', icon: BarChart },
-    { name: 'AI Automation', url: '/ai-automation', icon: Workflow },
-    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', icon: MessageCircle },
-    { name: 'AI Content Generation', url: '/ai-content-generation', icon: FileText },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', icon: Shield },
-    { name: 'AI CRM', url: '/ai-crm', icon: Users },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', icon: Database },
-    { name: 'AI Healthcare', url: '/ai-healthcare', icon: Heart },
-    { name: 'AI Computer Vision', url: '/ai-computer-vision', icon: Eye },
-    { name: 'AI Voice Solutions', url: '/ai-voice-solutions', icon: Mic },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', icon: Settings },
-    { name: 'AI Document Processing', url: '/ai-document-processing', icon: FileText }
+    { name: 'AI Analytics', url: '/ai-analytics', icon: BarChart, description: 'Business intelligence & insights' },
+    { name: 'AI Automation', url: '/ai-automation', icon: Workflow, description: 'Process automation' },
+    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', icon: MessageCircle, description: 'Conversational AI' },
+    { name: 'AI Content Generation', url: '/ai-content-generation', icon: FileText, description: 'Automated content creation' },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', icon: Shield, description: 'AI-powered security' },
+    { name: 'AI CRM', url: '/ai-crm', icon: Users, description: 'Smart customer management' },
+    { name: 'AI Data Analytics', url: '/ai-data-analytics', icon: Database, description: 'Advanced data insights' },
+    { name: 'AI Healthcare', url: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' },
+    { name: 'AI Computer Vision', url: '/ai-computer-vision', icon: Eye, description: 'Image & video analysis' },
+    { name: 'AI Voice Solutions', url: '/ai-voice-solutions', icon: Mic, description: 'Speech recognition & synthesis' },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', icon: Settings, description: 'Intelligent workflows' },
+    { name: 'AI Document Processing', url: '/ai-document-processing', icon: FileText, description: 'Document intelligence' },
+    { name: 'AI Financial Services', url: '/ai-financial-services', icon: DollarSign, description: 'Fintech AI solutions' },
+    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', icon: TrendingUp, description: 'Future forecasting' },
+    { name: 'AI HR Solutions', url: '/ai-hr-solutions', icon: Users, description: 'Human resources AI' },
+    { name: 'AI Edge Computing', url: '/ai-edge-computing', icon: Cpu, description: 'Distributed AI processing' }
   ];
 
   const itServices = [
-    { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', icon: Cloud },
-    { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', icon: Shield },
-    { name: 'Web Development', url: '/web-development', icon: Code },
-    { name: 'Mobile Development', url: '/mobile-development', icon: Smartphone },
-    { name: 'API Development', url: '/api-development', icon: LinkIcon },
-    { name: 'Database Management', url: '/database-management', icon: Database },
-    { name: 'DevOps & CI/CD', url: '/devops-cicd', icon: Settings },
-    { name: 'IT Support', url: '/it-support', icon: Users },
-    { name: 'Data Analytics & BI', url: '/data-analytics-bi', icon: BarChart },
-    { name: 'Custom Software', url: '/custom-software', icon: Code },
-    { name: 'Network Infrastructure', url: '/network-infrastructure', icon: Wifi },
-    { name: 'IT Asset Management', url: '/it-asset-management', icon: Package }
+    { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions' },
+    { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', icon: Shield, description: 'Enterprise security' },
+    { name: 'Web Development', url: '/web-development', icon: Code, description: 'Modern web applications' },
+    { name: 'Mobile Development', url: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
+    { name: 'API Development', url: '/api-development', icon: LinkIcon, description: 'RESTful & GraphQL APIs' },
+    { name: 'Database Management', url: '/database-management', icon: Database, description: 'Database optimization' },
+    { name: 'DevOps & CI/CD', url: '/devops-cicd', icon: Settings, description: 'Automation pipelines' },
+    { name: 'IT Support', url: '/it-support', icon: Users, description: '24/7 technical support' },
+    { name: 'Data Analytics & BI', url: '/data-analytics-bi', icon: BarChart, description: 'Business intelligence' },
+    { name: 'Custom Software', url: '/custom-software', icon: Code, description: 'Tailored solutions' },
+    { name: 'Network Infrastructure', url: '/network-infrastructure', icon: Wifi, description: 'Network setup & management' },
+    { name: 'IT Asset Management', url: '/it-asset-management', icon: Package, description: 'Asset lifecycle management' }
   ];
 
   const microSaasServices = [
-    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', icon: BarChart },
-    { name: 'Zion Chat AI', url: '/zion-chat-ai', icon: MessageCircle },
-    { name: 'Zion Security Shield', url: '/zion-security-shield', icon: Shield },
-    { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', icon: Cloud },
-    { name: 'Zion Content Studio', url: '/zion-content-studio', icon: FileText },
-    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', icon: Users },
-    { name: 'Zion Data Sync', url: '/zion-data-sync', icon: Database },
-    { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', icon: Target },
-    { name: 'Zion Project Master', url: '/zion-project-master', icon: CheckSquare },
-    { name: 'Zion Email Automation', url: '/zion-email-automation', icon: Mail },
-    { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', icon: Box },
-    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', icon: DollarSign }
+    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence platform' },
+    { name: 'Zion Chat AI', url: '/zion-chat-ai', icon: MessageCircle, description: 'AI customer support' },
+    { name: 'Zion Security Shield', url: '/zion-security-shield', icon: Shield, description: 'Cybersecurity monitoring' },
+    { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', icon: Cloud, description: 'Cloud backup & recovery' },
+    { name: 'Zion Content Studio', url: '/zion-content-studio', icon: FileText, description: 'Content creation platform' },
+    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', icon: Users, description: 'Smart CRM solution' },
+    { name: 'Zion Data Sync', url: '/zion-data-sync', icon: Database, description: 'Data synchronization' },
+    { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', icon: Target, description: 'Lead generation tool' },
+    { name: 'Zion Project Master', url: '/zion-project-master', icon: CheckSquare, description: 'Project management' },
+    { name: 'Zion Email Automation', url: '/zion-email-automation', icon: Mail, description: 'Email marketing automation' },
+    { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', icon: Box, description: 'Inventory management' },
+    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', icon: DollarSign, description: 'Invoice automation' }
+  ];
+
+  const resources = [
+    { name: 'Documentation', url: '/docs', icon: FileText, description: 'Technical documentation' },
+    { name: 'API Reference', url: '/api-docs', icon: LinkIcon, description: 'API documentation' },
+    { name: 'Tutorials', url: '/tutorials', icon: BookOpen, description: 'Learning resources' },
+    { name: 'Blog', url: '/blog', icon: FileText, description: 'Latest insights & news' },
+    { name: 'Case Studies', url: '/case-studies', icon: Target, description: 'Success stories' },
+    { name: 'FAQ', url: '/faq', icon: HelpCircle, description: 'Frequently asked questions' },
+    { name: 'Support', url: '/support', icon: MessageCircle, description: 'Get help & support' },
+    { name: 'Community', url: '/community', icon: Users, description: 'Join our community' }
   ];
 
   return (
@@ -168,15 +193,18 @@ const Navigation: React.FC = () => {
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               {aiServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 max-h-96 overflow-y-auto">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 max-h-96 overflow-y-auto">
                   {aiServices.map((service, index) => (
                     <Link
                       key={index}
                       to={service.url}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white"
+                      className="flex items-start px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white group"
                     >
-                      <service.icon className="h-4 w-4 mr-3" />
-                      {service.name}
+                      <service.icon className="h-5 w-5 mr-3 mt-0.5 text-purple-400 group-hover:text-purple-300" />
+                      <div>
+                        <div className="font-medium">{service.name}</div>
+                        <div className="text-xs text-gray-400 group-hover:text-gray-300">{service.description}</div>
+                      </div>
                     </Link>
                   ))}
                 </div>
@@ -193,15 +221,18 @@ const Navigation: React.FC = () => {
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               {itServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 max-h-96 overflow-y-auto">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 max-h-96 overflow-y-auto">
                   {itServices.map((service, index) => (
                     <Link
                       key={index}
                       to={service.url}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white"
+                      className="flex items-start px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white group"
                     >
-                      <service.icon className="h-4 w-4 mr-3" />
-                      {service.name}
+                      <service.icon className="h-5 w-5 mr-3 mt-0.5 text-cyan-400 group-hover:text-cyan-300" />
+                      <div>
+                        <div className="font-medium">{service.name}</div>
+                        <div className="text-xs text-gray-400 group-hover:text-gray-300">{service.description}</div>
+                      </div>
                     </Link>
                   ))}
                 </div>
@@ -218,15 +249,46 @@ const Navigation: React.FC = () => {
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               {microSaasOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 max-h-96 overflow-y-auto">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 max-h-96 overflow-y-auto">
                   {microSaasServices.map((service, index) => (
                     <Link
                       key={index}
                       to={service.url}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white"
+                      className="flex items-start px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white group"
                     >
-                      <service.icon className="h-4 w-4 mr-3" />
-                      {service.name}
+                      <service.icon className="h-5 w-5 mr-3 mt-0.5 text-green-400 group-hover:text-green-300" />
+                      <div>
+                        <div className="font-medium">{service.name}</div>
+                        <div className="text-xs text-gray-400 group-hover:text-gray-300">{service.description}</div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Resources Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={toggleResources}
+                className="flex items-center text-gray-300 hover:text-white transition-colors"
+              >
+                Resources
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              {resourcesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 max-h-96 overflow-y-auto">
+                  {resources.map((resource, index) => (
+                    <Link
+                      key={index}
+                      to={resource.url}
+                      className="flex items-start px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white group"
+                    >
+                      <resource.icon className="h-5 w-5 mr-3 mt-0.5 text-blue-400 group-hover:text-blue-300" />
+                      <div>
+                        <div className="font-medium">{resource.name}</div>
+                        <div className="text-xs text-gray-400 group-hover:text-gray-300">{resource.description}</div>
+                      </div>
                     </Link>
                   ))}
                 </div>
@@ -301,6 +363,20 @@ const Navigation: React.FC = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Micro SAAS
+              </Link>
+              <Link
+                to="/docs"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                Documentation
+              </Link>
+              <Link
+                to="/blog"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsOpen(false)}
+              >
+                Blog
               </Link>
               <Link
                 to="/pricing"
