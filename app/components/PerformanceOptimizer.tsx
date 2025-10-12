@@ -1,5 +1,12 @@
-import { useEffect, useState } from 'react'
+'use client';
+import React, { useEffect, useState } from 'react';
 
+interface PerformanceMetrics {
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  fcp: number | null;
+  ttfb: number | null;
 }
 
 const PerformanceOptimizer: React.FC = () => {
@@ -9,7 +16,7 @@ const PerformanceOptimizer: React.FC = () => {
     cls: null,
     fcp: null,
     ttfb: null
-  })
+  });
 
   useEffect(() => {
     // Preload critical resources
@@ -18,92 +25,78 @@ const PerformanceOptimizer: React.FC = () => {
         '/fonts/inter.woff2',
         '/images/hero-bg.jpg',
         '/images/logo.png'
-      ]
+      ];
 
       criticalResources.forEach(resource => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = resource
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image'
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
         if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous'
+          link.crossOrigin = 'anonymous';
         }
-        document.head.appendChild(link)
-      })
-    }
+        document.head.appendChild(link);
+      });
+    };
 
     // Optimize images
     const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]')
+      const images = document.querySelectorAll('img');
       images.forEach(img => {
-        const imageElement = img as HTMLImageElement
-        if (imageElement.dataset.src) {
-          imageElement.src = imageElement.dataset.src
-          imageElement.removeAttribute('data-src')
+        if (!img.loading) {
+          img.loading = 'lazy';
         }
-      })
-    }
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
+      });
+    };
 
-    // Lazy load non-critical components
-    const lazyLoadComponents = () => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const element = entry.target as HTMLElement
-              element.classList.add('loaded')
-              observer.unobserve(element)
-            }
-          })
-        },
-        { threshold: 0.1 }
-      )
+    // Optimize fonts
+    const optimizeFonts = () => {
+      const fontLink = document.createElement('link');
+      fontLink.rel = 'preconnect';
+      fontLink.href = 'https://fonts.googleapis.com';
+      document.head.appendChild(fontLink);
 
-      const lazyElements = document.querySelectorAll('[data-lazy]')
-      lazyElements.forEach(el => observer.observe(el))
-    }
+      const fontLink2 = document.createElement('link');
+      fontLink2.rel = 'preconnect';
+      fontLink2.href = 'https://fonts.gstatic.com';
+      fontLink2.crossOrigin = 'anonymous';
+      document.head.appendChild(fontLink2);
+    };
 
     // Monitor Core Web Vitals
     const monitorWebVitals = () => {
-import { onCLS, onFID, onFCP, onLCP, onTTFB } 
-        onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
-        onFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
-        onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
-        onLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
-        onTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
-      }).catch(() => {
-        // Silently fail if web-vitals is not available
-      })
-    }
-
-      }
-
-      window.addEventListener('scroll', updateScrollPosition, { passive: true })
-      
-      return () => window.removeEventListener('scroll', updateScrollPosition)
-    }
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })));
+        getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })));
+        getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
+        getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
+        getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
+      });
+    };
 
     // Initialize optimizations
-    preloadCriticalResources()
-    optimizeImages()
-    lazyLoadComponents()
-    monitorWebVitals()
-    const cleanupScroll = optimizeScroll()
+    preloadCriticalResources();
+    optimizeImages();
+    optimizeFonts();
+    monitorWebVitals();
 
-    // Cleanup
-    return () => {
-      cleanupScroll()
-    }
-  }, [])
+    // Re-optimize images when new ones are added
+    const observer = new MutationObserver(() => {
+      optimizeImages();
+    });
 
-  // Log performance metrics in development
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(val => val !== null)) {
-      console.log('Performance Metrics:', metrics)
-    }
-  }, [metrics])
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
 
-  return null
-}
+    return () => observer.disconnect();
+  }, []);
 
-export default PerformanceOptimizer
+  return null;
+};
+
+export default PerformanceOptimizer;

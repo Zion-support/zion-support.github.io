@@ -51,53 +51,41 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
   };
 
   const content = (
-    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
       <div className="text-center mb-6">
-        <Mail className="w-12 h-12 mx-auto mb-4 text-white/90" />
-        <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
-        <p className="text-white/90">
-          Get the latest updates on AI technology, IT solutions, and industry insights.
+        <h3 className="text-2xl font-bold text-white mb-2">
+          Stay Updated
+        </h3>
+        <p className="text-gray-300">
+          Get the latest news and updates from Zion Tech Group
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="flex flex-col sm:flex-row gap-3">
+        <div>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
-            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
+            className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
             disabled={status === 'loading'}
           />
-          <button
-            type="submit"
-            disabled={status === 'loading'}
-            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-          >
-            {status === 'loading' ? (
-              <>
-                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600 mr-2"></div>
-                Subscribing...
-              </>
-            ) : (
-              <>
-                <Send className="w-4 h-4 mr-2" />
-                Subscribe
-              </>
-            )}
-          </button>
         </div>
 
+        <button
+          type="submit"
+          disabled={status === 'loading'}
+          className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {status === 'loading' ? 'Subscribing...' : 'Subscribe Now'}
+        </button>
+
         {message && (
-          <div className={`flex items-center space-x-2 text-sm ${
-            status === 'success' ? 'text-green-200' : 'text-red-200'
+          <div className={`text-center text-sm ${
+            status === 'error' ? 'text-red-400' : 'text-green-400'
           }`}>
-            {status === 'success' ? (
-              <CheckCircle className="w-4 h-4" />
-            ) : (
-              <AlertCircle className="w-4 h-4" />
-            )}
+            {status === 'error' && <AlertCircle className="inline w-4 h-4 mr-1" />}
             <span>{message}</span>
           </div>
         )}
@@ -115,7 +103,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
 
   if (variant === 'modal') {
     return (
-    <div className="fixed inset-0 z-50 overflow-y-auto">
+      <div className="fixed inset-0 z-50 overflow-y-auto">
         <div className="flex min-h-screen items-center justify-center px-4 py-6">
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
           <div className="relative w-full max-w-md">
@@ -123,7 +111,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           </div>
         </div>
       </div>
-    </div>);
+    );
   }
 
   return content;

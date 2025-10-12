@@ -1,15 +1,13 @@
 'use client';
 import React, { useEffect } from 'react';
-=======
-import { useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     const monitorCoreWebVitals = () => {
       if ('web-vitals' in window) {
-import { getCLS, getFID, getFCP, getLCP, getTTFB } 
+        // Import web-vitals dynamically
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
           getCLS(console.log);
           getFID(console.log);
           getFCP(console.log);
@@ -28,10 +26,10 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB }
             const paint = performance.getEntriesByType('paint');
             
             console.log('Performance Metrics:', {
+              loadTime: navigation.loadEventEnd - navigation.loadEventStart,
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-              firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+              firstPaint: paint.find(p => p.name === 'first-paint')?.startTime,
+              firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime,
             });
           }, 0);
         });
@@ -41,26 +39,26 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB }
     // Monitor memory usage
     const monitorMemory = () => {
       if ('memory' in performance) {
-        setInterval(() => {
-          const memory = (performance as any).memory;
-          console.log('Memory Usage:', {
-            used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-            total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-            limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
-          });
-        }, 30000); // Check every 30 seconds
+        const memory = (performance as any).memory;
+        console.log('Memory Usage:', {
+          used: memory.usedJSHeapSize,
+          total: memory.totalJSHeapSize,
+          limit: memory.jsHeapSizeLimit,
+        });
       }
     };
 
-    // Initialize monitoring
+    // Start monitoring
     monitorCoreWebVitals();
     monitorPerformance();
     monitorMemory();
 
-    // Cleanup
-    return () => {
-      // Cleanup if needed
-    };
+    // Monitor every 30 seconds
+    const interval = setInterval(() => {
+      monitorMemory();
+    }, 30000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return null;

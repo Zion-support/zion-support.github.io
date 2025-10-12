@@ -15,6 +15,7 @@ interface ServicePageProps {
   seoKeywords: string
 }
 
+export default function ServiceTemplate({
   title,
   description,
   icon,

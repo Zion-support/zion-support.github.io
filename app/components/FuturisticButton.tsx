@@ -13,6 +13,7 @@ interface FuturisticButtonProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
+export default function FuturisticButton({
   children,
   onClick,
   variant = 'primary',
@@ -142,5 +143,5 @@ interface FuturisticButtonProps {
         )}
       </span>
     </motion.button>
-  </div></div>);
+  );
 }
