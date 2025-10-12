@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function 5GDataAnalyticsZionTechGroup() {
+export default function A5GDataAnalyticsZionTechGroup() {
   return (
     <>
       <Helmet>
@@ -15,7 +15,7 @@ export default function 5GDataAnalyticsZionTechGroup() {
           <p className="text-lgtext-gray-300mb-8">Professional ai predictive maintenance services coming soon.</p>
           <Link 
             to="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover: bg-blue-700 transition-colors",
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />

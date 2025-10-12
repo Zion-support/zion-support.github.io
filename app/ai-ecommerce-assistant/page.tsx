@@ -1,18 +1,19 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function 5GDataAnalyticsZionTechGroup() {
+export default function AIEcommerceAssistant() {
   return (
     <>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <title>AI Ecommerce Assistant - Zion Tech Group</title>
+        <meta name="description" content="Professional AI ecommerce assistant services by Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4 xl font-boldtext-whitemb-6">Ai Ecommerce Assistant</h1>
-          <p className="text-lgtext-gray-300mb-8">Professional ai ecommerce assistant services coming soon.</p>
+          <h1 className="text-4xl font-bold text-white mb-6">AI Ecommerce Assistant</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional AI ecommerce assistant services coming soon.</p>
           <Link 
             to="/contact" 
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"

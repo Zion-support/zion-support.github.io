@@ -11,16 +11,16 @@ import { ArrowRight, Zap, Shield, Cloud } from 'lucide-react';
 
       icon: <Cloud className="w-12h-12text-cyan-400" />,
       title: "Cloud Integration",
-      description: "Seamlessly integrate with all major cloud platforms and services."
+      description: "Seamlessly integrate with all major cloud platforms and services.",
     },
       icon: <Zap className="w-12h-12text-purple-400" />,
       title: "Real-time Sync",
-      description: "Keep all your systems synchronized with real-time data updates."
+      description: "Keep all your systems synchronized with real-time data updates.",
     },
       icon: <Shield className="w-12h-12text-green-400" />,
 
       title: "Secure & Reliable",
-      description: "Enterprise-grade security ensures your data is protected during integration."
+      description: "Enterprise-grade security ensures your data is protected during integration.",
   ];
 
   return (
@@ -72,7 +72,7 @@ import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 
-export default function 5GDataAnalyticsZionTechGroup() {
+export default function A5GDataAnalyticsZionTechGroup() {
   return (
     <>
       <Helmet>
@@ -84,7 +84,7 @@ export default function 5GDataAnalyticsZionTechGroup() {
           <p className="text-lg text-gray-300 mb-8">Professional system integration services coming soon.</p>
           <Link 
             to="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover: bg-blue-700 transition-colors",
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />

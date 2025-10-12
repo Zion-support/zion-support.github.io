@@ -1,4 +1,3 @@
-import { Shield, ArrowRight, CheckCircle, Brain, Lock, Star, Eye } from 'lucide-react'
 
 import Layout from '../layout'
 import React from 'react';
@@ -7,7 +6,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
 export default function AdvancedSecuritySuiteZionTechGroup() {
   return (

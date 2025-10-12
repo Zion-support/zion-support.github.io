@@ -1,9 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-import { Box, Palette, Zap, CheckCircle, ArrowRight, Star, Brain, Layers } from 'lucide-react';
 
-import { ArrowRight } from 'lucide-react';
 
 export default function Ai3DGenerationZionTechGroup() {
   return (

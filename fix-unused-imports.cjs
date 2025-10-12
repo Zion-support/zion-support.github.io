@@ -1,201 +1,150 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Get all TypeScript/JavaScript files in the app directory
-function getAllFiles(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      getAllFiles(filePath, fileList);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      fileList.push(filePath);
-    }
-  });
-  
-  return fileList;
-}
-
-// Common unused imports to remove
-const unusedImports = [
-  'Helmet',
-  'Star',
-  'Users',
-  'Award',
-  'Zap',
-  'Shield',
-  'Brain',
-  'Cloud',
-  'Code',
-  'Target',
-  'Globe',
-  'Database',
-  'Smartphone',
-  'Lock',
-  'TrendingUp',
-  'Settings',
-  'Calendar',
-  'CheckSquare',
-  'FileText',
-  'MessageCircle',
-  'Heart',
-  'DollarSign',
-  'Box',
-  'Monitor',
-  'LinkIcon',
-  'Server',
-  'Package',
-  'Mic',
-  'Workflow',
-  'Eye',
-  'Wifi',
-  'MessageSquare',
-  'ShoppingCart',
-  'Phone',
-  'Mail',
-  'MapPin',
-  'BarChart3',
-  'Sparkles',
-  'Cpu',
-  'Satellite',
-  'AlertTriangle',
-  'BarChart',
-  'PieChart',
-  'Receipt',
-  'CreditCard',
-  'Banknote',
-  'Camera',
-  'Image',
-  'Video',
-  'RotateCcw',
-  'Download',
-  'Upload',
-  'Lightbulb',
-  'Clock',
-  'MessageCircle',
-  'Filter',
-  'Share',
-  'Bell',
-  'RefreshCw',
-  'Pause',
-  'SkipForward',
-  'SkipBack',
-  'Repeat',
-  'Shuffle',
-  'ThumbsUp',
-  'ThumbsDown',
-  'Bookmark',
-  'Flag',
-  'Info',
-  'HelpCircle',
-  'Plus',
-  'Minus',
-  'Edit',
-  'Trash2',
-  'Save',
-  'Copy',
-  'Paste',
-  'Cut',
-  'Undo',
-  'Redo',
-  'Move',
-  'Maximize',
-  'Minimize',
-  'Square',
-  'Circle',
-  'Triangle',
-  'Hexagon',
-  'Octagon',
-  'Pentagon',
-  'Star2',
-  'Heart2',
-  'Smile',
-  'Frown',
-  'Meh',
-  'Laugh',
-  'Angry',
-  'Surprised',
-  'Confused',
-  'Wink',
-  'Kiss',
-  'Tongue',
-  'Wink2',
-  'Kiss2',
-  'Tongue2',
-  'Wink3',
-  'Kiss3',
-  'Tongue3',
-  'Wink4',
-  'Kiss4',
-  'Tongue4',
-  'Wink5',
-  'Kiss5',
-  'Tongue5',
-  'Wink6',
-  'Kiss6',
-  'Tongue6',
-  'Wink7',
-  'Kiss7',
-  'Tongue7',
-  'Wink8',
-  'Kiss8',
-  'Tongue8'
-];
-
-function removeUnusedImports(filePath) {
+// Function to remove unused imports and variables
+function fixUnusedImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Remove unused imports from lucide-react
-    const lucideImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g;
+    // Remove unused imports - this is a simple approach
+    // Remove lines that are just imports and not used
+    const lines = content.split('\n');
+    const newLines = [];
+    const usedImports = new Set();
     
-    content = content.replace(lucideImportRegex, (match, imports) => {
-      const importList = imports.split(',').map(imp => imp.trim());
-      const usedImports = importList.filter(imp => {
-        // Check if the import is actually used in the file
-        const importName = imp.split(' as ')[0].trim();
-        const usageRegex = new RegExp(`\\b${importName}\\b`, 'g');
-        const usageCount = (content.match(usageRegex) || []).length;
-        return usageCount > 1; // More than 1 because the import itself counts as 1
-      });
+    // Track which imports are actually used
+    for (const line of lines) {
+      if (line.includes('import') && line.includes('from')) {
+        // Extract import names
+        const importMatch = line.match(/import\s*\{([^}]+)\}/);
+        if (importMatch) {
+          const imports = importMatch[1].split(',').map(imp => imp.trim());
+          imports.forEach(imp => {
+            if (content.includes(imp) && !line.includes(imp)) {
+              usedImports.add(imp);
+            }
+          });
+        }
+      }
+    }
+    
+    // Remove unused import lines
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
       
-      if (usedImports.length === 0) {
-        modified = true;
-        return ''; // Remove the entire import line
-      } else if (usedImports.length < importList.length) {
-        modified = true;
-        return `import { ${usedImports.join(', ')} } from 'lucide-react';`;
+      // Skip lines that are just unused imports
+      if (line.includes('is defined but never used') || 
+          line.includes('is assigned a value but never used')) {
+        continue;
       }
       
-      return match;
-    });
+      // Remove unused import lines
+      if (line.includes('import') && line.includes('from')) {
+        const importMatch = line.match(/import\s*\{([^}]+)\}/);
+        if (importMatch) {
+          const imports = importMatch[1].split(',').map(imp => imp.trim());
+          const hasUsedImports = imports.some(imp => usedImports.has(imp));
+          if (!hasUsedImports && line.includes('lucide-react')) {
+            // Skip this line
+            continue;
+          }
+        }
+      }
+      
+      newLines.push(line);
+    }
     
-    // Remove unused Helmet imports
-    if (content.includes("import { Helmet } from 'react-helmet-async';") && !content.includes('<Helmet>')) {
-      content = content.replace(/import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];?\n?/g, '');
+    const newContent = newLines.join('\n');
+    if (newContent !== content) {
+      fs.writeFileSync(filePath, newContent, 'utf8');
       modified = true;
     }
     
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed unused imports in: ${filePath}`);
-    }
+    return modified;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Get all files and process them
-const files = getAllFiles('./app');
-console.log(`Processing ${files.length} files...`);
+// Fix App.tsx specifically
+function fixAppTsx() {
+  const filePath = './App.tsx';
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove unused imports
+    const lines = content.split('\n');
+    const newLines = [];
+    
+    for (const line of lines) {
+      // Skip lines with unused imports
+      if (line.includes('SEOHead') && line.includes('import')) {
+        continue;
+      }
+      
+      // Skip lines with unused variable assignments
+      if (line.includes('is assigned a value but never used')) {
+        continue;
+      }
+      
+      // Remove unused variable assignments
+      if (line.includes('const ') && line.includes('Page') && line.includes('=')) {
+        // Check if this variable is used elsewhere
+        const varName = line.match(/const (\w+)/)?.[1];
+        if (varName && !content.includes(varName + '(') && !content.includes(varName + ' ')) {
+          continue;
+        }
+      }
+      
+      newLines.push(line);
+    }
+    
+    const newContent = newLines.join('\n');
+    if (newContent !== content) {
+      fs.writeFileSync(filePath, newContent, 'utf8');
+      console.log('Fixed App.tsx');
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error('Error fixing App.tsx:', error.message);
+    return false;
+  }
+}
 
-files.forEach(file => {
-  removeUnusedImports(file);
-});
+// Main execution
+console.log('Fixing unused imports and variables...');
 
-console.log('Unused imports cleanup completed!');
+// Fix App.tsx
+fixAppTsx();
+
+// Fix other files with unused imports
+const appDir = './app';
+const files = [];
+
+function findTsxFiles(dir) {
+  const items = fs.readdirSync(dir);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory()) {
+      findTsxFiles(fullPath);
+    } else if (item.endsWith('.tsx')) {
+      files.push(fullPath);
+    }
+  }
+}
+
+findTsxFiles(appDir);
+
+let fixedCount = 0;
+for (const file of files.slice(0, 50)) { // Limit to first 50 files
+  if (fixUnusedImports(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} files`);
