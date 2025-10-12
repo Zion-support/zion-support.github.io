@@ -1,19 +1,12 @@
-<<<<<<< HEAD
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, Cpu, ArrowRight } from 'lucide-react';
-=======
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, Cpu, ArrowRight, BarChart, Shield, Database, Smartphone, Globe, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart, Target, TrendingUp, Settings, Calendar, CheckSquare } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-<<<<<<< HEAD
     { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Business intelligence' },
