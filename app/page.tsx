@@ -53,9 +53,15 @@ export default function HomePage() {
       features: ['Automated content creation', 'SEO optimization', 'Multi-language support']
     },
     {
+<<<<<<< HEAD
       title: 'IT Services & Solutions',
       description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
       icon: <Shield className="w-8 h-8 text-green-500" />,
+=======
+      icon: <Shield className="w-8 h-8 text-green-500" />,
+      title: 'IT Services & Solutions',
+      description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
+>>>>>>> cursor/analyze-improve-and-deploy-application-e212
       link: '/it-services',
       features: ['Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics']
     },
@@ -203,7 +209,11 @@ export default function HomePage() {
                   <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
                   <ul className="space-y-2 mb-6">
+<<<<<<< HEAD
                     {service.features.map((feature, featureIndex) => (
+=======
+                    {service.features?.map((feature, featureIndex) => (
+>>>>>>> cursor/analyze-improve-and-deploy-application-e212
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -263,13 +273,21 @@ export default function HomePage() {
                     to="/contact" 
                     className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                   >
+<<<<<<< HEAD
                     Get Started Today
+=======
+                    Start Your Project
+>>>>>>> cursor/analyze-improve-and-deploy-application-e212
                   </Link>
                   <Link 
                     to="/about" 
                     className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                   >
+<<<<<<< HEAD
                     Learn More
+=======
+                    Learn About Us
+>>>>>>> cursor/analyze-improve-and-deploy-application-e212
                   </Link>
                 </div>
               </div>
