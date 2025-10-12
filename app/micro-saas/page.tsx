@@ -1,135 +1,25 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Settings, ArrowRight, CheckCircle, Zap, Shield, Globe, BarChart3 } from 'lucide-react'
-
-<<<<<<< HEAD
-const MicroSaasPage: React.FC = () => {
-  const serviceName = 'micro-saas'
-  const title = 'Micro Saas'
-
-  const features = [
-    {
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
-      title: 'Core Feature 1',
-      description: 'Essential functionality for your business needs'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      title: 'Core Feature 2', 
-      description: 'Reliable and secure solution for your operations'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-purple-500" />,
-      title: 'Core Feature 3',
-      description: 'Global reach and scalability for your business'
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-orange-500" />,
-      title: 'Core Feature 4',
-      description: 'Analytics and insights to drive growth'
-    }
-  ]
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
-        <meta name="description" content={`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`} />
-        <link rel="canonical" href={`https://ziontechgroup.com/micro-saas/${serviceName}`} />
-      </Helmet>
-      
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Settings className="w-4 h-4" />
-            <span>{title}</span>
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            {title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400">Solution</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
-              <span>Get Started</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to succeed with {title.toLowerCase()}
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
-                <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Start using our {title.toLowerCase()} solution today and transform your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Start Free Trial
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Contact Sales
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-
-export default MicroSaasPage
-=======
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Zap, Star, Users, Cloud, MessageSquare, Share2, DollarSign, Calendar, Headphones, Package, FileText, Target, Clock, Shield, BarChart3, Mail, Search } from 'lucide-react';
+import { Link } from 'react-router-dom'
+import { CheckCircle, ArrowRight, Zap, Star, Users, Cloud, MessageSquare, Share2, DollarSign, Calendar, Headphones, Package, FileText, Target, Clock, Shield, BarChart3, Mail, Search } from 'lucide-react'
 
 interface MicroSaasProduct {
-  id: string;
-  icon: React.ComponentType<any>;
-  title: string;
-  description: string;
-  features: string[];
-  price: string;
-  users: string;
-  popular: boolean;
-  category: string;
-  link: string;
-  benefits: string[];
+  id: string
+  icon: React.ComponentType<any>
+  title: string
+  description: string
+  features: string[]
+  price: string
+  users: string
+  popular: boolean
+  category: string
+  link: string
+  benefits: string[]
 }
 
 const MicroSaasPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All')
 
   const microSaasProducts: MicroSaasProduct[] = [
     {
@@ -327,9 +217,9 @@ const MicroSaasPage: React.FC = () => {
       link: '/micro-saas/content-generator',
       benefits: ['Generate content 5x faster', 'Maintain brand consistency', 'Create diverse content types', 'Collaborate effectively']
     }
-  ];
+  ]
 
-  const categories = ['All', 'Content Creation', 'Analytics', 'Marketing', 'CRM', 'Social Media', 'Finance', 'Project Management', 'Customer Support', 'Inventory', 'Document Management', 'Lead Generation', 'Scheduling'];
+  const categories = ['All', 'Content Creation', 'Analytics', 'Marketing', 'CRM', 'Social Media', 'Finance', 'Project Management', 'Customer Support', 'Inventory', 'Document Management', 'Lead Generation', 'Scheduling']
 
   const benefits = [
     {
@@ -352,11 +242,11 @@ const MicroSaasPage: React.FC = () => {
       title: 'Expert Support',
       description: '24/7 customer support from our team of experts to help you succeed.'
     }
-  ];
+  ]
 
   const filteredProducts = selectedCategory === 'All' 
     ? microSaasProducts 
-    : microSaasProducts.filter(product => product.category === selectedCategory);
+    : microSaasProducts.filter(product => product.category === selectedCategory)
 
   return (
     <>
@@ -522,8 +412,7 @@ const MicroSaasPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default MicroSaasPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-2434
+export default MicroSaasPage
