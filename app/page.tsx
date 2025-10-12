@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
-=======
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Cloud, Database } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
@@ -105,7 +100,7 @@ const HomePage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link 
-                  to="/services"
+                  to="/ai-services"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group"
                 >
                   Explore Our Solutions
@@ -163,7 +158,7 @@ const HomePage: React.FC = () => {
                     {feature.description}
                   </p>
                   <Link 
-                    to="/services"
+                    to="/ai-services"
                     className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-block"
                   >
                     Learn More →
