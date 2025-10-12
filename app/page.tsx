@@ -19,56 +19,62 @@ export default function HomePage() {
 
   const services = [
     {
-      title: 'AI Content Generation',
-      description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
+      title: 'AI Smart Scheduler',
+      description: 'Intelligent scheduling that learns from your patterns and optimizes meetings automatically.',
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      link: '/ai-content-generation',
-      features: ['Automated content creation', 'SEO optimization', 'Multi-language support']
+      link: '/ai-smart-scheduler',
+      features: ['AI-powered optimization', 'Team coordination', 'Auto-optimization']
     },
     {
-      title: 'AI Chatbot Builder',
-      description: 'Create intelligent chatbots that understand and respond to your customers naturally.',
-      icon: <MessageSquare className="w-8 h-8 text-purple-400" />,
-      link: '/ai-chatbot-builder',
-      features: ['Natural language processing', '24/7 customer support', 'Easy integration']
+      title: 'AI E-commerce Optimizer Pro',
+      description: 'Boost sales by up to 40% with AI-powered e-commerce optimization and personalization.',
+      icon: <MessageSquare className="w-8 h-8 text-orange-400" />,
+      link: '/ai-ecommerce-optimizer-pro',
+      features: ['Revenue growth', 'Customer insights', 'Cart optimization']
     },
     {
-      title: 'Cloud Services',
-      description: 'Scalable, secure, and reliable cloud infrastructure solutions for your business.',
-      icon: <Cloud className="w-8 h-8 text-blue-400" />,
-      link: '/cloud-services',
-      features: ['Scalable infrastructure', '99.9% uptime', 'Global CDN']
-    },
-    {
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with our comprehensive cybersecurity services and monitoring.',
+      title: 'Advanced Security Suite',
+      description: 'Comprehensive cybersecurity with AI threat detection and 24/7 monitoring.',
       icon: <Shield className="w-8 h-8 text-red-400" />,
-      link: '/cybersecurity',
-      features: ['Threat detection', 'Security audits', 'Compliance management']
+      link: '/advanced-security-suite',
+      features: ['360° protection', 'AI threat detection', 'Compliance ready']
     },
     {
-      title: '5G Implementation',
-      description: 'Leverage the power of 5G technology for ultra-fast connectivity and IoT solutions.',
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      link: '/5g-implementation',
-      features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing']
+      title: '5G Smart City Solutions',
+      description: 'Transform cities with 5G-powered smart infrastructure and AI-driven analytics.',
+      icon: <Zap className="w-8 h-8 text-blue-400" />,
+      link: '/5g-smart-city-solutions',
+      features: ['Ultra-fast connectivity', 'Smart infrastructure', 'Citizen engagement']
     },
     {
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics platform.',
+      title: 'AI Analytics Dashboard Pro',
+      description: 'Transform data into actionable insights with AI-powered analytics and visualization.',
       icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      link: '/data-analytics',
-      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards']
+      link: '/ai-analytics-dashboard-pro',
+      features: ['AI-powered insights', 'Real-time analytics', 'Predictive analytics']
+    },
+    {
+      title: 'Cloud Migration Pro',
+      description: 'Expert cloud migration services with zero downtime guarantee and security-first approach.',
+      icon: <Cloud className="w-8 h-8 text-purple-400" />,
+      link: '/cloud-migration-pro',
+      features: ['Zero-downtime migration', 'Security-first approach', 'Performance optimization']
     }
   ]
 
   const additionalServices = [
+    { name: 'AI Content Moderation Pro', link: '/ai-content-moderation-pro' },
     { name: 'Web Development', link: '/web-development' },
     { name: 'Mobile Development', link: '/mobile-development' },
     { name: 'DevOps', link: '/devops' },
     { name: 'IT Consulting', link: '/it-consulting' },
     { name: 'Blockchain Solutions', link: '/blockchain' },
-    { name: 'IoT Development', link: '/iot' }
+    { name: 'IoT Development', link: '/iot' },
+    { name: '5G Implementation', link: '/5g-implementation' },
+    { name: 'Data Analytics', link: '/data-analytics' },
+    { name: 'Cloud Services', link: '/cloud-services' },
+    { name: 'Cybersecurity', link: '/cybersecurity' },
+    { name: 'AI Content Generation', link: '/ai-content-generation' }
   ]
 
   const testimonials = [
@@ -205,7 +211,7 @@ export default function HomePage() {
                 Explore our full range of technology solutions
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {additionalServices.map((service, index) => (
                 <Link
                   key={index}

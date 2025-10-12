@@ -26,15 +26,18 @@ export default function Navigation() {
   const aiServices = [
     { name: 'AI Content Generation', path: '/ai-content-generation', icon: <Brain className="w-4 h-4" /> },
     { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'AI Automation', path: '/ai-automation', icon: <Settings className="w-4 h-4" /> },
+    { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Smart Scheduler', path: '/ai-smart-scheduler', icon: <Settings className="w-4 h-4" /> },
+    { name: 'AI Content Moderation Pro', path: '/ai-content-moderation-pro', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Computer Vision', path: '/ai-computer-vision', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Database className="w-4 h-4" /> }
+    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Automation', path: '/ai-automation', icon: <Settings className="w-4 h-4" /> }
   ]
 
   const itServices = [
     { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
     { name: 'Mobile Development', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> },
+    { name: 'Cloud Migration Pro', path: '/cloud-migration-pro', icon: <Cloud className="w-4 h-4" /> },
     { name: 'DevOps', path: '/devops', icon: <Server className="w-4 h-4" /> },
     { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Cloud Services', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
@@ -42,12 +45,21 @@ export default function Navigation() {
   ]
 
   const fiveGServices = [
+    { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions', icon: <Wifi className="w-4 h-4" /> },
     { name: '5G Implementation', path: '/5g-implementation', icon: <Wifi className="w-4 h-4" /> },
     { name: '5G Network Infrastructure', path: '/5g-network-infrastructure', icon: <Server className="w-4 h-4" /> },
     { name: '5G IoT Solutions', path: '/5g-iot-solutions', icon: <Smartphone className="w-4 h-4" /> },
     { name: '5G Edge Computing', path: '/5g-edge-computing', icon: <Cpu className="w-4 h-4" /> },
-    { name: '5G Private Networks', path: '/5g-private-networks', icon: <Shield className="w-4 h-4" /> },
-    { name: '5G Mobile Applications', path: '/5g-mobile-applications', icon: <Smartphone className="w-4 h-4" /> }
+    { name: '5G Private Networks', path: '/5g-private-networks', icon: <Shield className="w-4 h-4" /> }
+  ]
+
+  const microSaasServices = [
+    { name: 'AI E-commerce Optimizer Pro', path: '/ai-ecommerce-optimizer-pro', icon: <Smartphone className="w-4 h-4" /> },
+    { name: 'Advanced Security Suite', path: '/advanced-security-suite', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI Smart Scheduler', path: '/ai-smart-scheduler', icon: <Settings className="w-4 h-4" /> },
+    { name: 'AI Content Moderation Pro', path: '/ai-content-moderation-pro', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'Cloud Migration Pro', path: '/cloud-migration-pro', icon: <Cloud className="w-4 h-4" /> }
   ]
 
   return (
@@ -151,6 +163,32 @@ export default function Navigation() {
               )}
             </div>
 
+            {/* Micro SAAS Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('saas')}
+                className="flex items-center text-white hover:text-cyan-400 transition-colors"
+              >
+                Micro SAAS
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {activeDropdown === 'saas' && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                  {microSaasServices.map((service, index) => (
+                    <Link
+                      key={index}
+                      to={service.path}
+                      onClick={closeDropdown}
+                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                    >
+                      {service.icon}
+                      <span className="ml-3">{service.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
             </Link>
@@ -225,6 +263,23 @@ export default function Navigation() {
                 <div className="text-cyan-400 font-medium mb-2">5G Solutions</div>
                 <div className="pl-4 space-y-1">
                   {fiveGServices.map((service, index) => (
+                    <Link
+                      key={index}
+                      to={service.path}
+                      onClick={() => setIsOpen(false)}
+                      className="block text-gray-300 hover:text-cyan-400 transition-colors"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile Micro SAAS Services */}
+              <div className="px-3 py-2">
+                <div className="text-cyan-400 font-medium mb-2">Micro SAAS</div>
+                <div className="pl-4 space-y-1">
+                  {microSaasServices.map((service, index) => (
                     <Link
                       key={index}
                       to={service.path}
