@@ -1,23 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-// Initialize analytics tracking
-// Google Analytics initialization
-if (typeof window !== 'undefined' && window.gtag) {}
-window.gtag('config', 'GA_MEASUREMENT_ID', {}
-page_title: document.title,
-page_location: window.location.href,
-});
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
 }
+
+interface AnalyticsProps {
+  children: React.ReactNode;
+}
+
+const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
+  useEffect(() => {
+    // Initialize analytics tracking
+    const initAnalytics = () => {
+      // Google Analytics initialization
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('config', 'GA_MEASUREMENT_ID', {
+          page_title: document.title,
+          page_location: window.location.href,
+        });
+      }
+    };
+    
+    initAnalytics();
+  }, []);
+
+  return <React.Fragment>{children}</React.Fragment>;
 };
-initAnalytics();
-}, []);
-return (
-<></>
-}
 
-return <React.Fragment />{children}</React.Fragment>;
-
-// Extend Window interface for gtag;
-declare global {}
-interface Window {}
-void;
+export default Analytics;
