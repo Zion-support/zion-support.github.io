@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
@@ -23,6 +24,17 @@ export default function 5GDataAnalyticsZionTechGroup() {
           </Link>
         </div>
       </div>
+=======
+export default function QualityAssurancePage() {
+  return (
+    <>
+      <title>Quality Assurance - Zion Tech Group</title>
+      <h1 className="text-4xl font-bold text-white mb-6">Quality Assurance</h1>
+      <p className="text-lg text-gray-300 mb-8">Professional quality assurance services coming soon.</p>
+      <a href="/contact" className="text-blue-400 hover:text-blue-300">
+        Contact Us
+      </a>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f21c
     </>
   );
 }

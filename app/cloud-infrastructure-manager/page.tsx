@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
@@ -23,6 +24,17 @@ export default function 5GDataAnalyticsZionTechGroup() {
           </Link>
         </div>
       </div>
+=======
+export default function CloudInfrastructureManagerPage() {
+  return (
+    <>
+      <title>Cloud Infrastructure Manager - Zion Tech Group</title>
+      <h1 className="text-4xl font-bold text-white mb-6">Cloud Infrastructure Manager</h1>
+      <p className="text-lg text-gray-300 mb-8">Professional cloud infrastructure manager services coming soon.</p>
+      <a href="/contact" className="text-blue-400 hover:text-blue-300">
+        Contact Us
+      </a>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f21c
     </>
   );
 }

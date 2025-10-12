@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -23,6 +24,17 @@ export default function CommunityZionTechGroup() {
           </Link>
         </div>
       </div>
+=======
+export default function CommunityPage() {
+  return (
+    <>
+      <h1 className="text-4xl font-bold text-white mb-6">Community</h1>
+      <p className="text-lg text-gray-300 mb-8">Professional community services coming soon.</p>
+      
+      <a href="/contact" className="text-blue-400 hover:text-blue-300">
+        Contact Us
+      </a>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f21c
     </>
   );
 }
