@@ -1,8 +1,7 @@
-'use client';
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {MessageSquare} from 'lucide-react';
+
+'use client';
 
 export default function AIEmailAssistant() {
   const features = [

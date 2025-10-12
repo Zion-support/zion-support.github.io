@@ -1,8 +1,7 @@
-'use client';
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {Receipt, Bot} from 'lucide-react';
+
+'use client';
 
 export default function AIExpenseTracker() {
   const features = [

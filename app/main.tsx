@@ -1,9 +1,9 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Brain, Shield, Zap, Globe, ArrowRight, CheckCircle, Phone, Mail } from 'lucide-react';
+import { Brain, Shield, Zap, Globe } from 'lucide-react';
 import Layout from './layout';
+import { Shield, Star, Zap } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
 
 const features = [
   {
@@ -150,23 +150,3 @@ const MainPage = () => {
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(<MainPage />);
-=======
-import { BrowserRouter } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import App from './App';
-import './index.css';
-
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-
-root.render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </HelmetProvider>
-  </React.StrictMode>
-);
->>>>>>> cursor/fix-errors-and-merge-to-main-c493

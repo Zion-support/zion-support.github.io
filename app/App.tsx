@@ -1,8 +1,13 @@
+import { Helmet } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter } from 'react-router-dom';
+import { Suspense } from 'react';
+import { Routes } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+
 'use client';
 
-import { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { lazy } from 'react';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';

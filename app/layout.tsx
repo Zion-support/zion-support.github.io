@@ -1,13 +1,11 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { AnalyticsProvider } from './components/AnalyticsProvider';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
-import { ErrorBoundary } from 'react-error-boundary';
 import { ErrorFallback } from './components/ErrorFallback';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 interface LayoutProps {
   children: React.ReactNode;

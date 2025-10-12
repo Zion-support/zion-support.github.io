@@ -1,7 +1,9 @@
 import React from 'react';
-import { Brain, Shield, Zap, Globe, ArrowRight } from 'lucide-react';
+import { Brain, Shield, Zap, Globe } from 'lucide-react';
+import { Shield, Zap } from 'lucide-react';
+import { Shield, Zap } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
 interface Service {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
@@ -80,32 +82,8 @@ const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ cla
           </div>
         </div>
       </div>
-=======
-interface EnhancedServicesShowcaseProps {
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
-}
-
-const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({
-  children,
-  className = '',
-  title,
-  description
-}) => {
-  return (
-    <div className={`enhanced-component ${className}`}>
-      {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}
-      {description && <p className="text-gray-600 mb-4">{description}</p>}
-      {children}
->>>>>>> cursor/fix-errors-and-merge-to-main-c493
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedServicesShowcase;
-=======
-export default EnhancedServicesShowcase;
->>>>>>> cursor/fix-errors-and-merge-to-main-c493

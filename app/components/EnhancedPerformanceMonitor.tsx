@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Activity, Zap, Clock, TrendingUp } from 'lucide-react';
+import { Star } from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;

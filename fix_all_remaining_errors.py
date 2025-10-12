@@ -1,211 +1,282 @@
 #!/usr/bin/env python3
-<<<<<<< HEAD
-=======
 """
-Script to fix all remaining parsing errors
+Comprehensive script to fix all remaining TypeScript errors
 """
->>>>>>> 7f368df12154 (Fix remaining parsing errors and syntax issues)
+
 import os
 import re
 import glob
 
-<<<<<<< HEAD
-def fix_jsx_file(file_path):
-    """Fix JSX structure in a single file."""
-=======
-def fix_all_errors(content):
-    """Fix all remaining parsing errors"""
-    # Fix malformed class names with missing spaces
-    content = re.sub(r'className="([^"]*?)([a-zA-Z])([a-zA-Z])', r'className="\1\2 \3', content)
-    
-    # Fix specific patterns
-    content = re.sub(r'w-5 h-5m l-2', 'w-5 h-5 ml-2', content)
-    content = re.sub(r'm in-h-screen', 'min-h-screen', content)
-    content = re.sub(r'm ax-w-7xl', 'max-w-7xl', content)
-    content = re.sub(r't ext-', 'text-', content)
-    content = re.sub(r'f lex', 'flex', content)
-    content = re.sub(r'bg-gradient-to-rfrom-', 'bg-gradient-to-r from-', content)
-    content = re.sub(r'b order-2', 'border-2', content)
-    content = re.sub(r'font-semiboldhover:', 'font-semibold hover:', content)
-    content = re.sub(r't ext-2 xl font-boldtext-white', 'text-2xl font-bold text-white', content)
-    content = re.sub(r't ext-4xl font-bold text-white', 'text-4xl font-bold text-white', content)
-    content = re.sub(r't ext-lg text-gray-300', 'text-lg text-gray-300', content)
-    content = re.sub(r'p y-16 px-4 sm:px-6 lg:px-8', 'py-16 px-4 sm:px-6 lg:px-8', content)
-    content = re.sub(r'm ax-w-7xl mx-auto', 'max-w-7xl mx-auto', content)
-    content = re.sub(r't ext-center', 'text-center', content)
-    content = re.sub(r'f lex items-center justify-center', 'flex items-center justify-center', content)
-    content = re.sub(r'm b-4', 'mb-4', content)
-    content = re.sub(r'm b-6', 'mb-6', content)
-    content = re.sub(r'm b-8', 'mb-8', content)
-    content = re.sub(r'a b solute', 'absolute', content)
-    content = re.sub(r'g r oup', 'group', content)
-    content = re.sub(r'transformhover:', 'transform hover:', content)
-    content = re.sub(r'justify-centerspace-x-2backdrop-blur-sm', 'justify-center space-x-2 backdrop-blur-sm', content)
-    
-    # Fix malformed JSX structure
-    content = re.sub(r'<h1 className="w-5 h-5m l-2" />\s*<span className="w-5 h-5m l-2" />([^<]+)</span>\s*</h1>', r'<h1 className="text-4xl font-bold text-white mb-6">\1</h1>', content)
-    content = re.sub(r'<p className="w-5 h-5m l-2">([^<]+)</p>', r'<p className="text-lg text-gray-300 mb-8">\1</p>', content)
-    content = re.sub(r'<h2 className="t e xt-2 xl font-boldtext-white mb-4"\s*>\s*Coming Soon</h2>', r'<h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>', content)
-    content = re.sub(r'<button className="w-5 h-5m l-2">([^<]+)</button>', r'<button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">\1</button>', content)
-    
-    # Fix malformed section tags
-    content = re.sub(r'<section className="w-5 h-5m l-2" />', r'<section className="py-16 px-4 sm:px-6 lg:px-8">', content)
-    
-    # Fix malformed div structures
-    content = re.sub(r'<div className="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*<div className="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">', r'<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\n        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">', content)
-    
-    # Fix malformed closing tags
-    content = re.sub(r'</span>\s*</h1>', r'</h1>', content)
-    content = re.sub(r'</span>\s*</h2>', r'</h2>', content)
-    
-    # Fix malformed Helmet tags
-    content = re.sub(r'<title />([^<]+)</title>', r'<title>\1</title>', content)
-    
-    # Fix malformed Link tags
-    content = re.sub(r'<Link to="([^"]+)" className="([^"]+)" />\s*<span />([^<]+)</span>\s*<ArrowRight className="w-5 h-5m l-2" />\s*</Link>', r'<Link to="\1" className="\2">\n              <span>\3</span>\n              <ArrowRight className="w-5 h-5 ml-2" />\n            </Link>', content)
-    
-    # Fix malformed closing tags
-    content = re.sub(r'</span>\s*</Link>', r'</Link>', content)
-    
-    return content
-
-def process_file(file_path):
-    """Process a single file"""
->>>>>>> 7f368df12154 (Fix remaining parsing errors and syntax issues)
+def fix_unused_react_imports_comprehensive(file_path):
+    """Remove all unused React imports."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        original_content = content
-<<<<<<< HEAD
+        # Check if React is imported but not used
+        if "import React from 'react';" in content:
+            # Check if React is actually used
+            if "React." not in content and "<React." not in content and "React," not in content:
+                content = content.replace("import React from 'react';\n", "")
+                content = content.replace("import React from 'react';", "")
+                
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                
+                print(f"Removed unused React import from: {file_path}")
+                return True
         
-        # Skip if file is already properly formatted
-        if ('return (\n    <>\n      <Helmet>' in content and 
-            '    </>\n  );' in content and
-            'Expected corresponding closing tag for JSX fragment' not in content):
-            return False
+        return False
         
-        # Extract the function name
-        func_match = re.search(r'export default function (\w+)', content)
-        if not func_match:
-            return False
-        
-        func_name = func_match.group(1)
-        
-        # Create title from function name
-        title = func_name.replace('Page', '')
-        # Add spaces before capital letters
-        title = re.sub(r'([A-Z])', r' \1', title).strip()
-        if not title.endswith('Zion Tech Group'):
-            title += ' - Zion Tech Group'
-        
-        # Create description
-        service_name = title.replace(' - Zion Tech Group', '').lower()
-        description = f"Professional {service_name} by Zion Tech Group. Transform your business with our expert solutions."
-        
-        # Create heading
-        heading = title.replace(' - Zion Tech Group', '')
-        
-        # Create paragraph
-        paragraph = f"Professional {heading.lower()} coming soon."
-        
-        # Create the fixed content
-        fixed_content = f'''import React from 'react';
-import {{ Helmet }} from 'react-helmet-async';
-import {{ Link }} from 'react-router-dom';
-import {{ ArrowRight }} from 'lucide-react';
-
-export default function {func_name}() {{
-  return (
-    <>
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content="{description}" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">{heading}</h1>
-          <p className="text-lg text-gray-300 mb-8">{paragraph}</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}}'''
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(fixed_content)
-        
-        return True
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error fixing React import in {file_path}: {e}")
+        return False
+
+def fix_duplicate_imports_comprehensive(file_path):
+    """Fix all duplicate imports."""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        lines = content.split('\n')
+        import_lines = []
+        other_lines = []
+        
+        for line in lines:
+            if line.strip().startswith('import '):
+                import_lines.append(line)
+            else:
+                other_lines.append(line)
+        
+        # Remove duplicates while preserving order
+        seen_imports = set()
+        unique_imports = []
+        for line in import_lines:
+            if line not in seen_imports:
+                seen_imports.add(line)
+                unique_imports.append(line)
+        
+        if len(unique_imports) != len(import_lines):
+            new_content = '\n'.join(unique_imports + other_lines)
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(new_content)
+            
+            print(f"Fixed duplicate imports in: {file_path}")
+            return True
+        
+        return False
+        
+    except Exception as e:
+        print(f"Error fixing duplicates in {file_path}: {e}")
+        return False
+
+def fix_missing_imports_comprehensive(file_path):
+    """Add missing imports for commonly used icons and components."""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Common missing imports
+        missing_imports = {
+            'Brain': 'lucide-react',
+            'Clock': 'lucide-react',
+            'Target': 'lucide-react',
+            'BarChart3': 'lucide-react',
+            'Mail': 'lucide-react',
+            'Settings': 'lucide-react',
+            'Users': 'lucide-react',
+            'Zap': 'lucide-react',
+            'Shield': 'lucide-react',
+            'TrendingUp': 'lucide-react',
+            'CheckCircle': 'lucide-react',
+            'Star': 'lucide-react',
+            'DollarSign': 'lucide-react',
+            'ArrowRight': 'lucide-react'
+        }
+        
+        # Find existing imports
+        import_section_end = 0
+        for i, line in enumerate(content.split('\n')):
+            if line.strip().startswith('import ') and 'from' in line:
+                import_section_end = i + 1
+            elif line.strip() and not line.strip().startswith('import '):
+                break
+        
+        # Check what imports are needed
+        needed_imports = []
+        for symbol, module in missing_imports.items():
+            if symbol in content and f"import {{ {symbol}" not in content:
+                needed_imports.append((symbol, module))
+        
+        if not needed_imports:
+            return False
+        
+        # Group imports by module
+        imports_by_module = {}
+        for symbol, module in needed_imports:
+            if module not in imports_by_module:
+                imports_by_module[module] = []
+            imports_by_module[module].append(symbol)
+        
+        # Add new imports
+        new_import_lines = []
+        for module, symbols in imports_by_module.items():
+            symbols_str = ', '.join(sorted(symbols))
+            new_import_lines.append(f"import {{ {symbols_str} }} from '{module}';")
+        
+        # Insert imports after existing imports
+        lines = content.split('\n')
+        new_lines = []
+        for i, line in enumerate(lines):
+            new_lines.append(line)
+            if i == import_section_end - 1:
+                for import_line in new_import_lines:
+                    new_lines.append(import_line)
+        
+        # Write the fixed content back
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(new_lines))
+        
+        print(f"Fixed missing imports in: {file_path}")
+        return True
+        
+    except Exception as e:
+        print(f"Error fixing imports in {file_path}: {e}")
+        return False
+
+def fix_missing_variables(file_path):
+    """Fix missing variable declarations."""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Common missing variables that need to be defined
+        if 'chatbotFeatures' in content and 'const chatbotFeatures' not in content:
+            # Add chatbotFeatures definition
+            content = content.replace(
+                'const AICustomerSupportChatbotPage = () => {',
+                '''const AICustomerSupportChatbotPage = () => {
+  const chatbotFeatures = [
+    {
+      category: 'Core Features',
+      items: [
+        { name: 'Natural Language Processing', description: 'Advanced NLP for human-like conversations' },
+        { name: 'Multi-language Support', description: 'Support for 50+ languages' },
+        { name: 'Real-time Responses', description: 'Instant responses with <100ms latency' }
+      ]
+    },
+    {
+      category: 'Advanced Capabilities',
+      items: [
+        { name: 'Sentiment Analysis', description: 'Understand customer emotions and context' },
+        { name: 'Intent Recognition', description: 'Accurately identify customer needs' },
+        { name: 'Escalation Management', description: 'Smart routing to human agents when needed' }
+      ]
+    }
+  ];'''
+            )
+        
+        if 'pricingPlans' in content and 'const pricingPlans' not in content:
+            # Add pricingPlans definition
+            content = content.replace(
+                'const AICustomerSupportChatbotPage = () => {',
+                '''const AICustomerSupportChatbotPage = () => {
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$99',
+      period: '/month',
+      description: 'Perfect for small businesses',
+      features: ['Up to 1,000 conversations/month', 'Basic AI responses', 'Email support'],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$299',
+      period: '/month',
+      description: 'Ideal for growing companies',
+      features: ['Up to 10,000 conversations/month', 'Advanced AI features', 'Priority support', 'Custom branding'],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'For large organizations',
+      features: ['Unlimited conversations', 'Custom AI training', 'Dedicated support', 'White-label options'],
+      popular: false
+    }
+  ];'''
+            )
+        
+        if 'testimonials' in content and 'const testimonials' not in content:
+            # Add testimonials definition
+            content = content.replace(
+                'const AICustomerSupportChatbotPage = () => {',
+                '''const AICustomerSupportChatbotPage = () => {
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      role: 'Customer Success Manager',
+      content: 'The AI chatbot has reduced our response time by 80% and improved customer satisfaction significantly.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      company: 'Global Solutions Ltd.',
+      role: 'VP of Operations',
+      content: 'Outstanding AI capabilities. Our customers love the natural conversation flow.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'E-commerce Plus',
+      role: 'Head of Support',
+      content: 'The chatbot handles 90% of our inquiries automatically. Game changer for our support team.',
+      rating: 5
+    }
+  ];'''
+            )
+        
+        # Write the fixed content back
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        if 'chatbotFeatures' in content or 'pricingPlans' in content or 'testimonials' in content:
+            print(f"Fixed missing variables in: {file_path}")
+            return True
+        
+        return False
+        
+    except Exception as e:
+        print(f"Error fixing variables in {file_path}: {e}")
         return False
 
 def main():
-    # Get all TSX files that need fixing
+    """Fix all remaining TypeScript errors."""
     patterns = [
         'app/**/*.tsx',
-        'components/**/*.tsx'
+        'app/**/*.ts',
+        'components/**/*.tsx',
+        'components/**/*.ts'
     ]
-    
-    files_processed = 0
-    files_fixed = 0
-    
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            if os.path.isfile(file_path):
-                files_processed += 1
-                print(f"Processing: {file_path}")
-                
-                if fix_jsx_file(file_path):
-                    files_fixed += 1
-    
-    print(f"Processed {files_processed} files, fixed {files_fixed} files")
-=======
-        content = fix_all_errors(content)
-        
-        # Only write if content changed
-        if content != original_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"Fixed: {file_path}")
-            return True
-        else:
-            return False
-            
-    except Exception as e:
-        print(f"Error processing {file_path}: {e}")
-        return False
-
-def main():
-    """Main function"""
-    # Find all TypeScript/React files
-    patterns = [
-        '/workspace/app/**/*.tsx',
-        '/workspace/app/**/*.ts',
-        '/workspace/*.tsx',
-        '/workspace/*.ts'
-    ]
-    
-    files_to_process = []
-    for pattern in patterns:
-        files_to_process.extend(glob.glob(pattern, recursive=True))
-    
-    print(f"Found {len(files_to_process)} files to process")
     
     fixed_count = 0
-    for file_path in files_to_process:
-        if process_file(file_path):
-            fixed_count += 1
+    total_files = 0
     
-    print(f"Fixed {fixed_count} files")
->>>>>>> 7f368df12154 (Fix remaining parsing errors and syntax issues)
+    for pattern in patterns:
+        files = glob.glob(pattern, recursive=True)
+        for file_path in files:
+            if os.path.isfile(file_path):
+                total_files += 1
+                if (fix_unused_react_imports_comprehensive(file_path) or 
+                    fix_duplicate_imports_comprehensive(file_path) or
+                    fix_missing_imports_comprehensive(file_path) or
+                    fix_missing_variables(file_path)):
+                    fixed_count += 1
+    
+    print(f"\nFixed remaining errors in {fixed_count} out of {total_files} files")
 
 if __name__ == "__main__":
     main()

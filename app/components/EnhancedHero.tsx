@@ -1,6 +1,9 @@
 import React from 'react';
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
+import { Mail, Star } from 'lucide-react';
+import { Mail, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 interface EnhancedHeroProps {
   title?: string;

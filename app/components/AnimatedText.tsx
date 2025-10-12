@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 interface AnimatedTextProps {
   text: string;
@@ -36,8 +38,6 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 
 export default AnimatedText;
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
 interface AnimatedTextProps {
   text: string;

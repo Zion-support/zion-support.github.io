@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Star } from 'lucide-react';
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {

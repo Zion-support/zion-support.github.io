@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3, ArrowRight } from 'lucide-react';
 import Layout from '../layout';
+import { Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 export default function CloudInfrastructureManagement() {
   const features = [

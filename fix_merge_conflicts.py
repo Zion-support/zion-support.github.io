@@ -1,68 +1,80 @@
 #!/usr/bin/env python3
+"""
+Script to automatically resolve merge conflicts in TypeScript/React files
+by choosing the HEAD version and cleaning up conflict markers.
+"""
+
 import os
 import re
 import glob
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a file by choosing the HEAD version and cleaning up markers."""
+    """Fix merge conflicts in a single file by choosing HEAD version."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Skip if no merge conflicts
+        # Check if file has merge conflicts
         if '<<<<<<< HEAD' not in content:
             return False
         
-        print(f"Fixing merge conflicts in: {file_path}")
+        # Split content into lines
+        lines = content.split('\n')
+        new_lines = []
+        in_conflict = False
+        choosing_head = True
         
-        # Remove merge conflict markers and choose HEAD version
-        # Pattern to match merge conflict blocks
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
-        
-        def replace_conflict(match):
-            head_content = match.group(1)
-            # Clean up any remaining conflict markers
-            head_content = re.sub(r'<<<<<<< HEAD\n?', '', head_content)
-            head_content = re.sub(r'=======\n?', '', head_content)
-            head_content = re.sub(r'>>>>>>> [^\n]+\n?', '', head_content)
-            return head_content
-        
-        # Replace all merge conflicts
-        new_content = re.sub(pattern, replace_conflict, content, flags=re.DOTALL)
-        
-        # Clean up any remaining conflict markers
-        new_content = re.sub(r'<<<<<<< HEAD\n?', '', new_content)
-        new_content = re.sub(r'=======\n?', '', new_content)
-        new_content = re.sub(r'>>>>>>> [^\n]+\n?', '', new_content)
+        for line in lines:
+            if line.strip() == '<<<<<<< HEAD':
+                in_conflict = True
+                choosing_head = True
+                continue
+            elif line.strip() == '=======':
+                choosing_head = False
+                continue
+            elif line.strip().startswith('>>>>>>>'):
+                in_conflict = False
+                choosing_head = True
+                continue
+            
+            if not in_conflict or choosing_head:
+                new_lines.append(line)
         
         # Write the cleaned content back
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(new_content)
+            f.write('\n'.join(new_lines))
         
+        print(f"Fixed merge conflicts in: {file_path}")
         return True
+        
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/TSX files in the app directory
+    """Fix merge conflicts in all TypeScript/React files."""
+    # Define patterns for files to fix
     patterns = [
-        '/workspace/app/**/*.tsx',
-        '/workspace/app/**/*.ts',
-        '/workspace/src/**/*.tsx',
-        '/workspace/src/**/*.ts'
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'components/**/*.tsx',
+        'components/**/*.ts',
+        'src/**/*.tsx',
+        'src/**/*.ts'
     ]
     
-    files_fixed = 0
+    fixed_count = 0
     total_files = 0
     
     for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            total_files += 1
-            if fix_merge_conflicts(file_path):
-                files_fixed += 1
+        files = glob.glob(pattern, recursive=True)
+        for file_path in files:
+            if os.path.isfile(file_path):
+                total_files += 1
+                if fix_merge_conflicts(file_path):
+                    fixed_count += 1
     
-    print(f"\nFixed merge conflicts in {files_fixed} out of {total_files} files")
+    print(f"\nFixed merge conflicts in {fixed_count} out of {total_files} files")
 
 if __name__ == "__main__":
     main()
