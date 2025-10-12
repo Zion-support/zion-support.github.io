@@ -174,10 +174,234 @@ const ITServicesPage: React.FC = () => {
       icon: Users,
       color: 'from-blue-500 to-indigo-500',
       category: 'Support'
+    },
+    {
+      title: 'Blockchain Development',
+      description: 'Custom blockchain solutions, smart contracts, and decentralized applications',
+      price: 'Starting at $15,000',
+      features: [
+        'Smart contract development',
+        'DApp creation',
+        'Token development',
+        'Blockchain integration',
+        'Security auditing',
+        'DeFi solutions'
+      ],
+      icon: LinkIcon,
+      color: 'from-purple-500 to-pink-500',
+      category: 'Development'
+    },
+    {
+      title: 'IoT Development',
+      description: 'Internet of Things solutions with device connectivity and data management',
+      price: 'Starting at $12,000',
+      features: [
+        'Device connectivity',
+        'Data collection',
+        'Real-time monitoring',
+        'Cloud integration',
+        'Mobile apps',
+        'Analytics dashboard'
+      ],
+      icon: Wifi,
+      color: 'from-cyan-500 to-blue-500',
+      category: 'Development'
+    },
+    {
+      title: 'E-commerce Development',
+      description: 'Custom e-commerce platforms with payment integration and inventory management',
+      price: 'Starting at $10,000',
+      features: [
+        'Custom storefront',
+        'Payment integration',
+        'Inventory management',
+        'Order processing',
+        'Customer portal',
+        'Analytics tracking'
+      ],
+      icon: ShoppingCart,
+      color: 'from-green-500 to-emerald-500',
+      category: 'Development'
+    },
+    {
+      title: 'Data Engineering',
+      description: 'Big data processing, ETL pipelines, and data warehouse solutions',
+      price: 'Starting at $8,000',
+      features: [
+        'ETL pipeline design',
+        'Data warehouse setup',
+        'Big data processing',
+        'Real-time streaming',
+        'Data quality assurance',
+        'Performance optimization'
+      ],
+      icon: Database,
+      color: 'from-orange-500 to-red-500',
+      category: 'Infrastructure'
+    },
+    {
+      title: 'Machine Learning Ops',
+      description: 'ML model deployment, monitoring, and maintenance in production environments',
+      price: 'Starting at $12,000',
+      features: [
+        'Model deployment',
+        'Performance monitoring',
+        'A/B testing',
+        'Auto-scaling',
+        'Model versioning',
+        'Continuous training'
+      ],
+      icon: Cpu,
+      color: 'from-indigo-500 to-purple-500',
+      category: 'DevOps'
+    },
+    {
+      title: 'Enterprise Integration',
+      description: 'Seamless integration of disparate systems and applications',
+      price: 'Starting at $6,000',
+      features: [
+        'API integration',
+        'Data synchronization',
+        'Legacy system migration',
+        'Real-time connectivity',
+        'Error handling',
+        'Monitoring dashboard'
+      ],
+      icon: LinkIcon,
+      color: 'from-teal-500 to-cyan-500',
+      category: 'Infrastructure'
+    },
+    {
+      title: 'Performance Optimization',
+      description: 'Application and infrastructure performance tuning for maximum efficiency',
+      price: 'Starting at $4,000',
+      features: [
+        'Performance analysis',
+        'Code optimization',
+        'Database tuning',
+        'Caching strategies',
+        'Load balancing',
+        'Monitoring setup'
+      ],
+      icon: TrendingUp,
+      color: 'from-yellow-500 to-orange-500',
+      category: 'Infrastructure'
+    },
+    {
+      title: 'Disaster Recovery',
+      description: 'Comprehensive backup and disaster recovery solutions',
+      price: 'Starting at $5,000',
+      features: [
+        'Backup strategies',
+        'Recovery planning',
+        'Data replication',
+        'Failover systems',
+        'Testing procedures',
+        'Documentation'
+      ],
+      icon: Shield,
+      color: 'from-red-500 to-pink-500',
+      category: 'Security'
+    },
+    {
+      title: 'Compliance Automation',
+      description: 'Automated compliance monitoring and reporting for various standards',
+      price: 'Starting at $7,000',
+      features: [
+        'Compliance monitoring',
+        'Automated reporting',
+        'Audit trails',
+        'Policy enforcement',
+        'Risk assessment',
+        'Documentation management'
+      ],
+      icon: CheckSquare,
+      color: 'from-gray-500 to-slate-500',
+      category: 'Security'
+    },
+    {
+      title: 'Cloud Cost Optimization',
+      description: 'Cloud resource optimization and cost reduction strategies',
+      price: 'Starting at $3,000',
+      features: [
+        'Cost analysis',
+        'Resource optimization',
+        'Right-sizing recommendations',
+        'Reserved instance planning',
+        'Cost monitoring',
+        'Budget management'
+      ],
+      icon: DollarSign,
+      color: 'from-green-500 to-teal-500',
+      category: 'Infrastructure'
+    },
+    {
+      title: 'Security Automation',
+      description: 'Automated security monitoring, incident response, and threat hunting',
+      price: 'Starting at $8,000',
+      features: [
+        'Threat detection',
+        'Incident response',
+        'Vulnerability scanning',
+        'Security orchestration',
+        'Compliance monitoring',
+        'Forensic analysis'
+      ],
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      category: 'Security'
+    },
+    {
+      title: 'Data Visualization',
+      description: 'Interactive dashboards and data visualization solutions',
+      price: 'Starting at $5,000',
+      features: [
+        'Custom dashboards',
+        'Interactive charts',
+        'Real-time data',
+        'Mobile responsive',
+        'Export capabilities',
+        'User management'
+      ],
+      icon: BarChart,
+      color: 'from-blue-500 to-purple-500',
+      category: 'Development'
+    },
+    {
+      title: 'Workflow Automation',
+      description: 'Business process automation and workflow optimization',
+      price: 'Starting at $6,000',
+      features: [
+        'Process mapping',
+        'Workflow design',
+        'Automation rules',
+        'Integration APIs',
+        'Monitoring dashboard',
+        'Performance analytics'
+      ],
+      icon: Workflow,
+      color: 'from-cyan-500 to-blue-500',
+      category: 'Automation'
+    },
+    {
+      title: 'Cloud Native Security',
+      description: 'Security solutions specifically designed for cloud-native applications',
+      price: 'Starting at $9,000',
+      features: [
+        'Container security',
+        'Kubernetes security',
+        'API security',
+        'Identity management',
+        'Network security',
+        'Compliance monitoring'
+      ],
+      icon: Shield,
+      color: 'from-indigo-500 to-purple-500',
+      category: 'Security'
     }
   ];
 
-  const categories = ['All', 'Infrastructure', 'Security', 'Development', 'DevOps', 'Support'];
+  const categories = ['All', 'Infrastructure', 'Security', 'Development', 'DevOps', 'Support', 'Automation'];
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredServices = selectedCategory === 'All' 

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -56,6 +59,7 @@ const AboutPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Serving clients worldwide with localized expertise and 24/7 support across all time zones.'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
 =======
       description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions to solve complex business challenges.'
@@ -77,6 +81,8 @@ const AboutPage: React.FC = () => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
     }
   ];
 
@@ -84,6 +90,7 @@ const AboutPage: React.FC = () => {
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,10 +110,16 @@ const AboutPage: React.FC = () => {
       bio: 'Visionary leader with 15+ years in technology and business transformation.',
       expertise: ['AI Strategy', 'Business Development', 'Technology Leadership']
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
+=======
+      image: '/images/team/kleber.jpg',
+      bio: 'Visionary leader with 15+ years in technology and business transformation.',
+      expertise: ['AI Strategy', 'Business Development', 'Technology Leadership']
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
     },
     {
       name: 'Sarah Johnson',
       role: 'CTO',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,6 +168,8 @@ const AboutPage: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
       image: '/images/team/sarah.jpg',
       bio: 'Technical architect specializing in AI and cloud infrastructure solutions.',
       expertise: ['AI Engineering', 'Cloud Architecture', 'System Design']
@@ -301,6 +316,7 @@ const AboutPage: React.FC = () => {
                   advanced technology to achieve unprecedented growth and success.
                 </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
 =======
         <section className="pt-32 pb-20">
@@ -381,6 +397,8 @@ const AboutPage: React.FC = () => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
               </div>
             </div>
           </div>
@@ -390,11 +408,14 @@ const AboutPage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
           <div className="container mx-auto px-4">
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
         <section className="py-20 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -402,6 +423,7 @@ const AboutPage: React.FC = () => {
                 Our Core Values
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 The principles that guide our work and define our culture
@@ -432,6 +454,8 @@ const AboutPage: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
                 The principles that guide everything we do and shape our company culture.
               </p>
             </div>
@@ -444,6 +468,7 @@ const AboutPage: React.FC = () => {
                     <p className="text-gray-300">{value.description}</p>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
 =======
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -454,6 +479,8 @@ const AboutPage: React.FC = () => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
                 </div>
               ))}
             </div>
@@ -462,6 +489,9 @@ const AboutPage: React.FC = () => {
 
         {/* Team Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -575,6 +605,7 @@ const AboutPage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
         <section className="py-20">
@@ -604,6 +635,8 @@ const AboutPage: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
         <section className="py-20 bg-gradient-to-br from-gray-900 to-purple-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -631,6 +664,7 @@ const AboutPage: React.FC = () => {
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
 =======
                 Ready to Work Together?
@@ -655,6 +689,8 @@ const AboutPage: React.FC = () => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
             </div>
           </div>
         </section>
@@ -666,6 +702,7 @@ const AboutPage: React.FC = () => {
 export default AboutPage;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default AboutPage;
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
@@ -673,3 +710,5 @@ export default AboutPage;
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
