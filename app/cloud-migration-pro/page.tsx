@@ -1,16 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Cloud, Shield, Zap, CheckCircle } from 'lucide-react';
-=======
-import { Cloud, Shield, Zap, CheckCircle, Database } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-09f3
-import Layout from '../layout';
-=======
-import { ArrowRight, Cloud, Zap, Shield } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c493
+import { Cloud, Shield, Zap, CheckCircle, Database, ArrowRight } from 'lucide-react';
 
 const CloudMigrationProPage = () => {
   const features = [
@@ -25,30 +16,9 @@ const CloudMigrationProPage = () => {
       description: 'Optimize your cloud resources for maximum performance and cost efficiency'
     },
     {
-<<<<<<< HEAD
-      step: '2',
-      title: 'Planning',
-      description: 'Detailed migration strategy and timeline development'
-    },
-    {
-      step: '3',
-      title: 'Migration',
-      description: 'Execute migration with minimal downtime and maximum security'
-    },
-    {
-      step: '04',
-      title: 'Testing & Validation',
-      description: 'Thorough testing to ensure all systems function correctly in the cloud'
-    },
-    {
-      step: '05',
-      title: 'Optimization',
-      description: 'Fine-tune performance and optimize costs for maximum efficiency'
-    },
-    {
-      step: '06',
-      title: 'Support & Monitoring',
-      description: 'Ongoing support and monitoring to ensure continued success'
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security and compliance standards for your cloud infrastructure'
     }
   ];
 
@@ -117,23 +87,16 @@ const CloudMigrationProPage = () => {
       role: 'Founder',
       content: 'The team made our cloud migration stress-free. Highly recommend their expertise.',
       rating: 5
-=======
-      icon: Shield,
-      title: 'Security First',
-      description: 'Enterprise-grade security throughout the migration process'
->>>>>>> cursor/fix-errors-and-merge-to-main-c493
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Cloud Migration Pro | Zion Tech Group</title>
-        <meta name="description" content="Professional cloud migration services. Seamless, secure, and optimized migration to cloud infrastructure." />
-      </Helmet>
+        <Helmet>
+          <title>Cloud Migration Pro | Zion Tech Group</title>
+          <meta name="description" content="Professional cloud migration services. Seamless, secure, and optimized cloud infrastructure migration." />
+        </Helmet>
 
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -162,40 +125,7 @@ const CloudMigrationProPage = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-=======
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Cloud Migration
-            </span>
-            <br />
-            <span className="text-white">Pro</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Migrate to the cloud with confidence. Our expert team ensures a seamless, 
-            secure, and optimized migration process for your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              to="/contact"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              Learn More
-            </Link>
-          </div>
-        </div>
-      </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-c493
+        </section>
 
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -217,71 +147,10 @@ const CloudMigrationProPage = () => {
                 <h3 className="text-xl font-semibold text-white mb-3 text-center">{feature.title}</h3>
                 <p className="text-gray-300 text-center">{feature.description}</p>
               </div>
+            ))}
           </div>
-<<<<<<< HEAD
-=======
-
-          {/* Features Section */}
-          <section className="py-20">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-4">
-                  Migration Features
-                </h2>
-                <p className="text-gray-300 text-lg">
-                  Comprehensive cloud migration solutions
-                </p>
-              </div>
-            </div>
-          </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-09f3
-
-          {/* Migration Process Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Our Migration Process</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {migrationSteps.map((step, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-                  <div className="text-4xl font-bold text-cyan-400 mb-4">{step.step}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-gray-300">{step.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Why Choose Our Migration Service?
-              </h2>
-              <p className="text-gray-300 text-lg">
-                Professional expertise and proven methodologies for successful cloud migration
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    {feature.icon}
-                    <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {features.map((feature, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-                    <div className="flex justify-center mb-4">
-                      {feature.icon}
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                    <p className="text-gray-300">{feature.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Migration Process */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -295,13 +164,21 @@ const CloudMigrationProPage = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {migrationSteps.map((step, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                  <div className="text-3xl font-bold text-cyan-400 mb-4">{step.step}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
-                  <p className="text-gray-300">{step.description}</p>
-                </div>
-              ))}
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                <div className="text-3xl font-bold text-cyan-400 mb-4">1</div>
+                <h3 className="text-xl font-semibold text-white mb-3">Assessment</h3>
+                <p className="text-gray-300">Comprehensive analysis of your current infrastructure and requirements</p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                <div className="text-3xl font-bold text-cyan-400 mb-4">2</div>
+                <h3 className="text-xl font-semibold text-white mb-3">Planning</h3>
+                <p className="text-gray-300">Detailed migration strategy and timeline development</p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                <div className="text-3xl font-bold text-cyan-400 mb-4">3</div>
+                <h3 className="text-xl font-semibold text-white mb-3">Migration</h3>
+                <p className="text-gray-300">Execute migration with minimal downtime and maximum security</p>
+              </div>
             </div>
           </div>
         </section>
@@ -442,7 +319,6 @@ const CloudMigrationProPage = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c493
   );
 };
 
