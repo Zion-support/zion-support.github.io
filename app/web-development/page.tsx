@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
@@ -41,7 +36,6 @@ export default function WebDevelopmentPage() {
       description: 'Future-proof architecture that scales with your business and handles growing traffic.'
     }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
 const WebDevelopmentPage: React.FC = () => {
   return (

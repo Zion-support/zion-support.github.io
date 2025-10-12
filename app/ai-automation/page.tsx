@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
@@ -41,7 +36,6 @@ export default function AIAutomationPage() {
       description: 'Enterprise-grade security with 99.9% uptime and data protection.'
     }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
 const AiAutomationPage: React.FC = () => {
   return (

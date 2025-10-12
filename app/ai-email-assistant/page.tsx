@@ -1,9 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react'
-=======
 import { ArrowRight, Mail, Brain, Zap, Users, BarChart3, Shield } from 'lucide-react'
 
 export default function AIEmailAssistantPage() {
@@ -39,7 +36,6 @@ export default function AIEmailAssistantPage() {
       description: 'Enterprise-grade security with end-to-end encryption and privacy protection.'
     }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
 export default function AiemailassistantPage() {
   return (

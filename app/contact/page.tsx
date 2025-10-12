@@ -1,98 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
-import { Link } from 'react-router-dom'
-import { ArrowRight, Mail, Phone, MapPin, Clock, MessageCircle, Send, CheckCircle, AlertCircle, User, Building, FileText, Calendar, Zap, Shield, Globe, Award, Star, TrendingUp, Users, Brain, Cpu, Rocket, Target, Lightbulb, Monitor, Server, CircuitBoard, Atom, Satellite, Wrench, BarChart, PieChart, LineChart, Activity, Eye, Search, Filter, Download, Upload, Share, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Package, DollarSign } from 'lucide-react'
-
-=======
 import { Mail, Phone, MapPin, Send, MessageCircle, CheckCircle, Clock } from 'lucide-react'
 
 export default function ContactPage() {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
-<<<<<<< HEAD
-    phone: '',
-    service: '',
-    budget: '',
-    message: '',
-    urgency: 'normal'
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    try {
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      setSubmitStatus('success')
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        budget: '',
-        message: '',
-        urgency: 'normal'
-      })
-    } catch (error) {
-      setSubmitStatus('error')
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-
-  const services = [
-    'AI Solutions',
-    'Cloud Migration',
-    'Cybersecurity',
-    'Mobile Development',
-    'Web Development',
-    'Data Analytics',
-    '5G Implementation',
-    'Micro SaaS',
-    'DevOps',
-    'System Integration',
-    'Other'
-  ]
-
-  const budgetRanges = [
-    'Under $10,000',
-    '$10,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $500,000',
-    '$500,000+',
-    'Not sure yet'
-  ]
-
-  const urgencyLevels = [
-    { value: 'low', label: 'Low - Planning for future', color: 'text-green-400' },
-    { value: 'normal', label: 'Normal - Within 3 months', color: 'text-blue-400' },
-    { value: 'high', label: 'High - Within 1 month', color: 'text-orange-400' },
-    { value: 'urgent', label: 'Urgent - ASAP', color: 'text-red-400' }
-  ]
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
   const contactInfo = [
     {
@@ -232,98 +148,22 @@ import ContactForm from '../components/ContactForm';
       </div>
     )
   }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 =======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
 
 const ContactPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <title>Contact Zion Tech Group - Get Your Free Consultation Today</title>
-        <meta name="description" content="Contact Zion Tech Group for AI solutions, IT services, and digital transformation. Free consultation, 24/7 support, and expert guidance. Call +1 (302) 464-0950 or email kleber@ziontechgroup.com" />
-        <meta name="keywords" content="contact zion tech group, AI consultation, IT services contact, technology consultation, free consultation, business transformation, Delaware tech company" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta name="author" content="Zion Tech Group" />
-        
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Contact Zion Tech Group - Get Your Free Consultation Today" />
-        <meta property="og:description" content="Contact Zion Tech Group for AI solutions, IT services, and digital transformation. Free consultation, 24/7 support, and expert guidance." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/contact" />
-        <meta property="og:image" content="https://ziontechgroup.com/contact-og-image.jpg" />
-        
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Zion Tech Group - Get Your Free Consultation Today" />
-        <meta name="twitter:description" content="Contact Zion Tech Group for AI solutions, IT services, and digital transformation. Free consultation, 24/7 support, and expert guidance." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/contact-twitter-image.jpg" />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ContactPage",
-            "name": "Contact Zion Tech Group",
-            "description": "Contact Zion Tech Group for AI solutions, IT services, and digital transformation. Free consultation, 24/7 support, and expert guidance.",
-            "url": "https://ziontechgroup.com/contact",
-            "mainEntity": {
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-                "addressCountry": "US"
-              },
-              "contactPoint": [
-                {
-                  "@type": "ContactPoint",
-                  "telephone": "+1-302-464-0950",
-                  "contactType": "customer service",
-                  "email": "kleber@ziontechgroup.com",
-                  "availableLanguage": "English",
-                  "areaServed": "US"
-                }
-              ]
-            }
-          })}
-        </script>
-=======
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group. We're here to help with your AI and IT needs." />
         <meta name="keywords" content="contact, support, AI services, IT consulting, help" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 relative">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.4)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          
-          <div className="relative max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
-              <MessageCircle className="w-4 h-4" />
-              <span>Get In Touch</span>
-            </div>
-            
-            <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
-              Let's Build the
-              <br />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-                Future Together
-=======
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts today." />
         <meta name="keywords" content="contact, AI solutions, IT services, consultation, support" />
@@ -335,7 +175,6 @@ const ContactPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Contact Us
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -426,17 +265,6 @@ const ContactPage: React.FC = () => {
                 </div>
               </div>
 
-<<<<<<< HEAD
-              {/* Contact Information */}
-              <div className="space-y-8">
-                <div>
-                  <h2 className="text-3xl font-bold text-white mb-6">
-                    Get in <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Touch</span>
-                  </h2>
-                  <p className="text-gray-300 text-lg mb-8">
-                    Prefer to reach out directly? We're here to help and always happy to chat about your project.
-                  </p>
-=======
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             Get in{' '}
@@ -474,7 +302,6 @@ const ContactPage: React.FC = () => {
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Your full name"
                   />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
@@ -493,46 +320,6 @@ const ContactPage: React.FC = () => {
                 </div>
               </div>
 
-<<<<<<< HEAD
-                <div className="space-y-6">
-                  {contactInfo.map((info, index) => (
-                    <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <div className="flex items-start space-x-4">
-                        <div className="flex-shrink-0">
-                          {info.icon}
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-xl font-bold text-white mb-2">{info.title}</h3>
-                          <div className="space-y-1">
-                            {info.details.map((detail, detailIndex) => (
-                              <p key={detailIndex} className="text-gray-300">{detail}</p>
-                            ))}
-                          </div>
-                          <button className="mt-3 text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
-                            {info.action} →
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Why Choose Us */}
-                <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-6 border border-cyan-500/20">
-                  <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    {whyChooseUs.map((reason, index) => (
-                      <div key={index} className="text-center">
-                        <div className="flex justify-center mb-2">
-                          {reason.icon}
-                        </div>
-                        <h4 className="text-sm font-semibold text-white mb-1">{reason.title}</h4>
-                        <p className="text-xs text-gray-300">{reason.description}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-=======
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
@@ -649,7 +436,6 @@ const ContactPage: React.FC = () => {
               <div className="flex items-center text-cyan-400 text-sm">
                 <Clock className="w-4 h-4 mr-2" />
                 Mon-Fri 9:00 AM - 6:00 PM PST
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 =======
               <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Business Hours</h3>
@@ -665,23 +451,15 @@ const ContactPage: React.FC = () => {
                 <p className="text-gray-300">
                   We typically respond to inquiries within 24 hours. For urgent matters, please call us directly.
                 </p>
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
               </div>
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </>
-  );
-<<<<<<< HEAD
-=======
     </div>
   )
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }
 =======
 };
 
 export default ContactPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d

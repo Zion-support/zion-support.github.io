@@ -1,13 +1,5 @@
 import React, { useEffect, useState } from 'react'
 
-<<<<<<< HEAD
-interface PerformanceMetrics {
-  lcp: number | null
-  fid: number | null
-  cls: number | null
-  fcp: number | null
-  ttfb: number | null
-=======
 import React, { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
@@ -15,7 +7,6 @@ interface PerformanceOptimizerProps {
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
   enableCodeSplitting?: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 }
 
 const PerformanceOptimizer: React.FC = () => {
@@ -92,26 +83,10 @@ const PerformanceOptimizer: React.FC = () => {
       })
     }
 
-<<<<<<< HEAD
-    // Optimize scroll performance
-    const optimizeScroll = () => {
-      let ticking = false
-      
-      const updateScrollPosition = () => {
-        // Throttle scroll events
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            // Update scroll-dependent elements
-            ticking = false
-          })
-          ticking = true
-        }
-=======
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
       } catch {
         // Fallback for browsers that don't support these entry types
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
       }
 
       window.addEventListener('scroll', updateScrollPosition, { passive: true })

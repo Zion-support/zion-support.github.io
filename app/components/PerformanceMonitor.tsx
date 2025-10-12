@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react'
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'
-=======
 'use client';
 import React, { useEffect, useState } from 'react';
 import { useAnalytics } from './EnhancedAnalytics';
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -96,8 +90,6 @@ const PerformanceMonitor: React.FC = () => {
       });
     }
 
-<<<<<<< HEAD
-=======
 'use client'
 import React, { useEffect, useState } from 'react'
 
@@ -133,14 +125,6 @@ const PerformanceMonitor: React.FC = () => {
         }
       })
 
-<<<<<<< HEAD
-      try {
-        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] })
-      } catch (e) {
-        // Fallback for browsers that don't support all entry types
-        observer.observe({ entryTypes: ['navigation'] })
-      }
-=======
       // Monitor First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
@@ -183,7 +167,6 @@ const PerformanceMonitor: React.FC = () => {
         fidObserver.disconnect();
         clsObserver.disconnect();
       };
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
     }
 
     // Start measuring after a short delay to ensure page is loaded
@@ -214,7 +197,6 @@ const PerformanceMonitor: React.FC = () => {
     }
   }, [metrics])
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   return null
 }
 =======
@@ -222,7 +204,6 @@ const PerformanceMonitor: React.FC = () => {
     const handleLoad = () => {
       analytics.trackPageView(window.location.pathname);
     };
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
 
     window.addEventListener('load', handleLoad);
 
