@@ -9,8 +9,10 @@ export default function Footer() {
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
     { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+    { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
+    { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
+    { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
     { name: 'AI Automation Suite', path: '/ai-automation' },
-    { name: 'AI Meeting Assistant', path: '/ai-meeting-assistant' },
     { name: 'AI Project Manager', path: '/ai-project-manager' },
     { name: 'AI 3D Generation', path: '/ai-3d-generation' },
     { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
@@ -33,6 +35,9 @@ export default function Footer() {
     { name: 'AI Password Manager', path: '/ai-password-manager' },
     { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
     { name: 'AI Health Tracker', path: '/ai-health-tracker' },
+    { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
+    { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
+    { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
     { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
     { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
   ];
