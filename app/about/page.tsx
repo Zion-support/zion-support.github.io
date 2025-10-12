@@ -1,10 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
 
 const AboutPage: React.FC = () => {
   return (

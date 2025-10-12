@@ -59,7 +59,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       console.log('Analytics Identify: ', userId, traits);
     }
   };
-  const page = (name: string, properties?: Record<string, any />) => {
+  const page = (name: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (window.gtag) {
@@ -73,13 +73,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       console.log('Analytics Page: ', name, properties);
     }
   };
-  const value: const AnalyticsContextType = {
+  const value: AnalyticsContextType = {
     track,
     identify,
     page
   };
   return (
-    <AnalyticsContext.Provider const value = {value} />
+    <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
@@ -87,8 +87,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 // Extend Window interface for TypeScript
 declare global {
   interface Window {
-    dataLayer: any[];,
-  gtag: (...args: any[]) => void;
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
   }
 }
-    </>

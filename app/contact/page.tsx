@@ -44,8 +44,9 @@ const ContactPage: React.FC = () => {
                 </button>
               </form>
             </div>
+          </div>
         </div>
-
+      </div>
     </>
   );
 };
