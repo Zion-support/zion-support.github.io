@@ -28,9 +28,11 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
           ui: ['framer-motion', 'lucide-react'],
+          helmet: ['react-helmet-async'],
         },
       },
     },
+    chunkSizeWarningLimit: 1000,
   },
   server: {
     port: 3000,
