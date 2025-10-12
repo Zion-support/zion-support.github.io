@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB };
 export default PerformanceMonitor;
@@ -28,7 +27,6 @@ const PerformanceMonitor: React.FC = () => {
         onTTFB(console.log);
       }
     };
-
     // Monitor performance metrics;
     const monitorPerformance = () => {
       if ('performance' in, window) {
@@ -46,7 +44,6 @@ const PerformanceMonitor: React.FC = () => {
         });
       }
     };
-
     // Monitor memory usage;
     const monitorMemory = () => {
       if ('memory' in, performance) {
@@ -60,29 +57,22 @@ const PerformanceMonitor: React.FC = () => {
         }, 30000); // Check every 30 seconds;
       }
     };
-
     // Initialize monitoring;
     monitorCoreWebVitals();
     monitorPerformance();
     monitorMemory();
-
     // Cleanup;
     return () => {
       // Cleanup if needed;
     };
   }, []);
-
   return null;
 };
-
-<<<<<<< HEAD
 export default PerformanceMonitor;
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function PerformanceMonitor() {
   return (
     <>
@@ -106,7 +96,4 @@ export default function PerformanceMonitor() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 }
->>>>>>> origin/main

@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect} from 'react';
 import { X, Cookie} from 'lucide-react';
-=======
 export default CookieConsent;
 'use client';
->>>>>>> origin/main
-
 const CookieConsent: React.FC = () => {
   const [showDetails, setShowDetails] = useState(false);
   useEffect(() => {
@@ -15,44 +10,32 @@ const CookieConsent: React.FC = () => {
       setIsVisible(true);
     }
   }, []);
-
   const acceptAll = () => {
     localStorage.setItem('cookie-consent', 'accepted');
     localStorage.setItem('analytics-consent', 'accepted');
     localStorage.setItem('marketing-consent', 'accepted');
     setIsVisible(false);
   };
-
   const acceptNecessary = () => {
     localStorage.setItem('cookie-consent', 'necessary');
     localStorage.setItem('analytics-consent', 'declined');
     localStorage.setItem('marketing-consent', 'declined');
     setIsVisible(false);
   };
-
   const acceptCustom = () => {
     localStorage.setItem('cookie-consent', 'custom');
     setIsVisible(false);
   };
-
   if (!isVisible) return null;
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function CookieConsent() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
->>>>>>> origin/main
           {!showDetails ? (
             // Simple view;
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -167,11 +150,7 @@ export default function CookieConsent() {
     </div>
   );
 };
-<<<<<<< HEAD
-
 export default CookieConsent;
-
-=======
     <>
       <Helmet>
         <title>Cookie Consent - Zion Tech Group</title>
@@ -193,6 +172,3 @@ export default CookieConsent;
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

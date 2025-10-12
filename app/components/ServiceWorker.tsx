@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 'use client';
-=======
->>>>>>> origin/main
 import React, { useEffect } from 'react';
 export default ServiceWorker;
 'use client';
-
 const ServiceWorker: React.FC = () => {
   useEffect(() => {
     if ('serviceWorker' in, navigator) {
@@ -20,18 +15,13 @@ const ServiceWorker: React.FC = () => {
         });
     }
   }, []);
-
   return null;
 };
-
-<<<<<<< HEAD
 export default ServiceWorker;
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function ServiceWorker() {
   return (
     <>
@@ -55,6 +45,3 @@ export default function ServiceWorker() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

@@ -1,11 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 'use client'
-
 const FuturisticHeroPage: React.FC = () => {
   const features = [
     {
@@ -126,14 +120,10 @@ const FuturisticHeroPage: React.FC = () => {
       </section>
     </div>
   )
-<<<<<<< HEAD
 };
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function FuturisticHeroPage() {
   return (
     <>
@@ -157,7 +147,4 @@ export default function FuturisticHeroPage() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 };
->>>>>>> origin/main

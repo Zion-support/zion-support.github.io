@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect } from 'react';
-
-=======
 export default SEOOptimizer;
->>>>>>> origin/main
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
@@ -25,10 +20,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       script.type = 'application/ld+json'
       script.text = JSON.stringify(structuredData)
       document.head.appendChild(script)
-      
         document.head.removeChild(script)
   }, [structuredData])
-
   // Generate breadcrumb structured data;
     const pathSegments = window.location.pathname.split('/').filter(Boolean)
  ({
@@ -37,7 +30,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
       item: `https://ziontechgroup.com/${pathSegments.slice(0, index + 1).join('/')}`
     }))
-
     return {
       '@context': 'https: //schema.org',
       '@type': 'BreadcrumbList',
@@ -49,7 +41,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
         },
         ...breadcrumbItems;
       ]
-
   // Generate FAQ structured data;
     return {
       '@context': 'https: //schema.org',
@@ -73,47 +64,30 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
             '@type': 'Answer',
             text': 'We provide 24/7 support with an average response time of 48 hours for general inquiries and immediate response for critical issues.'
       ]
-
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
   const breadcrumbData = generateBreadcrumbStructuredData()
   const faqData = generateFAQStructuredData()
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function SEOOptimizer() {
   return (
-<<<<<<< HEAD
-
         <title>5G Data Analytics - Zion Tech Group</title>
       {/* Basic Meta Tags */}
-    
       <title>{title}</title>
       {/* Canonical URL */}
       {/* Open Graph Meta Tags */}
-    
       {/* Twitter Card Meta Tags */}
-    
       {/* Additional SEO Meta Tags */}
-    
       {/* Performance Hints */}
-
       {/* Structured Data */}
-    
       <script type="application/ld+json">{JSON.stringify(breadcrumbData)}
       <script type="application/ld+json">{JSON.stringify(faqData)}
       {structuredData && (
-    
         <script type="application/ld+json">{JSON.stringify(structuredData)}
-
       )}
   )
-
-
-=======
     <>
       <Helmet>
         <title>S E O Optimizer - Zion Tech Group</title>
@@ -135,4 +109,3 @@ export default function SEOOptimizer() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918

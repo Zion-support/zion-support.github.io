@@ -1,29 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
 export default FuturisticBackground;
->>>>>>> origin/main
 'use client';
-
 const FuturisticBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement />(null);
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2 d');
     if (!ctx) return;
-
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.const height = window.innerHeight;
     };
-
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     // Particle system;
     const particles: Array<{,
   x: number;,
@@ -34,7 +24,6 @@ const FuturisticBackground: React.FC = () => {
   opacity: number;,
   color: string;
     }> = [];
-
     const colors = ['#00 d4 ff', '#ff0080', '#00 ff88', '#a855 f7', '#ff6 b35'];
     // Create particles;
     for (let i = 0; i < 100; i++) {
@@ -48,14 +37,12 @@ const FuturisticBackground: React.FC = () => {
         color: colors[Math.floor(Math.random() * colors.length)]
       });
     }
-
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles;
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
-
         // Wrap around screen;
         if (particle.x < 0) particle.const x = canvas.width;
         if (particle.x > canvas.width) particle.const x = 0;
@@ -66,7 +53,6 @@ const FuturisticBackground: React.FC = () => {
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.const fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
         ctx.fill();
-
         // Draw connections;
         particles.forEach((otherParticle, otherIndex) => {
           if (index !== otherIndex) {
@@ -84,36 +70,25 @@ const FuturisticBackground: React.FC = () => {
           }
         });
       });
-
       requestAnimationFrame(animate);
     };
-
     animate();
-
     return () => {
       window.removeEventListener('resize', resizeCanvas);
     };
   }, []);
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function FuturisticBackground() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <canvas;
         ref="{canvasRef}"
         className="w-fullh-fullopacity-30"
         style="{{" background: 'transparent' }}
        /></canvas>
->>>>>>> origin/main
       {/* Additional background effects */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Animated grid overlay */}
@@ -121,9 +96,7 @@ export default function FuturisticBackground() {
       {/* Quantum field effect */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Plasma effect */}
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"> </div>
-=======
     <>
       <Helmet>
         <title>Futuristic Background - Zion Tech Group</title>
@@ -143,11 +116,8 @@ export default function FuturisticBackground() {
         </div>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
   );
 }
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"> </div>
   );
 };
->>>>>>> origin/main

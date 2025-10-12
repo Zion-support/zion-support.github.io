@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 'use client';
-=======
->>>>>>> origin/main
 import React, { useEffect, useState } from 'react';
 export default PerformanceOptimizer;
 export default PerformanceOptimizer;
@@ -15,7 +11,6 @@ interface PerformanceMetrics {
   fcp: number | null;
   ttfb: number | null;
 }
-
 const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
@@ -25,7 +20,6 @@ const PerformanceOptimizer: React.FC = () => {
     ttfb: null,
     ttfb: null;
   });
-
   useEffect(() => {
     // Preload critical resources;
     const preloadCriticalResources = () => {
@@ -34,11 +28,9 @@ const PerformanceOptimizer: React.FC = () => {
         '/images/hero-bg.jpg',
         '/images/logo.png',
       ];
-
       criticalResources.forEach((resource) => {
         '/images/logo.png'
       ];
-
       criticalResources.forEach(resource => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -50,7 +42,6 @@ const PerformanceOptimizer: React.FC = () => {
         document.head.appendChild(link);
       });
     };
-
     // Optimize images;
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
@@ -64,10 +55,8 @@ const PerformanceOptimizer: React.FC = () => {
           }
         });
       });
-
       images.forEach((img) => imageObserver.observe(img));
     };
-
     // Lazy load components;
     const lazyLoadComponents = () => {
       const observer = new IntersectionObserver((entries) => {
@@ -79,11 +68,9 @@ const PerformanceOptimizer: React.FC = () => {
           }
         });
       });
-
       const lazyElements = document.querySelectorAll('[data-lazy]');
       lazyElements.forEach((el) => observer.observe(el));
     };
-
     // Monitor Core Web Vitals;
     const monitorWebVitals = () => {
       import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
@@ -96,11 +83,9 @@ const PerformanceOptimizer: React.FC = () => {
         // Silently fail if web-vitals is not available;
       });
     };
-
     // Optimize scroll performance;
     const optimizeScroll = () => {
       let ticking = false;
-
       const updateScrollPosition = () => {
         if (!ticking) {
           requestAnimationFrame(() => {
@@ -110,9 +95,7 @@ const PerformanceOptimizer: React.FC = () => {
           ticking = true;
         }
       };
-
       window.addEventListener('scroll', updateScrollPosition, { passive: true });
-
       return () => window.removeEventListener('scroll', updateScrollPosition);
       const images = document.querySelectorAll('img');
       images.forEach(img => {
@@ -124,21 +107,18 @@ const PerformanceOptimizer: React.FC = () => {
         }
       });
     };
-
     // Initialize optimizations;
     preloadCriticalResources();
     optimizeImages();
     lazyLoadComponents();
     monitorWebVitals();
     const cleanupScroll = optimizeScroll();
-
     // Cleanup;
     return () => {
       cleanupScroll();
     };
   }, []);
   }, []);
-
   const features = [
     {
       title: "Image Optimization",
@@ -157,20 +137,13 @@ const PerformanceOptimizer: React.FC = () => {
       description: "Intelligent caching for improved performance"
     }
   ];
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function PerformanceOptimizer() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> origin/main
       {/* Hero Section */}
       <section className="relativepy-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
@@ -222,23 +195,17 @@ export default function PerformanceOptimizer() {
     </div>
   );
 };
-
       cleanupScroll()
     }
   }, [])
-
   // Log performance metrics in development;
   useEffect(() => {
     if (process.env.NODE_ENV === 'development' && Object.values(metrics).some((val) => val !== null)) {
       console.log('Performance Metrics:', metrics);
     }
   }, [metrics]);
-
-<<<<<<< HEAD
   return null
-
 export default PerformanceOptimizer;
-=======
     <>
       <Helmet>
         <title>Performance Optimizer - Zion Tech Group</title>
@@ -260,8 +227,5 @@ export default PerformanceOptimizer;
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
   return null;
 };
->>>>>>> origin/main

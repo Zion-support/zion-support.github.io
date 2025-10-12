@@ -1,11 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default EnhancedSkipLink;
->>>>>>> origin/main
 'use client';
-
 const EnhancedSkipLink: React.FC = () => {
   const handleSkipToMain = () => {
     const mainContent = document.getElementById('main-content');
@@ -14,7 +9,6 @@ const EnhancedSkipLink: React.FC = () => {
       mainContent.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
   const handleSkipToNavigation = () => {
     const navigation = document.querySelector('nav');
     if (navigation) {
@@ -25,21 +19,13 @@ const EnhancedSkipLink: React.FC = () => {
       }
     }
   };
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function EnhancedSkipLink() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <button;
->>>>>>> origin/main
         onClick="{handleSkipToMain}"
         className="skip-link"
         aria-label="Skip to main content"
@@ -58,7 +44,6 @@ export default function EnhancedSkipLink() {
   left: 0;
           z-index: 1000;
         }
-        
         .skip-link {
           position: absolute;,
   top: -100 px;,
@@ -73,12 +58,10 @@ export default function EnhancedSkipLink() {
   transition: top 0.3 s;
           z-index: 1001;
         }
-        
         .skip-link: focus {,
   top: 10 px;,
   left: 10 px;
         }
-        
         .skip-link: hover {,
   background: #00 ffff;,
   color: #000;
@@ -87,11 +70,7 @@ export default function EnhancedSkipLink() {
     </div>
   );
 };
-<<<<<<< HEAD
-
 export default EnhancedSkipLink;
-
-=======
     <>
       <Helmet>
         <title>Enhanced Skip Link - Zion Tech Group</title>
@@ -113,6 +92,3 @@ export default EnhancedSkipLink;
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

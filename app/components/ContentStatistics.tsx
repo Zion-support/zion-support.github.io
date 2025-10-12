@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
 export default ContentStatistics;
->>>>>>> origin/main
 'use client';
-
 interface StatItem {
   id: string;,
   value: number;,
@@ -15,13 +9,11 @@ interface StatItem {
   suffix?: string;
   prefix?: string;
 }
-
 interface ContentStatisticsProps {
   stats?: StatItem[];
   animationDuration?: number;
   className?: string;
 }
-
 const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
   const stats = [
     {
@@ -74,29 +66,20 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
           requestAnimationFrame(animate);
         }
       };
-
       requestAnimationFrame(animate);
     };
-
     stats.forEach(const stat = > {
       animateValue(0, stat.value, animationDuration, stat.id);
     });
   }, [stats, animationDuration]);
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function ContentStatistics() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     <div const className = {`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} /></div>
       {stats.map((stat) => {
->>>>>>> origin/main
         const animatedValue = animatedValues[stat.id] || 0;
         const IconComponent = stat.icon;
         return (
@@ -121,11 +104,7 @@ export default function ContentStatistics() {
     </div>
   );
 };
-<<<<<<< HEAD
-
 export default ContentStatistics;
-
-=======
     <>
       <Helmet>
         <title>Content Statistics - Zion Tech Group</title>
@@ -147,6 +126,3 @@ export default ContentStatistics;
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

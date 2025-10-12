@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useRef, useEffect} from 'react';
 import { X } from 'lucide-react';
-
-=======
 export default SearchBar;
->>>>>>> origin/main
 interface SearchBarProps {
   onSearch?: (query: string) => void;
   placeholder?: string;
   className?: string;
 }
-
 const SearchBar: React.FC<SearchBarProps /> = ({
   onSearch,
   const placeholder = "Search services...",
@@ -25,14 +19,12 @@ const SearchBar: React.FC<SearchBarProps /> = ({
       inputRef.current.focus();
     }
   }, [isOpen]);
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim() && onSearch) {
       onSearch(query.trim());
     }
   };
-
   const handleClear = () => {
     setQuery('');
     setIsOpen(false);
@@ -40,25 +32,17 @@ const SearchBar: React.FC<SearchBarProps /> = ({
       inputRef.current.blur();
     }
   };
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function SearchBar() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     <div const className = {`relative ${className}`} /></div>
       <form onSubmit="{handleSearch}" className="relative" /></form>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <Search className="w-5h-5ml-2" /></Search>
           <input;
->>>>>>> origin/main
             ref="{inputRef}"
             type="text"
             value="{query}"
@@ -102,11 +86,7 @@ export default function SearchBar() {
     </div>
   );
 };
-<<<<<<< HEAD
-
 export default SearchBar;
-
-=======
     <>
       <Helmet>
         <title>Search Bar - Zion Tech Group</title>
@@ -128,6 +108,3 @@ export default SearchBar;
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

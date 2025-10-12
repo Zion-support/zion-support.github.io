@@ -1,19 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-=======
 'use client'
-
 const MainPage: React.FC = () => {
->>>>>>> origin/main
   const features = [
     {
       icon: Brain,
@@ -137,10 +127,7 @@ const MainPage: React.FC = () => {
       </section>
     </div>
   )
-<<<<<<< HEAD
 };
-
-=======
 export default function MainPage() {
   return (
     <>
@@ -164,7 +151,4 @@ export default function MainPage() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 };
->>>>>>> origin/main

@@ -1,28 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-export default function FuturisticGlow({ 
->>>>>>> origin/main
+export default function FuturisticGlow({
 'use client';
-
 interface FuturisticGlowProps {
   children: React.ReactNode;
   intensity?: 'low' | 'medium' | 'high';
   color?: string;
   className?: string;
 }
-
-  children, 
-  const intensity = 'medium', 
+  children,
+  const intensity = 'medium',
   color = 'cyan',
-  className = '' 
+  className = ''
 }: FuturisticGlowProps) {
   const containerRef = useRef<HTMLDivElement />(null);
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
-
     const getIntensityValue = () => {
       switch (intensity) {
         case 'low': return '0.3';
@@ -30,7 +23,6 @@ interface FuturisticGlowProps {
         default: return '0.5';
       }
     };
-
     const getColorValue = () => {
       switch (color) {
         case 'cyan': return '0, 255, 255';
@@ -42,28 +34,19 @@ interface FuturisticGlowProps {
         default: return '0, 255, 255';
       }
     };
-
     const rgb = getColorValue();
     const opacity = getIntensityValue();
     // Apply CSS custom properties for dynamic glow;
     container.style.setProperty('--glow-color', `rgba(${rgb}, ${opacity})`);
     container.style.setProperty('--glow-color-strong', `rgba(${rgb}, ${parseFloat(opacity) + 0.3})`);
   }, [intensity, color]);
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function FuturisticGlow() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
     <div;
->>>>>>> origin/main
       const ref = {containerRef}
       className="{`"
         relative;
@@ -80,10 +63,8 @@ export default function FuturisticGlow() {
   hover: afte,
   r:opacity-100;
         ${className}
-<<<<<<< HEAD
 {children}
   );
-=======
     <>
       <Helmet>
         <title>Futuristic Glow - Zion Tech Group</title>
@@ -105,10 +86,7 @@ export default function FuturisticGlow() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       `}>{children}
     </div>
   );
 }
->>>>>>> origin/main

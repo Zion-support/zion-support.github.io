@@ -1,19 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-=======
 'use client'
-
 const EnhancedLoadingSkeletonPage: React.FC = () => {
->>>>>>> origin/main
   const features = [
     {
       icon: Brain,
@@ -131,10 +121,7 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       </section>
     </div>
   )
-<<<<<<< HEAD
 };
-
-=======
 export default function EnhancedLoadingSkeletonPage() {
   return (
     <>
@@ -158,7 +145,4 @@ export default function EnhancedLoadingSkeletonPage() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 };
->>>>>>> origin/main

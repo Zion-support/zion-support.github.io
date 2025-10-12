@@ -1,15 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
 export default EnhancedSEO;
-
-
->>>>>>> origin/main
-
-<<<<<<< HEAD
 interface SEOProps {
   title?: string;
   description?: string;
@@ -69,33 +62,20 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       "lowPrice": "99",
       "highPrice": "2999",
       "priceCurrency": "USD"
-
   const finalStructuredData = structuredData || defaultStructuredData;
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
-
   return (
-
         <title>5G Data Analytics - Zion Tech Group</title>
       {/* Basic Meta Tags */}
-    
       <title>{title}</title>
       {/* Canonical URL */}
       {/* Open Graph Meta Tags */}
-    
       {/* Twitter Card Meta Tags */}
-    
       {/* Additional SEO Meta Tags */}
-    
       {/* Performance Hints */}
-
       {/* Structured Data */}
-    
       <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
-
   )
-
-
-=======
 export default function EnhancedSEO() {
   return (
     <>
@@ -119,4 +99,3 @@ export default function EnhancedSEO() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918

@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 export default PerformanceOptimizer;
->>>>>>> origin/main
 'use client';
-
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     // Preload critical resources;
@@ -22,7 +17,6 @@ const PerformanceOptimizer: React.FC = () => {
         document.head.appendChild(link);
       });
     };
-
     // Optimize images;
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
@@ -36,10 +30,8 @@ const PerformanceOptimizer: React.FC = () => {
           }
         });
       });
-
       images.forEach(const img = > imageObserver.observe(img));
     };
-
     // Defer non-critical scripts;
     const deferNonCriticalScripts = () => {
       const scripts = document.querySelectorAll('script[data-defer]');
@@ -50,29 +42,22 @@ const PerformanceOptimizer: React.FC = () => {
         script.parentNode?.replaceChild(newScript, script);
       });
     };
-
     // Initialize optimizations;
     preloadCriticalResources();
     optimizeImages();
     deferNonCriticalScripts();
-
     // Cleanup;
     return () => {
       // Cleanup if needed;
     };
   }, []);
-
   return null;
 };
-<<<<<<< HEAD
-
 export default PerformanceOptimizer;
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function PerformanceOptimizer() {
   return (
     <>
@@ -96,6 +81,3 @@ export default function PerformanceOptimizer() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

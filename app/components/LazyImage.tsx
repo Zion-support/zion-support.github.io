@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useRef, useEffect} from 'react';
 import { Loader2 } from 'lucide-react';
-
-=======
 export default LazyImage;
->>>>>>> origin/main
 interface LazyImageProps {
   src: string,
   alt: string;
@@ -14,7 +9,6 @@ interface LazyImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-
 const LazyImage: React.FC<LazyImageProps /> = ({
   src,
   alt,
@@ -27,7 +21,6 @@ const LazyImage: React.FC<LazyImageProps /> = ({
   const [isInView, setIsInView] = useState(false)
   const [hasError, setHasError] = useState(false)
   const imgRef = useRef<HTMLImageElement />(null)
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -38,52 +31,36 @@ const LazyImage: React.FC<LazyImageProps /> = ({
       },
       { threshold: 0.1 }
     )
-
     if (imgRef.current) {
       observer.observe(imgRef.current)
     }
-
     return () => observer.disconnect()
   }, [])
-
   const handleLoad = () => {
     setIsLoaded(true)
     onLoad?.()
   }
-
   const handleError = () => {
     setHasError(true)
     onError?.()
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
   }
->>>>>>> origin/main
-
 export default function LazyImage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} /></div>
->>>>>>> origin/main
       {!isInView && (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <Loader2 className="w-5h-5ml-2" /></Loader2>
         </div>
       )}
-      
       {isInView && !isLoaded && !hasError && (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <Loader2 className="w-5h-5ml-2" /></Loader2>
         </div>
       )}
-      
       {isInView && (
         <img;
           src="{src}"
@@ -96,7 +73,6 @@ export default function LazyImage() {
           loading="lazy"
          /></img>
       )}
-      
       {hasError && (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -106,11 +82,7 @@ export default function LazyImage() {
       )}
     </div>
   )
-<<<<<<< HEAD
-
 export default LazyImage;
-
-=======
     <>
       <Helmet>
         <title>Lazy Image - Zion Tech Group</title>
@@ -132,7 +104,4 @@ export default LazyImage;
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 }
->>>>>>> origin/main

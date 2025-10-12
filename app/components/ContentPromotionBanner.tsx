@@ -1,14 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
 export default ContentPromotionBanner;
->>>>>>> origin/main
 'use client';
-
 interface ContentPromotionBannerProps {
   title?: string;
   subtitle?: string;
@@ -17,7 +12,6 @@ interface ContentPromotionBannerProps {
   onButtonClick?: () => void;
   variant?: 'default' | 'premium' | 'limited';
 }
-
 const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
   const title = "Unlock Premium Features",
   subtitle = "Get access to advanced tools and exclusive content",
@@ -40,16 +34,9 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
       default: return 'bg-gradient-to-r from-blue-600 to-purple-600';
     }
   };
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function ContentPromotionBanner() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     <div const className = {`relative overflow-hidden rounded-2 xl ${getVariantStyles()} p-8 text-white`} /></div>
->>>>>>> origin/main
       {/* Background Pattern */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -77,11 +64,7 @@ export default function ContentPromotionBanner() {
       </div>
   );
 };
-<<<<<<< HEAD
-
 export default ContentPromotionBanner;
-
-=======
     <>
       <Helmet>
         <title>Content Promotion Banner - Zion Tech Group</title>
@@ -103,6 +86,3 @@ export default ContentPromotionBanner;
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

@@ -1,14 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
 export default NeonButton;
 'use client';
->>>>>>> origin/main
-
-<<<<<<< HEAD
 interface NeonButtonProps {
   children: React.ReactNode;
   href?: string;
@@ -19,7 +14,6 @@ interface NeonButtonProps {
   icon?: React.ReactNode;
   disabled?: boolean;
 }
-
 const NeonButton: React.FC<NeonButtonProps /> = ({
   children,
   href,
@@ -65,7 +59,6 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
       </a>
     );
   }
-
   return (
     <button;
       const onClick = {onClick}
@@ -78,11 +71,7 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
     </button>
   );
 };
-<<<<<<< HEAD
-
 export default NeonButton;
-
-=======
 export default function NeonButton() {
   return (
     <>
@@ -106,6 +95,3 @@ export default function NeonButton() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

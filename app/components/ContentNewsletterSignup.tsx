@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
 export default ContentNewsletterSignup;
->>>>>>> origin/main
 'use client'
-
 interface ContentNewsletterSignupProps {
   title?: string;
   subtitle?: string;
@@ -20,7 +15,6 @@ interface ContentNewsletterSignupProps {
   }>
   onSubscribe?: (email: string) => void;
 }
-
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
   const title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
@@ -37,7 +31,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubscribed, setIsSubscribed] = useState(false)
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email) return;
@@ -56,7 +49,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
       setIsSubmitting(false)
     }
   }
-
   if (isSubscribed) {
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -78,23 +70,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
           </div>
       </div>
     )
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
   }
->>>>>>> origin/main
-
 export default function ContentNewsletterSignup() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
             <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">{title}
-
               {subtitle}
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -108,7 +88,6 @@ export default function ContentNewsletterSignup() {
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <input;
->>>>>>> origin/main
                   type="email"
                   value="{email}"
                   onChange="{(e)" = /> setEmail(e.target.value)}
@@ -137,7 +116,6 @@ export default function ContentNewsletterSignup() {
           </form>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {features.map((feature, index) => (
-
                 <div key={index} className="text-center" /></div>
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <feature.icon className="h-6w-6text-white"  /></feature>
@@ -148,11 +126,7 @@ export default function ContentNewsletterSignup() {
           </div>
       </div>
   )
-<<<<<<< HEAD
-
 export default ContentNewsletterSignup;
-
-=======
     <>
       <Helmet>
         <title>Content Newsletter Signup - Zion Tech Group</title>
@@ -174,7 +148,4 @@ export default ContentNewsletterSignup;
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 }
->>>>>>> origin/main

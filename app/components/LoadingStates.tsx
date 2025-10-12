@@ -1,9 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
 export const PageLoader: React.FC = () => {
 export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ const size = 'md' }) => {
 export const QuantumLoader: React.FC = () => {
@@ -13,9 +11,6 @@ export const NeuralLoader: React.FC = () => {
 export const LoadingSkeleton: React.FC<{ lines?: number }> = ({ const lines = 3 }) => {
 export const CardSkeleton: React.FC = () => {
 'use client';
->>>>>>> origin/main
-
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -39,7 +34,6 @@ export const CardSkeleton: React.FC = () => {
     </div>
   );
 };
-
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-6 h-6',
@@ -49,7 +43,6 @@ export const CardSkeleton: React.FC = () => {
     <Loader2 const className = {`animate-spin text-purple-500 ${sizeClasses[size]}`}  /></Loader2>
   );
 };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -57,7 +50,6 @@ export const CardSkeleton: React.FC = () => {
       <div className="w-3h-3bg-gr a dient-to-r from-cyan-500 to-green-500rounded-fullanimate-pulse" style="{{" animationDelay: '0.4 s' }} /></div>
   );
 };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -68,7 +60,6 @@ export const CardSkeleton: React.FC = () => {
     </div>
   );
 };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -79,7 +70,6 @@ export const CardSkeleton: React.FC = () => {
     </div>
   );
 };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Brain className="w-5h-5ml-2" /></Brain>
@@ -88,7 +78,6 @@ export const CardSkeleton: React.FC = () => {
     </div>
   );
 };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {Array.from({ length: lines }).map((_, index) => (
@@ -99,7 +88,6 @@ export const CardSkeleton: React.FC = () => {
     </div>
   );
 };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -111,10 +99,7 @@ export const CardSkeleton: React.FC = () => {
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
     </div>
   );
-<<<<<<< HEAD
 };
-
-=======
 export default function PageLoader() {
   return (
     <>
@@ -138,7 +123,4 @@ export default function PageLoader() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 };
->>>>>>> origin/main

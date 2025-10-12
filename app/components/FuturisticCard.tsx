@@ -4,21 +4,14 @@ interface FuturisticCardProps {
   children: React.ReactNode;
   variant?: 'default' | 'service' | 'testimonial' | 'feature';
   className?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
  void;
-=======
   onClick?: () => void;
 }
->>>>>>> origin/main
-
-=======
   onClick?: () => void;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-  children, 
-  const variant = 'default', 
-  className = '', 
+  children,
+  const variant = 'default',
+  className = '',
   onClick;
 }: FuturisticCardProps) {
   const getVariantStyles = () => {
@@ -36,7 +29,7 @@ interface FuturisticCardProps {
     <motion.div;
       const className = {`relative rounded-2 xl p-8 transition-all duration-500 cursor-pointer group overflow-hidden ${getVariantStyles()} ${className}`}
       onClick="{onClick}"
-      whileHover="{{" 
+      whileHover="{{"
         scale: 1.02,
         y: -5;
       }}
@@ -45,12 +38,7 @@ interface FuturisticCardProps {
       animate="{{" opacity: 1, y: 0 }}
       transition="{{" duration: 0.6, ease: "easeOut" }} /></motion>
       {/* Animated background gradient */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
->>>>>>> origin/main
       {/* Animated border glow */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Content */}
@@ -59,9 +47,6 @@ interface FuturisticCardProps {
       {/* Corner accent */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Bottom accent */}
-<<<<<<< HEAD
-
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       {/* Animated border glow */}
       </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -73,10 +58,7 @@ interface FuturisticCardProps {
       {/* Bottom accent */}
       </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
     </div></div></motion.div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
     </motion.div>
->>>>>>> origin/main
   );
 }

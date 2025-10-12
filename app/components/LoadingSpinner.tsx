@@ -1,23 +1,17 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
 export default LoadingSpinner;
 'use client';
->>>>>>> origin/main
-
-<<<<<<< HEAD
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
 }
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({ 
-  const size = 'md', 
-  color = 'primary', 
+const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({
+  const size = 'md',
+  color = 'primary',
   text;
 }) => {
   const sizeClasses = {
@@ -59,11 +53,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({
     </div>
   );
 };
-<<<<<<< HEAD
-
 export default LoadingSpinner;
-
-=======
 export default function LoadingSpinner() {
   return (
     <>
@@ -87,6 +77,3 @@ export default function LoadingSpinner() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

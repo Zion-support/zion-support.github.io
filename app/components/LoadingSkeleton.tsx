@@ -1,30 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 'use client';
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
 import React from 'react';
 export default LoadingSkeleton;
 'use client';
->>>>>>> origin/main
-
-<<<<<<< HEAD
 interface LoadingSkeletonProps {
   lines?: number;
   className?: string;
 }
-
-const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
-const LoadingSkeleton: React.FC<LoadingSkeletonProps /> = ({ 
-  lines = 3, 
-  className = '' 
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
+const LoadingSkeleton: React.FC<LoadingSkeletonProps /> = ({
+  lines = 3,
+  className = ''
 }) => {
   return (
     <div className={`animate-pulse ${className}`}></div>
@@ -37,17 +27,11 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps /> = ({
     </div>
   );
 };
-
           key="{index}"
 ;
-
-<<<<<<< HEAD
  (
-
           key="{index}"
 ;
-
-=======
 export default function LoadingSkeleton() {
   return (
     <>
@@ -71,7 +55,4 @@ export default function LoadingSkeleton() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 }
->>>>>>> origin/main

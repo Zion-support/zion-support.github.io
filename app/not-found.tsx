@@ -1,19 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Link } from 'react';
 import { Home, ArrowLeft} from 'lucide-react';
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 const NotFound: React.FC = () => {
->>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -47,10 +38,7 @@ const NotFound: React.FC = () => {
         </div>
     </div>
   )
-<<<<<<< HEAD
 };
-
-=======
 export default function NotFound() {
   return (
     <>
@@ -74,7 +62,4 @@ export default function NotFound() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 };
->>>>>>> origin/main

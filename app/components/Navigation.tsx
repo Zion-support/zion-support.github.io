@@ -1,25 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Database, Smartphone, Settings, CheckSquare, FileText, MessageCircle, Link as LinkIcon, Mic, Eye } from 'lucide-react';
-
   return (
               Zion Tech Group
                 Home
                 About
                 Contact
-
         )}
-
-=======
 export default function Navigation() {
   return (
     <>
@@ -41,10 +30,8 @@ export default function Navigation() {
         </div>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
   );
 }
-=======
 export default Navigation;
 const Navigation: React.FC = () => {
   return (
@@ -81,4 +68,3 @@ const Navigation: React.FC = () => {
     </nav>
   );
 };
->>>>>>> origin/main

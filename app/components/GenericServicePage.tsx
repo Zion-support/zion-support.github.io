@@ -1,14 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
 export default GenericServicePage;
 'use client';
->>>>>>> origin/main
-
-<<<<<<< HEAD
 interface GenericServicePageProps {
   title: string;,
   description: string;,
@@ -19,7 +14,6 @@ interface GenericServicePageProps {
   category: 'AI' | 'IT' | 'MicroSAAS' | 'Emerging';,
   color: string;
 }
-
 const GenericServicePage: React.FC<GenericServicePageProps /> = ({
   title,
   description,
@@ -60,16 +54,15 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Starting at {pricing}
                 </div>
               )}
-              
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <a;
-                  href="/contact" 
+                  href="/contact"
                   className="px-8py-4 b g-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" /></a>
                   Get Started Today;
                   <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
                 </a>
                 <a;
-                  href="tel:+13024640950" 
+                  href="tel:+13024640950"
                   className="px-8py-4 b order-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup" /></a>
                   <Phone className="w-5h-5ml-2" /></Phone>
                   Call (302) 464-0950;
@@ -139,18 +132,18 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <h2 className="w-5h-5ml-2" />Ready to Get Started?
               </h2>
-              <p className="w-5h-5ml-2">Join hundreds of companies that trust Zion Tech Group for their {title.toLowerCase()} needs. 
+              <p className="w-5h-5ml-2">Join hundreds of companies that trust Zion Tech Group for their {title.toLowerCase()} needs.
                 Get a free consultation today.
               </p>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <a;
-                  href="/contact" 
+                  href="/contact"
                   className="px-8py-4 b g-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" /></a>
                   Get Free Consultation;
                   <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
                 </a>
                 <a;
-                  href="mailto:kleber@ziontechgroup.com" 
+                  href="mailto:kleber@ziontechgroup.com"
                   className="px-8py-4 b order-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup" /></a>
                   <Mail className="w-5h-5ml-2" /></Mail>
                   Email Us;
@@ -162,11 +155,7 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
     </>
   );
 };
-<<<<<<< HEAD
-
 export default GenericServicePage;
-
-=======
 export default function GenericServicePage() {
   return (
     <>
@@ -190,6 +179,3 @@ export default function GenericServicePage() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

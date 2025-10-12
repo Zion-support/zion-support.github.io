@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect} from 'react';
 import { Sun, Moon} from 'lucide-react';
-=======
 export default ThemeToggle;
 'use client';
->>>>>>> origin/main
-
 const ThemeToggle: React.FC = () => {
   const [isDark, setIsDark] = useState(true);
   useEffect(() => {
@@ -21,11 +16,9 @@ const ThemeToggle: React.FC = () => {
       document.documentElement.classList.add('dark');
     }
   }, []);
-
   const toggleTheme = () => {
     const newTheme = !isDark;
     setIsDark(newTheme);
-
     if (newTheme) {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
@@ -34,32 +27,22 @@ const ThemeToggle: React.FC = () => {
       localStorage.setItem('theme', 'light');
     }
   };
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function ThemeToggle() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     <button;
       const onClick = {toggleTheme}
       className="p-2rou nded-lg bg-slate-700/50 hover:bg-slate-700 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
       aria-label="{`Switch" to ${isDark ? 'light' : 'dark'} mode`}
      /></button>
->>>>>>> origin/main
       {isDark ? (
         <Sun className="w-5h-5ml-2" /></Sun>
       ) : (
         <Moon className="w-5h-5ml-2" /></Moon>
       )}
-<<<<<<< HEAD
-=======
     <>
       <Helmet>
         <title>Theme Toggle - Zion Tech Group</title>
@@ -79,11 +62,8 @@ export default function ThemeToggle() {
         </div>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
   );
 }
-=======
     </button>
   );
 };
->>>>>>> origin/main

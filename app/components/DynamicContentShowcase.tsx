@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect} from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight} from 'lucide-react';
-=======
 export default DynamicContentShowcase;
 'use client';
->>>>>>> origin/main
-
 interface ContentItem {
   id: string;,
   title: string;,
@@ -16,14 +11,12 @@ interface ContentItem {
   price?: string;
   category: string;
 }
-
 interface DynamicContentShowcaseProps {
   items?: ContentItem[];
   autoPlay?: boolean;
   autoPlayInterval?: number;
   className?: string;
 }
-
 const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
   const items = [
     {
@@ -60,29 +53,22 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
-
   useEffect(() => {
     if (!isPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % items.length);
     }, autoPlayInterval);
-
     return () => clearInterval(interval);
   }, [isPlaying, autoPlayInterval, items.length]);
-
   const nextItem = () => {
     setCurrentIndex((prev) => (prev + 1) % items.length);
   };
-
   const prevItem = () => {
     setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
   };
-
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
-
   const currentItem = items[currentIndex];
   const IconComponent = currentItem.icon;
   return (
@@ -155,7 +141,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{currentItem.price}
                 </div>
               )}
-
               <button className="w-5h-5ml-2" /></button>
                 Learn More;
                 <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
@@ -165,16 +150,11 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
     </div>
   );
 };
-<<<<<<< HEAD
-
 export default DynamicContentShowcase;
-
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function DynamicContentShowcase() {
   return (
     <>
@@ -198,6 +178,3 @@ export default function DynamicContentShowcase() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

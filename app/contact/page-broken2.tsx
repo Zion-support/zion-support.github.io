@@ -16,13 +16,8 @@ export default ContactPage;
         message: ''}
       })} catch (error) {setSubmitStatus('error')}
     } finally {setIsSubmitting(false)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     }
   }
->>>>>>> origin/main
-
   ];
   ];return (<React.Fragment /></React.Fragment>
       <Helmet></Helmet>
@@ -53,12 +48,10 @@ export default ContactPage;
                   <span className="text-green-400"  &gt;Message sent successfully! We'll get back to you soon.</span&gt;
                 </div&gt;}
               )}
-
               {submitStatus === 'error' && (<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"&gt;</div&gt;
                   <span className="text-red-400"  &gt;Failed to send message. Please try again.</span&gt;
                 </div&gt;}
               )}
-
               <form onSubmit="{handleSubmit}" className="space-y-6" /></div>
                 <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <div /></div>
@@ -105,17 +98,11 @@ export default ContactPage;
                     </select>
                   </div>
                 <div /></div>
-<<<<<<< HEAD
-
                   <label className="block text-sm font-mediumtext-gray-300mb-2">Message *
-
                   <div className="relative"></div>
-
         </div></div>
                       <span>Sending...</span>
                       <span>Send Message</span>
-
-=======
     }
   }
   ];
@@ -223,8 +210,6 @@ export default ContactPage;
                       <Send className="w-5 h-5 ml-2" />
                       <span  >Send Message</span>
                     </React.Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
                   <label className="w-5h-5ml-2" />Message *
                   </label>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -247,42 +232,27 @@ export default ContactPage;
                       <Send className="w-5h-5ml-2" /></Send>
                       <span  >Send Message</span>
                     </React.Fragment>
->>>>>>> origin/main
                   )}
                 </button>
               </form>
             </div>
             {/* Contact Information */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
                 <h2 className="text-3 xl font-boldtext-whitemb-6">Contact Information</h2>
                   We're here to help! Reach out to us through any of these channels
-
-=======
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               </div></div><div />
                 </div></div><h2 className="text-3 xl font-boldtext-white mb-6"  >Contact Information</h2>
                 <p className="w-5 h-5 ml-2">We're here to help! Reach out to us through any of these channels
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
                   and we'll get back to you as soon as possible.
-    
               {/* Contact Information */}
-<<<<<<< HEAD
-
                   <h2 className="text-3 xl font-boldtext-whitemb-6">Get in Touch</h2>
                     We're here to help you transform your business with cutting-edge AI and technology solutions.
-    
                       className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-nonefocus:border-cyan-500resize-none"
                       placeholder="Tell us about your project, goals, or any questions you have..."
-
                   {isSubmitting ? (<React.Fragment /></React.Fragment>
-
         </div></div>
                       <span>Sending...</span>
                       <span>Send Message</span>
-
-=======
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 </div></div><div />
                   </div></div><h2 className="text-3 xl font-boldtext-white mb-6"  >Get in Touch</h2>
@@ -307,42 +277,27 @@ export default ContactPage;
                     </>) : (<React.Fragment /></React.Fragment>
                       <Send className="w-5 h-5 ml-2" />
                       <span  >Send Message</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
                     </>}
-
                   )}
-    
             {/* Contact Information */}
-<<<<<<< HEAD
-
         </div></div>
               <div /></div>
                 <h2 className="text-3 xl font-boldtext-whitemb-6">Contact Information</h2>
                   We're here to help! Reach out to us through any of these channels
-
-=======
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <div /></div></div></div>
                 <h2 className="text-3 xl font-boldtext-white mb-6"  >Contact Information</h2>
                 <p className="w-5 h-5 ml-2">We're here to help! Reach out to us through any of these channels
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <div /></div>
                 <h2 className="text-3xl font-bold text-white mb-6"  >Contact Information</h2>
                 <p className="w-5h-5ml-2">We're here to help! Reach out to us through any of these channels;
->>>>>>> origin/main
                   and we'll get back to you as soon as possible.
                 </p>
               </div>
               {/* Contact Information */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
         </div></div>
-=======
               <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
->>>>>>> origin/main
                 <div /></div>
                   <h2 className="text-3xl font-bold text-white mb-6"  >Get in Touch</h2>
                   <p className="w-5h-5ml-2">We're here to help you transform your business with cutting-edge AI and technology solutions.
@@ -420,12 +375,9 @@ export default ContactPage;
                       <Clock className="w-5h-5ml-2" /></Clock>
                     </div>
                     <div /></div>
-<<<<<<< HEAD
                       <h3 className="text-lgfont-semiboldtext-white">Business Hours</h3>
                       <p className="text-gray-300" />Mon - Fri: 9:00 AM - 6:00 PM<br / />Sat: 10:00 AM - 4:00 PM</p>
 ;
-
-=======
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                 <div /></div></div></div>
                   <h2 className="text-3 xl font-boldtext-white mb-6"  >Get in Touch</h2>
@@ -468,21 +420,16 @@ export default ContactPage;
                     <div />
                       </div></div><h3 className="text-lgfont-semiboldtext-white"  >Business Hours</h3>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
-=======
                       <h3 className="text-lgfont-semiboldtext-white"  >Business Hours</h3>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 1,
   0:00 AM - 4:00 PM</p>
->>>>>>> origin/main
                     </div>
                 </div>
             </div>
         </section>
       </div>
   )}
-<<<<<<< HEAD
 export default ContactPage
-=======
->>>>>>> origin/main
   </textarea>
   </label>
   </label>
@@ -491,7 +438,6 @@ export default ContactPage
   </HTMLInputElement>
                       </p>
                     </div>
-<<<<<<< HEAD
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                       <Mail className="w-5 h-5 ml-2" />
@@ -515,7 +461,6 @@ export default ContactPage
                     <div /></div></div></div>
                       <h3 className="text-lgfont-semiboldtext-white"  >Business Hours</h3>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
-=======
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                       <Mail className="w-5h-5ml-2" /></Mail>
@@ -540,17 +485,12 @@ export default ContactPage
                       <h3 className="text-lgfont-semiboldtext-white"  >Business Hours</h3>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 1,
   0:00 AM - 4:00 PM</p>
->>>>>>> origin/main
                     </div>
                 </div>
             </div>
         </section>
       </div>
-<<<<<<< HEAD
     </>
 );
 ;
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 ;
->>>>>>> origin/main

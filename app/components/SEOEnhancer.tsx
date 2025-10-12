@@ -1,16 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { ArrowRight, Brain, Zap, Shield, Globe, CheckCircle } from 'lucide-react';
-
 import { Brain } from 'lucide-react';
-
-=======
 export default SEOEnhancer;
 'use client';
 const SEOEnhancer: React.FC = () => {
->>>>>>> origin/main
   const features = [
     {
       icon: Brain,
@@ -33,7 +27,6 @@ const SEOEnhancer: React.FC = () => {
       description: 'Worldwide SEO optimization and support for international businesses',
     },
   ];
-
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -44,19 +37,12 @@ const SEOEnhancer: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success',
   ];
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function SEOEnhancer() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
->>>>>>> origin/main
         <title>SEO Enhancer | Zion Tech Group</title>
         <meta name="description" content="Professional SEO Enhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
         <meta name="keywords" content="SEO Enhancer, AI solutions, IT services, Zion Tech Group, search engine optimization" /></meta>
@@ -150,10 +136,8 @@ export default function SEOEnhancer() {
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Contact us today to learn more about our SEO enhancement solutions and how they can benefit your business.
-<<<<<<< HEAD
                 Contact Us
                 Schedule Demo
-=======
     <>
       <Helmet>
         <title>S E O Enhancer - Zion Tech Group</title>
@@ -173,10 +157,8 @@ export default function SEOEnhancer() {
         </div>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
   );
 }
-=======
             </p>
             <div className="flexflex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300"></button>
@@ -192,4 +174,3 @@ export default function SEOEnhancer() {
     </div>
   );
 };
->>>>>>> origin/main

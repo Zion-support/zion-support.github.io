@@ -1,22 +1,15 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 import ErrorBoundary from './components/ErrorBoundary';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
 export default Layout;
-
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
 }
-
 const Layout: React.FC<LayoutProps /> = ({
   children,
   const title = "Zion Tech Group - Advanced AI and IT Solutions",
@@ -78,23 +71,15 @@ const Layout: React.FC<LayoutProps /> = ({
       }
     ];
   };
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function Layout() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
         <title>5G Data Analytics - Zion Tech Group</title>
-=======
     <ErrorBoundary /></ErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <Helmet></Helmet>
->>>>>>> origin/main
           <title>{title}</title>
           <meta name="description" content="{description}" /></meta>
           <meta name="keywords" content="{keywords}" /></meta>
@@ -131,11 +116,7 @@ export default function Layout() {
     </ErrorBoundary>
   );
 };
-<<<<<<< HEAD
-
 export default Layout;
-
-=======
     <>
       <Helmet>
         <title>Layout - Zion Tech Group</title>
@@ -157,6 +138,3 @@ export default Layout;
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

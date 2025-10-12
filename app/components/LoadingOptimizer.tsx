@@ -1,29 +1,21 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
 // Lazy load components for better performance
-
-=======
 import React, { Suspense, lazy } from 'react';
 export const ServiceCardSkeleton: React.FC = () => (
 export const HeroSkeleton: React.FC = () => (
 export const NavigationSkeleton: React.FC = () => (
 export default LoadingOptimizer;
 'use client';
-
 // Lazy load components for better performance;
->>>>>>> origin/main
 interface LoadingOptimizerProps {
   children: React.ReactNode;
   fallback?: React.ReactNode;
 }
-
-const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({ 
-  children, 
+const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({
+  children,
   fallback = <DefaultLoadingSpinner /&gt; </DefaultLoadingSpinner&gt;
 }) => {
   return (
@@ -32,7 +24,6 @@ const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({
     </Suspense>
   );
 };
-
 const DefaultLoadingSpinner: React.FC = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
     <div className="text-center"></div>
@@ -41,7 +32,6 @@ const DefaultLoadingSpinner: React.FC = () => (
     </div>
   </div>
 );
-
 // Skeleton loaders for different components;
   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-2xl border border-slate-700/50 animate-pulse"></div>
     <div className="w-16h-16bg-s late-700 rounded-full mb-6"></div>
@@ -50,7 +40,6 @@ const DefaultLoadingSpinner: React.FC = () => (
     <div className="h-4bg-slate-700 rounded w-3/4"></div>
   </div>
 );
-
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
     <div className="text-centermax-w-4xl mx-auto px-4"></div>
       <div className="h-16bg-slate-700 rounded mb-6 animate-pulse"></div>
@@ -63,7 +52,6 @@ const DefaultLoadingSpinner: React.FC = () => (
     </div>
   </div>
 );
-
   <nav className="fixedtop-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-700/50"></nav>
     <div className="containermx-auto px-4 py-4"></div>
       <div className="flex items-center justify-between"></div>
@@ -78,10 +66,7 @@ const DefaultLoadingSpinner: React.FC = () => (
     </div>
   </nav>
 );
-<<<<<<< HEAD
-
 export default LoadingOptimizer;
-=======
 export default function LoadingOptimizer() {
   return (
     <>
@@ -105,6 +90,3 @@ export default function LoadingOptimizer() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

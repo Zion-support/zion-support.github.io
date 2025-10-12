@@ -1,14 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { X, ArrowRight} from 'lucide-react';
-=======
 export default SearchModal;
->>>>>>> origin/main
 'use client';
-
 interface SearchResult {
   title: string;,
   description: string;,
@@ -16,12 +11,10 @@ interface SearchResult {
   category: string;,
   icon: React.ReactNode;
 }
-
 interface SearchModalProps {
   isOpen: boolean;,
   onClose: () => void;
 }
-
 const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[] /&gt;([]);</SearchResult></SearchResult>
@@ -66,7 +59,6 @@ const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
       inputRef.current.focus();
     }
   }, [isOpen]);
-
   useEffect(() => {
     if (query.length > 0) {
       setIsLoading(true);
@@ -80,33 +72,22 @@ const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
         setResults(filteredResults);
         setIsLoading(false);
       }, 150);
-
       return () => clearTimeout(timer);
     } else {
       setResults([]);
     }
   }, [query]);
-
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       onClose();
     }
   };
-
   if (!isOpen) return null;
-=======
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function SearchModal() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
->>>>>>> origin/main
         {/* Backdrop */}
         <div;
           className="fixed inset-0 bg-black/50backdrop-blur-smtransition-opacity"
@@ -187,11 +168,7 @@ export default function SearchModal() {
       </div>
   </div>);
 };
-<<<<<<< HEAD
-
 export default SearchModal;
-
-=======
     <>
       <Helmet>
         <title>Search Modal - Zion Tech Group</title>
@@ -213,6 +190,3 @@ export default SearchModal;
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

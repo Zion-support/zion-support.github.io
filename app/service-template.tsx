@@ -1,15 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
 interface ServicePageProps {
   title: string,
   description: string,
@@ -19,17 +10,10 @@ interface ServicePageProps {
   pricing: string,
   seoTitle: string,
   seoDescription: string,
-<<<<<<< HEAD
   seoKeywords: string
-<<<<<<< HEAD
-=======
   seoKeywords: string;
 }
->>>>>>> origin/main
-
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
   title,
   description,
   icon,
@@ -41,27 +25,16 @@ interface ServicePageProps {
   seoKeywords;
 }: ServicePageProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
         <title>5G Data Analytics - Zion Tech Group</title>
-
         <title>{seoTitle}</title>
-
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20rounded-fullmb-6">{icon}
           <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6">{title}
             {description}
-    
               Get Started
-
             <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
-
             <h2 className="text-3 xl font-boldtext-whitemb-6">Key Benefits</h2>
  (
-    
                   <span className="text-gray-300">{benefit}</span>
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title>Service - Zion Tech Group</title>
@@ -95,7 +68,6 @@ interface ServicePageProps {
                   <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
                   <span className="text-gray-300"  >{benefit}</span>
                 </li>
->>>>>>> origin/main
               ))}
             </ul>
           </div>
@@ -118,10 +90,7 @@ interface ServicePageProps {
         </div>
     </div>
   )
-<<<<<<< HEAD
 };
-
-=======
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       </div><Helmet>
@@ -182,7 +151,4 @@ interface ServicePageProps {
 }
     </>
 );
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 };
->>>>>>> origin/main

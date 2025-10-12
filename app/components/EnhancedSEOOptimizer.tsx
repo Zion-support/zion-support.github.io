@@ -32,15 +32,9 @@ ursor/
     'Proven track record of success'
   ];
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
         <title>5G Data Analytics - Zion Tech Group</title>
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
->>>>>>> origin/main
         <title>Enhanced SEO Optimizer | Zion Tech Group</title>
         <meta name="description" content="Professional SEO optimization services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
         <meta name="keywords" content="SEO optimizer, AI solutions, IT services, Zion Tech Group, search engine optimization" /></meta>
@@ -136,13 +130,8 @@ ursor/
     </div>
   )
 }
-
-<<<<<<< HEAD
 export default EnhancedSEOOptimizerPage
-
 ;
-
-=======
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       </div><Helmet>
@@ -246,7 +235,4 @@ export default EnhancedSEOOptimizerPage
     </>
 );
 ;
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 ;
->>>>>>> origin/main

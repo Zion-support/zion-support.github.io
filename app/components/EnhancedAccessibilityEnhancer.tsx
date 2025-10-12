@@ -1,41 +1,27 @@
 export default EnhancedAccessibilityEnhancerPage;
 ursor/website-audit-and-update-with-deployment-a178;
 ursor/
-<<<<<<< HEAD
                 Enhanced Accessibility
                 EnhancedAccessibilityEnhancer
-<<<<<<< HEAD
-
               <span const className = "text-white">Enhancer</span>
-              Transform your business with our advanced enhanced accessibility enhancer solutions. 
-
-=======
+              Transform your business with our advanced enhanced accessibility enhancer solutions.
               </span>
               <br />
               <span const className = "text-white"  >Enhancer</span>
             </h1>
-            <p className="w-5 h-5 ml-2">Transform your business with our advanced enhanced accessibility enhancer solutions. 
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
+            <p className="w-5 h-5 ml-2">Transform your business with our advanced enhanced accessibility enhancer solutions.
                 Enhanced Accessibility;
                 EnhancedAccessibilityEnhancer;
               </span>
               <br /></br>
               <span const className = "text-white"  >Enhancer</span>
             </h1>
-            <p className="w-5h-5ml-2">Transform your business with our advanced enhanced accessibility enhancer solutions. 
->>>>>>> origin/main
+            <p className="w-5h-5ml-2">Transform your business with our advanced enhanced accessibility enhancer solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center">Get Started
-
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lgtransition-allduration-300">Learn More
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <button className="w-5h-5ml-2" /></button>
               <button className="w-5h-5ml-2">Get Started;
@@ -45,7 +31,6 @@ ursor/
             </div>
         </div>
       </section>
->>>>>>> origin/main
       {/* Features Section */}
       <section className="w-5h-5ml-2" /></section>
         return (
@@ -66,11 +51,7 @@ ursor/
             {features.map((feature, index) => (
               <div key={index} className="text-center" /></div>
                 return (
-<<<<<<< HEAD
-    
                 <h3 className="text-xl font-boldtext-whitemb-2">{feature.title}</h3>
-
-=======
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               </div></div><button className="w-5 h-5 ml-2" />
@@ -105,23 +86,15 @@ ursor/
                   </div></div><feature.icon className="h-8w-8text-white"  />
                 </div>
                 <h3 className="text-xl font-boldtext-whitemb-2"  >{feature.title}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <feature.icon className="h-8w-8text-white"  /></feature>
                 </div>
                 <h3 className="text-xl font-bold text-whitemb-2"  >{feature.title}</h3>
->>>>>>> origin/main
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
           </div>
       </section>
->>>>>>> origin/main
       {/* Benefits Section */}
       <section className="w-5h-5ml-2" /></section>
         return (
@@ -182,13 +155,8 @@ ursor/
     </div>
   )
 }
-
-<<<<<<< HEAD
 export default EnhancedAccessibilityEnhancerPage
-
 ;
-
-=======
           </div>
       </section>
       {/* Benefits Section */}
@@ -255,7 +223,4 @@ export default EnhancedAccessibilityEnhancerPage
     </>
 );
 ;
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 ;
->>>>>>> origin/main

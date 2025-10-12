@@ -1,24 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
 import React from 'react';
 export default SkipLink;
->>>>>>> origin/main
 'use client';
-
 const SkipLink: React.FC = () => {
   return (
-<<<<<<< HEAD
-
       Skip to main content
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function SkipLink() {
   return (
     <>
@@ -40,10 +30,8 @@ export default function SkipLink() {
         </div>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
   );
 }
-=======
     <a;
       href="#main-content"
       className="sr-on l yfocus:not-sr-only focus: absolute,
@@ -53,4 +41,3 @@ export default function SkipLink() {
     </a>
   );
 };
->>>>>>> origin/main

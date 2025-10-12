@@ -1,21 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
-
-=======
 export default SystemMonitorPage;
 'use client'
-
->>>>>>> origin/main
   ];
               </span>
               <br /></br>
@@ -37,12 +26,10 @@ export default SystemMonitorPage;
   )}
   </button>
 }
-
 interface SystemMonitorProps {
   onAlert?: (alert: string) => void;
   className?: string;
 }
-
 const SystemMonitor: React.FC<SystemMonitorProps /> = ({
   onAlert,
   className = ''
@@ -56,7 +43,6 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
     uptime: 0;
   })
   const [isMonitoring, setIsMonitoring] = useState(false)
-
   const updateMetrics = useCallback(() => {
     // Simulate system metrics;
     const newMetrics = {
@@ -67,9 +53,7 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
       battery: Math.random() * 100,
       uptime: Date.now() - performance.timing.navigationStart;
     }
-
     setMetrics(newMetrics)
-
     // Check for alerts;
     if (newMetrics.cpu > 90) {
       onAlert?.('High CPU usage detected')
@@ -81,23 +65,17 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
       onAlert?.('High disk usage detected')
     }
   }, [onAlert])
-
   useEffect(() => {
     if (isMonitoring) {
       const interval = setInterval(updateMetrics, 1000)
       return () => clearInterval(interval)
     }
   }, [isMonitoring, updateMetrics])
-
   const toggleMonitoring = () => {
     setIsMonitoring(!isMonitoring)
     if (!isMonitoring) {
       updateMetrics()
-<<<<<<< HEAD
-
   };
-
-=======
 export default function SystemMonitor() {
   return (
     <>
@@ -121,8 +99,5 @@ export default function SystemMonitor() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
     }
   };
->>>>>>> origin/main

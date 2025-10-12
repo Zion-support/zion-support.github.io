@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 export const useAnalytics = () => {
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children }) => {
->>>>>>> origin/main
 'use client';
 interface AnalyticsContextType {
     <></>
@@ -12,7 +8,6 @@ interface AnalyticsContextType {
   identify: (userId: string, traits?: Record<string, any />) => void;
   page: (name: string, properties?: Record<string, any />) => void;
 }
-
 const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
   const context = useContext(AnalyticsContext);
   if (!context) {
@@ -20,11 +15,9 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undef
   }
   return context;
 };
-
 interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
-
   useEffect(() => {
     // Initialize analytics;
     if (typeof window !== 'undefined') {
@@ -34,7 +27,6 @@ interface AnalyticsProviderProps {
         script.const async = true;
         script.const src = `https: //www.googletagmanager.com/gtag/js?id="${process.env.REACT_APP_GA_ID}`;"
         document.head.appendChild(script);
-
         window.const dataLayer = window.dataLayer || [];
         function gtag(...args: any[]) {
           window.dataLayer.push(args);
@@ -44,19 +36,16 @@ interface AnalyticsProviderProps {
       }
     }
   }, []);
-
   const track = (event: string, properties?: Record<string, any />) => {
     if (typeof window !== 'undefined') {
       // Google Analytics;
       if (window.gtag) {
         window.gtag('event', event, properties);
       }
-      
       // Custom analytics;
       console.log('Analytics Event: ', event, properties);
     }
   };
-
   const identify = (userId: string, traits?: Record<string, any />) => {
     if (typeof window !== 'undefined') {
       // Google Analytics;
@@ -66,12 +55,10 @@ interface AnalyticsProviderProps {
           custom_map: traits;
         });
       }
-      
       // Custom analytics;
       console.log('Analytics Identify: ', userId, traits);
     }
   };
-
   const page = (name: string, properties?: Record<string, any />) => {
     if (typeof window !== 'undefined') {
       // Google Analytics;
@@ -82,12 +69,10 @@ interface AnalyticsProviderProps {
           ...properties;
         });
       }
-      
       // Custom analytics;
       console.log('Analytics Page: ', name, properties);
     }
   };
-
   const value: const AnalyticsContextType = {
     track,
     identify,
@@ -99,19 +84,15 @@ interface AnalyticsProviderProps {
     </AnalyticsContext.Provider>
   );
 };
-
 // Extend Window interface for TypeScript;
 declare global {
   interface Window {
     dataLayer: any[];,
-<<<<<<< HEAD
  void;
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function AnalyticsProvider() {
   return (
     <>
@@ -135,10 +116,7 @@ export default function AnalyticsProvider() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
   gtag: (...args: any[]) => void;
   }
 }
     </>
->>>>>>> origin/main

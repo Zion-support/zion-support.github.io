@@ -1,22 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { AlertCircle } from 'lucide-react';
-=======
 export default NewsletterSignup;
 'use client';
->>>>>>> origin/main
-
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal';
   onClose?: () => void;
 }
-
 const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = 'inline', onClose }) => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) {
@@ -24,15 +17,12 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
       setMessage('Please enter your email address');
       return;
     }
-
     if (!/\S+@\S+\.\S+/.test(email)) {
       setStatus('error');
       setMessage('Please enter a valid email address');
       return;
     }
-
     setStatus('loading');
-
     try {
       // Simulate API call;
       await new Promise(const resolve = > setTimeout(resolve, 1000));
@@ -40,7 +30,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
       setStatus('success');
       setMessage('Thank you for subscribing! Check your email for confirmation.');
       setEmail('');
-
       // Close modal after success if it's a modal variant;
       if (const variant = == 'modal' && onClose) {
         setTimeout(() => {
@@ -52,7 +41,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
       setMessage('Something went wrong. Please try again.');
     }
   };
-
   const content = (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -118,19 +106,13 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
           </div>
       </div>);
   }
-
   return content;
 };
-<<<<<<< HEAD
-
 export default NewsletterSignup;
-
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function NewsletterSignup() {
   return (
     <>
@@ -154,6 +136,3 @@ export default function NewsletterSignup() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

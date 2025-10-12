@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
 'use client'
->>>>>>> origin/main
-
-<<<<<<< HEAD
 interface OptimizedLoadingSpinnerProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars'
@@ -16,7 +11,6 @@ interface OptimizedLoadingSpinnerProps {
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
   fullScreen?: boolean;
 }
-
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
   ({
     const size = 'md',
@@ -36,7 +30,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       }),
       []
     )
-
     const textSizeClasses = useMemo(
       () => ({
         xs: 'text-xs',
@@ -47,7 +40,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       }),
       []
     )
-
     const colorClasses = useMemo(
       () => ({
         blue: 'text-blue-500',
@@ -58,7 +50,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       }),
       []
     )
-
     const renderSpinner = () => {
       switch (variant) {
         case 'dots':
@@ -134,11 +125,9 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
           )
       }
     }
-
     const containerClasses = fullScreen;
       ? 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center'
       : 'flex items-center justify-center p-8'
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           {renderSpinner}
@@ -152,10 +141,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
   }
 </div></div>)
 ;
-<<<<<<< HEAD
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner
-
-=======
 export default function OptimizedLoadingSpinner() {
   return (
     <>
@@ -179,8 +165,5 @@ export default function OptimizedLoadingSpinner() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner;
 }
->>>>>>> origin/main

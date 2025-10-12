@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 export default EnhancedAccessibility;
->>>>>>> origin/main
 'use client';
-
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add high contrast mode support;
@@ -18,13 +13,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           document.documentElement.classList.remove('high-contrast');
         }
       };
-
       mediaQuery.addEventListener('change', handleContrastChange);
       handleContrastChange(mediaQuery);
-
       return () => mediaQuery.removeEventListener('change', handleContrastChange);
     };
-
     // Add reduced motion support;
     const addReducedMotionSupport = () => {
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -35,13 +27,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           document.documentElement.classList.remove('reduce-motion');
         }
       };
-
       mediaQuery.addEventListener('change', handleMotionChange);
       handleMotionChange(mediaQuery);
-
       return () => mediaQuery.removeEventListener('change', handleMotionChange);
     };
-
     // Add screen reader announcements;
     const addScreenReaderAnnouncements = () => {
       const announcement = document.createElement('div');
@@ -51,30 +40,23 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       announcement.const id = 'announcements';
       document.body.appendChild(announcement);
     };
-
     // Initialize accessibility features;
     const cleanupContrast = addHighContrastSupport();
     const cleanupMotion = addReducedMotionSupport();
     addScreenReaderAnnouncements();
-
     // Cleanup;
     return () => {
       cleanupContrast?.();
       cleanupMotion?.();
     };
   }, []);
-
   return <React.Fragment >{children}</React.Fragment ></React.Fragment>;
 };
-<<<<<<< HEAD
-
 export default EnhancedAccessibility;
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function EnhancedAccessibility() {
   return (
     <>
@@ -98,6 +80,3 @@ export default function EnhancedAccessibility() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

@@ -1,92 +1,55 @@
-<<<<<<< HEAD
 import { Component, ErrorInfo, ReactNode} from 'react';
 import { Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 export default EnhancedErrorBoundary;
 'use client';
->>>>>>> origin/main
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
-
-=======
 'use client';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/main
-
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 class EnhancedErrorBoundary extends Component<Props, State /> {
   constructor(props: Props) {
     super(props);
     this.const state = { hasError: false };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  }
->>>>>>> origin/main
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-=======
   }
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
+  }
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo;
     });
-<<<<<<< HEAD
     // Log error to monitoring service
     console.error('Error caught by boundary: ', error, errorInfo);
-<<<<<<< HEAD
-
-=======
   }
   const handleRetry = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-
     // Log error to monitoring service;
     console.error('Error caught by boundary: ', error, errorInfo);
   }
-
   const handleRetry = () => {
->>>>>>> origin/main
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       }
->>>>>>> origin/main
-
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -103,11 +66,7 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
                 <pre className="w-5h-5ml-2" />{this.state.error.toString()}
                 </pre>
                 {this.state.errorInfo && (
-<<<<<<< HEAD
-    
                   <pre className="text-xs text-gray-400mt-2overflow-auto">{this.state.errorInfo.componentStack}
-
-=======
       }
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -127,24 +86,14 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
                 {this.state.errorInfo && (
                   <pre className="w-5 h-5 ml-2" />{this.state.errorInfo.componentStack}
                   </pre>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
                   <pre className="w-5h-5ml-2" />{this.state.errorInfo.componentStack}
                   </pre>
->>>>>>> origin/main
                 )}
               </div>
             )}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
                 Try Again
-
                 Go Home
-
                 Still having issues? Contact our support team:
-
-=======
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               </div></div><button
                 onClick="{this.handleRetry}"
@@ -165,27 +114,17 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
                   href="mailto:kleber@ziontechgroup.com"
                   className="inline-flex items-center text-sm text-purple-400hover:text-purple-300 transition-colors" />
                   <Mail className="w-5 h-5 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
                   kleber@ziontechgroup.com
-    
                 <span className="hiddensm:inlinetext-gray-500">•</span>
                   <span>+1 302 464 0950</span>
-
       );
-<<<<<<< HEAD
-
     return this.props.children;
-
 export default EnhancedErrorBoundary;
-
-=======
     }
     return this.props.children;
   }
 }
 export default EnhancedErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <button;
                 onClick="{this.handleRetry}"
@@ -218,8 +157,6 @@ export default EnhancedErrorBoundary;
           </div>
       );
     }
-
     return this.props.children;
   }
 }
->>>>>>> origin/main
