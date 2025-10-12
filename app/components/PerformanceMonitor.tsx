@@ -1,143 +1,114 @@
-'use client';
-import React, { useEffect, useState } from 'react';
+'use client'
+import React, { useEffect, useState } from 'react'
 
 interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-  memory?: number;
-  loadTime?: number;
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  ttfb?: number
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isVisible, setIsVisible] = useState(false);
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({})
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return
 
-    // Only show in development or when performance monitoring is enabled
-    const shouldMonitor = process.env.NODE_ENV === 'development' || 
-                         localStorage.getItem('performance-monitoring') === 'true';
-
-    if (!shouldMonitor) return;
-
-    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
-      setMetrics(prev => ({ ...prev, ...newMetrics }));
-    };
-
-    // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(updateMetrics);
-        getFID(updateMetrics);
-        getFCP(updateMetrics);
-        getLCP(updateMetrics);
-        getTTFB(updateMetrics);
-      });
-    }
-
-    // Monitor memory usage
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      updateMetrics({
-        memory: Math.round(memory.usedJSHeapSize / 1024 / 1024)
-      });
-    }
-
-    // Monitor load time
-    window.addEventListener('load', () => {
-      updateMetrics({
-        loadTime: Math.round(performance.now())
-      });
-    });
-
-    // Show/hide with keyboard shortcut (Ctrl+Shift+P)
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        e.preventDefault();
-        setIsVisible(prev => !prev);
+    const measurePerformance = () => {
+      // Measure First Contentful Paint (FCP)
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }))
+            }
+          }
+        })
+        observer.observe({ entryTypes: ['paint'] })
       }
-    };
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
+      // Measure Largest Contentful Paint (LCP)
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          const entries = list.getEntries()
+          const lastEntry = entries[entries.length - 1]
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))
+        })
+        observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      }
 
-  if (!isVisible) return null;
+      // Measure First Input Delay (FID)
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'first-input') {
+              setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))
+            }
+          }
+        })
+        observer.observe({ entryTypes: ['first-input'] })
+      }
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="font-semibold text-cyan-400">Performance Monitor</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
-        >
-          ×
-        </button>
-      </div>
-      <div className="space-y-1">
-        {metrics.lcp && (
-          <div className="flex justify-between">
-            <span>LCP:</span>
-            <span className={metrics.lcp > 2500 ? 'text-red-400' : 'text-green-400'}>
-              {metrics.lcp.toFixed(0)}ms
-            </span>
-          </div>
-        )}
-        {metrics.fid && (
-          <div className="flex justify-between">
-            <span>FID:</span>
-            <span className={metrics.fid > 100 ? 'text-red-400' : 'text-green-400'}>
-              {metrics.fid.toFixed(0)}ms
-            </span>
-          </div>
-        )}
-        {metrics.cls && (
-          <div className="flex justify-between">
-            <span>CLS:</span>
-            <span className={metrics.cls > 0.1 ? 'text-red-400' : 'text-green-400'}>
-              {metrics.cls.toFixed(3)}
-            </span>
-          </div>
-        )}
-        {metrics.fcp && (
-          <div className="flex justify-between">
-            <span>FCP:</span>
-            <span className={metrics.fcp > 1800 ? 'text-red-400' : 'text-green-400'}>
-              {metrics.fcp.toFixed(0)}ms
-            </span>
-          </div>
-        )}
-        {metrics.ttfb && (
-          <div className="flex justify-between">
-            <span>TTFB:</span>
-            <span className={metrics.ttfb > 600 ? 'text-red-400' : 'text-green-400'}>
-              {metrics.ttfb.toFixed(0)}ms
-            </span>
-          </div>
-        )}
-        {metrics.memory && (
-          <div className="flex justify-between">
-            <span>Memory:</span>
-            <span className="text-blue-400">{metrics.memory}MB</span>
-          </div>
-        )}
-        {metrics.loadTime && (
-          <div className="flex justify-between">
-            <span>Load Time:</span>
-            <span className="text-purple-400">{metrics.loadTime}ms</span>
-          </div>
-        )}
-      </div>
-      <div className="mt-2 pt-2 border-t border-slate-700 text-gray-400">
-        Press Ctrl+Shift+P to toggle
-      </div>
-    </div>
-  );
-};
+      // Measure Cumulative Layout Shift (CLS)
+      if ('PerformanceObserver' in window) {
+        let clsValue = 0
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value
+            }
+          }
+          setMetrics(prev => ({ ...prev, cls: clsValue }))
+        })
+        observer.observe({ entryTypes: ['layout-shift'] })
+      }
 
-export default PerformanceMonitor;
+      // Measure Time to First Byte (TTFB)
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'navigation') {
+              setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }))
+            }
+          }
+        })
+        observer.observe({ entryTypes: ['navigation'] })
+      }
+    }
+
+    // Start measuring after a short delay to ensure page is loaded
+    const timeoutId = setTimeout(measurePerformance, 1000)
+
+    return () => {
+      clearTimeout(timeoutId)
+    }
+  }, [])
+
+  // Send metrics to analytics (if available)
+  useEffect(() => {
+    if (Object.keys(metrics).length > 0 && typeof window !== 'undefined') {
+      // Send to Google Analytics or other analytics service
+      if (typeof window.gtag !== 'undefined') {
+        window.gtag('event', 'performance_metrics', {
+          event_category: 'Performance',
+          event_label: 'Core Web Vitals',
+          value: Math.round(metrics.lcp || 0),
+          custom_map: {
+            fcp: metrics.fcp,
+            lcp: metrics.lcp,
+            fid: metrics.fid,
+            cls: metrics.cls,
+            ttfb: metrics.ttfb
+          }
+        })
+      }
+    }
+  }, [metrics])
+
+  // Don't render anything visible
+  return null
+}
+
+export default PerformanceMonitor
