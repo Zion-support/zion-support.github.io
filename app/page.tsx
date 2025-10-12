@@ -2,25 +2,8 @@ import React, { Suspense, lazy } from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-<<<<<<< HEAD
-import { 
-  ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, 
-  BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, TrendingUp, 
-  Sparkles, Layers, Target, Award, Lightbulb, Monitor, Server, CircuitBoard, Atom, 
-  Satellite, Wrench, BarChart, PieChart, LineChart, Activity, Eye, Search, Filter, 
-  Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, 
-  Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, 
-  VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, 
-  ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, 
-  Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, 
-  Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, 
-  Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, 
-  FileText, Package 
-} from './components/Icons'
-=======
 import PerformanceOptimizer from './components/PerformanceOptimizer'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, TrendingUp, Sparkles, Layers, Target, Award, Lightbulb, Monitor, Server, CircuitBoard, Atom, Satellite, Wrench, BarChart, PieChart, LineChart, Activity, Eye, Search, Filter, Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10, FileText, Package } from 'lucide-react'
->>>>>>> cursor/analyze-improve-and-deploy-application-bb14
+import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, TrendingUp, Sparkles, Layers, Target, Award, Lightbulb, Monitor, Server, CircuitBoard, Atom, Satellite, Wrench, BarChart, PieChart, LineChart, Activity, Eye, Search, Filter, Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, FileText, Package } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const HomePage: React.FC = () => {
@@ -29,29 +12,29 @@ const HomePage: React.FC = () => {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       title: 'AI-Powered Solutions',
       description: 'Advanced artificial intelligence to transform your business operations and drive innovation with cutting-edge machine learning algorithms.',
-      price: 'Starting at $299/month',
+      price: 'Starting at $29/month',
       link: '/ai-services'
     },
     {
       icon: <Cloud className="w-8 h-8 text-emerald-400" />,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions designed for modern business needs with 99.99% uptime guarantee.',
-      price: 'Starting at $199/month',
-      link: '/it-services'
+      title: 'Cloud Migration Pro',
+      description: 'Professional cloud migration services with zero-downtime migration, cost optimization, and security-first approach.',
+      price: 'Starting at $2,999/project',
+      link: '/cloud-migration-pro'
     },
     {
       icon: <Shield className="w-8 h-8 text-red-400" />,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and data with real-time threat detection.',
-      price: 'Starting at $399/month',
-      link: '/cybersecurity'
+      title: 'AI Cybersecurity Suite',
+      description: 'Revolutionary AI-powered cybersecurity with threat detection, zero-trust architecture, and real-time monitoring.',
+      price: 'Starting at $199/month',
+      link: '/ai-cybersecurity-suite-pro'
     },
     {
-      icon: <Database className="w-8 h-8 text-purple-400" />,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics platform and AI-driven predictions.',
-      price: 'Starting at $249/month',
-      link: '/business-intelligence'
+      icon: <Code className="w-8 h-8 text-purple-400" />,
+      title: 'AI Code Assistant Pro',
+      description: 'Transform development workflow with AI-powered code generation, intelligent debugging, and analysis.',
+      price: 'Starting at $29/month',
+      link: '/ai-code-assistant-pro'
     },
     {
       icon: <CircuitBoard className="w-8 h-8 text-orange-400" />,
@@ -64,7 +47,7 @@ const HomePage: React.FC = () => {
       icon: <Rocket className="w-8 h-8 text-pink-400" />,
       title: 'Micro SAAS Solutions',
       description: 'Ready-to-deploy micro software solutions that scale with your business growth and needs.',
-      price: 'Starting at $99/month',
+      price: 'Starting at $9/month',
       link: '/micro-saas'
     }
   ]
@@ -82,7 +65,55 @@ const HomePage: React.FC = () => {
 
   const microSaasServices = [
     {
-      icon: <BarChart3 className="w-6 h-6 text-cyan-400" />,
+      icon: <Share2 className="w-6 h-6 text-cyan-400" />,
+      title: 'AI Social Media Scheduler',
+      description: 'Revolutionary AI-powered social media management with smart posting, analytics, and audience insights.',
+      price: '$29/month',
+      features: ['Smart scheduling', 'Analytics dashboard', 'Audience insights', 'Auto-posting'],
+      link: '/micro-saas/ai-social-media-scheduler'
+    },
+    {
+      icon: <DollarSign className="w-6 h-6 text-emerald-400" />,
+      title: 'AI Expense Tracker',
+      description: 'Transform financial management with AI-powered expense tracking, smart receipt scanning, and analytics.',
+      price: '$9/month',
+      features: ['Smart receipt scanning', 'Real-time analytics', 'AI categorization', 'Bank-level security'],
+      link: '/micro-saas/ai-expense-tracker'
+    },
+    {
+      icon: <Calendar className="w-6 h-6 text-purple-400" />,
+      title: 'AI Project Manager',
+      description: 'Intelligent project management with AI task prioritization, predictive analytics, and automation.',
+      price: '$19/month',
+      features: ['AI task prioritization', 'Predictive analytics', 'Smart team matching', 'Automated workflows'],
+      link: '/micro-saas/ai-project-manager'
+    },
+    {
+      icon: <Package className="w-6 h-6 text-orange-400" />,
+      title: 'AI Inventory Manager',
+      description: 'Smart inventory management with AI demand forecasting, automated reordering, and real-time analytics.',
+      price: '$39/month',
+      features: ['AI demand forecasting', 'Smart reorder points', 'Real-time analytics', 'Multi-location sync'],
+      link: '/micro-saas/ai-inventory-manager'
+    },
+    {
+      icon: <Mail className="w-6 h-6 text-pink-400" />,
+      title: 'AI Email Marketing Automation',
+      description: 'AI-powered email marketing with smart segmentation, content generation, and predictive analytics.',
+      price: '$29/month',
+      features: ['AI content generation', 'Smart segmentation', 'Predictive analytics', 'A/B testing AI'],
+      link: '/micro-saas/ai-email-marketing-automation'
+    },
+    {
+      icon: <MessageSquare className="w-6 h-6 text-red-400" />,
+      title: 'AI Customer Support Chatbot',
+      description: 'Intelligent customer support with natural language processing, multi-channel support, and analytics.',
+      price: '$49/month',
+      features: ['Natural language processing', 'Multi-channel support', 'Real-time analytics', 'Smart escalation'],
+      link: '/micro-saas/ai-customer-support-chatbot'
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6 text-blue-400" />,
       title: 'AI Customer Insights',
       description: 'Transform customer data into actionable insights with AI-powered analytics and churn prediction.',
       price: '$299/month',
@@ -90,60 +121,12 @@ const HomePage: React.FC = () => {
       link: '/ai-customer-insights'
     },
     {
-      icon: <Zap className="w-6 h-6 text-emerald-400" />,
+      icon: <Zap className="w-6 h-6 text-green-400" />,
       title: 'AI Workflow Automation',
       description: 'Automate complex business processes with intelligent AI that learns and adapts to your workflow.',
       price: '$299/month',
       features: ['Smart automation', 'Visual workflow builder', 'AI decision engine', '500+ integrations'],
       link: '/ai-workflow-automation'
-    },
-    {
-      icon: <Mic className="w-6 h-6 text-blue-400" />,
-      title: 'AI Voice Assistant',
-      description: 'Create intelligent voice assistants with natural language processing and human-like speech synthesis.',
-      price: '$299/month',
-      features: ['98% accuracy', 'Natural conversations', 'Multi-channel support', 'Custom integration'],
-      link: '/ai-voice-assistant'
-    },
-    {
-      icon: <Shield className="w-6 h-6 text-purple-400" />,
-      title: 'AI Blockchain Analytics',
-      description: 'Advanced AI-powered analytics for DeFi, smart contracts, and crypto trading with 95% accuracy.',
-      price: '$499/month',
-      features: ['DeFi analytics', 'Smart contract analysis', 'Trading intelligence', 'Cross-chain support'],
-      link: '/ai-blockchain-analytics'
-    },
-    {
-      icon: <Calendar className="w-6 h-6 text-orange-400" />,
-      title: 'Smart Appointment Scheduler',
-      description: 'Intelligent scheduling system with automated reminders and calendar integration.',
-      price: '$79/month',
-      features: ['Auto-scheduling', 'Calendar sync', 'SMS/Email reminders', 'Payment processing'],
-      link: '/micro-saas/appointment-scheduler'
-    },
-    {
-      icon: <MessageCircle className="w-6 h-6 text-pink-400" />,
-      title: 'AI Chat Analytics',
-      description: 'Advanced chat analytics with sentiment analysis and customer insights.',
-      price: '$129/month',
-      features: ['Sentiment analysis', 'Response optimization', 'Customer insights', 'Live monitoring'],
-      link: '/micro-saas/chat-analytics'
-    },
-    {
-      icon: <Edit className="w-6 h-6 text-green-400" />,
-      title: 'AI Content Generator',
-      description: 'Generate high-quality content for blogs, social media, and marketing campaigns.',
-      price: '$99/month',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice training', 'Content templates'],
-      link: '/micro-saas/content-generator'
-    },
-    {
-      icon: <FileText className="w-6 h-6 text-indigo-400" />,
-      title: 'Document Processor',
-      description: 'Automated document processing with OCR and intelligent data extraction.',
-      price: '$179/month',
-      features: ['OCR technology', 'Data extraction', 'Format conversion', 'Batch processing'],
-      link: '/micro-saas/document-processor'
     }
   ]
 

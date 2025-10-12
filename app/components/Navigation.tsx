@@ -21,6 +21,8 @@ export default function Navigation() {
       name: 'AI Services',
       path: '/ai-services',
       dropdown: [
+        { name: 'AI Code Assistant Pro', path: '/ai-code-assistant-pro' },
+        { name: 'AI Cybersecurity Suite Pro', path: '/ai-cybersecurity-suite-pro' },
         { name: 'AI Customer Insights', path: '/ai-customer-insights' },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
         { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
@@ -35,6 +37,7 @@ export default function Navigation() {
       name: 'IT Services',
       path: '/it-services',
       dropdown: [
+        { name: 'Cloud Migration Pro', path: '/cloud-migration-pro' },
         { name: 'Web Development', path: '/web-development' },
         { name: 'Mobile Development', path: '/mobile-development' },
         { name: 'DevOps', path: '/devops' },
@@ -49,6 +52,12 @@ export default function Navigation() {
       name: 'Micro SaaS',
       path: '/micro-saas-services',
       dropdown: [
+        { name: 'AI Social Media Scheduler', path: '/micro-saas/ai-social-media-scheduler' },
+        { name: 'AI Expense Tracker', path: '/micro-saas/ai-expense-tracker' },
+        { name: 'AI Project Manager', path: '/micro-saas/ai-project-manager' },
+        { name: 'AI Inventory Manager', path: '/micro-saas/ai-inventory-manager' },
+        { name: 'AI Email Marketing Automation', path: '/micro-saas/ai-email-marketing-automation' },
+        { name: 'AI Customer Support Chatbot', path: '/micro-saas/ai-customer-support-chatbot' },
         { name: 'AI Customer Insights', path: '/ai-customer-insights' },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
         { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },

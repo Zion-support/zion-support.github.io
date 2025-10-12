@@ -17,6 +17,8 @@ import {
 
 const Footer = () => {
   const aiServices = [
+    { name: 'AI Code Assistant Pro', path: '/ai-code-assistant-pro' },
+    { name: 'AI Cybersecurity Suite Pro', path: '/ai-cybersecurity-suite-pro' },
     { name: 'AI Content Generator', path: '/ai-content-generator' },
     { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
@@ -26,12 +28,11 @@ const Footer = () => {
     { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
     { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
     { name: 'AI Automation Suite', path: '/ai-automation' },
-    { name: 'AI Project Manager', path: '/ai-project-manager' },
-    { name: 'AI 3D Generation', path: '/ai-3d-generation' },
-    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
+    { name: 'AI Project Manager', path: '/ai-project-manager' }
   ];
 
   const itServices = [
+    { name: 'Cloud Migration Pro', path: '/cloud-migration-pro' },
     { name: 'Web Development', path: '/web-development' },
     { name: 'Mobile Development', path: '/mobile-development' },
     { name: 'DevOps', path: '/devops' },
@@ -42,19 +43,22 @@ const Footer = () => {
     { name: 'Cybersecurity', path: '/cybersecurity' },
     { name: 'System Integration', path: '/system-integration' },
     { name: 'Data Analytics', path: '/data-analytics' },
-    { name: 'IoT Solutions', path: '/iot-solutions' },
-    { name: 'Blockchain Development', path: '/blockchain-development' }
+    { name: 'IoT Solutions', path: '/iot-solutions' }
   ];
 
   const microSaasServices = [
+    { name: 'AI Social Media Scheduler', path: '/micro-saas/ai-social-media-scheduler' },
+    { name: 'AI Expense Tracker', path: '/micro-saas/ai-expense-tracker' },
+    { name: 'AI Project Manager', path: '/micro-saas/ai-project-manager' },
+    { name: 'AI Inventory Manager', path: '/micro-saas/ai-inventory-manager' },
+    { name: 'AI Email Marketing Automation', path: '/micro-saas/ai-email-marketing-automation' },
+    { name: 'AI Customer Support Chatbot', path: '/micro-saas/ai-customer-support-chatbot' },
     { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard' },
     { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler' },
     { name: 'Chat Analytics', path: '/micro-saas/chat-analytics' },
     { name: 'Content Generator', path: '/micro-saas/content-generator' },
     { name: 'Document Processor', path: '/micro-saas/document-processor' },
-    { name: 'Email Marketing', path: '/micro-saas/email-marketing' },
-    { name: 'Expense Tracker', path: '/micro-saas/expense-tracker' },
-    { name: 'Inventory Management', path: '/micro-saas/inventory-management' }
+    { name: 'Email Marketing', path: '/micro-saas/email-marketing' }
   ];
 
   const fiveGServices = [
