@@ -118,10 +118,7 @@ export default function AIInvoiceGenerator() {
     }
   ]
 
-<<<<<<< HEAD
 export default function AiinvoicegeneratorPage() {
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   return (
     <Layout
       title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
@@ -332,11 +329,6 @@ export default function AiinvoicegeneratorPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </div>
   );
-=======
-    </Layout>
-  )
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }
