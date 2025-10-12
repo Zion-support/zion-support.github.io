@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Users, Target, Award, Globe, Zap, Shield, Database } from 'lucide-react';
+import { Users, Target, Award, Globe, Zap, Shield, Database } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
