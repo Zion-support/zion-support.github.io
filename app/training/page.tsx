@@ -1,61 +1,47 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-  ]
+import SEOHead from '../components/SEOHead'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { ArrowRight, BookOpen, CheckCircle, Phone, Mail, MapPin } from 'lucide-react'
+import { Link } from 'react-router-dom'
+
+const TrainingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>
+      <SEOHead 
+        title="Training Services - Zion Tech Group"
+        description="Professional training and education services. Contact us at +1 302 464 0950"
+        keywords="training, education, professional development, technology training, certification"
+      />
+      
+      <Navigation />
+      
+      <section className="relative py-32 px-4 overflow-hidden">
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            Training
+            <br />
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Services
+            </span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Professional training and education services for your team.
+          </p>
+          <Link 
+            to="/contact" 
+            className="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
+      </section>
 
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>
-      {/* Hero Section */}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>))}
-          </div>
-        </div>
-      </section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-          </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
+      <Footer />
     </div>
-  )}
-export default PagePage
-  </h2>
-          </div>
-        </div>
-      </section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-          </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
-    </div>)};export default PagePage
+  )
+}
+
+export default TrainingPage

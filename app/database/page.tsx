@@ -1,57 +1,47 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-            </div>
-          </div>
-        </div>
-      </section>
-          </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )}
-export default PagePage
-  </h2>
+import SEOHead from '../components/SEOHead'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { ArrowRight, Database, CheckCircle, Phone, Mail, MapPin } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
-            </div>
-          </div>
+const DatabasePage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOHead 
+        title="Database Solutions - Zion Tech Group"
+        description="Professional database solutions. Contact us at +1 302 464 0950"
+        keywords="database, data management, database administration, data solutions"
+      />
+      
+      <Navigation />
+      
+      <section className="relative py-32 px-4 overflow-hidden">
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            Database
+            <br />
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Solutions
+            </span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Professional database solutions for your business needs.
+          </p>
+          <Link 
+            to="/contact" 
+            className="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </section>
-          </div>
-              </div>))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>)};export default PagePage
+
+      <Footer />
+    </div>
+  )
+}
+
+export default DatabasePage

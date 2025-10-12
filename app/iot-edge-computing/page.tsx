@@ -1,117 +1,47 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ]
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
+import SEOHead from '../components/SEOHead'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { ArrowRight, Wifi, CheckCircle, Phone, Mail, MapPin } from 'lucide-react'
+import { Link } from 'react-router-dom'
+
+const IOTEdgeComputingPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          </div>
-        </div>
-      </section>
-      {/* Features Section */}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              </div>
-            ))}
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOHead 
+        title="IoT Edge Computing - Zion Tech Group"
+        description="Advanced IoT and edge computing solutions. Contact us at +1 302 464 0950"
+        keywords="IoT, edge computing, internet of things, smart devices, connected solutions"
+      />
+      
+      <Navigation />
+      
+      <section className="relative py-32 px-4 overflow-hidden">
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            IoT Edge
+            <br />
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Computing
+            </span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Advanced IoT and edge computing solutions for connected devices.
+          </p>
+          <Link 
+            to="/contact" 
+            className="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </section>
 
-    {icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'}
-    },
-    {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'}
-    },
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'}
-    },
-    {icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'}
-    }
-  ];const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
-          </div>
-        </div>
-      </section>
-      {/* Features Section */}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              </div>))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
-              </div>))}
-          </div>
-        </div>
-      </section>
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-          </div>
-        </div>
-      </section>
-    </div>)};export default PagePage
+      <Footer />
+    </div>
+  )
+}
+
+export default IOTEdgeComputingPage
