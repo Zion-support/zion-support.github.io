@@ -54,6 +54,27 @@ import TaskManagerProPage from './app/task-manager-pro/page'
 import TrainingPage from './app/training/page'
 import ServicesAdvertisingPage from './app/services-advertising/page'
 import FiveGImplementationPage from './app/5g-implementation/page'
+// AI Services
+import AIContentGenerationPage from './app/ai-content-generation/page'
+import AIAnalyticsDashboardPage from './app/ai-analytics-dashboard/page'
+import AIAutomationPage from './app/ai-automation/page'
+import AIComputerVisionPage from './app/ai-computer-vision/page'
+import AIDataAnalyticsPage from './app/ai-data-analytics/page'
+// IT Services
+import WebDevelopmentPage from './app/web-development/page'
+import MobileDevelopmentPage from './app/mobile-development/page'
+import DataAnalyticsPage from './app/data-analytics/page'
+import CloudServicesPage from './app/cloud-services/page'
+// 5G Services
+import FiveGNetworkInfrastructurePage from './app/5g-network-infrastructure/page'
+import FiveGIotSolutionsPage from './app/5g-iot-solutions/page'
+import FiveGEdgeComputingPage from './app/5g-edge-computing/page'
+import FiveGPrivateNetworksPage from './app/5g-private-networks/page'
+import FiveGMobileApplicationsPage from './app/5g-mobile-applications/page'
+// Legal Pages
+import PrivacyPage from './app/privacy/page'
+import TermsPage from './app/terms/page'
+import CookiesPage from './app/cookies/page'
 
 const App: React.FC = () => {
   return (
@@ -122,6 +143,29 @@ const App: React.FC = () => {
                   
                   {/* 5G Services */}
                   <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                  <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
+                  <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
+                  <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
+                  <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
+                  <Route path="/5g-mobile-applications" element={<FiveGMobileApplicationsPage />} />
+                  
+                  {/* AI Services - Navigation Dropdown */}
+                  <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
+                  <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
+                  <Route path="/ai-automation" element={<AIAutomationPage />} />
+                  <Route path="/ai-computer-vision" element={<AIComputerVisionPage />} />
+                  <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
+                  
+                  {/* IT Services - Navigation Dropdown */}
+                  <Route path="/web-development" element={<WebDevelopmentPage />} />
+                  <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                  <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                  <Route path="/cloud-services" element={<CloudServicesPage />} />
+                  
+                  {/* Legal Pages */}
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
                   
                   {/* 404 Page */}
                   <Route path="*" element={<NotFoundPage />} />
