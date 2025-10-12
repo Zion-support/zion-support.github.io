@@ -1,8 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-
-
-import { Brain, MessageSquare, Mail, Camera, Palette, Mic, Database, ArrowRight, EyeOff, Database as DatabaseIcon, Code, Mail as MailIcon, Mail as MailIcon } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Brain, MessageSquare, Mail, Camera, Palette, Mic, Database, ArrowRight, EyeOff, Code, Shield, Users, Star, TrendingUp, Clock, Target, Zap, CheckCircle, Globe, Smartphone, Wifi, Cpu, Lock, Eye, MousePointer, Filter, Settings, Calendar, FileText, PieChart, Activity, DollarSign, Heart, ThumbsUp, Share2, Hash, Image, Video, Search, Menu, X, ChevronDown, Home, BarChart, ChevronRight, Play, Award, Lightbulb, Rocket, MapPin, Github, Linkedin, Twitter, Phone } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

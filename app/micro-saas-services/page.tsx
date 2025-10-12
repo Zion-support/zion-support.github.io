@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
@@ -33,18 +32,10 @@ import {
   Twitter,
   Calendar
 } from 'lucide-react';
-=======
-
-
-import { Code, ArrowRight, Mail, MessageSquare } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-b5ac
 
 const MicroSaasServicesPage: React.FC = () => {
   const services = [
     {
-<<<<<<< HEAD
-      icon: <Brain className="w-8 h-8 text-cyan-500" />,
-=======
       name: 'AI-Powered CRM',
       description: 'Intelligent customer relationship management with AI insights, lead scoring, and automated follow-ups',
       price: '$99/month',
@@ -445,7 +436,6 @@ const MicroSAASServicesPage: React.FC = () => {
   const microSAAS = [
     {
       icon: <Zap className="w-8 h-8 text-blue-500" />,
->>>>>>> cursor/analyze-improve-and-deploy-application-b5ac
       title: 'AI Content Generator',
       description: 'Create high-quality content with AI-powered writing tools.',
       features: ['Automated content creation', 'SEO optimization', 'Multi-language support', 'Content templates'],

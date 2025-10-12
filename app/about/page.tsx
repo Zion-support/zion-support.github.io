@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-
-
-import { Brain, ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Brain, ArrowRight, Target, Users, Shield, Phone, Mail, MapPin, Github, Linkedin, Twitter, Clock, Award, Lightbulb, Rocket, CheckCircle, Globe, Zap, BarChart3, Cpu, Database, Smartphone, Wifi, Cloud, Lock, Eye, MousePointer, Filter, Settings, Calendar, FileText, PieChart, Activity, DollarSign, Heart, ThumbsUp, Share2, Hash, Image, Video, Camera, Search, Menu, X, ChevronDown, Home, Code, BarChart, ChevronRight, Play, Star, TrendingUp } from 'lucide-react';
 
 export default function AboutPage() {
   const stats = [

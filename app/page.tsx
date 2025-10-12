@@ -1,9 +1,9 @@
 'use client';
 
 import React, { Suspense } from 'react';
-
-
-import { Brain, ArrowRight, MessageSquare } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Brain, ArrowRight, MessageSquare, Users, Star, Globe, TrendingUp, Shield, Zap, CheckCircle, Target, Clock, BarChart3, Cpu, Mail, Phone, MapPin, Github, Linkedin, Twitter, ChevronRight, Play, Award, Lightbulb, Rocket, Settings, Database, Smartphone, Wifi, Cloud, Lock, Eye, MousePointer, Filter, Calendar, FileText, PieChart, Activity, DollarSign, Heart, ThumbsUp, Share2, Hash, Image, Video, Camera, Search, Menu, X, ChevronDown, Home, Code, BarChart, ChevronRight as ChevronRightIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Clock as ClockIcon } from 'lucide-react';
 import FuturisticBackground from './components/FuturisticBackground';
 import FuturisticCard from './components/FuturisticCard';
 import FuturisticButton from './components/FuturisticButton';

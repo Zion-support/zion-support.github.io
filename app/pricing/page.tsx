@@ -1,6 +1,7 @@
-import React from 'react'
-
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Zap, CheckCircle, ArrowRight, Star, Users, Shield, Globe, Clock, Target, Brain, MessageSquare, Mail, Camera, Palette, Mic, Database, Code, HardDrive, EyeOff, Cloud, Smartphone, Wifi, Cpu, Lock, Eye, MousePointer, Filter, Settings, Calendar, FileText, PieChart, Activity, DollarSign, Heart, ThumbsUp, Share2, Hash, Image, Video, Search, Menu, X, ChevronDown, Home, BarChart, ChevronRight, Play, Award, Lightbulb, Rocket, MapPin, Github, Linkedin, Twitter, Phone, TrendingUp } from 'lucide-react';
 
 export default function PricingPage() {
   const plans = [
