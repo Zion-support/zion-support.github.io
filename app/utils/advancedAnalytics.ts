@@ -86,10 +86,10 @@
    * Track page view
    */
     const currentPage = page || window.location.pathname;
-    
+
     this.userBehavior.pageViews++;
     this.userBehavior.userJourney.push(currentPage);
-    
+
     // Update top pages
     const existingPage = this.userBehavior.topPages.find(p => p.page === currentPage);
       existingPage.views++;
@@ -121,7 +121,7 @@
 
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paintEntries = performance.getEntriesByType('paint');
-        
+
           largestContentfulPaint: 0, // Would need to be calculated with LCP API
           firstInputDelay: 0, // Would need to be calculated with FID API
           cumulativeLayoutShift: 0, // Would need to be calculated with CLS API
@@ -158,7 +158,7 @@
     if (typeof window === 'undefined') return;
 
     let maxScrollDepth = 0;
-    
+
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
         maxScrollDepth = scrollDepth;
         this.trackEvent('scroll_depth', { depth: scrollDepth });

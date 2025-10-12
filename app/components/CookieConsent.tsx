@@ -50,7 +50,7 @@ const CookieConsent: React.FC = () => {
                     We use cookies
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    We use cookies to enhance your browsing experience, serve personalized content, 
+                    We use cookies to enhance your browsing experience, serve personalized content,
                     and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
