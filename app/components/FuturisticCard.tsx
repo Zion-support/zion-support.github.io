@@ -9,7 +9,6 @@ interface FuturisticCardProps {
   onClick?: () => void;
 }
 
-export default function FuturisticCard({ 
   children, 
   variant = 'default', 
   className = '', 

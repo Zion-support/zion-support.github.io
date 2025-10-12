@@ -1,4 +1,33 @@
-/* Accessibility Enhancements */
+/* Accessibility and Performance Enhancements */
+
+/* Focus management */
+.using-mouse *:focus {
+  outline: none;
+}
+
+.using-mouse *:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* High contrast mode */
+.high-contrast {
+  filter: contrast(150%);
+}
+
+.high-contrast * {
+  border-color: currentColor !important;
+}
+
+/* Reduced motion */
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
 
 /* Screen reader only content */
 .sr-only {
@@ -24,73 +53,14 @@
   white-space: normal;
 }
 
-/* Focus indicators */
-.focus-visible *:focus {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-/* High contrast mode */
-.high-contrast {
-  --tw-bg-opacity: 1;
-  --tw-text-opacity: 1;
-  filter: contrast(150%) brightness(110%);
-}
-
-.high-contrast * {
-  border-color: currentColor !important;
-}
-
-/* Reduced motion */
-.reduced-motion * {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-  scroll-behavior: auto !important;
-}
-
-/* Font size adjustments */
-.font-large {
-  font-size: 1.125rem;
-}
-
-.font-large h1 {
-  font-size: 2.5rem;
-}
-
-.font-large h2 {
-  font-size: 2rem;
-}
-
-.font-large h3 {
-  font-size: 1.5rem;
-}
-
-.font-extra-large {
-  font-size: 1.25rem;
-}
-
-.font-extra-large h1 {
-  font-size: 3rem;
-}
-
-.font-extra-large h2 {
-  font-size: 2.5rem;
-}
-
-.font-extra-large h3 {
-  font-size: 2rem;
-}
-
-/* Skip link styles */
+/* Skip link */
 .skip-link {
   position: absolute;
   top: -40px;
   left: 6px;
-  background: #3b82f6;
+  background: #2563eb;
   color: white;
-  padding: 8px;
+  padding: 8px 16px;
   text-decoration: none;
   border-radius: 4px;
   z-index: 1000;
@@ -99,85 +69,6 @@
 
 .skip-link:focus {
   top: 6px;
-}
-
-/* Focus trap for modals */
-.modal-focus-trap {
-  position: relative;
-}
-
-/* Animation classes */
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-slide-up {
-  animation: slideUp 0.6s ease-out;
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Navigation scrolled state */
-nav.scrolled {
-  background: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-/* Button focus states */
-button:focus-visible,
-a:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-/* Form accessibility */
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-  border-color: #3b82f6;
-}
-
-/* Error states */
-.error {
-  border-color: #ef4444;
-  background-color: #fef2f2;
-}
-
-.error:focus-visible {
-  outline-color: #ef4444;
-}
-
-/* Success states */
-.success {
-  border-color: #10b981;
-  background-color: #f0fdf4;
-}
-
-.success:focus-visible {
-  outline-color: #10b981;
 }
 
 /* Loading states */
@@ -195,7 +86,7 @@ select:focus-visible {
   height: 20px;
   margin: -10px 0 0 -10px;
   border: 2px solid #f3f3f3;
-  border-top: 2px solid #3b82f6;
+  border-top: 2px solid #3498db;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -205,18 +96,139 @@ select:focus-visible {
   100% { transform: rotate(360deg); }
 }
 
+/* Enhanced focus indicators */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Improved contrast for interactive elements */
+button:not(:disabled):hover,
+a:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Better text contrast */
+.text-low-contrast {
+  color: #6b7280;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  .text-responsive {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+/* Performance optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improved form accessibility */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 16px; /* Prevents zoom on mobile */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Error states */
+.input-error {
+  border-color: #ef4444;
+}
+
+.input-error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Success states */
+.input-success {
+  border-color: #10b981;
+}
+
+.input-success:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Loading button states */
+.btn-loading {
+  position: relative;
+  color: transparent;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Dark mode improvements */
+@media (prefers-color-scheme: dark) {
+  .auto-dark {
+    background-color: #1f2937;
+    color: #f9fafb;
+  }
+}
+
 /* Print styles */
 @media print {
   .no-print {
     display: none !important;
   }
   
-  body {
-    background: white !important;
-    color: black !important;
+  .print-only {
+    display: block !important;
   }
   
   a[href]:after {
     content: " (" attr(href) ")";
+  }
+  
+  .page-break {
+    page-break-before: always;
   }
 }
