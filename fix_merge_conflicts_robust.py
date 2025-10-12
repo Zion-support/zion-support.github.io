@@ -13,21 +13,30 @@ def fix_merge_conflicts(file_path):
         if '<<<<<<< HEAD' not in content:
             return False
         
-        # Split by merge conflict markers
-        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
+        # More robust pattern to handle different merge conflict formats
+        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
         
-        if len(parts) < 2:
-            return False
+        # Replace all merge conflicts with HEAD version
+        def replace_conflict(match):
+            head_content = match.group(1)
+            return head_content
         
-        # Reconstruct content by choosing HEAD version
-        new_content = parts[0]  # Content before first conflict
+        new_content = re.sub(pattern, replace_conflict, content, flags=re.DOTALL)
         
-        for i in range(1, len(parts), 3):
-            if i + 1 < len(parts):
-                head_content = parts[i]  # HEAD version
-                new_content += head_content
-                if i + 2 < len(parts):
-                    new_content += parts[i + 2]  # Content after conflict
+        # Also handle cases where there might be multiple conflict markers in one block
+        while '<<<<<<< HEAD' in new_content:
+            # Find the first conflict
+            start = new_content.find('<<<<<<< HEAD')
+            middle = new_content.find('=======', start)
+            end = new_content.find('>>>>>>>', middle)
+            
+            if start != -1 and middle != -1 and end != -1:
+                # Extract HEAD content
+                head_content = new_content[start+12:middle].strip()
+                # Replace the entire conflict block with HEAD content
+                new_content = new_content[:start] + head_content + new_content[end+8:]
+            else:
+                break
         
         # Write the fixed content
         with open(file_path, 'w', encoding='utf-8') as f:
