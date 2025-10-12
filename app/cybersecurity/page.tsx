@@ -1,5 +1,7 @@
 import React from 'react'
 import SEOHead from '../components/SEOHead'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Globe, Database, Cpu, Network } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
@@ -48,215 +50,172 @@ export default function CybersecurityPage() {
   ]
 
   const complianceFrameworks = [
-    { name: 'SOC 2 Type II', description: 'Security, availability, and confidentiality controls' },
-    { name: 'ISO 27001', description: 'Information security management systems' },
-    { name: 'GDPR', description: 'General Data Protection Regulation compliance' },
-    { name: 'HIPAA', description: 'Healthcare data protection standards' },
-    { name: 'PCI DSS', description: 'Payment card industry data security' },
-    { name: 'NIST', description: 'National Institute of Standards and Technology' }
+    'SOC 2 Type II',
+    'ISO 27001',
+    'PCI DSS',
+    'HIPAA',
+    'GDPR',
+    'NIST Cybersecurity Framework',
+    'CIS Controls',
+    'COBIT'
   ]
 
   const stats = [
     { number: '99.9%', label: 'Threat Detection Rate' },
-    { number: '< 5min', label: 'Average Response Time' },
     { number: '24/7', label: 'Security Monitoring' },
-    { number: '100+', label: 'Security Experts' }
+    { number: '< 5min', label: 'Response Time' },
+    { number: '100%', label: 'Compliance Coverage' }
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEOHead 
-        title="Cybersecurity Services - Zion Tech Group"
-        description="Advanced cybersecurity solutions including threat detection, data protection, security monitoring, and incident response. Protect your business with enterprise-grade security."
-        keywords="cybersecurity, threat detection, data protection, security monitoring, incident response, compliance, SOC 2, ISO 27001, GDPR"
+        title="Cybersecurity Solutions - Zion Tech Group"
+        description="Protect your business with enterprise-grade cybersecurity solutions. Comprehensive security measures to safeguard your data and systems."
+        keywords="cybersecurity, security solutions, threat protection, compliance, data security, Zion Tech Group"
       />
       
-      {/* Animated background elements */}
-      <div className="absolute inset-0 bg-cyber-grid opacity-10"></div>
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400"></div>
-      
-      <main className="relative z-10 pt-20">
-        {/* Hero Section */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="mb-8">
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6 animate-pulse">
-                🛡️ Enterprise Cybersecurity
-              </span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              Advanced <span className="bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent animate-gradient">Cybersecurity</span> Solutions
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Protect your business with enterprise-grade cybersecurity solutions. 
-              Advanced threat detection, data protection, and 24/7 security monitoring.
+      <Navigation />
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <span className="bg-gradient-to-r from-red-400 to-purple-400 bg-clip-text text-transparent">Cybersecurity</span> Solutions
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Protect your business with enterprise-grade cybersecurity solutions. Comprehensive security measures 
+            to safeguard your data, systems, and reputation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flex items-center"
+            >
+              Get Security Assessment
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link 
+              to="/pricing" 
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              View Pricing
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Security Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive cybersecurity solutions designed to protect your business from evolving threats.
             </p>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mb-16">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-red-400 mb-2">{stat.number}</div>
-                  <div className="text-gray-400 text-sm">{stat.label}</div>
-                </div>
-              ))}
-            </div>
           </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">Security Services</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Comprehensive cybersecurity solutions designed to protect your business from evolving threats
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className={`${service.bgColor} backdrop-blur-lg rounded-2xl p-8 border ${service.borderColor} hover:bg-white/10 transition-all duration-500 group hover:scale-105 hover:shadow-2xl`}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border ${service.borderColor} hover:bg-white/20 transition-all duration-300`}>
+                <div className={`flex items-center justify-center w-12 h-12 ${service.bgColor} rounded-lg mb-4`}>
+                  <div className={service.color}>
+                    {service.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <ul className="space-y-2 mb-4">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="text-lg font-bold text-white mb-4">{service.price}</div>
+                <Link
+                  to="/contact"
+                  className="w-full bg-gradient-to-r from-red-500 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
-                  <div className="flex items-center justify-between mb-6">
-                    <div className={`${service.color} group-hover:scale-110 transition-transform duration-300`}>
-                      {service.icon}
-                    </div>
-                    <div className="text-right">
-                      <div className="text-lg font-bold text-white">{service.price}</div>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors duration-300">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="space-y-3 mb-8">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-sm text-gray-300">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <Link
-                    to="/contact"
-                    className="w-full bg-gradient-to-r from-red-500 to-orange-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
-                  >
-                    Get Started
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Link>
-                </div>
-              ))}
-            </div>
+                  Learn More
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Compliance Section */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-red-900/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">Compliance</span> & Standards
+      {/* Compliance Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Compliance & Standards
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We help you meet and maintain compliance with industry standards and regulations.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {complianceFrameworks.map((framework, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 text-center">
+                <p className="text-gray-300">{framework}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-red-600 to-purple-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Secure Your Business?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                We help you meet industry compliance requirements and security standards
+              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                Don't wait for a security breach. Protect your business with our comprehensive cybersecurity solutions.
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {complianceFrameworks.map((framework, index) => (
-                <div key={index} className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-orange-500/30 transition-all duration-300 group">
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
-                    {framework.name}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {framework.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-24 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-red-500 via-orange-600 to-yellow-600 rounded-3xl p-16 relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-full bg-cyber-grid opacity-10"></div>
-              <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
-              <div className="absolute bottom-10 left-10 w-24 h-24 bg-white/10 rounded-full blur-2xl"></div>
-              
-              <div className="relative z-10">
-                <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
-                  Secure Your Business Today
-                </h2>
-                <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
-                  Don't wait for a security breach. Protect your business with our advanced cybersecurity solutions.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <Link
-                    to="/contact"
-                    className="group bg-white text-red-600 px-12 py-6 rounded-2xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center"
-                  >
-                    Get Security Assessment
-                    <Shield className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Link>
-                  <a
-                    href="https://ziontechgroup.com/security-demo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group border-2 border-white text-white px-12 py-6 rounded-2xl font-bold text-lg hover:bg-white hover:text-red-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-                  >
-                    Request Demo
-                    <Eye className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact" 
+                  className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Get Security Assessment
+                </Link>
+                <Link 
+                  to="/contact" 
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                >
+                  Contact Us
+                </Link>
               </div>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
-  )
-}
-import { Shield } from 'lucide-react'
-import ServicePageTemplate from '../service-template'
+        </div>
+      </section>
 
-export default function CybersecurityPage() {
-  return (
-    <ServicePageTemplate
-      title="Cybersecurity Solutions"
-      description="Protect your business with enterprise-grade cybersecurity solutions. Comprehensive security measures to safeguard your data and systems."
-      icon={<Shield className="w-10 h-10 text-red-400" />}
-      benefits={[
-        'Protect against cyber threats',
-        'Ensure compliance with regulations',
-        'Minimize security risks',
-        '24/7 security monitoring',
-        'Rapid incident response'
-      ]}
-      features={[
-        'Threat detection and prevention',
-        'Security audits and assessments',
-        'Compliance management',
-        'Incident response planning',
-        'Security training programs',
-        'Vulnerability management'
-      ]}
-      pricing="Starting at $299/month"
-      seoTitle="Cybersecurity Solutions - Zion Tech Group"
-      seoDescription="Enterprise-grade cybersecurity solutions to protect your business. Comprehensive security measures and compliance management."
-      seoKeywords="cybersecurity, security solutions, threat protection, compliance, data security"
-    />
+      <Footer />
+    </div>
   )
 }
