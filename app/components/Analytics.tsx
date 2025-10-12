@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 import { useEffect } from 'react';
+=======
+'use client';
+import { useEffect } from 'react';
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface AnalyticsProps {
   children: React.ReactNode;
 }

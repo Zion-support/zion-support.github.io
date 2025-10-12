@@ -6,8 +6,15 @@ interface LazyWrapperProps {
 }
 
 const DefaultFallback = () => (
+<<<<<<< HEAD
   <div className="flex items-center justify-centermin-h-screen">
     <div className="animate-spin rounded-full h-32 w-32 border-b-2border-cyan-400"></div>
+=======
+    <>
+  <div className="flex items-center justify-centermin-h-screen" />
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2border-cyan-400">
+        </div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 )
 
 export const LazyWrapper: React.FC<LazyWrapperProps /> = ({ 
@@ -15,12 +22,14 @@ export const LazyWrapper: React.FC<LazyWrapperProps /> = ({
   fallback = <DefaultFallback / />
 }) => {
   return (
-    <Suspense fallback="{fallback}"  />{children}
+    <>
+    <Suspense fallback="{fallback}">{children}
     </Suspense>
   )
 }
 
 // Higher-order component for lazy loading pages
+    <>
 export const withLazyLoading = <P extends object />(
   Component: ComponentType<P />,
   fallback?: React.ReactNode
@@ -28,6 +37,7 @@ export const withLazyLoading = <P extends object />(
   const LazyComponent = lazy(() => Promise.resolve({ default: Component }))
   
   return (props: P) => (
+    <>
     <LazyWrapper fallback="{fallback}" />
       <LazyComponent {...props} / />
     </LazyWrapper>
@@ -47,3 +57,4 @@ export const preloadComponent = (importFn: () => Promise<any />) => {
 }
 
 export default LazyWrapper;
+    </>

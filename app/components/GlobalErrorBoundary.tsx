@@ -7,7 +7,13 @@
           <Home className="w-4 h-4 mr-2" /  />
         </Link>
                 Go Home
+    <>
               </Link>
             </div>
         </div>
+<<<<<<< HEAD
 ;
+=======
+;
+    </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, Zap, Cloud, Globe, Code, Smartphone, Brain, Wifi } from 'lucide-react';
 
 const Navigation: React.FC = () => {
+<<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -167,11 +172,28 @@ const Navigation: React.FC = () => {
                 to="/"
                 className="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
+=======
+  return (
+    <nav className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
+          <div className="flex items-center">
+            <Link to="/" className="text-2xl font-bold">
+              Zion Tech Group
+            </Link>
+          </div>
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <Link
+                to="/"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               >
                 Home
               </Link>
               <Link
                 to="/about"
+<<<<<<< HEAD
                 className="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
               >
@@ -235,6 +257,18 @@ const Navigation: React.FC = () => {
                   Get Started
                 </Link>
               </div>
+=======
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >
+                About
+              </Link>
+              <Link
+                to="/contact"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Contact
+              </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             </div>
           </div>
         )}

@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 import { createContext, useContext, useEffect} from 'react';
+=======
+'use client';
+import { createContext, useContext, useEffect} from 'react';
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any />) => void;
   trackPageView: (pageName: string) => void;

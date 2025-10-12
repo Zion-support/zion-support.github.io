@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import React  from 'react';
 import { motion } from 'framer-motion';
+=======
+'use client';
+import React from 'react';
+import { motion } from 'framer-motion';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface FuturisticCardProps {
   children: React.ReactNode;
   variant?: 'default' | 'service' | 'testimonial' | 'feature';
@@ -41,13 +48,25 @@ interface FuturisticCardProps {
       {/* Animated border glow */}
       <div className="absolute inset-0 rounded-2 xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacityduration-500blur-sm" />
       {/* Content */}
-      <div className="relativez-10"  />{children}
+    <>
+      <div className="relativez-10">{children}
       </div>
       
       {/* Corner accent */}
       <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-transparent rounded-bl-2 xl opacity-0 group-hover:opacity-100transition-opacityduration-500" />
       {/* Bottom accent */}
+<<<<<<< HEAD
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent opacity-0 group-hover:opacity-100transition-opacityduration-500" />
     </motion.div>
   );
 }
+=======
+    <>
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent opacity-0 group-hover:opacity-100transition-opacityduration-500" / />
+    </motion.div>
+  );
+};
+
+export default FuturisticCard;
+    </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

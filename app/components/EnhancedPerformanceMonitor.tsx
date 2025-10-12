@@ -207,6 +207,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   }
 
   return (
+<<<<<<< HEAD
     <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg max-w-smz-50">
       <h3 className="text-sm font-boldmb-2"  >Performance Monitor</h3>
       <div className="text-xsspace-y-1">
@@ -221,10 +222,32 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       {suggestions.length > 0 && (
         <div className="mt-2 pt-2 border-tborder-gray-600">
           <div className="text-xs font-semiboldmb-1"  >Suggestions:</div>
+=======
+    <>
+    <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg max-w-smz-50">
+        </div>
+      <h3 className="text-sm font-boldmb-2">Performance Monitor</h3>
+      <div className="text-xsspace-y-1">
+        </div>
+        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'Measuring...'}</div>
+        <div>INP: {metrics.inp ? `${metrics.inp.toFixed(0)}ms` : 'Measuring...'}</div>
+        <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}</div>
+        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'Measuring...'}</div>
+        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'Measuring...'}</div>
+        <div>Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}MB` : 'N/A'}</div>
+        <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'Measuring...'}</div>
+      
+      {suggestions.length > 0 && (
+    <>
+        <div className="mt-2 pt-2 border-tborder-gray-600">
+        </div>
+          <div className="text-xs font-semiboldmb-1">Suggestions:</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
           <ul className="text-xsspace-y-1" />
             {suggestions.map((suggestion, index) => (
-              <li key="{index}" className="text-yellow-300"  >• {suggestion}</li>
+              <li key="{index}" className="text-yellow-300">• {suggestion}</li>
             ))}
+    <>
           </ul>
         </div>
       )}
@@ -233,3 +256,4 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 }
 
 export default EnhancedPerformanceMonitor;
+    </>

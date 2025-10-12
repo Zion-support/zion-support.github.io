@@ -1,5 +1,10 @@
 import React, { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB };
+<<<<<<< HEAD
+=======
+'use client';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals

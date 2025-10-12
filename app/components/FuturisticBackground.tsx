@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import { useEffect, useRef} from 'react';
+=======
+'use client';
+import { useEffect, useRef} from 'react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const FuturisticBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement />(null);
   useEffect(() => {
@@ -89,6 +95,10 @@ const FuturisticBackground: React.FC = () => {
 
   return (
     <div className="fixed inset-0pointer-events-nonez-0">
+<<<<<<< HEAD
+=======
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
       <canvas
         ref="{canvasRef}"
         className="w-fullh-fullopacity-30"
@@ -101,7 +111,7 @@ const FuturisticBackground: React.FC = () => {
       {/* Quantum field effect */}
       <div className="absolute inset-0quantum-fieldopacity-30" />
       {/* Plasma effect */}
-      <div className="absolute inset-0plasma-effectopacity-20" /  > </div>
+      <div className="absolute inset-0plasma-effectopacity-20" /> </div>
   );
 };
 

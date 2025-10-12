@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import { useEffect, useRef} from 'react';
+=======
+'use client';
+import { useEffect, useRef} from 'react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface FuturisticGlowProps {
   children: React.ReactNode;
   intensity?: 'low' | 'medium' | 'high';
@@ -58,8 +64,7 @@ export default function FuturisticGlow({
   after: opacity-0 after:transition-opacity after:duration-500,
   hover:after:opacity-100
         ${className}
-      `}
-      />{children}
+      `}>{children}
     </div>
   );
 }
