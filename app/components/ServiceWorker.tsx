@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { ArrowRight, Mail, Brain, BarChart } from 'lucide-react';
+import { ArrowRight, Mail, Brain, BarChart, Shield, Globe, CheckCircle, Phone, MapPin } from 'lucide-react';
 
 const ServiceWorker: React.FC = () => {
   const features = [
@@ -162,3 +162,5 @@ const ServiceWorker: React.FC = () => {
     </div>
   )
 }
+
+export default ServiceWorker;

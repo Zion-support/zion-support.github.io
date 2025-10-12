@@ -16,7 +16,7 @@ import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer'
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './hooks/usePerformanceMonitor';
-import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
+import { AnalyticsProvider } from './app/components/AnalyticsProvider';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import ServiceWorker from './app/components/ServiceWorker';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
@@ -170,6 +170,10 @@ const MachineLearningPage = React.lazy(() => import('./app/machine-learning/page
 const TeamPage = React.lazy(() => import('./app/team/page'));
 const PartnersPage = React.lazy(() => import('./app/partners/page'));
 const StatusPage = React.lazy(() => import('./app/status/page'));
+const EnterprisePage = React.lazy(() => import('./app/enterprise/page'));
+const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'));
+const BusinessIntelligencePage = React.lazy(() => import('./app/business-intelligence/page'));
+const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
 
 // Resource Pages
 const FaqPage = React.lazy(() => import('./app/faq/page'));
@@ -354,6 +358,10 @@ const App: React.FC = () => {
                             <Route path="/team" element={<TeamPage />} />
                             <Route path="/partners" element={<PartnersPage />} />
                             <Route path="/status" element={<StatusPage />} />
+                            <Route path="/enterprise" element={<EnterprisePage />} />
+                            <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                            <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+                            <Route path="/edge-computing" element={<EdgeComputingPage />} />
                             
                             {/* Resource Pages */}
                             <Route path="/faq" element={<FaqPage />} />
