@@ -5,10 +5,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
 import ErrorBoundary from './app/components/ErrorBoundary'
-<<<<<<< HEAD
-import LoadingSpinner from './app/components/LoadingSpinner'
-import SEOHead from './app/components/SEOHead'
-import PerformanceMonitor from './app/components/PerformanceMonitor'
+import OptimizedLoading from './app/components/OptimizedLoading'
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
 
 // Lazy load pages for better performance
