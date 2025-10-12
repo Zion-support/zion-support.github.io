@@ -1,6 +1,12 @@
 'use client'
 import React, { useEffect } from 'react'
 
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
 interface AnalyticsProps {
   enableGoogleAnalytics?: boolean
   enablePerformanceMonitoring?: boolean
@@ -119,6 +125,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         window.removeEventListener('scroll', trackScrollDepth)
       }
     }
+    return undefined
   }
 
   return null

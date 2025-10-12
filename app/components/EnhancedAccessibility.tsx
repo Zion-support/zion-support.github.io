@@ -14,7 +14,9 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     fontSize: 'normal',
     focusVisible: false
   })
-  const { trackEvent } = useAnalytics()
+  // const { trackEvent } = useAnalytics()
+  
+  
   useEffect(() => {
     // Add ARIA landmarks
     const addLandmarks = () => {
@@ -227,7 +229,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       settings,
       updateSettings
     };
-    (window as { accessibilityContext: unknown }).accessibilityContext = context;
+    (window as any).accessibilityContext = context;
   }, [settings, updateSettings]);
   
   return <>{children}</>;

@@ -148,8 +148,7 @@ export const ResponsiveImage: React.FC<ImageProps & {
       src={defaultSrc}
       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       style={{
-        ...props.style,
-        srcSet
+        ...props.style
       }}
     />
   )

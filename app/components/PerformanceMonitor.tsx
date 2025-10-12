@@ -1,5 +1,11 @@
 import React, { useEffect } from 'react';
 
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
@@ -10,8 +16,8 @@ const PerformanceMonitor: React.FC = () => {
           if (entry.entryType === 'largest-contentful-paint') {
             console.log('LCP:', entry.startTime);
             // Send to analytics
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'web_vitals', {
+            if (typeof window !== 'undefined' && window.gtag) {
+              window.gtag('event', 'web_vitals', {
                 name: 'LCP',
                 value: Math.round(entry.startTime),
                 event_category: 'Web Vitals'
@@ -26,11 +32,11 @@ const PerformanceMonitor: React.FC = () => {
       // Monitor First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          console.log('FID:', entry.processingStart - entry.startTime);
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'web_vitals', {
+          console.log('FID:', (entry as any).processingStart - entry.startTime);
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'web_vitals', {
               name: 'FID',
-              value: Math.round(entry.processingStart - entry.startTime),
+              value: Math.round((entry as any).processingStart - entry.startTime),
               event_category: 'Web Vitals'
             });
           }
@@ -48,8 +54,8 @@ const PerformanceMonitor: React.FC = () => {
           }
         }
         console.log('CLS:', clsValue);
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'web_vitals', {
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'web_vitals', {
             name: 'CLS',
             value: Math.round(clsValue * 1000),
             event_category: 'Web Vitals'
