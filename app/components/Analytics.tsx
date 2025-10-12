@@ -1,35 +1,4 @@
-'use client'
-import React, { useEffect } from 'react'
-
-interface AnalyticsProps {
-  enableGoogleAnalytics?: boolean
-  enablePerformanceMonitoring?: boolean
-  enableErrorTracking?: boolean
-  enableUserBehaviorTracking?: boolean
-}
-
-const Analytics: React.FC<AnalyticsProps> = ({
-  enableGoogleAnalytics = true,
-  enablePerformanceMonitoring = true,
-  enableErrorTracking = true,
-  enableUserBehaviorTracking = true
-}) => {
-  useEffect(() => {
-    if (enableGoogleAnalytics) {
-      initializeGoogleAnalytics()
-    }
-    if (enablePerformanceMonitoring) {
-      initializePerformanceMonitoring()
-    }
-    if (enableErrorTracking) {
-      initializeErrorTracking()
-    }
-    if (enableUserBehaviorTracking) {
-      initializeUserBehaviorTracking()
-    }
-  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking])
-
-  const initializeGoogleAnalytics = () => {
+ursor/website-audit-and-update-with-deployment-a178
     // Load Google Analytics
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {

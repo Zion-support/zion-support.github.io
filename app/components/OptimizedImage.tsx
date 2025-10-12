@@ -1,3 +1,4 @@
+ursor/analyze-improve-and-deploy-application-edcb
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -16,7 +17,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 OptimizedImage
-  </
+              </h1>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
@@ -214,3 +215,4 @@ export default OptimizedImagePage
       </section>
     </div>)};export default OptimizedImagePage
 }
+'use client'

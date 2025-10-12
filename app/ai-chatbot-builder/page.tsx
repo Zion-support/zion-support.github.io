@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom'
 import { CheckCircle, ArrowRight, MessageCircle, Users, Zap, Shield, Brain, Globe, Clock, Star, Target, DollarSign } from 'lucide-react'
 
 export default function AIChatbotBuilderPage() {
-  const [activeTab, setActiveTab] = useState('overview')
 
   const features = [
     {
@@ -167,6 +166,27 @@ export default function AIChatbotBuilderPage() {
                 Try Demo
               </Link>
             </div>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Build Your AI Chatbot?</h2>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            Start building intelligent chatbots that will transform your customer experience and drive business growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+            >
+              Start Building Today
+            </Link>
+            <Link
+              to="/ai-services"
+              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+            >
+              View All AI Services
+            </Link>
           </div>
         </div>
       </section>

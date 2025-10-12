@@ -1,9 +1,13 @@
+ursor/enhance-app-with-new-services-and-futuristic-design-00bf
+ursor/website-audit-and-update-with-deployment-a178
+  )
+}
+'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import Navigation from './Navigation'
-import Footer from './Footer'
-import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 const FuturisticBackgroundPage: React.FC = () => {
   const features = [
     {
@@ -62,7 +66,6 @@ const FuturisticBackgroundPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -210,6 +213,8 @@ export default FuturisticBackgroundPage
       </div>
       <Footer />
     </>)};export default FuturisticBackgroundPage
+  )
+}
   )
 }
 

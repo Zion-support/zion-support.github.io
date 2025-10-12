@@ -1,7 +1,28 @@
+'use client';
+
 import React from 'react';
 import { Users, Target, Award, Globe, Zap, Shield, Database, Brain, Clock, Star, TrendingUp } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Zap, 
+  Globe, 
+  Users, 
+  Award, 
+  Target,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Github,
+  Linkedin,
+  Twitter
+} from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const values = [
@@ -27,11 +48,27 @@ const AboutPage: React.FC = () => {
     }
   ];
 
-  const stats = [
-    { number: '500+', label: 'Projects Completed', icon: <Target className="w-6 h-6" /> },
-    { number: '50+', label: 'Enterprise Clients', icon: <Users className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> },
-    { number: '24/7', label: 'Support Available', icon: <Clock className="w-6 h-6" /> }
+  const values = [
+    {
+      icon: Brain,
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value.'
+    },
+    {
+      icon: Shield,
+      title: 'Security',
+      description: 'Enterprise-grade security is at the core of everything we do, ensuring your data and systems are always protected.'
+    },
+    {
+      icon: Users,
+      title: 'Collaboration',
+      description: 'We work closely with our clients as partners, understanding their unique challenges and delivering tailored solutions.'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'With a worldwide presence, we deliver consistent, high-quality services to clients across all continents.'
+    }
   ];
 
   const team = [
@@ -95,8 +132,7 @@ const AboutPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Values Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
@@ -117,8 +153,7 @@ const AboutPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Team Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
@@ -174,9 +209,9 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 

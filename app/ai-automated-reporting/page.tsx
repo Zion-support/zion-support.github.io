@@ -2,6 +2,7 @@ import React from 'react';
 import { CheckCircle, ArrowRight, BarChart3, FileText, TrendingUp, Clock, Shield, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+ursor/website-audit-and-update-with-deployment-a178
 
 const AIAutomatedReportingPage: React.FC = () => {
   const features = [
@@ -100,173 +101,60 @@ const AIAutomatedReportingPage: React.FC = () => {
       popular: false
     }
   ];
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { FileText, Brain, Target } from 'lucide-react'
 
+export default function AIAutomatedReportingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Automated Reporting - Zion Tech Group</title>
-        <meta name="description" content="Transform your reporting process with AI-powered automated reporting solutions. Generate comprehensive reports automatically with real-time analytics." />
-        <meta name="keywords" content="AI reporting, automated reports, business intelligence, data analytics, report generation" />
+        <title>AI Automated Reporting - Zion Tech Group | Intelligent Data Insights</title>
+        <meta name="description" content="Transform your data into actionable insights with our AI-powered automated reporting solutions. Real-time analytics, custom dashboards, and intelligent reporting." />
+        <meta name="keywords" content="AI reporting, automated reporting, data analytics, business intelligence, Zion Tech Group" />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
             AI Automated Reporting
           </h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your reporting process with intelligent AI-powered automation. Generate comprehensive reports automatically with real-time analytics and insights.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Transform your data into actionable insights with intelligent automated reporting solutions that adapt to your business needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              to="/ai-services"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-            >
-              View All AI Services
-            </Link>
-          </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Powerful Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to automate your reporting process
-            </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <FileText className="w-12 h-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Real-time Reports</h3>
+            <p className="text-gray-300">Generate comprehensive reports automatically with real-time data updates and intelligent formatting.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
-                <div className="flex items-center mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Why Choose AI Automated Reporting?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of intelligent automation
-            </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <Brain className="w-12 h-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">AI-Powered Insights</h3>
+            <p className="text-gray-300">Leverage machine learning to identify trends, patterns, and anomalies in your data automatically.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4">
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
-              </div>
-            ))}
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <Target className="w-12 h-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Custom Dashboards</h3>
+            <p className="text-gray-300">Create personalized dashboards that adapt to your specific business requirements and KPIs.</p>
           </div>
         </div>
-      </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Simple Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-              <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
-                {plan.popular && (
-                  <div className="text-center mb-4">
-                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm px-4 py-1 rounded-full">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-300 ml-1">{plan.period}</span>
-                  </div>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  to="/contact"
-                  className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
-                      : 'bg-white/20 text-white hover:bg-white/30'
-                  }`}
-                >
-                  Get Started
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Automate Your Reporting?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of businesses already using our AI-powered reporting solutions.
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Ready to Automate Your Reporting?</h2>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let our AI-powered reporting solutions transform your data into actionable business insights.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Start Free Trial
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              to="/ai-services" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-            >
-              Explore All AI Services
-            </Link>
-          </div>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
+            Get Started Today
+          </button>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

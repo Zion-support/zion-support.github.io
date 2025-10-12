@@ -1,5 +1,7 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+'use client';
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
   title?: string;
@@ -54,60 +56,21 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   title?: string;
   description?: string;
   keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
+  canonical?: string;
+  ogImage?: string;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - AI & IT Solutions",
-  description = "Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.",
-  keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group",
-  image = "/og-image.svg",
-  url = "https://ziontechgroup.com",
-  type = "website"
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, artificial intelligence, and innovative digital solutions.',
+  keywords = 'AI, artificial intelligence, IT solutions, technology, digital transformation, machine learning, automation',
+  canonical,
+  ogImage = '/og-image.jpg'
 }) => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo192.png",
-    "description": "Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
-    ],
-    "foundingDate": "2020",
-    "numberOfEmployees": "10-50",
-    "industry": "Technology",
-    "services": [
-      "AI Solutions",
-      "IT Services", 
-      "Cybersecurity",
-      "Cloud Computing",
-      "Digital Transformation"
-    ]
-  };
 
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={fullCanonical} />
@@ -144,53 +107,45 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
+      <link rel="canonical" href={canonical || window.location.href} />
+      
+      {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={canonical || window.location.href} />
       
       {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={url} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={image} />
-      <meta property="twitter:site" content="@ziontechgroup" />
-      <meta property="twitter:creator" content="@ziontechgroup" />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={image} />
+      <meta property="og:site_name" content="Zion Tech Group" />
       
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      <meta name="twitter:site" content="@ziontechgroup" />
       
-      {/* Fonts */}
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+      {/* Additional SEO */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {/* Favicon */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="apple-touch-icon" href="/logo192.png" />
-      <link rel="manifest" href="/manifest.json" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       </script>
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#0f172a" />
-      <meta name="msapplication-TileColor" content="#0f172a" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-      
-      {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
     </Helmet>
-  )
-}
+  );
+};
 
 export default SEOHead;
 export default SEOHead
+export default SEOHead;

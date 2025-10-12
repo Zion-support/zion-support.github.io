@@ -1,13 +1,4 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
-
-const EnhancedSEOOptimizerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered SEO Optimization',
+ursor/website-audit-and-update-with-deployment-a178
       description: 'Advanced AI technology to automatically optimize your website for search engines'
       description: 'Advanced AI technology to optimize your website for search engines and improve rankings'
     },

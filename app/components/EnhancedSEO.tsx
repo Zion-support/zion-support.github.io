@@ -1,6 +1,5 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+ursor/analyze-improve-and-deploy-application-edcb
+ursor/website-audit-and-update-with-deployment-a178
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const EnhancedSEOPage: React.FC = () => {
