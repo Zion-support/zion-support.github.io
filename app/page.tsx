@@ -1,25 +1,10 @@
 'use client'
-<<<<<<< HEAD
 import React from 'react'
-import SEOHead from './components/SEOHead'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
+import { ArrowRight, Shield, Globe, Database, Code, Cloud, Smartphone, Brain, CheckCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
-=======
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
-=======
-import React, { Suspense, lazy } from 'react'
-import { ArrowRight, Shield, Globe, Database, Code, Cloud, Smartphone, Brain } from 'lucide-react'
+import SEOHead from './components/SEOHead'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import SEOHead from './components/SEOHead'
-import OptimizedLoading from './components/OptimizedLoading'
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
 
 export default function HomePage() {
   const stats = [
