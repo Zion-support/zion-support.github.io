@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 'use client';
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart, Video, Share2, Mail } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -120,36 +117,64 @@ const HomePage: React.FC = () => {
 
   const microSaasProducts = [
     {
+      title: 'Zion AI Video Generator',
+      description: 'Create professional videos in minutes with AI-powered script generation',
+      price: '$29/month',
+      originalPrice: '$79/month',
+      features: ['AI script generation', 'Professional templates', 'One-click publishing', 'Performance analytics'],
+      icon: Video,
+      color: 'from-purple-500 to-pink-500',
+      popular: true
+    },
+    {
+      title: 'Zion AI Social Scheduler Pro',
+      description: 'AI-powered social media management with content generation',
+      price: '$19/month',
+      originalPrice: '$49/month',
+      features: ['AI content generation', 'Smart scheduling', 'Multi-platform support', 'Advanced analytics'],
+      icon: Share2,
+      color: 'from-blue-500 to-cyan-500',
+      popular: true
+    },
+    {
+      title: 'Zion AI Email Marketing Pro',
+      description: 'AI-powered email marketing with segmentation and automation',
+      price: '$29/month',
+      originalPrice: '$79/month',
+      features: ['AI content generation', 'Smart segmentation', 'Automated workflows', 'ROI tracking'],
+      icon: Mail,
+      color: 'from-orange-500 to-red-500',
+      popular: false
+    },
+    {
+      title: 'Zion AI Customer Support Pro',
+      description: 'AI-powered customer support chatbot with multi-channel support',
+      price: '$49/month',
+      originalPrice: '$149/month',
+      features: ['Advanced AI understanding', '24/7 instant responses', 'Smart escalation', 'Real-time analytics'],
+      icon: MessageCircle,
+      color: 'from-green-500 to-emerald-500',
+      popular: true
+    },
+    {
       title: 'Zion Analytics Pro',
       description: 'Advanced business intelligence platform with AI insights',
       price: '$99/month',
+      originalPrice: '$149/month',
       features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Team collaboration'],
       icon: BarChart,
-      color: 'from-blue-500 to-purple-500'
+      color: 'from-indigo-500 to-purple-500',
+      popular: false
     },
     {
       title: 'Zion Security Shield',
       description: 'Comprehensive cybersecurity monitoring and threat detection',
       price: '$149/month',
+      originalPrice: '$199/month',
       features: ['Threat detection', 'Vulnerability scanning', 'Incident response', 'Compliance reporting'],
       icon: Shield,
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      title: 'Zion Content Studio',
-      description: 'AI-powered content creation and management platform',
-      price: '$79/month',
-      features: ['AI content generation', 'Multi-platform publishing', 'Brand consistency', 'Performance tracking'],
-      icon: FileText,
-      color: 'from-green-500 to-teal-500'
-    },
-    {
-      title: 'Zion CRM Intelligence',
-      description: 'Smart customer relationship management with AI insights',
-      price: '$129/month',
-      features: ['Lead scoring', 'Sales forecasting', 'Customer insights', 'Automation workflows'],
-      icon: Users,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-red-500 to-orange-500',
+      popular: false
     }
   ];
 
@@ -170,7 +195,7 @@ const HomePage: React.FC = () => {
 
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
           <div className="absolute inset-0 opacity-20" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }}></div>
@@ -178,7 +203,7 @@ const HomePage: React.FC = () => {
             <div className="text-center">
               <h1 className={`text-4xl md:text-6xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 Transform Your Business with
-                <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <span className="block holographic-text">
                   Advanced AI & IT Solutions
                 </span>
               </h1>
@@ -186,32 +211,34 @@ const HomePage: React.FC = () => {
                 Leading technology company providing cutting-edge artificial intelligence, cloud infrastructure, 
                 cybersecurity, and custom software development services to businesses worldwide.
               </p>
-<<<<<<< HEAD
               <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <Link
-=======
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Link 
-                  to="/ai-services"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group"
-                >
-                  Explore Our Solutions
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link 
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="cyber-button inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Get Started Today
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <Link
                   to="/demo"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105 neon-border"
                 >
                   View Demo
                 </Link>
+              </div>
+              <div className={`mt-8 flex items-center justify-center space-x-8 text-sm text-gray-400 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-400 mr-2" />
+                  Trusted by 500+ companies
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-400 mr-2" />
+                  99% client satisfaction
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-400 mr-2" />
+                  24/7 support
+                </div>
               </div>
             </div>
           </div>
@@ -226,23 +253,8 @@ const HomePage: React.FC = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4">
                     <stat.icon className="h-8 w-8 text-white" />
                   </div>
-<<<<<<< HEAD
                   <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-400">{stat.label}</div>
-=======
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                    {feature.description}
-                  </p>
-                  <Link 
-                    to="/ai-services"
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-block"
-                  >
-                    Learn More →
-                  </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
                 </div>
               ))}
             </div>
@@ -276,7 +288,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* AI Services Section */}
         <section className="py-20 bg-gradient-to-br from-purple-900 to-slate-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -357,33 +368,6 @@ const HomePage: React.FC = () => {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
-=======
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
-              <div className="relative z-10">
-                <h2 className="text-4xl font-bold text-white mb-6">
-                  Ready to Transform Your Business?
-                </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Let's discuss how our AI and IT solutions can drive innovation and growth for your organization.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
-                    to="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                  >
-                    Start Your Project
-                  </Link>
-                  <Link 
-                    to="/about"
-                    className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-                  >
-                    Learn More About Us
-                  </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
                 </div>
               ))}
             </div>
@@ -395,22 +379,34 @@ const HomePage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Micro SAAS Products
+                <span className="holographic-text">Micro SAAS Products</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Ready-to-use software solutions designed to solve specific business challenges with minimal setup.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasProducts.map((product, index) => (
                 <div key={index} className="group">
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
+                  <div className={`cyber-card p-6 h-full ${product.popular ? 'ring-2 ring-purple-500' : ''}`}>
+                    {product.popular && (
+                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                          Most Popular
+                        </span>
+                      </div>
+                    )}
                     <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${product.color} rounded-lg mb-4`}>
                       <product.icon className="h-6 w-6 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3">{product.title}</h3>
                     <p className="text-gray-300 mb-4">{product.description}</p>
-                    <div className="text-2xl font-bold text-green-400 mb-4">{product.price}</div>
+                    <div className="flex items-center space-x-2 mb-4">
+                      <span className="text-2xl font-bold text-green-400">{product.price}</span>
+                      {product.originalPrice && (
+                        <span className="text-lg text-gray-400 line-through">{product.originalPrice}</span>
+                      )}
+                    </div>
                     <ul className="space-y-2 mb-6">
                       {product.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
@@ -420,10 +416,10 @@ const HomePage: React.FC = () => {
                       ))}
                     </ul>
                     <Link
-                      to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
+                      to={`/${product.title.toLowerCase().replace(/\s+/g, '-').replace('zion-', 'zion-')}`}
+                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 cyber-button"
                     >
-                      Start Free Trial
+                      View Details
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>

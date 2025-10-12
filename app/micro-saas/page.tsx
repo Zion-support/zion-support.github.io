@@ -7,7 +7,7 @@ import {
   BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
   Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
   TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
-  Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock
+  Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock, Video, Share2
 } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
@@ -293,10 +293,102 @@ const MicroSaasPage: React.FC = () => {
       rating: 4.8,
       reviews: 156,
       popular: true
+    },
+    {
+      id: 'zion-ai-video-generator',
+      title: 'Zion AI Video Generator',
+      description: 'Create professional videos in minutes with AI-powered script generation and video creation',
+      price: '$29/month',
+      originalPrice: '$79/month',
+      features: [
+        'AI script generation',
+        'Professional video templates',
+        'One-click publishing',
+        'Performance analytics',
+        'Multi-platform support',
+        'HD & 4K export',
+        'Brand customization',
+        'Voice synthesis'
+      ],
+      icon: Video,
+      color: 'from-purple-500 to-pink-500',
+      category: 'Content Creation',
+      rating: 4.9,
+      reviews: 89,
+      popular: true
+    },
+    {
+      id: 'zion-ai-social-scheduler-pro',
+      title: 'Zion AI Social Scheduler Pro',
+      description: 'AI-powered social media management with content generation and smart scheduling',
+      price: '$19/month',
+      originalPrice: '$49/month',
+      features: [
+        'AI content generation',
+        'Smart scheduling',
+        'Multi-platform support',
+        'Advanced analytics',
+        'Auto-reposting',
+        'Hashtag research',
+        'Team collaboration',
+        'Content calendar'
+      ],
+      icon: Share2,
+      color: 'from-blue-500 to-cyan-500',
+      category: 'Social Media',
+      rating: 4.8,
+      reviews: 127,
+      popular: true
+    },
+    {
+      id: 'zion-ai-email-marketing-pro',
+      title: 'Zion AI Email Marketing Pro',
+      description: 'AI-powered email marketing with content generation, segmentation, and automation',
+      price: '$29/month',
+      originalPrice: '$79/month',
+      features: [
+        'AI content generation',
+        'Smart segmentation',
+        'Automated workflows',
+        'Advanced analytics',
+        'A/B testing',
+        'Custom templates',
+        'ROI tracking',
+        'Multi-user support'
+      ],
+      icon: Mail,
+      color: 'from-orange-500 to-red-500',
+      category: 'Email Marketing',
+      rating: 4.7,
+      reviews: 98,
+      popular: false
+    },
+    {
+      id: 'zion-ai-customer-support-pro',
+      title: 'Zion AI Customer Support Pro',
+      description: 'AI-powered customer support chatbot with multi-channel support and analytics',
+      price: '$49/month',
+      originalPrice: '$149/month',
+      features: [
+        'Advanced AI understanding',
+        '24/7 instant responses',
+        'Smart escalation',
+        'Multi-channel support',
+        'Real-time analytics',
+        'Custom integrations',
+        'Team collaboration',
+        'Performance tracking'
+      ],
+      icon: MessageCircle,
+      color: 'from-green-500 to-emerald-500',
+      category: 'Customer Support',
+      rating: 4.9,
+      reviews: 156,
+      popular: true
     }
   ];
 
-  const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'CRM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance'];
+  const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'CRM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance', 'Social Media'];
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredProducts = selectedCategory === 'All' 
