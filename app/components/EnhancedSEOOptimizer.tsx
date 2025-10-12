@@ -1,23 +1,9 @@
-<<<<<<< HEAD
-ursor/website-audit-and-update-with-deployment-a178
+ursor/
       description: 'Advanced AI technology to automatically optimize your website for search engines'
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react'
-
-const EnhancedSEOOptimizerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered SEO Optimization',
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
       description: 'Advanced AI technology to optimize your website for search engines and improve rankings'
     },
     {
       icon: Zap,
-<<<<<<< HEAD
       title: 'Real-time Analysis',
       description: 'Lightning-fast SEO analysis and optimization with instant recommendations'
     },
@@ -30,20 +16,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Optimization',
       description: 'Worldwide SEO optimization and support for international businesses'
-=======
-      title: 'Real-time Optimization',
-      description: 'Get instant SEO insights and recommendations for better search performance'
-    },
-    {
-      icon: Shield,
-      title: 'Technical SEO',
-      description: 'Comprehensive technical SEO audits and optimization for better search visibility'
-    },
-    {
-      icon: Globe,
-      title: 'Global SEO',
-      description: 'Optimize your website for international markets and multiple languages'
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
     }
   ]
 
@@ -62,15 +34,10 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Enhanced SEO Optimizer | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Professional SEO optimization services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SEO optimizer, AI solutions, IT services, Zion Tech Group, search engine optimization" />
         <meta name="description" content="Professional Enhanced SEO Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SEO optimizer, search engine optimization, AI solutions, IT services, Zion Tech Group" />
-=======
-        <meta name="description" content="Professional enhanced SEO optimizer solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="enhanced SEO optimizer, AI solutions, IT services, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
       </Helmet>
       
       {/* Hero Section */}
@@ -80,24 +47,16 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Enhanced SEO
-<<<<<<< HEAD
                 Enhanced SEO Optimizer
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
               </span>
               <br />
               <span className="text-white">Optimizer</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Transform your business with our advanced SEO optimization solutions. 
               Powered by cutting-edge AI technology and industry expertise.
               Optimize your website for search engines with our advanced AI-powered SEO optimization solutions. 
               Improve rankings and drive more organic traffic.
-=======
-              Transform your business with our advanced enhanced SEO optimizer solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
@@ -169,7 +128,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -188,24 +146,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-=======
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Get started with our enhanced SEO optimizer solutions today and experience the future of business technology.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
-              Start Your Journey
-            </button>
-            <button className="border border-gray-300 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-              Contact Us
-            </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
           </div>
         </div>
       </section>

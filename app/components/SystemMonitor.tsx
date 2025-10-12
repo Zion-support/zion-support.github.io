@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -26,18 +25,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   )}
 export default SystemMonitorPage
   </button>
-=======
-import React, { useState, useEffect, useCallback } from 'react'
-import { Monitor, Cpu, HardDrive, Wifi, Battery, Activity } from 'lucide-react'
-
-interface SystemMetrics {
-  cpu: number
-  memory: number
-  disk: number
-  network: number
-  battery: number
-  uptime: number
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
 }
 
 interface SystemMonitorProps {
@@ -134,125 +121,5 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
             <p className="text-gray-300 text-sm">Real-time system performance monitoring</p>
           </div>
         </div>
-<<<<<<< HEAD
     </div>)};export default SystemMonitorPage
 }
-=======
-        <button
-          onClick={toggleMonitoring}
-          className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
-            isMonitoring
-              ? 'bg-red-600 text-white hover:bg-red-700'
-              : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
-          }`}
-        >
-          {isMonitoring ? 'Stop' : 'Start'} Monitoring
-        </button>
-      </div>
-
-      {/* Metrics Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
-            <Cpu className="w-6 h-6 text-blue-400" />
-          </div>
-          <div className={`text-2xl font-bold ${getStatusColor(metrics.cpu)}`}>
-            {metrics.cpu.toFixed(1)}%
-          </div>
-          <div className="text-gray-400 text-sm">CPU</div>
-          <div className="w-full bg-gray-700 rounded-full h-2 mt-2">
-            <div
-              className={`h-2 rounded-full ${getStatusBg(metrics.cpu)}`}
-              style={{ width: `${metrics.cpu}%` }}
-            />
-          </div>
-        </div>
-
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
-            <HardDrive className="w-6 h-6 text-green-400" />
-          </div>
-          <div className={`text-2xl font-bold ${getStatusColor(metrics.memory)}`}>
-            {metrics.memory.toFixed(1)}%
-          </div>
-          <div className="text-gray-400 text-sm">Memory</div>
-          <div className="w-full bg-gray-700 rounded-full h-2 mt-2">
-            <div
-              className={`h-2 rounded-full ${getStatusBg(metrics.memory)}`}
-              style={{ width: `${metrics.memory}%` }}
-            />
-          </div>
-        </div>
-
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
-            <HardDrive className="w-6 h-6 text-purple-400" />
-          </div>
-          <div className={`text-2xl font-bold ${getStatusColor(metrics.disk)}`}>
-            {metrics.disk.toFixed(1)}%
-          </div>
-          <div className="text-gray-400 text-sm">Disk</div>
-          <div className="w-full bg-gray-700 rounded-full h-2 mt-2">
-            <div
-              className={`h-2 rounded-full ${getStatusBg(metrics.disk)}`}
-              style={{ width: `${metrics.disk}%` }}
-            />
-          </div>
-        </div>
-
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
-            <Wifi className="w-6 h-6 text-yellow-400" />
-          </div>
-          <div className={`text-2xl font-bold ${getStatusColor(metrics.network)}`}>
-            {metrics.network.toFixed(1)}%
-          </div>
-          <div className="text-gray-400 text-sm">Network</div>
-          <div className="w-full bg-gray-700 rounded-full h-2 mt-2">
-            <div
-              className={`h-2 rounded-full ${getStatusBg(metrics.network)}`}
-              style={{ width: `${metrics.network}%` }}
-            />
-          </div>
-        </div>
-
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
-            <Battery className="w-6 h-6 text-orange-400" />
-          </div>
-          <div className={`text-2xl font-bold ${getStatusColor(100 - metrics.battery)}`}>
-            {metrics.battery.toFixed(1)}%
-          </div>
-          <div className="text-gray-400 text-sm">Battery</div>
-          <div className="w-full bg-gray-700 rounded-full h-2 mt-2">
-            <div
-              className={`h-2 rounded-full ${getStatusBg(100 - metrics.battery)}`}
-              style={{ width: `${metrics.battery}%` }}
-            />
-          </div>
-        </div>
-
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
-            <Activity className="w-6 h-6 text-cyan-400" />
-          </div>
-          <div className="text-2xl font-bold text-white">
-            {formatUptime(metrics.uptime)}
-          </div>
-          <div className="text-gray-400 text-sm">Uptime</div>
-        </div>
-      </div>
-
-      {/* Status Indicator */}
-      <div className="flex items-center justify-center">
-        <div className={`w-3 h-3 rounded-full mr-2 ${isMonitoring ? 'bg-green-500 animate-pulse' : 'bg-gray-500'}`} />
-        <span className="text-gray-300 text-sm">
-          {isMonitoring ? 'Monitoring Active' : 'Monitoring Stopped'}
-        </span>
-      </div>
-    </div>
-  )
-}
-
-export default SystemMonitor
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07

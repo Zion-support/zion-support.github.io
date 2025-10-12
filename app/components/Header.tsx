@@ -10,7 +10,6 @@ const Header: React.FC = () => {
       <div className="h-16 lg:h-20" />
     </React.Fragment>
   )
-<<<<<<< HEAD
 
     return (
       <>
@@ -22,8 +21,3 @@ const Header: React.FC = () => {
   }
 
   export default Header
-=======
-}
-
-export default Header
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07

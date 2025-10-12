@@ -28,7 +28,6 @@ const Sidebar: React.FC = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-<<<<<<< HEAD
         setIsOpen(false)}
     }
     window.addEventListener('resize', handleResize)
@@ -38,9 +37,6 @@ const Sidebar: React.FC = () => {
     $3
   )}
         setIsOpen(false)}
-=======
-        setIsOpen(false)
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
       }
     }
 
@@ -112,7 +108,6 @@ const Sidebar: React.FC = () => {
     }
   ]
 
-<<<<<<< HEAD
     {title: 'Main',
       items: [}
         { name: 'Home', path: '/', icon: Home },
@@ -189,15 +184,6 @@ const Sidebar: React.FC = () => {
     hours: 'Mon-Fri 9AM-6PM EST'}
   };return (<></>
       {/* Mobile Menu Button */}
-=======
-  const isActive = (href: string) => {
-    return location.pathname === href
-  }
-
-  return (
-    <>
-      {/* Mobile menu button */}
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
       <button
         onClick={toggleSidebar}
         className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 text-white hover:bg-white/20 transition-colors duration-200"
@@ -289,7 +275,6 @@ const Sidebar: React.FC = () => {
               <span className="text-sm">New York, NY</span>
             </div>
           </div>
-<<<<<<< HEAD
           {/* Contact Info */}
           <div className="border-t border-slate-700/50 p-6">
             <h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information</h3>
@@ -344,20 +329,3 @@ export default Sidebar
       </aside>
     </>)};Sidebar.displayName = 'Sidebar';export default Sidebar
 }
-=======
-        </div>
-      </div>
-
-      {/* Overlay */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-30 bg-black/50 lg:hidden"
-          onClick={toggleSidebar}
-        />
-      )}
-    </>
-  )
-}
-
-export default memo(Sidebar)
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07

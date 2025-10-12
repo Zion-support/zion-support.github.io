@@ -12,7 +12,6 @@ interface SEOHeadProps {
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
-<<<<<<< HEAD
   title?: string
   description?: string
   keywords?: string
@@ -59,60 +58,21 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   keywords?: string;
   canonical?: string;
   ogImage?: string;
-=======
-  noIndex?: boolean;
-  noFollow?: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
-<<<<<<< HEAD
   description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, artificial intelligence, and innovative digital solutions.',
   keywords = 'AI, artificial intelligence, IT solutions, technology, digital transformation, machine learning, automation',
   canonical,
   ogImage = '/og-image.jpg'
 }) => {
-=======
-  description = 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your business with cutting-edge technology.',
-  keywords = 'AI solutions, IT services, digital transformation, cloud computing, 5G implementation, micro SAAS, artificial intelligence, business automation',
-  canonical = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noIndex = false,
-  noFollow = false
-}) => {
-  const defaultStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    description: description,
-    url: canonical,
-    logo: 'https://ziontechgroup.com/logo.png',
-    sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup',
-      'https://github.com/ziontechgroup'
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-123-4567',
-      contactType: 'customer service',
-      availableLanguage: 'English'
-    }
-  };
-
-  const finalStructuredData = structuredData || defaultStructuredData;
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
 
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-<<<<<<< HEAD
       <link rel="canonical" href={fullCanonical} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
@@ -136,40 +96,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-=======
-      <link rel="canonical" href={canonical} />
-      
-      {/* Robots Meta */}
-      {noIndex && <meta name="robots" content="noindex" />}
-      {noFollow && <meta name="robots" content="nofollow" />}
-      {!noIndex && !noFollow && <meta name="robots" content="index, follow" />}
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonical} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#3B82F6" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="generator" content="React" />
-      
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
       
       {/* Structured Data */}
       <script type="application/ld+json">
@@ -220,10 +146,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   );
 };
 
-<<<<<<< HEAD
 export default SEOHead;
 export default SEOHead
 export default SEOHead;
-=======
-export default SEOHead;
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
