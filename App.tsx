@@ -6,20 +6,8 @@ import Footer from './app/components/Footer'
 import ErrorBoundary from './app/components/ErrorBoundary'
 import PerformanceMonitor from './app/components/PerformanceMonitor'
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
-
-// Lazy load pages for better performance
-const HomePage = React.lazy(() => import('./app/page'))
-const AboutPage = React.lazy(() => import('./app/about/page'))
-const ContactPage = React.lazy(() => import('./app/contact/page'))
-const PricingPage = React.lazy(() => import('./app/pricing/page'))
-const AIServicesPage = React.lazy(() => import('./app/ai-services/page'))
-const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
-const MicroSaasServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
-const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'))
-const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
-const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
-const AIContentGenerationPage = React.lazy(() => import('./app/ai-content-generation/page'))
-const AIChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'))
+import DynamicRouteLoader from './app/components/DynamicRouteLoader'
+import { getAllRoutes } from './app/routes'
 
 // Loading component for Suspense
 const PageLoader = () => (
@@ -40,21 +28,14 @@ function App() {
                 <Navigation />
                 <Suspense fallback={<PageLoader />}>
                   <Routes>
-                    {/* Main Pages */}
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/pricing" element={<PricingPage />} />
-                    
-                    {/* Service Pages */}
-                    <Route path="/ai-services" element={<AIServicesPage />} />
-                    <Route path="/it-services" element={<ITServicesPage />} />
-                    <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
-                    <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-                    <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                    <Route path="/cloud-services" element={<CloudServicesPage />} />
-                    <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
-                    <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                    {/* Dynamic Routes - All pages are now dynamically loaded */}
+                    {getAllRoutes().map((route) => (
+                      <Route 
+                        key={route.path} 
+                        path={route.path} 
+                        element={<DynamicRouteLoader path={route.path} />} 
+                      />
+                    ))}
                     
                     {/* 404 Route */}
                     <Route path="*" element={

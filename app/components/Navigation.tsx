@@ -29,7 +29,11 @@ export default function Navigation() {
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'AI Automation', path: '/ai-automation', icon: <Settings className="w-4 h-4" /> },
     { name: 'AI Computer Vision', path: '/ai-computer-vision', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Database className="w-4 h-4" /> }
+    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Cybersecurity', path: '/ai-cybersecurity', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <MessageSquare className="w-4 h-4" /> },
+    { name: 'AI Video Editor', path: '/ai-video-editor', icon: <Smartphone className="w-4 h-4" /> },
+    { name: 'AI Project Management', path: '/ai-project-management', icon: <Settings className="w-4 h-4" /> }
   ]
 
   const itServices = [
@@ -38,7 +42,11 @@ export default function Navigation() {
     { name: 'DevOps', path: '/devops', icon: <Server className="w-4 h-4" /> },
     { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Cloud Services', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> }
+    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
+    { name: 'IT Consulting', path: '/it-consulting', icon: <Settings className="w-4 h-4" /> },
+    { name: 'Blockchain', path: '/blockchain', icon: <Database className="w-4 h-4" /> },
+    { name: 'IoT Development', path: '/iot-development', icon: <Smartphone className="w-4 h-4" /> },
+    { name: 'API Development', path: '/api-development', icon: <Code className="w-4 h-4" /> }
   ]
 
   const fiveGServices = [
@@ -71,6 +79,9 @@ export default function Navigation() {
             </Link>
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
+            </Link>
+            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+              Pricing
             </Link>
             
             {/* AI Services Dropdown */}
@@ -151,6 +162,53 @@ export default function Navigation() {
               )}
             </div>
 
+            {/* Micro SaaS Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('micro')}
+                className="flex items-center text-white hover:text-cyan-400 transition-colors"
+              >
+                Micro SaaS
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {activeDropdown === 'micro' && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                  <Link
+                    to="/micro-saas-services"
+                    onClick={closeDropdown}
+                    className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                  >
+                    <Settings className="w-4 h-4" />
+                    <span className="ml-3">All Micro SaaS</span>
+                  </Link>
+                  <Link
+                    to="/micro-saas/ai-content-writer"
+                    onClick={closeDropdown}
+                    className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                  >
+                    <Brain className="w-4 h-4" />
+                    <span className="ml-3">AI Content Writer</span>
+                  </Link>
+                  <Link
+                    to="/micro-saas/analytics-dashboard"
+                    onClick={closeDropdown}
+                    className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                  >
+                    <BarChart3 className="w-4 h-4" />
+                    <span className="ml-3">Analytics Dashboard</span>
+                  </Link>
+                  <Link
+                    to="/micro-saas/expense-tracker"
+                    onClick={closeDropdown}
+                    className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                  >
+                    <Database className="w-4 h-4" />
+                    <span className="ml-3">Expense Tracker</span>
+                  </Link>
+                </div>
+              )}
+            </div>
+
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
             </Link>
@@ -184,6 +242,13 @@ export default function Navigation() {
                 onClick={() => setIsOpen(false)}
               >
                 About
+              </Link>
+              <Link
+                to="/pricing"
+                className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Pricing
               </Link>
               
               {/* Mobile AI Services */}
@@ -234,6 +299,41 @@ export default function Navigation() {
                       {service.name}
                     </Link>
                   ))}
+                </div>
+              </div>
+
+              {/* Mobile Micro SaaS */}
+              <div className="px-3 py-2">
+                <div className="text-cyan-400 font-medium mb-2">Micro SaaS</div>
+                <div className="pl-4 space-y-1">
+                  <Link
+                    to="/micro-saas-services"
+                    onClick={() => setIsOpen(false)}
+                    className="block text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    All Micro SaaS
+                  </Link>
+                  <Link
+                    to="/micro-saas/ai-content-writer"
+                    onClick={() => setIsOpen(false)}
+                    className="block text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    AI Content Writer
+                  </Link>
+                  <Link
+                    to="/micro-saas/analytics-dashboard"
+                    onClick={() => setIsOpen(false)}
+                    className="block text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    Analytics Dashboard
+                  </Link>
+                  <Link
+                    to="/micro-saas/expense-tracker"
+                    onClick={() => setIsOpen(false)}
+                    className="block text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    Expense Tracker
+                  </Link>
                 </div>
               </div>
 
