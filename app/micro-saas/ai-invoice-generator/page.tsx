@@ -1,79 +1,79 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Cloud, Zap, Shield, Clock, DollarSign, CheckCircle, Star, ArrowRight, Database, Server, Globe, Lock, Activity, BarChart3, Users } from 'lucide-react'
+import { FileText, Zap, Brain, Clock, DollarSign, CheckCircle, Star, ArrowRight, Download, Send, Settings, BarChart3, Receipt, CreditCard, Shield } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-const CloudMigrationPage: React.FC = () => {
+const AIInvoiceGeneratorPage: React.FC = () => {
   const features = [
     {
-      icon: <Cloud className="w-6 h-6 text-blue-500" />,
-      title: 'Seamless Migration',
-      description: 'Zero-downtime cloud migration with automated data transfer and validation'
+      icon: <Brain className="w-6 h-6 text-blue-500" />,
+      title: 'AI-Powered Generation',
+      description: 'Automatically generate professional invoices with intelligent data extraction and formatting'
     },
     {
       icon: <Zap className="w-6 h-6 text-green-500" />,
-      title: 'Performance Optimization',
-      description: 'Optimize your cloud infrastructure for maximum performance and cost efficiency'
+      title: 'Instant Processing',
+      description: 'Create and send invoices in seconds with our lightning-fast AI processing'
     },
     {
       icon: <Shield className="w-6 h-6 text-purple-500" />,
-      title: 'Security First',
-      description: 'Enterprise-grade security with compliance and data protection built-in'
+      title: 'Secure & Compliant',
+      description: 'Bank-level security with automatic tax calculations and compliance checks'
     },
     {
-      icon: <Database className="w-6 h-6 text-orange-500" />,
-      title: 'Data Integrity',
-      description: 'Ensure complete data integrity and consistency throughout the migration process'
+      icon: <BarChart3 className="w-6 h-6 text-orange-500" />,
+      title: 'Smart Analytics',
+      description: 'Track payment trends, overdue invoices, and revenue insights with AI analytics'
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Basic Migration',
-      price: '$2,999',
-      period: 'one-time',
-      description: 'Perfect for small businesses',
+      name: 'Starter',
+      price: '$19',
+      period: '/month',
+      description: 'Perfect for freelancers',
       features: [
-        'Up to 10 servers',
-        'Basic cloud setup',
-        'Data migration',
-        'Basic security',
-        '30-day support',
-        'Documentation'
+        'Up to 50 invoices/month',
+        'Basic AI generation',
+        'PDF export',
+        'Email delivery',
+        'Basic templates',
+        'Email support'
       ],
       popular: false
     },
     {
-      name: 'Professional Migration',
-      price: '$9,999',
-      period: 'one-time',
-      description: 'Ideal for growing companies',
+      name: 'Professional',
+      price: '$49',
+      period: '/month',
+      description: 'Ideal for small businesses',
       features: [
-        'Up to 50 servers',
-        'Advanced cloud architecture',
-        'Automated migration',
-        'Enhanced security',
-        '90-day support',
-        'Performance optimization',
-        'Cost optimization',
-        'Monitoring setup'
+        'Up to 500 invoices/month',
+        'Advanced AI features',
+        'Custom branding',
+        'Payment tracking',
+        'Advanced templates',
+        'Priority support',
+        'API access',
+        'Multi-currency support'
       ],
       popular: true
     },
     {
-      name: 'Enterprise Migration',
-      price: '$29,999',
-      period: 'one-time',
+      name: 'Enterprise',
+      price: '$99',
+      period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited servers',
-        'Custom cloud architecture',
-        'Zero-downtime migration',
-        'Enterprise security',
-        '1-year support',
+        'Unlimited invoices',
+        'Premium AI capabilities',
         'White-label solution',
+        'Advanced analytics',
+        '24/7 dedicated support',
+        'Custom integrations',
         'SLA guarantee',
-        'Dedicated team'
+        'Bulk operations'
       ],
       popular: false
     }
@@ -81,33 +81,33 @@ const CloudMigrationPage: React.FC = () => {
 
   const benefits = [
     {
-      title: 'Cost Reduction',
-      description: 'Reduce infrastructure costs by up to 40% with optimized cloud resources',
-      icon: <DollarSign className="w-8 h-8 text-blue-500" />
+      title: 'Save Time & Money',
+      description: 'Reduce invoice creation time by 90% and eliminate manual data entry errors',
+      icon: <Clock className="w-8 h-8 text-blue-500" />
     },
     {
-      title: 'Scalability',
-      description: 'Scale your infrastructure instantly based on demand and business growth',
-      icon: <Activity className="w-8 h-8 text-green-500" />
+      title: 'Professional Branding',
+      description: 'Create branded invoices that reflect your business identity and professionalism',
+      icon: <FileText className="w-8 h-8 text-green-500" />
     },
     {
-      title: 'Reliability',
-      description: 'Achieve 99.9% uptime with redundant cloud infrastructure and failover systems',
-      icon: <Shield className="w-8 h-8 text-purple-500" />
+      title: 'Automated Follow-ups',
+      description: 'AI-powered payment reminders and follow-up sequences to improve collection rates',
+      icon: <Send className="w-8 h-8 text-purple-500" />
     },
     {
-      title: 'Global Reach',
-      description: 'Deploy your applications globally with multi-region cloud infrastructure',
-      icon: <Globe className="w-8 h-8 text-orange-500" />
+      title: 'Multi-Channel Delivery',
+      description: 'Send invoices via email, SMS, or integrate with your existing business tools',
+      icon: <CreditCard className="w-8 h-8 text-orange-500" />
     }
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Cloud Migration Services - Zion Tech Group</title>
-        <meta name="description" content="Professional cloud migration services with zero-downtime migration, performance optimization, and enterprise-grade security for seamless cloud transformation." />
-        <meta name="keywords" content="cloud migration, AWS migration, Azure migration, Google Cloud migration, cloud transformation, cloud consulting" />
+        <title>AI Invoice Generator - Zion Tech Group</title>
+        <meta name="description" content="Intelligent invoice generation with AI-powered automation, professional templates, and automated payment tracking for businesses." />
+        <meta name="keywords" content="AI invoice generator, automated invoicing, invoice templates, payment tracking, business automation" />
       </Helmet>
 
       {/* Hero Section */}
@@ -115,32 +115,32 @@ const CloudMigrationPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Cloud className="w-4 h-4 mr-2" />
-            Professional Cloud Migration
+          <div className="inline-flex items-center bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <FileText className="w-4 h-4 mr-2" />
+            AI-Powered Invoice Automation
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Cloud
+            AI Invoice
             <br />
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Migration
+            <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+              Generator
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform your business with seamless cloud migration services. Move to the cloud with 
-            zero downtime, enhanced security, and optimized performance for maximum ROI.
+            Transform your invoicing process with AI-powered automation. Generate professional invoices, 
+            track payments, and get paid faster with intelligent invoice management.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center"
+              className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 flex items-center"
             >
-              Get Free Assessment
+              Start Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center">
-              <Cloud className="mr-2 h-5 w-5" />
-              View Case Studies
+              <Download className="mr-2 h-5 w-5" />
+              Download Sample
             </button>
           </div>
         </div>
@@ -151,16 +151,16 @@ const CloudMigrationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Migration Services
+              Intelligent Invoice Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              End-to-end cloud migration solutions designed for seamless transformation and maximum efficiency.
+              Powerful AI-driven features that make invoicing effortless and professional.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg mb-4">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg mb-4">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -176,16 +176,16 @@ const CloudMigrationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Cloud Migration?
+              Why Choose AI Invoice Generator?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of professional cloud migration with our proven methodology and expertise.
+              Experience the benefits of intelligent invoice automation for your business.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg mb-4">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg mb-4">
                   {benefit.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
@@ -201,19 +201,19 @@ const CloudMigrationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transparent Migration Pricing
+              Simple Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the migration package that fits your infrastructure size and complexity.
+              Choose the plan that fits your invoicing needs and business size.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:bg-white/20 ${
-                plan.popular ? 'border-blue-500 bg-blue-500/10' : 'border-white/20'
+                plan.popular ? 'border-green-500 bg-green-500/10' : 'border-white/20'
               }`}>
                 {plan.popular && (
-                  <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-6">
+                  <div className="bg-gradient-to-r from-green-500 to-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-6">
                     Most Popular
                   </div>
                 )}
@@ -237,7 +237,7 @@ const CloudMigrationPage: React.FC = () => {
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
+                      ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700'
                       : 'border border-white text-white hover:bg-white hover:text-gray-900'
                   }`}
                 >
@@ -253,19 +253,19 @@ const CloudMigrationPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+            <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Move to the Cloud?
+                Ready to Streamline Your Invoicing?
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Join thousands of businesses already enjoying the benefits of cloud infrastructure with our expert migration services.
+                Join thousands of businesses already using AI-powered invoicing to get paid faster and reduce administrative overhead.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Get Free Assessment
+                  Start Free Trial
                 </Link>
                 <Link 
                   to="/pricing" 
@@ -282,4 +282,4 @@ const CloudMigrationPage: React.FC = () => {
   )
 }
 
-export default CloudMigrationPage
+export default AIInvoiceGeneratorPage

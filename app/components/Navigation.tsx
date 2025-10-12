@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Network, Bot, BarChart3, Settings, Rocket, Lock, Wifi, BarChart, Users, Mail, Phone, MapPin } from 'lucide-react'
+import '../styles/animations.css'
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -21,7 +22,9 @@ const Navigation: React.FC = () => {
         { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
         { name: 'AI Email Marketing', path: '/ai-email-marketing' },
         { name: 'AI Document Processing', path: '/ai-document-processing' },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' }
+        { name: 'AI Voice Assistant', path: '/micro-saas/ai-voice-assistant' },
+        { name: 'AI Project Manager', path: '/micro-saas/ai-project-manager' },
+        { name: 'AI Invoice Generator', path: '/micro-saas/ai-invoice-generator' }
       ]
     },
     {
@@ -30,6 +33,8 @@ const Navigation: React.FC = () => {
       icon: Cloud,
       dropdown: [
         { name: 'Cloud Migration', path: '/cloud-migration' },
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics' },
+        { name: 'AI Blockchain Solutions', path: '/ai-blockchain-solutions' },
         { name: 'DevOps Solutions', path: '/devops-solutions' },
         { name: 'Cybersecurity', path: '/cybersecurity' },
         { name: 'Mobile Development', path: '/mobile-development' },
@@ -83,12 +88,12 @@ const Navigation: React.FC = () => {
   }
 
   return (
-    <nav className="bg-gray-900/95 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
+    <nav className="bg-gray-900/95 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50 glass-morphism">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 group">
-              <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent group-hover:from-purple-300 group-hover:to-blue-300 transition-all duration-300">
+              <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-green-400 bg-clip-text text-transparent group-hover:from-purple-300 group-hover:to-green-300 transition-all duration-300 animate-gradient-x">
                 Zion Tech Group
               </span>
             </Link>

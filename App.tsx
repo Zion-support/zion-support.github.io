@@ -31,6 +31,12 @@ import MicroSaasLeadScoringPage from './app/micro-saas/lead-scoring/page'
 import MicroSaasSeoOptimizerPage from './app/micro-saas/seo-optimizer/page'
 import MicroSaasSocialManagerPage from './app/micro-saas/social-manager/page'
 import MicroSaasSupportBotPage from './app/micro-saas/support-bot/page'
+import AIVoiceAssistantPage from './app/micro-saas/ai-voice-assistant/page'
+import AIProjectManagerPage from './app/micro-saas/ai-project-manager/page'
+import AIInvoiceGeneratorPage from './app/micro-saas/ai-invoice-generator/page'
+import AIPredictiveAnalyticsPage from './app/ai-services/ai-predictive-analytics/page'
+import AIBlockchainSolutionsPage from './app/ai-services/ai-blockchain-solutions/page'
+import CloudMigrationPage from './app/it-services/cloud-migration/page'
 import AIAutomatedReportingPage from './app/ai-automated-reporting/page'
 import AIChatbotBuilderPage from './app/ai-chatbot-builder/page'
 import AIExpenseTrackerPage from './app/ai-expense-tracker/page'
@@ -93,8 +99,13 @@ const App: React.FC = () => {
                   <Route path="/micro-saas/seo-optimizer" element={<MicroSaasSeoOptimizerPage />} />
                   <Route path="/micro-saas/social-manager" element={<MicroSaasSocialManagerPage />} />
                   <Route path="/micro-saas/support-bot" element={<MicroSaasSupportBotPage />} />
+                  <Route path="/micro-saas/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                  <Route path="/micro-saas/ai-project-manager" element={<AIProjectManagerPage />} />
+                  <Route path="/micro-saas/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
                   
                   {/* AI Services */}
+                  <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
+                  <Route path="/ai-blockchain-solutions" element={<AIBlockchainSolutionsPage />} />
                   <Route path="/ai-automated-reporting" element={<AIAutomatedReportingPage />} />
                   <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
                   <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
@@ -103,6 +114,7 @@ const App: React.FC = () => {
                   <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
                   
                   {/* IT Services */}
+                  <Route path="/cloud-migration" element={<CloudMigrationPage />} />
                   <Route path="/it-consulting" element={<ITConsultingPage />} />
                   <Route path="/it-services" element={<ITServicesPage />} />
                   <Route path="/cybersecurity" element={<CybersecurityPage />} />

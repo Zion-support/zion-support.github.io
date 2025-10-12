@@ -4,6 +4,7 @@ import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, TrendingUp } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import './styles/animations.css'
 
 const HomePage: React.FC = () => {
   const features = [
@@ -60,7 +61,7 @@ const HomePage: React.FC = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen futuristic-bg">
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of AI-powered IT solutions, cloud infrastructure, cybersecurity, and digital transformation services." />
@@ -73,11 +74,13 @@ const HomePage: React.FC = () => {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.2)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse" style={{ animationDelay: '3s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in">
             Welcome to
             <br />
-            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-green-400 bg-clip-text text-transparent animate-gradient-x">
               Zion Tech Group
             </span>
           </h1>
@@ -130,11 +133,11 @@ const HomePage: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+              <div key={index} className="glass-morphism rounded-xl p-6 hover-lift hover-glow transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4 animate-float" style={{ animationDelay: `${index * 0.3}s` }}>
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3 animate-neon-glow">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -155,9 +158,11 @@ const HomePage: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div key={index} className="glass-morphism rounded-xl p-6 hover-lift hover-scale transition-all duration-300 animate-slide-in-left" style={{ animationDelay: `${index * 0.15}s` }}>
                 <div className="flex items-center mb-4">
-                  {service.icon}
+                  <div className="animate-rotate-glow">
+                    {service.icon}
+                  </div>
                   <h3 className="text-lg font-semibold text-white ml-3">{service.title}</h3>
                 </div>
                 <p className="text-gray-300 text-sm">{service.description}</p>

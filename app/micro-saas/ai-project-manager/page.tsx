@@ -1,113 +1,113 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Cloud, Zap, Shield, Clock, DollarSign, CheckCircle, Star, ArrowRight, Database, Server, Globe, Lock, Activity, BarChart3, Users } from 'lucide-react'
+import { Calendar, Users, BarChart3, Zap, Brain, Clock, DollarSign, CheckCircle, Star, ArrowRight, Target, TrendingUp, AlertCircle, CheckSquare, MessageSquare } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-const CloudMigrationPage: React.FC = () => {
+const AIProjectManagerPage: React.FC = () => {
   const features = [
     {
-      icon: <Cloud className="w-6 h-6 text-blue-500" />,
-      title: 'Seamless Migration',
-      description: 'Zero-downtime cloud migration with automated data transfer and validation'
+      icon: <Brain className="w-6 h-6 text-blue-500" />,
+      title: 'AI-Powered Planning',
+      description: 'Intelligent project planning with automatic resource allocation and timeline optimization'
     },
     {
-      icon: <Zap className="w-6 h-6 text-green-500" />,
-      title: 'Performance Optimization',
-      description: 'Optimize your cloud infrastructure for maximum performance and cost efficiency'
+      icon: <BarChart3 className="w-6 h-6 text-green-500" />,
+      title: 'Real-time Analytics',
+      description: 'Advanced analytics and insights to track project progress and team performance'
     },
     {
-      icon: <Shield className="w-6 h-6 text-purple-500" />,
-      title: 'Security First',
-      description: 'Enterprise-grade security with compliance and data protection built-in'
+      icon: <Zap className="w-6 h-6 text-purple-500" />,
+      title: 'Automated Workflows',
+      description: 'Streamline project workflows with AI-driven automation and smart notifications'
     },
     {
-      icon: <Database className="w-6 h-6 text-orange-500" />,
-      title: 'Data Integrity',
-      description: 'Ensure complete data integrity and consistency throughout the migration process'
+      icon: <Users className="w-6 h-6 text-orange-500" />,
+      title: 'Team Collaboration',
+      description: 'Enhanced team collaboration with AI-powered communication and task management'
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Basic Migration',
-      price: '$2,999',
-      period: 'one-time',
-      description: 'Perfect for small businesses',
+      name: 'Starter',
+      price: '$39',
+      period: '/month',
+      description: 'Perfect for small teams',
       features: [
-        'Up to 10 servers',
-        'Basic cloud setup',
-        'Data migration',
-        'Basic security',
-        '30-day support',
-        'Documentation'
+        'Up to 5 projects',
+        'Up to 10 team members',
+        'Basic AI planning',
+        'Task management',
+        'Basic reporting',
+        'Email support'
       ],
       popular: false
     },
     {
-      name: 'Professional Migration',
-      price: '$9,999',
-      period: 'one-time',
-      description: 'Ideal for growing companies',
+      name: 'Professional',
+      price: '$99',
+      period: '/month',
+      description: 'Ideal for growing teams',
       features: [
-        'Up to 50 servers',
-        'Advanced cloud architecture',
-        'Automated migration',
-        'Enhanced security',
-        '90-day support',
-        'Performance optimization',
-        'Cost optimization',
-        'Monitoring setup'
+        'Unlimited projects',
+        'Up to 50 team members',
+        'Advanced AI planning',
+        'Resource management',
+        'Advanced analytics',
+        'Priority support',
+        'API access',
+        'Custom integrations'
       ],
       popular: true
     },
     {
-      name: 'Enterprise Migration',
-      price: '$29,999',
-      period: 'one-time',
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited servers',
-        'Custom cloud architecture',
-        'Zero-downtime migration',
-        'Enterprise security',
-        '1-year support',
+        'Unlimited everything',
+        'Advanced AI insights',
+        'Custom workflows',
+        '24/7 dedicated support',
         'White-label solution',
         'SLA guarantee',
-        'Dedicated team'
+        'Custom deployment',
+        'Advanced security'
       ],
       popular: false
     }
   ]
 
-  const benefits = [
+  const capabilities = [
     {
-      title: 'Cost Reduction',
-      description: 'Reduce infrastructure costs by up to 40% with optimized cloud resources',
-      icon: <DollarSign className="w-8 h-8 text-blue-500" />
+      title: 'Smart Resource Allocation',
+      description: 'AI automatically assigns tasks based on team member skills and availability',
+      icon: <Target className="w-8 h-8 text-blue-500" />
     },
     {
-      title: 'Scalability',
-      description: 'Scale your infrastructure instantly based on demand and business growth',
-      icon: <Activity className="w-8 h-8 text-green-500" />
+      title: 'Predictive Analytics',
+      description: 'Forecast project risks and delays before they impact your timeline',
+      icon: <TrendingUp className="w-8 h-8 text-green-500" />
     },
     {
-      title: 'Reliability',
-      description: 'Achieve 99.9% uptime with redundant cloud infrastructure and failover systems',
-      icon: <Shield className="w-8 h-8 text-purple-500" />
+      title: 'Automated Reporting',
+      description: 'Generate comprehensive project reports automatically with AI insights',
+      icon: <BarChart3 className="w-8 h-8 text-purple-500" />
     },
     {
-      title: 'Global Reach',
-      description: 'Deploy your applications globally with multi-region cloud infrastructure',
-      icon: <Globe className="w-8 h-8 text-orange-500" />
+      title: 'Intelligent Notifications',
+      description: 'Smart alerts that keep your team informed without overwhelming them',
+      icon: <AlertCircle className="w-8 h-8 text-orange-500" />
     }
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Cloud Migration Services - Zion Tech Group</title>
-        <meta name="description" content="Professional cloud migration services with zero-downtime migration, performance optimization, and enterprise-grade security for seamless cloud transformation." />
-        <meta name="keywords" content="cloud migration, AWS migration, Azure migration, Google Cloud migration, cloud transformation, cloud consulting" />
+        <title>AI Project Manager - Zion Tech Group</title>
+        <meta name="description" content="Intelligent project management with AI-powered planning, resource allocation, and team collaboration tools for modern businesses." />
+        <meta name="keywords" content="AI project management, project planning, team collaboration, resource management, project analytics" />
       </Helmet>
 
       {/* Hero Section */}
@@ -115,32 +115,32 @@ const CloudMigrationPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Cloud className="w-4 h-4 mr-2" />
-            Professional Cloud Migration
+          <div className="inline-flex items-center bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <Brain className="w-4 h-4 mr-2" />
+            AI-Powered Project Management
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Cloud
+            AI Project
             <br />
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Migration
+            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              Manager
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform your business with seamless cloud migration services. Move to the cloud with 
-            zero downtime, enhanced security, and optimized performance for maximum ROI.
+            Transform your project management with AI-powered planning, intelligent resource allocation, 
+            and automated workflows that keep your teams productive and projects on track.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center"
+              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
             >
-              Get Free Assessment
+              Start Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center">
-              <Cloud className="mr-2 h-5 w-5" />
-              View Case Studies
+              <Calendar className="mr-2 h-5 w-5" />
+              Schedule Demo
             </button>
           </div>
         </div>
@@ -151,16 +151,16 @@ const CloudMigrationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Migration Services
+              Intelligent Project Management
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              End-to-end cloud migration solutions designed for seamless transformation and maximum efficiency.
+              Harness the power of AI to optimize your project workflows and team productivity.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg mb-4">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -171,25 +171,25 @@ const CloudMigrationPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Capabilities Section */}
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Cloud Migration?
+              Advanced AI Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of professional cloud migration with our proven methodology and expertise.
+              Discover how our AI transforms traditional project management into intelligent workflows.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {capabilities.map((capability, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg mb-4">
-                  {benefit.icon}
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  {capability.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{capability.title}</h3>
+                <p className="text-gray-300">{capability.description}</p>
               </div>
             ))}
           </div>
@@ -201,19 +201,19 @@ const CloudMigrationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transparent Migration Pricing
+              Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the migration package that fits your infrastructure size and complexity.
+              Choose the perfect plan for your team size and project complexity.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:bg-white/20 ${
-                plan.popular ? 'border-blue-500 bg-blue-500/10' : 'border-white/20'
+                plan.popular ? 'border-purple-500 bg-purple-500/10' : 'border-white/20'
               }`}>
                 {plan.popular && (
-                  <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-6">
+                  <div className="bg-gradient-to-r from-purple-500 to-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-6">
                     Most Popular
                   </div>
                 )}
@@ -237,7 +237,7 @@ const CloudMigrationPage: React.FC = () => {
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
+                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
                       : 'border border-white text-white hover:bg-white hover:text-gray-900'
                   }`}
                 >
@@ -253,19 +253,19 @@ const CloudMigrationPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Move to the Cloud?
+                Ready to Revolutionize Your Project Management?
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Join thousands of businesses already enjoying the benefits of cloud infrastructure with our expert migration services.
+                Join thousands of teams already using AI-powered project management to deliver better results faster.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Get Free Assessment
+                  Start Free Trial
                 </Link>
                 <Link 
                   to="/pricing" 
@@ -282,4 +282,4 @@ const CloudMigrationPage: React.FC = () => {
   )
 }
 
-export default CloudMigrationPage
+export default AIProjectManagerPage

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Zap, Brain, Cpu, Rocket, Shield, Network, BarChart3, Bot, ArrowRight } from 'lucide-react'
+import '../styles/animations.css'
 
 const Footer: React.FC = () => {
   const aiServices = [
@@ -11,11 +12,16 @@ const Footer: React.FC = () => {
     { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' },
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
     { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
-    { name: 'AI Email Marketing', path: '/ai-email-marketing' }
+    { name: 'AI Email Marketing', path: '/ai-email-marketing' },
+    { name: 'AI Voice Assistant', path: '/micro-saas/ai-voice-assistant' },
+    { name: 'AI Project Manager', path: '/micro-saas/ai-project-manager' },
+    { name: 'AI Invoice Generator', path: '/micro-saas/ai-invoice-generator' }
   ];
 
   const itServices = [
     { name: 'Cloud Migration', path: '/cloud-migration' },
+    { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics' },
+    { name: 'AI Blockchain Solutions', path: '/ai-blockchain-solutions' },
     { name: 'DevOps Solutions', path: '/devops-solutions' },
     { name: 'Cybersecurity', path: '/cybersecurity' },
     { name: 'Mobile Development', path: '/mobile-development' },
@@ -62,7 +68,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white">
+    <footer className="futuristic-bg text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
