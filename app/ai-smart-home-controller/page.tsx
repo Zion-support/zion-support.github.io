@@ -1,25 +1,36 @@
+'use client';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
-export default function AismarthomecontrollerPage() {
+const AiSmartHomeControllerPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <>
       <Helmet>
-        <title>Service - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>Ai Smart Home Controller - Zion Tech Group</title>
+        <meta name="description" content="Ai Smart Home Controller services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="ai-smart-home-controller, AI solutions, IT services" />
       </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4 xl font-bold text-white mb-6"  >Ai Smart Home Controller</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional ai smart home controller services coming soon.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-centermx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5h-5ml-2" />
-        </Link>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Ai Smart Home Controller
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
+            Professional ai smart home controller services by Zion Tech Group.
+          </p>
+          
+          <div className="bg-slate-800 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              We are working on bringing you the most advanced ai smart home controller solutions. 
+              Stay tuned for updates!
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
-}
+};
+
+export default AiSmartHomeControllerPage;

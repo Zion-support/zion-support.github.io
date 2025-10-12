@@ -1,45 +1,36 @@
+'use client';
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
-export default function InfrastructureManagementPage() {
+const InfrastructureManagementPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <>
       <Helmet>
-        <title />Infrastructure Management Services - Zion Tech Group</title>
-        <meta name="description" content="Complete IT infrastructure setup, management, and optimization services." />
+        <title>Infrastructure Management - Zion Tech Group</title>
+        <meta name="description" content="Infrastructure Management services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="infrastructure-management, AI solutions, IT services" />
       </Helmet>
       
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <h1 className="w-5h-5ml-2">Infrastructure Management
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Infrastructure Management
           </h1>
-          <p className="w-5h-5ml-2">Complete IT infrastructure setup, management, and optimization services.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
+            Professional infrastructure management services by Zion Tech Group.
           </p>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Link
-          to="/contact"
-          className="bg-gradient-to-rfrom-blue-600to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-        >
-          Get Started
-              
-          <ArrowRight className="w-5h-5ml-2" />
-        </Link>
-            <Link to="/it-services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">All IT Services
-            </Link>
+          
+          <div className="bg-slate-800 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              We are working on bringing you the most advanced infrastructure management solutions. 
+              Stay tuned for updates!
+            </p>
           </div>
-      </section>
-
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <h2 className="w-5h-5ml-2" />Coming Soon</h2>
-          <p className="w-5h-5ml-2">We're developing comprehensive infrastructure management services. Contact us to discuss your infrastructure needs.
-          </p>
-          <Link to="/contact" className="bg-gradient-to-rfrom-purple-600to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700transition-all duration-300">Contact Us
-          </Link>
         </div>
-      </section>
-    </div>
+      </div>
+    </>
   );
-}
+};
+
+export default InfrastructureManagementPage;

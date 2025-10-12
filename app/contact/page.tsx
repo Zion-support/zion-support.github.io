@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -6,44 +7,28 @@ const ContactPage: React.FC = () => {
     <>
       <Helmet>
         <title>Contact - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations and support." />
+        <meta name="description" content="Contact services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="contact, AI solutions, IT services" />
       </Helmet>
-
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xlmx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xlmd:text-6xl font-bold text-white  mb-6">
-              Contact Us
-            </h1>
-            <p className="text-xltext-gray-300 mb-8 max-w-3xl  mx-auto">
-              Ready to transform your business? Get in touch with our team of experts.
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Contact
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
+            Professional contact services by Zion Tech Group.
+          </p>
+          
+          <div className="bg-slate-800 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              We are working on bringing you the most advanced contact solutions. 
+              Stay tuned for updates!
             </p>
-            <div className="max-w-mdmx-auto">
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-fullpx-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
-                />
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-fullpx-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
-                />
-                <textarea
-                  placeholder="Your Message"
-                  rows={4}
-                  className="w-fullpx-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  className="w-fullbg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
+          </div>
         </div>
+      </div>
     </>
   );
 };

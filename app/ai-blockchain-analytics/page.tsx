@@ -1,27 +1,35 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
 const AiBlockchainAnalyticsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <>
       <Helmet>
-        <title>AI Blockchain Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional AI blockchain analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>Ai Blockchain Analytics - Zion Tech Group</title>
+        <meta name="description" content="Ai Blockchain Analytics services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="ai-blockchain-analytics, AI solutions, IT services" />
       </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">AI Blockchain Analytics</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional AI blockchain analytics services coming soon.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Ai Blockchain Analytics
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
+            Professional ai blockchain analytics services by Zion Tech Group.
+          </p>
+          
+          <div className="bg-slate-800 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              We are working on bringing you the most advanced ai blockchain analytics solutions. 
+              Stay tuned for updates!
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
