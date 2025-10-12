@@ -318,9 +318,12 @@ const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
 <<<<<<< HEAD
     </div>
   );
+<<<<<<< HEAD
+=======
 =======
   </div>);
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+>>>>>>> origin/main
 };
 
 export default SearchModal;

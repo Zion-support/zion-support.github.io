@@ -168,8 +168,12 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
           <div className="relative w-fullmax-w-md">{content}
           </div>
       </div>
+<<<<<<< HEAD
+    );
+=======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
   );
+>>>>>>> origin/main
   }
 
   return content;

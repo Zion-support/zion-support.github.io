@@ -1,53 +1,35 @@
-'use client'
+'use client';
+import React, { useEffect } from 'react';
 
-    {icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'}
-    },
-    {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'}
-    },
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'}
-    },
-    {icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'}
-    }
-  }, [])
-
-  const registerServiceWorker = async () => {
-    try {
-      const registration = await navigator.serviceWorker.register('/sw.js')
-      setRegistration(registration)
-      setIsRegistered(true)
-
-      // Listen for updates
-      registration.addEventListener('updatefound', () => {
-        const newWorker = registration.installing
-        if (newWorker) {
-          newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed') {
-              if (navigator.serviceWorker.controller) {
-                setUpdateAvailable(true)
-                onUpdateAvailable?.()
-              } else {
-                onUpdateInstalled?.()
-              }
-            }
+const ServiceWorkerRegistration: React.FC = () => {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker
+          .register('/sw.js')
+          .then((registration) => {
+            console.log('SW registered: ', registration);
           })
+<<<<<<< HEAD
+          .catch((registrationError) => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+=======
         }
       })
     } catch (error) {
       console.error('Service worker registration failed: ', error)
+>>>>>>> origin/main
     }
-  }
+  }, []);
 
-  const updateServiceWorker = async () => {
-    if (!registration) return
+  return null;
+};
 
+<<<<<<< HEAD
+export default ServiceWorkerRegistration;
+=======
     setIsUpdating(true)
     try {
       await registration.update()
@@ -269,3 +251,4 @@
     </div>)};export default ServiceWorkerRegistrationPage
 }
     </>
+>>>>>>> origin/main

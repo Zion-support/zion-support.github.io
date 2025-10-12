@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
+
+const OptimizedImagePage: React.FC = () => {
+=======
+<<<<<<< HEAD
 import React  from 'react';
 =======
 import React from 'react';
@@ -13,6 +21,7 @@ import { ArrowRight } from 'lucide-react';
 =======
 import { ArrowRight, Mail } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-33de
+>>>>>>> origin/main
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
@@ -31,6 +40,7 @@ import { ArrowRight, Mail } from 'lucide-react';
         <meta name="description" content="Professional OptimizedImage services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
         <meta name="keywords" content="OptimizedImage, AI solutions, IT services, Zion Tech Group, optimizedimage" / / />
       </Helmet>
+      
       {/* Hero Section */}
     <>
       <section className="relative py-20 px-4sm:px-6lg:px-8" />
@@ -69,6 +79,9 @@ import { ArrowRight, Mail } from 'lucide-react';
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
                 Learn More
+<<<<<<< HEAD
+              </button>
+=======
 <<<<<<< HEAD
   </
 =======
@@ -208,18 +221,17 @@ import { ArrowRight, Mail } from 'lucide-react';
     <>
               </button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+>>>>>>> origin/main
             </div>
         </div>
       </section>
     </div>
-  )}
-export default OptimizedImagePage
-  </button>
-  </button>
-  </h2>
-  </button>
-  </span>
+  );
+};
 
+<<<<<<< HEAD
+export default OptimizedImagePage;
+=======
 interface OptimizedImageProps {
   src: string,
   alt: string
@@ -280,3 +292,4 @@ const OptimizedImage: React.FC<OptimizedImageProps /> = ({
   };
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+>>>>>>> origin/main

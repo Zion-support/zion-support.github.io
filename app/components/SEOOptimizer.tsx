@@ -64,26 +64,30 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       mainEntity: [
         {
           '@type': 'Question',
-          name': 'What services does Zion Tech Group offer?',
+          'name': 'What services does Zion Tech Group offer?',
           acceptedAnswer: {
             '@type': 'Answer',
+<<<<<<< HEAD
+            'text': 'Zion Tech Group offers comprehensive AI solutions, IT services, 5G implementation, cloud migration, cybersecurity, mobile development, and micro SAAS platforms for businesses of all sizes.'
+=======
             text': 'Zion Tech Group offers comprehensive AI solutions, IT services, 5 G implementation, cloud migration, cybersecurity, mobile development, and micro SAAS platforms for businesses of all sizes.'
+>>>>>>> origin/main
           }
         },
         {
           '@type': 'Question',
-          name': 'How can I contact Zion Tech Group?',
+          'name': 'How can I contact Zion Tech Group?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text': 'You can contact us at +1 (302) 464-0950, email us at kleber@ziontechgroup.com, or visit our office at 364 E Main St STE 1008, Middletown, DE 19709.'
+            'text': 'You can contact us at +1 (302) 464-0950, email us at kleber@ziontechgroup.com, or visit our office at 364 E Main St STE 1008, Middletown, DE 19709.'
           }
         },
         {
           '@type': 'Question',
-          name': 'What is the typical response time for support?',
+          'name': 'What is the typical response time for support?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text': 'We provide 24/7 support with an average response time of 48 hours for general inquiries and immediate response for critical issues.'
+            'text': 'We provide 24/7 support with an average response time of 48 hours for general inquiries and immediate response for critical issues.'
           }
         }
       ]

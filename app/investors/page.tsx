@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+
+const InvestorsPage: React.FC = () => {
+=======
+<<<<<<< HEAD
 import React  from 'react';
 =======
 import React from 'react';
@@ -7,6 +15,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function PagePage() {
+>>>>>>> origin/main
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
@@ -57,5 +66,11 @@ export default function PagePage() {
         </Link>
       </div>
   );
+<<<<<<< HEAD
+};
+
+export default InvestorsPage;
+=======
 }
     </>
+>>>>>>> origin/main

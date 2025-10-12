@@ -30,7 +30,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     loadTime: null
   })
 
-  const [isMonitoring, setIsMonitoring] = useState(false)
+  // Removed unused isMonitoring state
 
   useEffect(() => {
     const startTime = performance.now()
@@ -164,7 +164,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     // Cleanup
     return () => {
       clearTimeout(reportTimer)
-      setIsMonitoring(false)
     }
   }, [metrics])
 

@@ -1,10 +1,15 @@
-ursor/
-      description: 'Advanced AI technology to automatically optimize your website for search engines',
-      description: 'Advanced AI technology to optimize your website for search engines and improve rankings',
-    },
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Brain, Zap, Shield, Globe, ArrowRight, CheckCircle } from 'lucide-react';
+
+const EnhancedSEOOptimizerPage: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered SEO Optimization',
+      description: 'Advanced AI technology to automatically optimize your website for search engines',
+    },
+    {
       icon: Zap,
       title: 'Real-time Analysis',
       description: 'Lightning-fast SEO analysis and optimization with instant recommendations',

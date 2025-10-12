@@ -1,13 +1,18 @@
+<<<<<<< HEAD
+'use client';
+import React, { memo, useMemo } from 'react';
+=======
 import { memo, useMemo} from 'react';
 'use client'
+>>>>>>> origin/main
 
 interface OptimizedLoadingSpinnerProps {
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars'
-  text?: string
-  className?: string
-  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
-  fullScreen?: boolean
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
+  text?: string;
+  className?: string;
+  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
+  fullScreen?: boolean;
 }
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
@@ -28,7 +33,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
         xl: 'h-16 w-16',
       }),
       []
-    )
+    );
 
     const textSizeClasses = useMemo(
       () => ({
@@ -39,7 +44,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
         xl: 'text-xl',
       }),
       []
-    )
+    );
 
     const colorClasses = useMemo(
       () => ({
@@ -50,12 +55,22 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
         purple: 'text-purple-500',
       }),
       []
-    )
+    );
 
     const renderSpinner = () => {
       switch (variant) {
         case 'dots':
           return (
+<<<<<<< HEAD
+            <div className="flex space-x-1">
+              {[0, 1, 2].map((i) => (
+                <div
+                  key={i}
+                  className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`}
+                  style={{
+                    animationDelay: `${i * 0.2}s`,
+                    animationDuration: '1s',
+=======
 <<<<<<< HEAD
     <div className="flex space-x-1">
 =======
@@ -136,19 +151,86 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
                   style="{{"
                     height: `${8 + i * 4}px`,
                     animationDelay: `${i * 0.1}s`,
+>>>>>>> origin/main
                   }}
                 />))}
             </div>
-          )
-        default:
+          );
+        case 'pulse':
           return (
+<<<<<<< HEAD
+            <div
+              className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`}
+            />
+          );
+        case 'spinner':
+          return (
+            <div
+              className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`}
+            />
+          );
+        case 'skeleton':
+          return (
+            <div className="space-y-2">
+              <div className={`h-4 ${colorClasses[color]} bg-current rounded animate-pulse`} />
+              <div className={`h-4 ${colorClasses[color]} bg-current rounded animate-pulse w-3/4`} />
+            </div>
+          );
+        case 'bars':
+          return (
+            <div className="flex space-x-1">
+              {[0, 1, 2, 3].map((i) => (
+                <div
+                  key={i}
+                  className={`w-1 ${colorClasses[color]} bg-current rounded animate-pulse`}
+                  style={{
+                    animationDelay: `${i * 0.1}s`,
+                    animationDuration: '1s',
+                    height: `${8 + i * 4}px`,
+                  }}
+                />
+              ))}
+            </div>
+          );
+        default:
+          return null;
+=======
     <div
               className="{`${sizeClasses[size]}" border-2 border-current border-t-transparent rounded-full animate-spin`}
             / />
           )
+>>>>>>> origin/main
       }
+    };
+
+    const content = (
+      <div className={`flex flex-col items-center justify-center ${className}`}>
+        {renderSpinner()}
+        {text && (
+          <p className={`mt-2 ${textSizeClasses[size]} ${colorClasses[color]}`}>
+            {text}
+          </p>
+        )}
+      </div>
+    );
+
+    if (fullScreen) {
+      return (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+          {content}
+        </div>
+      );
     }
 
+<<<<<<< HEAD
+    return content;
+  }
+);
+
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
+
+export default OptimizedLoadingSpinner;
+=======
 <<<<<<< HEAD
     const containerClasses = fullScreen
       ? 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center'
@@ -195,3 +277,4 @@ OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default O
 =======
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+>>>>>>> origin/main

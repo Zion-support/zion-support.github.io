@@ -7,6 +7,12 @@ const Header: React.FC = () => {
     <header>
       <Navigation />
     </header>
+<<<<<<< HEAD
+  )
+}
+
+export default Header
+=======
   );
 };
 
@@ -17,3 +23,4 @@ export default Header;
       <Navigation / />
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+>>>>>>> origin/main

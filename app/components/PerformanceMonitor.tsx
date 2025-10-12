@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
 <<<<<<< HEAD
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+=======
+<<<<<<< HEAD
 import { getCLS, getFID, getFCP, getLCP, getTTFB };
 <<<<<<< HEAD
 =======
@@ -7,12 +10,21 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB };
 =======
 import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
 >>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
+>>>>>>> origin/main
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     const monitorCoreWebVitals = () => {
+<<<<<<< HEAD
+      if (typeof window !== 'undefined') {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
+=======
 <<<<<<< HEAD
       if ('web-vitals' in, window) {
           getCLS(console.log);
@@ -29,6 +41,7 @@ const PerformanceMonitor: React.FC = () => {
         onLCP(console.log);
         onTTFB(console.log);
 >>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
+>>>>>>> origin/main
       }
     };
 

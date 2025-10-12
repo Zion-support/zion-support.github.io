@@ -2,9 +2,13 @@
 import React  from 'react';
 =======
 import React from 'react';
+<<<<<<< HEAD
+import { ArrowRight, Brain, Shield, Zap, CheckCircle } from 'lucide-react';
+=======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { ArrowRight } from 'lucide-react';
 'use client'
+>>>>>>> origin/main
 
 
 const EnhancedLoadingSkeletonPage: React.FC = () => {

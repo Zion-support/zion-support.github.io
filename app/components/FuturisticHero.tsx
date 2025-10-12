@@ -1,9 +1,15 @@
 <<<<<<< HEAD
+'use client';
+import React from 'react';
+import { Brain, Zap, Shield, Globe, ArrowRight, CheckCircle } from 'lucide-react';
+=======
+<<<<<<< HEAD
 import React  from 'react';
 =======
 import React from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 'use client'
+>>>>>>> origin/main
 
 const FuturisticHeroPage: React.FC = () => {
   const features = [
@@ -211,6 +217,13 @@ const FuturisticHeroPage: React.FC = () => {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
+  );
+};
+
+export default FuturisticHeroPage;
+=======
   )
 };
     </>
+>>>>>>> origin/main

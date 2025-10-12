@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+'use client';
+import React from 'react';
+import { ArrowRight, Brain, Cloud, Shield, Globe } from 'lucide-react';
+=======
+<<<<<<< HEAD
 import React  from 'react';
 =======
 import React from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { ArrowRight } from 'lucide-react';
 'use client'
+>>>>>>> origin/main
 
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
@@ -132,6 +138,12 @@ const EnhancedServicesShowcase: React.FC = () => {
     <>
         </div>
     </div>
+<<<<<<< HEAD
+  );
+};
+
+export default EnhancedServicesShowcase;
+=======
   )
 <<<<<<< HEAD
 };
@@ -139,3 +151,4 @@ const EnhancedServicesShowcase: React.FC = () => {
 };
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+>>>>>>> origin/main
