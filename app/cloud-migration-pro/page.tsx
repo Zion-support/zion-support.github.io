@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Cloud, Shield, Zap, CheckCircle } from 'lucide-react';
+import { Cloud, Shield, Zap, CheckCircle, Database } from 'lucide-react';
 import Layout from '../layout';
 
 export default function CloudMigrationProPage() {
@@ -178,8 +178,8 @@ export default function CloudMigrationProPage() {
                   Comprehensive cloud migration solutions
                 </p>
               </div>
-            ))}
-          </div>
+            </div>
+          </section>
 
           {/* Migration Process Section */}
           <div className="mb-16">

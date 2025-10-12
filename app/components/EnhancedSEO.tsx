@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
 
 interface SEOProps {
   title?: string;
@@ -14,23 +12,26 @@ interface SEOProps {
   structuredData?: object;
   noindex?: boolean;
   nofollow?: boolean;
-const EnhancedSEO: React.FC<SEOProps /> = ({
-  const title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered solutions, IT services, 5 G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
-  keywords = 'AI solutions, artificial intelligence, IT services, 5 G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
+}
+
+const EnhancedSEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
+  keywords = 'AI solutions, artificial intelligence, IT services, 5G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
   canonical,
-  ogImage = 'https: //ziontechgroup.com/og-image.jpg',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
-  noindex = false,;
-  nofollow = false;
-const defaultStructuredData = {
-    "@context": "https: //schema.org",
+  noindex = false,
+  nofollow = false
+}) => {
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": "https: //ziontechgroup.com",
-    "logo": "https: //ziontechgroup.com/logo.png",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
     "description": description,
     "foundingDate": "2020",
     "founder": {
@@ -52,8 +53,8 @@ const defaultStructuredData = {
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-      "https: //linkedin.com/company/ziontechgroup",
-      "https: //twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup",
       "https://github.com/ziontechgroup"
     ],
     "offers": {
@@ -61,21 +62,32 @@ const defaultStructuredData = {
       "offerCount": "50+",
       "lowPrice": "99",
       "highPrice": "2999",
-      "priceCurrency": "USD";
+      "priceCurrency": "USD"
+    }
+  };
+
   const finalStructuredData = structuredData || defaultStructuredData;
-  const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
+  const canonicalUrl = canonical || `https://ziontechgroup.com${typeof window !== 'undefined' ? window.location.pathname : ''}`;
+
   return (
-    <div>Content</div>
-  );
-        <title>5G Data Analytics - Zion Tech Group</title>
-      {/* Basic Meta Tags */}
+    <Helmet>
       <title>{title}</title>
-      {/* Canonical URL */}
-      {/* Open Graph Meta Tags */}
-      {/* Twitter Card Meta Tags */}
-      {/* Additional SEO Meta Tags */}
-      {/* Performance Hints */}
-      {/* Structured Data */}
-      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <link rel="canonical" href={canonicalUrl} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:type" content={ogType} />
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      {noindex && <meta name="robots" content="noindex" />}
+      {nofollow && <meta name="robots" content="nofollow" />}
+      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
+    </Helmet>
+  );
+};
 
-
+export default EnhancedSEO;

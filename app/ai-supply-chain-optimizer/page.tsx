@@ -3,7 +3,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Truck, Package, TrendingUp, Shield, Target, Globe, Clock, CheckCircle } from 'lucide-react';
-import { Truck, Package, TrendingUp, Shield } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -329,33 +328,6 @@ export default function AISupplyChainOptimizerPage() {
               </div>
             </div>
           </section>
-
-            {/* CTA Section */}
-            <div className="text-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Optimize Your Supply Chain?
-              </h2>
-              <p className="text-gray-300 mb-8">
-                Start your free 14-day trial today. No credit card required. Join 500+ companies optimizing their supply chains.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton
-                  variant="primary"
-                  size="lg"
-                  onClick={() => window.open('/contact', '_blank')}
-                >
-                  Start Free Trial
-                </FuturisticButton>
-                <FuturisticButton
-                  variant="secondary"
-                  size="lg"
-                  onClick={() => window.open('/contact', '_blank')}
-                >
-                  Contact Sales
-                </FuturisticButton>
-              </div>
-            </div>
-          </div>
         </div>
       </FuturisticBackground>
     </>
