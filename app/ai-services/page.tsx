@@ -1,14 +1,13 @@
+'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {;
-'use client';
+import {
   Brain, Zap, Shield, BarChart, MessageCircle, Eye, Mic, 
   FileText, Users, Heart, DollarSign, Target, Settings, 
   CheckCircle, ArrowRight, Star, TrendingUp,
   Cpu
 } from 'lucide-react';
-import { Brain, Zap, Shield, BarChart, MessageCircle, Eye, Mic, FileText, Users, Target, Settings, CheckCircle, ArrowRight, Clock, TrendingUp, Workflow } from 'lucide-react';
 
 const AiServicesPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
