@@ -1,55 +1,52 @@
 import React from 'react';
-constAiIotAnalyticsPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>AiIotAnalytics - ZionTechGroup</title>
-        <metaname="description" content="AiIotAnalyticsservicesbyZionTechGroup. ProfessionalAIandITsolutions." / / />
-        <metaname="keywords" content="ai-iot-analytics, AIsolutions, ITservices" / / />
-      </Helmet>
-    </>
-      
-      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
-        <divclassName="c o ntainermx-autopx-4py-16">
-          <divclassName="t e xt-centermb-16">
-            <h1 className="t e xt-4xlmd:text-6 xlfont-boldtext-whitemb-6" />
-              <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"  />AiIotAnalytics
-              </span>
-            </h1>
-            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">
-              ProfessionalaiiotanalyticsservicesbyZionTechGroup.
-    <>
-            </p>
-          </div>
-    </>
-
-          <divclassName="b g-gradient-to-brfrom-purple-900/50 to-blue-900/50 backdrop-blur-smborderborder-purple-500/20 rounded-xlp-8text-center">
-            <h2 className="t e xt-2 xlfont-boldtext-whitemb-4"  >ComingSoon</h2>
-            <pclassName="t e xt-gray-300 mb-6">
-              We'reworkingonbringingyoucomprehensiveaiiotanalyticssolutions. 
-              Contactustolearnmoreaboutourservices.
-    <>
-            </p>
-            <buttonclassName="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-600transition-allduration-300">ContactUs
-            </button>
-          </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
+constAiIotAnalyticsPage: React.FC = () => {return (;
+    <>;
+      <Helmet>;
+        <title>AiIotAnalytics - ZionTechGroup</title>;
+        <metaname="description" content="AiIotAnalyticsservicesbyZionTechGroup. ProfessionalAIandITsolutions." / / />;
+        <metaname="keywords" content="ai-iot-analytics, AIsolutions, ITservices" / / />;
+      </Helmet>;
+    </>;
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">;
+        <divclassName="c o ntainermx-autopx-4py-16">;
+          <divclassName="t e xt-centermb-16">;
+            <h1 className="t e xt-4xlmd: text-6 xlfont-boldtext-whitemb-6" />;
+              <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"  />AiIotAnalytics;
+              </span>;
+            </h1>;
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">;
+              ProfessionalaiiotanalyticsservicesbyZionTechGroup.;
+    <>;
+            </p>;
+          </div>;
+    </>;
+          <divclassName="b g-gradient-to-brfrom-purple-900/50 to-blue-900/50 backdrop-blur-smborderborder-purple-500/20 rounded-xlp-8text-center">;
+            <h2 className="t e xt-2 xlfont-boldtext-whitemb-4"  >ComingSoon</h2>;
+            <pclassName="t e xt-gray-300 mb-6">;
+              We'reworkingonbringingyoucomprehensiveaiiotanalyticssolutions.;
+              Contactustolearnmoreaboutourservices.;
+    <>;
+            </p>;
+            <buttonclassName="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-600transition-allduration-300">ContactUs;
+            </button>;
+          </div>;
+      </div>;
+        </div>;
+      </div>;
+          </div>;
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+          </div>;
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+      </div>;
+    </>;
   );
 };
-
+;
 exportdefaultAiIotAnalyticsPage;
-    </>
+    </>;

@@ -1,198 +1,198 @@
-importReact, { useState, useEffect } from 'react';
-import { Link   } from 'react-router-dom';
-import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight, Database, Settings, Target, MessageSquare, Eye, Cpu3, FileText, Search, Bot, Palette, Camera, Music, Video, ShoppingCart, CreditCard, Heart, Stethoscope, Briefcase, Calculator, Calendar, Smartphone   } from 'lucide-react';
-
+importReact, {useState, useEffect } from 'react';
+import {Link   } from 'react-router-dom';
+import {ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight, Database, Settings, Target, MessageSquare, Eye, Cpu3, FileText, Search, Bot, Palette, Camera, Music, Video, ShoppingCart, CreditCard, Heart, Stethoscope, Briefcase, Calculator, Calendar, Smartphone   } from 'lucide-react';
+;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   // Removedunusedstatevariablesconst [isScrolled, setIsScrolled] = useState(false);
-
+;
       setIsScrolled(window.scrollY > 50);
     };
-
+;
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+;
     setIsMenuOpen(false);
     setIsServicesOpen(false);
   };
-
+;
     setIsMenuOpen(!isMenuOpen);
       closeAllMenus();
     }
   };
-
+;
     setIsServicesOpen(!isServicesOpen);
   };
-
+;
   ];
-
+;
   ];
-
+;
   ];
-
-  // RemovedspecializedServicesasitwasunused
-
-    }`}>
-      <divclassName="c o ntainermx-autopx-4">
-        <divclassName="f l exitems-centerjustify-betweenh-16">
+;
+  // RemovedspecializedServicesasitwasunused;
+    }`}>;
+      <divclassName="c o ntainermx-autopx-4">;
+        <divclassName="f l exitems-centerjustify-betweenh-16">;
           {/* Logo */}
-          <ahref="/" className="f l exitems-centerspace-x-2" onClick={closeAllMenus}>
-            <divclassName="w-8 h-8 b g-gradient-to-brfrom-cyan-400 to-purple-600 rounded-lgflexitems-centerjustify-center">
-              <BrainclassName="w-5 h-5 t e xt-white" />
-            </div>
-            <spanclassName="t e xt-xlfont-boldtext-whiteneon-text">ZionTechGroup</span>
-          </a>
+          <ahref="/" className="f l exitems-centerspace-x-2" onClick={closeAllMenus}>;
+            <divclassName="w-8 h-8 b g-gradient-to-brfrom-cyan-400 to-purple-600 rounded-lgflexitems-centerjustify-center">;
+              <BrainclassName="w-5 h-5 t e xt-white" />;
+            </div>;
+            <spanclassName="t e xt-xlfont-boldtext-whiteneon-text">ZionTechGroup</span>;
+          </a>;
           {/* DesktopNavigation */}
-          <divclassName="h i ddenlg:flexitems-centerspace-x-8">
-            <divclassName="r e lativegroup">
-              >
-                <span>Services</span>
-                <ChevronDownclassName={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-                <divclassName="a b solutetop-fullleft-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-mdborderborder-cyan-400/20 rounded-lgshadow-xlp-6">
-                  <divclassName="g r idgrid-cols-3 gap-6">
-                    <div>
-                      <h3 className="t e xt-cyan-400 font-semiboldmb-3 flexitems-center">
-                        <ZapclassName="w-4 h-4 m r-2" />
-                        MicroSAAS
-                      </h3>
-                      <divclassName="s p ace-y-2">
-                          >
-                            <service.iconclassName="w-3 h-3" />
-                            <span>{service.name}</span>
-                          </a>
+          <divclassName="h i ddenlg: flexitems-centerspace-x-8">;
+            <divclassName="r e lativegroup">;
+              >;
+                <span>Services</span>;
+                <ChevronDownclassName={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />;
+              </button>;
+                <divclassName="a b solutetop-fullleft-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-mdborderborder-cyan-400/20 rounded-lgshadow-xlp-6">;
+                  <divclassName="g r idgrid-cols-3 gap-6">;
+                    <div>;
+                      <h3 className="t e xt-cyan-400 font-semiboldmb-3 flexitems-center">;
+                        <ZapclassName="w-4 h-4 m r-2" />;
+                        MicroSAAS;
+                      </h3>;
+                      <divclassName="s p ace-y-2">;
+                          >;
+                            <service.iconclassName="w-3 h-3" />;
+                            <span>{service.name}</span>;
+                          </a>;
                         ))}
-                      </div>
-                    <div>
-                      <h3 className="t e xt-cyan-400 font-semiboldmb-3 flexitems-center">
-                        <BrainclassName="w-4 h-4 m r-2" />
-                        AIServices
-                      </h3>
-                      <divclassName="s p ace-y-2">
-                          >
-                            <service.iconclassName="w-3 h-3" />
-                            <span>{service.name}</span>
-                          </a>
+                      </div>;
+                    <div>;
+                      <h3 className="t e xt-cyan-400 font-semiboldmb-3 flexitems-center">;
+                        <BrainclassName="w-4 h-4 m r-2" />;
+                        AIServices;
+                      </h3>;
+                      <divclassName="s p ace-y-2">;
+                          >;
+                            <service.iconclassName="w-3 h-3" />;
+                            <span>{service.name}</span>;
+                          </a>;
                         ))}
-                      </div>
-                    <div>
-                      <h3 className="t e xt-cyan-400 font-semiboldmb-3 flexitems-center">
-                        <SettingsclassName="w-4 h-4 m r-2" />
-                        ITServices
-                      </h3>
-                      <divclassName="s p ace-y-2">
-                          >
-                            <service.iconclassName="w-3 h-3" />
-                            <span>{service.name}</span>
-                          </Link>
+                      </div>;
+                    <div>;
+                      <h3 className="t e xt-cyan-400 font-semiboldmb-3 flexitems-center">;
+                        <SettingsclassName="w-4 h-4 m r-2" />;
+                        ITServices;
+                      </h3>;
+                      <divclassName="s p ace-y-2">;
+                          >;
+                            <service.iconclassName="w-3 h-3" />;
+                            <span>{service.name}</span>;
+                          </Link>;
                         ))}
-                      </div>
-                  </div>
-                  <divclassName="m t-4 pt-4 border-tborder-gray-700">
-                    <divclassName="g r idgrid-cols-2 gap-4">
-                      >
-                        <span>ViewAllServices</span>
-                        <ArrowRightclassName="w-4 h-4" />
-                      </Link>
-                      >
-                        <span>SpecializedSolutions</span>
-                        <ArrowRightclassName="w-4 h-4" />
-                      </Link>
-                    </div>
-                </div>
+                      </div>;
+                  </div>;
+                  <divclassName="m t-4 pt-4 border-tborder-gray-700">;
+                    <divclassName="g r idgrid-cols-2 gap-4">;
+                      >;
+                        <span>ViewAllServices</span>;
+                        <ArrowRightclassName="w-4 h-4" />;
+                      </Link>;
+                      >;
+                        <span>SpecializedSolutions</span>;
+                        <ArrowRightclassName="w-4 h-4" />;
+                      </Link>;
+                    </div>;
+                </div>;
               )}
-            </div>
-            <ahref="/about" className="t e xt-whitehover:text-cyan-400 transition-colors">
-              About
-            </a>
-            <ahref="/blog" className="t e xt-whitehover:text-cyan-400 transition-colors">
-              Blog
-            </a>
-            <ahref="/case-studies" className="t e xt-whitehover:text-cyan-400 transition-colors">
-              CaseStudies
-            </a>
-            <ahref="/pricing" className="t e xt-whitehover:text-cyan-400 transition-colors">
-              Pricing
-            </a>
-            <ahref="/contact" className="t e xt-whitehover:text-cyan-400 transition-colors">
-              Contact
-            </a>
-            <divclassName="f l exitems-centerspace-x-4">
-              >
-                <PhoneclassName="w-4 h-4" />
-                <spanclassName="h i ddensm:inline">+1 302 464 0950</span>
-              </a>
-              >
-                GetStarted
-              </a>
-            </div>
+            </div>;
+            <ahref="/about" className="t e xt-whitehover: text-cyan-400 transition-colors">;
+              About;
+            </a>;
+            <ahref="/blog" className="t e xt-whitehover:text-cyan-400 transition-colors">;
+              Blog;
+            </a>;
+            <ahref="/case-studies" className="t e xt-whitehover:text-cyan-400 transition-colors">;
+              CaseStudies;
+            </a>;
+            <ahref="/pricing" className="t e xt-whitehover:text-cyan-400 transition-colors">;
+              Pricing;
+            </a>;
+            <ahref="/contact" className="t e xt-whitehover:text-cyan-400 transition-colors">;
+              Contact;
+            </a>;
+            <divclassName="f l exitems-centerspace-x-4">;
+              >;
+                <PhoneclassName="w-4 h-4" />;
+                <spanclassName="h i ddensm:inline">+1 302 464 0950</span>;
+              </a>;
+              >;
+                GetStarted;
+              </a>;
+            </div>;
           {/* MobileMenuButton */}
-          
-          >
+;
+          >;
             {isMenuOpen ? <XclassName="w-6 h-6" /> : <MenuclassName="w-6 h-6" />}
-          </button>
-        </div>
+          </button>;
+        </div>;
         {/* MobileMenu */}
-          <divclassName="l g:hiddenbg-slate-900/95 backdrop-blur-mdborder-tborder-cyan-400/20">
-            <divclassName="p x-4 py-6 space-y-4">
-              <div>
-                >
-                  <span>Services</span>
-                  <ChevronDownclassName={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                  <divclassName="m t-4 pl-4 space-y-3">
-                    <div>
-                      <h4 className="t e xt-cyan-400 font-semiboldmb-2">MicroSAAS</h4>
-                      <divclassName="s p ace-y-2">
-                          >
+          <divclassName="l g: hiddenbg-slate-900/95 backdrop-blur-mdborder-tborder-cyan-400/20">;
+            <divclassName="p x-4 py-6 space-y-4">;
+              <div>;
+                >;
+                  <span>Services</span>;
+                  <ChevronDownclassName={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />;
+                </button>;
+                  <divclassName="m t-4 pl-4 space-y-3">;
+                    <div>;
+                      <h4 className="t e xt-cyan-400 font-semiboldmb-2">MicroSAAS</h4>;
+                      <divclassName="s p ace-y-2">;
+                          >;
                             {service.name}
-                          </a>
+                          </a>;
                         ))}
-                      </div>
-                    <div>
-                      <h4 className="t e xt-cyan-400 font-semiboldmb-2">AIServices</h4>
-                      <divclassName="s p ace-y-2">
-                          >
+                      </div>;
+                    <div>;
+                      <h4 className="t e xt-cyan-400 font-semiboldmb-2">AIServices</h4>;
+                      <divclassName="s p ace-y-2">;
+                          >;
                             {service.name}
-                          </a>
+                          </a>;
                         ))}
-                      </div>
-                    >
-                      ViewAllServices →
-                    </a>
-                  </div>
+                      </div>;
+                    >;
+                      ViewAllServices →;
+                    </a>;
+                  </div>;
                 )}
-              </div>
-              <ahref="/about" className="b l ocktext-whitehover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                About
-              </a>
-              <ahref="/blog" className="b l ocktext-whitehover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Blog
-              </a>
-              <ahref="/case-studies" className="b l ocktext-whitehover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                CaseStudies
-              </a>
-              <ahref="/pricing" className="b l ocktext-whitehover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Pricing
-              </a>
-              <ahref="/contact" className="b l ocktext-whitehover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Contact
-              </a>
-              <divclassName="p t-4 border-tborder-gray-700">
-                >
-                  <PhoneclassName="w-4 h-4" />
-                  <span>+1 302 464 0950</span>
-                </a>
-                >
-                  GetStarted
-                </a>
-              </div>
-          </div>
+              </div>;
+              <ahref="/about" className="b l ocktext-whitehover: text-cyan-400 transition-colors" onClick={closeAllMenus}>;
+                About;
+              </a>;
+              <ahref="/blog" className="b l ocktext-whitehover: text-cyan-400 transition-colors" onClick={closeAllMenus}>;
+                Blog;
+              </a>;
+              <ahref="/case-studies" className="b l ocktext-whitehover: text-cyan-400 transition-colors" onClick={closeAllMenus}>;
+                CaseStudies;
+              </a>;
+              <ahref="/pricing" className="b l ocktext-whitehover: text-cyan-400 transition-colors" onClick={closeAllMenus}>;
+                Pricing;
+              </a>;
+              <ahref="/contact" className="b l ocktext-whitehover: text-cyan-400 transition-colors" onClick={closeAllMenus}>;
+                Contact;
+              </a>;
+              <divclassName="p t-4 border-tborder-gray-700">;
+                >;
+                  <PhoneclassName="w-4 h-4" />;
+                  <span>+1 302 464 0950</span>;
+                </a>;
+                >;
+                  GetStarted;
+                </a>;
+              </div>;
+          </div>;
         )}
-      </div>
-    </nav>
+      </div>;
+    </nav>;
   );
 };
-
+;
 exportdefaultNavigation;
+;

@@ -1,88 +1,80 @@
-import { ArrowRight   } from 'lucide-react';
-'useclient'
-
-import { ArrowRight   } from 'lucide-react';
-  constbenefits = [
-    'AdvancedAItechnologyintegration',
-    'Real-timeprocessingandanalytics',
-    'Enterprise-gradesecurityandcompliance',
-    'Scalableandflexiblesolutions',
-    '24/7 technicalsupport',
-    'Easyintegrationwithexistingsystems',
-    'Cost-effectivepricingplans',
-    'Proventrackrecordofsuccess'
+import {ArrowRight   } from 'lucide-react';
+'useclient';
+import {ArrowRight   } from 'lucide-react';
+  constbenefits = ['AdvancedAItechnologyintegration',;
+    'Real-timeprocessingandanalytics',;
+    'Enterprise-gradesecurityandcompliance',;
+    'Scalableandflexiblesolutions',;
+    '24/7 technicalsupport',;
+    'Easyintegrationwithexistingsystems',;
+    'Cost-effectivepricingplans',;
+    'Proventrackrecordofsuccess';
   ];
-  constfeatures = [
-    {
-      icon: Brain,
-      title: 'AI-PoweredSolutions',
-      description: 'AdvancedAItechnologytotransformyourbusinessoperationsandimproveefficiency',
-    },
-    {
-      icon: Zap,
-      title: 'HighPerformance',
-      description: 'Lightning-fastprocessingandreal-timeanalyticsforoptimalresults',
-    },
-    {
-      icon: Shield,
-      title: 'EnterpriseSecurity',
-      description: 'Bank-levelsecuritywithencryptionandcompliancestandards',
-    },
-    {
-      icon: Globe,
-      title: 'GlobalReach',
-      description: 'Worldwidedeploymentandsupportforinternationalbusinesses',
-      </>
-
+  constfeatures = [{icon: Brain,;
+      title: 'AI-PoweredSolutions',;
+      description: 'AdvancedAItechnologytotransformyourbusinessoperationsandimproveefficiency',;
+    },;
+    {icon: Zap,;
+      title: 'HighPerformance',;
+      description: 'Lightning-fastprocessingandreal-timeanalyticsforoptimalresults',;
+    },;
+    {icon: Shield,;
+      title: 'EnterpriseSecurity',;
+      description: 'Bank-levelsecuritywithencryptionandcompliancestandards',;
+    },;
+    {icon: Globe,;
+      title: 'GlobalReach',;
+      description: 'Worldwidedeploymentandsupportforinternationalbusinesses',;
+      </>;
     }
   ];
-  return (
-    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
-      <Helmet />
-        <title   />FuturisticServiceCard | ZionTechGroup</title>
-        <metaname="description" content="ProfessionalfuturisticservicecardsolutionsbyZionTechGroup. AdvancedAIandITsolutionsforyourbusiness." / / />
-        <metaname="keywords" content="futuristicservicecard, AIsolutions, ITservices, ZionTechGroup" / / />
-      </Helmet>
+  return (;
+    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">;
+      <Helmet />;
+        <title   />FuturisticServiceCard | ZionTechGroup</title>;
+        <metaname="description" content="ProfessionalfuturisticservicecardsolutionsbyZionTechGroup. AdvancedAIandITsolutionsforyourbusiness." / / />;
+        <metaname="keywords" content="futuristicservicecard, AIsolutions, ITservices, ZionTechGroup" / / />;
+      </Helmet>;
       {/* HeroSection */}
-    <>
-      <sectionclassName="r e lativepy-20 px-4sm:px-6lg:px-8" />
-        <divclassName="m a x-w-7xlmx-auto">
-          <divclassName="t e xt-center">
-            <h1 className="t e xt-4xlmd:text-6 xlfont-boldtext-whitemb-6" />
-              <spanclassName="b g-gradient-to-rfrom-purple-400 to-blue-400bg-clip-texttext-transparent"  />FuturisticServiceCard
-              </span>
-              <br / />
-              <spanclassName="t e xt-white">Solutions</span>
-            </h1>
-            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">
-              Transformyourbusinesswithouradvancedfuturisticservicecardsolutions.
-              Poweredbycutting-edgeAItechnologyandindustryexpertise.
-    <>
-            </p>
-            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-              <buttonclassName="b g-gradient-to-rfrom-purple-500 to-blue-600 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-purple-600 hover:to-blue-700 transition-allduration-300flexitems-center" />
-                GetStarted
-    <>
-                <ArrowRightclassName="m l-2h-5w-5" />
-              </button>
-              <buttonclassName="b o rderborder-gray-300 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-gray-900transition-allduration-300">LearnMore
-              </button>
-            </div>
-        </div>
-      </section>
+    <>;
+      <sectionclassName="r e lativepy-20 px-4sm: px-6lg:px-8" />;
+        <divclassName="m a x-w-7xlmx-auto">;
+          <divclassName="t e xt-center">;
+            <h1 className="t e xt-4xlmd:text-6 xlfont-boldtext-whitemb-6" />;
+              <spanclassName="b g-gradient-to-rfrom-purple-400 to-blue-400bg-clip-texttext-transparent"  />FuturisticServiceCard;
+              </span>;
+              <br / />;
+              <spanclassName="t e xt-white">Solutions</span>;
+            </h1>;
+            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">;
+              Transformyourbusinesswithouradvancedfuturisticservicecardsolutions.;
+              Poweredbycutting-edgeAItechnologyandindustryexpertise.;
+    <>;
+            </p>;
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">;
+              <buttonclassName="b g-gradient-to-rfrom-purple-500 to-blue-600 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-purple-600 hover:to-blue-700 transition-allduration-300flexitems-center" />;
+                GetStarted;
+    <>;
+                <ArrowRightclassName="m l-2h-5w-5" />;
+              </button>;
+              <buttonclassName="b o rderborder-gray-300 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-gray-900transition-allduration-300">LearnMore;
+              </button>;
+            </div>;
+        </div>;
+      </section>;
       {/* FeaturesSection */}
-    <>
-      <sectionclassName="p y-20 px-4sm:px-6lg:px-8" />
-        <divclassName="m a x-w-7xlmx-auto">
-          <divclassName="t e xt-centermb-16">
-            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />OurFeatures
-            </h2>
-            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">
-              Discoverthepowerfulfeaturesthatmakeourfuturisticservicecardsolutionsstandout.
-    <>
-            </p>
+    <>;
+      <sectionclassName="p y-20 px-4sm: px-6lg:px-8" />;
+        <divclassName="m a x-w-7xlmx-auto">;
+          <divclassName="t e xt-centermb-16">;
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />OurFeatures;
+            </h2>;
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">;
+              Discoverthepowerfulfeaturesthatmakeourfuturisticservicecardsolutionsstandout.;
+    <>;
+            </p>;
           </div>;
-        </div></section>)};exportdefaultFuturisticServiceCardPage
-  </>
-
+        </div></section>)};exportdefaultFuturisticServiceCardPage;
+  </>;
 }
+;

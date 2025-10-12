@@ -1,11 +1,11 @@
 import React from 'react';
-constSkipLink: React.FC = () => {
-  return (
-    <ahref="#main-content"
-      className="s r-onlyfocus:not-sr-onlyfocus:absolutefocus:top-4 focus:left-4 bg-purple-600 text-whitepx-4 py-2 rounded-lgz-50 transition-allduration-200 focus:outline-nonefocus:ring-2 focus:ring-purple-500">
-      Skiptomaincontent
-    </a>
+constSkipLink: React.FC = () => {return (;
+    <ahref="#main-content";
+      className="s r-onlyfocus:not-sr-onlyfocus:absolutefocus:top-4 focus:left-4 bg-purple-600 text-whitepx-4 py-2 rounded-lgz-50 transition-allduration-200 focus:outline-nonefocus:ring-2 focus:ring-purple-500">;
+      Skiptomaincontent;
+    </a>;
   );
 };
-
+;
 exportdefaultSkipLink;
+;

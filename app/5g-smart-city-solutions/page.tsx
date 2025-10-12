@@ -1,141 +1,114 @@
 import React from 'react';
-import { Helmet    } from 'react-helmet-async';
-import { Link    } from 'react-router-dom';
-import { ArrowRight    } from 'lucide-react';
-import React from 'react'
-import { Helmet    } from 'react-helmet-async'
-import { Link    } from 'react-router-dom'
-import { Wifi, ArrowRight, CheckCircle, Brain, Star, Building, Users    } from 'lucide-react';
-importLayoutfrom '../layout'
-
-exportdefaultfunctionFiveGSmartCitySolutions() {
-  constfeatures = [
-    {
-      icon: <WificlassName="w-6 h-6 t e xt-cyan-400" />,
-      title: 'Ultra-FastConnectivity',
-      description: '5Gnetworksproviding 10xfasterspeedsandultra-lowlatencyforsmartcityapplications'
-    },
-    {
-      icon: <BuildingclassName="w-6 h-6 t e xt-purple-400" />,
-      title: 'SmartInfrastructure',
-      description: 'Intelligenttrafficmanagement, energyoptimization, andenvironmentalmonitoringsystems'
-    },
-    {
-      icon: <BrainclassName="w-6 h-6 t e xt-yellow-400" />,
-      title: 'AI-PoweredAnalytics',
-      description: 'Machinelearningalgorithmsanalyzecitydatatooptimizeservicesandimprovequalityoflife'
-    },
-    {
-      icon: <UsersclassName="w-6 h-6 t e xt-green-400" />,
-      title: 'CitizenEngagement',
-      description: 'Digitalplatformsconnectingcitizenswithcityservicesandenablingparticipatorygovernance'
+import {Helmet    } from 'react-helmet-async';
+import {Link    } from 'react-router-dom';
+import {ArrowRight    } from 'lucide-react';
+import React from 'react';
+import {Helmet    } from 'react-helmet-async';
+import {Link    } from 'react-router-dom';
+import {Wifi, ArrowRight, CheckCircle, Brain, Star, Building, Users    } from 'lucide-react';
+importLayoutfrom '../layout';
+exportdefaultfunctionFiveGSmartCitySolutions() {constfeatures = [{
+      icon: <WificlassName="w-6 h-6 t e xt-cyan-400" />,;
+      title: 'Ultra-FastConnectivity',;
+      description: '5Gnetworksproviding 10xfasterspeedsandultra-lowlatencyforsmartcityapplications';
+    },;
+    {icon: <BuildingclassName="w-6 h-6 t e xt-purple-400" />,;
+      title: 'SmartInfrastructure',;
+      description: 'Intelligenttrafficmanagement, energyoptimization, andenvironmentalmonitoringsystems';
+    },;
+    {icon: <BrainclassName="w-6 h-6 t e xt-yellow-400" />,;
+      title: 'AI-PoweredAnalytics',;
+      description: 'Machinelearningalgorithmsanalyzecitydatatooptimizeservicesandimprovequalityoflife';
+    },;
+    {icon: <UsersclassName="w-6 h-6 t e xt-green-400" />,;
+      title: 'CitizenEngagement',;
+      description: 'Digitalplatformsconnectingcitizenswithcityservicesandenablingparticipatorygovernance';
     }
-  ]
-
-  constsmartCityModules = [
-    {
-      category: 'Transportation',
-      items: ['SmartTrafficLights', 'AutonomousVehicleSupport', 'PublicTransitOptimization', 'ParkingManagement', 'TrafficAnalytics', 'EmergencyResponse']
-    },
-    {
-      category: 'Energy & Environment',
-      items: ['SmartGridManagement', 'AirQualityMonitoring', 'WasteManagement', 'WaterSystems', 'RenewableEnergy', 'CarbonFootprintTracking']
-    },
-    {
-      category: 'PublicSafety',
-      items: ['VideoSurveillance', 'EmergencyAlerts', 'CrimePrevention', 'DisasterResponse', 'CrowdManagement', 'HealthMonitoring']
-    },
-    {
-      category: 'DigitalServices',
-      items: ['CitizenPortal', 'MobileApps', 'DigitalPayments', 'ServiceRequests', 'OpenDataPlatform', 'E-Government']
+  ];
+  constsmartCityModules = [{category: 'Transportation',;
+      items: ['SmartTrafficLights', 'AutonomousVehicleSupport', 'PublicTransitOptimization', 'ParkingManagement', 'TrafficAnalytics', 'EmergencyResponse'];
+    },;
+    {category: 'Energy & Environment',;
+      items: ['SmartGridManagement', 'AirQualityMonitoring', 'WasteManagement', 'WaterSystems', 'RenewableEnergy', 'CarbonFootprintTracking'];
+    },;
+    {category: 'PublicSafety',;
+      items: ['VideoSurveillance', 'EmergencyAlerts', 'CrimePrevention', 'DisasterResponse', 'CrowdManagement', 'HealthMonitoring'];
+    },;
+    {category: 'DigitalServices',;
+      items: ['CitizenPortal', 'MobileApps', 'DigitalPayments', 'ServiceRequests', 'OpenDataPlatform', 'E-Government'];
     }
-  ]
-
-  constpricingPlans = [
-    {
-      name: 'PilotProgram',
-      price: '$50,000',
-      period: 'one-time',
-      description: 'Perfectforsmallcitiesstartingtheirsmartcityjourney',
-      features: [
-        'Basic 5Ginfrastructure',
-        'Coresmartmodules',
-        'Citizenengagementplatform',
-        '6-monthimplementation',
-        'Trainingandsupport'
-      ],
-      popular: false
-    },
-    {
-      name: 'SmartCityPro',
-      price: '$250,000',
-      period: 'one-time',
-      description: 'Comprehensivesolutionformedium-sizedcities',
-      features: [
-        'Full 5Gnetworkdeployment',
-        'Completesmartcitysuite',
-        'AdvancedAIanalytics',
-        '12-monthimplementation',
-        'Dedicatedsupportteam',
-        'Customintegrations'
-      ],
-      popular: true
-    },
-    {
-      name: 'MegaCity',
-      price: 'Custom',
-      period: 'pricing',
-      description: 'Enterprisesolutionforlargemetropolitanareas',
-      features: [
-        'City-wide 5Gcoverage',
-        'Customsmartcitymodules',
-        'White-labelplatform',
-        'Multi-yearimplementation',
-        '24/7 supportteam',
-        'SLAguarantee'
-      ],
-      popular: false
+  ];
+  constpricingPlans = [{name: 'PilotProgram',;
+      price: '$50,000',;
+      period: 'one-time',;
+      description: 'Perfectforsmallcitiesstartingtheirsmartcityjourney',;
+      features: [;
+        'Basic 5Ginfrastructure',;
+        'Coresmartmodules',;
+        'Citizenengagementplatform',;
+        '6-monthimplementation',;
+        'Trainingandsupport';
+      ],;
+      popular: false;
+    },;
+    {name: 'SmartCityPro',;
+      price: '$250,000',;
+      period: 'one-time',;
+      description: 'Comprehensivesolutionformedium-sizedcities',;
+      features: ['Full 5Gnetworkdeployment',;
+        'Completesmartcitysuite',;
+        'AdvancedAIanalytics',;
+        '12-monthimplementation',;
+        'Dedicatedsupportteam',;
+        'Customintegrations';
+      ],;
+      popular: true;
+    },;
+    {name: 'MegaCity',;
+      price: 'Custom',;
+      period: 'pricing',;
+      description: 'Enterprisesolutionforlargemetropolitanareas',;
+      features: ['City-wide 5Gcoverage',;
+        'Customsmartcitymodules',;
+        'White-labelplatform',;
+        'Multi-yearimplementation',;
+        '24/7 supportteam',;
+        'SLAguarantee';
+      ],;
+      popular: false;
     }
-  ]
-
-  consttestimonials = [
-    {
-      name: 'MayorSarahJohnson',
-      company: 'TechValleyCity',
-      content: '5GSmartCitySolutionstransformedourcity. Trafficcongestionreducedby 30% andcitizensatisfactionincreasedsignificantly.',
-      rating: 5
-    },
-    {
-      name: 'DavidChen',
-      company: 'MetroPlanningDepartment',
-      content: 'TheAI-poweredanalyticshelpusmakedata-drivendecisions. Ourenergyefficiencyimprovedby 25% inthefirstyear.',
-      rating: 5
-    },
-    {
-      name: 'LisaRodriguez',
-      company: 'UrbanDevelopmentCorp',
-      content: 'Citizenengagementplatformisincredible. Residentscannowaccesscityservices 24/7 throughtheirsmartphones.',
-      rating: 5
+  ];
+  consttestimonials = [{name: 'MayorSarahJohnson',;
+      company: 'TechValleyCity',;
+      content: '5GSmartCitySolutionstransformedourcity. Trafficcongestionreducedby 30% andcitizensatisfactionincreasedsignificantly.',;
+      rating: 5;
+    },;
+    {name: 'DavidChen',;
+      company: 'MetroPlanningDepartment',;
+      content: 'TheAI-poweredanalyticshelpusmakedata-drivendecisions. Ourenergyefficiencyimprovedby 25% inthefirstyear.',;
+      rating: 5;
+    },;
+    {name: 'LisaRodriguez',;
+      company: 'UrbanDevelopmentCorp',;
+      content: 'Citizenengagementplatformisincredible. Residentscannowaccesscityservices 24/7 throughtheirsmartphones.',;
+      rating: 5;
     }
-  ]
-
-exportdefaultfunctionFiveGSmartCitySolutionsPage() {
-  return (
-    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900pt-20">
-      <Helmet>
-        <title>5GSmartCitySolutions - ZionTechGroup</title>
-        <metaname="description" content="Professional 5GsmartcitysolutionsbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
-      </Helmet>
-      <divclassName="m a x-w-7xlmx-autopx-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="t e xt-4xlfont-boldtext-whitemb-6">5GSmartCitySolutions</h1>
-        <pclassName="t e xt-lgtext-gray-300 mb-8">Professional 5GsmartcitysolutionsbyZionTechGroup. Transformyourbusinesswithourexpertsolutions.</p>
-        <Linkto="/contact"
-          className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-centermx-autow-fit">
-          ContactUs
-          
-          <ArrowRightclassName="w-5 h-5 m l-2"  />
-        </Link>
-      </div>
+  ];
+exportdefaultfunctionFiveGSmartCitySolutionsPage() {return (;
+    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900pt-20">;
+      <Helmet>;
+        <title>5GSmartCitySolutions - ZionTechGroup</title>;
+        <metaname="description" content="Professional 5GsmartcitysolutionsbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />;
+      </Helmet>;
+      <divclassName="m a x-w-7xlmx-autopx-4 sm: px-6 lg:px-8 py-16 text-center">;
+        <h1 className="t e xt-4xlfont-boldtext-whitemb-6">5GSmartCitySolutions</h1>;
+        <pclassName="t e xt-lgtext-gray-300 mb-8">Professional 5GsmartcitysolutionsbyZionTechGroup. Transformyourbusinesswithourexpertsolutions.</p>;
+        <Linkto="/contact";
+          className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-centermx-autow-fit">;
+          ContactUs;
+          <ArrowRightclassName="w-5 h-5 m l-2"  />;
+        </Link>;
+      </div>;
   );
 }
-    </>
+    </>;

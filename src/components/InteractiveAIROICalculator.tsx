@@ -1,65 +1,66 @@
 const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
-  
+;
     constannualSavings = (currentCost * efficiencyGain) / 100;
     consttotalSavings = annualSavings * (timeframe / 12);
     constroi = ((totalSavings - currentCost) / currentCost) * 100;
     returnMath.max(0, roi);
   };
   constroi = calculateROI();
-    <sectionclassName='bg-whitepy-16 rounded-2xlshadow-lg'>
-      <divclassName='containermx-autopx-4'>
-        <h2 className='text-4xlfont-boldtext-centertext-gray-900 mb-8'>
-          AIROICalculator
-        </h2>
-        <divclassName='max-w-4xlmx-auto'>
-          <divclassName='gridmd:grid-cols-2 gap-8'>
-            <divclassName='space-y-6'>
-              <div>
-                <labelclassName='blocktext-smfont-mediumtext-gray-700 mb-2'>
-                  CurrentAnnualCost ($)
-                </label>
+    <sectionclassName='bg-whitepy-16 rounded-2xlshadow-lg'>;
+      <divclassName='containermx-autopx-4'>;
+        <h2 className='text-4xlfont-boldtext-centertext-gray-900 mb-8'>;
+          AIROICalculator;
+        </h2>;
+        <divclassName='max-w-4xlmx-auto'>;
+          <divclassName='gridmd: grid-cols-2 gap-8'>;
+            <divclassName='space-y-6'>;
+              <div>;
+                <labelclassName='blocktext-smfont-mediumtext-gray-700 mb-2'>;
+                  CurrentAnnualCost ($);
+                </label>;
                   onChange={e => setCurrentCost(Number(e.target.value))}
-                  className='w-fullpx-4 py-2 borderborder-gray-300 rounded-lgfocus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                />
-              </div>
-              <div>
-                <labelclassName='blocktext-smfont-mediumtext-gray-700 mb-2'>
-                  ExpectedEfficiencyGain (%)
-                </label>
+                  className='w-fullpx-4 py-2 borderborder-gray-300 rounded-lgfocus: ring-2 focus:ring-blue-500 focus:border-transparent';
+                />;
+              </div>;
+              <div>;
+                <labelclassName='blocktext-smfont-mediumtext-gray-700 mb-2'>;
+                  ExpectedEfficiencyGain (%);
+                </label>;
                   onChange={e => setEfficiencyGain(Number(e.target.value))}
-                  className='w-full'
-                />
-                <divclassName='text-centertext-smtext-gray-600'>
-                  {efficiencyGain}%
-                </div>
-              <div>
-                <labelclassName='blocktext-smfont-mediumtext-gray-700 mb-2'>
-                  ImplementationTimeframe (months)
-                </label>
+                  className='w-full';
+                />;
+                <divclassName='text-centertext-smtext-gray-600'>;
+                  {efficiencyGain}%;
+                </div>;
+              <div>;
+                <labelclassName='blocktext-smfont-mediumtext-gray-700 mb-2'>;
+                  ImplementationTimeframe (months);
+                </label>;
                   onChange={e => setTimeframe(Number(e.target.value))}
-                  className='w-fullpx-4 py-2 borderborder-gray-300 rounded-lgfocus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                >
-                  <optionvalue={6}>6 months</option>
-                  <optionvalue={12}>12 months</option>
-                  <optionvalue={18}>18 months</option>
-                  <optionvalue={24}>24 months</option>
-                </select>
-              </div>
-            <divclassName='bg-gradient-to-brfrom-blue-50 to-purple-50 p-8 rounded-2xl'>
-              <h3 className='text-2xlfont-boldtext-gray-900 mb-6 text-center'>
-                YourROIProjection
-              </h3>
-              <divclassName='text-center'>
-                <divclassName='text-6xlfont-boldtext-blue-600 mb-4'>
-                  {roi.toFixed(0)}%
-                </div>
-                <pclassName='text-gray-600 text-sm'>Expectedreturnoninvestmentover {timeframe} months</p>
-              </div>
-          </div>
-      </div>
-    </section>
+                  className='w-fullpx-4 py-2 borderborder-gray-300 rounded-lgfocus: ring-2 focus:ring-blue-500 focus:border-transparent';
+                >;
+                  <optionvalue={6}>6 months</option>;
+                  <optionvalue={12}>12 months</option>;
+                  <optionvalue={18}>18 months</option>;
+                  <optionvalue={24}>24 months</option>;
+                </select>;
+              </div>;
+            <divclassName='bg-gradient-to-brfrom-blue-50 to-purple-50 p-8 rounded-2xl'>;
+              <h3 className='text-2xlfont-boldtext-gray-900 mb-6 text-center'>;
+                YourROIProjection;
+              </h3>;
+              <divclassName='text-center'>;
+                <divclassName='text-6xlfont-boldtext-blue-600 mb-4'>;
+                  {roi.toFixed(0)}%;
+                </div>;
+                <pclassName='text-gray-600 text-sm'>Expectedreturnoninvestmentover {timeframe} months</p>;
+              </div>;
+          </div>;
+      </div>;
+    </section>;
   );
 };
 exportdefaultInteractiveAIROICalculator;
+;

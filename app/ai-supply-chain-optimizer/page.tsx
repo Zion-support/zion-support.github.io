@@ -1,336 +1,311 @@
 import React from 'react';
-import { Helmet    } from 'react-helmet-async';
-import { Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Globe, Target    } from 'lucide-react';
-import { Truck, ArrowRight   } from 'lucide-react';
+import {Helmet    } from 'react-helmet-async';
+import {Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Globe, Target    } from 'lucide-react';
+import {Truck, ArrowRight   } from 'lucide-react';
 importFuturisticBackgroundfrom '../components/FuturisticBackground';
 importFuturisticCardfrom '../components/FuturisticCard';
 importFuturisticButtonfrom '../components/FuturisticButton';
-exportdefaultfunctionAISupplyChainOptimizerPage() {
-  constfeatures = [
-    {
-      title: 'PredictiveDemandForecasting',
-      description: 'AIalgorithmsanalyzehistoricaldata, markettrends, andexternalfactorstopredictdemandwith 92% accuracy.',
-      icon: <TrendingUpclassName="w-6h-6t e xt-green-400" />,
-      benefits: ['Demandprediction', 'Seasonalanalysis', 'Markettrendinsights', 'Inventoryoptimization']
-    },
-    {
-      title: 'SmartRouteOptimization',
-      description: 'Advancedlogisticsalgorithmsoptimizedeliveryroutes, reducefuelcosts, andimprovedeliverytimes.',
-      icon: <TruckclassName="w-6h-6t e xt-blue-400" />,
-      benefits: ['Routeoptimization', 'Fuelcostreduction', 'Deliverytimeimprovement', 'Real-timetracking']
-    },
-    {
-      title: 'AutomatedInventoryManagement',
-      description: 'Intelligentinventorycontrolwithautomatedreordering, stocklevelmonitoring, andwastereduction.',
-      icon: <PackageclassName="w-6h-6t e xt-purple-400" />,
-      benefits: ['Autoreordering', 'Stockmonitoring', 'Wastereduction', 'Costoptimization']
-    },
-    {
-      title: 'RiskManagement & Compliance',
-      description: 'Comprehensiveriskassessmentandcompliancemonitoringtoensuresupplychainresilience.',
-      icon: <ShieldclassName="w-6h-6t e xt-red-400" />,
-      benefits: ['Riskassessment', 'Compliancemonitoring', 'Disruptionalerts', 'Mitigationstrategies']
+exportdefaultfunctionAISupplyChainOptimizerPage() {constfeatures = [{
+      title: 'PredictiveDemandForecasting',;
+      description: 'AIalgorithmsanalyzehistoricaldata, markettrends, andexternalfactorstopredictdemandwith 92% accuracy.',;
+      icon: <TrendingUpclassName="w-6h-6t e xt-green-400" />,;
+      benefits: ['Demandprediction', 'Seasonalanalysis', 'Markettrendinsights', 'Inventoryoptimization'];
+    },;
+    {title: 'SmartRouteOptimization',;
+      description: 'Advancedlogisticsalgorithmsoptimizedeliveryroutes, reducefuelcosts, andimprovedeliverytimes.',;
+      icon: <TruckclassName="w-6h-6t e xt-blue-400" />,;
+      benefits: ['Routeoptimization', 'Fuelcostreduction', 'Deliverytimeimprovement', 'Real-timetracking'];
+    },;
+    {title: 'AutomatedInventoryManagement',;
+      description: 'Intelligentinventorycontrolwithautomatedreordering, stocklevelmonitoring, andwastereduction.',;
+      icon: <PackageclassName="w-6h-6t e xt-purple-400" />,;
+      benefits: ['Autoreordering', 'Stockmonitoring', 'Wastereduction', 'Costoptimization'];
+    },;
+    {title: 'RiskManagement & Compliance',;
+      description: 'Comprehensiveriskassessmentandcompliancemonitoringtoensuresupplychainresilience.',;
+      icon: <ShieldclassName="w-6h-6t e xt-red-400" />,;
+      benefits: ['Riskassessment', 'Compliancemonitoring', 'Disruptionalerts', 'Mitigationstrategies'];
     }
   ];
-  constpricingPlans = [
-    {
-      name: 'Starter',
-      price: '$199',
-      period: '/month',
-      description: 'Perfectforsmalltomediumbusinesses',
-      features: [
-        'Upto 5 warehouses',
-        'Basicdemandforecasting',
-        'Routeoptimization',
-        'Emailsupport',
-        'Standardintegrations'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$599',
-      period: '/month',
-      description: 'Advancedfeaturesforgrowingcompanies',
-      features: [
-        'Upto 25 warehouses',
-        'AdvancedAIforecasting',
-        'Multi-modaloptimization',
-        'Prioritysupport',
-        'Customintegrations',
-        'Real-timeanalytics'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,999',
-      period: '/month',
-      description: 'Completesolutionforlargeorganizations',
-      features: [
-        'Unlimitedwarehouses',
-        'CustomAImodels',
-        'White-labeloptions',
-        'Dedicatedaccountmanager',
-        'APIaccess',
-        'Advancedsecurity'
-      ],
-      popular: false
+  constpricingPlans = [{name: 'Starter',;
+      price: '$199',;
+      period: '/month',;
+      description: 'Perfectforsmalltomediumbusinesses',;
+      features: [;
+        'Upto 5 warehouses',;
+        'Basicdemandforecasting',;
+        'Routeoptimization',;
+        'Emailsupport',;
+        'Standardintegrations';
+      ],;
+      popular: false;
+    },;
+    {name: 'Professional',;
+      price: '$599',;
+      period: '/month',;
+      description: 'Advancedfeaturesforgrowingcompanies',;
+      features: ['Upto 25 warehouses',;
+        'AdvancedAIforecasting',;
+        'Multi-modaloptimization',;
+        'Prioritysupport',;
+        'Customintegrations',;
+        'Real-timeanalytics';
+      ],;
+      popular: true;
+    },;
+    {name: 'Enterprise',;
+      price: '$1,999',;
+      period: '/month',;
+      description: 'Completesolutionforlargeorganizations',;
+      features: ['Unlimitedwarehouses',;
+        'CustomAImodels',;
+        'White-labeloptions',;
+        'Dedicatedaccountmanager',;
+        'APIaccess',;
+        'Advancedsecurity';
+      ],;
+      popular: false;
     }
   ];
-  consttestimonials = [
-    {
-      name: 'RobertChen',
-      role: 'SupplyChainDirector',
-      company: 'GlobalLogisticsInc.',
-      content: 'AISupplyChainOptimizerreducedourlogisticscostsby 35% andimproveddeliverytimesby 40%. Thepredictiveanalyticsaregame-changing.',
-      rating: 5
-    },
-    {
-      name: 'MariaRodriguez',
-      role: 'OperationsManager',
-      company: 'RetailMaxCorp',
-      content: 'Theautomatedinventorymanagementsavedusfromstockoutsandoverstocking. Ourinventoryturnoverimprovedby 50%.',
-      rating: 5
-    },
-    {
-      name: 'JamesWilson',
-      role: 'CEO',
-      company: 'ManufacturingSolutions',
-      content: 'ThisAItooltransformedourentiresupplychain. Wecannowpredictdisruptionsbeforetheyhappenandoptimizeaccordingly.',
-      rating: 5
+  consttestimonials = [{name: 'RobertChen',;
+      role: 'SupplyChainDirector',;
+      company: 'GlobalLogisticsInc.',;
+      content: 'AISupplyChainOptimizerreducedourlogisticscostsby 35% andimproveddeliverytimesby 40%. Thepredictiveanalyticsaregame-changing.',;
+      rating: 5;
+    },;
+    {name: 'MariaRodriguez',;
+      role: 'OperationsManager',;
+      company: 'RetailMaxCorp',;
+      content: 'Theautomatedinventorymanagementsavedusfromstockoutsandoverstocking. Ourinventoryturnoverimprovedby 50%.',;
+      rating: 5;
+    },;
+    {name: 'JamesWilson',;
+      role: 'CEO',;
+      company: 'ManufacturingSolutions',;
+      content: 'ThisAItooltransformedourentiresupplychain. Wecannowpredictdisruptionsbeforetheyhappenandoptimizeaccordingly.',;
+      rating: 5;
     }
   ];
-  conststats = [
-    { number: '35%', label: 'CostReduction', icon: <TrendingUpclassName="w-6h-6" /> },
-    { number: '92%', label: 'ForecastAccuracy', icon: <TargetclassName="w-6h-6" /> },
-    { number: '500+', label: 'CompaniesUsing', icon: <GlobeclassName="w-6h-6" /> },
-    { number: '40%', label: 'DeliveryImprovement', icon: <ClockclassName="w-6h-6" /> }
+  conststats = [{number: '35%', label: 'CostReduction', icon: <TrendingUpclassName="w-6h-6" /> },;
+    {number: '92%', label: 'ForecastAccuracy', icon: <TargetclassName="w-6h-6" /> },;
+    {number: '500+', label: 'CompaniesUsing', icon: <GlobeclassName="w-6h-6" /> },;
+    {number: '40%', label: 'DeliveryImprovement', icon: <ClockclassName="w-6h-6" /> }
   ];
-  return (
-    <>
-    <>
-      <Helmet>
-        <title>5GDataAnalytics - ZionTechGroup</title>
-        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
-      </Helmet>
-        <title>AISupplyChainOptimizer - SmartLogistics & InventoryManagement | ZionTechGroup</title>
-        <metaconstname = "description" content="OptimizeyoursupplychainwithAI-powereddemandforecasting, routeoptimization, andinventorymanagement. Reducecostsby 35% andimprovedeliverytimesby 40%." / / />
-        <metaname="keywords" content="AIsupplychain, logisticsoptimization, inventorymanagement, demandforecasting, supplychainAI, logisticstechnology" / / />
-        <linkrel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer" />
-      </Helmet>
-    </>
-
-      <FuturisticBackgroundvariant="services" />
+  return (;
+    <>;
+    <>;
+      <Helmet>;
+        <title>5GDataAnalytics - ZionTechGroup</title>;
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />;
+      </Helmet>;
+        <title>AISupplyChainOptimizer - SmartLogistics & InventoryManagement | ZionTechGroup</title>;
+        <metaconstname = "description" content="OptimizeyoursupplychainwithAI-powereddemandforecasting, routeoptimization, andinventorymanagement. Reducecostsby 35% andimprovedeliverytimesby 40%." / / />;
+        <metaname="keywords" content="AIsupplychain, logisticsoptimization, inventorymanagement, demandforecasting, supplychainAI, logisticstechnology" / / />;
+        <linkrel="canonical" href="https: //ziontechgroup.com/ai-supply-chain-optimizer" />;
+      </Helmet>;
+    </>;
+      <FuturisticBackgroundvariant="services" />;
         {/* HeroSection */}
-    <>
-        <sectionclassName="p t-20 px-4 py-12sm:py-16lg:py-20" />
-          <divclassName="m a x-w-7xlmx-auto">
-            <divclassName="t e xt-centermb-12">
-              <h1 className="t e xt-3 xlsm:text-4xlmd:text-5 xllg:text-6 xlfont-boldtext-whitemb-6"  />AISupplyChainOptimizer</h1>
-              <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-3 xlmx-automb-8">
-              RevolutionizeyoursupplychainwithAI-powereddemandforecasting, routeoptimization, 
-                andintelligentinventorymanagement. Reducecostsby 35% andimproveefficiencyby 40%.
-    <>
-              </p>
-              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-                <FuturisticButtonvariant="primary"
-                  size="lg"
+    <>;
+        <sectionclassName="p t-20 px-4 py-12sm: py-16lg:py-20" />;
+          <divclassName="m a x-w-7xlmx-auto">;
+            <divclassName="t e xt-centermb-12">;
+              <h1 className="t e xt-3 xlsm:text-4xlmd:text-5 xllg:text-6 xlfont-boldtext-whitemb-6"  />AISupplyChainOptimizer</h1>;
+              <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-3 xlmx-automb-8">;
+              RevolutionizeyoursupplychainwithAI-powereddemandforecasting, routeoptimization,;
+                andintelligentinventorymanagement. Reducecostsby 35% andimproveefficiencyby 40%.;
+    <>;
+              </p>;
+              <divclassName="f l exflex-colsm: flex-rowgap-4justify-center">;
+                <FuturisticButtonvariant="primary";
+                  size="lg";
                   onClick="{()" = /> window.open('/contact', '_blank')}
-                >
-                  StartFreeTrial
-    <>
-                  <ArrowRightclassName="w-5h-5m l-2" />
-                </FuturisticButton>
-    </>
-                <FuturisticButtonvariant="ghost"
-                  size="lg"
+                >;
+                  StartFreeTrial;
+    <>;
+                  <ArrowRightclassName="w-5h-5m l-2" />;
+                </FuturisticButton>;
+    </>;
+                <FuturisticButtonvariant="ghost";
+                  size="lg";
                   onClick="{()" =  />window.open('#demo', '_blank')}
-                >
-                  WatchDemo
-    <>
-                </FuturisticButton>
-              </div>
+                >;
+                  WatchDemo;
+    <>;
+                </FuturisticButton>;
+              </div>;
             {/* Stats */}
-            <divclassName="g r idgrid-cols-2 md:grid-cols-4gap-6mb-16">
-              {stats.map((stat, index) => (
-    <>
-                <divkey="{index}" className="t e xt-center" />
+            <divclassName="g r idgrid-cols-2 md: grid-cols-4gap-6mb-16">;
+              {stats.map((stat, index) => (;
+    <>;
+                <divkey="{index}" className="t e xt-center" />;
                   <divclassName="f l exitems-centerjustify-centermb-2">{stat.icon}
-                  </div>
-                  <divclassName="t e xt-3 xlfont-boldtext-whitemb-2"   />{stat.number}</div>
-                  <divclassName="t e xt-gray-300"   />{stat.label}</div>
+                  </div>;
+                  <divclassName="t e xt-3 xlfont-boldtext-whitemb-2"   />{stat.number}</div>;
+                  <divclassName="t e xt-gray-300"   />{stat.label}</div>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* FeaturesSection */}
-    <>
-        <sectionclassName="p y-12 sm:py-16lg:py-20px-4" />
-          <divclassName="m a x-w-7xlmx-auto">
-            <divclassName="t e xt-centermb-12">
-              <h2 className="t e xt-2 xlsm:text-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />AdvancedAIFeatures
-              </h2>
-              <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-2xlmx-auto">Cutting-edgeartificialintelligencemeetssupplychainexpertisetooptimizeyouroperations</p>
-            </div>
-    </>
-            
-            <divclassName="g r idgrid-cols-1 md:grid-cols-2gap-8mb-16">
-              {features.map((feature, index) => (
-    <>
-                <FuturisticCardkey="{index}" variant="service" className="h-f u ll" />
-                  <divclassName="f l exitems-startmb-4">
+    <>;
+        <sectionclassName="p y-12 sm: py-16lg:py-20px-4" />;
+          <divclassName="m a x-w-7xlmx-auto">;
+            <divclassName="t e xt-centermb-12">;
+              <h2 className="t e xt-2 xlsm:text-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />AdvancedAIFeatures;
+              </h2>;
+              <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-2xlmx-auto">Cutting-edgeartificialintelligencemeetssupplychainexpertisetooptimizeyouroperations</p>;
+            </div>;
+    </>;
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2gap-8mb-16">;
+              {features.map((feature, index) => (;
+    <>;
+                <FuturisticCardkey="{index}" variant="service" className="h-f u ll" />;
+                  <divclassName="f l exitems-startmb-4">;
                     {feature.icon}
-    <>
-                    <h3 className="t e xt-xlfont-semiboldtext-whiteml-3">{feature.title}</h3>
-                  </div>
-                  <pclassName="t e xt-gray-300 mb-6">{feature.description}</p>
-                  <ulclassName="s p ace-y-2" />
-    </>
-                    {feature.benefits.map((benefit, benefitIndex) => (
-    <>
-                      <likey="{benefitIndex}" className="f l exitems-centertext-smtext-gray-300" />
-                        <CheckCircleclassName="w-4 h-4 t e xt-green-400mr-2flex-shrink-0" />
+    <>;
+                    <h3 className="t e xt-xlfont-semiboldtext-whiteml-3">{feature.title}</h3>;
+                  </div>;
+                  <pclassName="t e xt-gray-300 mb-6">{feature.description}</p>;
+                  <ulclassName="s p ace-y-2" />;
+    </>;
+                    {feature.benefits.map((benefit, benefitIndex) => (;
+    <>;
+                      <likey="{benefitIndex}" className="f l exitems-centertext-smtext-gray-300" />;
+                        <CheckCircleclassName="w-4 h-4 t e xt-green-400mr-2flex-shrink-0" />;
                         {benefit}
-                      </li>
+                      </li>;
                     ))}
-    <>
-                  </ul>
-                </FuturisticCard>
-    </>
+    <>;
+                  </ul>;
+                </FuturisticCard>;
+    </>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* PricingSection */}
-    <>
-        <sectionclassName="p y-12 sm:py-16 lg:py-20px-4bg-white/5" />
-          <divclassName="m a x-w-7xlmx-auto">
-            <divclassName="t e xt-centermb-12">
-              <h2 className="t e xt-2 xlsm:text-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />ChooseYourPlan
-              </h2>
-              <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-2xlmx-auto">Scalablepricingoptionstomatchyoursupplychainneeds</p>
-            </div>
-    </>
-
-            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
-              {pricingPlans.map((plan, index) => (
-                <FuturisticCardkey="{index}" 
-                  variant="{plan.popular" ? "feature" : "service"} 
-                  className="{`h-f u ll" ${plan.popular ? 'ring-2 ring-purple-500' : ''}`} />
-                  {plan.popular && (
-                    <divclassName="a b solute -top-3 left-1/2transform-translate-x-1/2">
-                      <spanclassName="b g-gradient-to-rfrom-purple-500 to-pink-500 text-whitepx-4 py-1 rounded-fulltext-smfont-semibold"  />MostPopular
-                      </span>
-                    </div>
-    </>
+    <>;
+        <sectionclassName="p y-12 sm: py-16 lg:py-20px-4bg-white/5" />;
+          <divclassName="m a x-w-7xlmx-auto">;
+            <divclassName="t e xt-centermb-12">;
+              <h2 className="t e xt-2 xlsm:text-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />ChooseYourPlan;
+              </h2>;
+              <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-2xlmx-auto">Scalablepricingoptionstomatchyoursupplychainneeds</p>;
+            </div>;
+    </>;
+            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">;
+              {pricingPlans.map((plan, index) => (;
+                <FuturisticCardkey="{index}";
+                  variant="{plan.popular" ? "feature" : "service"} ;
+                  className="{`h-f u ll" ${plan.popular ? 'ring-2 ring-purple-500' : ''}`} />;
+                  {plan.popular && (;
+                    <divclassName="a b solute -top-3 left-1/2transform-translate-x-1/2">;
+                      <spanclassName="b g-gradient-to-rfrom-purple-500 to-pink-500 text-whitepx-4 py-1 rounded-fulltext-smfont-semibold"  />MostPopular;
+                      </span>;
+                    </div>;
+    </>;
                   )}
-                  
-                  <divclassName="t e xt-centermb-6">
-                    <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"   />{plan.name}</h3>
-                    <divclassName="f l exitems-baselinejustify-centermb-2">
-                      <spanclassName="t e xt-4xlfont-boldtext-white"   />{plan.price}</span>
-                      <spanclassName="t e xt-gray-400ml-1"   />{plan.period}</span>
-                    </div>
-                    <pclassName="t e xt-gray-300text-sm">{plan.description}</p>
-                  </div>
-    </>
-
-                  <ulclassName="s p ace-y-3mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-    <>
-                      <likey="{featureIndex}" className="f l exitems-centertext-smtext-gray-300" />
-                        <CheckCircleclassName="w-4 h-4 t e xt-green-400mr-3flex-shrink-0" />
+;
+                  <divclassName="t e xt-centermb-6">;
+                    <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"   />{plan.name}</h3>;
+                    <divclassName="f l exitems-baselinejustify-centermb-2">;
+                      <spanclassName="t e xt-4xlfont-boldtext-white"   />{plan.price}</span>;
+                      <spanclassName="t e xt-gray-400ml-1"   />{plan.period}</span>;
+                    </div>;
+                    <pclassName="t e xt-gray-300text-sm">{plan.description}</p>;
+                  </div>;
+    </>;
+                  <ulclassName="s p ace-y-3mb-8" />;
+                    {plan.features.map((feature, featureIndex) => (;
+    <>;
+                      <likey="{featureIndex}" className="f l exitems-centertext-smtext-gray-300" />;
+                        <CheckCircleclassName="w-4 h-4 t e xt-green-400mr-3flex-shrink-0" />;
                         {feature}
-                      </li>
+                      </li>;
                     ))}
-                  </ul>
+                  </ul>;
                   <FuturisticButtonvariant="{plan.popular" ? "primary" : "ghost"}
-                    className="w-f u ll"
+                    className="w-f u ll";
                     onClick="{()" =  />window.open('/contact', '_blank')}
-                  >
-                    GetStarted
-    <>
-                  </FuturisticButton>
-                </FuturisticCard>
-    </>
+                  >;
+                    GetStarted;
+    <>;
+                  </FuturisticButton>;
+                </FuturisticCard>;
+    </>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* TestimonialsSection */}
-    <>
-        <sectionclassName="p y-12 sm:py-16lg:py-20px-4" />
-          <divclassName="m a x-w-7xlmx-auto">
-            <divclassName="t e xt-centermb-12">
-              <h2 className="t e xt-2 xlsm:text-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />WhatOurClientsSay
-              </h2>
-              <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-2xlmx-auto">Joinhundredsofcompaniesoptimizingtheirsupplychains</p>
-            </div>
-    </>
-
-            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
-              {testimonials.map((testimonial, index) => (
-    <>
-                <FuturisticCardkey="{index}" variant="testimonial" className="h-f u ll" />
-                  <divclassName="f l exitems-centermb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Starkey="{i}" className="w-4 h-4t e xt-yellow-400fill-current" />
+    <>;
+        <sectionclassName="p y-12 sm: py-16lg:py-20px-4" />;
+          <divclassName="m a x-w-7xlmx-auto">;
+            <divclassName="t e xt-centermb-12">;
+              <h2 className="t e xt-2 xlsm:text-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />WhatOurClientsSay;
+              </h2>;
+              <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-2xlmx-auto">Joinhundredsofcompaniesoptimizingtheirsupplychains</p>;
+            </div>;
+    </>;
+            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">;
+              {testimonials.map((testimonial, index) => (;
+    <>;
+                <FuturisticCardkey="{index}" variant="testimonial" className="h-f u ll" />;
+                  <divclassName="f l exitems-centermb-4">;
+                    {[...Array(testimonial.rating)].map((_, i) => (;
+                      <Starkey="{i}" className="w-4 h-4t e xt-yellow-400fill-current" />;
                     ))}
-    <>
-                  </div>
-                  <blockquoteclassName="t e xt-gray-300 mb-6italic"  />"{testimonial.content}"
-                  </blockquote>
-                  <footer />
-                    <pclassName="f o nt-semiboldtext-white">{testimonial.name}</p>
-                    <pclassName="t e xt-gray-400text-sm">{testimonial.role}</p>
-                    <pclassName="t e xt-gray-500text-sm">{testimonial.company}</p>
-                  </footer>
-                </FuturisticCard>
-    </>
+    <>;
+                  </div>;
+                  <blockquoteclassName="t e xt-gray-300 mb-6italic"  />"{testimonial.content}";
+                  </blockquote>;
+                  <footer />;
+                    <pclassName="f o nt-semiboldtext-white">{testimonial.name}</p>;
+                    <pclassName="t e xt-gray-400text-sm">{testimonial.role}</p>;
+                    <pclassName="t e xt-gray-500text-sm">{testimonial.company}</p>;
+                  </footer>;
+                </FuturisticCard>;
+    </>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* CTASection */}
-    <>
-        <sectionclassName="p y-12 sm:py-16lg:py-20px-4" />
-          <divclassName="m a x-w-7xlmx-auto">
-            <FuturisticCardvariant="feature" className="t e xt-center" />
-              <h2 className="t e xt-2 xlsm:text-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />ReadytoOptimizeYourSupplyChain?
-              </h2>
-              <pclassName="t e xt-lgsm:text-xltext-white/90 mb-8 max-w-2xlmx-auto">Startyourfree 14-daytrialtoday. Nocreditcardrequired. Join 500+ companiesoptimizingtheirsupplychains.</p>
-              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-                <FuturisticButtonvariant="primary"
-                  size="lg"
+    <>;
+        <sectionclassName="p y-12 sm: py-16lg:py-20px-4" />;
+          <divclassName="m a x-w-7xlmx-auto">;
+            <FuturisticCardvariant="feature" className="t e xt-center" />;
+              <h2 className="t e xt-2 xlsm:text-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />ReadytoOptimizeYourSupplyChain?;
+              </h2>;
+              <pclassName="t e xt-lgsm:text-xltext-white/90 mb-8 max-w-2xlmx-auto">Startyourfree 14-daytrialtoday. Nocreditcardrequired. Join 500+ companiesoptimizingtheirsupplychains.</p>;
+              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">;
+                <FuturisticButtonvariant="primary";
+                  size="lg";
                   onClick="{()" =>window.open('/contact', '_blank')}
-                >
-                  StartFreeTrial
-                </FuturisticButton>
-                <FuturisticButtonvariant="secondary"
-                  size="lg"
+                >;
+                  StartFreeTrial;
+                </FuturisticButton>;
+                <FuturisticButtonvariant="secondary";
+                  size="lg";
                   onClick="{()" =  />window.open('/contact', '_blank')}
-                >
-                  ScheduleDemo
-    <>
-                </FuturisticButton>
-              </div>
-              <divclassName="m t-8text-white/80text-sm">
-                <p />✓ 14-dayfreetrial • ✓ Nosetupfees • ✓ Cancelanytime</p>
-              </div>
-            </FuturisticCard>
-          </div>
-        </section>
-      </FuturisticBackground>
-    </>
+                >;
+                  ScheduleDemo;
+    <>;
+                </FuturisticButton>;
+              </div>;
+              <divclassName="m t-8text-white/80text-sm">;
+                <p />✓ 14-dayfreetrial • ✓ Nosetupfees • ✓ Cancelanytime</p>;
+              </div>;
+            </FuturisticCard>;
+          </div>;
+        </section>;
+      </FuturisticBackground>;
+    </>;
   );
 }
-    </>
+    </>;

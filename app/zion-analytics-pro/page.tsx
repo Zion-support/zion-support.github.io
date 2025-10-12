@@ -1,384 +1,357 @@
 'useclient';
-import { useState, useEffect   } from 'react';
-import { Link   } from 'react-router-dom';
-import { ArrowRight, ShoppingCart   } from 'lucide-react';
-
-constZionAnalyticsProPage: React.FC = () => {
-
-  useEffect(() => {
+import {useState, useEffect   } from 'react';
+import {Link   } from 'react-router-dom';
+import {ArrowRight, ShoppingCart   } from 'lucide-react';
+;
+constZionAnalyticsProPage: React.FC = () => {useEffect(() => {
     setIsVisible(true);
   }, []);
-
-  constfeatures = [
-    {
-      title: 'Real-timeAnalyticsDashboard',
-      description: 'Monitoryourbusinessperformancewithlivedataupdatesandinteractivevisualizations',
-      icon: BarChart,
-      color: 'from-blue-500 to-purple-500'
-    },
-    {
-      title: 'AI-PoweredPredictiveInsights',
-      description: 'Getintelligentforecastsandrecommendationsbasedonyourdatapatterns',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'CustomReportGeneration',
-      description: 'Createpersonalizedreportswithdrag-and-dropinterfaceandautomatedscheduling',
-      icon: FileText,
-      color: 'from-green-500 to-teal-500'
-    },
-    {
-      title: 'TeamCollaborationTools',
-      description: 'Shareinsights, createannotations, andcollaboratewithyourteaminreal-time',
-      icon: Users,
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      title: 'APIIntegrations',
-      description: 'Connectwith 100+ popularbusinesstoolsandplatformsseamlessly',
-      icon: LinkIcon,
-      color: 'from-cyan-500 to-blue-500'
-    },
-    {
-      title: 'MobileAppAccess',
-      description: 'Accessyouranalyticson-the-gowithournativeiOSandAndroidapps',
-      icon: Smartphone,
-      color: 'from-indigo-500 to-purple-500'
+;
+  constfeatures = [{title: 'Real-timeAnalyticsDashboard',;
+      description: 'Monitoryourbusinessperformancewithlivedataupdatesandinteractivevisualizations',;
+      icon: BarChart,;
+      color: 'from-blue-500 to-purple-500';
+    },;
+    {title: 'AI-PoweredPredictiveInsights',;
+      description: 'Getintelligentforecastsandrecommendationsbasedonyourdatapatterns',;
+      icon: Brain,;
+      color: 'from-purple-500 to-pink-500';
+    },;
+    {title: 'CustomReportGeneration',;
+      description: 'Createpersonalizedreportswithdrag-and-dropinterfaceandautomatedscheduling',;
+      icon: FileText,;
+      color: 'from-green-500 to-teal-500';
+    },;
+    {title: 'TeamCollaborationTools',;
+      description: 'Shareinsights, createannotations, andcollaboratewithyourteaminreal-time',;
+      icon: Users,;
+      color: 'from-orange-500 to-red-500';
+    },;
+    {title: 'APIIntegrations',;
+      description: 'Connectwith 100+ popularbusinesstoolsandplatformsseamlessly',;
+      icon: LinkIcon,;
+      color: 'from-cyan-500 to-blue-500';
+    },;
+    {title: 'MobileAppAccess',;
+      description: 'Accessyouranalyticson-the-gowithournativeiOSandAndroidapps',;
+      icon: Smartphone,;
+      color: 'from-indigo-500 to-purple-500';
     }
   ];
-  constpricingPlans = [
-    {
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfectforsmallbusinesses',
-      features: [
-        'Upto 5 users',
-        '10 datasources',
-        'Basicdashboards',
-        'Emailsupport',
-        '1 GBdatastorage',
-        'Standardreports'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$199',
-      period: '/month',
-      description: 'Idealforgrowingcompanies',
-      features: [
-        'Upto 25 users',
-        'Unlimiteddatasources',
-        'Advanceddashboards',
-        'Prioritysupport',
-        '10 GBdatastorage',
-        'Customreports',
-        'APIaccess',
-        'White-labeloptions'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$399',
-      period: '/month',
-      description: 'Forlargeorganizations',
-      features: [
-        'Unlimitedusers',
-        'Unlimiteddatasources',
-        'Enterprisedashboards',
-        '24/7 phonesupport',
-        'Unlimiteddatastorage',
-        'Advancedanalytics',
-        'Customintegrations',
-        'Dedicatedaccountmanager'
-      ],
-      popular: false
+  constpricingPlans = [{name: 'Starter',;
+      price: '$99',;
+      period: '/month',;
+      description: 'Perfectforsmallbusinesses',;
+      features: [;
+        'Upto 5 users',;
+        '10 datasources',;
+        'Basicdashboards',;
+        'Emailsupport',;
+        '1 GBdatastorage',;
+        'Standardreports';
+      ],;
+      popular: false;
+    },;
+    {name: 'Professional',;
+      price: '$199',;
+      period: '/month',;
+      description: 'Idealforgrowingcompanies',;
+      features: ['Upto 25 users',;
+        'Unlimiteddatasources',;
+        'Advanceddashboards',;
+        'Prioritysupport',;
+        '10 GBdatastorage',;
+        'Customreports',;
+        'APIaccess',;
+        'White-labeloptions';
+      ],;
+      popular: true;
+    },;
+    {name: 'Enterprise',;
+      price: '$399',;
+      period: '/month',;
+      description: 'Forlargeorganizations',;
+      features: ['Unlimitedusers',;
+        'Unlimiteddatasources',;
+        'Enterprisedashboards',;
+        '24/7 phonesupport',;
+        'Unlimiteddatastorage',;
+        'Advancedanalytics',;
+        'Customintegrations',;
+        'Dedicatedaccountmanager';
+      ],;
+      popular: false;
     }
   ];
-  consttestimonials = [
-    {
-      name: 'SarahJohnson',
-      company: 'TechStartInc.',
-      role: 'CEO',
-      content: 'ZionAnalyticsProhastransformedhowweunderstandourbusiness. TheAIinsightshavehelpedusincreaserevenueby 40%.',
-      rating: 5,
-      avatar: 'SJ'
-    },
-    {
-      name: 'MichaelChen',
-      company: 'DataFlowSolutions',
-      role: 'CTO',
-      content: 'Thereal-timedashboardsandpredictiveanalyticshavegivenusacompetitiveedge. Highlyrecommended!',
-      rating: 5,
-      avatar: 'MC'
-    },
-    {
-      name: 'EmilyRodriguez',
-      company: 'GrowthCorp',
-      role: 'MarketingDirector',
-      content: 'Easytouse, powerfulfeatures, andexcellentsupport. Ourteamproductivityhasincreasedsignificantly.',
-      rating: 5,
-      avatar: 'ER'
+  consttestimonials = [{name: 'SarahJohnson',;
+      company: 'TechStartInc.',;
+      role: 'CEO',;
+      content: 'ZionAnalyticsProhastransformedhowweunderstandourbusiness. TheAIinsightshavehelpedusincreaserevenueby 40%.',;
+      rating: 5,;
+      avatar: 'SJ';
+    },;
+    {name: 'MichaelChen',;
+      company: 'DataFlowSolutions',;
+      role: 'CTO',;
+      content: 'Thereal-timedashboardsandpredictiveanalyticshavegivenusacompetitiveedge. Highlyrecommended!',;
+      rating: 5,;
+      avatar: 'MC';
+    },;
+    {name: 'EmilyRodriguez',;
+      company: 'GrowthCorp',;
+      role: 'MarketingDirector',;
+      content: 'Easytouse, powerfulfeatures, andexcellentsupport. Ourteamproductivityhasincreasedsignificantly.',;
+      rating: 5,;
+      avatar: 'ER';
     }
   ];
-  return (
-    <>
-    <>
-      <Helmet>
-        <title>5GDataAnalytics - ZionTechGroup</title>
-        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
-      </Helmet>
-        <title>ZionAnalyticsPro - AI-PoweredBusinessIntelligencePlatform</title>
-        <metaconstname = "description" content="TransformyourbusinesswithZionAnalyticsPro - themostadvancedAI-poweredbusinessintelligenceplatform. Real-timeanalytics, predictiveinsights, andcustomreporting." / / />
-        <metaname="keywords" content="businessintelligence, analyticsplatform, AIinsights, datavisualization, businessdashboard, predictiveanalytics" / / />
-      </Helmet>
-    </>
-
-      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
+  return (;
+    <>;
+    <>;
+      <Helmet>;
+        <title>5GDataAnalytics - ZionTechGroup</title>;
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />;
+      </Helmet>;
+        <title>ZionAnalyticsPro - AI-PoweredBusinessIntelligencePlatform</title>;
+        <metaconstname = "description" content="TransformyourbusinesswithZionAnalyticsPro - themostadvancedAI-poweredbusinessintelligenceplatform. Real-timeanalytics, predictiveinsights, andcustomreporting." / / />;
+        <metaname="keywords" content="businessintelligence, analyticsplatform, AIinsights, datavisualization, businessdashboard, predictiveanalytics" / / />;
+      </Helmet>;
+    </>;
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">;
         {/* HeroSection */}
-    <>
-        <sectionclassName="r e lativeoverflow-hiddenpt-20pb-16" />
-          <divclassName="a b soluteinset-0opacity-20" />
-          <divclassName="r e lativemax-w-7xlmx-autopx-4sm:px-6lg:px-8">
-            <divclassName="g r idgrid-cols-1 lg:grid-cols-2gap-12items-center">
-              <div />
-                <divclassName="i n line-flexitems-centerpx-4 py-2 bg-gradient-to-rfrom-blue-500 to-purple-500 rounded-fulltext-whitetext-smfont-semiboldmb-6">
-                  <SparklesclassName="h-4w-4m r-2" />
-                  AI-PoweredAnalytics
-    <>
-                </div>
-                <h1 className="{`t e xt-4" xlmd: text-6 xlfont-boldtext-whitemb-6 transition-allduration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-    </>
-                  ZionAnalytics
-    <>
-                  <spanclassName="b l ockbg-gradient-to-rfrom-blue-400 to-purple-400bg-clip-texttext-transparent">Pro
-                  </span>
-                </h1>
-                <pclassName="{`t e xt-xl" text-gray-300 mb-8 transition-allduration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-    </>
-                  ThemostadvancedAI-poweredbusinessintelligenceplatform. Getreal-timeinsights, 
-                  predictiveanalytics, andcustomreportsthatdriveyourbusinessforward.
-    <>
-                </p>
-                <divclassName="{`f l ex" flex-colsm: flex-rowgap-4 transition-allduration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                  <Linkto="/contact" className="i n line-flexitems-centerpx-8 py-4 bg-gradient-to-rfrom-blue-600 to-purple-600 text-whitefont-semiboldrounded-lghover:from-blue-700 hover:to-purple-700 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-xl">
-          StartFreeTrial
-                    
-          <ArrowRightclassName="m l-2h-5w-5"  />
-        </Link>
-                  <buttonclassName="i n line-flexitems-centerpx-8 py-4 border-2 border-blue-400 text-blue-400 font-semiboldrounded-lghover:bg-blue-400 hover:text-whitetransition-allduration-300transformhover:scale-105" />
-                    <PlayclassName="m r-2h-5w-5" />
-                    WatchDemo
-    <>
-                  </button>
-                </div>
-                <divclassName="m t-8 flexitems-centerspace-x-6">
-                  <divclassName="f l exitems-center">
-                    <divclassName="f l ex">
-                      {[...Array(5)].map((_, i) => (
-                        <Starkey="{i}" className="h-5 w-5t e xt-yellow-400fill-current" />
+    <>;
+        <sectionclassName="r e lativeoverflow-hiddenpt-20pb-16" />;
+          <divclassName="a b soluteinset-0opacity-20" />;
+          <divclassName="r e lativemax-w-7xlmx-autopx-4sm: px-6lg:px-8">;
+            <divclassName="g r idgrid-cols-1 lg:grid-cols-2gap-12items-center">;
+              <div />;
+                <divclassName="i n line-flexitems-centerpx-4 py-2 bg-gradient-to-rfrom-blue-500 to-purple-500 rounded-fulltext-whitetext-smfont-semiboldmb-6">;
+                  <SparklesclassName="h-4w-4m r-2" />;
+                  AI-PoweredAnalytics;
+    <>;
+                </div>;
+                <h1 className="{`t e xt-4" xlmd: text-6 xlfont-boldtext-whitemb-6 transition-allduration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />;
+    </>;
+                  ZionAnalytics;
+    <>;
+                  <spanclassName="b l ockbg-gradient-to-rfrom-blue-400 to-purple-400bg-clip-texttext-transparent">Pro;
+                  </span>;
+                </h1>;
+                <pclassName="{`t e xt-xl" text-gray-300 mb-8 transition-allduration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />;
+    </>;
+                  ThemostadvancedAI-poweredbusinessintelligenceplatform. Getreal-timeinsights,;
+                  predictiveanalytics, andcustomreportsthatdriveyourbusinessforward.;
+    <>;
+                </p>;
+                <divclassName="{`f l ex" flex-colsm: flex-rowgap-4 transition-allduration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />;
+                  <Linkto="/contact" className="i n line-flexitems-centerpx-8 py-4 bg-gradient-to-rfrom-blue-600 to-purple-600 text-whitefont-semiboldrounded-lghover: from-blue-700 hover:to-purple-700 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-xl">;
+          StartFreeTrial;
+          <ArrowRightclassName="m l-2h-5w-5"  />;
+        </Link>;
+                  <buttonclassName="i n line-flexitems-centerpx-8 py-4 border-2 border-blue-400 text-blue-400 font-semiboldrounded-lghover:bg-blue-400 hover:text-whitetransition-allduration-300transformhover:scale-105" />;
+                    <PlayclassName="m r-2h-5w-5" />;
+                    WatchDemo;
+    <>;
+                  </button>;
+                </div>;
+                <divclassName="m t-8 flexitems-centerspace-x-6">;
+                  <divclassName="f l exitems-center">;
+                    <divclassName="f l ex">;
+                      {[...Array(5)].map((_, i) => (;
+                        <Starkey="{i}" className="h-5 w-5t e xt-yellow-400fill-current" />;
                       ))}
-    <>
-                    </div>
-                    <spanclassName="m l-2text-gray-300">4.9/5 (127, reviews)</span>
-                  </div>
-              </div>
-              <divclassName="{`t r ansition-all" duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                <divclassName="r e lative">
-                  <divclassName="b g-gray-800 rounded-2 xlp-8borderborder-gray-700">
-                    <divclassName="s p ace-y-6">
-                      <divclassName="f l exitems-centerjustify-between">
-                        <h3 className="t e xt-xlfont-semiboldtext-white"   />RevenueAnalytics</h3>
-                        <divclassName="f l exitems-centertext-green-400">
-                          <TrendingUpclassName="h-4w-4m r-1" />
-                          +24.5%
-    <>
-                        </div>
-                      <divclassName="h-32 b g-gradient-to-rfrom-blue-500 to-purple-500 rounded-lgflexitems-centerjustify-center">
-                        <BarChartclassName="h-16 w-16t e xt-whiteopacity-50" />
-                      </div>
-                      <divclassName="g r idgrid-cols-3gap-4">
-                        <divclassName="t e xt-center">
-                          <divclassName="t e xt-2 xlfont-boldtext-white"   />$2.4 M</div>
-                          <divclassName="t e xt-smtext-gray-400"   />TotalRevenue</div>
-                        <divclassName="t e xt-center">
-                          <divclassName="t e xt-2 xlfont-boldtext-white"   />1,247</div>
-                          <divclassName="t e xt-smtext-gray-400"   />Customers</div>
-                        <divclassName="t e xt-center">
-                          <divclassName="t e xt-2 xlfont-boldtext-white"   />89%</div>
-                          <divclassName="t e xt-smtext-gray-400"   />Satisfaction</div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </section>
-    </>
-
+    <>;
+                    </div>;
+                    <spanclassName="m l-2text-gray-300">4.9/5 (127, reviews)</span>;
+                  </div>;
+              </div>;
+              <divclassName="{`t r ansition-all" duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />;
+                <divclassName="r e lative">;
+                  <divclassName="b g-gray-800 rounded-2 xlp-8borderborder-gray-700">;
+                    <divclassName="s p ace-y-6">;
+                      <divclassName="f l exitems-centerjustify-between">;
+                        <h3 className="t e xt-xlfont-semiboldtext-white"   />RevenueAnalytics</h3>;
+                        <divclassName="f l exitems-centertext-green-400">;
+                          <TrendingUpclassName="h-4w-4m r-1" />;
+                          +24.5%;
+    <>;
+                        </div>;
+                      <divclassName="h-32 b g-gradient-to-rfrom-blue-500 to-purple-500 rounded-lgflexitems-centerjustify-center">;
+                        <BarChartclassName="h-16 w-16t e xt-whiteopacity-50" />;
+                      </div>;
+                      <divclassName="g r idgrid-cols-3gap-4">;
+                        <divclassName="t e xt-center">;
+                          <divclassName="t e xt-2 xlfont-boldtext-white"   />$2.4 M</div>;
+                          <divclassName="t e xt-smtext-gray-400"   />TotalRevenue</div>;
+                        <divclassName="t e xt-center">;
+                          <divclassName="t e xt-2 xlfont-boldtext-white"   />1,247</div>;
+                          <divclassName="t e xt-smtext-gray-400"   />Customers</div>;
+                        <divclassName="t e xt-center">;
+                          <divclassName="t e xt-2 xlfont-boldtext-white"   />89%</div>;
+                          <divclassName="t e xt-smtext-gray-400"   />Satisfaction</div>;
+                      </div>;
+                  </div>;
+              </div>;
+          </div>;
+        </section>;
+    </>;
         {/* FeaturesSection */}
-    <>
-        <sectionclassName="p y-20bg-gray-900/50" />
-          <divclassName="m a x-w-7xlmx-autopx-4sm:px-6lg:px-8">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />PowerfulFeaturesforModernBusinesses
-              </h2>
-              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Everythingyouneedtotransformyourdataintoactionableinsightsanddrivebusinessgrowth.</p>
-            </div>
-            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-              {features.map((feature, index) => (
-    <>
-                <divkey="{index}" className="g r oup" />
-                  <divclassName="b g-gray-800 rounded-xlp-6 h-fullhover:bg-gray-700 transition-allduration-300 transformhover:scale-105borderborder-gray-700">
-                    <divclassName="{`i n line-flex" items-centerjustify-centerw-12 h-12 bg-gradient-to-r ${feature.color} rounded-lgmb-4`} />
-                      <feature.iconclassName="h-6w-6t e xt-white" />
-                    </div>
-                    <h3 className="t e xt-xlfont-semiboldtext-whitemb-3"   />{feature.title}</h3>
-                    <pclassName="t e xt-gray-300">{feature.description}</p>
-                  </div>
+    <>;
+        <sectionclassName="p y-20bg-gray-900/50" />;
+          <divclassName="m a x-w-7xlmx-autopx-4sm: px-6lg:px-8">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />PowerfulFeaturesforModernBusinesses;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Everythingyouneedtotransformyourdataintoactionableinsightsanddrivebusinessgrowth.</p>;
+            </div>;
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">;
+              {features.map((feature, index) => (;
+    <>;
+                <divkey="{index}" className="g r oup" />;
+                  <divclassName="b g-gray-800 rounded-xlp-6 h-fullhover: bg-gray-700 transition-allduration-300 transformhover:scale-105borderborder-gray-700">;
+                    <divclassName="{`i n line-flex" items-centerjustify-centerw-12 h-12 bg-gradient-to-r ${feature.color} rounded-lgmb-4`} />;
+                      <feature.iconclassName="h-6w-6t e xt-white" />;
+                    </div>;
+                    <h3 className="t e xt-xlfont-semiboldtext-whitemb-3"   />{feature.title}</h3>;
+                    <pclassName="t e xt-gray-300">{feature.description}</p>;
+                  </div>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* PricingSection */}
-    <>
-        <sectionclassName="p y-20" />
-          <divclassName="m a x-w-7xlmx-autopx-4sm:px-6lg:px-8">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />ChooseYourPlan
-              </h2>
-              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Flexiblepricingoptionstofitbusinessesofallsizes. Startwithafreetrial, nocreditcardrequired.</p>
-            </div>
-            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
-              {pricingPlans.map((plan, index) => (
-                <divkey="{index}"
+    <>;
+        <sectionclassName="p y-20" />;
+          <divclassName="m a x-w-7xlmx-autopx-4sm: px-6lg:px-8">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />ChooseYourPlan;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Flexiblepricingoptionstofitbusinessesofallsizes. Startwithafreetrial, nocreditcardrequired.</p>;
+            </div>;
+            <divclassName="g r idgrid-cols-1md: grid-cols-3gap-8">;
+              {pricingPlans.map((plan, index) => (;
+                <divkey="{index}";
                   className="{`r e lative" bg-gray-800 rounded-xlp-8 ${
-                    plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
-                  }`} />
-                  {plan.popular && (
-                    <divclassName="a b solute -top-4 left-1/2transform-translate-x-1/2">
-                      <spanclassName="b g-gradient-to-rfrom-blue-600 to-purple-600 text-whitepx-4 py-1 rounded-fulltext-smfont-semibold"  />MostPopular
-                      </span>
-                    </div>
-    </>
+                    plan.popular ? 'ring-2 ring-blue-500 scale-105' : '';
+                  }`} />;
+                  {plan.popular && (;
+                    <divclassName="a b solute -top-4 left-1/2transform-translate-x-1/2">;
+                      <spanclassName="b g-gradient-to-rfrom-blue-600 to-purple-600 text-whitepx-4 py-1 rounded-fulltext-smfont-semibold"  />MostPopular;
+                      </span>;
+                    </div>;
+    </>;
                   )}
-                  <divclassName="t e xt-centermb-8">
-                    <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"   />{plan.name}</h3>
-                    <pclassName="t e xt-gray-400mb-4">{plan.description}</p>
-                    <divclassName="f l exitems-baselinejustify-center">
-                      <spanclassName="t e xt-5 xlfont-boldtext-white"   />{plan.price}</span>
-                      <spanclassName="t e xt-gray-400ml-1"   />{plan.period}</span>
-                    </div>
-                  <ulclassName="s p ace-y-4mb-8" />
-    </>
-                    {plan.features.map((feature, idx) => (
-                      <likey="{idx}" className="f l exitems-centertext-gray-300" />
-                        <CheckCircleclassName="h-5 w-5 t e xt-green-400mr-3flex-shrink-0" />
-                        <span   />{feature}</span>
-                      </li>
-    </>
+                  <divclassName="t e xt-centermb-8">;
+                    <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"   />{plan.name}</h3>;
+                    <pclassName="t e xt-gray-400mb-4">{plan.description}</p>;
+                    <divclassName="f l exitems-baselinejustify-center">;
+                      <spanclassName="t e xt-5 xlfont-boldtext-white"   />{plan.price}</span>;
+                      <spanclassName="t e xt-gray-400ml-1"   />{plan.period}</span>;
+                    </div>;
+                  <ulclassName="s p ace-y-4mb-8" />;
+    </>;
+                    {plan.features.map((feature, idx) => (;
+                      <likey="{idx}" className="f l exitems-centertext-gray-300" />;
+                        <CheckCircleclassName="h-5 w-5 t e xt-green-400mr-3flex-shrink-0" />;
+                        <span   />{feature}</span>;
+                      </li>;
+    </>;
                     ))}
-                  </ul>
-                  <Linkto="/contact"
+                  </ul>;
+                  <Linkto="/contact";
                     className="{`w-f u ll" inline-flexitems-centerjustify-centerpx-6 py-3 font-semiboldrounded-lgtransition-allduration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-rfrom-blue-600 to-purple-600 text-whitehover:from-blue-700 hover:to-purple-700'
-                        : 'borderborder-gray-600 text-gray-300 hover: bg-gray-700 hover:text-white'
-                    }`}>
-          GetStarted
-                    
-          <ArrowRightclassName="m l-2h-4w-4"  />
-        </Link>
-                </div>
-    </>
+                      plan.popular;
+                        ? 'bg-gradient-to-rfrom-blue-600 to-purple-600 text-whitehover: from-blue-700 hover:to-purple-700';
+                        : 'borderborder-gray-600 text-gray-300 hover: bg-gray-700 hover:text-white';
+                    }`}>;
+          GetStarted;
+          <ArrowRightclassName="m l-2h-4w-4"  />;
+        </Link>;
+                </div>;
+    </>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* TestimonialsSection */}
-    <>
-        <sectionclassName="p y-20bg-gray-900/50" />
-          <divclassName="m a x-w-7xlmx-autopx-4sm:px-6lg:px-8">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />WhatOurCustomersSay
-              </h2>
-              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">JointhousandsofbusinessesalreadyusingZionAnalyticsProtodrivegrowth.</p>
-            </div>
-            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
-              {testimonials.map((testimonial, index) => (
-    <>
-                <divkey="{index}" className="b g-gray-800 rounded-xlp-6borderborder-gray-700" />
-                  <divclassName="f l exitems-centermb-4">
+    <>;
+        <sectionclassName="p y-20bg-gray-900/50" />;
+          <divclassName="m a x-w-7xlmx-autopx-4sm: px-6lg:px-8">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />WhatOurCustomersSay;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">JointhousandsofbusinessesalreadyusingZionAnalyticsProtodrivegrowth.</p>;
+            </div>;
+            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">;
+              {testimonials.map((testimonial, index) => (;
+    <>;
+                <divkey="{index}" className="b g-gray-800 rounded-xlp-6borderborder-gray-700" />;
+                  <divclassName="f l exitems-centermb-4">;
                     <divclassName="w-12 h-12 b g-gradient-to-rfrom-blue-500 to-purple-500 rounded-fullflexitems-centerjustify-centertext-whitefont-semiboldmr-4"  />{testimonial.avatar}
-                    </div>
-                    <div />
-                      <divclassName="f o nt-semiboldtext-white"   />{testimonial.name}</div>
-                      <divclassName="t e xt-smtext-gray-400"   />{testimonial.role}, {testimonial.company}</div>
-                  </div>
-                  <divclassName="f l exmb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Starkey="{i}" className="h-4 w-4t e xt-yellow-400fill-current" />
+                    </div>;
+                    <div />;
+                      <divclassName="f o nt-semiboldtext-white"   />{testimonial.name}</div>;
+                      <divclassName="t e xt-smtext-gray-400"   />{testimonial.role}, {testimonial.company}</div>;
+                  </div>;
+                  <divclassName="f l exmb-4">;
+                    {[...Array(testimonial.rating)].map((_, i) => (;
+                      <Starkey="{i}" className="h-4 w-4t e xt-yellow-400fill-current" />;
                     ))}
-    <>
-                  </div>
-                  <pclassName="t e xt-gray-300italic">"{testimonial.content}"</p>
-                </div>
-    </>
+    <>;
+                  </div>;
+                  <pclassName="t e xt-gray-300italic">"{testimonial.content}"</p>;
+                </div>;
+    </>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* CTASection */}
-    <>
-        <sectionclassName="p y-20 bg-gradient-to-brfrom-gray-900to-purple-900" />
-          <divclassName="m a x-w-7xlmx-autopx-4 sm:px-6lg:px-8text-center">
-            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />ReadytoTransformYourAnalytics?
-            </h2>
-            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">
-              StartyourfreetrialtodayandseehowZionAnalyticsProcanrevolutionizeyourbusinessintelligence.
-    <>
-            </p>
-            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-              <Linkto="/contact" className="i n line-flexitems-centerpx-8 py-4 bg-gradient-to-rfrom-blue-600 to-purple-600 text-whitefont-semiboldrounded-lghover:from-blue-700 hover:to-purple-700 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-xl">
-          StartFreeTrial
-                
-          <ArrowRightclassName="m l-2h-5w-5"  />
-        </Link>
-              <ahref="tel:+13024640950"
-                className="i n line-flexitems-centerpx-8 py-4 border-2 border-blue-400 text-blue-400 font-semiboldrounded-lghover:bg-blue-400 hover:text-whitetransition-allduration-300transformhover:scale-105" />
-                Call +1 302 464 0950
-    <>
-              </a>
-            </div>
-            <divclassName="m t-8text-gray-400">
-              <p />Email: kleber@ziontechgroup.com</p>
-              <p />Address: 364 EMainStSTE 1008, MiddletownDE 19709</p>
-            </div>
-        </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
+    <>;
+        <sectionclassName="p y-20 bg-gradient-to-brfrom-gray-900to-purple-900" />;
+          <divclassName="m a x-w-7xlmx-autopx-4 sm: px-6lg:px-8text-center">;
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />ReadytoTransformYourAnalytics?;
+            </h2>;
+            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">;
+              StartyourfreetrialtodayandseehowZionAnalyticsProcanrevolutionizeyourbusinessintelligence.;
+    <>;
+            </p>;
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">;
+              <Linkto="/contact" className="i n line-flexitems-centerpx-8 py-4 bg-gradient-to-rfrom-blue-600 to-purple-600 text-whitefont-semiboldrounded-lghover:from-blue-700 hover:to-purple-700 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-xl">;
+          StartFreeTrial;
+          <ArrowRightclassName="m l-2h-5w-5"  />;
+        </Link>;
+              <ahref="tel:+13024640950";
+                className="i n line-flexitems-centerpx-8 py-4 border-2 border-blue-400 text-blue-400 font-semiboldrounded-lghover:bg-blue-400 hover:text-whitetransition-allduration-300transformhover:scale-105" />;
+                Call +1 302 464 0950;
+    <>;
+              </a>;
+            </div>;
+            <divclassName="m t-8text-gray-400">;
+              <p />Email: kleber@ziontechgroup.com</p>;
+              <p />Address: 364 EMainStSTE 1008, MiddletownDE 19709</p>;
+            </div>;
+        </section>;
+      </div>;
+        </div>;
+      </div>;
+          </div>;
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+          </div>;
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+      </div>;
+    </>;
   );
 };
-
+;
 exportdefaultZionAnalyticsProPage;
-    </>
+    </>;

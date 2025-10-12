@@ -1,23 +1,21 @@
 import React from 'react';
-import { Link    } from 'react-router-dom';
-import { ArrowRight    } from 'lucide-react';
-
-exportdefaultfunctionRoboticsintegrationPage() {
-  return (
-    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900pt-20">
-      <Helmet>
-        <title>RoboticsIntegration - ZionTechGroup</title>
-        <metaname="description" content="ProfessionalroboticsintegrationservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." / / />
-      </Helmet>
-      <divclassName="m a x-w-7xlmx-autopx-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="t e xt-4xlfont-boldtext-whitemb-6">RoboticsIntegration</h1>
-        <pclassName="t e xt-lgtext-gray-300 mb-8">Professionalroboticsintegrationservicescomingsoon.</p>
-        <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-centermx-autow-fit">
-          ContactUs
-          
-          <ArrowRightclassName="w-5h-5m l-2"  />
-        </Link>
-      </div>
+import {Link    } from 'react-router-dom';
+import {ArrowRight    } from 'lucide-react';
+;
+exportdefaultfunctionRoboticsintegrationPage() {return (;
+    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900pt-20">;
+      <Helmet>;
+        <title>RoboticsIntegration - ZionTechGroup</title>;
+        <metaname="description" content="ProfessionalroboticsintegrationservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." / / />;
+      </Helmet>;
+      <divclassName="m a x-w-7xlmx-autopx-4 sm: px-6 lg:px-8 py-16 text-center">;
+        <h1 className="t e xt-4xlfont-boldtext-whitemb-6">RoboticsIntegration</h1>;
+        <pclassName="t e xt-lgtext-gray-300 mb-8">Professionalroboticsintegrationservicescomingsoon.</p>;
+        <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-centermx-autow-fit">;
+          ContactUs;
+          <ArrowRightclassName="w-5h-5m l-2"  />;
+        </Link>;
+      </div>;
   );
 }
-    </>
+    </>;

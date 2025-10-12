@@ -1,203 +1,192 @@
 import React from 'react';
-import { Helmet    } from 'react-helmet-async';
-import { Link    } from 'react-router-dom';
-import { ArrowRight, Zap, Brain, Settings, Globe, Users, Star, Award, CheckCircle    } from 'lucide-react';
-
-constAIAutomationPage: React.FC = () => {
-  constfeatures = [
-    {
-      icon: <ZapclassName="w-8h-8t e xt-cyan-400" />,
-      title: 'WorkflowAutomation',
-      description: 'Automatecomplexbusinessprocesseswithintelligentworkflowmanagement.'
-    },
-    {
-      icon: <BrainclassName="w-8h-8t e xt-purple-400" />,
-      title: 'IntelligentDecisionMaking',
-      description: 'AI-powereddecisionmakingbasedondataanalysisandbusinessrules.'
-    },
-    {
-      icon: <SettingsclassName="w-8h-8t e xt-green-400" />,
-      title: 'CustomIntegrations',
-      description: 'Seamlesslyintegratewithyourexistingsystemsandthird-partyapplications.'
-    },
-    {
-      icon: <GlobeclassName="w-8h-8t e xt-blue-400" />,
-      title: 'ScalableSolutions',
-      description: 'Automationsolutionsthatgrowwithyourbusinessandadapttochangingneeds.'
+import {Helmet    } from 'react-helmet-async';
+import {Link    } from 'react-router-dom';
+import {ArrowRight, Zap, Brain, Settings, Globe, Users, Star, Award, CheckCircle    } from 'lucide-react';
+;
+constAIAutomationPage: React.FC = () => {constfeatures = [{
+      icon: <ZapclassName="w-8h-8t e xt-cyan-400" />,;
+      title: 'WorkflowAutomation',;
+      description: 'Automatecomplexbusinessprocesseswithintelligentworkflowmanagement.';
+    },;
+    {icon: <BrainclassName="w-8h-8t e xt-purple-400" />,;
+      title: 'IntelligentDecisionMaking',;
+      description: 'AI-powereddecisionmakingbasedondataanalysisandbusinessrules.';
+    },;
+    {icon: <SettingsclassName="w-8h-8t e xt-green-400" />,;
+      title: 'CustomIntegrations',;
+      description: 'Seamlesslyintegratewithyourexistingsystemsandthird-partyapplications.';
+    },;
+    {icon: <GlobeclassName="w-8h-8t e xt-blue-400" />,;
+      title: 'ScalableSolutions',;
+      description: 'Automationsolutionsthatgrowwithyourbusinessandadapttochangingneeds.';
     }
   ];
-  constuseCases = [
-    {
-      title: 'CustomerService',
-      description: 'Automateticketrouting, responsegeneration, andissueresolution.',
-      icon: <UsersclassName="w-6h-6t e xt-blue-400" />
-    },
-    {
-      title: 'DataProcessing',
-      description: 'Automatedatacollection, validation, andanalysisworkflows.',
-      icon: <StarclassName="w-6h-6t e xt-yellow-400" />
-    },
-    {
-      title: 'MarketingAutomation',
-      description: 'Automateemailcampaigns, leadscoring, andcustomersegmentation.',
-      icon: <AwardclassName="w-6h-6t e xt-green-400" />
-    },
-    {
-      title: 'FinancialOperations',
-      description: 'Automateinvoiceprocessing, expensemanagement, andfinancialreporting.',
-      icon: <CheckCircleclassName="w-6h-6t e xt-red-400" />
+  constuseCases = [{title: 'CustomerService',;
+      description: 'Automateticketrouting, responsegeneration, andissueresolution.',;
+      icon: <UsersclassName="w-6h-6t e xt-blue-400" />;
+    },;
+    {title: 'DataProcessing',;
+      description: 'Automatedatacollection, validation, andanalysisworkflows.',;
+      icon: <StarclassName="w-6h-6t e xt-yellow-400" />;
+    },;
+    {title: 'MarketingAutomation',;
+      description: 'Automateemailcampaigns, leadscoring, andcustomersegmentation.',;
+      icon: <AwardclassName="w-6h-6t e xt-green-400" />;
+    },;
+    {title: 'FinancialOperations',;
+      description: 'Automateinvoiceprocessing, expensemanagement, andfinancialreporting.',;
+      icon: <CheckCircleclassName="w-6h-6t e xt-red-400" />;
     }
   ];
-  constbenefits = [
-    'Reduceoperationalcostsbyupto 70%',
-    'Increaseproductivityandefficiency',
-    'Eliminatehumanerrorsinrepetitivetasks',
-    '24/7 automatedoperations',
-    'Scalableandadaptablesolutions',
-    'ROIwithin 3-6 months'
+  constbenefits = ['Reduceoperationalcostsbyupto 70%',;
+    'Increaseproductivityandefficiency',;
+    'Eliminatehumanerrorsinrepetitivetasks',;
+    '24/7 automatedoperations',;
+    'Scalableandadaptablesolutions',;
+    'ROIwithin 3-6 months';
   ];
-  return (
-    <divclassName="m in-h-screenbg-gradient-to-brfrom-gray-900via-blue-900to-purple-900">
-      <Helmet />
-        <title />AIAutomationServices - ZionTechGroup</title>
-        <metaname="description" content="TransformyourbusinesswithAI-poweredautomationsolutions. Reducecosts, increaseefficiency, andeliminatemanualprocesses." />
-        <metaname="keywords" content="AIautomation, businessprocessautomation, workflowautomation, intelligentautomation, RPA" />
-      </Helmet>
+  return (;
+    <divclassName="m in-h-screenbg-gradient-to-brfrom-gray-900via-blue-900to-purple-900">;
+      <Helmet />;
+        <title />AIAutomationServices - ZionTechGroup</title>;
+        <metaname="description" content="TransformyourbusinesswithAI-poweredautomationsolutions. Reducecosts, increaseefficiency, andeliminatemanualprocesses." />;
+        <metaname="keywords" content="AIautomation, businessprocessautomation, workflowautomation, intelligentautomation, RPA" />;
+      </Helmet>;
       {/* HeroSection */}
-    <>
-      <sectionclassName="r e lativepy-20 px-4sm:px-6lg:px-8" />
-        <divclassName="m a x-w-7xlmx-autotext-center">
-          <h1 className="t e xt-5xlmd:text-6xlfont-boldtext-whitemb-6" />
-            AI <spanclassName="t e xt-transparentbg-clip-textbg-gradient-to-rfrom-cyan-400to-purple-400" />Automation</span> Services
-          </h1>
-          <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">Transformyourbusinessoperationswithintelligentautomationsolutionsthatreducecosts, increaseefficiency, andeliminaterepetitivetasks.</p>
-          <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-            <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-600 to-purple-600 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-cyan-700 hover:to-purple-700 transition-allduration-300 flexitems-centergap-2">
-          GetStarted 
-          <ArrowRightclassName="w-5h-5"  />
-        </Link>
-            <Linkto="/ai-services" className="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-gray-900transition-allduration-300" />
-              ViewAllAIServices
-    <>
-            </Link>
-          </div>
-      </section>
+    <>;
+      <sectionclassName="r e lativepy-20 px-4sm: px-6lg:px-8" />;
+        <divclassName="m a x-w-7xlmx-autotext-center">;
+          <h1 className="t e xt-5xlmd:text-6xlfont-boldtext-whitemb-6" />;
+            AI <spanclassName="t e xt-transparentbg-clip-textbg-gradient-to-rfrom-cyan-400to-purple-400" />Automation</span> Services;
+          </h1>;
+          <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">Transformyourbusinessoperationswithintelligentautomationsolutionsthatreducecosts, increaseefficiency, andeliminaterepetitivetasks.</p>;
+          <divclassName="f l exflex-colsm: flex-rowgap-4justify-center">;
+            <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-600 to-purple-600 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-cyan-700 hover:to-purple-700 transition-allduration-300 flexitems-centergap-2">;
+          GetStarted;
+          <ArrowRightclassName="w-5h-5"  />;
+        </Link>;
+            <Linkto="/ai-services" className="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-gray-900transition-allduration-300" />;
+              ViewAllAIServices;
+    <>;
+            </Link>;
+          </div>;
+      </section>;
       {/* FeaturesSection */}
-    <>
-      <sectionclassName="p y-20bg-white" />
-        <divclassName="m a x-w-7xlmx-autopx-4sm:px-6lg:px-8">
-          <divclassName="t e xt-centermb-16">
-            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-gray-900mb-4"  />AutomationCapabilities
-            </h2>
-            <pclassName="t e xt-xltext-gray-600 max-w-3xlmx-auto">
-              OurAIautomationsolutionscovereveryaspectofyourbusinessoperations
-    <>
-            </p>
-          </div>
-          <divclassName="g r idmd:grid-cols-2lg:grid-cols-4gap-8">
-            {features.map((feature, index) => (
-    <>
-              <divkey="{index}" className="t e xt-center" />
-                <divclassName="w-16 h-16 b g-blue-100 rounded-fullflexitems-centerjustify-centermx-automb-4">
-                  <feature.iconclassName="h-8w-8t e xt-blue-600" />
-                </div>
-                <h3 className="t e xt-xlfont-semiboldtext-gray-900mb-3"   />{feature.title}</h3>
-                <pclassName="t e xt-gray-600">{feature.description}</p>
-              </div>
+    <>;
+      <sectionclassName="p y-20bg-white" />;
+        <divclassName="m a x-w-7xlmx-autopx-4sm: px-6lg:px-8">;
+          <divclassName="t e xt-centermb-16">;
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-gray-900mb-4"  />AutomationCapabilities;
+            </h2>;
+            <pclassName="t e xt-xltext-gray-600 max-w-3xlmx-auto">;
+              OurAIautomationsolutionscovereveryaspectofyourbusinessoperations;
+    <>;
+            </p>;
+          </div>;
+          <divclassName="g r idmd:grid-cols-2lg:grid-cols-4gap-8">;
+            {features.map((feature, index) => (;
+    <>;
+              <divkey="{index}" className="t e xt-center" />;
+                <divclassName="w-16 h-16 b g-blue-100 rounded-fullflexitems-centerjustify-centermx-automb-4">;
+                  <feature.iconclassName="h-8w-8t e xt-blue-600" />;
+                </div>;
+                <h3 className="t e xt-xlfont-semiboldtext-gray-900mb-3"   />{feature.title}</h3>;
+                <pclassName="t e xt-gray-600">{feature.description}</p>;
+              </div>;
             ))}
-    <>
-          </div>
-      </section>
+    <>;
+          </div>;
+      </section>;
       {/* UseCasesSection */}
-    <>
-      <sectionclassName="p y-20bg-gray-50" />
-        <divclassName="m a x-w-7xlmx-autopx-4sm:px-6lg:px-8">
-          <divclassName="t e xt-centermb-16">
-            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-gray-900mb-4"  />CommonUseCases
-            </h2>
-            <pclassName="t e xt-xltext-gray-600 max-w-3xlmx-auto">
-              SeehowAIautomationcantransformdifferentareasofyourbusiness
-    <>
-            </p>
-          </div>
-          <divclassName="g r idmd:grid-cols-2lg:grid-cols-4gap-8">
-            {useCases.map((useCase, index) => (
-    <>
-              <divkey={index} className="b g-white/5 backdrop-blur-smrounded-xlp-6 borderborder-white/10 hover:bg-white/10transition-allduration-300" />
-                <divclassName="f l exitems-centergap-3mb-4">
+    <>;
+      <sectionclassName="p y-20bg-gray-50" />;
+        <divclassName="m a x-w-7xlmx-autopx-4sm: px-6lg:px-8">;
+          <divclassName="t e xt-centermb-16">;
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-gray-900mb-4"  />CommonUseCases;
+            </h2>;
+            <pclassName="t e xt-xltext-gray-600 max-w-3xlmx-auto">;
+              SeehowAIautomationcantransformdifferentareasofyourbusiness;
+    <>;
+            </p>;
+          </div>;
+          <divclassName="g r idmd:grid-cols-2lg:grid-cols-4gap-8">;
+            {useCases.map((useCase, index) => (;
+    <>;
+              <divkey={index} className="b g-white/5 backdrop-blur-smrounded-xlp-6 borderborder-white/10 hover: bg-white/10transition-allduration-300" />;
+                <divclassName="f l exitems-centergap-3mb-4">;
                   {useCase.icon}
-    <>
-                  <h3 className="t e xt-lgfont-semiboldtext-white">{useCase.title}</h3>
-                </div>
-                <pclassName="t e xt-gray-300">{useCase.description}</p>
-              </div>
+    <>;
+                  <h3 className="t e xt-lgfont-semiboldtext-white">{useCase.title}</h3>;
+                </div>;
+                <pclassName="t e xt-gray-300">{useCase.description}</p>;
+              </div>;
             ))}
-    <>
-          </div>
-      </section>
+    <>;
+          </div>;
+      </section>;
       {/* BenefitsSection */}
-    <>
-      <sectionclassName="p y-20 px-4sm:px-6lg:px-8" />
-        <divclassName="m a x-w-7xlmx-auto">
-          <divclassName="g r idlg:grid-cols-2gap-12items-center">
-            <div />
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-6"   />WhyChooseOurAIAutomation?</h2>
-              <pclassName="t e xt-lgtext-gray-300 mb-8">OurAIautomationsolutionsdelivermeasurableresultsthattransformyourbusinessoperationsanddrivegrowth.</p>
-              <ulclassName="s p ace-y-4" />
-                {benefits.map((benefit, index) => (
-                  <likey="{index}" className="f l exitems-centerspace-x-3" />
-                    <CheckCircleclassName="w-6 h-6t e xt-cyan-400flex-shrink-0" />
-                    <spanclassName="t e xt-gray-300"   />{benefit}</span>
-                  </li>
+    <>;
+      <sectionclassName="p y-20 px-4sm: px-6lg:px-8" />;
+        <divclassName="m a x-w-7xlmx-auto">;
+          <divclassName="g r idlg:grid-cols-2gap-12items-center">;
+            <div />;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6"   />WhyChooseOurAIAutomation?</h2>;
+              <pclassName="t e xt-lgtext-gray-300 mb-8">OurAIautomationsolutionsdelivermeasurableresultsthattransformyourbusinessoperationsanddrivegrowth.</p>;
+              <ulclassName="s p ace-y-4" />;
+                {benefits.map((benefit, index) => (;
+                  <likey="{index}" className="f l exitems-centerspace-x-3" />;
+                    <CheckCircleclassName="w-6 h-6t e xt-cyan-400flex-shrink-0" />;
+                    <spanclassName="t e xt-gray-300"   />{benefit}</span>;
+                  </li>;
                 ))}
-    <>
-              </ul>
-            </div>
-            <divclassName="b g-gradient-to-rfrom-cyan-600/20 to-purple-600/20 rounded-2xlp-8borderborder-cyan-500/30">
-              <h3 className="t e xt-2xlfont-boldtext-whitemb-4" />ReadytoAutomate?</h3>
-              <pclassName="t e xt-gray-300 mb-6">LetourAIexpertshelpyouidentifyautomationopportunitiesandimplementsolutionsthatdeliverimmediatevalue.</p>
-              <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-600 to-purple-600 text-whitepx-6 py-3 rounded-lgfont-semiboldhover:from-cyan-700 hover:to-purple-700 transition-allduration-300 inline-flexitems-centergap-2">
-          StartYourAutomationJourney 
-          <ArrowRightclassName="w-5h-5"  />
-        </Link>
-            <divclassName="r e lative">
-              <divclassName="b g-gradient-to-rfrom-cyan-500/20 to-purple-600/20 rounded-2 xlp-8 backdrop-blur-smborderborder-white/10">
-                <divclassName="t e xt-center">
-                  <divclassName="t e xt-4xlfont-boldtext-whitemb-2"   />70%</div>
-                  <divclassName="t e xt-gray-300 mb-6"   />AverageCostReduction</div>
-                  <divclassName="t e xt-4xlfont-boldtext-whitemb-2"   />3-6</div>
-                  <divclassName="t e xt-gray-300 mb-6"   />MonthstoROI</div>
-                  <divclassName="t e xt-4xlfont-boldtext-whitemb-2"   />24/7</div>
-                  <divclassName="t e xt-gray-300"   />AutomatedOperations</div>
-              </div>
-              <h3 className="t e xt-xlfont-semiboldtext-gray-900mb-3"   />Optimization</h3>
-              <pclassName="t e xt-gray-600">Continuouslymonitorandoptimizeautomationperformance</p>
-            </div>
-        </div>
-      </section>
+    <>;
+              </ul>;
+            </div>;
+            <divclassName="b g-gradient-to-rfrom-cyan-600/20 to-purple-600/20 rounded-2xlp-8borderborder-cyan-500/30">;
+              <h3 className="t e xt-2xlfont-boldtext-whitemb-4" />ReadytoAutomate?</h3>;
+              <pclassName="t e xt-gray-300 mb-6">LetourAIexpertshelpyouidentifyautomationopportunitiesandimplementsolutionsthatdeliverimmediatevalue.</p>;
+              <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-600 to-purple-600 text-whitepx-6 py-3 rounded-lgfont-semiboldhover: from-cyan-700 hover:to-purple-700 transition-allduration-300 inline-flexitems-centergap-2">;
+          StartYourAutomationJourney;
+          <ArrowRightclassName="w-5h-5"  />;
+        </Link>;
+            <divclassName="r e lative">;
+              <divclassName="b g-gradient-to-rfrom-cyan-500/20 to-purple-600/20 rounded-2 xlp-8 backdrop-blur-smborderborder-white/10">;
+                <divclassName="t e xt-center">;
+                  <divclassName="t e xt-4xlfont-boldtext-whitemb-2"   />70%</div>;
+                  <divclassName="t e xt-gray-300 mb-6"   />AverageCostReduction</div>;
+                  <divclassName="t e xt-4xlfont-boldtext-whitemb-2"   />3-6</div>;
+                  <divclassName="t e xt-gray-300 mb-6"   />MonthstoROI</div>;
+                  <divclassName="t e xt-4xlfont-boldtext-whitemb-2"   />24/7</div>;
+                  <divclassName="t e xt-gray-300"   />AutomatedOperations</div>;
+              </div>;
+              <h3 className="t e xt-xlfont-semiboldtext-gray-900mb-3"   />Optimization</h3>;
+              <pclassName="t e xt-gray-600">Continuouslymonitorandoptimizeautomationperformance</p>;
+            </div>;
+        </div>;
+      </section>;
       {/* CTASection */}
-    <>
-      <sectionclassName="p y-20 px-4sm:px-6lg:px-8" />
-        <divclassName="m a x-w-4xlmx-autotext-center">
-          <h2 className="t e xt-3xlfont-boldtext-whitemb-6" />
-            TransformYourBusinesswithAIAutomation
-    <>
-          </h2>
-          <pclassName="t e xt-gray-300text-lgmb-8">JoinhundredsofcompaniesthathavealreadyrevolutionizedtheiroperationswithourAIautomationsolutions.</p>
-          <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-            <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-600 to-purple-600 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-cyan-700 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-centergap-2">
-          GetStartedToday 
-          <ArrowRightclassName="w-5h-5"  />
-        </Link>
-            <Linkto="/about" className="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-gray-900transition-allduration-300" />
-              LearnMoreAboutUs
-    <>
-            </Link>
-          </div>
-      </section>
-    </div>
+    <>;
+      <sectionclassName="p y-20 px-4sm: px-6lg:px-8" />;
+        <divclassName="m a x-w-4xlmx-autotext-center">;
+          <h2 className="t e xt-3xlfont-boldtext-whitemb-6" />;
+            TransformYourBusinesswithAIAutomation;
+    <>;
+          </h2>;
+          <pclassName="t e xt-gray-300text-lgmb-8">JoinhundredsofcompaniesthathavealreadyrevolutionizedtheiroperationswithourAIautomationsolutions.</p>;
+          <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">;
+            <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-600 to-purple-600 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-cyan-700 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-centergap-2">;
+          GetStartedToday;
+          <ArrowRightclassName="w-5h-5"  />;
+        </Link>;
+            <Linkto="/about" className="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-gray-900transition-allduration-300" />;
+              LearnMoreAboutUs;
+    <>;
+            </Link>;
+          </div>;
+      </section>;
+    </div>;
   );
 };
-
+;
 exportdefaultAIAutomationPage;
-    </>
+    </>;

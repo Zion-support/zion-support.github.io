@@ -1,305 +1,280 @@
-import React from 'react'
-import { Link    } from 'react-router-dom'
-importLayoutfrom '../layout'
 import React from 'react';
-import { Link    } from 'react-router-dom';
-import { Languages, ArrowRight   } from 'lucide-react';
+import {Link    } from 'react-router-dom';
 importLayoutfrom '../layout';
-
-exportdefaultfunctionAITranslationService() {
-  constfeatures = [
-    {
-      icon: <BrainclassName="w-6h-6t e xt-cyan-400" />,
-      title: 'NeuralMachineTranslation',
-      description: 'AdvancedAImodelsprovidecontextuallyaccuratetranslationsin 100+ languages'
-    },
-    {
-      icon: <FileTextclassName="w-6h-6t e xt-purple-400" />,
-      title: 'DocumentTranslation',
-      description: 'Translateentiredocumentswhilepreservingformatting, layout, andstructure'
-    },
-    {
-      icon: <ClockclassName="w-6h-6t e xt-yellow-400" />,
-      title: 'Real-timeTranslation',
-      description: 'Instanttranslationforliveconversations, meetings, andcustomersupport'
-    },
-    {
-      icon: <TargetclassName="w-6h-6t e xt-green-400" />,
-      title: 'Industry-SpecificTranslation',
-      description: 'Specializedtranslationmodelsforlegal, medical, technical, andbusinesscontent'
+import React from 'react';
+import {Link    } from 'react-router-dom';
+import {Languages, ArrowRight   } from 'lucide-react';
+importLayoutfrom '../layout';
+;
+exportdefaultfunctionAITranslationService() {constfeatures = [{
+      icon: <BrainclassName="w-6h-6t e xt-cyan-400" />,;
+      title: 'NeuralMachineTranslation',;
+      description: 'AdvancedAImodelsprovidecontextuallyaccuratetranslationsin 100+ languages';
+    },;
+    {icon: <FileTextclassName="w-6h-6t e xt-purple-400" />,;
+      title: 'DocumentTranslation',;
+      description: 'Translateentiredocumentswhilepreservingformatting, layout, andstructure';
+    },;
+    {icon: <ClockclassName="w-6h-6t e xt-yellow-400" />,;
+      title: 'Real-timeTranslation',;
+      description: 'Instanttranslationforliveconversations, meetings, andcustomersupport';
+    },;
+    {icon: <TargetclassName="w-6h-6t e xt-green-400" />,;
+      title: 'Industry-SpecificTranslation',;
+      description: 'Specializedtranslationmodelsforlegal, medical, technical, andbusinesscontent';
     }
-  ]
-
-  consttranslationFeatures = [
-    {
-      category: 'TranslationTypes',
-      items: ['TextTranslation', 'DocumentTranslation', 'WebsiteTranslation', 'AudioTranslation', 'VideoSubtitles', 'LiveTranslation']
-    },
-    {
-      category: 'Languages',
-      items: ['100+ Languages', 'RegionalDialects', 'RareLanguages', 'SignLanguage', 'TechnicalJargon', 'CulturalAdaptation']
-    },
-    {
-      category: 'QualityAssurance',
-      items: ['HumanReview', 'QualityScoring', 'ConsistencyChecks', 'TerminologyManagement', 'StyleGuides', 'Proofreading']
-    },
-    {
-      category: 'Integration',
-      items: ['APIAccess', 'CMSIntegration', 'WebsiteWidgets', 'MobileApps', 'DesktopSoftware', 'CloudStorage']
+  ];
+  consttranslationFeatures = [{category: 'TranslationTypes',;
+      items: ['TextTranslation', 'DocumentTranslation', 'WebsiteTranslation', 'AudioTranslation', 'VideoSubtitles', 'LiveTranslation'];
+    },;
+    {category: 'Languages',;
+      items: ['100+ Languages', 'RegionalDialects', 'RareLanguages', 'SignLanguage', 'TechnicalJargon', 'CulturalAdaptation'];
+    },;
+    {category: 'QualityAssurance',;
+      items: ['HumanReview', 'QualityScoring', 'ConsistencyChecks', 'TerminologyManagement', 'StyleGuides', 'Proofreading'];
+    },;
+    {category: 'Integration',;
+      items: ['APIAccess', 'CMSIntegration', 'WebsiteWidgets', 'MobileApps', 'DesktopSoftware', 'CloudStorage'];
     }
-  ]
-
-  constpricingPlans = [
-    {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfectforsmallbusinessesandfreelancers',
-      features: [
-        'Upto 10,000 words/month',
-        '50+ languages',
-        'Basicdocumenttranslation',
-        'Emailsupport',
-        'Standardquality',
-        'APIaccess'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$99',
-      period: '/month',
-      description: 'Idealforgrowingbusinesses',
-      features: [
-        'Upto 100,000 words/month',
-        '100+ languages',
-        'Advanceddocumenttranslation',
-        'Prioritysupport',
-        'Highquality',
-        'Humanreview',
-        'Customterminology'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$299',
-      period: '/month',
-      description: 'Forlargeorganizations',
-      features: [
-        'Unlimitedwords',
-        'Alllanguages',
-        'Customtranslationmodels',
-        'Dedicatedsupport',
-        'Premiumquality',
-        'White-labelsolution',
-        'SLAguarantee'
-      ],
-      popular: false
+  ];
+  constpricingPlans = [{name: 'Starter',;
+      price: '$29',;
+      period: '/month',;
+      description: 'Perfectforsmallbusinessesandfreelancers',;
+      features: [;
+        'Upto 10,000 words/month',;
+        '50+ languages',;
+        'Basicdocumenttranslation',;
+        'Emailsupport',;
+        'Standardquality',;
+        'APIaccess';
+      ],;
+      popular: false;
+    },;
+    {name: 'Professional',;
+      price: '$99',;
+      period: '/month',;
+      description: 'Idealforgrowingbusinesses',;
+      features: ['Upto 100,000 words/month',;
+        '100+ languages',;
+        'Advanceddocumenttranslation',;
+        'Prioritysupport',;
+        'Highquality',;
+        'Humanreview',;
+        'Customterminology';
+      ],;
+      popular: true;
+    },;
+    {name: 'Enterprise',;
+      price: '$299',;
+      period: '/month',;
+      description: 'Forlargeorganizations',;
+      features: ['Unlimitedwords',;
+        'Alllanguages',;
+        'Customtranslationmodels',;
+        'Dedicatedsupport',;
+        'Premiumquality',;
+        'White-labelsolution',;
+        'SLAguarantee';
+      ],;
+      popular: false;
     }
-  ]
-
-  consttestimonials = [
-    {
-      name: 'MariaSantos',
-      company: 'GlobalMarketingAgency',
-      content: 'AITranslationServicehelpedusexpandto 15 newmarkets. Thequalityisexceptionalandcost-effective.',
-      rating: 5
-    },
-    {
-      name: 'JamesWilson',
-      company: 'E-learningPlatform',
-      content: 'Translatingourcoursesinto 8 languageswasseamless. Theeducationalcontenttranslationisspot-on.',
-      rating: 5
-    },
-    {
-      name: 'LisaChen',
-      company: 'LegalFirm',
-      content: 'Thelegaltranslationaccuracyisimpressive. Ourinternationalclientsareverysatisfiedwiththeservice.',
-      rating: 5
+  ];
+  consttestimonials = [{name: 'MariaSantos',;
+      company: 'GlobalMarketingAgency',;
+      content: 'AITranslationServicehelpedusexpandto 15 newmarkets. Thequalityisexceptionalandcost-effective.',;
+      rating: 5;
+    },;
+    {name: 'JamesWilson',;
+      company: 'E-learningPlatform',;
+      content: 'Translatingourcoursesinto 8 languageswasseamless. Theeducationalcontenttranslationisspot-on.',;
+      rating: 5;
+    },;
+    {name: 'LisaChen',;
+      company: 'LegalFirm',;
+      content: 'Thelegaltranslationaccuracyisimpressive. Ourinternationalclientsareverysatisfiedwiththeservice.',;
+      rating: 5;
     }
-  ]
-
-  return (
-    <Layouttitle="AITranslationService - ProfessionalTranslationSolutions | ZionTechGroup"
-      description="TransformyourglobalcommunicationwithAI-poweredtranslationin 100+ languages. Professionalquality, real-timetranslation, andindustry-specificsolutions. Startyourfreetrialtoday."
-      keywords="AItranslation, machinetranslation, documenttranslation, multilingualcontent, translationAPI, languageservices" />
-      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
+  ];
+  return (;
+    <Layouttitle="AITranslationService - ProfessionalTranslationSolutions | ZionTechGroup";
+      description="TransformyourglobalcommunicationwithAI-poweredtranslationin 100+ languages. Professionalquality, real-timetranslation, andindustry-specificsolutions. Startyourfreetrialtoday.";
+      keywords="AItranslation, machinetranslation, documenttranslation, multilingualcontent, translationAPI, languageservices" />;
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">;
         {/* HeroSection */}
-    <>
-        <sectionclassName="p t-20 pb-16 px-4sm:px-6lg:px-8" />
-          <divclassName="m a x-w-7xlmx-auto">
-            <divclassName="t e xt-center">
-              <divclassName="i n line-flexitems-centerpx-4 py-2 bg-amber-500/20 rounded-fulltext-amber-400 text-smfont-mediummb-6">
-                <LanguagesclassName="w-4h-4m r-2" />
-                AI-PoweredTranslation
-    <>
-              </div>
-              <h1 className="t e xt-4xlsm:text-5 xlmd:text-6 xlfont-boldtext-whitemb-6"  />AITranslationService</h1>
-              <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-3 xlmx-automb-8">
-              TransformyourglobalcommunicationwithAI-poweredtranslationin 100+ languages. 
-                Professionalquality, real-timetranslation, andindustry-specificsolutions.
-    <>
-              </p>
-              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-                <Linkto="/contact" className="b g-gradient-to-rfrom-amber-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-amber-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-center">
-          StartFreeTrial
-                  
-          <ArrowRightclassName="w-5h-5m l-2"  />
-        </Link>
-                <Linkto="#demo" className="b o rder-2 border-whitetext-whitepx-8 py-4 rounded-lgfont-semiboldhover:bg-white/10transition-colors">TryDemo
-                </Link>
-              </div>
-          </div>
-        </section>
+    <>;
+        <sectionclassName="p t-20 pb-16 px-4sm: px-6lg:px-8" />;
+          <divclassName="m a x-w-7xlmx-auto">;
+            <divclassName="t e xt-center">;
+              <divclassName="i n line-flexitems-centerpx-4 py-2 bg-amber-500/20 rounded-fulltext-amber-400 text-smfont-mediummb-6">;
+                <LanguagesclassName="w-4h-4m r-2" />;
+                AI-PoweredTranslation;
+    <>;
+              </div>;
+              <h1 className="t e xt-4xlsm:text-5 xlmd:text-6 xlfont-boldtext-whitemb-6"  />AITranslationService</h1>;
+              <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-3 xlmx-automb-8">;
+              TransformyourglobalcommunicationwithAI-poweredtranslationin 100+ languages.;
+                Professionalquality, real-timetranslation, andindustry-specificsolutions.;
+    <>;
+              </p>;
+              <divclassName="f l exflex-colsm: flex-rowgap-4justify-center">;
+                <Linkto="/contact" className="b g-gradient-to-rfrom-amber-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-amber-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-center">;
+          StartFreeTrial;
+          <ArrowRightclassName="w-5h-5m l-2"  />;
+        </Link>;
+                <Linkto="#demo" className="b o rder-2 border-whitetext-whitepx-8 py-4 rounded-lgfont-semiboldhover:bg-white/10transition-colors">TryDemo;
+                </Link>;
+              </div>;
+          </div>;
+        </section>;
         {/* FeaturesSection */}
-    <>
-        <sectionclassName="p y-16 px-4sm:px-6lg:px-8" />
-          <divclassName="m a x-w-7xlmx-auto">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-3 xlsm:text-4xlfont-boldtext-whitemb-4"  />IntelligentTranslationSolutions
-              </h2>
-              <pclassName="t e xt-lgtext-gray-300 max-w-2xlmx-auto">AI-poweredfeaturesthatbreakdownlanguagebarriersandenableglobalcommunication</p>
-            </div>
-            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-              {features.map((feature, index) => (
-    <>
-                <divkey="{index}" className="b g-gradient-to-brfrom-slate-800/50 to-purple-900/30 rounded-xlp-6 borderborder-amber-500/20 hover:border-amber-400/40transition-allduration-300" />
-                  <divclassName="f l exitems-centermb-4">
+    <>;
+        <sectionclassName="p y-16 px-4sm: px-6lg:px-8" />;
+          <divclassName="m a x-w-7xlmx-auto">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-3 xlsm:text-4xlfont-boldtext-whitemb-4"  />IntelligentTranslationSolutions;
+              </h2>;
+              <pclassName="t e xt-lgtext-gray-300 max-w-2xlmx-auto">AI-poweredfeaturesthatbreakdownlanguagebarriersandenableglobalcommunication</p>;
+            </div>;
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">;
+              {features.map((feature, index) => (;
+    <>;
+                <divkey="{index}" className="b g-gradient-to-brfrom-slate-800/50 to-purple-900/30 rounded-xlp-6 borderborder-amber-500/20 hover: border-amber-400/40transition-allduration-300" />;
+                  <divclassName="f l exitems-centermb-4">;
                     {feature.icon}
-    <>
-                    <h3 className="t e xt-xlfont-semiboldtext-whiteml-3">{feature.title}</h3>
-                  </div>
-                  <pclassName="t e xt-gray-300">{feature.description}</p>
-                </div>
+    <>;
+                    <h3 className="t e xt-xlfont-semiboldtext-whiteml-3">{feature.title}</h3>;
+                  </div>;
+                  <pclassName="t e xt-gray-300">{feature.description}</p>;
+                </div>;
               ))}
-    <>
-            </div>
-        </section>
+    <>;
+            </div>;
+        </section>;
         {/* TranslationFeatures */}
-    <>
-        <sectionclassName="p y-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
-          <divclassName="m a x-w-7xlmx-auto">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-3 xlsm:text-4xlfont-boldtext-whitemb-4"  />CompleteTranslationPlatform
-              </h2>
-              <pclassName="t e xt-lgtext-gray-300 max-w-2xlmx-auto">Everythingyouneedtotranslatecontentacrosslanguagesandcultures</p>
-            </div>
-            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-              {translationFeatures.map((feature, index) => (
-    <>
-                <divkey="{index}" className="b g-slate-800/50 rounded-xlp-6borderborder-slate-700" />
-                  <h3 className="t e xt-xlfont-semiboldtext-whitemb-4"   />{feature.category}</h3>
-                  <ulclassName="s p ace-y-2" />
-                    {feature.items.map((item, itemIndex) => (
-                      <likey="{itemIndex}" className="f l exitems-centertext-gray-300" />
-                        <CheckCircleclassName="w-4 h-4t e xt-amber-400mr-2" />
+    <>;
+        <sectionclassName="p y-16 px-4 sm: px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />;
+          <divclassName="m a x-w-7xlmx-auto">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-3 xlsm:text-4xlfont-boldtext-whitemb-4"  />CompleteTranslationPlatform;
+              </h2>;
+              <pclassName="t e xt-lgtext-gray-300 max-w-2xlmx-auto">Everythingyouneedtotranslatecontentacrosslanguagesandcultures</p>;
+            </div>;
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">;
+              {translationFeatures.map((feature, index) => (;
+    <>;
+                <divkey="{index}" className="b g-slate-800/50 rounded-xlp-6borderborder-slate-700" />;
+                  <h3 className="t e xt-xlfont-semiboldtext-whitemb-4"   />{feature.category}</h3>;
+                  <ulclassName="s p ace-y-2" />;
+                    {feature.items.map((item, itemIndex) => (;
+                      <likey="{itemIndex}" className="f l exitems-centertext-gray-300" />;
+                        <CheckCircleclassName="w-4 h-4t e xt-amber-400mr-2" />;
                         {item}
-                      </li>
+                      </li>;
                     ))}
-    <>
-                  </ul>
-                </div>
+    <>;
+                  </ul>;
+                </div>;
               ))}
-    <>
-            </div>
-        </section>
+    <>;
+            </div>;
+        </section>;
         {/* PricingSection */}
-    <>
-        <sectionclassName="p y-16 px-4sm:px-6lg:px-8" />
-          <divclassName="m a x-w-7xlmx-auto">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-3 xlsm:text-4xlfont-boldtext-whitemb-4"  />FlexiblePricingPlans
-              </h2>
-              <pclassName="t e xt-lgtext-gray-300 max-w-2xlmx-auto">Choosetheplanthatfitsyourtranslationneeds</p>
-            </div>
-            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
-              {pricingPlans.map((plan, index) => (
+    <>;
+        <sectionclassName="p y-16 px-4sm: px-6lg:px-8" />;
+          <divclassName="m a x-w-7xlmx-auto">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-3 xlsm:text-4xlfont-boldtext-whitemb-4"  />FlexiblePricingPlans;
+              </h2>;
+              <pclassName="t e xt-lgtext-gray-300 max-w-2xlmx-auto">Choosetheplanthatfitsyourtranslationneeds</p>;
+            </div>;
+            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">;
+              {pricingPlans.map((plan, index) => (;
                 <divkey="{index}" className="{`b g-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xlp-8 bordertransition-allduration-300 ${
-                  plan.popular 
-                    ? 'border-amber-400/40 scale-105 shadow-2 xlshadow-amber-500/20' 
-                    : 'border-amber-500/20 hover: border-amber-400/40'
-                }`} />
-                  {plan.popular && (
-                    <divclassName="i n line-flexitems-centerpx-3 py-1 bg-amber-500/20 rounded-fulltext-amber-400 text-smfont-mediummb-4">
-                      <StarclassName="w-4h-4m r-1" />
-                      MostPopular
-                    </div>
+                  plan.popular;
+                    ? 'border-amber-400/40 scale-105 shadow-2 xlshadow-amber-500/20';
+                    : 'border-amber-500/20 hover: border-amber-400/40';
+                }`} />;
+                  {plan.popular && (;
+                    <divclassName="i n line-flexitems-centerpx-3 py-1 bg-amber-500/20 rounded-fulltext-amber-400 text-smfont-mediummb-4">;
+                      <StarclassName="w-4h-4m r-1" />;
+                      MostPopular;
+                    </div>;
                   )}
-                  <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"   />{plan.name}</h3>
-                  <pclassName="t e xt-gray-300 mb-6">{plan.description}</p>
-                  <divclassName="m b-6">
-                    <spanclassName="t e xt-4xlfont-boldtext-white"   />{plan.price}</span>
-                    <spanclassName="t e xt-gray-400"   />{plan.period}</span>
-                  </div>
-                  <ulclassName="s p ace-y-3mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-                      <likey="{featureIndex}" className="f l exitems-centertext-gray-300" />
-                        <CheckCircleclassName="w-5 h-5t e xt-amber-400mr-3" />
+                  <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"   />{plan.name}</h3>;
+                  <pclassName="t e xt-gray-300 mb-6">{plan.description}</p>;
+                  <divclassName="m b-6">;
+                    <spanclassName="t e xt-4xlfont-boldtext-white"   />{plan.price}</span>;
+                    <spanclassName="t e xt-gray-400"   />{plan.period}</span>;
+                  </div>;
+                  <ulclassName="s p ace-y-3mb-8" />;
+                    {plan.features.map((feature, featureIndex) => (;
+                      <likey="{featureIndex}" className="f l exitems-centertext-gray-300" />;
+                        <CheckCircleclassName="w-5 h-5t e xt-amber-400mr-3" />;
                         {feature}
-                      </li>
+                      </li>;
                     ))}
-                  </ul>
-                  <Linkto="/contact"
+                  </ul>;
+                  <Linkto="/contact";
                     className="{`w-f u ll" blocktext-centerpy-3 px-6 rounded-lgfont-semiboldtransition-allduration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-rfrom-amber-500 to-purple-600 text-whitehover:from-amber-600 hover:to-purple-700'
-                        : 'border-2 border-amber-400 text-amber-400 hover: bg-amber-400/10'
+                      plan.popular;
+                        ? 'bg-gradient-to-rfrom-amber-500 to-purple-600 text-whitehover: from-amber-600 hover:to-purple-700';
+                        : 'border-2 border-amber-400 text-amber-400 hover: bg-amber-400/10';
                     }`}
-                    />GetStarted
-    <>
-                  </Link>
-                </div>
+                    />GetStarted;
+    <>;
+                  </Link>;
+                </div>;
               ))}
-    <>
-            </div>
-        </section>
+    <>;
+            </div>;
+        </section>;
         {/* Testimonials */}
-    <>
-        <sectionclassName="p y-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
-          <divclassName="m a x-w-7xlmx-auto">
-            <divclassName="t e xt-centermb-12">
-              <h2 className="t e xt-3 xlfont-boldtext-whitemb-4"  />TrustedbyGlobalBusinesses
-              </h2>
-              <pclassName="t e xt-gray-300">SeehowourAITranslationServiceenablesglobalcommunication</p>
-            </div>
-            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
-              {testimonials.map((testimonial, index) => (
-    <>
-                <divkey="{index}" className="b g-slate-800/50 rounded-xlp-6borderborder-slate-700" />
-                  <divclassName="f l exitems-centermb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Starkey="{i}" className="w-5 h-5t e xt-yellow-400fill-current" />
+    <>;
+        <sectionclassName="p y-16 px-4 sm: px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />;
+          <divclassName="m a x-w-7xlmx-auto">;
+            <divclassName="t e xt-centermb-12">;
+              <h2 className="t e xt-3 xlfont-boldtext-whitemb-4"  />TrustedbyGlobalBusinesses;
+              </h2>;
+              <pclassName="t e xt-gray-300">SeehowourAITranslationServiceenablesglobalcommunication</p>;
+            </div>;
+            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">;
+              {testimonials.map((testimonial, index) => (;
+    <>;
+                <divkey="{index}" className="b g-slate-800/50 rounded-xlp-6borderborder-slate-700" />;
+                  <divclassName="f l exitems-centermb-4">;
+                    {[...Array(testimonial.rating)].map((_, i) => (;
+                      <Starkey="{i}" className="w-5 h-5t e xt-yellow-400fill-current" />;
                     ))}
-    <>
-                  </div>
-                  <pclassName="t e xt-gray-300 mb-4">"{testimonial.content}"</p>
-                  <div />
-                    <divclassName="f o nt-semiboldtext-white"   />{testimonial.name}</div>
-                    <divclassName="t e xt-smtext-gray-400"   />{testimonial.company}</div>
-                </div>
+    <>;
+                  </div>;
+                  <pclassName="t e xt-gray-300 mb-4">"{testimonial.content}"</p>;
+                  <div />;
+                    <divclassName="f o nt-semiboldtext-white"   />{testimonial.name}</div>;
+                    <divclassName="t e xt-smtext-gray-400"   />{testimonial.company}</div>;
+                </div>;
               ))}
-    <>
-            </div>
-        </section>
+    <>;
+            </div>;
+        </section>;
         {/* CTASection */}
-    <>
-        <sectionclassName="p y-16 px-4sm:px-6lg:px-8" />
-          <divclassName="m a x-w-4 xlmx-autotext-center">
-            <divclassName="b g-gradient-to-rfrom-amber-500/20 to-purple-500/20 rounded-2 xlp-8borderborder-amber-500/30">
-              <h2 className="t e xt-3 xlfont-boldtext-whitemb-4"  />BreakDownLanguageBarriersToday
-              </h2>
-              <pclassName="t e xt-lgtext-gray-300 mb-8">JointhousandsofbusinessesusingAITranslationServicetoreachglobalaudiences</p>
-              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-                <Linkto="/contact" className="b g-gradient-to-rfrom-amber-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-amber-600 hover:to-purple-700transition-allduration-300">StartYourFreeTrial
-                </Link>
-                <Linkto="/about" className="b o rder-2 border-whitetext-whitepx-8 py-4 rounded-lgfont-semiboldhover:bg-white/10transition-colors">LearnMore
-                </Link>
-              </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  )
+    <>;
+        <sectionclassName="p y-16 px-4sm: px-6lg:px-8" />;
+          <divclassName="m a x-w-4 xlmx-autotext-center">;
+            <divclassName="b g-gradient-to-rfrom-amber-500/20 to-purple-500/20 rounded-2 xlp-8borderborder-amber-500/30">;
+              <h2 className="t e xt-3 xlfont-boldtext-whitemb-4"  />BreakDownLanguageBarriersToday;
+              </h2>;
+              <pclassName="t e xt-lgtext-gray-300 mb-8">JointhousandsofbusinessesusingAITranslationServicetoreachglobalaudiences</p>;
+              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">;
+                <Linkto="/contact" className="b g-gradient-to-rfrom-amber-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-amber-600 hover:to-purple-700transition-allduration-300">StartYourFreeTrial;
+                </Link>;
+                <Linkto="/about" className="b o rder-2 border-whitetext-whitepx-8 py-4 rounded-lgfont-semiboldhover:bg-white/10transition-colors">LearnMore;
+                </Link>;
+              </div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  );
 };
-    </>
+    </>;

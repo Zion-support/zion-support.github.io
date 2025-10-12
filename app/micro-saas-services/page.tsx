@@ -1,304 +1,293 @@
 import React from 'react';
-import { Helmet    } from 'react-helmet-async';
-import { Link    } from 'react-router-dom';
-import { Zap, BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users, Award, Star    } from 'lucide-react';
-import React from 'react'
-import { Helmet    } from 'react-helmet-async'
-import { Link    } from 'react-router-dom'
-import { BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users    } from 'lucide-react';
-
-constMicroSaasServicesPage: React.FC = () => {
-  constservices = [
-    {
-      icon: BarChart,
-      title: 'ZionAnalyticsPro',
-      description: 'Advancedbusinessintelligenceplatformwithreal-timeanalyticsandcustomdashboards.',
-      features: ['Real-timeAnalytics', 'CustomDashboards', 'DataVisualization', 'ExportReports'],
-      price: 'Startingat $99/month',
-      color: 'from-cyan-500 to-blue-500',
-      link: '/zion-analytics-pro'
-    },
-    {
-      icon: MessageSquare,
-      title: 'ZionChatAI',
-      description: 'Intelligentcustomersupportchatbotwithnaturallanguageprocessingcapabilities.',
-      features: ['24/7 Support', 'Multi-language', 'IntegrationAPIs', 'AnalyticsDashboard'],
-      price: 'Startingat $79/month',
-      color: 'from-purple-500 to-pink-500',
-      link: '/zion-chat-ai'
-    },
-    {
-      icon: Shield,
-      title: 'ZionSecurityShield',
-      description: 'Comprehensivecybersecuritymonitoringandthreatdetectionforyourbusiness.',
-      features: ['ThreatDetection', 'SecurityMonitoring', 'ComplianceReports', 'IncidentResponse'],
-      price: 'Startingat $149/month',
-      color: 'from-red-500 to-orange-500',
-      link: '/zion-security-shield'
-    },
-    {
-      icon: Cloud,
-      title: 'ZionCloudVault',
-      description: 'Securecloudbackupanddisasterrecoverysolutionforyourcriticaldata.',
-      features: ['AutomatedBackups', 'DisasterRecovery', 'DataEncryption', 'VersionControl'],
-      price: 'Startingat $59/month',
-      color: 'from-green-500 to-emerald-500',
-      link: '/zion-cloud-vault'
-    },
-    {
-      icon: Zap,
-      title: 'ZionWorkflowAutomation',
-      description: 'Streamlineyourbusinessprocesseswithintelligentworkflowautomation.',
-      features: ['ProcessAutomation', 'TaskScheduling', 'IntegrationTools', 'PerformanceAnalytics'],
-      price: 'Startingat $89/month',
-      color: 'from-yellow-500 to-orange-500',
-      link: '/zion-workflow-automation'
-    },
-    {
-      icon: Users,
-      title: 'ZionCRMIntelligence',
-      description: 'AI-poweredcustomerrelationshipmanagementwithpredictiveanalytics.',
-      features: ['LeadScoring', 'SalesForecasting', 'CustomerInsights', 'AutomationRules'],
-      price: 'Startingat $129/month',
-      color: 'from-indigo-500 to-purple-500',
-      link: '/zion-crm-intelligence'
+import {Helmet    } from 'react-helmet-async';
+import {Link    } from 'react-router-dom';
+import {Zap, BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users, Award, Star    } from 'lucide-react';
+import React from 'react';
+import {Helmet    } from 'react-helmet-async';
+import {Link    } from 'react-router-dom';
+import {BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users    } from 'lucide-react';
+;
+constMicroSaasServicesPage: React.FC = () => {constservices = [{
+      icon: BarChart,;
+      title: 'ZionAnalyticsPro',;
+      description: 'Advancedbusinessintelligenceplatformwithreal-timeanalyticsandcustomdashboards.',;
+      features: ['Real-timeAnalytics', 'CustomDashboards', 'DataVisualization', 'ExportReports'],;
+      price: 'Startingat $99/month',;
+      color: 'from-cyan-500 to-blue-500',;
+      link: '/zion-analytics-pro';
+    },;
+    {icon: MessageSquare,;
+      title: 'ZionChatAI',;
+      description: 'Intelligentcustomersupportchatbotwithnaturallanguageprocessingcapabilities.',;
+      features: ['24/7 Support', 'Multi-language', 'IntegrationAPIs', 'AnalyticsDashboard'],;
+      price: 'Startingat $79/month',;
+      color: 'from-purple-500 to-pink-500',;
+      link: '/zion-chat-ai';
+    },;
+    {icon: Shield,;
+      title: 'ZionSecurityShield',;
+      description: 'Comprehensivecybersecuritymonitoringandthreatdetectionforyourbusiness.',;
+      features: ['ThreatDetection', 'SecurityMonitoring', 'ComplianceReports', 'IncidentResponse'],;
+      price: 'Startingat $149/month',;
+      color: 'from-red-500 to-orange-500',;
+      link: '/zion-security-shield';
+    },;
+    {icon: Cloud,;
+      title: 'ZionCloudVault',;
+      description: 'Securecloudbackupanddisasterrecoverysolutionforyourcriticaldata.',;
+      features: ['AutomatedBackups', 'DisasterRecovery', 'DataEncryption', 'VersionControl'],;
+      price: 'Startingat $59/month',;
+      color: 'from-green-500 to-emerald-500',;
+      link: '/zion-cloud-vault';
+    },;
+    {icon: Zap,;
+      title: 'ZionWorkflowAutomation',;
+      description: 'Streamlineyourbusinessprocesseswithintelligentworkflowautomation.',;
+      features: ['ProcessAutomation', 'TaskScheduling', 'IntegrationTools', 'PerformanceAnalytics'],;
+      price: 'Startingat $89/month',;
+      color: 'from-yellow-500 to-orange-500',;
+      link: '/zion-workflow-automation';
+    },;
+    {icon: Users,;
+      title: 'ZionCRMIntelligence',;
+      description: 'AI-poweredcustomerrelationshipmanagementwithpredictiveanalytics.',;
+      features: ['LeadScoring', 'SalesForecasting', 'CustomerInsights', 'AutomationRules'],;
+      price: 'Startingat $129/month',;
+      color: 'from-indigo-500 to-purple-500',;
+      link: '/zion-crm-intelligence';
     }
   ];
-
-  constfeatures = [
-    {
-      icon: Zap,
-      title: 'QuickSetup',
-      description: 'Getupandrunninginminuteswithoureasy-to-useinterfaceandpre-builttemplates.'
-    },
-    {
-      icon: Shield,
-      title: 'EnterpriseSecurity',
-      description: 'Bank-levelsecuritywithencryption, compliance, andregularsecurityupdates.'
-    },
-    {
-      icon: Users,
-      title: '24/7 Support',
-      description: 'Round-the-clocksupportfromourexpertteamtoensureyoursuccess.'
-    },
-    {
-      icon: BarChart,
-      title: 'ScalableSolutions',
-      description: 'Growwithconfidenceknowingoursolutionsscalewithyourbusinessneeds.'
+;
+  constfeatures = [{icon: Zap,;
+      title: 'QuickSetup',;
+      description: 'Getupandrunninginminuteswithoureasy-to-useinterfaceandpre-builttemplates.';
+    },;
+    {icon: Shield,;
+      title: 'EnterpriseSecurity',;
+      description: 'Bank-levelsecuritywithencryption, compliance, andregularsecurityupdates.';
+    },;
+    {icon: Users,;
+      title: '24/7 Support',;
+      description: 'Round-the-clocksupportfromourexpertteamtoensureyoursuccess.';
+    },;
+    {icon: BarChart,;
+      title: 'ScalableSolutions',;
+      description: 'Growwithconfidenceknowingoursolutionsscalewithyourbusinessneeds.';
     }
   ];
-
-  return (
-    <>
-    <>
-      <Helmet>
-    </>
+;
+  return (;
+    <>;
+    <>;
+      <Helmet>;
+    </>;
 }
-        <title>MicroSaaSServices - ZionTechGroup</title>
-        <metaname="description" content="PowerfulmicroSaaSsolutionsincludinganalytics, chatbots, security, cloudbackup, workflowautomation, andCRMintelligenceformodernbusinesses." />
-        <metaname="keywords" content="microSaaS, businesssoftware, analytics, chatbots, security, cloudbackup, workflowautomation, CRM" />
-      </Helmet>
-      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
+        <title>MicroSaaSServices - ZionTechGroup</title>;
+        <metaname="description" content="PowerfulmicroSaaSsolutionsincludinganalytics, chatbots, security, cloudbackup, workflowautomation, andCRMintelligenceformodernbusinesses." />;
+        <metaname="keywords" content="microSaaS, businesssoftware, analytics, chatbots, security, cloudbackup, workflowautomation, CRM" />;
+      </Helmet>;
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">;
         {/* HeroSection */}
-        <sectionclassName="p t-32 pb-20">
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="t e xt-centermax-w-4xlmx-auto">
-              <h1 className="t e xt-5xlmd:text-6xlfont-boldtext-whitemb-6">
-                Micro <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-texttext-transparent">SaaSServices</span>
-              </h1>
-              <pclassName="t e xt-xltext-gray-300 mb-8 leading-relaxed">Powerful, purpose-builtsoftwaresolutionsdesignedtosolvespecificbusinesschallenges. 
-                Getenterprise-gradefunctionalitywithoutthecomplexity.</p>
-              <divclassName="f l exflex-colsm:flex-rowgap-4 justify-center">
-                <Linkto="/contact"
-                  className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105">
-                  StartFreeTrial
-                </Link>
-                <Linkto="/ai-services"
-                  className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300 transformhover:scale-105">
-                  ViewAIServices
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <sectionclassName="p t-32 pb-20">;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="t e xt-centermax-w-4xlmx-auto">;
+              <h1 className="t e xt-5xlmd: text-6xlfont-boldtext-whitemb-6">;
+                Micro <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-texttext-transparent">SaaSServices</span>;
+              </h1>;
+              <pclassName="t e xt-xltext-gray-300 mb-8 leading-relaxed">Powerful, purpose-builtsoftwaresolutionsdesignedtosolvespecificbusinesschallenges.;
+                Getenterprise-gradefunctionalitywithoutthecomplexity.</p>;
+              <divclassName="f l exflex-colsm: flex-rowgap-4 justify-center">;
+                <Linkto="/contact";
+                  className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105">;
+                  StartFreeTrial;
+                </Link>;
+                <Linkto="/ai-services";
+                  className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300 transformhover:scale-105">;
+                  ViewAIServices;
+                </Link>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
         {/* ServicesGrid */}
-        <sectionclassName="p y-20">
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-6">
-                Our <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-texttext-transparent">MicroSaaSSolutions</span>
-              </h2>
-              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Specializedsoftwaretoolsthatsolvespecificbusinessproblemswithprecisionandefficiency</p>
-            </div>
-            <divclassName="g r idgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+        <sectionclassName="p y-20">;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6">;
+                Our <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-texttext-transparent">MicroSaaSSolutions</span>;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Specializedsoftwaretoolsthatsolvespecificbusinessproblemswithprecisionandefficiency</p>;
+            </div>;
+            <divclassName="g r idgrid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;
+              {services.map((service, index) => (;
                 <divkey={index}
-                  className="b g-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-smborderborder-gray-700/50 rounded-xlp-8 hover:border-cyan-400/40 transition-allduration-300 grouphover:transformhover:scale-105">
-                  <divclassName={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xlflexitems-centerjustify-centermb-6 group-hover:scale-110 transition-transformduration-300`}>
-                    <service.iconclassName="w-8 h-8 t e xt-white" />
-                  </div>
-                  <h3 className="t e xt-2xlfont-boldtext-whitemb-4 group-hover:text-cyan-400 transition-colors">
+                  className="b g-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-smborderborder-gray-700/50 rounded-xlp-8 hover: border-cyan-400/40 transition-allduration-300 grouphover:transformhover:scale-105">;
+                  <divclassName={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xlflexitems-centerjustify-centermb-6 group-hover: scale-110 transition-transformduration-300`}>;
+                    <service.iconclassName="w-8 h-8 t e xt-white" />;
+                  </div>;
+                  <h3 className="t e xt-2xlfont-boldtext-whitemb-4 group-hover: text-cyan-400 transition-colors">;
                     {service.title}
-                  </h3>
-                  <pclassName="t e xt-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                  <ulclassName="s p ace-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <likey={featureIndex} className="f l exitems-centertext-smtext-gray-300">
-                        <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2 flex-shrink-0" />
+                  </h3>;
+                  <pclassName="t e xt-gray-300 mb-6 leading-relaxed">{service.description}</p>;
+                  <ulclassName="s p ace-y-2 mb-6">;
+                    {service.features.map((feature, featureIndex) => (;
+                      <likey={featureIndex} className="f l exitems-centertext-smtext-gray-300">;
+                        <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2 flex-shrink-0" />;
                         {feature}
-                      </li>
+                      </li>;
                     ))}
-                  </ul>
-                  <divclassName="f l exitems-centerjustify-betweenmb-6">
-                    <spanclassName="t e xt-2xlfont-boldtext-cyan-400">{service.price}</span>
+                  </ul>;
+                  <divclassName="f l exitems-centerjustify-betweenmb-6">;
+                    <spanclassName="t e xt-2xlfont-boldtext-cyan-400">{service.price}</span>;
                     <Linkto={service.link}
-                      className="t e xt-cyan-400 hover:text-cyan-300 transition-colorstext-smfont-mediumgroup-hover:translate-x-1 inline-flexitems-center">
-                      LearnMore <ArrowRightclassName="w-4 h-4 m l-1" />
-                    </Link>
-                  </div>
-                </div>
+                      className="t e xt-cyan-400 hover: text-cyan-300 transition-colorstext-smfont-mediumgroup-hover:translate-x-1 inline-flexitems-center">;
+                      LearnMore <ArrowRightclassName="w-4 h-4 m l-1" />;
+                    </Link>;
+                  </div>;
+                </div>;
               ))}
-            </div>
-          </div>
-        </section>
+            </div>;
+          </div>;
+        </section>;
         {/* FeaturesSection */}
-        <sectionclassName="p y-20 bg-gradient-to-rfrom-slate-800/30 to-slate-900/30">
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-6">
-                WhyChoose <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-texttext-transparent">MicroSaaS</span>?
-              </h2>
-              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Getthepowerofenterprisesoftwarewithoutthecomplexityandcost</p>
-            </div>
-            <divclassName="g r idgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <divkey={index} className="t e xt-centergroup">
-                  <divclassName="w-20 h-20 b g-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-fullflexitems-centerjustify-centermx-automb-6 group-hover:scale-110 transition-transformduration-300">
-                    <feature.iconclassName="w-10 h-10 t e xt-cyan-400" />
-                  </div>
-                  <h3 className="t e xt-xlfont-boldtext-whitemb-4">{feature.title}</h3>
-                  <pclassName="t e xt-gray-300 leading-relaxed">{feature.description}</p>
-                </div>
+        <sectionclassName="p y-20 bg-gradient-to-rfrom-slate-800/30 to-slate-900/30">;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6">;
+                WhyChoose <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-texttext-transparent">MicroSaaS</span>?;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Getthepowerofenterprisesoftwarewithoutthecomplexityandcost</p>;
+            </div>;
+            <divclassName="g r idgrid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">;
+              {features.map((feature, index) => (;
+                <divkey={index} className="t e xt-centergroup">;
+                  <divclassName="w-20 h-20 b g-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-fullflexitems-centerjustify-centermx-automb-6 group-hover: scale-110 transition-transformduration-300">;
+                    <feature.iconclassName="w-10 h-10 t e xt-cyan-400" />;
+                  </div>;
+                  <h3 className="t e xt-xlfont-boldtext-whitemb-4">{feature.title}</h3>;
+                  <pclassName="t e xt-gray-300 leading-relaxed">{feature.description}</p>;
+                </div>;
               ))}
-            </div>
-          </div>
-        </section>
+            </div>;
+          </div>;
+        </section>;
         {/* PricingSection */}
-        <sectionclassName="p y-20">
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-6">
-                Simple <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-texttext-transparent">Pricing</span>
-              </h2>
-              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Choosetheplanthatfitsyourneeds. Allplansinclude 24/7 supportandregularupdates.</p>
-            </div>
-            <divclassName="g r idgrid-cols-1 md:grid-cols-3 gap-8 max-w-5xlmx-auto">
-              <divclassName="b g-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-smborderborder-gray-700/50 rounded-xlp-8">
-                <h3 className="t e xt-2xlfont-boldtext-whitemb-4">Starter</h3>
-                <divclassName="t e xt-4xlfont-boldtext-cyan-400 mb-6">$99<spanclassName="t e xt-lgtext-gray-400">/month</span></div>
-                <ulclassName="s p ace-y-3 mb-8">
-                  <liclassName="f l exitems-centertext-gray-300">
-                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />
-                    Upto 3 MicroSaaStools
-                  </li>
-                  <liclassName="f l exitems-centertext-gray-300">
-                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />
-                    Basicsupport
-                  </li>
-                  <liclassName="f l exitems-centertext-gray-300">
-                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />
-                    Standardfeatures
-                  </li>
-                </ul>
-                <Linkto="/contact"
-                  className="w-f u llbg-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-6 py-3 rounded-lgfont-semiboldtext-centerhover:from-cyan-600 hover:to-purple-600 transition-allduration-300 block">
-                  GetStarted
-                </Link>
-              </div>
-              <divclassName="b g-gradient-to-brfrom-cyan-900/30 to-purple-900/30 backdrop-blur-smborderborder-cyan-500/50 rounded-xlp-8 relative">
-                <divclassName="a b solute -top-4 left-1/2 transform -translate-x-1/2">
-                  <spanclassName="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-4 py-1 rounded-fulltext-smfont-semibold">
-                    MostPopular
-                  </span>
-                </div>
-                <h3 className="t e xt-2xlfont-boldtext-whitemb-4">Professional</h3>
-                <divclassName="t e xt-4xlfont-boldtext-cyan-400 mb-6">$199<spanclassName="t e xt-lgtext-gray-400">/month</span></div>
-                <ulclassName="s p ace-y-3 mb-8">
-                  <liclassName="f l exitems-centertext-gray-300">
-                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />
-                    Upto 10 MicroSaaStools
-                  </li>
-                  <liclassName="f l exitems-centertext-gray-300">
-                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />
-                    Prioritysupport
-                  </li>
-                  <liclassName="f l exitems-centertext-gray-300">
-                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />
-                    Advancedfeatures
-                  </li>
-                  <liclassName="f l exitems-centertext-gray-300">
-                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />
-                    Customintegrations
-                  </li>
-                </ul>
-                <Linkto="/contact"
-                  className="w-f u llbg-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-6 py-3 rounded-lgfont-semiboldtext-centerhover:from-cyan-600 hover:to-purple-600 transition-allduration-300 block">
-                  GetStarted
-                </Link>
-              </div>
-              <divclassName="b g-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-smborderborder-gray-700/50 rounded-xlp-8">
-                <h3 className="t e xt-2xlfont-boldtext-whitemb-4">Enterprise</h3>
-                <divclassName="t e xt-4xlfont-boldtext-cyan-400 mb-6">Custom</div>
-                <ulclassName="s p ace-y-3 mb-8">
-                  <liclassName="f l exitems-centertext-gray-300">
-                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />
-                    UnlimitedMicroSaaStools
-                  </li>
-                  <liclassName="f l exitems-centertext-gray-300">
-                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />
-                    24/7 dedicatedsupport
-                  </li>
-                  <liclassName="f l exitems-centertext-gray-300">
-                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />
-                    Allfeaturesincluded
-                  </li>
-                  <liclassName="f l exitems-centertext-gray-300">
-                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />
-                    Customdevelopment
-                  </li>
-                </ul>
-                <Linkto="/contact"
-                  className="w-f u llborderborder-cyan-500 text-cyan-400 px-6 py-3 rounded-lgfont-semiboldtext-centerhover:bg-cyan-500/10 transition-allduration-300 block">
-                  ContactSales
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <sectionclassName="p y-20">;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6">;
+                Simple <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-texttext-transparent">Pricing</span>;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Choosetheplanthatfitsyourneeds. Allplansinclude 24/7 supportandregularupdates.</p>;
+            </div>;
+            <divclassName="g r idgrid-cols-1 md: grid-cols-3 gap-8 max-w-5xlmx-auto">;
+              <divclassName="b g-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-smborderborder-gray-700/50 rounded-xlp-8">;
+                <h3 className="t e xt-2xlfont-boldtext-whitemb-4">Starter</h3>;
+                <divclassName="t e xt-4xlfont-boldtext-cyan-400 mb-6">$99<spanclassName="t e xt-lgtext-gray-400">/month</span></div>;
+                <ulclassName="s p ace-y-3 mb-8">;
+                  <liclassName="f l exitems-centertext-gray-300">;
+                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />;
+                    Upto 3 MicroSaaStools;
+                  </li>;
+                  <liclassName="f l exitems-centertext-gray-300">;
+                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />;
+                    Basicsupport;
+                  </li>;
+                  <liclassName="f l exitems-centertext-gray-300">;
+                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />;
+                    Standardfeatures;
+                  </li>;
+                </ul>;
+                <Linkto="/contact";
+                  className="w-f u llbg-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-6 py-3 rounded-lgfont-semiboldtext-centerhover:from-cyan-600 hover:to-purple-600 transition-allduration-300 block">;
+                  GetStarted;
+                </Link>;
+              </div>;
+              <divclassName="b g-gradient-to-brfrom-cyan-900/30 to-purple-900/30 backdrop-blur-smborderborder-cyan-500/50 rounded-xlp-8 relative">;
+                <divclassName="a b solute -top-4 left-1/2 transform -translate-x-1/2">;
+                  <spanclassName="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-4 py-1 rounded-fulltext-smfont-semibold">;
+                    MostPopular;
+                  </span>;
+                </div>;
+                <h3 className="t e xt-2xlfont-boldtext-whitemb-4">Professional</h3>;
+                <divclassName="t e xt-4xlfont-boldtext-cyan-400 mb-6">$199<spanclassName="t e xt-lgtext-gray-400">/month</span></div>;
+                <ulclassName="s p ace-y-3 mb-8">;
+                  <liclassName="f l exitems-centertext-gray-300">;
+                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />;
+                    Upto 10 MicroSaaStools;
+                  </li>;
+                  <liclassName="f l exitems-centertext-gray-300">;
+                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />;
+                    Prioritysupport;
+                  </li>;
+                  <liclassName="f l exitems-centertext-gray-300">;
+                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />;
+                    Advancedfeatures;
+                  </li>;
+                  <liclassName="f l exitems-centertext-gray-300">;
+                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />;
+                    Customintegrations;
+                  </li>;
+                </ul>;
+                <Linkto="/contact";
+                  className="w-f u llbg-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-6 py-3 rounded-lgfont-semiboldtext-centerhover:from-cyan-600 hover:to-purple-600 transition-allduration-300 block">;
+                  GetStarted;
+                </Link>;
+              </div>;
+              <divclassName="b g-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-smborderborder-gray-700/50 rounded-xlp-8">;
+                <h3 className="t e xt-2xlfont-boldtext-whitemb-4">Enterprise</h3>;
+                <divclassName="t e xt-4xlfont-boldtext-cyan-400 mb-6">Custom</div>;
+                <ulclassName="s p ace-y-3 mb-8">;
+                  <liclassName="f l exitems-centertext-gray-300">;
+                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />;
+                    UnlimitedMicroSaaStools;
+                  </li>;
+                  <liclassName="f l exitems-centertext-gray-300">;
+                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />;
+                    24/7 dedicatedsupport;
+                  </li>;
+                  <liclassName="f l exitems-centertext-gray-300">;
+                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />;
+                    Allfeaturesincluded;
+                  </li>;
+                  <liclassName="f l exitems-centertext-gray-300">;
+                    <CheckCircleclassName="w-5 h-5 t e xt-green-400 mr-3" />;
+                    Customdevelopment;
+                  </li>;
+                </ul>;
+                <Linkto="/contact";
+                  className="w-f u llborderborder-cyan-500 text-cyan-400 px-6 py-3 rounded-lgfont-semiboldtext-centerhover:bg-cyan-500/10 transition-allduration-300 block">;
+                  ContactSales;
+                </Link>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
         {/* CTASection */}
-        <sectionclassName="p y-20">
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="b g-gradient-to-rfrom-cyan-900/50 to-purple-900/50 backdrop-blur-smborderborder-cyan-500/20 rounded-2xlp-12 text-center">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-6">
-                ReadytoTransformYourBusiness?
-              </h2>
-              <pclassName="t e xt-xltext-gray-300 mb-8 max-w-2xlmx-auto">StartyourfreetrialtodayandexperiencethepowerofourMicroSaaSsolutions.</p>
-              <divclassName="f l exflex-colsm:flex-rowgap-4 justify-center">
-                <Linkto="/contact"
-                  className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105">
-                  StartFreeTrial
-                </Link>
-                <Linkto="/about"
-                  className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300 transformhover:scale-105">
-                  LearnMoreAboutUs
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+        <sectionclassName="p y-20">;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="b g-gradient-to-rfrom-cyan-900/50 to-purple-900/50 backdrop-blur-smborderborder-cyan-500/20 rounded-2xlp-12 text-center">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6">;
+                ReadytoTransformYourBusiness?;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300 mb-8 max-w-2xlmx-auto">StartyourfreetrialtodayandexperiencethepowerofourMicroSaaSsolutions.</p>;
+              <divclassName="f l exflex-colsm: flex-rowgap-4 justify-center">;
+                <Linkto="/contact";
+                  className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105">;
+                  StartFreeTrial;
+                </Link>;
+                <Linkto="/about";
+                  className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300 transformhover:scale-105">;
+                  LearnMoreAboutUs;
+                </Link>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
 };
-
+;
 exportdefaultMicroSaasServicesPage;
+;

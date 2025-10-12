@@ -1,198 +1,189 @@
-import { ArrowRight   } from 'lucide-react';
-'useclient'
-
-  constfeatures = [
-    {
-      title: "Feature 1",
-      description: "Descriptionoffeature 1"
-    },
-    {
-      title: "Feature 2",
-      description: "Descriptionoffeature 2"
+import {ArrowRight   } from 'lucide-react';
+'useclient';
+  constfeatures = [{title: "Feature 1",;
+      description: "Descriptionoffeature 1";
+    },;
+    {title: "Feature 2",;
+      description: "Descriptionoffeature 2";
     }
   ];
-  constbenefits = [
-    'AdvancedAItechnologyintegration',
-    'Real-timeprocessingandanalytics',
-    'Enterprise-gradesecurityandcompliance',
-    'Scalableandflexiblesolutions',
-    '24/7 technicalsupport',
-    'Easyintegrationwithexistingsystems',
-    'Cost-effectivepricingplans',
-    'Proventrackrecordofsuccess'
+  constbenefits = ['AdvancedAItechnologyintegration',;
+    'Real-timeprocessingandanalytics',;
+    'Enterprise-gradesecurityandcompliance',;
+    'Scalableandflexiblesolutions',;
+    '24/7 technicalsupport',;
+    'Easyintegrationwithexistingsystems',;
+    'Cost-effectivepricingplans',;
+    'Proventrackrecordofsuccess';
   ];
-  return (
-    <>
-    <divconstclassName = {`bg-white/10 backdrop-blur-smrounded-xlp-6 borderborder-white/20 ${className}`} />
-      <divclassName="f l exitems-centerjustify-betweenmb-6">
-        <divclassName="f l exitems-centerspace-x-3">
-          <divclassName="w-10 h-10 b g-gradient-to-rfrom-blue-600 to-purple-600 rounded-lgflexitems-centerjustify-center">
-            <ZapclassName="w-5h-5t e xt-white" />
-          </div>
-          <div>
-            <h3 className="t e xt-whitefont-semibold"  >PerformanceEnhancer</h3>
-            <pclassName="t e xt-gray-300text-sm">Monitorandoptimizeyourapp'sperformance</p>
-          </div>
-        <buttononClick="{optimizePerformance}"
-          disabled="{isOptimizing}"
-          className="b g-gradient-to-rfrom-blue-600 to-purple-600 text-whitepx-4 py-2 rounded-lgfont-semiboldhover:from-blue-700 hover:to-purple-700 transition-allduration-300 disabled:opacity-50 disabled:cursor-not-allowedflexitems-centerspace-x-2" />
-          {isOptimizing ? (
-    <>
-            <>
-              <divclassName="w-4 h-4 b o rder-2 border-whiteborder-t-transparentrounded-fullanimate-spin" />
-              <span  >Optimizing...</span>
-            </>
-          ) : (
-    <>
-            <>
-              <ZapclassName="w-4h-4" />
-              <span  >Optimize</span>
-            </>
+  return (;
+    <>;
+    <divconstclassName = {`bg-white/10 backdrop-blur-smrounded-xlp-6 borderborder-white/20 ${className}`} />;
+      <divclassName="f l exitems-centerjustify-betweenmb-6">;
+        <divclassName="f l exitems-centerspace-x-3">;
+          <divclassName="w-10 h-10 b g-gradient-to-rfrom-blue-600 to-purple-600 rounded-lgflexitems-centerjustify-center">;
+            <ZapclassName="w-5h-5t e xt-white" />;
+          </div>;
+          <div>;
+            <h3 className="t e xt-whitefont-semibold"  >PerformanceEnhancer</h3>;
+            <pclassName="t e xt-gray-300text-sm">Monitorandoptimizeyourapp'sperformance</p>;
+          </div>;
+        <buttononClick="{optimizePerformance}";
+          disabled="{isOptimizing}";
+          className="b g-gradient-to-rfrom-blue-600 to-purple-600 text-whitepx-4 py-2 rounded-lgfont-semiboldhover: from-blue-700 hover:to-purple-700 transition-allduration-300 disabled:opacity-50 disabled:cursor-not-allowedflexitems-centerspace-x-2" />;
+          {isOptimizing ? (;
+    <>;
+            <>;
+              <divclassName="w-4 h-4 b o rder-2 border-whiteborder-t-transparentrounded-fullanimate-spin" />;
+              <span  >Optimizing...</span>;
+            </>;
+          ) : (;
+    <>;
+            <>;
+              <ZapclassName="w-4h-4" />;
+              <span  >Optimize</span>;
+            </>;
           )}
-    <>
-        </button>
-      </div>
+    <>;
+        </button>;
+      </div>;
       {/* PerformanceMetrics */}
-      <divclassName="g r idgrid-cols-2 md:grid-cols-4gap-4mb-6">
-        <divclassName="t e xt-center">
-          <divclassName="t e xt-2 xlfont-boldtext-whitemb-1"  />{metrics.loadTime.toFixed(0)}ms
-          </div>
-          <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-            {features.map((feature, index) => (
-              {features.map((feature, index) => (
-
-    <>
-                <divkey="{index}" className="b g-white/10 backdrop-blur-smrounded-xlp-6 borderborder-white/20 hover:bg-white/20transition-allduration-300" />
-                <divclassName="f l exitems-centerjustify-centerw-12 h-12 bg-gradient-to-rfrom-purple-500 to-blue-600rounded-lgmb-4">
-                  <feature.iconclassName="h-6w-6t e xt-white" />
-                </div>
-                <h3 className="t e xt-xlfont-semiboldtext-whitemb-3"  >{feature.title}</h3>
-                <pclassName="t e xt-gray-300">{feature.description}</p>
-              </div>
+      <divclassName="g r idgrid-cols-2 md: grid-cols-4gap-4mb-6">;
+        <divclassName="t e xt-center">;
+          <divclassName="t e xt-2 xlfont-boldtext-whitemb-1"  />{metrics.loadTime.toFixed(0)}ms;
+          </div>;
+          <divclassName="g r idgrid-cols-1 md: grid-cols-2lg:grid-cols-4gap-8">;
+            {features.map((feature, index) => (;
+              {features.map((feature, index) => (;
+    <>;
+                <divkey="{index}" className="b g-white/10 backdrop-blur-smrounded-xlp-6 borderborder-white/20 hover: bg-white/20transition-allduration-300" />;
+                <divclassName="f l exitems-centerjustify-centerw-12 h-12 bg-gradient-to-rfrom-purple-500 to-blue-600rounded-lgmb-4">;
+                  <feature.iconclassName="h-6w-6t e xt-white" />;
+                </div>;
+                <h3 className="t e xt-xlfont-semiboldtext-whitemb-3"  >{feature.title}</h3>;
+                <pclassName="t e xt-gray-300">{feature.description}</p>;
+              </div>;
             ))}
-    <>
-          </div>
-      </section>
+    <>;
+          </div>;
+      </section>;
       {/* BenefitsSection */}
-    <>
-      <sectionclassName="p y-20 px-4 sm:px-6lg:px-8bg-white/5" />
-        <divclassName="m a x-w-7xlmx-auto">
-          <divclassName="t e xt-centermb-16">
-            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4" />
-              KeyBenefits
-  </
-            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">
-              Experiencethepowerofourperformanceenhancersolutionsforyourbusiness.
-    <>
-            </p>
-          </div>
-          <divclassName="g r idgrid-cols-1md:grid-cols-2gap-6">
-            {benefits.map((benefit, index) => (
-              {features.map((feature, index) => (
-
-                <divkey="{index}" className="f l exitems-startspace-x-3" />
-                <CheckCircleclassName="h-6 w-6 t e xt-purple-400mt-1flex-shrink-0" />
-                <pclassName="t e xt-gray-300text-lg">{benefit}</p>
-              </div>
+    <>;
+      <sectionclassName="p y-20 px-4 sm: px-6lg:px-8bg-white/5" />;
+        <divclassName="m a x-w-7xlmx-auto">;
+          <divclassName="t e xt-centermb-16">;
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4" />;
+              KeyBenefits;
+  </;
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">;
+              Experiencethepowerofourperformanceenhancersolutionsforyourbusiness.;
+    <>;
+            </p>;
+          </div>;
+          <divclassName="g r idgrid-cols-1md:grid-cols-2gap-6">;
+            {benefits.map((benefit, index) => (;
+              {features.map((feature, index) => (;
+                <divkey="{index}" className="f l exitems-startspace-x-3" />;
+                <CheckCircleclassName="h-6 w-6 t e xt-purple-400mt-1flex-shrink-0" />;
+                <pclassName="t e xt-gray-300text-lg">{benefit}</p>;
+              </div>;
             ))}
-    <>
-          </div>
-      </section>
+    <>;
+          </div>;
+      </section>;
 }
-    <>
-  </h2>
-  </button>
-  </span>
-  </div>
+    <>;
+  </h2>;
+  </button>;
+  </span>;
+  </div>;
 };
-  ];constbenefits = [
-    'AdvancedAItechnologyintegration',
-    'Real-timeprocessingandanalytics',
-    'Enterprise-gradesecurityandcompliance',
-    'Scalableandflexiblesolutions',
-    '24/7 technicalsupport',
-    'Easyintegrationwithexistingsystems',
-    'Cost-effectivepricingplans',
-    'Proventrackrecordofsuccess'
+  ];constbenefits = ['AdvancedAItechnologyintegration',;
+    'Real-timeprocessingandanalytics',;
+    'Enterprise-gradesecurityandcompliance',;
+    'Scalableandflexiblesolutions',;
+    '24/7 technicalsupport',;
+    'Easyintegrationwithexistingsystems',;
+    'Cost-effectivepricingplans',;
+    'Proventrackrecordofsuccess';
 ;
-  ];return (<divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        <title>PerformanceEnhancer | ZionTechGroup</title>
-        <metaname="description" content="ProfessionalPerformanceEnhancerservicesbyZionTechGroup. AdvancedAIandITsolutionsforyourbusiness." / / />
-        <metaname="keywords" content="PerformanceEnhancer, AIsolutions, ITservices, ZionTechGroup, performanceenhancer" / / />
-      </Helmet>
+  ];return (<divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900"></div>;
+      <Helmet>;
+        <title>PerformanceEnhancer | ZionTechGroup</title>;
+        <metaname="description" content="ProfessionalPerformanceEnhancerservicesbyZionTechGroup. AdvancedAIandITsolutionsforyourbusiness." / / />;
+        <metaname="keywords" content="PerformanceEnhancer, AIsolutions, ITservices, ZionTechGroup, performanceenhancer" / / />;
+      </Helmet>;
       {/* HeroSection */}
-    <>
-      <sectionclassName="r e lativepy-20 px-4sm:px-6lg:px-8" /></section>
-        <divclassName="m a x-w-7xlmx-auto"></div>
-          <divclassName="t e xt-center"></div>
-            <h1 className="t e xt-4xlmd:text-6 xlfont-boldtext-whitemb-6" />
-              <spanclassName="b g-gradient-to-rfrom-purple-400 to-blue-400bg-clip-texttext-transparent"  />PerformanceEnhancer
-              </span>
-              <br / />
-              <spanclassName="t e xt-white">Solutions</span>
-            </h1>
-            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">
-              Transformyourbusinesswithouradvancedperformanceenhancersolutions.
-              Poweredbycutting-edgeAItechnologyandindustryexpertise.
-    <>
-            </p>
-            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center"></div>
-              <buttonclassName="b g-gradient-to-rfrom-purple-500 to-blue-600 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-purple-600 hover:to-blue-700 transition-allduration-300flexitems-center" />
-                GetStarted
-    <>
-                <ArrowRightclassName="m l-2h-5w-5" />
-              </button>
-              <buttonclassName="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-gray-900transition-allduration-300">LearnMore
-              </button>
-            </div>
-        </div>
-      </section>
+    <>;
+      <sectionclassName="r e lativepy-20 px-4sm: px-6lg:px-8" /></section>;
+        <divclassName="m a x-w-7xlmx-auto"></div>;
+          <divclassName="t e xt-center"></div>;
+            <h1 className="t e xt-4xlmd:text-6 xlfont-boldtext-whitemb-6" />;
+              <spanclassName="b g-gradient-to-rfrom-purple-400 to-blue-400bg-clip-texttext-transparent"  />PerformanceEnhancer;
+              </span>;
+              <br / />;
+              <spanclassName="t e xt-white">Solutions</span>;
+            </h1>;
+            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">;
+              Transformyourbusinesswithouradvancedperformanceenhancersolutions.;
+              Poweredbycutting-edgeAItechnologyandindustryexpertise.;
+    <>;
+            </p>;
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center"></div>;
+              <buttonclassName="b g-gradient-to-rfrom-purple-500 to-blue-600 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-purple-600 hover:to-blue-700 transition-allduration-300flexitems-center" />;
+                GetStarted;
+    <>;
+                <ArrowRightclassName="m l-2h-5w-5" />;
+              </button>;
+              <buttonclassName="b o rderborder-whitetext-whitepx-8 py-3 rounded-lgfont-semiboldhover:bg-whitehover:text-gray-900transition-allduration-300">LearnMore;
+              </button>;
+            </div>;
+        </div>;
+      </section>;
       {/* FeaturesSection */}
-    <>
-      <sectionclassName="p y-20 px-4sm:px-6lg:px-8" /></section>
-        <divclassName="m a x-w-7xlmx-auto"></div>
-          <divclassName="t e xt-centermb-16"></div>
-            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />WhyChooseOurPerformanceEnhancer?
-            </h2>
-            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">
-              Ourperformanceenhancersolutionsdeliverunmatchedperformance, security, andscalability.
-    <>
-            </p>
-          </div>
-          <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8"></div>
+    <>;
+      <sectionclassName="p y-20 px-4sm: px-6lg:px-8" /></section>;
+        <divclassName="m a x-w-7xlmx-auto"></div>;
+          <divclassName="t e xt-centermb-16"></div>;
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />WhyChooseOurPerformanceEnhancer?;
+            </h2>;
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">;
+              Ourperformanceenhancersolutionsdeliverunmatchedperformance, security, andscalability.;
+    <>;
+            </p>;
+          </div>;
+          <divclassName="g r idgrid-cols-1 md: grid-cols-2lg:grid-cols-4gap-8"></div>;
             {features.map((feature, index) => (}
-              {features.map((feature, index) => (
-
-    <>
-                <divkey="{index}" className="b g-white/10 backdrop-blur-smrounded-xlp-6 borderborder-white/20 hover:bg-white/20transition-allduration-300" /></div>
-                <divclassName="f l exitems-centerjustify-centerw-12 h-12 bg-gradient-to-rfrom-purple-500 to-blue-600rounded-lgmb-4"></div>
-                  <feature.iconclassName="h-6w-6t e xt-white" />
-                </div>
-                <h3 className="t e xt-xlfont-semiboldtext-whitemb-3"  >{feature.title}</h3>
-                <pclassName="t e xt-gray-300">{feature.description}</p>
+              {features.map((feature, index) => (;
+    <>;
+                <divkey="{index}" className="b g-white/10 backdrop-blur-smrounded-xlp-6 borderborder-white/20 hover: bg-white/20transition-allduration-300" /></div>;
+                <divclassName="f l exitems-centerjustify-centerw-12 h-12 bg-gradient-to-rfrom-purple-500 to-blue-600rounded-lgmb-4"></div>;
+                  <feature.iconclassName="h-6w-6t e xt-white" />;
+                </div>;
+                <h3 className="t e xt-xlfont-semiboldtext-whitemb-3"  >{feature.title}</h3>;
+                <pclassName="t e xt-gray-300">{feature.description}</p>;
               </div>))}
-          </div>
-      </section>
+          </div>;
+      </section>;
       {/* BenefitsSection */}
-    <>
-      <sectionclassName="p y-20 px-4 sm:px-6lg:px-8bg-white/5" /></section>
-        <divclassName="m a x-w-7xlmx-auto"></div>
-          <divclassName="t e xt-centermb-16"></div>
-            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />KeyBenefits
-            </h2>
-            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">
-              Experiencethepowerofourperformanceenhancersolutionsforyourbusiness.
-    <>
-            </p>
-          </div>
-          <divclassName="g r idgrid-cols-1md:grid-cols-2gap-6"></div>
+    <>;
+      <sectionclassName="p y-20 px-4 sm: px-6lg:px-8bg-white/5" /></section>;
+        <divclassName="m a x-w-7xlmx-auto"></div>;
+          <divclassName="t e xt-centermb-16"></div>;
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />KeyBenefits;
+            </h2>;
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">;
+              Experiencethepowerofourperformanceenhancersolutionsforyourbusiness.;
+    <>;
+            </p>;
+          </div>;
+          <divclassName="g r idgrid-cols-1md:grid-cols-2gap-6"></div>;
             {benefits.map((benefit, index) => (}
-              {features.map((feature, index) => (
-
-                <divkey="{index}" className="f l exitems-startspace-x-3" /></div>
-                <CheckCircleclassName="h-6 w-6 t e xt-purple-400mt-1flex-shrink-0" />
-                <pclassName="t e xt-gray-300text-lg">{benefit}</p>
+              {features.map((feature, index) => (;
+                <divkey="{index}" className="f l exitems-startspace-x-3" /></div>;
+                <CheckCircleclassName="h-6 w-6 t e xt-purple-400mt-1flex-shrink-0" />;
+                <pclassName="t e xt-gray-300text-lg">{benefit}</p>;
               </div>))}
-          </div>
+          </div>;
 };
+;

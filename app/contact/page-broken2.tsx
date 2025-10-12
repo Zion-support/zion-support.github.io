@@ -1,277 +1,275 @@
-'useclient'
-'useclient';importReact
-, { useState, useCallback } from 'react'
-
+'useclient';
+'useclient';importReact;
+, {useState, useCallback } from 'react';
   CheckCircle}
-} from 'lucide-react'
-    message: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-
-  });const [isSubmitting, setIsSubmitting] = useState(false)
-    setSubmitStatus('idle');try {// SimulateformsubmissionawaitnewPromise(constresolve = > setTimeout(resolve, 1000))
-      setSubmitStatus('success')
+} from 'lucide-react';
+    message: '';
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  });const [isSubmitting, setIsSubmitting] = useState(false);
+    setSubmitStatus('idle');try {// SimulateformsubmissionawaitnewPromise(constresolve = > setTimeout(resolve, 1000));
+      setSubmitStatus('success');
         message: ''}
       })} catch (error) {setSubmitStatus('error')}
     } finally {setIsSubmitting(false)}
     }
   }
-
+;
   ];
-    <>
-  ];return (<React.Fragment /></React.Fragment>
-      <Helmet>
-        <title>ContactUs - ZionTechGroup | GetinTouch</title>
-        <metaconstname = "description" content="GetintouchwithZionTechGroupforAIandITsolutions. Contactusforconsultations, support, ortodiscussyourprojectneeds." / / />
-        <metaname="keywords" content="contactus, ZionTechGroup, AIconsultation, ITsupport, getintouch" / / />
-      </Helmet>
-<divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900py-20"></div>
-        <divclassName="c o ntainermx-autopx-4"></div>
+    <>;
+  ];return (<React.Fragment /></React.Fragment>;
+      <Helmet>;
+        <title>ContactUs - ZionTechGroup | GetinTouch</title>;
+        <metaconstname = "description" content="GetintouchwithZionTechGroupforAIandITsolutions. Contactusforconsultations, support, ortodiscussyourprojectneeds." / / />;
+        <metaname="keywords" content="contactus, ZionTechGroup, AIconsultation, ITsupport, getintouch" / / />;
+      </Helmet>;
+<divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900py-20"></div>;
+        <divclassName="c o ntainermx-autopx-4"></div>;
           {/* Header */}
-          <divclassName="t e xt-centermb-16"></div>
-            <h1 className="t e xt-5 xllg:text-7 xlfont-boldtext-whitemb-6" />
-              Getin
-    <>
-              <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-500bg-clip-texttext-transparent">{' '}Touch
-              </span>
-            </h1>
-            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">
-              Readytotransformyourbusiness? Let'sdiscussyourprojectandexplorehowourAIandITsolutionscanhelpyouachieveyourgoals.
-    <>
-            </p>
-          </div>
-        </section>
-<divclassName="g r idgrid-cols-1lg:grid-cols-2gap-12"></div>
+          <divclassName="t e xt-centermb-16"></div>;
+            <h1 className="t e xt-5 xllg: text-7 xlfont-boldtext-whitemb-6" />;
+              Getin;
+    <>;
+              <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-500bg-clip-texttext-transparent">{' '}Touch;
+              </span>;
+            </h1>;
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">;
+              Readytotransformyourbusiness? Let'sdiscussyourprojectandexplorehowourAIandITsolutionscanhelpyouachieveyourgoals.;
+    <>;
+            </p>;
+          </div>;
+        </section>;
+<divclassName="g r idgrid-cols-1lg: grid-cols-2gap-12"></div>;
             {/* ContactForm */}
-            <divclassName="b g-white/5 backdrop-blur-lgrounded-2 xlp-8borderborder-white/10"></div>
-              <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >SendusaMessage</h2>
-              {submitStatus === 'success' && (<divclassName="m b-6 p-4 bg-green-500/20 borderborder-green-500/50 rounded-lgflexitems-centergap-3"></div>
-                  <CheckCircleclassName="w-5h-5t e xt-green-400" />
-                  <spanclassName="t e xt-green-400"  >Messagesentsuccessfully! We'llgetbacktoyousoon.</span>
+            <divclassName="b g-white/5 backdrop-blur-lgrounded-2 xlp-8borderborder-white/10"></div>;
+              <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >SendusaMessage</h2>;
+              {submitStatus === 'success' && (<divclassName="m b-6 p-4 bg-green-500/20 borderborder-green-500/50 rounded-lgflexitems-centergap-3"></div>;
+                  <CheckCircleclassName="w-5h-5t e xt-green-400" />;
+                  <spanclassName="t e xt-green-400"  >Messagesentsuccessfully! We'llgetbacktoyousoon.</span>;
                 </div>}
               )}
-
-              {submitStatus === 'error' && (<divclassName="m b-6 p-4 bg-red-500/20 borderborder-red-500/50 rounded-lgflexitems-centergap-3"></div>
-                  <spanclassName="t e xt-red-400"  >Failedtosendmessage. Pleasetryagain.</span>
+;
+              {submitStatus === 'error' && (<divclassName="m b-6 p-4 bg-red-500/20 borderborder-red-500/50 rounded-lgflexitems-centergap-3"></div>;
+                  <spanclassName="t e xt-red-400"  >Failedtosendmessage. Pleasetryagain.</span>;
                 </div>}
               )}
-
-    <>
-              <formonSubmit="{handleSubmit}" className="s p ace-y-6" />
-                <divclassName="g r idgrid-cols-1md:grid-cols-2gap-6"></div>
-                  <div /></div>
-                    <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />FullName *
-                    </label>
-                    <divclassName="r e lative"></div>
-                      <UserclassName="a b soluteleft-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
-                      />
-    <>
-                    </div>
-                  <div /></div>
-                    <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />EmailAddress *
-                    </label>
-                    <divclassName="r e lative"></div>
-                      <MailclassName="a b soluteleft-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
-                      />
-    <>
-                    </div>
-                </div>
-                <divclassName="g r idgrid-cols-1md:grid-cols-2gap-6"></div>
-                  <div /></div>
-                    <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />Company
-                    </label>
-                    <divclassName="r e lative"></div>
-                      <BuildingclassName="a b soluteleft-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
-                      />
-    <>
-                    </div>
-                  <div /></div>
-                    <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />PhoneNumber
-                    </label>
-                    <divclassName="r e lative"></div>
-                      <PhoneclassName="a b soluteleft-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
-                      />
-    <>
-                    </div>
-                </div>
-                <div /></div>
-                  <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />ServiceInterest
-                  </label>
-                  <divclassName="r e lative"></div>
-                    <GlobeclassName="a b soluteleft-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
-                      className="w-f u llpl-10 pr-4 py-3 bg-slate-800 borderborder-slate-700 rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-500">
-                      <optionvalue="">Selectaservice</option>
+;
+    <>;
+              <formonSubmit="{handleSubmit}" className="s p ace-y-6" />;
+                <divclassName="g r idgrid-cols-1md: grid-cols-2gap-6"></div>;
+                  <div /></div>;
+                    <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />FullName *;
+                    </label>;
+                    <divclassName="r e lative"></div>;
+                      <UserclassName="a b soluteleft-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />;
+                      />;
+    <>;
+                    </div>;
+                  <div /></div>;
+                    <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />EmailAddress *;
+                    </label>;
+                    <divclassName="r e lative"></div>;
+                      <MailclassName="a b soluteleft-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />;
+                      />;
+    <>;
+                    </div>;
+                </div>;
+                <divclassName="g r idgrid-cols-1md:grid-cols-2gap-6"></div>;
+                  <div /></div>;
+                    <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />Company;
+                    </label>;
+                    <divclassName="r e lative"></div>;
+                      <BuildingclassName="a b soluteleft-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />;
+                      />;
+    <>;
+                    </div>;
+                  <div /></div>;
+                    <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />PhoneNumber;
+                    </label>;
+                    <divclassName="r e lative"></div>;
+                      <PhoneclassName="a b soluteleft-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />;
+                      />;
+    <>;
+                    </div>;
+                </div>;
+                <div /></div>;
+                  <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />ServiceInterest;
+                  </label>;
+                  <divclassName="r e lative"></div>;
+                    <GlobeclassName="a b soluteleft-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />;
+                      className="w-f u llpl-10 pr-4 py-3 bg-slate-800 borderborder-slate-700 rounded-lgtext-whitefocus:outline-nonefocus:border-cyan-500">;
+                      <optionvalue="">Selectaservice</option>;
                       {services.map((service) => (}
-    <>
+    <>;
                         <optionkey="{service}" value="{service}">{service}
                         </option>))}
-                    </select>
-                  </div>
-                <div />
-                  <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />Message *
-                  </label>
-                  <divclassName="r e lative">
-                    <MessageCircleclassName="a b soluteleft-3 top-3 w-5h-5text-gray-400" />
-                    </select>
-                  </div>
-                <div /></div>
-                  <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />Message *
-                  </label>
-                  <divclassName="r e lative"></div>
-                    <MessageCircleclassName="a b soluteleft-3 top-3 w-5h-5text-gray-400" />
-                    />
-    <>
-                  </div>
-                  className="w-f u llbg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 disabled:opacity-50 disabled:cursor-not-allowedflexitems-centerjustify-centerspace-x-2">
-    <>
-                    <React.Fragment />
-                      <divclassName="w-5 h-5 b o rder-2 border-whiteborder-t-transparentrounded-fullanimate-spin"></div>
-                      <span  >Sending...</span>
-                    </React.Fragment>
-                    <React.Fragment />
-                      <SendclassName="w-5h-5" />
-                      <span  >SendMessage</span>
-                    </React.Fragment>
+                    </select>;
+                  </div>;
+                <div />;
+                  <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />Message *;
+                  </label>;
+                  <divclassName="r e lative">;
+                    <MessageCircleclassName="a b soluteleft-3 top-3 w-5h-5text-gray-400" />;
+                    </select>;
+                  </div>;
+                <div /></div>;
+                  <labelclassName="b l ocktext-smfont-mediumtext-gray-300 mb-2"  />Message *;
+                  </label>;
+                  <divclassName="r e lative"></div>;
+                    <MessageCircleclassName="a b soluteleft-3 top-3 w-5h-5text-gray-400" />;
+                    />;
+    <>;
+                  </div>;
+                  className="w-f u llbg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover: from-cyan-600 hover:to-purple-700 transition-allduration-300 disabled:opacity-50 disabled:cursor-not-allowedflexitems-centerjustify-centerspace-x-2">;
+    <>;
+                    <React.Fragment />;
+                      <divclassName="w-5 h-5 b o rder-2 border-whiteborder-t-transparentrounded-fullanimate-spin"></div>;
+                      <span  >Sending...</span>;
+                    </React.Fragment>;
+                    <React.Fragment />;
+                      <SendclassName="w-5h-5" />;
+                      <span  >SendMessage</span>;
+                    </React.Fragment>;
                   )}
-    <>
-                </button>
-              </form>
-            </div>
+    <>;
+                </button>;
+              </form>;
+            </div>;
             {/* ContactInformation */}
-            <divclassName="s p ace-y-8">
-              <div />
-                <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >ContactInformation</h2>
-                <pclassName="t e xt-lgtext-gray-300 mb-8">
-              We'reheretohelp! Reachouttousthroughanyofthesechannelsandwe'llgetbacktoyouassoonaspossible.
-    <>
-                </p>
-              </div>
+            <divclassName="s p ace-y-8">;
+              <div />;
+                <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >ContactInformation</h2>;
+                <pclassName="t e xt-lgtext-gray-300 mb-8">;
+              We'reheretohelp! Reachouttousthroughanyofthesechannelsandwe'llgetbacktoyouassoonaspossible.;
+    <>;
+                </p>;
+              </div>;
               {/* ContactInformation */}
-              <divclassName="s p ace-y-8">
-                <div />
-                  <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >GetinTouch</h2>
-                  <pclassName="t e xt-gray-300 mb-8">We'reheretohelpyoutransformyourbusinesswithcutting-edgeAIandtechnologysolutions.</p>
-                </div>
-                <divclassName="s p ace-y-6">
-                  <divclassName="f l exitems-center">
-                    <divclassName="w-12 h-12 b g-cyan-500 rounded-lgflexitems-centerjustify-centermr-4">
-                      <PhoneclassName="w-6h-6t e xt-white" />
-                    </div>
-                    <div>
-            <h3 className="t e xt-lgfont-semiboldtext-whitemb-1" />
-                      className="w-f u llpl-10 pr-4 py-3 bg-slate-800 borderborder-slate-700 rounded-lgtext-whiteplaceholder-gray-400 focus:outline-nonefocus:border-cyan-500resize-none"
-                      placeholder="Tellusaboutyourproject, goals, oranyquestionsyouhave..."
-                    />
-    <>
-                  </div>
-                  className="w-f u llbg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 disabled:opacity-50 disabled:cursor-not-allowedflexitems-centerjustify-centerspace-x-2">
-    <>
-                  {isSubmitting ? (<React.Fragment /></React.Fragment>
-                      <divclassName="w-5 h-5 b o rder-2 border-whiteborder-t-transparentrounded-fullanimate-spin"></div>
-                      <span  >Sending...</span>
-                    </>) : (<React.Fragment /></React.Fragment>
-                      <SendclassName="w-5h-5" />
-                      <span  >SendMessage</span>
+              <divclassName="s p ace-y-8">;
+                <div />;
+                  <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >GetinTouch</h2>;
+                  <pclassName="t e xt-gray-300 mb-8">We'reheretohelpyoutransformyourbusinesswithcutting-edgeAIandtechnologysolutions.</p>;
+                </div>;
+                <divclassName="s p ace-y-6">;
+                  <divclassName="f l exitems-center">;
+                    <divclassName="w-12 h-12 b g-cyan-500 rounded-lgflexitems-centerjustify-centermr-4">;
+                      <PhoneclassName="w-6h-6t e xt-white" />;
+                    </div>;
+                    <div>;
+            <h3 className="t e xt-lgfont-semiboldtext-whitemb-1" />;
+                      className="w-f u llpl-10 pr-4 py-3 bg-slate-800 borderborder-slate-700 rounded-lgtext-whiteplaceholder-gray-400 focus: outline-nonefocus:border-cyan-500resize-none";
+                      placeholder="Tellusaboutyourproject, goals, oranyquestionsyouhave...";
+                    />;
+    <>;
+                  </div>;
+                  className="w-f u llbg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover: from-cyan-600 hover:to-purple-700 transition-allduration-300 disabled:opacity-50 disabled:cursor-not-allowedflexitems-centerjustify-centerspace-x-2">;
+    <>;
+                  {isSubmitting ? (<React.Fragment /></React.Fragment>;
+                      <divclassName="w-5 h-5 b o rder-2 border-whiteborder-t-transparentrounded-fullanimate-spin"></div>;
+                      <span  >Sending...</span>;
+                    </>) : (<React.Fragment /></React.Fragment>;
+                      <SendclassName="w-5h-5" />;
+                      <span  >SendMessage</span>;
                     </>}
-    </>
+    </>;
                   )}
-    <>
-                </button>
-              </form>
-            </div>
+    <>;
+                </button>;
+              </form>;
+            </div>;
             {/* ContactInformation */}
-            <divclassName="s p ace-y-8"></div>
-              <div /></div>
-                <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >ContactInformation</h2>
-                <pclassName="t e xt-lgtext-gray-300 mb-8">
-              We'reheretohelp! Reachouttousthroughanyofthesechannelsandwe'llgetbacktoyouassoonaspossible.
-    <>
-                </p>
-              </div>
+            <divclassName="s p ace-y-8"></div>;
+              <div /></div>;
+                <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >ContactInformation</h2>;
+                <pclassName="t e xt-lgtext-gray-300 mb-8">;
+              We'reheretohelp! Reachouttousthroughanyofthesechannelsandwe'llgetbacktoyouassoonaspossible.;
+    <>;
+                </p>;
+              </div>;
               {/* ContactInformation */}
-              <divclassName="s p ace-y-8"></div>
-                <div /></div>
-                  <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >GetinTouch</h2>
-                  <pclassName="t e xt-gray-300 mb-8">We'reheretohelpyoutransformyourbusinesswithcutting-edgeAIandtechnologysolutions.</p>
-                </div>
-                <divclassName="s p ace-y-6"></div>
-                  <divclassName="f l exitems-center"></div>
-                    <divclassName="w-12 h-12 b g-cyan-500 rounded-lgflexitems-centerjustify-centermr-4"></div>
-                      <PhoneclassName="w-6h-6t e xt-white" />
-                    </div>
-                    <div /></div>
+              <divclassName="s p ace-y-8"></div>;
+                <div /></div>;
+                  <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >GetinTouch</h2>;
+                  <pclassName="t e xt-gray-300 mb-8">We'reheretohelpyoutransformyourbusinesswithcutting-edgeAIandtechnologysolutions.</p>;
+                </div>;
+                <divclassName="s p ace-y-6"></div>;
+                  <divclassName="f l exitems-center"></div>;
+                    <divclassName="w-12 h-12 b g-cyan-500 rounded-lgflexitems-centerjustify-centermr-4"></div>;
+                      <PhoneclassName="w-6h-6t e xt-white" />;
+                    </div>;
+                    <div /></div>;
 <h3 className="t e xt-lgfont-semiboldtext-whitemb-1"  />{info.title}
-                      </h3>
-                      <pclassName="t e xt-cyan-400font-mediummb-1">{info.details}</p>
-                      <pclassName="t e xt-gray-300text-sm">{info.description}</p>
-                    </div>
-                  <divclassName="f l exitems-center">
-                    <divclassName="w-12 h-12 b g-purple-500 rounded-lgflexitems-centerjustify-centermr-4">
-                      <MailclassName="w-6h-6t e xt-white" />
-                    </div>
-                    <div>
-            <h3 className="t e xt-lgfont-semiboldtext-white"  >Email</h3>
-                      <pclassName="t e xt-gray-300">info@ziontechgroup.com</p>
-                    </div>
-                  <divclassName="f l exitems-center">
-                    <divclassName="w-12 h-12 b g-pink-500 rounded-lgflexitems-centerjustify-centermr-4">
-                      <MapPinclassName="w-6h-6t e xt-white" />
-                    </div>
-                    <div>
-            <h3 className="t e xt-lgfont-semiboldtext-white"  >Address</h3>
-                      <pclassName="t e xt-gray-300">123 TechStreet<br / />SanFrancisco, CA 94105</p>
-                    </div>
-                  <divclassName="f l exitems-center">
-                    <divclassName="w-12 h-12 b g-green-500 rounded-lgflexitems-centerjustify-centermr-4">
-                      <ClockclassName="w-6h-6t e xt-white" />
-                    </div>
-                    <div>
-            <h3 className="t e xt-lgfont-semiboldtext-white"  >BusinessHours</h3>
-                      <pclassName="t e xt-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br / />Sat: 10:00 AM - 4:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-      </div>
+                      </h3>;
+                      <pclassName="t e xt-cyan-400font-mediummb-1">{info.details}</p>;
+                      <pclassName="t e xt-gray-300text-sm">{info.description}</p>;
+                    </div>;
+                  <divclassName="f l exitems-center">;
+                    <divclassName="w-12 h-12 b g-purple-500 rounded-lgflexitems-centerjustify-centermr-4">;
+                      <MailclassName="w-6h-6t e xt-white" />;
+                    </div>;
+                    <div>;
+            <h3 className="t e xt-lgfont-semiboldtext-white"  >Email</h3>;
+                      <pclassName="t e xt-gray-300">info@ziontechgroup.com</p>;
+                    </div>;
+                  <divclassName="f l exitems-center">;
+                    <divclassName="w-12 h-12 b g-pink-500 rounded-lgflexitems-centerjustify-centermr-4">;
+                      <MapPinclassName="w-6h-6t e xt-white" />;
+                    </div>;
+                    <div>;
+            <h3 className="t e xt-lgfont-semiboldtext-white"  >Address</h3>;
+                      <pclassName="t e xt-gray-300">123 TechStreet<br / />SanFrancisco, CA 94105</p>;
+                    </div>;
+                  <divclassName="f l exitems-center">;
+                    <divclassName="w-12 h-12 b g-green-500 rounded-lgflexitems-centerjustify-centermr-4">;
+                      <ClockclassName="w-6h-6t e xt-white" />;
+                    </div>;
+                    <div>;
+            <h3 className="t e xt-lgfont-semiboldtext-white"  >BusinessHours</h3>;
+                      <pclassName="t e xt-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br / />Sat: 10:00 AM - 4:00 PM</p>;
+                    </div>;
+                </div>;
+            </div>;
+        </section>;
+      </div>;
   )}
-exportdefaultContactPage
-    <>
-  </textarea>
-  </label>
-  </label>
-  </label>
-  </span>
-  </HTMLInputElement>
-                      </p>
-                    </div>
-                  <divclassName="f l exitems-center"></div>
-                    <divclassName="w-12 h-12 b g-purple-500 rounded-lgflexitems-centerjustify-centermr-4"></div>
-                      <MailclassName="w-6h-6t e xt-white" />
-                    </div>
-                    <div /></div>
-                      <h3 className="t e xt-lgfont-semiboldtext-white">Email</h3>
-                      <pclassName="t e xt-gray-300">info@ziontechgroup.com</p>
-                    </div>
-                  <divclassName="f l exitems-center"></div>
-                    <divclassName="w-12 h-12 b g-pink-500 rounded-lgflexitems-centerjustify-centermr-4"></div>
-                      <MapPinclassName="w-6h-6t e xt-white" />
-                    </div>
-                    <div /></div>
-                      <h3 className="t e xt-lgfont-semiboldtext-white">Address</h3>
-                      <pclassName="t e xt-gray-300" />123 TechStreet<br / />SanFrancisco, CA 94105</p>
-                    </div>
-                  <divclassName="f l exitems-center"></div>
-                    <divclassName="w-12 h-12 b g-green-500 rounded-lgflexitems-centerjustify-centermr-4"></div>
-                      <ClockclassName="w-6h-6t e xt-white" />
-                    </div>
-                    <div /></div>
-                      <h3 className="t e xt-lgfont-semiboldtext-white">BusinessHours</h3>
-                      <pclassName="t e xt-gray-300" />Mon - Fri: 9:00 AM - 6:00 PM<br / />Sat: 10:00 AM - 4:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-      </div>
+exportdefaultContactPage;
+    <>;
+  </textarea>;
+  </label>;
+  </label>;
+  </label>;
+  </span>;
+  </HTMLInputElement>;
+                      </p>;
+                    </div>;
+                  <divclassName="f l exitems-center"></div>;
+                    <divclassName="w-12 h-12 b g-purple-500 rounded-lgflexitems-centerjustify-centermr-4"></div>;
+                      <MailclassName="w-6h-6t e xt-white" />;
+                    </div>;
+                    <div /></div>;
+                      <h3 className="t e xt-lgfont-semiboldtext-white">Email</h3>;
+                      <pclassName="t e xt-gray-300">info@ziontechgroup.com</p>;
+                    </div>;
+                  <divclassName="f l exitems-center"></div>;
+                    <divclassName="w-12 h-12 b g-pink-500 rounded-lgflexitems-centerjustify-centermr-4"></div>;
+                      <MapPinclassName="w-6h-6t e xt-white" />;
+                    </div>;
+                    <div /></div>;
+                      <h3 className="t e xt-lgfont-semiboldtext-white">Address</h3>;
+                      <pclassName="t e xt-gray-300" />123 TechStreet<br / />SanFrancisco, CA 94105</p>;
+                    </div>;
+                  <divclassName="f l exitems-center"></div>;
+                    <divclassName="w-12 h-12 b g-green-500 rounded-lgflexitems-centerjustify-centermr-4"></div>;
+                      <ClockclassName="w-6h-6t e xt-white" />;
+                    </div>;
+                    <div /></div>;
+                      <h3 className="t e xt-lgfont-semiboldtext-white">BusinessHours</h3>;
+                      <pclassName="t e xt-gray-300" />Mon - Fri: 9:00 AM - 6:00 PM<br / />Sat: 10:00 AM - 4:00 PM</p>;
+                    </div>;
+                </div>;
+            </div>;
+        </section>;
+      </div>;
 ;
-    </>
+    </>;

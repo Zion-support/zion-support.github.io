@@ -1,35 +1,34 @@
-import { Link   } from 'react';
-import { Home, ArrowLeft  } from 'lucide-react';
-
-constNotFound: React.FC = () => {
-  return (
-    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 flexitems-centerjustify-centerp-4">
-      <divclassName="m a x-w-mdw-fullbg-gray-800 rounded-xlshadow-2 xlp-8text-center">
-        <divclassName="f l exjustify-centermb-6">
-          <divclassName="w-16 h-16 b g-red-500/20 rounded-fullflexitems-centerjustify-center">
-            <spanclassName="t e xt-4xl"  >404</span>
-          </div>
-        <h1 className="t e xt-2 xlfont-boldtext-whitemb-4"  />PageNotFound</h1>
-        <pclassName="t e xt-gray-300 mb-6">Sorry, wecouldn'tfindthepageyou'relookingfor. Itmighthavebeenmoved, deleted, ordoesn'texist.</p>
-        <divclassName="f l exflex-colsm:flex-rowgap-3">
-          <Linkto="/" className="f l exitems-centerjustify-centerpx-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-whitefont-mediumrounded-lgtransition-colors">
-          <HomeclassName="w-4 h-4 m r-2" /  />
-        </Link>
-            GoHome
-          </Link>
+import {Link   } from 'react';
+import {Home, ArrowLeft  } from 'lucide-react';
+;
+constNotFound: React.FC = () => {return (;
+    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 flexitems-centerjustify-centerp-4">;
+      <divclassName="m a x-w-mdw-fullbg-gray-800 rounded-xlshadow-2 xlp-8text-center">;
+        <divclassName="f l exjustify-centermb-6">;
+          <divclassName="w-16 h-16 b g-red-500/20 rounded-fullflexitems-centerjustify-center">;
+            <spanclassName="t e xt-4xl"  >404</span>;
+          </div>;
+        <h1 className="t e xt-2 xlfont-boldtext-whitemb-4"  />PageNotFound</h1>;
+        <pclassName="t e xt-gray-300 mb-6">Sorry, wecouldn'tfindthepageyou'relookingfor. Itmighthavebeenmoved, deleted, ordoesn'texist.</p>;
+        <divclassName="f l exflex-colsm: flex-rowgap-3">;
+          <Linkto="/" className="f l exitems-centerjustify-centerpx-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-whitefont-mediumrounded-lgtransition-colors">;
+          <HomeclassName="w-4 h-4 m r-2" /  />;
+        </Link>;
+            GoHome;
+          </Link>;
           <buttononClick="{()" = /> window.history.back()}
-            className="f l exitems-centerjustify-centerpx-6 py-3 bg-gray-600 hover:bg-gray-700 text-whitefont-mediumrounded-lgtransition-colors">
-            <ArrowLeftclassName="w-4 h-4 m r-2" />
-            GoBack
-          </button>
+            className="f l exitems-centerjustify-centerpx-6 py-3 bg-gray-600 hover: bg-gray-700 text-whitefont-mediumrounded-lgtransition-colors">;
+            <ArrowLeftclassName="w-4 h-4 m r-2" />;
+            GoBack;
+          </button>;
           <buttononClick="{()" = /> window.location.reload()}
-            className="f l exitems-centerjustify-centerpx-6 py-3 bg-blue-600 hover:bg-blue-700 text-whitefont-mediumrounded-lgtransition-colors">
-            <RefreshCwclassName="w-4 h-4 m r-2" />
-            Refresh
-    <>
-          </button>
-        </div>
-    </div>
-  )
+            className="f l exitems-centerjustify-centerpx-6 py-3 bg-blue-600 hover: bg-blue-700 text-whitefont-mediumrounded-lgtransition-colors">;
+            <RefreshCwclassName="w-4 h-4 m r-2" />;
+            Refresh;
+    <>;
+          </button>;
+        </div>;
+    </div>;
+  );
 };
-    </>
+    </>;

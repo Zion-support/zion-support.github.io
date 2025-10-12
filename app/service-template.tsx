@@ -1,83 +1,80 @@
 import React from 'react';
-import { Link    } from 'react-router-dom';
-import { ArrowRight    } from 'lucide-react';
-
-interfaceServicePageProps {
-  title: string,
-  description: string,
-  icon: React.ReactNode,
-  benefits: string[],
-  features: string[],
-  pricing: string,
-  seoTitle: string,
-  seoDescription: string,
-  seoKeywords: string
+import {Link    } from 'react-router-dom';
+import {ArrowRight    } from 'lucide-react';
+;
+interfaceServicePageProps {title: string,;
+  description: string,;
+  icon: React.ReactNode,;
+  benefits: string[],;
+  features: string[],;
+  pricing: string,;
+  seoTitle: string,;
+  seoDescription: string,;
+  seoKeywords: string;
 }
-
-  title,
-  description,
-  icon,
-  benefits,
-  features,
-  pricing,
-  seoTitle,
-  seoDescription,
-  seoKeywords
-}: ServicePageProps) {
-  return (
-    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900pt-20">
-      <Helmet>
-        <title>{seoTitle}</title>
-        <metaname="description" content="{seoDescription}" / / />
-        <metaname="keywords" content="{seoKeywords}" / / />
-      </Helmet>
-      <divclassName="m a x-w-7xlmx-autopx-4 sm:px-6lg:px-8py-16">
-        <divclassName="t e xt-centermb-16">
+;
+  title,;
+  description,;
+  icon,;
+  benefits,;
+  features,;
+  pricing,;
+  seoTitle,;
+  seoDescription,;
+  seoKeywords;
+}: ServicePageProps) {return (;
+    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900pt-20">;
+      <Helmet>;
+        <title>{seoTitle}</title>;
+        <metaname="description" content="{seoDescription}" / / />;
+        <metaname="keywords" content="{seoKeywords}" / / />;
+      </Helmet>;
+      <divclassName="m a x-w-7xlmx-autopx-4 sm: px-6lg:px-8py-16">;
+        <divclassName="t e xt-centermb-16">;
           <divclassName="i n line-flexitems-centerjustify-centerw-20 h-20 bg-gradient-to-rfrom-cyan-500/20 to-purple-500/20rounded-fullmb-6"  />{icon}
-          </div>
-          <h1 className="t e xt-4xlsm:text-5 xlmd:text-6 xlfont-boldtext-whitemb-6"  />{title}</h1>
-          <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-3 xlmx-automb-8">{description}</p>
-          <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-            <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-center">
-          GetStarted
-              
-          <ArrowRightclassName="w-5h-5m l-2"  />
-        </Link>
-            <Linkto="/about" className="b o rder-2 border-whitetext-whitepx-8 py-4 rounded-lgfont-semiboldhover:bg-white/10transition-colors">LearnMore
-            </Link>
-          </div>
-        <divclassName="g r idgrid-cols-1 lg:grid-cols-2gap-12mb-16">
-          <div />
-            <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >KeyBenefits</h2>
-            <ulclassName="s p ace-y-4" />
-              {benefits.map((benefit, index) => (
-                <likey="{index}" className="f l exitems-start" />
-                  <CheckCircleclassName="w-6 h-6 t e xt-green-400 mr-3mt-1flex-shrink-0" />
-                  <spanclassName="t e xt-gray-300"  >{benefit}</span>
-                </li>
+          </div>;
+          <h1 className="t e xt-4xlsm: text-5 xlmd:text-6 xlfont-boldtext-whitemb-6"  />{title}</h1>;
+          <pclassName="t e xt-lgsm: text-xltext-gray-300 max-w-3 xlmx-automb-8">{description}</p>;
+          <divclassName="f l exflex-colsm: flex-rowgap-4justify-center">;
+            <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-center">;
+          GetStarted;
+          <ArrowRightclassName="w-5h-5m l-2"  />;
+        </Link>;
+            <Linkto="/about" className="b o rder-2 border-whitetext-whitepx-8 py-4 rounded-lgfont-semiboldhover:bg-white/10transition-colors">LearnMore;
+            </Link>;
+          </div>;
+        <divclassName="g r idgrid-cols-1 lg:grid-cols-2gap-12mb-16">;
+          <div />;
+            <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >KeyBenefits</h2>;
+            <ulclassName="s p ace-y-4" />;
+              {benefits.map((benefit, index) => (;
+                <likey="{index}" className="f l exitems-start" />;
+                  <CheckCircleclassName="w-6 h-6 t e xt-green-400 mr-3mt-1flex-shrink-0" />;
+                  <spanclassName="t e xt-gray-300"  >{benefit}</span>;
+                </li>;
               ))}
-    <>
-            </ul>
-          </div>
-          <div />
-            <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >Features</h2>
-            <ulclassName="s p ace-y-4" />
-              {features.map((feature, index) => (
-                <likey="{index}" className="f l exitems-start" />
-                  <CheckCircleclassName="w-6 h-6 t e xt-cyan-400 mr-3mt-1flex-shrink-0" />
-                  <spanclassName="t e xt-gray-300"  >{feature}</span>
-                </li>
+    <>;
+            </ul>;
+          </div>;
+          <div />;
+            <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >Features</h2>;
+            <ulclassName="s p ace-y-4" />;
+              {features.map((feature, index) => (;
+                <likey="{index}" className="f l exitems-start" />;
+                  <CheckCircleclassName="w-6 h-6 t e xt-cyan-400 mr-3mt-1flex-shrink-0" />;
+                  <spanclassName="t e xt-gray-300"  >{feature}</span>;
+                </li>;
               ))}
-    <>
-            </ul>
-          </div>
-        <divclassName="b g-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-2 xlp-8 borderborder-cyan-500/30text-center">
-          <h2 className="t e xt-3 xlfont-boldtext-whitemb-4"  >Pricing</h2>
-          <pclassName="t e xt-2 xlfont-boldtext-cyan-400mb-6">{pricing}</p>
-          <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700transition-allduration-300">ContactUsforDetails
-          </Link>
-        </div>
-    </div>
-  )
+    <>;
+            </ul>;
+          </div>;
+        <divclassName="b g-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-2 xlp-8 borderborder-cyan-500/30text-center">;
+          <h2 className="t e xt-3 xlfont-boldtext-whitemb-4"  >Pricing</h2>;
+          <pclassName="t e xt-2 xlfont-boldtext-cyan-400mb-6">{pricing}</p>;
+          <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover: from-cyan-600 hover:to-purple-700transition-allduration-300">ContactUsforDetails;
+          </Link>;
+        </div>;
+    </div>;
+  );
 };
-    </>
+    </>;

@@ -1,184 +1,168 @@
 import React from 'react';
-import { Helmet    } from 'react-helmet-async';
-import { Link    } from 'react-router-dom';
-import { Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings    } from 'lucide-react';
+import {Helmet    } from 'react-helmet-async';
+import {Link    } from 'react-router-dom';
+import {Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings    } from 'lucide-react';
 import React from 'react';
-import { Helmet    } from 'react-helmet-async';
-import { Link    } from 'react-router-dom';
-import { Star, Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings   } from 'lucide-react';
-
-constAIEmailAssistantPage: React.FC = () => {
-  constfeatures = [
-    {
-      icon: Mail,
-      title: 'SmartClassification',
-      description: 'Automaticallycategorizeandprioritizeemailsbasedoncontentandsender.'
-    },
-    {
-      icon: MessageSquare,
-      title: 'Auto-Responses',
-      description: 'GenerateintelligentresponsesusingAItohandlecommoninquiries.'
-    },
-    {
-      icon: Brain,
-      title: 'SentimentAnalysis',
-      description: 'Analyzeemailtoneandsentimenttoprovidebettercustomerservice.'
-    },
-    {
-      icon: Settings,
-      title: 'WorkflowAutomation',
-      description: 'Createautomatedworkflowstostreamlineyouremailmanagement.'
+import {Helmet    } from 'react-helmet-async';
+import {Link    } from 'react-router-dom';
+import {Star, Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings   } from 'lucide-react';
+;
+constAIEmailAssistantPage: React.FC = () => {constfeatures = [{
+      icon: Mail,;
+      title: 'SmartClassification',;
+      description: 'Automaticallycategorizeandprioritizeemailsbasedoncontentandsender.';
+    },;
+    {icon: MessageSquare,;
+      title: 'Auto-Responses',;
+      description: 'GenerateintelligentresponsesusingAItohandlecommoninquiries.';
+    },;
+    {icon: Brain,;
+      title: 'SentimentAnalysis',;
+      description: 'Analyzeemailtoneandsentimenttoprovidebettercustomerservice.';
+    },;
+    {icon: Settings,;
+      title: 'WorkflowAutomation',;
+      description: 'Createautomatedworkflowstostreamlineyouremailmanagement.';
     }
   ];
-  constuseCases = [
-    {
-      title: 'CustomerSupport',
-      description: 'Automateresponsestocommoncustomerinquiriesandsupporttickets.',
-      icon: Users
-    },
-    {
-      title: 'SalesFollow-up',
-      description: 'Automaticallyfollowupwithleadsandprospectsbasedontheirbehavior.',
-      icon: BarChart3
-    },
-    {
-      title: 'EmailMarketing',
-      description: 'Personalizeandoptimizeemailcampaignsforbetterengagement.',
-      icon: Zap
-    },
-    {
-      title: 'InternalCommunication',
-      description: 'Streamlineinternalemailworkflowsandteamcommunication.',
-      icon: Shield
+  constuseCases = [{title: 'CustomerSupport',;
+      description: 'Automateresponsestocommoncustomerinquiriesandsupporttickets.',;
+      icon: Users;
+    },;
+    {title: 'SalesFollow-up',;
+      description: 'Automaticallyfollowupwithleadsandprospectsbasedontheirbehavior.',;
+      icon: BarChart3;
+    },;
+    {title: 'EmailMarketing',;
+      description: 'Personalizeandoptimizeemailcampaignsforbetterengagement.',;
+      icon: Zap;
+    },;
+    {title: 'InternalCommunication',;
+      description: 'Streamlineinternalemailworkflowsandteamcommunication.',;
+      icon: Shield;
     }
   ];
-  return (
-    <>
-    <>
-      <Helmet>
-        <title>5GDataAnalytics - ZionTechGroup</title>
-        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
-      </Helmet>
-        <title>AIEmailAssistant - ZionTechGroup</title>
-        <metaconstname = "description" content="TransformyouremailmanagementwithourAIEmailAssistant. Smartclassification, auto-responses, sentimentanalysis, andautomatedworkflows." / / />
-        <metaname="keywords" content="AIemailassistant, emailautomation, smartemailmanagement, auto-responses, emailclassification" / / />
-      </Helmet>
-    </>
-
-      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
+  return (;
+    <>;
+    <>;
+      <Helmet>;
+        <title>5GDataAnalytics - ZionTechGroup</title>;
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />;
+      </Helmet>;
+        <title>AIEmailAssistant - ZionTechGroup</title>;
+        <metaconstname = "description" content="TransformyouremailmanagementwithourAIEmailAssistant. Smartclassification, auto-responses, sentimentanalysis, andautomatedworkflows." / / />;
+        <metaname="keywords" content="AIemailassistant, emailautomation, smartemailmanagement, auto-responses, emailclassification" / / />;
+      </Helmet>;
+    </>;
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">;
         {/* HeroSection */}
-    <>
-        <sectionclassName="p t-32pb-20" />
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="t e xt-centermax-w-4xlmx-auto">
-              <h1 className="t e xt-5 xlmd:text-6 xlfont-boldtext-whitemb-6" />
-                AI <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />EmailAssistant</span>
-              </h1>
-              <pclassName="t e xt-xltext-gray-300 mb-8leading-relaxed">
-              Transformyouremailmanagementwithintelligentautomation, smartclassification, 
-                andAI-poweredresponsesthatsavetimeandimproveproductivity.
-    <>
-              </p>
-              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-                <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300transformhover:scale-105">StartBuilding
-                </Link>
-                <Linkto="/ai-services" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105">ViewAllAIServices
-                </Link>
-              </div>
-          </div>
-        </section>
-    </>
-
+    <>;
+        <sectionclassName="p t-32pb-20" />;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="t e xt-centermax-w-4xlmx-auto">;
+              <h1 className="t e xt-5 xlmd: text-6 xlfont-boldtext-whitemb-6" />;
+                AI <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />EmailAssistant</span>;
+              </h1>;
+              <pclassName="t e xt-xltext-gray-300 mb-8leading-relaxed">;
+              Transformyouremailmanagementwithintelligentautomation, smartclassification,;
+                andAI-poweredresponsesthatsavetimeandimproveproductivity.;
+    <>;
+              </p>;
+              <divclassName="f l exflex-colsm: flex-rowgap-4justify-center">;
+                <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300transformhover:scale-105">StartBuilding;
+                </Link>;
+                <Linkto="/ai-services" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105">ViewAllAIServices;
+                </Link>;
+              </div>;
+          </div>;
+        </section>;
+    </>;
         {/* FeaturesSection */}
-    <>
-        <sectionclassName="p y-20" />
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-6" />
-                Powerful <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Features</span>
-              </h2>
-              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Everythingyouneedtoautomateandoptimizeyouremailmanagement</p>
-            </div>
-    </>
-
-            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-              {features.map((feature, index) => (
-                <divkey={index} className="t e xt-centergroup" />
-                  <divclassName="w-20 h-20 b g-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-fullflexitems-centerjustify-centermx-automb-6 group-hover:scale-110transition-transformduration-300">
+    <>;
+        <sectionclassName="p y-20" />;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6" />;
+                Powerful <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Features</span>;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Everythingyouneedtoautomateandoptimizeyouremailmanagement</p>;
+            </div>;
+    </>;
+            <divclassName="g r idgrid-cols-1 md: grid-cols-2lg:grid-cols-4gap-8">;
+              {features.map((feature, index) => (;
+                <divkey={index} className="t e xt-centergroup" />;
+                  <divclassName="w-20 h-20 b g-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-fullflexitems-centerjustify-centermx-automb-6 group-hover: scale-110transition-transformduration-300">;
                     {feature.icon}
-                  </div>
-                  <h3 className="t e xt-xlfont-boldtext-whitemb-4"   />{feature.title}</h3>
-                  <pclassName="t e xt-gray-300leading-relaxed">{feature.description}</p>
-                </div>
-    </>
+                  </div>;
+                  <h3 className="t e xt-xlfont-boldtext-whitemb-4"   />{feature.title}</h3>;
+                  <pclassName="t e xt-gray-300leading-relaxed">{feature.description}</p>;
+                </div>;
+    </>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* UseCasesSection */}
-    <>
-        <sectionclassName="p y-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-6" />
-                Use <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Cases</span>
-              </h2>
-              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">DiscoverhowourAIemailassistantcantransformyourcommunicationworkflows</p>
-            </div>
-    </>
-
-            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-              {useCases.map((useCase, index) => (
-                <divkey={index} className="b g-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-smborderborder-gray-700/50 rounded-xlp-6 hover:border-cyan-400/40 transition-allduration-300 grouphover:transformhover:scale-105" />
-                  <divclassName="w-12 h-12 b g-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-lgflexitems-centerjustify-centermb-4 group-hover:scale-110transition-transformduration-300">
+    <>;
+        <sectionclassName="p y-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6" />;
+                Use <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Cases</span>;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">DiscoverhowourAIemailassistantcantransformyourcommunicationworkflows</p>;
+            </div>;
+    </>;
+            <divclassName="g r idgrid-cols-1 md: grid-cols-2lg:grid-cols-4gap-8">;
+              {useCases.map((useCase, index) => (;
+                <divkey={index} className="b g-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-smborderborder-gray-700/50 rounded-xlp-6 hover: border-cyan-400/40 transition-allduration-300 grouphover:transformhover:scale-105" />;
+                  <divclassName="w-12 h-12 b g-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-lgflexitems-centerjustify-centermb-4 group-hover:scale-110transition-transformduration-300">;
                     {useCase.icon}
-                  </div>
-                  <h3 className="t e xt-lgfont-boldtext-whitemb-3group-hover:text-cyan-400 transition-colors"  />{useCase.title}
-                  </h3>
-                  <pclassName="t e xt-gray-300text-smleading-relaxed">{useCase.description}</p>
-                </div>
-    </>
+                  </div>;
+                  <h3 className="t e xt-lgfont-boldtext-whitemb-3group-hover: text-cyan-400 transition-colors"  />{useCase.title}
+                  </h3>;
+                  <pclassName="t e xt-gray-300text-smleading-relaxed">{useCase.description}</p>;
+                </div>;
+    </>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* CTASection */}
-    <>
-        <sectionclassName="p y-20" />
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="b g-gradient-to-rfrom-cyan-900/50 to-purple-900/50 backdrop-blur-smborderborder-cyan-500/20 rounded-2 xlp-12text-center">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-6"  />ReadytoTransformYourEmailManagement?
-              </h2>
-              <pclassName="t e xt-xltext-gray-300 mb-8 max-w-2xlmx-auto">StartautomatingyouremailworkflowsandboostproductivitywithAI-poweredassistance.</p>
-              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-                <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300transformhover:scale-105">StartBuildingNow
-                </Link>
-                <Linkto="/about" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105">LearnMoreAboutUs
-                </Link>
-              </div>
-          </div>
-        </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
+    <>;
+        <sectionclassName="p y-20" />;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="b g-gradient-to-rfrom-cyan-900/50 to-purple-900/50 backdrop-blur-smborderborder-cyan-500/20 rounded-2 xlp-12text-center">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6"  />ReadytoTransformYourEmailManagement?;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300 mb-8 max-w-2xlmx-auto">StartautomatingyouremailworkflowsandboostproductivitywithAI-poweredassistance.</p>;
+              <divclassName="f l exflex-colsm: flex-rowgap-4justify-center">;
+                <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300transformhover:scale-105">StartBuildingNow;
+                </Link>;
+                <Linkto="/about" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105">LearnMoreAboutUs;
+                </Link>;
+              </div>;
+          </div>;
+        </section>;
+      </div>;
+        </div>;
+      </div>;
+          </div>;
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+          </div>;
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+      </div>;
+    </>;
   );
 };
-
+;
 exportdefaultAIEmailAssistantPage;
-    </>
+    </>;

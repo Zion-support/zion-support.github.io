@@ -5,59 +5,52 @@ size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
   fullScreen?: boolean;
 }
-    fullScreen = false
-    // Note: fullScreenparameterisusedincontainerClassescalculationbelow
-    
+    fullScreen = false;
+    // Note: fullScreenparameterisusedincontainerClassescalculationbelow;
     );
-    
+;
     );
-    
+;
     );
-    
+;
     );
-
+;
     );
-
+;
           );
-        case 'pulse':
-            
-            />
+        case 'pulse':;
+            />;
           );
-        case 'skeleton':
-            <divclassName='space-y-2' role='status' aria-label='Loading'>
-              
-              />
-              
-              />
-              
-              />
-            </div>
+        case 'skeleton':;
+            <divclassName='space-y-2' role='status' aria-label='Loading'>;
+              />;
+              />;
+              />;
+            </div>;
   );
-        case 'bars':
-            <divclassName='flexspace-x-1' role='status' aria-label='Loading'>
-                
-                />
+        case 'bars':;
+            <divclassName='flexspace-x-1' role='status' aria-label='Loading'>;
+                />;
               ))}
-            </div>
+            </div>;
   );
-        case 'spinner':
-        default:
-            
-            />
+        case 'spinner':;
+        default: />;
           );
       }
     }, [size, variant, color, sizeClasses, colorClasses, baseClasses]);
-    
+;
       return `${baseClasses} ${fullScreen ? fullScreenClasses : ''} ${className}`;
     }, [baseClasses, fullScreen, fullScreenClasses, className]);
-      <divclassName={containerClasses}>
-        <divclassName='text-center'>
+      <divclassName={containerClasses}>;
+        <divclassName='text-center'>;
           {renderSpinner}
-            <pclassName={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>{text}</p>
+            <pclassName={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>{text}</p>;
           )}
-        </div>
+        </div>;
   );
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 exportdefaultOptimizedLoadingSpinner;
+;

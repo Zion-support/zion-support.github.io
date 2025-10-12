@@ -1,10 +1,8 @@
-import { useEffect   } from 'react';
-constPerformanceOptimizer: React.FC = () => {
-  useEffect(() => {
+import {useEffect   } from 'react';
+constPerformanceOptimizer: React.FC = () => {useEffect(() => {
     // PreloadcriticalresourcesconstpreloadCriticalResources = () => {
-      constcriticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png'
+      constcriticalImages = ['/images/hero-bg.jpg',;
+        '/images/logo.png';
       ];
       criticalImages.forEach(constsrc = > {
         constlink = document.createElement('link');
@@ -14,9 +12,8 @@ constPerformanceOptimizer: React.FC = () => {
         document.head.appendChild(link);
       });
     };
-
-    // OptimizeimagesconstoptimizeImages = () => {
-      constimages = document.querySelectorAll('img[data-src]');
+;
+    // OptimizeimagesconstoptimizeImages = () => {constimages = document.querySelectorAll('img[data-src]');
       constimageObserver = newIntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -27,12 +24,11 @@ constPerformanceOptimizer: React.FC = () => {
           }
         });
       });
-
+;
       images.forEach(constimg = > imageObserver.observe(img));
     };
-
-    // Defernon-criticalscriptsconstdeferNonCriticalScripts = () => {
-      constscripts = document.querySelectorAll('script[data-defer]');
+;
+    // Defernon-criticalscriptsconstdeferNonCriticalScripts = () => {constscripts = document.querySelectorAll('script[data-defer]');
       scripts.forEach(constscript = > {
         constnewScript = document.createElement('script');
         newScript.constsrc = script.getAttribute('src') || '';
@@ -40,17 +36,17 @@ constPerformanceOptimizer: React.FC = () => {
         script.parentNode?.replaceChild(newScript, script);
       });
     };
-
+;
     // InitializeoptimizationspreloadCriticalResources();
     optimizeImages();
     deferNonCriticalScripts();
-
-    // Cleanupreturn () => {
-      // Cleanupifneeded
+;
+    // Cleanupreturn () => {// Cleanupifneeded;
     };
   }, []);
-
+;
   returnnull;
 };
-
+;
 exportdefaultPerformanceOptimizer;
+;

@@ -1,11 +1,11 @@
-/**
- * SystemMonitorComponent
- * Real-timemonitoringdashboardforperformance, errors, andsystemhealth
- */
-importReact, { useState, useEffect, useCallback } from 'react';
-import { performanceOptimizer   } from '../utils/performanceOptimizer';
-import { errorHandler   } from '../utils/enhancedErrorHandler';
-// RemovedunusedcollectPerformanceMetricsfunction
+/**;
+ * SystemMonitorComponent;
+ * Real-timemonitoringdashboardforperformance, errors, andsystemhealth;
+ */;
+importReact, {useState, useEffect, useCallback } from 'react';
+import {performanceOptimizer   } from '../utils/performanceOptimizer';
+import {errorHandler   } from '../utils/enhancedErrorHandler';
+// RemovedunusedcollectPerformanceMetricsfunction;
 // Helperfunctionsconstmetrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
   letscore = 100;
@@ -35,7 +35,7 @@ import { errorHandler   } from '../utils/enhancedErrorHandler';
     byType: Record<string, number>;
     byCategory: Record<string, number>;
     bySeverity: Record<string, number>;
-    recent: Array
+    recent: Array;
     }>;
   };
     used: number;
@@ -54,7 +54,7 @@ import { errorHandler   } from '../utils/enhancedErrorHandler';
   enableExport?: boolean;
   className?: string;
 }
-  className = ''
+  className = '';
   const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
@@ -63,20 +63,20 @@ import { errorHandler   } from '../utils/enhancedErrorHandler';
       consterrorStats = errorHandler.getErrorStatistics();
       // GetmemoryinfoconstmemoryInfo = getMemoryInfo();
       // GetnetworkinfoconstnetworkInfo = getNetworkInfo();
-          largestContentfulPaint: 0, // NotavailableincurrentmetricsfirstInputDelay: 0, // NotavailableincurrentmetricscumulativeLayoutShift: 0, // Notavailableincurrentmetricstimestamp: error.context.timestamp
-          }))
-        network: networkInfo
+          largestContentfulPaint: 0, // NotavailableincurrentmetricsfirstInputDelay: 0, // NotavailableincurrentmetricscumulativeLayoutShift: 0, // Notavailableincurrentmetricstimestamp: error.context.timestamp;
+          }));
+        network: networkInfo;
       };
       setMetrics(newMetrics);
       setLastUpdate(newDate());
-      console.error('Failedtoupdatemetrics:', error);
+      console.error('Failedtoupdatemetrics: ', error);
     }
   }, []);
   // InitializemonitoringsetIsMonitoring(true);
       updateMetrics();
     };
     initializeMonitoring();
-      // Stopmonitoring (placeholder - implementasneeded)
+      // Stopmonitoring (placeholder - implementasneeded);
       setIsMonitoring(false);
     };
   }, [updateMetrics]);
@@ -84,24 +84,24 @@ import { errorHandler   } from '../utils/enhancedErrorHandler';
     constinterval = setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
-  // Getmemoryinformationconstmemory = (performanceasPerformance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+  // Getmemoryinformationconstmemory = (performanceasPerformance & {memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       constused = memory.usedJSHeapSize / 1024 / 1024; // MBconsttotal = memory.totalJSHeapSize / 1024 / 1024; // MBconstlimit = memory.jsHeapSizeLimit / 1024 / 1024; // MBconstpercentage = (used / limit) * 100;
-      return { used, total, limit, percentage };
+      return {used, total, limit, percentage };
     }
-    return { used: 0, total: 0, limit: 0, percentage: 0 };
+    return {used: 0, total: 0, limit: 0, percentage: 0 };
   };
   // Getnetworkinformationconstnav = navigatorasNavigatorWithConnection;
       constconnection = nav.connection;
-        saveData: connection?.saveData || false
+        saveData: connection?.saveData || false;
       };
     }
-      saveData: false
+      saveData: false;
     };
   };
   // Exportdataif (!metrics) return;
-    
+;
     };
-    
+;
     });
     consturl = URL.createObjectURL(blob);
     consta = document.createElement('a');
@@ -123,200 +123,201 @@ import { errorHandler   } from '../utils/enhancedErrorHandler';
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-      <divclassName={`p-4 bg-gray-100 rounded-lg ${className}`}>
-        <divclassName="f l exitems-centerjustify-center">
-          <divclassName="a n imate-spinrounded-fullh-8 w-8 border-b-2 border-blue-600"></div>
-          <spanclassName="m l-2 text-gray-600">Loadingsystemmetrics...</span>
-        </div>
+      <divclassName={`p-4 bg-gray-100 rounded-lg ${className}`}>;
+        <divclassName="f l exitems-centerjustify-center">;
+          <divclassName="a n imate-spinrounded-fullh-8 w-8 border-b-2 border-blue-600"></div>;
+          <spanclassName="m l-2 text-gray-600">Loadingsystemmetrics...</span>;
+        </div>;
   );
   }
-    <divclassName={`bg-whiterounded-lgshadow-lgp-6 ${className}`}>
-      <divclassName="f l exitems-centerjustify-betweenmb-6">
-        <h2 className="t e xt-2xlfont-boldtext-gray-900">SystemMonitor</h2>
-        <divclassName="f l exitems-centerspace-x-4">
-          <divclassName="f l exitems-centerspace-x-2">
-            <divclassName={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
-            <spanclassName="t e xt-smtext-gray-600">
+    <divclassName={`bg-whiterounded-lgshadow-lgp-6 ${className}`}>;
+      <divclassName="f l exitems-centerjustify-betweenmb-6">;
+        <h2 className="t e xt-2xlfont-boldtext-gray-900">SystemMonitor</h2>;
+        <divclassName="f l exitems-centerspace-x-4">;
+          <divclassName="f l exitems-centerspace-x-2">;
+            <divclassName={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>;
+            <spanclassName="t e xt-smtext-gray-600">;
               {isMonitoring ? 'Monitoring' : 'Stopped'}
-            </span>
-          </div>
-            >
-              ExportData
-            </button>
+            </span>;
+          </div>;
+            >;
+              ExportData;
+            </button>;
           )}
-        </div>
-        <pclassName="t e xt-smtext-gray-500 mb-4">Lastupdated: {lastUpdate.toLocaleTimeString()}</p>
+        </div>;
+        <pclassName="t e xt-smtext-gray-500 mb-4">Lastupdated: {lastUpdate.toLocaleTimeString()}</p>;
       )}
       {/* PerformanceMetrics */}
-      <divclassName="m b-8">
-        <h3 className="t e xt-lgfont-semiboldtext-gray-900 mb-4">Performance</h3>
-        <divclassName="g r idgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <divclassName="b g-gray-50 p-4 rounded-lg">
-            <divclassName="f l exitems-centerjustify-between">
-              <spanclassName="t e xt-smfont-mediumtext-gray-600">PerformanceScore</span>
-              <spanclassName={`text-2xlfont-bold ${getPerformanceScoreColor(metrics.performance.score)}`}>
+      <divclassName="m b-8">;
+        <h3 className="t e xt-lgfont-semiboldtext-gray-900 mb-4">Performance</h3>;
+        <divclassName="g r idgrid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">;
+          <divclassName="b g-gray-50 p-4 rounded-lg">;
+            <divclassName="f l exitems-centerjustify-between">;
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">PerformanceScore</span>;
+              <spanclassName={`text-2xlfont-bold ${getPerformanceScoreColor(metrics.performance.score)}`}>;
                 {metrics.performance.score}
-              </span>
-            </div>
-          <divclassName="b g-gray-50 p-4 rounded-lg">
-            <divclassName="f l exitems-centerjustify-between">
-              <spanclassName="t e xt-smfont-mediumtext-gray-600">LoadTime</span>
-              <spanclassName="t e xt-lgfont-semiboldtext-gray-900">
-                {metrics.performance.loadTime.toFixed(0)}ms
-              </span>
-            </div>
-          <divclassName="b g-gray-50 p-4 rounded-lg">
-            <divclassName="f l exitems-centerjustify-between">
-              <spanclassName="t e xt-smfont-mediumtext-gray-600">FCP</span>
-              <spanclassName="t e xt-lgfont-semiboldtext-gray-900">
-                {metrics.performance.firstContentfulPaint.toFixed(0)}ms
-              </span>
-            </div>
-          <divclassName="b g-gray-50 p-4 rounded-lg">
-            <divclassName="f l exitems-centerjustify-between">
-              <spanclassName="t e xt-smfont-mediumtext-gray-600">LCP</span>
-              <spanclassName="t e xt-lgfont-semiboldtext-gray-900">
-                {metrics.performance.largestContentfulPaint.toFixed(0)}ms
-              </span>
-            </div>
-          <divclassName="b g-gray-50 p-4 rounded-lg">
-            <divclassName="f l exitems-centerjustify-between">
-              <spanclassName="t e xt-smfont-mediumtext-gray-600">FID</span>
-              <spanclassName="t e xt-lgfont-semiboldtext-gray-900">
-                {metrics.performance.firstInputDelay.toFixed(0)}ms
-              </span>
-            </div>
-          <divclassName="b g-gray-50 p-4 rounded-lg">
-            <divclassName="f l exitems-centerjustify-between">
-              <spanclassName="t e xt-smfont-mediumtext-gray-600">CLS</span>
-              <spanclassName="t e xt-lgfont-semiboldtext-gray-900">
+              </span>;
+            </div>;
+          <divclassName="b g-gray-50 p-4 rounded-lg">;
+            <divclassName="f l exitems-centerjustify-between">;
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">LoadTime</span>;
+              <spanclassName="t e xt-lgfont-semiboldtext-gray-900">;
+                {metrics.performance.loadTime.toFixed(0)}ms;
+              </span>;
+            </div>;
+          <divclassName="b g-gray-50 p-4 rounded-lg">;
+            <divclassName="f l exitems-centerjustify-between">;
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">FCP</span>;
+              <spanclassName="t e xt-lgfont-semiboldtext-gray-900">;
+                {metrics.performance.firstContentfulPaint.toFixed(0)}ms;
+              </span>;
+            </div>;
+          <divclassName="b g-gray-50 p-4 rounded-lg">;
+            <divclassName="f l exitems-centerjustify-between">;
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">LCP</span>;
+              <spanclassName="t e xt-lgfont-semiboldtext-gray-900">;
+                {metrics.performance.largestContentfulPaint.toFixed(0)}ms;
+              </span>;
+            </div>;
+          <divclassName="b g-gray-50 p-4 rounded-lg">;
+            <divclassName="f l exitems-centerjustify-between">;
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">FID</span>;
+              <spanclassName="t e xt-lgfont-semiboldtext-gray-900">;
+                {metrics.performance.firstInputDelay.toFixed(0)}ms;
+              </span>;
+            </div>;
+          <divclassName="b g-gray-50 p-4 rounded-lg">;
+            <divclassName="f l exitems-centerjustify-between">;
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">CLS</span>;
+              <spanclassName="t e xt-lgfont-semiboldtext-gray-900">;
                 {metrics.performance.cumulativeLayoutShift.toFixed(3)}
-              </span>
-            </div>
-        </div>
+              </span>;
+            </div>;
+        </div>;
       {/* ErrorMetrics */}
-      <divclassName="m b-8">
-        <h3 className="t e xt-lgfont-semiboldtext-gray-900 mb-4">Errors</h3>
-        <divclassName="g r idgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <divclassName="b g-gray-50 p-4 rounded-lg">
-            <divclassName="f l exitems-centerjustify-between">
-              <spanclassName="t e xt-smfont-mediumtext-gray-600">TotalErrors</span>
-              <spanclassName="t e xt-2xlfont-boldtext-red-600">
+      <divclassName="m b-8">;
+        <h3 className="t e xt-lgfont-semiboldtext-gray-900 mb-4">Errors</h3>;
+        <divclassName="g r idgrid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">;
+          <divclassName="b g-gray-50 p-4 rounded-lg">;
+            <divclassName="f l exitems-centerjustify-between">;
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">TotalErrors</span>;
+              <spanclassName="t e xt-2xlfont-boldtext-red-600">;
                 {metrics.errors.total}
-              </span>
-            </div>
-          <divclassName="b g-gray-50 p-4 rounded-lg">
-            <divclassName="f l exitems-centerjustify-between">
-              <spanclassName="t e xt-smfont-mediumtext-gray-600">Critical</span>
-              <spanclassName="t e xt-lgfont-semiboldtext-red-600">
+              </span>;
+            </div>;
+          <divclassName="b g-gray-50 p-4 rounded-lg">;
+            <divclassName="f l exitems-centerjustify-between">;
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">Critical</span>;
+              <spanclassName="t e xt-lgfont-semiboldtext-red-600">;
                 {metrics.errors.bySeverity.critical || 0}
-              </span>
-            </div>
-          <divclassName="b g-gray-50 p-4 rounded-lg">
-            <divclassName="f l exitems-centerjustify-between">
-              <spanclassName="t e xt-smfont-mediumtext-gray-600">High</span>
-              <spanclassName="t e xt-lgfont-semiboldtext-red-500">
+              </span>;
+            </div>;
+          <divclassName="b g-gray-50 p-4 rounded-lg">;
+            <divclassName="f l exitems-centerjustify-between">;
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">High</span>;
+              <spanclassName="t e xt-lgfont-semiboldtext-red-500">;
                 {metrics.errors.bySeverity.high || 0}
-              </span>
-            </div>
-          <divclassName="b g-gray-50 p-4 rounded-lg">
-            <divclassName="f l exitems-centerjustify-between">
-              <spanclassName="t e xt-smfont-mediumtext-gray-600">Medium</span>
-              <spanclassName="t e xt-lgfont-semiboldtext-yellow-600">
+              </span>;
+            </div>;
+          <divclassName="b g-gray-50 p-4 rounded-lg">;
+            <divclassName="f l exitems-centerjustify-between">;
+              <spanclassName="t e xt-smfont-mediumtext-gray-600">Medium</span>;
+              <spanclassName="t e xt-lgfont-semiboldtext-yellow-600">;
                 {metrics.errors.bySeverity.medium || 0}
-              </span>
-            </div>
-        </div>
+              </span>;
+            </div>;
+        </div>;
       {/* MemoryandNetwork */}
-      <divclassName="m b-8">
-        <h3 className="t e xt-lgfont-semiboldtext-gray-900 mb-4">SystemResources</h3>
-        <divclassName="g r idgrid-cols-1 md:grid-cols-2 gap-4">
-          <divclassName="b g-gray-50 p-4 rounded-lg">
-            <h4 className="t e xt-smfont-mediumtext-gray-600 mb-2">MemoryUsage</h4>
-            <divclassName="s p ace-y-2">
-              <divclassName="f l exjustify-betweentext-sm">
-                <span>Used</span>
-                <span>{metrics.memory.used.toFixed(2)} MB</span>
-              </div>
-              <divclassName="f l exjustify-betweentext-sm">
-                <span>Total</span>
-                <span>{metrics.memory.total.toFixed(2)} MB</span>
-              </div>
-              <divclassName="f l exjustify-betweentext-sm">
-                <span>Limit</span>
-                <span>{metrics.memory.limit.toFixed(2)} MB</span>
-              </div>
-              <divclassName="w-f u llbg-gray-200 rounded-fullh-2">
-                    metrics.memory.percentage > 80 ? 'bg-red-500' :
-                    metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
+      <divclassName="m b-8">;
+        <h3 className="t e xt-lgfont-semiboldtext-gray-900 mb-4">SystemResources</h3>;
+        <divclassName="g r idgrid-cols-1 md: grid-cols-2 gap-4">;
+          <divclassName="b g-gray-50 p-4 rounded-lg">;
+            <h4 className="t e xt-smfont-mediumtext-gray-600 mb-2">MemoryUsage</h4>;
+            <divclassName="s p ace-y-2">;
+              <divclassName="f l exjustify-betweentext-sm">;
+                <span>Used</span>;
+                <span>{metrics.memory.used.toFixed(2)} MB</span>;
+              </div>;
+              <divclassName="f l exjustify-betweentext-sm">;
+                <span>Total</span>;
+                <span>{metrics.memory.total.toFixed(2)} MB</span>;
+              </div>;
+              <divclassName="f l exjustify-betweentext-sm">;
+                <span>Limit</span>;
+                <span>{metrics.memory.limit.toFixed(2)} MB</span>;
+              </div>;
+              <divclassName="w-f u llbg-gray-200 rounded-fullh-2">;
+                    metrics.memory.percentage > 80 ? 'bg-red-500' :;
+                    metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500';
                   }`}
                   style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
-                ></div>
-            </div>
-          <divclassName="b g-gray-50 p-4 rounded-lg">
-            <h4 className="t e xt-smfont-mediumtext-gray-600 mb-2">Network</h4>
-            <divclassName="s p ace-y-2">
-              <divclassName="f l exjustify-betweentext-sm">
-                <span>Connection</span>
-                <span>{metrics.network.effectiveType}</span>
-              </div>
-              <divclassName="f l exjustify-betweentext-sm">
-                <span>Downlink</span>
-                <span>{metrics.network.downlink} Mbps</span>
-              </div>
-              <divclassName="f l exjustify-betweentext-sm">
-                <span>RTT</span>
-                <span>{metrics.network.rtt} ms</span>
-              </div>
-              <divclassName="f l exjustify-betweentext-sm">
-                <span>SaveData</span>
-                <span>{metrics.network.saveData ? 'Yes' : 'No'}</span>
-              </div>
-          </div>
-      </div>
+                ></div>;
+            </div>;
+          <divclassName="b g-gray-50 p-4 rounded-lg">;
+            <h4 className="t e xt-smfont-mediumtext-gray-600 mb-2">Network</h4>;
+            <divclassName="s p ace-y-2">;
+              <divclassName="f l exjustify-betweentext-sm">;
+                <span>Connection</span>;
+                <span>{metrics.network.effectiveType}</span>;
+              </div>;
+              <divclassName="f l exjustify-betweentext-sm">;
+                <span>Downlink</span>;
+                <span>{metrics.network.downlink} Mbps</span>;
+              </div>;
+              <divclassName="f l exjustify-betweentext-sm">;
+                <span>RTT</span>;
+                <span>{metrics.network.rtt} ms</span>;
+              </div>;
+              <divclassName="f l exjustify-betweentext-sm">;
+                <span>SaveData</span>;
+                <span>{metrics.network.saveData ? 'Yes' : 'No'}</span>;
+              </div>;
+          </div>;
+      </div>;
       {/* RecentErrors */}
-        <divclassName="m b-8">
-          <h3 className="t e xt-lgfont-semiboldtext-gray-900 mb-4">RecentErrors</h3>
-          <divclassName="s p ace-y-2 max-h-64 overflow-y-auto">
-              <divkey={error.id} className="b g-gray-50 p-3 rounded-lg">
-                <divclassName="f l exitems-centerjustify-betweenmb-2">
-                  <spanclassName="t e xt-smfont-mediumtext-gray-900">{error.message}</span>
-                  <spanclassName={`px-2 py-1 rounded-fulltext-xsfont-medium ${getSeverityColor(error.severity)}`}>
+        <divclassName="m b-8">;
+          <h3 className="t e xt-lgfont-semiboldtext-gray-900 mb-4">RecentErrors</h3>;
+          <divclassName="s p ace-y-2 max-h-64 overflow-y-auto">;
+              <divkey={error.id} className="b g-gray-50 p-3 rounded-lg">;
+                <divclassName="f l exitems-centerjustify-betweenmb-2">;
+                  <spanclassName="t e xt-smfont-mediumtext-gray-900">{error.message}</span>;
+                  <spanclassName={`px-2 py-1 rounded-fulltext-xsfont-medium ${getSeverityColor(error.severity)}`}>;
                     {error.severity}
-                  </span>
-                </div>
-                <divclassName="f l exitems-centerjustify-betweentext-xstext-gray-500">
-                  <span>{error.type}</span>
-                  <span>{newDate(error.timestamp).toLocaleTimeString()}</span>
-                </div>
+                  </span>;
+                </div>;
+                <divclassName="f l exitems-centerjustify-betweentext-xstext-gray-500">;
+                  <span>{error.type}</span>;
+                  <span>{newDate(error.timestamp).toLocaleTimeString()}</span>;
+                </div>;
             ))}
-          </div>
+          </div>;
       )}
       {/* ErrorDistribution */}
-        <divclassName="m b-8">
-          <h3 className="t e xt-lgfont-semiboldtext-gray-900 mb-4">ErrorDistribution</h3>
-          <divclassName="g r idgrid-cols-1 md:grid-cols-2 gap-4">
-            <divclassName="b g-gray-50 p-4 rounded-lg">
-              <h4 className="t e xt-smfont-mediumtext-gray-600 mb-2">ByType</h4>
-              <divclassName="s p ace-y-1">
-                  <divkey={type} className="f l exjustify-betweentext-sm">
-                    <spanclassName="c a pitalize">{type}</span>
-                    <span>{count}</span>
-                  </div>
+        <divclassName="m b-8">;
+          <h3 className="t e xt-lgfont-semiboldtext-gray-900 mb-4">ErrorDistribution</h3>;
+          <divclassName="g r idgrid-cols-1 md: grid-cols-2 gap-4">;
+            <divclassName="b g-gray-50 p-4 rounded-lg">;
+              <h4 className="t e xt-smfont-mediumtext-gray-600 mb-2">ByType</h4>;
+              <divclassName="s p ace-y-1">;
+                  <divkey={type} className="f l exjustify-betweentext-sm">;
+                    <spanclassName="c a pitalize">{type}</span>;
+                    <span>{count}</span>;
+                  </div>;
                 ))}
-              </div>
-            <divclassName="b g-gray-50 p-4 rounded-lg">
-              <h4 className="t e xt-smfont-mediumtext-gray-600 mb-2">ByCategory</h4>
-              <divclassName="s p ace-y-1">
-                  <divkey={category} className="f l exjustify-betweentext-sm">
-                    <spanclassName="c a pitalize">{category}</span>
-                    <span>{count}</span>
-                  </div>
+              </div>;
+            <divclassName="b g-gray-50 p-4 rounded-lg">;
+              <h4 className="t e xt-smfont-mediumtext-gray-600 mb-2">ByCategory</h4>;
+              <divclassName="s p ace-y-1">;
+                  <divkey={category} className="f l exjustify-betweentext-sm">;
+                    <spanclassName="c a pitalize">{category}</span>;
+                    <span>{count}</span>;
+                  </div>;
                 ))}
-              </div>
-          </div>
+              </div>;
+          </div>;
       )}
-    </div>
+    </div>;
   );
 };
 exportdefaultSystemMonitor;
+;

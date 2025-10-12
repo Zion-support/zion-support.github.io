@@ -1,89 +1,80 @@
 import React from 'react';
-import { ArrowRight    } from 'lucide-react';
-'useclient'
-
-constEnhancedServicesShowcase: React.FC = () => {
-  constservices = [
-    {
-      icon: Brain,
-      title: 'AISolutions',
-      description: 'Harnessthepowerofartificialintelligencetoautomateprocesses, gaininsights, anddriveinnovation.',
-      features: ['MachineLearning', 'NaturalLanguageProcessing', 'ComputerVision', 'PredictiveAnalytics']
-    },
-    {
-      icon: Cloud,
-      title: 'CloudServices',
-      description: 'Scalableandsecurecloudinfrastructuresolutionstosupportyourbusinessgrowthanddigitaltransformation.',
-      features: ['CloudMigration', 'InfrastructureSetup', 'Auto-scaling', 'CostOptimization']
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensivesecuritysolutionstoprotectyourbusinessfromevolvingthreatsandensurecompliance.',
-      features: ['ThreatDetection', 'SecurityAuditing', 'IncidentResponse', 'ComplianceManagement']
-    },
-    {
-      icon: BarChart,
-      title: 'DataAnalytics',
-      description: 'Transformyourdataintoactionableinsightswithadvancedanalyticsandvisualizationtools.',
-      features: ['Real-timeAnalytics', 'CustomDashboards', 'DataVisualization', 'BusinessIntelligence']
-    },
-    {
-      icon: Zap,
-      title: 'ProcessAutomation',
-      description: 'Streamlineyouroperationswithintelligentautomationsolutionsthatreducemanualworkanderrors.',
-      features: ['WorkflowAutomation', 'RPAImplementation', 'APIIntegration', 'ProcessOptimization']
-    },
-    {
-      icon: Globe,
-      title: 'DigitalTransformation',
-      description: 'Completedigitaltransformationservicestomodernizeyourbusinessandstaycompetitive.',
-      features: ['StrategyDevelopment', 'TechnologyIntegration', 'ChangeManagement', 'Training & Support']
-      </>
-
+import {ArrowRight    } from 'lucide-react';
+'useclient';
+constEnhancedServicesShowcase: React.FC = () => {constservices = [{
+      icon: Brain,;
+      title: 'AISolutions',;
+      description: 'Harnessthepowerofartificialintelligencetoautomateprocesses, gaininsights, anddriveinnovation.',;
+      features: ['MachineLearning', 'NaturalLanguageProcessing', 'ComputerVision', 'PredictiveAnalytics'];
+    },;
+    {icon: Cloud,;
+      title: 'CloudServices',;
+      description: 'Scalableandsecurecloudinfrastructuresolutionstosupportyourbusinessgrowthanddigitaltransformation.',;
+      features: ['CloudMigration', 'InfrastructureSetup', 'Auto-scaling', 'CostOptimization'];
+    },;
+    {icon: Shield,;
+      title: 'Cybersecurity',;
+      description: 'Comprehensivesecuritysolutionstoprotectyourbusinessfromevolvingthreatsandensurecompliance.',;
+      features: ['ThreatDetection', 'SecurityAuditing', 'IncidentResponse', 'ComplianceManagement'];
+    },;
+    {icon: BarChart,;
+      title: 'DataAnalytics',;
+      description: 'Transformyourdataintoactionableinsightswithadvancedanalyticsandvisualizationtools.',;
+      features: ['Real-timeAnalytics', 'CustomDashboards', 'DataVisualization', 'BusinessIntelligence'];
+    },;
+    {icon: Zap,;
+      title: 'ProcessAutomation',;
+      description: 'Streamlineyouroperationswithintelligentautomationsolutionsthatreducemanualworkanderrors.',;
+      features: ['WorkflowAutomation', 'RPAImplementation', 'APIIntegration', 'ProcessOptimization'];
+    },;
+    {icon: Globe,;
+      title: 'DigitalTransformation',;
+      description: 'Completedigitaltransformationservicestomodernizeyourbusinessandstaycompetitive.',;
+      features: ['StrategyDevelopment', 'TechnologyIntegration', 'ChangeManagement', 'Training & Support'];
+      </>;
     }
   ];
-  return (
-    <divclassName="p y-20 px-4sm:px-6lg:px-8">
-      <divclassName="m a x-w-7xlmx-auto">
-        <divclassName="t e xt-centermb-16">
-          <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6"  />OurCoreServices
-          </h2>
-          <pclassName="t e xt-xltext-cyan-400 max-w-3xlmx-auto">ComprehensiveAIandITsolutionsdesignedtotransformyourbusinessanddriveinnovation</p>
-        </div>
-        <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-          {services.map((service, index) => (
-
-    <>
-              <divkey="{index}" className="c y ber-cardp-8 grouphover:scale-105transition-transform" />
-              <divclassName="f l exitems-centermb-6">
-                <service.iconclassName="h-12 w-12t e xt-cyan-400mr-4" />
+  return (;
+    <divclassName="p y-20 px-4sm: px-6lg:px-8">;
+      <divclassName="m a x-w-7xlmx-auto">;
+        <divclassName="t e xt-centermb-16">;
+          <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6"  />OurCoreServices;
+          </h2>;
+          <pclassName="t e xt-xltext-cyan-400 max-w-3xlmx-auto">ComprehensiveAIandITsolutionsdesignedtotransformyourbusinessanddriveinnovation</p>;
+        </div>;
+        <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">;
+          {services.map((service, index) => (;
+    <>;
+              <divkey="{index}" className="c y ber-cardp-8 grouphover: scale-105transition-transform" />;
+              <divclassName="f l exitems-centermb-6">;
+                <service.iconclassName="h-12 w-12t e xt-cyan-400mr-4" />;
                 <h3 className="t e xt-2 xlfont-boldtext-whitegroup-hover:text-cyan-400 transition-colors"  />{service.title}
-                </h3>
-              </div>
-              <pclassName="t e xt-gray-300 mb-6leading-relaxed">{service.description}</p>
-              <divclassName="m b-6">
-                <h4 className="t e xt-smfont-semiboldtext-cyan-400mb-3"  >KeyFeatures</h4>
-                <ulclassName="s p ace-y-2" />
-                  {service.features.map((feature, featureIndex) => (
-    <>
-                    <likey="{featureIndex}" className="f l exitems-centertext-smtext-gray-300" />
-                      <CheckCircleclassName="h-4 w-4 t e xt-green-400mr-2flex-shrink-0" />
+                </h3>;
+              </div>;
+              <pclassName="t e xt-gray-300 mb-6leading-relaxed">{service.description}</p>;
+              <divclassName="m b-6">;
+                <h4 className="t e xt-smfont-semiboldtext-cyan-400mb-3"  >KeyFeatures</h4>;
+                <ulclassName="s p ace-y-2" />;
+                  {service.features.map((feature, featureIndex) => (;
+    <>;
+                    <likey="{featureIndex}" className="f l exitems-centertext-smtext-gray-300" />;
+                      <CheckCircleclassName="h-4 w-4 t e xt-green-400mr-2flex-shrink-0" />;
                       {feature}
-                    </li>
+                    </li>;
                   ))}
-    <>
-                </ul>
-              </div>
-              <buttonclassName="c y ber-buttonw-fullpy-3 text-centerinline-flexitems-centerjustify-centergroup-hover:scale-105transition-transform" />
-                LearnMore
-    <>
-                <ArrowRightclassName="m l-2h-4w-4" />
-              </button>
-            </div>
+    <>;
+                </ul>;
+              </div>;
+              <buttonclassName="c y ber-buttonw-fullpy-3 text-centerinline-flexitems-centerjustify-centergroup-hover: scale-105transition-transform" />;
+                LearnMore;
+    <>;
+                <ArrowRightclassName="m l-2h-4w-4" />;
+              </button>;
+            </div>;
           ))}
-    <>
-        </div>
-    </div>
-  )
+    <>;
+        </div>;
+    </div>;
+  );
 };
+;

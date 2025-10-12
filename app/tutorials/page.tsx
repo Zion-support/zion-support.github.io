@@ -1,134 +1,126 @@
 import React from 'react';
-constTutorialsPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Tutorials - ZionTechGroup</title>
-        <metaname="description" content="LearnAIandITsolutionswithourcomprehensivetutorialsandguides." / / />
-        <metaname="keywords" content="tutorials, AItutorials, ITtutorials, learning, guides, education" / / />
-      </Helmet>
-    </>
-      
-      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
-        <divclassName="c o ntainermx-autopx-4py-16">
-          <divclassName="t e xt-centermb-16">
-            <h1 className="t e xt-4xlmd:text-6 xlfont-boldtext-whitemb-6" />
-              <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Tutorials & LearningCenter
-              </span>
-            </h1>
-            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">
-              MasterAIandITtechnologieswithourcomprehensivetutorials, guides, andhands-onlearningresources.
-    <>
-            </p>
-          </div>
-    </>
-
-          <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
+constTutorialsPage: React.FC = () => {return (;
+    <>;
+      <Helmet>;
+        <title>Tutorials - ZionTechGroup</title>;
+        <metaname="description" content="LearnAIandITsolutionswithourcomprehensivetutorialsandguides." / / />;
+        <metaname="keywords" content="tutorials, AItutorials, ITtutorials, learning, guides, education" / / />;
+      </Helmet>;
+    </>;
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">;
+        <divclassName="c o ntainermx-autopx-4py-16">;
+          <divclassName="t e xt-centermb-16">;
+            <h1 className="t e xt-4xlmd: text-6 xlfont-boldtext-whitemb-6" />;
+              <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Tutorials & LearningCenter;
+              </span>;
+            </h1>;
+            <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">;
+              MasterAIandITtechnologieswithourcomprehensivetutorials, guides, andhands-onlearningresources.;
+    <>;
+            </p>;
+          </div>;
+    </>;
+          <divclassName="g r idgrid-cols-1 md: grid-cols-2lg:grid-cols-3gap-8">;
             {/* AITutorials */}
-            <divclassName="b g-gradient-to-brfrom-purple-900/50 to-blue-900/50 backdrop-blur-smborderborder-purple-500/20 rounded-xlp-6 hover:border-purple-400/40transition-allduration-300">
-              <h3 className="t e xt-2 xlfont-boldtext-whitemb-4"  >AITutorials</h3>
-              <pclassName="t e xt-gray-300 mb-4">Learnartificialintelligencefrombasicstoadvancedimplementations.</p>
-              <ulclassName="s p ace-y-2text-smtext-gray-400">
-              <li  >• MachineLearningFundamentals</li>
-                <li  >• DeepLearningwithTensorFlow</li>
-                <li  >• NaturalLanguageProcessing</li>
-                <li  >• ComputerVisionApplications</li>
-              </ul>
-            </div>
-    </>
-
+            <divclassName="b g-gradient-to-brfrom-purple-900/50 to-blue-900/50 backdrop-blur-smborderborder-purple-500/20 rounded-xlp-6 hover: border-purple-400/40transition-allduration-300">;
+              <h3 className="t e xt-2 xlfont-boldtext-whitemb-4"  >AITutorials</h3>;
+              <pclassName="t e xt-gray-300 mb-4">Learnartificialintelligencefrombasicstoadvancedimplementations.</p>;
+              <ulclassName="s p ace-y-2text-smtext-gray-400">;
+              <li  >• MachineLearningFundamentals</li>;
+                <li  >• DeepLearningwithTensorFlow</li>;
+                <li  >• NaturalLanguageProcessing</li>;
+                <li  >• ComputerVisionApplications</li>;
+              </ul>;
+            </div>;
+    </>;
             {/* ITInfrastructure */}
-            <divclassName="b g-gradient-to-brfrom-cyan-900/50 to-blue-900/50 backdrop-blur-smborderborder-cyan-500/20 rounded-xlp-6 hover:border-cyan-400/40transition-allduration-300">
-              <h3 className="t e xt-2 xlfont-boldtext-whitemb-4"  >ITInfrastructure</h3>
-              <pclassName="t e xt-gray-300 mb-4">Mastercloudcomputing, DevOps, andsystemadministration.</p>
-              <ulclassName="s p ace-y-2text-smtext-gray-400">
-              <li  >• CloudArchitectureDesign</li>
-                <li  >• ContainerOrchestration</li>
-                <li  >• CI/CDPipelineSetup</li>
-                <li  >• SecurityBestPractices</li>
-              </ul>
-            </div>
-    </>
-
+            <divclassName="b g-gradient-to-brfrom-cyan-900/50 to-blue-900/50 backdrop-blur-smborderborder-cyan-500/20 rounded-xlp-6 hover: border-cyan-400/40transition-allduration-300">;
+              <h3 className="t e xt-2 xlfont-boldtext-whitemb-4"  >ITInfrastructure</h3>;
+              <pclassName="t e xt-gray-300 mb-4">Mastercloudcomputing, DevOps, andsystemadministration.</p>;
+              <ulclassName="s p ace-y-2text-smtext-gray-400">;
+              <li  >• CloudArchitectureDesign</li>;
+                <li  >• ContainerOrchestration</li>;
+                <li  >• CI/CDPipelineSetup</li>;
+                <li  >• SecurityBestPractices</li>;
+              </ul>;
+            </div>;
+    </>;
             {/* WebDevelopment */}
-            <divclassName="b g-gradient-to-brfrom-green-900/50 to-emerald-900/50 backdrop-blur-smborderborder-green-500/20 rounded-xlp-6 hover:border-green-400/40transition-allduration-300">
-              <h3 className="t e xt-2 xlfont-boldtext-whitemb-4"  >WebDevelopment</h3>
-              <pclassName="t e xt-gray-300 mb-4">Buildmodern, scalablewebapplicationswithcutting-edgetechnologies.</p>
-              <ulclassName="s p ace-y-2text-smtext-gray-400">
-              <li  >• React & Next.jsMastery</li>
-                <li  >• Full-StackDevelopment</li>
-                <li  >• APIDesign & Integration</li>
-                <li  >• PerformanceOptimization</li>
-              </ul>
-            </div>
-    </>
-
+            <divclassName="b g-gradient-to-brfrom-green-900/50 to-emerald-900/50 backdrop-blur-smborderborder-green-500/20 rounded-xlp-6 hover: border-green-400/40transition-allduration-300">;
+              <h3 className="t e xt-2 xlfont-boldtext-whitemb-4"  >WebDevelopment</h3>;
+              <pclassName="t e xt-gray-300 mb-4">Buildmodern, scalablewebapplicationswithcutting-edgetechnologies.</p>;
+              <ulclassName="s p ace-y-2text-smtext-gray-400">;
+              <li  >• React & Next.jsMastery</li>;
+                <li  >• Full-StackDevelopment</li>;
+                <li  >• APIDesign & Integration</li>;
+                <li  >• PerformanceOptimization</li>;
+              </ul>;
+            </div>;
+    </>;
             {/* DataScience */}
-            <divclassName="b g-gradient-to-brfrom-orange-900/50 to-red-900/50 backdrop-blur-smborderborder-orange-500/20 rounded-xlp-6 hover:border-orange-400/40transition-allduration-300">
-              <h3 className="t e xt-2 xlfont-boldtext-whitemb-4"  >DataScience</h3>
-              <pclassName="t e xt-gray-300 mb-4">Extractinsightsfromdatausingadvancedanalyticsandvisualization.</p>
-              <ulclassName="s p ace-y-2text-smtext-gray-400">
-              <li  >• DataAnalysiswithPython</li>
-                <li  >• StatisticalModeling</li>
-                <li  >• DataVisualization</li>
-                <li  >• BigDataProcessing</li>
-              </ul>
-            </div>
-    </>
-
+            <divclassName="b g-gradient-to-brfrom-orange-900/50 to-red-900/50 backdrop-blur-smborderborder-orange-500/20 rounded-xlp-6 hover: border-orange-400/40transition-allduration-300">;
+              <h3 className="t e xt-2 xlfont-boldtext-whitemb-4"  >DataScience</h3>;
+              <pclassName="t e xt-gray-300 mb-4">Extractinsightsfromdatausingadvancedanalyticsandvisualization.</p>;
+              <ulclassName="s p ace-y-2text-smtext-gray-400">;
+              <li  >• DataAnalysiswithPython</li>;
+                <li  >• StatisticalModeling</li>;
+                <li  >• DataVisualization</li>;
+                <li  >• BigDataProcessing</li>;
+              </ul>;
+            </div>;
+    </>;
             {/* Cybersecurity */}
-            <divclassName="b g-gradient-to-brfrom-red-900/50 to-pink-900/50 backdrop-blur-smborderborder-red-500/20 rounded-xlp-6 hover:border-red-400/40transition-allduration-300">
-              <h3 className="t e xt-2 xlfont-boldtext-whitemb-4"  >Cybersecurity</h3>
-              <pclassName="t e xt-gray-300 mb-4">Protectsystemsanddatawithcomprehensivesecuritystrategies.</p>
-              <ulclassName="s p ace-y-2text-smtext-gray-400">
-              <li  >• ThreatDetection & Response</li>
-                <li  >• PenetrationTesting</li>
-                <li  >• SecurityArchitecture</li>
-                <li  >• Compliance & Governance</li>
-              </ul>
-            </div>
-    </>
-
+            <divclassName="b g-gradient-to-brfrom-red-900/50 to-pink-900/50 backdrop-blur-smborderborder-red-500/20 rounded-xlp-6 hover: border-red-400/40transition-allduration-300">;
+              <h3 className="t e xt-2 xlfont-boldtext-whitemb-4"  >Cybersecurity</h3>;
+              <pclassName="t e xt-gray-300 mb-4">Protectsystemsanddatawithcomprehensivesecuritystrategies.</p>;
+              <ulclassName="s p ace-y-2text-smtext-gray-400">;
+              <li  >• ThreatDetection & Response</li>;
+                <li  >• PenetrationTesting</li>;
+                <li  >• SecurityArchitecture</li>;
+                <li  >• Compliance & Governance</li>;
+              </ul>;
+            </div>;
+    </>;
             {/* MobileDevelopment */}
-            <divclassName="b g-gradient-to-brfrom-indigo-900/50 to-purple-900/50 backdrop-blur-smborderborder-indigo-500/20 rounded-xlp-6 hover:border-indigo-400/40transition-allduration-300">
-              <h3 className="t e xt-2 xlfont-boldtext-whitemb-4"  >MobileDevelopment</h3>
-              <pclassName="t e xt-gray-300 mb-4">Createcross-platformmobileapplicationswithmodernframeworks.</p>
-              <ulclassName="s p ace-y-2text-smtext-gray-400">
-              <li  >• ReactNativeDevelopment</li>
-                <li  >• FlutterApplications</li>
-                <li  >• NativeiOS & Android</li>
-                <li  >• MobileUI/UXDesign</li>
-              </ul>
-            </div>
-          <divclassName="t e xt-centermt-16">
-            <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >ReadytoStartLearning?</h2>
-            <pclassName="t e xt-gray-300 mb-8 max-w-2xlmx-auto">
-              JointhousandsofdevelopersandITprofessionalswhoareadvancingtheircareerswithourtutorials.
-    <>
-            </p>
-            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-              <buttonclassName="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-600transition-allduration-300"  />BrowseAllTutorials
-              </button>
-              <buttonclassName="b o rderborder-cyan-500 text-cyan-400 px-8 py-3 rounded-lgfont-semiboldhover:bg-cyan-500/10transition-allduration-300">GetPersonalizedRecommendations
-              </button>
-            </div>
-        </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
+            <divclassName="b g-gradient-to-brfrom-indigo-900/50 to-purple-900/50 backdrop-blur-smborderborder-indigo-500/20 rounded-xlp-6 hover: border-indigo-400/40transition-allduration-300">;
+              <h3 className="t e xt-2 xlfont-boldtext-whitemb-4"  >MobileDevelopment</h3>;
+              <pclassName="t e xt-gray-300 mb-4">Createcross-platformmobileapplicationswithmodernframeworks.</p>;
+              <ulclassName="s p ace-y-2text-smtext-gray-400">;
+              <li  >• ReactNativeDevelopment</li>;
+                <li  >• FlutterApplications</li>;
+                <li  >• NativeiOS & Android</li>;
+                <li  >• MobileUI/UXDesign</li>;
+              </ul>;
+            </div>;
+          <divclassName="t e xt-centermt-16">;
+            <h2 className="t e xt-3 xlfont-boldtext-whitemb-6"  >ReadytoStartLearning?</h2>;
+            <pclassName="t e xt-gray-300 mb-8 max-w-2xlmx-auto">;
+              JointhousandsofdevelopersandITprofessionalswhoareadvancingtheircareerswithourtutorials.;
+    <>;
+            </p>;
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">;
+              <buttonclassName="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-3 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-600transition-allduration-300"  />BrowseAllTutorials;
+              </button>;
+              <buttonclassName="b o rderborder-cyan-500 text-cyan-400 px-8 py-3 rounded-lgfont-semiboldhover:bg-cyan-500/10transition-allduration-300">GetPersonalizedRecommendations;
+              </button>;
+            </div>;
+        </div>;
+        </div>;
+      </div>;
+          </div>;
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+          </div>;
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+      </div>;
+    </>;
   );
 };
-
+;
 exportdefaultTutorialsPage;
-    </>
+    </>;

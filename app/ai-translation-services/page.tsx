@@ -1,322 +1,290 @@
-import { Helmet    } from 'react-helmet-async'
-import { Globe, Zap, Shield, Users, CheckCircle, ArrowRight, BarChart3, Brain, FileText, Mic    } from 'lucide-react'
-import { Link    } from 'react-router-dom'
+import {Helmet    } from 'react-helmet-async';
+import {Globe, Zap, Shield, Users, CheckCircle, ArrowRight, BarChart3, Brain, FileText, Mic    } from 'lucide-react';
+import {Link    } from 'react-router-dom';
 import React from 'react';
-import { ArrowRight    } from 'lucide-react';
-import { Link    } from 'react-router-dom';
-
-constAITranslationServicesPage: React.FC = () => {
-  constfeatures = [
-    {
-      icon: <GlobeclassName="w-6h-6t e xt-cyan-400" />,
-      title: '100+ Languages',
-      description: 'Supportforover 100 languageswithnative-levelaccuracyandculturalcontext.'
-    },
-    {
-      icon: <ZapclassName="w-6h-6t e xt-emerald-400" />,
-      title: 'Real-timeTranslation',
-      description: 'Instanttranslationforliveconversations, meetings, andcustomersupport.'
-    },
-    {
-      icon: <BrainclassName="w-6h-6t e xt-purple-400" />,
-      title: 'AI-PoweredContext',
-      description: 'AdvancedAIunderstandscontext, tone, andculturalnuancesforaccuratetranslations.'
-    },
-    {
-      icon: <FileTextclassName="w-6h-6t e xt-orange-400" />,
-      title: 'DocumentTranslation',
-      description: 'Translatedocuments, websites, andcontentwhilepreservingformattingandstructure.'
-    },
-    {
-      icon: <MicclassName="w-6h-6t e xt-pink-400" />,
-      title: 'VoiceTranslation',
-      description: 'Convertspeechtotextandtranslateinreal-timewithnaturalvoicesynthesis.'
-    },
-    {
-      icon: <ShieldclassName="w-6h-6t e xt-blue-400" />,
-      title: 'EnterpriseSecurity',
-      description: 'Bank-levelsecuritywithend-to-endencryptionforsensitivebusinesscommunications.'
+import {ArrowRight    } from 'lucide-react';
+import {Link    } from 'react-router-dom';
+;
+constAITranslationServicesPage: React.FC = () => {constfeatures = [{
+      icon: <GlobeclassName="w-6h-6t e xt-cyan-400" />,;
+      title: '100+ Languages',;
+      description: 'Supportforover 100 languageswithnative-levelaccuracyandculturalcontext.';
+    },;
+    {icon: <ZapclassName="w-6h-6t e xt-emerald-400" />,;
+      title: 'Real-timeTranslation',;
+      description: 'Instanttranslationforliveconversations, meetings, andcustomersupport.';
+    },;
+    {icon: <BrainclassName="w-6h-6t e xt-purple-400" />,;
+      title: 'AI-PoweredContext',;
+      description: 'AdvancedAIunderstandscontext, tone, andculturalnuancesforaccuratetranslations.';
+    },;
+    {icon: <FileTextclassName="w-6h-6t e xt-orange-400" />,;
+      title: 'DocumentTranslation',;
+      description: 'Translatedocuments, websites, andcontentwhilepreservingformattingandstructure.';
+    },;
+    {icon: <MicclassName="w-6h-6t e xt-pink-400" />,;
+      title: 'VoiceTranslation',;
+      description: 'Convertspeechtotextandtranslateinreal-timewithnaturalvoicesynthesis.';
+    },;
+    {icon: <ShieldclassName="w-6h-6t e xt-blue-400" />,;
+      title: 'EnterpriseSecurity',;
+      description: 'Bank-levelsecuritywithend-to-endencryptionforsensitivebusinesscommunications.';
     }
-  ]
-
-  constuseCases = [
-    {
-      title: 'GlobalCustomerSupport',
-      description: 'Providesupportinanylanguagewithinstanttranslationandculturaladaptation.',
-      icon: <UsersclassName="w-8h-8t e xt-cyan-400" />
-    },
-    {
-      title: 'MultilingualContent',
-      description: 'Translatewebsites, apps, andmarketingmaterialsforglobalaudiences.',
-      icon: <FileTextclassName="w-8h-8t e xt-emerald-400" />
-    },
-    {
-      title: 'InternationalMeetings',
-      description: 'Breakdownlanguagebarriersinreal-timeduringvideoconferencesandcalls.',
-      icon: <GlobeclassName="w-8h-8t e xt-purple-400" />
-    },
-    {
-      title: 'E-commerceExpansion',
-      description: 'Expandtonewmarketswithlocalizedproductdescriptionsandcustomercommunications.',
-      icon: <BarChart3 className="w-8h-8t e xt-orange-400" />
+  ];
+  constuseCases = [{title: 'GlobalCustomerSupport',;
+      description: 'Providesupportinanylanguagewithinstanttranslationandculturaladaptation.',;
+      icon: <UsersclassName="w-8h-8t e xt-cyan-400" />;
+    },;
+    {title: 'MultilingualContent',;
+      description: 'Translatewebsites, apps, andmarketingmaterialsforglobalaudiences.',;
+      icon: <FileTextclassName="w-8h-8t e xt-emerald-400" />;
+    },;
+    {title: 'InternationalMeetings',;
+      description: 'Breakdownlanguagebarriersinreal-timeduringvideoconferencesandcalls.',;
+      icon: <GlobeclassName="w-8h-8t e xt-purple-400" />;
+    },;
+    {title: 'E-commerceExpansion',;
+      description: 'Expandtonewmarketswithlocalizedproductdescriptionsandcustomercommunications.',;
+      icon: <BarChart3 className="w-8h-8t e xt-orange-400" />;
     }
-  ]
-
-  constpricingPlans = [
-    {
-      name: 'Starter',
-      price: '$49',
-      period: '/month',
-      description: 'Perfectforsmallbusinesses',
-      features: [
-        'Upto 50,000 words/month',
-        '50+ languages',
-        'BasicAPIaccess',
-        'Emailsupport'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$149',
-      period: '/month',
-      description: 'Idealforgrowingcompanies',
-      features: [
-        'Upto 500,000 words/month',
-        '100+ languages',
-        'Real-timetranslation',
-        'Prioritysupport',
-        'Customintegrations'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$499',
-      period: '/month',
-      description: 'Forlargeorganizations',
-      features: [
-        'Unlimitedwords',
-        'Alllanguages',
-        'CustomAItraining',
-        'Dedicatedsupport',
-        'White-labeloptions'
-      ],
-      popular: false
+  ];
+  constpricingPlans = [{name: 'Starter',;
+      price: '$49',;
+      period: '/month',;
+      description: 'Perfectforsmallbusinesses',;
+      features: [;
+        'Upto 50,000 words/month',;
+        '50+ languages',;
+        'BasicAPIaccess',;
+        'Emailsupport';
+      ],;
+      popular: false;
+    },;
+    {name: 'Professional',;
+      price: '$149',;
+      period: '/month',;
+      description: 'Idealforgrowingcompanies',;
+      features: ['Upto 500,000 words/month',;
+        '100+ languages',;
+        'Real-timetranslation',;
+        'Prioritysupport',;
+        'Customintegrations';
+      ],;
+      popular: true;
+    },;
+    {name: 'Enterprise',;
+      price: '$499',;
+      period: '/month',;
+      description: 'Forlargeorganizations',;
+      features: ['Unlimitedwords',;
+        'Alllanguages',;
+        'CustomAItraining',;
+        'Dedicatedsupport',;
+        'White-labeloptions';
+      ],;
+      popular: false;
     }
-  ]
-
-  return (
-    <>
-    <>
-      <Helmet>
-        <title>5GDataAnalytics - ZionTechGroup</title>
-        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
-      </Helmet>
-        <title>AITranslationServices - MultilingualCommunication | ZionTechGroup</title>
-        <metaname="description" content="BreaklanguagebarrierswithAI-poweredtranslationservices. Real-timetranslation, documentprocessing, andmultilingualsupportforglobalbusinesses." / / />
-        <metaname="keywords" content="AItranslation, multilingual, languageservices, real-timetranslation, documenttranslation, globalcommunication" / / />
-        <linkrel="canonical" href="https://ziontechgroup.com/ai-translation-services" />
-      </Helmet>
-    </>
-
-      <divclassName="m i n-h-screenbg-gray-900text-white">
+  ];
+  return (;
+    <>;
+    <>;
+      <Helmet>;
+        <title>5GDataAnalytics - ZionTechGroup</title>;
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />;
+      </Helmet>;
+        <title>AITranslationServices - MultilingualCommunication | ZionTechGroup</title>;
+        <metaname="description" content="BreaklanguagebarrierswithAI-poweredtranslationservices. Real-timetranslation, documentprocessing, andmultilingualsupportforglobalbusinesses." / / />;
+        <metaname="keywords" content="AItranslation, multilingual, languageservices, real-timetranslation, documenttranslation, globalcommunication" / / />;
+        <linkrel="canonical" href="https: //ziontechgroup.com/ai-translation-services" />;
+      </Helmet>;
+    </>;
+      <divclassName="m i n-h-screenbg-gray-900text-white">;
         {/* HeroSection */}
-    <>
-        <sectionclassName="r e lativepy-20px-4overflow-hidden" />
-          <divclassName="a b soluteinset-0 bg-gradient-to-rfrom-cyan-500/10to-purple-500/10" />
-          <divclassName="r e lativemax-w-7xlmx-autotext-center">
-            <divclassName="i n line-flexitems-centerspace-x-2 bg-gradient-to-rfrom-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-fulltext-smfont-mediummb-8borderborder-cyan-400/30">
-              <GlobeclassName="w-4h-4" />
-              <span   />AITranslationServices</span>
-            </div>
-    </>
-            
-            <h1 className="t e xt-4xlsm:text-6 xlmd:text-7 xlfont-boldtext-whitemb-8leading-tight" />
-              BreakLanguage <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Barriers</span>
-            </h1>
-    </>
-            
-            <pclassName="t e xt-lgsm:text-xlmd:text-2 xltext-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">ConnectwithglobalaudiencesusingAI-poweredtranslationservices. 
-              Real-timetranslation, documentprocessing, andmultilingualsupportforbusinessesworldwide.</p>
-            <divclassName="f l exflex-colsm:flex-rowgap-6justify-centermb-16">
-              <Linkto="/contact" className="g r oupbg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-10 py-4 rounded-xlfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-centerspace-x-2 shadow-lgshadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105">
-          <span    />
-        </Link>StartFreeTrial</span>
-                <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
-              </Link>
-              <Linkto="/demo" className="g r oupborder-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xlfont-semiboldhover:bg-cyan-400 hover:text-gray-900 transition-allduration-300 flexitems-centerjustify-centerspace-x-2backdrop-blur-sm">
-          <span    />
-        </Link>ViewDemo</span>
-                <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
-              </Link>
-            </div>
-        </section>
-    </>
-
+    <>;
+        <sectionclassName="r e lativepy-20px-4overflow-hidden" />;
+          <divclassName="a b soluteinset-0 bg-gradient-to-rfrom-cyan-500/10to-purple-500/10" />;
+          <divclassName="r e lativemax-w-7xlmx-autotext-center">;
+            <divclassName="i n line-flexitems-centerspace-x-2 bg-gradient-to-rfrom-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-fulltext-smfont-mediummb-8borderborder-cyan-400/30">;
+              <GlobeclassName="w-4h-4" />;
+              <span   />AITranslationServices</span>;
+            </div>;
+    </>;
+            <h1 className="t e xt-4xlsm: text-6 xlmd:text-7 xlfont-boldtext-whitemb-8leading-tight" />;
+              BreakLanguage <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Barriers</span>;
+            </h1>;
+    </>;
+            <pclassName="t e xt-lgsm:text-xlmd:text-2 xltext-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">ConnectwithglobalaudiencesusingAI-poweredtranslationservices.;
+              Real-timetranslation, documentprocessing, andmultilingualsupportforbusinessesworldwide.</p>;
+            <divclassName="f l exflex-colsm: flex-rowgap-6justify-centermb-16">;
+              <Linkto="/contact" className="g r oupbg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-10 py-4 rounded-xlfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-centerspace-x-2 shadow-lgshadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105">;
+          <span />;
+        </Link>StartFreeTrial</span>;
+                <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />;
+              </Link>;
+              <Linkto="/demo" className="g r oupborder-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xlfont-semiboldhover:bg-cyan-400 hover:text-gray-900 transition-allduration-300 flexitems-centerjustify-centerspace-x-2backdrop-blur-sm">;
+          <span />;
+        </Link>ViewDemo</span>;
+                <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />;
+              </Link>;
+            </div>;
+        </section>;
+    </>;
         {/* FeaturesSection */}
-    <>
-        <sectionclassName="p y-20px-4relative" />
-          <divclassName="a b soluteinset-0 bg-gradient-to-brfrom-purple-500/5via-cyan-500/5to-pink-500/5" />
-          <divclassName="r e lativemax-w-7xlmx-auto">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
-                Powerful <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />TranslationFeatures</span>
-              </h2>
-              <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">Everythingyouneedtocommunicateeffectivelyacrosslanguagesandcultures.</p>
-            </div>
-    </>
-            
-            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-              {features.map((feature, index) => (
-    <>
-                <divkey="{index}" className="g r oupbg-white/10 backdrop-blur-lgrounded-2 xlp-8 borderborder-white/20 hover:bg-white/20 transition-allduration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+    <>;
+        <sectionclassName="p y-20px-4relative" />;
+          <divclassName="a b soluteinset-0 bg-gradient-to-brfrom-purple-500/5via-cyan-500/5to-pink-500/5" />;
+          <divclassName="r e lativemax-w-7xlmx-auto">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlmd: text-5 xlfont-boldtext-whitemb-6" />;
+                Powerful <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />TranslationFeatures</span>;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">Everythingyouneedtocommunicateeffectivelyacrosslanguagesandcultures.</p>;
+            </div>;
+    </>;
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">;
+              {features.map((feature, index) => (;
+    <>;
+                <divkey="{index}" className="g r oupbg-white/10 backdrop-blur-lgrounded-2 xlp-8 borderborder-white/20 hover: bg-white/20 transition-allduration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />;
                   <divclassName="f l exitems-centerjustify-centerw-16 h-16 bg-gradient-to-rfrom-cyan-500 to-purple-600 rounded-2 xlmb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
-                  </div>
-                  <h3 className="t e xt-2 xlfont-boldtext-whitemb-4group-hover:text-cyan-400 transition-colors"  />{feature.title}
-                  </h3>
-                  <pclassName="t e xt-gray-300leading-relaxed">{feature.description}</p>
-                </div>
-    </>
+                  </div>;
+                  <h3 className="t e xt-2 xlfont-boldtext-whitemb-4group-hover: text-cyan-400 transition-colors"  />{feature.title}
+                  </h3>;
+                  <pclassName="t e xt-gray-300leading-relaxed">{feature.description}</p>;
+                </div>;
+    </>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* UseCasesSection */}
-    <>
-        <sectionclassName="p y-20 px-4 bg-gradient-to-brfrom-slate-800/50to-purple-900/50relative" />
-          <divclassName="r e lativemax-w-7xlmx-auto">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
-                Perfectfor <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />EveryBusiness</span>
-              </h2>
-              <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">DiscoverhowAItranslationcantransformyourbusinessoperationsandglobalreach.</p>
-            </div>
-    </>
-            
-            <divclassName="g r idgrid-cols-1md:grid-cols-2gap-8">
-              {useCases.map((useCase, index) => (
-    <>
-                <divkey="{index}" className="g r oupbg-white/10 backdrop-blur-lgrounded-2 xlp-8 borderborder-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                  <divclassName="f l exitems-centerspace-x-4mb-6">
+    <>;
+        <sectionclassName="p y-20 px-4 bg-gradient-to-brfrom-slate-800/50to-purple-900/50relative" />;
+          <divclassName="r e lativemax-w-7xlmx-auto">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlmd: text-5 xlfont-boldtext-whitemb-6" />;
+                Perfectfor <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />EveryBusiness</span>;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300 max-w-4xlmx-auto">DiscoverhowAItranslationcantransformyourbusinessoperationsandglobalreach.</p>;
+            </div>;
+    </>;
+            <divclassName="g r idgrid-cols-1md:grid-cols-2gap-8">;
+              {useCases.map((useCase, index) => (;
+    <>;
+                <divkey="{index}" className="g r oupbg-white/10 backdrop-blur-lgrounded-2 xlp-8 borderborder-white/20 hover: bg-white/20 transition-allduration-300hover:scale-105" />;
+                  <divclassName="f l exitems-centerspace-x-4mb-6">;
                     <divclassName="f l exitems-centerjustify-centerw-16 h-16 bg-gradient-to-rfrom-cyan-500 to-purple-600 rounded-2 xlgroup-hover:scale-110transition-transformduration-300"  />{useCase.icon}
-                    </div>
-                    <h3 className="t e xt-2 xlfont-boldtext-whitegroup-hover:text-cyan-400 transition-colors"  />{useCase.title}
-                    </h3>
-                  </div>
-                  <pclassName="t e xt-gray-300leading-relaxed">{useCase.description}</p>
-                </div>
-    </>
+                    </div>;
+                    <h3 className="t e xt-2 xlfont-boldtext-whitegroup-hover: text-cyan-400 transition-colors"  />{useCase.title}
+                    </h3>;
+                  </div>;
+                  <pclassName="t e xt-gray-300leading-relaxed">{useCase.description}</p>;
+                </div>;
+    </>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* PricingSection */}
-    <>
-        <sectionclassName="p y-20px-4relative" />
-          <divclassName="r e lativemax-w-7xlmx-auto">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />
-                Simple <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>
-              </h2>
-              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Choosetheplanthatfitsyourtranslationneeds. Allplansincludea 14-dayfreetrial.</p>
-            </div>
-    </>
-            
-            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
-              {pricingPlans.map((plan, index) => (
-                <divkey="{index}" className="{`r e lative" bg-white/10 backdrop-blur-lgrounded-2 xlp-8 bordertransition-allduration-300 hover:scale-105 ${
-                  plan.popular 
-                    ? 'border-cyan-400/50 shadow-2 xlshadow-cyan-500/20' 
-                    : 'border-white/20 hover: border-cyan-400/30'
-                }`} />
-                  {plan.popular && (
-                    <divclassName="a b solute -top-4 left-1/2transform-translate-x-1/2">
-                      <divclassName="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-6 py-2 rounded-fulltext-smfont-semibold"  />MostPopular
-                      </div>
+    <>;
+        <sectionclassName="p y-20px-4relative" />;
+          <divclassName="r e lativemax-w-7xlmx-auto">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlmd: text-5 xlfont-boldtext-whitemb-6" />;
+                Simple <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Choosetheplanthatfitsyourtranslationneeds. Allplansincludea 14-dayfreetrial.</p>;
+            </div>;
+    </>;
+            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">;
+              {pricingPlans.map((plan, index) => (;
+                <divkey="{index}" className="{`r e lative" bg-white/10 backdrop-blur-lgrounded-2 xlp-8 bordertransition-allduration-300 hover: scale-105 ${
+                  plan.popular;
+                    ? 'border-cyan-400/50 shadow-2 xlshadow-cyan-500/20';
+                    : 'border-white/20 hover: border-cyan-400/30';
+                }`} />;
+                  {plan.popular && (;
+                    <divclassName="a b solute -top-4 left-1/2transform-translate-x-1/2">;
+                      <divclassName="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-6 py-2 rounded-fulltext-smfont-semibold"  />MostPopular;
+                      </div>;
                   )}
-                  
-                  <divclassName="t e xt-centermb-8">
-                    <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"   />{plan.name}</h3>
-                    <pclassName="t e xt-gray-300 mb-4">{plan.description}</p>
-                    <divclassName="f l exitems-baselinejustify-center">
-                      <spanclassName="t e xt-5 xlfont-boldtext-white"   />{plan.price}</span>
-                      <spanclassName="t e xt-gray-400ml-2"   />{plan.period}</span>
-                    </div>
-                  <ulclassName="s p ace-y-4mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-                      <likey="{featureIndex}" className="f l exitems-centerspace-x-3" />
-                        <CheckCircleclassName="w-5 h-5t e xt-green-400flex-shrink-0" />
-                        <spanclassName="t e xt-gray-300"   />{feature}</span>
-                      </li>
-    </>
+;
+                  <divclassName="t e xt-centermb-8">;
+                    <h3 className="t e xt-2 xlfont-boldtext-whitemb-2"   />{plan.name}</h3>;
+                    <pclassName="t e xt-gray-300 mb-4">{plan.description}</p>;
+                    <divclassName="f l exitems-baselinejustify-center">;
+                      <spanclassName="t e xt-5 xlfont-boldtext-white"   />{plan.price}</span>;
+                      <spanclassName="t e xt-gray-400ml-2"   />{plan.period}</span>;
+                    </div>;
+                  <ulclassName="s p ace-y-4mb-8" />;
+                    {plan.features.map((feature, featureIndex) => (;
+                      <likey="{featureIndex}" className="f l exitems-centerspace-x-3" />;
+                        <CheckCircleclassName="w-5 h-5t e xt-green-400flex-shrink-0" />;
+                        <spanclassName="t e xt-gray-300"   />{feature}</span>;
+                      </li>;
+    </>;
                     ))}
-                  </ul>
-                  <Linkto="/contact" 
+                  </ul>;
+                  <Linkto="/contact";
                     className="{`b l ock" w-fulltext-centerpy-3 rounded-xlfont-semiboldtransition-allduration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitehover:from-cyan-600 hover:to-purple-700'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
+                      plan.popular;
+                        ? 'bg-gradient-to-rfrom-cyan-500 to-purple-600 text-whitehover: from-cyan-600 hover:to-purple-700';
+                        : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900';
                     }`}
-                    />GetStarted
-    <>
-                  </Link>
-                </div>
-    </>
+                    />GetStarted;
+    <>;
+                  </Link>;
+                </div>;
+    </>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* CTASection */}
-    <>
-        <sectionclassName="p y-20px-4relative" />
-          <divclassName="a b soluteinset-0 bg-gradient-to-rfrom-cyan-500/10via-purple-500/10to-pink-500/10" />
-          <divclassName="r e lativemax-w-7xlmx-autotext-center">
-            <divclassName="b g-gradient-to-rfrom-cyan-600 via-purple-600 to-pink-600 rounded-3 xlp-8sm:p-12lg:p-16">
-              <h2 className="t e xt-4xlsm:text-5 xlmd:text-6 xlfont-boldtext-whitemb-6leading-tight" />
-                ReadytoGo <spanclassName="b g-gradient-to-rfrom-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Global?</span>
-              </h2>
-    </>
-              
-              <pclassName="t e xt-xlsm:text-2 xltext-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">Breakdownlanguagebarriersandconnectwithglobalaudiences. 
-                StartyourfreetrialtodayandexperiencethepowerofAItranslation.</p>
-              <divclassName="f l exflex-colsm:flex-rowgap-6justify-center">
-                <Linkto="/contact" className="g r oupbg-whitetext-cyan-600 px-10 py-4 rounded-xlfont-boldtext-lghover:bg-gray-100 transition-allduration-300 flexitems-centerjustify-centerspace-x-2 shadow-lghover:shadow-xltransformhover:scale-105">
-          <span    />
-        </Link>StartFreeTrial</span>
-                  <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
-                </Link>
-                <Linkto="/pricing" className="g r oupborder-2 border-whitetext-whitepx-10 py-4 rounded-xlfont-boldtext-lghover:bg-white/10 transition-allduration-300 flexitems-centerjustify-centerspace-x-2backdrop-blur-sm">
-          <span    />
-        </Link>ViewAllPlans</span>
-                  <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />
-                </Link>
-              </div>
-          </div>
-        </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
-  )
+    <>;
+        <sectionclassName="p y-20px-4relative" />;
+          <divclassName="a b soluteinset-0 bg-gradient-to-rfrom-cyan-500/10via-purple-500/10to-pink-500/10" />;
+          <divclassName="r e lativemax-w-7xlmx-autotext-center">;
+            <divclassName="b g-gradient-to-rfrom-cyan-600 via-purple-600 to-pink-600 rounded-3 xlp-8sm: p-12lg:p-16">;
+              <h2 className="t e xt-4xlsm:text-5 xlmd:text-6 xlfont-boldtext-whitemb-6leading-tight" />;
+                ReadytoGo <spanclassName="b g-gradient-to-rfrom-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Global?</span>;
+              </h2>;
+    </>;
+              <pclassName="t e xt-xlsm:text-2 xltext-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">Breakdownlanguagebarriersandconnectwithglobalaudiences.;
+                StartyourfreetrialtodayandexperiencethepowerofAItranslation.</p>;
+              <divclassName="f l exflex-colsm:flex-rowgap-6justify-center">;
+                <Linkto="/contact" className="g r oupbg-whitetext-cyan-600 px-10 py-4 rounded-xlfont-boldtext-lghover:bg-gray-100 transition-allduration-300 flexitems-centerjustify-centerspace-x-2 shadow-lghover:shadow-xltransformhover:scale-105">;
+          <span />;
+        </Link>StartFreeTrial</span>;
+                  <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />;
+                </Link>;
+                <Linkto="/pricing" className="g r oupborder-2 border-whitetext-whitepx-10 py-4 rounded-xlfont-boldtext-lghover:bg-white/10 transition-allduration-300 flexitems-centerjustify-centerspace-x-2backdrop-blur-sm">;
+          <span />;
+        </Link>ViewAllPlans</span>;
+                  <ArrowRightclassName="w-5 h-5g r oup-hover:translate-x-1transition-transform" />;
+                </Link>;
+              </div>;
+          </div>;
+        </section>;
+      </div>;
+        </div>;
+      </div>;
+          </div>;
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+          </div>;
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+      </div>;
+    </>;
+  );
 }
-
+;
 exportdefaultAITranslationServicesPage;
-    </>
+    </>;

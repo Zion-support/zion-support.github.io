@@ -1,554 +1,515 @@
 import React from 'react';
-import { Helmet    } from 'react-helmet-async';
-import { Link    } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users   } from 'lucide-react';
+import {Helmet    } from 'react-helmet-async';
+import {Link    } from 'react-router-dom';
+import {ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users   } from 'lucide-react';
 'useclient';
 import React from 'react';
-import { Helmet    } from 'react-helmet-async';
-import { Link    } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users   } from 'lucide-react';
-
-constAiEcommerceOptimizerProPage: React.FC = () => {
-  constfeatures = [
-    {
-      icon: Zap,
-      title: 'AI-PoweredOptimization',
-      description: 'Advancedmachinelearningalgorithmstooptimizeyoure-commerceperformance.'
-    },
-    {
-      icon: BarChart3,
-      title: 'AnalyticsDashboard',
-      description: 'Comprehensiveanalyticsandinsightstotrackyourbusinessgrowth.'
-    },
-    {
-      icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Enterprise-gradesecuritywithfullcomplianceanddataprotection.'
-    },
-    {
-      icon: Users,
-      title: 'CustomerInsights',
-      description: 'Deepcustomerbehavioranalysistoimproveconversionrates.'
+import {Helmet    } from 'react-helmet-async';
+import {Link    } from 'react-router-dom';
+import {ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users   } from 'lucide-react';
+;
+constAiEcommerceOptimizerProPage: React.FC = () => {constfeatures = [{
+      icon: Zap,;
+      title: 'AI-PoweredOptimization',;
+      description: 'Advancedmachinelearningalgorithmstooptimizeyoure-commerceperformance.';
+    },;
+    {icon: BarChart3,;
+      title: 'AnalyticsDashboard',;
+      description: 'Comprehensiveanalyticsandinsightstotrackyourbusinessgrowth.';
+    },;
+    {icon: Shield,;
+      title: 'Security & Compliance',;
+      description: 'Enterprise-gradesecuritywithfullcomplianceanddataprotection.';
+    },;
+    {icon: Users,;
+      title: 'CustomerInsights',;
+      description: 'Deepcustomerbehavioranalysistoimproveconversionrates.';
     }
   ];
-import { ArrowRight, CheckCircle, Zap, Shield, Brain    } from 'lucide-react';
-
-constPage: React.FC = () => {
-  constpricingPlans = [
-    {
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Idealforgrowinge-commercebusinesses',
-      features: [
-        'Upto 10,000 products',
-        'BasicAIoptimization',
-        'Analyticsdashboard',
-        'Emailsupport'
-      ]
-    },
-    {
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Perfectforestablishedonlinestores',
-      features: [
-        'Upto 50,000 products',
-        'AdvancedAIoptimization',
-        'Real-timeanalytics',
-        'Prioritysupport',
-        'Customintegrations'
-      ]
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Forlarge-scalee-commerceoperations',
-      features: [
-        'Unlimitedproducts',
-        'FullAIsuite',
-        'Dedicatedsupport',
-        'Customdevelopment',
-        'SLAguarantee'
-      ]
+import {ArrowRight, CheckCircle, Zap, Shield, Brain    } from 'lucide-react';
+;
+constPage: React.FC = () => {constpricingPlans = [{
+      name: 'Starter',;
+      price: '$99',;
+      period: '/month',;
+      description: 'Idealforgrowinge-commercebusinesses',;
+      features: [;
+        'Upto 10,000 products',;
+        'BasicAIoptimization',;
+        'Analyticsdashboard',;
+        'Emailsupport';
+      ];
+    },;
+    {name: 'Professional',;
+      price: '$299',;
+      period: '/month',;
+      description: 'Perfectforestablishedonlinestores',;
+      features: ['Upto 50,000 products',;
+        'AdvancedAIoptimization',;
+        'Real-timeanalytics',;
+        'Prioritysupport',;
+        'Customintegrations';
+      ];
+    },;
+    {name: 'Enterprise',;
+      price: 'Custom',;
+      period: '',;
+      description: 'Forlarge-scalee-commerceoperations',;
+      features: ['Unlimitedproducts',;
+        'FullAIsuite',;
+        'Dedicatedsupport',;
+        'Customdevelopment',;
+        'SLAguarantee';
+      ];
     }
   ];
-  return (
-    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-50to-blue-50">
-      <Helmet />
-        <title />AIE-commerceOptimizerPro - ZionTechGroup</title>
-        <metaname="description" content="AdvancedAI-powerede-commerceoptimizationsolutions. Boostsales, improveconversionrates, andmaximizeyouronlinestoreperformance." />
-        <metaname="keywords" content="AIe-commerce, e-commerceoptimization, AIsolutions, onlinestoreoptimization, ZionTechGroup" />
-      </Helmet>
+  return (;
+    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-50to-blue-50">;
+      <Helmet />;
+        <title />AIE-commerceOptimizerPro - ZionTechGroup</title>;
+        <metaname="description" content="AdvancedAI-powerede-commerceoptimizationsolutions. Boostsales, improveconversionrates, andmaximizeyouronlinestoreperformance." />;
+        <metaname="keywords" content="AIe-commerce, e-commerceoptimization, AIsolutions, onlinestoreoptimization, ZionTechGroup" />;
+      </Helmet>;
       {/* HeroSection */}
-    <>
-      <sectionclassName="r e lativepy-20 px-4sm:px-6lg:px-8" />
-        <divclassName="m a x-w-7xlmx-auto">
-          <divclassName="t e xt-center">
-            <h1 className="t e xt-4xlmd:text-6 xlfont-boldtext-gray-900mb-6" />
-              AIE-commerce <spanclassName="t e xt-blue-600"   />OptimizerPro</span>
-            </h1>
-            <pclassName="t e xt-xltext-gray-600 mb-8 max-w-3xlmx-auto">
-              Transformyoure-commercebusinesswithadvancedAIoptimizationsolutionsthatboostsales, 
-              improveconversionrates, andmaximizeyouronlinestoreperformance.
-    <>
-            </p>
-            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-              <Linkto="/contact" className="i n line-flexitems-centerpx-8 py-4 bg-blue-600 text-whitefont-semiboldrounded-lghover:bg-blue-700transition-colors">
-          GetStarted
-                
-          <ArrowRightclassName="m l-2h-5w-5"  />
-        </Link>
-              <Linkto="/services" 
-                className="i n line-flexitems-centerpx-8 py-4 border-2 border-blue-600 text-blue-600 font-semiboldrounded-lghover:bg-blue-50transition-colors"
-    <>
-          <Helmet  />
-        </Link>
-        <title />AIE-commerceOptimizerPro - ZionTechGroup</title>
-        <metaname="description" content="ProfessionalAIe-commerceoptimizationservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds." />
-        <metaname="keywords" content="AIe-commerce, optimization, ZionTechGroup" />
-import { ArrowRight, CheckCircle, Star, Brain, BarChart3, Target, TrendingUp    } from 'lucide-react';
-
-exportdefaultfunctionAIEcommerceOptimizerPro() {
-  constfeatures = [
-    {
-      icon: <BrainclassName="w-6 h-6 t e xt-cyan-400" />,
-      title: 'AI-PoweredAnalytics',
-      description: 'Advancedmachinelearningalgorithmsanalyzeyoure-commercedatatoidentifyoptimizationopportunities'
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6 t e xt-purple-400" />,
-      title: 'Real-timeInsights',
-      description: 'Getinstantinsightsintocustomerbehavior, conversionrates, andsalesperformance'
-    },
-    {
-      icon: <TargetclassName="w-6 h-6 t e xt-yellow-400" />,
-      title: 'ConversionOptimization',
-      description: 'Automaticallyoptimizeproductpages, checkoutflows, andmarketingcampaignsformaximumconversions'
-    },
-    {
-      icon: <TrendingUpclassName="w-6 h-6 t e xt-green-400" />,
-      title: 'RevenueGrowth',
-      description: 'Increaseyoure-commercerevenuebyupto 40% withourprovenoptimizationstrategies'
+    <>;
+      <sectionclassName="r e lativepy-20 px-4sm: px-6lg:px-8" />;
+        <divclassName="m a x-w-7xlmx-auto">;
+          <divclassName="t e xt-center">;
+            <h1 className="t e xt-4xlmd:text-6 xlfont-boldtext-gray-900mb-6" />;
+              AIE-commerce <spanclassName="t e xt-blue-600"   />OptimizerPro</span>;
+            </h1>;
+            <pclassName="t e xt-xltext-gray-600 mb-8 max-w-3xlmx-auto">;
+              Transformyoure-commercebusinesswithadvancedAIoptimizationsolutionsthatboostsales,;
+              improveconversionrates, andmaximizeyouronlinestoreperformance.;
+    <>;
+            </p>;
+            <divclassName="f l exflex-colsm: flex-rowgap-4justify-center">;
+              <Linkto="/contact" className="i n line-flexitems-centerpx-8 py-4 bg-blue-600 text-whitefont-semiboldrounded-lghover:bg-blue-700transition-colors">;
+          GetStarted;
+          <ArrowRightclassName="m l-2h-5w-5"  />;
+        </Link>;
+              <Linkto="/services";
+                className="i n line-flexitems-centerpx-8 py-4 border-2 border-blue-600 text-blue-600 font-semiboldrounded-lghover:bg-blue-50transition-colors";
+    <>;
+          <Helmet />;
+        </Link>;
+        <title />AIE-commerceOptimizerPro - ZionTechGroup</title>;
+        <metaname="description" content="ProfessionalAIe-commerceoptimizationservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds." />;
+        <metaname="keywords" content="AIe-commerce, optimization, ZionTechGroup" />;
+import {ArrowRight, CheckCircle, Star, Brain, BarChart3, Target, TrendingUp    } from 'lucide-react';
+;
+exportdefaultfunctionAIEcommerceOptimizerPro() {constfeatures = [{
+      icon: <BrainclassName="w-6 h-6 t e xt-cyan-400" />,;
+      title: 'AI-PoweredAnalytics',;
+      description: 'Advancedmachinelearningalgorithmsanalyzeyoure-commercedatatoidentifyoptimizationopportunities';
+    },;
+    {icon: <BarChart3 className="w-6 h-6 t e xt-purple-400" />,;
+      title: 'Real-timeInsights',;
+      description: 'Getinstantinsightsintocustomerbehavior, conversionrates, andsalesperformance';
+    },;
+    {icon: <TargetclassName="w-6 h-6 t e xt-yellow-400" />,;
+      title: 'ConversionOptimization',;
+      description: 'Automaticallyoptimizeproductpages, checkoutflows, andmarketingcampaignsformaximumconversions';
+    },;
+    {icon: <TrendingUpclassName="w-6 h-6 t e xt-green-400" />,;
+      title: 'RevenueGrowth',;
+      description: 'Increaseyoure-commercerevenuebyupto 40% withourprovenoptimizationstrategies';
     }
-  ]
-
-  constoptimizationFeatures = [
-    {
-      category: 'ProductOptimization',
-      items: ['AIProductRecommendations', 'DynamicPricing', 'InventoryManagement', 'ProductImageOptimization', 'SEOEnhancement', 'ReviewManagement']
-    },
-    {
-      category: 'CustomerExperience',
-      items: ['PersonalizedShopping', 'SmartSearch', 'ChatbotIntegration', 'MobileOptimization', 'FastLoading', 'UserJourneyAnalysis']
-    },
-    {
-      category: 'MarketingAutomation',
-      items: ['EmailCampaigns', 'SocialMediaIntegration', 'RetargetingAds', 'A/BTesting', 'CustomerSegmentation', 'AnalyticsDashboard']
-    },
-    {
-      category: 'PerformanceMonitoring',
-      items: ['Real-timeAnalytics', 'ConversionTracking', 'RevenueReports', 'CustomerInsights', 'PerformanceAlerts', 'ROIAnalysis']
+  ];
+  constoptimizationFeatures = [{category: 'ProductOptimization',;
+      items: ['AIProductRecommendations', 'DynamicPricing', 'InventoryManagement', 'ProductImageOptimization', 'SEOEnhancement', 'ReviewManagement'];
+    },;
+    {category: 'CustomerExperience',;
+      items: ['PersonalizedShopping', 'SmartSearch', 'ChatbotIntegration', 'MobileOptimization', 'FastLoading', 'UserJourneyAnalysis'];
+    },;
+    {category: 'MarketingAutomation',;
+      items: ['EmailCampaigns', 'SocialMediaIntegration', 'RetargetingAds', 'A/BTesting', 'CustomerSegmentation', 'AnalyticsDashboard'];
+    },;
+    {category: 'PerformanceMonitoring',;
+      items: ['Real-timeAnalytics', 'ConversionTracking', 'RevenueReports', 'CustomerInsights', 'PerformanceAlerts', 'ROIAnalysis'];
     }
-  ]
-
-  constpricingPlans = [
-    {
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfectforsmalle-commercestores',
-      features: [
-        'Upto 1,000 products',
-        'BasicAIoptimization',
-        'Standardanalytics',
-        'Emailsupport',
-        'Basicintegrations',
-        'Monthlyreports'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Idealforgrowingbusinesses',
-      features: [
-        'Upto 10,000 products',
-        'AdvancedAIfeatures',
-        'Real-timeanalytics',
-        'Prioritysupport',
-        'Customintegrations',
-        'Weeklyreports',
-        'A/Btestingtools'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$799',
-      period: '/month',
-      description: 'Forlargee-commerceplatforms',
-      features: [
-        'Unlimitedproducts',
-        'CustomAItraining',
-        'White-labelsolution',
-        'Dedicatedsupport',
-        'Advancedintegrations',
-        'Real-timereports',
-        'Customdevelopment'
-      ],
-      popular: false
+  ];
+  constpricingPlans = [{name: 'Starter',;
+      price: '$99',;
+      period: '/month',;
+      description: 'Perfectforsmalle-commercestores',;
+      features: [;
+        'Upto 1,000 products',;
+        'BasicAIoptimization',;
+        'Standardanalytics',;
+        'Emailsupport',;
+        'Basicintegrations',;
+        'Monthlyreports';
+      ],;
+      popular: false;
+    },;
+    {name: 'Professional',;
+      price: '$299',;
+      period: '/month',;
+      description: 'Idealforgrowingbusinesses',;
+      features: ['Upto 10,000 products',;
+        'AdvancedAIfeatures',;
+        'Real-timeanalytics',;
+        'Prioritysupport',;
+        'Customintegrations',;
+        'Weeklyreports',;
+        'A/Btestingtools';
+      ],;
+      popular: true;
+    },;
+    {name: 'Enterprise',;
+      price: '$799',;
+      period: '/month',;
+      description: 'Forlargee-commerceplatforms',;
+      features: ['Unlimitedproducts',;
+        'CustomAItraining',;
+        'White-labelsolution',;
+        'Dedicatedsupport',;
+        'Advancedintegrations',;
+        'Real-timereports',;
+        'Customdevelopment';
+      ],;
+      popular: false;
     }
-  ]
-
-  consttestimonials = [
-    {
-      name: 'MichaelRodriguez',
-      company: 'FashionStore',
-      content: 'AIE-commerceOptimizerProincreasedourconversionrateby 35% andboostedrevenueby 50% injust 3 months.',
-      rating: 5
-    },
-    {
-      name: 'EmilyChen',
-      company: 'ElectronicsRetailer',
-      content: 'TheAIrecommendationsandautomatedoptimizationfeatureshavetransformedouronlinestoreperformance.',
-      rating: 5
-    },
-    {
-      name: 'DavidThompson',
-      company: 'Home & Garden',
-      content: 'OursaleshavegrownconsistentlysinceimplementingtheAIoptimizationtools. Highlyrecommended!',
-      rating: 5
+  ];
+  consttestimonials = [{name: 'MichaelRodriguez',;
+      company: 'FashionStore',;
+      content: 'AIE-commerceOptimizerProincreasedourconversionrateby 35% andboostedrevenueby 50% injust 3 months.',;
+      rating: 5;
+    },;
+    {name: 'EmilyChen',;
+      company: 'ElectronicsRetailer',;
+      content: 'TheAIrecommendationsandautomatedoptimizationfeatureshavetransformedouronlinestoreperformance.',;
+      rating: 5;
+    },;
+    {name: 'DavidThompson',;
+      company: 'Home & Garden',;
+      content: 'OursaleshavegrownconsistentlysinceimplementingtheAIoptimizationtools. Highlyrecommended!',;
+      rating: 5;
     }
-  ]
-
-  return (
-    <>
-      <Helmet>
-        <title>AIE-commerceOptimizerPro - ZionTechGroup</title>
-        <metaname="description" content="ProfessionalAIe-commerceoptimizationservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds." />
-        <metaname="keywords" content="AIe-commerce, optimization, conversion, ZionTechGroup" />
-        <metaproperty="og:title" content="AIE-commerceOptimizerPro - ZionTechGroup" />
-        <metaproperty="og:description" content="ProfessionalAIe-commerceoptimizationservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds." />
-        <metaproperty="og:type" content="website" />
-        <metaproperty="og:url" content="https://ziontechgroup.com/ai-ecommerce-optimizer-pro" />
-      </Helmet>
-      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900pt-16">
+  ];
+  return (;
+    <>;
+      <Helmet>;
+        <title>AIE-commerceOptimizerPro - ZionTechGroup</title>;
+        <metaname="description" content="ProfessionalAIe-commerceoptimizationservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds." />;
+        <metaname="keywords" content="AIe-commerce, optimization, conversion, ZionTechGroup" />;
+        <metaproperty="og: title" content="AIE-commerceOptimizerPro - ZionTechGroup" />;
+        <metaproperty="og:description" content="ProfessionalAIe-commerceoptimizationservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds." />;
+        <metaproperty="og:type" content="website" />;
+        <metaproperty="og:url" content="https://ziontechgroup.com/ai-ecommerce-optimizer-pro" />;
+      </Helmet>;
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900pt-16">;
         {/* HeroSection */}
-    <>
-        <sectionclassName="p y-20" />
-          <divclassName="c o ntainermx-autopx-4text-center">
-            <h1 className="t e xt-5xlmd:text-6xlfont-boldtext-whitemb-6" />
-              <spanclassName="b g-gradient-to-rfrom-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent" />
-                AIE-commerceOptimizerPro
-    <>
-              </span>
-            </h1>
-            <pclassName="t e xt-xltext-gray-300 mb-8max-w-3xlmx-auto">
-              ProfessionalAIe-commerceoptimizationservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds.
-    <>
-            </p>
-            <divclassName="f l exflex-colsm:flex-rowgap-4justify-centermb-12">
-              <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105 shadow-lghover:shadow-cyan-500/25 flexitems-centerjustify-centergroup">
-          GetStarted
-                
-          <ArrowRightclassName="m l-2group-hover:translate-x-1transition-transform"  />
-        </Link>
-              <Linkto="/contact" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105" />
-                LearnMore
-                />ViewAllServices
-              </Link>
-      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-16">
+    <>;
+        <sectionclassName="p y-20" />;
+          <divclassName="c o ntainermx-autopx-4text-center">;
+            <h1 className="t e xt-5xlmd: text-6xlfont-boldtext-whitemb-6" />;
+              <spanclassName="b g-gradient-to-rfrom-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent" />;
+                AIE-commerceOptimizerPro;
+    <>;
+              </span>;
+            </h1>;
+            <pclassName="t e xt-xltext-gray-300 mb-8max-w-3xlmx-auto">;
+              ProfessionalAIe-commerceoptimizationservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds.;
+    <>;
+            </p>;
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-centermb-12">;
+              <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105 shadow-lghover:shadow-cyan-500/25 flexitems-centerjustify-centergroup">;
+          GetStarted;
+          <ArrowRightclassName="m l-2group-hover:translate-x-1transition-transform"  />;
+        </Link>;
+              <Linkto="/contact" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105" />;
+                LearnMore;
+                />ViewAllServices;
+              </Link>;
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-16">;
         {/* HeroSection */}
-        <sectionclassName="p y-20">
-          <divclassName="c o ntainermx-autopx-4 text-center">
-            <h1 className="t e xt-5xlmd:text-6xlfont-boldtext-whitemb-6">
-              <spanclassName="b g-gradient-to-rfrom-cyan-400 via-purple-400 to-pink-400 bg-clip-texttext-transparent">
-                AIE-commerceOptimizerPro
-              </span>
-            </h1>
-            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">ProfessionalAIe-commerceoptimizationservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds.</p>
-            <divclassName="f l exflex-colsm:flex-rowgap-4 justify-centermb-12">
-              <Linkto="/contact"
-                className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105 shadow-lghover:shadow-cyan-500/25 flexitems-centerjustify-centergroup">
-                GetStarted
-                <ArrowRightclassName="m l-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Linkto="/contact"
-                className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300 transformhover:scale-105">
-                LearnMore
-              </Link>
-            </div>
-          </div>
-        </section>
+        <sectionclassName="p y-20">;
+          <divclassName="c o ntainermx-autopx-4 text-center">;
+            <h1 className="t e xt-5xlmd: text-6xlfont-boldtext-whitemb-6">;
+              <spanclassName="b g-gradient-to-rfrom-cyan-400 via-purple-400 to-pink-400 bg-clip-texttext-transparent">;
+                AIE-commerceOptimizerPro;
+              </span>;
+            </h1>;
+            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">ProfessionalAIe-commerceoptimizationservicesbyZionTechGroup. Expertsolutionstailoredtoyourbusinessneeds.</p>;
+            <divclassName="f l exflex-colsm:flex-rowgap-4 justify-centermb-12">;
+              <Linkto="/contact";
+                className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105 shadow-lghover:shadow-cyan-500/25 flexitems-centerjustify-centergroup">;
+                GetStarted;
+                <ArrowRightclassName="m l-2 group-hover:translate-x-1 transition-transform" />;
+              </Link>;
+              <Linkto="/contact";
+                className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300 transformhover:scale-105">;
+                LearnMore;
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
         {/* FeaturesSection */}
-        <sectionclassName="p y-20">
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-4">KeyFeatures</h2>
-              <pclassName="t e xt-xltext-gray-300">PowerfulAIcapabilitiesforsuperiore-commerceoptimization</p>
-            </div>
-            <divclassName="g r idmd:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <divkey={index} className="b g-slate-800/50 backdrop-blur-smborderborder-slate-700 rounded-xlp-6 hover:border-cyan-500/50 transition-allduration-300">
-                  <divclassName="m b-4">{feature.icon}</div>
-                  <h3 className="t e xt-xlfont-semiboldtext-whitemb-2">{feature.title}</h3>
-                  <pclassName="t e xt-gray-300">{feature.description}</p>
-                </div>
+        <sectionclassName="p y-20">;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-4">KeyFeatures</h2>;
+              <pclassName="t e xt-xltext-gray-300">PowerfulAIcapabilitiesforsuperiore-commerceoptimization</p>;
+            </div>;
+            <divclassName="g r idmd: grid-cols-2 lg:grid-cols-4 gap-8">;
+              {features.map((feature, index) => (;
+                <divkey={index} className="b g-slate-800/50 backdrop-blur-smborderborder-slate-700 rounded-xlp-6 hover: border-cyan-500/50 transition-allduration-300">;
+                  <divclassName="m b-4">{feature.icon}</div>;
+                  <h3 className="t e xt-xlfont-semiboldtext-whitemb-2">{feature.title}</h3>;
+                  <pclassName="t e xt-gray-300">{feature.description}</p>;
+                </div>;
               ))}
-            </div>
-        </div>
-      </section>
+            </div>;
+        </div>;
+      </section>;
         {/* FeaturesSection */}
-    <>
-        <sectionclassName="p y-20" />
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-6" />
-                WhyChooseOurAIE-commerceOptimizer?
-    <>
-              </h2>
-              <pclassName="t e xt-xltext-gray-300max-w-3xlmx-auto">OuradvancedAItechnologyhelpsyoumaximizeyoure-commercepotential</p>
-            </div>
-            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
-              {[
-                {
-                  icon: <BrainclassName="w-12h-12t e xt-cyan-400" />,
-                  title: "AI-PoweredOptimization",
-                  description: "Advancedmachinelearningalgorithmsoptimizeyourproductlistings, pricing, andrecommendations."
-                },
-                {
-                  icon: <ZapclassName="w-12h-12t e xt-purple-400" />,
-                  title: "Real-timeAnalytics",
-                  description: "Getinstantinsightsintocustomerbehaviorandsalesperformancewithourcomprehensivedashboard."
-                },
-                {
-                  icon: <ShieldclassName="w-12h-12t e xt-green-400" />,
-                  title: "Secure & Reliable",
-                  description: "Enterprise-gradesecurityensuresyourdataisprotectedwhilemaintaining 99.9% uptime."
+    <>;
+        <sectionclassName="p y-20" />;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6" />;
+                WhyChooseOurAIE-commerceOptimizer?;
+    <>;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300max-w-3xlmx-auto">OuradvancedAItechnologyhelpsyoumaximizeyoure-commercepotential</p>;
+            </div>;
+            <divclassName="g r idgrid-cols-1md: grid-cols-3gap-8">;
+              {[{
+                  icon: <BrainclassName="w-12h-12t e xt-cyan-400" />,;
+                  title: "AI-PoweredOptimization",;
+                  description: "Advancedmachinelearningalgorithmsoptimizeyourproductlistings, pricing, andrecommendations.";
+                },;
+                {icon: <ZapclassName="w-12h-12t e xt-purple-400" />,;
+                  title: "Real-timeAnalytics",;
+                  description: "Getinstantinsightsintocustomerbehaviorandsalesperformancewithourcomprehensivedashboard.";
+                },;
+                {icon: <ShieldclassName="w-12h-12t e xt-green-400" />,;
+                  title: "Secure & Reliable",;
+                  description: "Enterprise-gradesecurityensuresyourdataisprotectedwhilemaintaining 99.9% uptime.";
                 }
-              ].map((feature, index) => (
-    <>
-                <divkey={index} className="b g-slate-800/50 backdrop-blur-smborderborder-slate-700 rounded-xlp-8 text-centerhover:border-cyan-500/50transition-allduration-300" />
-                  <divclassName="f l exjustify-centermb-4">
+              ].map((feature, index) => (;
+    <>;
+                <divkey={index} className="b g-slate-800/50 backdrop-blur-smborderborder-slate-700 rounded-xlp-8 text-centerhover: border-cyan-500/50transition-allduration-300" />;
+                  <divclassName="f l exjustify-centermb-4">;
                     {feature.icon}
-    <>
+    <>;
         {/* DetailedFeaturesSection */}
-        <sectionclassName="p y-20">
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-4">ComprehensiveFeatures</h2>
-              <pclassName="t e xt-xltext-gray-300">Everythingyouneedforeffectivee-commerceoptimization</p>
-            </div>
-            <divclassName="g r idmd:grid-cols-2 lg:grid-cols-4 gap-8">
-              {optimizationFeatures.map((category, index) => (
-                <divkey={index} className="b g-slate-800/50 backdrop-blur-smborderborder-slate-700 rounded-xlp-6">
-                  <h3 className="t e xt-xlfont-semiboldtext-whitemb-4">{category.category}</h3>
-                  <ulclassName="s p ace-y-2">
-                    {category.items.map((item, itemIndex) => (
-                      <likey={itemIndex} className="f l exitems-centertext-gray-300">
-                        <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2 flex-shrink-0" />
+        <sectionclassName="p y-20">;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-4">ComprehensiveFeatures</h2>;
+              <pclassName="t e xt-xltext-gray-300">Everythingyouneedforeffectivee-commerceoptimization</p>;
+            </div>;
+            <divclassName="g r idmd: grid-cols-2 lg:grid-cols-4 gap-8">;
+              {optimizationFeatures.map((category, index) => (;
+                <divkey={index} className="b g-slate-800/50 backdrop-blur-smborderborder-slate-700 rounded-xlp-6">;
+                  <h3 className="t e xt-xlfont-semiboldtext-whitemb-4">{category.category}</h3>;
+                  <ulclassName="s p ace-y-2">;
+                    {category.items.map((item, itemIndex) => (;
+                      <likey={itemIndex} className="f l exitems-centertext-gray-300">;
+                        <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2 flex-shrink-0" />;
                         {item}
-                      </li>
+                      </li>;
                     ))}
-                  </ul>
-                </div>
+                  </ul>;
+                </div>;
               ))}
-            </div>
-          </div>
-        </section>
+            </div>;
+          </div>;
+        </section>;
         {/* PricingSection */}
-        <sectionclassName="p y-20">
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-4">PricingPlans</h2>
-              <pclassName="t e xt-xltext-gray-300">Choosetheperfectplanforyoure-commerceneeds</p>
-            </div>
-            <divclassName="g r idmd:grid-cols-3 gap-8 max-w-6xlmx-auto">
-              {pricingPlans.map((plan, index) => (
-                <divkey={index} className={`bg-slate-800/50 backdrop-blur-smborderrounded-xlp-8 relative ${plan.popular ? 'border-cyan-500 scale-105' : 'border-slate-700'}`}>
-                  {plan.popular && (
-                    <divclassName="a b solute -top-4 left-1/2 transform -translate-x-1/2">
-                      <spanclassName="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-4 py-1 rounded-fulltext-smfont-semibold">
-                        MostPopular
-                      </span>
-                    </div>
+        <sectionclassName="p y-20">;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-4">PricingPlans</h2>;
+              <pclassName="t e xt-xltext-gray-300">Choosetheperfectplanforyoure-commerceneeds</p>;
+            </div>;
+            <divclassName="g r idmd: grid-cols-3 gap-8 max-w-6xlmx-auto">;
+              {pricingPlans.map((plan, index) => (;
+                <divkey={index} className={`bg-slate-800/50 backdrop-blur-smborderrounded-xlp-8 relative ${plan.popular ? 'border-cyan-500 scale-105' : 'border-slate-700'}`}>;
+                  {plan.popular && (;
+                    <divclassName="a b solute -top-4 left-1/2 transform -translate-x-1/2">;
+                      <spanclassName="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-4 py-1 rounded-fulltext-smfont-semibold">;
+                        MostPopular;
+                      </span>;
+                    </div>;
                   )}
-                  <divclassName="t e xt-centermb-6">
-                    <h3 className="t e xt-2xlfont-boldtext-whitemb-2">{plan.name}</h3>
-                    <divclassName="f l exitems-baselinejustify-center">
-                      <spanclassName="t e xt-4xlfont-boldtext-white">{plan.price}</span>
-                      <spanclassName="t e xt-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                    <pclassName="t e xt-gray-300 mt-2">{plan.description}</p>
-                  </div>
-                  <ulclassName="s p ace-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <likey={featureIndex} className="f l exitems-centertext-gray-300">
-                        <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-3 flex-shrink-0" />
+                  <divclassName="t e xt-centermb-6">;
+                    <h3 className="t e xt-2xlfont-boldtext-whitemb-2">{plan.name}</h3>;
+                    <divclassName="f l exitems-baselinejustify-center">;
+                      <spanclassName="t e xt-4xlfont-boldtext-white">{plan.price}</span>;
+                      <spanclassName="t e xt-gray-400 ml-1">{plan.period}</span>;
+                    </div>;
+                    <pclassName="t e xt-gray-300 mt-2">{plan.description}</p>;
+                  </div>;
+                  <ulclassName="s p ace-y-3 mb-8">;
+                    {plan.features.map((feature, featureIndex) => (;
+                      <likey={featureIndex} className="f l exitems-centertext-gray-300">;
+                        <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-3 flex-shrink-0" />;
                         {feature}
-                      </li>
+                      </li>;
                     ))}
-                  </ul>
-                  <Linkto="/contact"
+                  </ul>;
+                  <Linkto="/contact";
                     className={`w-fullblocktext-centerpy-3 px-6 rounded-lgfont-semiboldtransition-allduration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-rfrom-cyan-500 to-purple-500 text-whitehover:from-cyan-600 hover:to-purple-600'
-                        : 'borderborder-cyan-500 text-cyan-400 hover:bg-cyan-500/10'
-                    }`}>
-                    GetStarted
-                  </Link>
-                </div>
+                      plan.popular;
+                        ? 'bg-gradient-to-rfrom-cyan-500 to-purple-500 text-whitehover: from-cyan-600 hover:to-purple-600';
+                        : 'borderborder-cyan-500 text-cyan-400 hover:bg-cyan-500/10';
+                    }`}>;
+                    GetStarted;
+                  </Link>;
+                </div>;
               ))}
-            </div>
-          </div>
-        </section>
+            </div>;
+          </div>;
+        </section>;
         {/* TestimonialsSection */}
-        <sectionclassName="p y-20">
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-4">WhatOurClientsSay</h2>
-              <pclassName="t e xt-xltext-gray-300">Realresultsfromrealbusinesses</p>
-            </div>
-            <divclassName="g r idmd:grid-cols-3 gap-8 max-w-6xlmx-auto">
-              {testimonials.map((testimonial, index) => (
-                <divkey={index} className="b g-slate-800/50 backdrop-blur-smborderborder-slate-700 rounded-xlp-6">
-                  <divclassName="f l exitems-centermb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Starkey={i} className="w-5 h-5 t e xt-yellow-400 fill-current" />
+        <sectionclassName="p y-20">;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-4">WhatOurClientsSay</h2>;
+              <pclassName="t e xt-xltext-gray-300">Realresultsfromrealbusinesses</p>;
+            </div>;
+            <divclassName="g r idmd: grid-cols-3 gap-8 max-w-6xlmx-auto">;
+              {testimonials.map((testimonial, index) => (;
+                <divkey={index} className="b g-slate-800/50 backdrop-blur-smborderborder-slate-700 rounded-xlp-6">;
+                  <divclassName="f l exitems-centermb-4">;
+                    {[...Array(testimonial.rating)].map((_, i) => (;
+                      <Starkey={i} className="w-5 h-5 t e xt-yellow-400 fill-current" />;
                     ))}
-                  </div>
-                  <pclassName="t e xt-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                  <div>
-                    <pclassName="f o nt-semiboldtext-white">{testimonial.name}</p>
-                    <pclassName="t e xt-cyan-400">{testimonial.company}</p>
-                  </div>
-                  <h3 className="t e xt-xlfont-semiboldtext-whitemb-4" />{feature.title}</h3>
-                  <pclassName="t e xt-gray-300">{feature.description}</p>
-                </div>
+                  </div>;
+                  <pclassName="t e xt-gray-300 mb-4 italic">"{testimonial.content}"</p>;
+                  <div>;
+                    <pclassName="f o nt-semiboldtext-white">{testimonial.name}</p>;
+                    <pclassName="t e xt-cyan-400">{testimonial.company}</p>;
+                  </div>;
+                  <h3 className="t e xt-xlfont-semiboldtext-whitemb-4" />{feature.title}</h3>;
+                  <pclassName="t e xt-gray-300">{feature.description}</p>;
+                </div>;
               ))}
-    <>
-            </div>
-        </section>
+    <>;
+            </div>;
+        </section>;
         {/* PricingSection */}
-    <>
-        <sectionclassName="p y-20" />
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-6" />
-                ChooseYourPlan
-    <>
-              </h2>
-              <pclassName="t e xt-xltext-gray-300max-w-3xlmx-auto">
-              Flexiblepricingoptionstofityourbusinessneeds
+    <>;
+        <sectionclassName="p y-20" />;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6" />;
+                ChooseYourPlan;
+    <>;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300max-w-3xlmx-auto">;
+              Flexiblepricingoptionstofityourbusinessneeds;
         {/* CTASection */}
-        <sectionclassName="p y-20">
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="b g-gradient-to-rfrom-cyan-900/50 to-purple-900/50 backdrop-blur-smborderborder-cyan-500/20 rounded-2xlp-12 text-center">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-6">
-                ReadytoOptimizeYourE-commerce?
-              </h2>
-              <pclassName="t e xt-xltext-gray-300 mb-8 max-w-2xlmx-auto">ContactustolearnmoreaboutourAIe-commerceoptimizationsolutionsandhowwecanhelpyourbusinessgrow.</p>
-            </div>
-            <divclassName="g r idgrid-cols-1md:grid-cols-3gap-8">
-              {pricingPlans.map((plan, index) => (
-    <>
-                <divkey={index} className="b g-slate-800/50 backdrop-blur-smborderborder-slate-700 rounded-xlp-8 hover:border-cyan-500/50transition-allduration-300" />
-                  <divclassName="t e xt-centermb-8">
-                    <h3 className="t e xt-2xlfont-boldtext-whitemb-2" />{plan.name}</h3>
-                    <divclassName="t e xt-4xlfont-boldtext-cyan-400mb-2">
+        <sectionclassName="p y-20">;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="b g-gradient-to-rfrom-cyan-900/50 to-purple-900/50 backdrop-blur-smborderborder-cyan-500/20 rounded-2xlp-12 text-center">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6">;
+                ReadytoOptimizeYourE-commerce?;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300 mb-8 max-w-2xlmx-auto">ContactustolearnmoreaboutourAIe-commerceoptimizationsolutionsandhowwecanhelpyourbusinessgrow.</p>;
+            </div>;
+            <divclassName="g r idgrid-cols-1md: grid-cols-3gap-8">;
+              {pricingPlans.map((plan, index) => (;
+    <>;
+                <divkey={index} className="b g-slate-800/50 backdrop-blur-smborderborder-slate-700 rounded-xlp-8 hover: border-cyan-500/50transition-allduration-300" />;
+                  <divclassName="t e xt-centermb-8">;
+                    <h3 className="t e xt-2xlfont-boldtext-whitemb-2" />{plan.name}</h3>;
+                    <divclassName="t e xt-4xlfont-boldtext-cyan-400mb-2">;
                       {plan.price}
-    <>
-                      <spanclassName="t e xt-lgtext-gray-400">{plan.period}</span>
-                    </div>
-                    <pclassName="t e xt-gray-300">{plan.description}</p>
-                  </div>
-                  <ulclassName="s p ace-y-4mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-                      <likey={featureIndex} className="f l exitems-centertext-gray-300" />
-                        <CheckCircleclassName="w-5 h-5 t e xt-green-400mr-3flex-shrink-0" />
+    <>;
+                      <spanclassName="t e xt-lgtext-gray-400">{plan.period}</span>;
+                    </div>;
+                    <pclassName="t e xt-gray-300">{plan.description}</p>;
+                  </div>;
+                  <ulclassName="s p ace-y-4mb-8" />;
+                    {plan.features.map((feature, featureIndex) => (;
+                      <likey={featureIndex} className="f l exitems-centertext-gray-300" />;
+                        <CheckCircleclassName="w-5 h-5 t e xt-green-400mr-3flex-shrink-0" />;
                         {feature}
-                      </li>
+                      </li>;
                     ))}
-                  </ul>
-                  <Linkto="/contact" className="w-f u llbg-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepy-3 rounded-lgfont-semiboldtext-centerblockhover:from-cyan-600 hover:to-purple-600transition-allduration-300" />
-                    GetStarted
-    <>
-                  </Link>
-                </div>
+                  </ul>;
+                  <Linkto="/contact" className="w-f u llbg-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepy-3 rounded-lgfont-semiboldtext-centerblockhover: from-cyan-600 hover:to-purple-600transition-allduration-300" />;
+                    GetStarted;
+    <>;
+                  </Link>;
+                </div>;
               ))}
-    <>
-            </div>
-        </div>
-      </section>
+    <>;
+            </div>;
+        </div>;
+      </section>;
         {/* CTASection */}
-    <>
-        <sectionclassName="p y-20" />
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="b g-gradient-to-rfrom-cyan-900/50 to-purple-900/50 backdrop-blur-smborderborder-cyan-500/20 rounded-2xlp-12text-center">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-6" />
-                ReadytoGetStarted?
-    <>
-              </h2>
-              <pclassName="t e xt-xltext-gray-300 mb-8max-w-2xlmx-auto">Contactustolearnmoreaboutoursolutionsandhowwecanhelpyourbusiness.</p>
-              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-                <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-cyan-500/25" />
-                  ContactUs
-    <>
-                </Link>
-                <Linkto="/services" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105" />
-                  ViewServices
-    <>
-                </Link>
-              </div>
-          </div>
-        </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
+    <>;
+        <sectionclassName="p y-20" />;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="b g-gradient-to-rfrom-cyan-900/50 to-purple-900/50 backdrop-blur-smborderborder-cyan-500/20 rounded-2xlp-12text-center">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6" />;
+                ReadytoGetStarted?;
+    <>;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300 mb-8max-w-2xlmx-auto">Contactustolearnmoreaboutoursolutionsandhowwecanhelpyourbusiness.</p>;
+              <divclassName="f l exflex-colsm: flex-rowgap-4justify-center">;
+                <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-cyan-500/25" />;
+                  ContactUs;
+    <>;
+                </Link>;
+                <Linkto="/services" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105" />;
+                  ViewServices;
+    <>;
+                </Link>;
+              </div>;
+          </div>;
+        </section>;
+      </div>;
+        </div>;
+      </div>;
+          </div>;
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+          </div>;
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+      </div>;
+    </>;
   );
 };
-
+;
 exportdefaultPage;
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
-    </>
-    </>
-    </>
-    </>
-    </>
-    </>
-    </>
-    </>
-    </>
-    </>
-    </>
-    </>
-    </>
-    </>
-    </>
-    </>
-    </>
-    </>
-    </>
-    </>
-    </>
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
+    </>;
 }
+;

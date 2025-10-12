@@ -1,205 +1,202 @@
 import React from 'react';
-import { Cloud, Database, Users, Server, HardDrive, Monitor, Printer, Router, ArrowRight, CheckCircle, Star, Award, FileText, Activity, Code, Target, Rocket    } from 'lucide-react';
+import {Cloud, Database, Users, Server, HardDrive, Monitor, Printer, Router, ArrowRight, CheckCircle, Star, Award, FileText, Activity, Code, Target, Rocket    } from 'lucide-react';
 importNavigationfrom '../components/Navigation';
 importFooterfrom '../components/Footer';
-
+;
   ];
-
-  // Removedunusedcategoriesandservicesvariables
-
-  // Removedunusedbenefitsarray
-
+;
+  // Removedunusedcategoriesandservicesvariables;
+  // Removedunusedbenefitsarray;
   ];
-
-  // Removedunusedbenefitsvariable
-
-    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <mainclassName="c o ntainermx-autopx-4 py-16 pt-24">
+;
+  // Removedunusedbenefitsvariable;
+    <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">;
+      <Navigation />;
+      <mainclassName="c o ntainermx-autopx-4 py-16 pt-24">;
         {/* HeroSection */}
-        <sectionclassName="t e xt-centermb-16">
-          <h1 className="t e xt-4xlmd:text-6xlfont-boldtext-whitemb-6">
-            <spanclassName="b g-gradient-to-rfrom-cyan-400 via-purple-500 to-pink-500 bg-clip-texttext-transparent">
-              ITServices & Infrastructure
-            </span>
-          </h1>
-          <pclassName="t e xt-xltext-gray-300 mb-8 max-w-4xlmx-auto">ComprehensiveITsolutionstosupportandoptimizeyourbusinessinfrastructure. 
-            Fromcloudmigrationtocybersecurity, wekeepyourtechnologyrunningsmoothly.</p>
-          <divclassName="f l exflex-colsm:flex-rowgap-4 justify-center">
-            >
-              GetFreeITAssessment
-            </a>
-            >
-              (302) 464-0950
-            </a>
-          </div>
-        </section>
+        <sectionclassName="t e xt-centermb-16">;
+          <h1 className="t e xt-4xlmd: text-6xlfont-boldtext-whitemb-6">;
+            <spanclassName="b g-gradient-to-rfrom-cyan-400 via-purple-500 to-pink-500 bg-clip-texttext-transparent">;
+              ITServices & Infrastructure;
+            </span>;
+          </h1>;
+          <pclassName="t e xt-xltext-gray-300 mb-8 max-w-4xlmx-auto">ComprehensiveITsolutionstosupportandoptimizeyourbusinessinfrastructure.;
+            Fromcloudmigrationtocybersecurity, wekeepyourtechnologyrunningsmoothly.</p>;
+          <divclassName="f l exflex-colsm: flex-rowgap-4 justify-center">;
+            >;
+              GetFreeITAssessment;
+            </a>;
+            >;
+              (302) 464-0950;
+            </a>;
+          </div>;
+        </section>;
         {/* MainServicesGrid */}
-        <sectionclassName="m b-16">
-          <h2 className="t e xt-3xlfont-boldtext-whitetext-centermb-12">CoreITServices</h2>
-          <divclassName="g r idgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <divkey={index} className="c y ber-cardhologram-cardp-6 hover:scale-105 transition-allduration-300">
-                <divclassName="t e xt-cyan-400 mb-4">
+        <sectionclassName="m b-16">;
+          <h2 className="t e xt-3xlfont-boldtext-whitetext-centermb-12">CoreITServices</h2>;
+          <divclassName="g r idgrid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;
+              <divkey={index} className="c y ber-cardhologram-cardp-6 hover: scale-105 transition-allduration-300">;
+                <divclassName="t e xt-cyan-400 mb-4">;
                   {React.createElement(service.icon, { className: "w-8 h-8" })}
-                </div>
-                <h3 className="t e xt-xlfont-boldtext-whitemb-3">{service.title}</h3>
-                <pclassName="t e xt-gray-300 mb-4 text-sm">{service.description}</p>
-                <divclassName="m b-4">
-                  <h4 className="t e xt-smfont-semiboldtext-cyan-400 mb-2">KeyFeatures:</h4>
-                  <ulclassName="t e xt-smtext-gray-400 space-y-1">
-                      <likey={idx} className="f l exitems-center">
-                        <CheckCircleclassName="w-3 h-3 t e xt-green-400 mr-2 flex-shrink-0" />
+                </div>;
+                <h3 className="t e xt-xlfont-boldtext-whitemb-3">{service.title}</h3>;
+                <pclassName="t e xt-gray-300 mb-4 text-sm">{service.description}</p>;
+                <divclassName="m b-4">;
+                  <h4 className="t e xt-smfont-semiboldtext-cyan-400 mb-2">KeyFeatures: </h4>;
+                  <ulclassName="t e xt-smtext-gray-400 space-y-1">;
+                      <likey={idx} className="f l exitems-center">;
+                        <CheckCircleclassName="w-3 h-3 t e xt-green-400 mr-2 flex-shrink-0" />;
                         {feature}
-                      </li>
+                      </li>;
                     ))}
-                  </ul>
-                </div>
-                <divclassName="m b-4">
-                  <h4 className="t e xt-smfont-semiboldtext-cyan-400 mb-2">Benefits:</h4>
-                  <ulclassName="t e xt-smtext-gray-400 space-y-1">
-                      <likey={idx} className="f l exitems-center">
-                        <StarclassName="w-3 h-3 t e xt-yellow-400 mr-2 flex-shrink-0" />
+                  </ul>;
+                </div>;
+                <divclassName="m b-4">;
+                  <h4 className="t e xt-smfont-semiboldtext-cyan-400 mb-2">Benefits: </h4>;
+                  <ulclassName="t e xt-smtext-gray-400 space-y-1">;
+                      <likey={idx} className="f l exitems-center">;
+                        <StarclassName="w-3 h-3 t e xt-yellow-400 mr-2 flex-shrink-0" />;
                         {benefit}
-                      </li>
+                      </li>;
                     ))}
-                  </ul>
-                </div>
-                <divclassName="m b-4">
-                  <divclassName="t e xt-2xlfont-boldtext-cyan-400 mb-2">{service.price}</div>
-                <divclassName="m b-4">
-                  <h4 className="t e xt-smfont-semiboldtext-cyan-400 mb-2">Technologies:</h4>
-                  <divclassName="f l exflex-wrapgap-1">
-                      <spankey={idx} className="p x-2 py-1 bg-gray-800 text-gray-300 text-xsrounded">
+                  </ul>;
+                </div>;
+                <divclassName="m b-4">;
+                  <divclassName="t e xt-2xlfont-boldtext-cyan-400 mb-2">{service.price}</div>;
+                <divclassName="m b-4">;
+                  <h4 className="t e xt-smfont-semiboldtext-cyan-400 mb-2">Technologies: </h4>;
+                  <divclassName="f l exflex-wrapgap-1">;
+                      <spankey={idx} className="p x-2 py-1 bg-gray-800 text-gray-300 text-xsrounded">;
                         {tech}
-                      </span>
+                      </span>;
                     ))}
-                  </div>
-                <pclassName="t e xt-gray-300 mb-4">{service.description}</p>
-                <ulclassName="s p ace-y-2 mb-6">
-                    <likey={featureIndex} className="f l exitems-centertext-smtext-gray-400">
-                      <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />
+                  </div>;
+                <pclassName="t e xt-gray-300 mb-4">{service.description}</p>;
+                <ulclassName="s p ace-y-2 mb-6">;
+                    <likey={featureIndex} className="f l exitems-centertext-smtext-gray-400">;
+                      <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />;
                       {feature}
-                    </li>
+                    </li>;
                   ))}
-                </ul>
-                <divclassName="t e xt-center">
-                  <divclassName="t e xt-lgfont-boldtext-cyan-400 mb-2">{service.price}</div>
-                  >
-                    LearnMore <ArrowRightclassName="w-4 h-4 m l-1" />
-                  </a>
-                </div>
+                </ul>;
+                <divclassName="t e xt-center">;
+                  <divclassName="t e xt-lgfont-boldtext-cyan-400 mb-2">{service.price}</div>;
+                  >;
+                    LearnMore <ArrowRightclassName="w-4 h-4 m l-1" />;
+                  </a>;
+                </div>;
             ))}
-          </div>
-        </section>
+          </div>;
+        </section>;
         {/* AdditionalServices */}
-        <sectionclassName="m b-16">
-          <h2 className="t e xt-3xlfont-boldtext-whitetext-centermb-12">AdditionalITServices</h2>
-          <divclassName="g r idgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <divkey={index} className="b g-slate-800/30 backdrop-blur-smrounded-lgp-4 hover:bg-slate-800/50 transition-allduration-300">
-                <divclassName="f l exitems-centermb-3">
+        <sectionclassName="m b-16">;
+          <h2 className="t e xt-3xlfont-boldtext-whitetext-centermb-12">AdditionalITServices</h2>;
+          <divclassName="g r idgrid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">;
+              <divkey={index} className="b g-slate-800/30 backdrop-blur-smrounded-lgp-4 hover: bg-slate-800/50 transition-allduration-300">;
+                <divclassName="f l exitems-centermb-3">;
                   {React.createElement(service.icon, { className: "w-6 h-6 text-cyan-400 mr-3" })}
-                  <h3 className="t e xt-lgfont-boldtext-white">{service.title}</h3>
-                </div>
-                <pclassName="t e xt-gray-300 text-smmb-3">{service.description}</p>
-                <divclassName="t e xt-cyan-400 font-boldtext-sm">{service.price}</div>
+                  <h3 className="t e xt-lgfont-boldtext-white">{service.title}</h3>;
+                </div>;
+                <pclassName="t e xt-gray-300 text-smmb-3">{service.description}</p>;
+                <divclassName="t e xt-cyan-400 font-boldtext-sm">{service.price}</div>;
             ))}
-          </div>
-        </section>
+          </div>;
+        </section>;
         {/* SupportTiers */}
-        <sectionclassName="m b-16">
-          <h2 className="t e xt-3xlfont-boldtext-whitetext-centermb-12">SupportTiers</h2>
-          <divclassName="g r idgrid-cols-1 md:grid-cols-3 gap-8">
-            <divclassName="b g-slate-800/50 backdrop-blur-smrounded-xlp-6">
-              <h3 className="t e xt-xlfont-boldtext-whitemb-4">BasicSupport</h3>
-              <divclassName="t e xt-3xlfont-boldtext-cyan-400 mb-4">$199/month</div>
-              <ulclassName="s p ace-y-2 mb-6">
-                <liclassName="f l exitems-centertext-smtext-gray-300">
-                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />
-                  Businesshourssupport
-                </li>
-                <liclassName="f l exitems-centertext-smtext-gray-300">
-                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />
-                  Remoteassistance
-                </li>
-                <liclassName="f l exitems-centertext-smtext-gray-300">
-                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />
-                  Basicmonitoring
-                </li>
-              </ul>
-              >
-                GetStarted
-              </a>
-            </div>
-            <divclassName="b g-slate-800/50 backdrop-blur-smrounded-xlp-6 border-2 border-cyan-500">
-              <h3 className="t e xt-xlfont-boldtext-whitemb-4">ProfessionalSupport</h3>
-              <divclassName="t e xt-3xlfont-boldtext-cyan-400 mb-4">$499/month</div>
-              <ulclassName="s p ace-y-2 mb-6">
-                <liclassName="f l exitems-centertext-smtext-gray-300">
-                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />
-                  24/7 support
-                </li>
-                <liclassName="f l exitems-centertext-smtext-gray-300">
-                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />
-                  On-sitevisits
-                </li>
-                <liclassName="f l exitems-centertext-smtext-gray-300">
-                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />
-                  Advancedmonitoring
-                </li>
-                <liclassName="f l exitems-centertext-smtext-gray-300">
-                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />
-                  Priorityresponse
-                </li>
-              </ul>
-              >
-                GetStarted
-              </a>
-            </div>
-            <divclassName="b g-slate-800/50 backdrop-blur-smrounded-xlp-6">
-              <h3 className="t e xt-xlfont-boldtext-whitemb-4">EnterpriseSupport</h3>
-              <divclassName="t e xt-3xlfont-boldtext-cyan-400 mb-4">Custom</div>
-              <ulclassName="s p ace-y-2 mb-6">
-                <liclassName="f l exitems-centertext-smtext-gray-300">
-                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />
-                  Dedicatedteam
-                </li>
-                <liclassName="f l exitems-centertext-smtext-gray-300">
-                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />
-                  CustomSLAs
-                </li>
-                <liclassName="f l exitems-centertext-smtext-gray-300">
-                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />
-                  Proactivemonitoring
-                </li>
-                <liclassName="f l exitems-centertext-smtext-gray-300">
-                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />
-                  Strategicconsulting
-                </li>
-              </ul>
-              >
-                ContactSales
-              </a>
-            </div>
-        </section>
+        <sectionclassName="m b-16">;
+          <h2 className="t e xt-3xlfont-boldtext-whitetext-centermb-12">SupportTiers</h2>;
+          <divclassName="g r idgrid-cols-1 md: grid-cols-3 gap-8">;
+            <divclassName="b g-slate-800/50 backdrop-blur-smrounded-xlp-6">;
+              <h3 className="t e xt-xlfont-boldtext-whitemb-4">BasicSupport</h3>;
+              <divclassName="t e xt-3xlfont-boldtext-cyan-400 mb-4">$199/month</div>;
+              <ulclassName="s p ace-y-2 mb-6">;
+                <liclassName="f l exitems-centertext-smtext-gray-300">;
+                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />;
+                  Businesshourssupport;
+                </li>;
+                <liclassName="f l exitems-centertext-smtext-gray-300">;
+                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />;
+                  Remoteassistance;
+                </li>;
+                <liclassName="f l exitems-centertext-smtext-gray-300">;
+                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />;
+                  Basicmonitoring;
+                </li>;
+              </ul>;
+              >;
+                GetStarted;
+              </a>;
+            </div>;
+            <divclassName="b g-slate-800/50 backdrop-blur-smrounded-xlp-6 border-2 border-cyan-500">;
+              <h3 className="t e xt-xlfont-boldtext-whitemb-4">ProfessionalSupport</h3>;
+              <divclassName="t e xt-3xlfont-boldtext-cyan-400 mb-4">$499/month</div>;
+              <ulclassName="s p ace-y-2 mb-6">;
+                <liclassName="f l exitems-centertext-smtext-gray-300">;
+                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />;
+                  24/7 support;
+                </li>;
+                <liclassName="f l exitems-centertext-smtext-gray-300">;
+                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />;
+                  On-sitevisits;
+                </li>;
+                <liclassName="f l exitems-centertext-smtext-gray-300">;
+                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />;
+                  Advancedmonitoring;
+                </li>;
+                <liclassName="f l exitems-centertext-smtext-gray-300">;
+                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />;
+                  Priorityresponse;
+                </li>;
+              </ul>;
+              >;
+                GetStarted;
+              </a>;
+            </div>;
+            <divclassName="b g-slate-800/50 backdrop-blur-smrounded-xlp-6">;
+              <h3 className="t e xt-xlfont-boldtext-whitemb-4">EnterpriseSupport</h3>;
+              <divclassName="t e xt-3xlfont-boldtext-cyan-400 mb-4">Custom</div>;
+              <ulclassName="s p ace-y-2 mb-6">;
+                <liclassName="f l exitems-centertext-smtext-gray-300">;
+                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />;
+                  Dedicatedteam;
+                </li>;
+                <liclassName="f l exitems-centertext-smtext-gray-300">;
+                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />;
+                  CustomSLAs;
+                </li>;
+                <liclassName="f l exitems-centertext-smtext-gray-300">;
+                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />;
+                  Proactivemonitoring;
+                </li>;
+                <liclassName="f l exitems-centertext-smtext-gray-300">;
+                  <CheckCircleclassName="w-4 h-4 t e xt-green-400 mr-2" />;
+                  Strategicconsulting;
+                </li>;
+              </ul>;
+              >;
+                ContactSales;
+              </a>;
+            </div>;
+        </section>;
         {/* CTASection */}
-        <sectionclassName="t e xt-center">
-          <divclassName="b g-gradient-to-rfrom-cyan-900/50 to-purple-900/50 rounded-2xlp-8">
-            <h2 className="t e xt-3xlfont-boldtext-whitemb-4">ReadytoOptimizeYourITInfrastructure?</h2>
-            <pclassName="t e xt-gray-300 mb-8 max-w-2xlmx-auto">GetafreeITassessmentanddiscoverhowourservicescanimproveyourtechnologyinfrastructureandreducecosts.</p>
-            <divclassName="f l exflex-colsm:flex-rowgap-4 justify-center">
-              >
-                GetFreeITAssessment
-              </a>
-              >
-                (302) 464-0950
-              </a>
-            </div>
-          </section>
-        </main>
-        <Footer />
-      </div>
+        <sectionclassName="t e xt-center">;
+          <divclassName="b g-gradient-to-rfrom-cyan-900/50 to-purple-900/50 rounded-2xlp-8">;
+            <h2 className="t e xt-3xlfont-boldtext-whitemb-4">ReadytoOptimizeYourITInfrastructure?</h2>;
+            <pclassName="t e xt-gray-300 mb-8 max-w-2xlmx-auto">GetafreeITassessmentanddiscoverhowourservicescanimproveyourtechnologyinfrastructureandreducecosts.</p>;
+            <divclassName="f l exflex-colsm: flex-rowgap-4 justify-center">;
+              >;
+                GetFreeITAssessment;
+              </a>;
+              >;
+                (302) 464-0950;
+              </a>;
+            </div>;
+          </section>;
+        </main>;
+        <Footer />;
+      </div>;
   );
 };
-
+;
 exportdefaultITServicesPage;
+;

@@ -1,261 +1,235 @@
 import React from 'react';
-import { Link    } from 'react-router-dom';
-import { ArrowRight    } from 'lucide-react';
-
-constServicesPage: React.FC = () => {
-  constmainServices = [
-    {
-      icon: Brain,
-      title: 'AISolutions',
-      description: 'Transformyourbusinesswithcutting-edgeartificialintelligenceandmachinelearningsolutions.',
-      features: ['MachineLearning', 'NaturalLanguageProcessing', 'ComputerVision', 'PredictiveAnalytics'],
-      color: 'from-purple-500 to-pink-500',
-      href: '/ai-services'
-    },
-    {
-      icon: Cloud,
-      title: 'CloudComputing',
-      description: 'Scalableandsecurecloudinfrastructuresolutionsformodernbusinesses.',
-      features: ['AWSMigration', 'AzureSolutions', 'GoogleCloud', 'HybridCloud'],
-      color: 'from-cyan-500 to-blue-500',
-      href: '/cloud-services'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Protectyourdigitalassetswithcomprehensivesecuritysolutionsandbestpractices.',
-      features: ['SecurityAudits', 'PenetrationTesting', 'Compliance', 'IncidentResponse'],
-      color: 'from-red-500 to-orange-500',
-      href: '/cybersecurity'
-    },
-    {
-      icon: Code,
-      title: 'CustomDevelopment',
-      description: 'Tailoredsoftwaresolutionsbuiltwithmoderntechnologiesandbestpractices.',
-      features: ['WebApplications', 'MobileApps', 'APIDevelopment', 'SystemIntegration'],
-      color: 'from-green-500 to-emerald-500',
-      href: '/custom-development'
+import {Link    } from 'react-router-dom';
+import {ArrowRight    } from 'lucide-react';
+;
+constServicesPage: React.FC = () => {constmainServices = [{
+      icon: Brain,;
+      title: 'AISolutions',;
+      description: 'Transformyourbusinesswithcutting-edgeartificialintelligenceandmachinelearningsolutions.',;
+      features: ['MachineLearning', 'NaturalLanguageProcessing', 'ComputerVision', 'PredictiveAnalytics'],;
+      color: 'from-purple-500 to-pink-500',;
+      href: '/ai-services';
+    },;
+    {icon: Cloud,;
+      title: 'CloudComputing',;
+      description: 'Scalableandsecurecloudinfrastructuresolutionsformodernbusinesses.',;
+      features: ['AWSMigration', 'AzureSolutions', 'GoogleCloud', 'HybridCloud'],;
+      color: 'from-cyan-500 to-blue-500',;
+      href: '/cloud-services';
+    },;
+    {icon: Shield,;
+      title: 'Cybersecurity',;
+      description: 'Protectyourdigitalassetswithcomprehensivesecuritysolutionsandbestpractices.',;
+      features: ['SecurityAudits', 'PenetrationTesting', 'Compliance', 'IncidentResponse'],;
+      color: 'from-red-500 to-orange-500',;
+      href: '/cybersecurity';
+    },;
+    {icon: Code,;
+      title: 'CustomDevelopment',;
+      description: 'Tailoredsoftwaresolutionsbuiltwithmoderntechnologiesandbestpractices.',;
+      features: ['WebApplications', 'MobileApps', 'APIDevelopment', 'SystemIntegration'],;
+      color: 'from-green-500 to-emerald-500',;
+      href: '/custom-development';
     }
   ];
-  constadditionalServices = [
-    {
-      icon: Database,
-      title: 'DataAnalytics',
-      description: 'Unlockinsightsfromyourdatawithadvancedanalyticsandvisualizationtools.',
-      href: '/data-analytics'
-    },
-    {
-      icon: Smartphone,
-      title: 'MobileDevelopment',
-      description: 'Nativeandcross-platformmobileapplicationsforiOSandAndroid.',
-      href: '/mobile-development'
-    },
-    {
-      icon: Globe,
-      title: 'WebDevelopment',
-      description: 'Modern, responsivewebsitesandwebapplicationsthatdriveengagement.',
-      href: '/web-development'
-    },
-    {
-      icon: Lock,
-      title: 'ITSupport',
-      description: 'ComprehensiveITsupportandmaintenanceservicesforyourbusiness.',
-      href: '/it-support'
+  constadditionalServices = [{icon: Database,;
+      title: 'DataAnalytics',;
+      description: 'Unlockinsightsfromyourdatawithadvancedanalyticsandvisualizationtools.',;
+      href: '/data-analytics';
+    },;
+    {icon: Smartphone,;
+      title: 'MobileDevelopment',;
+      description: 'Nativeandcross-platformmobileapplicationsforiOSandAndroid.',;
+      href: '/mobile-development';
+    },;
+    {icon: Globe,;
+      title: 'WebDevelopment',;
+      description: 'Modern, responsivewebsitesandwebapplicationsthatdriveengagement.',;
+      href: '/web-development';
+    },;
+    {icon: Lock,;
+      title: 'ITSupport',;
+      description: 'ComprehensiveITsupportandmaintenanceservicesforyourbusiness.',;
+      href: '/it-support';
     }
   ];
-  constprocessSteps = [
-    {
-      step: '01',
-      title: 'Discovery',
-      description: 'Weanalyzeyourbusinessneedsandtechnicalrequirementstounderstandyourgoals.',
-      icon: Users
-    },
-    {
-      step: '02',
-      title: 'Strategy',
-      description: 'Wedevelopacomprehensivestrategyandroadmaptailoredtoyourspecificneeds.',
-      icon: Brain
-    },
-    {
-      step: '03',
-      title: 'Implementation',
-      description: 'Ourexpertteamimplementsthesolutionwithprecisionandattentiontodetail.',
-      icon: Code
-    },
-    {
-      step: '04',
-      title: 'Support',
-      description: 'Weprovideongoingsupportandmaintenancetoensureoptimalperformance.',
-      icon: Zap
+  constprocessSteps = [{step: '01',;
+      title: 'Discovery',;
+      description: 'Weanalyzeyourbusinessneedsandtechnicalrequirementstounderstandyourgoals.',;
+      icon: Users;
+    },;
+    {step: '02',;
+      title: 'Strategy',;
+      description: 'Wedevelopacomprehensivestrategyandroadmaptailoredtoyourspecificneeds.',;
+      icon: Brain;
+    },;
+    {step: '03',;
+      title: 'Implementation',;
+      description: 'Ourexpertteamimplementsthesolutionwithprecisionandattentiontodetail.',;
+      icon: Code;
+    },;
+    {step: '04',;
+      title: 'Support',;
+      description: 'Weprovideongoingsupportandmaintenancetoensureoptimalperformance.',;
+      icon: Zap;
     }
   ];
-  return (
-    <>
-      <Helmet>
-        <title>OurServices - ZionTechGroup</title>
-        <metaconstname = "description" content="ExploreourcomprehensiverangeofAIandITservices. FromAIsolutionstocloudcomputing, cybersecurity, andcustomdevelopment - wehaveyoucovered." / / />
-        <metaname="keywords" content="AIservices, ITservices, cloudcomputing, cybersecurity, customdevelopment, dataanalytics, mobiledevelopment" / / />
-      </Helmet>
-    </>
-      
-      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900pt-16">
+  return (;
+    <>;
+      <Helmet>;
+        <title>OurServices - ZionTechGroup</title>;
+        <metaconstname = "description" content="ExploreourcomprehensiverangeofAIandITservices. FromAIsolutionstocloudcomputing, cybersecurity, andcustomdevelopment - wehaveyoucovered." / / />;
+        <metaname="keywords" content="AIservices, ITservices, cloudcomputing, cybersecurity, customdevelopment, dataanalytics, mobiledevelopment" / / />;
+      </Helmet>;
+    </>;
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900pt-16">;
         {/* HeroSection */}
-    <>
-        <sectionclassName="p y-20" />
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="m a x-w-4 xlmx-autotext-center">
-              <h1 className="t e xt-5 xlmd:text-6 xlfont-boldtext-whitemb-6" />
-                Our <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"  >Services</span>
-              </h1>
-              <pclassName="t e xt-xltext-gray-300 mb-8leading-relaxed">
-              ComprehensiveAIandITsolutionsdesignedtotransformyourbusinessanddrivegrowth. 
-                Weofferend-to-endservicesfromstrategytoimplementationandsupport.
-    <>
-              </p>
-            </div>
-        </section>
-    </>
-
+    <>;
+        <sectionclassName="p y-20" />;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="m a x-w-4 xlmx-autotext-center">;
+              <h1 className="t e xt-5 xlmd: text-6 xlfont-boldtext-whitemb-6" />;
+                Our <spanclassName="b g-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"  >Services</span>;
+              </h1>;
+              <pclassName="t e xt-xltext-gray-300 mb-8leading-relaxed">;
+              ComprehensiveAIandITsolutionsdesignedtotransformyourbusinessanddrivegrowth.;
+                Weofferend-to-endservicesfromstrategytoimplementationandsupport.;
+    <>;
+              </p>;
+            </div>;
+        </section>;
+    </>;
         {/* MainServicesSection */}
-    <>
-        <sectionclassName="p y-20" />
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-6"  >CoreServices</h2>
-              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Ourflagshipservicesthathavehelpedhundredsofbusinessestransformandgrow</p>
-            </div>
-    </>
-
-            <divclassName="g r idgrid-cols-1md:grid-cols-2gap-8">
-              {mainServices.map((service, index) => (
-                <divkey="{index}"
-                  className="b g-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-smborderborder-gray-700/50 rounded-xlp-8 hover:border-cyan-400/40 transition-allduration-300 grouphover:transformhover:scale-105" />
-    <>
-                  <divclassName="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-lgflexitems-centerjustify-centermb-6 group-hover: scale-110 transition-transformduration-300`} />
-                    <service.iconclassName="w-8h-8t e xt-white" />
-                  </div>
-    </>
-                  
-                  <h3 className="t e xt-2 xlfont-boldtext-whitemb-4group-hover:text-cyan-400 transition-colors"  />{service.title}
-                  </h3>
-    </>
-                  
-                  <pclassName="t e xt-gray-300 mb-6leading-relaxed">{service.description}</p>
-                  <ulclassName="s p ace-y-2mb-6" />
-                    {service.features.map((feature, featureIndex) => (
-                      <likey="{featureIndex}" className="f l exitems-centertext-gray-300" />
-                        <CheckCircleclassName="w-4 h-4 t e xt-cyan-400mr-3flex-shrink-0" />
-                        <spanclassName="t e xt-sm"  >{feature}</span>
-                      </li>
-    </>
+    <>;
+        <sectionclassName="p y-20" />;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6"  >CoreServices</h2>;
+              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Ourflagshipservicesthathavehelpedhundredsofbusinessestransformandgrow</p>;
+            </div>;
+    </>;
+            <divclassName="g r idgrid-cols-1md: grid-cols-2gap-8">;
+              {mainServices.map((service, index) => (;
+                <divkey="{index}";
+                  className="b g-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-smborderborder-gray-700/50 rounded-xlp-8 hover: border-cyan-400/40 transition-allduration-300 grouphover:transformhover:scale-105" />;
+    <>;
+                  <divclassName="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-lgflexitems-centerjustify-centermb-6 group-hover: scale-110 transition-transformduration-300`} />;
+                    <service.iconclassName="w-8h-8t e xt-white" />;
+                  </div>;
+    </>;
+                  <h3 className="t e xt-2 xlfont-boldtext-whitemb-4group-hover: text-cyan-400 transition-colors"  />{service.title}
+                  </h3>;
+    </>;
+                  <pclassName="t e xt-gray-300 mb-6leading-relaxed">{service.description}</p>;
+                  <ulclassName="s p ace-y-2mb-6" />;
+                    {service.features.map((feature, featureIndex) => (;
+                      <likey="{featureIndex}" className="f l exitems-centertext-gray-300" />;
+                        <CheckCircleclassName="w-4 h-4 t e xt-cyan-400mr-3flex-shrink-0" />;
+                        <spanclassName="t e xt-sm"  >{feature}</span>;
+                      </li>;
+    </>;
                     ))}
-                  </ul>
-                  <Linkto="{service.href}" className="i n line-flexitems-centertext-cyan-400 hover:text-cyan-300 transition-colorsfont-semiboldgroup-hover:translate-x-1">
-          LearnMore
-                    
-          <ArrowRightclassName="m l-2"  />
-        </Link>
-                </div>
-    </>
+                  </ul>;
+                  <Linkto="{service.href}" className="i n line-flexitems-centertext-cyan-400 hover: text-cyan-300 transition-colorsfont-semiboldgroup-hover:translate-x-1">;
+          LearnMore;
+          <ArrowRightclassName="m l-2"  />;
+        </Link>;
+                </div>;
+    </>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* AdditionalServicesSection */}
-    <>
-        <sectionclassName="p y-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-6"  >AdditionalServices</h2>
-              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Specializedservicestocomplementyourcoretechnologyneeds</p>
-            </div>
-    </>
-
-            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-6">
-              {additionalServices.map((service, index) => (
-                <Linkkey="{index}"
-                  to="{service.href}"
-                  className="b g-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-smborderborder-gray-700/50 rounded-xlp-6 hover:border-cyan-400/40 transition-allduration-300 grouphover:transformhover:scale-105text-center" />
-                  <divclassName="w-12 h-12 b g-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-lgflexitems-centerjustify-centermx-automb-4 group-hover:scale-110transition-transformduration-300">
-                    <service.iconclassName="w-6h-6t e xt-cyan-400" />
-                  </div>
+    <>;
+        <sectionclassName="p y-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6"  >AdditionalServices</h2>;
+              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Specializedservicestocomplementyourcoretechnologyneeds</p>;
+            </div>;
+    </>;
+            <divclassName="g r idgrid-cols-1 md: grid-cols-2lg:grid-cols-4gap-6">;
+              {additionalServices.map((service, index) => (;
+                <Linkkey="{index}";
+                  to="{service.href}";
+                  className="b g-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-smborderborder-gray-700/50 rounded-xlp-6 hover: border-cyan-400/40 transition-allduration-300 grouphover:transformhover:scale-105text-center" />;
+                  <divclassName="w-12 h-12 b g-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-lgflexitems-centerjustify-centermx-automb-4 group-hover:scale-110transition-transformduration-300">;
+                    <service.iconclassName="w-6h-6t e xt-cyan-400" />;
+                  </div>;
                   <h3 className="t e xt-lgfont-boldtext-whitemb-2group-hover:text-cyan-400 transition-colors"  />{service.title}
-                  </h3>
-                  <pclassName="t e xt-gray-300text-smleading-relaxed">{service.description}</p>
-                </Link>
-    </>
+                  </h3>;
+                  <pclassName="t e xt-gray-300text-smleading-relaxed">{service.description}</p>;
+                </Link>;
+    </>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* ProcessSection */}
-    <>
-        <sectionclassName="p y-20" />
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-6"  >OurProcess</h2>
-              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Howweworkwithyoutodeliverexceptionalresults</p>
-            </div>
-    </>
-
-            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-              {processSteps.map((step, index) => (
-                <divkey="{index}"
-                  className="t e xt-centergroup" />
-                  <divclassName="r e lativemb-6">
-                    <divclassName="w-20 h-20 b g-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-fullflexitems-centerjustify-centermx-automb-4 group-hover:scale-110 transition-transformduration-300borderborder-cyan-500/30">
-                      <step.iconclassName="w-8h-8t e xt-cyan-400" />
-                    </div>
+    <>;
+        <sectionclassName="p y-20" />;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6"  >OurProcess</h2>;
+              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">Howweworkwithyoutodeliverexceptionalresults</p>;
+            </div>;
+    </>;
+            <divclassName="g r idgrid-cols-1 md: grid-cols-2lg:grid-cols-4gap-8">;
+              {processSteps.map((step, index) => (;
+                <divkey="{index}";
+                  className="t e xt-centergroup" />;
+                  <divclassName="r e lativemb-6">;
+                    <divclassName="w-20 h-20 b g-gradient-to-rfrom-cyan-500/20 to-purple-500/20 rounded-fullflexitems-centerjustify-centermx-automb-4 group-hover: scale-110 transition-transformduration-300borderborder-cyan-500/30">;
+                      <step.iconclassName="w-8h-8t e xt-cyan-400" />;
+                    </div>;
                     <divclassName="a b solute -top-2 -right-2 w-8 h-8 bg-gradient-to-rfrom-cyan-500 to-purple-500 rounded-fullflexitems-centerjustify-centertext-whitefont-boldtext-sm">{step.step}
-                    </div>
-                  <h3 className="t e xt-xlfont-boldtext-whitemb-3group-hover:text-cyan-400 transition-colors"  />{step.title}
-                  </h3>
-                  <pclassName="t e xt-gray-300leading-relaxed">{step.description}</p>
-                </div>
-    </>
+                    </div>;
+                  <h3 className="t e xt-xlfont-boldtext-whitemb-3group-hover: text-cyan-400 transition-colors"  />{step.title}
+                  </h3>;
+                  <pclassName="t e xt-gray-300leading-relaxed">{step.description}</p>;
+                </div>;
+    </>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* CTASection */}
-    <>
-        <sectionclassName="p y-20" />
-          <divclassName="c o ntainermx-autopx-4">
-            <divclassName="b g-gradient-to-rfrom-cyan-900/50 to-purple-900/50 backdrop-blur-smborderborder-cyan-500/20 rounded-2 xlp-12text-center">
-              <h2 className="t e xt-4xlfont-boldtext-whitemb-6"  />ReadytoGetStarted?
-              </h2>
-              <pclassName="t e xt-xltext-gray-300 mb-8 max-w-2xlmx-auto">Let'sdiscussyourprojectandhowourservicescanhelpyouachieveyourbusinessgoals.</p>
-              <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-                <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300transformhover:scale-105">GetaFreeConsultation
-                </Link>
-                <Linkto="/about" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105">LearnMoreAboutUs
-                </Link>
-              </div>
-          </div>
-        </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
+    <>;
+        <sectionclassName="p y-20" />;
+          <divclassName="c o ntainermx-autopx-4">;
+            <divclassName="b g-gradient-to-rfrom-cyan-900/50 to-purple-900/50 backdrop-blur-smborderborder-cyan-500/20 rounded-2 xlp-12text-center">;
+              <h2 className="t e xt-4xlfont-boldtext-whitemb-6"  />ReadytoGetStarted?;
+              </h2>;
+              <pclassName="t e xt-xltext-gray-300 mb-8 max-w-2xlmx-auto">Let'sdiscussyourprojectandhowourservicescanhelpyouachieveyourbusinessgoals.</p>;
+              <divclassName="f l exflex-colsm: flex-rowgap-4justify-center">;
+                <Linkto="/contact" className="b g-gradient-to-rfrom-cyan-500 to-purple-500 text-whitepx-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300transformhover:scale-105">GetaFreeConsultation;
+                </Link>;
+                <Linkto="/about" className="b o rderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105">LearnMoreAboutUs;
+                </Link>;
+              </div>;
+          </div>;
+        </section>;
+      </div>;
+        </div>;
+      </div>;
+          </div>;
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+          </div>;
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+      </div>;
+    </>;
   );
 };
-
+;
 exportdefaultServicesPage;
-    </>
+    </>;

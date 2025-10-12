@@ -1,142 +1,138 @@
 'useclient';
-import { useState, useEffect  } from 'react';
-import { X, Cookie  } from 'lucide-react';
-constCookieConsent: React.FC = () => {
-  const [showDetails, setShowDetails] = useState(false);
+import {useState, useEffect  } from 'react';
+import {X, Cookie  } from 'lucide-react';
+constCookieConsent: React.FC = () => {const [showDetails, setShowDetails] = useState(false);
   useEffect(() => {
     constconsent = localStorage.getItem('cookie-consent');
     if (!consent) {
       setIsVisible(true);
     }
   }, []);
-
-  constacceptAll = () => {
-    localStorage.setItem('cookie-consent', 'accepted');
+;
+  constacceptAll = () => {localStorage.setItem('cookie-consent', 'accepted');
     localStorage.setItem('analytics-consent', 'accepted');
     localStorage.setItem('marketing-consent', 'accepted');
     setIsVisible(false);
   };
-
-  constacceptNecessary = () => {
-    localStorage.setItem('cookie-consent', 'necessary');
+;
+  constacceptNecessary = () => {localStorage.setItem('cookie-consent', 'necessary');
     localStorage.setItem('analytics-consent', 'declined');
     localStorage.setItem('marketing-consent', 'declined');
     setIsVisible(false);
   };
-
-  constacceptCustom = () => {
-    localStorage.setItem('cookie-consent', 'custom');
+;
+  constacceptCustom = () => {localStorage.setItem('cookie-consent', 'custom');
     setIsVisible(false);
   };
-
+;
   if (!isVisible) returnnull;
-
-  return (
-    <divclassName="f i xedbottom-0 left-0 right-0z-50p-4">
-      <divclassName="m a x-w-4xlmx-auto">
-        <divclassName="b g-slate-800 borderborder-slate-700 rounded-xlshadow-2xlbackdrop-blur-sm">
-          {!showDetails ? (
-            // Simpleview
-            <divclassName="p-6">
-              <divclassName="f l exitems-startspace-x-4">
-                <divclassName="f l ex-shrink-0">
-                  <CookieclassName="w-8h-8t e xt-cyan-400" />
-                </div>
-                <divclassName="f l ex-1">
-                  <h3 className="t e xt-lgfont-semiboldtext-whitemb-2"  />Weusecookies
-                  </h3>
-                  <pclassName="t e xt-gray-300 mb-4">
-              Weusecookiestoenhanceyourbrowsingexperience, servepersonalizedcontent,
-                    andanalyzeourtraffic. Byclicking "AcceptAll", youconsenttoouruseofcookies.
-    <>
-                  </p>
-                  <divclassName="f l exflex-colsm:flex-rowgap-3">
-                    <buttononClick="{acceptAll}"
-                      className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-6 py-2 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700transition-allduration-300">AcceptAll
-                    </button>
-                    <buttononClick="{acceptNecessary}"
-                      className="b o rderborder-slate-600 text-gray-300 px-6 py-2 rounded-lgfont-semiboldhover:bg-slate-700transition-colors">NecessaryOnly
-                    </button>
+;
+  return (;
+    <divclassName="f i xedbottom-0 left-0 right-0z-50p-4">;
+      <divclassName="m a x-w-4xlmx-auto">;
+        <divclassName="b g-slate-800 borderborder-slate-700 rounded-xlshadow-2xlbackdrop-blur-sm">;
+          {!showDetails ? (;
+            // Simpleview;
+            <divclassName="p-6">;
+              <divclassName="f l exitems-startspace-x-4">;
+                <divclassName="f l ex-shrink-0">;
+                  <CookieclassName="w-8h-8t e xt-cyan-400" />;
+                </div>;
+                <divclassName="f l ex-1">;
+                  <h3 className="t e xt-lgfont-semiboldtext-whitemb-2"  />Weusecookies;
+                  </h3>;
+                  <pclassName="t e xt-gray-300 mb-4">;
+              Weusecookiestoenhanceyourbrowsingexperience, servepersonalizedcontent,;
+                    andanalyzeourtraffic. Byclicking "AcceptAll", youconsenttoouruseofcookies.;
+    <>;
+                  </p>;
+                  <divclassName="f l exflex-colsm: flex-rowgap-3">;
+                    <buttononClick="{acceptAll}";
+                      className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-6 py-2 rounded-lgfont-semiboldhover: from-cyan-600 hover:to-purple-700transition-allduration-300">AcceptAll;
+                    </button>;
+                    <buttononClick="{acceptNecessary}";
+                      className="b o rderborder-slate-600 text-gray-300 px-6 py-2 rounded-lgfont-semiboldhover: bg-slate-700transition-colors">NecessaryOnly;
+                    </button>;
                     <buttononClick="{()" =  />setShowDetails(true)}
-                      className="t e xt-cyan-400 hover:text-cyan-300 px-6 py-2font-semiboldtransition-colors">
-                      Customize
-    <>
-                    </button>
-                  </div>
-                <buttononClick="{acceptNecessary}"
-                  className="t e xt-gray-400hover:text-whitetransition-colors"
-                  aria-label="Close" />
-                  <XclassName="w-5h-5" />
-                </button>
-              </div>
-          ) : (
-            // Detailedview
-            <divclassName="p-6">
-              <divclassName="f l exitems-centerjustify-betweenmb-6">
-                <h3 className="t e xt-xlfont-semiboldtext-white"  >CookiePreferences</h3>
+                      className="t e xt-cyan-400 hover: text-cyan-300 px-6 py-2font-semiboldtransition-colors">;
+                      Customize;
+    <>;
+                    </button>;
+                  </div>;
+                <buttononClick="{acceptNecessary}";
+                  className="t e xt-gray-400hover: text-whitetransition-colors";
+                  aria-label="Close" />;
+                  <XclassName="w-5h-5" />;
+                </button>;
+              </div>;
+          ) : (;
+            // Detailedview;
+            <divclassName="p-6">;
+              <divclassName="f l exitems-centerjustify-betweenmb-6">;
+                <h3 className="t e xt-xlfont-semiboldtext-white"  >CookiePreferences</h3>;
                 <buttononClick="{()" = /> setShowDetails(false)}
-                  className="t e xt-gray-400hover:text-whitetransition-colors"
-                  aria-label="Closedetails">
-                  <XclassName="w-5h-5" />
-                </button>
-              </div>
-              <divclassName="s p ace-y-6">
+                  className="t e xt-gray-400hover: text-whitetransition-colors";
+                  aria-label="Closedetails">;
+                  <XclassName="w-5h-5" />;
+                </button>;
+              </div>;
+              <divclassName="s p ace-y-6">;
                 {/* NecessaryCookies */}
-                <divclassName="f l exitems-startspace-x-4">
-                  <ShieldclassName="w-6 h-6t e xt-green-400mt-1" />
-                  <divclassName="f l ex-1">
-                    <divclassName="f l exitems-centerjustify-betweenmb-2">
-                      <h4 className="f o nt-semiboldtext-white"  >NecessaryCookies</h4>
-                      <spanclassName="t e xt-smtext-green-400font-medium"  >AlwaysActive</span>
-                    </div>
-                    <pclassName="t e xt-gray-300text-sm">Thesecookiesareessentialforthewebsitetofunctionproperly. Theycannotbedisabled.</p>
-                  </div>
+                <divclassName="f l exitems-startspace-x-4">;
+                  <ShieldclassName="w-6 h-6t e xt-green-400mt-1" />;
+                  <divclassName="f l ex-1">;
+                    <divclassName="f l exitems-centerjustify-betweenmb-2">;
+                      <h4 className="f o nt-semiboldtext-white"  >NecessaryCookies</h4>;
+                      <spanclassName="t e xt-smtext-green-400font-medium"  >AlwaysActive</span>;
+                    </div>;
+                    <pclassName="t e xt-gray-300text-sm">Thesecookiesareessentialforthewebsitetofunctionproperly. Theycannotbedisabled.</p>;
+                  </div>;
                 {/* AnalyticsCookies */}
-                <divclassName="f l exitems-startspace-x-4">
-                  <BarChart3 className="w-6 h-6t e xt-blue-400mt-1" />
-                  <divclassName="f l ex-1">
-                    <divclassName="f l exitems-centerjustify-betweenmb-2">
-                      <h4 className="f o nt-semiboldtext-white"  >AnalyticsCookies</h4>
-                      <labelclassName="r e lativeinline-flexitems-centercursor-pointer" />
-                        <inputtype="checkbox" className="s r-onlypeer" defaultChecked / />
-                        <divclassName="w-11 h-6 b g-slate-600 peer-focus:outline-nonepeer-focus:ring-4 peer-focus:ring-cyan-500/50 rounded-fullpeerpeer-checked:after:translate-x-fullpeer-checked:after:border-whiteafter:content-[''] after:absoluteafter:top-[2, px] after:left-[2, px] after:bg-whiteafter:rounded-fullafter:h-5 after:w-5after:transition-allpeer-checked:bg-cyan-500"></div>
-                      </label>
-                    </div>
-                    <pclassName="t e xt-gray-300text-sm">Thesecookieshelpusunderstandhowvisitorsinteractwithourwebsitebycollectingandreportinginformationanonymously.</p>
-                  </div>
+                <divclassName="f l exitems-startspace-x-4">;
+                  <BarChart3 className="w-6 h-6t e xt-blue-400mt-1" />;
+                  <divclassName="f l ex-1">;
+                    <divclassName="f l exitems-centerjustify-betweenmb-2">;
+                      <h4 className="f o nt-semiboldtext-white"  >AnalyticsCookies</h4>;
+                      <labelclassName="r e lativeinline-flexitems-centercursor-pointer" />;
+                        <inputtype="checkbox" className="s r-onlypeer" defaultChecked / />;
+                        <divclassName="w-11 h-6 b g-slate-600 peer-focus: outline-nonepeer-focus:ring-4 peer-focus:ring-cyan-500/50 rounded-fullpeerpeer-checked:after:translate-x-fullpeer-checked:after:border-whiteafter:content-[''] after:absoluteafter:top-[2, px] after: left-[2, px] after: bg-whiteafter:rounded-fullafter:h-5 after:w-5after:transition-allpeer-checked:bg-cyan-500"></div>;
+                      </label>;
+                    </div>;
+                    <pclassName="t e xt-gray-300text-sm">Thesecookieshelpusunderstandhowvisitorsinteractwithourwebsitebycollectingandreportinginformationanonymously.</p>;
+                  </div>;
                 {/* MarketingCookies */}
-                <divclassName="f l exitems-startspace-x-4">
-                  <SettingsclassName="w-6 h-6t e xt-purple-400mt-1" />
-                  <divclassName="f l ex-1">
-                    <divclassName="f l exitems-centerjustify-betweenmb-2">
-                      <h4 className="f o nt-semiboldtext-white"  >MarketingCookies</h4>
-                      <labelclassName="r e lativeinline-flexitems-centercursor-pointer" />
-                        <inputtype="checkbox" className="s r-onlypeer" />
-                        <divclassName="w-11 h-6 b g-slate-600 peer-focus:outline-nonepeer-focus:ring-4 peer-focus:ring-cyan-500/50 rounded-fullpeerpeer-checked:after:translate-x-fullpeer-checked:after:border-whiteafter:content-[''] after:absoluteafter:top-[2, px] after:left-[2, px] after:bg-whiteafter:rounded-fullafter:h-5 after:w-5after:transition-allpeer-checked:bg-cyan-500"></div>
-                      </label>
-                    </div>
-                    <pclassName="t e xt-gray-300text-sm">Thesecookiesareusedtotrackvisitorsacrosswebsitestodisplayrelevantandengagingadvertisements.</p>
-                  </div>
-              </div>
-              <divclassName="f l exflex-colsm:flex-rowgap-3 mt-6 pt-6border-tborder-slate-700">
-                <buttononClick="{acceptAll}"
-                  className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-6 py-2 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700transition-allduration-300">AcceptAll
-                </button>
-                <buttononClick="{acceptCustom}"
-                  className="b g-slate-700 text-whitepx-6 py-2 rounded-lgfont-semiboldhover:bg-slate-600transition-colors">SavePreferences
-                </button>
-                <buttononClick="{acceptNecessary}"
-                  className="b o rderborder-slate-600 text-gray-300 px-6 py-2 rounded-lgfont-semiboldhover:bg-slate-700transition-colors"
-                  />RejectAll
-    <>
-                </button>
-              </div>
+                <divclassName="f l exitems-startspace-x-4">;
+                  <SettingsclassName="w-6 h-6t e xt-purple-400mt-1" />;
+                  <divclassName="f l ex-1">;
+                    <divclassName="f l exitems-centerjustify-betweenmb-2">;
+                      <h4 className="f o nt-semiboldtext-white"  >MarketingCookies</h4>;
+                      <labelclassName="r e lativeinline-flexitems-centercursor-pointer" />;
+                        <inputtype="checkbox" className="s r-onlypeer" />;
+                        <divclassName="w-11 h-6 b g-slate-600 peer-focus: outline-nonepeer-focus:ring-4 peer-focus:ring-cyan-500/50 rounded-fullpeerpeer-checked:after:translate-x-fullpeer-checked:after:border-whiteafter:content-[''] after:absoluteafter:top-[2, px] after: left-[2, px] after: bg-whiteafter:rounded-fullafter:h-5 after:w-5after:transition-allpeer-checked:bg-cyan-500"></div>;
+                      </label>;
+                    </div>;
+                    <pclassName="t e xt-gray-300text-sm">Thesecookiesareusedtotrackvisitorsacrosswebsitestodisplayrelevantandengagingadvertisements.</p>;
+                  </div>;
+              </div>;
+              <divclassName="f l exflex-colsm:flex-rowgap-3 mt-6 pt-6border-tborder-slate-700">;
+                <buttononClick="{acceptAll}";
+                  className="b g-gradient-to-rfrom-cyan-500 to-purple-600 text-whitepx-6 py-2 rounded-lgfont-semiboldhover: from-cyan-600 hover:to-purple-700transition-allduration-300">AcceptAll;
+                </button>;
+                <buttononClick="{acceptCustom}";
+                  className="b g-slate-700 text-whitepx-6 py-2 rounded-lgfont-semiboldhover: bg-slate-600transition-colors">SavePreferences;
+                </button>;
+                <buttononClick="{acceptNecessary}";
+                  className="b o rderborder-slate-600 text-gray-300 px-6 py-2 rounded-lgfont-semiboldhover: bg-slate-700transition-colors";
+                  />RejectAll;
+    <>;
+                </button>;
+              </div>;
           )}
-    <>
-        </div>
-    </div>
+    <>;
+        </div>;
+    </div>;
   );
 };
-
+;
 exportdefaultCookieConsent;
-    </>
+    </>;

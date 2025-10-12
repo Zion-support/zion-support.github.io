@@ -1,38 +1,33 @@
-'useclient'
-import React from 'react'
-
-import { ArrowRight    } from 'lucide-react';
-constSEOEnhancer: React.FC = () => {
-  constfeatures = [
-    {
-      icon: Brain,
-      title: 'AI-PoweredSolutions',
-      description: 'AdvancedAItechnologytotransformyourbusinessoperationsandimproveefficiency'
-    },
-    {
-      icon: Zap,
-      title: 'HighPerformance',
-      description: 'Lightning-fastprocessingandreal-timeanalyticsforoptimalresults'
-    },
-    {
-      icon: Shield,
-      title: 'EnterpriseSecurity',
-      description: 'Bank-levelsecuritywithencryptionandcompliancestandards'
-    },
-    {
-      icon: Globe,
-      title: 'GlobalReach',
-      description: 'Worldwidedeploymentandsupportforinternationalbusinesses'
+'useclient';
+import React from 'react';
+;
+import {ArrowRight    } from 'lucide-react';
+constSEOEnhancer: React.FC = () => {constfeatures = [{
+      icon: Brain,;
+      title: 'AI-PoweredSolutions',;
+      description: 'AdvancedAItechnologytotransformyourbusinessoperationsandimproveefficiency';
+    },;
+    {icon: Zap,;
+      title: 'HighPerformance',;
+      description: 'Lightning-fastprocessingandreal-timeanalyticsforoptimalresults';
+    },;
+    {icon: Shield,;
+      title: 'EnterpriseSecurity',;
+      description: 'Bank-levelsecuritywithencryptionandcompliancestandards';
+    },;
+    {icon: Globe,;
+      title: 'GlobalReach',;
+      description: 'Worldwidedeploymentandsupportforinternationalbusinesses';
     }
   ];
-  constbenefits = [
-    'AdvancedAItechnologyintegration',
-    'Real-timeprocessingandanalytics',
-    'Enterprise-gradesecurityandcompliance',
-    'Scalableandflexiblesolutions',
-    '24/7 technicalsupport',
-    'Easyintegrationwithexistingsystems',
-    'Cost-effectivepricingplans',
-    'Proventrackrecordofsuccess'
+  constbenefits = ['AdvancedAItechnologyintegration',;
+    'Real-timeprocessingandanalytics',;
+    'Enterprise-gradesecurityandcompliance',;
+    'Scalableandflexiblesolutions',;
+    '24/7 technicalsupport',;
+    'Easyintegrationwithexistingsystems',;
+    'Cost-effectivepricingplans',;
+    'Proventrackrecordofsuccess';
   ];
-  return (
+  return (;
+;

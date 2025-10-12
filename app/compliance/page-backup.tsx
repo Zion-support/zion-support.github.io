@@ -1,187 +1,182 @@
 import React from 'react';
 importNavigationfrom '../components/Navigation';
 importFooterfrom '../components/Footer';
-constPageBackupPage: React.FC = () => {
-    constfeatures = [
-    {
-      icon: Brain,
-      title: 'AI-PoweredAnalysis',
-      description: 'AdvancedAIalgorithmsprovideintelligentinsightsandrecommendations.',
-      benefits: ['Smartrecommendations', 'Predictiveanalytics', 'Automatedinsights', 'Real-timeanalysis'],
-  },
-    {
-    icon: BarChart,
-      title: 'AdvancedAnalytics',
-      description: 'Comprehensiveanalyticsdashboardwithreal-timedatavisualization.',
-      benefits: ['Real-timedashboards', 'Customreports', 'Datavisualization', 'Performancemetrics'],
-  },
-    {
-    icon: Target,
-      title: 'PrecisionTargeting',
-      description: 'Targetspecificgoalsandobjectiveswithprecisionandaccuracy.',
-      benefits: ['Goaltracking', 'Performanceoptimization', 'Strategicplanning', 'Successmetrics'],
-  },
-    {
-    icon: TrendingUp,
-      title: 'GrowthOptimization',
-      description: 'Optimizeyourbusinessgrowthwithdata-drivenstrategies.',
-      benefits: ['Growthstrategies', 'Marketanalysis', 'Competitiveinsights', 'ROIoptimization'],
+constPageBackupPage: React.FC = () => {constfeatures = [{
+      icon: Brain,;
+      title: 'AI-PoweredAnalysis',;
+      description: 'AdvancedAIalgorithmsprovideintelligentinsightsandrecommendations.',;
+      benefits: ['Smartrecommendations', 'Predictiveanalytics', 'Automatedinsights', 'Real-timeanalysis'],;
+  },;
+    {icon: BarChart,;
+      title: 'AdvancedAnalytics',;
+      description: 'Comprehensiveanalyticsdashboardwithreal-timedatavisualization.',;
+      benefits: ['Real-timedashboards', 'Customreports', 'Datavisualization', 'Performancemetrics'],;
+  },;
+    {icon: Target,;
+      title: 'PrecisionTargeting',;
+      description: 'Targetspecificgoalsandobjectiveswithprecisionandaccuracy.',;
+      benefits: ['Goaltracking', 'Performanceoptimization', 'Strategicplanning', 'Successmetrics'],;
+  },;
+    {icon: TrendingUp,;
+      title: 'GrowthOptimization',;
+      description: 'Optimizeyourbusinessgrowthwithdata-drivenstrategies.',;
+      benefits: ['Growthstrategies', 'Marketanalysis', 'Competitiveinsights', 'ROIoptimization'],;
   }
-    ]
-return (
-    <>
-    <>
-      <Helmet>
-        <title>5GDataAnalytics - ZionTechGroup</title>
-        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
-      </Helmet><title>PageBackup - ZionTechGroup</title>
-        <meta / />
-      </Helmet>
-      <Navigation / />
-      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900"></div>
+    ];
+return (;
+    <>;
+    <>;
+      <Helmet>;
+        <title>5GDataAnalytics - ZionTechGroup</title>;
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />;
+      </Helmet><title>PageBackup - ZionTechGroup</title>;
+        <meta / />;
+      </Helmet>;
+      <Navigation / />;
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900"></div>;
         {/* HeroSection */}
-        <sectionclassName="p y-20px-4"  > </section><divclassName="
-           </d i v><divclassName="t e xt-centermb-16"  > </div><h2 className="t e xt-4xlfont-boldtext-whitemb-4"  >SectionTitle</h2>
-              <pclassName="t e xt-xltext-gray-300">Sectiondescription</p>
-            </div>
-        </section>
-          <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" /></div>
-          <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / /></div>
-          <divclassName="r e lativemax-w-7xlmx-autotext-center"></div>
-            <h1 />PageBackup</h1>
-            <p /></p>
-    </>
-              AdvancedpagebackupsolutionspoweredbyAItechnology.
-    <>
-            </p>
-            <divclassName="f l exflex-colsm: flex-rowgap-4justify-center" / / /></div>
-              <button /></button>
-    </>
-                GetStarted
-    <>
-              </button>
-              <button /></button>
-    </>
-                LearnMore,
-    <>
-              </button>
-            </div>
-        </section>
-        <sectionclassName="r e lativepy-20px-4overflow-hidden" />
-          <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" />
-          <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
-          <divclassName="r e lativemax-w-7xlmx-autotext-center">
-            <h1 className="t e xt-5 xlmd:text-7 xlfont-boldtext-whitemb-6leading-tight" />PageBackup
-            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3 xlmx-autoleading-relaxed">
-              AdvancedpagebackupsolutionspoweredbyAItechnology.
-            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-              <buttonclassName="b g-gradient-to-rfrom-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-whitefont-boldpy-4 px-8 rounded-lgtransition-allduration-300transformhover:scale-105" />GetStarted
-              <buttonclassName="b o rderborder-purple-400 text-purple-400 hover:bg-purple-400 hover:text-whitefont-boldpy-4 px-8 rounded-lgtransition-allduration-300" />LearnMore
-    </>
+        <sectionclassName="p y-20px-4"  > </section><divclassName=";
+           </d i v><divclassName="t e xt-centermb-16"  > </div><h2 className="t e xt-4xlfont-boldtext-whitemb-4"  >SectionTitle</h2>;
+              <pclassName="t e xt-xltext-gray-300">Sectiondescription</p>;
+            </div>;
+        </section>;
+          <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" /></div>;
+          <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / /></div>;
+          <divclassName="r e lativemax-w-7xlmx-autotext-center"></div>;
+            <h1 />PageBackup</h1>;
+            <p /></p>;
+    </>;
+              AdvancedpagebackupsolutionspoweredbyAItechnology.;
+    <>;
+            </p>;
+            <divclassName="f l exflex-colsm: flex-rowgap-4justify-center" / / /></div>;
+              <button /></button>;
+    </>;
+                GetStarted;
+    <>;
+              </button>;
+              <button /></button>;
+    </>;
+                LearnMore,;
+    <>;
+              </button>;
+            </div>;
+        </section>;
+        <sectionclassName="r e lativepy-20px-4overflow-hidden" />;
+          <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" />;
+          <divclassName="a b soluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />;
+          <divclassName="r e lativemax-w-7xlmx-autotext-center">;
+            <h1 className="t e xt-5 xlmd: text-7 xlfont-boldtext-whitemb-6leading-tight" />PageBackup;
+            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3 xlmx-autoleading-relaxed">;
+              AdvancedpagebackupsolutionspoweredbyAItechnology.;
+            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">;
+              <buttonclassName="b g-gradient-to-rfrom-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-whitefont-boldpy-4 px-8 rounded-lgtransition-allduration-300transformhover:scale-105" />GetStarted;
+              <buttonclassName="b o rderborder-purple-400 text-purple-400 hover:bg-purple-400 hover:text-whitefont-boldpy-4 px-8 rounded-lgtransition-allduration-300" />LearnMore;
+    </>;
         {/* FeaturesSection */}
-        <sectionclassName="p y-20px-4"  > </section><divclassName="
-           </d i v><divclassName="t e xt-centermb-16"  > </div><h2 className="t e xt-4xlfont-boldtext-whitemb-4"  >SectionTitle</h2>
-              <pclassName="t e xt-xltext-gray-300">Sectiondescription</p>
-            </div>
-        </section>
-          <divclassName="m a x-w-7xlmx-auto" / / /></div>
-            <divclassName="t e xt-centermb-16" / / /></div>
-              <h2 /></h2>
-    </>
-                KeyFeatures
-    <>
-              </h2>
-              <p /></p>
-    </>
-                PowerfulAItechnologythatdrivesresults
-    <>
-              </p>
-            </div>
-            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8"></div>
-              {features.map((feature, index) => (
-    <>
-                <divkey="{index}" className="b g-white/5 backdrop-blur-smrounded-2 xlp-8 hover:bg-white/10 transition-allduration-300group" /></div>
-                  <divclassName="w-16 h-16 b g-gradient-to-brfrom-purple-500 to-blue-600 rounded-2 xlflexitems-centerjustify-centermb-6group-hover:scale-110transition-transform"></div>
-                    <feature / />
-                  <h3 className="t e xt-xlfont-boldtext-whitemb-4"  >{feature.title}</h3>
-                  <pclassName="t e xt-gray-300 mb-4">{feature.description}</p>
-                  {
+        <sectionclassName="p y-20px-4"  > </section><divclassName=";
+           </d i v><divclassName="t e xt-centermb-16"  > </div><h2 className="t e xt-4xlfont-boldtext-whitemb-4"  >SectionTitle</h2>;
+              <pclassName="t e xt-xltext-gray-300">Sectiondescription</p>;
+            </div>;
+        </section>;
+          <divclassName="m a x-w-7xlmx-auto" / / /></div>;
+            <divclassName="t e xt-centermb-16" / / /></div>;
+              <h2 /></h2>;
+    </>;
+                KeyFeatures;
+    <>;
+              </h2>;
+              <p /></p>;
+    </>;
+                PowerfulAItechnologythatdrivesresults;
+    <>;
+              </p>;
+            </div>;
+            <divclassName="g r idgrid-cols-1 md: grid-cols-2lg:grid-cols-4gap-8"></div>;
+              {features.map((feature, index) => (;
+    <>;
+                <divkey="{index}" className="b g-white/5 backdrop-blur-smrounded-2 xlp-8 hover: bg-white/10 transition-allduration-300group" /></div>;
+                  <divclassName="w-16 h-16 b g-gradient-to-brfrom-purple-500 to-blue-600 rounded-2 xlflexitems-centerjustify-centermb-6group-hover:scale-110transition-transform"></div>;
+                    <feature / />;
+                  <h3 className="t e xt-xlfont-boldtext-whitemb-4"  >{feature.title}</h3>;
+                  <pclassName="t e xt-gray-300 mb-4">{feature.description}</p>;
+                  {;
     feature.benefits && (;
-                    <ul>{feature.benefits.map((benefit, idx) => (
-    </div>
-    </div>
-    </div>
+                    <ul>{feature.benefits.map((benefit, idx) => (;
+    </div>;
+    </div>;
+    </div>;
   }
-                        </ul><li> </li><CheckCircle />
+                        </ul><li> </li><CheckCircle />;
                           {benefit}
-                        </li>
+                        </li>;
                       ))}
-                    </ul>
+                    </ul>;
                   )}
-                </div>
+                </div>;
               ))}
-
-    <>
-            </div>
-        </section>
-          <divclassName="m a x-w-7xlmx-auto">
-            <divclassName="t e xt-centermb-16">
-              <h2 className="t e xt-4xlmd:text-5 xlfont-boldtext-whitemb-6" />KeyFeatures
-              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">PowerfulAItechnologythatdrivesresults
-            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-              {features.map((feature, index) => (
-    <>
-                <divkey="{index}" className="b g-white/5 backdrop-blur-smrounded-2 xlp-8 hover:bg-white/10 transition-allduration-300group" />
-                  <divclassName="w-16 h-16 b g-gradient-to-brfrom-purple-500 to-blue-600 rounded-2 xlflexitems-centerjustify-centermb-6group-hover:scale-110transition-transform">
-                    <feature.iconclassName="w-8h-8t e xt-white" />
+;
+    <>;
+            </div>;
+        </section>;
+          <divclassName="m a x-w-7xlmx-auto">;
+            <divclassName="t e xt-centermb-16">;
+              <h2 className="t e xt-4xlmd: text-5 xlfont-boldtext-whitemb-6" />KeyFeatures;
+              <pclassName="t e xt-xltext-gray-300 max-w-3xlmx-auto">PowerfulAItechnologythatdrivesresults;
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">;
+              {features.map((feature, index) => (;
+    <>;
+                <divkey="{index}" className="b g-white/5 backdrop-blur-smrounded-2 xlp-8 hover: bg-white/10 transition-allduration-300group" />;
+                  <divclassName="w-16 h-16 b g-gradient-to-brfrom-purple-500 to-blue-600 rounded-2 xlflexitems-centerjustify-centermb-6group-hover:scale-110transition-transform">;
+                    <feature.iconclassName="w-8h-8t e xt-white" />;
                   <h3 className="t e xt-xlfont-boldtext-whitemb-4" />{feature.title}
                   <pclassName="t e xt-gray-300 mb-4">{feature.description}
-                  {feature.benefits && (
-                    <ulclassName="s p ace-y-2" />
-                      {feature.benefits.map((benefit, idx) => (
-    <>
-                        <likey="{idx}" className="f l exitems-centertext-smtext-gray-400" />
-                          <CheckCircleclassName="w-4 h-4t e xt-green-400mr-2" />
+                  {feature.benefits && (;
+                    <ulclassName="s p ace-y-2" />;
+                      {feature.benefits.map((benefit, idx) => (;
+    <>;
+                        <likey="{idx}" className="f l exitems-centertext-smtext-gray-400" />;
+                          <CheckCircleclassName="w-4 h-4t e xt-green-400mr-2" />;
                           {benefit}
                       ))}
                   )}
               ))}
         {/* CTASection */}
-        <sectionclassName="p y-20px-4"  > </section><divclassName="
-           </d i v><divclassName="t e xt-centermb-16"  > </div><h2 className="t e xt-4xlfont-boldtext-whitemb-4"  >SectionTitle</h2>
-              <pclassName="t e xt-xltext-gray-300">Sectiondescription</p>
-            </div>
-        </section>
-          <divclassName="m a x-w-4 xlmx-autotext-center" / / /></div>
-            <divclassName="b g-white/5 backdrop-blur-smrounded-3xlp-12" / / /></div>
-              <h2 /></h2>
-    </>
-                ReadytoGetStarted?
-    <>
-              </h2>
-              <p /></p>
-    </>
-                Contactourexpertstodiscussyourrequirementsandgetstartedtoday.
-    <>
-              </p>
-              <divclassName="f l exflex-colsm: flex-rowgap-4justify-center" / / /></div>
-                <button /></button>
-    </>
-                  ContactUs
-    <>
-                </button>
-                <button /></button>
-    </>
-                  LearnMore
-    <>
-                </button>
-              </div>
-          </div>
-        </section>
-      </div>
-      <Footer /></Footer>
-    </>
-  ),
+        <sectionclassName="p y-20px-4"  > </section><divclassName=";
+           </d i v><divclassName="t e xt-centermb-16"  > </div><h2 className="t e xt-4xlfont-boldtext-whitemb-4"  >SectionTitle</h2>;
+              <pclassName="t e xt-xltext-gray-300">Sectiondescription</p>;
+            </div>;
+        </section>;
+          <divclassName="m a x-w-4 xlmx-autotext-center" / / /></div>;
+            <divclassName="b g-white/5 backdrop-blur-smrounded-3xlp-12" / / /></div>;
+              <h2 /></h2>;
+    </>;
+                ReadytoGetStarted?;
+    <>;
+              </h2>;
+              <p /></p>;
+    </>;
+                Contactourexpertstodiscussyourrequirementsandgetstartedtoday.;
+    <>;
+              </p>;
+              <divclassName="f l exflex-colsm: flex-rowgap-4justify-center" / / /></div>;
+                <button /></button>;
+    </>;
+                  ContactUs;
+    <>;
+                </button>;
+                <button /></button>;
+    </>;
+                  LearnMore;
+    <>;
+                </button>;
+              </div>;
+          </div>;
+        </section>;
+      </div>;
+      <Footer /></Footer>;
+    </>;
+  ),;
 };
 exportdefaultPageBackupPage;
-    </>
+    </>;

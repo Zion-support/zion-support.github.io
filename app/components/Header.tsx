@@ -1,12 +1,12 @@
 import React from 'react';
 importNavigationfrom './Navigation';
-
-constHeader: React.FC = () => {
-  return (
-    <header>
-      <Navigation />
-    </header>
+;
+constHeader: React.FC = () => {return (;
+    <header>;
+      <Navigation />;
+    </header>;
   );
 };
-
+;
 exportdefaultHeader;
+;

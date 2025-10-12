@@ -1,68 +1,66 @@
 'useclient';
-importReact, { Suspense, lazy } from 'react';
-
-// LazyloadcomponentsforbetterperformanceinterfaceLoadingOptimizerProps {
-  children: React.ReactNode;
+importReact, {Suspense, lazy } from 'react';
+;
+// LazyloadcomponentsforbetterperformanceinterfaceLoadingOptimizerProps {children: React.ReactNode;
   fallback?: React.ReactNode;
 }
-
-constLoadingOptimizer: React.FC<LoadingOptimizerProps> = ({ 
-  children, 
-  fallback = <DefaultLoadingSpinner /> 
-}) => {
-  return (
-    <Suspensefallback={fallback}>
+;
+constLoadingOptimizer: React.FC<LoadingOptimizerProps> = ({children,;
+  fallback = <DefaultLoadingSpinner />;
+}) => {return (;
+    <Suspensefallback={fallback}>;
       {children}
-    </Suspense>
+    </Suspense>;
   );
 };
-
-constDefaultLoadingSpinner: React.FC = () => (
-  <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 flexitems-centerjustify-center">
-    <divclassName="t e xt-center">
-      <divclassName="a n imate-spinrounded-fullh-32 w-32 border-b-2 border-cyan-400 mx-automb-4"></div>
-      <pclassName="t e xt-whitetext-lg">Loading...</p>
-    </div>
-  </div>
+;
+constDefaultLoadingSpinner: React.FC = () => (;
+  <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 flexitems-centerjustify-center">;
+    <divclassName="t e xt-center">;
+      <divclassName="a n imate-spinrounded-fullh-32 w-32 border-b-2 border-cyan-400 mx-automb-4"></div>;
+      <pclassName="t e xt-whitetext-lg">Loading...</p>;
+    </div>;
+  </div>;
 );
-
-// SkeletonloadersfordifferentcomponentsexportconstServiceCardSkeleton: React.FC = () => (
-  <divclassName="b g-gradient-to-brfrom-slate-800/50 to-slate-900/50 p-8 rounded-2xlborderborder-slate-700/50 animate-pulse">
-    <divclassName="w-16 h-16 b g-slate-700 rounded-fullmb-6"></div>
-    <divclassName="h-6 b g-slate-700 roundedmb-4"></div>
-    <divclassName="h-4 b g-slate-700 roundedmb-2"></div>
-    <divclassName="h-4 b g-slate-700 roundedw-3/4"></div>
-  </div>
+;
+// SkeletonloadersfordifferentcomponentsexportconstServiceCardSkeleton: React.FC = () => (;
+  <divclassName="b g-gradient-to-brfrom-slate-800/50 to-slate-900/50 p-8 rounded-2xlborderborder-slate-700/50 animate-pulse">;
+    <divclassName="w-16 h-16 b g-slate-700 rounded-fullmb-6"></div>;
+    <divclassName="h-6 b g-slate-700 roundedmb-4"></div>;
+    <divclassName="h-4 b g-slate-700 roundedmb-2"></div>;
+    <divclassName="h-4 b g-slate-700 roundedw-3/4"></div>;
+  </div>;
 );
-
-exportconstHeroSkeleton: React.FC = () => (
-  <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 flexitems-centerjustify-center">
-    <divclassName="t e xt-centermax-w-4xlmx-autopx-4">
-      <divclassName="h-16 b g-slate-700 roundedmb-6 animate-pulse"></div>
-      <divclassName="h-6 b g-slate-700 roundedmb-4 animate-pulse"></div>
-      <divclassName="h-6 b g-slate-700 roundedmb-8 w-3/4 mx-autoanimate-pulse"></div>
-      <divclassName="f l exflex-colsm:flex-rowgap-4 justify-center">
-        <divclassName="h-12 b g-slate-700 roundedw-48 animate-pulse"></div>
-        <divclassName="h-12 b g-slate-700 roundedw-48 animate-pulse"></div>
-      </div>
-    </div>
-  </div>
+;
+exportconstHeroSkeleton: React.FC = () => (;
+  <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 flexitems-centerjustify-center">;
+    <divclassName="t e xt-centermax-w-4xlmx-autopx-4">;
+      <divclassName="h-16 b g-slate-700 roundedmb-6 animate-pulse"></div>;
+      <divclassName="h-6 b g-slate-700 roundedmb-4 animate-pulse"></div>;
+      <divclassName="h-6 b g-slate-700 roundedmb-8 w-3/4 mx-autoanimate-pulse"></div>;
+      <divclassName="f l exflex-colsm:flex-rowgap-4 justify-center">;
+        <divclassName="h-12 b g-slate-700 roundedw-48 animate-pulse"></div>;
+        <divclassName="h-12 b g-slate-700 roundedw-48 animate-pulse"></div>;
+      </div>;
+    </div>;
+  </div>;
 );
-
-exportconstNavigationSkeleton: React.FC = () => (
-  <navclassName="f i xedtop-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-mdborder-bborder-slate-700/50">
-    <divclassName="c o ntainermx-autopx-4 py-4">
-      <divclassName="f l exitems-centerjustify-between">
-        <divclassName="h-8 b g-slate-700 roundedw-32 animate-pulse"></div>
-        <divclassName="h i ddenmd:flexspace-x-8">
-          {[...Array(6)].map((_, i) => (
-            <divkey={i} className="h-4 b g-slate-700 roundedw-16 animate-pulse"></div>
+;
+exportconstNavigationSkeleton: React.FC = () => (;
+  <navclassName="f i xedtop-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-mdborder-bborder-slate-700/50">;
+    <divclassName="c o ntainermx-autopx-4 py-4">;
+      <divclassName="f l exitems-centerjustify-between">;
+        <divclassName="h-8 b g-slate-700 roundedw-32 animate-pulse"></div>;
+        <divclassName="h i ddenmd:flexspace-x-8">;
+          {[...Array(6)].map((_, i) => (;
+            <divkey={i} className="h-4 b g-slate-700 roundedw-16 animate-pulse"></div>;
           ))}
-        </div>
-        <divclassName="h-10 b g-slate-700 roundedw-24 animate-pulse"></div>
-      </div>
-    </div>
-  </nav>
+        </div>;
+        <divclassName="h-10 b g-slate-700 roundedw-24 animate-pulse"></div>;
+      </div>;
+    </div>;
+  </nav>;
 );
-
+;
 exportdefaultLoadingOptimizer;
+;

@@ -1,959 +1,886 @@
 'useclient';
-import { useState, useEffect  } from 'react';
-import { Link   } from 'react-router-dom';
-import { ;
-  ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
-  BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
-  Settings, Heart, Eye, Mic, Workflow, LinkasLinkIcon, Wifi, Package, 
-  TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
-  Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock
+import {useState, useEffect  } from 'react';
+import {Link   } from 'react-router-dom';
+import {;
+  ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code,;
+  BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box,;
+  Settings, Heart, Eye, Mic, Workflow, LinkasLinkIcon, Wifi, Package,;
+  TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database,;
+  Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock;
   } from 'lucide-react';
-import { ArrowRight, ShoppingCart   } from 'lucide-react';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, LinkasLinkIcon, Package, TrendingUp, Calendar, Globe, Database, Monitor, Mail   } from 'lucide-react';
-
-constMicroSaasPage: React.FC = () => {
-
-  useEffect(() => {
+import {ArrowRight, ShoppingCart   } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, LinkasLinkIcon, Package, TrendingUp, Calendar, Globe, Database, Monitor, Mail   } from 'lucide-react';
+;
+constMicroSaasPage: React.FC = () => {useEffect(() => {
     setIsVisible(true);
   }, []);
-
-  constmicroSaasProducts = [
-    {
-      id: 'zion-analytics-pro',
-      title: 'ZionAnalyticsPro',
-      description: 'AdvancedbusinessintelligenceplatformwithAI-poweredinsightsandreal-timedashboards',
-      price: '$99/month',
-      originalPrice: '$149/month',
-      features: [
-        'Real-timeanalyticsdashboard',
-        'AI-poweredpredictiveinsights',
-        'Customreportgeneration',
-        'Teamcollaborationtools',
-        'APIintegrations',
-        'Mobileappaccess',
-        'Datavisualizationtools',
-        'Exporttomultipleformats'
-      ],
-      icon: BarChart,
-      color: 'from-blue-500 to-purple-500',
-      category: 'Analytics',
-      rating: 4.9,
-      reviews: 127,
-      popular: true
-    },
-    {
-      id: 'zion-chat-ai',
-      title: 'ZionChatAI',
-      description: 'Intelligentcustomersupportchatbotwithnaturallanguageprocessingandmulti-channelsupport',
-      price: '$79/month',
-      originalPrice: '$119/month',
-      features: [
-        'Multi-languagesupport',
-        'Sentimentanalysis',
-        'Escalationmanagement',
-        'Performanceanalytics',
-        'Customtraining',
-        'IntegrationAPIs',
-        'Livechathandoff',
-        'Knowledgebasemanagement'
-      ],
-      icon: MessageCircle,
-      color: 'from-green-500 to-teal-500',
-      category: 'CustomerSupport',
-      rating: 4.8,
-      reviews: 89,
-      popular: false
-    },
-    {
-      id: 'zion-security-shield',
-      title: 'ZionSecurityShield',
-      description: 'Comprehensivecybersecuritymonitoringandthreatdetectionforsmalltomediumbusinesses',
-      price: '$149/month',
-      originalPrice: '$199/month',
-      features: [
-        'Real-timethreatdetection',
-        'Vulnerabilityscanning',
-        'Incidentresponseautomation',
-        'Compliancereporting',
-        'Securityawarenesstraining',
-        '24/7 monitoring',
-        'Mobiledevicemanagement',
-        'Firewallmanagement'
-      ],
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      category: 'Security',
-      rating: 4.9,
-      reviews: 156,
-      popular: true
-    },
-    {
-      id: 'zion-cloud-vault',
-      title: 'ZionCloudVault',
-      description: 'Securecloudbackupanddisasterrecoverysolutionwithautomatedbackupsandinstantrestore',
-      price: '$59/month',
-      originalPrice: '$89/month',
-      features: [
-        'Automateddailybackups',
-        'Instantfilerecovery',
-        'Versionhistorytracking',
-        'Cross-platformsync',
-        'End-to-endencryption',
-        'Compliancecertifications',
-        'Unlimitedstorage',
-        'Mobileaccess'
-      ],
-      icon: Cloud,
-      color: 'from-cyan-500 to-blue-500',
-      category: 'Backup & Recovery',
-      rating: 4.7,
-      reviews: 203,
-      popular: false
-    },
-    {
-      id: 'zion-content-studio',
-      title: 'ZionContentStudio',
-      description: 'AI-poweredcontentcreationandmanagementplatformforblogs, socialmedia, andmarketing',
-      price: '$69/month',
-      originalPrice: '$99/month',
-      features: [
-        'AIcontentgeneration',
-        'Multi-platformpublishing',
-        'Brandvoicetraining',
-        'Contentcalendar',
-        'SEOoptimization',
-        'Imagegeneration',
-        'Videocreationtools',
-        'Performancetracking'
-      ],
-      icon: FileText,
-      color: 'from-purple-500 to-pink-500',
-      category: 'ContentCreation',
-      rating: 4.6,
-      reviews: 94,
-      popular: false
-    },
-    {
-      id: 'zion-crm-intelligence',
-      title: 'ZionCRMIntelligence',
-      description: 'SmartcustomerrelationshipmanagementwithAIinsightsandautomatedworkflows',
-      price: '$89/month',
-      originalPrice: '$129/month',
-      features: [
-        'Leadscoringautomation',
-        'Salesforecasting',
-        'Customerinsights',
-        'Automationworkflows',
-        'Emailmarketing',
-        'Pipelinemanagement',
-        'Teamcollaboration',
-        'MobileCRMaccess'
-      ],
-      icon: Users,
-      color: 'from-indigo-500 to-purple-500',
-      category: 'CRM',
-      rating: 4.8,
-      reviews: 142,
-      popular: true
-    },
-    {
-      id: 'zion-data-sync',
-      title: 'ZionDataSync',
-      description: 'Automateddatasynchronizationacrossmultipleplatformsanddatabases',
-      price: '$49/month',
-      originalPrice: '$79/month',
-      features: [
-        'Real-timedatasync',
-        'Multipleplatformsupport',
-        'Datatransformation',
-        'Errorhandling',
-        'Scheduledsyncs',
-        'Datavalidation',
-        'APIintegrations',
-        'Monitoringdashboard'
-      ],
-      icon: Database,
-      color: 'from-emerald-500 to-green-500',
-      category: 'DataManagement',
-      rating: 4.5,
-      reviews: 67,
-      popular: false
-    },
-    {
-      id: 'zion-lead-magnet',
-      title: 'ZionLeadMagnet',
-      description: 'Leadgenerationandnurturingplatformwithautomatedemailsequencesandlandingpages',
-      price: '$79/month',
-      originalPrice: '$119/month',
-      features: [
-        'Landingpagebuilder',
-        'Emailautomation',
-        'Leadscoring',
-        'A/Btesting',
-        'Analyticsdashboard',
-        'CRMintegration',
-        'Formbuilder',
-        'Socialmediaintegration'
-      ],
-      icon: Target,
-      color: 'from-yellow-500 to-orange-500',
-      category: 'Marketing',
-      rating: 4.7,
-      reviews: 118,
-      popular: false
-    },
-    {
-      id: 'zion-project-master',
-      title: 'ZionProjectMaster',
-      description: 'AdvancedprojectmanagementwithAI-poweredinsightsandteamcollaborationtools',
-      price: '$99/month',
-      originalPrice: '$149/month',
-      features: [
-        'Ganttcharts',
-        'Resourcemanagement',
-        'Timetracking',
-        'Budgetmonitoring',
-        'Teamcollaboration',
-        'Filesharing',
-        'Progressreporting',
-        'Mobileapp'
-      ],
-      icon: CheckSquare,
-      color: 'from-violet-500 to-purple-500',
-      category: 'ProjectManagement',
-      rating: 4.8,
-      reviews: 175,
-      popular: true
-    },
-    {
-      id: 'zion-email-automation',
-      title: 'ZionEmailAutomation',
-      description: 'IntelligentemailmarketingplatformwithAI-poweredpersonalizationandautomation',
-      price: '$59/month',
-      originalPrice: '$89/month',
-      features: [
-        'Emailtemplates',
-        'Automationworkflows',
-        'Personalizationengine',
-        'A/Btesting',
-        'Analyticstracking',
-        'Listmanagement',
-        'Dripcampaigns',
-        'IntegrationAPIs'
-      ],
-      icon: Mail,
-      color: 'from-pink-500 to-rose-500',
-      category: 'EmailMarketing',
-      rating: 4.6,
-      reviews: 89,
-      popular: false
-    },
-    {
-      id: 'zion-inventory-smart',
-      title: 'ZionInventorySmart',
-      description: 'AI-poweredinventorymanagementwithdemandforecastingandautomatedreordering',
-      price: '$89/month',
-      originalPrice: '$129/month',
-      features: [
-        'Demandforecasting',
-        'Automatedreordering',
-        'Stocklevelmonitoring',
-        'Suppliermanagement',
-        'Barcodescanning',
-        'Multi-locationsupport',
-        'Reportingdashboard',
-        'Mobileapp'
-      ],
-      icon: Box,
-      color: 'from-teal-500 to-cyan-500',
-      category: 'Inventory',
-      rating: 4.7,
-      reviews: 134,
-      popular: false
-    },
-    {
-      id: 'zion-invoice-genius',
-      title: 'ZionInvoiceGenius',
-      description: 'AutomatedinvoicingandpaymentprocessingwithAI-poweredexpensecategorization',
-      price: '$49/month',
-      originalPrice: '$79/month',
-      features: [
-        'Automatedinvoicing',
-        'Paymentprocessing',
-        'Expensecategorization',
-        'Taxcalculations',
-        'Clientportal',
-        'Recurringbilling',
-        'Financialreporting',
-        'Multi-currencysupport'
-      ],
-      icon: DollarSign,
-      color: 'from-green-500 to-emerald-500',
-      category: 'Finance',
-      rating: 4.8,
-      reviews: 156,
-      popular: true
-    },
-    {
-      id: 'zion-ai-video-editor',
-      title: 'ZionAIVideoEditor',
-      description: 'AI-poweredvideoeditingwithautomaticscenedetection, colorcorrection, andsmarttransitions',
-      price: '$89/month',
-      originalPrice: '$129/month',
-      features: [
-        'Autoscenedetection',
-        'Smartcolorcorrection',
-        'AI-generatedtransitions',
-        'Voice-overgeneration',
-        'Backgroundremoval',
-        'Text-to-video',
-        'Multi-formatexport',
-        'Cloudrendering'
-      ],
-      icon: Monitor,
-      color: 'from-purple-500 to-pink-500',
-      category: 'VideoProduction',
-      rating: 4.7,
-      reviews: 98,
-      popular: false
-    },
-    {
-      id: 'zion-ai-translator-pro',
-      title: 'ZionAITranslatorPro',
-      description: 'AdvancedAItranslationwithcontextawarenessandindustry-specificterminologysupport',
-      price: '$69/month',
-      originalPrice: '$99/month',
-      features: [
-        '100+ languagesupport',
-        'Context-awaretranslation',
-        'Industryterminology',
-        'Real-timetranslation',
-        'Documenttranslation',
-        'Voicetranslation',
-        'APIintegration',
-        'Qualityscoring'
-      ],
-      icon: Globe,
-      color: 'from-blue-500 to-cyan-500',
-      category: 'Translation',
-      rating: 4.6,
-      reviews: 134,
-      popular: false
-    },
-    {
-      id: 'zion-ai-code-reviewer',
-      title: 'ZionAICodeReviewer',
-      description: 'Intelligentcodereviewwithautomatedbugdetection, securityanalysis, andperformanceoptimization',
-      price: '$149/month',
-      originalPrice: '$199/month',
-      features: [
-        'Automatedcodereview',
-        'Bugdetection',
-        'Securityvulnerabilityscan',
-        'Performanceoptimization',
-        'Codequalitymetrics',
-        'Bestpracticesuggestions',
-        'Multi-languagesupport',
-        'Gitintegration'
-      ],
-      icon: Code,
-      color: 'from-indigo-500 to-purple-500',
-      category: 'Development',
-      rating: 4.8,
-      reviews: 187,
-      popular: true
-    },
-    {
-      id: 'zion-customer-insights',
-      title: 'ZionCustomerInsights',
-      description: 'AI-poweredcustomerbehavioranalysiswithpredictiveinsightsandpersonalizedrecommendations',
-      price: '$119/month',
-      originalPrice: '$159/month',
-      features: [
-        'Customersegmentation',
-        'Behaviorprediction',
-        'Churnanalysis',
-        'Personalizationengine',
-        'Sentimentanalysis',
-        'Lifetimevalueprediction',
-        'Recommendationsystem',
-        'Real-timeinsights'
-      ],
-      icon: Users,
-      color: 'from-teal-500 to-cyan-500',
-      category: 'Analytics',
-      rating: 4.7,
-      reviews: 145,
-      popular: false
-    },
-    {
-      id: 'zion-ai-email-assistant',
-      title: 'ZionAIEmailAssistant',
-      description: 'SmartemailmanagementwithAI-poweredresponses, scheduling, andpriorityclassification',
-      price: '$59/month',
-      originalPrice: '$89/month',
-      features: [
-        'AIemailresponses',
-        'Smartscheduling',
-        'Priorityclassification',
-        'Spamfiltering',
-        'Emailtemplates',
-        'Follow-upautomation',
-        'Sentimentanalysis',
-        'Calendarintegration'
-      ],
-      icon: Mail,
-      color: 'from-orange-500 to-red-500',
-      category: 'Productivity',
-      rating: 4.5,
-      reviews: 112,
-      popular: false
-    },
-    {
-      id: 'zion-ai-meeting-assistant',
-      title: 'ZionAIMeetingAssistant',
-      description: 'Intelligentmeetingmanagementwithtranscription, actionitems, andfollow-upautomation',
-      price: '$79/month',
-      originalPrice: '$119/month',
-      features: [
-        'Real-timetranscription',
-        'Actionitemextraction',
-        'Meetingsummaries',
-        'Follow-upautomation',
-        'Voicerecognition',
-        'Multi-languagesupport',
-        'Calendarintegration',
-        'Teamcollaboration'
-      ],
-      icon: Calendar,
-      color: 'from-green-500 to-emerald-500',
-      category: 'Productivity',
-      rating: 4.6,
-      reviews: 98,
-      popular: false
-    },
-    {
-      id: 'zion-ai-seo-optimizer',
-      title: 'ZionAISEOOptimizer',
-      description: 'AI-poweredSEOoptimizationwithcontentanalysis, keywordresearch, andrankingpredictions',
-      price: '$99/month',
-      originalPrice: '$149/month',
-      features: [
-        'Contentoptimization',
-        'Keywordresearch',
-        'Rankingpredictions',
-        'Competitoranalysis',
-        'TechnicalSEOaudit',
-        'Linkbuildingsuggestions',
-        'Performancetracking',
-        'Automatedreports'
-      ],
-      icon: TrendingUp,
-      color: 'from-yellow-500 to-orange-500',
-      category: 'Marketing',
-      rating: 4.7,
-      reviews: 167,
-      popular: true
-    },
-    {
-      id: 'zion-ai-data-cleaner',
-      title: 'ZionAIDataCleaner',
-      description: 'Intelligentdatacleaningandvalidationwithautomatederrordetectionandcorrection',
-      price: '$89/month',
-      originalPrice: '$129/month',
-      features: [
-        'Automateddatacleaning',
-        'Errordetection',
-        'Duplicateremoval',
-        'Datavalidation',
-        'Formatstandardization',
-        'Missingdataimputation',
-        'Qualityscoring',
-        'APIintegration'
-      ],
-      icon: Database,
-      color: 'from-gray-500 to-slate-500',
-      category: 'DataManagement',
-      rating: 4.6,
-      reviews: 89,
-      popular: false
-    },
-    {
-      id: 'zion-ai-contract-analyzer',
-      title: 'ZionAIContractAnalyzer',
-      description: 'AI-poweredcontractanalysiswithriskassessment, clauseextraction, andcompliancechecking',
-      price: '$199/month',
-      originalPrice: '$299/month',
-      features: [
-        'Contractanalysis',
-        'Riskassessment',
-        'Clauseextraction',
-        'Compliancechecking',
-        'Versioncomparison',
-        'Automatedsummaries',
-        'Legalinsights',
-        'Documentmanagement'
-      ],
-      icon: FileText,
-      color: 'from-violet-500 to-purple-500',
-      category: 'Legal',
-      rating: 4.8,
-      reviews: 76,
-      popular: false
-    },
-    {
-      id: 'zion-ai-survey-builder',
-      title: 'ZionAISurveyBuilder',
-      description: 'IntelligentsurveycreationwithAI-generatedquestions, responseanalysis, andinsights',
-      price: '$69/month',
-      originalPrice: '$99/month',
-      features: [
-        'AIquestiongeneration',
-        'Responseanalysis',
-        'Sentimentanalysis',
-        'Datavisualization',
-        'Customthemes',
-        'Multi-platformdistribution',
-        'Real-timeanalytics',
-        'Exportcapabilities'
-      ],
-      icon: CheckSquare,
-      color: 'from-pink-500 to-rose-500',
-      category: 'Research',
-      rating: 4.5,
-      reviews: 123,
-      popular: false
-    },
-    {
-      id: 'zion-ai-accounting-assistant',
-      title: 'ZionAIAccountingAssistant',
-      description: 'Smartaccountingautomationwithexpensecategorization, taxpreparation, andfinancialinsights',
-      price: '$129/month',
-      originalPrice: '$179/month',
-      features: [
-        'Expensecategorization',
-        'Taxpreparation',
-        'Financialinsights',
-        'Receiptscanning',
-        'Invoicematching',
-        'Compliancemonitoring',
-        'Reportingautomation',
-        'Multi-currencysupport'
-      ],
-      icon: DollarSign,
-      color: 'from-emerald-500 to-green-500',
-      category: 'Finance',
-      rating: 4.7,
-      reviews: 156,
-      popular: true
-    },
-    {
-      id: 'zion-ai-recruitment-pro',
-      title: 'ZionAIRecruitmentPro',
-      description: 'AI-poweredrecruitmentwithresumescreening, candidatematching, andinterviewscheduling',
-      price: '$179/month',
-      originalPrice: '$249/month',
-      features: [
-        'Resumescreening',
-        'Candidatematching',
-        'Interviewscheduling',
-        'Skillassessment',
-        'Backgroundchecks',
-        'Onboardingautomation',
-        'Performancetracking',
-        'Integrationcapabilities'
-      ],
-      icon: Users,
-      color: 'from-blue-500 to-indigo-500',
-      category: 'HR',
-      rating: 4.8,
-      reviews: 134,
-      popular: true
-    },
-    {
-      id: 'zion-ai-content-moderation',
-      title: 'ZionAIContentModeration',
-      description: 'AutomatedcontentmoderationwithAI-powereddetectionofinappropriatecontentandspam',
-      price: '$149/month',
-      originalPrice: '$199/month',
-      features: [
-        'Contentfiltering',
-        'Spamdetection',
-        'Imageanalysis',
-        'Textanalysis',
-        'Videomoderation',
-        'Real-timeprocessing',
-        'Customrules',
-        'APIintegration'
-      ],
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      category: 'Security',
-      rating: 4.6,
-      reviews: 98,
-      popular: false
-    },
-    {
-      id: 'zion-ai-predictive-maintenance',
-      title: 'ZionAIPredictiveMaintenance',
-      description: 'AI-poweredequipmentmonitoringwithpredictivemaintenanceandfailureprevention',
-      price: '$299/month',
-      originalPrice: '$399/month',
-      features: [
-        'Equipmentmonitoring',
-        'Failureprediction',
-        'Maintenancescheduling',
-        'Performanceanalytics',
-        'Alertsystem',
-        'Costoptimization',
-        'IoTintegration',
-        'Customdashboards'
-      ],
-      icon: Settings,
-      color: 'from-cyan-500 to-blue-500',
-      category: 'IoT',
-      rating: 4.7,
-      reviews: 67,
-      popular: false
-    },
-    {
-      id: 'zion-ai-energy-manager',
-      title: 'ZionAIEnergyManager',
-      description: 'Smartenergymanagementwithconsumptionoptimizationandcostreductionrecommendations',
-      price: '$199/month',
-      originalPrice: '$279/month',
-      features: [
-        'Energymonitoring',
-        'Consumptionoptimization',
-        'Costanalysis',
-        'Predictivemodeling',
-        'Automatedcontrols',
-        'Sustainabilitytracking',
-        'Reportingdashboard',
-        'IoTintegration'
-      ],
-      icon: Zap,
-      color: 'from-yellow-500 to-orange-500',
-      category: 'Sustainability',
-      rating: 4.5,
-      reviews: 89,
-      popular: false
-    },
-    {
-      id: 'zion-ai-supply-chain-optimizer',
-      title: 'ZionAISupplyChainOptimizer',
-      description: 'AI-poweredsupplychainoptimizationwithdemandforecastingandinventorymanagement',
-      price: '$249/month',
-      originalPrice: '$349/month',
-      features: [
-        'Demandforecasting',
-        'Inventoryoptimization',
-        'Routeoptimization',
-        'Supplieranalysis',
-        'Riskassessment',
-        'Costoptimization',
-        'Real-timetracking',
-        'Integrationcapabilities'
-      ],
-      icon: Package,
-      color: 'from-indigo-500 to-purple-500',
-      category: 'SupplyChain',
-      rating: 4.8,
-      reviews: 112,
-      popular: true
-    },
-    {
-      id: 'zion-ai-fraud-detector',
-      title: 'ZionAIFraudDetector',
-      description: 'Advancedfrauddetectionwithmachinelearningmodelsandreal-timetransactionmonitoring',
-      price: '$179/month',
-      originalPrice: '$249/month',
-      features: [
-        'Real-timemonitoring',
-        'Patternrecognition',
-        'Riskscoring',
-        'Transactionanalysis',
-        'Alertsystem',
-        'Machinelearningmodels',
-        'APIintegration',
-        'Compliancereporting'
-      ],
-      icon: Shield,
-      color: 'from-red-500 to-pink-500',
-      category: 'Security',
-      rating: 4.9,
-      reviews: 198,
-      popular: true
-    },
-    {
-      id: 'zion-ai-customer-service-pro',
-      title: 'ZionAICustomerServicePro',
-      description: 'AdvancedAIcustomerservicewithmulti-channelsupportandintelligentrouting',
-      price: '$159/month',
-      originalPrice: '$219/month',
-      features: [
-        'Multi-channelsupport',
-        'Intelligentrouting',
-        'Sentimentanalysis',
-        'Escalationmanagement',
-        'Knowledgebase',
-        'Performanceanalytics',
-        'Integrationcapabilities',
-        'Customtraining'
-      ],
-      icon: MessageCircle,
-      color: 'from-green-500 to-teal-500',
-      category: 'CustomerSupport',
-      rating: 4.7,
-      reviews: 167,
-      popular: true
-    },
-    {
-      id: 'zion-ai-marketing-automation',
-      title: 'ZionAIMarketingAutomation',
-      description: 'Intelligentmarketingautomationwithpersonalizedcampaignsandcustomerjourneyoptimization',
-      price: '$139/month',
-      originalPrice: '$189/month',
-      features: [
-        'Campaignautomation',
-        'Personalizationengine',
-        'Customerjourneymapping',
-        'A/Btesting',
-        'Performanceanalytics',
-        'Leadscoring',
-        'Emailmarketing',
-        'Socialmediaintegration'
-      ],
-      icon: Target,
-      color: 'from-purple-500 to-pink-500',
-      category: 'Marketing',
-      rating: 4.6,
-      reviews: 145,
-      popular: false
-    },
-    {
-      id: 'zion-ai-document-ai',
-      title: 'ZionAIDocumentAI',
-      description: 'AdvanceddocumentprocessingwithOCR, dataextraction, andintelligentdocumentanalysis',
-      price: '$119/month',
-      originalPrice: '$159/month',
-      features: [
-        'OCRtechnology',
-        'Dataextraction',
-        'Documentclassification',
-        'Formprocessing',
-        'Textanalysis',
-        'Versioncontrol',
-        'Searchcapabilities',
-        'APIintegration'
-      ],
-      icon: FileText,
-      color: 'from-gray-500 to-slate-500',
-      category: 'DocumentManagement',
-      rating: 4.7,
-      reviews: 123,
-      popular: false
+;
+  constmicroSaasProducts = [{id: 'zion-analytics-pro',;
+      title: 'ZionAnalyticsPro',;
+      description: 'AdvancedbusinessintelligenceplatformwithAI-poweredinsightsandreal-timedashboards',;
+      price: '$99/month',;
+      originalPrice: '$149/month',;
+      features: [;
+        'Real-timeanalyticsdashboard',;
+        'AI-poweredpredictiveinsights',;
+        'Customreportgeneration',;
+        'Teamcollaborationtools',;
+        'APIintegrations',;
+        'Mobileappaccess',;
+        'Datavisualizationtools',;
+        'Exporttomultipleformats';
+      ],;
+      icon: BarChart,;
+      color: 'from-blue-500 to-purple-500',;
+      category: 'Analytics',;
+      rating: 4.9,;
+      reviews: 127,;
+      popular: true;
+    },;
+    {id: 'zion-chat-ai',;
+      title: 'ZionChatAI',;
+      description: 'Intelligentcustomersupportchatbotwithnaturallanguageprocessingandmulti-channelsupport',;
+      price: '$79/month',;
+      originalPrice: '$119/month',;
+      features: ['Multi-languagesupport',;
+        'Sentimentanalysis',;
+        'Escalationmanagement',;
+        'Performanceanalytics',;
+        'Customtraining',;
+        'IntegrationAPIs',;
+        'Livechathandoff',;
+        'Knowledgebasemanagement';
+      ],;
+      icon: MessageCircle,;
+      color: 'from-green-500 to-teal-500',;
+      category: 'CustomerSupport',;
+      rating: 4.8,;
+      reviews: 89,;
+      popular: false;
+    },;
+    {id: 'zion-security-shield',;
+      title: 'ZionSecurityShield',;
+      description: 'Comprehensivecybersecuritymonitoringandthreatdetectionforsmalltomediumbusinesses',;
+      price: '$149/month',;
+      originalPrice: '$199/month',;
+      features: ['Real-timethreatdetection',;
+        'Vulnerabilityscanning',;
+        'Incidentresponseautomation',;
+        'Compliancereporting',;
+        'Securityawarenesstraining',;
+        '24/7 monitoring',;
+        'Mobiledevicemanagement',;
+        'Firewallmanagement';
+      ],;
+      icon: Shield,;
+      color: 'from-red-500 to-orange-500',;
+      category: 'Security',;
+      rating: 4.9,;
+      reviews: 156,;
+      popular: true;
+    },;
+    {id: 'zion-cloud-vault',;
+      title: 'ZionCloudVault',;
+      description: 'Securecloudbackupanddisasterrecoverysolutionwithautomatedbackupsandinstantrestore',;
+      price: '$59/month',;
+      originalPrice: '$89/month',;
+      features: ['Automateddailybackups',;
+        'Instantfilerecovery',;
+        'Versionhistorytracking',;
+        'Cross-platformsync',;
+        'End-to-endencryption',;
+        'Compliancecertifications',;
+        'Unlimitedstorage',;
+        'Mobileaccess';
+      ],;
+      icon: Cloud,;
+      color: 'from-cyan-500 to-blue-500',;
+      category: 'Backup & Recovery',;
+      rating: 4.7,;
+      reviews: 203,;
+      popular: false;
+    },;
+    {id: 'zion-content-studio',;
+      title: 'ZionContentStudio',;
+      description: 'AI-poweredcontentcreationandmanagementplatformforblogs, socialmedia, andmarketing',;
+      price: '$69/month',;
+      originalPrice: '$99/month',;
+      features: ['AIcontentgeneration',;
+        'Multi-platformpublishing',;
+        'Brandvoicetraining',;
+        'Contentcalendar',;
+        'SEOoptimization',;
+        'Imagegeneration',;
+        'Videocreationtools',;
+        'Performancetracking';
+      ],;
+      icon: FileText,;
+      color: 'from-purple-500 to-pink-500',;
+      category: 'ContentCreation',;
+      rating: 4.6,;
+      reviews: 94,;
+      popular: false;
+    },;
+    {id: 'zion-crm-intelligence',;
+      title: 'ZionCRMIntelligence',;
+      description: 'SmartcustomerrelationshipmanagementwithAIinsightsandautomatedworkflows',;
+      price: '$89/month',;
+      originalPrice: '$129/month',;
+      features: ['Leadscoringautomation',;
+        'Salesforecasting',;
+        'Customerinsights',;
+        'Automationworkflows',;
+        'Emailmarketing',;
+        'Pipelinemanagement',;
+        'Teamcollaboration',;
+        'MobileCRMaccess';
+      ],;
+      icon: Users,;
+      color: 'from-indigo-500 to-purple-500',;
+      category: 'CRM',;
+      rating: 4.8,;
+      reviews: 142,;
+      popular: true;
+    },;
+    {id: 'zion-data-sync',;
+      title: 'ZionDataSync',;
+      description: 'Automateddatasynchronizationacrossmultipleplatformsanddatabases',;
+      price: '$49/month',;
+      originalPrice: '$79/month',;
+      features: ['Real-timedatasync',;
+        'Multipleplatformsupport',;
+        'Datatransformation',;
+        'Errorhandling',;
+        'Scheduledsyncs',;
+        'Datavalidation',;
+        'APIintegrations',;
+        'Monitoringdashboard';
+      ],;
+      icon: Database,;
+      color: 'from-emerald-500 to-green-500',;
+      category: 'DataManagement',;
+      rating: 4.5,;
+      reviews: 67,;
+      popular: false;
+    },;
+    {id: 'zion-lead-magnet',;
+      title: 'ZionLeadMagnet',;
+      description: 'Leadgenerationandnurturingplatformwithautomatedemailsequencesandlandingpages',;
+      price: '$79/month',;
+      originalPrice: '$119/month',;
+      features: ['Landingpagebuilder',;
+        'Emailautomation',;
+        'Leadscoring',;
+        'A/Btesting',;
+        'Analyticsdashboard',;
+        'CRMintegration',;
+        'Formbuilder',;
+        'Socialmediaintegration';
+      ],;
+      icon: Target,;
+      color: 'from-yellow-500 to-orange-500',;
+      category: 'Marketing',;
+      rating: 4.7,;
+      reviews: 118,;
+      popular: false;
+    },;
+    {id: 'zion-project-master',;
+      title: 'ZionProjectMaster',;
+      description: 'AdvancedprojectmanagementwithAI-poweredinsightsandteamcollaborationtools',;
+      price: '$99/month',;
+      originalPrice: '$149/month',;
+      features: ['Ganttcharts',;
+        'Resourcemanagement',;
+        'Timetracking',;
+        'Budgetmonitoring',;
+        'Teamcollaboration',;
+        'Filesharing',;
+        'Progressreporting',;
+        'Mobileapp';
+      ],;
+      icon: CheckSquare,;
+      color: 'from-violet-500 to-purple-500',;
+      category: 'ProjectManagement',;
+      rating: 4.8,;
+      reviews: 175,;
+      popular: true;
+    },;
+    {id: 'zion-email-automation',;
+      title: 'ZionEmailAutomation',;
+      description: 'IntelligentemailmarketingplatformwithAI-poweredpersonalizationandautomation',;
+      price: '$59/month',;
+      originalPrice: '$89/month',;
+      features: ['Emailtemplates',;
+        'Automationworkflows',;
+        'Personalizationengine',;
+        'A/Btesting',;
+        'Analyticstracking',;
+        'Listmanagement',;
+        'Dripcampaigns',;
+        'IntegrationAPIs';
+      ],;
+      icon: Mail,;
+      color: 'from-pink-500 to-rose-500',;
+      category: 'EmailMarketing',;
+      rating: 4.6,;
+      reviews: 89,;
+      popular: false;
+    },;
+    {id: 'zion-inventory-smart',;
+      title: 'ZionInventorySmart',;
+      description: 'AI-poweredinventorymanagementwithdemandforecastingandautomatedreordering',;
+      price: '$89/month',;
+      originalPrice: '$129/month',;
+      features: ['Demandforecasting',;
+        'Automatedreordering',;
+        'Stocklevelmonitoring',;
+        'Suppliermanagement',;
+        'Barcodescanning',;
+        'Multi-locationsupport',;
+        'Reportingdashboard',;
+        'Mobileapp';
+      ],;
+      icon: Box,;
+      color: 'from-teal-500 to-cyan-500',;
+      category: 'Inventory',;
+      rating: 4.7,;
+      reviews: 134,;
+      popular: false;
+    },;
+    {id: 'zion-invoice-genius',;
+      title: 'ZionInvoiceGenius',;
+      description: 'AutomatedinvoicingandpaymentprocessingwithAI-poweredexpensecategorization',;
+      price: '$49/month',;
+      originalPrice: '$79/month',;
+      features: ['Automatedinvoicing',;
+        'Paymentprocessing',;
+        'Expensecategorization',;
+        'Taxcalculations',;
+        'Clientportal',;
+        'Recurringbilling',;
+        'Financialreporting',;
+        'Multi-currencysupport';
+      ],;
+      icon: DollarSign,;
+      color: 'from-green-500 to-emerald-500',;
+      category: 'Finance',;
+      rating: 4.8,;
+      reviews: 156,;
+      popular: true;
+    },;
+    {id: 'zion-ai-video-editor',;
+      title: 'ZionAIVideoEditor',;
+      description: 'AI-poweredvideoeditingwithautomaticscenedetection, colorcorrection, andsmarttransitions',;
+      price: '$89/month',;
+      originalPrice: '$129/month',;
+      features: ['Autoscenedetection',;
+        'Smartcolorcorrection',;
+        'AI-generatedtransitions',;
+        'Voice-overgeneration',;
+        'Backgroundremoval',;
+        'Text-to-video',;
+        'Multi-formatexport',;
+        'Cloudrendering';
+      ],;
+      icon: Monitor,;
+      color: 'from-purple-500 to-pink-500',;
+      category: 'VideoProduction',;
+      rating: 4.7,;
+      reviews: 98,;
+      popular: false;
+    },;
+    {id: 'zion-ai-translator-pro',;
+      title: 'ZionAITranslatorPro',;
+      description: 'AdvancedAItranslationwithcontextawarenessandindustry-specificterminologysupport',;
+      price: '$69/month',;
+      originalPrice: '$99/month',;
+      features: ['100+ languagesupport',;
+        'Context-awaretranslation',;
+        'Industryterminology',;
+        'Real-timetranslation',;
+        'Documenttranslation',;
+        'Voicetranslation',;
+        'APIintegration',;
+        'Qualityscoring';
+      ],;
+      icon: Globe,;
+      color: 'from-blue-500 to-cyan-500',;
+      category: 'Translation',;
+      rating: 4.6,;
+      reviews: 134,;
+      popular: false;
+    },;
+    {id: 'zion-ai-code-reviewer',;
+      title: 'ZionAICodeReviewer',;
+      description: 'Intelligentcodereviewwithautomatedbugdetection, securityanalysis, andperformanceoptimization',;
+      price: '$149/month',;
+      originalPrice: '$199/month',;
+      features: ['Automatedcodereview',;
+        'Bugdetection',;
+        'Securityvulnerabilityscan',;
+        'Performanceoptimization',;
+        'Codequalitymetrics',;
+        'Bestpracticesuggestions',;
+        'Multi-languagesupport',;
+        'Gitintegration';
+      ],;
+      icon: Code,;
+      color: 'from-indigo-500 to-purple-500',;
+      category: 'Development',;
+      rating: 4.8,;
+      reviews: 187,;
+      popular: true;
+    },;
+    {id: 'zion-customer-insights',;
+      title: 'ZionCustomerInsights',;
+      description: 'AI-poweredcustomerbehavioranalysiswithpredictiveinsightsandpersonalizedrecommendations',;
+      price: '$119/month',;
+      originalPrice: '$159/month',;
+      features: ['Customersegmentation',;
+        'Behaviorprediction',;
+        'Churnanalysis',;
+        'Personalizationengine',;
+        'Sentimentanalysis',;
+        'Lifetimevalueprediction',;
+        'Recommendationsystem',;
+        'Real-timeinsights';
+      ],;
+      icon: Users,;
+      color: 'from-teal-500 to-cyan-500',;
+      category: 'Analytics',;
+      rating: 4.7,;
+      reviews: 145,;
+      popular: false;
+    },;
+    {id: 'zion-ai-email-assistant',;
+      title: 'ZionAIEmailAssistant',;
+      description: 'SmartemailmanagementwithAI-poweredresponses, scheduling, andpriorityclassification',;
+      price: '$59/month',;
+      originalPrice: '$89/month',;
+      features: ['AIemailresponses',;
+        'Smartscheduling',;
+        'Priorityclassification',;
+        'Spamfiltering',;
+        'Emailtemplates',;
+        'Follow-upautomation',;
+        'Sentimentanalysis',;
+        'Calendarintegration';
+      ],;
+      icon: Mail,;
+      color: 'from-orange-500 to-red-500',;
+      category: 'Productivity',;
+      rating: 4.5,;
+      reviews: 112,;
+      popular: false;
+    },;
+    {id: 'zion-ai-meeting-assistant',;
+      title: 'ZionAIMeetingAssistant',;
+      description: 'Intelligentmeetingmanagementwithtranscription, actionitems, andfollow-upautomation',;
+      price: '$79/month',;
+      originalPrice: '$119/month',;
+      features: ['Real-timetranscription',;
+        'Actionitemextraction',;
+        'Meetingsummaries',;
+        'Follow-upautomation',;
+        'Voicerecognition',;
+        'Multi-languagesupport',;
+        'Calendarintegration',;
+        'Teamcollaboration';
+      ],;
+      icon: Calendar,;
+      color: 'from-green-500 to-emerald-500',;
+      category: 'Productivity',;
+      rating: 4.6,;
+      reviews: 98,;
+      popular: false;
+    },;
+    {id: 'zion-ai-seo-optimizer',;
+      title: 'ZionAISEOOptimizer',;
+      description: 'AI-poweredSEOoptimizationwithcontentanalysis, keywordresearch, andrankingpredictions',;
+      price: '$99/month',;
+      originalPrice: '$149/month',;
+      features: ['Contentoptimization',;
+        'Keywordresearch',;
+        'Rankingpredictions',;
+        'Competitoranalysis',;
+        'TechnicalSEOaudit',;
+        'Linkbuildingsuggestions',;
+        'Performancetracking',;
+        'Automatedreports';
+      ],;
+      icon: TrendingUp,;
+      color: 'from-yellow-500 to-orange-500',;
+      category: 'Marketing',;
+      rating: 4.7,;
+      reviews: 167,;
+      popular: true;
+    },;
+    {id: 'zion-ai-data-cleaner',;
+      title: 'ZionAIDataCleaner',;
+      description: 'Intelligentdatacleaningandvalidationwithautomatederrordetectionandcorrection',;
+      price: '$89/month',;
+      originalPrice: '$129/month',;
+      features: ['Automateddatacleaning',;
+        'Errordetection',;
+        'Duplicateremoval',;
+        'Datavalidation',;
+        'Formatstandardization',;
+        'Missingdataimputation',;
+        'Qualityscoring',;
+        'APIintegration';
+      ],;
+      icon: Database,;
+      color: 'from-gray-500 to-slate-500',;
+      category: 'DataManagement',;
+      rating: 4.6,;
+      reviews: 89,;
+      popular: false;
+    },;
+    {id: 'zion-ai-contract-analyzer',;
+      title: 'ZionAIContractAnalyzer',;
+      description: 'AI-poweredcontractanalysiswithriskassessment, clauseextraction, andcompliancechecking',;
+      price: '$199/month',;
+      originalPrice: '$299/month',;
+      features: ['Contractanalysis',;
+        'Riskassessment',;
+        'Clauseextraction',;
+        'Compliancechecking',;
+        'Versioncomparison',;
+        'Automatedsummaries',;
+        'Legalinsights',;
+        'Documentmanagement';
+      ],;
+      icon: FileText,;
+      color: 'from-violet-500 to-purple-500',;
+      category: 'Legal',;
+      rating: 4.8,;
+      reviews: 76,;
+      popular: false;
+    },;
+    {id: 'zion-ai-survey-builder',;
+      title: 'ZionAISurveyBuilder',;
+      description: 'IntelligentsurveycreationwithAI-generatedquestions, responseanalysis, andinsights',;
+      price: '$69/month',;
+      originalPrice: '$99/month',;
+      features: ['AIquestiongeneration',;
+        'Responseanalysis',;
+        'Sentimentanalysis',;
+        'Datavisualization',;
+        'Customthemes',;
+        'Multi-platformdistribution',;
+        'Real-timeanalytics',;
+        'Exportcapabilities';
+      ],;
+      icon: CheckSquare,;
+      color: 'from-pink-500 to-rose-500',;
+      category: 'Research',;
+      rating: 4.5,;
+      reviews: 123,;
+      popular: false;
+    },;
+    {id: 'zion-ai-accounting-assistant',;
+      title: 'ZionAIAccountingAssistant',;
+      description: 'Smartaccountingautomationwithexpensecategorization, taxpreparation, andfinancialinsights',;
+      price: '$129/month',;
+      originalPrice: '$179/month',;
+      features: ['Expensecategorization',;
+        'Taxpreparation',;
+        'Financialinsights',;
+        'Receiptscanning',;
+        'Invoicematching',;
+        'Compliancemonitoring',;
+        'Reportingautomation',;
+        'Multi-currencysupport';
+      ],;
+      icon: DollarSign,;
+      color: 'from-emerald-500 to-green-500',;
+      category: 'Finance',;
+      rating: 4.7,;
+      reviews: 156,;
+      popular: true;
+    },;
+    {id: 'zion-ai-recruitment-pro',;
+      title: 'ZionAIRecruitmentPro',;
+      description: 'AI-poweredrecruitmentwithresumescreening, candidatematching, andinterviewscheduling',;
+      price: '$179/month',;
+      originalPrice: '$249/month',;
+      features: ['Resumescreening',;
+        'Candidatematching',;
+        'Interviewscheduling',;
+        'Skillassessment',;
+        'Backgroundchecks',;
+        'Onboardingautomation',;
+        'Performancetracking',;
+        'Integrationcapabilities';
+      ],;
+      icon: Users,;
+      color: 'from-blue-500 to-indigo-500',;
+      category: 'HR',;
+      rating: 4.8,;
+      reviews: 134,;
+      popular: true;
+    },;
+    {id: 'zion-ai-content-moderation',;
+      title: 'ZionAIContentModeration',;
+      description: 'AutomatedcontentmoderationwithAI-powereddetectionofinappropriatecontentandspam',;
+      price: '$149/month',;
+      originalPrice: '$199/month',;
+      features: ['Contentfiltering',;
+        'Spamdetection',;
+        'Imageanalysis',;
+        'Textanalysis',;
+        'Videomoderation',;
+        'Real-timeprocessing',;
+        'Customrules',;
+        'APIintegration';
+      ],;
+      icon: Shield,;
+      color: 'from-red-500 to-orange-500',;
+      category: 'Security',;
+      rating: 4.6,;
+      reviews: 98,;
+      popular: false;
+    },;
+    {id: 'zion-ai-predictive-maintenance',;
+      title: 'ZionAIPredictiveMaintenance',;
+      description: 'AI-poweredequipmentmonitoringwithpredictivemaintenanceandfailureprevention',;
+      price: '$299/month',;
+      originalPrice: '$399/month',;
+      features: ['Equipmentmonitoring',;
+        'Failureprediction',;
+        'Maintenancescheduling',;
+        'Performanceanalytics',;
+        'Alertsystem',;
+        'Costoptimization',;
+        'IoTintegration',;
+        'Customdashboards';
+      ],;
+      icon: Settings,;
+      color: 'from-cyan-500 to-blue-500',;
+      category: 'IoT',;
+      rating: 4.7,;
+      reviews: 67,;
+      popular: false;
+    },;
+    {id: 'zion-ai-energy-manager',;
+      title: 'ZionAIEnergyManager',;
+      description: 'Smartenergymanagementwithconsumptionoptimizationandcostreductionrecommendations',;
+      price: '$199/month',;
+      originalPrice: '$279/month',;
+      features: ['Energymonitoring',;
+        'Consumptionoptimization',;
+        'Costanalysis',;
+        'Predictivemodeling',;
+        'Automatedcontrols',;
+        'Sustainabilitytracking',;
+        'Reportingdashboard',;
+        'IoTintegration';
+      ],;
+      icon: Zap,;
+      color: 'from-yellow-500 to-orange-500',;
+      category: 'Sustainability',;
+      rating: 4.5,;
+      reviews: 89,;
+      popular: false;
+    },;
+    {id: 'zion-ai-supply-chain-optimizer',;
+      title: 'ZionAISupplyChainOptimizer',;
+      description: 'AI-poweredsupplychainoptimizationwithdemandforecastingandinventorymanagement',;
+      price: '$249/month',;
+      originalPrice: '$349/month',;
+      features: ['Demandforecasting',;
+        'Inventoryoptimization',;
+        'Routeoptimization',;
+        'Supplieranalysis',;
+        'Riskassessment',;
+        'Costoptimization',;
+        'Real-timetracking',;
+        'Integrationcapabilities';
+      ],;
+      icon: Package,;
+      color: 'from-indigo-500 to-purple-500',;
+      category: 'SupplyChain',;
+      rating: 4.8,;
+      reviews: 112,;
+      popular: true;
+    },;
+    {id: 'zion-ai-fraud-detector',;
+      title: 'ZionAIFraudDetector',;
+      description: 'Advancedfrauddetectionwithmachinelearningmodelsandreal-timetransactionmonitoring',;
+      price: '$179/month',;
+      originalPrice: '$249/month',;
+      features: ['Real-timemonitoring',;
+        'Patternrecognition',;
+        'Riskscoring',;
+        'Transactionanalysis',;
+        'Alertsystem',;
+        'Machinelearningmodels',;
+        'APIintegration',;
+        'Compliancereporting';
+      ],;
+      icon: Shield,;
+      color: 'from-red-500 to-pink-500',;
+      category: 'Security',;
+      rating: 4.9,;
+      reviews: 198,;
+      popular: true;
+    },;
+    {id: 'zion-ai-customer-service-pro',;
+      title: 'ZionAICustomerServicePro',;
+      description: 'AdvancedAIcustomerservicewithmulti-channelsupportandintelligentrouting',;
+      price: '$159/month',;
+      originalPrice: '$219/month',;
+      features: ['Multi-channelsupport',;
+        'Intelligentrouting',;
+        'Sentimentanalysis',;
+        'Escalationmanagement',;
+        'Knowledgebase',;
+        'Performanceanalytics',;
+        'Integrationcapabilities',;
+        'Customtraining';
+      ],;
+      icon: MessageCircle,;
+      color: 'from-green-500 to-teal-500',;
+      category: 'CustomerSupport',;
+      rating: 4.7,;
+      reviews: 167,;
+      popular: true;
+    },;
+    {id: 'zion-ai-marketing-automation',;
+      title: 'ZionAIMarketingAutomation',;
+      description: 'Intelligentmarketingautomationwithpersonalizedcampaignsandcustomerjourneyoptimization',;
+      price: '$139/month',;
+      originalPrice: '$189/month',;
+      features: ['Campaignautomation',;
+        'Personalizationengine',;
+        'Customerjourneymapping',;
+        'A/Btesting',;
+        'Performanceanalytics',;
+        'Leadscoring',;
+        'Emailmarketing',;
+        'Socialmediaintegration';
+      ],;
+      icon: Target,;
+      color: 'from-purple-500 to-pink-500',;
+      category: 'Marketing',;
+      rating: 4.6,;
+      reviews: 145,;
+      popular: false;
+    },;
+    {id: 'zion-ai-document-ai',;
+      title: 'ZionAIDocumentAI',;
+      description: 'AdvanceddocumentprocessingwithOCR, dataextraction, andintelligentdocumentanalysis',;
+      price: '$119/month',;
+      originalPrice: '$159/month',;
+      features: ['OCRtechnology',;
+        'Dataextraction',;
+        'Documentclassification',;
+        'Formprocessing',;
+        'Textanalysis',;
+        'Versioncontrol',;
+        'Searchcapabilities',;
+        'APIintegration';
+      ],;
+      icon: FileText,;
+      color: 'from-gray-500 to-slate-500',;
+      category: 'DocumentManagement',;
+      rating: 4.7,;
+      reviews: 123,;
+      popular: false;
     }
   ];
   constcategories = ['All', 'Analytics', 'CustomerSupport', 'Security', 'Backup & Recovery', 'ContentCreation', 'CRM', 'DataManagement', 'Marketing', 'ProjectManagement', 'EmailMarketing', 'Inventory', 'Finance', 'VideoProduction', 'Translation', 'Development', 'Productivity', 'Research', 'HR', 'IoT', 'Sustainability', 'SupplyChain', 'Legal', 'DocumentManagement'];
   const [selectedCategory, setSelectedCategory] = useState('All');
-
-  constfilteredProducts = selectedCategory === 'All' 
-    ? microSaasProducts 
+;
+  constfilteredProducts = selectedCategory === 'All';
+    ? microSaasProducts;
     : microSaasProducts.filter(product => product.category === selectedCategory);
-  return (
-    <>
-    <>
-      <Helmet>
-        <title>5GDataAnalytics - ZionTechGroup</title>
-        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />
-      </Helmet>
-        <title>MicroSAASProducts - ZionTechGroup | AI-PoweredBusinessSolutions</title>
-        <metaconstname = "description" content="DiscoverourcomprehensivesuiteofmicroSAASproductsdesignedtosolvespecificbusinesschallenges. FromAIanalyticstocybersecurity, wehavethetoolsyouneedtosucceed." / / />
-        <metaname="keywords" content="microsaas, businesssoftware, AItools, analytics, CRM, projectmanagement, cybersecurity, automation" / / />
-      </Helmet>
-    </>
-
-      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
+  return (;
+    <>;
+    <>;
+      <Helmet>;
+        <title>5GDataAnalytics - ZionTechGroup</title>;
+        <metaname="description" content="Professional 5GdataanalyticsservicesbyZionTechGroup. Transformyourbusinesswithourexpertsolutions." />;
+      </Helmet>;
+        <title>MicroSAASProducts - ZionTechGroup | AI-PoweredBusinessSolutions</title>;
+        <metaconstname = "description" content="DiscoverourcomprehensivesuiteofmicroSAASproductsdesignedtosolvespecificbusinesschallenges. FromAIanalyticstocybersecurity, wehavethetoolsyouneedtosucceed." / / />;
+        <metaname="keywords" content="microsaas, businesssoftware, AItools, analytics, CRM, projectmanagement, cybersecurity, automation" / / />;
+      </Helmet>;
+    </>;
+      <divclassName="m in-h-screenbg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">;
         {/* HeroSection */}
-    <>
-        <sectionclassName="r e lativeoverflow-hiddenpt-20pb-16" />
-          <divclassName="a b soluteinset-0opacity-20" />
-          <divclassName="r e lativemax-w-7xlmx-autopx-4sm:px-6lg:px-8">
-            <divclassName="t e xt-center">
-              <h1 className="{`t e xt-4" xlmd: text-6 xlfont-boldtext-whitemb-6 transition-allduration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-    </>
-                MicroSAAS
-    <>
-                <spanclassName="b l ockbg-gradient-to-rfrom-purple-400 to-pink-400bg-clip-texttext-transparent">BusinessSolutions
-                </span>
-              </h1>
-              <pclassName="{`t e xt-xl" text-gray-300 mb-8 max-w-3 xlmx-autotransition-allduration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-    </>
-                Powerful, ready-to-usesoftwaresolutionsdesignedtosolvespecificbusinesschallenges. 
-                Nocomplexsetup, nolengthyimplementations - justinstantvalue.
-    <>
-              </p>
-              <divclassName="{`f l ex" flex-colsm: flex-rowgap-4 justify-centertransition-allduration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                <Linkto="/contact" className="i n line-flexitems-centerpx-8 py-4 bg-gradient-to-rfrom-purple-600 to-pink-600 text-whitefont-semiboldrounded-lghover:from-purple-700 hover:to-pink-700 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-xl">
-          StartFreeTrial
-                  
-          <ArrowRightclassName="m l-2h-5w-5"  />
-        </Link>
-                <ahref="tel:+13024640950"
-                  className="i n line-flexitems-centerpx-8 py-4 border-2 border-purple-400 text-purple-400 font-semiboldrounded-lghover:bg-purple-400 hover:text-whitetransition-allduration-300transformhover:scale-105" />
-                  Call +1 302 464 0950
-    <>
-                </a>
-              </div>
-          </div>
-        </section>
-    </>
-
+    <>;
+        <sectionclassName="r e lativeoverflow-hiddenpt-20pb-16" />;
+          <divclassName="a b soluteinset-0opacity-20" />;
+          <divclassName="r e lativemax-w-7xlmx-autopx-4sm: px-6lg:px-8">;
+            <divclassName="t e xt-center">;
+              <h1 className="{`t e xt-4" xlmd: text-6 xlfont-boldtext-whitemb-6 transition-allduration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />;
+    </>;
+                MicroSAAS;
+    <>;
+                <spanclassName="b l ockbg-gradient-to-rfrom-purple-400 to-pink-400bg-clip-texttext-transparent">BusinessSolutions;
+                </span>;
+              </h1>;
+              <pclassName="{`t e xt-xl" text-gray-300 mb-8 max-w-3 xlmx-autotransition-allduration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />;
+    </>;
+                Powerful, ready-to-usesoftwaresolutionsdesignedtosolvespecificbusinesschallenges.;
+                Nocomplexsetup, nolengthyimplementations - justinstantvalue.;
+    <>;
+              </p>;
+              <divclassName="{`f l ex" flex-colsm: flex-rowgap-4 justify-centertransition-allduration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />;
+                <Linkto="/contact" className="i n line-flexitems-centerpx-8 py-4 bg-gradient-to-rfrom-purple-600 to-pink-600 text-whitefont-semiboldrounded-lghover: from-purple-700 hover:to-pink-700 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-xl">;
+          StartFreeTrial;
+          <ArrowRightclassName="m l-2h-5w-5"  />;
+        </Link>;
+                <ahref="tel:+13024640950";
+                  className="i n line-flexitems-centerpx-8 py-4 border-2 border-purple-400 text-purple-400 font-semiboldrounded-lghover:bg-purple-400 hover:text-whitetransition-allduration-300transformhover:scale-105" />;
+                  Call +1 302 464 0950;
+    <>;
+                </a>;
+              </div>;
+          </div>;
+        </section>;
+    </>;
         {/* CategoryFilter */}
-    <>
-        <sectionclassName="p y-8bg-gray-900/50" />
-          <divclassName="m a x-w-7xlmx-autopx-4sm:px-6lg:px-8">
-            <divclassName="f l exflex-wrapjustify-centergap-4">
-              {categories.map((category) => (
-                <buttonkey="{category}"
+    <>;
+        <sectionclassName="p y-8bg-gray-900/50" />;
+          <divclassName="m a x-w-7xlmx-autopx-4sm: px-6lg:px-8">;
+            <divclassName="f l exflex-wrapjustify-centergap-4">;
+              {categories.map((category) => (;
+                <buttonkey="{category}";
                   onClick="{()" =>setSelectedCategory(category)}
                   className="{`p x-6" py-3 rounded-lgfont-semiboldtransition-allduration-300 ${
-                    selectedCategory === category
-                      ? 'bg-gradient-to-rfrom-purple-600 to-pink-600 text-whiteshadow-lg'
-                      : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'
+                    selectedCategory === category;
+                      ? 'bg-gradient-to-rfrom-purple-600 to-pink-600 text-whiteshadow-lg';
+                      : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white';
                   }`}
-                >
+                >;
                   {category}
-                </button>
+                </button>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* ProductsGrid */}
-    <>
-        <sectionclassName="p y-16" />
-          <divclassName="m a x-w-7xlmx-autopx-4sm:px-6lg:px-8">
-            <divclassName="g r idgrid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
-              {filteredProducts.map((product, index) => (
-                <divkey="{product.id}"
-                  className="{`g r oup" relativebg-gray-800 rounded-xlp-6 hover:bg-gray-700 transition-allduration-300 transformhover:scale-105 borderborder-gray-700 hover:border-purple-500 ${
-                    product.popular ? 'ring-2 ring-purple-500' : ''
-                  }`} />
-                  {product.popular && (
-                    <divclassName="a b solute -top-3 left-1/2transform-translate-x-1/2">
-                      <spanclassName="b g-gradient-to-rfrom-purple-600 to-pink-600 text-whitepx-4 py-1 rounded-fulltext-smfont-semibold"  />MostPopular
-                      </span>
-                    </div>
-    </>
+    <>;
+        <sectionclassName="p y-16" />;
+          <divclassName="m a x-w-7xlmx-autopx-4sm: px-6lg:px-8">;
+            <divclassName="g r idgrid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">;
+              {filteredProducts.map((product, index) => (;
+                <divkey="{product.id}";
+                  className="{`g r oup" relativebg-gray-800 rounded-xlp-6 hover: bg-gray-700 transition-allduration-300 transformhover:scale-105 borderborder-gray-700 hover:border-purple-500 ${
+                    product.popular ? 'ring-2 ring-purple-500' : '';
+                  }`} />;
+                  {product.popular && (;
+                    <divclassName="a b solute -top-3 left-1/2transform-translate-x-1/2">;
+                      <spanclassName="b g-gradient-to-rfrom-purple-600 to-pink-600 text-whitepx-4 py-1 rounded-fulltext-smfont-semibold"  />MostPopular;
+                      </span>;
+                    </div>;
+    </>;
                   )}
-                  
-                  <divclassName="t e xt-centermb-6">
-                    <divclassName="{`i n line-flex" items-centerjustify-centerw-16 h-16 bg-gradient-to-r ${product.color} rounded-xlmb-4`} />
-                      <product.iconclassName="h-8w-8t e xt-white" />
-                    </div>
-                    <h3 className="t e xt-xlfont-boldtext-whitemb-2"   />{product.title}</h3>
-                    <pclassName="t e xt-gray-300text-smmb-4">{product.description}</p>
-                    <divclassName="f l exitems-centerjustify-centerspace-x-2mb-4">
-                      <divclassName="f l exitems-center">
-                        {[...Array(5)].map((_, i) => (
-                          <Starkey="{i}"
+;
+                  <divclassName="t e xt-centermb-6">;
+                    <divclassName="{`i n line-flex" items-centerjustify-centerw-16 h-16 bg-gradient-to-r ${product.color} rounded-xlmb-4`} />;
+                      <product.iconclassName="h-8w-8t e xt-white" />;
+                    </div>;
+                    <h3 className="t e xt-xlfont-boldtext-whitemb-2"   />{product.title}</h3>;
+                    <pclassName="t e xt-gray-300text-smmb-4">{product.description}</p>;
+                    <divclassName="f l exitems-centerjustify-centerspace-x-2mb-4">;
+                      <divclassName="f l exitems-center">;
+                        {[...Array(5)].map((_, i) => (;
+                          <Starkey="{i}";
                             className="{`h-4" w-4 ${
-                              i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'
+                              i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600';
                             }`}
-                          / />
+                          / />;
                         ))}
-    <>
-                      </div>
-                      <spanclassName="t e xt-smtext-gray-400">({product.reviews} reviews)</span>
-                    </div>
-                  <divclassName="t e xt-centermb-6">
-                    <divclassName="f l exitems-centerjustify-centerspace-x-2mb-2">
-                      <spanclassName="t e xt-3 xlfont-boldtext-white"   />{product.price}</span>
-                      <spanclassName="t e xt-lgtext-gray-400line-through"   />{product.originalPrice}</span>
-                    </div>
-                    <spanclassName="t e xt-smtext-green-400font-semibold">Save {Math.round((1 - parseInt(product.price.replace('$', '')) / parseInt(product.originalPrice.replace('$', ''))) * 100)}%
-                    </span>
-                  </div>
-    </>
-
-                  <divclassName="s p ace-y-3mb-6">
-                    {product.features.slice(0, 4).map((feature, idx) => (
-    <>
-                      <divkey="{idx}" className="f l exitems-centertext-smtext-gray-300" />
-                        <CheckCircleclassName="h-4 w-4 t e xt-green-400mr-3flex-shrink-0" />
-                        <span   />{feature}</span>
-                      </div>
-    </>
+    <>;
+                      </div>;
+                      <spanclassName="t e xt-smtext-gray-400">({product.reviews} reviews)</span>;
+                    </div>;
+                  <divclassName="t e xt-centermb-6">;
+                    <divclassName="f l exitems-centerjustify-centerspace-x-2mb-2">;
+                      <spanclassName="t e xt-3 xlfont-boldtext-white"   />{product.price}</span>;
+                      <spanclassName="t e xt-lgtext-gray-400line-through"   />{product.originalPrice}</span>;
+                    </div>;
+                    <spanclassName="t e xt-smtext-green-400font-semibold">Save {Math.round((1 - parseInt(product.price.replace('$', '')) / parseInt(product.originalPrice.replace('$', ''))) * 100)}%;
+                    </span>;
+                  </div>;
+    </>;
+                  <divclassName="s p ace-y-3mb-6">;
+                    {product.features.slice(0, 4).map((feature, idx) => (;
+    <>;
+                      <divkey="{idx}" className="f l exitems-centertext-smtext-gray-300" />;
+                        <CheckCircleclassName="h-4 w-4 t e xt-green-400mr-3flex-shrink-0" />;
+                        <span   />{feature}</span>;
+                      </div>;
+    </>;
                     ))}
-                    {product.features.length > 4 && (
-    <>
-                      <divclassName="t e xt-smtext-gray-400text-center">+{product.features.length - 4} morefeatures
-                      </div>
-    </>
+                    {product.features.length > 4 && (;
+    <>;
+                      <divclassName="t e xt-smtext-gray-400text-center">+{product.features.length - 4} morefeatures;
+                      </div>;
+    </>;
                     )}
-                  </div>
-                  <divclassName="s p ace-y-3">
-                    <Linkto="{`/${product.id}`}" className="w-f u llinline-flexitems-centerjustify-centerpx-4 py-3 bg-gradient-to-rfrom-purple-600 to-pink-600 text-whitefont-semiboldrounded-lghover:from-purple-700 hover:to-pink-700 transition-allduration-300transformhover:scale-105">
-          ViewDetails
-                      
-          <ArrowRightclassName="m l-2h-4w-4"  />
-        </Link>
-                    <Linkto="/contact" className="w-f u llinline-flexitems-centerjustify-centerpx-4 py-3 borderborder-purple-400 text-purple-400 font-semiboldrounded-lghover:bg-purple-400 hover:text-whitetransition-allduration-300">StartFreeTrial
-                    </Link>
-                  </div>
+                  </div>;
+                  <divclassName="s p ace-y-3">;
+                    <Linkto="{`/${product.id}`}" className="w-f u llinline-flexitems-centerjustify-centerpx-4 py-3 bg-gradient-to-rfrom-purple-600 to-pink-600 text-whitefont-semiboldrounded-lghover: from-purple-700 hover:to-pink-700 transition-allduration-300transformhover:scale-105">;
+          ViewDetails;
+          <ArrowRightclassName="m l-2h-4w-4"  />;
+        </Link>;
+                    <Linkto="/contact" className="w-f u llinline-flexitems-centerjustify-centerpx-4 py-3 borderborder-purple-400 text-purple-400 font-semiboldrounded-lghover:bg-purple-400 hover:text-whitetransition-allduration-300">StartFreeTrial;
+                    </Link>;
+                  </div>;
               ))}
-    <>
-            </div>
-        </section>
-    </>
-
+    <>;
+            </div>;
+        </section>;
+    </>;
         {/* CTASection */}
-    <>
-        <sectionclassName="p y-20 bg-gradient-to-brfrom-gray-900to-purple-900" />
-          <divclassName="m a x-w-7xlmx-autopx-4 sm:px-6lg:px-8text-center">
-            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />ReadytoTransformYourBusiness?
-            </h2>
-            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">
-              JointhousandsofbusinessesalreadyusingourmicroSAASsolutionstostreamlineoperations, 
-              increaseproductivity, anddrivegrowth.
-    <>
-            </p>
-            <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-              <Linkto="/contact" className="i n line-flexitems-centerpx-8 py-4 bg-gradient-to-rfrom-purple-600 to-pink-600 text-whitefont-semiboldrounded-lghover:from-purple-700 hover:to-pink-700 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-xl">
-          GetStartedToday
-                
-          <ArrowRightclassName="m l-2h-5w-5"  />
-        </Link>
-              <ahref="tel:+13024640950"
-                className="i n line-flexitems-centerpx-8 py-4 border-2 border-purple-400 text-purple-400 font-semiboldrounded-lghover:bg-purple-400 hover:text-whitetransition-allduration-300transformhover:scale-105" />
-                Call +1 302 464 0950
-    <>
-              </a>
-            </div>
-            <divclassName="m t-8text-gray-400">
-              <p />Email: kleber@ziontechgroup.com</p>
-              <p />Address: 364 EMainStSTE 1008, MiddletownDE 19709</p>
-            </div>
-        </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
+    <>;
+        <sectionclassName="p y-20 bg-gradient-to-brfrom-gray-900to-purple-900" />;
+          <divclassName="m a x-w-7xlmx-autopx-4 sm: px-6lg:px-8text-center">;
+            <h2 className="t e xt-3 xlmd:text-4xlfont-boldtext-whitemb-4"  />ReadytoTransformYourBusiness?;
+            </h2>;
+            <pclassName="t e xt-xltext-gray-300 mb-8 max-w-3xlmx-auto">;
+              JointhousandsofbusinessesalreadyusingourmicroSAASsolutionstostreamlineoperations,;
+              increaseproductivity, anddrivegrowth.;
+    <>;
+            </p>;
+            <divclassName="f l exflex-colsm: flex-rowgap-4justify-center">;
+              <Linkto="/contact" className="i n line-flexitems-centerpx-8 py-4 bg-gradient-to-rfrom-purple-600 to-pink-600 text-whitefont-semiboldrounded-lghover:from-purple-700 hover:to-pink-700 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-xl">;
+          GetStartedToday;
+          <ArrowRightclassName="m l-2h-5w-5"  />;
+        </Link>;
+              <ahref="tel:+13024640950";
+                className="i n line-flexitems-centerpx-8 py-4 border-2 border-purple-400 text-purple-400 font-semiboldrounded-lghover:bg-purple-400 hover:text-whitetransition-allduration-300transformhover:scale-105" />;
+                Call +1 302 464 0950;
+    <>;
+              </a>;
+            </div>;
+            <divclassName="m t-8text-gray-400">;
+              <p />Email: kleber@ziontechgroup.com</p>;
+              <p />Address: 364 EMainStSTE 1008, MiddletownDE 19709</p>;
+            </div>;
+        </section>;
+      </div>;
+        </div>;
+      </div>;
+          </div>;
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+          </div>;
+        </div>;
+      </div>;
+        </div>;
+      </div>;
+      </div>;
+    </>;
   );
 };
-
+;
 exportdefaultMicroSaasPage;
+;

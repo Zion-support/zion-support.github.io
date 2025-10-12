@@ -1,42 +1,40 @@
 import React from 'react';
-import { ArrowRight    } from 'lucide-react';
-import { Helmet    } from 'react-helmet-async';
-import { Link    } from 'react-router-dom';
-
-exportdefaultfunctionInfrastructureManagementPage() {
-  return (
-    <divclassName="m i n-h-screenbg-gray-50">
-      <Helmet />
-        <title   />InfrastructureManagementServices - ZionTechGroup</title>
-        <metaname="description" content="CompleteITinfrastructuresetup, management, andoptimizationservices." / / />
-      </Helmet>
-    <>
-      <sectionclassName="p t-20 px-4 py-12 sm:py-16 lg:py-20 bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900" />
-        <divclassName="m a x-w-7xlmx-autotext-center">
-          <h1 className="t e xt-3 xlsm:text-4xlmd:text-5 xlfont-boldtext-whitemb-4"  />InfrastructureManagement</h1>
-          <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-3 xlmx-automb-8">CompleteITinfrastructuresetup, management, andoptimizationservices.</p>
-          <divclassName="f l exflex-colsm:flex-rowgap-4justify-center">
-            <Linkto="/contact" className="b g-gradient-to-rfrom-blue-600 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-blue-700 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-center">
-          GetStarted
-              
-          <ArrowRightclassName="w-5h-5m l-2"  />
-        </Link>
-            <Linkto="/it-services" className="b o rder-2 border-whitetext-whitepx-8 py-4 rounded-lgfont-semiboldhover:bg-white/10transition-colors">AllITServices
-            </Link>
-          </div>
-      </section>
-    <>
-      <sectionclassName="p y-20px-4" />
-        <divclassName="m a x-w-4 xlmx-autotext-center">
-          <h2 className="t e xt-3 xlfont-boldtext-gray-900mb-6"   />ComingSoon</h2>
-          <pclassName="t e xt-xltext-gray-600mb-8">We'redevelopingcomprehensiveinfrastructuremanagementservices. Contactustodiscussyourinfrastructureneeds.</p>
-          <Linkto="/contact" className="b g-gradient-to-rfrom-purple-600 to-pink-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-purple-700 hover:to-pink-700transition-allduration-300">ContactUs
-          </Link>
-        </div>
-      </section>
-    </div>
+import {ArrowRight    } from 'lucide-react';
+import {Helmet    } from 'react-helmet-async';
+import {Link    } from 'react-router-dom';
+;
+exportdefaultfunctionInfrastructureManagementPage() {return (;
+    <divclassName="m i n-h-screenbg-gray-50">;
+      <Helmet />;
+        <title   />InfrastructureManagementServices - ZionTechGroup</title>;
+        <metaname="description" content="CompleteITinfrastructuresetup, management, andoptimizationservices." / / />;
+      </Helmet>;
+    <>;
+      <sectionclassName="p t-20 px-4 py-12 sm: py-16 lg:py-20 bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900" />;
+        <divclassName="m a x-w-7xlmx-autotext-center">;
+          <h1 className="t e xt-3 xlsm:text-4xlmd:text-5 xlfont-boldtext-whitemb-4"  />InfrastructureManagement</h1>;
+          <pclassName="t e xt-lgsm:text-xltext-gray-300 max-w-3 xlmx-automb-8">CompleteITinfrastructuresetup, management, andoptimizationservices.</p>;
+          <divclassName="f l exflex-colsm: flex-rowgap-4justify-center">;
+            <Linkto="/contact" className="b g-gradient-to-rfrom-blue-600 to-purple-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-blue-700 hover:to-purple-700 transition-allduration-300 flexitems-centerjustify-center">;
+          GetStarted;
+          <ArrowRightclassName="w-5h-5m l-2"  />;
+        </Link>;
+            <Linkto="/it-services" className="b o rder-2 border-whitetext-whitepx-8 py-4 rounded-lgfont-semiboldhover:bg-white/10transition-colors">AllITServices;
+            </Link>;
+          </div>;
+      </section>;
+    <>;
+      <sectionclassName="p y-20px-4" />;
+        <divclassName="m a x-w-4 xlmx-autotext-center">;
+          <h2 className="t e xt-3 xlfont-boldtext-gray-900mb-6"   />ComingSoon</h2>;
+          <pclassName="t e xt-xltext-gray-600mb-8">We'redevelopingcomprehensiveinfrastructuremanagementservices. Contactustodiscussyourinfrastructureneeds.</p>;
+          <Linkto="/contact" className="b g-gradient-to-rfrom-purple-600 to-pink-600 text-whitepx-8 py-4 rounded-lgfont-semiboldhover:from-purple-700 hover:to-pink-700transition-allduration-300">ContactUs;
+          </Link>;
+        </div>;
+      </section>;
+    </div>;
   );
-    </>
-    </>
+    </>;
+    </>;
 }
-    </>
+    </>;
