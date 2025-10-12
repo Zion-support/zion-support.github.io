@@ -1,64 +1,55 @@
-'use client'
-import { useEffect } from 'react'
-  children: React.ReactNode}
-    // Security enhancement logic
+'use client';
+import React, { useEffect } from 'react';
 
+interface SecurityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
+  useEffect(() => {
+    // Security enhancement logic
+    const enhanceSecurity = () => {
+      // Set security headers
+      const securityHeaders = {
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'DENY',
+        'X-XSS-Protection': '1; mode=block',
         'Referrer-Policy': 'strict-origin-when-cross-origin'
-      }
+      };
 
       // Add CSP meta tag
-      const cspMeta = document.createElement('meta')
-      cspMeta.setAttribute('http-equiv', 'Content-Security-Policy')
-      cspMeta.setAttribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;")
-      document.head.appendChild(cspMeta)
+      const cspMeta = document.createElement('meta');
+      cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');
+      cspMeta.setAttribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;");
+      document.head.appendChild(cspMeta);
 
       // Add security event listeners
       const handleSecurityEvent = (event: Event) => {
-        console.log('Security event detected:', event.type)
-      }
+        console.log('Security event detected:', event.type);
+        // In a real application, you would send this to a security monitoring service
+      };
 
-      window.addEventListener('beforeunload', handleSecurityEvent)
-      window.addEventListener('unload', handleSecurityEvent)
+      // Monitor for potential security issues
+      window.addEventListener('error', handleSecurityEvent);
+      window.addEventListener('unhandledrejection', handleSecurityEvent);
 
+      // Cleanup function
       return () => {
-        window.removeEventListener('beforeunload', handleSecurityEvent)
-        window.removeEventListener('unload', handleSecurityEvent)
-        document.head.removeChild(cspMeta)
-      }
-    }
-
-    const cleanup = enhanceSecurity()
-    return cleanup
-  }, [])
-
-  return (
-    <div className={`security-enhanced ${className}`}>
-      {children}
-    </div>
-  )
-}
-
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {useEffect(() => {// Security enhancement logic
-
-    $3
-  )}
-        'Referrer-Policy': 'strict-origin-when-cross-origin'}
-      };// Add CSP meta tag
-
-      cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
-      document.head.appendChild(cspMeta)
-      // Disable right-click context menu
-        e.preventDefault()})
-      // Disable F12 and other dev tools shortcuts
-          e.preventDefault()}
-      })}
-    enhanceSecurity()}, [])
-  return <React.Fragment>{children}</React.Fragment>}
-export default SecurityEnhancer
-  </SecurityEnhancerProps>
-
-      // Disable right-click context menu
-      document.addEventListener('contextmenu', (e) => {e.preventDefault()}
-      });// Disable F12 and other dev tools shortcuts
-      document.addEventListener('keydown', (e) => {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
+        window.removeEventListener('error', handleSecurityEvent);
+        window.removeEventListener('unhandledrejection', handleSecurityEvent);
+        // Remove CSP meta tag
+        const existingCspMeta = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
+        if (existingCspMeta) {
+          existingCspMeta.remove();
         }
+      };
+    };
+
+    const cleanup = enhanceSecurity();
+    return cleanup;
+  }, []);
+
+  return <>{children}</>;
+};
+
+export default SecurityEnhancer;

@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
   trackPageView: (pageName: string) => void;
 }
 

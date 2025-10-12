@@ -1,15 +1,13 @@
 'use client';
 import React, { useEffect } from 'react';
-=======
-import { useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     const monitorCoreWebVitals = () => {
       if ('web-vitals' in window) {
-import { getCLS, getFID, getFCP, getLCP, getTTFB } 
+        // Import web-vitals dynamically
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
           getCLS(console.log);
           getFID(console.log);
           getFCP(console.log);
@@ -22,48 +20,50 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB }
     // Monitor performance metrics
     const monitorPerformance = () => {
       if ('performance' in window) {
-        window.addEventListener('load', () => {
-          setTimeout(() => {
-            const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-            const paint = performance.getEntriesByType('paint');
-            
-            console.log('Performance Metrics:', {
-              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-              firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
-            });
-          }, 0);
-        });
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const paint = performance.getEntriesByType('paint');
+        
+        console.log('Navigation timing:', navigation);
+        console.log('Paint timing:', paint);
       }
     };
 
     // Monitor memory usage
     const monitorMemory = () => {
       if ('memory' in performance) {
-        setInterval(() => {
-          const memory = (performance as any).memory;
-          console.log('Memory Usage:', {
-            used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-            total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-            limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
+        const memory = (performance as Performance & { 
+          memory?: { 
+            usedJSHeapSize: number; 
+            totalJSHeapSize: number; 
+            jsHeapSizeLimit: number 
+          } 
+        }).memory;
+        
+        if (memory) {
+          console.log('Memory usage:', {
+            used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
+            total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
+            limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
           });
-        }, 30000); // Check every 30 seconds
+        }
       }
     };
 
-    // Initialize monitoring
+    // Start monitoring
     monitorCoreWebVitals();
     monitorPerformance();
     monitorMemory();
 
-    // Cleanup
-    return () => {
-      // Cleanup if needed
-    };
+    // Set up periodic monitoring
+    const interval = setInterval(() => {
+      monitorPerformance();
+      monitorMemory();
+    }, 30000); // Check every 30 seconds
+
+    return () => clearInterval(interval);
   }, []);
 
-  return null;
+  return null; // This component doesn't render anything
 };
 
 export default PerformanceMonitor;

@@ -1,7 +1,8 @@
+'use client';
 import React from 'react';
-'use client'
+import { Brain, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 
-const FuturisticHeroPage: React.FC = () => {
+export const FuturisticHeroPage: React.FC = () => {
   const features = [
     {
       icon: Brain,

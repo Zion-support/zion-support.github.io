@@ -1,9 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
-=======
-import { useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
 
 const ServiceWorker: React.FC = () => {
   useEffect(() => {
@@ -18,7 +14,7 @@ const ServiceWorker: React.FC = () => {
     }
   }, []);
 
-  return null;
+  return null; // This component doesn't render anything
 };
 
 export default ServiceWorker;

@@ -40,7 +40,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
     } else if (isVisible) {
       setDisplayText(text);
     }
-  }, [isVisible, currentIndex, text, type]);
+  }, [currentIndex, text, type]);
 
   const getAnimationClasses = () => {
     const baseClasses = 'transition-all duration-1000';

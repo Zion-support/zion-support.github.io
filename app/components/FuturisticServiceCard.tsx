@@ -1,84 +1,112 @@
-'use client'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { LucideIcon } from 'lucide-react';
 
-import { ArrowRight } from 'lucide-react';
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
+interface FuturisticServiceCardProps {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  features: string[];
+  price?: string;
+  onClick?: () => void;
+  className?: string;
+  variant?: 'default' | 'premium' | 'enterprise';
+}
+
+const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
+  icon: Icon,
+  title,
+  description,
+  features,
+  price,
+  onClick,
+  className = '',
+  variant = 'default'
+}) => {
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'premium':
+        return 'bg-gradient-to-br from-purple-900/60 via-indigo-900/40 to-purple-900/60 border-purple-500/30 hover:border-purple-400/50 shadow-purple-500/20';
+      case 'enterprise':
+        return 'bg-gradient-to-br from-cyan-900/60 via-blue-900/40 to-cyan-900/60 border-cyan-500/30 hover:border-cyan-400/50 shadow-cyan-500/20';
+      default:
+        return 'bg-gradient-to-br from-slate-800/60 via-slate-700/40 to-slate-800/60 border-white/20 hover:border-cyan-500/50 shadow-cyan-500/20';
     }
-  ];
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Futuristic Service Card | Zion Tech Group</title>
-        <meta name="description" content="Professional futuristic service card solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="futuristic service card, AI solutions, IT services, Zion Tech Group" />
-      </Helmet>
+  };
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                FuturisticServiceCard
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced futuristic service card solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
+  return (
+    <motion.div
+      className={`relative rounded-2xl p-8 transition-all duration-500 cursor-pointer group overflow-hidden backdrop-blur-xl border shadow-2xl hover:shadow-2xl ${getVariantStyles()} ${className}`}
+      onClick={onClick}
+      whileHover={{ 
+        scale: 1.02,
+        y: -5
+      }}
+      whileTap={{ scale: 0.98 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+      {/* Animated background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      
+      {/* Animated border glow */}
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
+      
+      {/* Content */}
+      <div className="relative z-10">
+        {/* Icon */}
+        <div className="mb-6">
+          <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+            <Icon className="w-8 h-8 text-white" />
           </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the powerful features that make our futuristic service card solutions stand out.
-            </p>
+        {/* Title */}
+        <h3 className="text-2xl font-bold text-white mb-3">
+          {title}
+        </h3>
+
+        {/* Description */}
+        <p className="text-gray-300 mb-6 leading-relaxed">
+          {description}
+        </p>
+
+        {/* Features */}
+        <ul className="space-y-3 mb-6">
+          {features.map((feature, index) => (
+            <li key={index} className="flex items-start space-x-3">
+              <div className="w-2 h-2 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mt-2 flex-shrink-0" />
+              <span className="text-gray-300 text-sm">{feature}</span>
+            </li>
+          ))}
+        </ul>
+
+        {/* Price */}
+        {price && (
+          <div className="mb-6">
+            <span className="text-3xl font-bold text-white">{price}</span>
+            <span className="text-gray-400 ml-2">/month</span>
           </div>
-        </div></div></section>)};export default FuturisticServiceCardPage
-}
+        )}
+
+        {/* CTA Button */}
+        <motion.button
+          className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          Get Started
+        </motion.button>
+      </div>
+      
+      {/* Corner accent */}
+      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-transparent rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      
+      {/* Bottom accent */}
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    </motion.div>
+  );
+};
+
+export default FuturisticServiceCard;

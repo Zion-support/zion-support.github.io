@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { ArrowRight, Brain, Shield, Zap, BarChart3, CheckCircle, Star } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Zap, CheckCircle } from 'lucide-react';
 
 export default function EnhancedLoadingSkeletonPage() {
   const features = [

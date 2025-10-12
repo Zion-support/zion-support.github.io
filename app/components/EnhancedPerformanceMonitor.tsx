@@ -30,7 +30,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     loadTime: null
   })
 
-  const [isMonitoring, setIsMonitoring] = useState(false)
+  // const [isMonitoring] = useState(false)
 
   useEffect(() => {
     const startTime = performance.now()
@@ -61,7 +61,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     // Monitor memory usage
     const measureMemoryUsage = () => {
       if ('memory' in performance) {
-        const memory = (performance as any).memory
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
         setMetrics(prev => ({ 
           ...prev, 
           memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
@@ -122,8 +122,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         metrics,
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
-        connectionType: (navigator as any).connection?.effectiveType || 'unknown',
-        deviceMemory: (navigator as any).deviceMemory || null
+        connectionType: (navigator as Navigator & { connection?: { effectiveType: string } }).connection?.effectiveType || 'unknown',
+        deviceMemory: (navigator as Navigator & { deviceMemory?: number }).deviceMemory || null
       }
 
       // Send to analytics (in a real app, you'd send this to your analytics service)
@@ -166,7 +166,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       clearTimeout(reportTimer)
       setIsMonitoring(false)
     }
-  }, [])
+  }, [metrics])
 
   // Performance optimization suggestions
   const getPerformanceSuggestions = (): string[] => {
