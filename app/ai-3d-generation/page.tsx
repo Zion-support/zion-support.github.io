@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Box, Zap, Palette, Download, Share2, Star, Users, Clock, DollarSign } from 'lucide-react';
+import { CheckCircle, ArrowRight, Box, Zap, Palette, Download, Share2, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 

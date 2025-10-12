@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Settings, Brain, Zap, Users, BarChart3, Shield } from 'lucide-react'
+import { ArrowRight, Settings, Brain, Zap, Users, BarChart3, Shield } from 'lucide-react'
 
 export default function AIAutomationPage() {
   const features = [
