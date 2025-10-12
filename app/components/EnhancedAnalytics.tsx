@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-'use client'
-import { Helmet } from 'react-helmet-async';
-=======
 'use client';
 import React, { createContext, useContext, useState, useEffect } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
+import { Helmet } from 'react-helmet-async';
 
 interface AnalyticsContextType {
   trackEvent: (event: string, properties?: Record<string, any>) => void;
@@ -71,22 +66,21 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     setUser,
   };
 
-<<<<<<< HEAD
-const EnhancedAnalytics: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const value = {
+    trackEvent,
+    trackPageView,
+    setUser,
+  };
+
+  return (
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
+};
+
+export default AnalyticsProvider;
       description: 'Bank-level security with encryption and compliance standards',
     },
     {
