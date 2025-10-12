@@ -1,16 +1,4 @@
-import { useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
-import {;
-'use client';
-  ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
-  BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
-  Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
-  TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
-  Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock
-} from 'lucide-react';
-import { ArrowRight, ShoppingCart } from 'lucide-react';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Link as LinkIcon, Package, TrendingUp, Calendar, Globe, Database, Monitor, Mail } from 'lucide-react';
-
+export default MicroSaasPage;
 const MicroSaasPage: React.FC = () => {
 
   useEffect(() => {
@@ -39,7 +27,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Analytics',
       rating: 4.9,
       reviews: 127,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-chat-ai',
@@ -62,7 +50,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Customer Support',
       rating: 4.8,
       reviews: 89,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-security-shield',
@@ -85,7 +73,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Security',
       rating: 4.9,
       reviews: 156,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-cloud-vault',
@@ -108,7 +96,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Backup & Recovery',
       rating: 4.7,
       reviews: 203,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-content-studio',
@@ -131,7 +119,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Content Creation',
       rating: 4.6,
       reviews: 94,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-crm-intelligence',
@@ -154,7 +142,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'CRM',
       rating: 4.8,
       reviews: 142,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-data-sync',
@@ -177,7 +165,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Data Management',
       rating: 4.5,
       reviews: 67,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-lead-magnet',
@@ -200,7 +188,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Marketing',
       rating: 4.7,
       reviews: 118,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-project-master',
@@ -223,7 +211,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Project Management',
       rating: 4.8,
       reviews: 175,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-email-automation',
@@ -246,7 +234,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Email Marketing',
       rating: 4.6,
       reviews: 89,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-inventory-smart',
@@ -269,7 +257,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Inventory',
       rating: 4.7,
       reviews: 134,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-invoice-genius',
@@ -292,7 +280,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Finance',
       rating: 4.8,
       reviews: 156,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-ai-video-editor',
@@ -315,7 +303,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Video Production',
       rating: 4.7,
       reviews: 98,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-translator-pro',
@@ -338,7 +326,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Translation',
       rating: 4.6,
       reviews: 134,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-code-reviewer',
@@ -361,7 +349,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Development',
       rating: 4.8,
       reviews: 187,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-customer-insights',
@@ -384,7 +372,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Analytics',
       rating: 4.7,
       reviews: 145,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-email-assistant',
@@ -407,7 +395,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Productivity',
       rating: 4.5,
       reviews: 112,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-meeting-assistant',
@@ -430,7 +418,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Productivity',
       rating: 4.6,
       reviews: 98,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-seo-optimizer',
@@ -453,7 +441,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Marketing',
       rating: 4.7,
       reviews: 167,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-ai-data-cleaner',
@@ -476,7 +464,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Data Management',
       rating: 4.6,
       reviews: 89,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-contract-analyzer',
@@ -499,7 +487,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Legal',
       rating: 4.8,
       reviews: 76,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-survey-builder',
@@ -522,7 +510,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Research',
       rating: 4.5,
       reviews: 123,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-accounting-assistant',
@@ -545,7 +533,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Finance',
       rating: 4.7,
       reviews: 156,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-ai-recruitment-pro',
@@ -568,7 +556,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'HR',
       rating: 4.8,
       reviews: 134,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-ai-content-moderation',
@@ -591,7 +579,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Security',
       rating: 4.6,
       reviews: 98,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-predictive-maintenance',
@@ -614,7 +602,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'IoT',
       rating: 4.7,
       reviews: 67,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-energy-manager',
@@ -637,7 +625,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Sustainability',
       rating: 4.5,
       reviews: 89,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-supply-chain-optimizer',
@@ -660,7 +648,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Supply Chain',
       rating: 4.8,
       reviews: 112,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-ai-fraud-detector',
@@ -683,7 +671,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Security',
       rating: 4.9,
       reviews: 198,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-ai-customer-service-pro',
@@ -706,7 +694,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Customer Support',
       rating: 4.7,
       reviews: 167,
-      popular: true
+      popular: true;
     },
     {
       id: 'zion-ai-marketing-automation',
@@ -729,7 +717,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Marketing',
       rating: 4.6,
       reviews: 145,
-      popular: false
+      popular: false;
     },
     {
       id: 'zion-ai-document-ai',
@@ -752,67 +740,63 @@ const MicroSaasPage: React.FC = () => {
       category: 'Document Management',
       rating: 4.7,
       reviews: 123,
-      popular: false
+      popular: false;
     }
   ];
   const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'CRM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance', 'Video Production', 'Translation', 'Development', 'Productivity', 'Research', 'HR', 'IoT', 'Sustainability', 'Supply Chain', 'Legal', 'Document Management'];
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredProducts = selectedCategory === 'All' 
-    ? microSaasProducts 
+    ? microSaasProducts;
     : microSaasProducts.filter(product => product.category === selectedCategory);
   return (
-<<<<<<< HEAD
-    <>
-      <Helmet>
+    <></>
+      <Helmet></Helmet>
         <title />Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
-        <meta const name = "description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." /  />
-        <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" />
+        <meta const name = "description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." /  /></meta>
+        <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" /></meta>
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         {/* Hero Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                Micro SAAS
-                <span className="w-5h-5ml-2" />Business Solutions
+        <section className="w-5h-5ml-2" /></section>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></h1>
+                Micro SAAS;
+                <span className="w-5h-5ml-2" />Business Solutions;
                 </span>
               </h1>
-              <p className="{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+              <p className="{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></p>
                 Powerful, ready-to-use software solutions designed to solve specific business challenges. 
                 No complex setup, no lengthy implementations - just instant value.
               </p>
-              <div className="{`flex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                <Link
+              <div className="{`flex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>
+                <Link;</Link></Link>
           to="/contact"
           className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
-        >
-          Start Free Trial
-                  
-          <ArrowRight className="w-5h-5ml-2" />
+        ></Link>
+          Start Free Trial;
+          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
         </Link>
-                <a
+                <a;
                   href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
-                  Call +1 302 464 0950
+                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" /></a>
+                  Call +1 302 464 0950;
                 </a>
               </div>
           </div>
         </section>
-
         {/* Category Filter */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <section className="w-5h-5ml-2" /></section>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {categories.map((category) => (
-                <button
+                <button;
                   key="{category}"
                   onClick="{()" =  />setSelectedCategory(category)}
                   className="{`px-6" py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    selectedCategory === category
+                    selectedCategory === category;
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
                       : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'
                   }`}
@@ -822,106 +806,99 @@ const MicroSaasPage: React.FC = () => {
               ))}
             </div>
         </section>
-
         {/* Products Grid */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <section className="w-5h-5ml-2" /></section>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {filteredProducts.map((product, index) => (
-                <div
+                <div;
                   key="{product.id}"
                   className="{`group" relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-purple-500 ${
                     product.popular ? 'ring-2 ring-purple-500' : ''
-                  }`} />
+                  }`} /></div>
                   {product.popular && (
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <span className="w-5h-5ml-2" />Most Popular
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                      <span className="w-5h-5ml-2" />Most Popular;
                       </span>
                     </div>
                   )}
                   
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="{`inline- flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl mb-4`} />
-                      <product.icon className="h-8w-8text-white"  />
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <div className="{`inline- flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl mb-4`} /></div>
+                      <product.icon className="h-8w-8text-white"  /></product>
                     </div>
                     <h3 className="w-5h-5ml-2" />{product.title}</h3>
                     <p className="w-5h-5ml-2">{product.description}</p>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                         {[...Array(5)].map((_, i) => (
-                          <Star
+                          <Star;</Star></Star>
                             key="{i}"
                             className="{`h-4" w-4 ${
                               i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'
                             }`}
-                           />
+                           /></Star>
                         ))}
                       </div>
                       <span className="w-5h-5ml-2" />({product.reviews} reviews)</span>
                     </div>
-
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                       <span className="w-5h-5ml-2" />{product.price}</span>
                       <span className="w-5h-5ml-2" />{product.originalPrice}</span>
                     </div>
                     <span className="w-5h-5ml-2" />Save {Math.round((1 - parseInt(product.price.replace('$', '')) / parseInt(product.originalPrice.replace('$', ''))) * 100)}%
                     </span>
                   </div>
-
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     {product.features.slice(0, 4).map((feature, idx) => (
-                      <div key="{idx}" className="flex items-centertext-sm text-gray-300" />
-                        <CheckCircle className="w-5h-5ml-2" />
+                      <div key="{idx}" className="flex items-centertext-sm text-gray-300" /></div>
+                        <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
                         <span />{feature}</span>
                       </div>
                     ))}
                     {product.features.length > 4 && (
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">+{product.features.length - 4} more features
+                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">+{product.features.length - 4} more features;
                       </div>
                     )}
                   </div>
-
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <Link
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <Link;</Link></Link>
           to="{`/${product.id}`}"
           className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105"
-        >
-          View Details
-                      
-          <ArrowRight className="w-5h-5ml-2" />
+        ></Link>
+          View Details;
+          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
         </Link>
-                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-all duration-300">Start Free Trial
+                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-all duration-300">Start Free Trial;
                     </Link>
                   </div>
               ))}
             </div>
         </section>
-
         {/* CTA Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <section className="w-5h-5ml-2" /></section>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="w-5h-5ml-2" />Ready to Transform Your Business?
             </h2>
             <p className="w-5h-5ml-2">Join thousands of businesses already using our micro SAAS solutions to streamline operations, 
               increase productivity, and drive growth.
             </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <Link
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <Link;</Link></Link>
           to="/contact"
           className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
-        >
-          Get Started Today
-                
-          <ArrowRight className="w-5h-5ml-2" />
+        ></Link>
+          Get Started Today;
+          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
         </Link>
-              <a
+              <a;
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
-                Call +1 302 464 0950
+                className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" /></a>
+                Call +1 302 464 0950;
               </a>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <p />Email: kleber@ziontechgroup.com</p>
               <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
@@ -930,19 +907,3 @@ const MicroSaasPage: React.FC = () => {
     </>
   );
 };
-
-export default MicroSaasPage;
-=======
-    
-        <>
-      <title>MicroSaas - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">MicroSaas</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional microsaas services coming soon.</p>
-            
-              Contact Us
-
-      </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-48fd

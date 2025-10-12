@@ -1,49 +1,34 @@
 import React from 'react';
+export default AiDocumentIntelligencePage;
 'use client';
 
 const AiDocumentIntelligencePage: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <>
-      <Helmet>
+    <></>
+      <Helmet></Helmet>
         <title>Ai Document Intelligence - Zion Tech Group</title>
-        <meta name="description" content="Ai Document Intelligence services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="ai-document-intelligence, AI solutions, IT services" />
+        <meta name="description" content="Ai Document Intelligence services by Zion Tech Group. Professional AI and IT solutions." /></meta>
+        <meta name="keywords" content="ai-document-intelligence, AI solutions, IT services" /></meta>
       </Helmet>
-=======
-    
-        <>
-      <title>AiDocumentIntelligence - Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-48fd
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5h-5ml-2" />
-              <span className="w-5h-5ml-2" />Ai Document Intelligence
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h1 className="w-5h-5ml-2" /></h1>
+              <span className="w-5h-5ml-2" />Ai Document Intelligence;
               </span>
             </h1>
             <p className="w-5h-5ml-2">Professional ai document intelligence services by Zion Tech Group.
             </p>
           </div>
-
-<<<<<<< HEAD
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
             <p className="w-5h-5ml-2">We're working on bringing you comprehensive ai document intelligence solutions. 
               Contact us to learn more about our services.
             </p>
-            <button className="w-5h-5ml-2">Contact Us
+            <button className="w-5h-5ml-2">Contact Us;
             </button>
           </div>
       </div>
     </>
   );
 };
-
-export default AiDocumentIntelligencePage;
-=======
-      </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-48fd

@@ -1,13 +1,12 @@
-import { memo, useMemo} from 'react';
 'use client'
 
 interface OptimizedLoadingSpinnerProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars'
-  text?: string
-  className?: string
+  text?: string;
+  className?: string;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
-  fullScreen?: boolean
+  fullScreen?: boolean;
 }
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
@@ -56,10 +55,9 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       switch (variant) {
         case 'dots':
           return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {[0, 1, 2].map((i) => (
-                <div
-
+                <div;
     variant = 'spinner',
     text = 'Loading...',
     className = '',
@@ -95,22 +93,22 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
           )
         case 'pulse':
           return (
-    <div
+    <div;
               className="{`${sizeClasses[size]}" rounded-full bg-current animate-pulse`}
-             />
+             /></div>
           )
         case 'skeleton':
           return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"> </div>
           )
         case 'bars':
           return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {[0, 1, 2, 3].map((i) => (
-                <div
+                <div;
                   key="{i}"
                   className="{`w-1" bg-current animate-pulse`}
                   style="{{"
@@ -122,22 +120,22 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
           )
         default:
           return (
-    <div
+    <div;
               className="{`${sizeClasses[size]}" border-2 border-current border-t-transparent rounded-full animate-spin`}
-             />
+             /></div>
           )
       }
     }
 
-    const containerClasses = fullScreen
+    const containerClasses = fullScreen;
       ? 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center'
       : 'flex items-center justify-center p-8'
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           {renderSpinner}
-          {text && (</div>}
-            <p className="{`mt-2" text-gray-600 ${textSizeClasses[size]}`} />
+          {text && (</div&gt;}
+            <p className="{`mt-2" text-gray-600 ${textSizeClasses[size]}`} /></p>
               {text}
             </p>
           )}
@@ -146,5 +144,5 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
   }
 </div></div>)
 ;
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner;
 }

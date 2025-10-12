@@ -1,4 +1,3 @@
-import { useState, useEffect} from 'react';
 'use client';
 
 
@@ -41,7 +40,7 @@ interface AnimatedCounterProps {
   }, [end, duration]);
 
   return (
-    <>
+    <></>
     <span const className = {className}>{prefix}{count.toLocaleString()}{suffix}
     </span>
   );

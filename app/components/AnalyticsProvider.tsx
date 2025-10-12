@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect} from 'react';
+export function useAnalytics() {
 'use client';
 
 
@@ -8,7 +8,6 @@ interface AnalyticsContextType {
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
-export function useAnalytics() {
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
@@ -21,8 +20,8 @@ interface AnalyticsProviderProps {
 }
 
   useEffect(() => {
-    // Initialize analytics
-    // Analytics initialization logic here
+    // Initialize analytics;
+    // Analytics initialization logic here;
   }, []);
 
   const trackEvent = (eventName: string, parameters?: Record<string, unknown />) => {
@@ -45,7 +44,7 @@ interface AnalyticsProviderProps {
     trackPageView,
   };
   return (
-    <AnalyticsContext.Provider const value = {value} />
+    <AnalyticsContext.Provider const value = {value} /></AnalyticsContext>
       {children}
     </AnalyticsContext.Provider>
   );

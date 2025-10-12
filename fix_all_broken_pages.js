@@ -1,12 +1,15 @@
 import fs from 'fs';
 import path from 'path';
+import { Helmet } from 'react-helmet-async'
+import Layout from '../layout'
+export default ${pageName}Page`;
 
-// Find all page.tsx files that might be broken
+// Find all page.tsx files that might be broken;
 function findPageFiles(dir) {
   const files = [];
   const items = fs.readdirSync(dir);
   
-  for (const item of items) {
+  for (const item, of, items) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
@@ -17,29 +20,26 @@ function findPageFiles(dir) {
   
   return files;
 
-// Check if a page file is broken
+// Check if a page file is broken;
 function isBrokenPage(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     
-    // Check for common issues
+    // Check for common issues;
     if (content.includes('export default function') && content.includes('return (')) {
-      return true; // Mixed function declaration and return
+      return true; // Mixed function declaration and return;
     if (content.includes('Page\n  </\n  <br />')) {
-      return true; // Malformed JSX
+      return true; // Malformed JSX;
     if (content.includes('Professional Page services')) {
-      return true; // Generic placeholder content
+      return true; // Generic placeholder content;
     if (content.includes('import Layout from \'../../layout\'')) {
-      return true; // Wrong import path
-    
+      return true; // Wrong import path;
     return false;
   } catch (error) {
     return true;
 
-// Template for a basic page
+// Template for a basic page;
  `import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Layout from '../layout'
 
   return (
                 ${title}
@@ -51,14 +51,12 @@ import Layout from '../layout'
                 <li>• Benefit 2</li>
                 <li>• Benefit 3</li>
                 <li>• Benefit 4</li>
-
               <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
                 Description of the second key feature or service.
                 <li>• Benefit 1</li>
                 <li>• Benefit 2</li>
                 <li>• Benefit 3</li>
                 <li>• Benefit 4</li>
-
               <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
                 Description of the third key feature or service.
                 <li>• Benefit 1</li>
@@ -67,9 +65,8 @@ import Layout from '../layout'
                 <li>• Benefit 4</li>
   )
 
-export default ${pageName}Page`;
 
-// Generate page configuration from file path
+// Generate page configuration from file path;
 function generatePageConfig(filePath) {
   const relativePath = filePath.replace('/workspace/app/', '').replace('/page.tsx', '');
   const pageName = relativePath.split('/').pop();
@@ -83,12 +80,12 @@ function generatePageConfig(filePath) {
     keywords: `${title.toLowerCase()}, services, solutions, technology, Zion Tech Group`
   };
 
-// Find and fix all broken page files
+// Find and fix all broken page files;
 const pageFiles = findPageFiles('/workspace/app');
 console.log(`Found ${pageFiles.length} page files`);
 
 let fixedCount = 0;
-for (const file of pageFiles) {
+for (const file, of, pageFiles) {
   try {
     if (isBrokenPage(file)) {
       const config = generatePageConfig(file);

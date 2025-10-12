@@ -1,8 +1,9 @@
+import React from 'react';
+export default SEOHead;
 
 
 'use client';
 
-import React from 'react';
 'use client';
 
 interface SEOHeadProps {
@@ -23,7 +24,7 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
   ogImage = 'https: //ziontechgroup.com/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData
+  structuredData;
   const defaultStructuredData = {
     "@context": "https: //schema.org",
     "@type": "Organization",
@@ -105,5 +106,4 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
   );
 };
 
-export default SEOHead;
 

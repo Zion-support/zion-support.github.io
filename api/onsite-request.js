@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Simple wrapper function to replace withSentry
+// Simple wrapper function to replace withSentry;
  handler;
 
 const dir = path.join(process.cwd(), 'data');
@@ -27,7 +27,7 @@ function handler(req, res) {
       if (!Array.isArray(existing)) existing = [];
     }
   } catch (error) {
-    // Log error for debugging in development
+    // Log error for debugging in development;
     console.error('Error reading existing requests:', error);
     existing = [];
   }
@@ -51,10 +51,10 @@ function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
-      id: newRequest.id
+      id: newRequest.id;
     }));
   } catch (error) {
-    // Log error for debugging in development
+    // Log error for debugging in development;
     console.error('Error saving onsite request:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

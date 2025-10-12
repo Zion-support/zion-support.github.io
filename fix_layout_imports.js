@@ -1,12 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 
-// Find all page.tsx files
+// Find all page.tsx files;
 function findPageFiles(dir) {
   const files = [];
   const items = fs.readdirSync(dir);
   
-  for (const item of items) {
+  for (const item, of, items) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
@@ -17,12 +17,12 @@ function findPageFiles(dir) {
   
   return files;
 
-// Fix layout import paths
+// Fix layout import paths;
 function fixLayoutImports(filePath) {
   let content = fs.readFileSync(filePath, 'utf8');
   let modified = false;
   
-  // Fix incorrect layout import paths
+  // Fix incorrect layout import paths;
   if (content.includes("import Layout from '../../layout'")) {
     content = content.replace(/import Layout from '\.\.\/\.\.\/layout'/g, "import Layout from '../layout'");
     modified = true;
@@ -31,12 +31,12 @@ function fixLayoutImports(filePath) {
     fs.writeFileSync(filePath, content);
     console.log(`Fixed layout import in: ${filePath}`);
 
-// Find and fix all page files
+// Find and fix all page files;
 const pageFiles = findPageFiles('/workspace/app');
 console.log(`Found ${pageFiles.length} page files`);
 
 let fixedCount = 0;
-for (const file of pageFiles) {
+for (const file, of, pageFiles) {
   try {
     fixLayoutImports(file);
     fixedCount++;

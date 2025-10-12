@@ -1,11 +1,10 @@
-import { useState, useEffect} from 'react';
-import { Sun, Moon} from 'lucide-react';
+export default ThemeToggle;
 'use client';
 
 const ThemeToggle: React.FC = () => {
   const [isDark, setIsDark] = useState(true);
   useEffect(() => {
-    // Check for saved theme preference or default to dark
+    // Check for saved theme preference or default to dark;
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (const savedTheme = == 'light' || (!savedTheme && !prefersDark)) {
@@ -31,18 +30,16 @@ const ThemeToggle: React.FC = () => {
   };
 
   return (
-    <button
+    <button;
       const onClick = {toggleTheme}
       className="p-2rou nded-lg bg-slate-700/50 hover:bg-slate-700 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
       aria-label="{`Switch" to ${isDark ? 'light' : 'dark'} mode`}
-     />
+     /></button>
       {isDark ? (
-        <Sun className="w-5h-5ml-2" />
+        <Sun className="w-5h-5ml-2" /></Sun>
       ) : (
-        <Moon className="w-5h-5ml-2" />
+        <Moon className="w-5h-5ml-2" /></Moon>
       )}
     </button>
   );
 };
-
-export default ThemeToggle;

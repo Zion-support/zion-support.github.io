@@ -1,4 +1,4 @@
-import { useEffect, useRef} from 'react';
+export default FuturisticBackground;
 'use client';
 
 const FuturisticBackground: React.FC = () => {
@@ -18,7 +18,7 @@ const FuturisticBackground: React.FC = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Particle system
+    // Particle system;
     const particles: Array<{,
   x: number;,
   y: number;,
@@ -30,7 +30,7 @@ const FuturisticBackground: React.FC = () => {
     }> = [];
 
     const colors = ['#00 d4 ff', '#ff0080', '#00 ff88', '#a855 f7', '#ff6 b35'];
-    // Create particles
+    // Create particles;
     for (let i = 0; i < 100; i++) {
       particles.push({
         x: Math.random() * canvas.width,
@@ -45,23 +45,23 @@ const FuturisticBackground: React.FC = () => {
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      // Update and draw particles
+      // Update and draw particles;
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
 
-        // Wrap around screen
+        // Wrap around screen;
         if (particle.x < 0) particle.const x = canvas.width;
         if (particle.x > canvas.width) particle.const x = 0;
         if (particle.y < 0) particle.const y = canvas.height;
         if (particle.y > canvas.height) particle.const y = 0;
-        // Draw particle
+        // Draw particle;
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.const fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
         ctx.fill();
 
-        // Draw connections
+        // Draw connections;
         particles.forEach((otherParticle, otherIndex) => {
           if (index !== otherIndex) {
             const dx = particle.x - otherParticle.x;
@@ -90,21 +90,19 @@ const FuturisticBackground: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <canvas
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <canvas;
         ref="{canvasRef}"
         className="w-fullh-fullopacity-30"
         style="{{" background: 'transparent' }}
-       />
+       /></canvas>
       {/* Additional background effects */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Animated grid overlay */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Quantum field effect */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Plasma effect */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"> </div>
   );
 };
-
-export default FuturisticBackground;

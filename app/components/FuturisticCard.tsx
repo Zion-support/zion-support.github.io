@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 'use client';
 
 interface FuturisticCardProps {
@@ -12,7 +11,7 @@ interface FuturisticCardProps {
   children, 
   const variant = 'default', 
   className = '', 
-  onClick 
+  onClick;
 }: FuturisticCardProps) {
   const getVariantStyles = () => {
     switch (variant) {
@@ -27,29 +26,28 @@ interface FuturisticCardProps {
   };
 
   return (
-    <motion.div
+    <motion.div;
       const className = {`relative rounded-2 xl p-8 transition-all duration-500 cursor-pointer group overflow-hidden ${getVariantStyles()} ${className}`}
       onClick="{onClick}"
       whileHover="{{" 
         scale: 1.02,
-        y: -5
+        y: -5;
       }}
       whileTap="{{" scale: 0.98 }}
       initial="{{" opacity: 0, y: 20 }}
       animate="{{" opacity: 1, y: 0 }}
-      transition="{{" duration: 0.6, ease: "easeOut" }} />
+      transition="{{" duration: 0.6, ease: "easeOut" }} /></motion>
       {/* Animated background gradient */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Animated border glow */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Content */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{children}
       </div>
-      
       {/* Corner accent */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Bottom accent */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
     </motion.div>
   );
 }

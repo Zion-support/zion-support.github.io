@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import { MessageSquare } from 'lucide-react';
 'use client';
 
 
@@ -27,7 +25,7 @@ interface FormData {
     const { name, value } = e.target;
     setFormData(const prev = > ({
       ...prev,
-      [name]: value
+      [name]: value;
     }));
   };
 
@@ -35,12 +33,12 @@ interface FormData {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
+    // Simulate form submission;
     await new Promise(const resolve = > setTimeout(resolve, 1000));
     setIsSubmitting(false);
     setIsSubmitted(true);
 
-    // Reset form after 3 seconds
+    // Reset form after 3 seconds;
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
@@ -56,8 +54,8 @@ interface FormData {
 
   if (isSubmitted) {
     return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <CheckCircle className="w-5h-5ml-2" />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
         <h3 className="text-2 xl font-bold text-whitemb-2"  >Message Sent!</h3>
         <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>
       </div>
@@ -65,49 +63,46 @@ interface FormData {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <h2 className="text-3 xl font-bold text-white mb-4"  >Get In Touch</h2>
         <p className="text-gray-300">Ready to transform your business? Let's discuss your project.</p>
       </div>
-
-      <form onSubmit="{handleSubmit}" className="space-y-6" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div />
+      <form onSubmit="{handleSubmit}" className="space-y-6" /></form>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div /></div>
             <label htmlFor="name" className="block text-sm font-mediumtext-gray-300mb-2"  />Full Name *
             </label>
-            <input
+            <input;
               type="text"
               id="name"
               name="name"
               value="{formData.name}"
               onChange="{handleChange}"
-              required
+              required;
               className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"
               placeholder="Your full name"
-             />
+             /></input>
           </div>
-
-          <div />
+          <div /></div>
             <label htmlFor="email" className="block text-sm font-mediumtext-gray-300mb-2"  />Email Address *
             </label>
-            <input
+            <input;
               type="email"
               id="email"
               name="email"
               value="{formData.email}"
               onChange="{handleChange}"
-              required
+              required;
               className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"
               placeholder="your@email.com"
-             />
+             /></input>
           </div>
-
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div />
-            <label htmlFor="phone" className="block text-sm font-mediumtext-gray-300mb-2"  />Phone Number
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div /></div>
+            <label htmlFor="phone" className="block text-sm font-mediumtext-gray-300mb-2"  />Phone Number;
             </label>
-            <input
+            <input;
               type="tel"
               id="phone"
               name="phone"
@@ -115,13 +110,12 @@ interface FormData {
               onChange="{handleChange}"
               className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"
               placeholder="+1 (555) 123-4567"
-             />
+             /></input>
           </div>
-
-          <div />
-            <label htmlFor="company" className="block text-sm font-mediumtext-gray-300mb-2"  />Company
+          <div /></div>
+            <label htmlFor="company" className="block text-sm font-mediumtext-gray-300mb-2"  />Company;
             </label>
-            <input
+            <input;
               type="text"
               id="company"
               name="company"
@@ -129,18 +123,17 @@ interface FormData {
               onChange="{handleChange}"
               className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"
               placeholder="Your company name"
-             />
+             /></input>
           </div>
-
-        <div />
-          <label htmlFor="service" className="block text-sm font-mediumtext-gray-300mb-2"  />Service Interest
+        <div /></div>
+          <label htmlFor="service" className="block text-sm font-mediumtext-gray-300mb-2"  />Service Interest;
           </label>
-          <select
+          <select;
             id="service"
             name="service"
             value="{formData.service}"
             onChange="{handleChange}"
-            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent" />
+            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent" /></select>
             <option value=""  >Select a service</option>
             <option value="ai-services"  >AI Services</option>
             <option value="it-services"  >IT Services</option>
@@ -149,52 +142,49 @@ interface FormData {
             <option value="consulting"  >Consulting</option>
           </select>
         </div>
-
-        <div />
+        <div /></div>
           <label htmlFor="message" className="block text-sm font-mediumtext-gray-300mb-2"  />Message *
           </label>
-          <textarea
+          <textarea;
             id="message"
             name="message"
             value="{formData.message}"
             onChange="{handleChange}"
-            required
+            required;
             rows="{5}"
             className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500focus:border-transparentresize-none"
             placeholder="Tell us about your project..."
-           />
+           /></textarea>
         </div>
-
-        <button
+        <button;
           type="submit"
           disabled="{isSubmitting}"
-          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-centerdisabled:opacity-50disabled:cursor-not-allowed" />
+          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-centerdisabled:opacity-50disabled:cursor-not-allowed" /></button>
           {isSubmitting ? (
-            <>
+            <></>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               Sending...
             </>
           ) : (
-            <>
-              <Send className="w-5h-5ml-2" />
-              Send Message
+            <></>
+              <Send className="w-5h-5ml-2" /></Send>
+              Send Message;
             </>
           )}
         </button>
       </form>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Mail className="w-5h-5ml-2" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <Mail className="w-5h-5ml-2" /></Mail>
             <span className="text-gray-300"  >kleber@ziontechgroup.com</span>
           </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Phone className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <Phone className="w-5h-5ml-2" /></Phone>
             <span className="text-gray-300"  >+1 (302) 464-0950</span>
           </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <MessageSquare className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <MessageSquare className="w-5h-5ml-2" /></MessageSquare>
             <span className="text-gray-300"  >24/7 Support</span>
           </div>
       </div>

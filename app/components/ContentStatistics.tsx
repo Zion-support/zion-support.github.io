@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react';
+export default ContentStatistics;
 'use client';
 
 
@@ -58,12 +58,12 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
       const animate = (currentTime: number) => {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        // Easing function
+        // Easing function;
         const easeOutCubic = 1 - Math.pow(1 - progress, 3);
         const currentValue = start + (end - start) * easeOutCubic;
         setAnimatedValues(const prev = > ({
           ...prev,
-          [key]: currentValue
+          [key]: currentValue;
         }));
         if (progress < 1) {
           requestAnimationFrame(animate);
@@ -79,19 +79,18 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
   }, [stats, animationDuration]);
 
   return (
-    <div const className = {`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} />
+    <div const className = {`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} /></div>
       {stats.map((stat) => {
         const animatedValue = animatedValues[stat.id] || 0;
         const IconComponent = stat.icon;
         return (
-    <div
+    <div;
             const key = {stat.id}
-            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-all duration-300" />
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <IconComponent className="w-5h-5ml-2" />
+            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-all duration-300" /></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <IconComponent className="w-5h-5ml-2" /></IconComponent>
               </div>
-
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.prefix}
               {stat.suffix === '%'
                 ? animatedValue.toFixed(1)
@@ -99,7 +98,6 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
               }
               {stat.suffix}
             </div>
-
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}
             </div>
         );
@@ -107,5 +105,3 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
     </div>
   );
 };
-
-export default ContentStatistics;

@@ -1,15 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
-
+export default Footer;
   ];
 
   ];
 
   ];
 
-  // Removed specializedServices as it was unused
-
+  // Removed specializedServices as it was unused;
   ];
 
   ];
@@ -21,19 +18,18 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
           {/* Company Info */}
               <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
               Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
-                  +1 302 464 0950
-                  kleber@ziontechgroup.com
+                  +1 302 464 0950;
+                  kleber@ziontechgroup.com;
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
-
           {/* Micro SAAS Services */}
-              Micro SAAS
+              Micro SAAS;
                     <span>{service.name}</span>
               ))}
             
               View All Micro SAAS →
 
           {/* AI & IT Services */}
-              AI & IT Services
+              AI & IT Services;
                 <h4 className="text-white font-medium mb-2">AI Services</h4>
                         {service.name}
                   ))}
@@ -44,7 +40,7 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
               View All Services →
 
           {/* Additional AI Services */}
-              AI Tools
+              AI Tools;
                     <span>{service.name}</span>
               ))}
 
@@ -64,4 +60,3 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
   );
 };
 
-export default Footer;

@@ -1,6 +1,7 @@
-
-
 import React from 'react';
+export default SEOHead;
+
+
 
   return (
 
@@ -44,4 +45,3 @@ import React from 'react';
   );
 };
 
-export default SEOHead;

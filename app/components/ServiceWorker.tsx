@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useEffect } from 'react';
+export default ServiceWorker;
 'use client';
 
 const ServiceWorker: React.FC = () => {
@@ -18,4 +18,3 @@ const ServiceWorker: React.FC = () => {
   return null;
 };
 
-export default ServiceWorker;

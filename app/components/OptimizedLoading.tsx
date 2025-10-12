@@ -1,11 +1,10 @@
 import React from 'react';
-import { Loader2 } from 'lucide-react';
-
+export default OptimizedLoading;
 interface OptimizedLoadingProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'
-  text?: string
-  fullScreen?: boolean
-  className?: string
+  text?: string;
+  fullScreen?: boolean;
+  className?: string;
 }
 
 const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
@@ -21,14 +20,14 @@ const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
     xl: 'w-12 h-12'
   }
 
-  const containerClasses = fullScreen
+  const containerClasses = fullScreen;
     ? 'fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4'
 
   return (
-    <div className="{`${containerClasses}" ${className}`} />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`}  />
+    <div className="{`${containerClasses}" ${className}`} /></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`}  /></Loader2>
         {text && (
           <p className="w-5h-5ml-2">{text}
           </p>
@@ -36,5 +35,3 @@ const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
       </div>
   )
 }
-
-export default OptimizedLoading;

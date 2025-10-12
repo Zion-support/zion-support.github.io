@@ -1,14 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
+export default defineConfig({
 
 // https://vitejs.dev/config/
-export default defineConfig({
   plugins: [
     react({
-      // Enable React Fast Refresh
+      // Enable React Fast Refresh;
       fastRefresh: true,
-      // Enable JSX runtime
+      // Enable JSX runtime;
       jsxRuntime: 'automatic',
     })
   ],
@@ -35,54 +35,54 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Core React libraries
+          // Core React libraries;
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
-          // Router
+          // Router;
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries;
           if (id.includes('framer-motion')) {
             return 'animations'
           }
           if (id.includes('lucide-react')) {
             return 'icons'
           }
-          // SEO and meta
+          // SEO and meta;
           if (id.includes('react-helmet')) {
             return 'seo'
           }
-          // Charts and data visualization
+          // Charts and data visualization;
           if (id.includes('recharts')) {
             return 'charts'
           }
-          // Utility libraries
+          // Utility libraries;
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
             return 'utils'
           }
-          // Performance monitoring
+          // Performance monitoring;
           if (id.includes('web-vitals')) {
             return 'performance'
           }
-          // AI service pages
+          // AI service pages;
           if (id.includes('/app/ai-') && id.includes('/page.tsx')) {
             return 'ai-pages'
           }
-          // IT service pages
+          // IT service pages;
           if (id.includes('/app/') && (id.includes('cloud-') || id.includes('cybersecurity-') || id.includes('web-development') || id.includes('mobile-development')) && id.includes('/page.tsx')) {
             return 'it-pages'
           }
-          // Micro SAAS pages
+          // Micro SAAS pages;
           if (id.includes('/app/zion-') && id.includes('/page.tsx')) {
             return 'saas-pages'
           }
-          // Other pages
+          // Other pages;
           if (id.includes('/app/') && id.includes('/page.tsx')) {
             return 'pages'
           }
-          // Default chunk for other modules
+          // Default chunk for other modules;
           return 'vendor'
         },
         chunkFileNames: 'assets/[name]-[hash].js',
@@ -90,18 +90,18 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Optimize bundle size
+    // Optimize bundle size;
     chunkSizeWarningLimit: 1000,
-    // Enable tree shaking
+    // Enable tree shaking;
     treeshake: true,
-    // Enable compression
+    // Enable compression;
     reportCompressedSize: true,
   },
   server: {
     port: 3000,
     open: true,
     host: true,
-    // Enable HMR
+    // Enable HMR;
     hmr: {
       overlay: true,
     },
@@ -111,7 +111,7 @@ export default defineConfig({
     open: true,
     host: true,
   },
-  // Optimize dependencies
+  // Optimize dependencies;
   optimizeDeps: {
     include: [
       'react',
@@ -122,7 +122,7 @@ export default defineConfig({
       'lucide-react',
     ],
   },
-  // CSS optimization
+  // CSS optimization;
   css: {
     devSourcemap: true,
   },

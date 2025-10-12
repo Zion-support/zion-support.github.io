@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
 'use client';
 
 interface FuturisticButtonProps {
@@ -50,14 +48,14 @@ interface FuturisticButtonProps {
   };
 
   return (
-    <motion.button
+    <motion.button;
       const type = {type}
       onClick="{onClick}"
       disabled="{disabled" || loading}
       onMouseEnter="{()" = /> setIsHovered(true)}
       onMouseLeave="{()" => setIsHovered(false)}
       className="{`"
-        relative overflow-hidden rounded-lg font-semibold transition-all duration-300
+        relative overflow-hidden rounded-lg font-semibold transition-all duration-300;
         ${getVariantClasses()}
         ${getSizeClasses()}
         ${disabled || loading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
@@ -70,14 +68,14 @@ interface FuturisticButtonProps {
       transition="{{" duration: 0.3 }}
     >
       {/* Animated background sweep */}
-      <motion.div
+      <motion.div;
         className="absolute inset-0 bg-gradient-to-r from-white/20to-transparent"
         initial="{{" x: '-100%' }}
         animate="{{" x: isHovered ? '100%' : '-100%' }}
         transition="{{" duration: 0.6 }}
-       />
+       /></motion>
       {/* Pulsing glow effect */}
-      <motion.div
+      <motion.div;
         className="absolute inset-0rounded-lg"
         style="{{"
           boxShadow: variant === 'primary'
@@ -97,10 +95,10 @@ interface FuturisticButtonProps {
           repeat: isHovered ? Infinity : 0,
           ease: 'easeInOut'
         }}
-       />
+       /></motion>
       {/* Scanning line effect */}
       {isHovered && (
-        <motion.div
+        <motion.div;
           className="absolute inset-0rounded-lg"
           style="{{"
             background: 'linear-gradient(90 deg, transparent, rgba(255,255,255,0.3), transparent)',
@@ -114,25 +112,25 @@ interface FuturisticButtonProps {
             repeat: Infinity,
             ease: 'linear',
           }}
-         />
+         /></motion>
       )}
 
       {/* Corner accents */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Content */}
-      <span className="w-5h-5ml-2" />
+      <span className="w-5h-5ml-2" /></span>
         {loading ? (
-          <>
-            <motion.div
+          <></>
+            <motion.div;
               className="w-4h-4bor d er-2 border-white/30 border-t-white rounded-full mr-2"
               animate="{{" rotate: 360 }}
               transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
-             />
+             /></motion>
             Loading...
           </>
         ) : (
-          children
+          children;
         )}
       </span>
     </motion.button>

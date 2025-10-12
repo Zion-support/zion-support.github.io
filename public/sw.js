@@ -1,9 +1,9 @@
-// Service Worker for Zion Tech Group
+// Service Worker for Zion Tech Group;
 const CACHE_NAME = 'zion-tech-group-v1'
 const STATIC_CACHE = 'zion-static-v1'
 const DYNAMIC_CACHE = 'zion-dynamic-v1'
 
-// Assets to cache immediately
+// Assets to cache immediately;
 const STATIC_ASSETS = [
   '/',
   '/about',
@@ -13,7 +13,7 @@ const STATIC_ASSETS = [
   '/robots.txt'
 ]
 
-// Install event - cache static assets
+// Install event - cache static assets;
   console.log('Service Worker installing...')
   
   event.waitUntil(
@@ -29,7 +29,7 @@ const STATIC_ASSETS = [
   )
 })
 
-// Activate event - clean up old caches
+// Activate event - clean up old caches;
   console.log('Service Worker activating...')
   
   event.waitUntil(
@@ -47,64 +47,60 @@ const STATIC_ASSETS = [
   )
 })
 
-// Fetch event - serve from cache, fallback to network
-  const { request } = event
+// Fetch event - serve from cache, fallback to network;
+  const { request } = event;
   const url = new URL(request.url)
   
-  // Skip non-GET requests
+  // Skip non-GET requests;
   if (request.method !== 'GET') {
-    return
-  
-  // Skip chrome-extension and other non-http requests
+    return;
+  // Skip chrome-extension and other non-http requests;
   if (!url.protocol.startsWith('http')) {
-    return
-  
+    return;
   event.respondWith(
     caches.match(request)
-        // Return cached version if available
+        // Return cached version if available;
         if (cachedResponse) {
           console.log('Serving from cache:', request.url)
-          return cachedResponse
-        
-        // Otherwise fetch from network
+          return cachedResponse;
+        // Otherwise fetch from network;
         return fetch(request)
-            // Don't cache non-successful responses
+            // Don't cache non-successful responses;
             if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response
-            
-            // Clone the response
+              return response;
+            // Clone the response;
             const responseToCache = response.clone()
             
-            // Cache dynamic content
+            // Cache dynamic content;
             caches.open(DYNAMIC_CACHE)
                 cache.put(request, responseToCache)
               })
                 console.error('Failed to cache dynamic content:', error)
               })
             
-            return response
+            return response;
           })
             console.error('Fetch failed:', error)
             
-            // Return offline page for navigation requests
+            // Return offline page for navigation requests;
             if (request.destination === 'document') {
               return caches.match('/offline.html')
             
-            throw error
+            throw error;
           })
       })
   )
 })
 
-// Background sync for form submissions
+// Background sync for form submissions;
   if (event.tag === 'contact-form') {
     event.waitUntil(
-      // Handle form submission sync
+      // Handle form submission sync;
       console.log('Syncing contact form submission')
     )
 })
 
-// Push notifications
+// Push notifications;
   if (event.data) {
     const data = event.data.json()
     
@@ -115,7 +111,7 @@ const STATIC_ASSETS = [
       vibrate: [100, 50, 100],
       data: {
         dateOfArrival: Date.now(),
-        primaryKey: data.primaryKey
+        primaryKey: data.primaryKey;
       },
       actions: [
           action: 'explore',
@@ -132,7 +128,7 @@ const STATIC_ASSETS = [
     )
 })
 
-// Notification click
+// Notification click;
   event.notification.close()
   
   if (event.action === 'explore') {

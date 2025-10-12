@@ -1,7 +1,10 @@
 import fs from 'fs';
 import path from 'path';
+import { Helmet } from 'react-helmet-async'
+import Layout from '../../layout'
+export default ${pageName}Page`;
 
-// List of pages that need to be completely rewritten
+// List of pages that need to be completely rewritten;
 const pagesToRewrite = [
   'enterprise-security',
   'services-advertising', 
@@ -9,10 +12,8 @@ const pagesToRewrite = [
   'task-manager-pro'
 ];
 
-// Template for a basic page
+// Template for a basic page;
  `import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Layout from '../../layout'
 
   return (
                 ${title}
@@ -24,14 +25,12 @@ import Layout from '../../layout'
                 <li>• Benefit 2</li>
                 <li>• Benefit 3</li>
                 <li>• Benefit 4</li>
-
               <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
                 Description of the second key feature or service.
                 <li>• Benefit 1</li>
                 <li>• Benefit 2</li>
                 <li>• Benefit 3</li>
                 <li>• Benefit 4</li>
-
               <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
                 Description of the third key feature or service.
                 <li>• Benefit 1</li>
@@ -40,9 +39,8 @@ import Layout from '../../layout'
                 <li>• Benefit 4</li>
   )
 
-export default ${pageName}Page`;
 
-// Page configurations
+// Page configurations;
 const pageConfigs = {
   'enterprise-security': {
     title: 'Enterprise Security',
@@ -65,8 +63,8 @@ const pageConfigs = {
     keywords: 'task management, project planning, team collaboration, productivity tools'
 };
 
-// Rewrite pages
-for (const page of pagesToRewrite) {
+// Rewrite pages;
+for (const page, of, pagesToRewrite) {
   const pagePath = `/workspace/app/${page}/page.tsx`;
   const config = pageConfigs[page];
  

@@ -1,4 +1,4 @@
-// Define metadata type for compatibility
+// Define metadata type for compatibility;
   title: string;
   description: string;
   keywords: string[];
@@ -16,7 +16,7 @@
     description: string;
     url: string;
     siteName: string;
-    images: Array
+    images: Array;
 ;
     locale: string;
     type: string;

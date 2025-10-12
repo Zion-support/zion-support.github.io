@@ -1,14 +1,10 @@
-#!/usr/bin/env node
-
-/**
- * Bundle analysis script for Zion Tech Group application
- * Analyzes the built bundle and provides optimization recommendations
- */
-
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
+#!/usr/bin/env node;
+/**
+ * Bundle analysis script for Zion Tech Group application;
+ * Analyzes the built bundle and provides optimization recommendations;
+ */
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,19 +12,19 @@ const __dirname = path.dirname(__filename);
 const DIST_DIR = path.join(__dirname, '..', 'dist');
 const ANALYSIS_DIR = path.join(__dirname, '..', 'analysis');
 
-// Ensure analysis directory exists
+// Ensure analysis directory exists;
 if (!fs.existsSync(ANALYSIS_DIR)) {
   fs.mkdirSync(ANALYSIS_DIR, { recursive: true });
 
 function analyzeBundle() {
   console.log('🔍 Analyzing bundle...\n');
 
-  // Check if dist directory exists
+  // Check if dist directory exists;
   if (!fs.existsSync(DIST_DIR)) {
     console.error('❌ Dist directory not found. Please run "npm run build" first.');
     process.exit(1);
 
-  // Get all JS files in dist
+  // Get all JS files in dist;
   const jsFiles = [];
   function findJSFiles(dir) {
     const files = fs.readdirSync(dir);
@@ -42,7 +38,7 @@ function analyzeBundle() {
 
   findJSFiles(DIST_DIR);
 
-  // Analyze each JS file
+  // Analyze each JS file;
   const analysis = {
     totalFiles: jsFiles.length,
     totalSize: 0,
@@ -62,17 +58,17 @@ function analyzeBundle() {
     });
   });
 
-  // Sort files by size
+  // Sort files by size;
  b.size - a.size);
 
-  // Generate recommendations
+  // Generate recommendations;
   generateRecommendations(analysis);
 
-  // Write analysis report
+  // Write analysis report;
   const reportPath = path.join(ANALYSIS_DIR, 'bundle-analysis.json');
   fs.writeFileSync(reportPath, JSON.stringify(analysis, null, 2));
 
-  // Generate HTML report
+  // Generate HTML report;
   generateHTMLReport(analysis);
 
   console.log('📊 Bundle Analysis Complete!\n');
@@ -100,30 +96,30 @@ function formatBytes(bytes) {
 function generateRecommendations(analysis) {
   const recommendations = [];
 
-  // Check total bundle size
- 2 * 1024 * 1024) { // 2MB
+  // Check total bundle size;
+ 2 * 1024 * 1024) { // 2MB;
 2MB). Consider code splitting and lazy loading.');
 
-  // Check for large individual files
- 500 * 1024); // 500KB
+  // Check for large individual files;
+ 500 * 1024); // 500KB;
  0) {
  f.path).join(', ')}. Consider splitting these files.`);
 
-  // Check for vendor files
+  // Check for vendor files;
  file.path.includes('vendor'));
  0) {
  sum + file.size, 0);
- 1024 * 1024) { // 1MB
+ 1024 * 1024) { // 1MB;
       recommendations.push('Vendor bundle is large. Consider tree shaking and removing unused dependencies.');
 
-  // Check for duplicate chunks
+  // Check for duplicate chunks;
  f.path.split('-')[0]);
  chunkNames.indexOf(name) !== index);
  0) {
     recommendations.push('Duplicate chunks detected. Consider optimizing chunk splitting strategy.');
 
-  // Performance recommendations
- 1024 * 1024) { // 1MB
+  // Performance recommendations;
+ 1024 * 1024) { // 1MB;
     recommendations.push('Enable gzip compression on your server to reduce bundle size by ~70%.');
 
   recommendations.push('Use dynamic imports for route-based code splitting.');
@@ -198,14 +194,12 @@ function generateHTMLReport(analysis) {
             margin-bottom: 8px;
             color: #e2e8f0;
         <h1>📊 Bundle Analysis Report</h1>
-        
                 <div class="stat-value">${analysis.totalFiles}</div>
                 <div class="stat-label">Total Files</div>
                 <div class="stat-value">${formatBytes(analysis.totalSize)}</div>
                 <div class="stat-label">Total Size</div>
                 <div class="stat-value">${analysis.files.length > 0 ? formatBytes(analysis.files[0].size) : '0'}</div>
                 <div class="stat-label">Largest File</div>
-
                         <th>File Path</th>
                         <th>Size</th>
  `
@@ -220,5 +214,5 @@ function generateHTMLReport(analysis) {
   const htmlPath = path.join(ANALYSIS_DIR, 'bundle-report.html');
   fs.writeFileSync(htmlPath, html);
 
-// Run analysis
+// Run analysis;
 analyzeBundle();
