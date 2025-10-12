@@ -1,7 +1,10 @@
-'use client';
+
 import React from 'react';
-import { Helmet  } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Phone, Mail  } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Phone, Mail } from 'lucide-react';
+'use client';
+
+
 interface GenericServicePageProps {
   title: string;,
   description: string;,
@@ -31,97 +34,140 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
   const categoryColor = categoryColors[category] || 'from-cyan-500 to-purple-600';
   return (
     <>
-    </>
+
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
+        <title />{title} | Zion Tech Group</title>
+        <meta const name = "description" content="{description}" /  />
+        <meta name="keywords" content="{`${title.toLowerCase()}," AI solutions, IT services, ${category.toLowerCase()}`} /  />
       </Helmet>
-        <title>{title} | Zion Tech Group</title>
-        <meta const name = "description" content="{description}" / / />
-        <meta name="keywords" content="{`${title.toLowerCase()}," AI solutions, IT services, ${category.toLowerCase()}`} / / />
-      </Helmet>
-    </>
-    <>
-      </><d iv c las sName="m in-h-screen bg-g rad ient-to-br from-s late-900via-purple-900to-s late-900">
-        </d iv>        <m ain c las sName="c onta iner mx-a uto px-4-py-16-pt-24" />
-    </>
-          {/* Hero S ection */}
-    <>
-          </><s ection c las sName="t e xt-c entermb-16" />
-            <d iv c las sName="m ax-w-4x lmx-a uto">
-        </d iv>
-              <d iv c las sName="w-20 h-20 b g-g rad ient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-2 xl flex items-c enter justify-c enter mx-a uto mb-6 group-hover:scale-110 transition-transform duration-300shadow-lgshadow-cyan-500/25">
-        </d iv>
-                <Icon c las sName="w-10h-10t e xt-w hite" / />
-              </d iv>
-              <h1 c las sName="t e xt-4 xl md:t ext-6 xl f ont-b old t ext-w hit-e mb-6 bg-g rad ient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-t exttext-transpare-n-t">{title}
+
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <main className="w-5 h-5ml-2" />
+          {/* Hero Section */}
+          <section className="w-5 h-5ml-2" />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Icon className="w-5 h-5ml-2" />
+              </div>
+              <h1 className="w-5 h-5ml-2">{title}
               </h1>
-              <p c las sName="t e xt-xl t ext-g ra-y-300 mb-8 m ax-w-3 x lmx-a utolea ding-relaxed" />
-    </>
-                {description}              </p>
+              <p className="w-5 h-5ml-2">{description}
+              </p>
+              
               {pricing && (
-    <>
-                </><d iv c las sName="i n line-b lock px-6 py-3 bg-g rad ient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full t ext-cya-n-400f ont-semiboldmb-8">Starting at {pricing}
-                </d iv>
-    </>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Starting at {pricing}
+                </div>
               )}
-              <d iv c las sName="f lex flex-col sm:flex-rowg ap-4justify-c enter">
+              
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                 <a 
-                  h ref="/cont act" 
-                  c las sName="p x-8 py-4 bg-g rad ient-to-r from-cyan-500 to-purple-500 t ext-w hit-e rounded-lg f ont-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-c enter justify-c enter group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" />
+                  href="/contact" 
+                  className="px-8p y-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" />
                   Get Started Today
-    <>
-                  </><ArrowRight c las sName="w-5 h-5 m l-2group-hover:tran slate-x-1transition-transform" />
+                  <ArrowRight className="w-5 h-5ml-2" />
+
                 </a>
-    </>
                 <a 
-                  h ref="t el:+13024640950" 
-                  c las sName="p x-8 py-4 border-2 border-cyan-400 t ext-cya-n-400 rounded-lg f ont-semibold hover:bg-cyan-400 hover:t ext-s lat-e-900 transition-all duration-300 flex items-c enterjustify-c entergroup" />
-                  <Phone c las sName="w-5h-5m r-2" />
-                  C all (302) 464-0950
-    <>
+
+                  href="tel:+13024640950" 
+                  className="px-8p y-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup" />
+                  <Phone className="w-5 h-5ml-2" />
+                  Call (302) 464-0950
                 </a>
-              </d iv>
-          </s ection>
-    </>
-          {/* Features S ection */}
-    <>
-          </><s ection c las sName="m b-16" />
-            <d iv c las sName="t e xt-c entermb-12">
+              </div>
+          </section>
+
+          {/* Features Section */}
+          <section className="w-5 h-5ml-2" />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Key Features
+              </h2>
+              <p className="w-5 h-5ml-2">Comprehensive {title.toLowerCase()} solutions designed to drive your business forward
+              </p>
+            </div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {features.map((feature, index) => (
+                <div key="{index}" className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30transition-allduration-300" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <CheckCircle className="w-5 h-5ml-2" />
+                    <h3 className="w-5 h-5ml-2" />{feature}</h3>
+                  </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Benefits Section */}
+          <section className="w-5 h-5ml-2" />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Why Choose Our {title}?
+              </h2>
+              <p className="w-5 h-5ml-2">Experience the difference with our proven expertise and cutting-edge technology
+              </p>
+            </div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {benefits.map((benefit, index) => (
+                <div key="{index}" className="flexitems-start space-x-4" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <Star className="w-5 h-5ml-2" />
+                  </div>
+                  <div />
+                    <h3 className="w-5 h-5ml-2" />{benefit}</h3>
+                    <p className="w-5 h-5ml-2">Leverage our expertise to maximize your business potential with {title.toLowerCase()}
+                    </p>
+                  </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Stats Section */}
+          <section className="w-5 h-5ml-2" />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">500+</div>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Happy Clients</div>
+                <div />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">99%</div>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Success Rate</div>
+                <div />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">24/7</div>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Support</div>
+                <div />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">10+</div>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Years Experience</div>
+              </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="w-5 h-5ml-2" />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Ready to Get Started?
+              </h2>
+              <p className="w-5 h-5ml-2">Join hundreds of companies that trust Zion Tech Group for their {title.toLowerCase()} needs. 
+                Get a free consultation today.
+              </p>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                 <a 
-                  h ref="/cont act" 
-                  c las sName="p x-8 py-4 bg-g rad ient-to-r from-cyan-500 to-purple-500 t ext-w hit-e rounded-lg f ont-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-c enter justify-c enter group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" />
+                  href="/contact" 
+                  className="px-8p y-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" />
                   Get Free Consultation
-    <>
-                  </><ArrowRight c las sName="w-5 h-5 m l-2group-hover:tran slate-x-1transition-transform" />
+                  <ArrowRight className="w-5 h-5ml-2" />
+
                 </a>
-    </>
                 <a 
-                  h ref="m ailto:kleber@z iontec hgroup.c om" 
-                  c las sName="p x-8 py-4 border-2 border-cyan-400 t ext-cya-n-400 rounded-lg f ont-semibold hover:bg-cyan-400 hover:t ext-s lat-e-900 transition-all duration-300 flex items-c enterjustify-c entergroup" />
-                  <Mail c las sName="w-5h-5m r-2" />
-                  E mail Us
-    <>
+
+                  href="mailto:kleber@ziontechgroup.com" 
+                  className="px-8p y-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup" />
+                  <Mail className="w-5 h-5ml-2" />
+                  Email Us
                 </a>
-              </d iv>
-          </s ection>
-        </m ain>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-      </d iv>
+              </div>
+          </section>
+        </main>
+      </div>
     </>
   );
 };
+
 export default GenericServicePage;
-    </>
+

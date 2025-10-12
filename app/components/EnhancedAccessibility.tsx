@@ -49,6 +49,9 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       cleanupMotion?.();
     };
   }, []);
-  return <React.Fragment />{children}</React.Fragment>;
+
+
+  return <React.Fragment >{children}</React.Fragment ></React.Fragment>;
+
 };
 export default EnhancedAccessibility;

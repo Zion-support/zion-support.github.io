@@ -16,48 +16,54 @@ const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({
   );
 };
 const DefaultLoadingSpinner: React.FC = () => (
-  <d iv c las sNa me="m in-h-s cre en bg-g rad ient-to-br from-s late-900 via-purple-900 to-s late-900 flex i tems-c enter j ust ify-c enter">
-    <d iv c las sNa me="t e xt-c enter">
-      <d iv c las sNa me="a n ima te-s pin r oun ded-f ull h-32 w-32 b order-b-2 b order-c yan-400 mx-a uto mb-4"></d iv>
-      <p c las sNa me="t e xt-w hite t ext-l-g">Loading...</p>
-    </d iv>
-  </d iv>
+
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="text-center">
+      <div className="animate-spinrounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
+      <p className="text-whitetext-lg">Loading...</p>
+    </div>
+  </div>
+
 );
 // Skeleton loaders for different components
-export const Service Car dSkeleton: React.FC = () => (
-  <d iv c las sNa me="b g-g rad ient-to-br from-s late-800/50 to-s late-900/50 p-8 r oun ded-2xl b order b order-s late-700/50 a nim ate-p ulse">
-    <d iv c las sNa me="w-16 h-16 b g-s late-700 r oun ded-f ull mb-6"></d iv>
-    <d iv c las sNa me="h-6 b g-s late-700 r oun ded mb-4"></d iv>
-    <d iv c las sNa me="h-4 b g-s late-700 r oun ded mb-2"></d iv>
-    <d iv c las sNa me="h-4 b g-s late-700 r oun ded w-3/4"></d iv>
-  </d iv>
+
+export const ServiceCardSkeleton: React.FC = () => (
+  <div className="bg-gradient-to-brfrom-slate-800/50 to-slate-900/50 p-8 rounded-2xl border border-slate-700/50 animate-pulse">
+    <div className="w-16h-16 bg-slate-700 rounded-full mb-6"></div>
+    <div className="h-6bg-slate-700 rounded mb-4"></div>
+    <div className="h-4bg-slate-700 rounded mb-2"></div>
+    <div className="h-4bg-slate-700 rounded w-3/4"></div>
+  </div>
 );
-export const H ero Skeleton: React.FC = () => (
-  <d iv c las sNa me="m in-h-s cre en bg-g rad ient-to-br from-s late-900 via-purple-900 to-s late-900 flex i tems-c enter j ust ify-c enter">
-    <d iv c las sNa me="t e xt-c enter m ax-w-4xl mx-a uto px-4">
-      <d iv c las sNa me="h-16 b g-s late-700 r oun ded mb-6 a nim ate-p ulse"></d iv>
-      <d iv c las sNa me="h-6 b g-s late-700 r oun ded mb-4 a nim ate-p ulse"></d iv>
-      <d iv c las sNa me="h-6 b g-s late-700 r oun ded mb-8 w-3/4 mx-a uto a nim ate-p ulse"></d iv>
-      <d iv c las sNa me="f lex flex-c ol sm:flex-r ow g ap-4 j ust ify-c enter">
-        <d iv c las sNa me="h-12 b g-s late-700 r oun ded w-48 a nim ate-p ulse"></d iv>
-        <d iv c las sNa me="h-12 b g-s late-700 r oun ded w-48 a nim ate-p ulse"></d iv>
-      </d iv>
-    </d iv>
-  </d iv>
+
+export const HeroSkeleton: React.FC = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="text-centermax-w-4xl mx-auto px-4">
+      <div className="h-16bg-slate-700 rounded mb-6 animate-pulse"></div>
+      <div className="h-6bg-slate-700 rounded mb-4 animate-pulse"></div>
+      <div className="h-6bg-slate-700 rounded mb-8 w-3/4 mx-auto animate-pulse"></div>
+      <div className="flexflex-col sm:flex-row gap-4 justify-center">
+        <div className="h-12bg-slate-700 rounded w-48 animate-pulse"></div>
+        <div className="h-12bg-slate-700 rounded w-48 animate-pulse"></div>
+      </div>
+    </div>
+  </div>
 );
-export const Navigat ion Skeleton: React.FC = () => (
-  <n av c las sNa me="f i xed t op-0 l eft-0 r ight-0 z-50 bg-s late-900/90 backdrop-blur-md b order-b b order-s late-700/50">
-    <d iv c las sNa me="c o nta iner mx-a uto px-4 py-4">
-      <d iv c las sNa me="f lex i tems-c enter j ust ify-betw een">
-        <d iv c las sNa me="h-8 b g-s late-700 r oun ded w-32 a nim ate-p ulse"></d iv>
-        <d iv c las sNa me="h i dden md:flex s pace-x-8">
-          {[...Array(6)].m ap((_, i) => (
-            <d iv k ey={i} c las sNa me="h-4 b g-s late-700 r oun ded w-16 a nim ate-p ulse"></d iv>
+
+export const NavigationSkeleton: React.FC = () => (
+  <nav className="fixedtop-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-700/50">
+    <div className="containermx-auto px-4 py-4">
+      <div className="flex items-center justify-between">
+        <div className="h-8bg-slate-700 rounded w-32 animate-pulse"></div>
+        <div className="hiddenmd:flex space-x-8">
+          {[...Array(6)].map((_, i) => (
+            <div key={i} className="h-4bg-slate-700 rounded w-16 animate-pulse"></div>
           ))}
-        </d iv>
-        <d iv c las sNa me="h-10 b g-s late-700 r oun ded w-24 a nim ate-p ulse"></d iv>
-      </d iv>
-    </d iv>
-  </n av>
+        </div>
+        <div className="h-10bg-slate-700 rounded w-24 animate-pulse"></div>
+      </div>
+    </div>
+  </nav>
+
 );
 export default LoadingOptimizer;

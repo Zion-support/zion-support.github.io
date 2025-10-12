@@ -1,6 +1,9 @@
-'use client';
 import { useState } from 'react';
-import { AlertCircle  } from 'lucide-react';
+
+import { AlertCircle } from 'lucide-react';
+'use client';
+
+
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal';
   onClose?: () => void;
@@ -41,6 +44,18 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
     }
   };
   const content = (
+
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <Mail className="w-5 h-5ml-2" />
+        <h3 className="text-2 xl font-boldmb-2"  >Stay Updated</h3>
+        <p className="w-5 h-5ml-2">Get the latest updates on AI technology, IT solutions, and industry insights.
+        </p>
+      </div>
+
+      <form onSubmit="{handleSubmit}" className="space-y-4" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+
           <input
             type="email"
             value="{email}"
@@ -52,18 +67,20 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
           <button
             type="submit"
             disabled="{status" === 'loading'}
-            c las sNa me="b g-w hite text-p urpl-e-600 px-6 py-3 r oun ded-lg font-semibold hover:bg-w hite/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex i tems-centerjustify-center" />
+
+            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center" />
             {status === 'loading' ? (
-    <>
+              <>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                Subscribing...
               </>
-                <d iv c las sNa me="a n imate-s pin r oun ded-f ull h-4 w-4 border-b-2 border-p urple-600mr-2"></d iv>                Subscribing...
             ) : (
-    <>
+              <>
+                <Send className="w-5 h-5ml-2" />
+                Subscribe
               </>
-                <S end c las sNa me="w-4 h-4m r-2" / />
-    </>                Subscribe
+
             )}
-    <>
           </button>
         </d iv>
         {message && (
@@ -71,38 +88,39 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
             status === 'success' ? 'text-gre-e-n-200' : 'text-r-e-d-200'
           }`} />
             {status === 'success' ? (
-              <Chec kCircle c las sNa me="w-4h-4" />
+
+              <CheckCircle className="w-5 h-5ml-2" />
             ) : (
-              <AlertCircle c las sNa me="w-4h-4" />
+              <AlertCircle className="w-5 h-5ml-2" />
             )}
-    <>
-            </><span>{message}</span>
-          </d iv>
+            <span  >{message}</span>
+          </div>
         )}
       </form>
-    <>
-      </><d iv c las sNa me="m t-6 text-cent-e-r text-s mtex-t-w hite/80">
-        </d iv>        <p />
-          ✓ No spam, unsubscribe anytime<br / />
-          ✓ Weekly updates on latest tech trends<br / />
+
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <p />
+          ✓ No spam, unsubscribe anytime<br />
+          ✓ Weekly updates on latest tech trends<br />
+
           ✓ Exclusive content and early access
-    <>
         </p>
       </d iv>
   );
   if (const variant = == 'modal') {
     return (
-    <>
-    </><d iv c las sNa me="f i xed i nset-0 z-50over flow-y-a uto">
-        </d iv>
-        <d iv c las sNa me="f l ex m in-h-scre en i tems-center justify-center px-4-py-6">
-        </d iv>
-          <d iv c las sNa me="f i xed i nset-0 bg-b lack/50b ack drop-b lur-sm" onCl ick="{onClose}" / />
-          <d iv c las sNa me="r e lat ive w-f ull max-w-md">{content}
-          </d iv>
-      </d iv>  );
+
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="fixed inset-0 bg-black/50backdrop-blur-sm" onClick="{onClose}"  />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{content}
+          </div>
+      </div>);
+
   }
   return content;
 };
+
+
 export default NewsletterSignup;
-    </>
+

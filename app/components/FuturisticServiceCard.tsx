@@ -1,6 +1,10 @@
 import { ArrowRight  } from 'lucide-react';
 'use client'
-import { ArrowRight, Brain  } from 'lucide-react';  const benefits = [
+
+
+import { ArrowRight } from 'lucide-react';
+  const benefits = [
+
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -32,55 +36,50 @@ import { ArrowRight, Brain  } from 'lucide-react';  const benefits = [
       description: 'Worldwide deployment and support for international businesses',
     }
   ];
-  r etu rn (
-    <>
-    </><d iv c las sNa me="m in-h-scre en bg-grad ient-to-br from-s late-900via-purple-900to-s late-900">
-        </d iv>
+
+  return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
+        <title />Futuristic Service Card | Zion Tech Group</title>
+        <meta name="description" content="Professional futuristic service card solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="futuristic service card, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
-        <title>Futuristic Service Card | Zion Tech Group</title>        <meta name="description" content="Professional futuristic service card solutions by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
-        <meta name="keywords" content="futuristic service card, AI solutions, IT services, Zion Tech Group" / / />
-      </Helmet>
-      {/* H ero Section */}
-    <>
-      </><section c las sNa me="r e lative py-20 px-4-sm:px-6-lg:px-8" />
-        <d iv c las sNa me="m ax-w-7x lmx-a uto">
-        </d iv>
-          <d iv c las sNa me="t e xt-c enter" />
-            <h1 c las sNa me="t e xt-4 xl md:t ext-6 xl f ont-b old text-w hitem-b-6" />
-              <s pan c las sNa me="b g-grad ient-to-r from-purple-400 to-b lue-400bg-clip-t exttext-transpare-n-t">FuturisticServiceCard              </s pan>
-              <br / />
-              <s pan c las sNa me="t e xt-w hite">Solutions</s pan>
+
+      {/* Hero Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h1 className="w-5 h-5ml-2" />
+              <span className="w-5 h-5ml-2" />FuturisticServiceCard
+              </span>
+              <br />
+              <span className="w-5 h-5ml-2" />Solutions</span>
             </h1>
-            <p c las sNa me="t e xt-xl t ext-gra-y-300 mb-8 m ax-w-3x lmx-a uto">
-              Transform your business with our advanced futuristic service card solutions.
+            <p className="w-5 h-5ml-2">Transform your business with our advanced futuristic service card solutions.
+
               Powered by cutting-edge AI technology and industry expertise.
-    <>
             </p>
-            <d iv c las sNa me="f lex flex-c ol sm:flex-rowg ap-4j ust ify-c enter">
-        </d iv>
-              <b utt on c las sNa me="b g-grad ient-to-r from-purple-500 to-b lue-600 t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:from-purple-600 hover:to-b lue-700 transition-all duration-300flexitems-c enter" />                Get Star ted
-    <>
-                </><ArrowRight c las sNa me="m l-2h-5w-5" />
-              </b utt on>
-              <b utt on c las sNa me="b order b ord er-gray-300 t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:bg-w hite hover:t ext-gra-y-900transition-allduration-300">Learn More
-              </b utt on>
-            </d iv>
-        </d iv>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <button className="w-5 h-5ml-2" />
+                Get Started
+                <ArrowRight className="w-5 h-5ml-2" />
+              </button>
+              <button className="w-5 h-5ml-2">Learn More
+              </button>
+            </div>
+        </div>
+
       </section>
       {/* Features Section */}
-    <>
-      </><section c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" />
-        <d iv c las sNa me="m ax-w-7x lmx-a uto">
-        </d iv>
-          <d iv c las sNa me="t e xt-c entermb-16">
-        </d iv>
-            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-w hitem-b-4">Our Features            </h2>
-            <p c las sNa me="t e xt-xl t ext-gra-y-300 m ax-w-3x lmx-a uto">
-              Discover the powerful features that make our futuristic service card solutions stand out.
-    <>
+
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />Our Features
+            </h2>
+            <p className="w-5 h-5ml-2">Discover the powerful features that make our futuristic service card solutions stand out.
+
             </p>
           </d iv>;
         </d iv></section>)};export default FuturisticServiceCardPage

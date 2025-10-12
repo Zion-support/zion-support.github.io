@@ -1,4 +1,7 @@
-import React from 'react';import { ArrowRight  } from 'lucide-react';
+
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+
 'use client'
 const EnhancedLoadingSkeletonPage: React.FC = () => {
   const features = [
@@ -33,113 +36,101 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of s uccess'
   ];
-  r etu rn (
-    <>
-    </><d iv c las sNa me="m in-h-scre en bg-grad ient-to-br from-s late-900via-purple-900to-s late-900">
-        </d iv>
+
+  return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
-      </Helmet>        <title>EnhancedLoadingSkeleton | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedLoadingSkeleton services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
-        <meta name="keywords" content="EnhancedLoadingSkeleton, AI solutions, IT services, Zion Tech Group, enhancedloadingskeleton" / / />
+        <title>EnhancedLoadingSkeleton | Zion Tech Group</title>
+        <meta name="description" content="Professional EnhancedLoadingSkeleton services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="EnhancedLoadingSkeleton, AI solutions, IT services, Zion Tech Group, enhancedloadingskeleton" />
       </Helmet>
-      {/* H ero Section */}
-    <>
-      </><section c las sNa me="r e lative py-20 px-4-sm:px-6-lg:px-8" />
-        <d iv c las sNa me="m ax-w-7x lmx-a uto">
-        </d iv>
-          <d iv c las sNa me="t e xt-c enter" />
-            <h1 c las sNa me="t e xt-4 xl md:t ext-6 xl f ont-b old text-w hitem-b-6" />
-              <s pan c las sNa me="b g-grad ient-to-r from-purple-400 to-b lue-400bg-clip-t exttext-transpare-n-t">EnhancedLoadingSkeleton              </s pan>
-              <br / />
-              <s pan c las sNa me="t e xt-w hite">Solutions</s pan>
+
+      {/* Hero Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h1 className="w-5 h-5ml-2" />
+              <span className="w-5 h-5ml-2" />EnhancedLoadingSkeleton
+              </span>
+              <br />
+              <span className="text-white"  >Solutions</span>
             </h1>
-            <p c las sNa me="t e xt-xl t ext-gra-y-300 mb-8 m ax-w-3x lmx-a uto">
-              Transform your business with our advanced enhancedloadingskeleton solutions.
+            <p className="w-5 h-5ml-2">Transform your business with our advanced enhancedloadingskeleton solutions.
+
               Powered by cutting-edge AI technology and industry expertise.
-    <>
             </p>
-            <d iv c las sNa me="f lex flex-c ol sm:flex-rowg ap-4j ust ify-c enter">
-        </d iv>
-              <b utton c las sNa me="b g-grad ient-to-r from-purple-500 to-b lue-600 hover:from-purple-600 hover:to-b lue-700 t ext-w hit-e f ont-b old py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105">Get Started              </b utton>
-              <b utton c las sNa me="b order b ord er-purple-400 t ext-purpl-e-400 hover:bg-purple-400 hover:t ext-w hit-e f ont-b old py-4 px-8 rounded-lgtransition-allduration-300">Learn More
-              </b utton>
-            </d iv>
-        </d iv>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <button className="w-5 h-5ml-2">Get Started
+              </button>
+              <button className="w-5 h-5ml-2">Learn More
+              </button>
+            </div>
+        </div>
+
       </section>
       {/* Features Section */}
-    <>
-      </><section c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" />
-        <d iv c las sNa me="m ax-w-7x lmx-a uto">
-        </d iv>
-          <d iv c las sNa me="t e xt-c entermb-16">
-        </d iv>
-            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-w hitem-b-4">Why Choose Our EnhancedLoadingSkeleton Solutions?            </h2>
-            <p c las sNa me="t e xt-xl t ext-gra-y-300 m ax-w-3x lmx-a uto">
-              Our comprehensive approach ensures m aximum efficiency and results for your business.
-    <>
+
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />Why Choose Our EnhancedLoadingSkeleton Solutions?
+            </h2>
+            <p className="w-5 h-5ml-2">Our comprehensive approach ensures maximum efficiency and results for your business.
             </p>
-          </d iv>
-          <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-8">
+          </div>
+
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             {features.map((feature, index) => (
-    <>
-              </><d iv key="{index}" c las sNa me="b g-w hite/10 b ack drop-b lur-sm rounded-xl p-6 b ord er b ord er-w hite/20 hover:bg-w hite/20transition-allduration-300" />
-                <d iv c las sNa me="f lex i tems-c entermb-4">
-                  <feature.icon c las sNa me="h-8 w-8t e xt-purple-400mr-3" />
-                  <h3 c las sNa me="t e xt-x lfont-s emi bol dte xt-w hit-e"  >{feature.title}</h3>                </d iv>
-                <p c las sNa me="t e xt-gray-300">{feature.description}</p>
-              </d iv>
+              <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <feature.icon className="h-8w-8te xt-purple-400mr-3"  />
+                  <h3 className="text-xlfont-semibold text-white"  >{feature.title}</h3>
+                </div>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
             ))}
-    <>
-          </d iv>
+          </div>
+
       </section>
       {/* Benefits Section */}
-    <>
-      </><section c las sNa me="p y-20 px-4 sm:px-6-lg:px-8-bg-w hite/5" />
-        <d iv c las sNa me="m ax-w-7x lmx-a uto">
-        </d iv>
-          <d iv c las sNa me="t e xt-c entermb-16">
-        </d iv>
-            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-w hitem-b-4">Key Benefits            </h2>
-            <p c las sNa me="t e xt-xl t ext-gra-y-300 m ax-w-3x lmx-a uto">
-              Discover the advantages of our enhancedloadingskeleton solutions.
-    <>
+
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />Key Benefits
+            </h2>
+            <p className="w-5 h-5ml-2">Discover the advantages of our enhancedloadingskeleton solutions.
             </p>
-          </d iv>
-          <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-6">
-        </d iv>
+          </div>
+
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             {benefits.map((benefit, index) => (
-    <>
-              </><d iv key="{index}" c las sNa me="f lexi tems-star tsp ace-x-3" />
-                <C hec kCi rcle c las sNa me="h-6 w-6 t e xt-g reen-400flex-s hri nk-0mt-1" / />                <p c las sNa me="t e xt-gray-300">{benefit}</p>
-              </d iv>
+              <div key="{index}" className="flexitems-startspace-x-3" />
+                <CheckCircle className="w-5 h-5ml-2" />
+                <p className="text-gray-300">{benefit}</p>
+              </div>
             ))}
-    <>
-          </d iv>
+          </div>
       </section>
-      {/* C TA Section */}
-    <>
-      </><section c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" />
-        <d iv c las sNa me="m ax-w-4 x lmx-a uto text-c ente-r">
-        </d iv>
-          <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-w hitem-b-6">Ready to Get Started?
+
+      {/* CTA Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <h2 className="w-5 h-5ml-2" />Ready to Get Started?
           </h2>
-          <p c las sNa me="t e xt-x lte xt-gra-y-300mb-8" />
-            Join thousands of satisfied customers who trust our enhancedloadingskeleton solutions.
-    <>
+          <p className="w-5 h-5ml-2">Join thousands of satisfied customers who trust our enhancedloadingskeleton solutions.
           </p>
-          <d iv c las sNa me="f lex flex-c ol sm:flex-rowg ap-4j ust ify-c enter">
-        </d iv>
-            <b utton c las sNa me="b g-grad ient-to-r from-purple-500 to-b lue-600 hover:from-purple-600 hover:to-b lue-700 t ext-w hit-e f ont-b old py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-c enterj ust ify-c enter" />              Get Started N ow
-    <>
-              </><ArrowRight c las sNa me="m l-2h-5w-5" />
-            </b utton>
-            <b utton c las sNa me="b order b ord er-purple-400 t ext-purpl-e-400 hover:bg-purple-400 hover:t ext-w hit-e f ont-b old py-4 px-8 rounded-lgtransition-allduration-300">Contact Sales
-            </b utton>
-          </d iv>
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <button className="w-5 h-5ml-2" />
+              Get Started Now
+              <ArrowRight className="w-5 h-5ml-2" />
+            </button>
+            <button className="w-5 h-5ml-2">Contact Sales
+            </button>
+          </div>
+
       </section>
     </d iv>
   )
 };
-    </>

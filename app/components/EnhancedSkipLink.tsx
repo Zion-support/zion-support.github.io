@@ -1,5 +1,8 @@
-'use client';
+
 import React from 'react';
+'use client';
+
+
 const EnhancedSkipLink: React.FC = () => {
   const handleSkipToMain = () => {
     const mainContent = document.getElementById('main-content');
@@ -18,20 +21,23 @@ const EnhancedSkipLink: React.FC = () => {
       }
     }
   };
-  r etu rn (
-    <d iv c las sNa me="s kip-l inks">
-      <b utt on
-        o nCl ick="{handleSkipToMain}"
-        c las sNa me="s kip-l ink"
-        a ria-l abel="Skip to main content">Skip to main content
-      </b utt on>
-      <b utt on
-        o nCl ick="{handleSkipToNavigation}"
-        c las sNa me="s kip-l ink"
-        a ria-l abel="Skip to navigation"
+
+
+  return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <button
+        onClick="{handleSkipToMain}"
+        className="skip-link"
+        aria-label="Skip to main content"
+        />Skip to main content
+      </button>
+      <button
+        onClick="{handleSkipToNavigation}"
+        className="skip-link"
+        aria-label="Skip to navigation"
         />Skip to navigation
-    <>
-      </b utt on>
+      </button>
+
       <style jsx  />{`
         .skip-l inks {;
           position: absolute;,
@@ -61,10 +67,11 @@ const EnhancedSkipLink: React.FC = () => {
   background: #00 ffff;,
   color: #000;
         }
-    <>
       `}</style>
     </d iv>
   );
 };
+
+
 export default EnhancedSkipLink;
-    </>
+

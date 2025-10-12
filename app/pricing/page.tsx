@@ -1,6 +1,10 @@
-'use client';
 import { useState } from 'react';
-import { Link  } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+'use client';
+
+
 const PricingPage: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState('monthly');
   const aiServicesPricing = [
@@ -213,79 +217,317 @@ const PricingPage: React.FC = () => {
   };
   return (
     <>
-    </>
+
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
+        <title />Pricing - Zion Tech Group | Transparent AI & IT Solutions Pricing</title>
+        <meta const name = "description" content="Transparent pricing for AI services, IT solutions, and micro SAAS tools. Choose the plan that fits your business needs with 14-day free trials." /  />
+        <meta name="keywords" content="pricing, AI services pricing, IT services pricing, micro SAAS pricing, business solutions" />
+        <link rel="canonical" href="https://ziontechgroup.com/pricing"  />
       </Helmet>
-        <title>Pricing - Zion Tech Group | Transparent AI & IT Solutions Pricing</title>
-        <meta const name = "description" content="Transparent pricing for AI services, IT solutions, and micro SAAS tools. Choose the plan that fits your business needs with 14-day free trials." / / />
-        <meta name="keywords" content="pricing, AI services pricing, IT services pricing, micro SAAS pricing, business solutions" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/pricing" />
-      </Helmet>
-    </>
-      <d iv c las sName="m in-h-scre en bg-grad ient-to-br from-s late-900via-purple-900to-s late-900">
-        {/* H ero S ection */}
-    <>
-        </><section c las sName="r e lative py-20-px-4-o ver flow-h idd en" />
-          <d iv c las sName="a b solute inset-0bg-[radial-grad ient(c ircle_at_20%_80%,rgba(168,85,247,0.4)_0%,transparent_50%)]animate-pulse" />
-          <d iv c las sName="a b solute inset-0bg-[radial-grad ient(c ircle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
-              {addOns.map((addon, index) => (
-    <>
-                </><d iv key="{index}" c las sName="b g-w hite/10 b ack drop-b lur-lg rounded-2 xl p-6 border border-w hite/20 hover:bg-w hite/20transition-allduration-300" />
-              {faqs.map((faq, index) => (
-    <>
-                </><d iv key="{index}" c las sName="b g-w hite/10 b ack drop-b lur-lg rounded-2 xl p-6borderborder-w hite/20" />
-                  <h3 c las sName="t e xt-xl f ont-b old t ext-w hit-e mb-3"   />{faq.question}</h3>
-                  <p c las sName="t e xt-gray-300l ead ing-rela xed">
-              {faq.answer}</p>                </d iv>
-    </>
-              ))}
-    <>
-            </d iv>
+
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        {/* Hero Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <DollarSign className="w-5 h-5ml-2" />
+              <span />Transparent Pricing</span>
+            </div>
+            
+            <h1 className="w-5 h-5ml-2" />
+              Simple, Transparent{' '}
+              <span className="w-5 h-5ml-2" />Pricing
+              </span>
+            </h1>
+            
+            <p className="w-5 h-5ml-2">Choose the plan that fits your business needs. All plans include 14-day free trials and no setup fees.
+            </p>
+
+            {/* Billing Toggle */}
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <span className="{`text-lg" ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}  />Monthly
+              </span>
+              <button
+                onClick="{()" = /> setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+                className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2focus:ring-cyan-500focus:ring-offset-2"
+              >
+                <span
+                  className="{`inline-block" h-4 w-4 transform rounded-full bg-white transition-transform ${
+                    billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'
+                  }`}
+                 />
+              </button>
+              <span className="{`text-lg" ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}  />Yearly
+              </span>
+              {billingCycle === 'yearly' && (
+                <span className="w-5 h-5ml-2" />Save up to 20%
+                </span>
+              )}
+            </div>
         </section>
-    </>
-        {/* C TA S ection */}
-    <>
-        </><section c las sName="p y-20px-4" />
-          <d iv c las sName="m ax-w-7x lmx-auto">
-        </d iv>
-            <d iv c las sName="b g-grad ient-to-r from-c yan-900/50 to-purple-900/50 b ack drop-b lur-sm border border-c yan-500/20 rounded-2 xl p-12 t ext-centerrelativeov erflo-w-h idd en">
-        </d iv>
-              <d iv c las sName="a b solute inset-0 bg-grad ient-to-r from-c yan-500/5to-purple-500/5" / />
-              <d iv c las sName="r e lativez-10">
-        </d iv>
-                <h2 c las sName="t e xt-4 xl f ont-b old text-w hitem-b-6">Ready to Get Started?
+
+        {/* AI Services Pricing */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                <span className="w-5 h-5ml-2" />AI Services</span> Pricing
+              </h2>
+              <p className="w-5 h-5ml-2">Advanced artificial intelligence solutions for every business size
+              </p>
+            </div>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {aiServicesPricing.map((plan, index) => (
+                <div key="{index}" className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''}`} />
+                  {plan.popular && (
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <span className="w-5 h-5ml-2" />Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <Brain className="w-5 h-5ml-2" />
+                    </div>
+                    <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
+                    <p className="w-5 h-5ml-2">{plan.description}</p>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      {formatPrice(billingCycle === 'monthly' ? plan.price.monthly : plan.price.yearly)}
+                      <span className="w-5 h-5ml-2" />/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
+                    </div>
+                    {billingCycle === 'yearly' && (
+                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Save {getSavings(plan.price.monthly, plan.price.yearly)}%
+                      </div>
+                    )}
+                  </div>
+
+                  <ul className="w-5 h-5ml-2" />
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key="{featureIndex}" className="flex items-centerspace-x-3 text-gray-300" />
+                        <CheckCircle className="w-5 h-5ml-2" />
+                        <span />{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link 
+                    to="/contact"
+                    className="{`block" w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                        : 'border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
+                    }`}
+                    />Start Free Trial
+                  </Link>
+                </div>
+              ))}
+            </div>
+        </section>
+
+        {/* IT Services Pricing */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                <span className="w-5 h-5ml-2" />IT Services</span> Pricing
+              </h2>
+              <p className="w-5 h-5ml-2">Comprehensive technology solutions for modern businesses
+              </p>
+            </div>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {itServicesPricing.map((plan, index) => (
+                <div key="{index}" className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-emerald-400 scale-105' : ''}`} />
+                  {plan.popular && (
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <span className="w-5 h-5ml-2" />Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <Settings className="w-5 h-5ml-2" />
+                    </div>
+                    <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
+                    <p className="w-5 h-5ml-2">{plan.description}</p>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      {formatPrice(billingCycle === 'monthly' ? plan.price.monthly : plan.price.yearly)}
+                      <span className="w-5 h-5ml-2" />/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
+                    </div>
+                    {billingCycle === 'yearly' && (
+                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Save {getSavings(plan.price.monthly, plan.price.yearly)}%
+                      </div>
+                    )}
+                  </div>
+
+                  <ul className="w-5 h-5ml-2" />
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key="{featureIndex}" className="flex items-centerspace-x-3 text-gray-300" />
+                        <CheckCircle className="w-5 h-5ml-2" />
+                        <span />{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link 
+                    to="/contact"
+                    className="{`block" w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-emerald-500 to-blue-600 text-white hover:from-emerald-600 hover:to-blue-700'
+                        : 'border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-gray-900'
+                    }`}
+                    />Start Free Trial
+                  </Link>
+                </div>
+              ))}
+            </div>
+        </section>
+
+        {/* Micro SAAS Pricing */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                <span className="w-5 h-5ml-2" />Micro SAAS</span> Pricing
+              </h2>
+              <p className="w-5 h-5ml-2">Ready-to-use business tools with AI-powered features
+              </p>
+            </div>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {microSaasPricing.map((plan, index) => (
+                <div key="{index}" className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-purple-400 scale-105' : ''}`} />
+                  {plan.popular && (
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <span className="w-5 h-5ml-2" />Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <Zap className="w-5 h-5ml-2" />
+                    </div>
+                    <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
+                    <p className="w-5 h-5ml-2">{plan.description}</p>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      {formatPrice(billingCycle === 'monthly' ? plan.price.monthly : plan.price.yearly)}
+                      <span className="w-5 h-5ml-2" />/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
+                    </div>
+                    {billingCycle === 'yearly' && (
+                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Save {getSavings(plan.price.monthly, plan.price.yearly)}%
+                      </div>
+                    )}
+                  </div>
+
+                  <ul className="w-5 h-5ml-2" />
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key="{featureIndex}" className="flex items-centerspace-x-3 text-gray-300" />
+                        <CheckCircle className="w-5 h-5ml-2" />
+                        <span />{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link 
+                    to="/contact"
+                    className="{`block" w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
+                        : 'border border-purple-400 text-purple-400 hover: bg-purple-400 hover:text-gray-900'
+                    }`}
+                    />Start Free Trial
+                  </Link>
+                </div>
+              ))}
+            </div>
+        </section>
+
+        {/* Add-ons Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Additional <span className="w-5 h-5ml-2" />Services</span>
+              </h2>
+              <p className="w-5 h-5ml-2">Enhance your plan with these powerful add-ons
+              </p>
+            </div>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {addOns.map((addon, index) => (
+                <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
+                  <h3 className="w-5 h-5ml-2" />{addon.name}</h3>
+                  <p className="w-5 h-5ml-2">{addon.description}</p>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    {formatPrice(billingCycle === 'monthly' ? addon.price.monthly : addon.price.yearly)}
+                    <span className="w-5 h-5ml-2" />/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
+                  </div>
+                  <ul className="w-5 h-5ml-2" />
+                    {addon.features.map((feature, featureIndex) => (
+                      <li key="{featureIndex}" className="flex items-center space-x-2text-gray-300text-sm" />
+                        <CheckCircle className="w-5 h-5ml-2" />
+                        <span />{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link to="/contact" className="block w-full text-center py-2 rounded-lg font-semibold border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900transition-allduration-300">Add to Plan
+                  </Link>
+                </div>
+              ))}
+            </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Frequently Asked <span className="w-5 h-5ml-2" />Questions</span>
+              </h2>
+              <p className="w-5 h-5ml-2">Everything you need to know about our pricing and services
+              </p>
+            </div>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {faqs.map((faq, index) => (
+                <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6borderborder-white/20" />
+                  <h3 className="w-5 h-5ml-2" />{faq.question}</h3>
+                  <p className="w-5 h-5ml-2">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <h2 className="w-5 h-5ml-2" />Ready to Get Started?
                 </h2>
-                <p c las sName="t e xt-xl t ext-gra-y-300 mb-8 m ax-w-2x lmx-auto" />
-    </>
-                  Start your free trial today and experience the power of our AI and IT solutions.
-    <>
+                <p className="w-5 h-5ml-2">Start your free trial today and experience the power of our AI and IT solutions.
                 </p>
-                <d iv c las sName="f l ex f lex-c ol sm:f lex-rowg ap-4j ustify-center">
-        </d iv>                  <Link to="/contact" c las sName="b g-grad ient-to-r from-c yan-500 to-purple-500 t ext-w hit-e px-8 py-4 rounded-lg f ont-semibold t ext-l-g hover:from-c yan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lgho ver:shadow-c yan-500/25">Start Free Trial
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Start Free Trial
+
                   </Link>
                   <Link to="/contact" c las sName="b order border-c yan-500 t ext-c ya-n-400 px-8 py-4 rounded-lg f ont-semibold t ext-l-g hover:bg-c yan-500/10 transition-all duration-300transformhover:scale-105">Contact Sales
                   </Link>
                 </d iv>
             </d iv>
         </section>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-      </d iv>
+
+      </div>
     </>
   );
 };
+
 export default PricingPage;
-    </>
+

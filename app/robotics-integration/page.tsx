@@ -1,30 +1,27 @@
-import React from 'react';import { Link  } from 'react-router-dom';
-import { ArrowRight  } from 'lucide-react';
-export default function Roboticsintegration Page() {
-}
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+export default function RoboticsintegrationPage() {
   return (
-}
-  r etu rn (
-    <>
-    </><d iv c las sNa me="m in-h-s cre en bg-grad ient-to-br from-s late-900 via-purple-900to-s late-900 pt-20">
-        </d iv>
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
+        <title>Service - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
-        <title>Robotics Integra tion - Zion Tech Group</title>
-        <meta name="description" content="Professional robotics integra tion services by Zion Tech Group. Transform your business with our expert solutions." / / />
-      </Helmet>
-      <d iv c las sNa me="m ax-w-7 xl mx-a uto px-4 sm:px-6 lg:px-8-py-16-text-c ente-r">
-        </d iv>
-        <h1 c las sNa me="t e xt-4 xl f ont-b old text-w hit em-b-6">Robotics Integra tion</h1>
-        <p c las sNa me="t e xt-l gte xt-gra-y-300mb-8">Professional robotics integra tion services coming s oon.</p>
-        <Link to="/cont act" c las sNa me="b g-grad ient-to-r from-c yan-500 to-purple-600 text-w hit-e px-8 py-4 rounded-lg f ont-semibold hover:from-c yan-600 hover:to-purple-700 transition-all dura tion-300 flex i tems-c enter justify-c entermx-a utow-fit" />
-          C ont act Us
-    <>
-          </><ArrowRight c las sNa me="w-5h-5m l-2" />        </Link>
-      </d iv>
-  );
+      <div className="max-w-7xl mx-autopx-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4 xl font-boldtext-white mb-6"  >Robotics Integration</h1>
+        <p className="text-lgtext-gray-300mb-8">Professional robotics integration services coming soon.</p>
+        <Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-centermx-auto w-fit"
+        >
+          Contact Us
+          <ArrowRight className="w-5 h-5ml-2" />
+        </Link>
+      </div>
+    </div>
+
   );
 }
-    </>

@@ -1,125 +1,104 @@
-import React from 'react';import { ArrowRight  } from 'lucide-react';
+
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
 ursor/analyze-improve-and-deploy-application-edcb
 ursor/analyze-improve-and-deploy-application-edcb
 'use client'
-import { ArrowRight, Mail  } from 'lucide-react';  r etu rn (
-    <>
-    </><d iv c las sNa me="m in-h-s cre en bg-g rad ient-to-br from-s late-900via-purple-900to-s late-900">
-        </d iv>
+
+import { ArrowRight } from 'lucide-react';
+  return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
+        <title />OptimizedImage | Zion Tech Group</title>
+        <meta name="description" content="Professional OptimizedImage services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="OptimizedImage, AI solutions, IT services, Zion Tech Group, optimizedimage" />
       </Helmet>
-        <title>OptimizedImage | Zion Tech Group</title>        <meta name="description" content="Professional OptimizedImage services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
-        <meta name="keywords" content="OptimizedImage, AI solutions, IT services, Zion Tech Group, optimizedimage" / / />
-      </Helmet>
-      {/* H ero S ection */}
-    <>
-      </><s ection c las sNa me="r e lat ive py-20 px-4-sm:px-6-lg:px-8" />
-        <d iv c las sNa me="m ax-w-7x lmx-a uto">
-        </d iv>
-          <d iv c las sNa me="t e xt-c ent er" />
-            <h1 c las sNa me="t e xt-4 xl md:t ext-6 xl f ont-b old text-w hit em-b-6" />
-              <s pan c las sNa me="b g-g rad ient-to-r from-purple-400 to-b lue-400bg-clip-t exttext-transpare-n-t">OptimizedImage              </s pan>
-              <br / />
-              <s pan c las sNa me="t e xt-w hite">S olutions</s pan>
+      {/* Hero Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h1 className="w-5 h-5ml-2" />
+              <span className="w-5 h-5ml-2" />OptimizedImage
+              </span>
+              <br />
+              <span className="w-5 h-5ml-2" />Solutions</span>
             </h1>
-            <p c las sNa me="t e xt-xl t ext-g ra-y-300 mb-8 m ax-w-3x lmx-a uto">
-              Transform your business with our advanced optimizedimage solutions.
+            <p className="w-5 h-5ml-2">Transform your business with our advanced optimizedimage solutions.
               Powered by cutting-edge AI technology and industry expertise.
-    <>
             </p>
-            <d iv c las sNa me="f l ex f lex-c ol sm:f lex-rowg ap-4j ust ify-c ent er">
-        </d iv>
-              <b utt on c las sNa me="b g-g rad ient-to-r from-purple-500 to-b lue-600 t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:from-purple-600 hover:to-b lue-700 transition-all duration-300f lexitems-c ent er" />                Get Star ted
-    <>
-                </><ArrowRight c las sNa me="m l-2h-5w-5" />
-              </b utt on>
-              <b utt on c las sNa me="b order b ord er-w hite t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:bg-w hite hover:t ext-g ra-y-900transition-allduration-300" />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <button className="w-5 h-5ml-2" />
+                Get Started
+                <ArrowRight className="w-5 h-5ml-2" />
+              </button>
+              <button className="w-5 h-5ml-2" />
                 Learn More
-    <>
-              </b utt on>            </d iv>
-        </d iv>
-      </s ection>
-      {/* Feat ures S ection */}
-    <>
-      </><s ection c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" />
-        <d iv c las sNa me="m ax-w-7x lmx-a uto">
-        </d iv>
-          <d iv c las sNa me="t e xt-c ent ermb-16">
-        </d iv>
-            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-w hit em-b-4">Why Choose Our OptimizedImage?            </h2>
-            <p c las sNa me="t e xt-xl t ext-g ra-y-300 m ax-w-3x lmx-a uto">
-              Our optimizedimage solutions deli ver unmatched performance, s ecurity, and scalability.
-    <>
-            </p>
-          </d iv>
-          <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-8">
-            {feat ures.map((feat ure, index) => (
-    <>
-              </><d iv key="{index}" c las sNa me="b g-w hite/10 b ack drop-b lur-sm rounded-xl p-6 b ord er b ord er-w hite/20 hover:bg-w hite/20transition-allduration-300" />
-                <d iv c las sNa me="f l ex i tems-c ent er j ust ify-c ent er w-12 h-12 bg-g rad ient-to-r from-purple-500 to-b lue-600rounded-l gmb-4">
-                  <feat ure.i con c las sNa me="h-6w-6t e xt-w hite" />
-                </d iv>
-                <h3 c las sNa me="t e xt-xl f ont-semibol dte xt-w hit-e mb-3"   />{feat ure.title}</h3>
-                <p c las sNa me="t e xt-g ray-300">
-              {feat ure.description}</p>              </d iv>
-            ))}
-    <>
-          </d iv>
-      </s ection>
-      {/* Bene fits S ection */}
-    <>
-      </><s ection c las sNa me="p y-20 px-4 sm:px-6-lg:px-8-bg-w hite/5" />
-        <d iv c las sNa me="m ax-w-7x lmx-a uto">
-        </d iv>
-          <d iv c las sNa me="t e xt-c ent ermb-16">
-        </d iv>
-            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-w hit em-b-4" />
-              K ey Bene fits
   </
-            <p c las sNa me="t e xt-xl t ext-g ra-y-300 m ax-w-3x lmx-a uto" />              Experience the power of our optimizedimage solutions for your business.
-    <>
+            </div>
+        </div>
+      </section>
+      {/* Features Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />Why Choose Our OptimizedImage?
+            </h2>
+            <p className="w-5 h-5ml-2">Our optimizedimage solutions deliver unmatched performance, security, and scalability.
             </p>
-          </d iv>
-          <d iv c las sNa me="g r id g rid-c ols-1md:g rid-c ols-2g ap-6">
-        </d iv>
-            {bene fits.map((bene fit, index) => (
-    <>
-              </><d iv key="{index}" c las sNa me="f l exi tems-s tar tsp ace-x-3" />
-                <C hec kCi rcle c las sNa me="h-6 w-6 t e xt-purple-400mt-1-f lex-s hri nk-0" / />
-                <p c las sNa me="t e xt-g ray-300t ext-l-g">{bene fit}</p>              </d iv>
+          </div>
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            {features.map((feature, index) => (
+              <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <feature.icon className="h-6w-6text-white"  />
+                </div>
+                <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
+                <p className="w-5 h-5ml-2">{feature.description}</p>
+              </div>
             ))}
-    <>
-          </d iv>
-      </s ection>
-      {/* C TA S ection */}
-    <>
-      </><s ection c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" />
-        <d iv c las sNa me="m ax-w-4 x lmx-a uto text-c ente-r">
-        </d iv>
-          <d iv c las sNa me="b g-g rad ient-to-r from-purple-600 to-b lue-600 rounded-2 xlp-8md:p-12">
-        </d iv>
-            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-w hit em-b-4">Ready to Get Star ted?            </h2>
-            <p c las sNa me="t e xt-x lte xt-purpl-e-100mb-8">
-              Contact our experts to discuss your optimizedimage needs and get a customized solution.
-    <>
-            </p>
-            <d iv c las sNa me="f l ex f lex-c ol sm:f lex-rowg ap-4j ust ify-c ent er">
-        </d iv>
-              <b utt on c las sNa me="b g-w hite t ext-purpl-e-600 px-8 py-3 rounded-lg f ont-semibold hover:bg-g ray-100 transition-all duration-300 f lexitems-c ent erj ust ify-c ent er" />
-                <P hone c las sNa me="m r-2h-5w-5" / />
-                C all N ow
+          </div>
+      </section>
+      {/* Benefits Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Key Benefits
   </
-    <>
-              </><b utt on c las sNa me="b order b ord er-w hite t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:bg-w hite hover:t ext-purpl-e-600 transition-all duration-300 f lexitems-c ent erj ust ify-c ent er" />
-                <Mail c las sNa me="m r-2h-5w-5" / />
-                E mail Us
-    <>
-              </b utt on>            </d iv>
-        </d iv>
-      </s ection>
-    </d iv>
+            <p className="w-5 h-5ml-2">Experience the power of our optimizedimage solutions for your business.
+            </p>
+          </div>
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            {benefits.map((benefit, index) => (
+              <div key="{index}" className="flexitems-startspace-x-3" />
+                <CheckCircle className="w-5 h-5ml-2" />
+                <p className="w-5 h-5ml-2">{benefit}</p>
+              </div>
+            ))}
+          </div>
+      </section>
+      {/* CTA Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />Ready to Get Started?
+            </h2>
+            <p className="w-5 h-5ml-2">Contact our experts to discuss your optimizedimage needs and get a customized solution.
+            </p>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <button className="w-5 h-5ml-2" />
+                <Phone className="w-5 h-5ml-2" />
+                Call Now
+  </
+              <button className="w-5 h-5ml-2" />
+                <Mail className="w-5 h-5ml-2" />
+                Email Us
+  </
+            </div>
+        </div>
+      </section>
+    </div>
+
   )}
 export default OptimizedImagePage
   </b utt on>
@@ -175,5 +154,6 @@ const OptimizedImage: React.FC<OptimizedImagePr ops /> = ({
   const handleLoad = () => {
     setIsLoaded(true)
     onLoad?.()
+
   };
-    </>
+

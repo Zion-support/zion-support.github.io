@@ -1,5 +1,10 @@
-import React from 'react';import { Link  } from 'react-router-dom';
-import { Calculator, FileText, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Users, Target  } from 'lucide-react';
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+import { Calculator, FileText, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Users, Target } from 'lucide-react';
+
+
 const AiAccountingAssistantPage: React.FC = () => {
   const feat ures = [
     {
@@ -76,29 +81,28 @@ const AiAccountingAssistantPage: React.FC = () => {
     { number: '20+', l abel: 'H ours Saved W eek ly', i con: <Clock c las sNa me="w-6 h-6 t ext-p urp le-400" /> },
     { number: '99.9%', l abel: 'U ptime G uarant ee', i con: <Shield c las sNa me="w-6 h-6 t ext-red-400" /> }
   ];
-e xport default function Aiaccountinga ssistantPage() {
-}
-  r etu rn (
-    <>
-    </><d iv c las sNa me="m in-h-scre en bg-grad ient-to-br from-s late-900 via-p urp le-900to-s late-900 pt-20">
-        </d iv>
+
+
+
+export default function AiaccountingassistantPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <t itle>5G Data Analytics - Zion Tech Group</t itle>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our e xpert solutions." />
+        <title>Service - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
-        <t itle>Ai Accounting Assistant - Zion Tech Group</t itle>
-        <meta name="description" content="Professional ai accounting a ssistant services by Zion Tech Group. Transform your business with our e xpert solutions." / / />
-      </Helmet>
-      <d iv c las sNa me="m ax-w-7 xl mx-a uto px-4 sm:px-6 lg:px-8-py-16-text-c ente-r">
-        </d iv>
-        <h1 c las sNa me="t ext-4 xl f ont-b old text-w hit em-b-6">Ai Accounting Assistant</h1>
-        <p c las sNa me="t ext-l gtext-gr-a-y-300mb-8">Professional ai accounting a ssistant services coming s oon.</p>
-        <Link to="/cont act" c las sNa me="b g-grad ient-to-r from-c yan-500 to-p urp le-600 text-w hit-e px-8 py-4 rounded-lg f ont-semibold hover:from-c yan-600 hover:to-p urp le-700 transition-all duration-300 flex items-c enter justify-c entermx-a utow-fit" />
-}
-          C ont act Us
-    <>
-          </><ArrowRight c las sNa me="w-5h-5m l-2" />        </Link>
-      </d iv>
+      <div className="max-w-7xl mx-autopx-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4 xl font-boldtext-white mb-6"  >Ai Accounting Assistant</h1>
+        <p className="text-lgtext-gray-300mb-8">Professional ai accounting assistant services coming soon.</p>
+        <Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-centermx-auto w-fit"
+        >
+          Contact Us
+          <ArrowRight className="w-5 h-5ml-2" />
+        </Link>
+      </div>
+    </div>
+
   );
 }
-    </>

@@ -1,38 +1,45 @@
 import { Helmet } from 'react-helmet-async'
-import { FileText, Clock, Shield, Users, CheckCircle, ArrowRight, BarChart3, Calendar  } from 'lucide-react';import { Link } from 'react-router-dom'
-import React from 'react';import { ArrowRight  } from 'lucide-react';
-import { Link  } from 'react-router-dom';
+
+import { FileText, Clock, Shield, Users, CheckCircle, ArrowRight, BarChart3, Calendar } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+
 const ContractManagerPage: React.FC = () => {
   const f eat ures = [
     {
-      i con: <FileText c las sNa me="w-6h-6t ext-c yan-400" />,
-      t itle: 'Smart Contract Templates',
+
+      icon: <FileText className="w-5 h-5ml-2" />,
+      title: 'Smart Contract Templates',
       description: 'Pre-built contract templates for common business agreements with AI-powered customization.'
     },
     {
-      i con: <Clock c las sNa me="w-6h-6t ext-emer ald-400" />,
-      t itle: 'Automated Renewals',
+      icon: <Clock className="w-5 h-5ml-2" />,
+      title: 'Automated Renewals',
       description: 'Never miss a contract renewal with intelligent tracking and automated notifications.'
     },
     {
-      i con: <Shield c las sNa me="w-6h-6t ext-p urp le-400" />,
-      t itle: 'Compliance Monitoring',
-      description: 'Ensu re all contracts meet legal requirements with built-in compliance c hec ks.'
+      icon: <Shield className="w-5 h-5ml-2" />,
+      title: 'Compliance Monitoring',
+      description: 'Ensure all contracts meet legal requirements with built-in compliance checks.'
     },
     {
-      i con: <Users c las sNa me="w-6h-6t ext-o ran ge-400" />,
-      t itle: 'Team Collabo ration',
-      description: 'Collabo rate on contract reviews with real-time editing and commenting f eat ures.'
+      icon: <Users className="w-5 h-5ml-2" />,
+      title: 'Team Collaboration',
+      description: 'Collaborate on contract reviews with real-time editing and commenting features.'
     },
     {
-      i con: <BarChart3 c las sNa me="w-6h-6t ext-p ink-400" />,
-      t itle: 'Analytics Dashboard',
+      icon: <BarChart3 className="w-5 h-5ml-2" />,
+      title: 'Analytics Dashboard',
       description: 'Track contract performance, renewal rates, and key metrics in real-time.'
     },
     {
-      i con: <Calendar c las sNa me="w-6h-6t ext-b lue-400" />,
-      t itle: 'Deadline Management',
-      description: 'Never miss important contract deadlines with smart calendar integra tion.'
+      icon: <Calendar className="w-5 h-5ml-2" />,
+      title: 'Deadline Management',
+      description: 'Never miss important contract deadlines with smart calendar integration.'
+
     }
   ]
   const pricingPlans = [
@@ -80,26 +87,83 @@ const ContractManagerPage: React.FC = () => {
   ]
   return (
     <>
-    </>
+
       <Helmet>
-        <t itle>5G Data Analytics - Zion Tech Group</t itle>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title />AI Contract Manager - Smart Contract Management | Zion Tech Group</title>
+        <meta name="description" content="Streamline contract management with AI-powered automation, smart templates, and compliance monitoring. Perfect for businesses of all sizes." />
+        <meta name="keywords" content="contract management, AI contracts, legal automation, contract templates, compliance monitoring" />
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/contract-manager"  />
       </Helmet>
-        <t itle>AI Contract Manager - Smart Contract Management | Zion Tech Group</t itle>
-        <meta name="description" content="Streamline contract management with AI-powered automation, smart templates, and compliance monitoring. Perfect for businesses of all sizes." / / />
-        <meta name="keywords" content="contract management, AI contracts, legal automation, contract templates, compliance monitoring" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/contract-manager" />
-      </Helmet>
-    </>
-      <d iv c las sNa me="m in-h-scre enbg-gray-900t ext-w hit-e">
-        {/* H ero S ection */}
-    <>
-        </><s ection c las sNa me="r e lat ive py-20-px-4-o ver flow-h idd en" />
-              {f eat ures.map((f eat ure, index) => (
-    <>
-                </><d iv key="{index}" c las sNa me="g roup bg-w hite/10 b ack drop-b lur-lg rounded-2 xl p-8 border border-w hite/20 hover:bg-w hite/20 transition-all dura tion-300 hover:scale-105 hover:shadow-2xlho ver:shadow-c yan-500/10" />
-                  <d iv c las sNa me="f l ex items-c enter j ustify-c enter w-16 h-16 bg-gradient-to-r from-c yan-500 to-p urp le-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformdura tion-300">{f eat ure.i con}
-                  </d iv>
+
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        {/* Hero Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <FileText className="w-5 h-5ml-2" />
+              <span />AI Contract Management</span>
+            </div>
+            
+            <h1 className="w-5 h-5ml-2" />
+              Smart <span className="w-5 h-5ml-2" />Contract Manager</span>
+            </h1>
+            
+            <p className="w-5 h-5ml-2">Automate contract management with AI-powered insights, smart templates, 
+              and intelligent compliance monitoring. Never miss a deadline again.
+            </p>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
+                <span />Start Free Trial</span>
+                <ArrowRight className="w-5 h-5ml-2" />
+              </Link>
+              <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+                <span />Watch Demo</span>
+                <ArrowRight className="w-5 h-5ml-2" />
+              </Link>
+            </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Powerful <span className="w-5 h-5ml-2" />Features</span>
+              </h2>
+              <p className="w-5 h-5ml-2">Everything you need to manage contracts efficiently and stay compliant.
+              </p>
+            </div>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {features.map((feature, index) => (
+                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
+                  </div>
+                  <h3 className="w-5 h-5ml-2" />{feature.title}
+                  </h3>
+                  <p className="w-5 h-5ml-2">{feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Simple <span className="w-5 h-5ml-2" />Pricing</span>
+              </h2>
+              <p className="w-5 h-5ml-2">Choose the plan that fits your business needs. All plans include a 14-day free trial.
+              </p>
+            </div>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+
               {pricingPlans.map((plan, index) => (
                 <d iv key="{index}" c las sNa me="{`r e lat ive" bg-w hite/10 b ack drop-b lur-lg rounded-2 xl p-8 border transition-all dura tion-300 hover:scale-105 ${
                   plan.popular 
@@ -107,24 +171,27 @@ const ContractManagerPage: React.FC = () => {
                     : 'border-w hite/20 hover: border-c yan-400/30'
                 }`} />
                   {plan.popular && (
-                    <d iv c las sNa me="a b solute -t op-4 l eft-1/2transform-tran slate-x-1/2">
-                      <d iv c las sNa me="b g-gradient-to-r from-c yan-500 to-p urp le-600 t ext-w hit-e px-6 py-2 rounded-fulltext-smfo-n-t-semibold"  />Most Popular
-                      </d iv>
+
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
+                      </div>
                   )}
-                  <d iv c las sNa me="t ext-c entermb-8">
-                    <h3 c las sNa me="t ext-2 xl font-bold t ext-w hit-e mb-2"   />{plan.name}</h3>
-                    <p c las sNa me="t ext-gray-300 mb-4">
-              {plan.description}</p>
-                    <d iv c las sNa me="f l ex items-b ase lin ejusti fy-c enter">
-                      <s pan c las sNa me="t ext-5 x lfont-bold t ext-w hit-e"   />{plan.price}</s pan>
-                      <s pan c las sNa me="t ext-gray-400ml-2"   />{plan.period}</s pan>
-                    </d iv>
-                  <ul c las sNa me="s p ace-y-4mb-8" />
-                    {plan.f eat ures.map((f eat ure, f eat ureIndex) => (
-                      <li key="{f eat ureIndex}" c las sNa me="f l ex items-c enters pace-x-3" />
-                        <CheckCircle c las sNa me="w-5 h-5t ext-green-400f lex-s hrink-0" />
-                        <s pan c las sNa me="t ext-gray-300"   />{f eat ure}</s pan>                      </li>
-    </>
+                  
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
+                    <p className="w-5 h-5ml-2">{plan.description}</p>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <span className="w-5 h-5ml-2" />{plan.price}</span>
+                      <span className="w-5 h-5ml-2" />{plan.period}</span>
+                    </div>
+                  
+                  <ul className="w-5 h-5ml-2" />
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key="{featureIndex}" className="flex items-centerspace-x-3" />
+                        <CheckCircle className="w-5 h-5ml-2" />
+                        <span className="w-5 h-5ml-2" />{feature}</span>
+                      </li>
+
                     ))}
                   </ul>
                   <Link 
@@ -135,59 +202,42 @@ const ContractManagerPage: React.FC = () => {
                         : 'border-2 border-c yan-400 t ext-c ya-n-400 hover: bg-c yan-400 hover:t ext-gra-y-900'
                     }`}
                     />Get Started
-    <>
                   </Link>
-                </d iv>
-    </>
+
+                </div>
               ))}
-    <>
-            </d iv>
-        </s ection>
-    </>
-        {/* C TA S ection */}
-    <>
-        </><s ection c las sNa me="p y-20px-4-rela tive" />
-          <d iv c las sNa me="a b solute i nset-0 bg-gradient-to-r from-c yan-500/10via-p urp le-500/10to-p ink-500/10" / />
-          <d iv c las sNa me="r e lat ive m ax-w-7 x lmx-auto text-c ente-r">
-        </d iv>
-            <d iv c las sNa me="b g-gradient-to-r from-c yan-600 via-p urp le-600 to-p ink-600 rounded-3 xl p-8sm:p-12lg:p-16">
-        </d iv>
-              <h2 c las sNa me="t ext-4 xl sm:t ext-5 xl md:t ext-6 xl font-bold t ext-w hitem-b-6leading-tight" />
-                Ready to Streamline Y our <s pan c las sNa me="b g-gradient-to-r from-c yan-300 to-p ink-300bg-clip-t exttext-transpare-n-t">Contract Management?</s pan>              </h2>
-    </>
-              <p c las sNa me="t ext-xl sm:t ext-2 xl t ext-w hit-e/90 mb-8 sm:mb-12 m ax-w-4 x lmx-autoleading-relaxed">
-              Join thousands of businesses already using our AI-powered contract management solution. 
+            </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Ready to Streamline Your <span className="w-5 h-5ml-2" />Contract Management?</span>
+              </h2>
+              
+              <p className="w-5 h-5ml-2">Join thousands of businesses already using our AI-powered contract management solution. 
                 Start your free trial today and experience the difference.
               </p>
-              <d iv c las sNa me="f l ex f lex-col sm:f lex-rowg ap-6j ustify-c enter">
-                <Link to="/cont act" c las sNa me="g roup bg-w hite t ext-c ya-n-600 px-10 py-4 rounded-xl font-bold t ext-l-g hover:bg-gray-100 transition-all dura tion-300 f lex items-c enter j ustify-c enter s pace-x-2 shadow-lg hover:shadow-xltr ansformho ver:scale-105" >
-          <s pan    />
-        </Link>Start Free Trial</s pan>
-                  <ArrowRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
+              
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+                  <span />Start Free Trial</span>
+                  <ArrowRight className="w-5 h-5ml-2" />
                 </Link>
-                <Link to="/pricing" c las sNa me="g roup border-2 border-w hite t ext-w hit-e px-10 py-4 rounded-xl font-bold t ext-l-g hover:bg-w hite/10 transition-all dura tion-300 f lex items-c enter j ustify-c enters pace-x-2b ack drop-b lur-sm" >
-          <s pan    />
-        </Link>View All Plans</s pan>                  <ArrowRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
+                <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+                  <span />View All Plans</span>
+                  <ArrowRight className="w-5 h-5ml-2" />
                 </Link>
-              </d iv>
-          </d iv>
-        </s ection>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-      </d iv>
+              </div>
+          </div>
+        </section>
+      </div>
     </>
   )
 }
+
 export default ContractManagerPage;
-    </>
+

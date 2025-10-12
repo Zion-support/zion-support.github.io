@@ -1,39 +1,46 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Receipt, Bot} from 'lucide-react';
+
+
 export default function AIExpenseTrackerPage() {
 }
   return (
 }
   const f eat ures = [
     {
-      i con: <R ece ipt c las sNa me="w-6h-6t e xt-c yan-400" />,
-      t itle: 'Smart R ece ipt Scanning',
-      description: 'AI-powered OCR technology automatically e xtracts data from rece ipts and invoices'
-  );
-},
-    {
-      i con: <B arC hart3 c las sNa me="w-6h-6t e xt-e mer ald-400" />,
-      t itle: 'Real-time Analytics',
-      description: 'Comprehensive spending insights with predictive analytics and budget fore cas ting'
+
+      icon: <Receipt className="w-5 h-5ml-2" />,
+      title: 'Smart Receipt Scanning',
+      description: 'AI-powered OCR technology automatically extracts data from receipts and invoices'
     },
     {
-      i con: <B ot c las sNa me="w-6h-6t e xt-p urp le-400" />,
-      t itle: 'AI Categorization',
+      icon: <BarChart3 className="w-5 h-5ml-2" />,
+      title: 'Real-time Analytics',
+      description: 'Comprehensive spending insights with predictive analytics and budget forecasting'
+    },
+    {
+      icon: <Bot className="w-5 h-5ml-2" />,
+      title: 'AI Categorization',
       description: 'Automatically categorizes expenses using machine learning and learns from your patterns'
     },
     {
-      i con: <S hie ld c las sNa me="w-6h-6t e xt-o ran ge-400" />,
-      t itle: 'Bank-level Security',
-      description: '256-bit encryption and secu re cloud storage for all your financial data'
+      icon: <Shield className="w-5 h-5ml-2" />,
+      title: 'Bank-level Security',
+      description: '256-bit encryption and secure cloud storage for all your financial data'
     },
     {
-      i con: <T arget c las sNa me="w-6h-6t e xt-p ink-400" />,
-      t itle: 'Smart Budgeting',
-      description: 'AI-powered budget recommendations based on your spending patterns and g oals'
+      icon: <Target className="w-5 h-5ml-2" />,
+      title: 'Smart Budgeting',
+      description: 'AI-powered budget recommendations based on your spending patterns and goals'
     },
     {
-      i con: <Z ap c las sNa me="w-6h-6t e xt-red-400" />,
-      t itle: 'Automated Workflows',
+      icon: <Zap className="w-5 h-5ml-2" />,
+      title: 'Automated Workflows',
+
       description: 'Set up rules for automatic expense approval, reimbursement, and reporting'
     }
   ]
@@ -113,109 +120,151 @@ export default function AIExpenseTrackerPage() {
   ]
   const b ene fits = [
     {
-      i con: <Clock c las sNa me="w-8h-8t e xt-c yan-400" />,
-      t itle: 'Save 5+ Hours Weekly',
+
+      icon: <Clock className="w-5 h-5ml-2" />,
+      title: 'Save 5+ Hours Weekly',
       description: 'Automated data entry and categorization eliminates manual work'
     },
     {
-      i con: <T rendin gUp c las sNa me="w-8h-8t e xt-e mer ald-400" />,
-      t itle: 'Reduce Costs by 15%',
-      description: 'AI insights help identify spending patterns and optimization opportunit ies'
+      icon: <TrendingUp className="w-5 h-5ml-2" />,
+      title: 'Reduce Costs by 15%',
+      description: 'AI insights help identify spending patterns and optimization opportunities'
     },
     {
-      i con: <S hie ld c las sNa me="w-8h-8t e xt-p urp le-400" />,
-      t itle: '100% Accurate',
-      description: 'AI-powered validation ensu res data accuracy and compliance'
+      icon: <Shield className="w-5 h-5ml-2" />,
+      title: '100% Accurate',
+      description: 'AI-powered validation ensures data accuracy and compliance'
     },
     {
-      i con: <Z ap c las sNa me="w-8h-8t e xt-o ran ge-400" />,
-      t itle: 'Real-time Sync',
+      icon: <Zap className="w-5 h-5ml-2" />,
+      title: 'Real-time Sync',
       description: 'Instant updates across all devices and team members'
     }
   ]
-  r etu rn (
-    <>
-    </><div c las sNa me="m in-h-scre en bg-grad ient-to-br from-s late-900 via-p urp le-900to-s late-900 pt-20"></div>
+
+  return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <t itle>5G Data Analytics - Zion Tech Group</t itle>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title />AI Expense Tracker - Zion Tech Group | Smart Financial Management</title>
+        <meta name="description" content="Revolutionary AI-powered expense tracker with smart receipt scanning, automated categorization, and real-time analytics. Save 5+ hours weekly. Starting at $9/month." />
+        <meta name="keywords" content="AI expense tracker, receipt scanning, expense management, financial analytics, budget tracking, automated categorization" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-expense-tracker"  />
       </Helmet>
-        <t itle>AI Expense Tracker - Zion Tech Group | Smart Financial Management</t itle>        <meta name="description" content="Revolutionary AI-powered expense tracker with smart rece ipt scanning, automated categorization, and real-time analytics. Save 5+ hours weekly. Starting at $9/month." / / />
-        <meta name="keywords" content="AI expense tracker, rece ipt scanning, expense management, financial analytics, budget tracking, automated categorization" / / />
-        <meta name="robots" content="index, follow" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-expense-tracker" />
-      </Helmet>
-      {/* H ero Section */}
-    <>
-      </><section c las sNa me="r elative py-20-px-4-o ver flow-h idden" />
-        <div c las sNa me="a b solute ins et-0bg-[r adial-grad ient(c irc le_at_20%_80%,rgba(6,182,212,0.1)_0%,tran sparent_50%)]" / />
-        <div c las sNa me="a b solute ins et-0bg-[r adial-grad ient(c irc le_at_80%_20%,rgba(147,51,234,0.1)_0%,tran sparent_50%)]" / />
-        <div c las sNa me="r elative m ax-w-7 x lmx-auto text-c ente-r"></div>
-          <div c las sNa me="i nline-f lex items-c enter s pace-x-2 bg-grad ient-to-r from-c yan-500/20 to-p urp le-500/20 t ext-c ya-n-400 px-6 py-3 rounded-full t ext-s-m font-medium mb-8-borderborder-c yan-400/30"></div>
-            <D ollarS ign c las sNa me="w-4h-4" / />
-            <s pan>AI-P owered Financial Management</s pan>          </div>
-          <h1 c las sNa me="t e xt-4xl sm:t ext-6 xl md:t ext-7 xl font-bold t ext-whit-e mb-8-leading-tight" />
+
+      {/* Hero Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <DollarSign className="w-5 h-5ml-2" />
+            <span />AI-Powered Financial Management</span>
+          </div>
+          
+          <h1 className="w-5 h-5ml-2" />
             AI Expense
-    <>
-            </><br / />
-            <s pan c las sNa me="b g-grad ient-to-r from-c yan-400 via-p urp le-400 to-p ink-400bg-clip-t ext text-tra-n sparen-t">Tracker
-            </s pan>
+            <br />
+            <span className="w-5 h-5ml-2" />Tracker
+            </span>
           </h1>
-          <p c las sNa me="t e xt-lg sm:t ext-x-l md:t ext-2 xl t ext-gra-y-300 mb-12 m ax-w-4 x lmx-autolea ding-relaxed">
-              Transform your financial management with AI-powered expense tracking, smart rece ipt scanning, 
+          
+          <p className="w-5 h-5ml-2">Transform your financial management with AI-powered expense tracking, smart receipt scanning, 
             and automated categorization. Save time and gain insights like never before.
           </p>
-          <div c las sNa me="f l ex f lex-col sm:f lex-r ow g ap-6j ustify-c entermb-16">
-            <Link to="/cont act" c las sNa me="g roup bg-grad ient-to-r from-c yan-500 to-p urp le-600 t ext-whit-e px-10 py-4 rounded-xl font-semibold hover:from-c yan-600 hover:to-p urp le-700 transition-all duration-300 f lex items-c enter j ustify-c enter s pace-x-2 shadow-lg shadow-c yan-500/25 hover:shadow-c yan-500/40transformhover:scale-105" >
-          <s pan    />
-        </Link>Start Free T rial</s pan>
-              <A rro wRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
+              <span />Start Free Trial</span>
+              <ArrowRight className="w-5 h-5ml-2" />
             </Link>
-            <Link to="#pricing" c las sNa me="g roup border-2 border-c yan-400 t ext-c ya-n-400 px-10 py-4 rounded-xl font-semibold hover:bg-c yan-400 hover:t ext-gra-y-900 transition-all duration-300 f lex items-c enter j ustify-c enters pace-x-2backdrop-blur-sm" >
-          <s pan    />
-        </Link>View Pricing</s pan>              <A rro wRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
+            <Link to="#pricing" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+              <span />View Pricing</span>
+              <ArrowRight className="w-5 h-5ml-2" />
             </Link>
           </div>
-          {/* K ey Stats */}
-    <>
-          </><div c las sNa me="g r id g rid-cols-2 md:g rid-cols-4 g ap-8 m ax-w-4x lmx-auto"></div>
-            <div c las sNa me="t e xt-c enter" />
-              <div c las sNa me="t e xt-3 xl font-bold text-c ya-n-400mb-2">5+</div>
-              <div c las sNa me="t e xt-gray-300t ext-s-m">Hours Saved Weekly</div>
-            <div c las sNa me="t e xt-c enter" />
-              <div c las sNa me="t e xt-3 xl font-bold text-p urpl-e-400mb-2">15%</div>
-              <div c las sNa me="t e xt-gray-300t ext-s-m">A verage Cost Reduction</div>
-            <div c las sNa me="t e xt-c enter" />
-              <div c las sNa me="t e xt-3 xl font-bold text-p in-k-400mb-2">99.9%</div>
-              <div c las sNa me="t e xt-gray-300t ext-s-m">Accuracy R ate</div>
-            <div c las sNa me="t e xt-c enter" />
-              <div c las sNa me="t e xt-3 xl font-bold text-e mer al-d-400mb-2">25 K+</div>
-              <div c las sNa me="t e xt-gray-300t ext-s-m">A ctive U sers</div>          </div>
+
+          {/* Key Stats */}
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">5+</div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Hours Saved Weekly</div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">15%</div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Average Cost Reduction</div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">99.9%</div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Accuracy Rate</div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">25 K+</div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Active Users</div>
+          </div>
       </section>
-      {/* Bene fits Section */}
-    <>
-      </><section c las sNa me="p y-20px-4-relative" />
-        <div c las sNa me="a b solute inset-0 bg-grad ient-to-br from-p urp le-500/5via-c yan-500/5to-p ink-500/5" / />
-        <div c las sNa me="r elative m ax-w-7x lmx-auto"></div>
-          <div c las sNa me="t e xt-c entermb-16"></div>
-            <h2 c las sNa me="t e xt-4 xl md:t ext-5 xl font-bold text-whi-t em-b-6" />
-              W hy C hoo se Our <s pan c las sNa me="b g-grad ient-to-r from-c yan-400 to-p urp le-400bg-clip-t ext text-tra-n sparen-t">AI Expense Tracker?</s pan>            </h2>
-            <p c las sNa me="t e xt-xl t ext-gra-y-300 m ax-w-4x lmx-auto">
-              Experience the futu re of financial management with cutt ing-edge AI technology that works for you.
-    <>
+
+      {/* Benefits Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Why Choose Our <span className="w-5 h-5ml-2" />AI Expense Tracker?</span>
+            </h2>
+            <p className="w-5 h-5ml-2">Experience the future of financial management with cutting-edge AI technology that works for you.
             </p>
           </div>
-          <div c las sNa me="g r id g rid-cols-1 md:g rid-cols-2lg:g rid-cols-4g ap-8">
-            {b ene fits.map((b ene fit, index) => (
-    <>
-              </><div key="{index}" c las sNa me="t e xt-c entergroup" />
-                <div c las sNa me="f l ex items-c enter j ustify-c enter w-20 h-20 bg-grad ient-to-r from-c yan-500 to-p urp le-600 rounded-2 xl mb-6 mx-auto group-hover:scale-110transition-transformduration-300">{b ene fit.i con}
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            {benefits.map((benefit, index) => (
+              <div key="{index}" className="text-centergroup" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{benefit.icon}
                 </div>
-            {f eat ures.map((f eat ure, index) => (
-    <>
-              </><div key="{index}" c las sNa me="g roup bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlho ver:shadow-c yan-500/10" />
-                <div c las sNa me="f l ex items-c enter j ustify-c enter w-16 h-16 bg-grad ient-to-r from-c yan-500 to-p urp le-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{f eat ure.i con}
+                <h3 className="w-5 h-5ml-2" />{benefit.title}
+                </h3>
+                <p className="w-5 h-5ml-2">{benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Powerful Features for <span className="w-5 h-5ml-2" />Smart Finance</span>
+            </h2>
+            <p className="w-5 h-5ml-2">Everything you need to manage your finances efficiently with AI-powered intelligence and automation.
+            </p>
+          </div>
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            {features.map((feature, index) => (
+              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
                 </div>
+                <h3 className="w-5 h-5ml-2" />{feature.title}
+                </h3>
+                <p className="w-5 h-5ml-2">{feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20p x-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Simple, Transparent <span className="w-5 h-5ml-2" />Pricing</span>
+            </h2>
+            <p className="w-5 h-5ml-2">Choose the plan that fits your needs. All plans include our core AI features and secure cloud storage.
+            </p>
+          </div>
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+
             {pricingPlans.map((plan, index) => (
               <div key="{index}" c las sNa me="{`r elative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
                 plan.popular 
@@ -223,59 +272,110 @@ export default function AIExpenseTrackerPage() {
                   : 'border-white/20 hover: border-c yan-400/30'
               }`} />
                 {plan.popular && (
-            {testimonia ls.map((testimonial, index) => (
-    <>
-              </><div key="{index}" c las sNa me="b g-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <div c las sNa me="f l ex items-c entermb-4">
-                  <div c las sNa me="w-12 h-12 b g-grad ient-to-r from-c yan-500 to-p urp le-600 rounded-full f lex items-c enter j ustify-c enter t ext-whitefon-t-boldmr-4"  />{testimonial.avatar}
+
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
+                    </div>
+                )}
+                
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
+                  <p className="w-5 h-5ml-2">{plan.description}</p>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <span className="w-5 h-5ml-2" />{plan.price}</span>
+                    <span className="w-5 h-5ml-2" />{plan.period}</span>
                   </div>
-                  <div />
-                    <div c las sNa me="f ont-semibol dte xt-whit-e"   />{testimonial.name}</div>
-                    <div c las sNa me="t e xt-gray-400t ext-s-m"   />{testimonial.company}</div>
-                </div>
-                <div c las sNa me="f l exmb-4">                  {[...A rray(testimonial.rating)].map((_, i) => (
-                    <C hec kSq uare key="{i}" c las sNa me="w-5 h-5t e xt-y ellow-400f ill-current" />
+                
+                <ul className="w-5 h-5ml-2" />
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key="{featureIndex}" className="flex items-centerspace-x-3" />
+                      <CheckCircle className="w-5 h-5ml-2" />
+                      <span className="w-5 h-5ml-2" />{feature}</span>
+                    </li>
                   ))}
-    <>
-                </div>
-                <p c las sNa me="t e xt-gray-300i talic">
-              "{testimonial.content}"</p>              </div>
+                </ul>
+                
+                <Link 
+                  to="/contact"
+                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
+                      : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
+                  }`}
+                  />Get Started
+                </Link>
+              </div>
+
             ))}
-    <>
           </div>
       </section>
-      {/* C TA Section */}
-    <>
-      </><section c las sNa me="p y-20px-4-relative" />
-        <div c las sNa me="a b solute inset-0 bg-grad ient-to-r from-c yan-500/10via-p urp le-500/10to-p ink-500/10" / />
-        <div c las sNa me="r elative m ax-w-7x lmx-auto"></div>
-          <div c las sNa me="t e xt-c enter" />
-            <div c las sNa me="b g-grad ient-to-r from-c yan-600 via-p urp le-600 to-p ink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-h idden"></div>
-              <div c las sNa me="r elativez-10"></div>
-                <h2 c las sNa me="t e xt-4 xl sm:t ext-5 xl md:t ext-6 xl font-bold t ext-whit em-b-6leading-tight" />
-                  Ready to Transform Y our <s pan c las sNa me="b g-grad ient-to-r from-c yan-300 to-p ink-300bg-clip-t ext text-tra-n sparen-t">Financial Management?</s pan>
+
+
+      {/* Testimonials Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Trusted by <span className="w-5 h-5ml-2" />25,000+</span> Users
+            </h2>
+            <p className="w-5 h-5ml-2">See what our customers are saying about their success with our AI expense tracker.
+            </p>
+          </div>
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            {testimonials.map((testimonial, index) => (
+              <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
+                  </div>
+                  <div />
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
+                </div>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <CheckSquare key="{i}" className="w-5 h-5te xt-yellow-400fill-current"  />
+                  ))}
+                </div>
+                <p className="w-5 h-5ml-2">"{testimonial.content}"</p>
+              </div>
+            ))}
+          </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <h2 className="w-5 h-5ml-2" />
+                  Ready to Transform Your <span className="w-5 h-5ml-2" />Financial Management?</span>
                 </h2>
-                <p c las sNa me="t e xt-xl sm:t ext-2 xl t ext-whit-e/90 mb-8 sm:mb-12 m ax-w-4 x lmx-autolea ding-relaxed">
-                  Join thousands of users already saving time and money with our AI-powered expense tracker. 
-                  Start your free trial today and experience the futu re of financial management.
+                
+                <p className="w-5 h-5ml-2">Join thousands of users already saving time and money with our AI-powered expense tracker. 
+                  Start your free trial today and experience the future of financial management.
                 </p>
-    <>
-                </><div c las sNa me="f l ex f lex-col sm:f lex-r ow g ap-6j ustify-c entermb-8"></div>
-                  <Link to="/cont act" c las sNa me="g roup bg-white t ext-c ya-n-600 px-10 py-4 rounded-xl font-bold t ext-l-g hover:bg-gray-100 transition-all duration-300 f lex items-c enter j ustify-c enter s pace-x-2 shadow-lg hover:shadow-xltr ansformho ver:scale-105" />
-                    <s pan>Start Free T rial</s pan>
-                    <A rro wRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
+                
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+                    <span />Start Free Trial</span>
+                    <ArrowRight className="w-5 h-5ml-2" />
                   </Link>
-                  <Link to="#pricing" c las sNa me="g roup border-2 border-white t ext-whit-e px-10 py-4 rounded-xl font-bold t ext-l-g hover:bg-white/10 transition-all duration-300 f lex items-c enter j ustify-c enters pace-x-2backdrop-blur-sm" />
-                    <s pan>View All Plans</s pan>                    <A rro wRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
+                  <Link to="#pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+                    <span />View All Plans</span>
+                    <ArrowRight className="w-5 h-5ml-2" />
                   </Link>
                 </div>
-    <>
-                </><div c las sNa me="t e xt-white/80t ext-s-m"></div>
-                  <p>✓ 14-day free trial * ✓ No credit card required * ✓ Cancel anytime</p>                </div>
+                
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
+                </div>
+
             </div>
         </div>
       </section>
     </div>
   );
 }
-    </>

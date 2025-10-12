@@ -31,12 +31,14 @@ c onst SearchBar: R eact.FC<SearchBarProps /> = ({
       inputRef.current.blur();
     }
   };
-  r etu rn (
-    <>
-    </><d iv c onst c las sNa me = {`r ela tive ${c las sNa me}`} />
-      <f orm onSu bmit="{handleSearch}" c las sNa me="r e lat ive" />
-        <d iv c las sNa me="r e lat ive">
-          <Search c las sNa me="a b sol ute l eft-3 t op-1/2 t ran sform -t ran slate-y-1/2 w-5h-5text-gr-a-y-400" />
+
+
+  return (
+    <div const className = {`relative ${className}`} />
+      <form onSubmit="{handleSearch}" className="relative" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <Search className="w-5 h-5ml-2" />
+
           <input
             ref="{inputRef}"
             type="text"
@@ -49,42 +51,46 @@ c onst SearchBar: R eact.FC<SearchBarProps /> = ({
           {query && (
             <button
               type="button"
-              onCl ick="{handleClear}"
-              c las sNa me="a b sol ute r ight-3 t op-1/2 t ran sform -t ran slate-y-1/2 text-gr-a-y-400hover:text-w hitetr ansitio-n-c olo rs" />
-    <>
-              </><X c las sNa me="w-4h-4" / />            </button>
+
+              onClick="{handleClear}"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400hover:text-white transition-colors" />
+              <X className="w-5 h-5ml-2" />
+            </button>
           )}
-    <>
-        </d iv>
-      </f orm>
+        </div>
+      </form>
+
       {/* Search suggestions dropdown */}
       {isOpen && (
-    <>
-        </><d iv c las sNa me="a b sol ute t op-f ull l eft-0 r ight-0 mt-2 bg-w hite/95 b ackdrop-blur-lg rounded-lg shadow-lg bord erbord er-w hite/20z-50">
-        </d iv>
-          <d iv c las sNa me="p-4">
-        </d iv>
-            <p c las sNa me="t ext-s mtext-gr-a-y-600mb-2">P opu lar s earches:</p>
-            <d iv c las sNa me="s p ace-y-1">
-        </d iv>              {['AI Serv ices', 'Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics'].map((suggestion) => (
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <p className="text-smtext-gray-600mb-2">Popular searches:</p>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {['AI Services', 'Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics'].map((suggestion) => (
                 <button
                   key="{suggestion}"
-                  onCl ick="{()" =>{
-                    s etQ uery(suggestion);
+                  onClick="{()" =  />{
+                    setQuery(suggestion);
+
                     if (onSearch) onSearch(suggestion);
                     s etIsOpen(false);
                   }}
-                  c onst c las sNa me="w-f ull text-l ef-t px-3 py-2 text-s-m text-gr-a-y-700 hover:bg-purple-50rounded-mdtr ansition-c olo rs"
+
+                  const className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-purple-50rounded-md transition-colors"
+
                 >
                   {suggestion}
                 </button>
               ))}
-    <>
-            </d iv>
-        </d iv>
+
+            </div>
+        </div>
+
       )}
     </d iv>
   );
 };
+
+
 export default SearchBar;
-    </>
+

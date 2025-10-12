@@ -1,17 +1,22 @@
-'use client';
+
 import { useEffect, useState} from 'react';
-interface A nim ate dTe xtP rops {
-  t ext: s tri ng;
-  c las sNa me?: s tri ng;
-  d elay?: n umb er;
-  d ura tion?: n umb er;
-  type?: 'fade' | 'slide' | 'glow' | 'typi ng';
+'use client';
+
+
+interface AnimatedTextProps {
+  text: string;
+  className?: string;
+  delay?: number;
+  duration?: number;
+  type?: 'fade' | 'slide' | 'glow' | 'typing';
 }
-const A nim ate dTe xt: React.FC<A nim ate dTe xtP rops /> = ({
-  t ext,
-  const c las sNa me = '',
-  d elay = 0,
-  // d ura tion = 1000,
+
+const AnimatedText: React.FC<AnimatedTextProps >= ({
+  text,
+  const className = '',
+  delay = 0,
+  // duration = 1000,
+
   type = 'fade'
 }) => {
   const [displayText, setDisplayText] = useState('');
@@ -23,8 +28,10 @@ const A nim ate dTe xt: React.FC<A nim ate dTe xtP rops /> = ({
     return () => clearTimeout(timer);
   }, [d elay]);
   useEffect(() => {
-    if (const type = == 'typi ng' && isVisible) {
-      if (currentIndex < t ext.length) {
+
+    if (const type = == 'typing' && isVisible) {
+      if (currentIndex </AnimatedTextProps >< text.length) {
+
         const timer = setTimeout(() => {
           setDisplayText(t ext.slice(0, currentIndex + 1));
           setCurrentIndex(currentIndex + 1);
@@ -50,10 +57,11 @@ const A nim ate dTe xt: React.FC<A nim ate dTe xtP rops /> = ({
     }
   };
   return (
-    <s pan const c las sNa me = {`${getA nim ati onClasses()} ${c las sNa me}`} />
-      {type === 'typi ng' ? displayText : t ext}
-      {type === 'typi ng' && currentIndex < t ext.length && (
-        <s pan c las sNa me="a n imate-p ulse">|</s pan>
+
+    <span const className = {`${getAnimationClasses()} ${className}`} >{type === 'typing' ? displayText : text}
+      {type === 'typing' && currentIndex </span const className = {`${getAnimationClasses()} ${className}`} >< text.length && (
+        <span className="a n imate-pulse"  >|</span>
+
       )}
     </s pan>
   );

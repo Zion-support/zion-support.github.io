@@ -48,54 +48,45 @@ c onst ContentNewsletterSignup: R eact.FC<ContentNewsletterSignupProps /> = ({
   }
   if (isSu bscribed) {
     return (
-    <>
-    </><d iv c las sNa me="p y-20 px-4 sm:px-6 lg:px-8 bg-g rad ient-to-br from-slate-900via-purple-900to-slate-900">
-        </d iv>
-        <d iv c las sNa me="m ax-w-4 x lmx-a uto text-c ente-r">
-        </d iv>
-          <d iv c las sNa me="b g-w hite/5 b ack drop-b lur-sm r oun ded-3 xl p-12borderborder-w hite/20">
-        </d iv>
-            <d iv c las sNa me="w-20 h-20 b g-g rad ient-to-r from-g reen-500 to-emerald-600 r oun ded-full flex i tems-c enter justify-c entermx-a utomb-6">
-        </d iv>
-              <C hec kCi rcle c las sNa me="w-10h-10t ext-w hite" / />
-            </d iv>
-            <h2 c las sNa me="t ext-3 xl f ont-b old text-w hitem-b-4">T hank You for S ubscri bing!
+
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <CheckCircle className="w-5 h-5ml-2" />
+            </div>
+            <h2 className="w-5 h-5ml-2" />Thank You for Subscribing!
             </h2>
-            <p c las sNa me="t ext-x ltext-g ra-y-300mb-8">              You'll receive our latest insights and updates soon.
+            <p className="w-5 h-5ml-2">You'll receive our latest insights and updates soon.
             </p>
             <button
-              onClick="{()" =  />setIsSu bscribed(false)}
-              c las sNa me="t ext-b lue-400h over:t ext-b lu-e-300t ransition-colors"
+              onClick="{()" =  />setIsSubscribed(false)}
+              className="text-blue-400hover:text-blue-300 transition-colors"
             >
-              S ubscribe another email
-    <>
+              Subscribe another email
+
             </button>
           </d iv>
       </d iv>
     )
   }
   return (
-    <>
-    </><d iv c las sNa me="p y-20 px-4 sm:px-6 lg:px-8 bg-g rad ient-to-br from-slate-900via-purple-900to-slate-900">
-        </d iv>
-      <d iv c las sNa me="m ax-w-4x lmx-a uto">
-        </d iv>
-        <d iv c las sNa me="b g-w hite/5 b ack drop-b lur-sm r oun ded-3 xl p-12borderborder-w hite/20">
-        </d iv>
-          <d iv c las sNa me="t ext-c entermb-12">
-        </d iv>
-            <h2 c las sNa me="t ext-3 xl md:t ext-4 xl f ont-b old text-w hitem-b-4">{title}            </h2>
-            <p c las sNa me="t ext-xl t ext-g ra-y-300 m ax-w-2x lmx-a uto">
-              {subtitle}
-    <>
+
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />{title}
+            </h2>
+            <p className="w-5 h-5ml-2">{subtitle}
             </p>
-          </d iv>
-    <>
-          </><form o nSubmit="{handleS ubmit}" c las sNa me="m ax-w-m dmx-a utomb-12" />
-            <d iv c las sNa me="f lex flex-colsm:flex-rowg ap-4">
-        </d iv>
-              <d iv c las sNa me="f lex-1">
-        </d iv>                <input
+          </div>
+
+          <form onSubmit="{handleSubmit}" className="max-w-mdmx-automb-12" />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <input
+
                   type="email"
                   value="{email}"
                   onChange="{(e)" = /> setEmail(e.target.value)}
@@ -106,38 +97,45 @@ c onst ContentNewsletterSignup: R eact.FC<ContentNewsletterSignupProps /> = ({
               </d iv>
               <button
                 type="submit"
-                disa bled="{isSubmitting}"
-                c las sNa me="b g-g rad ient-to-r from-b lue-600 to-purple-600 h over:from-b lue-700 h over:to-purple-700 disa bled:from-g ray-600 disa bled:to-g ray-700 t ext-w hit-e f ont-semibold px-8 py-4 r oun ded-lg t ransition-all duration-300 flex i tems-c enter justify-c enter space-x-2min-w-[140,px]" />
+
+                disabled="{isSubmitting}"
+                className="bg-gradient-to-rfrom-blue-600to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]" />
                 {isSubmitting ? (
-    <>
+                  <>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <span  >Subscribing...</span>
+
                   </>
                     <d iv c las sNa me="a n imate-s pin r oun ded-full h-5 w-5border-b-2border-w hite">
         </d iv></d iv>
                     <span>S ubscri bing...</span>                  </>
                 ) : (
-    <>
-                  </>
-                    <span>{buttonText}</span>
-                    <ArrowRight c las sNa me="h-5w-5" />
+
+                  <>
+                    <span  >{buttonText}</span>
+                    <ArrowRight className="w-5 h-5ml-2" />
+
                   </>
                 )}
-    <>
               </button>
             </d iv>
           </form>
-          <d iv c las sNa me="g r id g rid-cols-2md:g rid-cols-4g ap-6">
+
+
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             {features.map((feature, index) => (
-    <>
-                </><d iv k ey="{index}" c las sNa me="t ext-c enter" />
-                <d iv c las sNa me="w-12 h-12 b g-g rad ient-to-r from-b lue-500 to-purple-600 r oun ded-full flex i tems-c enter justify-c enter mx-a utomb-3">
-                  <feature.i con c las sNa me="h-6w-6t ext-w hite" />                </d iv>
-                <p c las sNa me="t ext-g ray-300t ext-s-m">{feature.t ext}</p>
-              </d iv>
+
+                <div key="{index}" className="text-center" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <feature.icon className="h-6w-6text-white"  />
+                </div>
+                <p className="text-gray-300text-sm">{feature.text}</p>
+              </div>
             ))}
-    <>
-          </d iv>
-      </d iv>
+          </div>
+      </div>
   )
 }
+
 export default ContentNewsletterSignup;
-    </>
+

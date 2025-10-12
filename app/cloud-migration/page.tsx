@@ -1,44 +1,55 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Zap, Cloud, CheckCircle, Star, Clock, BarChart3, Sparkles, Target, Shield, MessageCircle, Mail, Phone, MapPin, Play, Settings, Database, Search, Server, Network, Database as DatabaseIcon  } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { ArrowRight, HardDrive, Laptop, Tablet, Router } from 'lucide-react';
+
+
 export default function CloudMigrationPage() {
 }
   const f eat ures = [
     {
-}
-      i con: <Cloud c las sNa me="w-6h-6t e xt-c yan-400" />,
-      t itle: 'Multi-Cloud Strategy',
+
+      icon: <Cloud className="w-5 h-5ml-2" />,
+      title: 'Multi-Cloud Strategy',
+
       description: 'Comprehensive cloud migration strategy supporting AWS, Azure, Google Cloud, and hybrid environments.',
       benefits: ['AWS expertise', 'Azure migration', 'Google Cloud setup', 'Hybrid cloud solutions']
     },
     {
-      i con: <Shield c las sNa me="w-6h-6t e xt-e mer ald-400" />,
-      t itle: 'Security-First Approach',
+
+      icon: <Shield className="w-5 h-5ml-2" />,
+      title: 'Security-First Approach',
+
       description: 'Enterprise-grade security with zero-downtime migration and comprehensive compliance validation.',
       benefits: ['Zero-downtime migration', 'Security compliance', 'Data encryption', 'Access controls']
     },
     {
-      i con: <BarChart3 c las sNa me="w-6h-6t e xt-p urp le-400" />,
-      t itle: 'Cost Optimization',
-      description: 'Intelligent r esource allocation and cost monitoring to reduce cloud expenses by up to 40%.',
+
+      icon: <BarChart3 className="w-5 h-5ml-2" />,
+      title: 'Cost Optimization',
+      description: 'Intelligent resource allocation and cost monitoring to reduce cloud expenses by up to 40%.',
       benefits: ['Cost analysis', 'Resource optimization', 'Auto-scaling', 'Budget monitoring']
     },
     {
-      i con: <Zap c las sNa me="w-6h-6t e xt-p ink-400" />,
-      t itle: 'Performance Enhance ment',
+      icon: <Zap className="w-5 h-5ml-2" />,
+      title: 'Performance Enhancement',
+
       description: 'Optimize application performance with advanced monitoring, caching, and load balancing.',
       benefits: ['Performance monitoring', 'Load balancing', 'Caching strategies', 'Auto-scaling']
     },
     {
-      i con: <Database c las sNa me="w-6h-6t e xt-o ran ge-400" />,
-      t itle: 'Database Migration',
-      description: 'Seamless database migration with minimal downtime and data integrity guar antees.',
+
+      icon: <Database className="w-5 h-5ml-2" />,
+      title: 'Database Migration',
+      description: 'Seamless database migration with minimal downtime and data integrity guarantees.',
       benefits: ['Zero data loss', 'Schema migration', 'Data validation', 'Backup strategies']
     },
     {
-      i con: <Network c las sNa me="w-6h-6t e xt-red-400" />,
-      t itle: 'Network Architectu re',
-      description: 'Design and implement robust cloud network architectu re with high availability and scalability.',
+      icon: <Network className="w-5 h-5ml-2" />,
+      title: 'Network Architecture',
+      description: 'Design and implement robust cloud network architecture with high availability and scalability.',
+
       benefits: ['VPC design', 'Load balancing', 'CDN setup', 'Global distribution']
     }
   ]
@@ -129,215 +140,260 @@ export default function CloudMigrationPage() {
   const migrationSteps = [
     {
       step: '01',
-      t itle: 'Assessment & Planning',
-      description: 'Comprehensive analysis of your current infrastructure and cloud readiness a ssessment.',
-      i con: <Search c las sNa me="w-8h-8t e xt-c yan-400" />,
-      d uration: '1-2 weeks'
+
+      title: 'Assessment & Planning',
+      description: 'Comprehensive analysis of your current infrastructure and cloud readiness assessment.',
+      icon: <Search className="w-5 h-5ml-2" />,
+      duration: '1-2 weeks'
     },
     {
       step: '02',
-      t itle: 'Strategy Design',
-      description: 'Custom migration strategy tailored to your business needs and technical r equ ire ments.',
-      i con: <Target c las sNa me="w-8h-8t e xt-e mer ald-400" />,
-      d uration: '1 week'
+      title: 'Strategy Design',
+      description: 'Custom migration strategy tailored to your business needs and technical requirements.',
+      icon: <Target className="w-5 h-5ml-2" />,
+      duration: '1 week'
     },
     {
       step: '03',
-      t itle: 'Pre-Migration Setup',
-      description: 'Cloud environment preparation, security configu ration, and testing environment setup.',
-      i con: <Settings c las sNa me="w-8h-8t e xt-p urp le-400" />,
-      d uration: '2-3 weeks'
+      title: 'Pre-Migration Setup',
+      description: 'Cloud environment preparation, security configuration, and testing environment setup.',
+      icon: <Settings className="w-5 h-5ml-2" />,
+      duration: '2-3 weeks'
     },
     {
       step: '04',
-      t itle: 'Data Migration',
-      description: 'Secu re data transfer with zero data loss guar antee and real-time validation.',
-      i con: <Database c las sNa me="w-8h-8t e xt-p ink-400" />,
-      d uration: '1-2 weeks'
+      title: 'Data Migration',
+      description: 'Secure data transfer with zero data loss guarantee and real-time validation.',
+      icon: <Database className="w-5 h-5ml-2" />,
+      duration: '1-2 weeks'
     },
     {
       step: '05',
-      t itle: 'Application Migration',
-      description: 'Application deployment, configu ration, and optimization in the cloud environment.',
-      i con: <Server c las sNa me="w-8h-8t e xt-o ran ge-400" />,
-      d uration: '2-4 weeks'
+      title: 'Application Migration',
+      description: 'Application deployment, configuration, and optimization in the cloud environment.',
+      icon: <Server className="w-5 h-5ml-2" />,
+      duration: '2-4 weeks'
+
     },
     {
       step: '06',
       t itle: 'Testing & Optimization',
       description: 'Comprehensive testing, performance optimization, and security validation.',
-      i con: <CheckCircle c las sNa me="w-8h-8t e xt-red-400" />,
-      d uration: '1-2 weeks'
+
+      icon: <CheckCircle className="w-5 h-5ml-2" />,
+      duration: '1-2 weeks'
+
     }
   ]
   const cloudProviders = [
     {
-      name: 'A maz on W eb Serv ices',
-      i con: <Cloud c las sNa me="w-8h-8t e xt-o ran ge-400" />,
-      description: 'Leading cloud platform with comprehensive serv ices and global reach',
-      f eat ures: ['EC2, S3, RDS', 'Lambda functions', 'CloudFront CDN', 'Auto Scaling']
+
+      name: 'Amazon Web Services',
+      icon: <Cloud className="w-5 h-5ml-2" />,
+      description: 'Leading cloud platform with comprehensive services and global reach',
+      features: ['EC2, S3, RDS', 'Lambda functions', 'CloudFront CDN', 'Auto Scaling']
     },
     {
-      name: 'M icr oso ft Azure',
-      i con: <Cloud c las sNa me="w-8h-8t e xt-b lue-400" />,
-      description: 'Enterprise-focused cloud platform with strong M icr oso ft integration',
-      f eat ures: ['Virtual Machines', 'Azure SQL', 'App Serv ice', 'Active Directory']
+      name: 'Microsoft Azure',
+      icon: <Cloud className="w-5 h-5ml-2" />,
+      description: 'Enterprise-focused cloud platform with strong Microsoft integration',
+      features: ['Virtual Machines', 'Azure SQL', 'App Service', 'Active Directory']
     },
     {
       name: 'Google Cloud Platform',
-      i con: <Cloud c las sNa me="w-8h-8t e xt-g reen-400" />,
+      icon: <Cloud className="w-5 h-5ml-2" />,
+
       description: 'AI and machine learning focused cloud with advanced analytics',
       f eat ures: ['Compute Engine', 'BigQuery', 'AI/ML serv ices', 'Kubernetes Engine']
     },
     {
       name: 'Hybrid Cloud',
-      i con: <Network c las sNa me="w-8h-8t e xt-p urp le-400" />,
+
+      icon: <Network className="w-5 h-5ml-2" />,
+
       description: 'Best of both worlds with on-premises and cloud integration',
       f eat ures: ['Hybrid connectivity', 'Data synchronization', 'Unified management', 'Flexible deployment']
     }
   ]
   return (
     <>
-    </>
+
       <Helmet>
-        <t itle>5G Data Analytics - Zion Tech Group</t itle>
-        <meta name="description" content="Professional 5G data analytics serv ices by Zion Tech Group. Transform your business with our expert solutions." />
+        <title />Cloud Migration Services - Expert Cloud Transformation | Zion Tech Group</title>
+        <meta name="description" content="Transform your business with our expert cloud migration services. AWS, Azure, Google Cloud migration with zero downtime. Starting at $2,500. Free consultation available." />
+        <meta name="keywords" content="cloud migration, AWS migration, Azure migration, Google Cloud migration, cloud transformation, cloud consulting, infrastructure migration" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://ziontechgroup.com/cloud-migration"  />
       </Helmet>
-        <t itle>Cloud Migration Serv ices - Expert Cloud Transformation | Zion Tech Group</t itle>
-        <meta name="description" content="Transform your business with our expert cloud migration serv ices. AWS, Azure, Google Cloud migration with zero downtime. Starting at $2,500. Free consultation available." / / />
-        <meta name="keywords" content="cloud migration, AWS migration, Azure migration, Google Cloud migration, cloud transformation, cloud consulting, infrastructure migration" / / />
-        <meta name="robots" content="index, follow" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/cloud-migration" />
-      </Helmet>
-    </>
-      <d iv c las sNa me="m in-h-scre en bg-grad ient-to-br from-s late-900 via-p urp le-900to-s late-900 pt-20">
-        </d iv>
-        {/* H ero Section */}
-        <section c las sNa me="r e lative py-20-px-4-o ver flow-h idd en" />
-          {/* Animated Back gro und */}
-    <>
-          </><d iv c las sNa me="a b solute i nset-0bg-[radial-grad ient(c ircle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)]a nimate-pulse" / />          <d iv c las sNa me="a b solute i nset-0bg-[radial-grad ient(c ircle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]a nimate-pulse" style="{{" a nimationDelay: '1 s' }} / />
-    </>
-          {/* Floating E lements */}
-    <>
-          </><d iv c las sNa me="a b solute t op-20 l eft-10 w-16 h-16 bg-c yan-400/20 rounded-fullblur-xlanimate-bounce" style="{{" a nimationDelay: '0.5 s' }} / />
-          <d iv c las sNa me="a b solute t op-40 right-20 w-12 h-12 bg-p urp le-400/20 rounded-fullblur-xlanimate-bounce" style="{{" a nimationDelay: '1.5 s' }} / />
-          <d iv c las sNa me="a b solute bottom-20 l eft-1/4 w-8 h-8 bg-p ink-400/20 rounded-fullblur-xlanimate-bounce" style="{{" a nimationDelay: '2.5 s' }} / />
-          <d iv c las sNa me="r e lative m ax-w-7 x lmx-a uto text-c ente-r">
-        </d iv>
-            <d iv c las sNa me="i nline-f lex items-c enter space-x-2 bg-grad ient-to-r from-c yan-500/20 to-p urp le-500/20 t ext-c ya-n-400 px-6 py-3 rounded-full t ext-s-m font-medium mb-8-borderborder-c yan-400/30">
-        </d iv>
-              <Sparkles c las sNa me="w-4h-4" / />
-              <span>Expert Cloud Transformation</span>            </d iv>
-    </>
-            <h1 c las sNa me="t e xt-4xl sm:t ext-6 xl md:t ext-7 xl font-bold t ext-whit-e mb-8-leading-tight" />
+
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        {/* Hero Section */}
+        <section className="w-5 h-5ml-2" />
+          {/* Animated Background */}
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  />
+          {/* Floating Elements */}
+          <div className="absolute top-20 left-10 w-16 h-16 bg-cyan-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '0.5 s' }}  />
+          <div className="absolute top-40 right-20 w-12 h-12 bg-purple-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '1.5 s' }}  />
+          <div className="absolute bottom-20 left-1/4 w-8 h-8 bg-pink-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '2.5 s' }}  />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <Sparkles className="w-5 h-5ml-2" />
+              <span />Expert Cloud Transformation</span>
+            </div>
+            
+            <h1 className="w-5 h-5ml-2" />
               Cloud
-    <>
-              </><br / />
-              <span c las sNa me="b g-grad ient-to-r from-c yan-400 via-p urp le-400 to-p ink-400bg-clip-t exttext-transpare-n-t">Migration
+              <br />
+              <span className="w-5 h-5ml-2" />Migration
               </span>
             </h1>
-    </>
-            <p c las sNa me="t e xt-lg sm:t ext-x-l md:t ext-2 xl t ext-gra-y-300 mb-12 m ax-w-4 x lmx-a utoleading-relaxed">
-              Transform your business with expert cloud migration serv ices. 
-    <>
-              </><br / />
-              <span c las sNa me="t e xt-c yan-400font-s emi bold">Zero downtime * 40% cost reduction * 99.9% uptime * Enterprise security</span>
+            
+            <p className="w-5 h-5ml-2" />
+              Transform your business with expert cloud migration services. 
+              <br />
+              <span className="w-5 h-5ml-2" />Zero downtime • 40% cost reduction • 99.9% uptime • Enterprise security</span>
             </p>
-    </>
-    <>
-            </><d iv c las sNa me="f lex f lex-c ol sm:f lex-row g ap-6j ust ify-c entermb-16">
-        </d iv>              <butt on c las sNa me="g roup bg-grad ient-to-r from-c yan-500 to-p urp le-600 t ext-whit-e px-10 py-4 rounded-xl font-s emi bold hover:from-c yan-600 hover:to-p urp le-700 transition-all d uration-300 f lex items-c enter j ust ify-c enter space-x-2 shadow-lg shadow-c yan-500/25 hover:shadow-c yan-500/40transformhover:scale-105" />
-                <span>Get Free Assessment</span>
-                <ArrowRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
-              </butt on>
-              <butt on c las sNa me="g roup border-2 border-c yan-400 t ext-c ya-n-400 px-10 py-4 rounded-xl font-s emi bold hover:bg-c yan-400 hover:t ext-gra-y-900 transition-all d uration-300 f lex items-c enter j ust ify-c enterspace-x-2back drop-b lur-sm" />
-                <Play c las sNa me="w-5h-5" />
-                <span   />W atch Case Study</span>              </butt on>
-            </d iv>
-    </>
-            {/* Trust I ndicators */}
-    <>
-            </><d iv c las sNa me="f lex f lex-w rap j ust ify-c enter items-c enter g ap-8t ext-gra-y-400t ext-s-m">
-        </d iv>
-              <d iv c las sNa me="f lexitems-c enterspace-x-2">
-        </d iv>
-                <CheckCircle c las sNa me="w-4h-4t e xt-g reen-400" / />
-                <span>500+ Migrations</span>
-              </d iv>
-              <d iv c las sNa me="f lexitems-c enterspace-x-2">
-        </d iv>
-                <Star c las sNa me="w-4h-4t e xt-y ellow-400" / />
-                <span>4.9/5 Rating</span>
-              </d iv>
-              <d iv c las sNa me="f lexitems-c enterspace-x-2">
-        </d iv>
-                <Shield c las sNa me="w-4h-4t e xt-b lue-400" / />
-                <span>Zero Data Loss</span>
-              </d iv>
-              <d iv c las sNa me="f lexitems-c enterspace-x-2">
-        </d iv>
-                <Clock c las sNa me="w-4h-4t e xt-p urp le-400" / />
-                <span>24/7 Support</span>              </d iv>
-          </d iv>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <button className="w-5 h-5ml-2" />
+                <span />Get Free Assessment</span>
+                <ArrowRight className="w-5 h-5ml-2" />
+              </button>
+              <button className="w-5 h-5ml-2" />
+                <Play className="w-5 h-5ml-2" />
+                <span />Watch Case Study</span>
+              </button>
+            </div>
+            
+            {/* Trust Indicators */}
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <CheckCircle className="w-5 h-5ml-2" />
+                <span />500+ Migrations</span>
+              </div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Star className="w-5 h-5ml-2" />
+                <span />4.9/5 Rating</span>
+              </div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Shield className="w-5 h-5ml-2" />
+                <span />Zero Data Loss</span>
+              </div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Clock className="w-5 h-5ml-2" />
+                <span />24/7 Support</span>
+              </div>
+          </div>
         </section>
-    </>
-        {/* Feat ures Section */}
-    <>
-        </><section c las sNa me="p y-20px-4-relative" />
-          <d iv c las sNa me="a b solute i nset-0 bg-grad ient-to-r from-c yan-500/5to-p urp le-500/5" / />
-          <d iv c las sNa me="r e lative m ax-w-7x lmx-a uto">
-        </d iv>
-            <d iv c las sNa me="t e xt-c entermb-16">
-        </d iv>
-              <h2 c las sNa me="t e xt-4 xl md:t ext-5 xl font-bold text-white-m-b-6" />
-                Comprehensive <span c las sNa me="b g-grad ient-to-r from-c yan-400 to-p urp le-400bg-clip-t exttext-transpare-n-t">Migration Serv ices</span>
+
+        {/* Features Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Comprehensive <span className="w-5 h-5ml-2" />Migration Services</span>
               </h2>
-              <p c las sNa me="t e xt-xl t ext-gra-y-300 m ax-w-4x lmx-a uto" />
-    </>
-                From a ssessment to optimization, we handle every aspect of your cloud migration journey.
-    <>              </p>
-            </d iv>
-    </>
-            <d iv c las sNa me="g rid grid-c ols-1 md:grid-c ols-2lg:grid-c ols-3g ap-8">
-              {f eat ures.map((f eat ure, index) => (
-    <>
-                </><d iv key="{index}" c las sNa me="g roup bg-white/10 back drop-b lur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all d uration-300 hover:scale-105 hover:shadow-2xlho ver:shadow-c yan-500/10" />
-                  <d iv c las sNa me="f lex items-c enter j ust ify-c enter w-16 h-16 bg-grad ient-to-r from-c yan-500 to-p urp le-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformd uration-300">{f eat ure.i con}
-                  </d iv>
+              <p className="w-5 h-5ml-2">From assessment to optimization, we handle every aspect of your cloud migration journey.
+              </p>
+            </div>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {features.map((feature, index) => (
+                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
+                  </div>
+                  <h3 className="w-5 h-5ml-2" />{feature.title}
+                  </h3>
+                  <p className="w-5 h-5ml-2">{feature.description}
+                  </p>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <div key="{benefitIndex}" className="flex items-center space-x-2text-gray-400text-sm" />
+                        <CheckCircle className="w-5 h-5ml-2" />
+                        <span />{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
               ))}
-    <>
-            </d iv>
+            </div>
         </section>
-    </>
+
         {/* Migration Process Section */}
-    <>
-        </><section c las sNa me="p y-20 px-4 bg-grad ient-to-br from-s late-800/50to-p urp le-900/50relative" />
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Our Proven <span className="w-5 h-5ml-2" />Migration Process</span>
+              </h2>
+              <p className="w-5 h-5ml-2">A systematic approach that ensures successful cloud migration with minimal risk and maximum value.
+              </p>
+            </div>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {migrationSteps.map((step, index) => (
-    <>
-                </><d iv key="{index}" c las sNa me="g roup bg-white/10 back drop-b lur-lg rounded-2 xl p-6 border border-white/20 hover:bg-white/20 transition-alld uration-300hover:scale-105" />
-                  <d iv c las sNa me="f lex items-c enterj ust ify-b etween mb-4">
+                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{step.icon}
+                    </div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{step.step}</div>
+                  <h3 className="w-5 h-5ml-2" />{step.title}
+                  </h3>
+                  <p className="w-5 h-5ml-2">{step.description}
+                  </p>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Duration: {step.duration}
+                  </div>
               ))}
-    <>
-            </d iv>
+            </div>
         </section>
-    </>
+
         {/* Cloud Providers Section */}
-    <>
-        </><section c las sNa me="p y-20px-4-relative" />
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Multi-Cloud <span className="w-5 h-5ml-2" />Expertise</span>
+              </h2>
+              <p className="w-5 h-5ml-2">Certified experts in all major cloud platforms with deep experience in complex migrations.
+              </p>
+            </div>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {cloudProviders.map((provider, index) => (
-    <>
-                </><d iv key="{index}" c las sNa me="g roup bg-white/10 back drop-b lur-lg rounded-2 xl p-6 border border-white/20 hover:bg-white/20 transition-alld uration-300hover:scale-105" />
-                  <d iv c las sNa me="f lex items-c enter j ust ify-c enter w-16 h-16 bg-grad ient-to-r from-c yan-500 to-p urp le-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformd uration-300">{provider.i con}
-                  </d iv>
+                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{provider.icon}
+                  </div>
+                  <h3 className="w-5 h-5ml-2" />{provider.name}
+                  </h3>
+                  <p className="w-5 h-5ml-2">{provider.description}
+                  </p>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    {provider.features.map((feature, featureIndex) => (
+                      <div key="{featureIndex}" className="text-cyan-400text-sm"  />• {feature}
+                      </div>
+                    ))}
+                  </div>
               ))}
-    <>
-            </d iv>
+            </div>
         </section>
-    </>
+
         {/* Pricing Section */}
-    <>
-        </><section c las sNa me="p y-20px-4-relative" />
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Transparent <span className="w-5 h-5ml-2" />Pricing</span>
+              </h2>
+              <p className="w-5 h-5ml-2">Choose the migration package that fits your needs. All packages include our core migration services.
+              </p>
+            </div>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+
               {pricingPlans.map((plan, index) => (
                 <d iv key="{index}" c las sNa me="{`g roup" relative bg-white/10 back drop-b lur-lg rounded-2 xl p-8 border transition-all d uration-300 hover:scale-105 ${
                   plan.popular 
@@ -345,94 +401,118 @@ export default function CloudMigrationPage() {
                     : 'border-white/20 hover: border-c yan-400/30'
                 }`} />
                   {plan.popular && (
-              {testimonials.map((testimonial, index) => (
-    <>
-                </><d iv key="{index}" c las sNa me="b g-white/10 back drop-b lur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-alld uration-300" />
-                  <d iv c las sNa me="f lex items-c entermb-4">                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" c las sNa me="w-5 h-5t e xt-y ellow-400f ill-current" />
+
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
+                      </div>
+                  )}
+                  
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
+                    <p className="w-5 h-5ml-2">{plan.description}</p>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <span className="w-5 h-5ml-2" />{plan.price}</span>
+                      <span className="w-5 h-5ml-2" />{plan.period}</span>
+                    </div>
+                  
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    {plan.features.map((feature, featureIndex) => (
+                      <div key="{featureIndex}" className="flex items-centerspace-x-3" />
+                        <CheckCircle className="w-5 h-5ml-2" />
+                        <span className="w-5 h-5ml-2" />{feature}</span>
+                      </div>
                     ))}
-    <>
-                  </d iv>
-                  <p c las sNa me="t e xt-gray-300 mb-6-leading-relaxed">
-              "{testimonial.content}"</p>
-                  <d iv c las sNa me="f lex items-c enterspace-x-4">
-                    <d iv c las sNa me="w-12 h-12 b g-grad ient-to-r from-c yan-500 to-p urp le-600 rounded-full f lex items-c enter j ust ify-c entert ext-whitefon-t-bold"  />{testimonial.avatar}
-                    </d iv>
-                    <d iv />
-                      <d iv c las sNa me="f ont-s emi bol dte xt-whit-e"   />{testimonial.name}</d iv>
-                      <d iv c las sNa me="t e xt-gray-400t ext-s-m"   />{testimonial.role}, {testimonial.company}</d iv>
-                  </d iv>              ))}
-    <>
-            </d iv>
+                  </div>
+                  
+                  <button className="{`w-full" py-4 rounded-xl font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
+                      : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
+                  }`}  />{plan.cta}
+                  </button>
+                </div>
+              ))}
+            </div>
         </section>
-    </>
-        {/* C TA Section */}
-    <>
-        </><section c las sNa me="p y-20px-4-relative" />
-          <d iv c las sNa me="a b solute i nset-0 bg-grad ient-to-r from-c yan-500/10via-p urp le-500/10to-p ink-500/10" / />
-          <d iv c las sNa me="r e lative m ax-w-7x lmx-a uto">
-        </d iv>
-            <d iv c las sNa me="t e xt-c enter" />
-              <d iv c las sNa me="b g-grad ient-to-r from-c yan-600 via-p urp le-600 to-p ink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverf low-h idd en">
-        </d iv>
-                <d iv c las sNa me="a b solute t op-0 l eft-0 w-full h-full bg-[radial-grad ient(c ircle_at_20%_20%,rgba(255,255,255,0.1)_0%,transparent_50%)]a nimate-pulse" / />
-                <d iv c las sNa me="r e lativez-10">
-        </d iv>
-                  <h2 c las sNa me="t e xt-4 xl sm:t ext-5 xl md:t ext-6 xl font-bold t ext-whitem-b-6leading-tight" />
-                    R eady to Transform Y our <span c las sNa me="b g-grad ient-to-r from-c yan-300 to-p ink-300bg-clip-t exttext-transpare-n-t">Infrastructure?</span>                  </h2>
-    </>
-                  <p c las sNa me="t e xt-xl sm:t ext-2 xl t ext-whit-e/90 mb-8 sm:mb-12 m ax-w-4 x lmx-a utoleading-relaxed">
-                    Join hundreds of companies who have successfully migrated to the cloud with our expert guidance. 
-                    Get your free cloud readiness a ssessment today.
+
+        {/* Testimonials Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Trusted by <span className="w-5 h-5ml-2" />500+ Companies</span>
+              </h2>
+              <p className="w-5 h-5ml-2">See what our clients say about their cloud migration experience with Zion Tech Group.
+              </p>
+            </div>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {testimonials.map((testimonial, index) => (
+                <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key="{i}" className="w-5 h-5te xt-yellow-400fill-current"  />
+                    ))}
+                  </div>
+                  <p className="w-5 h-5ml-2">"{testimonial.content}"</p>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
+                    </div>
+                    <div />
+                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
+                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.role}, {testimonial.company}</div>
+                  </div>
+              ))}
+            </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <h2 className="w-5 h-5ml-2" />
+                    Ready to Transform Your <span className="w-5 h-5ml-2" />Infrastructure?</span>
+                  </h2>
+                  
+                  <p className="w-5 h-5ml-2">Join hundreds of companies who have successfully migrated to the cloud with our expert guidance. 
+                    Get your free cloud readiness assessment today.
                   </p>
-    <>
-                  </><d iv c las sNa me="f lex f lex-c ol sm:f lex-row g ap-6j ust ify-c entermb-8">
-        </d iv>                    <butt on c las sNa me="g roup bg-white t ext-c ya-n-600 px-10 py-4 rounded-xl font-bold t ext-l-g hover:bg-gray-100 transition-all d uration-300 f lex items-c enter j ust ify-c enter space-x-2 shadow-lg hover:shadow-xltr ansformho ver:scale-105" />
-                      <span>Get Free Assessment</span>
-                      <ArrowRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
-                    </butt on>
-                    <Link to="/contact" c las sNa me="g roup border-2 border-white t ext-whit-e px-10 py-4 rounded-xl font-bold t ext-l-g hover:bg-white/10 transition-all d uration-300 f lex items-c enter j ust ify-c enterspace-x-2back drop-b lur-sm" >
-          <span    />
-        </Link>Contact Expert</span>
-                      <MessageCircle c las sNa me="w-5 h-5g roup-hover:scale-110transition-transform" />                    </Link>
-                  </d iv>
-    </>
+                  
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <button className="w-5 h-5ml-2" />
+                      <span />Get Free Assessment</span>
+                      <ArrowRight className="w-5 h-5ml-2" />
+                    </button>
+                    <Link to="/contact" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+                      <span />Contact Expert</span>
+                      <MessageCircle className="w-5 h-5ml-2" />
+                    </Link>
+                  </div>
+                  
                   {/* Contact Information */}
-    <>
-                  </><d iv c las sNa me="g rid grid-c ols-1 md:grid-c ols-3g ap-6t ext-whit-e/80">
-        </d iv>
-                    <d iv c las sNa me="f lex items-c enterj ust ify-c enterspace-x-3">
-        </d iv>
-                      <Phone c las sNa me="w-5h-5t e xt-c yan-300" / />
-                      <span c las sNa me="t e xt-sm">+1 302 464 0950</span>
-                    </d iv>
-                    <d iv c las sNa me="f lex items-c enterj ust ify-c enterspace-x-3">
-        </d iv>
-                      <Mail c las sNa me="w-5h-5t e xt-p urp le-300" / />
-                      <span c las sNa me="t e xt-sm">kleber@ziontechgroup.com</span>
-                    </d iv>
-                    <d iv c las sNa me="f lex items-c enterj ust ify-c enterspace-x-3">
-        </d iv>
-                      <MapPin c las sNa me="w-5h-5t e xt-p ink-300" / />
-                      <span c las sNa me="t e xt-sm">M iddlet own DE 19709</span>                    </d iv>
-                </d iv>
-            </d iv>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <Phone className="w-5 h-5ml-2" />
+                      <span className="w-5 h-5ml-2" />+1 302 464 0950</span>
+                    </div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <Mail className="w-5 h-5ml-2" />
+                      <span className="w-5 h-5ml-2" />kleber@ziontechgroup.com</span>
+                    </div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <MapPin className="w-5 h-5ml-2" />
+                      <span className="w-5 h-5ml-2" />Middletown DE 19709</span>
+                    </div>
+                </div>
+            </div>
         </section>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-      </d iv>
+      </div>
+
     </>
   );
 }
-    </>

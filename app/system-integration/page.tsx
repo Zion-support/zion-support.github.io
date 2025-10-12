@@ -1,69 +1,114 @@
+
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Zap, Shield, Cloud } from 'lucide-react';
+
+const Page: React.FC = () => {
+  const features = [
+    {
+      icon: <Cloud className="w-5 h-5ml-2" />,
+      title: "Cloud Integration",
+      description: "Seamlessly integrate with all major cloud platforms and services."
+    },
+    {
+      icon: <Zap className="w-5 h-5ml-2" />,
+      title: "Real-time Sync",
+      description: "Keep all your systems synchronized with real-time data updates."
+    },
+    {
+      icon: <Shield className="w-5 h-5ml-2" />,
+      title: "Secure & Reliable",
+      description: "Enterprise-grade security ensures your data is protected during integration."
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title />System Integration - Zion Tech Group</title>
+        <meta name="description" content="Professional system integration services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta name="keywords" content="system integration, IT services, Zion Tech Group" />
+        <meta property="og:title" content="System Integration - Zion Tech Group" />
+        <meta property="og:description" content="Professional system integration services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/system-integration" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
-    <>
-        </><section c las sNa me="p y-20" />
-          <d iv c las sNa me="c o nta iner mx-a uto px-4-t ext-c ente-r">
-              {features.map((feature, index) => (
-    <>
-                </><d iv k ey={index} c las sNa me="b g-s late-800/50 b ack drop-b lur-sm b ord er b ord er-s late-700 rounded-xl p-8 t ext-c ente-r hover:b ord er-cyan-500/50transition-alld ura tion-300" />
-                  <d iv c las sNa me="f l exj ust ify-c ent ermb-4">
-<<<<<<< H EAD                    {feature.icon}
-    <>
-                  </d iv>
-                  <h3 c las sNa me="t e xt-xl f ont-s emi bol dte xt-w hit-e mb-4" />{feature.t itle}</h3>
-                  <p c las sNa me="t e xt-g ray-300">
-              {feature.description}</p>                </d iv>
-    </>
-              ))}
-    <>
-            </d iv>
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h1 className="w-5 h-5ml-2" />
+              <span className="w-5 h-5ml-2" />
+                System Integration
+              </span>
+            </h1>
+            <p className="w-5 h-5ml-2">Professional system integration services by Zion Tech Group. Expert solutions tailored to your business needs.
+            </p>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup"
+        >
+          Get Started
+                
+          <ArrowRight className="w-5 h-5ml-2" />
+        </Link>
+              <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
+                Learn More
+              </Link>
+            </div>
         </section>
-    </>
-        {/* C TA Section */}
-    <>
-        </><section c las sNa me="p y-20" />
-          <d iv c las sNa me="c o nta ine rmx-a uto px-4">
-        </d iv>
-            <d iv c las sNa me="b g-g rad ient-to-r f rom-cyan-900/50 to-p urple-900/50 b ack drop-b lur-sm b ord er b ord er-cyan-500/20 rounded-2xlp-12t ext-c ente-r">
-        </d iv>
-              <h2 c las sNa me="t e xt-4xl f ont-b old text-w hit em-b-6" />
-    </>                Ready to Get Started?
-    <>
+
+        {/* Features Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Why Choose Our System Integration Services?
               </h2>
-              <p c las sNa me="t e xt-xl t ext-g ra-y-300 mb-8-m ax-w-2x lmx-a uto" />
-    </>
-                Contact us to learn more about our solutions and how we can help your busi ness.
-    <>
+              <p className="w-5 h-5ml-2">Our expert team helps you connect and optimize all your business systems
               </p>
-              <d iv c las sNa me="f l ex f lex-c ol sm:f lex-r owg ap-4j ust ify-c ent er">
-        </d iv>                <L ink to="/contact" c las sNa me="b g-g rad ient-to-r f rom-cyan-500 to-p urple-500 t ext-w hit-e px-8 py-4 rounded-lg f ont-s emi bold t ext-l-g hover:f rom-cyan-600 hover:to-p urple-600 transition-all d ura tion-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
-    </>
-                  Contact Us
-    <>
-                </L ink>
-                <L ink to="/s erv ices" c las sNa me="b o rder b ord er-cyan-500 t ext-cya-n-400 px-8 py-4 rounded-lg f ont-s emi bold t ext-l-g hover:bg-cyan-500/10 transition-all d ura tion-300transformhover:scale-105" />
-    </>
-                  View All Serv ices
-    <>
-                </L ink>
-              </d iv>
-          </d iv>
+            </div>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-allduration-300" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    {feature.icon}
+                  </div>
+                  <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
+                  <p className="w-5 h-5ml-2">{feature.description}</p>
+                </div>
+              ))}
+            </div>
         </section>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-      </d iv>
+
+        {/* CTA Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Ready to Get Started?
+              </h2>
+              <p className="w-5 h-5ml-2">Contact us to learn more about our solutions and how we can help your business.
+              </p>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
+                  Contact Us
+                </Link>
+                <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
+                  View All Services
+                </Link>
+              </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 };
+
 export default Page;
-    </>
+

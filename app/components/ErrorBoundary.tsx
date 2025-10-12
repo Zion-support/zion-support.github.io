@@ -21,22 +21,26 @@ class ErrorBoundary extends Component<Props, State /> {
   if (this.state.hasError) {
 }
       return (
-    <>
-        </><d iv clas sNa me="m in-h-s cre en bg-g rad ient-to-br from-s late-900 via-purple-900 to-s late-900 flexitems-centerjustify-center">
-        </d iv>
-          <d iv clas sNa me="t ext-center" />
-            <h1 clas sNa me="t ext-6 xl f ont-b old text-w hitem-b-4">O ops!</h1>
-            <p clas sNa me="t ext-x ltext-g ra-y-300mb-8">S ome thi ng w ent wrong.</p>            <button
-              onClick="{()" =  />this.setState({ hasError: false, error: unde fin ed })}
-              clas sNa me="b g-g rad ient-to-r from-c yan-500 to-purple-500 t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:from-c yan-600 hover:to-purple-600transition-allduration-300"
+
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h1 className="text-6 xl font-boldtext-white mb-4"  >Oops!</h1>
+            <p className="text-xl text-gray-300 mb-8">Something went wrong.</p>
+            <button
+              onClick="{()" =  />this.setState({ hasError: false, error: undefined })}
+              className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300"
+
             >
               Try Again
-    <>
             </button>
-          </d iv>
-  );    }
+
+          </div>
+      );
+    }
+
     return this.props.children;
   }
 }
-export d efault ErrorBoundary;
-    </>
+
+export default ErrorBoundary;
+

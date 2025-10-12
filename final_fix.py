@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Final fix script to handle remaining syntax errors and invalid characters.
+
+Final comprehensive fix for all remaining issues
 """
 
 import os
@@ -8,21 +9,59 @@ import re
 import glob
 from pathlib import Path
 
-def fix_invalid_characters(file_path):
-    """Fix invalid characters and remaining issues in a single file."""
+
+def final_fix(content):
+    """Final comprehensive fix"""
+    # Fix malformed JSX elements with closing tags
+    content = re.sub(r'</[A-Za-z]+ className="[^"]*" ><([A-Za-z]+) className="([^"]*?)" />', r'<\1 className="\2" />', content)
+    
+    # Fix malformed closing tags
+    content = re.sub(r'</[A-Za-z]+ className="[^"]*" >', '', content)
+    
+    # Fix spaces in class names
+    content = re.sub(r'w-8 h-8t ext-', 'w-8 h-8 text-', content)
+    content = re.sub(r'w-6 h-6t ext-', 'w-6 h-6 text-', content)
+    content = re.sub(r'w-4 h-4t ext-', 'w-4 h-4 text-', content)
+    content = re.sub(r'w-5 h-5t ext-', 'w-5 h-5 text-', content)
+    
+    # Fix malformed function names
+    content = re.sub(r'export default function (\d+[Gg])-([A-Za-z-]+)Page\(\)', 
+                     lambda m: f'export default function {m.group(1).replace("5G", "FiveG").replace("5g", "FiveG")}{"".join(word.capitalize() for word in m.group(2).split("-"))}Page()', 
+                     content)
+    
+    # Fix other function names with hyphens
+    content = re.sub(r'export default function ([A-Za-z0-9]+)-([A-Za-z-]+)Page\(\)', 
+                     lambda m: f'export default function {m.group(1)}{"".join(word.capitalize() for word in m.group(2).split("-"))}Page()', 
+                     content)
+    
+    # Fix malformed JSX attributes
+    content = re.sub(r'className="([^"]*?)([a-zA-Z])([a-zA-Z])', r'className="\1\2 \3', content)
+    
+    # Fix specific patterns
+    content = re.sub(r'text-cyan-400" >', 'text-cyan-400" />', content)
+    content = re.sub(r'text-emerald-400" >', 'text-emerald-400" />', content)
+    content = re.sub(r'text-purple-400" >', 'text-purple-400" />', content)
+    content = re.sub(r'text-red-400" >', 'text-red-400" />', content)
+    content = re.sub(r'text-orange-400" >', 'text-orange-400" />', content)
+    content = re.sub(r'text-pink-400" >', 'text-pink-400" />', content)
+    
+    return content
+
+def process_file(file_path):
+    """Process a single file"""
+
     try:
         with open(file_path, 'r', encoding='utf-8', errors='replace') as f:
             content = f.read()
         
         original_content = content
+        content = final_fix(content)
         
-        # Remove any remaining merge conflict markers
-        content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n.*?', '', content, flags=re.DOTALL)
-        content = re.sub(r'=======\n.*?\n>>>>>>> [^\n]+', '', content, flags=re.DOTALL)
-        content = re.sub(r'<<<<<<< HEAD\n', '', content)
-        content = re.sub(r'=======\n', '', content)
-        content = re.sub(r'>>>>>>> [^\n]+\n', '', content)
+\n.*?\n
+        content = re.sub(r'\n.*?', '', content, flags=re.DOTALL)
+        content = re.sub(r'=======\n.*?\n
+        content = re.sub(r'\n', '', content)
+        content = re.sub(r'
         
         # Fix invalid characters - replace with proper characters
         content = content.replace('"', '"').replace('"', '"')
@@ -69,46 +108,51 @@ def fix_invalid_characters(file_path):
         content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
         content = re.sub(r'^\s*\n', '', content, flags=re.MULTILINE)
         
+=======
+>>>>>>> main
         # Only write if content changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
+
+            print(f"Final fix applied: {file_path}")
             return True
-        
-        return False
-        
+        else:
+            return False
+            
+
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to process all files."""
-    # Get all TypeScript and JavaScript files
+
+    """Main function"""
+    # Find all TypeScript/React files
     patterns = [
-        '**/*.tsx',
-        '**/*.ts', 
-        '**/*.jsx',
-        '**/*.js'
+        '/workspace/app/**/*.tsx',
+        '/workspace/app/**/*.ts',
+        '/workspace/*.tsx',
+        '/workspace/*.ts'
+
     ]
     
     files_to_process = []
     for pattern in patterns:
         files_to_process.extend(glob.glob(pattern, recursive=True))
     
-    # Filter out node_modules and other excluded directories
-    files_to_process = [f for f in files_to_process if not any(exclude in f for exclude in [
-        'node_modules', '.git', 'dist', 'build', '.next', 'out'
-    ])]
-    
+
+
     print(f"Found {len(files_to_process)} files to process")
     
     fixed_count = 0
     for file_path in files_to_process:
-        if fix_invalid_characters(file_path):
+
+        if process_file(file_path):
             fixed_count += 1
-            print(f"Fixed: {file_path}")
     
-    print(f"Fixed invalid characters in {fixed_count} files")
+    print(f"Applied final fixes to {fixed_count} files")
+
 
 if __name__ == "__main__":
     main()

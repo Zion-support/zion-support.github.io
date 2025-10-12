@@ -1,27 +1,31 @@
-import React from 'react';import { ArrowRight  } from 'lucide-react';
+
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
 'use client'
+
+
   ];
-    <>
               </span>
-              <br / />
-              <span c onst c las sNa me = "t ext-w hit-e">S olu tio ns</span>
+
+              <br />
+              <span const className = "text-white"  >Solutions</span>
             </h1>
-            <p c las sNa me="t e xt-xl t ext-g ra-y-300 mb-8 m ax-w-3x lmx-auto">
-              Transform your business with our advanced systemmonitor solu tio ns.
+            <p className="w-5 h-5ml-2">Transform your business with our advanced systemmonitor solutions.
+
               Powered by cutting-edge AI technology and industry expertise.
-    <>
             </p>
-            <d iv c las sNa me="f l ex f lex-c ol sm:f lex-rowg ap-4j ust ify-c ent er">
-              <b utt on c las sNa me="b g-g rad ient-to-r from-p urp le-500 to-b lue-600 t ext-w hit-e px-8 py-3 rounded-lg font-semibold hover:from-p urp le-600 hover:to-b lue-700 transit ion-all duration-300f lex items-c ent er" />                Get Star ted
-    <>
-                </><ArrowRight c las sNa me="m l-2h-5w-5" />
-              </b utt on>
-              <b utt on c las sNa me="b o rder b ord er-w hite t ext-w hit-e px-8 py-3 rounded-lg font-semibold hover:bg-w hite hover:t ext-g ra-y-900transit ion-allduration-300" />
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <button className="w-5 h-5ml-2" />
+                Get Started
+                <ArrowRight className="w-5 h-5ml-2" />
+              </button>
+              <button className="w-5 h-5ml-2" />
                 Learn More
   </
-    <>
-            </d iv>
-    </d iv>
+            </div>
+    </div>
+
   )}
 export default SystemMonitorPage
   </b utt on>
@@ -77,4 +81,3 @@ c onst SystemMonitor: React.FC<SystemMonitorProps /> = ({
       updateM etr ics()
     }
   };
-    </>

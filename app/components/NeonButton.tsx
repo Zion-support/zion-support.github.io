@@ -1,6 +1,10 @@
-'use client';
+
 import React from 'react';
-import { ArrowRight  } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+'use client';
+
+
+
 interface NeonButtonProps {
   children: React.ReactNode;
   href?: string;
@@ -36,12 +40,11 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
   const buttonClasses = `${baseCla sses} ${s izeCla sses[s ize]} ${variantCla sses[variant]} ${neonEffect} ${c las sNa me}`;
   const cont ent = (
     <>
-    </>
-      {i con && <s pan c las sNa me="m r-2">{i con}</s pan>}
-    </>
+
+      {icon && <span className="mr-2"  >{icon}</span>}
       {children}
-    <>
-      {!i con && </><ArrowRight c las sNa me="w-4 h-4 m l-2 g roup-hover:tran sla te-x-1transition-transform" />}
+      {!icon && <ArrowRight className="w-5 h-5ml-2" />}
+
     </>
   );
   if (href) {
@@ -51,8 +54,10 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
         c las sNa me="{b uttonCl asses}"
         s tyle="{{"
           boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',
-        }}>
-        {cont ent}
+
+        }} />
+        {content}
+
       </a>
     );
   }
@@ -63,9 +68,12 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
       c las sNa me="{b uttonCl asses}"
       s tyle="{{"
         boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',
-      }}>{cont ent}
+
+      }}
+      />{content}
     </button>
   );
 };
+
 export default NeonButton;
-    </>
+

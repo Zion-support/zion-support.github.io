@@ -1,7 +1,10 @@
-'use client';
 import { Component, ErrorInfo, ReactNode} from 'react';
-import { Home  } from 'lucide-react';
-import { Link  } from 'react-router-dom';
+
+import { Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
+'use client';
+
+
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -38,45 +41,69 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
         return this.props.fallback;
       }
       return (
+
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <AlertTriangle className="w-5 h-5ml-2" />
+            </div>
+            
+            <h1 className="w-5 h-5ml-2">Oops! Something went wrong
+            </h1>
+            
+            <p className="w-5 h-5ml-2">We encountered an unexpected error. Don't worry, our team has been notified and we're working to fix it.
+            </p>
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <h3 className="text-red-400font-semiboldmb-2"  >Error Details:</h3>
+                <pre className="w-5 h-5ml-2" />{this.state.error.toString()}
+                </pre>
+                {this.state.errorInfo && (
+                  <pre className="w-5 h-5ml-2" />{this.state.errorInfo.componentStack}
+                  </pre>
+                )}
+              </div>
+            )}
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               <button
                 onClick="{this.handleRetry}"
-                clas sNa me="w-f u ll i nline-f lex i tems-c enter j ust ify-c enter px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-whi-t-e font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:s cale-105" />
-                <R efr esh Cw clas sNa me="h-4w-4m r-2" />
-                T ry A gain
+                className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
+                <RefreshCw className="w-5 h-5ml-2" />
+                Try Again
               </button>
-              <Link to="/" clas sNa me="w-f u ll i nline-f lex i tems-c enter j ust ify-c enter px-6 py-3 border border-gray-600 text-gr-a-y-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransiti-o-n-allduration-300" >
-          <Home clas sNa me="h-4w-4m r-2" /  />
-        </Link>                Go Home
-    <>
+              
+              <Link to="/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-allduration-300" />
+                <Home className="w-5 h-5ml-2" />
+                Go Home
               </Link>
-            </d iv>
-    <>
-            </><d iv clas sNa me="m t-8 pt-6-border-t border-gray-700">
-        </d iv>
-              <p clas sNa me="t ext-s mtext-gr-a-y-400mb-4" />
-                Still having issues? Contact our support team:
-    <>
+            </div>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <p className="w-5 h-5ml-2">Still having issues? Contact our support team:
               </p>
-              <d iv clas sNa me="f l ex f lex-c ol sm:f lex-r owg ap-2j ust ify-c enter">
-        </d iv>                <a
-                  href="mailto:kleb er@z iontec hgroup.com"
-                  clas sNa me="i n line-f lex i tems-c enter text-s-m text-purp-l-e-400hover:text-purp-l-e-300transition-c olo rs" />
-                  <M ail clas sNa me="h-4w-4m r-1" />
-                  kleb er@z iontec hgroup.com
-    <>
-                </a>
-                <s pan clas sNa me="h i dde nsm:i nlinetext-gr-a-y-500">*</s pan>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                 <a
-                  href="t el:+13024640950"
-                  clas sNa me="i n line-f lex i tems-c enter text-s-m text-purp-l-e-400hover:text-purp-l-e-300transition-c olo rs" />
-    <>
-                  </><s pan>+1 302 464 0950</s pan>
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300 transition-colors" />
+                  <Mail className="w-5 h-5ml-2" />
+                  kleber@ziontechgroup.com
                 </a>
-              </d iv>
-          </d iv>
-      );    }
+                <span className="hiddensm:inlinetext-gray-500"  >•</span>
+                <a
+                  href="tel:+13024640950"
+                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300 transition-colors" />
+                  <span  >+1 302 464 0950</span>
+                </a>
+              </div>
+          </div>
+      );
+    }
+
     return this.props.children;
   }
 }
+
 export default EnhancedErrorBoundary;
-    </>
+

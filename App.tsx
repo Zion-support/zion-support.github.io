@@ -357,6 +357,9 @@ const App: React.FC = () => {
           </AppWithPerformanceMonitoring>
         </Router>
       </HelmetProvider>
-    </ErrorBoundary>  );
+
+    </ErrorBoundary>
+  );
+
 };
 export default App;

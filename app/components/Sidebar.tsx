@@ -1,5 +1,9 @@
-import React from 'react';import { Link  } from 'react-router-dom';
-import { X  } from 'lucide-react';
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { X } from 'lucide-react';
+
+
 interface SidebarProps {
   isOpen: boolean,
   onClose: () => void
@@ -21,31 +25,29 @@ export default function Sidebar({
     <d iv c las sName="{`f i xed" i nset-0 z-50 t ran sfo rm t ran sition-t ran sfo rm duration-300 ease-in-out ${
       isOpen ? 't ranslate-x-0' : '-t ranslate-x-f ull'
     }`} />
-    <>
-      </><d iv c las sName="f i xed i nset-0 bg-b lac kbg-o pac ity-50" onCl ick="{onClose}" / />
-      <d iv c las sName="r e lat ive f lex f lex-c ol w-64 h-f ull bg-g ray-900s had ow-xl">
-        </d iv>
-        <d iv c las sName="f l ex i tems-c enter j ust ify-b etw eenp-4">
-        </d iv>
-          <s pan c las sName="t e xt-xl f ont-b old text-w hit-e">M enu</s pan>
+
+      <div className="fixed inset-0 bg-blackbg-opacity-50" onClick="{onClose}"  />
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <span className="text-xl font-bold text-white"  >Menu</span>
           <button
-            onCl ick="{onClose}"
-            c las sName="t e xt-g ray-300 h over:t ext-w hit etr ans itio-n-c olo rs" />
-    <>
-            </><X c las sName="w-6h-6" / />          </button>
-        </d iv>
-        <nav c las sName="f l ex-1 px-4 py-6-s pace-y-2" />
-          {navigationItems.map((i tem, index) => (
+            onClick="{onClose}"
+            className="text-gray-300 hover:text-white transition-colors" />
+            <X className="w-5 h-5ml-2" />
+          </button>
+        </div>
+        <nav className="w-5 h-5ml-2" />
+          {navigationItems.map((item, index) => (
             <Link
               key="{index}"
-              to="{i tem.path}"
-              c las sName="b l ock px-4 py-2 t ext-g ra-y-300 h over:t ext-w hit-e h over:bg-g ray-800 rounded-lgtr ans ition-c olo rs"
-              onCl ick="{onClose}">{i tem.name}
+              to="{item.path}"
+              className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
+              onClick="{onClose}"
+              />{item.name}
+
             </Link>
           ))}
-    <>
         </nav>
       </d iv>
   );
 }
-    </>

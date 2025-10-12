@@ -46,16 +46,18 @@ const LazyImage: React.FC<LazyImageP rops /> = ({
   return (
     <d iv r ef="{imgRef}" c las sNa me="{`r e lat ive" o ver flow-h idd en ${c las sNa me}`} />
       {!isInView && (
-    <>
-        </><d iv c las sNa me="a b sol ute i nset-0 bg-g ray-800 a nim ate-p ulse flexitems-centerjustify-center">
-        </d iv>
-          <Loader2 c las sNa me="w-8 h-8t e xt-g ray-400a nim ate-s pin" / />        </d iv>
+
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <Loader2 className="w-5 h-5ml-2" />
+        </div>
+
       )}
       {isInView && !isLoaded && !hasError && (
-    <>
-        </><d iv c las sNa me="a b sol ute i nset-0 bg-g ray-800 flexitems-centerjustify-center">
-        </d iv>
-          <Loader2 c las sNa me="w-8 h-8t e xt-g ray-400a nim ate-s pin" / />        </d iv>
+
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <Loader2 className="w-5 h-5ml-2" />
+        </div>
+
       )}
       {isInView && (
         <img
@@ -67,19 +69,21 @@ const LazyImage: React.FC<LazyImageP rops /> = ({
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           loading="lazy"
-        / />
+         />
       )}
       {hasError && (
-    <>
-        </><d iv c las sNa me="a b sol ute i nset-0 bg-g ray-800 flexitems-centerjustify-center">
-        </d iv>
-          <d iv c las sNa me="t e xt-centert ext-g ra-y-400">
-        </d iv>
-            <d iv c las sNa me="w-8 h-8m x-a uto mb-2">📷</d iv>            <p c las sNa me="t e xt-sm">Image f ail ed to load</p>
-          </d iv>
+
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="w-8h-8mx-a utomb-2"  >📷</div>
+            <p className="text-sm">Image failed to load</p>
+          </div>
+
       )}
     </d iv>
   )
 }
+
+
 export default LazyImage;
-    </>
+

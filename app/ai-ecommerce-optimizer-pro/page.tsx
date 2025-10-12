@@ -1,143 +1,194 @@
+
+
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3 } from 'lucide-react';
+
+export default function AIEcommerceOptimizerPro() {
+  const features = [
+    {
+      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+      title: 'AI-Powered Optimization',
+      description: 'Advanced machine learning algorithms analyze customer behavior and optimize your e-commerce platform in real-time'
+    },
+    {
+      icon: <Zap className="w-6 h-6 text-purple-400" />,
+      title: 'Performance Enhancement',
+      description: 'Boost conversion rates, reduce cart abandonment, and increase average order value with intelligent recommendations'
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-yellow-400" />,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security with PCI DSS compliance and advanced fraud detection'
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive insights into customer behavior, sales performance, and optimization opportunities'
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
+        <meta name="description" content="Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta name="keywords" content="AI e-commerce, optimization, machine learning, Zion Tech Group" />
+
         <meta property="og:title" content="AI E-commerce Optimizer Pro - Zion Tech Group" />
         <meta property="og:description" content="Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-ecommerce-optimizer-pro" />
-      </H elmet>
-      <d iv c las sNa me="m in-h-scre en bg-g rad ient-to-br f rom-s late-900 via-purple-900to-s late-900pt-16">
-<<<<<<< HEAD        {/* H ero S ection */}
-    <>
-        </><s ection c las sNa me="p y-20" />
-          <d iv c las sNa me="c onta iner mx-a uto px-4-t ext-c ente-r">
-        </d iv>
-            <h1 c las sNa me="t e xt-5xl md:t ext-6xl f ont-b old text-w hit em-b-6" />              <s pan c las sNa me="b g-g rad ient-to-r f rom-c yan-400 via-purple-400 to-pink-400bg-clip-t exttext-transpare-n-t" />
+
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+        {/* Hero Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 AI E-commerce Optimizer Pro
-    <>
-              </s pan>
+              </span>
             </h1>
-            <p c las sNa me="t e xt-xl t ext-g ra-y-300 mb-8-m ax-w-3x lmx-a uto">
-              Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs.
-    <>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your e-commerce platform with cutting-edge AI technology. 
+              Boost sales, improve customer experience, and maximize your revenue potential.
             </p>
-            <d iv c las sNa me="f l ex f lex-c ol sm:f lex-r ow g ap-4j ust ify-c entermb-12">
-        </d iv>
-              <L ink to="/cont act" c las sNa me="b g-g rad ient-to-r f rom-c yan-500 to-purple-500 t ext-w hit-e px-8 py-4 rounded-lg f ont-semibold t ext-l-g hover:f rom-c yan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-c yan-500/25 f lex items-c enterj ust ify-c entergroup" />
-                Get Star ted
-    <>
-                </><A rro wRi ght c las sNa me="m l-2group-hover:tran sla te-x-1transition-transform" />
-              </L ink>
-              <L ink to="/cont act" c las sNa me="b o rder b ord er-c yan-500 t ext-c ya-n-400 px-8 py-4 rounded-lg f ont-semibold t ext-l-g hover:bg-c yan-500/10 transition-all duration-300transformhover:scale-105" />
-                Learn More
-                />View All Services
-    <>              </L ink>
-            </d iv>
-        </d iv>
-      </s ection>
-        {/* Features S ection */}
-    <>
-        </><s ection c las sNa me="p y-20" />
-          <d iv c las sNa me="c onta inermx-a uto px-4">
-              {[
-                {
-                  i con: <B rain c las sNa me="w-12h-12t e xt-c yan-400" />,
-                  title: "AI-Powered Optimization",
-                  description: "Advanced machine learning algorithms optimize your product listings, pricing, and recommendations."
-                },
-                {
-                  i con: <Z ap c las sNa me="w-12h-12t e xt-purple-400" />,
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/services"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
+              >
+                View All Services
+
+              </Link>
+            </div>
+        </div>
+      </section>
+
+        {/* Features Section */}
+
+                  icon: <Zap className="w-5 h-5ml-2" />,
+
                   title: "Real-time Analytics",
                   description: "Get instant insi ghts into customer behavior and sales performance with our comprehensive dashboard."
                 },
                 {
-                  i con: <S hie ld c las sNa me="w-12h-12t e xt-g reen-400" />,
-                  title: "S ecu re & Reliable",
-                  description: "Enterprise-g rade s ecurity ensu res your data is protect ed w hile main taining 99.9% uptime."
+
+                  icon: <Shield className="w-5 h-5ml-2" />,
+                  title: "Secure & Reliable",
+                  description: "Enterprise-grade security ensures your data is protected while maintaining 99.9% uptime."
                 }
               ].map((feature, index) => (
-    <>
-                </><d iv k ey={index} c las sNa me="b g-s late-800/50 b ack drop-b lur-sm b ord er b ord er-s late-700 rounded-xl p-8 t ext-c ente-r hover:b ord er-c yan-500/50transition-allduration-300" />
-                  <d iv c las sNa me="f l exj ust ify-c entermb-4">
-<<<<<<< HEAD                    {feature.i con}
-    <>
-                  </d iv>
-                  <h3 c las sNa me="t e xt-xl f ont-semibol dte xt-w hit-e mb-4" />{feature.title}</h3>
-                  <p c las sNa me="t e xt-g ray-300">
-              {feature.description}</p>                </d iv>
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-allduration-300" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    {feature.icon}
+                  </div>
+                  <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
+                  <p className="w-5 h-5ml-2">{feature.description}</p>
+=======
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold text-white text-center mb-16">
+              Powerful Features
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+                  <div className="mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {feature.description}
+                  </p>
+
+                </div>
               ))}
-            </d iv>
-        </s ection>
+            </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Choose Your Plan
+              </h2>
+              <p className="w-5 h-5ml-2">Flexible pricing options to fit your business needs
               </p>
-            </d iv>
-            <d iv c las sNa me="g r id g rid-c ols-1md:g rid-c ols-3g ap-8">
+            </div>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {pricingPlans.map((plan, index) => (
-    <>
-                </><d iv k ey={index} c las sNa me="b g-s late-800/50 b ack drop-b lur-sm b ord er b ord er-s late-700 rounded-xl p-8 hover:b ord er-c yan-500/50transition-allduration-300" />
-                  <d iv c las sNa me="t e xt-c entermb-8">
-                    <h3 c las sNa me="t e xt-2xl f ont-b old t ext-w hit-e mb-2" />{plan.n ame}</h3>
-                    <d iv c las sNa me="t e xt-4xl f ont-b old text-c ya-n-400mb-2">                      {plan.price}
-    <>
-                      </><s pan c las sNa me="t e xt-l gte xt-g ra-y-400">{plan.peri od}</s pan>
-                    </d iv>
-                    <p c las sNa me="t e xt-g ray-300">
-              {plan.description}</p>                  </d iv>
-                  <ul c las sNa me="s p ace-y-4mb-8" />
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50transition-allduration-300" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      {plan.price}
+                      <span className="w-5 h-5ml-2" />{plan.period}</span>
+                    </div>
+                    <p className="w-5 h-5ml-2">{plan.description}</p>
+                  </div>
+                  
+                  <ul className="w-5 h-5ml-2" />
                     {plan.features.map((feature, featureIndex) => (
-    <>
-                      </><li k ey={featureIndex} c las sNa me="f l exitems-c entert ext-g ra-y-300" />                        <C hec kCi rcle c las sNa me="w-5 h-5 t e xt-g reen-400mr-3-f lex-s hrink-0" />
+                      <li key={featureIndex} className="flex items-center text-gray-300" />
+                        <CheckCircle className="w-5 h-5ml-2" />
+
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <L ink to="/cont act" c las sNa me="w-f u ll bg-g rad ient-to-r f rom-c yan-500 to-purple-500 t ext-w hit-e py-3 rounded-lg f ont-semibold t ext-c ente-r block hover:f rom-c yan-600 hover:to-purple-600transition-allduration-300" />
-                    Get Star ted
-    <>
-                  </L ink>
-                </d iv>
+
+                  
+                  <Link to="/contact" className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 rounded-lg font-semibold text-center block hover:from-cyan-600 hover:to-purple-600transition-allduration-300" />
+                    Get Started
+                  </Link>
+                </div>
               ))}
-    <>
-            </d iv>
-        </d iv>
-      </s ection>
-        {/* C TA S ection */}
-    <>
-        </><s ection c las sNa me="p y-20" />
-          <d iv c las sNa me="c onta inermx-a uto px-4">
-        </d iv>
-            <d iv c las sNa me="b g-g rad ient-to-r f rom-c yan-900/50 to-purple-900/50 b ack drop-b lur-sm b ord er b ord er-c yan-500/20 rounded-2xlp-12t ext-c ente-r">
-        </d iv>
-              <h2 c las sNa me="t e xt-4xl f ont-b old text-w hit em-b-6" />                Ready to Get Star ted?
-    <>
-              </h2>
-              <p c las sNa me="t e xt-xl t ext-g ra-y-300 mb-8-m ax-w-2x lmx-a uto" />
-                Cont act us to learn more about our solutions and how we can help your business.
-    <>
-              </p>
-              <d iv c las sNa me="f l ex f lex-c ol sm:f lex-r owg ap-4j ust ify-c enter">
-        </d iv>                <L ink to="/cont act" c las sNa me="b g-g rad ient-to-r f rom-c yan-500 to-purple-500 t ext-w hit-e px-8 py-4 rounded-lg f ont-semibold t ext-l-g hover:f rom-c yan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-c yan-500/25" />
-                  Cont act Us
-    <>
-                </L ink>
-                <L ink to="/services" c las sNa me="b o rder b ord er-c yan-500 t ext-c ya-n-400 px-8 py-4 rounded-lg f ont-semibold t ext-l-g hover:bg-c yan-500/10 transition-all duration-300transformhover:scale-105" />
-                  View Services
-    <>
-                </L ink>
-              </d iv>
-          </d iv>
-        </s ection>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-      </d iv>
+            </div>
+        </div>
+      </section>
+
+        {/* CTA Section */}
+
+        <section className="py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your E-commerce?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of businesses already using our AI-powered solutions to boost their online sales.
+            </p>
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
+            >
+              Contact Us Today
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+
+          </div>
+        </section>
+      </div>
+
     </>
   );
-};
-export default Page;
+
+=======
+}
+
+>>>>>>> main

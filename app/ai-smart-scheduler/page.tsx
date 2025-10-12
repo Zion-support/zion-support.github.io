@@ -1,13 +1,173 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Layout from '../layout'
-        {/* H ero S ect ion */}
-    <>
-        </><s ect ion c las sNa me="p t-20 pb-16 px-4-sm:px-6-lg:px-8" />
-          <d iv c las sNa me="m ax-w-7x lmx-a uto">
-              {f eat ures.map((f eat ure, index) => (
-    <>
-                </><d iv k ey="{index}" c las sNa me="b g-g rad ient-to-br from-s late-800/50 to-purple-900/30 rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40transit ion-allduration-300" />
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import Layout from '../layout';
+
+export default function AISmartScheduler() {
+  const features = [
+    {
+      icon: <Brain className="w-5 h-5ml-2" />,
+      title: 'AI-Powered Scheduling',
+      description: 'Intelligent scheduling that learns from your patterns and preferences'
+    },
+    {
+      icon: <Users className="w-5 h-5ml-2" />,
+      title: 'Team Coordination',
+      description: 'Seamlessly coordinate meetings across multiple time zones and schedules'
+    },
+    {
+      icon: <Zap className="w-5 h-5ml-2" />,
+      title: 'Auto-Optimization',
+      description: 'Automatically finds the best meeting times for maximum productivity'
+    },
+    {
+      icon: <Globe className="w-5 h-5ml-2" />,
+      title: 'Global Integration',
+      description: 'Works with all major calendar platforms and time zones'
+    }
+  ]
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for individuals and small teams',
+      features: [
+        'Up to 5 team members',
+        'Basic AI scheduling',
+        'Calendar integration',
+        'Email notifications',
+        'Mobile app access'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$79',
+      period: '/month',
+      description: 'Ideal for growing businesses',
+      features: [
+        'Up to 25 team members',
+        'Advanced AI optimization',
+        'Custom meeting templates',
+        'Analytics dashboard',
+        'Priority support',
+        'API access'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited team members',
+        'Custom AI training',
+        'White-label options',
+        'Advanced analytics',
+        'Dedicated support',
+        'Custom integrations'
+      ],
+      popular: false
+    }
+  ]
+
+  const testimonials = [
+    {
+      name: 'Sarah Chen',
+      company: 'TechStart Inc.',
+      content: 'This AI scheduler saved us 10+ hours per week. The intelligent optimization is incredible.',
+      rating: 5
+    },
+    {
+      name: 'Michael Rodriguez',
+      company: 'Global Consulting',
+      content: 'Finally, a scheduling tool that actually understands our complex team dynamics.',
+      rating: 5
+    },
+    {
+      name: 'Emily Watson',
+      company: 'RemoteFirst Co.',
+      content: 'The time zone handling is flawless. Our international team coordination has never been smoother.',
+      rating: 5
+    }
+  ]
+
+  return (
+    <Layout
+      title="AI Smart Scheduler - Intelligent Meeting Optimization | Zion Tech Group"
+      description="Revolutionary AI-powered scheduling tool that optimizes meetings, coordinates teams, and maximizes productivity. Start your free trial today."
+      keywords="AI scheduler, meeting optimization, team coordination, calendar management, productivity tools" />
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        {/* Hero Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Sparkles className="w-5 h-5ml-2" />
+                AI-Powered Scheduling
+              </div>
+              <h1 className="w-5 h-5ml-2">AI Smart Scheduler
+              </h1>
+              <p className="w-5 h-5ml-2">Transform your scheduling chaos into organized efficiency with our intelligent AI-powered scheduler. 
+                Optimize meetings, coordinate teams, and maximize productivity automatically.
+              </p>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-center justify-center"
+        >
+          Start Free Trial
+                  
+          <ArrowRight className="w-5 h-5ml-2" />
+        </Link>
+                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Watch Demo
+                </Link>
+              </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Intelligent Scheduling Features
+              </h2>
+              <p className="w-5 h-5ml-2">Powered by advanced AI to make scheduling effortless and efficient
+              </p>
+            </div>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {features.map((feature, index) => (
+                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40transition-allduration-300" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    {feature.icon}
+                    <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
+                  </div>
+                  <p className="w-5 h-5ml-2">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Simple, Transparent Pricing
+              </h2>
+              <p className="w-5 h-5ml-2">Choose the plan that fits your team size and needs
+              </p>
+            </div>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+
               {pricingPlans.map((plan, index) => (
                 <d iv k ey="{index}" c las sNa me="{`b g-g rad ient-to-br" from-s late-800/50 to-purple-900/30 rounded-xl p-8 border transit ion-all duration-300 ${
                   plan.popular 
@@ -15,22 +175,24 @@ import Layout from '../layout'
                     : 'border-cyan-500/20 hover: border-cyan-400/40'
                 }`} />
                   {plan.popular && (
-                    <d iv c las sNa me="i n line-f lex i tems-c enter px-3 py-1 bg-cyan-500/20 rounded-full text-cy-a-n-400 text-smfo-n-t-m edi ummb-4">
-                      <S tar c las sNa me="w-4h-4m r-1" />
-                      M ost Popular
-                    </d iv>
+
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <Star className="w-5 h-5ml-2" />
+                      Most Popular
+                    </div>
                   )}
-                  <h3 c las sNa me="t ext-2 xl font-b old text-w hit-e mb-2"   />{plan.n ame}</h3>
-                  <p c las sNa me="t ext-g ray-300 mb-6">
-              {plan.d esc rip tion}</p>
-                  <d iv c las sNa me="m b-6">
-                    <s pan c las sNa me="t ext-4x lfo nt-b old text-w hit-e"   />{plan.price}</s pan>
-                    <s pan c las sNa me="t ext-g ray-400"   />{plan.p eri od}</s pan>
-                  </d iv>
-                  <ul c las sNa me="s p ace-y-3mb-8" />
-                    {plan.f eat ures.map((f eat ure, f eat ureIndex) => (
-                      <li k ey="{f eat ureIndex}" c las sNa me="f l ex i tems-c enter text-g ra-y-300" />
-                        <C hec kCi rcle c las sNa me="w-5 h-5t ext-g reen-400mr-3" />                        {f eat ure}
+                  <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
+                  <p className="w-5 h-5ml-2">{plan.description}</p>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <span className="w-5 h-5ml-2" />{plan.price}</span>
+                    <span className="w-5 h-5ml-2" />{plan.period}</span>
+                  </div>
+                  <ul className="w-5 h-5ml-2" />
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key="{featureIndex}" className="flex items-center text-gray-300" />
+                        <CheckCircle className="w-5 h-5ml-2" />
+                        {feature}
+
                       </li>
                     ))}
                   </ul>
@@ -41,64 +203,55 @@ import Layout from '../layout'
                         ? 'bg-g rad ient-to-r from-cyan-500 to-purple-600 text-w hit-e hover:from-cyan-600 hover:to-purple-700'
                         : 'border-2 border-cyan-400 text-cy-a-n-400 hover: bg-cyan-400/10'
                     }`}
-                    />Get S tarted
-    <>
+
+                    />Get Started
+
                   </Link>
                 </d iv>
               ))}
-    <>
-            </d iv>
-        </s ect ion>
-        {/* T est imo nia ls */}
-    <>
-        </><s ect ion c las sNa me="p y-16 px-4-sm:px-6-lg:px-8" />
-          <d iv c las sNa me="m ax-w-7x lmx-a uto">
-        </d iv>
-            <d iv c las sNa me="t ext-c entermb-12">
-        </d iv>
-              <h2 c las sNa me="t ext-3 xl font-b old text-w hit em-b-4">T rusted by Teams Worldwi de
+
+            </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Trusted by Teams Worldwide
               </h2>
-              <p c las sNa me="t ext-g ray-300" />
-                S ee w hat our customers say about AI Smart Scheduler
-    <>
+              <p className="w-5 h-5ml-2">See what our customers say about AI Smart Scheduler
               </p>
-            </d iv>
-            <d iv c las sNa me="g r id g rid-c ols-1md:g rid-c ols-3g ap-8">
-        </d iv>              {test imo nia ls.map((test imo nial, index) => (
-    <>
-                </><d iv k ey="{index}" c las sNa me="b g-s late-800/50 rounded-xl p-6borderborder-s late-700" />
-                  <d iv c las sNa me="f l exi tems-c entermb-4">
-        </d iv>                    {[...Array(test imo nial.rating)].map((_, i) => (
-                      <S tar k ey="{i}" c las sNa me="w-5 h-5t ext-y ell ow-400f ill-c urr ent" />
+            </div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {testimonials.map((testimonial, index) => (
+                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key="{i}" className="w-5 h-5te xt-yellow-400fill-current"  />
                     ))}
-    <>
-                  </d iv>
-                  <p c las sNa me="t ext-g ray-300 mb-4">
-              "{test imo nial.c ontent}"</p>
-                  <d iv />
-                    <d iv c las sNa me="f o nt-semibol dtext-w hit-e"   />{test imo nial.n ame}</d iv>
-                    <d iv c las sNa me="t ext-s mtext-g ra-y-400"   />{test imo nial.comp any}</d iv>                </d iv>
+                  </div>
+                  <p className="w-5 h-5ml-2">"{testimonial.content}"</p>
+                  <div />
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
+                </div>
               ))}
-    <>
-            </d iv>
-        </s ect ion>
-        {/* C TA S ect ion */}
-    <>
-        </><s ect ion c las sNa me="p y-16 px-4-sm:px-6-lg:px-8" />
-          <d iv c las sNa me="m ax-w-4 x lmx-a uto text-c ente-r">
-        </d iv>
-            <d iv c las sNa me="b g-g rad ient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-8borderborder-cyan-500/30">
-        </d iv>
-              <h2 c las sNa me="t ext-3 xl font-b old text-w hit em-b-4">Ready to Transform Your Schedul ing?
+            </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Ready to Transform Your Scheduling?
               </h2>
-              <p c las sNa me="t ext-l gtext-g ra-y-300mb-8" />
-                Join thousands of teams alre ady using AI Smart Scheduler to optimize their productivity
-    <>
+              <p className="w-5 h-5ml-2">Join thousands of teams already using AI Smart Scheduler to optimize their productivity
               </p>
-              <d iv c las sNa me="f l ex f lex-c ol sm:f lex-r owg ap-4j ust ify-c enter">
-        </d iv>                <Link to="/c ont act" c las sNa me="b g-g rad ient-to-r from-cyan-500 to-purple-600 text-w hit-e px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transit ion-allduration-300">S tart Your Free Trial
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
                 </Link>
-                <Link to="/about" c las sNa me="b order-2 border-w hite text-w hit-e px-8 py-4 rounded-lg font-semiboldhover:bg-w hite/10transit ion-c olors">Learn More
+                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More
+
                 </Link>
               </d iv>
           </d iv>
@@ -107,4 +260,3 @@ import Layout from '../layout'
     </Layout>
   )
 };
-    </>

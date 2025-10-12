@@ -1,5 +1,10 @@
-import React from 'react';import { Link  } from 'react-router-dom';
-import { ArrowRight  } from 'lucide-react';
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+
+
 interface ServicePageProps {
   title: string,
   description: string,
@@ -21,74 +26,69 @@ interface ServicePageProps {
   seoDescription,
   seoKeywords
 }: ServicePageProps) {
-  r etu rn (
-    <>
-    </><d iv c las sNa me="m in-h-scre en bg-g rad ient-to-br from-s late-900 via-purple-900to-s late-900 pt-20">
-        </d iv>
+
+  return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
-      </Helmet>        <title>{seoTitle}</title>
-        <meta name="description" content="{seoDescription}" / / />
-        <meta name="keywords" content="{seoKeywords}" / / />
+        <title>Service - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
-    <>
-      </><d iv c las sNa me="m ax-w-7 xl mx-a uto px-4 sm:px-6-lg:px-8-py-16">
-        </d iv>
-        <d iv c las sNa me="t e xt-c entermb-16">
-        </d iv>
-          <d iv c las sNa me="i n line-f lex i tems-c enter j ust ify-c enter w-20 h-20 bg-g rad ient-to-r from-cyan-500/20 to-purple-500/20rounded-fullmb-6">{icon}
-          </d iv>
-          <h1 c las sNa me="t e xt-4 xl sm:t ext-5 xl md:t ext-6 xl f ont-boldtext-whi-t em-b-6">{title}
+      <div className="max-w-7xl mx-autopx-4 sm:px-6 lg:px-8 py-16 text-center">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{icon}
+          </div>
+          <h1 className="w-5 h-5ml-2">{title}
           </h1>
-          <p c las sNa me="t e xt-lg sm:t ext-x-l t ext-g ra-y-300 m ax-w-3 xlmx-a utomb-8" />
-            {description}
-    <>
+          <p className="w-5 h-5ml-2">{description}
           </p>
-          <d iv c las sNa me="f l ex f lex-c ol sm:f lex-rowg ap-4j ust ify-c enter">
-        </d iv>
-            <Link to="/cont act" c las sNa me="b g-g rad ient-to-r from-cyan-500 to-purple-600 t ext-whit-e px-8 py-4 rounded-lg f ont-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 f lexite ms-c enterj ust ify-c enter" />
-              Get S tar ted
-    <>
-              </><ArrowRight c las sNa me="w-5h-5m l-2" />
-            </Link>            <Link to="/a bout" c las sNa me="b order-2 b ord er-white t ext-whit-e px-8 py-4 rounded-lg f ont-semiboldhover:bg-white/10transition-c olors">Learn More
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-center justify-center"
+        >
+          Get Started
+              
+          <ArrowRight className="w-5 h-5ml-2" />
+        </Link>
+            <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More
             </Link>
-          </d iv>
-    <>
-        </><d iv c las sNa me="g r id g rid-c ols-1 lg:g rid-c ols-2g ap-12mb-16">
-        </d iv>
-          <d iv />
-            <h2 c las sNa me="t e xt-3 xl f ont-boldtext-whi-t em-b-6">Key B enefits</h2>
-            <ul c las sNa me="s p ace-y-4" />
-              {benefits.m ap((benefit, index) => (
-    <>
-                </><li key="{index}" c las sNa me="f l exi tems-s tart" />
-                  <C hec kCi rcle c las sNa me="w-6 h-6 t e xt-g reen-400 mr-3-mt-1-f lex-s hrink-0" / />
-                  <s pan c las sNa me="t e xt-g ray-300">{benefit}</s pan>                </li>
+          </div>
+
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div />
+            <h2 className="text-3 xl font-boldtext-white mb-6"  >Key Benefits</h2>
+            <ul className="w-5 h-5ml-2" />
+              {benefits.map((benefit, index) => (
+                <li key="{index}" className="flexitems-start" />
+                  <CheckCircle className="w-5 h-5ml-2" />
+                  <span className="text-gray-300"  >{benefit}</span>
+                </li>
+
               ))}
-    <>
             </ul>
-          </d iv>
-          <d iv />
-            <h2 c las sNa me="t e xt-3 xl f ont-boldtext-whi-t em-b-6">F eatures</h2>
-            <ul c las sNa me="s p ace-y-4" />
-              {features.m ap((feature, index) => (
-    <>
-                </><li key="{index}" c las sNa me="f l exi tems-s tart" />
-                  <C hec kCi rcle c las sNa me="w-6 h-6 t e xt-cyan-400 mr-3-mt-1-f lex-s hrink-0" / />
-                  <s pan c las sNa me="t e xt-g ray-300">{feature}</s pan>                </li>
+
+          </div>
+          <div />
+            <h2 className="text-3 xl font-boldtext-white mb-6"  >Features</h2>
+            <ul className="w-5 h-5ml-2" />
+              {features.map((feature, index) => (
+                <li key="{index}" className="flexitems-start" />
+                  <CheckCircle className="w-5 h-5ml-2" />
+                  <span className="text-gray-300"  >{feature}</span>
+                </li>
+
               ))}
-    <>
             </ul>
-          </d iv>
-    <>
-        </><d iv c las sNa me="b g-g rad ient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-8 b ord erb ord er-cyan-500/30t ext-c ente-r">
-        </d iv>
-          <h2 c las sNa me="t e xt-3 xl f ont-boldtext-whi-t em-b-4">P ricing</h2>          <p c las sNa me="t e xt-2 xl f ont-boldtext-cy-a-n-400mb-6">{pricing}</p>
-          <Link to="/cont act" c las sNa me="b g-g rad ient-to-r from-cyan-500 to-purple-600 t ext-whit-e px-8 py-4 rounded-lg f ont-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300">Cont act Us for Details
+
+          </div>
+
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <h2 className="text-3 xl font-boldtext-white mb-4"  >Pricing</h2>
+          <p className="text-2 xl font-boldtext-cyan-400 mb-6">{pricing}</p>
+          <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300">Contact Us for Details
+
           </Link>
         </d iv>
     </d iv>
   )
 };
-    </>

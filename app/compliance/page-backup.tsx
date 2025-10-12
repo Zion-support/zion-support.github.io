@@ -1,6 +1,9 @@
-'use client';
-import React from 'react';import Navigation from '../components/Navigation';
+
+import React from 'react';
+import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+'use client';
+
 const PageBackupPage: React.FC = () => {
     const features = [
     {
@@ -30,91 +33,79 @@ const PageBackupPage: React.FC = () => {
     ]
 return (
     <>
-    </>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
-      </Helmet><title>Page Backup - Zion Tech Group</title>
-        <meta / />
+
+      <Helmet  > </Helmet><title>Page Backup - Zion Tech Group</title>
+        <meta />
       </Helmet>
-      <Navigation / />
-      <d iv c las sName="m in-h-scre en bg-g rad ient-to-br from-s late-900via-purple-900to-s late-900"></d iv>
-        {/* H ero S ection */}
-        <s ection c las sName="p y-20px-4"  > </s ection><d iv c las sName="
-           </d iv><d ivc las sName="t e xt-c enter mb-16"  > </d iv><h2 c las sName="t e xt-4xl f ont-b old t ext-w hit-e mb-4"  >S ection T itle</h2>              <p c las sName="t e xt-x lte xt-g ra-y-300">S ection description</p>
-            </d iv>
-        </s ection>
-          <d iv c las sName="a b solute inset-0bg-[r adi al-g rad ient(c ircle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]a nimate-p ulse" /></d iv>
-          <d iv c las sName="a b solute inset-0bg-[r adi al-g rad ient(c ircle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]a nimate-p ulse" style="{{" a nimationDelay: '1 s' }} / /></d iv>
-          <d iv c las sName="r e lative m ax-w-7 x lmx-a utotext-c ente-r">
-        </d iv></d iv>
-            <h1>Page Backup            </h1>
-            <p /></p>
-    </>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        {/* Hero Section */}
+        <section className="py-20px-4"  > </section><div className="</di v><divclassName="text-center mb-16"  > </div><h2 className="text-4 xl font-boldtext-white mb-4"  >Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+        </section>
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  /></div>
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h1 />Page Backup
+            </h1>
+            <p></p>
+
               Advanced page backup solutions powered by AI technology.
-    <>
             </p>
-            <d iv c las sName="f l ex f lex-c ol sm: f lex-rowg ap-4j ust ify-c enter" / / /></d iv>
+
+            <div className="flex flex-col sm: flex-rowgap-4 justify-center" /  /></div>
+
               <button /></button>
-    </>
                 Get Started
-    <>
               </button>
               <button /></button>
-    </>
                 Learn More,
-    <>
               </button>
-            </d iv>
-        </s ection>
-        <s ection c las sName="r e lative py-20-px-4-o ver flow-h idd en" />
-          <d iv c las sName="a b solute inset-0bg-[r adi al-g rad ient(c ircle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]a nimate-p ulse" />
-          <d iv c las sName="a b solute inset-0bg-[r adi al-g rad ient(c ircle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]a nimate-p ulse" style="{{" a nimationDelay: '1 s' }} / />
-          <d iv c las sName="r e lative m ax-w-7 x lmx-a utotext-c ente-r">
-        </d iv>
-            <h1 c las sName="t e xt-5 xl md:t ext-7 xl f ont-b old t ext-w hitem-b-6leading-t ight" /></h1>Page Backup
-            <p c las sName="t e xt-xl t ext-g ra-y-300 mb-8 m ax-w-3 x lmx-a utolea ding-relaxed" />
-    </>
+
+            </div>
+        </section>
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h1 className="w-5 h-5ml-2" />Page Backup
+            <p className="w-5 h-5ml-2" />
               Advanced page backup solutions powered by AI technology.
-    <>
-            </><d iv c las sName="f l ex f lex-c ol sm:f lex-rowg ap-4j ust ify-c enter">
-        </d iv>              <button c las sName="b g-g rad ient-to-r from-purple-500 to-b lue-600 hover:from-purple-600 hover:to-b lue-700 t ext-w hit-e f ont-b old py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105" />Get Started
-              <button c las sName="b o rder b ord er-purple-400 t ext-purpl-e-400 hover:bg-purple-400 hover:t ext-w hit-e f ont-b old py-4 px-8 rounded-lgtransition-allduration-300" />Learn More
-    </>
-        {/* Features S ection */}
-    <>
-        </><s ection c las sName="p y-20px-4"> </s ection><d iv c las sName="
-           </d iv /><d ivc las sName="t e xt-c enter mb-16"> </d iv><h2 c las sName="t e xt-4 xl f ont-b old text-w hitem-b-4">S ection T itle</h2>              <p c las sName="t e xt-x lte xt-g ra-y-300">S ection description</p>
-            </d iv>
-        </s ection>
-          <d iv c las sName="m ax-w-7x lmx-a uto" / / /></d iv>
-            <d iv c las sName="t e xt-c entermb-16" / / /></d iv>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <button className="w-5 h-5ml-2" />Get Started
+              <button className="w-5 h-5ml-2" />Learn More
+        {/* Features Section */}
+        <section className="py-20px-4"  > </section><div className="</di v><divclassName="text-center mb-16"  > </div><h2 className="text-4 xl font-boldtext-white mb-4"  >Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+        </section>
+          <div className="max-w-7xl mx-auto" /  /></div>
+            <div className="text-centermb-16" /  /></div>
+
               <h2 /></h2>
-    </>
                 Key Features
-    <>
               </h2>
-              <p /></p>
-    </>
+              <p></p>
                 Powerful AI technology that drives results
-    <>
               </p>
-            </d iv>
-            <d iv c las sName="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-8">
-        </d iv></d iv>
-    </>              {features.map((feature, index) => (
-    <>
-                </><d iv k ey="{index}" c las sName="b g-w hite/5 back drop-b lur-sm rounded-2 xl p-8 hover:bg-w hite/10 transition-allduration-300group" /></d iv>
-                  <d iv c las sName="w-16 h-16 b g-g rad ient-to-br from-purple-500 to-b lue-600 rounded-2 xl f lex items-c enter j ust ify-c enter mb-6-group-hover:scale-110transition-transform">
-        </d iv></d iv>
-                    <feature / />
-                  <h3 c las sName="t e xt-xl f ont-b old text-w hitem-b-4">{feature.title}</h3>
-                  <p c las sName="t e xt-g ray-300mb-4">{feature.description}</p>
-    </>                  {
+
+            </div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              {features.map((feature, index) => (
+                <div key="{index}" className="bg-white/5 backdrop-blur-sm rounded-2 xl p-8 hover:bg-white/10 transition-allduration-300group" /></div>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <feature />
+                  <h3 className="text-xl font-boldtext-white mb-4"  >{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {
+
     feature.benefits && (;
-                    <ul>{feature.benefits.map((benefit, idx) => (
+                    <ul />{feature.benefits.map((benefit, idx) => (
   }
-                        </ul><li></li><CheckCi rcle />
+
+                        </ul><li  > </li><CheckCircle />
+
                           {benefit}
                         </li>
                       ))}
@@ -122,63 +113,52 @@ return (
                   )}
                 </d iv>
               ))}
-    <>
-            </d iv>
-        </s ection>
-          <d iv c las sName="m ax-w-7x lmx-a uto">
-        </d iv>
-            <d iv c las sName="t e xt-c entermb-16">
-        </d iv>
-              <h2 c las sName="t e xt-4 xl md:t ext-5 xl f ont-b old text-w hitem-b-6" />Key Features
-              <p c las sName="t e xt-xl t ext-g ra-y-300 m ax-w-3x lmx-a uto" />Powerful AI technology that drives results
-            <d iv c las sName="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-8">
-        </d iv>
-    </>              {features.map((feature, index) => (
-    <>
-                </><d iv k ey="{index}" c las sName="b g-w hite/5 back drop-b lur-sm rounded-2 xl p-8 hover:bg-w hite/10 transition-allduration-300group" />
-                  <d iv c las sName="w-16 h-16 b g-g rad ient-to-br from-purple-500 to-b lue-600 rounded-2 xl f lex items-c enter j ust ify-c enter mb-6-group-hover:scale-110transition-transform">
-        </d iv>
-                    <feature.icon c las sName="w-8h-8t e xt-w hite" / />
-                  <h3 c las sName="t e xt-xl f ont-b old text-w hitem-b-4" /></h3>{feature.title}
-                  <p c las sName="t e xt-g ray-300mb-4" />{feature.description}
-    </>                  {feature.benefits && (
-                    <ul c las sName="s p ace-y-2" />
+
+
+            </div>
+        </section>
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Key Features
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Powerful AI technology that drives results
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {features.map((feature, index) => (
+                <div key="{index}" className="bg-white/5 backdrop-blur-sm rounded-2 xl p-8 hover:bg-white/10 transition-allduration-300group" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <feature.icon className="w-8h-8text-white"  />
+                  <h3 className="w-5 h-5ml-2" />{feature.title}
+                  <p className="text-gray-300 mb-4">{feature.description}
+                  {feature.benefits && (
+                    <ul className="w-5 h-5ml-2" />
                       {feature.benefits.map((benefit, idx) => (
-    <>
-                        </><li k ey="{idx}" c las sName="f l ex items-c entert ext-s mtex-t-g ray-400" />
-                          <CheckCi rcle c las sName="w-4 h-4t e xt-g reen-400mr-2" / />
-    </>                          {benefit}
+                        <li key="{idx}" className="flex items-centertext-sm text-gray-400" />
+                          <CheckCircle className="w-5 h-5ml-2" />
+                          {benefit}
                       ))}
                   )}
               ))}
-        {/* C TA S ection */}
-    <>
-        </><s ection c las sName="p y-20px-4"> </s ection><d iv c las sName="
-           </d iv /><d ivc las sName="t e xt-c enter mb-16"> </d iv><h2 c las sName="t e xt-4 xl f ont-b old text-w hitem-b-4">S ection T itle</h2>              <p c las sName="t e xt-x lte xt-g ra-y-300">S ection description</p>
-            </d iv>
-        </s ection>
-          <d iv c las sName="m ax-w-4 x lmx-a utotext-c ente-r" / / /></d iv>
-            <d iv c las sName="b g-w hite/5 back drop-b lur-sm rounded-3x lp-12" / / /></d iv>
+        {/* CTA Section */}
+        <section className="py-20px-4"  > </section><div className="</di v><divclassName="text-center mb-16"  > </div><h2 className="text-4 xl font-boldtext-white mb-4"  >Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+        </section>
+          <div className="max-w-4 xlmx-auto text-center" /  /></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xlp-12" /  /></div>
+
               <h2 /></h2>
-    </>
                 Ready to Get Started?
-    <>
               </h2>
-              <p /></p>
-    </>
+              <p></p>
                 Contact our experts to discuss your requirements and get started today.
-    <>
               </p>
-              <d iv c las sName="f l ex f lex-c ol sm: f lex-rowg ap-4j ust ify-c enter" / / /></d iv>
+
+              <div className="flex flex-col sm: flex-rowgap-4 justify-center" /  /></div>
+
                 <button /></button>
-    </>
                   Contact Us
-    <>
                 </button>
                 <button /></button>
-    </>
                   Learn More
-    <>
                 </button>
               </d iv>
           </d iv>
@@ -189,4 +169,3 @@ return (
   ),
 };
 export default PageBackupPage;
-    </>

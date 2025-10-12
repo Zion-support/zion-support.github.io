@@ -1,40 +1,47 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Bot, Key} from 'lucide-react';
+
+
 export default function AICybersecuritySuiteProPage() {
 }
   return (
 }
   const f eat ures = [
     {
-      i con: <B ot c las sNa me="w-6h-6t e xt-c yan-400" />,
-      t itle: 'AI Thre at Detection',
-      description: 'Advanced machine learning algorithms detect and prevent thre ats in real-time with 99.9% accu racy'
-  );
-},
-    {
-      i con: <S hie ld c las sNa me="w-6h-6t e xt-e mer ald-400" />,
-      t itle: 'Zero-Trust Architectu re',
-      description: 'Implement comprehensive zero-trust security model with continuous verification and monitor ing'
+
+      icon: <Bot className="w-5 h-5ml-2" />,
+      title: 'AI Threat Detection',
+      description: 'Advanced machine learning algorithms detect and prevent threats in real-time with 99.9% accuracy'
     },
     {
-      i con: <A cti vity c las sNa me="w-6h-6t e xt-p urple-400" />,
-      t itle: 'Real-time Monitor ing',
-      description: '24/7 network monitor ing with instant alerts and automated r esponse to security i nci den ts'
+      icon: <Shield className="w-5 h-5ml-2" />,
+      title: 'Zero-Trust Architecture',
+      description: 'Implement comprehensive zero-trust security model with continuous verification and monitoring'
     },
     {
-      i con: <K ey c las sNa me="w-6h-6t e xt-o ran ge-400" />,
-      t itle: 'Advanced Encryption',
-      description: 'Military-grade encryption with quantum-r esistant algorithms for maximum data protection'
+      icon: <Activity className="w-5 h-5ml-2" />,
+      title: 'Real-time Monitoring',
+      description: '24/7 network monitoring with instant alerts and automated response to security incidents'
     },
     {
-      i con: <N etwork c las sNa me="w-6h-6t e xt-p ink-400" />,
-      t itle: 'N etwork Security',
+      icon: <Key className="w-5 h-5ml-2" />,
+      title: 'Advanced Encryption',
+      description: 'Military-grade encryption with quantum-resistant algorithms for maximum data protection'
+    },
+    {
+      icon: <Network className="w-5 h-5ml-2" />,
+      title: 'Network Security',
       description: 'Comprehensive network protection with AI-powered intrusion detection and prevention'
     },
     {
-      i con: <A lert c las sNa me="w-6h-6t e xt-red-400" />,
-      t itle: 'I nci dent Response',
-      description: 'Automated i nci dent r esponse with AI-driven forensics and rapid thre at containment'
+      icon: <Alert className="w-5 h-5ml-2" />,
+      title: 'Incident Response',
+      description: 'Automated incident response with AI-driven forensics and rapid threat containment'
+
     }
   ]
   const pricingPlans = [
@@ -113,23 +120,25 @@ export default function AICybersecuritySuiteProPage() {
   ]
   const b ene fits = [
     {
-      i con: <S hie ld c las sNa me="w-8h-8t e xt-c yan-400" />,
-      t itle: '99.9% Thre at Detection',
-      description: 'AI-powered detection prevents security breaches before they h app en'
+
+      icon: <Shield className="w-5 h-5ml-2" />,
+      title: '99.9% Threat Detection',
+      description: 'AI-powered detection prevents security breaches before they happen'
     },
     {
-      i con: <C lock c las sNa me="w-8h-8t e xt-e mer ald-400" />,
-      t itle: 'Real-time Response',
-      description: 'Instant thre at containment and automated i nci dent r esponse'
+      icon: <Clock className="w-5 h-5ml-2" />,
+      title: 'Real-time Response',
+      description: 'Instant threat containment and automated incident response'
     },
     {
-      i con: <T arg et c las sNa me="w-8h-8t e xt-p urple-400" />,
-      t itle: 'Zero False Positives',
-      description: 'Advanced AI eliminates false alarms and focuses on real thre ats'
+      icon: <Target className="w-5 h-5ml-2" />,
+      title: 'Zero False Positives',
+      description: 'Advanced AI eliminates false alarms and focuses on real threats'
     },
     {
-      i con: <L ock c las sNa me="w-8h-8t e xt-o ran ge-400" />,
-      t itle: 'Enterprise Security',
+      icon: <Lock className="w-5 h-5ml-2" />,
+      title: 'Enterprise Security',
+
       description: 'Military-grade encryption and compliance with industry standards'
     }
   ]
@@ -174,103 +183,180 @@ export default function AICybersecuritySuiteProPage() {
   const complianceStandards = [
     'SOC 2 Type II', 'ISO 27001', 'HIPAA', 'GDPR', 'PCI DSS', 'NIST', 'CIS Controls', 'C OBIT'
   ]
-  r etu rn (
-    <>
-    </><d iv c las sNa me="m in-h-scre en bg-grad ient-to-br from-s late-900 via-p urple-900to-s late-900 pt-20">
-        </d iv>
+
+
+  return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <t itle>5G Data Analytics - Zion Tech Group</t itle>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutio ns." />
+        <title />AI Cybersecurity Suite Pro - Zion Tech Group | Advanced Security Solutions</title>
+        <meta name="description" content="Revolutionary AI-powered cybersecurity suite with threat detection, zero-trust architecture, and real-time monitoring. 99.9% threat detection accuracy. Starting at $199/month." />
+        <meta name="keywords" content="AI cybersecurity, threat detection, zero-trust security, network monitoring, incident response, security automation" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-cybersecurity-suite-pro"  />
       </Helmet>
-        <t itle>AI Cybersecurity Suite Pro - Zion Tech Group | Advanced Security Solutio ns</t itle>        <meta name="description" content="Revolutionary AI-powered cybersecurity suite with thre at detection, zero-trust architectu re, and real-time monitor ing. 99.9% thre at detection accu racy. Starting at $199/month." / / />
-        <meta name="keywords" content="AI cybersecurity, thre at detection, zero-trust security, network monitor ing, i nci dent r esponse, security automation" / / />
-        <meta name="robots" content="index, follow" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-cybersecurity-suite-pro" />
-      </Helmet>
-      {/* H ero Section */}
-    <>
-      </><section c las sNa me="r e lat ive py-20-px-4-over flow-h idd en" />
-        <d iv c las sNa me="a b solute ins et-0bg-[radial-grad ient(c irc le_at_20%_80%,rgba(6,182,212,0.1)_0%,tran sparent_50%)]" / />
-        <d iv c las sNa me="a b solute ins et-0bg-[radial-grad ient(c irc le_at_80%_20%,rgba(147,51,234,0.1)_0%,tran sparent_50%)]" / />
-        <d iv c las sNa me="r e lat ive max-w-7 x lmx-autotext-c ente-r">
-        </d iv>
-          <d iv c las sNa me="i nline-f lex items-c enter s pace-x-2 bg-grad ient-to-r from-c yan-500/20 to-p urple-500/20 t ext-c ya-n-400 px-6 py-3 rounded-full t ext-s-m font-medium mb-8-borderborder-c yan-400/30">
-        </d iv>
-            <S hie ld c las sNa me="w-4h-4" / />
-            <s pan>AI-P owered Cybersecurity</s pan>          </d iv>
-          <h1 c las sNa me="t e xt-4xl sm:t ext-6 xl md:t ext-7 xl font-bold t ext-whit-e mb-8-leading-tight" />
+
+      {/* Hero Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <Shield className="w-5 h-5ml-2" />
+            <span />AI-Powered Cybersecurity</span>
+          </div>
+          
+          <h1 className="w-5 h-5ml-2" />
             AI Cybersecurity
-    <>
-            </><br / />
-            <s pan c las sNa me="b g-grad ient-to-r from-c yan-400 via-p urple-400 to-p ink-400bg-clip-t exttext-tra-n sparen-t">Suite Pro
-            </s pan>
+            <br />
+            <span className="w-5 h-5ml-2" />Suite Pro
+            </span>
           </h1>
-          <p c las sNa me="t e xt-lg sm:t ext-x-l md:t ext-2 xl t ext-gra-y-300 mb-12 max-w-4 x lmx-autolea ding-relaxed">
-              Protect your organization with AI-powered cybersecurity that detects and prevents thre ats in real-time. 
-            Achieve 99.9% thre at detection accu racy with zero-trust architectu re and automated i nci dent r esponse.
+          
+          <p className="w-5 h-5ml-2">Protect your organization with AI-powered cybersecurity that detects and prevents threats in real-time. 
+            Achieve 99.9% threat detection accuracy with zero-trust architecture and automated incident response.
           </p>
-          <d iv c las sNa me="f l ex f lex-c ol sm:f lex-row g ap-6j ustify-c entermb-16">
-            <Link to="/contact" c las sNa me="g roup bg-grad ient-to-r from-c yan-500 to-p urple-600 t ext-whit-e px-10 py-4 rounded-xl font-semibold hover:from-c yan-600 hover:to-p urple-700 transition-all duration-300 f lex items-c enter j ustify-c enter s pace-x-2 shadow-lg shadow-c yan-500/25 hover:shadow-c yan-500/40transformhover:scale-105" >
-          <s pan    />
-        </Link>Start Free T rial</s pan>
-              <A rro wRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
+              <span />Start Free Trial</span>
+              <ArrowRight className="w-5 h-5ml-2" />
             </Link>
-            <Link to="#pricing" c las sNa me="g roup border-2 border-c yan-400 t ext-c ya-n-400 px-10 py-4 rounded-xl font-semibold hover:bg-c yan-400 hover:t ext-gra-y-900 transition-all duration-300 f lex items-c enter j ustify-c enters pace-x-2backdrop-blur-sm" >
-          <s pan    />
-        </Link>View Pricing</s pan>              <A rro wRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
+            <Link to="#pricing" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+              <span />View Pricing</span>
+              <ArrowRight className="w-5 h-5ml-2" />
             </Link>
-          </d iv>
-          {/* K ey Stats */}
-    <>
-          </><d iv c las sNa me="g r id g rid-c ols-2 md:g rid-c ols-4 g ap-8 max-w-4x lmx-auto">
-        </d iv>
-            <d iv c las sNa me="t e xt-c enter" />
-              <d iv c las sNa me="t e xt-3 xl font-bold text-c ya-n-400mb-2">99.9%</d iv>
-              <d iv c las sNa me="t e xt-gray-300t ext-s-m">Thre at Detection</d iv>
-            <d iv c las sNa me="t e xt-c enter" />
-              <d iv c las sNa me="t e xt-3 xl font-bold text-p urpl-e-400mb-2">24/7</d iv>
-              <d iv c las sNa me="t e xt-gray-300t ext-s-m">Real-time Monitor ing</d iv>
-            <d iv c las sNa me="t e xt-c enter" />
-              <d iv c las sNa me="t e xt-3 xl font-bold text-p in-k-400mb-2">0</d iv>
-              <d iv c las sNa me="t e xt-gray-300t ext-s-m">False Positives</d iv>
-            <d iv c las sNa me="t e xt-c enter" />
-              <d iv c las sNa me="t e xt-3 xl font-bold text-e mer al-d-400mb-2">10 K+</d iv>
-              <d iv c las sNa me="t e xt-gray-300t ext-s-m">Protected O rganizations</d iv>          </d iv>
+          </div>
+
+          {/* Key Stats */}
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">99.9%</div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Threat Detection</div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">24/7</div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Real-time Monitoring</div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">0</div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">False Positives</div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">10 K+</div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Protected Organizations</div>
+          </div>
       </section>
-      {/* Bene fits Section */}
-    <>
-      </><section c las sNa me="p y-20px-4-relative" />
-        <d iv c las sNa me="a b solute inset-0 bg-grad ient-to-br from-p urple-500/5via-c yan-500/5to-p ink-500/5" / />
-        <d iv c las sNa me="r e lat ive max-w-7x lmx-auto">
-        </d iv>
-          <d iv c las sNa me="t e xt-c entermb-16">
-        </d iv>
-            <h2 c las sNa me="t e xt-4 xl md:t ext-5 xl font-bold text-whi-t em-b-6" />
-              W hy C hoo se Our <s pan c las sNa me="b g-grad ient-to-r from-c yan-400 to-p urple-400bg-clip-t exttext-tra-n sparen-t">AI Cybersecurity Suite?</s pan>            </h2>
-            <p c las sNa me="t e xt-xl t ext-gra-y-300 max-w-4x lmx-auto">
-              Experience the futu re of cybersecurity with cutting-edge AI technology that protects your organization.
-    <>
+
+      {/* Benefits Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Why Choose Our <span className="w-5 h-5ml-2" />AI Cybersecurity Suite?</span>
+            </h2>
+            <p className="w-5 h-5ml-2">Experience the future of cybersecurity with cutting-edge AI technology that protects your organization.
             </p>
-          </d iv>
-          <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-8">
-            {b ene fits.map((b ene fit, index) => (
-    <>
-              </><d iv key="{index}" c las sNa me="t e xt-c entergroup" />
-                <d iv c las sNa me="f l ex items-c enter j ustify-c enter w-20 h-20 bg-grad ient-to-r from-c yan-500 to-p urple-600 rounded-2 xl mb-6 mx-auto group-hover:scale-110transition-transformduration-300">{b ene fit.i con}
-                </d iv>
-            {securityFe atu res.map((f eat ure, index) => (
-    <>
-              </><d iv key="{index}" c las sNa me="g roup bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-c yan-500/10" />
-                <d iv c las sNa me="t e xt-c entermb-6">
+          </div>
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            {benefits.map((benefit, index) => (
+              <div key="{index}" className="text-centergroup" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{benefit.icon}
+                </div>
+                <h3 className="w-5 h-5ml-2" />{benefit.title}
+                </h3>
+                <p className="w-5 h-5ml-2">{benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
+      </section>
+
+      {/* Security Features Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Comprehensive <span className="w-5 h-5ml-2" />Security Features</span>
+            </h2>
+            <p className="w-5 h-5ml-2">Complete cybersecurity protection across all attack vectors with AI-powered intelligence.
+            </p>
+          </div>
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            {securityFeatures.map((feature, index) => (
+              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}</div>
+                  <h3 className="w-5 h-5ml-2" />{feature.title}
+                  </h3>
+                </div>
+                <p className="w-5 h-5ml-2">{feature.description}
+                </p>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{feature.benefit}
+                </div>
+            ))}
+          </div>
+      </section>
+
+      {/* Compliance Standards Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Industry <span className="w-5 h-5ml-2" />Compliance</span>
+            </h2>
+            <p className="w-5 h-5ml-2">Meet and maintain compliance with major industry standards and regulations.
+            </p>
+          </div>
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             {complianceStandards.map((standard, index) => (
-    <>
-              </><d iv key="{index}" c las sNa me="g roup text-c ente-r" />
-                <d iv c las sNa me="w-f ull h-16 bg-white/10 backdrop-blur-lg rounded-xl f lex items-c enter j ustify-c enter mx-auto mb-2 group-hover:bg-white/20 transition-allduration-300group-hover:scale-105">
-            {f eat ures.map((f eat ure, index) => (
-    <>
-              </><d iv key="{index}" c las sNa me="g roup bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-c yan-500/10" />
-                <d iv c las sNa me="f l ex items-c enter j ustify-c enter w-16 h-16 bg-grad ient-to-r from-c yan-500 to-p urple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{f eat ure.i con}
-                </d iv>
+              <div key="{index}" className="group text-center" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <span className="w-5 h-5ml-2" />{standard}
+                  </span>
+                </div>
+            ))}
+          </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Advanced Features for <span className="w-5 h-5ml-2" />Enterprise Security</span>
+            </h2>
+            <p className="w-5 h-5ml-2">Everything you need to protect your organization with AI-powered cybersecurity intelligence.
+            </p>
+          </div>
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            {features.map((feature, index) => (
+              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
+                </div>
+                <h3 className="w-5 h-5ml-2" />{feature.title}
+                </h3>
+                <p className="w-5 h-5ml-2">{feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20px-4relative" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Simple, Transparent <span className="w-5 h-5ml-2" />Pricing</span>
+            </h2>
+            <p className="w-5 h-5ml-2">Choose the plan that fits your organization size and security needs. All plans include our core AI features.
+            </p>
+          </div>
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+
             {pricingPlans.map((plan, index) => (
               <d iv key="{index}" c las sNa me="{`r e lat ive" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
                 plan.popular 
@@ -278,64 +364,108 @@ export default function AICybersecuritySuiteProPage() {
                   : 'border-white/20 hover: border-c yan-400/30'
               }`} />
                 {plan.popular && (
-            {testimonials.map((testimonial, index) => (
-    <>
-              </><d iv key="{index}" c las sNa me="b g-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <d iv c las sNa me="f l ex items-c entermb-4">
-                  <d iv c las sNa me="w-12 h-12 b g-grad ient-to-r from-c yan-500 to-p urple-600 rounded-full f lex items-c enter j ustify-c enter t ext-whitefon-t-boldmr-4"  />{testimonial.avatar}
-                  </d iv>
-                  <d iv />
-                    <d iv c las sNa me="f ont-semibol dte xt-whit-e"   />{testimonial.name}</d iv>
-                    <d iv c las sNa me="t e xt-gray-400t ext-s-m"   />{testimonial.company}</d iv>
-                </d iv>
-                <d iv c las sNa me="f l exmb-4">                  {[...A rray(testimonial.rating)].map((_, i) => (
-                    <Star key="{i}" c las sNa me="w-5 h-5t e xt-y ellow-400f ill-current" />
+
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
+                    </div>
+                )}
+                
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
+                  <p className="w-5 h-5ml-2">{plan.description}</p>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <span className="w-5 h-5ml-2" />{plan.price}</span>
+                    <span className="w-5 h-5ml-2" />{plan.period}</span>
+                  </div>
+                
+                <ul className="w-5 h-5ml-2" />
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key="{featureIndex}" className="flex items-centerspace-x-3" />
+                      <CheckCircle className="w-5 h-5ml-2" />
+                      <span className="w-5 h-5ml-2" />{feature}</span>
+                    </li>
                   ))}
-    <>
-                </d iv>
-                <p c las sNa me="t e xt-gray-300italic">
-              "{testimonial.content}"</p>              </d iv>
+                </ul>
+                
+                <Link 
+                  to="/contact"
+                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
+                      : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
+                  }`}
+                  />Get Started
+                </Link>
+              </div>
             ))}
-    <>
-          </d iv>
+          </div>
       </section>
-      {/* C TA Section */}
-    <>
-      </><section c las sNa me="p y-20px-4-relative" />
-        <d iv c las sNa me="a b solute inset-0 bg-grad ient-to-r from-c yan-500/10via-p urple-500/10to-p ink-500/10" / />
-        <d iv c las sNa me="r e lat ive max-w-7x lmx-auto">
-        </d iv>
-          <d iv c las sNa me="t e xt-c enter" />
-            <d iv c las sNa me="b g-grad ient-to-r from-c yan-600 via-p urple-600 to-p ink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverf low-h idd en">
-        </d iv>
-              <d iv c las sNa me="r e lat ivez-10">
-        </d iv>
-                <h2 c las sNa me="t e xt-4 xl sm:t ext-5 xl md:t ext-6 xl font-bold t ext-whit em-b-6leading-tight" />
-                  Ready to Secu re Y our <s pan c las sNa me="b g-grad ient-to-r from-c yan-300 to-p ink-300bg-clip-t exttext-tra-n sparen-t">O rganization?</s pan>
+
+      {/* Testimonials Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Trusted by <span className="w-5 h-5ml-2" />10,000+</span> Organizations
+            </h2>
+            <p className="w-5 h-5ml-2">See what our customers are saying about their success with our AI cybersecurity suite.
+            </p>
+          </div>
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            {testimonials.map((testimonial, index) => (
+              <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
+                  </div>
+                  <div />
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
+                </div>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key="{i}" className="w-5 h-5te xt-yellow-400fill-current"  />
+                  ))}
+                </div>
+                <p className="w-5 h-5ml-2">"{testimonial.content}"</p>
+              </div>
+            ))}
+          </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <h2 className="w-5 h-5ml-2" />
+                  Ready to Secure Your <span className="w-5 h-5ml-2" />Organization?</span>
                 </h2>
-                <p c las sNa me="t e xt-xl sm:t ext-2 xl t ext-whit-e/90 mb-8 sm:mb-12 max-w-4 x lmx-autolea ding-relaxed">
-                  Join thousands of organizations already protected with our AI-powered cybersecurity suite. 
-                  Start your free trial today and experience the futu re of enterprise security.
+                
+                <p className="w-5 h-5ml-2">Join thousands of organizations already protected with our AI-powered cybersecurity suite. 
+                  Start your free trial today and experience the future of enterprise security.
                 </p>
-    <>
-                </><d iv c las sNa me="f l ex f lex-c ol sm:f lex-row g ap-6j ustify-c entermb-8">
-        </d iv>
-                  <Link to="/contact" c las sNa me="g roup bg-white t ext-c ya-n-600 px-10 py-4 rounded-xl font-bold t ext-l-g hover:bg-gray-100 transition-all duration-300 f lex items-c enter j ustify-c enter s pace-x-2 shadow-lg hover:shadow-xltr ansformhover:scale-105" />
-                    <s pan>Start Free T rial</s pan>
-                    <A rro wRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
+                
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+                    <span />Start Free Trial</span>
+                    <ArrowRight className="w-5 h-5ml-2" />
                   </Link>
-                  <Link to="#pricing" c las sNa me="g roup border-2 border-white t ext-whit-e px-10 py-4 rounded-xl font-bold t ext-l-g hover:bg-white/10 transition-all duration-300 f lex items-c enter j ustify-c enters pace-x-2backdrop-blur-sm" />
-                    <s pan>View All Plans</s pan>                    <A rro wRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
+                  <Link to="#pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+                    <span />View All Plans</span>
+                    <ArrowRight className="w-5 h-5ml-2" />
                   </Link>
-                </d iv>
-    <>
-                </><d iv c las sNa me="t e xt-white/80t ext-s-m">
-        </d iv>
-                  <p>✓ 14-day free trial * ✓ No credit card required * ✓ Cancel anytime</p>                </d iv>
-            </d iv>
-        </d iv>
+                </div>
+                
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
+                </div>
+            </div>
+        </div>
+
       </section>
     </d iv>
   );
 }
-    </>

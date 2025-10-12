@@ -1,15 +1,20 @@
-'use client';
 import { useState, useEffect} from 'react';
-import { Link  } from 'react-router-dom';
-import { ;
+
+import { Link } from 'react-router-dom';
+import {;
+'use client';
+
   ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
   BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
   Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
   TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
   Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock
- } from 'lucide-react';
-import { ArrowRight, ShoppingCart  } from 'lucide-react';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Link as LinkIcon, Package, TrendingUp, Calendar, Globe, Database, Monitor, Mail  } from 'lucide-react';
+
+} from 'lucide-react';
+import { ArrowRight, ShoppingCart } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Link as LinkIcon, Package, TrendingUp, Calendar, Globe, Database, Monitor, Mail } from 'lucide-react';
+
+
 const MicroSaasPage: React.FC = () => {
   useEffect(() => {
     setIsVisible(true);
@@ -759,99 +764,177 @@ const MicroSaasPage: React.FC = () => {
     : microSaasProducts.filter(product => product.category === selectedCategory);
   return (
     <>
-    </>
+
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
+        <title />Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
+        <meta const name = "description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." /  />
+        <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" />
       </Helmet>
-        <title>Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
-        <meta const name = "description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." / / />
-        <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" / / />
-      </Helmet>
-    </>
-      <d iv clas sName="m in-h-screen bg-grad ient-to-br from-slate-900via-purple-900to-slate-900">
-        {/* H ero Section */}
-    <>
-        </><section clas sName="r elative over flow-h iddenpt-20-pb-16" />
+
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        {/* Hero Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+                Micro SAAS
+                <span className="w-5 h-5ml-2" />Business Solutions
+                </span>
+              </h1>
+              <p className="{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+                Powerful, ready-to-use software solutions designed to solve specific business challenges. 
+                No complex setup, no lengthy implementations - just instant value.
+              </p>
+              <div className="{`flex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+                <Link
+          to="/contact"
+          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
+        >
+          Start Free Trial
+                  
+          <ArrowRight className="w-5 h-5ml-2" />
+        </Link>
+                <a
+                  href="tel:+13024640950"
+                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
+                  Call +1 302 464 0950
+                </a>
+              </div>
+          </div>
+        </section>
+
+        {/* Category Filter */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {categories.map((category) => (
+                <button
+                  key="{category}"
+                  onClick="{()" =  />setSelectedCategory(category)}
+                  className="{`px-6" py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    selectedCategory === category
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                      : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+        </section>
+
+        {/* Products Grid */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {filteredProducts.map((product, index) => (
+                <div
+                  key="{product.id}"
+                  className="{`group" relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-purple-500 ${
+                    product.popular ? 'ring-2 ring-purple-500' : ''
+                  }`} />
+                  {product.popular && (
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <span className="w-5 h-5ml-2" />Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="{`inline- flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl mb-4`} />
+                      <product.icon className="h-8w-8text-white"  />
+                    </div>
+                    <h3 className="w-5 h-5ml-2" />{product.title}</h3>
+                    <p className="w-5 h-5ml-2">{product.description}</p>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key="{i}"
+                            className="{`h-4" w-4 ${
+                              i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'
+                            }`}
+                           />
+                        ))}
+                      </div>
+                      <span className="w-5 h-5ml-2" />({product.reviews} reviews)</span>
+                    </div>
+
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <span className="w-5 h-5ml-2" />{product.price}</span>
+                      <span className="w-5 h-5ml-2" />{product.originalPrice}</span>
+                    </div>
+                    <span className="w-5 h-5ml-2" />Save {Math.round((1 - parseInt(product.price.replace('$', '')) / parseInt(product.originalPrice.replace('$', ''))) * 100)}%
+                    </span>
+                  </div>
+
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                     {product.features.slice(0, 4).map((feature, idx) => (
-    <>
-                      </><d iv key="{idx}" clas sName="f l ex items-centertext-s mtex-t-gray-300" />
-                        <CheckCircle clas sName="h-4 w-4 t ext-green-400mr-3-f lex-s hrink-0" />
-                        <span   />{feature}</span>                      </d iv>
-    </>
+                      <div key="{idx}" className="flex items-centertext-sm text-gray-300" />
+                        <CheckCircle className="w-5 h-5ml-2" />
+                        <span />{feature}</span>
+                      </div>
                     ))}
                     {product.features.length > 4 && (
-    <>
-                      </><d iv clas sName="t ext-s mtext-gr-a-y-400text-cent-e-r">+{product.features.length - 4} more features
-                      </d iv>
-    </>
+                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">+{product.features.length - 4} more features
+                      </div>
                     )}
-                  </d iv>
-    <>
-                  </><d iv clas sName="s p ace-y-3">
-        </d iv>
-                    <Link to="{`/${product.id}`}" clas sName="w-f u ll i nline-f lex items-center j ustify-center px-4 py-3 bg-grad ient-to-r from-purple-600 to-pink-600 text-whi-t-e font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
-    </>
-                      View Details
-    <>
-                      </><ArrowRight clas sName="m l-2h-4w-4" />
+                  </div>
+
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <Link
+          to="{`/${product.id}`}"
+          className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105"
+        >
+          View Details
+                      
+          <ArrowRight className="w-5 h-5ml-2" />
+        </Link>
+                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300">Start Free Trial
                     </Link>
-                    <Link to="/cont act" clas sName="w-f u ll i nline-f lex items-center j ustify-center px-4 py-3 border border-purple-400 text-purp-l-e-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransiti-o-n-allduration-300">Start Free Trial
-                    </Link>
-                  </d iv>
-    </>              ))}
-    <>
-            </d iv>
+                  </div>
+              ))}
+            </div>
         </section>
-    </>
-        {/* C TA Section */}
-    <>
-        </><section clas sName="p y-20 bg-grad ient-to-b rfrom-gray-900to-purple-900" />
-          <d iv clas sName="m ax-w-7 xl mx-auto px-4 sm:px-6-lg:px-8-text-cent-e-r">
-        </d iv>
-            <h2 clas sName="t ext-3 xl md:text-4 xl font-bold text-white-m-b-4">Ready to Transform Your Business?
+
+        {/* CTA Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />Ready to Transform Your Business?
             </h2>
-            <p clas sName="t ext-xl text-gr-a-y-300 mb-8 m ax-w-3x lmx-auto" />
-    </>              Join thousands of businesses already using our micro SAAS solutions to streamline operations, 
+            <p className="w-5 h-5ml-2">Join thousands of businesses already using our micro SAAS solutions to streamline operations, 
+
               increase productivity, and drive growth.
-    <>
             </p>
-            <d iv clas sName="f l ex f lex-col sm:f lex-rowg ap-4j ustify-center">
-        </d iv>
-              <Link to="/cont act" clas sName="i nline-f lex items-center px-8 py-4 bg-grad ient-to-r from-purple-600 to-pink-600 text-whi-t-e font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
-    </>
-                Get Star ted T oday
-    <>
-                </><ArrowRight clas sName="m l-2h-5w-5" />
-              </Link>
-    </>              <a
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <Link
+          to="/contact"
+          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
+        >
+          Get Started Today
+                
+          <ArrowRight className="w-5 h-5ml-2" />
+        </Link>
+              <a
+
                 href="tel:+13024640950"
                 clas sName="i nline-f lex items-center px-8 py-4 border-2 border-purple-400 text-purp-l-e-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whi-t-e transition-all duration-300transformhover:scale-105" />
                 Call +1 302 464 0950
-    <>
               </a>
-            </d iv>
-            <d iv clas sName="m t-8text-gr-a-y-400">
-        </d iv>
-              <p>Email: kleber@ziontechgroup.com</p>
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>            </d iv>
+
+            </div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <p />Email: kleber@ziontechgroup.com</p>
+              <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+            </div>
         </section>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-      </d iv>
+      </div>
     </>
   );
 };
+
 export default MicroSaasPage;
-    </>
+

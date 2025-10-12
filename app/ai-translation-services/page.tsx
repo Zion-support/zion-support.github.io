@@ -1,60 +1,71 @@
 import { Helmet } from 'react-helmet-async'
-import { Globe, Zap, Shield, Users, CheckCircle, ArrowRight, BarChart3, Brain, FileText, Mic  } from 'lucide-react';import { Link } from 'react-router-dom'
-import React from 'react';import { ArrowRight  } from 'lucide-react';
-import { Link  } from 'react-router-dom';
+
+import { Globe, Zap, Shield, Users, CheckCircle, ArrowRight, BarChart3, Brain, FileText, Mic } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+
 const AITranslationServicesPage: React.FC = () => {
   const f eat ures = [
     {
-      i con: <Globe c las sNa me="w-6h-6t ext-c yan-400" />,
-      t itle: '100+ Languages',
-      description: 'Support for over 100 languages with native-level accuracy and cult ural cont ext.'
+
+      icon: <Globe className="w-5 h-5ml-2" />,
+      title: '100+ Languages',
+      description: 'Support for over 100 languages with native-level accuracy and cultural context.'
     },
     {
-      i con: <Zap c las sNa me="w-6h-6t ext-e merald-400" />,
-      t itle: 'Real-time Translation',
+      icon: <Zap className="w-5 h-5ml-2" />,
+      title: 'Real-time Translation',
       description: 'Instant translation for live conversations, meetings, and customer support.'
     },
     {
-      i con: <Brain c las sNa me="w-6h-6t ext-p urp le-400" />,
-      t itle: 'AI-Powered Cont ext',
-      description: 'Advanced AI understands cont ext, tone, and cult ural nuances for accurate translations.'
+      icon: <Brain className="w-5 h-5ml-2" />,
+      title: 'AI-Powered Context',
+      description: 'Advanced AI understands context, tone, and cultural nuances for accurate translations.'
     },
     {
-      i con: <FileText c las sNa me="w-6h-6t ext-o ran ge-400" />,
-      t itle: 'Document Translation',
-      description: 'Translate documents, websites, and content while preserving formatting and stru ctu re.'
+      icon: <FileText className="w-5 h-5ml-2" />,
+      title: 'Document Translation',
+      description: 'Translate documents, websites, and content while preserving formatting and structure.'
     },
     {
-      i con: <Mic c las sNa me="w-6h-6t ext-p ink-400" />,
-      t itle: 'Voice Translation',
-      description: 'Convert speech to t ext and translate in real-time with natural voice synthes is.'
+      icon: <Mic className="w-5 h-5ml-2" />,
+      title: 'Voice Translation',
+      description: 'Convert speech to text and translate in real-time with natural voice synthesis.'
     },
     {
-      i con: <Shield c las sNa me="w-6h-6t ext-b lue-400" />,
-      t itle: 'Enterprise Security',
+      icon: <Shield className="w-5 h-5ml-2" />,
+      title: 'Enterprise Security',
+
       description: 'Bank-level security with end-to-end encryption for sensitive business communications.'
     }
   ]
   const useCases = [
     {
-      t itle: 'Global Customer Support',
-      description: 'Provide support in any language with instant translation and cult ural a dap tation.',
-      i con: <Users c las sNa me="w-8h-8t ext-c yan-400" />
+
+      title: 'Global Customer Support',
+      description: 'Provide support in any language with instant translation and cultural adaptation.',
+      icon: <Users className="w-5 h-5ml-2" />
     },
     {
-      t itle: 'Multilingual Content',
-      description: 'Translate websites, apps, and marketing materials for global a udi ences.',
-      i con: <FileText c las sNa me="w-8h-8t ext-e merald-400" />
+      title: 'Multilingual Content',
+      description: 'Translate websites, apps, and marketing materials for global audiences.',
+      icon: <FileText className="w-5 h-5ml-2" />
     },
     {
-      t itle: 'International Meetings',
-      description: 'Break down language barriers in real-time during video conf erences and c alls.',
-      i con: <Globe c las sNa me="w-8h-8t ext-p urp le-400" />
+      title: 'International Meetings',
+      description: 'Break down language barriers in real-time during video conferences and calls.',
+      icon: <Globe className="w-5 h-5ml-2" />
+
     },
     {
       t itle: 'E-comm erce Expansion',
       description: 'Expand to new markets with localized product descriptions and customer communications.',
-      i con: <BarChart3 c las sNa me="w-8h-8t ext-o ran ge-400" />
+
+      icon: <BarChart3 className="w-5 h-5ml-2" />
+
     }
   ]
   const pricingPlans = [
@@ -102,30 +113,110 @@ const AITranslationServicesPage: React.FC = () => {
   ]
   return (
     <>
-    </>
+
       <Helmet>
-        <t itle>5G Data Analytics - Zion Tech Group</t itle>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title />AI Translation Services - Multilingual Communication | Zion Tech Group</title>
+        <meta name="description" content="Break language barriers with AI-powered translation services. Real-time translation, document processing, and multilingual support for global businesses." />
+        <meta name="keywords" content="AI translation, multilingual, language services, real-time translation, document translation, global communication" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-translation-services"  />
       </Helmet>
-        <t itle>AI Translation Services - Multilingual Communication | Zion Tech Group</t itle>
-        <meta name="description" content="Break language barriers with AI-powered translation services. Real-time translation, document processing, and multilingual support for global businesses." / / />
-        <meta name="keywords" content="AI translation, multilingual, language services, real-time translation, document translation, global communication" / / />
-        <link rel="canonic al" href="https://zion techgroup.com/ai-translation-services" />
-      </Helmet>
-    </>
-      <d iv c las sNa me="m in-h-scre enbg-gray-900t ext-whit-e">
-        {/* H ero Section */}
-    <>
-        </><section c las sNa me="r e lative py-20-px-4-over flow-h idd en" />
-              {f eat ures.map((f eat ure, index) => (
-    <>
-                </><d iv key="{index}" c las sNa me="g roup bg-white/10 b ack drop-b lur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-a ll duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-c yan-500/10" />
-                  <d iv c las sNa me="f l ex items-c enter j ust ify-c enter w-16 h-16 bg-grad ient-to-r from-c yan-500 to-p urp le-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{f eat ure.i con}
-                  </d iv>
+
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        {/* Hero Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <Globe className="w-5 h-5ml-2" />
+              <span />AI Translation Services</span>
+            </div>
+            
+            <h1 className="w-5 h-5ml-2" />
+              Break Language <span className="w-5 h-5ml-2" />Barriers</span>
+            </h1>
+            
+            <p className="w-5 h-5ml-2">Connect with global audiences using AI-powered translation services. 
+              Real-time translation, document processing, and multilingual support for businesses worldwide.
+            </p>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
+                <span />Start Free Trial</span>
+                <ArrowRight className="w-5 h-5ml-2" />
+              </Link>
+              <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+                <span />View Demo</span>
+                <ArrowRight className="w-5 h-5ml-2" />
+              </Link>
+            </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Powerful <span className="w-5 h-5ml-2" />Translation Features</span>
+              </h2>
+              <p className="w-5 h-5ml-2">Everything you need to communicate effectively across languages and cultures.
+              </p>
+            </div>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {features.map((feature, index) => (
+                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
+                  </div>
+                  <h3 className="w-5 h-5ml-2" />{feature.title}
+                  </h3>
+                  <p className="w-5 h-5ml-2">{feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Perfect for <span className="w-5 h-5ml-2" />Every Business</span>
+              </h2>
+              <p className="w-5 h-5ml-2">Discover how AI translation can transform your business operations and global reach.
+              </p>
+            </div>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {useCases.map((useCase, index) => (
-    <>
-                </><d iv key="{index}" c las sNa me="g roup bg-white/10 b ack drop-b lur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-a llduration-300hover:scale-105" />
-                  <d iv c las sNa me="f l ex items-c enters pace-x-4mb-6">
+                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{useCase.icon}
+                    </div>
+                    <h3 className="w-5 h-5ml-2" />{useCase.title}
+                    </h3>
+                  </div>
+                  <p className="w-5 h-5ml-2">{useCase.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Simple <span className="w-5 h-5ml-2" />Pricing</span>
+              </h2>
+              <p className="w-5 h-5ml-2">Choose the plan that fits your translation needs. All plans include a 14-day free trial.
+              </p>
+            </div>
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+
               {pricingPlans.map((plan, index) => (
                 <d iv key="{index}" c las sNa me="{`r e lative" bg-white/10 b ack drop-b lur-lg rounded-2 xl p-8 border transition-a ll duration-300 hover:scale-105 ${
                   plan.popular 
@@ -133,24 +224,27 @@ const AITranslationServicesPage: React.FC = () => {
                     : 'border-white/20 hover: border-c yan-400/30'
                 }`} />
                   {plan.popular && (
-                    <d iv c las sNa me="a b solute -t op-4 l eft-1/2transform-translate-x-1/2">
-                      <d iv c las sNa me="b g-grad ient-to-r from-c yan-500 to-p urp le-600 t ext-whit-e px-6 py-2 rounded-fulltext-smfo-n-t-semibold"  />Most Popular
-                      </d iv>
+
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
+                      </div>
                   )}
-                  <d iv c las sNa me="t ext-c entermb-8">
-                    <h3 c las sNa me="t ext-2 xl font-bold t ext-whit-e mb-2"   />{plan.name}</h3>
-                    <p c las sNa me="t ext-gray-300 mb-4">
-              {plan.description}</p>
-                    <d iv c las sNa me="f l ex items-b ase lin ejusti fy-c enter">
-                      <s pan c las sNa me="t ext-5 x lfo nt-bold t ext-whit-e"   />{plan.price}</s pan>
-                      <s pan c las sNa me="t ext-gray-400ml-2"   />{plan.period}</s pan>
-                    </d iv>
-                  <ul c las sNa me="s p ace-y-4mb-8" />
-                    {plan.f eat ures.map((f eat ure, f eat ureIndex) => (
-                      <li key="{f eat ureIndex}" c las sNa me="f l ex items-c enters pace-x-3" />
-                        <CheckCircle c las sNa me="w-5 h-5t ext-g reen-400f lex-s hrink-0" />
-                        <s pan c las sNa me="t ext-gray-300"   />{f eat ure}</s pan>                      </li>
-    </>
+                  
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
+                    <p className="w-5 h-5ml-2">{plan.description}</p>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <span className="w-5 h-5ml-2" />{plan.price}</span>
+                      <span className="w-5 h-5ml-2" />{plan.period}</span>
+                    </div>
+                  
+                  <ul className="w-5 h-5ml-2" />
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key="{featureIndex}" className="flex items-centerspace-x-3" />
+                        <CheckCircle className="w-5 h-5ml-2" />
+                        <span className="w-5 h-5ml-2" />{feature}</span>
+                      </li>
+
                     ))}
                   </ul>
                   <Link 
@@ -161,59 +255,42 @@ const AITranslationServicesPage: React.FC = () => {
                         : 'border-2 border-c yan-400 t ext-c ya-n-400 hover: bg-c yan-400 hover:t ext-gra-y-900'
                     }`}
                     />Get Started
-    <>
                   </Link>
-                </d iv>
-    </>
+
+                </div>
               ))}
-    <>
-            </d iv>
+            </div>
         </section>
-    </>
-        {/* C TA Section */}
-    <>
-        </><section c las sNa me="p y-20px-4-relative" />
-          <d iv c las sNa me="a b solute inset-0 bg-grad ient-to-r from-c yan-500/10via-p urp le-500/10to-p ink-500/10" / />
-          <d iv c las sNa me="r e lative m ax-w-7 x lmx-a uto text-c ente-r">
-        </d iv>
-            <d iv c las sNa me="b g-grad ient-to-r from-c yan-600 via-p urp le-600 to-p ink-600 rounded-3 xl p-8sm:p-12lg:p-16">
-        </d iv>
-              <h2 c las sNa me="t ext-4 xl sm:t ext-5 xl md:t ext-6 xl font-bold t ext-whit em-b-6leading-tight" />
-                Ready to Go <s pan c las sNa me="b g-grad ient-to-r from-c yan-300 to-p ink-300bg-clip-t exttext-transpare-n-t">Global?</s pan>              </h2>
-    </>
-              <p c las sNa me="t ext-xl sm:t ext-2 xl t ext-whit-e/90 mb-8 sm:mb-12 m ax-w-4 x lmx-a utoleading-relaxed">
-              Break down language barriers and connect with global a udi ences. 
+
+        {/* CTA Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Ready to Go <span className="w-5 h-5ml-2" />Global?</span>
+              </h2>
+              
+              <p className="w-5 h-5ml-2">Break down language barriers and connect with global audiences. 
                 Start your free trial today and experience the power of AI translation.
               </p>
-              <d iv c las sNa me="f l ex f lex-c ol sm:f lex-rowg ap-6j ust ify-c enter">
-                <Link to="/cont act" c las sNa me="g roup bg-white t ext-c ya-n-600 px-10 py-4 rounded-xl font-bold t ext-l-g hover:bg-gray-100 transition-a ll duration-300 f lex items-c enter j ust ify-c enter s pace-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
-          <s pan    />
-        </Link>Start Free Trial</s pan>
-                  <ArrowRight c las sNa me="w-5 h-5g roup-hover:translate-x-1transition-transform" />
+              
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+                  <span />Start Free Trial</span>
+                  <ArrowRight className="w-5 h-5ml-2" />
                 </Link>
-                <Link to="/pricing" c las sNa me="g roup border-2 border-white t ext-whit-e px-10 py-4 rounded-xl font-bold t ext-l-g hover:bg-white/10 transition-a ll duration-300 f lex items-c enter j ust ify-c enters pace-x-2b ack drop-b lur-sm" >
-          <s pan    />
-        </Link>View All Plans</s pan>                  <ArrowRight c las sNa me="w-5 h-5g roup-hover:translate-x-1transition-transform" />
+                <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+                  <span />View All Plans</span>
+                  <ArrowRight className="w-5 h-5ml-2" />
                 </Link>
-              </d iv>
-          </d iv>
+              </div>
+          </div>
         </section>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-      </d iv>
+      </div>
     </>
   )
 }
+
 export default AITranslationServicesPage;
-    </>
+

@@ -1,17 +1,17 @@
+import { useEffect } from 'react';
 'use client'
-import { useEffect } from 'react'
   children: React.ReactNode}
     // Security enhancement logic
         'Referrer-Policy': 'strict-origin-when-cross-origin'
       }
       // Add CSP meta tag
       const cspMeta = document.createElement('meta')
-      cspMeta.setAttribute('http-equiv', 'Content-Security-Policy')
+      cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');
       cspMeta.setAttribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;")
       document.head.appendChild(cspMeta)
       // Add security event listeners
       const handleSecurityEvent = (event: Event) => {
-        console.log('Security event detected:', event.type)
+        console.log('Security event detected: ', event.type)
       }
       window.addEventListener('beforeunload', handleSecurityEvent)
       window.addEventListener('unload', handleSecurityEvent)
@@ -25,14 +25,18 @@ import { useEffect } from 'react'
     return cleanup
   }, [])
   return (
-    <>
-    </><d iv c las sNa me="{`s ecurity-enhanced" ${c las sNa me}`}>{children}    </d iv>
+
+    <div className="{`s e curity-enhanced" ${className}`}  >{children}
+    </div className="{`s e curity-enhanced" ${className}`}  ></div>
   )
 }
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {useEffect(() => {// Security enhancement logic
+
+const SecurityEnhancer: React.FC<SecurityEnhancerProps >= ({ children }) => {useEffect(() => {// Security enhancement logic
+
+
     $3
   )}
-        'Referrer-Policy': 'strict-origin-when-cross-origin'}
+        'Referrer-Policy': 'strict-origin-when-cross-origin'};
       };// Add CSP meta tag
       cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
       document.head.appendChild(cspMeta)
@@ -42,11 +46,14 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {use
           e.preventDefault()}
       })}
     enhanceSecurity()}, [])
-  return <React.Fragment>{children}</React.Fragment>}
+  return </SecurityEnhancerProps ><React.Fragment >{children}</React.Fragment ></React.Fragment>}
 export default SecurityEnhancer
   </SecurityEnhancerProps>
       // Disable right-click context menu
       document.addEventListener('contextmenu', (e) => {e.preventDefault()}
       });// Disable F12 and other dev tools shortcuts
-      document.addEventListener('keydown', (e) => {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
+      document.addEventListener('keydown', (e) => {if (e.const key = == 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
         }
+
+;
+

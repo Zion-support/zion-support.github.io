@@ -1,11 +1,15 @@
-'use client';
-import { Suspense, lazy} from 'react';
+
+import { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HelmetProvider  } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async';
+
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
+
+
+
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
@@ -55,6 +59,7 @@ const StatusPage = lazy(() => import('./status/page'));
 const ConsultationPage = lazy(() => import('./consultation/page'));
 // Loading component
 const AppLoadingSpinner = () => <LoadingSpinner />;
+
 function App() {
 }
   return (
@@ -126,7 +131,7 @@ function App() {
                 <Route path="/ai-social-media-manager" element={<AiServicesPage />} />
                 <Route path="/ai-email-marketing-automation" element={<AiServicesPage />} />
                 <Route path="/ai-project-manager" element={<AiServicesPage />} />
-                <Route path="/ai-3 d-generation" element={<AiServicesPage />} />
+                <Route path="/ai-3d-generation" element={<AiServicesPage />} />
                 <Route path="/ai-drug-discovery-pro" element={<AiServicesPage />} />
                 <Route path="/ai-automated-reporting" element={<AiServicesPage />} />
                 <Route path="/ai-password-manager" element={<AiServicesPage />} />
@@ -144,16 +149,21 @@ function App() {
                 <Route path="/data-analytics" element={<ItServicesPage />} />
                 <Route path="/iot-solutions" element={<ItServicesPage />} />
                 <Route path="/blockchain-development" element={<ItServicesPage />} />
-                {/* 5 G Services */}
-                <Route path="/5 g-network-infrastructure" element={<ItServicesPage />} />
-                <Route path="/5 g-iot-solutions" element={<ItServicesPage />} />
-                <Route path="/5 g-edge-computing" element={<ItServicesPage />} />
-                <Route path="/5 g-private-networks" element={<ItServicesPage />} />
-                <Route path="/5 g-mobile-applications" element={<ItServicesPage />} />
-                <Route path="/5 g-data-analytics" element={<ItServicesPage />} />
+
+                
+                {/* 5G Services */}
+                <Route path="/5g-network-infrastructure" element={<ItServicesPage />} />
+                <Route path="/5g-iot-solutions" element={<ItServicesPage />} />
+                <Route path="/5g-edge-computing" element={<ItServicesPage />} />
+                <Route path="/5g-private-networks" element={<ItServicesPage />} />
+                <Route path="/5g-mobile-applications" element={<ItServicesPage />} />
+                <Route path="/5g-data-analytics" element={<ItServicesPage />} />
+                
                 {/* Additional Services */}
                 <Route path="/business-intelligence" element={<ItServicesPage />} />
-                <Route path="/5 g-implementation" element={<ItServicesPage />} />
+                <Route path="/5g-implementation" element={<ItServicesPage />} />
+                
+
                 {/* Company Pages */}
                 <Route path="/team" element={<TeamPage />} />
                 <Route path="/careers" element={<CareersPage />} />
@@ -164,7 +174,10 @@ function App() {
                 <Route path="/api-docs" element={<ApiDocsPage />} />
                 <Route path="/support" element={<SupportPage />} />
                 <Route path="/status" element={<StatusPage />} />
-                <Route path="/consultation" element={<ConsultationPage />} />              </Routes>
+
+                <Route path="/consultation" element={<ConsultationPage />} />
+              </Routes>
+
             </Suspense>
           </d iv>
         </BrowserRouter>
@@ -173,4 +186,3 @@ function App() {
   );
 };
 export default App;
-    </>

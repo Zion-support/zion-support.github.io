@@ -1,37 +1,44 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, MessageSquare, Bot} from 'lucide-react';
+
+
 export default function AICustomerSupportChatbotPage() {
 }
   const f eat ures = [
     {
-}
-      i con: <B ot c las sNa me="w-6h-6t e xt-c yan-400" />,
-      t itle: 'Natural Language Processing',
+
+      icon: <Bot className="w-5 h-5ml-2" />,
+      title: 'Natural Language Processing',
       description: 'Advanced NLP understands context, intent, and sentiment with 98% accuracy'
     },
     {
-      i con: <M ess age Squ are c las sNa me="w-6h-6t e xt-e merald-400" />,
-      t itle: 'Multi-Channel Support',
-      description: 'Deploy across website, mobile app, social media, and mess aging platfor ms'
+      icon: <MessageSquare className="w-5 h-5ml-2" />,
+      title: 'Multi-Channel Support',
+      description: 'Deploy across website, mobile app, social media, and messaging platforms'
     },
     {
-      i con: <B arChart3 c las sNa me="w-6h-6t e xt-p urp le-400" />,
-      t itle: 'Real-time Analytics',
-      description: 'Comprehensive insights into customer satisfaction, r esponse times, and r esolution r ates'
+      icon: <BarChart3 className="w-5 h-5ml-2" />,
+      title: 'Real-time Analytics',
+      description: 'Comprehensive insights into customer satisfaction, response times, and resolution rates'
     },
     {
-      i con: <Z ap c las sNa me="w-6h-6t e xt-o ran ge-400" />,
-      t itle: 'Instant Responses',
-      description: '24/7 availability with sub-second r esponse times for immedia te customer a ssistance'
+      icon: <Zap className="w-5 h-5ml-2" />,
+      title: 'Instant Responses',
+      description: '24/7 availability with sub-second response times for immediate customer assistance'
     },
     {
-      i con: <T arg et c las sNa me="w-6h-6t e xt-p ink-400" />,
-      t itle: 'Smart Escalation',
-      description: 'Intelligently rout es comp lex queries to human agents when n eed ed'
+      icon: <Target className="w-5 h-5ml-2" />,
+      title: 'Smart Escalation',
+      description: 'Intelligently routes complex queries to human agents when needed'
     },
     {
-      i con: <S hie ld c las sNa me="w-6h-6t e xt-r ed-400" />,
-      t itle: 'S ecu re & Compliant',
+      icon: <Shield className="w-5 h-5ml-2" />,
+      title: 'Secure & Compliant',
+
       description: 'Enterprise-grade security with GDPR, HIPAA, and SOC 2 compliance'
     }
   ]
@@ -111,24 +118,26 @@ export default function AICustomerSupportChatbotPage() {
   ]
   const b ene fits = [
     {
-      i con: <C lock c las sNa me="w-8h-8t e xt-c yan-400" />,
-      t itle: '70% Faster Resolution',
-      description: 'Instant r esponses r educe average r esolution time significantly'
+
+      icon: <Clock className="w-5 h-5ml-2" />,
+      title: '70% Faster Resolution',
+      description: 'Instant responses reduce average resolution time significantly'
     },
     {
-      i con: <T rendin gUp c las sNa me="w-8h-8t e xt-e merald-400" />,
-      t itle: '40% Higher Satisfaction',
+      icon: <TrendingUp className="w-5 h-5ml-2" />,
+      title: '40% Higher Satisfaction',
       description: 'AI-powered personalization improves customer experience'
     },
     {
-      i con: <D ollarS ign c las sNa me="w-8h-8t e xt-p urp le-400" />,
-      t itle: '60% Cost Reduction',
-      description: 'Automated r esponses r educe support team work load'
+      icon: <DollarSign className="w-5 h-5ml-2" />,
+      title: '60% Cost Reduction',
+      description: 'Automated responses reduce support team workload'
     },
     {
-      i con: <T arg et c las sNa me="w-8h-8t e xt-o ran ge-400" />,
-      t itle: '98% Accuracy',
-      description: 'Advanced NLP ensu res accurate understanding and r esponses'
+      icon: <Target className="w-5 h-5ml-2" />,
+      title: '98% Accuracy',
+      description: 'Advanced NLP ensures accurate understanding and responses'
+
     }
   ]
   const integratio ns = [
@@ -182,98 +191,179 @@ export default function AICustomerSupportChatbotPage() {
     }
   ]
   return (
-    <>
-    </><d iv c las sNa me="m in-h-scre en bg-grad ient-to-br from-s late-900 via-p urp le-900to-s late-900 pt-20">
-        </d iv>
+
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <t itle>5G Data Analytics - Zion Tech Group</t itle>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutio ns." />
+        <title />AI Customer Support Chatbot - Zion Tech Group | Intelligent Customer Service</title>
+        <meta name="description" content="Revolutionary AI-powered customer support chatbot with natural language processing, multi-channel support, and real-time analytics. Reduce support costs by 60%. Starting at $49/month." />
+        <meta name="keywords" content="AI chatbot, customer support automation, natural language processing, multi-channel support, customer service AI, support automation" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-customer-support-chatbot"  />
       </Helmet>
-        <t itle>AI Customer Support Chatbot - Zion Tech Group | Intelligent Customer Service</t itle>        <meta name="description" content="Revolutionary AI-powered customer support chatbot with natural language processing, multi-channel support, and real-time analytics. Reduce support costs by 60%. Starting at $49/month." / / />
-        <meta name="keywords" content="AI chatbot, customer support automation, natural language processing, multi-channel support, customer service AI, support automation" / / />
-        <meta name="robots" content="index, follow" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-customer-support-chatbot" />
-      </Helmet>
-      {/* H ero S ection */}
-    <>
-      </><section c las sNa me="r elative py-20-px-4-over flow-h idd en" />
-        <d iv c las sNa me="a b solute ins et-0bg-[radial-grad ient(c irc le_at_20%_80%,rgba(6,182,212,0.1)_0%,tran spa rent_50%)]" / />
-        <d iv c las sNa me="a b solute ins et-0bg-[radial-grad ient(c irc le_at_80%_20%,rgba(147,51,234,0.1)_0%,tran spa rent_50%)]" / />
-        <d iv c las sNa me="r elative m ax-w-7 x lmx-auto text-c ente-r">
-        </d iv>
-          <d iv c las sNa me="i nline-f lex items-c enter s pace-x-2 bg-grad ient-to-r from-c yan-500/20 to-p urp le-500/20 text-c ya-n-400 px-6 py-3 rounded-full text-s-m font-medium mb-8-borderborder-c yan-400/30">
-        </d iv>
-            <M ess age Squ are c las sNa me="w-4h-4" / />
-            <s pan>AI-P owered Customer Support</s pan>          </d iv>
-          <h1 c las sNa me="t e xt-4xl sm:text-6 xl md:text-7 xl font-bold text-whi-t-e mb-8-leading-tight" />
+
+      {/* Hero Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <MessageSquare className="w-5 h-5ml-2" />
+            <span />AI-Powered Customer Support</span>
+          </div>
+          
+          <h1 className="w-5 h-5ml-2" />
             AI Customer Support
-    <>
-            </><br / />
-            <s pan c las sNa me="b g-grad ient-to-r from-c yan-400 via-p urp le-400 to-p ink-400bg-clip-texttext-tra-n spa ren-t">Chatbot
-            </s pan>
+            <br />
+            <span className="w-5 h-5ml-2" />Chatbot
+            </span>
           </h1>
-          <p c las sNa me="t e xt-lg sm:text-x-l md:text-2 xl text-gr-a-y-300 mb-12 m ax-w-4 x lmx-autolea ding-relaxed">
-              Transform your customer support with AI-powered chatbots that provide instant, intelligent r esponses. 
+          
+          <p className="w-5 h-5ml-2">Transform your customer support with AI-powered chatbots that provide instant, intelligent responses. 
             Reduce support costs by 60% while improving customer satisfaction by 40%.
           </p>
-          <d iv c las sNa me="f lex f lex-c ol sm:f lex-row g ap-6j ust ify-c entermb-16">
-            <Link to="/cont act" c las sNa me="g roup bg-grad ient-to-r from-c yan-500 to-p urp le-600 text-whi-t-e px-10 py-4 rounded-xl font-semibold hover:from-c yan-600 hover:to-p urp le-700 transition-all duration-300 f lex items-c enter j ust ify-c enter s pace-x-2 shadow-lg shadow-c yan-500/25 hover:shadow-c yan-500/40transformhover:scale-105" >
-          <s pan    />
-        </Link>Start Free T rial</s pan>
-              <A rro wRight c las sNa me="w-5 h-5g roup-hover:tran sla te-x-1transition-transform" />
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
+              <span />Start Free Trial</span>
+              <ArrowRight className="w-5 h-5ml-2" />
             </Link>
-            <Link to="#pricing" c las sNa me="g roup border-2 border-c yan-400 text-c ya-n-400 px-10 py-4 rounded-xl font-semibold hover:bg-c yan-400 hover:text-gr-a-y-900 transition-all duration-300 f lex items-c enter j ust ify-c enters pace-x-2backdrop-blur-sm" >
-          <s pan    />
-        </Link>View Pricing</s pan>              <A rro wRight c las sNa me="w-5 h-5g roup-hover:tran sla te-x-1transition-transform" />
+            <Link to="#pricing" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+              <span />View Pricing</span>
+              <ArrowRight className="w-5 h-5ml-2" />
             </Link>
-          </d iv>
-          {/* K ey Stats */}
-    <>
-          </><d iv c las sNa me="g r id g rid-c ols-2 md:g rid-c ols-4 g ap-8 m ax-w-4x lmx-auto">
-        </d iv>
-            <d iv c las sNa me="t e xt-c enter" />
-              <d iv c las sNa me="t e xt-3 xl font-bold text-c ya-n-400mb-2">70%</d iv>
-              <d iv c las sNa me="t e xt-gray-300text-s-m">Faster Resolution</d iv>
-            <d iv c las sNa me="t e xt-c enter" />
-              <d iv c las sNa me="t e xt-3 xl font-bold text-p urpl-e-400mb-2">98%</d iv>
-              <d iv c las sNa me="t e xt-gray-300text-s-m">Accuracy R ate</d iv>
-            <d iv c las sNa me="t e xt-c enter" />
-              <d iv c las sNa me="t e xt-3 xl font-bold text-p in-k-400mb-2">60%</d iv>
-              <d iv c las sNa me="t e xt-gray-300text-s-m">Cost Reduction</d iv>
-            <d iv c las sNa me="t e xt-c enter" />
-              <d iv c las sNa me="t e xt-3 xl font-bold text-e meral-d-400mb-2">30 K+</d iv>
-              <d iv c las sNa me="t e xt-gray-300text-s-m">A ctive U sers</d iv>          </d iv>
+          </div>
+
+          {/* Key Stats */}
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">70%</div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Faster Resolution</div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">98%</div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Accuracy Rate</div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">60%</div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Cost Reduction</div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">30 K+</div>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Active Users</div>
+          </div>
       </section>
-      {/* Bene fits S ection */}
-    <>
-      </><section c las sNa me="p y-20px-4-relative" />
-        <d iv c las sNa me="a b solute inset-0 bg-grad ient-to-br from-p urp le-500/5via-c yan-500/5to-p ink-500/5" / />
-        <d iv c las sNa me="r elative m ax-w-7x lmx-auto">
-        </d iv>
-          <d iv c las sNa me="t e xt-c entermb-16">
-        </d iv>
-            <h2 c las sNa me="t e xt-4 xl md:text-5 xl font-bold text-white-m-b-6" />
-              W hy C hoo se Our <s pan c las sNa me="b g-grad ient-to-r from-c yan-400 to-p urp le-400bg-clip-texttext-tra-n spa ren-t">AI Chatbot?</s pan>            </h2>
-            <p c las sNa me="t e xt-xl text-gr-a-y-300 m ax-w-4x lmx-auto">
-              Experience the futu re of customer support with cutting-edge AI technology that works for your business.
-    <>
+
+      {/* Benefits Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Why Choose Our <span className="w-5 h-5ml-2" />AI Chatbot?</span>
+            </h2>
+            <p className="w-5 h-5ml-2">Experience the future of customer support with cutting-edge AI technology that works for your business.
             </p>
-          </d iv>
-          <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-8">
-            {b ene fits.map((b ene fit, index) => (
-    <>
-              </><d iv key="{index}" c las sNa me="t e xt-c entergroup" />
-                <d iv c las sNa me="f lex items-c enter j ust ify-c enter w-20 h-20 bg-grad ient-to-r from-c yan-500 to-p urp le-600 rounded-2 xl mb-6 mx-auto group-hover:scale-110transition-transformduration-300">{b ene fit.i con}
-                </d iv>
+          </div>
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            {benefits.map((benefit, index) => (
+              <div key="{index}" className="text-centergroup" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{benefit.icon}
+                </div>
+                <h3 className="w-5 h-5ml-2" />{benefit.title}
+                </h3>
+                <p className="w-5 h-5ml-2">{benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Powerful <span className="w-5 h-5ml-2" />Use Cases</span>
+            </h2>
+            <p className="w-5 h-5ml-2">Deploy AI chatbots across various customer support scenarios for maximum impact and efficiency.
+            </p>
+          </div>
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             {useCases.map((useCase, index) => (
-    <>
-              </><d iv key="{index}" c las sNa me="g roup bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-c yan-500/10" />
-                <d iv c las sNa me="t e xt-c entermb-6">
-            {f eat ures.map((f eat ure, index) => (
-    <>
-              </><d iv key="{index}" c las sNa me="g roup bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-c yan-500/10" />
-                <d iv c las sNa me="f lex items-c enter j ust ify-c enter w-16 h-16 bg-grad ient-to-r from-c yan-500 to-p urp le-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{f eat ure.i con}
-                </d iv>
+              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{useCase.icon}</div>
+                  <h3 className="w-5 h-5ml-2" />{useCase.title}
+                  </h3>
+                </div>
+                <p className="w-5 h-5ml-2">{useCase.description}
+                </p>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{useCase.benefit}
+                </div>
+            ))}
+          </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Advanced Features for <span className="w-5 h-5ml-2" />Smart Support</span>
+            </h2>
+            <p className="w-5 h-5ml-2">Everything you need to provide exceptional customer support with AI-powered intelligence.
+            </p>
+          </div>
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            {features.map((feature, index) => (
+              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
+                </div>
+                <h3 className="w-5 h-5ml-2" />{feature.title}
+                </h3>
+                <p className="w-5 h-5ml-2">{feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+      </section>
+
+      {/* Integrations Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Seamless <span className="w-5 h-5ml-2" />Integrations</span>
+            </h2>
+            <p className="w-5 h-5ml-2">Connect with your existing tools and platforms for a unified customer support experience.
+            </p>
+          </div>
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            {integrations.map((integration, index) => (
+              <div key="{index}" className="group text-center" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <span className="w-5 h-5ml-2" />{integration.icon}</span>
+                </div>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{integration.name}
+                </div>
+            ))}
+          </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20px-4relative" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Simple, Transparent <span className="w-5 h-5ml-2" />Pricing</span>
+            </h2>
+            <p className="w-5 h-5ml-2">Choose the plan that fits your conversation volume and support needs. All plans include our core AI features.
+            </p>
+          </div>
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+
             {pricingPlans.map((plan, index) => (
               <d iv key="{index}" c las sNa me="{`r elative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
                 plan.popular 
@@ -281,64 +371,108 @@ export default function AICustomerSupportChatbotPage() {
                   : 'border-white/20 hover: border-c yan-400/30'
               }`} />
                 {plan.popular && (
-            {t estimonials.map((t estimonial, index) => (
-    <>
-              </><d iv key="{index}" c las sNa me="b g-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <d iv c las sNa me="f lex items-c entermb-4">
-                  <d iv c las sNa me="w-12 h-12 b g-grad ient-to-r from-c yan-500 to-p urp le-600 rounded-full f lex items-c enter j ust ify-c enter text-whitefo-n-t-boldmr-4"  />{t estimonial.avatar}
-                  </d iv>
-                  <d iv />
-                    <d iv c las sNa me="f ont-semibol dte xt-whit-e"   />{t estimonial.name}</d iv>
-                    <d iv c las sNa me="t e xt-gray-400text-s-m"   />{t estimonial.company}</d iv>
-                </d iv>
-                <d iv c las sNa me="f lexmb-4">                  {[...A rray(t estimonial.r ating)].map((_, i) => (
-                    <Star key="{i}" c las sNa me="w-5 h-5t e xt-y ellow-400f ill-curr ent" />
+
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
+                    </div>
+                )}
+                
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
+                  <p className="w-5 h-5ml-2">{plan.description}</p>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <span className="w-5 h-5ml-2" />{plan.price}</span>
+                    <span className="w-5 h-5ml-2" />{plan.period}</span>
+                  </div>
+                
+                <ul className="w-5 h-5ml-2" />
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key="{featureIndex}" className="flex items-centerspace-x-3" />
+                      <CheckCircle className="w-5 h-5ml-2" />
+                      <span className="w-5 h-5ml-2" />{feature}</span>
+                    </li>
                   ))}
-    <>
-                </d iv>
-                <p c las sNa me="t e xt-gray-300i tal ic">
-              "{t estimonial.content}"</p>              </d iv>
+                </ul>
+                
+                <Link 
+                  to="/contact"
+                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
+                      : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
+                  }`}
+                  />Get Started
+                </Link>
+              </div>
             ))}
-    <>
-          </d iv>
+          </div>
       </section>
-      {/* C TA S ection */}
-    <>
-      </><section c las sNa me="p y-20px-4-relative" />
-        <d iv c las sNa me="a b solute inset-0 bg-grad ient-to-r from-c yan-500/10via-p urp le-500/10to-p ink-500/10" / />
-        <d iv c las sNa me="r elative m ax-w-7x lmx-auto">
-        </d iv>
-          <d iv c las sNa me="t e xt-c enter" />
-            <d iv c las sNa me="b g-grad ient-to-r from-c yan-600 via-p urp le-600 to-p ink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-h idd en">
-        </d iv>
-              <d iv c las sNa me="r elativez-10">
-        </d iv>
-                <h2 c las sNa me="t e xt-4 xl sm:text-5 xl md:text-6 xl font-bold text-white-m-b-6leading-tight" />
-                  Ready to Transform Y our <s pan c las sNa me="b g-grad ient-to-r from-c yan-300 to-p ink-300bg-clip-texttext-tra-n spa ren-t">Customer Support?</s pan>
+
+      {/* Testimonials Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />
+              Trusted by <span className="w-5 h-5ml-2" />30,000+</span> Businesses
+            </h2>
+            <p className="w-5 h-5ml-2">See what our customers are saying about their success with our AI customer support chatbot.
+            </p>
+          </div>
+          
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            {testimonials.map((testimonial, index) => (
+              <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
+                  </div>
+                  <div />
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
+                </div>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key="{i}" className="w-5 h-5te xt-yellow-400fill-current"  />
+                  ))}
+                </div>
+                <p className="w-5 h-5ml-2">"{testimonial.content}"</p>
+              </div>
+            ))}
+          </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <h2 className="w-5 h-5ml-2" />
+                  Ready to Transform Your <span className="w-5 h-5ml-2" />Customer Support?</span>
                 </h2>
-                <p c las sNa me="t e xt-xl sm:text-2 xl text-whi-t-e/90 mb-8 sm:mb-12 m ax-w-4 x lmx-autolea ding-relaxed">
-                  Join thousands of businesses already r educing support costs by 60% with our AI-powered chatbot. 
-                  Start your free trial today and experience the futu re of customer support.
+                
+                <p className="w-5 h-5ml-2">Join thousands of businesses already reducing support costs by 60% with our AI-powered chatbot. 
+                  Start your free trial today and experience the future of customer support.
                 </p>
-    <>
-                </><d iv c las sNa me="f lex f lex-c ol sm:f lex-row g ap-6j ust ify-c entermb-8">
-        </d iv>
-                  <Link to="/cont act" c las sNa me="g roup bg-white text-c ya-n-600 px-10 py-4 rounded-xl font-bold text-l-g hover:bg-gray-100 transition-all duration-300 f lex items-c enter j ust ify-c enter s pace-x-2 shadow-lg hover:shadow-xltr ansformhover:scale-105" />
-                    <s pan>Start Free T rial</s pan>
-                    <A rro wRight c las sNa me="w-5 h-5g roup-hover:tran sla te-x-1transition-transform" />
+                
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+                    <span />Start Free Trial</span>
+                    <ArrowRight className="w-5 h-5ml-2" />
                   </Link>
-                  <Link to="#pricing" c las sNa me="g roup border-2 border-white text-whi-t-e px-10 py-4 rounded-xl font-bold text-l-g hover:bg-white/10 transition-all duration-300 f lex items-c enter j ust ify-c enters pace-x-2backdrop-blur-sm" />
-                    <s pan>View All Plans</s pan>                    <A rro wRight c las sNa me="w-5 h-5g roup-hover:tran sla te-x-1transition-transform" />
+                  <Link to="#pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+                    <span />View All Plans</span>
+                    <ArrowRight className="w-5 h-5ml-2" />
                   </Link>
-                </d iv>
-    <>
-                </><d iv c las sNa me="t e xt-white/80text-s-m">
-        </d iv>
-                  <p>✓ 14-day free trial * ✓ No credit card required * ✓ Cancel anytime</p>                </d iv>
-            </d iv>
-        </d iv>
+                </div>
+                
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
+                </div>
+            </div>
+        </div>
+
       </section>
     </d iv>
   );
 }
-    </>

@@ -1,5 +1,9 @@
-'use client';
+
 import { useState, useEffect} from 'react';
+'use client';
+
+
+
 interface StatItem {
   id: string;,
   value: number;,
@@ -70,35 +74,38 @@ c onst ContentStatistics: R eact.FC<ContentStatisticsProps /> = ({
     stats.forEach(c onst stat = > {
       a nim ateValue(0, stat.value, a nim ati onD uration, stat.id);
     });
-  }, [stats, a nim ati onD uration]);
-  r etu rn (
-    <d iv c onst c las sNa me = {`g rid g rid-c ols-2 lg: g rid-c ols-4 g ap-6 ${c las sNa me}`} />
-      {stats.m ap((stat) => {
-        c onst a nim ate dValue = a nim ate dValues[stat.id] || 0;
-        c onst IconCompon ent = stat.i con;
-        r etu rn (
-    <d iv
-            c onst key = {stat.id}
-            c las sNa me="t e xt-c enter p-6 bg-w hite/5 b ack drop-b lur-lg rounded-xl border border-w hite/10 hover:border-w hite/20transit ion-allduration-300" />
-    <>
-            </><d iv c las sNa me="f l exj ust ify-c entermb-4">
-        </d iv>
-              <d iv c las sNa me="w-12 h-12 b g-g rad ient-to-r from-c yan-500 to-purple-600 rounded-full flexitems-c enterj ust ify-c enter">
-        </d iv>
-                <IconCompon ent c las sNa me="w-6h-6t e xt-w hite" / />
-              </d iv>
-            <d iv c las sNa me="t e xt-3 xl f ont-b old text-w hitem-b-2">{stat.p ref ix}              {stat.s uff ix === '%'
-                ? a nim ate dValue.toFixed(1)
-                : Math.floor(a nim ate dValue).toLocaleString()
+
+  }, [stats, animationDuration]);
+
+  return (
+    <div const className = {`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} />
+      {stats.map((stat) => {
+        const animatedValue = animatedValues[stat.id] || 0;
+        const IconComponent = stat.icon;
+        return (
+    <div
+            const key = {stat.id}
+            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-allduration-300" />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <IconComponent className="w-5 h-5ml-2" />
+              </div>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.prefix}
+              {stat.suffix === '%'
+                ? animatedValue.toFixed(1)
+                : Math.floor(animatedValue).toLocaleString()
               }
-              {stat.s uff ix}
-            </d iv>
-    <>
-            </><d iv c las sNa me="t e xt-g ray-300t ext-s-m">{stat.label}
-            </d iv>
-  );      })}
-    </d iv>
+              {stat.suffix}
+            </div>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}
+            </div>
+        );
+      })}
+    </div>
   );
 };
+
 export default ContentStatistics;
-    </>
+

@@ -1,6 +1,10 @@
-'use client';
 import { useState, useEffect} from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+import { ChevronLeft, ChevronRight} from 'lucide-react';
+'use client';
+
+
+
 interface Slide {
   id: number;,
   title: string;,
@@ -63,15 +67,64 @@ const defaultSlides: Slide[] = [
     setCurrentSlide(index);
   };
   return (
-    <d iv c las sNa me="r e lat ive w-f ull m ax-w-4x lmx-auto">
+
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      {/* Main Carousel */}
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div 
+          className="flex transition-transformduration-500ease-in-out"
+          style="{{" transform: `translateX(-${currentSlide * 100}%)` }} />
+          {slides.map((slide) => (
+            <div key="{slide.id}" className="w-fullflex-shrink-0" />
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <h3 className="text-3 xlfont-bold text-white"  >{slide.title}</h3>
+                  <p className="text-lgtext-gray-300">{slide.description}</p>
+                  <ul className="w-5 h-5ml-2" />
+                    {slide.features.map((feature, index) => (
+                      <li key="{index}" className="flex items-center text-gray-300" />
+                        <CheckCircle className="w-5 h-5ml-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <Cloud className="w-5 h-5ml-2" />
+                  </div>
+              </div>
+          ))}
+        </div>
+
+        {/* Navigation Arrows */}
         <button
-          o nCl ick="{togglePlayPause}"
-          c las sNa me="b g-w hite/20 h over:bg-w hite/30 t ext-w hit-e p-2rounded-f ulltransition-colors"
-          aria-label="{isPlaying" ? 'Pause' : 'Play'} />
-          {isPlaying ? <Pause c las sNa me="w-5h-5" /> : <Play c las sNa me="w-5h-5" />}
+          onClick="{prevSlide}"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
+          aria-label="Previous slide" />
+          <ChevronLeft className="w-5 h-5ml-2" />
         </button>
-        {/* Slide I ndi cat ors */}
-        <d iv c las sNa me="f l ex s pace-x-2">          {slides.m ap((_, index) => (
+        <button
+          onClick="{nextSlide}"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
+          aria-label="Next slide" />
+          <ChevronRight className="w-5 h-5ml-2" />
+        </button>
+      </div>
+
+      {/* Controls */}
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <button
+          onClick="{togglePlayPause}"
+          className="bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
+          aria-label="{isPlaying" ? 'Pause' : 'Play'} />
+          {isPlaying ? <Pause className="w-5 h-5ml-2" /> : <Play className="w-5 h-5ml-2" />}
+        </button>
+
+        {/* Slide Indicators */}
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          {slides.map((_, index) => (
+
             <button
               key="{index}"
               o nCl ick="{()" = /> goToSlide(index)}
@@ -81,9 +134,9 @@ const defaultSlides: Slide[] = [
               aria-label="{`Go" to slide ${index + 1}`}
             />
           ))}
-    <>
-        </d iv>
-    </d iv>
+
+        </div>
+    </div>
+
   );
 }
-    </>

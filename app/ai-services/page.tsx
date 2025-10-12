@@ -1,20 +1,27 @@
-'use client';
 import React, { useState } from 'react';
-import { Helmet  } from 'react-helmet-async';
-import { Link  } from 'react-router-dom';
-import { ;
+
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import {;
+'use client';
+
   Brain, Zap, Shield, BarChart, MessageCircle, Eye, Mic, 
   FileText, Users, Heart, DollarSign, Target, Settings, 
   CheckCircle, ArrowRight, Star, TrendingUp,
   Cpu
- } from 'lucide-react';
-import { Brain, Zap, Shield, BarChart, MessageCircle, Eye, Mic, FileText, Users, Target, Settings, CheckCircle, ArrowRight, Clock, TrendingUp, Workflow  } from 'lucide-react';
+
+} from 'lucide-react';
+import { Brain, Zap, Shield, BarChart, MessageCircle, Eye, Mic, FileText, Users, Target, Settings, CheckCircle, ArrowRight, Clock, TrendingUp, Workflow } from 'lucide-react';
+
+
 const AiServicesPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
   const a iServices = [
     {
-      i con: <Brain c las sNa me="w-8h-8t ext-c yan-400" />,
-      t itle: 'AI Analytics & Business Intelligence',
+
+      icon: <Brain className="w-5 h-5ml-2" />,
+      title: 'AI Analytics & Business Intelligence',
+
       description: 'Transform your data into actionable insights with advanced AI-powered analytics.',
       price: 'Starting at $2,999/month',
       features: ['Real-time dashboards', 'Predictive analytics', 'Custom ML models', 'Data visualization'],
@@ -23,8 +30,10 @@ const AiServicesPage: React.FC = () => {
       category: 'analytics'
     },
     {
-      i con: <MessageCircle c las sNa me="w-8h-8t ext-p urp le-400" />,
-      t itle: 'AI Chatbot & Conversational AI',
+
+      icon: <MessageCircle className="w-5 h-5ml-2" />,
+      title: 'AI Chatbot & Conversational AI',
+
       description: 'Intelligent chatbots that understand context and provide human-like interactions.',
       price: 'Starting at $1,499/month',
       features: ['Natural language processing', 'Multi-language support', 'Voice integration', '24/7 availability'],
@@ -33,8 +42,10 @@ const AiServicesPage: React.FC = () => {
       category: 'conversational'
     },
     {
-      i con: <Shield c las sNa me="w-8h-8t ext-red-400" />,
-      t itle: 'AI Cybersecurity Solutions',
+
+      icon: <Shield className="w-5 h-5ml-2" />,
+      title: 'AI Cybersecurity Solutions',
+
       description: 'Advanced threat detection and prevention using machine learning algorithms.',
       price: 'Starting at $3,999/month',
       features: ['Threat detection', 'Anomaly detection', 'Automated response', 'Compliance monitoring'],
@@ -43,8 +54,10 @@ const AiServicesPage: React.FC = () => {
       category: 'security'
     },
     {
-      i con: <Eye c las sNa me="w-8h-8t ext-g reen-400" />,
-      t itle: 'Computer Vision & Image Recognition',
+
+      icon: <Eye className="w-5 h-5ml-2" />,
+      title: 'Computer Vision & Image Recognition',
+
       description: 'Advanced image analysis and recognition capabilities for various industries.',
       price: 'Starting at $2,499/month',
       features: ['Object detection', 'Facial recognition', 'Quality inspection', 'Medical imaging'],
@@ -53,9 +66,11 @@ const AiServicesPage: React.FC = () => {
       category: 'vision'
     },
     {
-      i con: <Mic c las sNa me="w-8h-8t ext-o ran ge-400" />,
-      t itle: 'AI Voice & Speech Processing',
-      description: 'Convert speech to text, analyze sentiment, and create voice a ssistants.',
+
+      icon: <Mic className="w-5 h-5ml-2" />,
+      title: 'AI Voice & Speech Processing',
+      description: 'Convert speech to text, analyze sentiment, and create voice assistants.',
+
       price: 'Starting at $1,999/month',
       features: ['Speech-to-text', 'Voice synthesis', 'Sentiment analysis', 'Multi-language support'],
       benefits: ['95% accuracy rate', 'Real-time processing', 'Custom voice models'],
@@ -63,8 +78,10 @@ const AiServicesPage: React.FC = () => {
       category: 'voice'
     },
     {
-      i con: <FileText c las sNa me="w-8h-8t ext-b lue-400" />,
-      t itle: 'AI Content Generation',
+
+      icon: <FileText className="w-5 h-5ml-2" />,
+      title: 'AI Content Generation',
+
       description: 'Automated content creation for blogs, social media, and marketing materials.',
       price: 'Starting at $999/month',
       features: ['Blog writing', 'Social media posts', 'Email campaigns', 'Product descriptions'],
@@ -73,8 +90,10 @@ const AiServicesPage: React.FC = () => {
       category: 'content'
     },
     {
-      i con: <Users c las sNa me="w-8h-8t ext-p ink-400" />,
-      t itle: 'AI Customer Service',
+
+      icon: <Users className="w-5 h-5ml-2" />,
+      title: 'AI Customer Service',
+
       description: 'Intelligent customer support with automated ticket routing and resolution.',
       price: 'Starting at $1,799/month',
       features: ['Ticket automation', 'Sentiment analysis', 'Escalation management', 'Performance analytics'],
@@ -83,9 +102,11 @@ const AiServicesPage: React.FC = () => {
       category: 'customer'
     },
     {
-      i con: <Heart c las sNa me="w-8h-8t ext-red-400" />,
-      t itle: 'AI Healthcare Solutions',
-      description: 'Medical diagnosis a ssistance, drug discovery, and patient monitoring systems.',
+
+      icon: <Heart className="w-5 h-5ml-2" />,
+      title: 'AI Healthcare Solutions',
+      description: 'Medical diagnosis assistance, drug discovery, and patient monitoring systems.',
+
       price: 'Starting at $4,999/month',
       features: ['Medical imaging analysis', 'Drug discovery', 'Patient monitoring', 'Diagnostic a ssistance'],
       benefits: ['95% diagnostic accuracy', '30% faster diagnosis', 'FDA compliant'],
@@ -93,9 +114,11 @@ const AiServicesPage: React.FC = () => {
       category: 'healthcare'
     },
     {
-      i con: <DollarSign c las sNa me="w-8h-8t ext-g reen-400" />,
-      t itle: 'AI Financial Services',
-      description: 'Fraud detection, algorithmic trading, and risk a ssessment solutions.',
+
+      icon: <DollarSign className="w-5 h-5ml-2" />,
+      title: 'AI Financial Services',
+      description: 'Fraud detection, algorithmic trading, and risk assessment solutions.',
+
       price: 'Starting at $3,499/month',
       features: ['Fraud detection', 'Algorithmic trading', 'Risk a ssessment', 'Credit scoring'],
       benefits: ['99.5% fraud detection', '25% risk reduction', 'Real-time monitoring'],
@@ -103,8 +126,10 @@ const AiServicesPage: React.FC = () => {
       category: 'finance'
     },
     {
-      i con: <Target c las sNa me="w-8h-8t ext-y ellow-400" />,
-      t itle: 'AI Marketing Automation',
+
+      icon: <Target className="w-5 h-5ml-2" />,
+      title: 'AI Marketing Automation',
+
       description: 'Personalized marketing campaigns and customer segmentation using AI.',
       price: 'Starting at $2,199/month',
       features: ['Customer segmentation', 'Personalized campaigns', 'A/B testing', 'ROI optimization'],
@@ -113,8 +138,10 @@ const AiServicesPage: React.FC = () => {
       category: 'marketing'
     },
     {
-      i con: <Settings c las sNa me="w-8h-8t ext-gray-400" />,
-      t itle: 'AI Process Automation',
+
+      icon: <Settings className="w-5 h-5ml-2" />,
+      title: 'AI Process Automation',
+
       description: 'Automate repetitive tasks and optimize business processes with AI.',
       price: 'Starting at $1,299/month',
       features: ['Workflow automation', 'Document processing', 'Data entry automation', 'Process optimization'],
@@ -123,8 +150,10 @@ const AiServicesPage: React.FC = () => {
       category: 'automation'
     },
     {
-      i con: <Cpu c las sNa me="w-8h-8t ext-indi go-400" />,
-      t itle: 'Custom AI Development',
+
+      icon: <Cpu className="w-5 h-5ml-2" />,
+      title: 'Custom AI Development',
+
       description: 'Bespoke AI solutions tailored to your specific business requirements.',
       price: 'Custom pricing',
       features: ['Custom ML models', 'API development', 'Integration services', 'Ongoing support'],
@@ -134,39 +163,37 @@ const AiServicesPage: React.FC = () => {
     }
   ];
   const categories = [
-    <>
-    { id: 'overview', n ame: 'O verview', i con: </><BarChart c las sNa me="w-5h-5" / /> },
-    { id: 'analytics', n ame: 'Analytics', i con: <TrendingUp c las sNa me="w-5h-5" / /> },
-    { id: 'conversational', n ame: 'Conversational', i con: <MessageCircle c las sNa me="w-5h-5" / /> },
-    { id: 'security', n ame: 'S ecurity', i con: <Shield c las sNa me="w-5h-5" / /> },
-    { id: 'vision', n ame: 'Computer Vision', i con: <Eye c las sNa me="w-5h-5" / /> },
-    { id: 'voice', n ame: 'Voice AI', i con: <Mic c las sNa me="w-5h-5" / /> },
-    { id: 'content', n ame: 'Content', i con: <FileText c las sNa me="w-5h-5" / /> },
-    { id: 'customer', n ame: 'Customer Service', i con: <Users c las sNa me="w-5h-5" / /> },
-    { id: 'automation', n ame: 'Automation', i con: <Workflow c las sNa me="w-5h-5" / /> }
+
+    { id: 'overview', name: 'Overview', icon: <BarChart className="w-5 h-5ml-2" /> },
+    { id: 'analytics', name: 'Analytics', icon: <TrendingUp className="w-5 h-5ml-2" /> },
+    { id: 'conversational', name: 'Conversational', icon: <MessageCircle className="w-5 h-5ml-2" /> },
+    { id: 'security', name: 'Security', icon: <Shield className="w-5 h-5ml-2" /> },
+    { id: 'vision', name: 'Computer Vision', icon: <Eye className="w-5 h-5ml-2" /> },
+    { id: 'voice', name: 'Voice AI', icon: <Mic className="w-5 h-5ml-2" /> },
+    { id: 'content', name: 'Content', icon: <FileText className="w-5 h-5ml-2" /> },
+    { id: 'customer', name: 'Customer Service', icon: <Users className="w-5 h-5ml-2" /> },
+    { id: 'automation', name: 'Automation', icon: <Workflow className="w-5 h-5ml-2" /> }
   ];
   const stats = [
-    <>
-    { number: '500+', label: 'AI M odels D epl oyed', i con: </><Brain c las sNa me="w-6h-6t ext-c yan-400" / /> },
-    { number: '99.9%', label: 'U ptime G uarant ee', i con: <Shield c las sNa me="w-6h-6t ext-g reen-400" / /> },
-    { number: '24/7', label: 'AI M onitoring', i con: <Clock c las sNa me="w-6h-6t ext-b lue-400" / /> },
-    { number: '150+', label: 'AI E xperts', i con: <Users c las sNa me="w-6h-6t ext-p urp le-400" / /> }  ];
+    { number: '500+', label: 'AI Models Deployed', icon: <Brain className="w-5 h-5ml-2" /> },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-5 h-5ml-2" /> },
+    { number: '24/7', label: 'AI Monitoring', icon: <Clock className="w-5 h-5ml-2" /> },
+    { number: '150+', label: 'AI Experts', icon: <Users className="w-5 h-5ml-2" /> }
+  ];
+
   const filteredServices = activeTab === 'overview' 
     ? a iServices 
     : a iServices.filter(service => service.category === activeTab);
   return (
     <>
-    </>
+
       <Helmet>
-        <t itle>5G Data Analytics - Zion Tech Group</t itle>
-        <meta n ame="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-        <t itle>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</t itle>
-        <meta const n ame = "description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and automation. Transform your business with cutting-edge AI technology." / / />
-        <meta n ame="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI automation, AI consulting" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
+        <title />AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
+        <meta const name = "description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and automation. Transform your business with cutting-edge AI technology." /  />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI automation, AI consulting" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-services"  />
+
         <script type="application/ld+json"  />{JSON.stringify({
-    </>
             "@context": "https: //schema.org",
             "@type": "Service",
             "n ame": "AI Services",
@@ -183,419 +210,421 @@ const AiServicesPage: React.FC = () => {
               "availability": "https: //schema.org/InStock"
             }
           })}
-    <>
         </script>
       </Helmet>
-    </>
-      {/* H ero S ection */}
-    <>
-      </><section c las sNa me="r e lative py-20 px-4-sm:px-6-lg:px-8" />
-        <d iv c las sNa me="m ax-w-7x lmx-auto">
-        </d iv>
-          <d iv c las sNa me="t ext-c enter" />
-            <h1 c las sNa me="t ext-4xl md:text-6xl f ont-b old text-w hitem-b-6" />
-              AI <s pan c las sNa me="t ext-transparent bg-clip-text bg-grad ient-to-rfrom-b lue-400to-p urp le-400">Services</s pan>
+
+
+      {/* Hero Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h1 className="w-5 h-5ml-2" />
+              AI <span className="w-5 h-5ml-2" />Services</span>
             </h1>
-            <p c las sNa me="t ext-xl text-gr-a-y-300 mb-8-m ax-w-3x lmx-auto" />
-    </>              Transform your business with cutting-edge AI solutions designed to drive growth, efficiency, and innovation.
-    <>
+            <p className="w-5 h-5ml-2">Transform your business with cutting-edge AI solutions designed to drive growth, efficiency, and innovation.
             </p>
-            <d iv c las sNa me="f l ex f lex-w rap justify-c enterg ap-4">
-        </d iv>
-              <Link to="/cont act" c las sNa me="b g-grad ient-to-r from-b lue-600 to-p urp le-600 text-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:from-b lue-700 hover:to-p urp le-700 transition-all duration-300 f lexitems-c enterg ap-2" />
-                G et Star ted <ArrowRight c las sNa me="w-5h-5" />
-              </Link>
-              <Link to="/a bout" c las sNa me="b order b order-w hite text-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:bg-w hite hover:text-gr-a-y-900transition-allduration-300" />
-      <d iv c las sNa me="m in-h-scre en bg-grad ient-to-br from-s late-900via-p urp le-900to-s late-900">
-        </d iv>
-    </>        {/* H ero S ection */}
-    <>
-        </><section c las sNa me="r e lative py-20-px-4-over flow-h idden" />
-          <d iv c las sNa me="a b solute inset-0bg-[radial-grad ient(c ircle_at_20%_80%,rgba(34,197,94,0.4)_0%,transparent_50%)]animate-p ulse" />
-          <d iv c las sNa me="a b solute inset-0bg-[radial-grad ient(c ircle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)]animate-p ulse" style="{{" animationD elay: '1 s' }} / />
-          <d iv c las sNa me="r e lative m ax-w-7 x lmx-auto text-c ente-r">
-        </d iv>
-            <d iv c las sNa me="i n line-f lex items-c enter s pace-x-2 bg-grad ient-to-r from-c yan-500/20 to-p urp le-500/20 text-c ya-n-400 px-6 py-3 rounded-full text-s-m f ont-medium mb-8-b orderb order-c yan-400/30">
-        </d iv>
-              <Brain c las sNa me="w-4h-4" / />
-              <s pan>Advanced AI Solutions</s pan>            </d iv>
-    </>
-            <h1 c las sNa me="t ext-4xl sm:text-6 xl md:text-7 xl f ont-b old text-w hit-e mb-8-leading-tight" />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <Link
+          to="/contact"
+          className="bg-gradient-to-rfrom-blue-600to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flexitems-centergap-2"
+        >
+          Get Started 
+          <ArrowRight className="w-5 h-5ml-2" />
+        </Link>
+              <Link to="/about" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        {/* Hero Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <Brain className="w-5 h-5ml-2" />
+              <span />Advanced AI Solutions</span>
+            </div>
+            
+            <h1 className="w-5 h-5ml-2" />
               Transform Your Business with{' '}
-    <>
-              </><s pan c las sNa me="b g-grad ient-to-r from-c yan-400 via-p urp le-400 to-p ink-400bg-clip-texttext-transpare-n-t">AI Technology
-              </s pan>
+              <span className="w-5 h-5ml-2" />AI Technology
+              </span>
             </h1>
-    </>
-            <p c las sNa me="t ext-lg sm:text-x-l md:text-2 xl text-gr-a-y-300 mb-12 m ax-w-4 x lmx-autoleading-relaxed">
-              Leverage cutting-edge artificial intelligence to automate processes, gain insights, 
+            
+            <p className="w-5 h-5ml-2">Leverage cutting-edge artificial intelligence to automate processes, gain insights, 
               and drive innovation across your organization.
             </p>
-            <d iv c las sNa me="f l ex f lex-c ol sm:f lex-rowg ap-6j ustify-c enter">
-              <Link to="/cont act" c las sNa me="g roup bg-grad ient-to-r from-c yan-500 to-p urp le-600 text-w hit-e px-10 py-4 rounded-xl f ont-semibold hover:from-c yan-600 hover:to-p urp le-700 transition-all duration-300 f lex items-c enter j ustify-c enter s pace-x-2 shadow-lg shadow-c yan-500/25 hover:shadow-c yan-500/40transformhover:scale-105" >
-          <s pan    />
-        </Link>G et AI Consultation</s pan>
-                <ArrowRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
+            
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
+                <span />Get AI Consultation</span>
+                <ArrowRight className="w-5 h-5ml-2" />
               </Link>
-              <Link to="/d emo" c las sNa me="g roup b order-2 b order-c yan-400 text-c ya-n-400 px-10 py-4 rounded-xl f ont-semibold hover:bg-c yan-400 hover:text-gr-a-y-900 transition-all duration-300 f lex items-c enter j ustify-c enters pace-x-2backdrop-b lur-sm" >
-          <s pan    />
-        </Link>View AI D emo</s pan>                <ArrowRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
+              <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+                <span />View AI Demo</span>
+                <ArrowRight className="w-5 h-5ml-2" />
               </Link>
-            </d iv>
-        </d iv>
+            </div>
+        </div>
       </section>
-    </>
-        <meta n ame="description" content="Transform your business with cutting-edge AI services including machine learning, natural language processing, computer vision, and automation. E xpert AI solutions for enterprises." / / />
-        <meta n ame="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI automation, business intelligence, AI consulting" / / />
-        <meta prop erty="og:t itle" content="AI Services - Zion Tech Group" / / />
-        <meta prop erty="og:description" content="Advanced AI solutions to transform your business operations and drive innovation." / / />
-        <meta prop erty="og:type" content="website" / / />
-        <meta prop erty="og:url" content="https://ziontechgroup.com/ai-services" / / />
+
+        <meta name="description" content="Transform your business with cutting-edge AI services including machine learning, natural language processing, computer vision, and automation. Expert AI solutions for enterprises." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI automation, business intelligence, AI consulting" />
+        <meta property="og:title" content="AI Services - Zion Tech Group" /  />
+        <meta property="og:description" content="Advanced AI solutions to transform your business operations and drive innovation." /  />
+        <meta property="og:type" content="website" /  />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-services" /  />
       </Helmet>
-    </>
-      <d iv c las sNa me="m in-h-scre en bg-grad ient-to-br from-s late-900via-p urp le-900to-s late-900">
-<<<<<<< HEAD        {/* H ero S ection */}
-    <>
-        </><section c las sNa me="r e lative over flow-h iddenpt-20-pb-16" />
-          <d iv c las sNa me="a b solute inset-0o pac ity-20" / />
-          <d iv c las sNa me="r e lative m ax-w-7 xl mx-auto px-4-sm:px-6-lg:px-8">
-        </d iv>
-            <d iv c las sNa me="t ext-c enter" />              <h1 c las sNa me="{`t ext-4" xl md: text-6 xl f ont-b old text-w hit-e mb-6 transition-all duration-1000 ${isVisible ? 'o pac ity-100 tran slate-y-0' : 'o pac ity-0 tran slate-y-10'}`} />
-    </>
+
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        {/* Hero Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
                 AI Services
-    <>
-                </><s pan c las sNa me="b lock bg-grad ient-to-r from-p urp le-400 to-p ink-400bg-clip-texttext-transpare-n-t">& Solutions
-                </s pan>
+                <span className="w-5 h-5ml-2" />& Solutions
+                </span>
               </h1>
-              <p c las sNa me="{`t ext-xl" text-gr-a-y-300 mb-8 m ax-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'o pac ity-100 tran slate-y-0' : 'o pac ity-0 tran slate-y-10'}`} />
-    </>
+              <p className="{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+
                 Transform your business with cutting-edge artificial intelligence solutions. From machine learning 
                 to natural language processing, we deliver AI that drives real business value.
-    <>
               </p>
-              <d iv c las sNa me="{`f l ex" f lex-c ol sm: f lex-row g ap-4 j ustify-c enter transition-all duration-1000 delay-500 ${isVisible ? 'o pac ity-100 tran slate-y-0' : 'o pac ity-0 tran slate-y-10'}`} />
-                <Link to="/cont act" c las sNa me="i n line-f lex items-c enter px-8 py-4 bg-grad ient-to-r from-p urp le-600 to-p ink-600 text-w hit-e f ont-semibold rounded-lg hover:from-p urp le-700 hover:to-p ink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
-    </>
-                  G et AI Consultation
-    <>
-                  </><ArrowRight c las sNa me="m l-2h-5w-5" />
-                </Link>
-    </>                <a
+
+              <div className="{`flex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+                <Link
+          to="/contact"
+          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
+        >
+          Get AI Consultation
+                  
+          <ArrowRight className="w-5 h-5ml-2" />
+        </Link>
+                <a
+
                   href="tel:+13024640950"
                   c las sNa me="i n line-f lex items-c enter px-8 py-4 b order-2 b order-p urp le-400 text-p urpl-e-400 f ont-semibold rounded-lg hover:bg-p urp le-400 hover:text-w hit-e transition-all duration-300transformhover:scale-105" />
                   Call +1 302 464 0950
-    <>
                 </a>
-              </d iv>
-        <section c las sNa me="p y-16px-4" />
-          <d iv c las sNa me="m ax-w-7x lmx-auto">
-        </d iv>
-            <d iv c las sNa me="g r id g rid-c ols-2md:g rid-c ols-4g ap-8">
-        </d iv>
-    </>              {stats.map((stat, index) => (
-    <>
-                </><d iv key="{index}" c las sNa me="t ext-c entergroup" />
-                  <d iv c las sNa me="i n line-f lex items-c enter j ustify-c enter w-16 h-16 bg-grad ient-to-r from-c yan-500/20 to-p urp le-500/20 rounded-full mb-4 group-hover:scale-110transition-transformduration-300">
-        </d iv>
-                    <stat.i con c las sNa me="w-8h-8t ext-c yan-400" / />
-                  </d iv>
-                  <d iv c las sNa me="t ext-3 xl f ont-b old text-w hitem-b-2">{stat.number}</d iv>
-                  <d iv c las sNa me="t ext-gray-400text-s-m">{stat.label}</d iv>
-    </>              ))}
-    <>
-            </d iv>
-        </d iv>
+
+              </div>
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {stats.map((stat, index) => (
+                <div key="{index}" className="text-centergroup" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <stat.icon className="w-8h-8text-cyan-400"  />
+                  </div>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}</div>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}</div>
+              ))}
+            </div>
+        </div>
       </section>
-    </>
+
               </p>
-            </d iv>
-    </>
-            <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-3g ap-8">
-<<<<<<< HEAD              {services.map((service, index) => (
-                <d iv 
+            </div>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {services.map((service, index) => (
+                <div 
                   key="{index}"
-                  c las sNa me="b g-grad ient-to-br from-s late-800/50 to-s late-900/50 backdrop-b lur-sm b order b order-gray-700/50 rounded-xl p-8 hover:b order-c yan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
-    <>
-                  </><d iv c las sNa me="{`w-16" h-16 bg-grad ient-to-r ${service.c olor} rounded-xl f lex items-c enter j ustify-c enter mb-6 group-hover: scale-110 transition-transform duration-300`} />
-                    <service.i con c las sNa me="w-8h-8t ext-w hite" />
-                  </d iv>
-    </>
-    <>
-                  </><h3 c las sNa me="t ext-2 xl f ont-b old text-w hit-e mb-4-group-hover:text-c ya-n-400transition-c olors">{service.t itle}                  </h3>
-    </>
-                  <p c las sNa me="t ext-gray-300mb-6-leading-relaxed">
-                    {service.description}                  </p>
-                  <ul c las sNa me="s p ace-y-2mb-6" />
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
+                  <div className="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`} />
+                    <service.icon className="w-8h-8text-white"  />
+                  </div>
+                  
+                  <h3 className="w-5 h-5ml-2" />{service.title}
+                  </h3>
+                  
+                  <p className="w-5 h-5ml-2">{service.description}
+                  </p>
+
+                  <ul className="w-5 h-5ml-2" />
                     {service.features.map((feature, featureIndex) => (
-    <>
-                      </><li key="{featureIndex}" c las sNa me="f l ex items-c entertext-s mtex-t-gray-300" />
-                        <CheckCircle c las sNa me="w-4 h-4 t ext-g reen-400mr-2-f lex-s hrink-0" / />
-    </>                        {feature}
+                      <li key="{featureIndex}" className="flex items-centertext-sm text-gray-300" />
+                        <CheckCircle className="w-5 h-5ml-2" />
+                        {feature}
                       </li>
                     ))}
                   </ul>
-    <>
-                  </><d iv c las sNa me="f l ex items-c enterj ustify-b etw een mb-6">
-        </d iv>
-                    <s pan c las sNa me="t ext-2 x lfont-b old text-c ya-n-400">{service.price}</s pan>
-                    <Link to="{service.link}" c las sNa me="t ext-c yan-400 hover:text-c ya-n-300 transition-c olors text-s-m f ont-medium group-hover:tran slate-x-1inline-f lexitems-c enter" />
-                      L earn M ore <ArrowRight c las sNa me="w-4h-4m l-1" />
-    </>        {/* Stats S ection */}
-    <>
-        </><section c las sNa me="p y-16bg-gray-900/50" />
-          <d iv c las sNa me="m ax-w-7 xl mx-auto px-4-sm:px-6-lg:px-8">
-        </d iv>
-            <d iv c las sNa me="g r id g rid-c ols-2md:g rid-c ols-4g ap-8">
-        </d iv>
-    </>              {stats.map((stat, index) => (
-    <>
-                </><d iv key="{index}" c las sNa me="t ext-c enter" />
-                  <d iv c las sNa me="i n line-f lex items-c enter j ustify-c enter w-16 h-16 bg-grad ient-to-r from-p urp le-500 to-p ink-500rounded-fullmb-4">
-        </d iv>
-                    <stat.i con c las sNa me="h-8w-8t ext-w hite" / />
-                  </d iv>
-                  <d iv c las sNa me="t ext-3 xl f ont-b old text-w hitem-b-2">{stat.number}</d iv>
-                  <d iv c las sNa me="t ext-gray-400">{stat.label}</d iv>
-    </>              ))}
-    <>
-            </d iv>
+
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <span className="w-5 h-5ml-2" />{service.price}</span>
+                    <Link
+          to="{service.link}"
+          className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1inline-flex items-center"
+        >
+          Learn More 
+          <ArrowRight className="w-5 h-5ml-2" />
+        </Link>
+        {/* Stats Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {stats.map((stat, index) => (
+                <div key="{index}" className="text-center" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <stat.icon className="h-8w-8text-white"  />
+                  </div>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}</div>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}</div>
+              ))}
+            </div>
         </section>
-    </>
+
         {/* Category Filter */}
-    <>
-        </><section c las sNa me="p y-8bg-gray-900/30" />
-          <d iv c las sNa me="m ax-w-7 xl mx-auto px-4-sm:px-6-lg:px-8">
-        </d iv>
-            <d iv c las sNa me="f l ex f lex-w rap justify-c enterg ap-4">
-        </d iv>
-    </>              {categories.map((category) => (
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {categories.map((category) => (
                 <button
                   key="{category}"
-                  onClick="{()" =>setSelecte dCategory(category)}
-                  c las sNa me="{`p x-6" py-3 rounded-lg f ont-semibold transition-all duration-300 ${
-                    selecte dCategory === category
-                      ? 'bg-grad ient-to-r from-p urp le-600 to-p ink-600 text-w hit-e shadow-lg'
-                      : 'bg-gray-800 text-gr-a-y-300 hover: bg-gray-700 hover:text-w hit-e'
+                  onClick="{()" =  />setSelectedCategory(category)}
+                  className="{`px-6" py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    selectedCategory === category
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                      : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'
+
                   }`}
                 >
                   {category}
                 </button>
               ))}
-    <>
-            </d iv>
+
+            </div>
         </section>
-    </>
-        {/* Services G rid */}
-    <>
-        </><section c las sNa me="p y-16" />
-          <d iv c las sNa me="m ax-w-7 xl mx-auto px-4-sm:px-6-lg:px-8">
-        </d iv>
-            <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2 lg:g rid-c ols-3xl:g rid-c ols-4g ap-8">
-        </d iv>
-    </>              {filteredServices.map((service, index) => (
-                <d iv
+
+        {/* Services Grid */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {filteredServices.map((service, index) => (
+                <div
+
                   key="{service.id}"
                   c las sNa me="{`g roup" relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 b order b order-gray-700 hover:b order-p urp le-500 ${
                     service.popular ? 'ring-2 ring-p urp le-500' : ''
                   }`} />
                   {service.popular && (
-    <>
-                    </><d iv c las sNa me="a b solute -t op-3 l eft-1/2transform-tran slate-x-1/2">
-        </d iv>
-                      <s pan c las sNa me="b g-grad ient-to-r from-p urp le-600 to-p ink-600 text-w hit-e px-4 py-1 rounded-fulltext-smfo-n-t-semibold">Most Popular                      </s pan>
-                    </d iv>
-    </>
+
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <span className="w-5 h-5ml-2" />Most Popular
+                      </span>
+                    </div>
                   )}
-    <>
-                  </><d iv c las sNa me="t ext-c entermb-6">
-        </d iv>                    <d iv c las sNa me="{`i n line-f lex" items-c enter j ustify-c enter w-16 h-16 bg-grad ient-to-r ${service.c olor} rounded-xl mb-4`} />
-                      <service.i con c las sNa me="h-8w-8t ext-w hite" />
-                    </d iv>
-                    <h3 c las sNa me="t ext-xl f ont-b old text-w hitem-b-2">{service.t itle}</h3>
-                    <p c las sNa me="t ext-gray-300text-s mm-b-4">{service.description}</p>
-                    <d iv c las sNa me="f l ex items-c enter j ustify-c enters pace-x-2mb-4">
-        </d iv>
-                      <d iv c las sNa me="f l exitems-c enter" />
-    </>                        {[...Array(5)].map((_, i) => (
+                  
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="{`inline- flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl mb-4`} />
+                      <service.icon className="h-8w-8text-white"  />
+                    </div>
+                    <h3 className="w-5 h-5ml-2" />{service.title}</h3>
+                    <p className="w-5 h-5ml-2">{service.description}</p>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                        {[...Array(5)].map((_, i) => (
+
                           <Star
                             key="{i}"
                             c las sNa me="{`h-4" w-4 ${
                               i < Math.floor(service.rating) ? 'text-y ello-w-400 fill-current' : 'text-gr-a-y-600'
                             }`}
-                          / />
+                           />
                         ))}
-    <>
-                      </d iv>
-                      <s pan c las sNa me="t ext-s mtext-gr-a-y-400">({service.reviews} reviews)</s pan>
-                    </d iv>
-    </>
-    <>
-                  </><d iv c las sNa me="t ext-c entermb-6">
-        </d iv>
-                    <d iv c las sNa me="t ext-2 xl f ont-b old text-p urpl-e-400mb-2">{service.price}</d iv>
-                    <s pan c las sNa me="t ext-s mtext-gr-a-y-400">M ont hly s ubscription</s pan>                  </d iv>
-    </>
-                  <d iv c las sNa me="s p ace-y-3mb-6">
+
+                      </div>
+                      <span className="w-5 h-5ml-2" />({service.reviews} reviews)</span>
+                    </div>
+
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{service.price}</div>
+                    <span className="w-5 h-5ml-2" />Monthly subscription</span>
+                  </div>
+
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                     {service.features.slice(0, 4).map((feature, idx) => (
-    <>
-                      </><d iv key="{idx}" c las sNa me="f l ex items-c entertext-s mtex-t-gray-300" />
+                      <div key="{idx}" className="flex items-centertext-sm text-gray-300" />
+                        <CheckCircle className="w-5 h-5ml-2" />
+                        <span />{feature}</span>
+                      </div>
+                    ))}
+                    {service.features.length > 4 && (
+                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">+{service.features.length - 4} more features
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <Link
+          to="{`/${service.id}`}"
+          className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105"
+        >
+          View Details
+                      
+          <ArrowRight className="w-5 h-5ml-2" />
+        </Link>
+                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300">Get Quote
+                    </Link>
+                  </div>
+              ))}
+            </div>
+        </section>
+
+        {/* AI Process Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Our <span className="w-5 h-5ml-2" />AI Process</span>
+              </h2>
+              <p className="w-5 h-5ml-2">A proven methodology for successful AI implementation
+              </p>
+            </div>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+
               {[
                 {
                   step: '01',
                   t itle: 'Discovery & Analysis',
                   description: 'We analyze your business processes and identify AI opportunities.',
-                  i con: <Target c las sNa me="w-8h-8t ext-c yan-400" />
+
+                  icon: <Target className="w-5 h-5ml-2" />
+
                 },
                 {
                   step: '02',
                   t itle: 'AI Strategy & Planning',
                   description: 'Develop a comprehensive AI roadmap tailored to your goals.',
-                  i con: <Settings c las sNa me="w-8h-8t ext-p urp le-400" />
+
+                  icon: <Settings className="w-5 h-5ml-2" />
                 },
                 {
                   step: '03',
-                  t itle: 'M odel Development',
-                  description: 'Build and train custom AI models for your specific use c ases.',
-                  i con: <Brain c las sNa me="w-8h-8t ext-g reen-400" />
+                  title: 'Model Development',
+                  description: 'Build and train custom AI models for your specific use cases.',
+                  icon: <Brain className="w-5 h-5ml-2" />
                 },
                 {
                   step: '04',
-                  t itle: 'D epl oyment & Optimization',
-                  description: 'D epl oy AI solutions and continuously optimize p erformance.',
-                  i con: <Zap c las sNa me="w-8h-8t ext-y ellow-400" />
+                  title: 'Deployment & Optimization',
+                  description: 'Deploy AI solutions and continuously optimize performance.',
+                  icon: <Zap className="w-5 h-5ml-2" />
                 }
               ].map((step, index) => (
-    <>
-                </><d iv key={index} c las sNa me="t ext-c entergroup" />
-                  <d iv c las sNa me="w-20 h-20 b g-grad ient-to-r from-c yan-500/20 to-p urp le-500/20 rounded-full f lex items-c enter j ustify-c enter mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
-<<<<<<< HEAD                    {step.i con}
-    <>
-                  </d iv>
-                  <d iv c las sNa me="t ext-c yan-400 f ont-b old text-l gm-b-2">{step.step}</d iv>
-                  <h3 c las sNa me="t ext-xl f ont-b old text-w hit-e mb-4" />{step.t itle}</h3>
-                  <p c las sNa me="t ext-gray-300leading-relaxed">
-              {step.description}</p>                </d iv>
-    </>
+                <div key={index} className="text-centergroup" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    {step.icon}
+                  </div>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{step.step}</div>
+                  <h3 className="w-5 h-5ml-2" />{step.title}</h3>
+                  <p className="w-5 h-5ml-2">{step.description}</p>
+                </div>
               ))}
-    <>
-            </d iv>
+            </div>
         </section>
-    </>
-        {/* C TA S ection */}
-    <>
-        </><section c las sNa me="p y-20px-4" />
-          <d iv c las sNa me="m ax-w-7x lmx-auto">
-        </d iv>
-            <d iv c las sNa me="b g-grad ient-to-r from-c yan-900/50 to-p urp le-900/50 backdrop-b lur-sm b order b order-c yan-500/20 rounded-2xl p-12 text-c enterrelativeoverflo-w-h idden">
-        </d iv>
-              <d iv c las sNa me="a b solute inset-0 bg-grad ient-to-rfrom-c yan-500/5to-p urp le-500/5" / />
-              <d iv c las sNa me="r e lativez-10">
-        </d iv>
-                <h2 c las sNa me="t ext-4xl f ont-b old text-w hitem-b-6" />
-    </>                  Ready to Harness the Power of AI?
-    <>
+
+        {/* CTA Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <h2 className="w-5 h-5ml-2" />
+                  Ready to Harness the Power of AI?
                 </h2>
-                <p c las sNa me="t ext-xl text-gr-a-y-300 mb-8-m ax-w-2x lmx-auto" />
-    </>
-                  Let's discuss how our AI solutions can transform your business and give you a competitive edge.
-    <>
+                <p className="w-5 h-5ml-2">Let's discuss how our AI solutions can transform your business and give you a competitive edge.
                 </p>
-                <d iv c las sNa me="f l ex f lex-c ol sm:f lex-rowg ap-4j ustify-c enter">
-        </d iv>                  <Link to="/cont act" c las sNa me="b g-grad ient-to-r from-c yan-500 to-p urp le-500 text-w hit-e px-8 py-4 rounded-lg f ont-semibold text-l-g hover:from-c yan-600 hover:to-p urp le-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-c yan-500/25" />
-    </>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
+
                     Start Your AI Journey
-    <>
                   </Link>
-                  <Link to="/pricing" c las sNa me="b order b order-c yan-500 text-c ya-n-400 px-8 py-4 rounded-lg f ont-semibold text-l-g hover:bg-c yan-500/10 transition-all duration-300transformhover:scale-105" />
-    </>
+
+                  <Link to="/pricing" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
+
                     View AI Pricing
-    <>
                   </Link>
                 </d iv>
             </d iv>
         </section>
-    </>
-        {/* C TA S ection */}
-    <>
-        </><section c las sNa me="p y-20" />
-          <d iv c las sNa me="c ontaine rmx-auto px-4">
-        </d iv>
-            <d iv c las sNa me="b g-grad ient-to-r from-c yan-900/50 to-p urp le-900/50 backdrop-b lur-sm b order b order-c yan-500/20 rounded-2 xlp-12text-c ente-r">
-        </d iv>
-              <h2 c las sNa me="t ext-4 xl f ont-b old text-w hitem-b-6">Ready to Transform Your Business with AI?
+
+
+        {/* CTA Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Ready to Transform Your Business with AI?
               </h2>
-              <p c las sNa me="t ext-xl text-gr-a-y-300 mb-8 m ax-w-2x lmx-auto" />
-    </>
-                Let's discuss how our AI solutions can automate your processes, enhance customer experiences, and drive growth.
-    <>
+              <p className="w-5 h-5ml-2">Let's discuss how our AI solutions can automate your processes, enhance customer experiences, and drive growth.
               </p>
-              <d iv c las sNa me="f l ex f lex-c ol sm:f lex-rowg ap-4j ustify-c enter">
-        </d iv>
-                <Link to="/cont act" c las sNa me="b g-grad ient-to-r from-c yan-500 to-p urp le-500 text-w hit-e px-8 py-4 rounded-lg f ont-semibold text-l-g hover:from-c yan-600 hover:to-p urp le-600 transition-all duration-300transformhover:scale-105" />
-                  L earn M ore <ArrowRight c las sNa me="w-4h-4" />
-    </>                  />Start Your AI Journey
-    <>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105"
+        >
+          Learn More 
+          <ArrowRight className="w-5 h-5ml-2" />
+        </Link>
+                  />Start Your AI Journey
                 </Link>
-        <section c las sNa me="p y-20 bg-grad ient-to-b rfrom-s late-900to-gray-900" />
-          <d iv c las sNa me="m ax-w-7 xl mx-auto px-4 sm:px-6-lg:px-8-text-c ente-r">
-        </d iv>
-            <h2 c las sNa me="t ext-3 xl md:text-4 xl f ont-b old text-w hitem-b-4">Ready to Transform Your Business with AI?
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />Ready to Transform Your Business with AI?
             </h2>
-            <p c las sNa me="t ext-xl text-gr-a-y-300 mb-8 m ax-w-3x lmx-auto" />
-    </>              Let our AI experts help you identify opportunities, design solutions, and implement AI that drives real business value.
-    <>
+            <p className="w-5 h-5ml-2">Let our AI experts help you identify opportunities, design solutions, and implement AI that drives real business value.
             </p>
-            <d iv c las sNa me="f l ex f lex-c ol sm:f lex-rowg ap-4j ustify-c enter">
-        </d iv>
-              <Link to="/cont act" c las sNa me="i n line-f lex items-c enter px-8 py-4 bg-grad ient-to-r from-p urp le-600 to-p ink-600 text-w hit-e f ont-semibold rounded-lg hover:from-p urp le-700 hover:to-p ink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
-    </>
-                Start Your AI Journey
-    <>
-                </><ArrowRight c las sNa me="m l-2h-5w-5" />
-              </Link>
-    </>              <a
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <Link
+          to="/contact"
+          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
+        >
+          Start Your AI Journey
+                
+          <ArrowRight className="w-5 h-5ml-2" />
+        </Link>
+              <a
+
                 href="tel:+13024640950"
                 c las sNa me="i n line-f lex items-c enter px-8 py-4 b order-2 b order-p urp le-400 text-p urpl-e-400 f ont-semibold rounded-lg hover:bg-p urp le-400 hover:text-w hit-e transition-all duration-300transformhover:scale-105" />
                 Call +1 302 464 0950
-    <>
               </a>
-            </d iv>
-            <d iv c las sNa me="m t-8text-gr-a-y-400">
-        </d iv>
-              <p>Email: kleber@ziontechgroup.com</p>
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>            </d iv>
-        </d iv>
+
+            </div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <p />Email: kleber@ziontechgroup.com</p>
+              <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+            </div>
+        </div>
       </section>
-    </>
-      {/* C TA S ection */}
-    <>
-      </><section c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" />
-        <d iv c las sNa me="m ax-w-4x lmx-auto text-c ente-r">
-        </d iv>
-          <h2 c las sNa me="t ext-3xl f ont-b old text-w hitem-b-6" />
-    </>            Ready to Harness the Power of AI?
-    <>
+
+      {/* CTA Section */}
+      <section className="w-5 h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <h2 className="w-5 h-5ml-2" />
+            Ready to Harness the Power of AI?
           </h2>
-          <p c las sNa me="t ext-gray-300text-l gm-b-8" />
-    </>
-            Let our AI experts help you choose the p erfect solution for your business needs.
-    <>
+          <p className="w-5 h-5ml-2">Let our AI experts help you choose the perfect solution for your business needs.
           </p>
-          <d iv c las sNa me="f l ex f lex-c ol sm:f lex-rowg ap-4j ustify-c enter">
-        </d iv>
-            <Link to="/cont act" c las sNa me="b g-grad ient-to-r from-b lue-600 to-p urp le-600 text-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:from-b lue-700 hover:to-p urp le-700 transition-all duration-300 f lex items-c enterj ustify-c enterg ap-2" />
-              Start Your AI Journey <ArrowRight c las sNa me="w-5h-5" />
-            </Link>            <Link to="/a bout" c las sNa me="b order b order-w hite text-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:bg-w hite hover:text-gr-a-y-900transition-allduration-300" />
-    </>
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <Link
+          to="/contact"
+          className="bg-gradient-to-rfrom-blue-600to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-centergap-2"
+        >
+          Start Your AI Journey 
+          <ArrowRight className="w-5 h-5ml-2" />
+        </Link>
+            <Link to="/about" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
+
               Meet Our Team
-    <>
             </Link>
           </d iv>
       </section>
-    </d iv>
-    </>
+
+    </div>
   );
 };
+
 export default AiServicesPage;
-    </>
-    </>
+

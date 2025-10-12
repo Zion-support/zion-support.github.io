@@ -1,6 +1,9 @@
-'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
+'use client';
+
+
 interface FuturisticLoaderProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'cyan' | 'purple' | 'pink' | 'green';
@@ -27,20 +30,23 @@ export default function FuturisticLoader({
     }
   };
   return (
-    <>
-    </><d iv c las sName="f l ex f lex-col i tems-c enterj ust ify-c enters pace-y-4">
-        </d iv>
-      <d iv c las sName="r e lat ive" />        {/* O uter r ota ting ring */}
-        <motion.d iv
-          c las sName="{`"
+
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        {/* Outer rotating ring */}
+        <motion.div
+          className="{`"
+
             ${getSizeClasses()} 
             border-4 border-transparent 
             border-t-4 ${getColorClasses().split(' ')[1]}
             rounded-full
           `}
-          animate="{{" r otate: 360 }}
-          transition="{{" dura tion: 1, repeat: Infinity, ease: 'linear' }}
-        / />
+
+          animate="{{" rotate: 360 }}
+          transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
+         />
+
         {/* Inner pulsing ring */}
         <motion.d iv
           c las sName="{`"
@@ -49,13 +55,15 @@ export default function FuturisticLoader({
             border-r-2 ${getColorClasses().split(' ')[1]}
             rounded-full
           `}
-          animate="{{" r otate: -360 }}
-          transition="{{" dura tion: 1.5, repeat: Infinity, ease: 'linear' }}
-        / />
-        {/* Center pulsing d ot */}
-        <motion.d iv
-          c las sName="{`"
-            a bso lute t op-1/2 l eft-1/2 w-2 h-2 
+
+          animate="{{" rotate: -360 }}
+          transition="{{" duration: 1.5, repeat: Infinity, ease: 'linear' }}
+         />
+        {/* Center pulsing dot */}
+        <motion.div
+          className="{`"
+            absolute top-1/2 left-1/2 w-2 h-2 
+
             ${getColorClasses().split(' ')[1]} 
             rounded-full
             transform -translate-x-1/2 -translate-y-1/2
@@ -69,11 +77,13 @@ export default function FuturisticLoader({
             repeat: Infinity, 
             ease: 'easeInO ut' 
           }}
-        / />
-        {/* Glow e ffe ct */}
-        <motion.d iv
-          c las sName="{`"
-            a bso lute i nset-0 
+
+         />
+        {/* Glow effect */}
+        <motion.div
+          className="{`"
+            absolute inset-0 
+
             ${getColorClasses().split(' ')[1]} 
             rounded-full
             blur-md
@@ -88,8 +98,11 @@ export default function FuturisticLoader({
             repeat: Infinity, 
             ease: 'easeInO ut' 
           }}
-        / />
-      </d iv>
+
+         />
+      </div>
+      
+
       {text && (
         <motion.p
           c las sName="{`t ext-sm" ${getColorClasses().split(' ')[1]} font-medium`}
@@ -105,4 +118,3 @@ export default function FuturisticLoader({
     </d iv>
   );
 }
-    </>

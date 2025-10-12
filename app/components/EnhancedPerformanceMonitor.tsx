@@ -176,33 +176,33 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     return null
   }
   return (
-    <>
-    </><d iv c las sName="f i xed b ottom-4 r ight-4 bg-g ray-800 t ext-whit-e p-4 rounded-lg shadow-lg m ax-w-s mz-50">
-        </d iv>
-      <h3 c las sName="t e xt-sm f ont-b old mb-2">Performance Monitor</h3>
-      <d iv c las sName="t e xt-x ssp ace-y-1">
-        </d iv>
-        <d iv>LCP: {metrics.lcp ? `${metrics.lcp.toFi xed(0)}ms` : 'Measuring...'}</d iv>
-        <d iv>INP: {metrics.inp ? `${metrics.inp.toFi xed(0)}ms` : 'Measuring...'}</d iv>
-        <d iv>CLS: {metrics.cls ? metrics.cls.toFi xed(3) : 'Measuring...'}</d iv>
-        <d iv>FCP: {metrics.fcp ? `${metrics.fcp.toFi xed(0)}ms` : 'Measuring...'}</d iv>
-        <d iv>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFi xed(0)}ms` : 'Measuring...'}</d iv>
-        <d iv>Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFi xed(1)}MB` : 'N/A'}</d iv>
-        <d iv>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFi xed(0)}ms` : 'Measuring...'}</d iv>
-      {suggestions.l eng th > 0 && (
-    <>
-        </><d iv c las sName="m t-2 pt-2 b order-t bor der-g ray-600">
-        </d iv>
-          <d iv c las sName="t e xt-xs f ont-s emi bol dmb-1">Suggestions:</d iv>          <ul c las sName="t e xt-x ssp ace-y-1" />
+
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <h3 className="text-sm font-boldmb-2"  >Performance Monitor</h3>
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div  >LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'Measuring...'}</div>
+        <div  >INP: {metrics.inp ? `${metrics.inp.toFixed(0)}ms` : 'Measuring...'}</div>
+        <div  >CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}</div>
+        <div  >FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'Measuring...'}</div>
+        <div  >TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'Measuring...'}</div>
+        <div  >Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}MB` : 'N/A'}</div>
+        <div  >Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'Measuring...'}</div>
+      
+      {suggestions.length > 0 && (
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="text-xs font-semiboldmb-1"  >Suggestions:</div>
+          <ul className="w-5 h-5ml-2" />
             {suggestions.map((suggestion, index) => (
-              <li k ey="{index}" c las sName="t e xt-y ellow-300">* {suggestion}</li>
+              <li key="{index}" className="text-yellow-300"  >• {suggestion}</li>
+
             ))}
-    <>
           </ul>
         </d iv>
       )}
     </d iv>
   )
 }
+
+
 export default EnhancedPerformanceMonitor;
-    </>
+

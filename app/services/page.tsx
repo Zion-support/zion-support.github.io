@@ -1,5 +1,9 @@
-import React from 'react';import { Link  } from 'react-router-dom';
-import { ArrowRight  } from 'lucide-react';
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+
 const ServicesPage: React.FC = () => {
   const mainServices = [
     {
@@ -89,94 +93,157 @@ const ServicesPage: React.FC = () => {
   ];
   return (
     <>
-    </>
+
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
-      </Helmet>        <title>Our Services - Zion Tech Group</title>
-        <meta const name = "description" content="Explore our comprehensive range of AI and IT services. From AI solutions to cloud computing, cybersecurity, and custom development - we have you covered." / / />
-        <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, custom development, data analytics, mobile development" / / />
+        <title>Our Services - Zion Tech Group</title>
+        <meta const name = "description" content="Explore our comprehensive range of AI and IT services. From AI solutions to cloud computing, cybersecurity, and custom development - we have you covered." /  />
+        <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, custom development, data analytics, mobile development" />
       </Helmet>
-    </>
-      <d iv c las sName="m in-h-screen bg-grad ient-to-br from-s late-900 via-purple-900to-s late-900pt-16">
-        {/* H ero Section */}
-    <>
-        </><section c las sName="p y-20" />
-          <d iv c las sName="c ontaine rmx-a uto px-4">
+      
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        {/* Hero Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h1 className="w-5 h-5ml-2" />
+                Our <span className="bg-gradient-to-rfrom-cyan-400to-purple-400bg-clip-texttext-transparent"  >Services</span>
+              </h1>
+              <p className="w-5 h-5ml-2">Comprehensive AI and IT solutions designed to transform your business and drive growth. 
+                We offer end-to-end services from strategy to implementation and support.
+              </p>
+            </div>
+        </section>
+
+        {/* Main Services Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="text-4 xl font-boldtext-white mb-6"  >Core Services</h2>
+              <p className="w-5 h-5ml-2">Our flagship services that have helped hundreds of businesses transform and grow
+              </p>
+            </div>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+
               {mainServices.map((service, index) => (
                 <d iv 
                   key="{index}"
-                  c las sName="b g-grad ient-to-br from-s late-800/50 to-s late-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
-    <>
-                  </><d iv c las sName="{`w-16" h-16 bg-grad ient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`} />
-                    <service.icon c las sName="w-8h-8t e xt-w hite" />
-                  </d iv>
-    </>
+
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
+                  <div className="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`} />
+                    <service.icon className="w-8h-8text-white"  />
+                  </div>
+                  
+                  <h3 className="w-5 h-5ml-2" />{service.title}
+                  </h3>
+                  
+                  <p className="w-5 h-5ml-2">{service.description}
+                  </p>
+                  
+                  <ul className="w-5 h-5ml-2" />
+                    {service.features.map((feature, featureIndex) => (
+                      <li key="{featureIndex}" className="flex items-center text-gray-300" />
+                        <CheckCircle className="w-5 h-5ml-2" />
+                        <span className="text-sm"  >{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Link
+          to="{service.href}"
+          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colorsfont-semiboldgroup-hover:translate-x-1"
+        >
+          Learn More
+                    
+          <ArrowRight className="w-5 h-5ml-2" />
+        </Link>
+                </div>
+              ))}
+            </div>
+        </section>
+
+        {/* Additional Services Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="text-4 xl font-boldtext-white mb-6"  >Additional Services</h2>
+              <p className="w-5 h-5ml-2">Specialized services to complement your core technology needs
+              </p>
+            </div>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+
               {additionalServices.map((service, index) => (
                 <Link
                   key="{index}"
                   to="{service.href}"
-                  c las sName="b g-grad ient-to-br from-s late-800/50 to-s late-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transformhover:scale-105text-cent-e-r" />
+
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transformhover:scale-105 text-center" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <service.icon className="w-6h-6text-cyan-400"  />
+                  </div>
+                  <h3 className="w-5 h-5ml-2" />{service.title}
+                  </h3>
+                  <p className="w-5 h-5ml-2">{service.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="text-4 xl font-boldtext-white mb-6"  >Our Process</h2>
+              <p className="w-5 h-5ml-2">How we work with you to deliver exceptional results
+              </p>
+            </div>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+
               {processSteps.map((step, index) => (
                 <d iv 
                   key="{index}"
-                  c las sName="t e xt-centergroup" />
-                  <d iv c las sName="r e lative mb-6">
-                    <d iv c las sName="w-20 h-20 b g-grad ient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-a uto mb-4 group-hover:scale-110 transition-transform duration-300borderborder-cyan-500/30">
-                      <step.icon c las sName="w-8h-8t e xt-cyan-400" />                    </d iv>
-                    <d iv c las sName="a b solute -t op-2 -r ight-2 w-8 h-8 bg-grad ient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-w hitefon-t-boldtext-s-m">{step.step}
-                    </d iv>
-                  <h3 c las sName="t e xt-xl font-bold text-w hit-e mb-3-group-hover:text-cy-a-n-400transition-colors">{step.title}
+
+                  className="text-centergroup" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <step.icon className="w-8h-8text-cyan-400"  />
+                    </div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{step.step}
+                    </div>
+                  <h3 className="w-5 h-5ml-2" />{step.title}
                   </h3>
-                  <p c las sName="t e xt-gray-300lead ing-r ela xed" />
-    </>
-                    {step.description}
-    <>                  </p>
-                </d iv>
-    </>
+                  <p className="w-5 h-5ml-2">{step.description}
+                  </p>
+                </div>
               ))}
-    <>
-            </d iv>
+            </div>
         </section>
-    </>
-        {/* C TA Section */}
-    <>
-        </><section c las sName="p y-20" />
-          <d iv c las sName="c ontaine rmx-a uto px-4">
-        </d iv>
-            <d iv c las sName="b g-grad ient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-cent-e-r">
-        </d iv>
-              <h2 c las sName="t e xt-4 xl font-boldtext-w hitem-b-6">Ready to Get Started?
+
+        {/* CTA Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Ready to Get Started?
               </h2>
-              <p c las sName="t e xt-xl text-gr-a-y-300 mb-8 m ax-w-2x lmx-a uto" />
-    </>
-                Let's discuss your project and how our services can help you achieve your business goals.
-    <>
+              <p className="w-5 h-5ml-2">Let's discuss your project and how our services can help you achieve your business goals.
               </p>
-              <d iv c las sName="f lex flex-col sm:flex-rowg ap-4justify-center">
-        </d iv>                <Link to="/cont act" c las sName="b g-grad ient-to-r from-cyan-500 to-purple-500 text-w hit-e px-8 py-4 rounded-lg font-semibold text-l-g hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Get a Free Consultation
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Get a Free Consultation
+
                 </Link>
                 <Link to="/a bout" c las sName="b order border-cyan-500 text-cy-a-n-400 px-8 py-4 rounded-lg font-semibold text-l-g hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
                 </Link>
               </d iv>
           </d iv>
         </section>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-          </d iv>
-        </d iv>
-      </d iv>
-        </d iv>
-      </d iv>
-      </d iv>
+
+      </div>
     </>
   );
 };
+
 export default ServicesPage;
-    </>
+

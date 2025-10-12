@@ -1,7 +1,10 @@
-'use client';
+
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
+import { Link, useLocation} from 'react-router-dom';
+import { ChevronRight, Home} from 'lucide-react';
+'use client';
+
+
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
@@ -9,16 +12,15 @@ const Breadcrumb: React.FC = () => {
     return null;
   }
   return (
-    <>
-    </><n av const c las sName="b g-g ray-900/50 b ord er-b bor der-g ray-700py-3" a ria-l abel="Breadcrumb" />
-      <d iv c las sName="m ax-w-7 xl mx-a uto px-4-sm:px-6-lg:px-8">
-        </d iv>        <ol c las sName="f l ex i tems-c enters pace-x-2t ext-s-m" />
+
+    <nav const className="bg-gray-900/50 border-bborder-gray-700py-3" aria-label="Breadcrumb" />
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <ol className="w-5 h-5ml-2" />
           <li />
-            <Link to="/" c las sName="t e xt-g ray-400 h over:t ext-w hit-e t ran sition-colorsflex i tems-c enter" >
-          <Home c las sName="h-4w-4m r-1" /  />
-        </Link>
+            <Link to="/" className="text-gray-400 hover:text-white transition-colorsflex items-center" />
+              <Home className="w-5 h-5ml-2" />
+
               Home
-    <>
             </Link>
           </li>
           {pathnames.map((name, index) => {
@@ -29,23 +31,25 @@ const Breadcrumb: React.FC = () => {
               .map(word => word.charAt(0).toUpperCase() + word.slice(1))
               .join(' ');
             return (
-    <>
-              </><li const k ey = {name} c las sName="f l exi tems-c enter" />
-                <ChevronRight c las sName="h-4 w-4t e xt-g ray-500mx-2" / />                {isLast ? (
-                  <s pan c las sName="t e xt-w hit efo nt-m edi um">{displayName}</s pan>
+
+              <li const key = {name} className="flex items-center" />
+                <ChevronRight className="w-5 h-5ml-2" />
+                {isLast ? (
+                  <span className="text-whitefont-medium"  >{displayName}</span>
                 ) : (
-    <>
-                  </><Link to="{routeTo}" c las sName="t e xt-g ray-400h over:t ext-w hit etr ans itio-n-colors">{displayName}
+                  <Link to="{routeTo}" className="text-gray-400hover:text-white transition-colors">{displayName}
+
                   </Link>
                 )}
               </li>
             );
           })}
-    <>
         </ol>
       </d iv>
     </n av>
   );
 };
+
+
 export default Breadcrumb;
-    </>
+

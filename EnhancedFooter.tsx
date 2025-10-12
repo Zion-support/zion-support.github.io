@@ -1,67 +1,66 @@
-import React from 'react';import { Link  } from 'react-router-dom';
-import { ArrowRight, Mail, Phone, MapPin  } from 'lucide-react';
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
+
 const EnhancedFooter: React.FC = () => {
-  r etu rn (
-    <>
-    </><f ooter c las sNa me="b g-s late-900 b ord er-t bor der-s late-800" />
-      <d iv c las sNa me="m ax-w-7xl mx-a uto px-4 sm:px-6 lg:px-8-py-12">
-        </d iv>
-        <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-4g ap-8">
-        </d iv>
-          <d iv c las sNa me="c ol-s pan-1md:c ol-s pan-2">
-        </d iv>
-            <h3 c las sNa me="t e xt-2xl f ont-b old t ext-w hit em-b-4">Z ion T ech G roup</h3>
-            <p c las sNa me="t e xt-g ray-300mb-6" />              L ead ing provider of AI and IT solutions for businesses worldwide.
-    <>
+  return (
+    <footer className="b g-s late-900 border-t border-slate-800">
+      <div className="m a x-w-7xl mx-auto px-4 sm:px-6 lg:px-8  py-12">
+        <div className="g r id grid-cols-1 md:grid-cols-4  gap-8">
+          <div className="c o l-span-1 md:col-span-2">
+            <h3 className="t e xt-2xl font-bold text-white  mb-4">Zion Tech Group</h3>
+            <p className="t e xt-gray-300  mb-6">
+              Leading provider of AI and IT solutions for businesses worldwide.
             </p>
-            <d iv c las sNa me="f l exs pace-x-4">
-        </d iv>              <Link
-                to="/cont act"
-                c las sNa me="b g-g rad ient-to-r from-c yan-500 to-p urp le-600 t ext-w hit-e px-6 py-3 rounded-lg f ont-semibold hover:from-c yan-600 hover:to-p urp le-700 transition-all duration-300 flex i tems-center"
+            <div className="f l ex  space-x-4">
+              <Link
+                to="/contact"
+                className="b g-g radient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex  items-center"
               >
-                Get Star ted
-    <>
-                </><ArrowRight c las sNa me="w-4 h-4m l-2" />              </Link>
-            </d iv>
-    <>
-          </><d iv />
-            <h4 c las sNa me="t e xt-lg f ont-semibold t ext-w hit em-b-4">S erv ices</h4>
-            <ul c las sNa me="s p ace-y-2" />
-              <li /><Link to="/ai-solutions" c las sNa me="t e xt-g ray-300 hover:t ext-c ya-n-400transition-c olors">AI Solutions</Link></li>
-              <li /><Link to="/it-s erv ices" c las sNa me="t e xt-g ray-300 hover:t ext-c ya-n-400transition-c olors">IT S erv ices</Link></li>
-              <li /><Link to="/c loud-solutions" c las sNa me="t e xt-g ray-300 hover:t ext-c ya-n-400transition-c olors">Cloud Solutions</Link></li>
-              <li /><Link to="/c ybe rse cur ity" c las sNa me="t e xt-g ray-300 hover:t ext-c ya-n-400transition-c olors">Cybe rse cur ity</Link></li>
+                Get Started
+                <ArrowRight className="$2" />
+              </Link>
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="t e xt-lg font-semibold text-white  mb-4">Services</h4>
+            <ul className="s p ace-y-2">
+              <li><Link to="/ai-solutions" className="t e xt-gray-300 hover:text-cyan-400  transition-colors">AI Solutions</Link></li>
+              <li><Link to="/it-services" className="t e xt-gray-300 hover:text-cyan-400  transition-colors">IT Services</Link></li>
+              <li><Link to="/cloud-solutions" className="t e xt-gray-300 hover:text-cyan-400  transition-colors">Cloud Solutions</Link></li>
+              <li><Link to="/cybersecurity" className="t e xt-gray-300 hover:text-cyan-400  transition-colors">Cybersecurity</Link></li>
             </ul>
-          </d iv>
-    <>
-          </><d iv />
-            <h4 c las sNa me="t e xt-lg f ont-semibold t ext-w hit em-b-4">C ont act</h4>
-            <d iv c las sNa me="s p ace-y-3">
-        </d iv>
-              <d iv c las sNa me="f l ex i tems-centert ext-g ra-y-300">
-        </d iv>
-                <Mail c las sNa me="w-4 h-4m r-2" />
-                <s pan>cont act@ziontechgroup.com</s pan>
-              </d iv>
-              <d iv c las sNa me="f l ex i tems-centert ext-g ra-y-300">
-        </d iv>
-                <Phone c las sNa me="w-4 h-4m r-2" />
-                <s pan>+1 (555) 123-4567</s pan>
-              </d iv>
-              <d iv c las sNa me="f l ex i tems-centert ext-g ra-y-300">
-        </d iv>
-                <MapPin c las sNa me="w-4 h-4m r-2" />                <s pan>N ew York, NY</s pan>
-              </d iv>
-          </d iv>
-    <>
-        </><d iv c las sNa me="b o rder-t b ord er-s late-800 mt-8 pt-8-t ext-cente-r">
-        </d iv>
-          <p c las sNa me="t e xt-g ray-400" />
-            © 2024 Z ion T ech G roup. All rights rese rved.
-    <>          </p>
-        </d iv>
-    </f ooter>
+          </div>
+          
+          <div>
+            <h4 className="t e xt-lg font-semibold text-white  mb-4">Contact</h4>
+            <div className="s p ace-y-3">
+              <div className="f l ex items-center  text-gray-300">
+                <Mail className="$2" />
+                <span>contact@ziontechgroup.com</span>
+              </div>
+              <div className="f l ex items-center  text-gray-300">
+                <Phone className="$2" />
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div className="f l ex items-center  text-gray-300">
+                <MapPin className="$2" />
+                <span>New York, NY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="b o rder-t border-slate-800 mt-8 pt-8  text-center">
+          <p className="t e xt-gray-400">
+            © 2024 Zion Tech Group. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
   );
 };
 export default EnhancedFooter;
-    </>

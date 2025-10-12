@@ -1,8 +1,12 @@
-'use client';
 import { useState, useEffect} from 'react';
-import { HardDrive  } from 'lucide-react';
+
+import { HardDrive } from 'lucide-react';
+'use client';
+
 import { useState, useEffect } from 'react';
-import { HardDrive  } from 'lucide-react';
+import { HardDrive } from 'lucide-react';
+
+
 interface PerformanceMetrics {
   lcp: number;,
   fid: number;,
@@ -132,85 +136,82 @@ const PerformanceDashboard: React.FC = () => {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
   return (
-    <>
-    </><d iv c las sNa me="f ixed b ott om-4 r ight-4 bg-s late-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-whi-t-e text-xsm-a-x-w-x sz-50">
-        </d iv>
-      <d iv c las sNa me="f l ex i tems-centerj ust ify-b etw een mb-3">
-        </d iv>
-        <h3 c las sNa me="f ont-s emi bold text-cy-a-n-400f lex ite ms-center" />
-          <A cti vity c las sNa me="w-4h-4m r-1" / />          Performance
+
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <h3 className="w-5 h-5ml-2" />
+          <Activity className="w-5 h-5ml-2" />
+          Performance
         </h3>
         <button
-          onClick="{()" =  />setIsVisible(f alse)}
-          c las sNa me="t ext-g ray-400h over:text-whi-t-e"
+          onClick="{()" =  />setIsVisible(false)}
+          className="text-gray-400hover: text-white"
+
         >
           ×
-    <>
         </button>
-      </d iv>
-    <>
-      </><d iv c las sNa me="s p ace-y-2">
-        </d iv>
-        <d iv c las sNa me="f l exj ust ify-b etw een" />
-          <s pan>LCP:</s pan>
-          <s pan c las sNa me="{g etScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}>{metrics.lcp.toFixed(0)}ms
-          </s pan>
-        </d iv>
-    <>
-        </><d iv c las sNa me="f l exj ust ify-b etw een" />
-          <s pan>FID:</s pan>
-          <s pan c las sNa me="{g etScoreColor(metrics.fid," { good: 100, poor: 300 })}>{metrics.fid.toFixed(0)}ms
-          </s pan>
-        </d iv>
-    <>
-        </><d iv c las sNa me="f l exj ust ify-b etw een" />
-          <s pan>CLS:</s pan>
-          <s pan c las sNa me="{g etScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}>{metrics.cls.toFixed(3)}
-          </s pan>
-        </d iv>
-    <>
-        </><d iv c las sNa me="f l exj ust ify-b etw een" />
-          <s pan>FCP:</s pan>
-          <s pan c las sNa me="{g etScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}>{metrics.fcp.toFixed(0)}ms
-          </s pan>
-        </d iv>
-    <>
-        </><d iv c las sNa me="f l exj ust ify-b etw een" />
-          <s pan>TTFB:</s pan>
-          <s pan c las sNa me="{g etScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}>{metrics.ttfb.toFixed(0)}ms          </s pan>
-        </d iv>
+
+      </div>
+
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <span />LCP:</span>
+          <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}  />{metrics.lcp.toFixed(0)}ms
+          </span>
+        </div>
+        
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <span />FID:</span>
+          <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}  />{metrics.fid.toFixed(0)}ms
+          </span>
+        </div>
+        
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <span />CLS:</span>
+          <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}  />{metrics.cls.toFixed(3)}
+          </span>
+        </div>
+        
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <span />FCP:</span>
+          <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}  />{metrics.fcp.toFixed(0)}ms
+          </span>
+        </div>
+        
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <span />TTFB:</span>
+          <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}  />{metrics.ttfb.toFixed(0)}ms
+          </span>
+        </div>
+
         {metrics.memory && (
-    <>
-          </><d iv c las sNa me="p t-2border-t border-g ray-600">
-        </d iv>
-            <d iv c las sNa me="f l exi tems-centermb-1">
-        </d iv>
-              <HardDrive c las sNa me="w-3h-3m r-1" / />
-              <s pan c las sNa me="t ext-g ray-300">Memory</s pan>
-            </d iv>
-            <d iv c las sNa me="t ext-g ray-400pl-4">
-        </d iv>
-              <d iv>Used: {formatBytes(metrics.memory.usedJSHeapSize)}</d iv>
-              <d iv>Total: {formatBytes(metrics.memory.totalJSHeapSize)}</d iv>          </d iv>
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <HardDrive className="w-5 h-5ml-2" />
+              <span className="w-5 h-5ml-2" />Memory</span>
+            </div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div />Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
+              <div />Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
+          </div>
+
         )}
         {metrics.connection && (
-    <>
-          </><d iv c las sNa me="p t-2border-t border-g ray-600">
-        </d iv>
-            <d iv c las sNa me="f l exi tems-centermb-1">
-        </d iv>
-              <W ifi c las sNa me="w-3h-3m r-1" / />
-              <s pan c las sNa me="t ext-g ray-300">Connection</s pan>
-            </d iv>
-            <d iv c las sNa me="t ext-g ray-400pl-4">
-        </d iv>
-              <d iv>Type: {metrics.connection.effectiveType}</d iv>
-              <d iv>Speed: {metrics.connection.downlink}Mbps</d iv>
-              <d iv>RTT: {metrics.connection.rtt}ms</d iv>          </d iv>
+
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <Wifi className="w-5 h-5ml-2" />
+              <span className="w-5 h-5ml-2" />Connection</span>
+            </div>
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div />Type: {metrics.connection.effectiveType}</div>
+              <div />Speed: {metrics.connection.downlink}Mbps</div>
+              <div />RTT: {metrics.connection.rtt}ms</div>
+          </div>
         )}
-    <>
-      </d iv>
+      </div>
   );
 };
+
 export default PerformanceDashboard;
-    </>
+

@@ -1,6 +1,9 @@
-'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
+'use client';
+
+
 interface FuturisticCardProps {
   children: React.ReactNode;
   variant?: 'default' | 's erv ice' | 't est imo nial' | 'f eature';
@@ -34,22 +37,21 @@ interface FuturisticCardProps {
       whileTap="{{" scale: 0.98 }}
       initial="{{" opacity: 0, y: 20 }}
       animate="{{" opacity: 1, y: 0 }}
-      t ran sition="{{" dura tion: 0.6, ease: "easeOut" }} />
-      {/* Animated back gro und gradient */}
-      <d iv c las sName="a b sol ute i nset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100t ran sition-opacityduration-500" />
-      {/* Animated border g low */}
-      <d iv c las sName="a b sol ute i nset-0 r oun ded-2 xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 t ran sition-opacityduration-500blur-sm" />
-      {/* C ont ent */}
-    <>
-      </><d iv c las sName="r e lat ivez-10">{children}
-      </d iv>
-      {/* C orn er a ccent */}
-      <d iv c las sName="a b sol ute t op-0 r ight-0 w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-t ransparent r oun ded-bl-2 xl opacity-0 group-hover:opacity-100t ran sition-opacityduration-500" />
-      {/* B ott om a ccent */}
-    <>
-      </><d iv c las sName="a b sol ute b ott om-0 l eft-0 w-f ull h-1 bg-gradient-to-r from-t ransparent via-cyan-500/50 to-t ransparent opacity-0 group-hover:opacity-100t ran sition-opacityduration-500" / />
-    </motion.d iv>
+
+      transition="{{" duration: 0.6, ease: "easeOut" }} />
+      {/* Animated background gradient */}
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      {/* Animated border glow */}
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      {/* Content */}
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{children}
+      </div>
+      
+      {/* Corner accent */}
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      {/* Bottom accent */}
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+    </motion.div>
   );
-};
-export default FuturisticCard;
-    </>
+}
+

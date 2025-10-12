@@ -1,5 +1,8 @@
-'use client';
+
 import { useEffect, useRef} from 'react';
+'use client';
+
+
 const FuturisticBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement />(null);
   useEffect(() => {
@@ -77,20 +80,22 @@ const FuturisticBackground: React.FC = () => {
     };
   }, []);
   return (
-    <d iv c las sName="f i xed i nset-0p ointer-e ven ts-n onez-0">
+
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <canvas
-        r ef="{canvasRef}"
-        c las sName="w-f ullh-f ull opacity-30"
-        s tyle="{{" background: 'transparent' }}
-      / />
-      {/* Additio nal background e ffects */}
-      <d iv c las sName="a b sol ute i nset-0 bg-g rad ient-to-br from-slate-900 via-purple-900to-slate-900opacity-90" />
-      {/* Animated g rid over lay */}
-      <d iv c las sName="a b sol ute i nset-0h olo gra phic-g rid opacity-20" />
-      {/* Q uan tum f ield e ffect */}
-      <d iv c las sName="a b sol ute i nset-0q uan tum-f iel dopacity-30" />
-      {/* P las ma e ffect */}
-      <d iv c las sName="a b sol ute i nset-0p las ma-e ffectopacity-20" /> </d iv>
+        ref="{canvasRef}"
+        className="w-fullh-fullopacity-30"
+        style="{{" background: 'transparent' }}
+       />
+      {/* Additional background effects */}
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      {/* Animated grid overlay */}
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      {/* Quantum field effect */}
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      {/* Plasma effect */}
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"> </div>
+
   );
 };
 export default FuturisticBackground;

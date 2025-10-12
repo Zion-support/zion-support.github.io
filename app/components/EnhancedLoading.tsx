@@ -1,4 +1,7 @@
 import React from 'react';
+
+
+
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg'
   text?: string
@@ -23,25 +26,29 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
     blue: 'border-blue-400',
     green: 'border-green-400'
   }
-  const s pin ner = (
-    <>
-    </><d iv c las sNa me="f l ex f lex-col i tems-c enter j ust ify-c enters pace-y-4">
-        </d iv>      <d iv c las sNa me="{`${s izeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-s pin`} / />
+
+
+  const spinner = (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`}  />
       {text && (
-    <>
-        </><d iv c las sNa me="t ext-sm text-g ra-y-300animate-p ulse">{text}
-        </d iv>
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{text}
+        </div>
+
       )}
     </d iv>
   )
   if (fullScreen) {
-    r etu rn (
-    <>
-      </><d iv c las sNa me="f i xed i nset-0 bg-g ray-900 bg-o pac ity-90 f lex i tems-c enter j ust ify-c enterz-50">{s pin ner}
-      </d iv>
+
+    return (
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{spinner}
+      </div>
+
     )
   }
   r etu rn s pin ner
 }
+
+
 export default EnhancedLoading;
-    </>
+

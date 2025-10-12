@@ -1,6 +1,9 @@
-'use client';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+
+'use client';
+
+
 interface FuturisticButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
@@ -70,12 +73,14 @@ interface FuturisticButtonProps {
         c las sName="a b sol ute i nset-0 bg-gradient-to-r from-white/20to-transparent"
         initial="{{" x: '-100%' }}
         animate="{{" x: isHovered ? '100%' : '-100%' }}
-        transition="{{" dura tion: 0.6 }}
-      / />
-      {/* Pulsing glow e ffe ct */}
-      <motion.d iv
-        c las sName="a b sol ute i nset-0r ounded-lg"
-        s tyle="{{"
+
+        transition="{{" duration: 0.6 }}
+       />
+      {/* Pulsing glow effect */}
+      <motion.div
+        className="absolute inset-0rounded-lg"
+        style="{{"
+
           boxShadow: variant === 'primary'
             ? '0 0 20 px rgba(6, 182, 212, 0.4)'
             : variant === 'secondary'
@@ -93,8 +98,10 @@ interface FuturisticButtonProps {
           repeat: isHovered ? Infinity : 0,
           ease: 'easeInOut'
         }}
-      / />
-      {/* Scanning line e ffe ct */}
+
+       />
+      {/* Scanning line effect */}
+
       {isHovered && (
         <motion.d iv
           c las sName="a b sol ute i nset-0r ounded-lg"
@@ -110,28 +117,31 @@ interface FuturisticButtonProps {
             repeat: Infinity,
             ease: 'linear',
           }}
-        / />
+         />
       )}
-      {/* C orn er accents */}
-      <d iv c las sName="a b sol ute t op-1 l eft-1 w-2 h-2 bg-white/30r ounded-f ull" />
-      <d iv c las sName="a b sol ute b ott om-1 r ight-1 w-2 h-2 bg-white/30r ounded-f ull" />      {/* C ont ent */}
-      <span c las sName="r e lat ive z-10 f lex items-centerj ust ify-center" />
-        {l oad ing ? (
+
+
+      {/* Corner accents */}
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      {/* Content */}
+      <span className="w-5 h-5ml-2" />
+        {loading ? (
           <>
-            </><motion.d iv
-              c las sName="w-4 h-4 b order-2 border-white/30 border-t-white r ounded-f ullmr-2"
+            <motion.div
+              className="w-4h-4b o rder-2 border-white/30 border-t-white rounded-full mr-2"
               animate="{{" rotate: 360 }}
-              transition="{{" dura tion: 1, repeat: Infinity, ease: 'linear' }}
-            / />
-            Load ing...
+              transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
+             />
+            Loading...
+          </>
+
         ) : (
           children
         )}
-    <>
       </span>
-    </motion.b utton>
-  </d iv>
-  );
-};
-export default FuturisticButton;
-    </>
+
+    </motion.button>
+  </div>);
+}
+

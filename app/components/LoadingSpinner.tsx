@@ -1,5 +1,8 @@
-'use client';
+
 import React from 'react';
+'use client';
+
+
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
@@ -20,13 +23,14 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({
     secondary: 'text-purp-l-e-500',
     white: 'text-whi-t-e'
   };
-  r etu rn (
-    <>
-    </><d iv c las sNa me="f l ex f lex-col items-c enterj ust ify-c enters pace-y-4">
-        </d iv>      <d iv c las sNa me="{`${s izeClasses[size]}" ${colorClasses[color]} a nim ate-s pin`} />
-        <s vg
-          c las sNa me="w-f u llh-f ull"
-          x mlns="h ttp://w ww.w3.org/2000/s vg"
+
+  return (
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="{`${sizeClasses[size]}" ${colorClasses[color]} animate-spin`} />
+        <svg
+          className="w-fullh-full"
+          xmlns="http://www.w3.org/2000/svg"
+
           fill="none"
           viewBox="0 0 24 24" />
           <c irc le
@@ -36,20 +40,23 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({
             r="10"
             stroke="currentColor"
             strokeWidth="4"
-          / />
-          <p ath
-            c las sNa me="o p aci ty-75"
+
+           />
+          <path
+            className="opacity-75"
             fill="currentColor"
             d="M4 12 a8 8 0 018-8 V0 C5.373 0 0 5.373 0 12 h4 zm2 5.291 A7.962 7.962 0 014 12 H0 c0 3.042 1.135 5.824 3 7.938 l3-2.647 z"
-          / />
-    <>
-        </s vg>
-      </d iv>
+           />
+        </svg>
+      </div>
+
       {text && (
         <p c las sNa me="t ext-g ray-400text-s man imat-e-p ulse">{text}</p>
       )}
     </d iv>
   );
 };
+
+
 export default LoadingSpinner;
-    </>
+

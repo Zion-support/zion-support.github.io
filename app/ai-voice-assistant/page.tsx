@@ -1,25 +1,29 @@
+
+
+
 export default function AIVoiceAssistant() {
 }
   const f eat ures = [
     {
-}
-      i con: <B rain c las sNa me="w-6 h-6t e xt-c yan-400" />,
-      t itle: 'Natural Language Understanding',
+
+      icon: <Brain className="w-5 h-5ml-2" />,
+      title: 'Natural Language Understanding',
       description: 'Advanced AI processes complex voice commands and maintains context across conversations'
     },
     {
-      i con: <V olu me2 c las sNa me="w-6 h-6t e xt-p urple-400" />,
-      t itle: 'Human-like Voice Synthesis',
-      description: 'Generate natural, expr essive speech with customizable voices and emotional t ones'
+      icon: <Volume2 className="w-5 h-5ml-2" />,
+      title: 'Human-like Voice Synthesis',
+      description: 'Generate natural, expressive speech with customizable voices and emotional tones'
     },
     {
-      i con: <C lock c las sNa me="w-6 h-6t e xt-y ell ow-400" />,
-      t itle: '24/7 Availability',
-      description: 'Always-on voice a ssistant that can handle tasks, answer questions, and provide support'
+      icon: <Clock className="w-5 h-5ml-2" />,
+      title: '24/7 Availability',
+      description: 'Always-on voice assistant that can handle tasks, answer questions, and provide support'
     },
     {
-      i con: <T arg et c las sNa me="w-6 h-6t e xt-g reen-400" />,
-      t itle: 'Multi-platform Integration',
+      icon: <Target className="w-5 h-5ml-2" />,
+      title: 'Multi-platform Integration',
+
       description: 'Seamlessly integrate with mobile apps, websites, smart devices, and IoT systems'
     }
   ]
@@ -112,39 +116,201 @@ export default function AIVoiceAssistant() {
   ]
   return (
     <Layout
-      t itle="AI Voice Assistant - Inte lligent Voice Solutions | Zion Tech Group"
-      description="Transform user interaction with AI-powered voice a ssistants. Natural language processing, human-like voice synthesis, and seamless integration. Start your free trial today."
-      keywords="AI voice a ssistant, voice AI, speech recognition, voice synthesis, conversational AI, voice a utomation" />
-      <div c las sNa me="m in-h-scre en bg-grad ient-to-br f rom-s late-900 via-p urple-900to-s late-900">
-<<<<<<< HEAD        {/* H ero S ection */}
-    <>
-        </><s ection c las sNa me="p t-32pb-20" />
-          <div c las sNa me="c onta iner mx-a uto px-4"></div>
-            <div c las sNa me="t e xt-c enter m ax-w-4 x lmx-a uto"></div>
-              <h1 c las sNa me="t e xt-5 xl md:text-6 xl f ont-b old text-w hitem-b-6" />
-                AI <s pan c las sNa me="b g-grad ient-to-r f rom-c yan-400 to-p urple-400 bg-clip-texttext-transpare-n-t">Voice Assistant</s pan>              </h1>
-              <p c las sNa me="t e xt-xl text-gr-a-y-300 mb-8-l eading-r elaxed">
-              Create inte lligent voice a ssistants that understand natural speech, execute commands, 
-                and provide hands-free a utomation for your business and personal needs.
-    <>
+
+      title="AI Voice Assistant - Intelligent Voice Solutions | Zion Tech Group"
+      description="Transform user interaction with AI-powered voice assistants. Natural language processing, human-like voice synthesis, and seamless integration. Start your free trial today."
+      keywords="AI voice assistant, voice AI, speech recognition, voice synthesis, conversational AI, voice automation" />
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        {/* Hero Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h1 className="w-5 h-5ml-2" />
+                AI <span className="w-5 h-5ml-2" />Voice Assistant</span>
+              </h1>
+              <p className="w-5 h-5ml-2">Create intelligent voice assistants that understand natural speech, execute commands, 
+                and provide hands-free automation for your business and personal needs.
               </p>
-              <div c las sNa me="f lex f lex-c ol sm:f lex-row g ap-4j ust ify-c enter">
-                <L ink to="/cont act" c las sNa me="b g-grad ient-to-r f rom-c yan-500 to-p urple-500 text-w hit-e px-8 py-4 rounded-lg f ont-semibold text-l-g hover:f rom-c yan-600 hover:to-p urple-600 transition-all duration-300 transformhover:scale-105">Start Building
-                </L ink>
-                <L ink to="/ai-services" c las sNa me="b order b order-c yan-500 text-c ya-n-400 px-8 py-4 rounded-lg f ont-semibold text-l-g hover:bg-c yan-500/10 transition-all duration-300 transformhover:scale-105">View All AI Services
-                </L ink>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transformhover:scale-105">Start Building
+                </Link>
+                <Link to="/ai-services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transformhover:scale-105">View All AI Services
+                </Link>
               </div>
           </div>
-        </s ection>
-        {/* Feat ures S ection */}
-    <>
-        </><s ection c las sNa me="p y-20" />
-          <div c las sNa me="c onta iner mx-a uto px-4"></div>
-              {f eat ures.map((f eat ure, index) => (
-    <>
-                </><div key="{index}" c las sNa me="t e xt-c entergroup" /></div>
-                  <div c las sNa me="w-20 h-20 b g-grad ient-to-r f rom-c yan-500/20 to-p urple-500/20 rounded-full f lex items-c enter j ust ify-c enter mx-a uto mb-6 group-hover:scale-110 transition-transformduration-300"></div>
+        </section>
+
+        {/* Features Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Powerful <span className="w-5 h-5ml-2" />Features</span>
+              </h2>
+              <p className="w-5 h-5ml-2">Everything you need to build, deploy, and manage intelligent voice assistants
+              </p>
+            </div>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              {features.map((feature, index) => (
+                <div key="{index}" className="text-centergroup" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <feature.icon className="w-10h-10te xt-cyan-400"  />
+                  </div>
+                  <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
+                  <p className="w-5 h-5ml-2">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Use <span className="w-5 h-5ml-2" />Cases</span>
+              </h2>
+              <p className="w-5 h-5ml-2">Discover how our AI voice assistants can transform your business operations
+              </p>
+            </div>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {useCases.map((useCase, index) => (
-    <>
-                </><div key="{index}" c las sNa me="b g-grad ient-to-br f rom-s late-800/50 to-s late-900/50 backdrop-blur-sm b order b order-gray-700/50 rounded-xl p-6 hover:b order-c yan-400/40 transition-all duration-300 group hover:transformhover:scale-105" /></div>
-                  <div c las sNa me="w-12 h-12 b g-grad ient-to-r f rom-c yan-500/20 to-p urple-500/20 rounded-lg f lex items-c enter j ust ify-c enter mb-4 group-hover:scale-110 transition-transformduration-300"></div>
+                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transformhover:scale-105" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <useCase.icon className="w-6h-6te xt-cyan-400"  />
+                  </div>
+                  <h3 className="w-5 h-5ml-2" />{useCase.title}
+                  </h3>
+                  <p className="w-5 h-5ml-2">{useCase.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />
+                Simple <span className="w-5 h-5ml-2" />Pricing</span>
+              </h2>
+              <p className="w-5 h-5ml-2">Choose the plan that fits your voice assistant needs
+              </p>
+            </div>
+
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <h3 className="w-5 h-5ml-2" />Starter</h3>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">$99<span className="w-5 h-5ml-2" />/month</span></div>
+                <ul className="w-5 h-5ml-2" />
+                  <li className="w-5 h-5ml-2" />
+                    <CheckCircle className="w-5 h-5ml-2" />
+                    Up to 1,000 voice commands/month
+                  </li>
+                  <li className="w-5 h-5ml-2" />
+                    <CheckCircle className="w-5 h-5ml-2" />
+                    Basic speech recognition
+                  </li>
+                  <li className="w-5 h-5ml-2" />
+                    <CheckCircle className="w-5 h-5ml-2" />
+                    Email support
+                  </li>
+                  <li className="w-5 h-5ml-2" />
+                    <CheckCircle className="w-5 h-5ml-2" />
+                    Standard integrations
+                  </li>
+                </ul>
+                <Link to="/contact" className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300block">Get Started
+                </Link>
+              </div>
+
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <span className="w-5 h-5ml-2" />Most Popular
+                  </span>
+                </div>
+                <h3 className="w-5 h-5ml-2" />Professional</h3>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">$199<span className="w-5 h-5ml-2" />/month</span></div>
+                <ul className="w-5 h-5ml-2" />
+                  <li className="w-5 h-5ml-2" />
+                    <CheckCircle className="w-5 h-5ml-2" />
+                    Up to 10,000 voice commands/month
+                  </li>
+                  <li className="w-5 h-5ml-2" />
+                    <CheckCircle className="w-5 h-5ml-2" />
+                    Advanced speech recognition
+                  </li>
+                  <li className="w-5 h-5ml-2" />
+                    <CheckCircle className="w-5 h-5ml-2" />
+                    Priority support
+                  </li>
+                  <li className="w-5 h-5ml-2" />
+                    <CheckCircle className="w-5 h-5ml-2" />
+                    Custom wake words
+                  </li>
+                  <li className="w-5 h-5ml-2" />
+                    <CheckCircle className="w-5 h-5ml-2" />
+                    Analytics dashboard
+                  </li>
+                </ul>
+                <Link to="/contact" className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300block">Get Started
+                </Link>
+              </div>
+
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <h3 className="w-5 h-5ml-2" />Enterprise</h3>
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Custom</div>
+                <ul className="w-5 h-5ml-2" />
+                  <li className="w-5 h-5ml-2" />
+                    <CheckCircle className="w-5 h-5ml-2" />
+                    Unlimited voice commands
+                  </li>
+                  <li className="w-5 h-5ml-2" />
+                    <CheckCircle className="w-5 h-5ml-2" />
+                    Custom AI training
+                  </li>
+                  <li className="w-5 h-5ml-2" />
+                    <CheckCircle className="w-5 h-5ml-2" />
+                    24/7 dedicated support
+                  </li>
+                  <li className="w-5 h-5ml-2" />
+                    <CheckCircle className="w-5 h-5ml-2" />
+                    White-label solution
+                  </li>
+                  <li className="w-5 h-5ml-2" />
+                    <CheckCircle className="w-5 h-5ml-2" />
+                    Custom development
+                  </li>
+                </ul>
+                <Link to="/contact" className="w-full border border-cyan-500 text-cyan-400 px-6 py-3 rounded-lg font-semibold text-center hover:bg-cyan-500/10 transition-all duration-300block">Contact Sales
+                </Link>
+              </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Ready to Build Your AI Voice Assistant?
+              </h2>
+              <p className="w-5 h-5ml-2">Start creating intelligent voice assistants that understand and respond to natural speech.
+              </p>
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transformhover:scale-105">Start Building Now
+                </Link>
+                <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transformhover:scale-105">Learn More About Us
+                </Link>
+              </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default AIVoiceAssistantPage;
+
