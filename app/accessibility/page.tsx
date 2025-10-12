@@ -1,16 +1,14 @@
 import React from 'react';
-
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function AccessibilityZionTechGroup() {
+export default function AccessibilityPage() {
   return (
     <>
       <Helmet>
         <title>Accessibility - Zion Tech Group</title>
+        <meta name="description" content="Learn about our commitment to accessibility and inclusive design." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">
@@ -28,19 +26,3 @@ export default function AccessibilityZionTechGroup() {
     </>
   );
 }
-=======
-export default function AccessibilityPage() {
-  return (
-    <>
-      <title>Accessibility - Zion Tech Group</title>
-      
-      <h1 className="text-4xl font-bold text-white mb-6">Accessibility</h1>
-      <p className="text-lg text-gray-300 mb-8">Learn about our commitment to accessibility and inclusive design.</p>
-      
-      <a href="/contact" className="text-blue-400 hover:text-blue-300">
-        Contact Us
-      </a>
-    </>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f21c

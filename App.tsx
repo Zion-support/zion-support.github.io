@@ -1,13 +1,8 @@
 'use client';
 import React, { Suspense } from 'react';
-<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-=======
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f21c
 import './app/styles/futuristic.css';
 import './app/styles/futuristic-enhanced.css';
 import Navigation from './app/components/Navigation';
@@ -23,11 +18,7 @@ import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
-<<<<<<< HEAD
 import FuturisticBackground from './app/components/FuturisticBackground';
-=======
-import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f21c
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -341,8 +332,4 @@ function App() {
   );
 }
 
-<<<<<<< HEAD
 export default App;
-=======
-export default App;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f21c
