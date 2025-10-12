@@ -1,88 +1,31 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, Users, Award, Target, Lightbulb, Shield, Globe, Zap, Brain, Cpu, 
-  Rocket, CheckCircle, Star, Clock, TrendingUp, MessageCircle, Mail, Phone, MapPin, 
-  Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, 
-  Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, 
-  Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, 
-  Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, 
-  RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, 
-  Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, 
-  Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, 
-  Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, 
-  Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, 
-  Kiss10, Tongue10, FileText, Package, DollarSign, Database, Cloud, Code, 
-  Smartphone, Server, Lock, Eye, Workflow, Settings, BarChart, FileText as FileTextIcon
-} from 'lucide-react';
-
-const AboutPage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Users, Award, Zap, Brain, Cloud, Shield, Code, ArrowRight, Star } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
+
   const values = [
     {
       icon: <Brain className="w-8 h-8 text-purple-400" />,
       title: 'Innovation First',
-<<<<<<< HEAD
-      description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions to deliver cutting-edge results.'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      title: 'Security & Trust',
-      description: 'Your data security is our top priority. We implement enterprise-grade security measures to protect your business.'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-purple-400" />,
-      title: 'Client Success',
-      description: 'We measure our success by your success. Our dedicated team ensures every project exceeds expectations.'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-blue-400" />,
-      title: 'Global Reach',
-      description: 'Serving clients worldwide with localized expertise and 24/7 support across all time zones.'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
       description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions to solve complex business challenges.'
     },
     {
-      icon: Users,
+      icon: <Users className="w-8 h-8 text-blue-400" />,
       title: 'Client-Centric',
       description: 'Your success is our priority. We build lasting partnerships through exceptional service and measurable results.'
     },
     {
-      icon: Shield,
+      icon: <Shield className="w-8 h-8 text-red-400" />,
       title: 'Security & Trust',
       description: 'We implement enterprise-grade security measures and maintain the highest standards of data protection and compliance.'
     },
     {
-      icon: Zap,
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
       title: 'Agile Delivery',
       description: 'We deliver solutions quickly and efficiently, adapting to your changing needs with flexible development methodologies.'
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-7d13
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
     }
   ];
 
