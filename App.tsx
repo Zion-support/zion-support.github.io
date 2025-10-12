@@ -8,7 +8,6 @@ import Breadcrumb from './app/components/Breadcrumb'
 import CookieConsent from './app/components/CookieConsent'
 import PerformanceMonitor from './app/components/PerformanceMonitor'
 
-<<<<<<< HEAD
 // Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./app/page'))
 const AboutPage = React.lazy(() => import('./app/about/page'))
@@ -23,6 +22,8 @@ const PartnersPage = React.lazy(() => import('./app/partners/page'))
 const InvestorsPage = React.lazy(() => import('./app/investors/page'))
 const CommunityPage = React.lazy(() => import('./app/community/page'))
 const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'))
+const TeamPage = React.lazy(() => import('./app/team/page'))
+const ResourcesPage = React.lazy(() => import('./app/resources/page'))
 
 // Core Services Pages
 const AIServicesPage = React.lazy(() => import('./app/ai-services/page'))
@@ -46,6 +47,7 @@ const FiveGDataAnalyticsPage = React.lazy(() => import('./app/5g-data-analytics/
 // AI Services Pages
 const AIContentGeneratorPage = React.lazy(() => import('./app/ai-content-generator/page'))
 const AIChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'))
+const AIChatbotEnterprisePage = React.lazy(() => import('./app/ai-chatbot-enterprise/page'))
 const AIAnalyticsDashboardPage = React.lazy(() => import('./app/ai-analytics-dashboard/page'))
 const AIEmailAssistantPage = React.lazy(() => import('./app/ai-email-assistant/page'))
 const AIVoiceAssistantPage = React.lazy(() => import('./app/ai-voice-assistant/page'))
@@ -60,7 +62,7 @@ const AIHealthTrackerPage = React.lazy(() => import('./app/ai-health-tracker/pag
 const AISmartCalendarPage = React.lazy(() => import('./app/ai-smart-calendar/page'))
 const AIClimateSolutionsProPage = React.lazy(() => import('./app/ai-climate-solutions-pro/page'))
 const AIMeetingAssistantPage = React.lazy(() => import('./app/ai-meeting-assistant/page'))
-const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'))
+const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-management/page'))
 
 // Additional AI Services Pages
 const AIContentGenerationPage = React.lazy(() => import('./app/ai-content-generation/page'))
@@ -149,7 +151,6 @@ const AIOpsPage = React.lazy(() => import('./app/ai-ops/page'))
 const AIPredictiveAnalyticsPage = React.lazy(() => import('./app/ai-predictive-analytics/page'))
 const AIPredictiveMaintenancePage = React.lazy(() => import('./app/ai-predictive-maintenance/page'))
 const AIPredictiveModelingPage = React.lazy(() => import('./app/ai-predictive-modeling/page'))
-const AIProjectManagementPage = React.lazy(() => import('./app/ai-project-management/page'))
 const AIQualityAssurancePage = React.lazy(() => import('./app/ai-quality-assurance/page'))
 const AIQuantumComputingPage = React.lazy(() => import('./app/ai-quantum-computing/page'))
 const AIQuantumComputingSimulatorPage = React.lazy(() => import('./app/ai-quantum-computing-simulator/page'))
@@ -195,6 +196,7 @@ const AIVoiceSynthesisPage = React.lazy(() => import('./app/ai-voice-synthesis/p
 const AIWebsiteBuilderPage = React.lazy(() => import('./app/ai-website-builder/page'))
 const AIWorkflowAutomationPage = React.lazy(() => import('./app/ai-workflow-automation/page'))
 const AIWritingAssistantPage = React.lazy(() => import('./app/ai-writing-assistant/page'))
+const AIAutomatedTestingPage = React.lazy(() => import('./app/ai-automated-testing/page'))
 
 // Additional IT Services Pages
 const BlockchainPage = React.lazy(() => import('./app/blockchain/page'))
@@ -383,54 +385,6 @@ const PageLoader = () => (
 )
 
 function App() {
-=======
-// Additional AI Services
-import AIContentGeneratorPage from './app/ai-content-generator/page'
-import AIChatbotEnterprisePage from './app/ai-chatbot-enterprise/page'
-import AIAnalyticsDashboardPage from './app/ai-analytics-dashboard/page'
-import AI3DGenerationPage from './app/ai-3d-generation/page'
-import AIDrugDiscoveryProPage from './app/ai-drug-discovery-pro/page'
-import AICybersecuritySuitePage from './app/ai-cybersecurity-suite/page'
-import AICRMAssistantPage from './app/ai-crm-assistant/page'
-import AIEmailMarketingPage from './app/ai-email-marketing/page'
-import AIDocumentProcessingPage from './app/ai-document-processing/page'
-import AIVoiceAssistantPage from './app/ai-voice-assistant/page'
-
-// Additional IT Services
-import CloudMigrationPage from './app/cloud-migration/page'
-import MobileDevelopmentPage from './app/mobile-development/page'
-import APIDevelopmentPage from './app/api-development/page'
-import DatabaseManagementPage from './app/database-management/page'
-import NetworkInfrastructurePage from './app/network-infrastructure/page'
-
-// Micro SaaS Services
-import AICRMPage from './app/ai-crm/page'
-import SmartAnalyticsPage from './app/smart-analytics/page'
-import AIAutomatedTestingPage from './app/ai-automated-testing/page'
-import AISocialMediaManagerPage from './app/ai-social-media-manager/page'
-import AIProjectManagementPage from './app/ai-project-management/page'
-import AICustomerSupportPage from './app/ai-customer-support/page'
-import AIInvoiceGeneratorPage from './app/ai-invoice-generator/page'
-
-// Company Pages
-import TeamPage from './app/team/page'
-import CaseStudiesPage from './app/case-studies/page'
-import HelpPage from './app/help/page'
-import DocsPage from './app/docs/page'
-import APIDocsPage from './app/api-docs/page'
-import CommunityPage from './app/community/page'
-
-// Additional Missing Pages
-import DevOpsSolutionsPage from './app/devops-solutions/page'
-import SystemIntegrationPage from './app/system-integration/page'
-import AIContentManagementPage from './app/ai-content-management/page'
-import PressPage from './app/press/page'
-import CookiePolicyPage from './app/cookie-policy/page'
-import GDPRCompliancePage from './app/gdpr-compliance/page'
-import ResourcesPage from './app/resources/page'
-
-const App: React.FC = () => {
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
   return (
     <HelmetProvider>
       <ErrorBoundary>
