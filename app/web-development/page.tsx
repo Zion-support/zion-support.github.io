@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-=======
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Code, Zap, CheckCircle, ArrowRight, Users, Award, Star, Globe, Settings } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 
 const WebDevelopmentPage: React.FC = () => {
   const services = [

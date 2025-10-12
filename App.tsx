@@ -38,16 +38,12 @@ const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
 const TermsPage = React.lazy(() => import('./app/terms/page'));
 const CookiesPage = React.lazy(() => import('./app/cookies/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
-<<<<<<< HEAD
-=======
 const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'));
 const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'));
 const AIContentGeneratorPage = React.lazy(() => import('./app/ai-content-generator/page'));
 const AIAnalyticsDashboardPage = React.lazy(() => import('./app/ai-analytics-dashboard/page'));
 const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'));
-const DevOpsCICDPage = React.lazy(() => import('./app/devops-cicd/page'));
 const DataAnalyticsPage = React.lazy(() => import('./app/data-analytics/page'));
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
 
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
@@ -261,13 +257,8 @@ const App: React.FC = () => {
                             <Route path="/ai-customer-churn" element={<AiCustomerChurnPage />} />
                             <Route path="/ai-automated-reporting" element={<AiAutomatedReportingPage />} />
                             <Route path="/ai-content-generation-pro" element={<AiContentGenerationProPage />} />
-<<<<<<< HEAD
-
-=======
                             <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
                             <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
-                            
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
                             {/* IT Service Pages */}
                             <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                             <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
@@ -301,13 +292,8 @@ const App: React.FC = () => {
                             <Route path="/data-visualization" element={<DataVisualizationPage />} />
                             <Route path="/workflow-automation" element={<WorkflowAutomationPage />} />
                             <Route path="/cloud-native-security" element={<CloudNativeSecurityPage />} />
-<<<<<<< HEAD
-
-=======
                             <Route path="/cloud-migration" element={<CloudMigrationPage />} />
                             <Route path="/data-analytics" element={<DataAnalyticsPage />} />
-                            
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
                             {/* Micro SAAS Pages */}
                             <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
                             <Route path="/zion-chat-ai" element={<ZionChatAiPage />} />
@@ -367,11 +353,6 @@ const App: React.FC = () => {
                             <Route path="/api-docs" element={<ApiDocsPage />} />
                             <Route path="/community" element={<CommunityPage />} />
                             <Route path="/compliance" element={<CompliancePage />} />
-<<<<<<< HEAD
-
-=======
-                            
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
                             {/* 404 Route */}
                             <Route path="*" element={
                               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -403,9 +384,5 @@ const App: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default App;
-=======
 App.displayName = 'App';
 export default App;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
