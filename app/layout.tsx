@@ -1,12 +1,35 @@
 import React from 'react';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter } from 'react-router-dom';
+import { AnalyticsProvider } from './components/AnalyticsProvider';
+import { ErrorBoundary } from 'react-error-boundary';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Loading from './components/Loading';
+import ErrorFallback from './components/ErrorFallback';
 
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>;
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export default function Layout({ children }: LayoutProps) {
+  return (
+    <HelmetProvider>
+      <BrowserRouter>
+        <AnalyticsProvider>
+          <ErrorBoundary FallbackComponent={ErrorFallback}>
+            <div className="min-h-screen bg-gray-50">
+              <Header />
+              <main className="flex-1">
+                <React.Suspense fallback={<Loading />}>
+                  {children}
+                </React.Suspense>
+              </main>
+              <Footer />
+            </div>
+          </ErrorBoundary>
+        </AnalyticsProvider>
+      </BrowserRouter>
+    </HelmetProvider>
   );
-
+}

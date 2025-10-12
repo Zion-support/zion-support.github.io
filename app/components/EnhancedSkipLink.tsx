@@ -1,16 +1,45 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+interface SkipLinkProps {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+}
 
-export default function ComponentsPage() {
+const EnhancedSkipLink: React.FC<SkipLinkProps> = ({
+  href,
+  children,
+  className = ''
+}) => {
   return (
-
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>;
+    <>
+      <Helmet>
+        <title>Skip Navigation - Zion Tech Group</title>
+      </Helmet>
+      
+      <a
+        href={href}
+        className={`
+          sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4
+          bg-blue-600 text-white px-4 py-2 rounded-lg font-medium
+          z-50 transition-all duration-200
+          hover:bg-blue-700 focus:bg-blue-700
+          ${className}
+        `}
+        onClick={(e) => {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+            (target as HTMLElement).focus();
+          }
+        }}
+      >
+        {children}
+      </a>
+    </>
   );
+};
 
+export default EnhancedSkipLink;

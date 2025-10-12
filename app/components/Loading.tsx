@@ -1,26 +1,49 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Loader2 } from 'lucide-react';
 
-
-  return (
-    <div>Content</div>
-  );
-    <div>Component content</div>
-  );
+interface LoadingProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  fullScreen?: boolean;
+  className?: string;
 }
-  return (
-    <div>Content</div>
-  );
-    <>
 
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+const Loading: React.FC<LoadingProps> = ({
+  size = 'md',
+  text = 'Loading...',
+  fullScreen = false,
+  className = ''
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
+  const spinner = (
+    <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
+      <Loader2 className={`${sizeClasses[size]} text-blue-600 animate-spin`} />
+      {text && (
+        <p className="text-gray-600 font-medium">{text}</p>
+      )}
+    </div>
+  );
+
+  if (fullScreen) {
+    return (
+      <>
+        <Helmet>
+          <title>Loading - Zion Tech Group</title>
+        </Helmet>
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          {spinner}
         </div>
-      </div>
-    </>;
-  );
+      </>
+    );
+  }
 
+  return spinner;
+};
+
+export default Loading;

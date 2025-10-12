@@ -1,23 +1,58 @@
+import React, { useState, useRef, useEffect, ReactNode } from 'react';
+import { Helmet } from 'react-helmet-async';
+
+interface LazyWrapperProps {
+  children: ReactNode;
+  fallback?: ReactNode;
+  threshold?: number;
+  rootMargin?: string;
+  className?: string;
+}
+
+const LazyWrapper: React.FC<LazyWrapperProps> = ({
+  children,
+  fallback = <div className="w-full h-32 bg-gray-200 animate-pulse rounded" />,
+  threshold = 0.1,
+  rootMargin = '50px',
+  className = ''
+}) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasIntersected, setHasIntersected] = useState(false);
+  const elementRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasIntersected) {
+          setIsVisible(true);
+          setHasIntersected(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold,
+        rootMargin
+      }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [threshold, rootMargin, hasIntersected]);
 
   return (
-    <div>Content</div>
-  );
-    <div>Component content</div>
-  );
-}
-  return (
-    <div>Content</div>
-  );
     <>
-
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
+      <Helmet>
+        <title>Lazy Wrapper - Zion Tech Group</title>
+      </Helmet>
+      
+      <div ref={elementRef} className={className}>
+        {isVisible ? children : fallback}
       </div>
-    </>;
+    </>
   );
-}
+};
 
+export default LazyWrapper;

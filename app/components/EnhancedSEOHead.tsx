@@ -1,10 +1,5 @@
 import React from 'react';
-
-import React from 'react';
-
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
 
 interface SEOHeadProps {
   title?: string;
@@ -15,82 +10,74 @@ interface SEOHeadProps {
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
-const SEOHead: React.FC<SEOHeadProps /> = ({
-  const title = 'Zion Tech Group - Advanced AI & IT Solutions',
+  noindex?: boolean;
+  nofollow?: boolean;
+}
+
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.',
   keywords = 'AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics, machine learning, artificial intelligence',
-  canonical = 'https: //ziontechgroup.com',
-  ogImage = 'https: //ziontechgroup.com/og-image.jpg',
+  canonical = 'https://ziontechgroup.com',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
   ogType = 'website',
-  twitterCard = 'summary_large_image',;
-  structuredData;
-const defaultStructuredData = {
-    "@context": "https: //schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": "Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.",
-    "url": "https: //ziontechgroup.com",
-    "logo": "https: //ziontechgroup.com/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "sameAs": [
-      "https: //linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup"
-    ],
-    "foundingDate": "2020",
-    "numberOfEmployees": "50-100",
-    "industry": "Technology",
-    "services": [
-      "AI Solutions",
-      "Cloud Infrastructure",
-      "Cybersecurity",
-      "Software Development",
-      "Data Analytics",
-      "Machine Learning"
-    ];
+  twitterCard = 'summary_large_image',
+  structuredData,
+  noindex = false,
+  nofollow = false
+}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  
+  const defaultStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    description: description,
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    sameAs: [
+      'https://linkedin.com/company/ziontechgroup',
+      'https://twitter.com/ziontechgroup'
+    ]
   };
-  const finalStructuredData = structuredData || defaultStructuredData;
+
   return (
-    <div>Content</div>
-  );
-        <title>5G Data Analytics - Zion Tech Group</title>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-      {/* Canonical URL */}
-      {/* Open Graph Meta Tags */}
-      {/* Twitter Card Meta Tags */}
-      {/* Additional Meta Tags */}
-      {/* Favicon and Icons */}
-      {/* Preconnect to external domains */}
-      {/* DNS Prefetch */}
+    <Helmet>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      
+      {canonical && <link rel="canonical" href={canonical} />}
+      
+      {noindex && <meta name="robots" content="noindex" />}
+      {nofollow && <meta name="robots" content="nofollow" />}
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      
+      {/* Additional SEO */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#3B82F6" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow" />
+      
       {/* Structured Data */}
-      <script type = "application/ld+json">{JSON.stringify(finalStructuredData)}
-      {/* Additional SEO Scripts */}
-      <script type="application/ld+json"  />{JSON.stringify({
-          "@context": "https: //schema.org",
-          "@type": "WebSite",
-          "name": "Zion Tech Group",
-          "url": "https: //ziontechgroup.com",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https: //ziontechgroup.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        })}
-      {/* Performance Hints */}
-      {/* Security Headers */};
-      <meta httpEquiv="X-Frame-Options" content="DENY" / / />;
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData || defaultStructuredData)}
+      </script>
+    </Helmet>
   );
+};
 
-
+export default SEOHead;
