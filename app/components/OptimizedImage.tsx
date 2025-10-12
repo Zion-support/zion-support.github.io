@@ -2,8 +2,8 @@ ursor/analyze-improve-and-deploy-application-edcb
 ursor/analyze-improve-and-deploy-application-edcb
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+
+import { ArrowRight, Mail, Brain } from 'lucide-react';
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -18,7 +18,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 OptimizedImage
-              </h1>
+              </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>

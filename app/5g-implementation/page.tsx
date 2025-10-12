@@ -1,23 +1,9 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Wifi, 
-  Cpu, 
-  Smartphone, 
-  Server, 
-  Globe, 
-  Zap, 
-  ArrowRight, 
-  CheckCircle, 
-  Shield,
-  BarChart3,
-  Users,
-  Database,
-  Cloud
-} from 'lucide-react';
+
+
+import { ArrowRight, Database } from 'lucide-react';
 
 export default function FiveGImplementationPage() {
   const fiveGServices = [

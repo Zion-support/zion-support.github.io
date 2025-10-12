@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Shield, Lock, Eye, Database, Users, Mail, Phone, MapPin } from 'lucide-react';
+
+
+import { Database, Mail } from 'lucide-react';
 
 export default function PrivacyPage() {
   const lastUpdated = 'October 8, 2024';

@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
 import Layout from '../layout'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Mic, Brain, Smartphone, Shield, CheckCircle, Star, Zap, Globe, MessageSquare } from 'lucide-react'
+
+import { ArrowRight, Mic, Brain, MessageSquare } from 'lucide-react';
 
 const AIVoiceAssistantPage: React.FC = () => {
   const features = [

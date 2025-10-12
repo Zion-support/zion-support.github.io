@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
 import Layout from '../layout'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Receipt, PieChart, Smartphone, Shield, CheckCircle, Star, Zap, DollarSign, TrendingUp } from 'lucide-react'
+
+import { ArrowRight, Receipt } from 'lucide-react';
 
 const AIExpenseTrackerPage: React.FC = () => {
   const features = [

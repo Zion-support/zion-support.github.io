@@ -17,6 +17,8 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    let isVisible = true;
+
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -40,6 +42,7 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
       '#00ffff', '#ff00ff', '#00ff00', '#ffff00', '#ff0080', '#8000ff'
     ];
 
+<<<<<<< HEAD
     // Create particles
     for (let i = 0; i < 100; i++) {
       particles.push({
@@ -49,11 +52,27 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
         vy: (Math.random() - 0.5) * 1.5,
         size: Math.random() * 3 + 1,
         opacity: Math.random() * 0.8 + 0.2,
+=======
+    // Create particles - reduced count for better performance
+    for (let i = 0; i < 25; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        size: Math.random() * 1.5 + 0.5,
+        opacity: Math.random() * 0.3 + 0.1,
+>>>>>>> cursor/analyze-improve-and-deploy-application-b5ac
         color: colors[Math.floor(Math.random() * colors.length)]
       });
     }
 
     const animate = () => {
+      if (!isVisible) {
+        animationRef.current = requestAnimationFrame(animate);
+        return;
+      }
+      
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
@@ -80,12 +99,21 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
             const dy = particle.y - otherParticle.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
 
+<<<<<<< HEAD
             if (distance < 150) {
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
               ctx.strokeStyle = particle.color + Math.floor((1 - distance / 150) * 80).toString(16).padStart(2, '0');
               ctx.lineWidth = 1;
+=======
+            if (distance < 80) {
+              ctx.beginPath();
+              ctx.moveTo(particle.x, particle.y);
+              ctx.lineTo(otherParticle.x, otherParticle.y);
+              ctx.strokeStyle = particle.color + Math.floor((1 - distance / 80) * 30).toString(16).padStart(2, '0');
+              ctx.lineWidth = 0.3;
+>>>>>>> cursor/analyze-improve-and-deploy-application-b5ac
               ctx.stroke();
             }
           }
@@ -116,10 +144,21 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
       animationRef.current = requestAnimationFrame(animate);
     };
 
+    // Intersection Observer for performance
+    const observer = new IntersectionObserver(
+      (entries) => {
+        isVisible = entries[0].isIntersecting;
+      },
+      { threshold: 0.1 }
+    );
+    
+    observer.observe(canvas);
+
     animate();
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
+      observer.disconnect();
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }

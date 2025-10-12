@@ -1,32 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  FileText, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Users, 
-  BarChart3, 
-  Globe, 
-  Shield, 
-  Clock, 
-  Sparkles,
-  Wand2,
-  Target,
-  TrendingUp,
-  MessageSquare,
-  Image,
-  Video,
-  Music,
-  Code,
-  BookOpen,
-  PenTool
-} from 'lucide-react';
+
+
+import { Brain, ArrowRight, MessageSquare, Image, Code, BookOpen, PenTool } from 'lucide-react';
 
 export default function AiContentGeneratorPage() {
   const [selectedPlan, setSelectedPlan] = useState('pro');

@@ -1,31 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  HelpCircle, 
-  MessageSquare, 
-  Phone, 
-  Mail, 
-  BookOpen, 
-  Video, 
-  FileText, 
-  Users, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight,
-  ChevronDown,
-  ChevronUp,
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
-  Code,
-  Smartphone,
-  BarChart3
-} from 'lucide-react';
+
+
+import { HelpCircle, MessageSquare, Mail, BookOpen, ArrowRight, ChevronDown, ChevronUp, Brain, Code } from 'lucide-react';
 
 export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('');

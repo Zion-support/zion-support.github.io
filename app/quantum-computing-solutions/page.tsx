@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
 import Layout from '../layout'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Atom, Cpu, Shield, Database, CheckCircle, Star, Zap, Globe, TrendingUp } from 'lucide-react'
+
+import { ArrowRight, Atom, Database } from 'lucide-react';
 
 const QuantumComputingSolutionsPage: React.FC = () => {
   const features = [

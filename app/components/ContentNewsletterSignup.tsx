@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 interface ContentNewsletterSignupProps {
   title?: string
@@ -124,7 +124,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              {features.map((feature, index) => (
 
                 <div key={index} className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">

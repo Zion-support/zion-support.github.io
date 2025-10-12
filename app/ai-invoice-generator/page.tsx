@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
 import Layout from '../layout'
-import { Link } from 'react-router-dom'
-import { ArrowRight, FileText, DollarSign, Clock, CheckCircle, Star, Zap, Shield, Globe, TrendingUp } from 'lucide-react'
+
+import { ArrowRight } from 'lucide-react';
 
 const AIInvoiceGeneratorPage: React.FC = () => {
   const features = [

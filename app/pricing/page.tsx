@@ -1,6 +1,6 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, Star, Zap, Shield, Globe } from 'lucide-react'
+
+
 
 export default function PricingPage() {
   const plans = [

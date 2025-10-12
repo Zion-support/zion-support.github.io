@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { FileText, Shield, AlertTriangle, Users, Mail, Phone, MapPin, CheckCircle } from 'lucide-react';
+
+
+import { Mail } from 'lucide-react';
 
 export default function TermsPage() {
   const lastUpdated = 'October 8, 2024';

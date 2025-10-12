@@ -1,51 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Mail, 
-  Calendar, 
-  FileText, 
-  CreditCard, 
-  Users, 
-  Settings, 
-  ArrowRight,
-  CheckCircle,
-  Star,
-  TrendingUp,
-  Clock,
-  Globe,
-  Smartphone,
-  Database,
-  Lock,
-  MessageSquare,
-  Camera,
-  Music,
-  Palette,
-  Target,
-  PieChart,
-  Activity,
-  DollarSign,
-  Download,
-  Upload,
-  Share2,
-  Bell,
-  Search,
-  Filter,
-  Plus,
-  Edit,
-  Trash2,
-  Eye,
-  EyeOff,
-  Play,
-  Pause,
-  RefreshCw
-} from 'lucide-react';
+
+
+import { Brain, Mail, ArrowRight, Database, MessageSquare, Camera, Palette, EyeOff } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
