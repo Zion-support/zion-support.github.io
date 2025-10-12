@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
+
 
 import React from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import ErrorBoundary from './components/ErrorBoundary';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -73,52 +70,7 @@ const Layout: React.FC<LayoutProps /> = ({
   };
 
   return (
-<<<<<<< HEAD
-    <ErrorBoundary />
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <Helmet>
-          <title>{title}</title>
-          <meta name="description" content="{description}" />
-          <meta name="keywords" content="{keywords}" />
-          {/* Open Graph Meta Tags */}
-          <meta property="og: title" content="{title}" /  />
-          <meta property="og: description" content="{description}" /  />
-          <meta property="og:type" content="website" /  />
-          <meta property="og:url" content="https://ziontechgroup.com" /  />
-          <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" /  />
-          <meta property="og:site_name" content="Zion Tech Group" /  />
-          {/* Twitter Card Meta Tags */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter: title" content="{title}" />
-          <meta name="twitter: description" content="{description}" />
-          <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
-          <meta name="twitter:site" content="@ziontechgroup" />
-          {/* Additional SEO Meta Tags */}
-          <meta name="robots" content="index, follow" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta name="viewport" content="width="device-width," initial-scale=1.0" /  />
-          <meta name="theme-color" content="#8 b5 cf6" />
-          {/* Structured Data */}
-          <script type="application/ld+json"  />{JSON.stringify(structuredData)}
-          </script>
-        </Helmet>
 
-        <Navigation />
-        <main className="w-5 h-5ml-2" />{children}
-        </main>
-
-        <Footer />
-        {/* Theme Toggle - Fixed Position */}
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <ThemeToggle />
-        </div>
-    </ErrorBoundary>
-  );
-};
-
-export default Layout;
-=======
-    
         <title>5G Data Analytics - Zion Tech Group</title>
           <title>{title}</title>
           {/* Open Graph Meta Tags */}
@@ -139,4 +91,4 @@ export default Layout;
 };
 
 export default Layout;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+

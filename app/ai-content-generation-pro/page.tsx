@@ -1,48 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
-'use client';
-=======
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
 export default function AiContentGenerationPro() {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Ai Content Generation Pro - Zion Tech Group</title>
-        <meta name="description" content="Ai Content Generation Pro services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="ai-content-generation-pro, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />Ai Content Generation Pro
-              </span>
-            </h1>
-            <p className="w-5 h-5ml-2">Professional ai content generation pro services by Zion Tech Group.
-            </p>
-          </div>
 
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="text-2 xl font-boldtext-white mb-4"  >Coming Soon</h2>
-            <p className="w-5 h-5ml-2">We're working on bringing you comprehensive ai content generation pro solutions. 
-              Contact us to learn more about our services.
-            </p>
-            <button className="w-5 h-5ml-2">Contact Us
-            </button>
-          </div>
-      </div>
-    </>
-  );
-};
-
-export default AiContentGenerationProPage;
-=======
         <title>AiContentGenerationPro - Zion Tech Group</title>
         <meta name="description" content="Professional aicontentgenerationpro services by Zion Tech Group" />
       </Helmet>
@@ -66,4 +32,4 @@ export default AiContentGenerationProPage;
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+

@@ -1,27 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-'use client'
 
-  ];
-              </span>
-              <br />
-              <span const className = "text-white"  >Solutions</span>
-            </h1>
-            <p className="w-5 h-5ml-2">Transform your business with our advanced systemmonitor solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <button className="w-5 h-5ml-2" />
-                Get Started
-                <ArrowRight className="w-5 h-5ml-2" />
-              </button>
-              <button className="w-5 h-5ml-2" />
-                Learn More
-  </
-            </div>
-    </div>
-=======
 
 import React from 'react';
 
@@ -40,7 +17,6 @@ import { ArrowRight } from 'lucide-react';
     
                 Learn More
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
   )}
 export default SystemMonitorPage
 
@@ -89,9 +65,6 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
     setIsMonitoring(!isMonitoring)
     if (!isMonitoring) {
       updateMetrics()
-<<<<<<< HEAD
-    }
+
   };
-=======
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+

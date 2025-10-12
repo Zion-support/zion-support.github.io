@@ -1,48 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
-'use client';
-=======
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
 export default function ZionContentStudio() {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Zion Content Studio - Zion Tech Group</title>
-        <meta name="description" content="Zion Content Studio services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="zion-content-studio, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />Zion Content Studio
-              </span>
-            </h1>
-            <p className="w-5 h-5ml-2">Professional zion content studio services by Zion Tech Group.
-            </p>
-          </div>
 
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="text-2 xl font-boldtext-white mb-4"  >Coming Soon</h2>
-            <p className="w-5 h-5ml-2">We're working on bringing you comprehensive zion content studio solutions. 
-              Contact us to learn more about our services.
-            </p>
-            <button className="w-5 h-5ml-2">Contact Us
-            </button>
-          </div>
-      </div>
-    </>
-  );
-};
-
-export default ZionContentStudioPage;
-=======
         <title>ZionContentStudio - Zion Tech Group</title>
         <meta name="description" content="Professional zioncontentstudio services by Zion Tech Group" />
       </Helmet>
@@ -66,4 +32,4 @@ export default ZionContentStudioPage;
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+

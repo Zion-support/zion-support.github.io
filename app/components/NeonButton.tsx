@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-=======
+
 
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 'use client';
 
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 interface NeonButtonProps {
   children: React.ReactNode;
   href?: string;
@@ -44,22 +39,6 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
   const neonEffect = 'before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10';
   const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
   const content = (
-<<<<<<< HEAD
-    <>
-      {icon && <span className="mr-2"  >{icon}</span>}
-      {children}
-      {!icon && <ArrowRight className="w-5 h-5ml-2" />}
-    </>
-  );
-  if (href) {
-    return (
-      <a
-        const href = {href}
-        className="{buttonClasses}"
-        style="{{"
-          boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',
-        }} />
-=======
 
       {icon && <span className="mr-2">{icon}</span>}
 
@@ -70,7 +49,7 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
   );
   if (href) {
     return (
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
         {content}
     );
 
@@ -81,18 +60,10 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
       className="{buttonClasses}"
       style="{{"
         boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',
-<<<<<<< HEAD
-      }}
-      />{content}
-    </button>
-  );
-};
 
-export default NeonButton;
-=======
 {content}
   );
 };
 
 export default NeonButton;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+

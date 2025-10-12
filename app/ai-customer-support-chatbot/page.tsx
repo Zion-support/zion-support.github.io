@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 'use client';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const AiCustomerSupportChatbotPage: React.FC = () => {
-=======
 export default function AICustomerSupportChatbot() {
   const features = [
     {
@@ -122,11 +118,6 @@ export default function AICustomerSupportChatbot() {
     }
   ]
 
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
   return (
     <>
       <Helmet>
@@ -180,17 +171,9 @@ export default function AICustomerSupportChatbot() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </>
-  );
-};
 
-export default AiCustomerSupportChatbotPage;
-export default AiCustomerSupportChatbotPage;
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
-=======
+
 export default function AiCustomerSupportChatbot() {
   return (
     <>
@@ -218,4 +201,4 @@ export default function AiCustomerSupportChatbot() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+

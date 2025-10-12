@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
+
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Network, Zap, Shield, Globe, BarChart3, CheckCircle, ArrowRight, Cpu, Smartphone } from 'lucide-react'
@@ -88,7 +85,6 @@ const FiveGSolutionsPage: React.FC = () => {
     { number: '1M+', label: 'Devices per km²', icon: <Network className="w-6 h-6 text-purple-400" /> },
     { number: '99.9%', label: 'Reliability', icon: <Shield className="w-6 h-6 text-orange-400" /> }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
 
 export default function FiveGSolutionsPage() {
   return (
@@ -111,7 +107,6 @@ export default function FiveGSolutionsPage() {
     </div>
   );
 }
-=======
 
 export default function Page() {
   return (
@@ -140,4 +135,4 @@ export default function Page() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+

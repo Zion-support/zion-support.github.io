@@ -1,50 +1,9 @@
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
-=======
-<<<<<<< HEAD
-import { getCLS, getFID, getFCP, getLCP, getTTFB };
-
-'use client';
-=======
-import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
->>>>>>> origin/main
 
     // Monitor Core Web Vitals
-<<<<<<< HEAD
-    const monitorCoreWebVitals = () => {
-<<<<<<< HEAD
-      if (typeof window !== 'undefined') {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
-      if ('web-vitals' in, window) {
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);
-        });
-<<<<<<< HEAD
-=======
-      if ('web-vitals' in window) {
-        onCLS(console.log);
-        onINP(console.log);
-        onFCP(console.log);
-        onLCP(console.log);
-        onTTFB(console.log);
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
->>>>>>> origin/main
+
       }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
     };
 
     // Monitor performance metrics

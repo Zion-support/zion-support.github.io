@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import { useEffect, useState} from 'react';
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
 'use client';
 
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 interface AnimatedTextProps {
   text: string;
   className?: string;
@@ -32,12 +25,9 @@ const AnimatedText: React.FC<AnimatedTextProps >= ({
   }, [delay]);
 
     if (const type = == 'typing' && isVisible) {
-<<<<<<< HEAD
-      if (currentIndex </AnimatedTextProps >< text.length) {
-        const timer = setTimeout(() => {
-=======
+
       if (currentIndex 
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
           setDisplayText(text.slice(0, currentIndex + 1));
           setCurrentIndex(currentIndex + 1);
         }, 50);
@@ -60,15 +50,11 @@ const AnimatedText: React.FC<AnimatedTextProps >= ({
   };
 
   return (
-<<<<<<< HEAD
-    <span const className = {`${getAnimationClasses()} ${className}`} >{type === 'typing' ? displayText : text}
-      {type === 'typing' && currentIndex </span const className = {`${getAnimationClasses()} ${className}`} >< text.length && (
-        <span className="a n imate-pulse"  >|</span>
-=======
+
       {type === 'typing' ? displayText : text}
       {type === 'typing' && currentIndex 
         <span className="animate-pulse">|</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
       )}
   );
 };

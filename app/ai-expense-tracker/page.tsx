@@ -1,45 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
 'use client';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import React from 'react'
 import { Receipt, ArrowRight, Bot, RotateCcw, RotateCw } from 'lucide-react'
 import { Link } from 'react-router-dom'
   )
-<<<<<<< HEAD
-}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
+
 'use client';
 import React from 'react';
-=======
 
 import React from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, Shield, Brain, TrendingUp } from 'lucide-react';
 
-  const features = [
-<<<<<<< HEAD
-    {
-      icon: <Brain className="w-5 h-5ml-2" />,
-      title: "AI-Powered Analysis",
-      description: "Advanced AI algorithms analyze your spending patterns and provide intelligent insights."
-    },
-    {
-      icon: <TrendingUp className="w-5 h-5ml-2" />,
-      title: "Real-time Tracking",
-      description: "Track your expenses in real-time with automatic categorization and smart notifications."
-    },
-    {
-      icon: <Shield className="w-5 h-5ml-2" />,
-=======
       icon: <Brain className="w-12h-12text-cyan-400" />,
       title: "AI-Powered Analysis",
       description: "Advanced AI algorithms analyze your spending patterns and provide intelligent insights."
@@ -49,19 +24,13 @@ import { ArrowRight, Shield, Brain, TrendingUp } from 'lucide-react';
       description: "Track your expenses in real-time with automatic categorization and smart notifications."
     },
       icon: <Shield className="w-12h-12text-green-400" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
       title: "Secure & Private",
       description: "Bank-level security ensures your financial data is protected and private."
   ];
 
   return (
-<<<<<<< HEAD
-    <>
-      <Helmet>
-        <title />AI Expense Tracker - Zion Tech Group</title>
-        <meta name="description" content="Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="AI expense tracking, financial management, Zion Tech Group" />
-=======
+
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, DollarSign, TrendingUp, PieChart, BarChart3, Receipt, CreditCard, Smartphone, Clock, Globe, Target, Lightbulb, Bot, Cpu, Database, Lock, Eye, Search, Filter, Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, Battery, Wifi, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, FileText, Package } from 'lucide-react';
 
 export default function AIExpenseTracker() {
@@ -94,7 +63,7 @@ export default function AIExpenseTracker() {
         <title>AI Expense Tracker - Zion Tech Group</title>
         <meta name="description" content="Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta name="keywords" content="AI expense tracker, financial management, automation, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
+
         <meta property="og:title" content="AI Expense Tracker - Zion Tech Group" />
         <meta property="og:description" content="Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta property="og:type" content="website" />
@@ -103,28 +72,7 @@ export default function AIExpenseTracker() {
 
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />
-                AI Expense Tracker
-              </span>
-            </h1>
-            <p className="w-5 h-5ml-2">Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs.
-            </p>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup"
-        >
-          Get Started
-                
-          <ArrowRight className="w-5 h-5ml-2" />
-        </Link>
-              <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
-                Learn More
-=======
+
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -149,7 +97,7 @@ export default function AIExpenseTracker() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
               >
                 View All Services
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
+
               </Link>
             </div>
         </section>
@@ -203,24 +151,7 @@ export default function AIExpenseTracker() {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />
-                Ready to Get Started?
-              </h2>
-              <p className="w-5 h-5ml-2">Contact us to learn more about our solutions and how we can help your business.
-              </p>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
-                  Contact Us
-                </Link>
-                <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
-                  View All Services
-                </Link>
-              </div>
-=======
+
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -236,20 +167,14 @@ export default function AIExpenseTracker() {
               Contact Us Today
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
+
           </div>
         </section>
       </div>
     </>
   );
-<<<<<<< HEAD
-};
 
-export default Page;
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
-=======
 
         <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Expense Tracker - Zion Tech Group</title>
@@ -304,4 +229,3 @@ export default function AIExpenseTracker() {
           Contact Us
   );
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

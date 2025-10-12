@@ -20,21 +20,6 @@ class ErrorBoundary extends Component<Props, State /> {
   public render() {
     if (this.state.hasError) {
       return (
-<<<<<<< HEAD
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="text-6 xl font-boldtext-white mb-4"  >Oops!</h1>
-            <p className="text-xl text-gray-300 mb-8">Something went wrong.</p>
-            <button
-              onClick="{()" =  />this.setState({ hasError: false, error: undefined })}
-              className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300"
-            >
-              Try Again
-            </button>
-          </div>
-      );
-    }
-=======
 
             <h1 className="text-6 xl font-boldtext-whitemb-4">Oops!</h1>
             <p className="text-xltext-gray-300mb-8">Something went wrong.</p>
@@ -44,7 +29,6 @@ this.setState({ hasError: false, error: undefined })}
               Try Again
 
       );
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
     return this.props.children;
 

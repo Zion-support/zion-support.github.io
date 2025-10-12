@@ -1,40 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Bot} from 'lucide-react';
-
-export default function AIInventoryManagerPage() {
-  const features = [
-    {
-      icon: <Bot className="w-5 h-5ml-2" />,
-      title: 'AI Demand Forecasting',
-      description: 'Predict inventory needs with 95% accuracy using machine learning algorithms'
-    },
-    {
-      icon: <Package className="w-5 h-5ml-2" />,
-      title: 'Smart Reorder Points',
-      description: 'Automatically trigger reorders based on sales velocity and lead times'
-    },
-    {
-      icon: <BarChart3 className="w-5 h-5ml-2" />,
-      title: 'Real-time Analytics',
-      description: 'Comprehensive inventory insights with predictive analytics and trend analysis'
-    },
-    {
-      icon: <Zap className="w-5 h-5ml-2" />,
-      title: 'Automated Workflows',
-      description: 'Streamline inventory processes with intelligent automation and alerts'
-    },
-    {
-      icon: <Target className="w-5 h-5ml-2" />,
-      title: 'Multi-location Sync',
-      description: 'Seamlessly manage inventory across multiple warehouses and stores'
-    },
-    {
-      icon: <Shield className="w-5 h-5ml-2" />,
-=======
 
 import React from 'react';
 
@@ -66,7 +31,7 @@ export default function AIInventoryManagerPage() {
       description: 'Seamlessly manage inventory across multiple warehouses and stores'
     },
       icon: <Shield className="w-6h-6text-red-400" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
       title: 'Loss Prevention',
       description: 'AI-powered theft detection and shrinkage analysis with real-time alerts'
   ]
@@ -140,25 +105,7 @@ export default function AIInventoryManagerPage() {
   ]
 
   const benefits = [
-<<<<<<< HEAD
-    {
-      icon: <DollarSign className="w-5 h-5ml-2" />,
-      title: '25% Cost Reduction',
-      description: 'Optimize inventory levels and reduce carrying costs'
-    },
-    {
-      icon: <Target className="w-5 h-5ml-2" />,
-      title: '95% Accuracy',
-      description: 'AI forecasting with industry-leading accuracy rates'
-    },
-    {
-      icon: <Activity className="w-5 h-5ml-2" />,
-      title: 'Zero Stockouts',
-      description: 'Smart reorder points prevent stockouts completely'
-    },
-    {
-      icon: <Zap className="w-5 h-5ml-2" />,
-=======
+
       icon: <DollarSign className="w-8h-8text-cyan-400" />,
       title: '25% Cost Reduction',
       description: 'Optimize inventory levels and reduce carrying costs'
@@ -172,7 +119,7 @@ export default function AIInventoryManagerPage() {
       description: 'Smart reorder points prevent stockouts completely'
     },
       icon: <Zap className="w-8h-8text-orange-400" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
       title: 'Real-time Sync',
       description: 'Instant updates across all locations and devices'
   ]
@@ -191,178 +138,6 @@ export default function AIInventoryManagerPage() {
   ]
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title />AI Inventory Manager - Zion Tech Group | Smart Inventory Management</title>
-        <meta name="description" content="Revolutionary AI-powered inventory management with demand forecasting, automated reordering, and real-time analytics. Reduce costs by 25%. Starting at $39/month." />
-        <meta name="keywords" content="AI inventory management, demand forecasting, automated reordering, inventory analytics, stock management, warehouse management" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-inventory-manager"  />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Package className="w-5 h-5ml-2" />
-            <span />AI-Powered Inventory Management</span>
-          </div>
-          
-          <h1 className="w-5 h-5ml-2" />
-            AI Inventory
-            <br />
-            <span className="w-5 h-5ml-2" />Manager
-            </span>
-          </h1>
-          
-          <p className="w-5 h-5ml-2">Transform your inventory management with AI-powered demand forecasting, automated reordering, 
-            and real-time analytics. Reduce costs by 25% and eliminate stockouts completely.
-          </p>
-          
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
-              <span />Start Free Trial</span>
-              <ArrowRight className="w-5 h-5ml-2" />
-            </Link>
-            <Link to="#pricing" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-              <span />View Pricing</span>
-              <ArrowRight className="w-5 h-5ml-2" />
-            </Link>
-          </div>
-
-          {/* Key Stats */}
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">25%</div>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Cost Reduction</div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">95%</div>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Forecast Accuracy</div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">0</div>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Stockouts</div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">15 K+</div>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Active Users</div>
-          </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />
-              Why Choose Our <span className="w-5 h-5ml-2" />AI Inventory Manager?</span>
-            </h2>
-            <p className="w-5 h-5ml-2">Experience the future of inventory management with cutting-edge AI technology that works for your business.
-            </p>
-          </div>
-          
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {benefits.map((benefit, index) => (
-              <div key="{index}" className="text-centergroup" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{benefit.icon}
-                </div>
-                <h3 className="w-5 h-5ml-2" />{benefit.title}
-                </h3>
-                <p className="w-5 h-5ml-2">{benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />
-              Powerful Features for <span className="w-5 h-5ml-2" />Smart Inventory</span>
-            </h2>
-            <p className="w-5 h-5ml-2">Everything you need to manage inventory efficiently with AI-powered intelligence and automation.
-            </p>
-          </div>
-          
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {features.map((feature, index) => (
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
-                </div>
-                <h3 className="w-5 h-5ml-2" />{feature.title}
-                </h3>
-                <p className="w-5 h-5ml-2">{feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-      </section>
-
-      {/* Integrations Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />
-              Seamless <span className="w-5 h-5ml-2" />Integrations</span>
-            </h2>
-            <p className="w-5 h-5ml-2">Connect with your favorite e-commerce platforms, accounting software, and business tools.
-            </p>
-          </div>
-          
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {integrations.map((integration, index) => (
-              <div key="{index}" className="group text-center" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <span className="w-5 h-5ml-2" />{integration.icon}</span>
-                </div>
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{integration.name}
-                </div>
-            ))}
-          </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="pricing" className="py-20px-4relative" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />
-              Simple, Transparent <span className="w-5 h-5ml-2" />Pricing</span>
-            </h2>
-            <p className="w-5 h-5ml-2">Choose the plan that fits your business size and inventory needs. All plans include our core AI features.
-            </p>
-          </div>
-          
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {pricingPlans.map((plan, index) => (
-              <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
-                plan.popular 
-                  ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
-                  : 'border-white/20 hover: border-cyan-400/30'
-              }`} />
-                {plan.popular && (
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
-                    </div>
-                )}
-                
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
-                  <p className="w-5 h-5ml-2">{plan.description}</p>
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5 h-5ml-2" />{plan.price}</span>
-                    <span className="w-5 h-5ml-2" />{plan.period}</span>
-                  </div>
-                
-                <ul className="w-5 h-5ml-2" />
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key="{featureIndex}" className="flex items-centerspace-x-3" />
-                      <CheckCircle className="w-5 h-5ml-2" />
-                      <span className="w-5 h-5ml-2" />{feature}</span>
-                    </li>
-=======
 
         <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Inventory Manager - Zion Tech Group | Smart Inventory Management</title>
@@ -455,7 +230,6 @@ export default function AIInventoryManagerPage() {
 
                       <span className="text-gray-300">{feature}</span>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                   ))}
 
                   to="/contact"
@@ -464,82 +238,7 @@ export default function AIInventoryManagerPage() {
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
                   }`}
-<<<<<<< HEAD
-                  />Get Started
-                </Link>
-              </div>
-            ))}
-          </div>
-      </section>
 
-      {/* Testimonials Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />
-              Trusted by <span className="w-5 h-5ml-2" />15,000+</span> Businesses
-            </h2>
-            <p className="w-5 h-5ml-2">See what our customers are saying about their success with our AI inventory manager.
-            </p>
-          </div>
-          
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {testimonials.map((testimonial, index) => (
-              <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
-                  </div>
-                  <div />
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
-                </div>
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key="{i}" className="w-5 h-5te xt-yellow-400fill-current"  />
-                  ))}
-                </div>
-                <p className="w-5 h-5ml-2">"{testimonial.content}"</p>
-              </div>
-            ))}
-          </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <h2 className="w-5 h-5ml-2" />
-                  Ready to Transform Your <span className="w-5 h-5ml-2" />Inventory Management?</span>
-                </h2>
-                
-                <p className="w-5 h-5ml-2">Join thousands of businesses already reducing costs by 25% with our AI-powered inventory manager. 
-                  Start your free trial today and experience the future of inventory management.
-                </p>
-                
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
-                    <span />Start Free Trial</span>
-                    <ArrowRight className="w-5 h-5ml-2" />
-                  </Link>
-                  <Link to="#pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                    <span />View All Plans</span>
-                    <ArrowRight className="w-5 h-5ml-2" />
-                  </Link>
-                </div>
-                
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-                </div>
-            </div>
-        </div>
-      </section>
-    </div>
-  );
-}
-=======
 Get Started
     
             ))}
@@ -576,4 +275,4 @@ Get Started
                   <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
 
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+

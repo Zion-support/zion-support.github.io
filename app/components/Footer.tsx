@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shield, Database, Workflow, Link as LinkIcon, Linkedin, Twitter, Github } from 'lucide-react';
 
@@ -66,30 +64,16 @@ import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shiel
 
   return (
           <h3 className="text-2-xl font-bold mb-4">Zion Tech Group</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
   const currentYear = new Date().getFullYear();
 
   return (
-<<<<<<< HEAD
-    <footer className="bg-gray-900  text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  py-12">
-        <div className="text-center">
-          <h3 className="text-2xl font-bold  mb-4">Zion Tech Group</h3>
-          <p className="text-gray-400  mb-4">
-=======
+
           <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
             Advanced AI & IT Solutions
             © {currentYear} Zion Tech Group. All rights reserved.
-<<<<<<< HEAD
-          </p>
-        </div>
-    </footer>
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
   );
 };
 

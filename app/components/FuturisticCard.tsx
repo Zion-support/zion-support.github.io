@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-=======
+
 
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
 import React from 'react';
 import { motion } from 'framer-motion';
 'use client';
@@ -30,22 +29,7 @@ interface FuturisticCardProps {
 
   return (
       {/* Animated background gradient */}
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      {/* Animated border glow */}
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      {/* Content */}
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{children}
-      </div>
-      
-      {/* Corner accent */}
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      {/* Bottom accent */}
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-    </motion.div>
-  );
-}
-=======
+
       {/* Animated border glow */}
       {/* Content */}
     
@@ -58,4 +42,4 @@ interface FuturisticCardProps {
 };
 
 export default FuturisticCard;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+

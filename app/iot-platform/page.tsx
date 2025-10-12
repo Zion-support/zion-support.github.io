@@ -1,36 +1,12 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
+
 
 import React from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function IotplatformPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>Service - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="max-w-7xl mx-autopx-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4 xl font-boldtext-white mb-6"  >Iot Platform</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional iot platform services coming soon.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-centermx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5ml-2" />
-        </Link>
-      </div>
-    </div>
-  );
-}
-=======
 
         <title>5G Data Analytics - Zion Tech Group</title>
         <title>Iot Platform - Zion Tech Group</title>
@@ -39,4 +15,4 @@ export default function IotplatformPage() {
           Contact Us
     
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+

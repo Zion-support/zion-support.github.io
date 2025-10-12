@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-=======
+
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
 import { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -66,27 +65,7 @@ const AICybersecurityMonitorProPage = lazy(() => import('./ai-cybersecurity-moni
 
 // IT Services
 const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'));
-<<<<<<< HEAD
-const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
-// Emerging Technologies
-const BlockchainPage = lazy(() => import('./blockchain/page'));
-const QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
-const IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
-const ARVRSolutionsPage = lazy(() => import('./ar-vr-solutions/page'));
-const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
-// Micro SaaS
-const MicroSaasPage = lazy(() => import('./micro-saas/page'));
-const AIContentWriterProPage = lazy(() => import('./micro-saas/ai-content-writer-pro/page'));
-// Support Pages
-const DocsPage = lazy(() => import('./docs/page'));
-const ApiDocsPage = lazy(() => import('./api-docs/page'));
-const SupportPage = lazy(() => import('./support/page'));
-const StatusPage = lazy(() => import('./status/page'));
-const ConsultationPage = lazy(() => import('./consultation/page'));
-// Loading component
-const AppLoadingSpinner = () => <LoadingSpinner />;
 
-=======
 const CybersecuritySolutionsPage = lazy(() => import('./cybersecurity-solutions/page'));
 const WebDevelopmentPage = lazy(() => import('./web-development/page'));
 const MobileDevelopmentPage = lazy(() => import('./mobile-development/page'));
@@ -166,7 +145,7 @@ const FiveGSmartCitySolutionsPage = lazy(() => import('./5g-smart-city-solutions
 const FiveGSolutionsPage = lazy(() => import('./5g-solutions/page'));
 
 // Main App Component
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
 function App() {
   return (
     <ErrorBoundary>
@@ -296,59 +275,7 @@ function App() {
                 <Route path="/zion-ai-seo-optimizer" element={<ZionAISEOOptimizerPage />} />
                 <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
                 <Route path="/zion-customer-insights" element={<ZionAICustomerInsightsPage />} />
-                
-<<<<<<< HEAD
-                {/* Additional AI Services */}
-                <Route path="/ai-voice-assistant" element={<AiServicesPage />} />
-                <Route path="/ai-crm-assistant" element={<AiServicesPage />} />
-                <Route path="/ai-social-media-manager" element={<AiServicesPage />} />
-                <Route path="/ai-email-marketing-automation" element={<AiServicesPage />} />
-                <Route path="/ai-project-manager" element={<AiServicesPage />} />
-                <Route path="/ai-3d-generation" element={<AiServicesPage />} />
-                <Route path="/ai-drug-discovery-pro" element={<AiServicesPage />} />
-                <Route path="/ai-automated-reporting" element={<AiServicesPage />} />
-                <Route path="/ai-password-manager" element={<AiServicesPage />} />
-                <Route path="/ai-task-manager" element={<AiServicesPage />} />
-                
-                {/* IT Services Dropdown */}
-                <Route path="/web-development" element={<ItServicesPage />} />
-                <Route path="/mobile-development" element={<ItServicesPage />} />
-                <Route path="/devops" element={<ItServicesPage />} />
-                <Route path="/cloud-migration" element={<ItServicesPage />} />
-                
-                {/* Additional IT Services */}
-                <Route path="/api-development" element={<ItServicesPage />} />
-                <Route path="/database-management" element={<ItServicesPage />} />
-                <Route path="/network-infrastructure" element={<ItServicesPage />} />
-                <Route path="/system-integration" element={<ItServicesPage />} />
-                <Route path="/data-analytics" element={<ItServicesPage />} />
-                <Route path="/iot-solutions" element={<ItServicesPage />} />
-                <Route path="/blockchain-development" element={<ItServicesPage />} />
-                
-                {/* 5G Services */}
-                <Route path="/5g-network-infrastructure" element={<ItServicesPage />} />
-                <Route path="/5g-iot-solutions" element={<ItServicesPage />} />
-                <Route path="/5g-edge-computing" element={<ItServicesPage />} />
-                <Route path="/5g-private-networks" element={<ItServicesPage />} />
-                <Route path="/5g-mobile-applications" element={<ItServicesPage />} />
-                <Route path="/5g-data-analytics" element={<ItServicesPage />} />
-                
-                {/* Additional Services */}
-                <Route path="/business-intelligence" element={<ItServicesPage />} />
-                <Route path="/5g-implementation" element={<ItServicesPage />} />
-                
-                {/* Company Pages */}
-                <Route path="/team" element={<TeamPage />} />
-                <Route path="/careers" element={<CareersPage />} />
-                <Route path="/case-studies" element={<CaseStudiesPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                {/* Support Pages */}
-                <Route path="/docs" element={<DocsPage />} />
-                <Route path="/api-docs" element={<ApiDocsPage />} />
-                <Route path="/support" element={<SupportPage />} />
-                <Route path="/status" element={<StatusPage />} />
-                <Route path="/consultation" element={<ConsultationPage />} />
-=======
+
                 {/* 5G Solutions Routes */}
                 <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
                 <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
@@ -359,7 +286,7 @@ function App() {
                 <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
                 <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
                 <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
               </Routes>
             </Suspense>
             <PerformanceMonitor />
@@ -371,8 +298,5 @@ function App() {
   );
 }
 
-<<<<<<< HEAD
 export default App;
-=======
-export default App;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+

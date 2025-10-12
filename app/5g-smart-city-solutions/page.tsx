@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
+
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Wifi, ArrowRight, CheckCircle, Brain, Building, Users } from 'lucide-react'
@@ -123,7 +120,6 @@ export default function FiveGSmartCitySolutions() {
       rating: 5
     }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
 
 export default function FiveGSmartCitySolutionsPage() {
   return (
@@ -146,7 +142,6 @@ export default function FiveGSmartCitySolutionsPage() {
     </div>
   );
 }
-=======
 
 export default function Page() {
   return (
@@ -175,4 +170,4 @@ export default function Page() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+

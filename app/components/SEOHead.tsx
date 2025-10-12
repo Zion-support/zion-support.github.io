@@ -1,35 +1,9 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
 import React from 'react';
 
   return (
-<<<<<<< HEAD
-    <Helmet>
-      <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-      <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
-      <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, 5 G implementation" />
-      <meta name="viewport" content="width="device-width," initial-scale=1.0" /  />
-      <meta name="theme-color" content="#8 b5 cf6" />
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" /  />
-      <meta property="og: description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." /  />
-      <meta property="og:type" content="website" /  />
-      <meta property="og:url" content="https://ziontechgroup.com" /  />
-      <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" /  />
-      <meta property="og:site_name" content="Zion Tech Group" /  />
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-      <meta name="twitter: description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
-      <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-=======
-    
+
         <title>5G Data Analytics - Zion Tech Group</title>
       <title>Zion Tech Group - Advanced AI and IT Solutions</title>
       {/* Open Graph Meta Tags */}
@@ -37,8 +11,7 @@ import React from 'react';
       {/* Twitter Card Meta Tags */}
     
       {/* Additional SEO Meta Tags */}
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
       {/* Structured Data */}
       <script type="application/ld+json"  />{JSON.stringify({
           "@context": "https: //schema.org",
@@ -67,12 +40,7 @@ import React from 'react';
             "https://twitter.com/ziontechgroup"
           ]
         })}
-<<<<<<< HEAD
-      </script>
-    </Helmet>
-=======
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
   );
 };
 
