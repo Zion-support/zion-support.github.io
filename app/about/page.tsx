@@ -29,29 +29,6 @@ const AboutPage: React.FC = () => {
     }
   ];
 
-  const values = [
-    {
-      icon: Brain,
-      title: 'Innovation',
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value.'
-    },
-    {
-      icon: Shield,
-      title: 'Security',
-      description: 'Enterprise-grade security is at the core of everything we do, ensuring your data and systems are always protected.'
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'We work closely with our clients as partners, understanding their unique challenges and delivering tailored solutions.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'With a worldwide presence, we deliver consistent, high-quality services to clients across all continents.'
-    }
-  ];
-
   const team = [
     {
       name: 'John Smith',
