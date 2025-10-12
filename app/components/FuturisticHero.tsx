@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-ursor/analyze-improve-and-deploy-application-edcb
-=======
 'use client'
 import React from 'react'
 <<<<<<< HEAD
@@ -158,9 +155,12 @@ const FuturisticHeroPage: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-fabc
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-072b
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7720
           </div>
         </div>
       </section>
