@@ -6,19 +6,34 @@ export default function Footer() {
   const aiServices = [
     { name: 'AI Content Generator', path: '/ai-content-generator' },
     { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
+    { name: 'AI Task Manager', path: '/ai-task-manager' },
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
+    { name: 'AI Password Manager', path: '/ai-password-manager' },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
-    { name: 'AI Email Assistant', path: '/ai-email-assistant' },
-    { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Automation Suite', path: '/ai-automation' }
+    { name: 'AI Automation Suite', path: '/ai-automation' },
+    { name: 'AI Cybersecurity', path: '/ai-cybersecurity' }
   ]
 
   const itServices = [
     { name: 'Cloud Migration', path: '/cloud-migration' },
-    { name: 'DevOps Solutions', path: '/devops-solutions' },
     { name: 'Cybersecurity', path: '/cybersecurity' },
     { name: 'Data Analytics', path: '/data-analytics' },
-    { name: 'API Development', path: '/api-development' },
-    { name: 'System Integration', path: '/system-integration' }
+    { name: 'Custom Development', path: '/custom-development' },
+    { name: 'Mobile Development', path: '/mobile-development' },
+    { name: 'Web Development', path: '/web-development' },
+    { name: 'System Integration', path: '/system-integration' },
+    { name: 'Infrastructure Management', path: '/infrastructure-management' }
+  ]
+
+  const microSaasServices = [
+    { name: 'AI Task Manager Pro', path: '/ai-task-manager' },
+    { name: 'Expense Tracker AI', path: '/ai-expense-tracker' },
+    { name: 'Password Manager Plus', path: '/ai-password-manager' },
+    { name: 'Code Review Assistant', path: '/ai-code-review' },
+    { name: 'Analytics Dashboard Pro', path: '/ai-analytics-dashboard' },
+    { name: 'Social Media Scheduler', path: '/social-media-scheduler' },
+    { name: 'Customer Support Bot', path: '/ai-customer-support-bot' },
+    { name: 'Workflow Automation', path: '/workflow-automation' }
   ]
 
   const companyLinks = [
@@ -42,7 +57,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
@@ -101,6 +116,24 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Micro SAAS Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Micro SAAS</h3>
+            <ul className="space-y-2">
+              {microSaasServices.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.path} 
+                    className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Company & Support */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
@@ -138,15 +171,15 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center">
               <Mail className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">contact@ziontech.com</span>
+              <span className="text-gray-400">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
               <Phone className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">+1 (555) 123-4567</span>
+              <span className="text-gray-400">+1 302 464 0950</span>
             </div>
             <div className="flex items-center">
               <MapPin className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">San Francisco, CA</span>
+              <span className="text-gray-400">364 E Main St STE 1008 Middletown DE 19709</span>
             </div>
           </div>
         </div>

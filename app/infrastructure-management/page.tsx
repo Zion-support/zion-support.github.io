@@ -1,23 +1,23 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Code, Smartphone, Globe, Database } from 'lucide-react';
+import { ArrowRight, Server } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function CustomDevelopmentPage() {
+export default function InfrastructureManagementPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Custom Development Services - Zion Tech Group</title>
-        <meta name="description" content="Bespoke software solutions tailored to your specific business requirements." />
+        <title>Infrastructure Management Services - Zion Tech Group</title>
+        <meta name="description" content="Complete IT infrastructure setup, management, and optimization services." />
       </Helmet>
       
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Custom Development
+            Infrastructure Management
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Bespoke software solutions tailored to your specific business requirements.
+            Complete IT infrastructure setup, management, and optimization services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -41,7 +41,7 @@ export default function CustomDevelopmentPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Coming Soon</h2>
           <p className="text-xl text-gray-600 mb-8">
-            We're developing comprehensive custom development services. Contact us to discuss your project requirements.
+            We're developing comprehensive infrastructure management services. Contact us to discuss your infrastructure needs.
           </p>
           <Link
             to="/contact"

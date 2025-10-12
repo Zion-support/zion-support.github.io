@@ -18,6 +18,26 @@ const MicroSAASServicesPage = React.lazy(() => import('./app/micro-saas-services
 const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
 const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'))
 
+// AI Services
+const AIContentGeneratorPage = React.lazy(() => import('./app/ai-content-generator/page'))
+const AIChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'))
+const AITaskManagerPage = React.lazy(() => import('./app/ai-task-manager/page'))
+const AIExpenseTrackerPage = React.lazy(() => import('./app/ai-expense-tracker/page'))
+const AIPasswordManagerPage = React.lazy(() => import('./app/ai-password-manager/page'))
+const AIAnalyticsDashboardPage = React.lazy(() => import('./app/ai-analytics-dashboard/page'))
+const AIAutomationPage = React.lazy(() => import('./app/ai-automation/page'))
+const AICybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'))
+
+// IT Services
+const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'))
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
+const DataAnalyticsPage = React.lazy(() => import('./app/data-analytics/page'))
+const CustomDevelopmentPage = React.lazy(() => import('./app/custom-development/page'))
+const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'))
+const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'))
+const SystemIntegrationPage = React.lazy(() => import('./app/system-integration/page'))
+const InfrastructureManagementPage = React.lazy(() => import('./app/infrastructure-management/page'))
+
 // Loading component for Suspense
 const PageLoader = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -44,6 +64,26 @@ function App() {
                 <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                 <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                
+                {/* AI Services Routes */}
+                <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                <Route path="/ai-task-manager" element={<AITaskManagerPage />} />
+                <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
+                <Route path="/ai-password-manager" element={<AIPasswordManagerPage />} />
+                <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
+                <Route path="/ai-automation" element={<AIAutomationPage />} />
+                <Route path="/ai-cybersecurity" element={<AICybersecurityPage />} />
+                
+                {/* IT Services Routes */}
+                <Route path="/cloud-migration" element={<CloudMigrationPage />} />
+                <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                <Route path="/custom-development" element={<CustomDevelopmentPage />} />
+                <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                <Route path="/web-development" element={<WebDevelopmentPage />} />
+                <Route path="/system-integration" element={<SystemIntegrationPage />} />
+                <Route path="/infrastructure-management" element={<InfrastructureManagementPage />} />
                 {/* 404 Route */}
                 <Route path="*" element={
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">

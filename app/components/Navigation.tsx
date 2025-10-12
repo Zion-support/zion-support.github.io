@@ -28,16 +28,16 @@ export default function Navigation() {
       description: 'Information Technology Solutions'
     },
     {
-      title: 'Cloud Services',
-      href: '/cloud-services',
-      icon: Cloud,
-      description: 'Cloud Computing Solutions'
-    },
-    {
       title: 'Micro SaaS',
       href: '/micro-saas-services',
       icon: Code,
       description: 'Micro Software as a Service'
+    },
+    {
+      title: 'Cloud Services',
+      href: '/cloud-services',
+      icon: Cloud,
+      description: 'Cloud Computing Solutions'
     },
     {
       title: '5G Implementation',
@@ -59,7 +59,9 @@ export default function Navigation() {
     { name: 'AI Task Manager', path: '/ai-task-manager', icon: <Database className="w-4 h-4" /> },
     { name: 'AI Expense Tracker', path: '/ai-expense-tracker', icon: <Code className="w-4 h-4" /> },
     { name: 'AI Password Manager', path: '/ai-password-manager', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Automated Reporting', path: '/ai-automated-reporting', icon: <Globe className="w-4 h-4" /> }
+    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', icon: <Globe className="w-4 h-4" /> },
+    { name: 'AI Automation Suite', path: '/ai-automation', icon: <Cpu className="w-4 h-4" /> },
+    { name: 'AI Cybersecurity', path: '/ai-cybersecurity', icon: <Shield className="w-4 h-4" /> }
   ]
 
   return (
@@ -117,12 +119,30 @@ export default function Navigation() {
               
               {activeDropdown === 'it' && (
                 <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                  {services.slice(1).map((service, index) => (
-                    <Link key={index} to={service.href} className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">
-                      <service.icon className="w-4 h-4" />
-                      <span className="ml-3">{service.title}</span>
-                    </Link>
-                  ))}
+                  <Link to="/cloud-migration" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">
+                    <Cloud className="w-4 h-4" />
+                    <span className="ml-3">Cloud Migration</span>
+                  </Link>
+                  <Link to="/cybersecurity" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">
+                    <Shield className="w-4 h-4" />
+                    <span className="ml-3">Cybersecurity</span>
+                  </Link>
+                  <Link to="/data-analytics" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">
+                    <Database className="w-4 h-4" />
+                    <span className="ml-3">Data Analytics</span>
+                  </Link>
+                  <Link to="/custom-development" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">
+                    <Code className="w-4 h-4" />
+                    <span className="ml-3">Custom Development</span>
+                  </Link>
+                  <Link to="/mobile-development" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">
+                    <Smartphone className="w-4 h-4" />
+                    <span className="ml-3">Mobile Development</span>
+                  </Link>
+                  <Link to="/web-development" className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">
+                    <Globe className="w-4 h-4" />
+                    <span className="ml-3">Web Development</span>
+                  </Link>
                 </div>
               )}
             </div>
@@ -167,11 +187,24 @@ export default function Navigation() {
               {/* IT Services Mobile */}
               <div className="px-3 py-2">
                 <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">IT Services</p>
-                {services.slice(1).map((service, index) => (
-                  <Link key={index} to={service.href} className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
-                    {service.title}
-                  </Link>
-                ))}
+                <Link to="/cloud-migration" className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                  Cloud Migration
+                </Link>
+                <Link to="/cybersecurity" className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                  Cybersecurity
+                </Link>
+                <Link to="/data-analytics" className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                  Data Analytics
+                </Link>
+                <Link to="/custom-development" className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                  Custom Development
+                </Link>
+                <Link to="/mobile-development" className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                  Mobile Development
+                </Link>
+                <Link to="/web-development" className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                  Web Development
+                </Link>
               </div>
 
               <Link
