@@ -1,14 +1,39 @@
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+interface AnimatedTextProps {
+  text: string;
+  className?: string;
+  delay?: number;
+  duration?: number;
+}
 
+const AnimatedText: React.FC<AnimatedTextProps> = ({
+  text,
+  className = '',
+  delay = 0,
+  duration = 0.5
+}) => {
+  const [isVisible, setIsVisible] = useState(false);
 
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, delay);
 
+    return () => clearTimeout(timer);
+  }, [delay]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+      transition={{ duration }}
+      className={className}
+    >
+      {text}
+    </motion.div>
+  );
+};
+
+export default AnimatedText;
