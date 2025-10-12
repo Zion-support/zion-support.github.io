@@ -1,8 +1,9 @@
 'use client';
 
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const PricingPage: React.FC = () => {
   const plans = [
@@ -55,6 +56,17 @@ const PricingPage: React.FC = () => {
     }
   ];
 
+  const features = [
+    'AI Content Generation',
+    'Business Intelligence',
+    'Customer Support Automation',
+    'Data Analytics',
+    'Process Automation',
+    'API Access',
+    '24/7 Support',
+    'Custom Integrations'
+  ];
+
   return (
     <>
       <Helmet>
@@ -86,9 +98,7 @@ const PricingPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
               {plans.map((plan, index) => (
-                {features.map((feature, index) => (
-
-                  <div key={index} className={`bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+                <div key={index} className={`bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-gray-700'
                 } hover:border-blue-500 transition-all duration-300 relative`}>
                   {plan.popular && (
@@ -110,60 +120,51 @@ const PricingPage: React.FC = () => {
 
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
 
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-                      : 'border border-gray-600 text-white hover:bg-gray-700'
-                  }`}>
-                    {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-                  </button>
+                  <Link
+                    to="/contact"
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 flex items-center justify-center ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
+                        : 'bg-gray-700 text-white hover:bg-gray-600'
+                    }`}
+                  >
+                    Get Started
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-white text-center mb-12">
-              Frequently Asked Questions
-            </h2>
+        {/* Features Comparison */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                All Plans Include
+              </h2>
+              <p className="text-xl text-gray-300">
+                Everything you need to succeed with AI
+              </p>
+            </div>
             
-            <div className="space-y-6">
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  Can I change my plan anytime?
-                </h3>
-                <p className="text-gray-300">
-                  Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.
-                </p>
-              </div>
-              
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  Is there a free trial available?
-                </h3>
-                <p className="text-gray-300">
-                  Yes, we offer a 14-day free trial for all plans. No credit card required.
-                </p>
-              </div>
-              
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  What payment methods do you accept?
-                </h3>
-                <p className="text-gray-300">
-                  We accept all major credit cards, PayPal, and bank transfers for enterprise plans.
-                </p>
-              </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-4 mb-4">
+                    <CheckCircle className="w-8 h-8 text-white mx-auto" />
+                  </div>
+                  <h3 className="text-white font-semibold">{feature}</h3>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -171,19 +172,26 @@ const PricingPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of companies already using our platform
+              Join thousands of businesses already using our AI solutions to drive growth and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
-                Start Free Trial
-              </button>
-              <button className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              >
                 Contact Sales
-              </button>
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/ai-services"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                View AI Services
+              </Link>
             </div>
           </div>
         </section>

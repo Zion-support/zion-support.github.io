@@ -1,129 +1,151 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, DollarSign, TrendingUp, Users, Award } from 'lucide-react'
+import { CheckCircle, ArrowRight, TrendingUp, Users, Clock, Star, Zap, Globe, Database, Cpu } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const InvestorsPage: React.FC = () => {
-  const features = [
+  const metrics = [
     {
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      title: 'Revenue Growth',
+      value: '150%',
+      description: 'Year-over-year growth'
     },
     {
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      title: 'Client Satisfaction',
+      value: '98%',
+      description: 'Customer satisfaction rate'
     },
     {
-      icon: <Brain className="w-8 h-8 text-purple-500" />,
-      title: 'AI Innovation',
-      description: 'Cutting-edge artificial intelligence solutions'
+      title: 'Market Expansion',
+      value: '25+',
+      description: 'Countries served'
     },
     {
-      icon: <Globe className="w-8 h-8 text-orange-500" />,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      title: 'Team Growth',
+      value: '200+',
+      description: 'Employees worldwide'
     }
   ]
 
-  const stats = [
-    { icon: <DollarSign className="w-6 h-6 text-green-500" />, value: '$50M+', label: 'Revenue Growth' },
-    { icon: <TrendingUp className="w-6 h-6 text-blue-500" />, value: '300%', label: 'Year-over-Year Growth' },
-    { icon: <Users className="w-6 h-6 text-purple-500" />, value: '1000+', label: 'Enterprise Clients' },
-    { icon: <Award className="w-6 h-6 text-yellow-500" />, value: '25+', label: 'Industry Awards' }
+  const highlights = [
+    'Strong financial performance',
+    'Expanding market presence',
+    'Innovative technology solutions',
+    'Experienced leadership team',
+    'Growing customer base',
+    'Strategic partnerships',
+    'Research and development focus',
+    'Sustainable growth strategy'
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Investors - Zion Tech Group</title>
-        <meta name="description" content="Investor information for Zion Tech Group. Learn about our growth, financial performance, and investment opportunities." />
-        <meta name="keywords" content="investors, investment, financial performance, growth, Zion Tech Group" />
+        <title>Investors - Zion Tech Group | Investor Relations</title>
+        <meta name="description" content="Investor information and financial highlights for Zion Tech Group. Learn about our growth and investment opportunities." />
+        <meta name="keywords" content="investors, financial information, growth metrics, Zion Tech Group investment" />
       </Helmet>
-      
-      {/* Hero Section */}
-      <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-              Investor Relations
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
-              Discover investment opportunities with Zion Tech Group, a leading provider of AI-powered solutions and digital transformation services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                Download Investor Kit
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                Schedule Meeting
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Stats Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
-                <div className="mb-4 flex justify-center">{stat.icon}</div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Why Invest in Zion Tech Group?</h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              We deliver cutting-edge technology solutions that drive innovation and growth
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
-                <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Ready to Invest?</h2>
-              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Contact our investor relations team to learn more about investment opportunities.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+                Investor Relations
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
+                Learn about Zion Tech Group's financial performance, growth strategy, 
+                and investment opportunities.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Investor Relations
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Download Financial Reports
-                </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Metrics Section */}
+        <section className="py-12 sm:py-16 lg:py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Key Metrics</h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+                Our performance highlights
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {metrics.map((metric, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+                  <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
+                  <div className="text-lg font-semibold text-white mb-2">{metric.title}</div>
+                  <div className="text-gray-300 text-sm">{metric.description}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Highlights Section */}
+        <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Investment Highlights</h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+                Why invest in Zion Tech Group
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                {highlights.slice(0, 4).map((highlight, index) => (
+                  <div key={index} className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-4 flex-shrink-0 mt-1" />
+                    <p className="text-gray-300">{highlight}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="space-y-6">
+                {highlights.slice(4).map((highlight, index) => (
+                  <div key={index} className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-4 flex-shrink-0 mt-1" />
+                    <p className="text-gray-300">{highlight}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+                  Interested in Investing?
+                </h2>
+                <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                  Contact our investor relations team to learn more about investment opportunities 
+                  and our growth strategy.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link 
+                    to="/contact" 
+                    className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  >
+                    Contact IR Team
+                  </Link>
+                  <Link 
+                    to="/contact" 
+                    className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                  >
+                    Request Information
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   )
 }
 

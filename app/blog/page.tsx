@@ -1,208 +1,158 @@
-import React from 'react';
-import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, BookOpen, Users, Clock, Star, Zap, Globe, Database, Cpu } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const BlogPage: React.FC = () => {
   const blogPosts = [
     {
-      title: 'The Future of AI in Business: Trends to Watch in 2024',
-      excerpt: 'Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.',
-      author: 'Sarah Johnson',
+      title: 'The Future of AI in Business',
+      excerpt: 'Exploring how artificial intelligence is transforming modern business operations.',
       date: '2024-01-15',
-      category: 'AI & Technology',
-      readTime: '5 min read',
-      image: '/api/placeholder/600/300',
-      link: '/blog/future-of-ai-in-business-2024'
+      category: 'AI & Technology'
     },
     {
-      title: 'Cloud Migration Best Practices: A Complete Guide',
-      excerpt: 'Learn the essential steps and strategies for a successful cloud migration that minimizes downtime and maximizes benefits.',
-      author: 'Michael Chen',
+      title: 'Cybersecurity Best Practices',
+      excerpt: 'Essential security measures every business should implement to protect their data.',
       date: '2024-01-10',
-      category: 'Cloud Computing',
-      readTime: '8 min read',
-      image: '/api/placeholder/600/300',
-      link: '/blog/cloud-migration-best-practices'
+      category: 'Security'
     },
     {
-      title: 'Cybersecurity in the Age of AI: New Threats and Solutions',
-      excerpt: 'Discover how AI is both creating new security challenges and providing innovative solutions to protect your business.',
-      author: 'Emily Rodriguez',
+      title: 'Cloud Migration Strategies',
+      excerpt: 'A comprehensive guide to successfully migrating your business to the cloud.',
       date: '2024-01-05',
-      category: 'Cybersecurity',
-      readTime: '6 min read',
-      image: '/api/placeholder/600/300',
-      link: '/blog/cybersecurity-age-of-ai'
+      category: 'Cloud Computing'
     },
     {
-      title: 'Micro SaaS: Building Profitable Niche Applications',
-      excerpt: 'Learn how to identify opportunities and build successful micro SaaS applications that solve specific business problems.',
-      author: 'David Kim',
+      title: 'Digital Transformation Trends',
+      excerpt: 'Latest trends in digital transformation and how they impact your business.',
       date: '2024-01-01',
-      category: 'SaaS',
-      readTime: '7 min read',
-      image: '/api/placeholder/600/300',
-      link: '/blog/micro-saas-building-profitable-applications'
-    },
-    {
-      title: '5G Implementation: Transforming Industries and Connectivity',
-      excerpt: 'Explore how 5G technology is revolutionizing various industries and creating new opportunities for innovation.',
-      author: 'Lisa Wang',
-      date: '2023-12-28',
-      category: '5G Technology',
-      readTime: '9 min read',
-      image: '/api/placeholder/600/300',
-      link: '/blog/5g-implementation-transforming-industries'
-    },
-    {
-      title: 'Data Analytics: Turning Information into Business Intelligence',
-      excerpt: 'Learn how to leverage data analytics to gain actionable insights and drive better business decisions.',
-      author: 'Alex Thompson',
-      date: '2023-12-20',
-      category: 'Data Analytics',
-      readTime: '6 min read',
-      image: '/api/placeholder/600/300',
-      link: '/blog/data-analytics-business-intelligence'
+      category: 'Digital Transformation'
     }
-  ];
+  ]
 
   const categories = [
-    'All Posts',
     'AI & Technology',
+    'Security',
     'Cloud Computing',
-    'Cybersecurity',
-    'SaaS',
-    '5G Technology',
-    'Data Analytics'
-  ];
+    'Digital Transformation',
+    'Business Intelligence',
+    'Mobile Development',
+    'Data Analytics',
+    'IoT Solutions'
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends from our expert team." />
-        <meta name="keywords" content="technology blog, AI insights, cloud computing, cybersecurity, SaaS, 5G, data analytics" />
+        <title>Blog - Zion Tech Group | Technology Insights & News</title>
+        <meta name="description" content="Stay updated with the latest technology insights, industry news, and expert advice from Zion Tech Group." />
+        <meta name="keywords" content="technology blog, AI insights, cybersecurity, cloud computing, digital transformation, Zion Tech Group" />
       </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20">
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Technology <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Insights</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Stay ahead of the curve with expert insights on AI, cloud computing, cybersecurity, and emerging technologies.
-            </p>
-          </div>
-        </section>
-
-        {/* Categories */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category, index) => (
-                <button
-                  key={index}
-                  className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    index === 0
-                      ? 'bg-blue-500 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Blog Posts */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post, index) => (
-                <article key={index} className="bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all duration-300 group">
-                  <div className="aspect-w-16 aspect-h-9 bg-gray-700">
-                    <div className="w-full h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                      <span className="text-white text-sm font-medium">Featured Image</span>
-                    </div>
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium">
-                        {post.category}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                      {post.title}
-                    </h3>
-                    
-                    <p className="text-gray-300 mb-4 line-clamp-3">
-                      {post.excerpt}
-                    </p>
-                    
-                    <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                      <div className="flex items-center">
-                        <User className="w-4 h-4 mr-2" />
-                        {post.author}
-                      </div>
-                      <div className="flex items-center">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        {new Date(post.date).toLocaleDateString()}
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-400">{post.readTime}</span>
-                      <Link
-                        to={post.link}
-                        className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors group-hover:translate-x-1"
-                      >
-                        Read More
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Newsletter Signup */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Stay Updated
-              </h2>
-              <p className="text-xl text-blue-100 mb-8">
-                Subscribe to our newsletter and never miss the latest technology insights and updates.
+            <div className="text-center mb-12 sm:mb-16">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+                Technology Blog
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
+                Stay updated with the latest technology insights, industry news, 
+                and expert advice from our team of technology professionals.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
-                />
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-                  Subscribe
-                </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Blog Posts Section */}
+        <section className="py-12 sm:py-16 lg:py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Latest Articles</h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+                Insights and expertise from our technology team
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {blogPosts.map((post, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="mb-4">
+                    <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">
+                      {post.category}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{post.title}</h3>
+                  <p className="text-gray-300 mb-4">{post.excerpt}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm">{post.date}</span>
+                    <Link 
+                      to={`/blog/${post.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="text-purple-400 hover:text-purple-300 transition-colors"
+                    >
+                      Read More →
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Categories Section */}
+        <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Categories</h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+                Explore our content by category
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {categories.map((category, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+                  <CheckCircle className="w-6 h-6 text-green-500 mx-auto mb-3" />
+                  <p className="text-gray-300">{category}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+                  Stay Updated with Our Latest Insights
+                </h2>
+                <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                  Subscribe to our newsletter and never miss the latest technology insights and industry updates.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link 
+                    to="/contact" 
+                    className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  >
+                    Subscribe Now
+                  </Link>
+                  <Link 
+                    to="/contact" 
+                    className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </section>
-      </main>
-      
-      <Footer />
-    </div>
-  );
-};
+      </div>
+    </>
+  )
+}
+
+export default BlogPage

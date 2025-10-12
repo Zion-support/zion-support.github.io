@@ -1,79 +1,207 @@
-ursor/website-audit-and-update-with-deployment-a178
-import { CheckCircle, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-import { CheckCircle, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react';
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, Brain, Target } from 'lucide-react'
+import React from 'react';
+import { CheckCircle, ArrowRight, BarChart3, TrendingUp, Brain, Shield, Globe, Users, Clock, Star } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-export default function BusinessIntelligencePage() {
+const BusinessIntelligencePage: React.FC = () => {
   const features = [
     {
-      icon: <CheckCircle className="w-6 h-6 text-blue-500" />,
+      icon: <BarChart3 className="w-8 h-8 text-blue-500" />,
       title: 'Advanced Analytics',
-      description: 'Transform your data into actionable insights with powerful business intelligence tools.',
-      benefits: ['Real-time dashboards', 'Predictive analytics', 'Data visualization', 'Custom reporting']
+      description: 'Comprehensive data analysis and visualization tools for deep business insights.'
     },
     {
-      icon: <Brain className="w-6 h-6 text-green-500" />,
-      title: 'AI-Powered Insights',
-      description: 'Leverage artificial intelligence to discover patterns and trends in your business data.',
-      benefits: ['Machine learning', 'Pattern recognition', 'Automated insights', 'Smart recommendations']
+      icon: <TrendingUp className="w-8 h-8 text-green-500" />,
+      title: 'Predictive Analytics',
+      description: 'AI-powered forecasting and trend analysis to predict future business outcomes.'
     },
     {
-      icon: <Target className="w-6 h-6 text-purple-500" />,
-      title: 'Strategic Decision Making',
-      description: 'Make informed business decisions based on comprehensive data analysis and reporting.',
-      benefits: ['KPI tracking', 'Performance metrics', 'Trend analysis', 'Strategic planning']
+      icon: <Brain className="w-8 h-8 text-purple-500" />,
+      title: 'Machine Learning',
+      description: 'Advanced ML algorithms to uncover patterns and insights in your data.'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: 'Data Security',
+      description: 'Enterprise-grade security and compliance for all your business data.'
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-orange-500" />,
+      title: 'Real-time Dashboards',
+      description: 'Live dashboards and KPI monitoring for instant business insights.'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-cyan-500" />,
+      title: 'Collaborative Tools',
+      description: 'Share insights and reports across teams for better decision making.'
     }
-  ];
+  ]
+
+  const benefits = [
+    'Data-driven decision making',
+    'Real-time business insights',
+    'Predictive analytics and forecasting',
+    'Customizable dashboards and reports',
+    'Integration with existing systems',
+    'Advanced data visualization',
+    'Automated report generation',
+    '24/7 monitoring and alerts'
+  ]
+
+  const services = [
+    'Data Integration & ETL',
+    'Dashboard Development',
+    'Predictive Analytics',
+    'Data Warehousing',
+    'KPI Monitoring',
+    'Custom Reporting',
+    'Data Visualization',
+    'Business Process Optimization'
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Business Intelligence - Zion Tech Group | Data Analytics Solutions</title>
-        <meta name="description" content="Transform your business data into actionable insights with our advanced business intelligence solutions. Real-time analytics, AI-powered insights, and strategic decision making." />
-        <meta name="keywords" content="business intelligence, data analytics, business insights, Zion Tech Group" />
+        <title>Business Intelligence - Zion Tech Group | Advanced Analytics Solutions</title>
+        <meta name="description" content="Transform your business with advanced business intelligence solutions. Get real-time insights, predictive analytics, and data-driven decision making tools." />
+        <meta name="keywords" content="business intelligence, analytics, data visualization, predictive analytics, BI solutions, Zion Tech Group" />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Business Intelligence
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transform your business data into actionable insights with our advanced business intelligence solutions. Make informed decisions and drive growth with data-driven strategies.
-          </p>
-        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              {feature.icon}
-              <h3 className="text-xl font-semibold text-white mb-3 mt-4">{feature.title}</h3>
-              <p className="text-gray-300 mb-4">{feature.description}</p>
-              <ul className="space-y-2">
-                {feature.benefits.map((benefit, benefitIndex) => (
-                  <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+                Business Intelligence
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
+                Transform your business with advanced analytics and intelligence solutions. 
+                Make data-driven decisions with real-time insights and predictive analytics.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact" 
+                  className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link 
+                  to="/pricing" 
+                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+                >
+                  View Pricing
+                </Link>
+              </div>
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
 
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Data?</h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let our business intelligence solutions help you unlock the power of your data and drive business growth.
-          </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
-            Get Started Today
-          </button>
-        </div>
+        {/* Features Section */}
+        <section className="py-12 sm:py-16 lg:py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Our BI Solutions</h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+                Comprehensive business intelligence tools for modern enterprises
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                  <div className="mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Our Services</h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+                Complete business intelligence implementation and support
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+                  <CheckCircle className="w-6 h-6 text-green-500 mx-auto mb-3" />
+                  <p className="text-gray-300">{service}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-12 sm:py-16 lg:py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits</h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+                Why choose our business intelligence solutions
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                {benefits.slice(0, 4).map((benefit, index) => (
+                  <div key={index} className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-4 flex-shrink-0 mt-1" />
+                    <p className="text-gray-300">{benefit}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="space-y-6">
+                {benefits.slice(4).map((benefit, index) => (
+                  <div key={index} className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-4 flex-shrink-0 mt-1" />
+                    <p className="text-gray-300">{benefit}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+                  Ready to Transform Your Business with BI?
+                </h2>
+                <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                  Unlock the power of your data with our advanced business intelligence solutions. 
+                  Get insights that drive growth and competitive advantage.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link 
+                    to="/contact" 
+                    className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  >
+                    Get Free Consultation
+                  </Link>
+                  <Link 
+                    to="/pricing" 
+                    className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                  >
+                    View Pricing
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
-  );
+    </>
+  )
 }
+
+export default BusinessIntelligencePage
