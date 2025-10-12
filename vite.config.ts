@@ -1,14 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
-export default defineConfig({
 
-// https://vitejs.dev/config/
+export default defineConfig({
+  // https://vitejs.dev/config/
   plugins: [
     react({
-      // Enable React Fast Refresh;
+      // Enable React Fast Refresh
       fastRefresh: true,
-      // Enable JSX runtime;
+      // Enable JSX runtime
       jsxRuntime: 'automatic',
     })
   ],
@@ -90,18 +90,18 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Optimize bundle size;
+    // Optimize bundle size
     chunkSizeWarningLimit: 1000,
-    // Enable tree shaking;
+    // Enable tree shaking
     treeshake: true,
-    // Enable compression;
+    // Enable compression
     reportCompressedSize: true,
   },
   server: {
     port: 3000,
     open: true,
     host: true,
-    // Enable HMR;
+    // Enable HMR
     hmr: {
       overlay: true,
     },
@@ -111,7 +111,7 @@ export default defineConfig({
     open: true,
     host: true,
   },
-  // Optimize dependencies;
+  // Optimize dependencies
   optimizeDeps: {
     include: [
       'react',
@@ -122,7 +122,7 @@ export default defineConfig({
       'lucide-react',
     ],
   },
-  // CSS optimization;
+  // CSS optimization
   css: {
     devSourcemap: true,
   },

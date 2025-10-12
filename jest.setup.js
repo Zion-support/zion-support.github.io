@@ -1,6 +1,6 @@
 require("@testing-library/jest-dom");
 
-// Polyfill for TextEncoder/TextDecoder;
+// Polyfill for TextEncoder/TextDecoder
 const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
@@ -40,4 +40,8 @@ global.ResizeObserver = class ResizeObserver {
 global.gtag = jest.fn();
 
 // Mock window.dataLayer
+<<<<<<< HEAD
 global.dataLayer = [];
+=======
+global.dataLayer = [];
+>>>>>>> cursor/fix-errors-and-merge-to-main-d941

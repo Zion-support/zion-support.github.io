@@ -2,6 +2,12 @@ const fs = require('fs');
 const path = require('path');
 
 // Simple wrapper function to replace withSentry
+<<<<<<< HEAD
+=======
+function withSentry(handler) {
+  return handler;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d941
 
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');

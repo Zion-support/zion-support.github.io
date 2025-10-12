@@ -8,7 +8,11 @@ export default function AiMobileAppBuilderPage() {
     <>
       <Helmet>
         <title>Ai Mobile App Builder - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Advanced Ai Mobile App Builder solutions powered by AI." />
+=======
+        <meta name="description" content="Professional ai mobile app builder services by Zion Tech Group. Transform your business with our expert solutions." />
+>>>>>>> cursor/fix-errors-and-merge-to-main-d941
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
