@@ -3,85 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import ErrorBoundary from './app/components/ErrorBoundary'
-import OptimizedLoading from './app/components/OptimizedLoading'
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-51d9
-import HomePage from './app/page'
-import AboutPage from './app/about/page'
-import ContactPage from './app/contact/page'
-import AIServicesPage from './app/ai-services/page'
-<<<<<<< HEAD
-<<<<<<< HEAD
-import ITServicesPage from './app/it-services/page'
-import MicroSaasPage from './app/micro-saas/page'
-import AIContentWriterProPage from './app/micro-saas/ai-content-writer-pro/page'
-import FiveGImplementationPage from './app/5g-implementation/page'
-=======
-import FiveGImplementationPage from './app/5g-implementation/page'
-import ITServicesPage from './app/it-services/page'
-import MicroSaasServicesPage from './app/micro-saas-services/page'
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
-=======
-import ITServicesPage from './app/it-services/page'
-import MicroSaasServicesPage from './app/micro-saas-services/page'
-import FiveGImplementationPage from './app/5g-implementation/page'
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
-import CloudServicesPage from './app/cloud-services/page'
-import DigitalTransformationPage from './app/digital-transformation/page'
-<<<<<<< HEAD
-
-function App() {
-  return (
-<<<<<<< HEAD
-    <Router>
-      <div className="min-h-screen bg-gray-900">
-        <Navigation />
-<<<<<<< HEAD
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/ai-services" element={<AIServicesPage />} />
-            <Route path="/it-services" element={<ITServicesPage />} />
-            <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
-            <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-            <Route path="/cloud-services" element={<CloudServicesPage />} />
-            <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-          </Routes>
-        </main>
-=======
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/ai-services" element={<AIServicesPage />} />
-          <Route path="/it-services" element={<ITServicesPage />} />
-          <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
-          <Route path="/cloud-services" element={<CloudServicesPage />} />
-          <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-          <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
-        <Footer />
-      </div>
-    </Router>
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-7aba
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7149
 import ErrorBoundary from './app/components/ErrorBoundary'
 import LoadingSpinner from './app/components/LoadingSpinner'
-import SEOHead from './app/components/SEOHead'
 
 // Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./app/page'))
@@ -90,19 +13,9 @@ const ContactPage = React.lazy(() => import('./app/contact/page'))
 const AIServicesPage = React.lazy(() => import('./app/ai-services/page'))
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'))
 const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
-const MicroSAASServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
+const MicroSaasServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
 const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
 const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'))
-<<<<<<< HEAD
-const CareersPage = React.lazy(() => import('./app/careers/page'))
-const BlogPage = React.lazy(() => import('./app/blog/page'))
-const PrivacyPolicyPage = React.lazy(() => import('./app/privacy-policy/page'))
-const TermsOfServicePage = React.lazy(() => import('./app/terms-of-service/page'))
-=======
-const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
-const AnalyticsPage = React.lazy(() => import('./app/analytics/page'))
-const AutomationPage = React.lazy(() => import('./app/automation/page'))
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7149
 
 // Loading component for Suspense
 const PageLoader = () => (
@@ -110,89 +23,25 @@ const PageLoader = () => (
     <LoadingSpinner size="lg" text="Loading page..." />
   </div>
 )
-=======
-import CareersPage from './app/careers/page'
-import BlogPage from './app/blog/page'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-51d9
 
 function App() {
   return (
     <HelmetProvider>
-<<<<<<< HEAD
-      <Router>
-        <div className="min-h-screen bg-gray-900">
-          <Navigation />
-          <main>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/ai-services" element={<AIServicesPage />} />
-              <Route path="/it-services" element={<ITServicesPage />} />
-              <Route path="/micro-saas" element={<MicroSaasPage />} />
-              <Route path="/micro-saas/ai-content-writer-pro" element={<AIContentWriterProPage />} />
-              <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-              <Route path="/cloud-services" element={<CloudServicesPage />} />
-              <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-              <Route path="/careers" element={<CareersPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </HelmetProvider>
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
-=======
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <Navigation />
-          <Suspense fallback={<OptimizedLoading fullScreen text="Loading..." />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/ai-services" element={<AIServicesPage />} />
-              <Route path="/it-services" element={<ITServicesPage />} />
-              <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
-              <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-              <Route path="/cloud-services" element={<CloudServicesPage />} />
-              <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-            </Routes>
-          </Suspense>
-          <Footer />
-        </div>
-      </Router>
-    </ErrorBoundary>
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-51d9
-=======
       <ErrorBoundary>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <SEOHead />
             <Navigation />
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
                 <Route path="/ai-services" element={<AIServicesPage />} />
                 <Route path="/it-services" element={<ITServicesPage />} />
-                <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
+                <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
+                <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                 <Route path="/cloud-services" element={<CloudServicesPage />} />
                 <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-                <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                <Route path="/analytics" element={<AnalyticsPage />} />
-                <Route path="/automation" element={<AutomationPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/careers" element={<CareersPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-                <Route path="/terms-of-service" element={<TermsOfServicePage />} />
                 {/* 404 Route */}
                 <Route path="*" element={
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -215,10 +64,6 @@ function App() {
         </Router>
       </ErrorBoundary>
     </HelmetProvider>
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-7aba
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7149
   )
 }
 

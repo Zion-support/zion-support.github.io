@@ -261,13 +261,10 @@ describe('AdvancedPerformanceMonitor', () => {
 });
 =======
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
       )
     }).not.toThrow()
     consoleSpy.mockRestore()
   })
 })
 <<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9603
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
