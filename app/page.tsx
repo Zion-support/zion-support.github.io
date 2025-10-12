@@ -3,44 +3,22 @@ import React from 'react'
 import SEOHead from './components/SEOHead'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock } from 'lucide-react'
+import FuturisticBackground from './components/FuturisticBackground'
+import FuturisticCard from './components/FuturisticCard'
+import NeonButton from './components/NeonButton'
+import AnimatedText from './components/AnimatedText'
+import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, Sparkles, TrendingUp, Award, Target, Phone, Mail, MapPin } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { microSaasServices, getPopularMicroSaasServices } from '../data/micro-saas-services'
+import { aiServices, getPopularAIServices } from '../data/ai-services'
+import { itServices, getPopularITServices } from '../data/it-services'
 
 const HomePage: React.FC = () => {
-  const features = [
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Database, 
-  Code, 
-  Smartphone, 
-  ArrowRight, 
-  CheckCircle, 
-  Star,
-  Users,
-  TrendingUp,
-  Lock,
-  Cpu,
-  Wifi,
-  BarChart3,
-  MessageSquare,
-  FileText,
-  Camera,
-  Mail,
-  Phone,
-  MapPin,
-  Github,
-  Linkedin,
-  Twitter
-} from 'lucide-react';
+  const popularMicroSaas = getPopularMicroSaasServices()
+  const popularAI = getPopularAIServices()
+  const popularIT = getPopularITServices()
 
-export default function HomePage() {
-  const aiServices = [
+  const features = [
     {
       icon: <Brain className="w-8 h-8 text-blue-500" />,
       title: 'AI-Powered Solutions',
@@ -62,54 +40,6 @@ export default function HomePage() {
       description: 'Transform your data into actionable insights with our advanced analytics platform.'
     }
   ]
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Home</h1>
-          <p className="text-xl text-gray-300 mb-8">Welcome to Zion Tech Group - Advanced AI and IT Solutions</p>
-          <a
-            href="/"
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-          >
-            Go Home
-          </a>
-        </div>
-import { Link } from 'react-router-dom';
-import SEOHead from './components/SEOHead';
-import FuturisticBackground from './components/FuturisticBackground';
-import FuturisticCard from './components/FuturisticCard';
-import NeonButton from './components/NeonButton';
-import AnimatedText from './components/AnimatedText';
-
-export default function HomePage() {
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99%', label: 'Success Rate' },
-    { number: '24/7', label: 'Support' }
-  ];
-
-  const services = [
-    {
-      icon: <Code className="w-6 h-6 text-blue-500" />,
-      title: 'Software Development',
-      description: 'Custom software solutions tailored to your business requirements.'
-    },
-    {
-      icon: <Network className="w-6 h-6 text-green-500" />,
-      title: 'IT Infrastructure',
-      description: 'Robust and scalable IT infrastructure solutions for your organization.'
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6 text-purple-500" />,
-      title: 'Business Intelligence',
-      description: 'Data-driven insights to help you make informed business decisions.'
-    },
-    {
-      icon: <Bot className="w-6 h-6 text-orange-500" />,
-      title: 'AI Automation',
-      description: 'Intelligent automation solutions to streamline your business processes.'
-    }
-  ]
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
@@ -119,7 +49,9 @@ export default function HomePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen relative overflow-hidden">
+      <FuturisticBackground />
+      
       <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered IT solutions, cloud infrastructure, cybersecurity, and digital transformation services."
@@ -134,50 +66,54 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Welcome to
+            <AnimatedText text="Welcome to" type="fade" delay={0} />
             <br />
-            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Zion Tech Group
-            </span>
+            <AnimatedText 
+              text="Zion Tech Group" 
+              type="glow" 
+              delay={500}
+              className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"
+            />
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Leading the future of technology with cutting-edge AI solutions, 
-            robust IT infrastructure, and innovative digital transformation services.
+            <AnimatedText 
+              text="Leading the future of technology with cutting-edge AI solutions, robust IT infrastructure, and innovative digital transformation services." 
+              type="fade" 
+              delay={1000}
+            />
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
-            >
-              Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link 
-              to="/about" 
-              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-            >
-              Learn More
-            </Link>
+            <AnimatedText delay={1500}>
+              <NeonButton to="/contact" size="lg">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </NeonButton>
+            </AnimatedText>
+            <AnimatedText delay={1700}>
+              <NeonButton to="/about" variant="secondary" size="lg">
+                Learn More
+              </NeonButton>
+            </AnimatedText>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <FuturisticCard key={index} className="text-center p-6">
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
-              </div>
+              </FuturisticCard>
             ))}
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -189,74 +125,173 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <FuturisticCard key={index} className="p-6">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
+              </FuturisticCard>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 px-4 bg-white/5">
+      {/* Micro SAAS Services Section */}
+      <section className="py-20 px-4 bg-white/5 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Services
+              <Sparkles className="inline-block w-8 h-8 mr-3 text-purple-400" />
+              Micro SAAS Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to meet your business needs.
+              Powerful, ready-to-use micro applications that solve specific business problems with AI-powered intelligence.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {popularMicroSaas.slice(0, 6).map((service, index) => (
+              <FuturisticCard key={service.id} className="p-6">
                 <div className="flex items-center mb-4">
-                  {service.icon}
-                  <h3 className="text-lg font-semibold text-white ml-3">{service.title}</h3>
+                  <span className="text-2xl mr-3">{service.icon}</span>
+                  <h3 className="text-lg font-semibold text-white">{service.name}</h3>
                 </div>
-                <p className="text-gray-300 text-sm">{service.description}</p>
-              </div>
+                <p className="text-gray-300 text-sm mb-4">{service.shortDescription}</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-purple-400 font-semibold">
+                    From ${service.pricing.free.price}/month
+                  </span>
+                  <NeonButton to={`/micro-saas/${service.id}`} size="sm" variant="accent">
+                    Learn More
+                  </NeonButton>
+                </div>
+              </FuturisticCard>
             ))}
+          </div>
+          <div className="text-center mt-8">
+            <NeonButton to="/micro-saas" size="lg">
+              View All Micro SAAS Services
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </NeonButton>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
+      {/* AI Services Section */}
+      <section className="py-20 px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Let's discuss how our technology solutions can help you achieve your business goals.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact" 
-                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Contact Us
-                </Link>
-                <Link 
-                  to="/ai-services" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-                >
-                  Explore AI Services
-                </Link>
-                </NeonButton>
-              </div>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <Brain className="inline-block w-8 h-8 mr-3 text-blue-400" />
+              AI Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Advanced artificial intelligence solutions that transform your business with cutting-edge AI technology.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {popularAI.slice(0, 6).map((service, index) => (
+              <FuturisticCard key={service.id} className="p-6">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-3">{service.icon}</span>
+                  <h3 className="text-lg font-semibold text-white">{service.name}</h3>
+                </div>
+                <p className="text-gray-300 text-sm mb-4">{service.shortDescription}</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-blue-400 font-semibold">
+                    From ${service.pricing.free.price}/month
+                  </span>
+                  <NeonButton to={`/ai-services/${service.id}`} size="sm" variant="accent">
+                    Learn More
+                  </NeonButton>
+                </div>
+              </FuturisticCard>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <NeonButton to="/ai-services" size="lg">
+              View All AI Services
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </NeonButton>
           </div>
         </div>
       </section>
-        </section>
+
+      {/* IT Services Section */}
+      <section className="py-20 px-4 bg-white/5 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <Cpu className="inline-block w-8 h-8 mr-3 text-green-400" />
+              IT Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive IT solutions including cloud migration, cybersecurity, and digital transformation services.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {popularIT.slice(0, 6).map((service, index) => (
+              <FuturisticCard key={service.id} className="p-6">
+                <div className="flex items-center mb-4">
+                  <span className="text-2xl mr-3">{service.icon}</span>
+                  <h3 className="text-lg font-semibold text-white">{service.name}</h3>
+                </div>
+                <p className="text-gray-300 text-sm mb-4">{service.shortDescription}</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-green-400 font-semibold">
+                    From ${service.pricing.basic.price}
+                  </span>
+                  <NeonButton to={`/it-services/${service.id}`} size="sm" variant="accent">
+                    Learn More
+                  </NeonButton>
+                </div>
+              </FuturisticCard>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <NeonButton to="/it-services" size="lg">
+              View All IT Services
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </NeonButton>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-4 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <FuturisticCard className="p-8 lg:p-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let's discuss how our technology solutions can help you achieve your business goals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <NeonButton to="/contact" size="lg">
+                Contact Us
+              </NeonButton>
+              <NeonButton to="/ai-services" variant="secondary" size="lg">
+                Explore AI Services
+              </NeonButton>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              <div className="flex items-center justify-center">
+                <Phone className="w-5 h-5 text-purple-400 mr-3" />
+                <span className="text-gray-300">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <Mail className="w-5 h-5 text-blue-400 mr-3" />
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <MapPin className="w-5 h-5 text-green-400 mr-3" />
+                <span className="text-gray-300">Middletown, DE 19709</span>
+              </div>
+            </div>
+          </FuturisticCard>
+        </div>
+      </section>
 
       <Footer />
     </div>
@@ -264,7 +299,3 @@ export default function HomePage() {
 }
 
 export default HomePage
-      </div>
-    </>
-  );
-}

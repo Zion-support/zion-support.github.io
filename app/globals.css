@@ -2,6 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Futuristic Design System */
+:root {
+  --neon-cyan: #00ffff;
+  --neon-pink: #ff00ff;
+  --neon-purple: #8b5cf6;
+  --neon-blue: #3b82f6;
+  --neon-green: #00ff00;
+  --neon-orange: #ff6600;
+  
+  --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+  --gradient-secondary: linear-gradient(135deg, #00ffff 0%, #ff00ff 100%);
+  --gradient-accent: linear-gradient(135deg, #00ff00 0%, #00ffff 100%);
+  
+  --glow-primary: 0 0 20px rgba(139, 92, 246, 0.5);
+  --glow-secondary: 0 0 20px rgba(0, 255, 255, 0.5);
+  --glow-accent: 0 0 20px rgba(255, 0, 255, 0.5);
+}
+
+/* Base Animations */
+@keyframes neon-pulse {
+  0%, 100% {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  50% {
+    text-shadow: 0 0 2px currentColor, 0 0 5px currentColor, 0 0 8px currentColor;
+  }
+}
+
+@keyframes neon-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 2px currentColor, 0 0 5px currentColor, 0 0 8px currentColor;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Utility Classes */
+.neon-text {
+  animation: neon-pulse 2s ease-in-out infinite;
+}
+
+.neon-glow {
+  animation: neon-glow 2s ease-in-out infinite;
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
 /* Custom CSS for enhanced accessibility and performance */
 
 /* High contrast mode */
