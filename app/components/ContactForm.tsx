@@ -54,15 +54,6 @@ const ContactForm: React.FC = () => {
         service: '',
         message: ''
       })
-<<<<<<< HEAD
-    } catch {
-      setStatus({ type: 'error', message: 'Failed to send message. Please try again.' })
-=======
-      setStatus({
-        type: 'error',
-        message: 'Sorry, there was an error sending your message. Please try again later.'
-      })
->>>>>>> cursor/website-audit-and-update-with-deployment-a178
     }
   }
 

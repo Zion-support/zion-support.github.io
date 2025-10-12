@@ -1,13 +1,6 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
-import { CheckCircle, ArrowRight } from 'lucide-react'
-
-const FuturisticServiceCardPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-edcb
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -66,48 +59,3 @@ const FuturisticServiceCardPage: React.FC = () => {
               Our advanced AI-powered solutions deliver measurable results and drive sustainable growth.
             </p>
           </div>
-<<<<<<< HEAD
-        </div>)};export default FuturisticServiceCardPage
-}
-=======
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
-                <div className="flex items-center mb-4">
-                  <CheckCircle className="w-6 h-6 text-green-400 mr-3" />
-                  <h3 className="text-lg font-semibold text-white">Feature {index + 1}</h3>
-                </div>
-                <p className="text-gray-300">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Boost Your Performance?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact us today to learn how our futuristicservicecard solutions can transform your digital presence.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center">
-              Get Started Today
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-
-export default FuturisticServiceCardPage
->>>>>>> cursor/analyze-improve-and-deploy-application-edcb
