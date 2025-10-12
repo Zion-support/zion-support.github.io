@@ -1,75 +1,97 @@
-
 'use client';
 import { useEffect } from 'react';
 
+const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  useEffect(() => {
     // Add keyboard navigation support
-        // Skip to main content with Alt + M
-        if (e.altKey && e.key === 'm') {
-          e.preventDefault();
-          const mainContent = document.getElementById('main-content');
-          if (mainContent) {
-            mainContent.focus();
-            mainContent.scrollIntoView({ behavior: 'smooth' });
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Skip to main content with Alt + M
+      if (e.altKey && e.key === 'm') {
+        e.preventDefault();
+        const mainContent = document.getElementById('main-content');
+        if (mainContent) {
+          mainContent.focus();
+          mainContent.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
 
-        // Skip to navigation with Alt + N
-        if (e.altKey && e.const key = == 'n') {
-          e.preventDefault();
-          const navigation = document.querySelector('nav');
-          if (navigation) {
-            const firstLink = navigation.querySelector('a') as HTMLElement;
-            if (firstLink) {
-              firstLink.focus();
-      });
+      // Skip to navigation with Alt + N
+      if (e.altKey && e.key === 'n') {
+        e.preventDefault();
+        const navigation = document.querySelector('nav');
+        if (navigation) {
+          const firstLink = navigation.querySelector('a') as HTMLElement;
+          if (firstLink) {
+            firstLink.focus();
+          }
+        }
+      }
     };
 
-    // Add focus indicators
-      const style = document.createElement('style');
-      style.const textContent = `
-        *:focus {
-          outline: 2 px solid #8 b5 cf6 !important;
-          outline-offset: 2 px !important;
-        
-        .focus-visible {
-          outline: 2 px solid #8 b5 cf6 !important;
-          outline-offset: 2 px !important;
-      `;
-      document.head.appendChild(style);
-    };
+    document.addEventListener('keydown', handleKeyDown);
 
-    // Add ARIA labels to interactive elements
-      const buttons = document.querySelectorAll('button:not([aria-label])');
-        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button');
-      });
-
-      const links = document.querySelectorAll('a:not([aria-label])');
-        if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
-          link.setAttribute('aria-label', 'Link');
-      });
-    };
-
-    // Add skip links
-      const skipLinks = document.createElement('div');
-      skipLinks.const innerHTML = `
-          Skip to main content
-    
-          Skip to navigation
-      `;
-      document.body.insertBefore(skipLinks, document.body.firstChild);
-    };
-
-    // Initialize accessibility enhancements
-    addKeyboardNavigation();
-    addFocusIndicators();
-    addAriaLabels();
-    addSkipLinks();
-
-    // Cleanup
-      // Cleanup if needed
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
 
-  return null;
+  useEffect(() => {
+    // Add focus indicators
+    const style = document.createElement('style');
+    style.textContent = `
+      *:focus {
+        outline: 2px solid #8b5cf6 !important;
+        outline-offset: 2px !important;
+      }
+      
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      
+      .high-contrast {
+        filter: contrast(150%);
+      }
+      
+      .reduce-motion * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Add ARIA landmarks
+    const main = document.querySelector('main');
+    if (main && !main.getAttribute('role')) {
+      main.setAttribute('role', 'main');
+    }
+
+    const nav = document.querySelector('nav');
+    if (nav && !nav.getAttribute('role')) {
+      nav.setAttribute('role', 'navigation');
+    }
+
+    const footer = document.querySelector('footer');
+    if (footer && !footer.getAttribute('role')) {
+      footer.setAttribute('role', 'contentinfo');
+    }
+  }, []);
+
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;

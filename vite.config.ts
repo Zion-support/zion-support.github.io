@@ -34,43 +34,56 @@ export default defineConfig({
     
     rollupOptions: {
       output: {
+        manualChunks: (id) => {
           // Core React libraries
           if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
+            return 'react-vendor';
+          }
           // Router
           if (id.includes('react-router')) {
-            return 'router'
+            return 'router';
+          }
           // UI libraries
           if (id.includes('framer-motion')) {
-            return 'animations'
+            return 'animations';
+          }
           if (id.includes('lucide-react')) {
-            return 'icons'
+            return 'icons';
+          }
           // SEO and meta
           if (id.includes('react-helmet')) {
-            return 'seo'
+            return 'seo';
+          }
           // Charts and data visualization
           if (id.includes('recharts')) {
-            return 'charts'
+            return 'charts';
+          }
           // Utility libraries
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
-            return 'utils'
+            return 'utils';
+          }
           // Performance monitoring
           if (id.includes('web-vitals')) {
-            return 'performance'
+            return 'performance';
+          }
           // AI service pages
           if (id.includes('/app/ai-') && id.includes('/page.tsx')) {
-            return 'ai-pages'
+            return 'ai-pages';
+          }
           // IT service pages
           if (id.includes('/app/') && (id.includes('cloud-') || id.includes('cybersecurity-') || id.includes('web-development') || id.includes('mobile-development')) && id.includes('/page.tsx')) {
-            return 'it-pages'
+            return 'it-pages';
+          }
           // Micro SAAS pages
           if (id.includes('/app/zion-') && id.includes('/page.tsx')) {
-            return 'saas-pages'
+            return 'saas-pages';
+          }
           // Other pages
           if (id.includes('/app/') && id.includes('/page.tsx')) {
-            return 'pages'
+            return 'pages';
+          }
           // Default chunk for other modules
-          return 'vendor'
+          return 'vendor';
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',

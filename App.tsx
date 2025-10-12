@@ -165,7 +165,20 @@ function App() {
   const { performanceData } = usePerformanceMonitor();
 
   return (
+    <HelmetProvider>
+      <Router>
+        <ErrorBoundary>
+          <AnalyticsProvider>
+            <PerformanceOptimizer />
+            <AccessibilityEnhancer />
+            <EnhancedAccessibility />
+            <PerformanceMonitor performanceData={performanceData} />
+            <FuturisticBackground />
+            <SEOHead />
+            <Navigation />
+            <Breadcrumb />
             <Suspense fallback={<PageLoader />}>
+              <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
@@ -306,6 +319,14 @@ function App() {
                 <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
                 <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
                 <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+              </Routes>
+            </Suspense>
+            <Footer />
+          </AnalyticsProvider>
+        </ErrorBoundary>
+      </Router>
+    </HelmetProvider>
   );
+}
 
 export default App;
