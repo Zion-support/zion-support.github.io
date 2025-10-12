@@ -18,7 +18,11 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'Document analysis' },
     { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Business forecasting' },
     { name: 'AI HR Solutions', url: '/ai-hr-solutions', description: 'Human resources AI' },
-    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed AI processing' }
+    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed AI processing' },
+    { name: 'AI Video Analysis', url: '/ai-video-analysis', description: 'Video processing' },
+    { name: 'AI Speech Synthesis', url: '/ai-speech-synthesis', description: 'Text-to-speech' },
+    { name: 'AI Recommendation Engine', url: '/ai-recommendation-engine', description: 'Personalized recommendations' },
+    { name: 'AI Sentiment Analysis', url: '/ai-sentiment-analysis', description: 'Emotion detection' }
   ];
 
   const itServices = [
@@ -33,7 +37,11 @@ const Footer: React.FC = memo(() => {
     { name: 'Custom Software', url: '/custom-software', description: 'Tailored solutions' },
     { name: 'Database Management', url: '/database-management', description: 'Database optimization' },
     { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Network setup' },
-    { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle' }
+    { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle' },
+    { name: 'Blockchain Development', url: '/blockchain-development', description: 'Blockchain solutions' },
+    { name: 'IoT Development', url: '/iot-development', description: 'IoT applications' },
+    { name: 'E-commerce Development', url: '/e-commerce-development', description: 'Online stores' },
+    { name: 'Data Engineering', url: '/data-engineering', description: 'Data pipelines' }
   ];
 
   const microSaasServices = [
@@ -48,7 +56,11 @@ const Footer: React.FC = memo(() => {
     { name: 'Zion Project Master', url: '/zion-project-master', description: 'Project management' },
     { name: 'Zion Email Automation', url: '/zion-email-automation', description: 'Email marketing' },
     { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', description: 'Inventory management' },
-    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', description: 'Invoice automation' }
+    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', description: 'Invoice automation' },
+    { name: 'Zion AI Video Editor', url: '/zion-ai-video-editor', description: 'AI video editing' },
+    { name: 'Zion AI Translator Pro', url: '/zion-ai-translator-pro', description: 'AI translation' },
+    { name: 'Zion AI Code Reviewer', url: '/zion-ai-code-reviewer', description: 'Code analysis' },
+    { name: 'Zion Customer Insights', url: '/zion-customer-insights', description: 'Customer analytics' }
   ];
 
   const companyLinks = [
@@ -78,7 +90,7 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white quantum-field">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}

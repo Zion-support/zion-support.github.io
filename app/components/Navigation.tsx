@@ -75,7 +75,15 @@ const Navigation: React.FC = () => {
     { name: 'AI Computer Vision', url: '/ai-computer-vision', icon: Eye },
     { name: 'AI Voice Solutions', url: '/ai-voice-solutions', icon: Mic },
     { name: 'AI Workflow Automation', url: '/ai-workflow-automation', icon: Settings },
-    { name: 'AI Document Processing', url: '/ai-document-processing', icon: FileText }
+    { name: 'AI Document Processing', url: '/ai-document-processing', icon: FileText },
+    { name: 'AI Financial Services', url: '/ai-financial-services', icon: DollarSign },
+    { name: 'AI HR Solutions', url: '/ai-hr-solutions', icon: Users },
+    { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', icon: ShoppingCart },
+    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', icon: TrendingUp },
+    { name: 'AI Edge Computing', url: '/ai-edge-computing', icon: Cpu },
+    { name: 'AI Video Analysis', url: '/ai-video-analysis', icon: Monitor },
+    { name: 'AI Speech Synthesis', url: '/ai-speech-synthesis', icon: Mic },
+    { name: 'AI Recommendation Engine', url: '/ai-recommendation-engine', icon: Target }
   ];
 
   const itServices = [
@@ -90,7 +98,15 @@ const Navigation: React.FC = () => {
     { name: 'Data Analytics & BI', url: '/data-analytics-bi', icon: BarChart },
     { name: 'Custom Software', url: '/custom-software', icon: Code },
     { name: 'Network Infrastructure', url: '/network-infrastructure', icon: Wifi },
-    { name: 'IT Asset Management', url: '/it-asset-management', icon: Package }
+    { name: 'IT Asset Management', url: '/it-asset-management', icon: Package },
+    { name: 'Blockchain Development', url: '/blockchain-development', icon: Shield },
+    { name: 'IoT Development', url: '/iot-development', icon: Cpu },
+    { name: 'E-commerce Development', url: '/e-commerce-development', icon: ShoppingCart },
+    { name: 'Data Engineering', url: '/data-engineering', icon: Database },
+    { name: 'Machine Learning Ops', url: '/machine-learning-ops', icon: Brain },
+    { name: 'Enterprise Integration', url: '/enterprise-integration', icon: LinkIcon },
+    { name: 'Performance Optimization', url: '/performance-optimization', icon: Zap },
+    { name: 'Disaster Recovery', url: '/disaster-recovery-advanced', icon: Shield }
   ];
 
   const microSaasServices = [
@@ -105,12 +121,20 @@ const Navigation: React.FC = () => {
     { name: 'Zion Project Master', url: '/zion-project-master', icon: CheckSquare },
     { name: 'Zion Email Automation', url: '/zion-email-automation', icon: Mail },
     { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', icon: Box },
-    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', icon: DollarSign }
+    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', icon: DollarSign },
+    { name: 'Zion AI Video Editor', url: '/zion-ai-video-editor', icon: Monitor },
+    { name: 'Zion AI Translator Pro', url: '/zion-ai-translator-pro', icon: Globe },
+    { name: 'Zion AI Code Reviewer', url: '/zion-ai-code-reviewer', icon: Code },
+    { name: 'Zion Customer Insights', url: '/zion-customer-insights', icon: Eye },
+    { name: 'Zion AI Email Assistant', url: '/zion-ai-email-assistant', icon: Mail },
+    { name: 'Zion AI Meeting Assistant', url: '/zion-ai-meeting-assistant', icon: Calendar },
+    { name: 'Zion AI SEO Optimizer', url: '/zion-ai-seo-optimizer', icon: TrendingUp },
+    { name: 'Zion AI Data Cleaner', url: '/zion-ai-data-cleaner', icon: Database }
   ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'nav-cyberpunk' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
