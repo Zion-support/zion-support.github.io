@@ -35,6 +35,7 @@ ai-content-delivery-network
 ai-content-generation
 ai-content-generation-pro
 ai-content-generator
+ai-content-management
 ai-content-moderation
 ai-content-studio
 ai-content-writer
@@ -110,6 +111,7 @@ ai-logo-designer
 ai-manufacturing
 ai-marketing
 ai-meeting-assistant
+ai-meeting-transcriber
 ai-mental-health-companion
 ai-ml
 ai-ml-platform
@@ -224,6 +226,7 @@ compliance-automation
 computer-vision
 consultation
 contact
+cookie-policy
 cookies
 crm-lite
 custom-development
@@ -244,6 +247,7 @@ developer-tools
 devops
 devops-advanced
 devops-cicd
+devops-solutions
 digital-transformation
 digital-twin-platform
 disaster-recovery-advanced
@@ -259,6 +263,7 @@ enterprise-solutions
 expense-tracker
 financial-it
 gdpr
+gdpr-compliance
 health
 healthcare-it
 help
@@ -319,11 +324,13 @@ network-security
 network-solutions
 news
 nlp
+not-found
 offline
 page.tsx
 partners
 penetration-testing
 performance-optimization
+press
 pricing
 privacy
 privacy-policy
@@ -355,6 +362,7 @@ status
 support
 system-admin
 system-administration
+system-integration
 system-status
 task-manager-pro
 team

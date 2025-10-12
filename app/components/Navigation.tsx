@@ -112,6 +112,15 @@ export default function Navigation() {
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
               About
             </Link>
+            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Pricing
+            </Link>
+            <Link to="/demo" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Demo
+            </Link>
+            <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Blog
+            </Link>
             
             {/* AI Services Dropdown */}
             <div className="relative">
@@ -230,6 +239,12 @@ export default function Navigation() {
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
               About
             </Link>
+            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Pricing
+            </Link>
+            <Link to="/demo" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Demo
+            </Link>
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Contact
             </Link>
@@ -258,6 +273,15 @@ export default function Navigation() {
               </Link>
               <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
                 About
+              </Link>
+              <Link to="/pricing" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
+                Pricing
+              </Link>
+              <Link to="/demo" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
+                Demo
+              </Link>
+              <Link to="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
+                Blog
               </Link>
               
               {/* AI Services Mobile */}

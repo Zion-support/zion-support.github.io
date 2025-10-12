@@ -55,9 +55,17 @@ export default function Footer() {
   const companyLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
-    { name: 'Privacy Policy', path: '/privacy' },
-    { name: 'Terms of Service', path: '/terms' }
+    { name: 'Pricing', path: '/pricing' },
+    { name: 'Demo', path: '/demo' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Careers', path: '/careers' },
+    { name: 'News', path: '/news' },
+    { name: 'Press', path: '/press' },
+    { name: 'Partners', path: '/partners' },
+    { name: 'Investors', path: '/investors' },
+    { name: 'Community', path: '/community' },
+    { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   const supportLinks = [
@@ -71,7 +79,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
@@ -180,6 +188,52 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Important Pages */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Globe className="w-5 h-5 mr-2 text-blue-400" />
+              Important Pages
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/pricing" className="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link to="/demo" className="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  Demo
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/careers" className="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link to="/partners" className="text-gray-300 hover:text-blue-400 transition-colors flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  Partners
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
