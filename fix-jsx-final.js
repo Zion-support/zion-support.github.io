@@ -6,9 +6,7 @@ import path from 'path';
 // Function to fix common JSX syntax issues
 function fixJSXSyntax(content) {
   // Remove any remaining merge conflict artifacts
-  content = content.replace(/<<<<<<< HEAD\n?/g, '');
-  content = content.replace(/=======\n?/g, '');
-  content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+  content = content.replace(/
   
   // Fix common broken JSX patterns
   content = content.replace(/\}\s*\)\s*\)\s*\)\s*$/gm, '}');

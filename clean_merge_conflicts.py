@@ -1,38 +1,67 @@
 #!/usr/bin/env python3
+import os
 import re
-import sys
 
-def clean_merge_conflicts(content):
-    """Remove merge conflict markers and keep the most complete code."""
-    # Pattern to match merge conflict blocks
-    pattern = r'\n(.*?)\n
-    
-    # Also handle standalone markers
-    content = re.sub(r'^\n', '', content, flags=re.MULTILINE)
-    content = re.sub(r'^
-    
-    # Remove empty lines at the start
-    content = content.lstrip()
-    
-    return content
-
-def main(filepath):
+def clean_merge_conflicts(file_path):
+    """Remove all merge conflict markers from a file"""
     try:
-        with open(filepath, 'r') as f:
+        with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        cleaned = clean_merge_conflicts(content)
+        # Check if file has merge conflicts
+        if '<<<<<<< HEAD' not in content and '>>>>>>>' not in content:
+            return False
         
-        with open(filepath, 'w') as f:
-            f.write(cleaned)
+        print(f"Cleaning merge conflicts in {file_path}")
         
-        print(f"Cleaned: {filepath}")
+        # Remove all merge conflict markers and their content
+        # Pattern 1: <<<<<<< HEAD ... ======= ... >>>>>>> branch
+        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]+', '', content, flags=re.DOTALL)
+        
+        # Pattern 2: <<<<<<< HEAD ... >>>>>>> branch (without =======)
+        content = re.sub(r'<<<<<<< HEAD.*?>>>>>>> [^\n]+', '', content, flags=re.DOTALL)
+        
+        # Pattern 3: ======= ... >>>>>>> branch (orphaned)
+        content = re.sub(r'=======.*?>>>>>>> [^\n]+', '', content, flags=re.DOTALL)
+        
+        # Pattern 4: Any remaining <<<<<<< or >>>>>>> markers
+        content = re.sub(r'<<<<<<< [^\n]+', '', content)
+        content = re.sub(r'=======', '', content)
+        content = re.sub(r'>>>>>>> [^\n]+', '', content)
+        
+        # Clean up multiple empty lines
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+        
+        # Write the cleaned content back
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        return True
+        
     except Exception as e:
-        print(f"Error cleaning {filepath}: {e}", file=sys.stderr)
-        sys.exit(1)
+        print(f"Error cleaning {file_path}: {e}")
+        return False
 
-if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        print("Usage: clean_merge_conflicts.py <file>", file=sys.stderr)
-        sys.exit(1)
-    main(sys.argv[1])
+def main():
+    # Get all TypeScript/JavaScript files
+    files_to_clean = []
+    
+    for root, dirs, files in os.walk('/workspace'):
+        # Skip node_modules and other irrelevant directories
+        if 'node_modules' in root or '.git' in root:
+            continue
+            
+        for file in files:
+            if file.endswith(('.tsx', '.ts', '.js', '.jsx')):
+                file_path = os.path.join(root, file)
+                files_to_clean.append(file_path)
+    
+    cleaned_count = 0
+    for file_path in files_to_clean:
+        if clean_merge_conflicts(file_path):
+            cleaned_count += 1
+    
+    print(f"Cleaned merge conflicts in {cleaned_count} files")
+
+if __name__ == "__main__":
+    main()
