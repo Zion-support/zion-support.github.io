@@ -2,11 +2,6 @@
 <<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
-
-export default function Footer() {
-=======
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight } from 'lucide-react';
 =======
 'use client';
@@ -56,7 +51,6 @@ export default function Footer() {
     { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
   ];
 
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
   const quickLinks = [
 =======
     { name: 'Mobile App Development', path: '/mobile-development' },
@@ -86,15 +80,21 @@ export default function Footer() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-2f7d
 
   const legalPages = [
     { name: 'Privacy Policy', path: '/privacy' },
     { name: 'Terms of Service', path: '/terms' }
   ];
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-41ac
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-c17c
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-2f7d
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -164,6 +164,7 @@ export default function Footer() {
           <div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
 <<<<<<< HEAD
@@ -179,6 +180,10 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-white">AI Services</h3>
             <ul className="space-y-2">
 >>>>>>> cursor/fix-errors-and-merge-to-main-c17c
+=======
+            <h3 className="text-lg font-semibold mb-4">AI Services</h3>
+            <ul className="space-y-2">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-2f7d
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link 
@@ -286,7 +291,6 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 mb-6">
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
@@ -298,8 +302,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-<<<<<<< HEAD
-=======
             
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
@@ -335,7 +337,6 @@ export default function Footer() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
           </div>
         </div>
 
@@ -346,8 +347,6 @@ export default function Footer() {
               <p className="text-gray-400 text-sm">
                 © 2024 Zion Tech Group. All rights reserved.
               </p>
-<<<<<<< HEAD
-=======
               <div className="flex space-x-6">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
                   <span className="sr-only">Twitter</span>
@@ -362,7 +361,6 @@ export default function Footer() {
                   <Github className="w-5 h-5" />
                 </a>
               </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
             </div>
             <div className="mt-4 md:mt-0">
               <p className="text-gray-500 text-xs">
@@ -487,6 +485,7 @@ export default function Footer() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -497,3 +496,6 @@ export default function Footer() {
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-c17c
+=======
+}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-2f7d

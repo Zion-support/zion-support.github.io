@@ -2,13 +2,17 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Brain, Cloud, Code, Wifi, ChevronDown } from 'lucide-react';
-
 <<<<<<< HEAD
+import { Menu, X, Brain, Cloud, Code, Wifi, ChevronDown } from 'lucide-react';
+=======
+import { Menu, X, Brain, Code, Cpu, Wifi, ChevronDown } from 'lucide-react';
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-2f7d
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
+<<<<<<< HEAD
   const navigationItems = [
     {
       name: 'AI Services',
@@ -79,6 +83,12 @@ const Navigation = () => {
                 Zion Tech Group
               </span>
 =======
+=======
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-2f7d
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
   }
@@ -162,10 +172,10 @@ const Navigation = () => {
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
               <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
             </Link>
           </div>
           
+<<<<<<< HEAD
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-center space-x-1">
@@ -234,6 +244,8 @@ const Navigation = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2"
 =======
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-2f7d
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
@@ -288,6 +300,7 @@ const Navigation = () => {
             <button
               onClick={toggleMenu}
               className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-41ac
 =======
           {/* Mobile menu button */}
@@ -296,13 +309,13 @@ const Navigation = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-all duration-300"
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7720
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-2f7d
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
         {/* Mobile Navigation */}
         {isOpen && (
@@ -354,8 +367,8 @@ const Navigation = () => {
             </div>
           </div>
         )}
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
       </div>
+<<<<<<< HEAD
 
       {/* Mobile Navigation */}
       {isOpen && (
@@ -402,6 +415,8 @@ const Navigation = () => {
           </div>
         </div>
       )}
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-2f7d
     </nav>
   );
 };

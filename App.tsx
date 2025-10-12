@@ -13,6 +13,7 @@ const ContactPage = React.lazy(() => import('./app/contact/page'))
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'))
 const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
 const MicroSAASServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
+const AIServicesPage = React.lazy(() => import('./app/ai-services/page'))
 const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
 const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'))
 const CareersPage = React.lazy(() => import('./app/careers/page'))
@@ -40,6 +41,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
+                <Route path="/ai-services" element={<AIServicesPage />} />
                 <Route path="/it-services" element={<ITServicesPage />} />
                 <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
                 <Route path="/cloud-services" element={<CloudServicesPage />} />
