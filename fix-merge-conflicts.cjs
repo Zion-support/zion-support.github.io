@@ -1,73 +1,73 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-
-// Get all TypeScript/JavaScript files in the app directory
-function getAllFiles(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      getAllFiles(filePath, fileList);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      fileList.push(filePath);
-    }
-  });
-  
-  return fileList;
-}
 
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
     
     // Check if file has merge conflicts
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
-      console.log(`Fixing merge conflicts in: ${filePath}`);
-      
-      // Remove merge conflict markers and keep the content after =======
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n?/g, '');
-      content = content.replace(/>>>>>>> [^\n]*\n?/g, '');
-      
-      // Clean up any remaining conflict markers
-      content = content.replace(/<<<<<<< [^\n]*\n?/g, '');
-      content = content.replace(/=======\n?/g, '');
-      content = content.replace(/>>>>>>> [^\n]*\n?/g, '');
-      
-      // Remove duplicate export statements
-      content = content.replace(/export default [^;]+;\s*export default [^;]+;/g, (match) => {
-        const exports = match.split(';').filter(exp => exp.trim().startsWith('export default'));
-        return exports[exports.length - 1] + ';';
-      });
-      
-      // Clean up extra closing braces and parentheses
-      content = content.replace(/\}\s*\}\s*\}\s*$/, '}');
-      content = content.replace(/\}\s*\}\s*$/, '}');
-      
-      // Remove empty lines at the end
-      content = content.replace(/\n\s*\n\s*$/, '\n');
-      
-      modified = true;
+    if (!content.includes('<<<<<<< HEAD')) {
+      return false;
     }
     
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed merge conflicts in: ${filePath}`);
+    console.log(`Fixing merge conflicts in: ${filePath}`);
+    
+    // Remove merge conflict markers and keep the newer version (after =======)
+    const lines = content.split('\n');
+    const newLines = [];
+    let inConflict = false;
+    let keepLines = false;
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.startsWith('<<<<<<< HEAD')) {
+        inConflict = true;
+        keepLines = false;
+        continue;
+      }
+      
+      if (line.startsWith('=======')) {
+        keepLines = true;
+        continue;
+      }
+      
+      if (line.startsWith('>>>>>>>')) {
+        inConflict = false;
+        keepLines = false;
+        continue;
+      }
+      
+      if (!inConflict || keepLines) {
+        newLines.push(line);
+      }
     }
+    
+    const newContent = newLines.join('\n');
+    fs.writeFileSync(filePath, newContent, 'utf8');
+    return true;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Get all files and process them
-const files = getAllFiles('./app');
-console.log(`Processing ${files.length} files for merge conflicts...`);
+// Get all files with merge conflicts
+const { execSync } = require('child_process');
+const files = execSync('find /workspace/app -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \\;', { encoding: 'utf8' })
+  .trim()
+  .split('\n')
+  .filter(f => f.length > 0);
 
+console.log(`Found ${files.length} files with merge conflicts`);
+
+let fixedCount = 0;
 files.forEach(file => {
-  fixMergeConflicts(file);
+  if (fixMergeConflicts(file)) {
+    fixedCount++;
+  }
 });
 
-console.log('Merge conflicts cleanup completed!');
+console.log(`Fixed merge conflicts in ${fixedCount} files`);

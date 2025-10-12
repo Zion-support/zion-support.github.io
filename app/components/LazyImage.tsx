@@ -1,24 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-interface LazyImageProps {
-  children?: React.ReactNode;
-  className?: string;
-}
-
-const LazyImage: React.FC<LazyImageProps> = ({
-  children,
-  className = ''
-}) => {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
-};
-
-export default LazyImage;
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -57,4 +37,3 @@ export default function LazyImage({ src, alt, className = '', width, height }: L
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-2d8f

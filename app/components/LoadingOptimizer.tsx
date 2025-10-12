@@ -1,24 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-interface LoadingOptimizerProps {
-  children?: React.ReactNode;
-  className?: string;
-}
-
-const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({
-  children,
-  className = ''
-}) => {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
-};
-
-export default LoadingOptimizer;
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -44,4 +24,3 @@ export default function LoadingOptimizer() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-2d8f

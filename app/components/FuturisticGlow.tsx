@@ -1,41 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-interface FuturisticGlowProps {
-  children: React.ReactNode;
-  className?: string;
-  intensity?: 'low' | 'medium' | 'high';
-  color?: 'blue' | 'purple' | 'cyan' | 'pink';
-}
-
-const FuturisticGlow: React.FC<FuturisticGlowProps> = ({
-  children,
-  className = '',
-  intensity = 'medium',
-  color = 'blue'
-}) => {
-  const intensityClasses = {
-    low: 'shadow-lg',
-    medium: 'shadow-xl',
-    high: 'shadow-2xl'
-  };
-
-  const colorClasses = {
-    blue: 'shadow-blue-500/50',
-    purple: 'shadow-purple-500/50',
-    cyan: 'shadow-cyan-500/50',
-    pink: 'shadow-pink-500/50'
-  };
-
-  return (
-    <div className={`${intensityClasses[intensity]} ${colorClasses[color]} ${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default FuturisticGlow;
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -58,4 +21,3 @@ export default function FuturisticGlow() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-2d8f

@@ -27,15 +27,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   nofollow = false
 }) => {
   const defaultStructuredData = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "@context": "https: //schema.org",
-=======
     "@context": "https://schema.org",
->>>>>>> cursor/fix-errors-and-merge-to-main-c493
-=======
     "@context": "https://schema.org",
->>>>>>> cursor/fix-errors-and-merge-to-main-09f3
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
@@ -47,14 +40,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       "addressRegion": "Delaware"
     },
     "sameAs": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "https: //linkedin.com/company/ziontechgroup",
-      "https: //twitter.com/ziontechgroup",
-=======
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
->>>>>>> cursor/fix-errors-and-merge-to-main-09f3
       "https://github.com/ziontechgroup"
     ],
     "offers": {
@@ -70,18 +57,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   const canonicalUrl = canonical || `https://ziontechgroup.com${typeof window !== 'undefined' ? window.location.pathname : ''}`;
 
   return (
-<<<<<<< HEAD
-    <>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Open Graph Meta Tags */}
-=======
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup"
     ]
@@ -97,71 +72,35 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       {canonical && <link rel="canonical" href={canonical} />}
       
       {/* Open Graph */}
->>>>>>> cursor/fix-errors-and-merge-to-main-c493
-=======
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={canonicalUrl} />
->>>>>>> cursor/fix-errors-and-merge-to-main-09f3
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:type" content={ogType} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <meta property="og:url" content={canonicalUrl} />
-      
-      {/* Twitter Card Meta Tags */}
-=======
       <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
       
       {/* Twitter Card */}
->>>>>>> cursor/fix-errors-and-merge-to-main-c493
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-09f3
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-      {/* Additional SEO Meta Tags */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
-      
-      {/* Performance Hints */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
-=======
       {/* SEO */}
       {noindex && <meta name="robots" content="noindex" />}
       {nofollow && <meta name="robots" content="nofollow" />}
       
->>>>>>> cursor/fix-errors-and-merge-to-main-c493
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-<<<<<<< HEAD
-    </>
-  );
-};
-=======
-=======
       {noindex && <meta name="robots" content="noindex" />}
       {nofollow && <meta name="robots" content="nofollow" />}
       <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
->>>>>>> cursor/fix-errors-and-merge-to-main-09f3
     </Helmet>
   );
 };
 
 export default EnhancedSEO;
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-c493
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-09f3

@@ -2,20 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-interface FuturisticLoaderProps {
-  children?: React.ReactNode;
-  className?: string;
-}
-
-const FuturisticLoader: React.FC<FuturisticLoaderProps> = ({
-  children,
-  className = ''
-}) => {
-  return (
-    <div className={className}>
-      {children}
-=======
 export default function FuturisticLoader() {
   return (
     <div className="futuristic-loader-container">
@@ -26,7 +12,6 @@ export default function FuturisticLoader() {
         Contact Us
         <ArrowRight className="w-5 h-5 ml-2" />
       </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-2d8f
     </div>
   );
 };
