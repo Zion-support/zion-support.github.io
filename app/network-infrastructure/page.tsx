@@ -1,26 +1,21 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+'use client';
+import React from 'react';
+import GenericServicePage from '../components/GenericServicePage';
+import { Wifi } from 'lucide-react';
 
-export default function NetworkinfrastructurePage() {
+const NetworkInfrastructurePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>Network Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="Professional network infrastructure services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">Network Infrastructure</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional network infrastructure services coming soon.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </div>
+    <GenericServicePage
+      title="Network Infrastructure"
+      description="Complete network infrastructure design, implementation, and management for optimal performance."
+      icon={Wifi}
+      features={["Network Design","Security Implementation","Performance Optimization","Monitoring","Disaster Recovery","24/7 Support"]}
+      benefits={["Better Performance","Enhanced Security","Reduced Downtime","Scalable Infrastructure"]}
+      pricing="$1,399/month"
+      category="IT"
+      color="from-cyan-500 to-blue-600"
+    />
   );
-}
+};
+
+export default NetworkInfrastructurePage;
