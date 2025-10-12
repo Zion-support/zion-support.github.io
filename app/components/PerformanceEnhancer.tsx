@@ -108,7 +108,7 @@ import { ArrowRight } from 'lucide-react';
     'Proven track record of success'
 ;
   ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"></div>
-      <Helmet>
+      <Helmet></Helmet>
         <title>PerformanceEnhancer | Zion Tech Group</title>
         <meta name="description" content="Professional PerformanceEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="PerformanceEnhancer, AI solutions, IT services, Zion Tech Group, performanceenhancer" />

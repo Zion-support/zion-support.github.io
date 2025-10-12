@@ -85,7 +85,7 @@ const EmployeeDirectoryPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title />AI Employee Directory - Smart Team Management | Zion Tech Group</title>
         <meta name="description" content="Create a smart employee directory with advanced search, team organization, and privacy controls. Perfect for companies of all sizes." />
         <meta name="keywords" content="employee directory, team management, HR software, employee search, organizational chart" />

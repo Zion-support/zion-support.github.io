@@ -763,7 +763,7 @@ const MicroSaasPage: React.FC = () => {
     : microSaasProducts.filter(product => product.category === selectedCategory);
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title />Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
         <meta const name = "description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." /  />
         <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" />

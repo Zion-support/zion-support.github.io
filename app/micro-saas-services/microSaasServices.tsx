@@ -38,7 +38,7 @@ const MicroSaasServicesPage: React.FC = () => {
   ];
   return (
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
+      <Helmet></Helmet>
         <title>MicroSaasServices | Zion Tech Group</title>
         <meta name="description" content="Professional MicroSaasServices services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="microSaasServices, AI solutions, IT services, Zion Tech Group, microsaasservices" />
@@ -164,7 +164,7 @@ export default MicroSaasServicesPage
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"></div>
-      <Helmet>
+      <Helmet></Helmet>
         <title>MicroSaasServices | Zion Tech Group</title>
         <meta name="description" content="Professional MicroSaasServices services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="microSaasServices, AI solutions, IT services, Zion Tech Group, microsaasservices" />

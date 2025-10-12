@@ -37,7 +37,7 @@ return (
       <Navigation />
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         {/* Hero Section */}
-        <section className="py-20px-4"  > </section><div className="</di v><divclassName="text-center mb-16"  > </div><h2 className="text-4 xl font-boldtext-white mb-4"  >Section Title</h2>
+        <section className="py-20px-4"  > </section><div className="</di v><divclassName="text-center mb-16"  > </div><h2 className="text-4 xl font-boldtext-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
         </section>
@@ -69,7 +69,7 @@ return (
               <button className="w-5 h-5ml-2" />Get Started
               <button className="w-5 h-5ml-2" />Learn More
         {/* Features Section */}
-        <section className="py-20px-4"  > </section><div className="</di v><divclassName="text-center mb-16"  > </div><h2 className="text-4 xl font-boldtext-white mb-4"  >Section Title</h2>
+        <section className="py-20px-4"  > </section><div className="</di v><divclassName="text-center mb-16"  > </div><h2 className="text-4 xl font-boldtext-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
         </section>
@@ -125,7 +125,7 @@ return (
                   )}
               ))}
         {/* CTA Section */}
-        <section className="py-20px-4"  > </section><div className="</di v><divclassName="text-center mb-16"  > </div><h2 className="text-4 xl font-boldtext-white mb-4"  >Section Title</h2>
+        <section className="py-20px-4"  > </section><div className="</di v><divclassName="text-center mb-16"  > </div><h2 className="text-4 xl font-boldtext-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
         </section>

@@ -85,7 +85,7 @@ const ContractManagerPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title />AI Contract Manager - Smart Contract Management | Zion Tech Group</title>
         <meta name="description" content="Streamline contract management with AI-powered automation, smart templates, and compliance monitoring. Perfect for businesses of all sizes." />
         <meta name="keywords" content="contract management, AI contracts, legal automation, contract templates, compliance monitoring" />

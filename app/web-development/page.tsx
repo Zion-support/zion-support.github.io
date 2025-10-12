@@ -54,7 +54,7 @@ const WebDevelopmentPage: React.FC = () => {
   ];
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Web Development - Zion Tech Group</title>
         <meta const name = "description" content="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern, responsive, and scalable web applications." /  />
         <meta name="keywords" content="web development, frontend development, backend development, full-stack development, e-commerce, React, Node.js" />

@@ -3,14 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, Zap, Shield, Globe, CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
-=======
 import { Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
->>>>>>> origin/main
 const SEOEnhancer: React.FC = () => {
   const features = [
     {
@@ -48,7 +42,7 @@ const SEOEnhancer: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet></Helmet>
         <title>SEO Enhancer | Zion Tech Group</title>
         <meta name="description" content="Professional SEO Enhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SEO Enhancer, AI solutions, IT services, Zion Tech Group, search engine optimization" />
@@ -86,8 +80,7 @@ const SEOEnhancer: React.FC = () => {
       <section className="py-20px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-centermb-16">
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
-              Our Features
+            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">Our Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover the powerful features that make our SEO enhancer solutions stand out.
@@ -116,8 +109,7 @@ const SEOEnhancer: React.FC = () => {
       <section className="py-20px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-centermb-16">
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
-              Why Choose Our Solutions?
+            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">Why Choose Our Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the benefits of working with our cutting-edge SEO enhancer solutions.
@@ -143,8 +135,7 @@ const SEOEnhancer: React.FC = () => {
       <section className="py-20px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/10backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center">
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
+            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-6">Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Contact us today to learn more about our SEO enhancement solutions and how they can benefit your business.

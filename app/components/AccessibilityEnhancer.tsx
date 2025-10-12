@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-=======
 'use client';
 import { useEffect } from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Add keyboard navigation support
@@ -21,7 +16,7 @@ const AccessibilityEnhancer: React.FC = () => {
         }
 
         // Skip to navigation with Alt + N
-        if (e.altKey && e.const key = == 'n') {
+        if (e.altKey && e.key === 'n') {
           e.preventDefault();
           const navigation = document.querySelector('nav');
           if (navigation) {

@@ -122,7 +122,7 @@ const AiChatbotBuilderPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
+      <Helmet></Helmet>
         <title>AI Chatbot Builder - Zion Tech Group</title>
         <meta name="description" content="Build intelligent chatbots without coding. Deploy across multiple channels with advanced AI capabilities." />
         <meta name="keywords" content="AI chatbot builder, no-code chatbot, conversational AI, customer support automation" />
@@ -149,7 +149,7 @@ const AiChatbotBuilderPage: React.FC = () => {
               
           <ArrowRight className="w-5 h-5ml-2" />
         </Link>
-            <Link to="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900transition-allduration-300" />
+            <Link to="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900transition-allduration-300">
               View Demo
             </Link>
           </div>
@@ -281,7 +281,7 @@ const AiChatbotBuilderPage: React.FC = () => {
               
           <ArrowRight className="w-5 h-5ml-2" />
         </Link>
-            <Link to="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900transition-allduration-300" />
+            <Link to="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900transition-allduration-300">
               Schedule Demo
             </Link>
           </div>

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-=======
 'use client';
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Zap } from 'lucide-react';
->>>>>>> origin/main
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -20,11 +16,7 @@ const PerformanceOptimizer: React.FC = () => {
     fid: null,
     cls: null,
     fcp: null,
-<<<<<<< HEAD
-    ttfb: null,
-=======
     ttfb: null
->>>>>>> origin/main
   });
 
   useEffect(() => {
@@ -33,17 +25,10 @@ const PerformanceOptimizer: React.FC = () => {
       const criticalResources = [
         '/fonts/inter.woff2',
         '/images/hero-bg.jpg',
-<<<<<<< HEAD
-        '/images/logo.png',
-      ];
-
-      criticalResources.forEach((resource) => {
-=======
         '/images/logo.png'
       ];
 
       criticalResources.forEach(resource => {
->>>>>>> origin/main
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
@@ -57,69 +42,6 @@ const PerformanceOptimizer: React.FC = () => {
 
     // Optimize images
     const optimizeImages = () => {
-<<<<<<< HEAD
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      images.forEach((img) => imageObserver.observe(img));
-    };
-
-    // Lazy load components
-    const lazyLoadComponents = () => {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const element = entry.target as HTMLElement;
-            element.classList.add('loaded');
-            observer.unobserve(element);
-          }
-        });
-      });
-
-      const lazyElements = document.querySelectorAll('[data-lazy]');
-      lazyElements.forEach((el) => observer.observe(el));
-    };
-
-    // Monitor Core Web Vitals
-    const monitorWebVitals = () => {
-      import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
-        onCLS((metric) => setMetrics((prev) => ({ ...prev, cls: metric.value })));
-        onFID((metric) => setMetrics((prev) => ({ ...prev, fid: metric.value })));
-        onFCP((metric) => setMetrics((prev) => ({ ...prev, fcp: metric.value })));
-        onLCP((metric) => setMetrics((prev) => ({ ...prev, lcp: metric.value })));
-        onTTFB((metric) => setMetrics((prev) => ({ ...prev, ttfb: metric.value })));
-      }).catch(() => {
-        // Silently fail if web-vitals is not available
-      });
-    };
-
-    // Optimize scroll performance
-    const optimizeScroll = () => {
-      let ticking = false;
-
-      const updateScrollPosition = () => {
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            // Update scroll position
-            ticking = false;
-          });
-          ticking = true;
-        }
-      };
-
-      window.addEventListener('scroll', updateScrollPosition, { passive: true });
-
-      return () => window.removeEventListener('scroll', updateScrollPosition);
-=======
       const images = document.querySelectorAll('img');
       images.forEach(img => {
         if (!img.loading) {
@@ -129,23 +51,11 @@ const PerformanceOptimizer: React.FC = () => {
           img.decoding = 'async';
         }
       });
->>>>>>> origin/main
     };
 
     // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
-<<<<<<< HEAD
-    lazyLoadComponents();
-    monitorWebVitals();
-    const cleanupScroll = optimizeScroll();
-
-    // Cleanup
-    return () => {
-      cleanupScroll();
-    };
-  }, []);
-=======
   }, []);
 
   const features = [
@@ -198,8 +108,7 @@ const PerformanceOptimizer: React.FC = () => {
       <section className="py-20px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-centermb-16">
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
-              Our Features
+            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">Our Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover the powerful features that make our performance optimizer solutions stand out.
@@ -227,7 +136,6 @@ export default PerformanceOptimizer;
       cleanupScroll()
     }
   }, [])
->>>>>>> origin/main
 
   // Log performance metrics in development
   useEffect(() => {

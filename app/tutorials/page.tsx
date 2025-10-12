@@ -4,7 +4,7 @@ import React from 'react';
 const TutorialsPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Tutorials - Zion Tech Group</title>
         <meta name="description" content="Learn AI and IT solutions with our comprehensive tutorials and guides." />
         <meta name="keywords" content="tutorials, AI tutorials, IT tutorials, learning, guides, education" />
@@ -13,10 +13,8 @@ const TutorialsPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />Tutorials & Learning Center
-              </span>
-            </h1>
+            <h1 className="w-5 h-5ml-2">Tutorials & Learning Center
+              </h1>
             <p className="w-5 h-5ml-2">Master AI and IT technologies with our comprehensive tutorials, guides, and hands-on learning resources.
             </p>
           </div>
@@ -101,7 +99,7 @@ const TutorialsPage: React.FC = () => {
             </div>
 
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="text-3 xl font-boldtext-white mb-6"  >Ready to Start Learning?</h2>
+            <h2 className="text-3 xl font-boldtext-white mb-6">Ready to Start Learning?</h2>
             <p className="w-5 h-5ml-2">Join thousands of developers and IT professionals who are advancing their careers with our tutorials.
             </p>
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">

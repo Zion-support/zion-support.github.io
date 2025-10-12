@@ -100,7 +100,7 @@ const ZionChatAiPage: React.FC = () => {
   ];
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title />Zion Chat AI - Intelligent Customer Support Chatbot</title>
         <meta const name = "description" content="Transform your customer support with Zion Chat AI - the most intelligent chatbot platform. Multi-language support, sentiment analysis, and seamless human handoff." /  />
         <meta name="keywords" content="AI chatbot, customer support, conversational AI, chatbot platform, customer service automation, AI assistant" />

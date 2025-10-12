@@ -108,7 +108,7 @@ const AITranslationServicesPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title />AI Translation Services - Multilingual Communication | Zion Tech Group</title>
         <meta name="description" content="Break language barriers with AI-powered translation services. Real-time translation, document processing, and multilingual support for global businesses." />
         <meta name="keywords" content="AI translation, multilingual, language services, real-time translation, document translation, global communication" />

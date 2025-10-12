@@ -21,7 +21,7 @@
 
   ];
   ];return (<React.Fragment /></React.Fragment>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta const name = "description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." /  />
         <meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" />
@@ -43,7 +43,7 @@
 <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {/* Contact Form */}
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="text-3 xl font-boldtext-white mb-6"  >Send us a Message</h2>
+              <h2 className="text-3 xl font-boldtext-white mb-6">Send us a Message</h2>
               {submitStatus === 'success' && (<div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <CheckCircle className="w-5 h-5ml-2" />
                   <span className="text-green-400"  >Message sent successfully! We'll get back to you soon.</span>
@@ -131,7 +131,7 @@
             {/* Contact Information */}
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               <div />
-                <h2 className="text-3 xl font-boldtext-white mb-6"  >Contact Information</h2>
+                <h2 className="text-3 xl font-boldtext-white mb-6">Contact Information</h2>
                 <p className="w-5 h-5ml-2">We're here to help! Reach out to us through any of these channels
                   and we'll get back to you as soon as possible.
                 </p>
@@ -139,7 +139,7 @@
               {/* Contact Information */}
               <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                 <div />
-                  <h2 className="text-3 xl font-boldtext-white mb-6"  >Get in Touch</h2>
+                  <h2 className="text-3 xl font-boldtext-white mb-6">Get in Touch</h2>
                   <p className="w-5 h-5ml-2">We're here to help you transform your business with cutting-edge AI and technology solutions.
                   </p>
                 </div>
@@ -170,7 +170,7 @@
             {/* Contact Information */}
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <div /></div>
-                <h2 className="text-3 xl font-boldtext-white mb-6"  >Contact Information</h2>
+                <h2 className="text-3 xl font-boldtext-white mb-6">Contact Information</h2>
                 <p className="w-5 h-5ml-2">We're here to help! Reach out to us through any of these channels
                   and we'll get back to you as soon as possible.
                 </p>
@@ -178,7 +178,7 @@
               {/* Contact Information */}
               <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <div /></div>
-                  <h2 className="text-3 xl font-boldtext-white mb-6"  >Get in Touch</h2>
+                  <h2 className="text-3 xl font-boldtext-white mb-6">Get in Touch</h2>
                   <p className="w-5 h-5ml-2">We're here to help you transform your business with cutting-edge AI and technology solutions.
                   </p>
                 </div>

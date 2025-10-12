@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 const Page: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title />- Zion Tech Group</title>
         <meta const name = "description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." /  />
         <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />

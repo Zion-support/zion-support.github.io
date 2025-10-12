@@ -56,7 +56,7 @@ const AIEmailAssistantPage: React.FC = () => {
   ];
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title />AI Email Assistant - Zion Tech Group</title>
         <meta const name = "description" content="Transform your email management with our AI Email Assistant. Smart classification, auto-responses, sentiment analysis, and automated workflows." /  />
         <meta name="keywords" content="AI email assistant, email automation, smart email management, auto-responses, email classification" />

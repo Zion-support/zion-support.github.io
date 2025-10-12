@@ -152,7 +152,7 @@ export default function AIInventoryManagerPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
+      <Helmet></Helmet>
         <title />AI Inventory Manager - Zion Tech Group | Smart Inventory Management</title>
         <meta name="description" content="Revolutionary AI-powered inventory management with demand forecasting, automated reordering, and real-time analytics. Reduce costs by 25%. Starting at $39/month." />
         <meta name="keywords" content="AI inventory management, demand forecasting, automated reordering, inventory analytics, stock management, warehouse management" />

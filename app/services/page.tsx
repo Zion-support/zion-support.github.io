@@ -91,7 +91,7 @@ const ServicesPage: React.FC = () => {
   ];
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Our Services - Zion Tech Group</title>
         <meta const name = "description" content="Explore our comprehensive range of AI and IT services. From AI solutions to cloud computing, cybersecurity, and custom development - we have you covered." /  />
         <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, custom development, data analytics, mobile development" />
@@ -115,7 +115,7 @@ const ServicesPage: React.FC = () => {
         <section className="w-5 h-5ml-2" />
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="text-4 xl font-boldtext-white mb-6"  >Core Services</h2>
+              <h2 className="text-4 xl font-boldtext-white mb-6">Core Services</h2>
               <p className="w-5 h-5ml-2">Our flagship services that have helped hundreds of businesses transform and grow
               </p>
             </div>
@@ -161,7 +161,7 @@ const ServicesPage: React.FC = () => {
         <section className="w-5 h-5ml-2" />
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="text-4 xl font-boldtext-white mb-6"  >Additional Services</h2>
+              <h2 className="text-4 xl font-boldtext-white mb-6">Additional Services</h2>
               <p className="w-5 h-5ml-2">Specialized services to complement your core technology needs
               </p>
             </div>
@@ -188,7 +188,7 @@ const ServicesPage: React.FC = () => {
         <section className="w-5 h-5ml-2" />
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="text-4 xl font-boldtext-white mb-6"  >Our Process</h2>
+              <h2 className="text-4 xl font-boldtext-white mb-6">Our Process</h2>
               <p className="w-5 h-5ml-2">How we work with you to deliver exceptional results
               </p>
             </div>

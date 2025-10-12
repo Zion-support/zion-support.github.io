@@ -67,7 +67,7 @@ interface FormData {
   return (
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <h2 className="text-3 xl font-boldtext-white mb-4"  >Get In Touch</h2>
+        <h2 className="text-3 xl font-boldtext-white mb-4">Get In Touch</h2>
         <p className="text-gray-300">Ready to transform your business? Let's discuss your project.</p>
       </div>
 

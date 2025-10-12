@@ -4,7 +4,7 @@ import React from 'react';
 const PerformanceOptimizationPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Performance Optimization - Zion Tech Group</title>
         <meta name="description" content="Performance Optimization services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="performance-optimization, AI solutions, IT services" />
@@ -13,16 +13,14 @@ const PerformanceOptimizationPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />Performance Optimization
-              </span>
-            </h1>
+            <h1 className="w-5 h-5ml-2">Performance Optimization
+              </h1>
             <p className="w-5 h-5ml-2">Professional performance optimization services by Zion Tech Group.
             </p>
           </div>
 
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="text-2 xl font-boldtext-white mb-4"  >Coming Soon</h2>
+            <h2 className="text-2 xl font-boldtext-white mb-4">Coming Soon</h2>
             <p className="w-5 h-5ml-2">We're working on bringing you comprehensive performance optimization solutions. 
               Contact us to learn more about our services.
             </p>

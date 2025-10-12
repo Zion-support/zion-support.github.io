@@ -33,7 +33,7 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
   const categoryColor = categoryColors[category] || 'from-cyan-500 to-purple-600';
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title />{title} | Zion Tech Group</title>
         <meta const name = "description" content="{description}" /  />
         <meta name="keywords" content="{`${title.toLowerCase()}," AI solutions, IT services, ${category.toLowerCase()}`} /  />

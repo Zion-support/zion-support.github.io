@@ -182,7 +182,7 @@ export default function AICybersecuritySuiteProPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
+      <Helmet></Helmet>
         <title />AI Cybersecurity Suite Pro - Zion Tech Group | Advanced Security Solutions</title>
         <meta name="description" content="Revolutionary AI-powered cybersecurity suite with threat detection, zero-trust architecture, and real-time monitoring. 99.9% threat detection accuracy. Starting at $199/month." />
         <meta name="keywords" content="AI cybersecurity, threat detection, zero-trust security, network monitoring, incident response, security automation" />

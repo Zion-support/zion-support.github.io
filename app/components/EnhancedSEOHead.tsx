@@ -61,7 +61,7 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
   };
   const finalStructuredData = structuredData || defaultStructuredData;
   return (
-    <Helmet>
+    <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta const name = "description" content="{description}" /  />

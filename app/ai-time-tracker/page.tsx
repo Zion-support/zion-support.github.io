@@ -125,7 +125,7 @@ const AITimeTrackerPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title />AI Time Tracker - Smart Productivity Management | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered time tracking with activity recognition, productivity analytics, and automated reporting. Increase productivity by 40% and deliver projects 20% faster." />
         <meta name="keywords" content="AI time tracking, productivity management, activity recognition, time analytics, project management, work optimization" />

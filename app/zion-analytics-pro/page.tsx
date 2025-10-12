@@ -126,7 +126,7 @@ const ZionAnalyticsProPage: React.FC = () => {
   ];
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title />Zion Analytics Pro - AI-Powered Business Intelligence Platform</title>
         <meta const name = "description" content="Transform your business with Zion Analytics Pro - the most advanced AI-powered business intelligence platform. Real-time analytics, predictive insights, and custom reporting." /  />
         <meta name="keywords" content="business intelligence, analytics platform, AI insights, data visualization, business dashboard, predictive analytics" />

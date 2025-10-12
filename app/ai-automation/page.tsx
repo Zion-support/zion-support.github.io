@@ -58,7 +58,7 @@ const AIAutomationPage: React.FC = () => {
   ];
   return (
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
+      <Helmet></Helmet>
         <title />AI Automation Services - Zion Tech Group</title>
         <meta name="description" content="Transform your business with AI-powered automation solutions. Reduce costs, increase efficiency, and eliminate manual processes." />
         <meta name="keywords" content="AI automation, business process automation, workflow automation, intelligent automation, RPA" />
@@ -80,7 +80,7 @@ const AIAutomationPage: React.FC = () => {
           Get Started 
           <ArrowRight className="w-5 h-5ml-2" />
         </Link>
-            <Link to="/ai-services" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
+            <Link to="/ai-services" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">
               View All AI Services
             </Link>
           </div>
@@ -191,7 +191,7 @@ const AIAutomationPage: React.FC = () => {
           Get Started Today 
           <ArrowRight className="w-5 h-5ml-2" />
         </Link>
-            <Link to="/about" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
+            <Link to="/about" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">
               Learn More About Us
             </Link>
           </div>

@@ -191,7 +191,7 @@ export default function AICustomerSupportChatbotPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
+      <Helmet></Helmet>
         <title />AI Customer Support Chatbot - Zion Tech Group | Intelligent Customer Service</title>
         <meta name="description" content="Revolutionary AI-powered customer support chatbot with natural language processing, multi-channel support, and real-time analytics. Reduce support costs by 60%. Starting at $49/month." />
         <meta name="keywords" content="AI chatbot, customer support automation, natural language processing, multi-channel support, customer service AI, support automation" />

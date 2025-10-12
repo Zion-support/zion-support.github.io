@@ -2,7 +2,7 @@ import React from 'react';
 
 const SEOHead: React.FC = () => {
   return (
-    <Helmet>
+    <Helmet></Helmet>
       <title>Zion Tech Group - Advanced AI and IT Solutions</title>
       <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
       <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, 5 G implementation" />

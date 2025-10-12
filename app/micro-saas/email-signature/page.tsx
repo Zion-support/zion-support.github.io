@@ -85,7 +85,7 @@ const EmailSignaturePage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title />AI Email Signature Manager - Professional Email Signatures | Zion Tech Group</title>
         <meta name="description" content="Create and manage professional email signatures for your team. Beautiful templates, team management, and analytics included." />
         <meta name="keywords" content="email signature, email marketing, team management, professional signatures, email branding" />

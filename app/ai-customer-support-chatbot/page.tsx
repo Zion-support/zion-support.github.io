@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 const AiCustomerSupportChatbotPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title />AI Customer Support Chatbot - Zion Tech Group</title>
         <meta name="description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta name="keywords" content="AI chatbot, customer support, AI solutions, IT services, Zion Tech Group" />
@@ -21,10 +21,8 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
         {/* Hero Section */}
         <section className="w-5 h-5ml-2" />
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />AI Customer Support Chatbot
-              </span>
-            </h1>
+            <h1 className="w-5 h-5ml-2">AI Customer Support Chatbot
+              </h1>
             <p className="w-5 h-5ml-2">Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs.
             </p>
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">

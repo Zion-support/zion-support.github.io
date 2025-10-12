@@ -165,7 +165,7 @@ export default function AIContentGeneratorPage() {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title />AI Content Generator - Advanced AI Writing Assistant | Zion Tech Group</title>
         <meta name="description" content="Transform your content creation with our AI Content Generator. Generate high-quality, SEO-optimized content in 50+ languages. Starting at $29/month. Free trial available." />
         <meta name="keywords" content="AI content generator, content writing, SEO content, blog writing, social media content, email marketing, content automation, AI writing assistant" />

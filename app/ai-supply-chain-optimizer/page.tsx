@@ -112,7 +112,7 @@ export default function AISupplyChainOptimizerPage() {
   ];
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title />AI Supply Chain Optimizer - Smart Logistics & Inventory Management | Zion Tech Group</title>
         <meta const name = "description" content="Optimize your supply chain with AI-powered demand forecasting, route optimization, and inventory management. Reduce costs by 35% and improve delivery times by 40%." /  />
         <meta name="keywords" content="AI supply chain, logistics optimization, inventory management, demand forecasting, supply chain AI, logistics technology" />

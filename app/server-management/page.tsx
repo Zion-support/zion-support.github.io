@@ -112,7 +112,7 @@ const ServerManagementPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title />Server Management - Professional Server Administration | Zion Tech Group</title>
         <meta name="description" content="Professional server management services including monitoring, security, optimization, and 24/7 support. Keep your servers running at peak performance." />
         <meta name="keywords" content="server management, server administration, server monitoring, server security, IT infrastructure, server optimization" />

@@ -108,7 +108,7 @@ export default function IoTSolutionsPage() {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title />IoT Solutions - Zion Tech Group | Smart Device Management & Analytics</title>
         <meta name="description" content="Comprehensive IoT solutions including device management, data analytics, security, and cloud platforms. Transform your business with smart connected devices." />
         <meta name="keywords" content="IoT solutions, internet of things, smart devices, IoT analytics, device management, edge computing, IoT security, connected devices" />

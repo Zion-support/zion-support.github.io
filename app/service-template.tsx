@@ -54,7 +54,7 @@ interface ServicePageProps {
 
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           <div />
-            <h2 className="text-3 xl font-boldtext-white mb-6"  >Key Benefits</h2>
+            <h2 className="text-3 xl font-boldtext-white mb-6">Key Benefits</h2>
             <ul className="w-5 h-5ml-2" />
               {benefits.map((benefit, index) => (
                 <li key="{index}" className="flexitems-start" />
@@ -65,7 +65,7 @@ interface ServicePageProps {
             </ul>
           </div>
           <div />
-            <h2 className="text-3 xl font-boldtext-white mb-6"  >Features</h2>
+            <h2 className="text-3 xl font-boldtext-white mb-6">Features</h2>
             <ul className="w-5 h-5ml-2" />
               {features.map((feature, index) => (
                 <li key="{index}" className="flexitems-start" />
@@ -77,7 +77,7 @@ interface ServicePageProps {
           </div>
 
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <h2 className="text-3 xl font-boldtext-white mb-4"  >Pricing</h2>
+          <h2 className="text-3 xl font-boldtext-white mb-4">Pricing</h2>
           <p className="text-2 xl font-boldtext-cyan-400 mb-6">{pricing}</p>
           <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300">Contact Us for Details
           </Link>

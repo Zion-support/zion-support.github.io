@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export default function InfrastructureManagementPage() {
   return (
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
+      <Helmet></Helmet>
         <title />Infrastructure Management Services - Zion Tech Group</title>
         <meta name="description" content="Complete IT infrastructure setup, management, and optimization services." />
       </Helmet>

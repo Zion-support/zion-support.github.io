@@ -95,7 +95,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
   const faqData = generateFAQStructuredData()
 
   return (
-    <Helmet>
+    <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content="{description}" />

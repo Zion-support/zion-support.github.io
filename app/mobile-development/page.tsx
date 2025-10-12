@@ -63,7 +63,7 @@ const MobileDevelopmentPage: React.FC = () => {
   ];
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Mobile Development - Zion Tech Group</title>
         <meta const name = "description" content="Professional mobile app development services for iOS, Android, React Native, and Flutter. Native and cross-platform solutions for your business." /  />
         <meta name="keywords" content="mobile app development, iOS development, Android development, React Native, Flutter, mobile apps" />

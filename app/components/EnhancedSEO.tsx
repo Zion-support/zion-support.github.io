@@ -69,7 +69,7 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
 
   return (
-    <Helmet>
+    <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content="{description}" />

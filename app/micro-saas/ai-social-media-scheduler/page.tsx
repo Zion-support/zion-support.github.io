@@ -116,7 +116,7 @@ export default function AISocialMediaSchedulerPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
+      <Helmet></Helmet>
         <title />AI Social Media Scheduler - Zion Tech Group | Automated Social Media Management</title>
         <meta name="description" content="Revolutionary AI-powered social media scheduler with smart posting, analytics, and audience insights. Increase engagement by 300% with automated content optimization. Starting at $29/month." />
         <meta name="keywords" content="AI social media scheduler, automated posting, social media management, content optimization, social media analytics, AI marketing tools" />

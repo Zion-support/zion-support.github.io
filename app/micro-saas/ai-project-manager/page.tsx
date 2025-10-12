@@ -152,7 +152,7 @@ export default function AIProjectManagerPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
+      <Helmet></Helmet>
         <title />AI Project Manager - Zion Tech Group | Intelligent Project Management</title>
         <meta name="description" content="Revolutionary AI-powered project management with smart task prioritization, predictive analytics, and automated workflows. Increase team productivity by 60%. Starting at $19/month." />
         <meta name="keywords" content="AI project management, smart task prioritization, predictive analytics, team collaboration, project automation, resource optimization" />
