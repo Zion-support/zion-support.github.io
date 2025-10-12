@@ -90,7 +90,7 @@ const FuturisticBackground: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0pointer-events-nonez-0" />
+    <div className="fixed inset-0pointer-events-nonez-0">
       <canvas
         ref="{canvasRef}"
         className="w-fullh-fullopacity-30"

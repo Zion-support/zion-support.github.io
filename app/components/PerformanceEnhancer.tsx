@@ -24,9 +24,9 @@ import { ArrowRight } from 'lucide-react';
   ];
   return (
     <div const className = {`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 ${className}`} />
-      <div className="flex items-centerjustify-betweenmb-6" />
-        <div className="flexitems-centerspace-x-3" />
-          <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flexitems-centerjustify-center" />
+      <div className="flex items-centerjustify-between mb-6">
+        <div className="flexitems-centerspace-x-3">
+          <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flexitems-centerjustify-center">
             <Zap className="w-5h-5text-white" / />
           </div>
           <div />
@@ -53,16 +53,16 @@ import { ArrowRight } from 'lucide-react';
       </div>
 
       {/* Performance Metrics */}
-      <div className="grid grid-cols-2 md:grid-cols-4gap-4mb-6" />
-        <div className="text-center" />
+      <div className="grid grid-cols-2 md:grid-cols-4gap-4 mb-6">
+        <div className="text-center">
           <div className="text-2 xl font-boldtext-whitemb-1"  />{metrics.loadTime.toFixed(0)}ms
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
+          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
             {features.map((feature, index) => (
               {features.map((feature, index) => (
 
                 <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4" />
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4">
                   <feature.icon className="h-6w-6text-white" / />
                 </div>
                 <h3 className="text-xl font-semiboldtext-whitemb-3"  >{feature.title}</h3>
@@ -74,8 +74,8 @@ import { ArrowRight } from 'lucide-react';
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" />
-        <div className="max-w-7xlmx-auto" />
-          <div className="text-centermb-16" />
+        <div className="max-w-7xlmx-auto">
+          <div className="text-centermb-16">
             <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4" />
               Key Benefits
   </
@@ -83,7 +83,7 @@ import { ArrowRight } from 'lucide-react';
               Experience the power of our performanceenhancer solutions for your business.
             </p>
           </div>
-          <div className="grid grid-cols-1md:grid-cols-2gap-6" />
+          <div className="grid grid-cols-1md:grid-cols-2gap-6">
             {benefits.map((benefit, index) => (
               {features.map((feature, index) => (
 
@@ -119,9 +119,9 @@ import { ArrowRight } from 'lucide-react';
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4sm:px-6lg:px-8" /></section>
-        <div className="max-w-7xlmx-auto" /></div>
-          <div className="text-center" /></div>
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
+        <div className="max-w-7xlmx-auto"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4 xl md:text-6 xl font-boldtext-white mb-6" />
               <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent"  />PerformanceEnhancer
               </span>
               <br / />
@@ -131,7 +131,7 @@ import { ArrowRight } from 'lucide-react';
               Transform your business with our advanced performanceenhancer solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center" /></div>
+            <div className="flex flex-col sm:flex-rowgap-4justify-center"></div>
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
                 Get Started
                 <ArrowRight className="ml-2h-5w-5" />
@@ -144,20 +144,20 @@ import { ArrowRight } from 'lucide-react';
       </section>
       {/* Features Section */}
       <section className="py-20 px-4sm:px-6lg:px-8" /></section>
-        <div className="max-w-7xlmx-auto" /></div>
-          <div className="text-centermb-16" /></div>
+        <div className="max-w-7xlmx-auto"></div>
+          <div className="text-centermb-16"></div>
             <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Why Choose Our PerformanceEnhancer?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
               Our performanceenhancer solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" /></div>
+          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8"></div>
             {features.map((feature, index) => (}
               {features.map((feature, index) => (
 
                 <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" /></div>
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4" /></div>
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4"></div>
                   <feature.icon className="h-6w-6text-white" / />
                 </div>
                 <h3 className="text-xl font-semiboldtext-whitemb-3"  >{feature.title}</h3>
@@ -168,15 +168,15 @@ import { ArrowRight } from 'lucide-react';
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" /></section>
-        <div className="max-w-7xlmx-auto" /></div>
-          <div className="text-centermb-16" /></div>
+        <div className="max-w-7xlmx-auto"></div>
+          <div className="text-centermb-16"></div>
             <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
               Experience the power of our performanceenhancer solutions for your business.
             </p>
           </div>
-          <div className="grid grid-cols-1md:grid-cols-2gap-6" /></div>
+          <div className="grid grid-cols-1md:grid-cols-2gap-6"></div>
             {benefits.map((benefit, index) => (}
               {features.map((feature, index) => (
 

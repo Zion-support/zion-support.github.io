@@ -74,16 +74,16 @@ const defaultSlides: Slide[] = [
   };
 
   return (
-    <div className="relative w-full max-w-4xlmx-auto" />
+    <div className="relative w-full max-w-4xlmx-auto">
       {/* Main Carousel */}
-      <div className="relative overflow-hidden rounded-2 xl bg-white/10 backdrop-blur-lgborderborder-white/20" />
+      <div className="relative overflow-hidden rounded-2 xl bg-white/10 backdrop-blur-lgborderborder-white/20">
         <div 
           className="flex transition-transformduration-500ease-in-out"
           style="{{" transform: `translateX(-${currentSlide * 100}%)` }} />
           {slides.map((slide) => (
             <div key="{slide.id}" className="w-fullflex-shrink-0" />
-              <div className="grid grid-cols-1 lg:grid-cols-2gap-8p-8" />
-                <div className="space-y-6" />
+              <div className="grid grid-cols-1 lg:grid-cols-2gap-8p-8">
+                <div className="space-y-6">
                   <h3 className="text-3 xlfont-boldtext-white"  >{slide.title}</h3>
                   <p className="text-lgtext-gray-300">{slide.description}</p>
                   <ul className="space-y-3" />
@@ -95,8 +95,8 @@ const defaultSlides: Slide[] = [
                     ))}
                   </ul>
                 </div>
-                <div className="flexitems-centerjustify-center" />
-                  <div className="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flexitems-centerjustify-center" />
+                <div className="flexitems-centerjustify-center">
+                  <div className="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flexitems-centerjustify-center">
                     <Cloud className="w-24 h-24text-whiteopacity-50" / />
                   </div>
                 </div>
@@ -121,7 +121,7 @@ const defaultSlides: Slide[] = [
       </div>
 
       {/* Controls */}
-      <div className="flex items-center justify-centermt-6space-x-4" />
+      <div className="flex items-center justify-centermt-6space-x-4">
         <button
           onClick="{togglePlayPause}"
           className="bg-white/20 hover:bg-white/30 text-white p-2rounded-fulltransition-colors"
@@ -130,7 +130,7 @@ const defaultSlides: Slide[] = [
         </button>
 
         {/* Slide Indicators */}
-        <div className="flexspace-x-2" />
+        <div className="flexspace-x-2">
           {slides.map((_, index) => (
             <button
               key="{index}"

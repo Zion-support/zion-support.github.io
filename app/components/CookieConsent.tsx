@@ -33,24 +33,24 @@ const CookieConsent: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0z-50p-4" />
-      <div className="max-w-4xlmx-auto" />
-        <div className="bg-slate-800 border border-slate-700 rounded-xl shadow-2xlbackdrop-blur-sm" />
+    <div className="fixed bottom-0 left-0 right-0z-50p-4">
+      <div className="max-w-4xlmx-auto">
+        <div className="bg-slate-800 border border-slate-700 rounded-xl shadow-2xlbackdrop-blur-sm">
           {!showDetails ? (
             // Simple view
-            <div className="p-6" />
-              <div className="flexitems-startspace-x-4" />
-                <div className="flex-shrink-0" />
+            <div className="p-6">
+              <div className="flexitems-startspace-x-4">
+                <div className="flex-shrink-0">
                   <Cookie className="w-8h-8text-cyan-400" / />
                 </div>
-                <div className="flex-1" />
+                <div className="flex-1">
                   <h3 className="text-lg font-semiboldtext-whitemb-2"  />We use cookies
                   </h3>
                   <p className="text-gray-300mb-4" />
                     We use cookies to enhance your browsing experience, serve personalized content,
                     and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
                   </p>
-                  <div className="flex flex-colsm:flex-rowgap-3" />
+                  <div className="flex flex-colsm:flex-rowgap-3">
                     <button
                       onClick="{acceptAll}"
                       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300"
@@ -79,8 +79,8 @@ const CookieConsent: React.FC = () => {
             </div>
           ) : (
             // Detailed view
-            <div className="p-6" />
-              <div className="flex items-centerjustify-betweenmb-6" />
+            <div className="p-6">
+              <div className="flex items-centerjustify-between mb-6">
                 <h3 className="text-xlfont-semiboldtext-white"  >Cookie Preferences</h3>
                 <button
                   onClick="{()" = /> setShowDetails(false)}
@@ -91,12 +91,12 @@ const CookieConsent: React.FC = () => {
                 </button>
               </div>
 
-              <div className="space-y-6" />
+              <div className="space-y-6">
                 {/* Necessary Cookies */}
-                <div className="flexitems-startspace-x-4" />
+                <div className="flexitems-startspace-x-4">
                   <Shield className="w-6 h-6text-green-400mt-1" / />
-                  <div className="flex-1" />
-                    <div className="flex items-centerjustify-betweenmb-2" />
+                  <div className="flex-1">
+                    <div className="flex items-centerjustify-betweenmb-2">
                       <h4 className="font-semiboldtext-white"  >Necessary Cookies</h4>
                       <span className="text-smtext-green-400font-medium"  >Always Active</span>
                     </div>
@@ -107,14 +107,14 @@ const CookieConsent: React.FC = () => {
                 </div>
 
                 {/* Analytics Cookies */}
-                <div className="flexitems-startspace-x-4" />
+                <div className="flexitems-startspace-x-4">
                   <BarChart3 className="w-6 h-6text-blue-400mt-1" / />
-                  <div className="flex-1" />
-                    <div className="flex items-centerjustify-betweenmb-2" />
+                  <div className="flex-1">
+                    <div className="flex items-centerjustify-betweenmb-2">
                       <h4 className="font-semiboldtext-white"  >Analytics Cookies</h4>
                       <label className="relative inline-flexitems-centercursor-pointer" />
                         <input type="checkbox" className="sr-onlypeer" defaultChecked / />
-                        <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2, px] after:left-[2, px] after:bg-white after:rounded-full after:h-5 after:w-5after:transition-allpeer-checked:bg-cyan-500" /></div>
+                        <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2, px] after:left-[2, px] after:bg-white after:rounded-full after:h-5 after:w-5after:transition-allpeer-checked:bg-cyan-500"></div>
                       </label>
                     </div>
                     <p className="text-gray-300text-sm" />
@@ -124,14 +124,14 @@ const CookieConsent: React.FC = () => {
                 </div>
 
                 {/* Marketing Cookies */}
-                <div className="flexitems-startspace-x-4" />
+                <div className="flexitems-startspace-x-4">
                   <Settings className="w-6 h-6text-purple-400mt-1" / />
-                  <div className="flex-1" />
-                    <div className="flex items-centerjustify-betweenmb-2" />
+                  <div className="flex-1">
+                    <div className="flex items-centerjustify-betweenmb-2">
                       <h4 className="font-semiboldtext-white"  >Marketing Cookies</h4>
                       <label className="relative inline-flexitems-centercursor-pointer" />
                         <input type="checkbox" className="sr-onlypeer" / />
-                        <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2, px] after:left-[2, px] after:bg-white after:rounded-full after:h-5 after:w-5after:transition-allpeer-checked:bg-cyan-500" /></div>
+                        <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2, px] after:left-[2, px] after:bg-white after:rounded-full after:h-5 after:w-5after:transition-allpeer-checked:bg-cyan-500"></div>
                       </label>
                     </div>
                     <p className="text-gray-300text-sm" />
@@ -141,7 +141,7 @@ const CookieConsent: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 mt-6 pt-6border-tborder-slate-700" />
+              <div className="flex flex-col sm:flex-row gap-3 mt-6 pt-6border-tborder-slate-700">
                 <button
                   onClick="{acceptAll}"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300"

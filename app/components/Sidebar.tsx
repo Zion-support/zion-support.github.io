@@ -1,4 +1,4 @@
-import React from \'react\';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { X } from 'lucide-react';
 
@@ -22,8 +22,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       isOpen ? 'translate-x-0' : '-translate-x-full'
     }`} />
       <div className="fixed inset-0 bg-blackbg-opacity-50" onClick="{onClose}" / />
-      <div className="relative flex flex-col w-64 h-full bg-gray-900shadow-xl" />
-        <div className="flex items-center justify-betweenp-4" />
+      <div className="relative flex flex-col w-64 h-full bg-gray-900shadow-xl">
+        <div className="flex items-center justify-betweenp-4">
           <span className="text-xl font-boldtext-white"  >Menu</span>
           <button
             onClick="{onClose}"

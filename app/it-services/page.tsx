@@ -432,12 +432,12 @@ const ITServicesPage: React.FC = () => {
         <meta name="keywords" content="IT services, cloud computing, cybersecurity, web development, mobile development, DevOps, database management, IT support" / / />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-cyan-900to-slate-900" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-cyan-900to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hiddenpt-20pb-16" />
           <div className="absoluteinset-0opacity-20" / />
-          <div className="relative max-w-7 xl mx-auto px-4sm:px-6lg:px-8" />
-            <div className="text-center" />
+          <div className="relative max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+            <div className="text-center">
               <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
                 IT Services
                 <span className="block bg-gradient-to-r from-cyan-400 to-blue-400bg-clip-texttext-transparent"  />& Solutions
@@ -464,8 +464,8 @@ const ITServicesPage: React.FC = () => {
 
         {/* Category Filter */}
         <section className="py-8bg-gray-900/50" />
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8" />
-            <div className="flex flex-wrapjustify-centergap-4" />
+          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+            <div className="flex flex-wrapjustify-centergap-4">
               {categories.map((category) => (
                 <button
                   key="{category}"
@@ -485,13 +485,13 @@ const ITServicesPage: React.FC = () => {
 
         {/* Services Grid */}
         <section className="py-16" />
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8" />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8" />
+          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
               {filteredServices.map((service, index) => (
                 <div
                   key="{index}"
                   className="group relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 borderborder-gray-700hover:border-cyan-500" />
-                  <div className="text-centermb-6" />
+                  <div className="text-center mb-6">
                     <div className="{`inline-flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl mb-4`} />
                       <service.icon className="h-8w-8text-white" / />
                     </div>
@@ -500,7 +500,7 @@ const ITServicesPage: React.FC = () => {
                     <div className="text-2 xl font-boldtext-cyan-400mb-4"   />{service.price}</div>
                   </div>
 
-                  <div className="space-y-3mb-6" />
+                  <div className="space-y-3 mb-6">
                     {service.features.map((feature, idx) => (
                       <div key="{idx}" className="flex items-centertext-smtext-gray-300" />
                         <CheckCircle className="h-4 w-4 text-green-400mr-3flex-shrink-0" / />
@@ -509,15 +509,15 @@ const ITServicesPage: React.FC = () => {
                     ))}
                   </div>
 
-                  <div className="space-y-3" />
+                  <div className="space-y-3">
                     <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300transformhover:scale-105" />
                       Get Quote
                       <ArrowRight className="ml-2h-4w-4" />
                     </Link>
                     <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-whitetransition-allduration-300">Learn More
-                    </Link>
-                  </div>
-                </div>
+                            </Link>
+      </div>
+    </div>
               ))}
             </div>
           </div>
@@ -525,14 +525,14 @@ const ITServicesPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-brfrom-gray-900to-cyan-900" />
-          <div className="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center" />
+          <div className="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8 text-center">
             <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
               Let our expert team help you build, secure, and optimize your technology infrastructure 
               for maximum performance and security.
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center" />
+            <div className="flex flex-col sm:flex-rowgap-4justify-center">
               <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
                 Get Started Today
                 <ArrowRight className="ml-2h-5w-5" />
@@ -543,7 +543,7 @@ const ITServicesPage: React.FC = () => {
                 Call +1 302 464 0950
               </a>
             </div>
-            <div className="mt-8text-gray-400" />
+            <div className="mt-8text-gray-400">
               <p />Email: kleber@ziontechgroup.com</p>
               <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
@@ -555,9 +555,9 @@ const ITServicesPage: React.FC = () => {
 
         {/* Services Grid */}
         <section className="py-20" />
-          <div className="containermx-autopx-4" />
-            <div className="text-centermb-16" />
-              <h2 className="text-4 xl font-boldtext-whitemb-6" />
+          <div className="containermx-autopx-4">
+            <div className="text-centermb-16">
+              <h2 className="text-4 xl font-boldtext-white mb-6" />
                 Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />IT Solutions</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
@@ -565,7 +565,7 @@ const ITServicesPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8" />
+            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
               {services.map((service, index) => (
                 <div 
                   key="{index}"
@@ -581,7 +581,7 @@ const ITServicesPage: React.FC = () => {
                     {service.description}
                   </p>
 
-                  <ul className="space-y-2mb-6" />
+                  <ul className="space-y-2 mb-6" />
                     {service.features.map((feature, featureIndex) => (
                       <li key="{featureIndex}" className="flex items-centertext-smtext-gray-300" />
                         <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" / />
@@ -590,13 +590,13 @@ const ITServicesPage: React.FC = () => {
                     ))}
                   </ul>
 
-                  <div className="flex items-centerjustify-betweenmb-6" />
+                  <div className="flex items-centerjustify-between mb-6">
                     <span className="text-2 xlfont-boldtext-cyan-400"   />{service.price}</span>
                     <Link to="{service.link}" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1inline-flexitems-center" />
                       Learn More <ArrowRight className="w-4h-4ml-1" />
-                    </Link>
-                  </div>
-                </div>
+                            </Link>
+      </div>
+    </div>
               ))}
             </div>
           </div>
@@ -604,9 +604,9 @@ const ITServicesPage: React.FC = () => {
 
         {/* Process Section */}
         <section className="py-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />
-          <div className="containermx-autopx-4" />
-            <div className="text-centermb-16" />
-              <h2 className="text-4 xl font-boldtext-whitemb-6" />
+          <div className="containermx-autopx-4">
+            <div className="text-centermb-16">
+              <h2 className="text-4 xl font-boldtext-white mb-6" />
                 Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Process</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
@@ -614,10 +614,10 @@ const ITServicesPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1md:grid-cols-5gap-8" />
+            <div className="grid grid-cols-1md:grid-cols-5gap-8">
               {process.map((step, index) => (
                 <div key="{index}" className="text-centergroup" />
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
                     <span className="text-2 xlfont-boldtext-cyan-400"   />{step.step}</span>
                   </div>
                   <h3 className="text-xl font-boldtext-whitemb-4"   />{step.title}</h3>
@@ -630,9 +630,9 @@ const ITServicesPage: React.FC = () => {
 
         {/* Why Choose Us */}
         <section className="py-20" />
-          <div className="containermx-autopx-4" />
-            <div className="text-centermb-16" />
-              <h2 className="text-4 xl font-boldtext-whitemb-6" />
+          <div className="containermx-autopx-4">
+            <div className="text-centermb-16">
+              <h2 className="text-4 xl font-boldtext-white mb-6" />
                 Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Zion Tech Group</span>?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
@@ -640,9 +640,9 @@ const ITServicesPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1md:grid-cols-3gap-8" />
-              <div className="text-centergroup" />
-                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300" />
+            <div className="grid grid-cols-1md:grid-cols-3gap-8">
+              <div className="text-centergroup">
+                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
                   <Zap className="w-10h-10text-cyan-400" / />
                 </div>
                 <h3 className="text-2 xl font-boldtext-whitemb-4"   />Rapid Deployment</h3>
@@ -651,8 +651,8 @@ const ITServicesPage: React.FC = () => {
                 </p>
               </div>
 
-              <div className="text-centergroup" />
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300" />
+              <div className="text-centergroup">
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
                   <Users className="w-10h-10text-purple-400" / />
                 </div>
                 <h3 className="text-2 xl font-boldtext-whitemb-4"   />Expert Team</h3>
@@ -661,8 +661,8 @@ const ITServicesPage: React.FC = () => {
                 </p>
               </div>
 
-              <div className="text-centergroup" />
-                <div className="w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300" />
+              <div className="text-centergroup">
+                <div className="w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
                   <Award className="w-10h-10text-green-400" / />
                 </div>
                 <h3 className="text-2 xl font-boldtext-whitemb-4"   />Proven Results</h3>
@@ -676,20 +676,20 @@ const ITServicesPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20" />
-          <div className="containermx-autopx-4" />
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center" />
-              <h2 className="text-4 xl font-boldtext-whitemb-6"  />Ready to Modernize Your IT Infrastructure?
+          <div className="containermx-autopx-4">
+            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12 text-center">
+              <h2 className="text-4 xl font-boldtext-white mb-6"  />Ready to Modernize Your IT Infrastructure?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
                 Let's discuss your IT needs and create a customized solution that drives your business forward.
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center" />
+              <div className="flex flex-col sm:flex-rowgap-4justify-center">
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project
                 </Link>
                 <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
-                </Link>
-              </div>
-            </div>
+                        </Link>
+      </div>
+    </div>
           </div>
         </section>
       </div>

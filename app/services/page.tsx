@@ -1,4 +1,4 @@
-import React from \'react\';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
@@ -97,12 +97,12 @@ const ServicesPage: React.FC = () => {
         <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, custom development, data analytics, mobile development" / / />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16">
         {/* Hero Section */}
         <section className="py-20" />
-          <div className="containermx-autopx-4" />
-            <div className="max-w-4 xlmx-autotext-center" />
-              <h1 className="text-5 xl md:text-6 xl font-boldtext-whitemb-6" />
+          <div className="containermx-autopx-4">
+            <div className="max-w-4 xlmx-auto text-center">
+              <h1 className="text-5 xl md:text-6 xl font-boldtext-white mb-6" />
                 Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  >Services</span>
               </h1>
               <p className="text-xl text-gray-300mb-8leading-relaxed" />
@@ -115,15 +115,15 @@ const ServicesPage: React.FC = () => {
 
         {/* Main Services Section */}
         <section className="py-20" />
-          <div className="containermx-autopx-4" />
-            <div className="text-centermb-16" />
-              <h2 className="text-4 xl font-boldtext-whitemb-6"  >Core Services</h2>
+          <div className="containermx-autopx-4">
+            <div className="text-centermb-16">
+              <h2 className="text-4 xl font-boldtext-white mb-6"  >Core Services</h2>
               <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
                 Our flagship services that have helped hundreds of businesses transform and grow
               </p>
             </div>
 
-            <div className="grid grid-cols-1md:grid-cols-2gap-8" />
+            <div className="grid grid-cols-1md:grid-cols-2gap-8">
               {mainServices.map((service, index) => (
                 <div 
                   key="{index}"
@@ -139,7 +139,7 @@ const ServicesPage: React.FC = () => {
                     {service.description}
                   </p>
                   
-                  <ul className="space-y-2mb-6" />
+                  <ul className="space-y-2 mb-6" />
                     {service.features.map((feature, featureIndex) => (
                       <li key="{featureIndex}" className="flexitems-centertext-gray-300" />
                         <CheckCircle className="w-4 h-4 text-cyan-400mr-3flex-shrink-0" / />
@@ -160,21 +160,21 @@ const ServicesPage: React.FC = () => {
 
         {/* Additional Services Section */}
         <section className="py-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />
-          <div className="containermx-autopx-4" />
-            <div className="text-centermb-16" />
-              <h2 className="text-4 xl font-boldtext-whitemb-6"  >Additional Services</h2>
+          <div className="containermx-autopx-4">
+            <div className="text-centermb-16">
+              <h2 className="text-4 xl font-boldtext-white mb-6"  >Additional Services</h2>
               <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
                 Specialized services to complement your core technology needs
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-6" />
+            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-6">
               {additionalServices.map((service, index) => (
                 <Link
                   key="{index}"
                   to="{service.href}"
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transformhover:scale-105text-center" />
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110transition-transformduration-300" />
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transformhover:scale-105 text-center" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110transition-transformduration-300">
                     <service.icon className="w-6h-6text-cyan-400" / />
                   </div>
                   <h3 className="text-lg font-bold text-white mb-2group-hover:text-cyan-400transition-colors"  />{service.title}
@@ -190,21 +190,21 @@ const ServicesPage: React.FC = () => {
 
         {/* Process Section */}
         <section className="py-20" />
-          <div className="containermx-autopx-4" />
-            <div className="text-centermb-16" />
-              <h2 className="text-4 xl font-boldtext-whitemb-6"  >Our Process</h2>
+          <div className="containermx-autopx-4">
+            <div className="text-centermb-16">
+              <h2 className="text-4 xl font-boldtext-white mb-6"  >Our Process</h2>
               <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
                 How we work with you to deliver exceptional results
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
+            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
               {processSteps.map((step, index) => (
                 <div 
                   key="{index}"
                   className="text-centergroup" />
-                  <div className="relativemb-6" />
-                    <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300borderborder-cyan-500/30" />
+                  <div className="relative mb-6">
+                    <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300borderborder-cyan-500/30">
                       <step.icon className="w-8h-8text-cyan-400" / />
                     </div>
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-whitefont-boldtext-sm"  />{step.step}
@@ -223,20 +223,20 @@ const ServicesPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20" />
-          <div className="containermx-autopx-4" />
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center" />
-              <h2 className="text-4 xl font-boldtext-whitemb-6"  />Ready to Get Started?
+          <div className="containermx-autopx-4">
+            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12 text-center">
+              <h2 className="text-4 xl font-boldtext-white mb-6"  />Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
                 Let's discuss your project and how our services can help you achieve your business goals.
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center" />
+              <div className="flex flex-col sm:flex-rowgap-4justify-center">
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Get a Free Consultation
                 </Link>
                 <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
-                </Link>
-              </div>
-            </div>
+                        </Link>
+      </div>
+    </div>
           </div>
         </section>
       </div>

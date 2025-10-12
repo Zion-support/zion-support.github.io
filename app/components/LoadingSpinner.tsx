@@ -1,4 +1,4 @@
-import React from \'react\';
+import React from 'react';
 'use client';
 
 interface LoadingSpinnerProps {
@@ -23,7 +23,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({
     white: 'text-white'
   };
   return (
-    <div className="flex flex-col items-centerjustify-centerspace-y-4" />
+    <div className="flex flex-col items-centerjustify-centerspace-y-4">
       <div className="{`${sizeClasses[size]}" ${colorClasses[color]} animate-spin`} />
         <svg
           className="w-fullh-full"

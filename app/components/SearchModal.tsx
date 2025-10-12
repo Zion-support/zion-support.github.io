@@ -1,4 +1,4 @@
-import React from \'react\';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { X, ArrowRight} from 'lucide-react';
 'use client';
@@ -94,18 +94,18 @@ const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0z-50overflow-y-auto" />
-      <div className="flex min-h-screen items-start justify-center px-4 pt-16 pb-20 text-centersm:blocksm:p-0" />
+    <div className="fixed inset-0z-50overflow-y-auto">
+      <div className="flex min-h-screen items-start justify-center px-4 pt-16 pb-20 text-centersm:blocksm:p-0">
         {/* Backdrop */}
         <div
           className="fixed inset-0 bg-black/50backdrop-blur-smtransition-opacity"
           onClick="{onClose}"
         / />
         {/* Modal */}
-        <div className="relative inline-block w-full max-w-2 xl transform overflow-hidden rounded-2 xl bg-slate-800 text-left align-bottom shadow-xl transition-allsm:my-8sm:align-middle" />
+        <div className="relative inline-block w-full max-w-2 xl transform overflow-hidden rounded-2 xl bg-slate-800 text-left align-bottom shadow-xl transition-allsm:my-8sm:align-middle">
           {/* Header */}
-          <div className="flex items-center justify-between p-6border-bborder-slate-700" />
-            <div className="flexitems-centerspace-x-3" />
+          <div className="flex items-center justify-between p-6border-bborder-slate-700">
+            <div className="flexitems-centerspace-x-3">
               <Search className="w-6h-6text-cyan-400" / />
               <h3 className="text-lgfont-semiboldtext-white"  >Search Services</h3>
             </div>
@@ -118,8 +118,8 @@ const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Search Input */}
-          <div className="p-6" />
-            <div className="relative" />
+          <div className="p-6">
+            <div className="relative">
               <input
                 ref="{inputRef}"
                 type="text"
@@ -134,27 +134,27 @@ const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Results */}
-          <div className="max-h-96overflow-y-auto" />
+          <div className="max-h-96overflow-y-auto">
             {isLoading ? (
-              <div className="flex items-centerjustify-centerpy-8" />
-                <div className="animate-spin rounded-full h-8 w-8border-b-2border-cyan-400" /></div>
+              <div className="flex items-centerjustify-centerpy-8">
+                <div className="animate-spin rounded-full h-8 w-8border-b-2border-cyan-400"></div>
                 <span className="ml-3text-gray-400"  >Searching...</span>
               </div>
             ) : query.length === 0 ? (
-              <div className="px-6py-8text-center" />
+              <div className="px-6py-8 text-center">
                 <Search className="w-12 h-12 text-gray-600mx-automb-4" / />
                 <p className="text-gray-400">Start typing to search for services</p>
               </div>
             ) : results.length === 0 ? (
-              <div className="px-6py-8text-center" />
+              <div className="px-6py-8 text-center">
                 <p className="text-gray-400">No results found for "{query}"</p>
               </div>
             ) : (
-              <div className="px-6pb-6" />
+              <div className="px-6pb-6">
                 <p className="text-smtext-gray-400mb-4" />
                   {results.length} result{results.length !== 1 ? 's' : ''} found
                 </p>
-                <div className="space-y-2" />
+                <div className="space-y-2">
                   {results.map((result, index) => (
                     <Link
                       key="{index}"
@@ -163,7 +163,7 @@ const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
                       className="flex items-center p-4 bg-slate-700/50 hover:bg-slate-700 rounded-lgtransition-colorsgroup" />
                       <div className="flex-shrink-0 mr-4text-cyan-400group-hover:text-cyan-300"  />{result.icon}
                       </div>
-                      <div className="flex-1min-w-0" />
+                      <div className="flex-1min-w-0">
                         <h4 className="text-white font-mediumgroup-hover:text-cyan-300transition-colors"  />{result.title}
                         </h4>
                         <p className="text-smtext-gray-400mt-1" />

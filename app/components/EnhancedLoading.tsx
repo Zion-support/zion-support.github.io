@@ -1,4 +1,4 @@
-import React from \'react\';
+import React from 'react';
 
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg'
@@ -28,7 +28,7 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
   }
 
   const spinner = (
-    <div className="flex flex-col items-center justify-centerspace-y-4" />
+    <div className="flex flex-col items-center justify-centerspace-y-4">
       <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`} / />
       {text && (
         <div className="text-sm text-gray-300animate-pulse"  />{text}

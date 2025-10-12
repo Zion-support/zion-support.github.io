@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import { Mail, Send, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Clock, Brain, Shield, DollarSign } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import React from \'react\';
+import React from 'react';
 import { ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -137,8 +137,8 @@ const AIEmailAutomationPage: React.FC = () => {
       <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900via-blue-900to-slate-900" />
         <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)]" / />
         <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.3)_0%,transparent_50%)]" / />
-        <div className="relative max-w-7 xlmx-autotext-center" />
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-blue-400/30" />
+        <div className="relative max-w-7 xlmx-auto text-center">
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-blue-400/30">
             <Mail className="w-4h-4" / />
             <span   />AI-Powered Email Marketing</span>
           </div>
@@ -155,7 +155,7 @@ const AIEmailAutomationPage: React.FC = () => {
             content generation, and performance optimization that increases revenue by 300%.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16" />
+          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
             <Link to="/contact" className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40transformhover:scale-105" />
               <span   />Start Free Trial</span>
               <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
@@ -163,15 +163,15 @@ const AIEmailAutomationPage: React.FC = () => {
             <Link to="#demo" className="group border-2 border-blue-400 text-blue-400 px-10 py-4 rounded-xl font-semibold hover:bg-blue-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
               <span   />Watch Demo</span>
               <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-          </div>
-        </div>
+                    </Link>
+      </div>
+    </div>
       </section>
 
       {/* Stats Section */}
       <section className="py-20px-4bg-gray-900" />
-        <div className="max-w-7xlmx-auto" />
-          <div className="grid grid-cols-2md:grid-cols-4gap-8" />
+        <div className="max-w-7xlmx-auto">
+          <div className="grid grid-cols-2md:grid-cols-4gap-8">
             {stats.map((stat, index) => (
               <div key="{index}" className="text-center bg-white/5 backdrop-blur-sm rounded-2 xl p-6borderborder-white/10" />
                 <div className="flexjustify-centermb-4"  />{stat.icon}
@@ -188,9 +188,9 @@ const AIEmailAutomationPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4 bg-gradient-to-brfrom-slate-800/50to-blue-900/50" />
-        <div className="max-w-7xlmx-auto" />
-          <div className="text-centermb-16" />
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+        <div className="max-w-7xlmx-auto">
+          <div className="text-centermb-16">
+            <h2 className="text-4 xl md:text-5 xl font-boldtext-white mb-6" />
               Advanced <span className="bg-gradient-to-r from-blue-400 to-cyan-400bg-clip-texttext-transparent"   />Features</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
@@ -199,7 +199,7 @@ const AIEmailAutomationPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8" />
+          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
             {features.map((feature, index) => (
               <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300"  />{feature.icon}
@@ -209,7 +209,7 @@ const AIEmailAutomationPage: React.FC = () => {
                 <p className="text-gray-300mb-6leading-relaxed" />
                   {feature.description}
                 </p>
-                <div className="space-y-2" />
+                <div className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <div key="{benefitIndex}" className="flex items-center space-x-2text-gray-400text-sm" />
                       <CheckCircle className="w-4h-4text-green-400" / />
@@ -225,9 +225,9 @@ const AIEmailAutomationPage: React.FC = () => {
 
       {/* Pricing Section */}
       <section className="py-20px-4bg-gray-900" />
-        <div className="max-w-7xlmx-auto" />
-          <div className="text-centermb-16" />
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+        <div className="max-w-7xlmx-auto">
+          <div className="text-centermb-16">
+            <h2 className="text-4 xl md:text-5 xl font-boldtext-white mb-6" />
               Transparent <span className="bg-gradient-to-r from-blue-400 to-cyan-400bg-clip-texttext-transparent"   />Pricing</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
@@ -236,7 +236,7 @@ const AIEmailAutomationPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1md:grid-cols-3gap-8" />
+          <div className="grid grid-cols-1md:grid-cols-3gap-8">
             {pricingPlans.map((plan, index) => (
               <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
                 plan.popular 
@@ -244,22 +244,22 @@ const AIEmailAutomationPage: React.FC = () => {
                   : 'border-white/20 hover: border-white/40'
               }`} />
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2" />
+                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
                     <div className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold"  />Most Popular
                     </div>
                   </div>
                 )}
                 
-                <div className="text-centermb-8" />
+                <div className="text-center mb-8">
                   <h3 className="text-2 xl font-boldtext-whitemb-2"   />{plan.name}</h3>
                   <p className="text-gray-300mb-4" />{plan.description}</p>
-                  <div className="flexitems-baselinejustify-center" />
+                  <div className="flexitems-baselinejustify-center">
                     <span className="text-5 xlfont-boldtext-white"   />{plan.price}</span>
-                    <span className="text-gray-400ml-2"   />{plan.period}</span>
+                    <span className="text-gray-400 ml-2"   />{plan.period}</span>
                   </div>
                 </div>
                 
-                <div className="space-y-4mb-8" />
+                <div className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <div key="{featureIndex}" className="flexitems-centerspace-x-3" />
                       <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
@@ -285,9 +285,9 @@ const AIEmailAutomationPage: React.FC = () => {
 
       {/* Testimonials Section */}
       <section className="py-20 px-4 bg-gradient-to-brfrom-blue-900/50to-purple-900/50" />
-        <div className="max-w-7xlmx-auto" />
-          <div className="text-centermb-16" />
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+        <div className="max-w-7xlmx-auto">
+          <div className="text-centermb-16">
+            <h2 className="text-4 xl md:text-5 xl font-boldtext-white mb-6" />
               Trusted by <span className="bg-gradient-to-r from-blue-400 to-purple-400bg-clip-texttext-transparent"   />Marketers</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
@@ -295,10 +295,10 @@ const AIEmailAutomationPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1md:grid-cols-3gap-8" />
+          <div className="grid grid-cols-1md:grid-cols-3gap-8">
             {testimonials.map((testimonial, index) => (
               <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8borderborder-white/20" />
-                <div className="flexitems-centermb-4" />
+                <div className="flexitems-centermb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4"  />{testimonial.avatar}
                   </div>
                   <div />
@@ -306,7 +306,7 @@ const AIEmailAutomationPage: React.FC = () => {
                     <p className="text-gray-400text-sm" />{testimonial.company}</p>
                   </div>
                 </div>
-                <div className="flexitems-centermb-4" />
+                <div className="flexitems-centermb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" / />
                   ))}
@@ -320,8 +320,8 @@ const AIEmailAutomationPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-blue-600via-cyan-600to-purple-600" />
-        <div className="max-w-7 xlmx-autotext-center" />
-          <h2 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6" />
+        <div className="max-w-7 xlmx-auto text-center">
+          <h2 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-white mb-6" />
             Ready to Revolutionize Your
             <br / />
             <span className="bg-gradient-to-r from-blue-300 to-cyan-300bg-clip-texttext-transparent"  />Email Marketing?
@@ -331,7 +331,7 @@ const AIEmailAutomationPage: React.FC = () => {
             Join thousands of marketers already increasing revenue and saving time with AI Email Automation. 
             Start your free trial today - no credit card required.
           </p>
-          <div className="flex flex-col sm:flex-rowgap-6justify-center" />
+          <div className="flex flex-col sm:flex-rowgap-6justify-center">
             <Link to="/contact" className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
               <span   />Start Free Trial</span>
               <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
@@ -339,9 +339,9 @@ const AIEmailAutomationPage: React.FC = () => {
             <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
               <span   />View All Plans</span>
               <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-          </div>
-        </div>
+                    </Link>
+      </div>
+    </div>
       </section>
     </>
   )

@@ -1,4 +1,4 @@
-import React from \'react\';
+import React from 'react';
 'use client';
 
 const EnhancedSkipLink: React.FC = () => {
@@ -22,7 +22,7 @@ const EnhancedSkipLink: React.FC = () => {
   };
 
   return (
-    <div className="skip-links" />
+    <div className="skip-links">
       <button
         onClick="{handleSkipToMain}"
         className="skip-link"

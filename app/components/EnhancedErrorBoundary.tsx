@@ -45,21 +45,21 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-centerjustify-centerpx-4" />
-          <div className="max-w-md w-full bg-gray-800 rounded-xl p-8 text-centerborderborder-gray-700" />
-            <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-centermx-automb-6" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-centerjustify-centerpx-4">
+          <div className="max-w-md w-full bg-gray-800 rounded-xl p-8 text-centerborderborder-gray-700">
+            <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-centermx-auto mb-6">
               <AlertTriangle className="h-8w-8text-white" / />
             </div>
             
             <h1 className="text-2 xl font-boldtext-whitemb-4"  />Oops! Something went wrong
             </h1>
             
-            <p className="text-gray-300mb-6" />
+            <p className="text-gray-300 mb-6" />
               We encountered an unexpected error. Don't worry, our team has been notified and we're working to fix it.
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="bg-gray-900 rounded-lg p-4mb-6text-left" />
+              <div className="bg-gray-900 rounded-lg p-4mb-6text-left">
                 <h3 className="text-red-400font-semiboldmb-2"  >Error Details:</h3>
                 <pre className="text-xstext-gray-300overflow-auto"  />{this.state.error.toString()}
                 </pre>
@@ -70,7 +70,7 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
               </div>
             )}
 
-            <div className="space-y-3" />
+            <div className="space-y-3">
               <button
                 onClick="{this.handleRetry}"
                 className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
@@ -84,11 +84,11 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
               </Link>
             </div>
 
-            <div className="mt-8 pt-6border-tborder-gray-700" />
+            <div className="mt-8 pt-6border-tborder-gray-700">
               <p className="text-smtext-gray-400mb-4" />
                 Still having issues? Contact our support team:
               </p>
-              <div className="flex flex-col sm:flex-rowgap-2justify-center" />
+              <div className="flex flex-col sm:flex-rowgap-2justify-center">
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="inline-flex items-center text-sm text-purple-400hover:text-purple-300transition-colors" />

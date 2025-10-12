@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Layout from '../layout'
-import React from \'react\';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Layout from '../layout';
@@ -122,37 +122,37 @@ export default function AIContentModerationPro() {
       title="AI Content Moderation Pro - Advanced Content Safety Platform | Zion Tech Group"
       description="Protect your platform with AI-powered content moderation. Real-time detection, multi-format support, and 99.7% accuracy. Start your free trial today."
       keywords="AI content moderation, content safety, platform protection, automated moderation, content filtering" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto" />
-            <div className="text-center" />
-              <div className="inline-flex items-center px-4 py-2 bg-red-500/20 rounded-full text-red-400 text-smfont-mediummb-6" />
+          <div className="max-w-7xlmx-auto">
+            <div className="text-center">
+              <div className="inline-flex items-center px-4 py-2 bg-red-500/20 rounded-full text-red-400 text-smfont-medium mb-6">
                 <Shield className="w-4h-4mr-2" / />
                 Advanced Content Safety
               </div>
-              <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6"  />AI Content Moderation Pro
+              <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-white mb-6"  />AI Content Moderation Pro
               </h1>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8" />
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3 xlmx-auto mb-8" />
                 Protect your platform with industry-leading AI content moderation. Real-time detection, 
                 multi-format support, and 99.7% accuracy to keep your community safe and compliant.
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center" />
+              <div className="flex flex-col sm:flex-rowgap-4justify-center">
                 <Link to="/contact" className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
                   Start Free Trial
-                  <ArrowRight className="w-5h-5ml-2" />
+                  <ArrowRight className="w-5h-5 ml-2" />
                 </Link>
                 <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Watch Demo
-                </Link>
-              </div>
-            </div>
+                        </Link>
+      </div>
+    </div>
           </div>
         </section>
 
         {/* Features Section */}
         <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto" />
-            <div className="text-centermb-16" />
+          <div className="max-w-7xlmx-auto">
+            <div className="text-centermb-16">
               <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4"  />Advanced Content Safety Features
               </h2>
               <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
@@ -160,10 +160,10 @@ export default function AIContentModerationPro() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
+            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
               {features.map((feature, index) => (
                 <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-red-500/20 hover:border-red-400/40transition-allduration-300" />
-                  <div className="flexitems-centermb-4" />
+                  <div className="flexitems-centermb-4">
                     {feature.icon}
                     <h3 className="text-xl font-semiboldtext-whiteml-3"   />{feature.title}</h3>
                   </div>
@@ -176,8 +176,8 @@ export default function AIContentModerationPro() {
 
         {/* Capabilities Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
-          <div className="max-w-7xlmx-auto" />
-            <div className="text-centermb-16" />
+          <div className="max-w-7xlmx-auto">
+            <div className="text-centermb-16">
               <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4"  />Comprehensive Moderation Capabilities
               </h2>
               <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
@@ -185,7 +185,7 @@ export default function AIContentModerationPro() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
+            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
               {capabilities.map((capability, index) => (
                 <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
                   <h3 className="text-xl font-semiboldtext-whitemb-4"   />{capability.category}</h3>
@@ -205,8 +205,8 @@ export default function AIContentModerationPro() {
 
         {/* Pricing Section */}
         <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto" />
-            <div className="text-centermb-16" />
+          <div className="max-w-7xlmx-auto">
+            <div className="text-centermb-16">
               <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4"  />Flexible Pricing Plans
               </h2>
               <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
@@ -214,7 +214,7 @@ export default function AIContentModerationPro() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1md:grid-cols-3gap-8" />
+            <div className="grid grid-cols-1md:grid-cols-3gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key="{index}" className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
@@ -222,18 +222,18 @@ export default function AIContentModerationPro() {
                     : 'border-red-500/20 hover: border-red-400/40'
                 }`} />
                   {plan.popular && (
-                    <div className="inline-flex items-center px-3 py-1 bg-red-500/20 rounded-full text-red-400 text-smfont-mediummb-4" />
+                    <div className="inline-flex items-center px-3 py-1 bg-red-500/20 rounded-full text-red-400 text-smfont-mediummb-4">
                       <Star className="w-4h-4mr-1" / />
                       Most Popular
                     </div>
                   )}
                   <h3 className="text-2 xl font-boldtext-whitemb-2"   />{plan.name}</h3>
-                  <p className="text-gray-300mb-6" />{plan.description}</p>
-                  <div className="mb-6" />
+                  <p className="text-gray-300 mb-6" />{plan.description}</p>
+                  <div className="mb-6">
                     <span className="text-4 xlfont-boldtext-white"   />{plan.price}</span>
                     <span className="text-gray-400"   />{plan.period}</span>
                   </div>
-                  <ul className="space-y-3mb-8" />
+                  <ul className="space-y-3 mb-8" />
                     {plan.features.map((feature, featureIndex) => (
                       <li key="{featureIndex}" className="flexitems-centertext-gray-300" />
                         <CheckCircle className="w-5 h-5text-green-400mr-3" / />
@@ -258,18 +258,18 @@ export default function AIContentModerationPro() {
 
         {/* Testimonials */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
-          <div className="max-w-7xlmx-auto" />
-            <div className="text-centermb-12" />
+          <div className="max-w-7xlmx-auto">
+            <div className="text-centermb-12">
               <h2 className="text-3 xl font-boldtext-whitemb-4"  />Trusted by Leading Platforms
               </h2>
               <p className="text-gray-300" />
                 See how our AI content moderation protects platforms worldwide
               </p>
             </div>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8" />
+            <div className="grid grid-cols-1md:grid-cols-3gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-                  <div className="flexitems-centermb-4" />
+                  <div className="flexitems-centermb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" / />
                     ))}
@@ -287,20 +287,20 @@ export default function AIContentModerationPro() {
 
         {/* CTA Section */}
         <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-4 xlmx-autotext-center" />
-            <div className="bg-gradient-to-r from-red-500/20 to-purple-500/20 rounded-2 xl p-8borderborder-red-500/30" />
+          <div className="max-w-4 xlmx-auto text-center">
+            <div className="bg-gradient-to-r from-red-500/20 to-purple-500/20 rounded-2 xl p-8borderborder-red-500/30">
               <h2 className="text-3 xl font-boldtext-whitemb-4"  />Protect Your Platform Today
               </h2>
-              <p className="text-lgtext-gray-300mb-8" />
+              <p className="text-lgtext-gray-300 mb-8" />
                 Join thousands of platforms using AI Content Moderation Pro to keep their communities safe
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center" />
+              <div className="flex flex-col sm:flex-rowgap-4justify-center">
                 <Link to="/contact" className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
                 </Link>
                 <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
-                </Link>
-              </div>
-            </div>
+                        </Link>
+      </div>
+    </div>
           </div>
         </section>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import React from \'react\';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Bot} from 'lucide-react';
 
@@ -157,7 +157,7 @@ export default function AICodeAssistantProPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20" />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900 pt-20">
       <Helmet />
         <title   />AI Code Assistant Pro - Zion Tech Group | Intelligent Code Generation</title>
         <meta name="description" content="Revolutionary AI-powered code assistant with intelligent generation, debugging, and analysis. Increase development speed by 300%. Starting at $29/month." / / />
@@ -170,8 +170,8 @@ export default function AICodeAssistantProPage() {
       <section className="relative py-20px-4overflow-hidden" />
         <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.1)_0%,transparent_50%)]" / />
         <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1)_0%,transparent_50%)]" / />
-        <div className="relative max-w-7 xlmx-autotext-center" />
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30" />
+        <div className="relative max-w-7 xlmx-auto text-center">
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
             <Code className="w-4h-4" / />
             <span   />AI-Powered Code Generation</span>
           </div>
@@ -188,7 +188,7 @@ export default function AICodeAssistantProPage() {
             Increase development speed by 300% while reducing bugs by 80%.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16" />
+          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
             <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
               <span   />Start Free Trial</span>
               <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
@@ -200,20 +200,20 @@ export default function AICodeAssistantProPage() {
           </div>
 
           {/* Key Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xlmx-auto" />
-            <div className="text-center" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xlmx-auto">
+            <div className="text-center">
               <div className="text-3 xl font-boldtext-cyan-400mb-2"   />300%</div>
               <div className="text-gray-300text-sm"   />Faster Development</div>
             </div>
-            <div className="text-center" />
+            <div className="text-center">
               <div className="text-3 xl font-boldtext-purple-400mb-2"   />80%</div>
               <div className="text-gray-300text-sm"   />Fewer Bugs</div>
             </div>
-            <div className="text-center" />
+            <div className="text-center">
               <div className="text-3 xl font-boldtext-pink-400mb-2"   />50+</div>
               <div className="text-gray-300text-sm"   />Languages Supported</div>
             </div>
-            <div className="text-center" />
+            <div className="text-center">
               <div className="text-3 xl font-boldtext-emerald-400mb-2"   />25 K+</div>
               <div className="text-gray-300text-sm"   />Active Developers</div>
             </div>
@@ -224,9 +224,9 @@ export default function AICodeAssistantProPage() {
       {/* Benefits Section */}
       <section className="py-20px-4relative" />
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" / />
-        <div className="relative max-w-7xlmx-auto" />
-          <div className="text-centermb-16" />
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+        <div className="relative max-w-7xlmx-auto">
+          <div className="text-centermb-16">
+            <h2 className="text-4 xl md:text-5 xl font-boldtext-white mb-6" />
               Why Choose Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />AI Code Assistant?</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
@@ -234,7 +234,7 @@ export default function AICodeAssistantProPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
+          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
             {benefits.map((benefit, index) => (
               <div key="{index}" className="text-centergroup" />
                 <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 mx-auto group-hover:scale-110transition-transformduration-300"  />{benefit.icon}
@@ -252,9 +252,9 @@ export default function AICodeAssistantProPage() {
 
       {/* Supported Languages Section */}
       <section className="py-20px-4relative" />
-        <div className="relative max-w-7xlmx-auto" />
-          <div className="text-centermb-16" />
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+        <div className="relative max-w-7xlmx-auto">
+          <div className="text-centermb-16">
+            <h2 className="text-4 xl md:text-5 xl font-boldtext-white mb-6" />
               Support for <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />50+ Languages</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
@@ -262,10 +262,10 @@ export default function AICodeAssistantProPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4lg:grid-cols-6gap-4" />
+          <div className="grid grid-cols-2 md:grid-cols-4lg:grid-cols-6gap-4">
             {supportedLanguages.map((language, index) => (
-              <div key="{index}" className="grouptext-center" />
-                <div className="w-full h-16 bg-white/10 backdrop-blur-lg rounded-xl flex items-center justify-center mx-auto mb-2 group-hover:bg-white/20 transition-allduration-300group-hover:scale-105" />
+              <div key="{index}" className="group text-center" />
+                <div className="w-full h-16 bg-white/10 backdrop-blur-lg rounded-xl flex items-center justify-center mx-auto mb-2 group-hover:bg-white/20 transition-allduration-300group-hover:scale-105">
                   <span className="text-gray-300 group-hover:text-whitetransition-colorsfont-medium"  />{language}
                   </span>
                 </div>
@@ -277,9 +277,9 @@ export default function AICodeAssistantProPage() {
 
       {/* Features Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
-        <div className="relative max-w-7xlmx-auto" />
-          <div className="text-centermb-16" />
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+        <div className="relative max-w-7xlmx-auto">
+          <div className="text-centermb-16">
+            <h2 className="text-4 xl md:text-5 xl font-boldtext-white mb-6" />
               Powerful Features for <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Smart Development</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
@@ -287,7 +287,7 @@ export default function AICodeAssistantProPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8" />
+          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
             {features.map((feature, index) => (
               <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300"  />{feature.icon}
@@ -305,9 +305,9 @@ export default function AICodeAssistantProPage() {
 
       {/* Integrations Section */}
       <section className="py-20px-4relative" />
-        <div className="relative max-w-7xlmx-auto" />
-          <div className="text-centermb-16" />
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+        <div className="relative max-w-7xlmx-auto">
+          <div className="text-centermb-16">
+            <h2 className="text-4 xl md:text-5 xl font-boldtext-white mb-6" />
               Seamless <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Integrations</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
@@ -315,10 +315,10 @@ export default function AICodeAssistantProPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2md:grid-cols-5gap-8" />
+          <div className="grid grid-cols-2md:grid-cols-5gap-8">
             {integrations.map((integration, index) => (
-              <div key="{index}" className="grouptext-center" />
-                <div className="w-20 h-20 bg-white/10 backdrop-blur-lg rounded-2 xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-allduration-300group-hover:scale-110" />
+              <div key="{index}" className="group text-center" />
+                <div className="w-20 h-20 bg-white/10 backdrop-blur-lg rounded-2 xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-allduration-300group-hover:scale-110">
                   <span className="text-3xl"   />{integration.icon}</span>
                 </div>
                 <div className="text-gray-300group-hover:text-whitetransition-colors"  />{integration.name}
@@ -331,9 +331,9 @@ export default function AICodeAssistantProPage() {
 
       {/* Pricing Section */}
       <section id="pricing" className="py-20px-4relative" />
-        <div className="relative max-w-7xlmx-auto" />
-          <div className="text-centermb-16" />
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+        <div className="relative max-w-7xlmx-auto">
+          <div className="text-centermb-16">
+            <h2 className="text-4 xl md:text-5 xl font-boldtext-white mb-6" />
               Simple, Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
@@ -341,7 +341,7 @@ export default function AICodeAssistantProPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1md:grid-cols-3gap-8" />
+          <div className="grid grid-cols-1md:grid-cols-3gap-8">
             {pricingPlans.map((plan, index) => (
               <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
                 plan.popular 
@@ -349,22 +349,22 @@ export default function AICodeAssistantProPage() {
                   : 'border-white/20 hover: border-cyan-400/30'
               }`} />
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2" />
+                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
                     <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold"  />Most Popular
                     </div>
                   </div>
                 )}
                 
-                <div className="text-centermb-8" />
+                <div className="text-center mb-8">
                   <h3 className="text-2 xl font-boldtext-whitemb-2"   />{plan.name}</h3>
                   <p className="text-gray-300text-smmb-4" />{plan.description}</p>
-                  <div className="flexitems-baselinejustify-center" />
+                  <div className="flexitems-baselinejustify-center">
                     <span className="text-5 xlfont-boldtext-cyan-400"   />{plan.price}</span>
-                    <span className="text-gray-300ml-2"   />{plan.period}</span>
+                    <span className="text-gray-300 ml-2"   />{plan.period}</span>
                   </div>
                 </div>
                 
-                <ul className="space-y-4mb-8" />
+                <ul className="space-y-4 mb-8" />
                   {plan.features.map((feature, featureIndex) => (
                     <li key="{featureIndex}" className="flexitems-centerspace-x-3" />
                       <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
@@ -390,9 +390,9 @@ export default function AICodeAssistantProPage() {
 
       {/* Testimonials Section */}
       <section className="py-20px-4relative" />
-        <div className="relative max-w-7xlmx-auto" />
-          <div className="text-centermb-16" />
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+        <div className="relative max-w-7xlmx-auto">
+          <div className="text-centermb-16">
+            <h2 className="text-4 xl md:text-5 xl font-boldtext-white mb-6" />
               Trusted by <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />25,000+</span> Developers
             </h2>
             <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
@@ -400,10 +400,10 @@ export default function AICodeAssistantProPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1md:grid-cols-3gap-8" />
+          <div className="grid grid-cols-1md:grid-cols-3gap-8">
             {testimonials.map((testimonial, index) => (
               <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <div className="flexitems-centermb-4" />
+                <div className="flexitems-centermb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4"  />{testimonial.avatar}
                   </div>
                   <div />
@@ -411,7 +411,7 @@ export default function AICodeAssistantProPage() {
                     <div className="text-gray-400text-sm"   />{testimonial.company}</div>
                   </div>
                 </div>
-                <div className="flexmb-4" />
+                <div className="flexmb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" / />
                   ))}
@@ -426,10 +426,10 @@ export default function AICodeAssistantProPage() {
       {/* CTA Section */}
       <section className="py-20px-4relative" />
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" / />
-        <div className="relative max-w-7xlmx-auto" />
-          <div className="text-center" />
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden" />
-              <div className="relativez-10" />
+        <div className="relative max-w-7xlmx-auto">
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
+              <div className="relativez-10">
                 <h2 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-whitemb-6leading-tight" />
                   Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Development Workflow?</span>
                 </h2>
@@ -439,7 +439,7 @@ export default function AICodeAssistantProPage() {
                   Start your free trial today and experience the future of software development.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-6justify-centermb-8" />
+                <div className="flex flex-col sm:flex-row gap-6justify-center mb-8">
                   <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
                     <span   />Start Free Trial</span>
                     <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
@@ -450,7 +450,7 @@ export default function AICodeAssistantProPage() {
                   </Link>
                 </div>
                 
-                <div className="text-white/80text-sm" />
+                <div className="text-white/80text-sm">
                   <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
                 </div>
               </div>

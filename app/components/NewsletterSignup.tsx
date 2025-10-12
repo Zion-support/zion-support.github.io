@@ -49,8 +49,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
   };
 
   const content = (
-    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2 xl p-8text-white" />
-      <div className="text-centermb-6" />
+    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2 xl p-8text-white">
+      <div className="text-center mb-6">
         <Mail className="w-12 h-12 mx-auto mb-4text-white/90" / />
         <h3 className="text-2 xl font-boldmb-2"  >Stay Updated</h3>
         <p className="text-white/90" />
@@ -59,7 +59,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
       </div>
 
       <form onSubmit="{handleSubmit}" className="space-y-4" />
-        <div className="flex flex-col sm:flex-rowgap-3" />
+        <div className="flex flex-col sm:flex-rowgap-3">
           <input
             type="email"
             value="{email}"
@@ -74,7 +74,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
             className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-centerjustify-center" />
             {status === 'loading' ? (
               <>
-                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600mr-2" /></div>
+                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600mr-2"></div>
                 Subscribing...
               </>
             ) : (
@@ -100,7 +100,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
         )}
       </form>
 
-      <div className="mt-6 text-center text-smtext-white/80" />
+      <div className="mt-6 text-center text-smtext-white/80">
         <p />
           ✓ No spam, unsubscribe anytime<br / />
           ✓ Weekly updates on latest tech trends<br / />
@@ -111,8 +111,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
   );
   if (const variant = == 'modal') {
     return (
-    <div className="fixed inset-0 z-50overflow-y-auto" />
-        <div className="flex min-h-screen items-center justify-center px-4py-6" />
+    <div className="fixed inset-0 z-50overflow-y-auto">
+        <div className="flex min-h-screen items-center justify-center px-4py-6">
           <div className="fixed inset-0 bg-black/50backdrop-blur-sm" onClick="{onClose}" / />
           <div className="relative w-fullmax-w-md"  />{content}
           </div>

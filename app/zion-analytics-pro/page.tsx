@@ -132,14 +132,14 @@ const ZionAnalyticsProPage: React.FC = () => {
         <meta name="keywords" content="business intelligence, analytics platform, AI insights, data visualization, business dashboard, predictive analytics" / / />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hiddenpt-20pb-16" />
           <div className="absoluteinset-0opacity-20" / />
-          <div className="relative max-w-7 xl mx-auto px-4sm:px-6lg:px-8" />
-            <div className="grid grid-cols-1 lg:grid-cols-2gap-12items-center" />
+          <div className="relative max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2gap-12items-center">
               <div />
-                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white text-smfont-semiboldmb-6" />
+                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white text-smfont-semibold mb-6">
                   <Sparkles className="h-4w-4mr-2" / />
                   AI-Powered Analytics
                 </div>
@@ -162,9 +162,9 @@ const ZionAnalyticsProPage: React.FC = () => {
                     Watch Demo
                   </button>
                 </div>
-                <div className="mt-8 flexitems-centerspace-x-6" />
-                  <div className="flexitems-center" />
-                    <div className="flex" />
+                <div className="mt-8 flexitems-centerspace-x-6">
+                  <div className="flexitems-center">
+                    <div className="flex">
                       {[...Array(5)].map((_, i) => (
                         <Star key="{i}" className="h-5 w-5text-yellow-400fill-current" / />
                       ))}
@@ -174,29 +174,29 @@ const ZionAnalyticsProPage: React.FC = () => {
                 </div>
               </div>
               <div className="{`transition-all" duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                <div className="relative" />
-                  <div className="bg-gray-800 rounded-2 xl p-8borderborder-gray-700" />
-                    <div className="space-y-6" />
-                      <div className="flexitems-centerjustify-between" />
+                <div className="relative">
+                  <div className="bg-gray-800 rounded-2 xl p-8borderborder-gray-700">
+                    <div className="space-y-6">
+                      <div className="flexitems-centerjustify-between">
                         <h3 className="text-xlfont-semiboldtext-white"   />Revenue Analytics</h3>
-                        <div className="flexitems-centertext-green-400" />
+                        <div className="flexitems-centertext-green-400">
                           <TrendingUp className="h-4w-4mr-1" / />
                           +24.5%
                         </div>
                       </div>
-                      <div className="h-32 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flexitems-centerjustify-center" />
+                      <div className="h-32 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flexitems-centerjustify-center">
                         <BarChart className="h-16 w-16text-whiteopacity-50" / />
                       </div>
-                      <div className="gridgrid-cols-3gap-4" />
-                        <div className="text-center" />
+                      <div className="gridgrid-cols-3gap-4">
+                        <div className="text-center">
                           <div className="text-2 xlfont-boldtext-white"   />$2.4 M</div>
                           <div className="text-smtext-gray-400"   />Total Revenue</div>
                         </div>
-                        <div className="text-center" />
+                        <div className="text-center">
                           <div className="text-2 xlfont-boldtext-white"   />1,247</div>
                           <div className="text-smtext-gray-400"   />Customers</div>
                         </div>
-                        <div className="text-center" />
+                        <div className="text-center">
                           <div className="text-2 xlfont-boldtext-white"   />89%</div>
                           <div className="text-smtext-gray-400"   />Satisfaction</div>
                         </div>
@@ -211,18 +211,18 @@ const ZionAnalyticsProPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20bg-gray-900/50" />
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8" />
-            <div className="text-centermb-16" />
+          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+            <div className="text-centermb-16">
               <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Powerful Features for Modern Businesses
               </h2>
               <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
                 Everything you need to transform your data into actionable insights and drive business growth.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8" />
+            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
               {features.map((feature, index) => (
                 <div key="{index}" className="group" />
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105borderborder-gray-700" />
+                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105borderborder-gray-700">
                     <div className="{`inline-flex" items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4`} />
                       <feature.icon className="h-6w-6text-white" / />
                     </div>
@@ -237,15 +237,15 @@ const ZionAnalyticsProPage: React.FC = () => {
 
         {/* Pricing Section */}
         <section className="py-20" />
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8" />
-            <div className="text-centermb-16" />
+          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+            <div className="text-centermb-16">
               <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
                 Flexible pricing options to fit businesses of all sizes. Start with a free trial, no credit card required.
               </p>
             </div>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8" />
+            <div className="grid grid-cols-1md:grid-cols-3gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
                   key="{index}"
@@ -253,20 +253,20 @@ const ZionAnalyticsProPage: React.FC = () => {
                     plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
                   }`} />
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2transform-translate-x-1/2" />
+                    <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
                       <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
                       </span>
                     </div>
                   )}
-                  <div className="text-centermb-8" />
+                  <div className="text-center mb-8">
                     <h3 className="text-2 xl font-boldtext-whitemb-2"   />{plan.name}</h3>
                     <p className="text-gray-400mb-4" />{plan.description}</p>
-                    <div className="flexitems-baselinejustify-center" />
+                    <div className="flexitems-baselinejustify-center">
                       <span className="text-5 xlfont-boldtext-white"   />{plan.price}</span>
                       <span className="text-gray-400ml-1"   />{plan.period}</span>
                     </div>
                   </div>
-                  <ul className="space-y-4mb-8" />
+                  <ul className="space-y-4 mb-8" />
                     {plan.features.map((feature, idx) => (
                       <li key="{idx}" className="flexitems-centertext-gray-300" />
                         <CheckCircle className="h-5 w-5 text-green-400mr-3flex-shrink-0" / />
@@ -292,18 +292,18 @@ const ZionAnalyticsProPage: React.FC = () => {
 
         {/* Testimonials Section */}
         <section className="py-20bg-gray-900/50" />
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8" />
-            <div className="text-centermb-16" />
+          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+            <div className="text-centermb-16">
               <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />What Our Customers Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
                 Join thousands of businesses already using Zion Analytics Pro to drive growth.
               </p>
             </div>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8" />
+            <div className="grid grid-cols-1md:grid-cols-3gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key="{index}" className="bg-gray-800 rounded-xl p-6borderborder-gray-700" />
-                  <div className="flexitems-centermb-4" />
+                  <div className="flexitems-centermb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-whitefont-semiboldmr-4"  />{testimonial.avatar}
                     </div>
                     <div />
@@ -311,7 +311,7 @@ const ZionAnalyticsProPage: React.FC = () => {
                       <div className="text-smtext-gray-400"   />{testimonial.role}, {testimonial.company}</div>
                     </div>
                   </div>
-                  <div className="flexmb-4" />
+                  <div className="flexmb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key="{i}" className="h-4 w-4text-yellow-400fill-current" / />
                     ))}
@@ -325,13 +325,13 @@ const ZionAnalyticsProPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-brfrom-gray-900to-purple-900" />
-          <div className="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center" />
+          <div className="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8 text-center">
             <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Ready to Transform Your Analytics?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
               Start your free trial today and see how Zion Analytics Pro can revolutionize your business intelligence.
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center" />
+            <div className="flex flex-col sm:flex-rowgap-4justify-center">
               <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
                 Start Free Trial
                 <ArrowRight className="ml-2h-5w-5" />
@@ -342,7 +342,7 @@ const ZionAnalyticsProPage: React.FC = () => {
                 Call +1 302 464 0950
               </a>
             </div>
-            <div className="mt-8text-gray-400" />
+            <div className="mt-8text-gray-400">
               <p />Email: kleber@ziontechgroup.com</p>
               <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>

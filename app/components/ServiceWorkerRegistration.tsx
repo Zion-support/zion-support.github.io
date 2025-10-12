@@ -76,10 +76,10 @@
   return (
     <div className="{`service-worker-registration" ${className}`} />
       {updateAvailable && (
-        <div className="fixed bottom-4 left-4 right-4 z-50 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-4shadow-lg" />
-          <div className="flex items-centerjustify-between" />
-            <div className="flex items-centerspace-x-3" />
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-centerjustify-center" />
+        <div className="fixed bottom-4 left-4 right-4 z-50 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-4shadow-lg">
+          <div className="flex items-centerjustify-between">
+            <div className="flex items-centerspace-x-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-centerjustify-center">
                 <RefreshCw className="w-5 h-5text-white" / />
               </div>
               <div />
@@ -87,7 +87,7 @@
                 <p className="text-gray-300text-sm">A new version of the app is available</p>
               </div>
             </div>
-            <div className="flex items-centerspace-x-2" />
+            <div className="flex items-centerspace-x-2">
               <button
                 onClick="{updateServiceWorker}"
                 disabled="{isUpdating}"
@@ -116,18 +116,18 @@
       </section>
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6lg:px-8" /></section>
-        <div className="max-w-7 xlmx-auto" /></div>
-          <div className="text-centermb-16" /></div>
+        <div className="max-w-7 xlmx-auto"></div>
+          <div className="text-centermb-16"></div>
             <h2 className="text-3 xl md:text-4 xl font-bold text-whitemb-4"  />Why Choose Our ServiceWorkerRegistration?
             </h2>
             <p className="text-xl text-gray-300 max-w-3 xlmx-auto" />
               Our serviceworkerregistration solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4gap-8" /></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4gap-8"></div>
             {features.map((feature, index) => (}
               <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-allduration-300" /></div>
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lgmb-4" /></div>
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lgmb-4"></div>
                   <feature.icon className="h-6 w-6text-white" / />
                 </div>
                 <h3 className="text-xl font-semibold text-whitemb-3"  >{feature.title}</h3>
@@ -138,15 +138,15 @@
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8bg-white/5" /></section>
-        <div className="max-w-7 xlmx-auto" /></div>
-          <div className="text-centermb-16" /></div>
+        <div className="max-w-7 xlmx-auto"></div>
+          <div className="text-centermb-16"></div>
             <h2 className="text-3 xl md:text-4 xl font-bold text-whitemb-4"  />Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3 xlmx-auto" />
               Experience the power of our serviceworkerregistration solutions for your business.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2gap-6" /></div>
+          <div className="grid grid-cols-1 md:grid-cols-2gap-6"></div>
             {benefits.map((benefit, index) => (}
               <div key="{index}" className="flex items-startspace-x-3" /></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1flex-shrink-0" / />
@@ -157,14 +157,14 @@
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6lg:px-8" /></section>
-        <div className="max-w-4 xl mx-autotext-center" /></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8md:p-12" /></div>
+        <div className="max-w-4 xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8md:p-12"></div>
             <h2 className="text-3 xl md:text-4 xl font-bold text-whitemb-4"  />Ready to Get Started?
             </h2>
-            <p className="text-xl text-purple-100mb-8" />
+            <p className="text-xl text-purple-100 mb-8" />
               Contact our experts to discuss your serviceworkerregistration needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4justify-center" /></div>
+            <div className="flex flex-col sm:flex-row gap-4justify-center"></div>
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-centerjustify-center" />
                 <Phone className="mr-2 h-5w-5" / />
                 Call Now

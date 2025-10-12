@@ -87,8 +87,8 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
     <div
             const key = {stat.id}
             className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-allduration-300" />
-            <div className="flexjustify-centermb-4" />
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flexitems-centerjustify-center" />
+            <div className="flexjustify-centermb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flexitems-centerjustify-center">
                 <IconComponent className="w-6h-6text-white" / />
               </div>
             </div>
