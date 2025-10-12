@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  ArrowRight, Users, Shield, Globe, Brain, Cloud, CheckCircle, Award, Zap, Code, Star
+  ArrowRight, Users, Shield, Globe, Brain, CheckCircle, Award, Star
 } from 'lucide-react';
 
 const AboutPage: React.FC = () => {

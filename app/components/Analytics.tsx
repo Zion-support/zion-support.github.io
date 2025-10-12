@@ -6,6 +6,7 @@ interface AnalyticsProps {
   children: React.ReactNode;
 }
 
+const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics tracking
     const initAnalytics = () => {
@@ -22,7 +23,7 @@ interface AnalyticsProps {
   }, []);
 
   return <>{children}</>;
-}
+};
 
 // Extend Window interface for gtag
 declare global {
@@ -30,3 +31,5 @@ declare global {
     gtag: (...args: unknown[]) => void;
   }
 }
+
+export default Analytics;
