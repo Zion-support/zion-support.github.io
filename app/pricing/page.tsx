@@ -1,335 +1,294 @@
 import React from 'react'
-import { Check, Star, Zap, Brain, Cloud, Code, Wifi, Shield, BarChart3, Users, Clock, DollarSign } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
+import { CheckCircle, Star, ArrowRight, Zap, Brain, Cloud, Code, Wifi } from 'lucide-react'
 
-const PricingPage: React.FC = () => {
-  const aiServices = [
+export default function PricingPage() {
+  const aiServicesPricing = [
     {
       name: 'AI Content Generator',
-      price: '$99',
+      price: '$29',
       period: '/month',
-      description: 'Generate high-quality content with AI assistance',
+      description: 'Generate high-quality content with AI',
       features: [
-        'Unlimited content generation',
-        'Multiple content types (blog, social, email)',
+        'Up to 50 articles/month',
+        'Multiple content formats',
         'SEO optimization',
-        'Brand voice customization',
-        '24/7 support'
+        'Brand voice consistency',
+        'Basic analytics'
       ],
       popular: false
     },
     {
       name: 'AI Chatbot Enterprise',
-      price: '$299',
+      price: '$99',
       period: '/month',
-      description: 'Advanced AI chatbot for customer service',
+      description: 'Advanced conversational AI for businesses',
       features: [
+        'Unlimited conversations',
         'Multi-language support',
         'Custom training',
-        'Integration with CRM',
-        'Analytics dashboard',
+        'Advanced analytics',
+        'API integration',
         'Priority support'
       ],
       popular: true
     },
     {
-      name: 'AI Analytics Dashboard',
-      price: '$199',
+      name: 'AI Voice Assistant',
+      price: '$299',
       period: '/month',
-      description: 'AI-powered business intelligence platform',
+      description: 'Intelligent voice AI solutions',
       features: [
-        'Real-time analytics',
-        'Predictive insights',
-        'Custom reports',
-        'Data visualization',
-        'API access'
-      ],
-      popular: false
-    },
-    {
-      name: 'AI 3D Generation',
-      price: '$399',
-      period: '/month',
-      description: 'Create stunning 3D models with AI',
-      features: [
-        'Unlimited 3D models',
-        'High-resolution output',
-        'Multiple formats',
-        'Custom training',
-        'Commercial license'
+        'Up to 10,000 conversations',
+        'Natural voice recognition',
+        'Custom voice models',
+        'Multi-platform support',
+        'Advanced security',
+        'Dedicated support'
       ],
       popular: false
     }
   ]
 
-  const itServices = [
+  const microSaasPricing = [
     {
-      name: 'Cloud Migration',
-      price: '$2,500',
-      period: '/project',
-      description: 'Complete cloud infrastructure migration',
+      name: 'AI Invoice Generator',
+      price: '$79',
+      period: '/month',
+      description: 'Automated invoicing and payment tracking',
       features: [
-        'Assessment & planning',
-        'Data migration',
-        'Security configuration',
-        'Performance optimization',
-        '6 months support'
+        'Unlimited invoices',
+        'Payment tracking',
+        'Client management',
+        'Advanced analytics',
+        'Custom branding',
+        'API access'
       ],
       popular: true
     },
     {
-      name: 'DevOps Solutions',
-      price: '$1,800',
+      name: 'AI Social Media Manager',
+      price: '$99',
       period: '/month',
-      description: 'Comprehensive DevOps implementation',
+      description: 'Automated social media management',
       features: [
-        'CI/CD pipeline setup',
-        'Infrastructure as Code',
-        'Monitoring & alerting',
-        'Security scanning',
-        '24/7 monitoring'
+        '10 social accounts',
+        'Unlimited posts',
+        'AI content generation',
+        'Advanced analytics',
+        'Team collaboration',
+        'Priority support'
       ],
       popular: false
+    },
+    {
+      name: 'AI Project Management',
+      price: '$79',
+      period: '/month',
+      description: 'Intelligent project management platform',
+      features: [
+        'Up to 25 team members',
+        'AI-powered insights',
+        'Custom workflows',
+        'Advanced analytics',
+        '100+ integrations',
+        'Priority support'
+      ],
+      popular: false
+    }
+  ]
+
+  const itServicesPricing = [
+    {
+      name: 'Cloud Migration',
+      price: '$15,000',
+      period: 'one-time',
+      description: 'Complete cloud infrastructure migration',
+      features: [
+        'Up to 100 servers',
+        'Zero-downtime migration',
+        'Security & compliance',
+        'Cost optimization',
+        '90-day support',
+        'Performance monitoring'
+      ],
+      popular: true
     },
     {
       name: 'Cybersecurity Audit',
-      price: '$1,200',
-      period: '/project',
-      description: 'Complete security assessment and hardening',
-      features: [
-        'Vulnerability assessment',
-        'Penetration testing',
-        'Security recommendations',
-        'Implementation support',
-        'Compliance reporting'
-      ],
-      popular: false
-    },
-    {
-      name: 'Mobile App Development',
       price: '$5,000',
-      period: '/project',
-      description: 'Custom mobile applications',
+      period: 'one-time',
+      description: 'Comprehensive security assessment',
       features: [
-        'iOS & Android development',
-        'UI/UX design',
-        'Backend integration',
-        'App store deployment',
-        '3 months maintenance'
+        'Vulnerability scanning',
+        'Penetration testing',
+        'Compliance review',
+        'Security recommendations',
+        'Detailed report',
+        '30-day follow-up'
+      ],
+      popular: false
+    },
+    {
+      name: 'DevOps Implementation',
+      price: '$25,000',
+      period: 'one-time',
+      description: 'Complete DevOps transformation',
+      features: [
+        'CI/CD pipeline setup',
+        'Infrastructure as Code',
+        'Monitoring & logging',
+        'Security integration',
+        'Team training',
+        '6-month support'
       ],
       popular: false
     }
   ]
 
-  const microSaasServices = [
+  const serviceCategories = [
     {
-      name: 'AI-Powered CRM',
-      price: '$49',
-      period: '/month',
-      description: 'Intelligent customer relationship management',
-      features: [
-        'Lead scoring',
-        'Automated follow-ups',
-        'Sales forecasting',
-        'Integration capabilities',
-        'Basic support'
-      ],
-      popular: false
+      name: 'AI Services',
+      icon: <Brain className="w-6 h-6 text-blue-500" />,
+      description: 'Advanced AI solutions for content, chatbots, and automation',
+      startingPrice: '$29/month'
     },
     {
-      name: 'Smart Analytics',
-      price: '$79',
-      period: '/month',
-      description: 'AI-driven business analytics',
-      features: [
-        'Real-time dashboards',
-        'Custom metrics',
-        'Automated reports',
-        'Data export',
-        'Email support'
-      ],
-      popular: true
+      name: 'Micro SAAS',
+      icon: <Code className="w-6 h-6 text-green-500" />,
+      description: 'Ready-to-use software solutions for business automation',
+      startingPrice: '$79/month'
     },
     {
-      name: 'Automated Testing',
-      price: '$129',
-      period: '/month',
-      description: 'AI-powered software testing',
-      features: [
-        'Automated test generation',
-        'Cross-browser testing',
-        'Performance testing',
-        'Bug tracking',
-        'Priority support'
-      ],
-      popular: false
+      name: 'IT Services',
+      icon: <Cloud className="w-6 h-6 text-purple-500" />,
+      description: 'Infrastructure, security, and digital transformation services',
+      startingPrice: '$5,000/project'
     },
     {
-      name: 'Content Management',
-      price: '$39',
-      period: '/month',
-      description: 'AI content management system',
-      features: [
-        'Content scheduling',
-        'SEO optimization',
-        'Multi-platform publishing',
-        'Analytics integration',
-        'Basic support'
-      ],
-      popular: false
-    }
-  ]
-
-  const enterpriseServices = [
-    {
-      name: 'Custom AI Solution',
-      price: 'Custom',
-      period: '',
-      description: 'Tailored AI solutions for enterprise needs',
-      features: [
-        'Custom AI model development',
-        'Dedicated team',
-        'Unlimited support',
-        'SLA guarantees',
-        'On-premise deployment'
-      ],
-      popular: false
-    },
-    {
-      name: 'Digital Transformation',
-      price: 'Custom',
-      period: '',
-      description: 'Complete digital transformation package',
-      features: [
-        'Strategy development',
-        'Technology implementation',
-        'Change management',
-        'Training & support',
-        'Ongoing optimization'
-      ],
-      popular: false
+      name: '5G Solutions',
+      icon: <Wifi className="w-6 h-6 text-yellow-500" />,
+      description: 'Next-generation 5G network implementation and optimization',
+      startingPrice: '$10,000/project'
     }
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Header */}
-      <div className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Transparent
-            <br />
-            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Pricing
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Choose the perfect plan for your business needs. All plans include our commitment to excellence and 24/7 support.
-          </p>
-        </div>
-      </div>
-
-      {/* AI Services Pricing */}
-      <section className="py-16 px-4">
+      <Helmet>
+        <title>Pricing - Zion Tech Group | Transparent Pricing for AI and IT Services</title>
+        <meta name="description" content="Transparent pricing for AI services, micro SAAS solutions, and IT services. Choose the plan that fits your business needs." />
+        <meta name="keywords" content="pricing, AI services pricing, micro SAAS pricing, IT services pricing, cloud migration pricing" />
+      </Helmet>
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-4">
-              <Brain className="w-8 h-8 text-purple-400 mr-3" />
-              <h2 className="text-3xl md:text-4xl font-bold text-white">AI Services</h2>
+          <div className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+              Transparent Pricing
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Choose the perfect plan for your business needs. No hidden fees, no surprises. 
+              Scale up or down as your business grows.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Get Custom Quote
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                Schedule Demo
+              </Link>
             </div>
-            <p className="text-xl text-gray-300">Advanced AI solutions to transform your business</p>
           </div>
+        </div>
+      </section>
+
+      {/* Service Categories */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Service Categories
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our comprehensive range of technology solutions
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {aiServices.map((service, index) => (
-              <div key={index} className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:bg-white/20 ${service.popular ? 'border-purple-400 ring-2 ring-purple-400/50' : 'border-white/20'}`}>
-                {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">{service.price}</span>
-                    <span className="text-gray-400">{service.period}</span>
-                  </div>
-                  <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      service.popular
-                        ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
-                        : 'bg-white/10 text-white hover:bg-white/20'
-                    }`}
-                  >
-                    Get Started
-                  </Link>
+            {serviceCategories.map((category, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  {category.icon}
+                  <h3 className="text-xl font-semibold text-white ml-3">{category.name}</h3>
                 </div>
+                <p className="text-gray-300 mb-4">{category.description}</p>
+                <div className="text-purple-400 font-semibold">Starting at {category.startingPrice}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* IT Services Pricing */}
-      <section className="py-16 px-4 bg-white/5">
+      {/* AI Services Pricing */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-4">
-              <Cloud className="w-8 h-8 text-blue-400 mr-3" />
-              <h2 className="text-3xl md:text-4xl font-bold text-white">IT Services</h2>
-            </div>
-            <p className="text-xl text-gray-300">Professional IT solutions and infrastructure</p>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              AI Services Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Advanced AI solutions with flexible pricing options
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {itServices.map((service, index) => (
-              <div key={index} className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:bg-white/20 ${service.popular ? 'border-blue-400 ring-2 ring-blue-400/50' : 'border-white/20'}`}>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {aiServicesPricing.map((service, index) => (
+              <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 transition-all duration-300 ${
+                service.popular 
+                  ? 'border-purple-500 bg-gradient-to-br from-purple-500/20 to-blue-500/20' 
+                  : 'border-white/20 hover:border-white/40'
+              }`}>
                 {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
-                      Recommended
-                    </span>
+                  <div className="bg-gradient-to-r from-purple-500 to-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-6">
+                    Most Popular
                   </div>
                 )}
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                  <div className="mb-6">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
+                  <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">{service.price}</span>
-                    <span className="text-gray-400">{service.period}</span>
+                    <span className="text-gray-300 ml-1">{service.period}</span>
                   </div>
-                  <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      service.popular
-                        ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-                        : 'bg-white/10 text-white hover:bg-white/20'
-                    }`}
-                  >
-                    Get Quote
-                  </Link>
+                  <p className="text-gray-300 mt-2">{service.description}</p>
                 </div>
+                <ul className="space-y-3 mb-8">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  to="/contact"
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    service.popular
+                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
+                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                  }`}
+                >
+                  Get Started
+                </Link>
               </div>
             ))}
           </div>
@@ -337,93 +296,111 @@ const PricingPage: React.FC = () => {
       </section>
 
       {/* Micro SAAS Pricing */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-4">
-              <Code className="w-8 h-8 text-green-400 mr-3" />
-              <h2 className="text-3xl md:text-4xl font-bold text-white">Micro SAAS</h2>
-            </div>
-            <p className="text-xl text-gray-300">Ready-to-use software solutions</p>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Micro SAAS Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Ready-to-use software solutions for business automation
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {microSaasServices.map((service, index) => (
-              <div key={index} className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:bg-white/20 ${service.popular ? 'border-green-400 ring-2 ring-green-400/50' : 'border-white/20'}`}>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {microSaasPricing.map((service, index) => (
+              <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 transition-all duration-300 ${
+                service.popular 
+                  ? 'border-purple-500 bg-gradient-to-br from-purple-500/20 to-blue-500/20' 
+                  : 'border-white/20 hover:border-white/40'
+              }`}>
                 {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
-                      Best Value
-                    </span>
+                  <div className="bg-gradient-to-r from-purple-500 to-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-6">
+                    Most Popular
                   </div>
                 )}
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                  <div className="mb-6">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
+                  <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">{service.price}</span>
-                    <span className="text-gray-400">{service.period}</span>
+                    <span className="text-gray-300 ml-1">{service.period}</span>
                   </div>
-                  <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      service.popular
-                        ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700'
-                        : 'bg-white/10 text-white hover:bg-white/20'
-                    }`}
-                  >
-                    Start Free Trial
-                  </Link>
+                  <p className="text-gray-300 mt-2">{service.description}</p>
                 </div>
+                <ul className="space-y-3 mb-8">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  to="/contact"
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    service.popular
+                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
+                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                  }`}
+                >
+                  Get Started
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Enterprise Services */}
-      <section className="py-16 px-4 bg-white/5">
+      {/* IT Services Pricing */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-4">
-              <Zap className="w-8 h-8 text-yellow-400 mr-3" />
-              <h2 className="text-3xl md:text-4xl font-bold text-white">Enterprise Solutions</h2>
-            </div>
-            <p className="text-xl text-gray-300">Custom solutions for large organizations</p>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              IT Services Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional IT services with transparent project-based pricing
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {enterpriseServices.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 transition-all duration-300 hover:bg-white/20">
-                <div className="text-center">
-                  <h3 className="text-2xl font-semibold text-white mb-4">{service.name}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  <div className="mb-8">
-                    <span className="text-5xl font-bold text-white">{service.price}</span>
-                    <span className="text-gray-400 text-xl">{service.period}</span>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {itServicesPricing.map((service, index) => (
+              <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 transition-all duration-300 ${
+                service.popular 
+                  ? 'border-purple-500 bg-gradient-to-br from-purple-500/20 to-blue-500/20' 
+                  : 'border-white/20 hover:border-white/40'
+              }`}>
+                {service.popular && (
+                  <div className="bg-gradient-to-r from-purple-500 to-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-6">
+                    Most Popular
                   </div>
-                  <ul className="space-y-4 mb-8">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <Check className="w-6 h-6 text-green-400 mr-4 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className="w-full block text-center py-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-white rounded-lg font-semibold hover:from-yellow-600 hover:to-orange-700 transition-all duration-300"
-                  >
-                    Contact Sales
-                  </Link>
+                )}
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{service.price}</span>
+                    <span className="text-gray-300 ml-1">{service.period}</span>
+                  </div>
+                  <p className="text-gray-300 mt-2">{service.description}</p>
                 </div>
+                <ul className="space-y-3 mb-8">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  to="/contact"
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    service.popular
+                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
+                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                  }`}
+                >
+                  Get Quote
+                </Link>
               </div>
             ))}
           </div>
@@ -431,30 +408,29 @@ const PricingPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Get Started?
-              </h2>
-              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Contact us today to discuss your specific needs and get a customized quote.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact" 
-                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Contact Us
-                </Link>
-                <Link 
-                  to="/about" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-                >
-                  Learn More
-                </Link>
-              </div>
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+              Need a Custom Solution?
+            </h2>
+            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              We offer custom pricing for enterprise solutions and specialized requirements. 
+              Contact us for a personalized quote.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+              >
+                Get Custom Quote
+              </Link>
+              <Link
+                to="/about"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
+              >
+                Learn More About Us
+              </Link>
             </div>
           </div>
         </div>
@@ -462,5 +438,3 @@ const PricingPage: React.FC = () => {
     </div>
   )
 }
-
-export default PricingPage

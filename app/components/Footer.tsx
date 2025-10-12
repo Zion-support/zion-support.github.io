@@ -6,12 +6,12 @@ const Footer: React.FC = () => {
   const aiServices = [
     { name: 'AI Content Generator', path: '/ai-content-generator' },
     { name: 'AI Chatbot Enterprise', path: '/ai-chatbot-enterprise' },
+    { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
     { name: 'AI 3D Generation', path: '/ai-3d-generation' },
     { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' },
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
-    { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
-    { name: 'AI Email Marketing', path: '/ai-email-marketing' }
+    { name: 'AI CRM Assistant', path: '/ai-crm-assistant' }
   ];
 
   const itServices = [
@@ -26,14 +26,14 @@ const Footer: React.FC = () => {
   ];
 
   const microSaasServices = [
+    { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
+    { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
+    { name: 'AI Project Management', path: '/ai-project-management' },
     { name: 'AI-Powered CRM', path: '/ai-crm' },
     { name: 'Smart Analytics', path: '/smart-analytics' },
     { name: 'Automated Testing', path: '/ai-automated-testing' },
     { name: 'Content Management', path: '/ai-content-management' },
-    { name: 'Email Marketing', path: '/ai-email-marketing' },
-    { name: 'Social Media Manager', path: '/ai-social-media-manager' },
-    { name: 'Project Management', path: '/ai-project-management' },
-    { name: 'Customer Support', path: '/ai-customer-support' }
+    { name: 'Email Marketing', path: '/ai-email-marketing' }
   ];
 
   const companyLinks = [

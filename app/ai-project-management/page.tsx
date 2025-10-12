@@ -1,45 +1,56 @@
-import React, { useState } from 'react'
-import { Brain, Calendar, Users, BarChart3, Clock, CheckCircle, AlertCircle, Plus, Filter, Search, Settings, Zap, Target, TrendingUp, Award, Star } from 'lucide-react'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
+import { ArrowRight, CheckCircle, Kanban, Zap, Users, BarChart3, Calendar, Target, Clock, FileText, MessageSquare, Bell } from 'lucide-react'
 
-const AIProjectManagement: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview')
-
+export default function AIProjectManagementPage() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-purple-400" />,
-      title: 'AI-Powered Planning',
-      description: 'Intelligent project planning with predictive analytics and resource optimization'
+      icon: <Kanban className="w-8 h-8 text-blue-500" />,
+      title: 'Smart Task Management',
+      description: 'AI-powered task prioritization, assignment, and progress tracking with intelligent insights.'
     },
     {
-      icon: <Users className="w-6 h-6 text-blue-400" />,
-      title: 'Smart Team Management',
-      description: 'Automated task assignment based on team member skills and availability'
+      icon: <Zap className="w-8 h-8 text-yellow-500" />,
+      title: 'Automated Workflows',
+      description: 'Create custom workflows that automatically move tasks through stages based on conditions.'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
-      title: 'Real-time Analytics',
-      description: 'Advanced analytics dashboard with AI-driven insights and recommendations'
+      icon: <Users className="w-8 h-8 text-green-500" />,
+      title: 'Team Collaboration',
+      description: 'Real-time collaboration tools with AI-powered suggestions for optimal team performance.'
     },
     {
-      icon: <Clock className="w-6 h-6 text-orange-400" />,
-      title: 'Time Tracking',
-      description: 'Automatic time tracking with productivity analysis and efficiency metrics'
+      icon: <BarChart3 className="w-8 h-8 text-purple-500" />,
+      title: 'Predictive Analytics',
+      description: 'AI-driven insights to predict project risks, delays, and resource requirements.'
+    },
+    {
+      icon: <Calendar className="w-8 h-8 text-red-500" />,
+      title: 'Smart Scheduling',
+      description: 'Automatically schedule tasks and meetings based on team availability and priorities.'
+    },
+    {
+      icon: <Target className="w-8 h-8 text-indigo-500" />,
+      title: 'Goal Tracking',
+      description: 'Set and track project goals with AI-powered progress monitoring and recommendations.'
     }
   ]
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$29',
+      price: '$39',
       period: '/month',
-      description: 'Perfect for small teams',
+      description: 'Perfect for small teams and freelancers',
       features: [
         'Up to 5 team members',
-        'Basic AI recommendations',
-        'Standard project templates',
-        'Email support',
-        '5GB storage'
+        'Unlimited projects',
+        'Basic task management',
+        'File sharing',
+        'Basic reporting',
+        'Mobile app access',
+        'Email support'
       ],
       popular: false
     },
@@ -47,111 +58,108 @@ const AIProjectManagement: React.FC = () => {
       name: 'Professional',
       price: '$79',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing teams and businesses',
       features: [
         'Up to 25 team members',
-        'Advanced AI analytics',
-        'Custom project templates',
+        'Advanced AI features',
+        'Custom workflows',
+        'Advanced analytics',
+        'Time tracking',
+        'Integration with 100+ tools',
         'Priority support',
-        '50GB storage',
-        'API access'
+        'Custom fields'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$199',
+      price: '$149',
       period: '/month',
-      description: 'For large organizations',
+      description: 'For large organizations and agencies',
       features: [
         'Unlimited team members',
-        'Full AI suite',
+        'Advanced AI insights',
         'White-label options',
-        'Dedicated support',
-        'Unlimited storage',
-        'Custom integrations'
+        'Custom integrations',
+        'Dedicated account manager',
+        'Advanced security',
+        'API access',
+        '24/7 phone support'
       ],
       popular: false
     }
   ]
 
-  const stats = [
-    { number: '95%', label: 'Project Success Rate' },
-    { number: '40%', label: 'Time Saved' },
-    { number: '500+', label: 'Happy Teams' },
-    { number: '24/7', label: 'AI Support' }
+  const integrations = [
+    'Slack',
+    'Microsoft Teams',
+    'Google Workspace',
+    'Jira',
+    'Trello',
+    'Asana',
+    'GitHub',
+    'Figma',
+    'Zoom',
+    'Salesforce',
+    'HubSpot',
+    'Zapier'
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AI Project Management - Zion Tech Group | Intelligent Project Management Software</title>
+        <meta name="description" content="Streamline your projects with our AI-powered project management tool. Smart task management, team collaboration, and predictive analytics." />
+        <meta name="keywords" content="AI project management, task management, team collaboration, project planning, workflow automation" />
+      </Helmet>
+      
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="relative max-w-7xl mx-auto">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center">
-                <Brain className="w-8 h-8 text-white" />
-              </div>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Project
-              <br />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Management
-              </span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Project Management
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Revolutionize your project management with AI-powered insights, automated task assignment, 
-              and intelligent resource optimization. Boost productivity by 40% with our smart project management platform.
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform your project management with AI-powered insights, automation, and intelligent collaboration tools. 
+              Deliver projects faster and more efficiently.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Free Trial
-                <Zap className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link 
-                to="#demo" 
+              <Link
+                to="/demo"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                Watch Demo
+                View Demo
               </Link>
             </div>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful AI Features
+              Powerful Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage artificial intelligence to streamline your project management and boost team productivity.
+              Everything you need to manage projects intelligently with AI-powered automation.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -159,359 +167,109 @@ const AIProjectManagement: React.FC = () => {
         </div>
       </section>
 
-      {/* Demo Section */}
-      <section id="demo" className="py-20 px-4 bg-white/5">
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              See It In Action
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of AI-driven project management with our interactive demo.
+              Choose the plan that fits your team size and project needs. No hidden fees, cancel anytime.
             </p>
           </div>
           
-          {/* Demo Tabs */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-8">
-            <div className="flex flex-wrap justify-center mb-8">
-              {['overview', 'analytics', 'team', 'settings'].map((tab) => (
-                <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab)}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 mr-2 mb-2 ${
-                    activeTab === tab
-                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white'
-                      : 'text-gray-300 hover:text-white hover:bg-white/10'
-                  }`}
-                >
-                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                </button>
-              ))}
-            </div>
-
-            {/* Demo Content */}
-            <div className="min-h-[400px] bg-gray-900/50 rounded-lg p-8">
-              {activeTab === 'overview' && (
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-2xl font-bold text-white">Project Dashboard</h3>
-                    <div className="flex items-center space-x-4">
-                      <div className="flex items-center text-green-400">
-                        <CheckCircle className="w-5 h-5 mr-2" />
-                        <span>3 Active Projects</span>
-                      </div>
-                      <div className="flex items-center text-blue-400">
-                        <Clock className="w-5 h-5 mr-2" />
-                        <span>On Track</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="bg-white/10 rounded-lg p-6">
-                      <h4 className="text-lg font-semibold text-white mb-2">Q4 Website Redesign</h4>
-                      <div className="flex items-center justify-between mb-4">
-                        <span className="text-sm text-gray-300">Progress</span>
-                        <span className="text-sm text-green-400">75%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2 rounded-full" style={{width: '75%'}}></div>
-                      </div>
-                      <div className="flex items-center justify-between mt-4">
-                        <span className="text-sm text-gray-300">Due: Dec 15</span>
-                        <span className="text-sm text-blue-400">5 days left</span>
-                      </div>
-                    </div>
-                    
-                    <div className="bg-white/10 rounded-lg p-6">
-                      <h4 className="text-lg font-semibold text-white mb-2">Mobile App Launch</h4>
-                      <div className="flex items-center justify-between mb-4">
-                        <span className="text-sm text-gray-300">Progress</span>
-                        <span className="text-sm text-yellow-400">45%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div className="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full" style={{width: '45%'}}></div>
-                      </div>
-                      <div className="flex items-center justify-between mt-4">
-                        <span className="text-sm text-gray-300">Due: Jan 20</span>
-                        <span className="text-sm text-yellow-400">25 days left</span>
-                      </div>
-                    </div>
-                    
-                    <div className="bg-white/10 rounded-lg p-6">
-                      <h4 className="text-lg font-semibold text-white mb-2">AI Integration</h4>
-                      <div className="flex items-center justify-between mb-4">
-                        <span className="text-sm text-gray-300">Progress</span>
-                        <span className="text-sm text-purple-400">90%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div className="bg-gradient-to-r from-purple-400 to-pink-500 h-2 rounded-full" style={{width: '90%'}}></div>
-                      </div>
-                      <div className="flex items-center justify-between mt-4">
-                        <span className="text-sm text-gray-300">Due: Dec 10</span>
-                        <span className="text-sm text-green-400">2 days left</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {activeTab === 'analytics' && (
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-white mb-6">AI Analytics Dashboard</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="bg-white/10 rounded-lg p-6">
-                      <h4 className="text-lg font-semibold text-white mb-4">Team Productivity</h4>
-                      <div className="space-y-4">
-                        <div className="flex items-center justify-between">
-                          <span className="text-gray-300">John Doe</span>
-                          <div className="flex items-center">
-                            <div className="w-24 bg-gray-700 rounded-full h-2 mr-2">
-                              <div className="bg-green-400 h-2 rounded-full" style={{width: '85%'}}></div>
-                            </div>
-                            <span className="text-green-400 text-sm">85%</span>
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-gray-300">Jane Smith</span>
-                          <div className="flex items-center">
-                            <div className="w-24 bg-gray-700 rounded-full h-2 mr-2">
-                              <div className="bg-blue-400 h-2 rounded-full" style={{width: '92%'}}></div>
-                            </div>
-                            <span className="text-blue-400 text-sm">92%</span>
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-gray-300">Mike Johnson</span>
-                          <div className="flex items-center">
-                            <div className="w-24 bg-gray-700 rounded-full h-2 mr-2">
-                              <div className="bg-yellow-400 h-2 rounded-full" style={{width: '78%'}}></div>
-                            </div>
-                            <span className="text-yellow-400 text-sm">78%</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="bg-white/10 rounded-lg p-6">
-                      <h4 className="text-lg font-semibold text-white mb-4">AI Recommendations</h4>
-                      <div className="space-y-3">
-                        <div className="flex items-start">
-                          <AlertCircle className="w-5 h-5 text-yellow-400 mr-3 mt-1" />
-                          <div>
-                            <p className="text-white text-sm font-medium">Resource Optimization</p>
-                            <p className="text-gray-300 text-xs">Consider reassigning 2 tasks from John to Jane for better balance</p>
-                          </div>
-                        </div>
-                        <div className="flex items-start">
-                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1" />
-                          <div>
-                            <p className="text-white text-sm font-medium">Timeline Adjustment</p>
-                            <p className="text-gray-300 text-xs">Mobile App project is ahead of schedule by 3 days</p>
-                          </div>
-                        </div>
-                        <div className="flex items-start">
-                          <TrendingUp className="w-5 h-5 text-blue-400 mr-3 mt-1" />
-                          <div>
-                            <p className="text-white text-sm font-medium">Performance Boost</p>
-                            <p className="text-gray-300 text-xs">Team productivity increased by 15% this week</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {activeTab === 'team' && (
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-white mb-6">Smart Team Management</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {[
-                      { name: 'John Doe', role: 'Frontend Developer', status: 'Available', avatar: 'JD', tasks: 8 },
-                      { name: 'Jane Smith', role: 'Backend Developer', status: 'Busy', avatar: 'JS', tasks: 12 },
-                      { name: 'Mike Johnson', role: 'UI/UX Designer', status: 'Available', avatar: 'MJ', tasks: 5 },
-                      { name: 'Sarah Wilson', role: 'Project Manager', status: 'In Meeting', avatar: 'SW', tasks: 15 },
-                      { name: 'David Brown', role: 'DevOps Engineer', status: 'Available', avatar: 'DB', tasks: 6 },
-                      { name: 'Lisa Davis', role: 'QA Tester', status: 'Busy', avatar: 'LD', tasks: 10 }
-                    ].map((member, index) => (
-                      <div key={index} className="bg-white/10 rounded-lg p-6">
-                        <div className="flex items-center mb-4">
-                          <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                            {member.avatar}
-                          </div>
-                          <div>
-                            <h4 className="text-white font-semibold">{member.name}</h4>
-                            <p className="text-gray-300 text-sm">{member.role}</p>
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-sm text-gray-300">Status</span>
-                          <span className={`text-sm px-2 py-1 rounded-full ${
-                            member.status === 'Available' ? 'bg-green-500/20 text-green-400' :
-                            member.status === 'Busy' ? 'bg-yellow-500/20 text-yellow-400' :
-                            'bg-red-500/20 text-red-400'
-                          }`}>
-                            {member.status}
-                          </span>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm text-gray-300">Active Tasks</span>
-                          <span className="text-sm text-white">{member.tasks}</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {activeTab === 'settings' && (
-                <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-white mb-6">AI Configuration</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="bg-white/10 rounded-lg p-6">
-                      <h4 className="text-lg font-semibold text-white mb-4">AI Preferences</h4>
-                      <div className="space-y-4">
-                        <div className="flex items-center justify-between">
-                          <span className="text-gray-300">Auto-assign tasks</span>
-                          <div className="w-12 h-6 bg-green-500 rounded-full relative">
-                            <div className="w-5 h-5 bg-white rounded-full absolute right-0.5 top-0.5"></div>
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-gray-300">Smart notifications</span>
-                          <div className="w-12 h-6 bg-green-500 rounded-full relative">
-                            <div className="w-5 h-5 bg-white rounded-full absolute right-0.5 top-0.5"></div>
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-gray-300">Predictive analytics</span>
-                          <div className="w-12 h-6 bg-gray-600 rounded-full relative">
-                            <div className="w-5 h-5 bg-white rounded-full absolute left-0.5 top-0.5"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="bg-white/10 rounded-lg p-6">
-                      <h4 className="text-lg font-semibold text-white mb-4">Performance Metrics</h4>
-                      <div className="space-y-4">
-                        <div>
-                          <div className="flex justify-between mb-1">
-                            <span className="text-sm text-gray-300">AI Accuracy</span>
-                            <span className="text-sm text-white">94%</span>
-                          </div>
-                          <div className="w-full bg-gray-700 rounded-full h-2">
-                            <div className="bg-green-400 h-2 rounded-full" style={{width: '94%'}}></div>
-                          </div>
-                        </div>
-                        <div>
-                          <div className="flex justify-between mb-1">
-                            <span className="text-sm text-gray-300">Time Saved</span>
-                            <span className="text-sm text-white">40%</span>
-                          </div>
-                          <div className="w-full bg-gray-700 rounded-full h-2">
-                            <div className="bg-blue-400 h-2 rounded-full" style={{width: '40%'}}></div>
-                          </div>
-                        </div>
-                        <div>
-                          <div className="flex justify-between mb-1">
-                            <span className="text-sm text-gray-300">Team Satisfaction</span>
-                            <span className="text-sm text-white">92%</span>
-                          </div>
-                          <div className="w-full bg-gray-700 rounded-full h-2">
-                            <div className="bg-purple-400 h-2 rounded-full" style={{width: '92%'}}></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Choose Your Plan
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Start with a free trial and scale as your team grows. All plans include our AI-powered features.
-            </p>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:bg-white/20 ${plan.popular ? 'border-purple-400 ring-2 ring-purple-400/50' : 'border-white/20'}`}>
+              <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 transition-all duration-300 ${
+                plan.popular 
+                  ? 'border-purple-500 bg-gradient-to-br from-purple-500/20 to-blue-500/20' 
+                  : 'border-white/20 hover:border-white/40'
+              }`}>
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
-                      Most Popular
-                    </span>
+                  <div className="bg-gradient-to-r from-purple-500 to-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-6">
+                    Most Popular
                   </div>
                 )}
-                <div className="text-center">
-                  <h3 className="text-2xl font-semibold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-6">{plan.description}</p>
-                  <div className="mb-8">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 text-xl">{plan.period}</span>
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className={`w-full block text-center py-4 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
-                        : 'bg-white/10 text-white hover:bg-white/20'
-                    }`}
-                  >
-                    {plan.name === 'Starter' ? 'Start Free Trial' : 'Get Started'}
-                  </Link>
+                  <p className="text-gray-300 mt-2">{plan.description}</p>
                 </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  to="/contact"
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
+                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                  }`}
+                >
+                  Get Started
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
+      {/* Integrations Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Transform Your Project Management?
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Seamless Integrations
               </h2>
-              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Join thousands of teams already using AI to boost their productivity and project success rates.
+              <p className="text-xl text-gray-300">
+                Connect with your favorite tools and streamline your workflow
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact" 
-                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Start Free Trial
-                </Link>
-                <Link 
-                  to="/pricing" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-                >
-                  View Pricing
-                </Link>
-              </div>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+              {integrations.map((integration, index) => (
+                <div key={index} className="flex items-center justify-center text-gray-300 bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-all duration-300">
+                  <span className="text-sm font-medium">{integration}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Project Management?
+            </h2>
+            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              Start managing projects intelligently with our AI-powered project management platform.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+              >
+                Start Free Trial
+              </Link>
+              <Link
+                to="/micro-saas-services"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
+              >
+                View All Micro SAAS
+              </Link>
             </div>
           </div>
         </div>
@@ -519,5 +277,3 @@ const AIProjectManagement: React.FC = () => {
     </div>
   )
 }
-
-export default AIProjectManagement
