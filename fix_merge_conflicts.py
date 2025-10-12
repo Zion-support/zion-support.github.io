@@ -1,61 +1,79 @@
 #!/usr/bin/env python3
+"""
+Script to automatically resolve merge conflicts in the codebase
+"""
 import os
 import re
 import glob
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a file by keeping the HEAD version"""
+    """Fix merge conflicts in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if file has merge conflicts
+        # Skip if no merge conflicts
         if '<<<<<<< HEAD' not in content:
             return False
             
-        # Split by merge conflict markers
+        print(f"Fixing merge conflicts in: {file_path}")
+        
+        # Remove merge conflict markers and keep the newer version (after =======)
         lines = content.split('\n')
         new_lines = []
-        skip_until_end = False
+        skip_until = None
         
-        for line in lines:
+        for i, line in enumerate(lines):
             if line.strip() == '<<<<<<< HEAD':
-                skip_until_end = False
+                skip_until = '======='
                 continue
             elif line.strip() == '=======':
-                skip_until_end = True
+                skip_until = '>>>>>>>'
                 continue
-            elif line.strip() == '>>>>>>> cursor/':
-                skip_until_end = False
+            elif line.strip().startswith('>>>>>>>'):
+                skip_until = None
                 continue
-            elif line.strip().startswith('>>>>>>> cursor/'):
-                skip_until_end = False
+            elif skip_until == '=======':
+                # Skip lines between <<<<<<< HEAD and =======
                 continue
-            elif not skip_until_end:
+            elif skip_until is None:
                 new_lines.append(line)
         
-        # Write the cleaned content
+        # Write the cleaned content back
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write('\n'.join(new_lines))
         
-        print(f"Fixed merge conflicts in: {file_path}")
         return True
-        
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/TSX files with merge conflicts
-    pattern = "/workspace/**/*.tsx"
-    files = glob.glob(pattern, recursive=True)
+    """Main function to fix all merge conflicts"""
+    # Find all files with merge conflicts
+    patterns = [
+        '**/*.tsx',
+        '**/*.ts',
+        '**/*.js',
+        '**/*.jsx',
+        '**/*.json',
+        '**/*.md'
+    ]
     
     fixed_count = 0
-    for file_path in files:
-        if fix_merge_conflicts(file_path):
-            fixed_count += 1
+    total_files = 0
     
-    print(f"Fixed merge conflicts in {fixed_count} files")
+    for pattern in patterns:
+        for file_path in glob.glob(pattern, recursive=True):
+            # Skip node_modules and other directories
+            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', '.next', 'out']):
+                continue
+                
+            total_files += 1
+            if fix_merge_conflicts(file_path):
+                fixed_count += 1
+    
+    print(f"\nFixed merge conflicts in {fixed_count} out of {total_files} files")
 
 if __name__ == "__main__":
     main()
