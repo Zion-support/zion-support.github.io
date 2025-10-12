@@ -5,10 +5,10 @@ import path from 'path'
 console.log('🚀 Starting comprehensive merge conflict resolution and PR management...\n')
 // Function to execute git commands safely
     console.log(`📝 ${description}...`)
-    
-  for (let i = 0; i 
+
+  for (let i = 0; i
     await new Promise(resolve => setTimeout(resolve, 1000))}
-  
+
   // Step 8: Final status check
   console.log('\n📊 Final Status: ')
   execGitCommand('git status', 'Final git status')

@@ -7,14 +7,12 @@
   message: string;
   severity: 'error' | 'warning' | 'info';
   element?: HTMLElement;
-}
 
   totalChecks: number;
   passedChecks: number;
   failedChecks: number;
   warnings: number;
   results: AccessibilityCheckResult[];
-}
 
   private results: AccessibilityCheckResult[] = [];
 
@@ -26,15 +24,12 @@
 
         element
       };
-    }
 
         element
       };
-    }
 
       element
     };
-  }
 
   /**
    * Check if form inputs have proper labels
@@ -45,17 +40,13 @@
 
         element
       };
-    }
 
       const label = document.querySelector(`label[for="${id}"]`);
           element
         };
-      }
-    }
 
       element
     };
-  }
 
   /**
    * Check if headings are properly structured
@@ -68,17 +59,14 @@
 
           element: heading as HTMLElement
         });
-      }
 
           element: heading as HTMLElement
         });
-      }
 
       previousLevel = level;
     });
 
     return results;
-  }
 
   /**
    * Check color contrast ratio
@@ -90,11 +78,9 @@
     // you would calculate the actual contrast ratio
         element
       };
-    }
 
       element
     };
-  }
 
   /**
    * Check if interactive elements are keyboard accessible
@@ -104,11 +90,9 @@
 
         element
       };
-    }
 
       element
     };
-  }
 
   /**
    * Run all accessibility checks on the page
@@ -145,14 +129,12 @@
 
       results: this.results
     };
-  }
 
   /**
    * Get accessibility score as percentage
    */
     const report = this.runAllChecks();
     return Math.round((report.passedChecks / report.totalChecks) * 100);
-  }
 
   /**
    * Generate accessibility report summary
@@ -174,8 +156,6 @@ ${report.results
   .map(r => `- ${r.severity.toUpperCase()}: ${r.message}`)
   .join('\n')}
     `.trim();
-  }
-}
 
 // Export a default instance
 export const accessibilityChecker = new AccessibilityChecker();

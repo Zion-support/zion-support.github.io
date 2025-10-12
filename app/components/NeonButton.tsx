@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 import React  from 'react';
 import { ArrowRight } from 'lucide-react';
-=======
-'use client';
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface NeonButtonProps {
   children: React.ReactNode;
   href?: string;
@@ -17,7 +9,6 @@ interface NeonButtonProps {
   className?: string;
   icon?: React.ReactNode;
   disabled?: boolean;
-}
 
 const NeonButton: React.FC<NeonButtonProps /> = ({
   children,
@@ -43,14 +34,13 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
   const neonEffect = 'before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10';
   const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
   const content = (
-    <>
-    <>
+
       {icon && <span className="mr-2">{icon}</span>}
-    </>
+
       {children}
-    <>
+
       {!icon && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1transition-transform" />}
-    </>
+
   );
   if (href) {
     return (
@@ -63,7 +53,6 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
         {content}
       </a>
     );
-  }
 
   return (
     <button
@@ -78,4 +67,3 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
 };
 
 export default NeonButton;
-    </>

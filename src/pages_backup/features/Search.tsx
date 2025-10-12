@@ -11,9 +11,9 @@ import Footer from '../components/Footer'
         <meta name="description" content="Professional search services and solutions." />
         <meta name="keywords" content="search, services, solutions, technology" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-16">
         <div className="flex items-center justify-center min-h-screen">
           <div className="text-center">
@@ -25,10 +25,12 @@ import Footer from '../components/Footer'
             </button>
           </div>
       </main>
-      
+
       <Footer />
     </div>
   );
 };
 
 export default SearchPage;
+</div>
+</div>

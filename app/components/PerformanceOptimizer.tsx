@@ -8,7 +8,6 @@ interface PerformanceMetrics {
   cls: number | null;
   fcp: number | null;
   ttfb: number | null;
-}
 
 const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -35,7 +34,7 @@ const PerformanceOptimizer: React.FC = () => {
         link.as = resource.endsWith('.woff2') ? 'font' : 'image';
         if (resource.endsWith('.woff2')) {
           link.crossOrigin = 'anonymous';
-        }
+
         document.head.appendChild(link);
       });
     };
@@ -46,10 +45,10 @@ const PerformanceOptimizer: React.FC = () => {
       images.forEach(img => {
         if (!img.loading) {
           img.loading = 'lazy';
-        }
+
         if (!img.decoding) {
           img.decoding = 'async';
-        }
+
       });
     };
 
@@ -74,7 +73,7 @@ const PerformanceOptimizer: React.FC = () => {
     {
       title: "Caching Strategy",
       description: "Intelligent caching for improved performance"
-    }
+
   ];
 
   return (
@@ -115,7 +114,7 @@ const PerformanceOptimizer: React.FC = () => {
               Discover the powerful features that make our performance optimizer solutions stand out.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300">
@@ -135,17 +134,16 @@ const PerformanceOptimizer: React.FC = () => {
 
 export default PerformanceOptimizer;
       cleanupScroll()
-    }
+
   }, [])
 
   // Log performance metrics in development
   useEffect(() => {
     if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(val => val !== null)) {
       console.log('Performance Metrics:', metrics)
-    }
+
   }, [metrics])
 
   return null
-}
 
 export default PerformanceOptimizer

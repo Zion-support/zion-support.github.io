@@ -20,7 +20,7 @@ export default function AICybersecuritySuitePage() {
               AI Cybersecurity Suite
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI-powered cybersecurity solutions with advanced threat detection, 
+              Comprehensive AI-powered cybersecurity solutions with advanced threat detection,
               zero trust security, and automated incident response capabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -158,4 +158,9 @@ export default function AICybersecuritySuitePage() {
       </div>
     </div>
   );
-}
+}</div>
+</div>
+</div>
+</div>
+</div>
+</div>

@@ -1,17 +1,8 @@
 'use client';
 import { useState, useEffect} from 'react';
 import { HardDrive } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { useState, useEffect } from 'react';
 import { HardDrive } from 'lucide-react';
-=======
-import React, { useState, useEffect } from 'react';
-import { Activity, Wifi, HardDrive } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 interface PerformanceMetrics {
   lcp: number;,
@@ -29,7 +20,6 @@ interface PerformanceMetrics {
   downlink: number;,
   rtt: number;
   };
-}
 
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics />({
@@ -41,7 +31,7 @@ const PerformanceDashboard: React.FC = () => {
   });
   useEffect(() => {
     // Only show in development or if user has enabled debug mode
-    const shouldShow = process.env.NODE_ENV === 'development' || 
+    const shouldShow = process.env.NODE_ENV === 'development' ||
                       localStorage.getItem('debug-performance') === 'true';
     if (!shouldShow) return;
 
@@ -61,9 +51,9 @@ const PerformanceDashboard: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
-          setMetrics(const prev = > ({ 
-            ...prev, 
-            fid: entry.processingStart - entry.startTime 
+          setMetrics(const prev = > ({
+            ...prev,
+            fid: entry.processingStart - entry.startTime
           }));
         });
       });
@@ -77,7 +67,7 @@ const PerformanceDashboard: React.FC = () => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
             setMetrics(const prev = > ({ ...prev, cls: clsValue }));
-          }
+
         });
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -95,9 +85,9 @@ const PerformanceDashboard: React.FC = () => {
       const navigationObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
-          setMetrics(const prev = > ({ 
-            ...prev, 
-            ttfb: entry.responseStart - entry.requestStart 
+          setMetrics(const prev = > ({
+            ...prev,
+            ttfb: entry.responseStart - entry.requestStart
           }));
         });
       });
@@ -106,26 +96,25 @@ const PerformanceDashboard: React.FC = () => {
       // Memory usage
       const updateMemory = () => {
         if ('memory' in, performance) {
-          setMetrics(prev => ({ 
-            ...prev, 
-            memory: (performance as, any).memory 
+          setMetrics(prev => ({
+            ...prev,
+            memory: (performance as, any).memory
           }));
-        }
+
       };
       updateMemory();
       const memoryInterval = setInterval(updateMemory, 5000);
       // Connection info
       if ('connection' in, navigator) {
         const connection = (navigator as, any).connection;
-        setMetrics(const prev = > ({ 
-          ...prev, 
+        setMetrics(const prev = > ({
+          ...prev,
           connection: {,
   effectiveType: connection.effectiveType,
             downlink: connection.downlink,
             rtt: connection.rtt,
-          }
+
         }));
-      }
 
       return () => {
         lcpObserver.disconnect();
@@ -135,7 +124,7 @@ const PerformanceDashboard: React.FC = () => {
         navigationObserver.disconnect();
         clearInterval(memoryInterval);
       };
-    }
+
   }, []);
 
   if (!isVisible) return null;
@@ -155,20 +144,10 @@ const PerformanceDashboard: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-white text-xsmax-w-xsz-50">
       <div className="flex items-centerjustify-betweenmb-3">
         <h3 className="font-semibold text-cyan-400flex items-center" />
           <Activity className="w-4h-4mr-1" />
-=======
-    <>
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-white text-xsmax-w-xsz-50">
-        </div>
-      <div className="flex items-centerjustify-betweenmb-3">
-        </div>
-        <h3 className="font-semibold text-cyan-400flexitems-center" />
-          <Activity className="w-4h-4mr-1" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
           Performance
         </h3>
         <button
@@ -176,80 +155,42 @@ const PerformanceDashboard: React.FC = () => {
           className="text-gray-400hover:text-white"
         >
           ×
-    <>
+
         </button>
       </div>
 
-<<<<<<< HEAD
       <div className="space-y-2">
         <div className="flexjustify-between">
           <span   />LCP:</span>
           <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}  />{metrics.lcp.toFixed(0)}ms
           </span>
         </div>
-        
+
         <div className="flexjustify-between">
           <span   />FID:</span>
           <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}  />{metrics.fid.toFixed(0)}ms
           </span>
         </div>
-        
+
         <div className="flexjustify-between">
           <span   />CLS:</span>
           <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}  />{metrics.cls.toFixed(3)}
           </span>
         </div>
-        
+
         <div className="flexjustify-between">
           <span   />FCP:</span>
           <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}  />{metrics.fcp.toFixed(0)}ms
           </span>
         </div>
-        
+
         <div className="flexjustify-between">
           <span   />TTFB:</span>
           <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}  />{metrics.ttfb.toFixed(0)}ms
-=======
-    <>
-      <div className="space-y-2">
-        </div>
-        <div className="flexjustify-between" />
-          <span>LCP:</span>
-          <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}>{metrics.lcp.toFixed(0)}ms
-          </span>
-        </div>
-        
-    <>
-        <div className="flexjustify-between" />
-          <span>FID:</span>
-          <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}>{metrics.fid.toFixed(0)}ms
-          </span>
-        </div>
-        
-    <>
-        <div className="flexjustify-between" />
-          <span>CLS:</span>
-          <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}>{metrics.cls.toFixed(3)}
-          </span>
-        </div>
-        
-    <>
-        <div className="flexjustify-between" />
-          <span>FCP:</span>
-          <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}>{metrics.fcp.toFixed(0)}ms
-          </span>
-        </div>
-        
-    <>
-        <div className="flexjustify-between" />
-          <span>TTFB:</span>
-          <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}>{metrics.ttfb.toFixed(0)}ms
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
           </span>
         </div>
 
         {metrics.memory && (
-<<<<<<< HEAD
           <div className="pt-2border-tborder-gray-600">
             <div className="flex items-centermb-1">
               <HardDrive className="w-3h-3mr-1" />
@@ -258,25 +199,10 @@ const PerformanceDashboard: React.FC = () => {
             <div className="text-gray-400pl-4">
               <div   />Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
               <div   />Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
-=======
-    <>
-          <div className="pt-2border-tborder-gray-600">
-        </div>
-            <div className="flexitems-centermb-1">
-        </div>
-              <HardDrive className="w-3h-3mr-1" / />
-              <span className="text-gray-300">Memory</span>
-            </div>
-            <div className="text-gray-400pl-4">
-        </div>
-              <div>Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
-              <div>Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
           </div>
         )}
 
         {metrics.connection && (
-<<<<<<< HEAD
           <div className="pt-2border-tborder-gray-600">
             <div className="flex items-centermb-1">
               <Wifi className="w-3h-3mr-1" />
@@ -286,27 +212,17 @@ const PerformanceDashboard: React.FC = () => {
               <div   />Type: {metrics.connection.effectiveType}</div>
               <div   />Speed: {metrics.connection.downlink}Mbps</div>
               <div   />RTT: {metrics.connection.rtt}ms</div>
-=======
-    <>
-          <div className="pt-2border-tborder-gray-600">
-        </div>
-            <div className="flexitems-centermb-1">
-        </div>
-              <Wifi className="w-3h-3mr-1" / />
-              <span className="text-gray-300">Connection</span>
-            </div>
-            <div className="text-gray-400pl-4">
-        </div>
-              <div>Type: {metrics.connection.effectiveType}</div>
-              <div>Speed: {metrics.connection.downlink}Mbps</div>
-              <div>RTT: {metrics.connection.rtt}ms</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
           </div>
         )}
-    <>
+
       </div>
   );
 };
 
 export default PerformanceDashboard;
-    </>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

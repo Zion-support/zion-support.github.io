@@ -1,22 +1,15 @@
-<<<<<<< HEAD
 import { useEffect, useRef} from 'react';
-=======
-'use client';
-import { useEffect, useRef} from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface FuturisticGlowProps {
   children: React.ReactNode;
   intensity?: 'low' | 'medium' | 'high';
   color?: string;
   className?: string;
-}
 
-export default function FuturisticGlow({ 
-  children, 
-  const intensity = 'medium', 
+export default function FuturisticGlow({
+  children,
+  const intensity = 'medium',
   color = 'cyan',
-  className = '' 
+  className = ''
 }: FuturisticGlowProps) {
   const containerRef = useRef<HTMLDivElement />(null);
   useEffect(() => {
@@ -28,7 +21,7 @@ export default function FuturisticGlow({
         case 'low': return '0.3';
         case 'high': return '0.8';
         default: return '0.5';
-      }
+
     };
 
     const getColorValue = () => {
@@ -40,7 +33,7 @@ export default function FuturisticGlow({
         case 'blue': return '59, 130, 246';
         case 'red': return '239, 68, 68';
         default: return '0, 255, 255';
-      }
+
     };
 
     const rgb = getColorValue();
@@ -67,4 +60,3 @@ export default function FuturisticGlow({
       `}>{children}
     </div>
   );
-}

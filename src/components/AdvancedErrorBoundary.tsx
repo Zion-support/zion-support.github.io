@@ -1,20 +1,19 @@
 // Simple logger implementation
 
       console.error(message, context);
-    }
-  }
+
 };
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
-}
+
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableErrorReporting?: boolean;
   enableRetry?: boolean;
-}
+
   errorId: string | null;
   error: Error;
   errorInfo: ErrorInfo;
@@ -26,30 +25,29 @@
   url: string;
   userId: string | null;
   sessionId: string;
-}
+
 class AdvancedErrorBoundary extends Component
   private retryCount = 0;
   private maxRetries = 3;
     super(props);
       errorId: null
     };
-  }
+
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
-  }
+
       errorInfo
     });
     // Log error to console in development
-        errorInfo 
+        errorInfo
       });
-    }
+
     // Call custom error handler
       this.props.onError(error, errorInfo);
-    }
+
     // Report error to external service
       this.reportError(error, errorInfo);
-    }
-  }
+
       sessionId: this.getSessionId()
     };
     // Send to error reporting service
@@ -58,16 +56,16 @@ class AdvancedErrorBoundary extends Component
     // Try to get user ID from localStorage or other sources
       return localStorage.getItem('userId') || null;
       return null;
-    }
+
   };
     // Generate or retrieve session ID
       let sessionId = sessionStorage.getItem('sessionId');
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         sessionStorage.setItem('sessionId', sessionId);
-      }
+
       return sessionId;
       return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    }
+
   };
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   };
@@ -75,27 +73,27 @@ class AdvancedErrorBoundary extends Component
           'Content-Type': 'application/json'
         body: JSON.stringify(errorReport)
       });
-        error: reportError 
+        error: reportError
       });
-    }
+
   };
-    if (this.retryCount 
+    if (this.retryCount
     window.location.reload();
   };
     window.location.href = '/';
   };
       // Custom fallback UI
         return this.props.fallback;
-      }
+
       // Default error UI
         <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
           <div className='sm:mx-auto sm:w-full sm:max-w-md'>
             <div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'>
               <div className='text-center'>
                 <div className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100'>
-                  
+
                   >
-                    
+
                     />
                   </svg>
                 </div>
@@ -138,17 +136,17 @@ class AdvancedErrorBoundary extends Component
               )}
               <div className='mt-6 space-y-3'>
                 {this.props.enableRetry &&
-                  this.retryCount 
+                  this.retryCount
                     >
                       Try Again ({this.maxRetries - this.retryCount} attempts
                       left)
                     </button>
                   )}
-                
+
                 >
                   Reload Page
                 </button>
-                
+
                 >
                   Go to Homepage
                 </button>
@@ -157,7 +155,7 @@ class AdvancedErrorBoundary extends Component
                 <p className='text-xs text-gray-500'>
                   If this problem persists, please contact our support team
                   at&nbsp;
-                  
+
                   >
                     kleber@ziontechgroup.com
                   </a>
@@ -165,8 +163,13 @@ class AdvancedErrorBoundary extends Component
               </div>
     </div>
   );
-    }
+
     return this.props.children;
-  }
-}
+
 export default AdvancedErrorBoundary;
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

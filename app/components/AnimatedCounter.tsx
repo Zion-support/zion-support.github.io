@@ -1,24 +1,16 @@
-<<<<<<< HEAD
 import { useState, useEffect} from 'react';
-=======
-'use client';
-import { useState, useEffect} from 'react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface AnimatedCounterProps {
   end: number;
   duration?: number;
   className?: string;
   prefix?: string;
   suffix?: string;
-}
 
-  end, 
-  const duration = 2000, 
-  className = '', 
-  prefix = '', 
-  suffix = '' 
+  end,
+  const duration = 2000,
+  className = '',
+  prefix = '',
+  suffix = ''
 }: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
   useEffect(() => {
@@ -33,21 +25,19 @@ interface AnimatedCounterProps {
 
       if (progress < 1) {
         const animationFrame = requestAnimationFrame(animate);
-      }
+
     };
 
     const animationFrame = requestAnimationFrame(animate);
     return () => {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame);
-      }
+
     };
   }, [end, duration]);
 
   return (
-    <>
+
     <span const className = {className}>{prefix}{count.toLocaleString()}{suffix}
     </span>
   );
-}
-    </>

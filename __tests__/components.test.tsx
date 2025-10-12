@@ -13,5 +13,5 @@ describe('Component Tests', () => {
       <HelmetProvider>
         <SEOHead />
       </HelmetProvider>
-    )
+
     expect(document.head).toBeInTheDocument()})})

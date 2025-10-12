@@ -85,8 +85,6 @@ const ${pageName}Page: React.FC = () => {
         </div>
       </div>
     </Layout>
-  )
-}
 
 export default ${pageName}Page`;
 
@@ -151,25 +149,23 @@ const pageConfigs = {
     title: 'Page Not Found',
     description: 'The page you are looking for could not be found. Please check the URL or return to the homepage.',
     keywords: '404, not found, error, page not found'
-  }
+
 };
 
 // Fix pages
 for (const page of pagesToFix) {
   const pagePath = `/workspace/app/${page}/page.tsx`;
   const config = pageConfigs[page];
-  const componentName = page.split('-').map(word => 
+  const componentName = page.split('-').map(word =>
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('');
-  
+
   const content = pageTemplate(componentName, config.title, config.description, config.keywords);
-  
+
   try {
     fs.writeFileSync(pagePath, content);
     console.log(`Fixed ${page} page`);
   } catch (error) {
     console.error(`Error fixing ${page}:`, error.message);
-  }
-}
 
 console.log('Page fixing completed');

@@ -12,7 +12,6 @@ export function debounce<T extends (...args: any[]) => any>(
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
-}
 
 // Throttle function for performance optimization
 export function throttle<T extends (...args: any[]) => any>(
@@ -25,9 +24,8 @@ export function throttle<T extends (...args: any[]) => any>(
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
-    }
+
   };
-}
 
 // Intersection Observer for lazy loading
 export function createIntersectionObserver(
@@ -36,50 +34,43 @@ export function createIntersectionObserver(
 ): IntersectionObserver | null {
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
     return null;
-  }
-  
+
   return new IntersectionObserver(callback, {
     rootMargin: '50px',
     threshold: 0.1,
     ...options,
   });
-}
 
 // Performance monitoring utilities
 export function measurePerformance(name: string, fn: () => void): void {
   if (typeof window === 'undefined' || !('performance' in window)) {
     fn();
     return;
-  }
 
   const start = performance.now();
   fn();
   const end = performance.now();
-  
+
   if (process.env.NODE_ENV === 'development') {
     console.log(`${name} took ${end - start} milliseconds`);
-  }
-}
 
 // Memory usage monitoring
 export function getMemoryUsage(): any {
   if (typeof window === 'undefined' || !('memory' in performance)) {
     return null;
-  }
-  
+
   return (performance as any).memory;
-}
 
 // Bundle size optimization - preload critical resources
 export function preloadCriticalResources(): void {
   if (typeof window === 'undefined') return;
-  
+
   const criticalResources = [
     '/fonts/inter.woff2',
     '/images/logo.png',
     '/images/og-image.jpg'
   ];
-  
+
   criticalResources.forEach(resource => {
     const link = document.createElement('link');
     link.rel = 'preload';
@@ -87,10 +78,9 @@ export function preloadCriticalResources(): void {
     link.as = resource.endsWith('.woff2') ? 'font' : 'image';
     if (resource.endsWith('.woff2')) {
       link.crossOrigin = 'anonymous';
-    }
+
     document.head.appendChild(link);
   });
-}
 
 // Image optimization utility
 export function optimizeImage(src: string, width?: number, height?: number): string {
@@ -101,7 +91,6 @@ export function optimizeImage(src: string, width?: number, height?: number): str
   url.searchParams.set('q', '80'); // Quality
   url.searchParams.set('f', 'webp'); // Format
   return url.toString();
-}
 
 // Lazy loading utility for images
 export function createLazyImageObserver(): IntersectionObserver | null {
@@ -114,41 +103,36 @@ export function createLazyImageObserver(): IntersectionObserver | null {
           img.src = src;
           img.classList.remove('lazy');
           img.classList.add('loaded');
-        }
-      }
+
     });
   });
-}
 
 // Performance budget monitoring
 export function checkPerformanceBudget(): void {
   if (typeof window === 'undefined') return;
-  
+
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   if (!navigation) return;
-  
+
   const loadTime = navigation.loadEventEnd - navigation.fetchStart;
   const budget = 3000; // 3 seconds
-  
+
   if (loadTime > budget) {
     console.warn(`Performance budget exceeded: ${loadTime}ms > ${budget}ms`);
-  }
-}
 
 // Resource hints for better performance
 export function addResourceHints(): void {
   if (typeof window === 'undefined') return;
-  
+
   const hints = [
     { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
     { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
     { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
   ];
-  
+
   hints.forEach(hint => {
     const link = document.createElement('link');
     Object.assign(link, hint);
     document.head.appendChild(link);
   });
-}

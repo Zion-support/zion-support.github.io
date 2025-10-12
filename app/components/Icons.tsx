@@ -124,12 +124,12 @@ export const IconRegistry = {
   Menu,
   X,
   ChevronDown,
-  
+
   // Social
   Twitter,
   Linkedin,
   Github,
-  
+
   // Core Business
   ArrowRight,
   Zap,

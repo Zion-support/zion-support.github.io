@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 import React  from 'react';
-=======
-'use client';
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const EnhancedSkipLink: React.FC = () => {
   const handleSkipToMain = () => {
     const mainContent = document.getElementById('main-content');
     if (mainContent) {
       mainContent.focus();
       mainContent.scrollIntoView({ behavior: 'smooth' });
-    }
+
   };
 
   const handleSkipToNavigation = () => {
@@ -21,8 +15,7 @@ const EnhancedSkipLink: React.FC = () => {
       if (firstLink) {
         firstLink.focus();
         firstLink.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
+
   };
 
   return (
@@ -37,7 +30,7 @@ const EnhancedSkipLink: React.FC = () => {
         className="skip-link"
         aria-label="Skip to navigation"
         />Skip to navigation
-    <>
+
       </button>
       <style jsx  />{`
         .skip-links {;
@@ -45,8 +38,7 @@ const EnhancedSkipLink: React.FC = () => {
   top: -100 px;,
   left: 0;
           z-index: 1000;
-        }
-        
+
         .skip-link {
           position: absolute;,
   top: -100 px;,
@@ -60,22 +52,18 @@ const EnhancedSkipLink: React.FC = () => {
           font-weight: bold;,
   transition: top 0.3 s;
           z-index: 1001;
-        }
-        
+
         .skip-link: focus {,
   top: 10 px;,
   left: 10 px;
-        }
-        
+
         .skip-link: hover {,
   background: #00 ffff;,
   color: #000;
-        }
-    <>
+
       `}</style>
     </div>
   );
 };
 
 export default EnhancedSkipLink;
-    </>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -33,7 +32,7 @@ const AboutPage: React.FC = () => {
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
       title: 'Excellence',
       description: 'We maintain the highest standards of quality in everything we do, from initial consultation to final delivery.'
-    }
+
   ];
 
   const team = [
@@ -60,7 +59,7 @@ const AboutPage: React.FC = () => {
       role: 'Head of Security',
       description: 'Cybersecurity expert ensuring enterprise-grade protection.',
       image: '/team/emily.jpg'
-    }
+
   ];
 
   const timeline = [
@@ -93,11 +92,11 @@ const AboutPage: React.FC = () => {
       year: '2024',
       title: 'AI Revolution',
       description: 'Leading the next generation of AI solutions with advanced machine learning and automation.'
-    }
+
   ];
 
   return (
-    <>
+
       <Helmet>
         <title>About Us - Zion Tech Group | Leading AI & IT Solutions Company</title>
         <meta name="description" content="Learn about Zion Tech Group, a leading technology company specializing in AI solutions, cloud infrastructure, cybersecurity, and custom software development. Founded in 2019." />
@@ -106,50 +105,40 @@ const AboutPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.4)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          
+
           <div className="relative max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
               <Brain className="w-4 h-4" />
               <span>About Zion Tech Group</span>
             </div>
-            
+
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Pioneering the{' '}
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Future of Technology
               </span>
             </h1>
-            
+
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Founded in 2019, Zion Tech Group is a leading technology company that specializes in 
-              artificial intelligence, cloud infrastructure, cybersecurity, and custom software development. 
+              Founded in 2019, Zion Tech Group is a leading technology company that specializes in
+              artificial intelligence, cloud infrastructure, cybersecurity, and custom software development.
               We help businesses transform their operations with cutting-edge technology solutions.
-=======
-        <div className="max-w-7-xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4-xl md:text-6xl font-bold text-white  mb-6">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3-xl mx-auto">
-              We are a leading technology company dedicated to transforming businesses through innovative AI and IT solutions.
->>>>>>> cursor/fix-errors-and-merge-to-main-bff1
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transform hover:scale-105"
               >
                 <span>Work With Us</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link 
-                to="/team" 
+              <Link
+                to="/team"
                 className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
               >
                 <span>Meet Our Team</span>
@@ -287,11 +276,11 @@ const AboutPage: React.FC = () => {
                   Ready to Work With Us?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Join hundreds of businesses that trust Zion Tech Group for their technology needs. 
+                  Join hundreds of businesses that trust Zion Tech Group for their technology needs.
                   Let's build something amazing together.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
+                  <Link
                     to="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
                   >
@@ -312,52 +301,11 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AboutPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>About - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We are a leading technology company specializing in artificial intelligence, 
-              cloud infrastructure, and cybersecurity solutions.
-            </p>
-            <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6">
-                  <h2 className="text-2xl font-bold text-white mb-4">Our Mission</h2>
-                  <p className="text-gray-300">
-                    To empower businesses with cutting-edge technology solutions that drive innovation, 
-                    efficiency, and growth in the digital age.
-                  </p>
-                </div>
-                <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6">
-                  <h2 className="text-2xl font-bold text-white mb-4">Our Vision</h2>
-                  <p className="text-gray-300">
-                    To be the global leader in AI and IT solutions, transforming industries 
-                    and creating a more connected, intelligent world.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
       </div>
-    </>
+
   );
 };
 
-export default AboutPage;
+export default AboutPage;</div>
+</div>
+</div>

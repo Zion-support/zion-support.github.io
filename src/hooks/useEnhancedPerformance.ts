@@ -9,7 +9,7 @@ import { analytics } from '../utils/enhancedAnalytics';
   trackErrors?: boolean;
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
-}
+
     trackAnalytics = true
   } = _options;
   const mountTimeRef = useRef<number>(0);
@@ -18,17 +18,16 @@ import { analytics } from '../utils/enhancedAnalytics';
     renderCountRef.current = 0;
     // Track component mount
       analytics.trackCustomEvent('Component', 'Mounted', component);
-    }
+
       // Track component unmount duration
         const duration = performance.now() - mountTimeRef.current;
           // Long-lived component
             Math.round(duration)
           );
-        }
-      }
+
       // Track component unmount
         analytics.trackCustomEvent('Component', 'Unmounted', component);
-      }
+
     };
   }, [component, trackAnalytics, trackPerformance]);
   // Track render performance
@@ -36,30 +35,30 @@ import { analytics } from '../utils/enhancedAnalytics';
       // Many re-renders detected
         renderCountRef.current
       );
-    }
+
   });
-  
+
         });
-      }
+
     [component, trackErrors]
   );
-  
+
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
-      }
+
     [component, trackAnalytics]
   );
-  
+
       const startTime = performance.now();
           const duration = performance.now() - startTime;
               duration > 1000 ? 'slow' : 'fast'
             );
-          }
+
           return duration;
-        }
+
       };
     [component, trackPerformance]
   );
     measureOperation
   };
-}
+
 export default useEnhancedPerformance;

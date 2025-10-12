@@ -1,10 +1,6 @@
 'use client';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface FuturisticButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
@@ -14,7 +10,6 @@ interface FuturisticButtonProps {
   loading?: boolean;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
-}
 
   children,
   onClick,
@@ -37,7 +32,7 @@ interface FuturisticButtonProps {
       case 'ghost':
         return 'bg-white/10 backdrop-blur-lg text-white border border-white/20 hover: bg-white/20';,
   default: return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
-    }
+
   };
 
   const getSizeClasses = () => {
@@ -49,7 +44,7 @@ interface FuturisticButtonProps {
       case 'lg':
         return 'px-8 py-4 text-lg';
       default: return 'px-6 py-3 text-base';
-    }
+
   };
 
   return (
@@ -121,18 +116,12 @@ interface FuturisticButtonProps {
       )}
 
       {/* Corner accents */}
-<<<<<<< HEAD
       <div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" />
       <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" />
-=======
-    <>
-      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" / />
-      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
       {/* Content */}
       <span className="relative z-10 flex items-centerjustify-center" />
         {loading ? (
-          <>
+
             <motion.div
               className="w-4 h-4 border-2 border-white/30 border-t-white rounded-fullmr-2"
               animate="{{" rotate: 360 }}
@@ -142,16 +131,11 @@ interface FuturisticButtonProps {
         ) : (
           children
         )}
-    <>
+
       </span>
     </motion.button>
   </div>
   );
-<<<<<<< HEAD
-}
-=======
-};
 
-export default FuturisticButton;
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+</div>
+</div>

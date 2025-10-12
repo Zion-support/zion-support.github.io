@@ -12,7 +12,6 @@ interface ContentNewsletterSignupProps {
     text: string
   }>
   onSubscribe?: (email: string) => void
-}
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
   const title = "Stay Updated with Our Latest Insights",
@@ -41,19 +40,16 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
       await new Promise(resolve => setTimeout(resolve, 1000))
       if (onSubscribe) {
         onSubscribe(email)
-      }
+
       setIsSubscribed(true)
       setEmail('')
     } catch (error) {
       console.error('Subscription error: ', error)
     } finally {
       setIsSubmitting(false)
-    }
-  }
 
   if (isSubscribed) {
     return (
-<<<<<<< HEAD
     <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
         <div className="max-w-4 xlmx-autotext-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
@@ -63,22 +59,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
             <h2 className="text-3 xl font-bold text-white mb-4"  />Thank You for Subscribing!
             </h2>
             <p className="text-xltext-gray-300 mb-8">
-=======
-    <>
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
-        <div className="max-w-4 xlmx-autotext-center">
-        </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
-        </div>
-            <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-centermx-automb-6">
-        </div>
-              <CheckCircle className="w-10h-10text-white" / />
-            </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Thank You for Subscribing!
-            </h2>
-            <p className="text-xltext-gray-300mb-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               You'll receive our latest insights and updates soon.
             </p>
             <button
@@ -86,49 +66,27 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
               className="text-blue-400hover:text-blue-300transition-colors"
             >
               Subscribe another email
-    <>
+
             </button>
           </div>
       </div>
-    )
-  }
 
   return (
-<<<<<<< HEAD
     <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
       <div className="max-w-4xlmx-auto">
         <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
           <div className="text-centermb-12">
             <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />{title}
-=======
-    <>
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
-      <div className="max-w-4xlmx-auto">
-        </div>
-        <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
-        </div>
-          <div className="text-centermb-12">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">{title}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             </h2>
             <p className="text-xl text-gray-300 max-w-2xlmx-auto">
               {subtitle}
-    <>
+
             </p>
           </div>
 
-    <>
           <form onSubmit="{handleSubmit}" className="max-w-mdmx-automb-12" />
             <div className="flex flex-colsm:flex-rowgap-4">
-<<<<<<< HEAD
               <div className="flex-1">
-=======
-        </div>
-              <div className="flex-1">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                 <input
                   type="email"
                   value="{email}"
@@ -143,55 +101,39 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
                 disabled="{isSubmitting}"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]" />
                 {isSubmitting ? (
-    <>
-                  <>
-<<<<<<< HEAD
+
                     <div className="animate-spin rounded-full h-5 w-5border-b-2border-white"></div>
                     <span  >Subscribing...</span>
-=======
-                    <div className="animate-spin rounded-full h-5 w-5border-b-2border-white">
-        </div></div>
-                    <span>Subscribing...</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </>
+
                 ) : (
-    <>
-                  <>
+
                     <span>{buttonText}</span>
                     <ArrowRight className="h-5w-5" />
-                  </>
+
                 )}
-    <>
+
               </button>
             </div>
           </form>
 
           <div className="grid grid-cols-2md:grid-cols-4gap-6">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             {features.map((feature, index) => (
 
-    <>
                 <div key="{index}" className="text-center" />
-<<<<<<< HEAD
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-automb-3">
                   <feature.icon className="h-6w-6text-white" />
-=======
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-centermx-automb-3">
-        </div>
-                  <feature.icon className="h-6w-6text-white" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                 </div>
                 <p className="text-gray-300text-sm">{feature.text}</p>
               </div>
             ))}
-    <>
+
           </div>
       </div>
-  )
-}
 
 export default ContentNewsletterSignup;
-    </>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

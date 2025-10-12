@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import { useEffect } from 'react';
-=======
-'use client';
-import { useEffect } from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add high contrast mode support
@@ -15,7 +9,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           document.documentElement.classList.add('high-contrast');
         } else {
           document.documentElement.classList.remove('high-contrast');
-        }
+
       };
 
       mediaQuery.addEventListener('change', handleContrastChange);
@@ -32,7 +26,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           document.documentElement.classList.add('reduce-motion');
         } else {
           document.documentElement.classList.remove('reduce-motion');
-        }
+
       };
 
       mediaQuery.addEventListener('change', handleMotionChange);

@@ -73,7 +73,7 @@ export default {
           accent: '#16213e',
           neon: '#00d4ff',
           glow: '#00ffff',
-        }
+
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -137,11 +137,11 @@ export default {
           '100%': { boxShadow: '0 0 20px rgba(168, 85, 247, 0.8), 0 0 30px rgba(168, 85, 247, 0.6)' },
         },
         neonPulse: {
-          '0%': { 
+          '0%': {
             boxShadow: '0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff',
             textShadow: '0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff'
           },
-          '100%': { 
+          '100%': {
             boxShadow: '0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff',
             textShadow: '0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff'
           },
@@ -155,12 +155,12 @@ export default {
           '100%': { transform: 'translateY(100vh)' },
         },
         hologram: {
-          '0%, 100%': { 
+          '0%, 100%': {
             opacity: '0.8',
             transform: 'translateY(0px) scale(1)',
             filter: 'hue-rotate(0deg)'
           },
-          '50%': { 
+          '50%': {
             opacity: '1',
             transform: 'translateY(-10px) scale(1.02)',
             filter: 'hue-rotate(90deg)'
@@ -175,11 +175,11 @@ export default {
           '50%': { opacity: '0.8' },
         },
         cyberGlow: {
-          '0%, 100%': { 
+          '0%, 100%': {
             boxShadow: '0 0 5px #00d4ff, inset 0 0 5px #00d4ff',
             borderColor: '#00d4ff'
           },
-          '50%': { 
+          '50%': {
             boxShadow: '0 0 20px #00d4ff, 0 0 30px #00d4ff, inset 0 0 20px #00d4ff',
             borderColor: '#00ffff'
           },
@@ -195,11 +195,11 @@ export default {
           '100%': { transform: 'translate(20px, 20px)' },
         },
         neonBorder: {
-          '0%, 100%': { 
+          '0%, 100%': {
             borderColor: '#00ffff',
             boxShadow: '0 0 5px #00ffff, inset 0 0 5px #00ffff'
           },
-          '50%': { 
+          '50%': {
             borderColor: '#ff00ff',
             boxShadow: '0 0 15px #ff00ff, inset 0 0 15px #ff00ff'
           },
@@ -246,4 +246,3 @@ export default {
     },
   },
   plugins: [],
-}

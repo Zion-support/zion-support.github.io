@@ -1,40 +1,22 @@
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
-import { getCLS, getFID, getFCP, getLCP, getTTFB };
-<<<<<<< HEAD
-=======
-'use client';
-=======
-import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     const monitorCoreWebVitals = () => {
-<<<<<<< HEAD
-      if ('web-vitals' in, window) {
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);
-        });
-=======
       if ('web-vitals' in window) {
-        onCLS(console.log);
-        onINP(console.log);
-        onFCP(console.log);
-        onLCP(console.log);
-        onTTFB(console.log);
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
       }
     };
 
     // Monitor performance metrics
     const monitorPerformance = () => {
-      if ('performance' in, window) {
+      if ('performance' in window) {
         window.addEventListener('load', () => {
           setTimeout(() => {
             const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -47,7 +29,7 @@ const PerformanceMonitor: React.FC = () => {
             });
           }, 0);
         });
-      }
+
     };
 
     // Monitor memory usage
@@ -61,7 +43,7 @@ const PerformanceMonitor: React.FC = () => {
             limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
           });
         }, 30000); // Check every 30 seconds
-      }
+
     };
 
     // Initialize monitoring

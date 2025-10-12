@@ -11,7 +11,7 @@ import { useState, useCallback, ChangeEvent } from 'react';
   onSubmit: (values: T) => void | Promise<void>;
   validateOnChange?: boolean;
   validateOnBlur?: boolean;
-}
+
   values: T;
   errors: Record<keyof T, string[]>;
   touched: Record<keyof T, boolean>;
@@ -26,14 +26,14 @@ import { useState, useCallback, ChangeEvent } from 'react';
   resetForm: () => void;
   validateField: (field: keyof T) => void;
   validateAllFields: () => boolean;
-}
+
   initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true
   const [values, setValues] = useState<T>(initialValues);
   const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>);
   const [touched, setTouched] = useState<Record<keyof T, boolean>>({} as Record<keyof T, boolean>);
   const [isSubmitting, setIsSubmitting] = useState(false);
   // Validate a single field
-  
+
       if (!validationSchema[field]) return;
       const fieldValue = values[field];
       const rules = validationSchema[field];
@@ -43,7 +43,7 @@ import { useState, useCallback, ChangeEvent } from 'react';
     [values, validationSchema]
   );
   // Validate all fields
-  
+
     if (Object.keys(validationSchema).length === 0) return true;
     const validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>);
     const formErrors = getFormErrors(validationResults);
@@ -51,35 +51,35 @@ import { useState, useCallback, ChangeEvent } from 'react';
     return isFormValid(validationResults);
   }, [values, validationSchema]);
   // Handle input change
-  
+
       const { name, value, type } = e.target;
       const fieldName = name as keyof T;
       // Handle checkbox inputs
       let fieldValue: unknown = value;
         fieldValue = (e.target as HTMLInputElement).checked;
-      }
+
         [fieldName]: fieldValue
       }));
       // Validate on change if enabled
         setTimeout(() => validateSingleField(fieldName), 0);
-      }
+
     [validateOnChange, touched, validateSingleField]
   );
   // Handle input blur
-  
+
       const fieldName = e.target.name as keyof T;
         [fieldName]: true
       }));
       // Validate on blur if enabled
         validateSingleField(fieldName);
-      }
+
     [validateOnBlur, validateSingleField]
   );
   // Handle form submission
-  
+
       e.preventDefault();
       // Mark all fields as touched
-      
+
         acc[key as keyof T] = true;
         return acc;
       }, {} as Record<keyof T, boolean>);
@@ -87,38 +87,37 @@ import { useState, useCallback, ChangeEvent } from 'react';
       // Validate all fields
       const isValid = validateAllFields();
         return;
-      }
+
       setIsSubmitting(true);
         await onSubmit(values);
         console.error('Form submission error:', error);
         setIsSubmitting(false);
-      }
+
     [values, validateAllFields, onSubmit]
   );
   // Set field value programmatically
-  
+
     }));
       setTimeout(() => validateSingleField(field), 0);
-    }
+
   }, [validateOnChange, touched, validateSingleField]);
   // Set field error programmatically
-  
+
     }));
   }, []);
   // Set field touched programmatically
-  
+
     }));
   }, []);
   // Reset form to initial values
-  
+
     setValues(initialValues);
     setErrors({} as Record<keyof T, string[]>);
     setTouched({} as Record<keyof T, boolean>);
     setIsSubmitting(false);
   }, [initialValues]);
   // Check if form is valid
-  
+
     Object.values(errors).every(errorArray => errorArray.length === 0);
     validateAllFields
   };
-}

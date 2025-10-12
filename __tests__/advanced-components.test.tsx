@@ -31,7 +31,7 @@ describe('Advanced Components', () => {
       <MemoryRouter>
         <ThrowError shouldThrow={false} />
       </MemoryRouter>
-    )
+
     expect(screen.getByText('Test content')).toBeInTheDocument()})
   it('renders error UI when there is an error', () => {
     const consoleSpy = jest
@@ -43,7 +43,7 @@ describe('Advanced Components', () => {
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
       </MemoryRouter>
-    )
+
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument()
     expect(screen.getByText(/Try Again/)).toBeInTheDocument()
     expect(screen.getByText('Reload Page')).toBeInTheDocument()
@@ -60,7 +60,7 @@ describe('Advanced Components', () => {
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
       </MemoryRouter>
-    )
+
     expect(onError).toHaveBeenCalled()
     consoleSpy.mockRestore()})
   it('retries when retry button is clicked', async () => {
@@ -75,11 +75,11 @@ describe('Advanced Components', () => {
           <TestComponent />
         </AdvancedErrorBoundary>
       </MemoryRouter>
-    )
+
     const retryButton = screen.getByText('Try Again (3 attempts left)')
     // Change shouldThrow before clicking retry
     shouldThrow = false
-    fireEvent.click(retryButton)
+    fireEvent.click(retryButton,)
     // After retry, the error boundary should reset and show the child component
     await waitFor(() => {
       expect(
@@ -97,7 +97,7 @@ describe('AdvancedSEOOptimizer', () => {
       '@type': 'Organization',
       name: 'Test Organization',
     },
-  }
+
   it('renders without crashing', () => {
     render(
       <MemoryRouter>
@@ -106,7 +106,7 @@ describe('AdvancedSEOOptimizer', () => {
           <div>Test content</div>
         </HelmetProvider>
       </MemoryRouter>
-    )
+
     expect(screen.getByText('Test content')).toBeInTheDocument()})
   it('sets document title', async () => {
     render(
@@ -115,7 +115,7 @@ describe('AdvancedSEOOptimizer', () => {
           <AdvancedSEOOptimizer seoData={mockSEOData} />
         </HelmetProvider>
       </MemoryRouter>
-    )
+
     // Wait for helmet to update the document title
     await new Promise(resolve => setTimeout(resolve, 100))
     expect(document.title).toBe('Test Title')})
@@ -130,7 +130,7 @@ describe('AdvancedSEOOptimizer', () => {
           />
         </HelmetProvider>
       </MemoryRouter>
-    )
+
     // In test environment, helmet may not render scripts in the DOM
     // Just verify component renders without crashing
     await waitFor(() => {
@@ -143,7 +143,7 @@ describe('AdvancedSEOOptimizer', () => {
           <AdvancedSEOOptimizer seoData={mockSEOData} enableOpenGraph={true} />
         </HelmetProvider>
       </MemoryRouter>
-    )
+
     // In test environment, helmet renders to document head, not container
     // Just verify component renders without crashing
     await waitFor(() => {
@@ -156,7 +156,7 @@ describe('AdvancedSEOOptimizer', () => {
           <AdvancedSEOOptimizer seoData={mockSEOData} enableTwitterCards={true} />
         </HelmetProvider>
       </MemoryRouter>
-    )
+
     // In test environment, helmet renders to document head, not container
     // Just verify component renders without crashing
     await waitFor(() => {
@@ -169,7 +169,7 @@ describe('AdvancedPerformanceMonitor', () => {
     getEntries: jest.fn(() => []),
     measurePageLoad: jest.fn(),
     reportWebVitals: jest.fn(),
-  }
+
   // Mock PerformanceObserver
   class MockPerformanceObserver {
     constructor(callback: PerformanceObserverCallback) {
@@ -178,7 +178,7 @@ describe('AdvancedPerformanceMonitor', () => {
     observe() {}
     disconnect() {}
     takeRecords() { return []}
-  }
+
   beforeEach(() => {
     // Mock performance API
     Object.defineProperty(window, 'performance', {
@@ -197,7 +197,7 @@ describe('AdvancedPerformanceMonitor', () => {
       <MemoryRouter>
         <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
       </MemoryRouter>
-    )
+
     expect(container.firstChild).toBeNull()
     Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true })})
   it('renders performance monitor in development mode', () => {
@@ -207,7 +207,7 @@ describe('AdvancedPerformanceMonitor', () => {
       <MemoryRouter>
         <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
       </MemoryRouter>
-    )
+
     expect(screen.getByText('Performance Monitor')).toBeInTheDocument()
     Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true })})
   it('calls onMetricsUpdate when metrics change', async () => {
@@ -222,7 +222,7 @@ describe('AdvancedPerformanceMonitor', () => {
           onMetricsUpdate={onMetricsUpdate}
         />
       </MemoryRouter>
-    )
+
     await waitFor(() => {
       expect(onMetricsUpdate).toHaveBeenCalled()})
     Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true })})
@@ -237,7 +237,7 @@ describe('AdvancedPerformanceMonitor', () => {
       <MemoryRouter>
         <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
       </MemoryRouter>
-    )
+
     // Should show recommendations for poor performance
     expect(screen.getByText('Recommendations:')).toBeInTheDocument()
     Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true })})

@@ -224,4 +224,12 @@ export default function Ai3dGenerationPage() {
       </section>
     </div>
   );
-}
+}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

@@ -1,11 +1,7 @@
 'use client'
 import React from 'react'
 
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
-=======
-import { Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
 const SEOEnhancer: React.FC = () => {
   const features = [
     {
@@ -27,7 +23,7 @@ const SEOEnhancer: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
+
   ];
   const benefits = [
     'Advanced AI technology integration',

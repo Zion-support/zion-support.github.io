@@ -15,7 +15,7 @@ import Footer from '../components/Footer';
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -25,15 +25,15 @@ import Footer from '../components/Footer';
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Comprehensive IT solutions to support and optimize your business infrastructure. 
+            Comprehensive IT solutions to support and optimize your business infrastructure.
             From cloud migration to cybersecurity, we keep your technology running smoothly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            
+
             >
               Get Free IT Assessment
             </a>
-            
+
             >
               (302) 464-0950
             </a>
@@ -90,7 +90,7 @@ import Footer from '../components/Footer';
                 </ul>
                 <div className="text-center">
                   <div className="text-lg font-bold text-cyan-400 mb-2">{service.price}</div>
-                  
+
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
@@ -135,7 +135,7 @@ import Footer from '../components/Footer';
                   Basic monitoring
                 </li>
               </ul>
-              
+
               >
                 Get Started
               </a>
@@ -161,7 +161,7 @@ import Footer from '../components/Footer';
                   Priority response
                 </li>
               </ul>
-              
+
               >
                 Get Started
               </a>
@@ -187,7 +187,7 @@ import Footer from '../components/Footer';
                   Strategic consulting
                 </li>
               </ul>
-              
+
               >
                 Contact Sales
               </a>
@@ -202,11 +202,11 @@ import Footer from '../components/Footer';
               Get a free IT assessment and discover how our services can improve your technology infrastructure and reduce costs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              
+
               >
                 Get Free IT Assessment
               </a>
-              
+
               >
                 (302) 464-0950
               </a>
@@ -219,3 +219,15 @@ import Footer from '../components/Footer';
 };
 
 export default ITServicesPage;
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

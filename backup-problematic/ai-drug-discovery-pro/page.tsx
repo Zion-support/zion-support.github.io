@@ -224,4 +224,12 @@ export default function AiDrugDiscoveryProPage() {
       </section>
     </div>
   );
-}
+}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

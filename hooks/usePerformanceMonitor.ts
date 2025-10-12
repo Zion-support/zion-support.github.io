@@ -9,7 +9,7 @@ export const usePerformanceMonitor = () => {
           setTimeout(() => {
             const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
             const paint = performance.getEntriesByType('paint');
-            
+
             // Log performance metrics
             console.log('Page Load Performance:', {
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -19,7 +19,7 @@ export const usePerformanceMonitor = () => {
             });
           }, 0);
         });
-      }
+
     };
 
     // Monitor resource loading
@@ -33,14 +33,14 @@ export const usePerformanceMonitor = () => {
                 duration: entry.duration,
                 size: (entry as any).transferSize,
               });
-            }
+
           });
         });
-        
+
         observer.observe({ entryTypes: ['resource'] });
-        
+
         return () => observer.disconnect();
-      }
+
     };
 
     // Initialize monitoring

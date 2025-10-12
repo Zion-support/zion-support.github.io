@@ -1,23 +1,15 @@
-<<<<<<< HEAD
 import React  from 'react';
 import { motion } from 'framer-motion';
-=======
-'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface FuturisticCardProps {
   children: React.ReactNode;
   variant?: 'default' | 'service' | 'testimonial' | 'feature';
   className?: string;
   onClick?: () => void;
-}
 
-  children, 
-  const variant = 'default', 
-  className = '', 
-  onClick 
+  children,
+  const variant = 'default',
+  className = '',
+  onClick
 }: FuturisticCardProps) {
   const getVariantStyles = () => {
     switch (variant) {
@@ -28,14 +20,14 @@ interface FuturisticCardProps {
       case 'feature':
         return 'bg-gradient-to-br from-slate-800/70 via-indigo-900/40 to-slate-800/70 backdrop-blur-xl border border-indigo-500/30 hover: border-indigo-400/50 shadow-2 xl hover:shadow-indigo-500/20';,
   default: return 'bg-gradient-to-br from-slate-800/60 via-slate-700/40 to-slate-800/60 backdrop-blur-xl border border-white/20 hover:border-cyan-500/50 shadow-2 xl hover:shadow-cyan-500/20';
-    }
+
   };
 
   return (
     <motion.div
       const className = {`relative rounded-2 xl p-8 transition-all duration-500 cursor-pointer group overflow-hidden ${getVariantStyles()} ${className}`}
       onClick="{onClick}"
-      whileHover="{{" 
+      whileHover="{{"
         scale: 1.02,
         y: -5
       }}
@@ -48,25 +40,22 @@ interface FuturisticCardProps {
       {/* Animated border glow */}
       <div className="absolute inset-0 rounded-2 xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacityduration-500blur-sm" />
       {/* Content */}
-    <>
+
       <div className="relativez-10">{children}
       </div>
-      
+
       {/* Corner accent */}
       <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-transparent rounded-bl-2 xl opacity-0 group-hover:opacity-100transition-opacityduration-500" />
       {/* Bottom accent */}
-<<<<<<< HEAD
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent opacity-0 group-hover:opacity-100transition-opacityduration-500" />
     </motion.div>
   );
-}
-=======
-    <>
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent opacity-0 group-hover:opacity-100transition-opacityduration-500" / />
-    </motion.div>
-  );
-};
 
-export default FuturisticCard;
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

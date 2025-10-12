@@ -13,9 +13,9 @@ const AccessibilityenhancerPage: React.FC = () => {
         <meta name="description" content="Professional accessibilityenhancer services and solutions." />
         <meta name="keywords" content="accessibilityenhancer, services, solutions, technology" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-16">
         <div className="flex items-center justify-center min-h-screen">
           <div className="text-center">
@@ -27,10 +27,12 @@ const AccessibilityenhancerPage: React.FC = () => {
             </button>
           </div>
       </main>
-      
+
       <Footer />
     </div>
   );
 };
 
 export default AccessibilityenhancerPage;
+</div>
+</div>

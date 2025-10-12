@@ -1,10 +1,6 @@
 'use client';
 import { useState, useEffect} from 'react';
 import { Sun, Moon} from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const ThemeToggle: React.FC = () => {
   const [isDark, setIsDark] = useState(true);
   useEffect(() => {
@@ -17,7 +13,7 @@ const ThemeToggle: React.FC = () => {
     } else {
       setIsDark(true);
       document.documentElement.classList.add('dark');
-    }
+
   }, []);
 
   const toggleTheme = () => {
@@ -30,7 +26,7 @@ const ThemeToggle: React.FC = () => {
     } else {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
-    }
+
   };
 
   return (

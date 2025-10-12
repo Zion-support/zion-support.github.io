@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback } from 'react';
   renderTime: number;
   memoryUsage: number;
   networkLatency: number;
-}
 
   });
 
@@ -38,7 +37,7 @@ import { useState, useEffect, useCallback } from 'react';
         link.as = resource.endsWith('.woff2') ? 'font' : 'image';
         document.head.appendChild(link);
       });
-    }
+
   }, []);
 
     measurePerformance();

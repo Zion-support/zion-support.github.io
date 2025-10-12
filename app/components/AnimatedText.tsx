@@ -1,18 +1,10 @@
-<<<<<<< HEAD
 import { useEffect, useState} from 'react';
-=======
-'use client';
-import { useEffect, useState} from 'react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface AnimatedTextProps {
   text: string;
   className?: string;
   delay?: number;
   duration?: number;
   type?: 'fade' | 'slide' | 'glow' | 'typing';
-}
 
 const AnimatedText: React.FC<AnimatedTextProps /> = ({
   text,
@@ -40,10 +32,10 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
           setCurrentIndex(currentIndex + 1);
         }, 50);
         return () => clearTimeout(timer);
-      }
+
     } else if (isVisible) {
       setDisplayText(text);
-    }
+
   }, [isVisible, currentIndex, text, type]);
 
   const getAnimationClasses = () => {
@@ -58,7 +50,7 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
       case 'typing':
         return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
       default: return baseClasses;
-    }
+
   };
 
   return (

@@ -7,8 +7,6 @@ const MobileOptimizer: React.FC = () => {
       const viewport = document.querySelector('meta[name="viewport"]')
       if (viewport) {
         viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
-      }
-    }
 
     // Add touch-friendly classes
     const addTouchClasses = () => {
@@ -16,9 +14,8 @@ const MobileOptimizer: React.FC = () => {
       buttons.forEach(button => {
         if (!button.classList.contains('touch-manipulation')) {
           button.classList.add('touch-manipulation')
-        }
+
       })
-    }
 
     // Optimize images for mobile
     const optimizeImagesForMobile = () => {
@@ -27,12 +24,11 @@ const MobileOptimizer: React.FC = () => {
         const imageElement = img as HTMLImageElement
         if (!imageElement.loading) {
           imageElement.loading = 'lazy'
-        }
+
         if (!imageElement.decoding) {
           imageElement.decoding = 'async'
-        }
+
       })
-    }
 
     // Add mobile-specific event listeners
     const addMobileEventListeners = () => {
@@ -42,7 +38,7 @@ const MobileOptimizer: React.FC = () => {
         const now = new Date().getTime()
         if (now - lastTouchEnd <= 300) {
           event.preventDefault()
-        }
+
         lastTouchEnd = now
       }, false)
 
@@ -51,13 +47,11 @@ const MobileOptimizer: React.FC = () => {
         element.addEventListener('touchstart', () => {
           if ('vibrate' in navigator) {
             navigator.vibrate(10) // Short vibration
-          }
+
         })
-      }
 
       const interactiveElements = document.querySelectorAll('button, a, [role="button"]')
       interactiveElements.forEach(addHapticFeedback)
-    }
 
     // Optimize scroll performance
     const optimizeScrollPerformance = () => {
@@ -65,17 +59,13 @@ const MobileOptimizer: React.FC = () => {
       const updateScrollPosition = () => {
         // Add scroll-based optimizations here
         ticking = false
-      }
 
       const requestTick = () => {
         if (!ticking) {
           requestAnimationFrame(updateScrollPosition)
           ticking = true
-        }
-      }
 
       window.addEventListener('scroll', requestTick, { passive: true })
-    }
 
     // Initialize mobile optimizations
     preventZoom()
@@ -88,10 +78,9 @@ const MobileOptimizer: React.FC = () => {
     return () => {
       window.removeEventListener('touchend', () => {})
       window.removeEventListener('scroll', () => {})
-    }
+
   }, [])
 
   return null
-}
 
 export default MobileOptimizer

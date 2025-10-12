@@ -1,28 +1,18 @@
-<<<<<<< HEAD
 import { createContext, useContext, useEffect} from 'react';
-=======
-'use client';
-import { createContext, useContext, useEffect} from 'react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any />) => void;
   trackPageView: (pageName: string) => void;
-}
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
 export function useAnalytics() {
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
+
   return context;
-}
 
 interface AnalyticsProviderProps {
   children: React.ReactNode;
-}
 
   useEffect(() => {
     // Initialize analytics
@@ -32,7 +22,7 @@ interface AnalyticsProviderProps {
   const trackEvent = (eventName: string, parameters?: Record<string, unknown />) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
-    }
+
   };
 
   const trackPageView = (pageName: string) => {
@@ -41,7 +31,7 @@ interface AnalyticsProviderProps {
         page_title: pageName,
         page_location: window.location.href,
       });
-    }
+
   };
 
   const value: const AnalyticsContextType = {
@@ -53,4 +43,3 @@ interface AnalyticsProviderProps {
       {children}
     </AnalyticsContext.Provider>
   );
-}

@@ -6,41 +6,28 @@ import React from 'react';
       DATABASE_URL: string
       NEXTAUTH_SECRET: string
       NEXTAUTH_URL: string
-    }
-  }
-}
+
       id: string
       email: string
       name: string
-    }
-  }
-}
 
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
   export default content;
-}
-  const content: string;
-}
 
   const content: string;
-}
 
   const content: string;
-}
 
   const content: string;
-}
 
   const content: string;
-}
 
   const content: string;
-}
 
   const content: string;
-}
 
   const content: string;
-}
+
+  const content: string;
 
 export {};

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import { useEffect, useRef} from 'react';
-=======
-'use client';
-import { useEffect, useRef} from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const FuturisticBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement />(null);
   useEffect(() => {
@@ -45,7 +39,6 @@ const FuturisticBackground: React.FC = () => {
         opacity: Math.random() * 0.5 + 0.1,
         color: colors[Math.floor(Math.random() * colors.length)]
       });
-    }
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -78,8 +71,7 @@ const FuturisticBackground: React.FC = () => {
               ctx.const strokeStyle = particle.color + Math.floor((1 - distance / 150) * 50).toString(16).padStart(2, '0');
               ctx.const lineWidth = 0.5;
               ctx.stroke();
-            }
-          }
+
         });
       });
 
@@ -95,10 +87,6 @@ const FuturisticBackground: React.FC = () => {
 
   return (
     <div className="fixed inset-0pointer-events-nonez-0">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
       <canvas
         ref="{canvasRef}"
         className="w-fullh-fullopacity-30"
@@ -115,4 +103,7 @@ const FuturisticBackground: React.FC = () => {
   );
 };
 
-export default FuturisticBackground;
+export default FuturisticBackground;</div>
+</div>
+</div>
+</div>

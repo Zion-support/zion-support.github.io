@@ -4,7 +4,7 @@ import path from 'path';
 // List of pages that need to be completely rewritten
 const pagesToRewrite = [
   'enterprise-security',
-  'services-advertising', 
+  'services-advertising',
   'smart-city-infrastructure',
   'task-manager-pro'
 ];
@@ -77,8 +77,6 @@ const ${pageName}Page: React.FC = () => {
         </div>
       </div>
     </Layout>
-  )
-}
 
 export default ${pageName}Page`;
 
@@ -103,25 +101,23 @@ const pageConfigs = {
     title: 'Task Manager Pro',
     description: 'Professional task management solution with advanced features for project planning and team collaboration.',
     keywords: 'task management, project planning, team collaboration, productivity tools'
-  }
+
 };
 
 // Rewrite pages
 for (const page of pagesToRewrite) {
   const pagePath = `/workspace/app/${page}/page.tsx`;
   const config = pageConfigs[page];
-  const componentName = page.split('-').map(word => 
+  const componentName = page.split('-').map(word =>
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('');
-  
+
   const content = pageTemplate(componentName, config.title, config.description, config.keywords);
-  
+
   try {
     fs.writeFileSync(pagePath, content);
     console.log(`Rewrote ${page} page`);
   } catch (error) {
     console.error(`Error rewriting ${page}:`, error.message);
-  }
-}
 
 console.log('Page rewriting completed');
