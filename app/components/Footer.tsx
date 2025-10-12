@@ -49,17 +49,6 @@ export default function Footer() {
     { name: 'Terms of Service', path: '/terms' }
   ];
 
-  const quickLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'AI Services', path: '/ai-services' },
-    { name: 'IT Services', path: '/it-services' },
-    { name: 'Micro SAAS', path: '/micro-saas-services' },
-    { name: '5G Solutions', path: '/5g-implementation' },
-    { name: 'Contact', path: '/contact' }
->>>>>>> cursor/website-audit-and-update-with-deployment-c78e
-  ]
-
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -70,21 +59,6 @@ export default function Footer() {
             <p className="text-gray-400 mb-4">
               Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.
             </p>
-<<<<<<< HEAD
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <span className="sr-only">Twitter</span>
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <span className="sr-only">LinkedIn</span>
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <span className="sr-only">GitHub</span>
-                <Github className="w-5 h-5" />
-              </a>
-=======
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
                 <Mail className="w-4 h-4 mr-3" />
@@ -98,7 +72,6 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 mr-3" />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
             </div>
           </div>
 
@@ -138,11 +111,29 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company & Support */}
+          {/* Micro SAAS Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <h3 className="text-lg font-semibold mb-4">Micro SAAS Services</h3>
+            <ul className="space-y-2">
+              {microSaasServices.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.path} 
+                    className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 mb-6">
-              {companyLinks.map((link, index) => (
+              {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
                     to={link.path} 
@@ -154,46 +145,19 @@ export default function Footer() {
               ))}
             </ul>
             
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
-            <ul className="space-y-2">
-              {supportLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to={link.path} 
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-<<<<<<< HEAD
-          {/* Legal Pages */}
-          <div>
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               {legalPages.map((page) => (
                 <li key={page.name}>
                   <Link
                     to={page.path}
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors"
                   >
                     {page.name}
-=======
-        {/* Micro SAAS Services */}
-        <div className="mb-12">
-          <h3 className="text-lg font-semibold mb-4">Micro SAAS Services</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            <Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors text-sm font-semibold">
-              All Micro SAAS
-            </Link>
-            {microSaasServices.map((service, index) => (
-              <Link key={index} to={service.path} className="text-gray-400 hover:text-white transition-colors text-sm">
-                {service.name}
-              </Link>
-            ))}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
@@ -226,53 +190,21 @@ export default function Footer() {
                 © 2024 Zion Tech Group. All rights reserved.
               </p>
               <div className="flex space-x-6">
-                {legal.map((item, index) => (
+                {legalPages.map((item, index) => (
                   <Link key={index} to={item.path} className="text-gray-400 hover:text-white transition-colors text-sm">
                     {item.name}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
                   </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Contact Info */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex items-center">
-              <Mail className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">contact@ziontech.com</span>
+                ))}
+              </div>
             </div>
-<<<<<<< HEAD
-            <div className="flex items-center">
-              <Phone className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">+1 (555) 123-4567</span>
-            </div>
-            <div className="flex items-center">
-              <MapPin className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">San Francisco, CA</span>
-=======
             <div className="mt-4 md:mt-0">
               <p className="text-gray-500 text-xs">
                 Built with ❤️ by Zion Tech Group
               </p>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
             </div>
           </div>
         </div>
-
-        {/* Copyright */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © 2024 Zion Tech Group. All rights reserved.
-          </p>
-        </div>
       </div>
     </footer>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
 }

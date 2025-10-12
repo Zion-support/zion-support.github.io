@@ -162,94 +162,34 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-<<<<<<< HEAD
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
-              <Link to="/" className="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+              <Link to="/" className="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">
                 Home
               </Link>
-              <Link to="/about" className="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-=======
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-lg mt-2">
-              <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors">
-                Home
-              </Link>
-              <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
+              <Link to="/about" className="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">
                 About
               </Link>
               
               {/* AI Services Mobile */}
               <div className="px-3 py-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">AI Services</p>
-                {aiServices.map((service, index) => (
-                  <Link key={index} to={service.path} className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
-                    {service.name}
-                  </Link>
-                ))}
-=======
-                <div className="text-white font-medium mb-2">Services</div>
-                <div className="space-y-1 ml-4">
-                  {services.map((service, index) => (
-                    <div key={index}>
-                      <Link
-                        to={service.href}
-                        className="flex items-center text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        <div className="mr-2">{service.icon}</div>
-                        {service.title}
-                      </Link>
-                      {service.submenu && (
-                        <div className="ml-6 space-y-1">
-                          {service.submenu.map((subItem, subIndex) => (
-                            <Link
-                              key={subIndex}
-                              to={subItem.href}
-                              className="block text-gray-400 hover:text-white px-3 py-1 rounded-md text-xs"
-                              onClick={() => setIsOpen(false)}
-                            >
-                              {subItem.title}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-=======
-                <div className="text-gray-300 font-medium mb-2">AI Services</div>
+                <div className="text-gray-700 font-medium mb-2">AI Services</div>
                 <div className="ml-4 space-y-1">
-                  <Link to="/ai-services" className="text-gray-400 hover:text-white block py-1 text-sm" onClick={() => setIsOpen(false)}>All AI Services</Link>
+                  <Link to="/ai-services" className="text-gray-500 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>All AI Services</Link>
                   {aiServices.slice(0, 4).map((service, index) => (
-                    <Link key={index} to={service.path} className="text-gray-400 hover:text-white block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                    <Link key={index} to={service.path} className="text-gray-500 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
                       {service.name}
                     </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
                   ))}
                 </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-c78e
               </div>
 
               {/* IT Services Mobile */}
               <div className="px-3 py-2">
-<<<<<<< HEAD
-                <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">IT Services</p>
-                {services.slice(1).map((service, index) => (
-                  <Link key={index} to={service.href} className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
-                    {service.title}
-                  </Link>
-                ))}
-              </div>
-
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center"
-=======
-                <div className="text-gray-300 font-medium mb-2">IT Services</div>
+                <div className="text-gray-700 font-medium mb-2">IT Services</div>
                 <div className="ml-4 space-y-1">
-                  <Link to="/it-services" className="text-gray-400 hover:text-white block py-1 text-sm" onClick={() => setIsOpen(false)}>All IT Services</Link>
+                  <Link to="/it-services" className="text-gray-500 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>All IT Services</Link>
                   {itServices.slice(0, 4).map((service, index) => (
-                    <Link key={index} to={service.path} className="text-gray-400 hover:text-white block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                    <Link key={index} to={service.path} className="text-gray-500 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
                       {service.name}
                     </Link>
                   ))}
@@ -258,28 +198,27 @@ export default function Navigation() {
 
               {/* Micro SAAS Mobile */}
               <div className="px-3 py-2">
-                <div className="text-gray-300 font-medium mb-2">Micro SAAS</div>
+                <div className="text-gray-700 font-medium mb-2">Micro SAAS</div>
                 <div className="ml-4 space-y-1">
-                  <Link to="/micro-saas-services" className="text-gray-400 hover:text-white block py-1 text-sm" onClick={() => setIsOpen(false)}>All Micro SAAS</Link>
+                  <Link to="/micro-saas-services" className="text-gray-500 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>All Micro SAAS</Link>
                   {microSaasServices.slice(0, 4).map((service, index) => (
-                    <Link key={index} to={service.path} className="text-gray-400 hover:text-white block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                    <Link key={index} to={service.path} className="text-gray-500 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
                       {service.name}
                     </Link>
                   ))}
                 </div>
               </div>
 
-              <Link to="/5g-implementation" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors">
+              <Link to="/5g-implementation" className="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">
                 5G Solutions
               </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors">
+              <Link to="/contact" className="text-gray-700 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">
                 Contact
               </Link>
               
               <Link 
                 to="/contact" 
                 className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 rounded-lg text-base font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center mt-4"
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
                 onClick={() => setIsOpen(false)}
               >
                 Get Started
@@ -289,5 +228,5 @@ export default function Navigation() {
         )}
       </div>
     </nav>
-  )
+  );
 }
