@@ -165,8 +165,10 @@ function App() {
   const { performanceData } = usePerformanceMonitor();
 
   return (
-            <Suspense fallback={<PageLoader />}>
-                <Route path="/" element={<HomePage />} />
+    <Router>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/services" element={<ServicesPage />} />
@@ -306,6 +308,9 @@ function App() {
                 <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
                 <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
                 <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+        </Routes>
+      </Suspense>
+    </Router>
   );
 
 export default App;

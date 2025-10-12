@@ -1,49 +1,54 @@
 
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Wifi, ArrowRight, CheckCircle, Brain, Building, Users } from 'lucide-react'
-import Layout from '../layout'
+import { Wifi, ArrowRight, CheckCircle, Brain, Building, Users } from 'lucide-react';
 
 export default function FiveGSmartCitySolutions() {
   const features = [
+    {
       icon: <Wifi className="w-6 h-6 text-cyan-400" />,
       title: 'Ultra-Fast Connectivity',
       description: '5G networks providing 10x faster speeds and ultra-low latency for smart city applications'
     },
+    {
       icon: <Building className="w-6 h-6 text-purple-400" />,
       title: 'Smart Infrastructure',
       description: 'Intelligent traffic management, energy optimization, and environmental monitoring systems'
     },
+    {
       icon: <Brain className="w-6 h-6 text-yellow-400" />,
       title: 'AI-Powered Analytics',
       description: 'Machine learning algorithms analyze city data to optimize services and improve quality of life'
     },
+    {
       icon: <Users className="w-6 h-6 text-green-400" />,
       title: 'Citizen Engagement',
       description: 'Digital platforms connecting citizens with city services and enabling participatory governance'
-  ]
+    }
+  ];
 
   const smartCityModules = [
+    {
       category: 'Transportation',
       items: ['Smart Traffic Lights', 'Autonomous Vehicle Support', 'Public Transit Optimization', 'Parking Management', 'Traffic Analytics', 'Emergency Response']
     },
+    {
       category: 'Energy & Environment',
       items: ['Smart Grid Management', 'Air Quality Monitoring', 'Waste Management', 'Water Systems', 'Renewable Energy', 'Carbon Footprint Tracking']
     },
+    {
       category: 'Public Safety',
       items: ['Video Surveillance', 'Emergency Alerts', 'Crime Prevention', 'Disaster Response', 'Crowd Management', 'Health Monitoring']
     },
+    {
       category: 'Digital Services',
       items: ['Citizen Portal', 'Mobile Apps', 'Digital Payments', 'Service Requests', 'Open Data Platform', 'E-Government']
-  ]
+    }
+  ];
 
   const pricingPlans = [
+    {
       name: 'Pilot Program',
       price: '$50,000',
       period: 'one-time',
