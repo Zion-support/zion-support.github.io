@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Shield, Cloud, Database } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 

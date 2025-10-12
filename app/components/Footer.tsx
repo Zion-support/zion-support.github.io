@@ -21,7 +21,6 @@ export default function Footer() {
     { name: 'System Integration', path: '/system-integration' }
   ]
 
-<<<<<<< HEAD
   const companyLinks = [
     { name: 'About Us', path: '/about' },
     { name: 'Our Team', path: '/team' },
@@ -38,22 +37,22 @@ export default function Footer() {
     { name: 'Status Page', path: '/status' },
     { name: 'Contact Support', path: '/contact' },
     { name: 'Community', path: '/community' }
-=======
+  ]
+
   const legalPages = [
     { name: 'Privacy Policy', path: '/privacy' },
     { name: 'Terms of Service', path: '/terms' }
   ]
 
-  const quickLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'AI Services', path: '/ai-services' },
-    { name: 'IT Services', path: '/it-services' },
-    { name: 'Micro SAAS', path: '/micro-saas-services' },
-    { name: '5G Solutions', path: '/5g-implementation' },
-    { name: 'Contact', path: '/contact' }
->>>>>>> cursor/website-audit-and-update-with-deployment-c78e
-  ]
+  // const quickLinks = [
+  //   { name: 'Home', path: '/' },
+  //   { name: 'About', path: '/about' },
+  //   { name: 'AI Services', path: '/ai-services' },
+  //   { name: 'IT Services', path: '/it-services' },
+  //   { name: 'Micro SAAS', path: '/micro-saas-services' },
+  //   { name: '5G Solutions', path: '/5g-implementation' },
+  //   { name: 'Contact', path: '/contact' }
+  // ]
 
   return (
     <footer className="bg-gray-900 text-white">

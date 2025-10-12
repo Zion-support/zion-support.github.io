@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Globe, Zap, Users, BarChart3, Shield, Code } from 'lucide-react'
+import { ArrowRight, Globe, Zap, Users, BarChart3, Shield, Code } from 'lucide-react'
 
 export default function WebDevelopmentPage() {
   const features = [
