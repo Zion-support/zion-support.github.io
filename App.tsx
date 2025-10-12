@@ -12,15 +12,52 @@ import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
 const HomePage = React.lazy(() => import('./app/page'))
 const AboutPage = React.lazy(() => import('./app/about/page'))
 const ContactPage = React.lazy(() => import('./app/contact/page'))
-const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'))
-const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
-const MicroSAASServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
-const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
-const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'))
-const CareersPage = React.lazy(() => import('./app/careers/page'))
+const AIServicesPage = React.lazy(() => import('./app/ai-services/page'))
+const PricingPage = React.lazy(() => import('./app/pricing/page'))
 const BlogPage = React.lazy(() => import('./app/blog/page'))
-const PrivacyPolicyPage = React.lazy(() => import('./app/privacy-policy/page'))
-const TermsOfServicePage = React.lazy(() => import('./app/terms-of-service/page'))
+const NewsPage = React.lazy(() => import('./app/news/page'))
+const SupportPage = React.lazy(() => import('./app/support/page'))
+const CareersPage = React.lazy(() => import('./app/careers/page'))
+const InvestorsPage = React.lazy(() => import('./app/investors/page'))
+const StatusPage = React.lazy(() => import('./app/status/page'))
+const SystemStatusPage = React.lazy(() => import('./app/system-status/page'))
+const NotFoundPage = React.lazy(() => import('./app/not-found'))
+const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'))
+const MicroSaasAnalyticsDashboardPage = React.lazy(() => import('./app/micro-saas/analytics-dashboard/page'))
+const MicroSaasAppointmentSchedulerPage = React.lazy(() => import('./app/micro-saas/appointment-scheduler/page'))
+const MicroSaasChatAnalyticsPage = React.lazy(() => import('./app/micro-saas/chat-analytics/page'))
+const MicroSaasContentGeneratorPage = React.lazy(() => import('./app/micro-saas/content-generator/page'))
+const MicroSaasDocumentProcessorPage = React.lazy(() => import('./app/micro-saas/document-processor/page'))
+const MicroSaasEmailMarketingPage = React.lazy(() => import('./app/micro-saas/email-marketing/page'))
+const MicroSaasExpenseTrackerPage = React.lazy(() => import('./app/micro-saas/expense-tracker/page'))
+const MicroSaasInventoryManagementPage = React.lazy(() => import('./app/micro-saas/inventory-management/page'))
+const MicroSaasLeadScoringPage = React.lazy(() => import('./app/micro-saas/lead-scoring/page'))
+const MicroSaasSeoOptimizerPage = React.lazy(() => import('./app/micro-saas/seo-optimizer/page'))
+const MicroSaasSocialManagerPage = React.lazy(() => import('./app/micro-saas/social-manager/page'))
+const MicroSaasSupportBotPage = React.lazy(() => import('./app/micro-saas/support-bot/page'))
+const AIAutomatedReportingPage = React.lazy(() => import('./app/ai-automated-reporting/page'))
+const AIChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'))
+const AIExpenseTrackerPage = React.lazy(() => import('./app/ai-expense-tracker/page'))
+const AIPasswordManagerPage = React.lazy(() => import('./app/ai-password-manager/page'))
+const AITaskManagerPage = React.lazy(() => import('./app/ai-task-manager/page'))
+const BusinessIntelligencePage = React.lazy(() => import('./app/business-intelligence/page'))
+const ITConsultingPage = React.lazy(() => import('./app/it-consulting/page'))
+const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
+const DataCenterPage = React.lazy(() => import('./app/data-center/page'))
+const DatabaseServicesPage = React.lazy(() => import('./app/database-services/page'))
+const DatabasePage = React.lazy(() => import('./app/database/page'))
+const DevOpsPage = React.lazy(() => import('./app/devops/page'))
+const EnterprisePage = React.lazy(() => import('./app/enterprise/page'))
+const EnterpriseSecurityPage = React.lazy(() => import('./app/enterprise-security/page'))
+const GDPRPage = React.lazy(() => import('./app/gdpr/page'))
+const IOTEdgeComputingPage = React.lazy(() => import('./app/iot-edge-computing/page'))
+const RoboticsPage = React.lazy(() => import('./app/robotics/page'))
+const SmartCityInfrastructurePage = React.lazy(() => import('./app/smart-city-infrastructure/page'))
+const TaskManagerProPage = React.lazy(() => import('./app/task-manager-pro/page'))
+const TrainingPage = React.lazy(() => import('./app/training/page'))
+const ServicesAdvertisingPage = React.lazy(() => import('./app/services-advertising/page'))
+const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'))
 
 // Loading component for Suspense
 const PageLoader = () => (
@@ -30,107 +67,16 @@ const PageLoader = () => (
   </div>
 )
 
-function App() {
-=======
-import OptimizedLoading from './app/components/OptimizedLoading'
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
-import HomePage from './app/page'
-import AboutPage from './app/about/page'
-import ContactPage from './app/contact/page'
-import AIServicesPage from './app/ai-services/page'
-import PricingPage from './app/pricing/page'
-import BlogPage from './app/blog/page'
-import NewsPage from './app/news/page'
-import SupportPage from './app/support/page'
-import CareersPage from './app/careers/page'
-import InvestorsPage from './app/investors/page'
-import StatusPage from './app/status/page'
-import SystemStatusPage from './app/system-status/page'
-import NotFoundPage from './app/not-found'
-import MicroSaasPage from './app/micro-saas/page'
-import MicroSaasAnalyticsDashboardPage from './app/micro-saas/analytics-dashboard/page'
-import MicroSaasAppointmentSchedulerPage from './app/micro-saas/appointment-scheduler/page'
-import MicroSaasChatAnalyticsPage from './app/micro-saas/chat-analytics/page'
-import MicroSaasContentGeneratorPage from './app/micro-saas/content-generator/page'
-import MicroSaasDocumentProcessorPage from './app/micro-saas/document-processor/page'
-import MicroSaasEmailMarketingPage from './app/micro-saas/email-marketing/page'
-import MicroSaasExpenseTrackerPage from './app/micro-saas/expense-tracker/page'
-import MicroSaasInventoryManagementPage from './app/micro-saas/inventory-management/page'
-import MicroSaasLeadScoringPage from './app/micro-saas/lead-scoring/page'
-import MicroSaasSeoOptimizerPage from './app/micro-saas/seo-optimizer/page'
-import MicroSaasSocialManagerPage from './app/micro-saas/social-manager/page'
-import MicroSaasSupportBotPage from './app/micro-saas/support-bot/page'
-import AIAutomatedReportingPage from './app/ai-automated-reporting/page'
-import AIChatbotBuilderPage from './app/ai-chatbot-builder/page'
-import AIExpenseTrackerPage from './app/ai-expense-tracker/page'
-import AIPasswordManagerPage from './app/ai-password-manager/page'
-import AITaskManagerPage from './app/ai-task-manager/page'
-import BusinessIntelligencePage from './app/business-intelligence/page'
-import ITConsultingPage from './app/it-consulting/page'
-import ITServicesPage from './app/it-services/page'
-import CybersecurityPage from './app/cybersecurity/page'
-import DataCenterPage from './app/data-center/page'
-import DatabaseServicesPage from './app/database-services/page'
-import DatabasePage from './app/database/page'
-import DevOpsPage from './app/devops/page'
-import EnterprisePage from './app/enterprise/page'
-import EnterpriseSecurityPage from './app/enterprise-security/page'
-import GDPRPage from './app/gdpr/page'
-import IOTEdgeComputingPage from './app/iot-edge-computing/page'
-import RoboticsPage from './app/robotics/page'
-import SmartCityInfrastructurePage from './app/smart-city-infrastructure/page'
-import TaskManagerProPage from './app/task-manager-pro/page'
-import TrainingPage from './app/training/page'
-import ServicesAdvertisingPage from './app/services-advertising/page'
-import FiveGImplementationPage from './app/5g-implementation/page'
->>>>>>> cursor/analyze-improve-and-deploy-application-4ebe
-
 const App: React.FC = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-            <SEOHead />
-            <Navigation />
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/it-services" element={<ITServicesPage />} />
-                <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
-                <Route path="/cloud-services" element={<CloudServicesPage />} />
-                <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/careers" element={<CareersPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-                <Route path="/terms-of-service" element={<TermsOfServicePage />} />
-                {/* 404 Route */}
-                <Route path="*" element={
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-                    <div className="text-center">
-                      <h1 className="text-6xl font-bold text-white mb-4">404</h1>
-                      <p className="text-xl text-gray-300 mb-8">Page not found</p>
-                      <a 
-                        href="/" 
-                        className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                      >
-                        Go Home
-                      </a>
-                    </div>
-                  </div>
-                } />
-              </Routes>
-            </Suspense>
-=======
             <a href="#main-content" className="skip-link">Skip to main content</a>
->>>>>>> cursor/analyze-improve-and-deploy-application-4ebe
             <Navigation />
             <main id="main-content" className="min-h-screen">
-              <Suspense fallback={<OptimizedLoading />}>
+              <Suspense fallback={<PageLoader />}>
                 <Routes>
                   {/* Main Pages */}
                   <Route path="/" element={<HomePage />} />
