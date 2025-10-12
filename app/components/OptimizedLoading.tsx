@@ -1,42 +1,24 @@
-import React from 'react';
-import { Loader2 } from 'lucide-react';
+import React from 'react'
 
 interface OptimizedLoadingProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  text?: string;
-  fullScreen?: boolean;
-  className?: string;
+  fullScreen?: boolean
+  text?: string
 }
 
-const OptimizedLoading: React.FC<OptimizedLoadingProps> = ({
-  size = 'md',
-  text,
-  fullScreen = false,
-  className = ''
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
-  };
-
+export default function OptimizedLoading({ 
+  fullScreen = false, 
+  text = 'Loading...' 
+}: OptimizedLoadingProps) {
   const containerClasses = fullScreen 
-    ? 'fixed inset-0 bg-gray-900/80 backdrop-blur-sm flex items-center justify-center z-50'
-    : 'flex items-center justify-center p-4';
+    ? 'min-h-screen flex items-center justify-center bg-gray-900'
+    : 'flex items-center justify-center p-4'
 
   return (
-    <div className={`${containerClasses} ${className}`}>
-      <div className="flex flex-col items-center space-y-4">
-        <Loader2 className={`${sizeClasses[size]} text-blue-500 animate-spin`} />
-        {text && (
-          <p className="text-gray-300 text-sm font-medium animate-pulse">
-            {text}
-          </p>
-        )}
+    <div className={containerClasses}>
+      <div className="text-center">
+        <div className="w-12 h-12 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin mx-auto mb-4"></div>
+        <p className="text-gray-300">{text}</p>
       </div>
     </div>
-  );
-};
-
-export default OptimizedLoading;
+  )
+}

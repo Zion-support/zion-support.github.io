@@ -4,73 +4,70 @@ import re
 import glob
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a file by keeping the most recent version"""
+    """Fix merge conflicts in a file by keeping the latest version and removing conflict markers."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Remove all merge conflict markers and keep the content after the last =======
-        # This keeps the most recent version (usually after the last =======)
-        lines = content.split('\n')
-        new_lines = []
-        skip_until_next_section = False
+        # Remove all merge conflict markers and keep the latest version
+        # Pattern to match merge conflict blocks
+        conflict_pattern = r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]+'
         
-        for line in lines:
-            if line.startswith('<<<<<<< HEAD'):
-                skip_until_next_section = True
-                continue
-            elif line.startswith('======='):
-                skip_until_next_section = False
-                continue
-            elif line.startswith('>>>>>>>'):
-                skip_until_next_section = False
-                continue
-            elif not skip_until_next_section:
-                new_lines.append(line)
+        # Replace with empty string to remove conflicts
+        cleaned_content = re.sub(conflict_pattern, '', content, flags=re.DOTALL)
+        
+        # Also remove any remaining conflict markers
+        cleaned_content = re.sub(r'<<<<<<< HEAD.*?\n', '', cleaned_content, flags=re.DOTALL)
+        cleaned_content = re.sub(r'=======.*?\n', '', cleaned_content, flags=re.DOTALL)
+        cleaned_content = re.sub(r'>>>>>>> [^\n]+.*?\n', '', cleaned_content, flags=re.DOTALL)
+        
+        # Clean up any extra whitespace
+        cleaned_content = re.sub(r'\n\s*\n\s*\n', '\n\n', cleaned_content)
         
         # Write the cleaned content back
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write('\n'.join(new_lines))
+            f.write(cleaned_content)
         
         print(f"Fixed merge conflicts in: {file_path}")
         return True
+        
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/TSX files with merge conflicts
+    # Find all TypeScript and JavaScript files
     patterns = [
-        '/workspace/app/**/*.tsx',
-        '/workspace/app/**/*.ts',
-        '/workspace/components/**/*.tsx',
-        '/workspace/components/**/*.ts'
+        '**/*.tsx',
+        '**/*.ts',
+        '**/*.jsx',
+        '**/*.js'
     ]
     
-    files_to_fix = []
+    files_fixed = 0
+    total_files = 0
+    
     for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
+        for file_path in glob.glob(pattern, recursive=True):
+            # Skip node_modules and other directories
+            if 'node_modules' in file_path or 'dist' in file_path or '.next' in file_path:
+                continue
+                
+            total_files += 1
+            
+            # Check if file has merge conflicts
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>> ' in content:
+                    if fix_merge_conflicts(file_path):
+                        files_fixed += 1
+                        
+            except Exception as e:
+                print(f"Error reading {file_path}: {e}")
     
-    # Filter files that actually have merge conflicts
-    files_with_conflicts = []
-    for file_path in files_to_fix:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
-                    files_with_conflicts.append(file_path)
-        except:
-            continue
-    
-    print(f"Found {len(files_with_conflicts)} files with merge conflicts")
-    
-    # Fix each file
-    fixed_count = 0
-    for file_path in files_with_conflicts:
-        if fix_merge_conflicts(file_path):
-            fixed_count += 1
-    
-    print(f"Fixed merge conflicts in {fixed_count} files")
+    print(f"\nFixed merge conflicts in {files_fixed} out of {total_files} files")
 
 if __name__ == "__main__":
     main()

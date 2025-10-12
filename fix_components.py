@@ -1,4 +1,152 @@
-import React, { useState } from 'react'
+#!/usr/bin/env python3
+import os
+import glob
+
+def create_clean_component(component_name, content):
+    """Create a clean version of a component."""
+    file_path = f"app/components/{component_name}.tsx"
+    
+    try:
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        print(f"Created clean {component_name}.tsx")
+        return True
+    except Exception as e:
+        print(f"Error creating {component_name}.tsx: {e}")
+        return False
+
+def main():
+    # Create clean ErrorBoundary component
+    error_boundary_content = '''import React, { Component, ErrorInfo, ReactNode } from 'react'
+
+interface Props {
+  children: ReactNode
+  fallback?: ReactNode
+}
+
+interface State {
+  hasError: boolean
+  error?: Error
+}
+
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    this.state = { hasError: false }
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error }
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo)
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-900">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">Something went wrong</h2>
+            <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
+            >
+              Reload Page
+            </button>
+          </div>
+        </div>
+      )
+    }
+
+    return this.props.children
+  }
+}
+
+export default ErrorBoundary
+'''
+    
+    # Create clean LoadingSpinner component
+    loading_spinner_content = '''import React from 'react'
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg'
+  text?: string
+  fullScreen?: boolean
+}
+
+export default function LoadingSpinner({ 
+  size = 'md', 
+  text = 'Loading...', 
+  fullScreen = false 
+}: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  }
+
+  const containerClasses = fullScreen 
+    ? 'min-h-screen flex items-center justify-center bg-gray-900'
+    : 'flex items-center justify-center p-4'
+
+  return (
+    <div className={containerClasses}>
+      <div className="text-center">
+        <div className={`${sizeClasses[size]} border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin mx-auto mb-4`}></div>
+        {text && <p className="text-gray-300">{text}</p>}
+      </div>
+    </div>
+  )
+}
+'''
+    
+    # Create clean SEOHead component
+    seo_head_content = '''import React from 'react'
+import { Helmet } from 'react-helmet-async'
+
+interface SEOHeadProps {
+  title: string
+  description: string
+  keywords?: string
+  canonical?: string
+  ogImage?: string
+}
+
+export default function SEOHead({ 
+  title, 
+  description, 
+  keywords = '', 
+  canonical = '', 
+  ogImage = '' 
+}: SEOHeadProps) {
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      {canonical && <link rel="canonical" href={canonical} />}
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content="website" />
+      {ogImage && <meta property="og:image" content={ogImage} />}
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      {ogImage && <meta name="twitter:image" content={ogImage} />}
+    </Helmet>
+  )
+}
+'''
+    
+    # Create clean ContactForm component
+    contact_form_content = '''import React, { useState } from 'react'
 import { Mail, Phone, MapPin, Send } from 'lucide-react'
 
 export default function ContactForm() {
@@ -191,3 +339,18 @@ export default function ContactForm() {
     </div>
   )
 }
+'''
+    
+    # Create components
+    components = [
+        ('ErrorBoundary', error_boundary_content),
+        ('LoadingSpinner', loading_spinner_content),
+        ('SEOHead', seo_head_content),
+        ('ContactForm', contact_form_content)
+    ]
+    
+    for name, content in components:
+        create_clean_component(name, content)
+
+if __name__ == "__main__":
+    main()
