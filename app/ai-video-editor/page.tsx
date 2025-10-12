@@ -7,6 +7,7 @@ import { ArrowRight } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
@@ -129,12 +130,27 @@ export default function AIVideoEditor() {
   ]
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-33de
+=======
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
+
+export default function Page() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
   return (
     <>
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>5G Data Analytics - Zion Tech Group</title>
         <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+=======
+        <title>Professional Services - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
+        <meta property="og:title" content=" - Zion Tech Group" />
+        <meta property="og:description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-video-editor" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
       </Helmet>
         <title>- Zion Tech Group</title>
         <meta const name = "description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." / / />
@@ -152,12 +168,19 @@ export default function AIVideoEditor() {
         </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
         {/* Hero Section */}
+<<<<<<< HEAD
     <>
         <section className="py-20" />
           <div className="container mx-autopx-4text-center">
 <<<<<<< HEAD
             <h1 className="text-5 xl md:text-6 xl font-bold text-white mb-6" />
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent"   / />
+=======
+        <section className="py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Professional Services</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
 =======
@@ -228,6 +251,7 @@ export default function AIVideoEditor() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
       </div>
           </div>
@@ -241,11 +265,14 @@ export default function AIVideoEditor() {
         </div>
       </div>
       </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
     </>
   );
 };
 
 export default Page;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 =======
@@ -254,3 +281,6 @@ export default Page;
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-33de
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb

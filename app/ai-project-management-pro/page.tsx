@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React  from 'react';
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-33de
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
 'use client';
 import React from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
@@ -12,6 +15,7 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 import { ArrowRight, CheckCircle, Zap, Shield, Brain } from 'lucide-react';
 
+<<<<<<< HEAD
 const Page: React.FC = () => {
   const pricingPlans = [
     {
@@ -397,6 +401,17 @@ export default function AIProjectManagementPro() {
         <meta name="keywords" content="AI project management, team collaboration, productivity, Zion Tech Group" />
         <meta property="og:title" content="AI Project Management Pro - Zion Tech Group" />
         <meta property="og:description" content="Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs." />
+=======
+export default function AIProjectManagementPro() {
+  return (
+    <>
+      <Helmet>
+        <title>AI Project Management Pro - Zion Tech Group | Advanced Project Management Solutions</title>
+        <meta name="description" content="Transform your project management with AI-powered tools. Streamline workflows, track progress, and deliver projects on time with our advanced platform." />
+        <meta name="keywords" content="AI project management, project tracking, team collaboration, workflow automation, project analytics" />
+        <meta property="og:title" content="AI Project Management Pro - Zion Tech Group" />
+        <meta property="og:description" content="Transform your project management with AI-powered tools. Streamline workflows, track progress, and deliver projects on time with our advanced platform." />
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-project-management-pro" />
       </Helmet>
@@ -411,7 +426,12 @@ export default function AIProjectManagementPro() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
               Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs.
+=======
+              Transform your project management with AI-powered tools that streamline workflows, 
+              track progress, and deliver projects on time with intelligent automation.
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link 
@@ -427,6 +447,20 @@ export default function AIProjectManagementPro() {
               >
                 Learn More
               </Link>
+<<<<<<< HEAD
+=======
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+    },
+    {
+      name: 'Enterprise',
+      price: '$299',
+      period: '/month',
+                </div>
+              ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
             </div>
           </div>
         </section>
@@ -529,6 +563,7 @@ export default function AIProjectManagementPro() {
         {/* CTA Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className="py-20" />
           <div className="containermx-autopx-4">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xlp-12text-center">
@@ -550,6 +585,8 @@ export default function AIProjectManagementPro() {
               <p className="text-xl text-gray-300 mb-8max-w-2xlmx-auto">
               Contact us to learn more about our solutions and how we can help your business.
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
@@ -585,6 +622,7 @@ export default function AIProjectManagementPro() {
                 </Link>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>
         </section>
       </div>
@@ -601,11 +639,18 @@ export default function AIProjectManagementPro() {
         </div>
       </div>
       </div>
+=======
+            </div>
+          </div>
+        </section>
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
     </>
   );
 };
 
 export default Page;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 =======
@@ -620,3 +665,6 @@ export default Page;
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-33de
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb

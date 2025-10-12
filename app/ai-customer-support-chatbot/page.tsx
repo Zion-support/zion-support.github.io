@@ -9,11 +9,14 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const AiCustomerSupportChatbotPage: React.FC = () => {
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
 import { ArrowRight, CheckCircle, Star, Brain, Clock, Target, BarChart3 } from 'lucide-react';
 
 export default function AICustomerSupportChatbot() {
@@ -130,11 +133,15 @@ export default function AICustomerSupportChatbot() {
     }
   ]
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-33de
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
   return (
     <>
     <>
       <Helmet>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <title>5G Data Analytics - Zion Tech Group</title>
         <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
@@ -144,6 +151,13 @@ export default function AICustomerSupportChatbot() {
         <meta name="keywords" content="AI chatbot, customer support, automation, Zion Tech Group" />
         <meta property="og:title" content="AI Customer Support Chatbot - Zion Tech Group" />
         <meta property="og:description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." />
+=======
+        <title>Professional Services - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
+        <meta property="og:title" content=" - Zion Tech Group" />
+        <meta property="og:description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-customer-support-chatbot" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-33de
@@ -189,9 +203,13 @@ export default function AICustomerSupportChatbot() {
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+<<<<<<< HEAD
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 AI Customer Support Chatbot
               </span>
+=======
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Professional Services</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs.
@@ -378,6 +396,7 @@ export default function AICustomerSupportChatbot() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
       </div>
           </div>
@@ -406,3 +425,8 @@ export default AiCustomerSupportChatbotPage;
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-33de
+=======
+    </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb

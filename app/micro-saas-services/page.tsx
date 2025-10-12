@@ -4,11 +4,15 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { 
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-6024
 =======
 import { Zap, BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users, Award, Star } from 'lucide-react';
@@ -21,6 +25,8 @@ import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-33de
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
 
 const MicroSaasServicesPage: React.FC = () => {
   const services = [
@@ -107,6 +113,7 @@ const MicroSaasServicesPage: React.FC = () => {
     <>
     <>
       <Helmet>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -376,3 +383,6 @@ export default MicroSaasServicesPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-33de
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb

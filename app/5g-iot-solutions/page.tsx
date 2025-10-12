@@ -8,10 +8,14 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function FiveGIoTSolutionsPage() {
 =======
 export default function FiveGIotSolutionsPage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-33de
+=======
+export default function FiveGIoTSolutionsPage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900pt-20">

@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React  from 'react';
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
 'use client';
 import React from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
@@ -9,7 +12,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-const Page: React.FC = () => {
+export default function Page() {
   return (
     <>
 <<<<<<< HEAD
@@ -18,15 +21,20 @@ const Page: React.FC = () => {
 =======
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>5G Data Analytics - Zion Tech Group</title>
         <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
         <title> - Zion Tech Group</title>
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
         <meta name="description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
+=======
+        <title>Professional Services - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
         <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
         <meta property="og:title" content=" - Zion Tech Group" />
-        <meta property="og:description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta property="og:description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/cloud-migration-pro" />
       </Helmet>
@@ -35,10 +43,17 @@ const Page: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16">
 <<<<<<< HEAD
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="py-20" />
           <div className="container mx-autopx-4text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" />
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent" />
+=======
+        <section className="py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Professional Services</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
             </h1>
             <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
               Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
@@ -146,6 +161,7 @@ const Page: React.FC = () => {
 
 export default Page;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
@@ -177,3 +193,6 @@ export default function CloudMigrationProPage() {
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-33de
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
