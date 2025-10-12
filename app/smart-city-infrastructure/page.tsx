@@ -11,20 +11,20 @@ const SmartCityInfrastructurePage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-      description: 'Advanced AI technology to transform your city infrastructure and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
+    description: 'Advanced AI technology to transform your city infrastructure and improve efficiency'
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-      description: 'Lightning-fast processing and real-time analytics for optimal city management'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
+    description: 'Lightning-fast processing and real-time analytics for optimal city management'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-      description: 'Bank-level security with advanced encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
+    description: 'Bank-level security with advanced encryption and compliance standards'
     },
     {
       icon: Globe,
@@ -87,7 +87,7 @@ const PagePage: React.FC = () => {const features = [
     {icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'}
-      description: 'Worldwide deployment and support for international smart city projects'
+        description: 'Worldwide deployment and support for international smart city projects'
     }
   ]
   const smartCityServices = [

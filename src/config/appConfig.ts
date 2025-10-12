@@ -3,59 +3,59 @@
  * Centralized configuration management for the Zion Tech Group application
  */
 export interface AppConfig {
-  app: {
-    name: string;
-    version: string;
+  app: {,
+    name: string;,
+    version: string;,
     environment: 'development' | 'production' | 'test';
   };
-  api: {
-    baseUrl: string;
-    timeout: number;
+  api: {,
+    baseUrl: string;,
+    timeout: number;,
     retryAttempts: number;
   };
-  features: {
-    analytics: boolean;
-    monitoring: boolean;
-    errorTracking: boolean;
+  features: {,
+    analytics: boolean;,
+    monitoring: boolean;,
+    errorTracking: boolean;,
     performanceOptimization: boolean;
   };
-  performance: {
-    enableLazyLoading: boolean;
-    imageLazyLoadThreshold: number;
-    componentLazyLoadThreshold: number;
+  performance: {,
+    enableLazyLoading: boolean;,
+    imageLazyLoadThreshold: number;,
+    componentLazyLoadThreshold: number;,
     cacheMaxAge: number;
   };
-  security: {
-    enableCSP: boolean;
-    enableHSTS: boolean;
+  security: {,
+    enableCSP: boolean;,
+    enableHSTS: boolean;,
     enableXSSProtection: boolean;
   };
 }
-const config: AppConfig = {
-  app: {
+const config: AppConfig = {,
+    app: {,
     name: 'Zion Tech Group',
     version: '1.0.0',
     environment:
       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
   },
-  api: {
+  api: {,
     baseUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.zion.app',
     timeout: 30000,
     retryAttempts: 3
   },
-  features: {
+  features: {,
     analytics: process.env['NODE_ENV'] === 'production',
     monitoring: true,
     errorTracking: true,
     performanceOptimization: true
   },
-  performance: {
+  performance: {,
     enableLazyLoading: true,
     imageLazyLoadThreshold: 0.5,
     componentLazyLoadThreshold: 0.25,
     cacheMaxAge: 3600000, // 1 hour in milliseconds
   },
-  security: {
+  security: {,
     enableCSP: true,
     enableHSTS: true,
     enableXSSProtection: true

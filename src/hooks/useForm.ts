@@ -21,20 +21,20 @@ export interface UseFormConfig<T extends Record<string, unknown>> {
   validateOnBlur?: boolean;
 }
 export interface UseFormReturn<T extends Record<string, unknown>> {
-  values: T;
-  errors: Record<keyof T, string[]>;
+  values: T;,
+    errors: Record<keyof T, string[]>;
   touched: Record<keyof T, boolean>;
-  isSubmitting: boolean;
-  isValid: boolean;
-  handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
-  handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-  setFieldValue: (field: keyof T, value: T[keyof T]) => void;
-  setFieldError: (field: keyof T, errors: string[]) => void;
-  setFieldTouched: (field: keyof T, touched: boolean) => void;
-  resetForm: () => void;
-  validateField: (field: keyof T) => void;
-  validateAllFields: () => boolean;
+  isSubmitting: boolean;,
+    isValid: boolean;,
+    handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;,
+    handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;,
+    handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;,
+    setFieldValue: (field: keyof T, value: T[keyof T]) => void;,
+    setFieldError: (field: keyof T, errors: string[]) => void;,
+    setFieldTouched: (field: keyof T, touched: boolean) => void;,
+    resetForm: () => void;,
+    validateField: (field: keyof T) => void;,
+    validateAllFields: () => boolean;
 }
 export function useForm<T extends Record<string, unknown>>({
   initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true

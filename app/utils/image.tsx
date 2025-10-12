@@ -11,17 +11,17 @@ interface ImageProps {}
   height?: number
   className?: string
   priority?: boolean
-  _quality?: number
-  src: string,
+  _quality?: number,
+    src: string,
   alt: string,
-  src: string
-  alt: string
+  src: string,
+    alt: string
   width?: number
   height?: number
   className?: string
   priority?: boolean
-  _quality?: number
-  src: string,
+  _quality?: number,
+    src: string,
   alt: string,
   width?: number
   height?: number
@@ -67,8 +67,8 @@ export const Image: React.FC<ImageProps> = ({,
     if (onError) onError()}
   }, [onError])
   const imageStyle: React.CSSProperties = {...style
-    ...(fill && {position: 'absolute'
-      top: 0,
+    ...(fill && {position: 'absolute',
+    top: 0,
       left: 0,}
   const imageStyle: React.CSSProperties = {}
     ...style,

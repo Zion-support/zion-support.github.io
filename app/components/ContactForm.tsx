@@ -2,17 +2,17 @@ import React, { useState } from 'react'
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 
 interface FormData {
-  name: string
-  email: string
-  company: string
-  phone: string
-  service: string
-  message: string
+  name: string,
+    email: string,
+    company: string,
+    phone: string,
+    service: string,
+    message: string
 }
 
 interface FormStatus {
-  type: 'idle' | 'loading' | 'success' | 'error'
-  message: string
+  type: 'idle' | 'loading' | 'success' | 'error',
+    message: string
 }
 
 const ContactForm: React.FC = () => {

@@ -4,18 +4,18 @@
  */
 
 export interface AccessibilityCheckResult {
-  passed: boolean;
-  message: string;
-  severity: 'error' | 'warning' | 'info';
+  passed: boolean;,
+    message: string;,
+    severity: 'error' | 'warning' | 'info';
   element?: HTMLElement;
 }
 
 export interface AccessibilityReport {
-  totalChecks: number;
-  passedChecks: number;
-  failedChecks: number;
-  warnings: number;
-  results: AccessibilityCheckResult[];
+  totalChecks: number;,
+    passedChecks: number;,
+    failedChecks: number;,
+    warnings: number;,
+    results: AccessibilityCheckResult[];
 }
 
 export class AccessibilityChecker {
@@ -240,8 +240,8 @@ export class AccessibilityChecker {
     const score = this.getAccessibilityScore();
     
     return `
-Accessibility Report
-Score: ${score}%
+Accessibility Report,
+    Score: ${score}%
 Total Checks: ${report.totalChecks}
 Passed: ${report.passedChecks}
 Failed: ${report.failedChecks}

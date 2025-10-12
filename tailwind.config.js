@@ -6,11 +6,11 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {
-      colors: {
-        primary: {
-          50: '#f0f9ff',
+  theme: {,
+    extend: {,
+    colors: {,
+    primary: {,
+    50: '#f0f9ff',
           100: '#e0f2fe',
           200: '#bae6fd',
           300: '#7dd3fc',
@@ -21,8 +21,8 @@ export default {
           800: '#075985',
           900: '#0c4a6e',
         },
-        secondary: {
-          50: '#faf5ff',
+        secondary: {,
+    50: '#faf5ff',
           100: '#f3e8ff',
           200: '#e9d5ff',
           300: '#d8b4fe',
@@ -33,8 +33,8 @@ export default {
           800: '#6b21a8',
           900: '#581c87',
         },
-        accent: {
-          50: '#fdf2f8',
+        accent: {,
+    50: '#fdf2f8',
           100: '#fce7f3',
           200: '#fbcfe8',
           300: '#f9a8d4',
@@ -46,8 +46,8 @@ export default {
           900: '#831843',
         }
       },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+      fontFamily: {,
+    sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       animation: {
@@ -62,8 +62,8 @@ export default {
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
       },
-      keyframes: {
-        fadeIn: {
+      keyframes: {,
+    fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
@@ -106,8 +106,8 @@ export default {
       backgroundSize: {
         'cyber-grid': '20px 20px',
       },
-      backdropBlur: {
-        xs: '2px',
+      backdropBlur: {,
+    xs: '2px',
       },
       boxShadow: {
         'cyber': '0 0 20px rgba(168, 85, 247, 0.3), inset 0 0 20px rgba(168, 85, 247, 0.1)',

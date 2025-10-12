@@ -86,8 +86,8 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
     showErrorOverlay: isDevelopment,
     maxStoredErrors: 50,
     customMessages: DEFAULT_ERROR_MESSAGES,
-    fallbackComponents: {
-      default: DefaultErrorFallback,
+    fallbackComponents: {,
+    default: DefaultErrorFallback,
       network: NetworkErrorFallback,
       notFound: NotFoundFallback,
     },

@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  networkLatency: number;
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    networkLatency: number;
 }
 
 export const useEnhancedPerformance = () => {

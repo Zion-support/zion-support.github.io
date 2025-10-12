@@ -1,16 +1,16 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    fps: number;
 }
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    fps: number;
   [key: string]: number;
 }
 const PerformanceDashboard: React.FC = () => {

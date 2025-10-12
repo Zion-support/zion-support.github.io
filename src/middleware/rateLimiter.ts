@@ -5,15 +5,15 @@
  * @module rateLimiter
  */
 export interface RateLimitConfig {
-  windowMs: number; // Time window in milliseconds
-  max: number; // Maximum number of requests per window
+  windowMs: number; // Time window in milliseconds,
+    max: number; // Maximum number of requests per window
   message?: string; // Custom error message
   skipSuccessfulRequests?: boolean;
   skipFailedRequests?: boolean;
 }
 interface RequestRecord {
-  count: number;
-  resetTime: number;
+  count: number;,
+    resetTime: number;
 }
 /**
  * Simple in-memory rate limiter
@@ -88,30 +88,30 @@ export class RateLimiter {
  * Pre-configured rate limiters for common use cases
  */
 export const rateLimiters = {
-  // Strict: 10 requests per minute
-  strict: new RateLimiter({
+  // Strict: 10 requests per minute,
+    strict: new RateLimiter({,
     windowMs: 60 * 1000,
     max: 10,
     message: 'Too many requests. Please try again in a minute.'
   }),
-  // Standard: 100 requests per 15 minutes
-  standard: new RateLimiter({
+  // Standard: 100 requests per 15 minutes,
+    standard: new RateLimiter({,
     windowMs: 15 * 60 * 1000,
     max: 100
   }),
-  // Lenient: 1000 requests per hour
-  lenient: new RateLimiter({
+  // Lenient: 1000 requests per hour,
+    lenient: new RateLimiter({,
     windowMs: 60 * 60 * 1000,
     max: 1000
   }),
-  // API: 60 requests per minute
-  api: new RateLimiter({
+  // API: 60 requests per minute,
+    api: new RateLimiter({,
     windowMs: 60 * 1000,
     max: 60,
     message: 'API rate limit exceeded. Please try again later.'
   }),
-  // Authentication: 5 login attempts per 15 minutes
-  auth: new RateLimiter({
+  // Authentication: 5 login attempts per 15 minutes,
+    auth: new RateLimiter({,
     windowMs: 15 * 60 * 1000,
     max: 5,
     message: 'Too many login attempts. Please try again later.',

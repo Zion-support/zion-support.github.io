@@ -33,8 +33,8 @@ export interface AppError {}
   type: ErrorType,
   severity: ErrorSeverity,
   message: string,
-  stack?: string
-  timestamp: Date,
+  stack?: string,
+    timestamp: Date,
   userId?: string
   sessionId?: string
   url?: string
@@ -61,8 +61,8 @@ export interface ErrorHandlerConfig {}
   enableUserNotification: boolean,
   enableConsoleLogging: boolean,
   enableNetworkLogging: boolean,
-  reportEndpoint?: string
-  logLevel: 'debug' | 'info' | 'warn' | 'error'}
+  reportEndpoint?: string,
+    logLevel: 'debug' | 'info' | 'warn' | 'error'}
 // Default configuration
 export const defaultErrorHandlerConfig: ErrorHandlerConfig = {,
     enableLogging: true,}
@@ -142,15 +142,15 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
       componentStack: errorInfo?.componentStack ?? undefined}
   // Handle error
-  handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {const appError: AppError = {id: this.generateErrorId()
-      type: this.determineErrorType(error)
-      severity: this.determineErrorSeverity(error)
-      message: error.message
-      stack: error.stack
-      timestamp: new Date()
-      url: typeof window !== 'undefined' ? window.location.href : undefined
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined
-      componentStack: errorInfo?.componentStack ?? undefined
+  handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {const appError: AppError = {id: this.generateErrorId(),
+    type: this.determineErrorType(error),
+    severity: this.determineErrorSeverity(error),
+    message: error.message,
+    stack: error.stack,
+    timestamp: new Date(),
+    url: typeof window !== 'undefined' ? window.location.href : undefined,
+    userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+    componentStack: errorInfo?.componentStack ?? undefined
       context,
       resolved: false,
       retryCount: 0,}
@@ -176,14 +176,14 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       severity: this.determineNetworkErrorSeverity(status),
       message: error.message,
       stack: error.stack,
-    const appError: AppError = {id: this.generateErrorId()
-      type: ErrorType.NETWORK
-      severity: this.determineNetworkErrorSeverity(status)
-      message: error.message
-      stack: error.stack
-      timestamp: new Date(),
-      url: typeof window !== 'undefined' ? window.location.href : undefined
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined}
+    const appError: AppError = {id: this.generateErrorId(),
+    type: ErrorType.NETWORK,
+    severity: this.determineNetworkErrorSeverity(status),
+    message: error.message,
+    stack: error.stack,
+    timestamp: new Date(),
+      url: typeof window !== 'undefined' ? window.location.href : undefined,
+    userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined}
       context: { networkUrl: url, statusCode: status },
       resolved: false,
       retryCount: 0,}
@@ -203,12 +203,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       type: ErrorType.VALIDATION,
       severity: ErrorSeverity.LOW,
       id: this.generateErrorId(),
-      type: ErrorType.VALIDATION
-      severity: ErrorSeverity.LOW
-      message: `Validation error in ${field}: ${message}`,
+      type: ErrorType.VALIDATION,
+    severity: ErrorSeverity.LOW,
+    message: `Validation error in ${field}: ${message}`,
       timestamp: new Date(),
-      url: typeof window !== 'undefined' ? window.location.href : undefined
-      context: { field, value },
+      url: typeof window !== 'undefined' ? window.location.href : undefined,
+    context: { field, value },
       resolved: false,
       retryCount: 0,}
     this.errors.push(appError)
@@ -419,12 +419,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         method: 'POST',
         headers: {}
           'Content-Type': 'application/json'},
-        body: JSON.stringify({...error)
+        body: JSON.stringify({...error),
     timestamp: error.timestamp.toISOString()
     try {,
       await fetch(this.config.reportEndpoint, {)
-        method: 'POST')
-        headers: {)}
+        method: 'POST'),
+    headers: {)}
           'Content-Type': 'application/json')})
         body: JSON.stringify({)
           ...error),
@@ -445,8 +445,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     notification.className = 'error-notification'
     notification.style.cssText = `
       position: fixed;,
-    top: 20 px
-      right: 20 px;,
+    top: 20 px,
+    right: 20 px;,
     background: ${this.getNotificationColor(error.severity)}
       color: white;,
     padding: 15 px
@@ -565,9 +565,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         return '#ffc107'
       case ErrorSeverity.LOW: return '#28a745';,
     default:
-      case ErrorSeverity.LOW:
-        return '#28a745'
-      default:,
+      case ErrorSeverity.LOW: return '#28a745',
+    default:,
         return '#6c757d'}
   }
   // Check if error should be retried
@@ -793,13 +792,13 @@ export class ErrorBoundary extends React.Component<{ children: React.ReactNode; 
     return { hasError: true, error }}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
     this.errorHandler.handleError(error, errorInfo, {)}
-      component: 'ErrorBoundary'
+        component: 'ErrorBoundary'
   })
     render() {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.errorHandler.handleError(error, errorInfo, {)
-      component: 'ErrorBoundary')
-      component: 'ErrorBoundary'})
+      component: 'ErrorBoundary'),
+    component: 'ErrorBoundary'})
     render() {componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.errorHandler.handleError(error, errorInfo, {)
       component: 'ErrorBoundary')}

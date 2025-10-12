@@ -1,11 +1,11 @@
 'use client';
 import { useEffect, useCallback } from 'react';
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  loadTime: number;,
+    firstContentfulPaint: number;,
+    largestContentfulPaint: number;,
+    cumulativeLayoutShift: number;,
+    firstInputDelay: number;
 }
 export const usePerformanceOptimization = () => {
   const measurePerformance = useCallback(() => {
@@ -16,8 +16,8 @@ export const usePerformanceOptimization = () => {
       'navigation'
     )[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
-    const metrics: PerformanceMetrics = {
-      loadTime: navigation
+    const metrics: PerformanceMetrics = {,
+    loadTime: navigation
         ? navigation.loadEventEnd - navigation.loadEventStart
         : 0,
       firstContentfulPaint:

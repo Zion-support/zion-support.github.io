@@ -36,7 +36,7 @@ export interface ErrorBoundaryConfig {
   /**
    * Fallback UI components
    */
-  fallbackComponents: {
+  fallbackComponents: {,
     default: React.ComponentType<{ error: Error; resetError: () => void }>;
     network: React.ComponentType<{ error: Error; resetError: () => void }>;
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
@@ -66,8 +66,8 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
     showErrorOverlay: isDevelopment,
     maxStoredErrors: 50,
     customMessages: DEFAULT_ERROR_MESSAGES,
-    fallbackComponents: {
-      default: DefaultErrorFallback,
+    fallbackComponents: {,
+    default: DefaultErrorFallback,
       network: NetworkErrorFallback,
       notFound: NotFoundFallback
     }

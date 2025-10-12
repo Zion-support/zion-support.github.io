@@ -174,7 +174,7 @@ describe('AdvancedPerformanceMonitor', () => {
   class MockPerformanceObserver {
     constructor(callback: PerformanceObserverCallback) {
       this.callback = callback}
-    callback: PerformanceObserverCallback
+      callback: PerformanceObserverCallback
     observe() {}
     disconnect() {}
     takeRecords() { return []}

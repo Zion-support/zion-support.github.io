@@ -1,9 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-=======
-import { AlertTriangle, RefreshCw } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-04ca
 
 interface Props {
   children: ReactNode;
@@ -13,7 +9,6 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
-<<<<<<< HEAD
   errorInfo?: ErrorInfo;
 }
 
@@ -54,106 +49,57 @@ class ErrorBoundary extends Component<Props, State> {
   };
 
   render() {
-=======
-}
-
-class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false
-  };
-
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-  }
-
-  private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined });
-  };
-
-  public render() {
->>>>>>> cursor/analyze-improve-and-deploy-application-04ca
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-<<<<<<< HEAD
-          <div className="max-w-md w-full">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
-              <div className="mb-6">
-                <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
-                <h1 className="text-2xl font-bold text-white mb-2">
-                  Oops! Something went wrong
-                </h1>
-                <p className="text-gray-300 mb-6">
-                  We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
-                </p>
-              </div>
-
-              {process.env.NODE_ENV === 'development' && this.state.error && (
-                <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">
-                  <h3 className="text-sm font-semibold text-red-400 mb-2">Error Details:</h3>
-                  <pre className="text-xs text-red-300 whitespace-pre-wrap overflow-auto max-h-32">
-                    {this.state.error.toString()}
-                  </pre>
-                  {this.state.errorInfo && (
-                    <pre className="text-xs text-red-300 whitespace-pre-wrap overflow-auto max-h-32 mt-2">
-                      {this.state.errorInfo.componentStack}
-                    </pre>
-                  )}
-                </div>
-              )}
-
-              <div className="space-y-3">
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-                >
-                  <RefreshCw className="w-5 h-5 mr-2" />
-                  Try Again
-                </button>
-                <button
-                  onClick={this.handleGoHome}
-                  className="w-full border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center"
-                >
-                  <Home className="w-5 h-5 mr-2" />
-                  Go Home
-                </button>
-              </div>
-
-              <div className="mt-6 pt-6 border-t border-white/20">
-                <p className="text-sm text-gray-400">
-                  If this problem continues, please contact our support team.
-                </p>
-                <a
-                  href="/contact"
-                  className="text-purple-400 hover:text-purple-300 text-sm font-medium"
-                >
-                  Contact Support
-                </a>
-              </div>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
+            <div className="flex justify-center mb-4">
+              <AlertTriangle className="w-16 h-16 text-red-500" />
             </div>
-=======
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 max-w-md w-full text-center">
-            <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
-            <h2 className="text-2xl font-bold text-white mb-4">Something went wrong</h2>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+            
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">
+              Oops! Something went wrong
+            </h1>
+            
+            <p className="text-gray-600 mb-6">
+              We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
             </p>
-            <button
-              onClick={this.handleRetry}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto"
-            >
-              <RefreshCw className="w-5 h-5 mr-2" />
-              Try Again
-            </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-04ca
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-left">
+                <h3 className="font-semibold text-red-800 mb-2">Error Details:</h3>
+                <pre className="text-sm text-red-700 whitespace-pre-wrap">
+                  {this.state.error.toString()}
+                </pre>
+                {this.state.errorInfo && (
+                  <pre className="text-sm text-red-700 whitespace-pre-wrap mt-2">
+                    {this.state.errorInfo.componentStack}
+                  </pre>
+                )}
+              </div>
+            )}
+
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <button
+                onClick={this.handleRetry}
+                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Try Again
+              </button>
+              
+              <button
+                onClick={this.handleGoHome}
+                className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+              >
+                <Home className="w-4 h-4 mr-2" />
+                Go Home
+              </button>
+            </div>
           </div>
         </div>
       );
@@ -163,8 +109,4 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
-<<<<<<< HEAD
 export default ErrorBoundary;
-=======
-export default ErrorBoundary;
->>>>>>> cursor/analyze-improve-and-deploy-application-04ca

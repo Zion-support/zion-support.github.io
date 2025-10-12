@@ -3,10 +3,10 @@
  * Defines security headers and policies for the application
  */
 export const securityHeaders = {
-  // Content Security Policy
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
+  // Content Security Policy,
+    contentSecurityPolicy: {,
+    directives: {,
+    defaultSrc: ["'self'"],
       scriptSrc: [
         "'self'",
         "'unsafe-inline'",
@@ -23,8 +23,8 @@ export const securityHeaders = {
       upgradeInsecureRequests: true
     }
   },
-  // Security Headers
-  headers: {
+  // Security Headers,
+    headers: {
     'X-DNS-Prefetch-Control': 'on',
     'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
     'X-XSS-Protection': '1; mode=block',
@@ -38,9 +38,9 @@ export const securityHeaders = {
  * Rate limiting configuration
  */
 export const rateLimitConfig = {
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // Limit each IP to 100 requests per windowMs
-  message: 'Too many requests from this IP, please try again later.'
+  windowMs: 15 * 60 * 1000, // 15 minutes,
+    max: 100, // Limit each IP to 100 requests per windowMs,
+    message: 'Too many requests from this IP, please try again later.'
 };
 /**
  * CORS configuration
@@ -59,10 +59,10 @@ export const sessionConfig = {
   secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
   resave: false,
   saveUninitialized: false,
-  cookie: {
+  cookie: {,
     secure: process.env['NODE_ENV'] === 'production',
     httpOnly: true,
-    maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    maxAge: 24 * 60 * 60 * 1000, // 24 hours,
     sameSite: 'strict' as const
   }
 };

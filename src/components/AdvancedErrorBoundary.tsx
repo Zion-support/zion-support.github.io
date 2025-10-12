@@ -10,10 +10,10 @@ const logger = {
   }
 };
 interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
+  hasError: boolean;,
+    error: Error | null;,
+    errorInfo: ErrorInfo | null;,
+    errorId: string | null;
 }
 interface ErrorBoundaryProps {
   children: ReactNode;
@@ -23,17 +23,17 @@ interface ErrorBoundaryProps {
   enableRetry?: boolean;
 }
 interface ErrorReport {
-  errorId: string | null;
-  error: Error;
-  errorInfo: ErrorInfo;
-  message: string;
-  stack: string | undefined;
-  componentStack: string | null | undefined;
-  timestamp: string;
-  userAgent: string;
-  url: string;
-  userId: string | null;
-  sessionId: string;
+  errorId: string | null;,
+    error: Error;,
+    errorInfo: ErrorInfo;,
+    message: string;,
+    stack: string | undefined;,
+    componentStack: string | null | undefined;,
+    timestamp: string;,
+    userAgent: string;,
+    url: string;,
+    userId: string | null;,
+    sessionId: string;
 }
 class AdvancedErrorBoundary extends Component<
   ErrorBoundaryProps,
@@ -80,8 +80,8 @@ class AdvancedErrorBoundary extends Component<
     }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    const errorReport: ErrorReport = {
-      errorId: this.state.errorId || this.generateErrorId(),
+    const errorReport: ErrorReport = {,
+    errorId: this.state.errorId || this.generateErrorId(),
       error,
       errorInfo,
       message: error.message,

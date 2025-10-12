@@ -2,90 +2,84 @@
 
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Function to fix common syntax errors in React/TypeScript files
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
-    // Fix JSX fragment issues
-    content = content.replace(/<>([^<]*?)<\/>/gs, (match, inner) => {
-      if (inner.trim()) {
-        modified = true;
-        return `<div>${inner}</div>`;
-      }
-      return match;
-    });
-
-    // Fix unclosed JSX tags by adding proper closing tags
-    const unclosedTags = [
-      'main', 'section', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
-      'p', 'span', 'button', 'a', 'ul', 'ol', 'li', 'form', 'input',
-      'textarea', 'select', 'option', 'table', 'tr', 'td', 'th',
-      'thead', 'tbody', 'tfoot', 'nav', 'header', 'footer', 'article',
-      'aside', 'figure', 'figcaption', 'blockquote', 'code', 'pre'
-    ];
-
-    for (const tag of unclosedTags) {
-      // Find unclosed opening tags
-      const openTagRegex = new RegExp(`<${tag}([^>]*)>(?!.*</${tag}>)`, 'gs');
-      const matches = content.match(openTagRegex);
+    
+    // Fix missing commas in object properties
+    content = content.replace(/(\w+):\s*([^,\n}]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
+    
+    // Fix missing commas in arrays
+    content = content.replace(/(\w+)\n\s*(\w+):/g, '$1,\n    $2:');
+    
+    // Fix orphaned object properties (lines that start with a property but aren't in an object)
+    content = content.replace(/^\s*(\w+):\s*([^,\n}]+)\n\s*(\w+):/gm, '    $1: $2,\n    $3:');
+    
+    // Fix missing closing brackets for arrays/objects
+    const lines = content.split('\n');
+    let bracketCount = 0;
+    let parenCount = 0;
+    let braceCount = 0;
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
       
-      if (matches) {
-        // This is a complex fix, let's use a simpler approach
-        // Just ensure proper closing for common patterns
-        content = content.replace(new RegExp(`<${tag}([^>]*)>\\s*$`, 'gm'), `<${tag}$1></${tag}>`);
-        modified = true;
+      // Count brackets
+      for (const char of line) {
+        if (char === '[') bracketCount++;
+        if (char === ']') bracketCount--;
+        if (char === '(') parenCount++;
+        if (char === ')') parenCount--;
+        if (char === '{') braceCount++;
+        if (char === '}') braceCount--;
+      }
+      
+      // If we have orphaned properties, try to fix them
+      if (line.trim().match(/^\w+:\s*[^,}]+$/) && i > 0) {
+        const prevLine = lines[i - 1].trim();
+        if (prevLine.endsWith('}') || prevLine.endsWith(']')) {
+          lines[i] = '  ' + line;
+          modified = true;
+        }
       }
     }
-
-    // Fix missing closing tags for self-closing elements
-    const selfClosingElements = ['img', 'br', 'hr', 'input', 'meta', 'link'];
-    for (const element of selfClosingElements) {
-      content = content.replace(new RegExp(`<${element}([^>]*?)(?<!/)>`, 'g'), `<${element}$1 />`);
-      modified = true;
-    }
-
-    // Fix JSX expressions that need wrapping
-    content = content.replace(/\{([^}]*?)\s*\}\s*\{([^}]*?)\s*\}/g, '{$1}{$2}');
     
-    // Fix missing semicolons in JSX
-    content = content.replace(/(\w+)\s*(\n\s*<)/g, '$1;$2');
+    content = lines.join('\n');
     
-    // Fix broken JSX attributes
-    content = content.replace(/className\s*=\s*"([^"]*?)\s*"/g, 'className="$1"');
-    content = content.replace(/className\s*=\s*'([^']*?)\s*'/g, "className='$1'");
+    // Fix common JSX issues - remove this complex regex for now
+    // content = content.replace(/<(\w+)([^>]*?)(?<!/)>(?!.*<\/\1>)/g, (match, tag, attrs) => {
+    //   // If it's a self-closing tag, make sure it ends with />
+    //   if (match.includes('/>')) return match;
+    //   // If it's not self-closing and doesn't have a closing tag, make it self-closing
+    //   return `<${tag}${attrs} />`;
+    // });
     
-    // Fix broken string literals
-    content = content.replace(/"([^"]*?)\s*"/g, '"$1"');
-    content = content.replace(/'([^']*?)\s*'/g, "'$1'");
-    
-    // Fix missing commas in arrays and objects
-    content = content.replace(/(\w+)\s*\n\s*(\w+)/g, '$1,\n$2');
-    
-    // Fix broken function calls
-    content = content.replace(/(\w+)\s*\(\s*\)\s*(\w+)/g, '$1();\n$2');
+    // Fix missing semicolons
+    content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1;\n    $2:');
     
     // Clean up extra whitespace
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^\s*\n/g, '');
-    content = content.replace(/\n\s*$/g, '');
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
+    
+    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all TypeScript/JavaScript files
-function findSourceFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+function findFilesWithErrors(dir) {
   const files = [];
   
   function traverse(currentDir) {
@@ -95,16 +89,10 @@ function findSourceFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory()) {
-        // Skip node_modules, .git, and other common directories
-        if (!['node_modules', '.git', '.next', 'dist', 'build', 'out'].includes(item)) {
-          traverse(fullPath);
-        }
-      } else if (stat.isFile()) {
-        const ext = path.extname(item);
-        if (extensions.includes(ext)) {
-          files.push(fullPath);
-        }
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
+        files.push(fullPath);
       }
     }
   }
@@ -113,20 +101,15 @@ function findSourceFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   return files;
 }
 
-// Main function
-function main() {
-  console.log('Starting syntax error resolution...');
-  
-  const sourceFiles = findSourceFiles(process.cwd());
-  let fixedCount = 0;
-  
-  for (const file of sourceFiles) {
-    if (fixSyntaxErrors(file)) {
-      fixedCount++;
-    }
+// Main execution
+const files = findFilesWithErrors('.');
+console.log(`Checking ${files.length} files for syntax errors`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
   }
-  
-  console.log(`\nFixed syntax errors in ${fixedCount} files.`);
 }
 
-main();
+console.log(`Fixed syntax errors in ${fixedCount} files`);

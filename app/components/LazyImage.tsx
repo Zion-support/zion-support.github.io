@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 interface LazyImageProps {
-  src: string;
-  alt: string;
+  src: string;,
+    alt: string;
   className?: string;
   placeholder?: string;
   onLoad?: () => void;

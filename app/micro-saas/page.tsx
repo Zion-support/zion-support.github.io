@@ -6,15 +6,15 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
 
 interface MicroSaasProduct {
-  id: string;
-  icon: React.ComponentType<any>;
-  title: string;
-  description: string;
-  features: string[];
-  price: string;
-  users: string;
-  popular: boolean;
-  category: string;
+  id: string;,
+    icon: React.ComponentType<any>;,
+    title: string;,
+    description: string;,
+    features: string[];,
+    price: string;,
+    users: string;,
+    popular: boolean;,
+    category: string;
 }
 
 const MicroSaasPage: React.FC = () => {

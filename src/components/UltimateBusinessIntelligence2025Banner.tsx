@@ -10,8 +10,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       type: 'Blog Post',
-      metrics: {
-        efficiency: '300%',
+      metrics: {,
+    efficiency: '300%',
         accuracy: '99.7%',
         timeline: '6 months',
         adoption: '95%'
@@ -24,8 +24,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
       description: 'Real-world case study: How a Fortune 500 company achieved 30,000% ROI through AI-powered business intelligence transformation.',
       url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
       type: 'Case Study',
-      metrics: {
-        roi: '30,000%',
+      metrics: {,
+    roi: '30,000%',
         savings: '$750M',
         efficiency: '400%',
         timeline: '18 months'
@@ -38,8 +38,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
       description: 'Automate your entire business process with our comprehensive automation suite, reducing manual work by 95% and increasing productivity by 300%.',
       url: '/services/automation',
       type: 'Service',
-      metrics: {
-        automation: '95%',
+      metrics: {,
+    automation: '95%',
         productivity: '300%',
         efficiency: '400%',
         cost: '80% reduction'

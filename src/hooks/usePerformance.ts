@@ -2,12 +2,12 @@
 import { useEffect, useState } from 'react';
 import { analytics } from '../utils/analytics';
 interface PerformanceMetrics {
-  loadTime: number;
-  domContentLoaded: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  loadTime: number;,
+    domContentLoaded: number;,
+    firstContentfulPaint: number;,
+    largestContentfulPaint: number;,
+    cumulativeLayoutShift: number;,
+    firstInputDelay: number;
 }
 export const usePerformance = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -51,8 +51,8 @@ export const usePerformance = () => {
         });
         observer.observe({ entryTypes: ['first-input'] });
       }
-      const performanceData: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.fetchStart,
+      const performanceData: PerformanceMetrics = {,
+    loadTime: navigation.loadEventEnd - navigation.fetchStart,
         domContentLoaded:
           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         firstContentfulPaint,

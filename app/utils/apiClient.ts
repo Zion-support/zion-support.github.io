@@ -12,10 +12,10 @@ interface RequestConfig {
 }
 
 interface APIResponse<T = any> {
-  data: T;
-  status: number;
-  statusText: string;
-  headers: Record<string, string>;
+  data: T;,
+    status: number;,
+    statusText: string;,
+    headers: Record<string, string>;
 }
 
 class APIError extends Error {

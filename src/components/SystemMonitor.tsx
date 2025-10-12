@@ -33,37 +33,37 @@ interface NavigatorWithConnection extends Navigator {
   webkitConnection?: NetworkConnection;
 }
 interface SystemMetrics {
-  performance: {
-    score: number;
-    loadTime: number;
-    firstContentfulPaint: number;
-    largestContentfulPaint: number;
-    firstInputDelay: number;
+  performance: {,
+    score: number;,
+    loadTime: number;,
+    firstContentfulPaint: number;,
+    largestContentfulPaint: number;,
+    firstInputDelay: number;,
     cumulativeLayoutShift: number;
   };
-  errors: {
-    total: number;
+  errors: {,
+    total: number;,
     byType: Record<string, number>;
     byCategory: Record<string, number>;
     bySeverity: Record<string, number>;
-    recent: Array<{
-      id: string;
-      message: string;
-      type: string;
-      severity: string;
-      timestamp: string;
+    recent: Array<{,
+    id: string;,
+    message: string;,
+    type: string;,
+    severity: string;,
+    timestamp: string;
     }>;
   };
-  memory: {
-    used: number;
-    total: number;
-    limit: number;
+  memory: {,
+    used: number;,
+    total: number;,
+    limit: number;,
     percentage: number;
   };
-  network: {
-    effectiveType: string;
-    downlink: number;
-    rtt: number;
+  network: {,
+    effectiveType: string;,
+    downlink: number;,
+    rtt: number;,
     saveData: boolean;
   };
 }
@@ -92,22 +92,22 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const memoryInfo = getMemoryInfo();
       // Get network info
       const networkInfo = getNetworkInfo();
-      const newMetrics: SystemMetrics = {
-        performance: {
-          score: performanceScore,
+      const newMetrics: SystemMetrics = {,
+    performance: {,
+    score: performanceScore,
           loadTime: performanceMetrics?.loadTime || 0,
           firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
-          largestContentfulPaint: 0, // Not available in current metrics
-          firstInputDelay: 0, // Not available in current metrics
-          cumulativeLayoutShift: 0, // Not available in current metrics
+          largestContentfulPaint: 0, // Not available in current metrics,
+    firstInputDelay: 0, // Not available in current metrics,
+    cumulativeLayoutShift: 0, // Not available in current metrics
         },
-        errors: {
-          total: errorStats.totalErrors,
+        errors: {,
+    total: errorStats.totalErrors,
           byType: errorStats.errorsByType,
           byCategory: errorStats.errorsByCategory,
           bySeverity: errorStats.errorsBySeverity,
-          recent: errorStats.recentErrors.map(error => ({
-            id: error.id,
+          recent: errorStats.recentErrors.map(error => ({,
+    id: error.id,
             message: error.message,
             type: error.type,
             severity: error.severity,

@@ -12,35 +12,35 @@ export interface AnalyticsEvent {
 }
 
 export interface UserBehavior {
-  pageViews: number;
-  sessionDuration: number;
-  bounceRate: number;
-  conversionRate: number;
-  topPages: Array<{ page: string; views: number }>;
+  pageViews: number;,
+    sessionDuration: number;,
+    bounceRate: number;,
+    conversionRate: number;,
+    topPages: Array<{ page: string; views: number }>;
   userJourney: string[];
 }
 
 export interface PerformanceMetrics {
-  pageLoadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  timeToInteractive: number;
+  pageLoadTime: number;,
+    firstContentfulPaint: number;,
+    largestContentfulPaint: number;,
+    firstInputDelay: number;,
+    cumulativeLayoutShift: number;,
+    timeToInteractive: number;
 }
 
 export interface AnalyticsConfig {
-  trackingId: string;
-  enabled: boolean;
-  debug: boolean;
-  sampleRate: number;
+  trackingId: string;,
+    enabled: boolean;,
+    debug: boolean;,
+    sampleRate: number;
   customDimensions?: Record<string, string>;
 }
 
 export class AdvancedAnalytics {
   private config: AnalyticsConfig;
   private events: AnalyticsEvent[] = [];
-  private userBehavior: UserBehavior = {
+  private userBehavior: UserBehavior = {,
     pageViews: 0,
     sessionDuration: 0,
     bounceRate: 0,
@@ -83,8 +83,8 @@ export class AdvancedAnalytics {
   trackEvent(eventName: string, properties?: Record<string, any>): void {
     if (!this.config.enabled) return;
 
-    const event: AnalyticsEvent = {
-      name: eventName,
+    const event: AnalyticsEvent = {,
+    name: eventName,
       properties: {
         ...properties,
         timestamp: Date.now(),
@@ -169,10 +169,10 @@ export class AdvancedAnalytics {
         this.performanceMetrics = {
           pageLoadTime: navigation.loadEventEnd - navigation.loadEventStart,
           firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-          largestContentfulPaint: 0, // Would need to be calculated with LCP API
-          firstInputDelay: 0, // Would need to be calculated with FID API
-          cumulativeLayoutShift: 0, // Would need to be calculated with CLS API
-          timeToInteractive: 0 // Would need to be calculated
+          largestContentfulPaint: 0, // Would need to be calculated with LCP API,
+    firstInputDelay: 0, // Would need to be calculated with FID API,
+    cumulativeLayoutShift: 0, // Would need to be calculated with CLS API,
+    timeToInteractive: 0 // Would need to be calculated
         };
 
         this.trackEvent('performance_metrics', this.performanceMetrics);
@@ -272,9 +272,9 @@ export class AdvancedAnalytics {
    * Get analytics report
    */
   getReport(): {
-    events: AnalyticsEvent[];
-    userBehavior: UserBehavior;
-    performanceMetrics: PerformanceMetrics | null;
+    events: AnalyticsEvent[];,
+    userBehavior: UserBehavior;,
+    performanceMetrics: PerformanceMetrics | null;,
     totalEvents: number;
   } {
     return {
