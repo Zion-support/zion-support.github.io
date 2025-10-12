@@ -1,16 +1,77 @@
-
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { TrendingUp, Users, Award, Zap } from 'lucide-react';
 
+interface StatItem {
+  value: string;
+  label: string;
+  icon: React.ReactNode;
+  color: string;
+}
 
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+interface ContentStatisticsProps {
+  stats?: StatItem[];
+  className?: string;
+}
+
+const ContentStatistics: React.FC<ContentStatisticsProps> = ({ 
+  stats = [
+    {
+      value: '500+',
+      label: 'Happy Clients',
+      icon: <Users className="w-8 h-8" />,
+      color: 'text-blue-400'
+    },
+    {
+      value: '99.9%',
+      label: 'Uptime',
+      icon: <Zap className="w-8 h-8" />,
+      color: 'text-green-400'
+    },
+    {
+      value: '50+',
+      label: 'Awards Won',
+      icon: <Award className="w-8 h-8" />,
+      color: 'text-yellow-400'
+    },
+    {
+      value: '40%',
+      label: 'Cost Savings',
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: 'text-purple-400'
+    }
+  ],
+  className = ''
+}) => {
+  return (
+    <div className={`py-16 ${className}`}>
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Trusted by Industry Leaders
+          </h2>
+          <p className="text-xl text-gray-300">
+            Our solutions deliver measurable results across all industries
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className={`${stat.color} flex justify-center mb-4`}>
+                {stat.icon}
+              </div>
+              <div className="text-4xl font-bold text-white mb-2">
+                {stat.value}
+              </div>
+              <div className="text-gray-300 text-lg">
+                {stat.label}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </>;
+    </div>
   );
+};
 
+export default ContentStatistics;
