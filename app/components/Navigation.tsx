@@ -116,6 +116,15 @@ export default function Navigation() {
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
               About
             </Link>
+            <Link to="/micro-saas" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Micro SAAS
+            </Link>
+            <Link to="/ai-services" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              AI Services
+            </Link>
+            <Link to="/it-services" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              IT Services
+            </Link>
             
             {/* AI Services Dropdown */}
             <div className="relative">
@@ -262,6 +271,15 @@ export default function Navigation() {
               </Link>
               <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
                 About
+              </Link>
+              <Link to="/micro-saas" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
+                Micro SAAS
+              </Link>
+              <Link to="/ai-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
+                AI Services
+              </Link>
+              <Link to="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
+                IT Services
               </Link>
               
               {/* AI Services Mobile */}
