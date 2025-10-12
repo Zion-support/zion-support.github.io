@@ -1,9 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { createContext, useContext, useState, useEffect } from 'react';
-=======
-import React, { createContext, useContext, useEffect } from 'react';
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
 
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
@@ -26,6 +22,8 @@ interface AnalyticsProviderProps {
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  const [isInitialized, setIsInitialized] = useState(false);
+
   useEffect(() => {
     // Initialize analytics
     if (typeof window !== 'undefined') {
@@ -43,43 +41,26 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         gtag('js', new Date());
         gtag('config', process.env.REACT_APP_GA_ID);
       }
+      setIsInitialized(true);
     }
   }, []);
 
   const track = (event: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && isInitialized) {
       // Google Analytics
       if (window.gtag) {
         window.gtag('event', event, properties);
       }
       
-      // Custom analytics
-      console.log('Analytics Event:', event, properties);
+      // Console log for development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Analytics Event:', event, properties);
+      }
     }
   };
 
-<<<<<<< HEAD
-  const trackPageView = (page: string) => {
-    if (!isInitialized) return;
-    
-    // Track page view (placeholder for actual analytics implementation)
-    console.log('Analytics Page View:', page);
-    
-    // Here you would integrate with your analytics service
-    // Example: gtag('config', 'GA_MEASUREMENT_ID', { page_path: page });
-  };
-
-  const setUser = (userId: string, properties?: Record<string, any>) => {
-    if (!isInitialized) return;
-    
-    // Set user properties (placeholder for actual analytics implementation)
-    console.log('Analytics Set User:', userId, properties);
-    
-    // Here you would integrate with your analytics service
-    // Example: gtag('config', 'GA_MEASUREMENT_ID', { user_id: userId });
-=======
   const identify = (userId: string, traits?: Record<string, any>) => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && isInitialized) {
       // Google Analytics
       if (window.gtag) {
         window.gtag('config', process.env.REACT_APP_GA_ID, {
@@ -88,26 +69,29 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         });
       }
       
-      // Custom analytics
-      console.log('Analytics Identify:', userId, traits);
+      // Console log for development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Analytics Identify:', userId, traits);
+      }
     }
   };
 
   const page = (name: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && isInitialized) {
       // Google Analytics
       if (window.gtag) {
-        window.gtag('event', 'page_view', {
+        window.gtag('config', process.env.REACT_APP_GA_ID, {
           page_title: name,
           page_location: window.location.href,
           ...properties
         });
       }
       
-      // Custom analytics
-      console.log('Analytics Page:', name, properties);
+      // Console log for development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Analytics Page:', name, properties);
+      }
     }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
   };
 
   const value: AnalyticsContextType = {
@@ -123,14 +107,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   );
 };
 
-<<<<<<< HEAD
-export default AnalyticsProvider;
-=======
-// Extend Window interface for TypeScript
+// Declare global gtag function
 declare global {
   interface Window {
-    dataLayer: any[];
     gtag: (...args: any[]) => void;
+    dataLayer: any[];
   }
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9

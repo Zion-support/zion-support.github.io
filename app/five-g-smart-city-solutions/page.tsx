@@ -1,10 +1,10 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Wifi, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Shield, BarChart3, Star, Sparkles, Building, Users, Target, Cpu } from 'lucide-react'
+import { Wifi, ArrowRight, CheckCircle, Zap, Brain, Building, Users, Star } from 'lucide-react'
 import Layout from '../layout'
 
-export default function FiveGSmartCitySolutions() {
+export default function FiveGSmartCitySolutionsPage() {
   const features = [
     {
       icon: <Wifi className="w-6 h-6 text-cyan-400" />,

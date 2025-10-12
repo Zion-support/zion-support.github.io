@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Code, Zap, CheckCircle, ArrowRight, Users, Award, Star, Globe, Settings } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 
 const WebDevelopmentPage: React.FC = () => {
   const services = [
@@ -53,211 +50,220 @@ const WebDevelopmentPage: React.FC = () => {
     },
     {
       title: 'Cloud',
-      items: ['AWS', 'Azure', 'Google Cloud', 'Vercel', 'Netlify']
+      items: ['AWS', 'Vercel', 'Netlify', 'Docker', 'Kubernetes']
     },
     {
       title: 'Tools',
-      items: ['Git', 'Docker', 'CI/CD', 'Testing', 'Monitoring']
+      items: ['Git', 'Webpack', 'ESLint', 'Jest', 'Cypress']
     }
   ];
 
+  const process = [
+    {
+      step: '01',
+      title: 'Discovery & Planning',
+      description: 'We analyze your requirements and create a detailed project roadmap.'
+    },
+    {
+      step: '02',
+      title: 'Design & Prototyping',
+      description: 'Our designers create wireframes and interactive prototypes.'
+    },
+    {
+      step: '03',
+      title: 'Development & Testing',
+      description: 'We build your application using modern technologies and best practices.'
+    },
+    {
+      step: '04',
+      title: 'Deployment & Launch',
+      description: 'We deploy your application and provide ongoing support and maintenance.'
+    }
+  ];
+
+  const stats = [
+    { number: '200+', label: 'Websites Delivered', icon: Globe },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Zap },
+    { number: '50+', label: 'Happy Clients', icon: Users },
+    { number: '24/7', label: 'Support Available', icon: Settings }
+  ];
+
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title>Web Development - Zion Tech Group</title>
-        <meta name="description" content="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern, responsive, and scalable web applications." />
-        <meta name="keywords" content="web development, frontend development, backend development, full-stack development, e-commerce, React, Node.js" />
+        <title>Web Development - Zion Tech Group | Modern Web Applications</title>
+        <meta name="description" content="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and responsive design." />
+        <meta name="keywords" content="web development, frontend development, backend development, React, Next.js, e-commerce, web applications" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-32 pb-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Web <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Development</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Create powerful, modern web applications that engage users and drive business growth. 
-                From simple websites to complex web platforms, we deliver exceptional digital experiences.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Your Project
-                </Link>
-                <Link 
-                  to="/it-services"
-                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-                >
-                  View All IT Services
-                </Link>
-              </div>
+      {/* Hero Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Web <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Development</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Create stunning, high-performance web applications with modern technologies. 
+              From frontend to backend, we deliver exceptional digital experiences.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+              >
+                Start Your Project <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link 
+                to="/demo" 
+                className="inline-flex items-center px-8 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
+              >
+                View Portfolio
+              </Link>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Services Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Web Solutions</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive web development services for all your digital needs
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div 
-                  key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className="w-8 h-8 text-white" />
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => {
+              const IconComponent = stat.icon;
+              return (
+                <div key={index} className="text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4">
+                    <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-gray-300">{stat.label}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
+      {/* Services Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Web Development Services</h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Comprehensive web development solutions tailored to your business needs.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <div key={index} className="bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-xl p-6 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group">
+                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <div className="text-purple-400 font-semibold mb-4">{service.price}</div>
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                    <Link 
-                      to="/contact"
-                      className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-flex items-center"
-                    >
-                      Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
-                  </div>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center w-full justify-center px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 group-hover:scale-105"
+                  >
+                    Get Quote <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
                 </div>
-              ))}
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Technologies We Use</h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              We work with the latest and most reliable technologies in web development.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {technologies.map((tech, index) => (
+              <div key={index} className="bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-xl p-6 border border-purple-500/20">
+                <h3 className="text-xl font-semibold text-white mb-4">{tech.title}</h3>
+                <ul className="space-y-2">
+                  {tech.items.map((item, i) => (
+                    <li key={i} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Development Process</h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              A proven methodology that ensures your web application is delivered on time and exceeds expectations.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {process.map((step, index) => (
+              <div key={index} className="text-center group">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl font-bold text-white">{step.step}</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+                <p className="text-gray-300">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-8 backdrop-blur-sm border border-purple-500/30">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Build Your Web Application?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Let's discuss your web development needs and create something amazing together.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+              >
+                Start Your Project <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link 
+                to="/pricing" 
+                className="inline-flex items-center px-8 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
+              >
+                View Pricing
+              </Link>
             </div>
           </div>
-        </section>
-
-        {/* Technologies Section */}
-        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Technologies <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">We Use</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Modern, proven technologies for building exceptional web applications
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {technologies.map((tech, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-white mb-4 text-center">{tech.title}</h3>
-                  <ul className="space-y-2">
-                    {tech.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Us */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Zion Tech Group</span>?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We deliver exceptional web solutions through expertise, innovation, and commitment to quality
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-10 h-10 text-cyan-400" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Fast Development</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Rapid development cycles with modern tools and agile methodologies for faster time-to-market.
-                </p>
-              </div>
-
-              <div className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-10 h-10 text-purple-400" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Expert Team</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Certified developers with years of experience in modern web technologies and best practices.
-                </p>
-              </div>
-
-              <div className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Award className="w-10 h-10 text-green-400" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Quality Assurance</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Comprehensive testing and quality assurance to ensure your web application works flawlessly.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Build Your Web Application?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Let's discuss your web project and create a solution that engages your users and drives business growth.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Your Project
-                </Link>
-                <Link 
-                  to="/about"
-                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-                >
-                  Learn More About Us
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+    </div>
   );
 };
 
