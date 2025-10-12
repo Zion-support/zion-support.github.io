@@ -1,8 +1,9 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'}
-  ]
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+
+const LazyImage: React.FC = () => {
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -20,7 +21,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 LazyImage
-  </
+              </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
@@ -35,7 +36,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
-  </
+              </button>
             </div>
           </div>
         </div>
@@ -176,4 +177,8 @@ export default LazyImagePage
           </div>
         </div>
       </section>
-    </div>)};export default LazyImagePage
+    </div>
+  )
+}
+
+export default LazyImage
