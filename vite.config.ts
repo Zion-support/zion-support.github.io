@@ -46,6 +46,9 @@ export default defineConfig({
     },
     // Optimize bundle size
     chunkSizeWarningLimit: 1000,
+    // Additional performance optimizations
+    reportCompressedSize: true,
+    assetsInlineLimit: 4096,
   },
   server: {
     port: 3000,

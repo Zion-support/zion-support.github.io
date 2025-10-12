@@ -177,7 +177,6 @@ export default function Footer() {
             </ul>
           </div>
 
-<<<<<<< HEAD
           {/* 5G Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 flex items-center">
@@ -193,33 +192,16 @@ export default function Footer() {
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
-=======
-          {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Resources</h3>
-            <ul className="space-y-2">
-              {resourceLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to={link.path} 
-                    className="text-gray-400 hover:text-white transition-colors flex items-center"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2" />
-                    {link.name}
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
         </div>
 
         {/* Newsletter Signup */}
         <div className="border-t border-white/10 mt-12 pt-8">
           <NewsletterSignup variant="inline" />
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
         </div>
 
         {/* Company & Support Links */}
