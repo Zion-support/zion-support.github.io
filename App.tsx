@@ -31,6 +31,9 @@ import MicroSaasLeadScoringPage from './app/micro-saas/lead-scoring/page'
 import MicroSaasSeoOptimizerPage from './app/micro-saas/seo-optimizer/page'
 import MicroSaasSocialManagerPage from './app/micro-saas/social-manager/page'
 import MicroSaasSupportBotPage from './app/micro-saas/support-bot/page'
+import AIInvoiceGeneratorPage from './app/ai-invoice-generator/page'
+import AISocialMediaManagerPage from './app/ai-social-media-manager/page'
+import CloudMigrationPage from './app/cloud-migration/page'
 import AIAutomatedReportingPage from './app/ai-automated-reporting/page'
 import AIChatbotBuilderPage from './app/ai-chatbot-builder/page'
 import AIExpenseTrackerPage from './app/ai-expense-tracker/page'
@@ -93,6 +96,13 @@ const App: React.FC = () => {
                   <Route path="/micro-saas/seo-optimizer" element={<MicroSaasSeoOptimizerPage />} />
                   <Route path="/micro-saas/social-manager" element={<MicroSaasSocialManagerPage />} />
                   <Route path="/micro-saas/support-bot" element={<MicroSaasSupportBotPage />} />
+                  
+                  {/* New AI Services */}
+                  <Route path="/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
+                  <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
+                  
+                  {/* IT Services */}
+                  <Route path="/cloud-migration" element={<CloudMigrationPage />} />
                   
                   {/* AI Services */}
                   <Route path="/ai-automated-reporting" element={<AIAutomatedReportingPage />} />

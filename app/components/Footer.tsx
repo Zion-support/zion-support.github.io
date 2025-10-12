@@ -62,29 +62,52 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.1)_0%,transparent_50%)] animate-pulse" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/25">
+                <Zap className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-2xl font-bold">Zion Tech Group</h3>
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Zion Tech Group
+              </h3>
             </div>
-            <p className="text-gray-300 mb-6 max-w-md">
+            <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
               Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. 
               Empowering businesses to thrive in the digital age with cutting-edge technology.
             </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-cyan-300">
+                <Phone className="w-4 h-4 mr-3" />
+                <span className="font-semibold">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center text-cyan-300">
+                <Mail className="w-4 h-4 mr-3" />
+                <span className="font-semibold">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center text-cyan-300">
+                <MapPin className="w-4 h-4 mr-3" />
+                <span className="font-semibold">Middletown, DE 19709</span>
+              </div>
+            </div>
+            
             <div className="flex space-x-4">
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 hover:scale-110">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 hover:scale-110">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 hover:scale-110">
                 <Github className="w-5 h-5" />
               </a>
             </div>
@@ -92,15 +115,18 @@ const Footer: React.FC = () => {
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">AI Services</h3>
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Brain className="w-5 h-5 mr-2 text-cyan-400" />
+              AI Services
+            </h3>
             <ul className="space-y-2">
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link 
                     to={service.path} 
-                    className="text-gray-400 hover:text-white transition-colors flex items-center"
+                    className="text-gray-400 hover:text-cyan-300 transition-colors flex items-center group"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2" />
+                    <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
                   </Link>
                 </li>
@@ -110,15 +136,18 @@ const Footer: React.FC = () => {
 
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">IT Services</h3>
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Cpu className="w-5 h-5 mr-2 text-emerald-400" />
+              IT Services
+            </h3>
             <ul className="space-y-2">
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link 
                     to={service.path} 
-                    className="text-gray-400 hover:text-white transition-colors flex items-center"
+                    className="text-gray-400 hover:text-emerald-300 transition-colors flex items-center group"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2" />
+                    <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
                   </Link>
                 </li>
@@ -128,15 +157,18 @@ const Footer: React.FC = () => {
 
           {/* Micro SAAS Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Micro SAAS</h3>
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Rocket className="w-5 h-5 mr-2 text-violet-400" />
+              Micro SAAS
+            </h3>
             <ul className="space-y-2">
               {microSaasServices.map((service, index) => (
                 <li key={index}>
                   <Link 
                     to={service.path} 
-                    className="text-gray-400 hover:text-white transition-colors flex items-center"
+                    className="text-gray-400 hover:text-violet-300 transition-colors flex items-center group"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2" />
+                    <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
                   </Link>
                 </li>

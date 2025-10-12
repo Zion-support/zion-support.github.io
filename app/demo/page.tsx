@@ -1,104 +1,119 @@
-'use client'
 import React from 'react'
-import { Play, ArrowRight, CheckCircle } from 'lucide-react';
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 
 const DemoPage: React.FC = () => {
-  const demos = [
+  const features = [
     {
-      id: '1',
-      title: 'AI Analytics Dashboard',
-      description: 'See how our AI-powered analytics can transform your data into actionable insights.',
-      features: [
-        'Real-time data visualization',
-        'Predictive analytics',
-        'Custom reporting',
-        'Automated insights'
-      ],
-      duration: '5 min'
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
     {
-      id: '2',
-      title: 'Cloud Migration Tool',
-      description: 'Experience our seamless cloud migration process with live demonstrations.',
-      features: [
-        'Automated migration',
-        'Zero downtime',
-        'Data integrity checks',
-        'Rollback capabilities'
-      ],
-      duration: '8 min'
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
-      id: '3',
-      title: 'Cybersecurity Scanner',
-      description: 'Watch our AI-powered security scanner identify and resolve vulnerabilities.',
-      features: [
-        'Automated scanning',
-        'Threat detection',
-        'Vulnerability assessment',
-        'Remediation suggestions'
-      ],
-      duration: '6 min'
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
     }
+  ]
+
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
+      <Helmet>
+        <title>Demo | Zion Tech Group</title>
+        <meta name="description" content="Professional Demo services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="demo, AI solutions, IT services, Zion Tech Group, demo" />
+      </Helmet>
+
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            <span className="neon-text">See Our Solutions in Action</span>
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.
-          </p>
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Demo
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced demo solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Demo Cards */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {demos.map((demo) => (
-              <div key={demo.id} className="cyber-card p-8 group hover:scale-105 transition-transform">
-                <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg mb-6 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Play className="w-8 h-8 text-white ml-1" />
-                  </div>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Demo Solutions?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our demo solutions deliver unmatched performance, security, and scalability.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                  {demo.title}
-                </h3>
-                
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {demo.description}
-                </p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features</h4>
-                  <ul className="space-y-2">
-                    {demo.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-400">{demo.duration}</span>
-                  <button className="cyber-button px-6 py-3 text-sm font-semibold inline-flex items-center">
-                    <Play className="w-4 h-4 mr-2" />
-                    Watch Demo
-                  </button>
-                </div>
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover the advantages of our demo solutions.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                {benefit}
               </div>
             ))}
           </div>
@@ -106,29 +121,28 @@ const DemoPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="cyber-card hologram-card p-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Ready to See More?
-            </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Schedule a personalized demo with our experts to see how our solutions can work for your specific needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
-                Schedule Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-                Contact Sales
-              </button>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                Let's discuss how our demo solutions can help you achieve your business goals.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Contact Us
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                  View Pricing
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }
