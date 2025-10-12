@@ -45,11 +45,17 @@ import { analytics } from '../utils/analytics';
       analytics.trackTiming('performance', 'load_time', performanceData.loadTime);
       analytics.trackTiming('performance', 'dom_content_loaded', performanceData.domContentLoaded);
         performanceData.firstContentfulPaint
-      );
+      </div>
+    </div>
+  );
         performanceData.largestContentfulPaint
-      );
+      </div>
+    </div>
+  );
         performanceData.cumulativeLayoutShift
-      );
+      </div>
+    </div>
+  );
       analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay);
     };
     // Start monitoring

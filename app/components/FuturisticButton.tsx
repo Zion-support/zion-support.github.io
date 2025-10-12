@@ -24,7 +24,7 @@ interface FuturisticButtonProps {
 }: FuturisticButtonProps) {
   const [isHovered, setIsHovered] = useState(false);
 
-  const getVariantClasses = () => {
+  const getVariantClasses = ($2) => {
     switch (variant) {
       case 'primary':
         return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
@@ -39,7 +39,7 @@ interface FuturisticButtonProps {
     }
   };
 
-  const getSizeClasses = () => {
+  const getSizeClasses = ($2) => {
     switch (size) {
       case 'sm':
         return 'px-4 py-2 text-sm';
@@ -124,6 +124,7 @@ interface FuturisticButtonProps {
 
       {/* Corner accents */}
       <div className="absolute top-1 left-1 w-2 h-2 bg-white/30 rounded-full" />
+  return (
       <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30 rounded-full" />
 
       {/* Content */}

@@ -4,6 +4,7 @@ import React from 'react';
 const AiContentModerationPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Ai Content Moderation - Zion Tech Group</title>
         <meta name="description" content="Ai Content Moderation services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const AiContentModerationPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

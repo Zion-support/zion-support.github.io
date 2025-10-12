@@ -2,9 +2,10 @@
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
-export const PageLoader: React.FC = () => {
+export const PageLoader: React.FC = ($2) => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (
       <div className="text-center">
         <div className="relative mb-8">
           <div className="w-20 h-20 mx-auto">
@@ -27,6 +28,13 @@ export const PageLoader: React.FC = () => {
         </div>
       </div>
     </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 
@@ -39,20 +47,39 @@ export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size =
 
   return (
     <Loader2 className={`animate-spin text-purple-500 ${sizeClasses[size]}`} />
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 
-export const QuantumLoader: React.FC = () => {
+export const QuantumLoader: React.FC = ($2) => {
   return (
     <div className="flex items-center justify-center space-x-2">
       <div className="w-3 h-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse"></div>
       <div className="w-3 h-3 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
       <div className="w-3 h-3 bg-gradient-to-r from-cyan-500 to-green-500 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
     </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 
-export const CyberLoader: React.FC = () => {
+export const CyberLoader: React.FC = ($2) => {
   return (
     <div className="flex items-center justify-center">
       <div className="relative">
@@ -62,10 +89,22 @@ export const CyberLoader: React.FC = () => {
         <div className="absolute top-2 left-2 w-8 h-8 border-4 border-pink-500 border-t-transparent rounded-full animate-spin" style={{ animationDirection: 'reverse' }}></div>
       </div>
     </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 
-export const HolographicLoader: React.FC = () => {
+export const HolographicLoader: React.FC = ($2) => {
   return (
     <div className="flex items-center justify-center">
       <div className="relative w-16 h-16">
@@ -75,15 +114,47 @@ export const HolographicLoader: React.FC = () => {
         <div className="absolute inset-6 rounded-full bg-gradient-to-r from-green-500 to-purple-500 opacity-50 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
       </div>
     </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 
-export const NeuralLoader: React.FC = () => {
+export const NeuralLoader: React.FC = ($2) => {
   return (
     <div className="flex items-center justify-center space-x-1">
       <Brain className="w-6 h-6 text-purple-500 animate-pulse" />
       <Zap className="w-6 h-6 text-pink-500 animate-pulse" style={{ animationDelay: '0.2s' }} />
       <Cpu className="w-6 h-6 text-cyan-500 animate-pulse" style={{ animationDelay: '0.4s' }} />
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
     </div>
   );
 };
@@ -98,10 +169,31 @@ export const LoadingSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => 
         </div>
       ))}
     </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 
-export const CardSkeleton: React.FC = () => {
+export const CardSkeleton: React.FC = ($2) => {
   return (
     <div className="animate-pulse">
       <div className="bg-gray-800 rounded-lg p-6">
@@ -112,6 +204,30 @@ export const CardSkeleton: React.FC = () => {
           <div className="h-3 bg-gray-600 rounded w-4/6"></div>
         </div>
         <div className="h-10 bg-gray-700 rounded w-1/3"></div>
+      </div>
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       </div>
     </div>
   );

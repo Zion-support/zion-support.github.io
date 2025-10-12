@@ -32,7 +32,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }, [structuredData])
 
   // Generate breadcrumb structured data
-  const generateBreadcrumbStructuredData = () => {
+  const generateBreadcrumbStructuredData = ($2) => {
     const pathSegments = window.location.pathname.split('/').filter(Boolean)
     const breadcrumbItems = pathSegments.map((segment, index) => ({
       '@type': 'ListItem',
@@ -57,7 +57,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }
 
   // Generate FAQ structured data
-  const generateFAQStructuredData = () => {
+  const generateFAQStructuredData = ($2) => {
     return {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -101,6 +101,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  return (
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
       <meta name="theme-color" content="#8b5cf6" />

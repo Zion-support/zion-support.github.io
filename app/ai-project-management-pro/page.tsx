@@ -48,6 +48,7 @@ const Page: React.FC = () => {
 
   return (
     <>
+  return (
       <Helmet>
         <title>AI Project Management Pro - Zion Tech Group</title>
         <meta name="description" content="Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs." />
@@ -176,8 +177,6 @@ const Page: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-=======
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
@@ -201,17 +200,63 @@ const Page: React.FC = () => {
                   View Services
                 </Link>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-}
-=======
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d

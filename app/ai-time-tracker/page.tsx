@@ -1,10 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
-import { ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async'
 import { Clock, Timer, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Target, Brain, Shield } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import { Link } from 'react-router-dom'
 
 const AITimeTrackerPage: React.FC = () => {
@@ -127,6 +123,7 @@ const AITimeTrackerPage: React.FC = () => {
 
   return (
     <>
+  return (
       <Helmet>
         <title>AI Time Tracker - Smart Productivity Management | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered time tracking with activity recognition, productivity analytics, and automated reporting. Increase productivity by 40% and deliver projects 20% faster." />

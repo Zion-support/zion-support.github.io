@@ -1,39 +1,11 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings } from 'lucide-react';
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { CheckCircle, Mail, Bot, Zap, Shield, BarChart, Users, Clock, Target } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 
 const AIEmailAssistantPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-      icon: Mail,
-      title: 'Smart Classification',
-      description: 'Automatically categorize and prioritize emails based on content and sender.'
-    },
-    {
-      icon: MessageSquare,
-      title: 'Auto-Responses',
-      description: 'Generate intelligent responses using AI to handle common inquiries.'
-    },
-    {
-      icon: Brain,
-      title: 'Sentiment Analysis',
-      description: 'Analyze email tone and sentiment to provide better customer service.'
-    },
-    {
-      icon: Settings,
-      title: 'Workflow Automation',
-      description: 'Create automated workflows to streamline your email management.'
-=======
       icon: <Mail className="w-6 h-6 text-cyan-400" />,
       title: 'Smart Classification',
       description: 'Automatically categorize emails by priority, type, and sentiment'
@@ -52,32 +24,11 @@ const AIEmailAssistantPage: React.FC = () => {
       icon: <Shield className="w-6 h-6 text-blue-400" />,
       title: 'Security & Privacy',
       description: 'Enterprise-grade security with end-to-end encryption'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
     }
   ];
 
   const useCases = [
     {
-<<<<<<< HEAD
-      title: 'Customer Support',
-      description: 'Automate responses to common customer inquiries and support tickets.',
-      icon: Users
-    },
-    {
-      title: 'Sales Follow-up',
-      description: 'Automatically follow up with leads and prospects based on their behavior.',
-      icon: BarChart3
-    },
-    {
-      title: 'Email Marketing',
-      description: 'Personalize and optimize email campaigns for better engagement.',
-      icon: Zap
-    },
-    {
-      title: 'Internal Communication',
-      description: 'Streamline internal email workflows and team communication.',
-      icon: Shield
-=======
       icon: <BarChart className="w-6 h-6 text-cyan-400" />,
       title: 'Customer Support',
       description: 'Automate responses to common inquiries and route complex issues'
@@ -96,12 +47,12 @@ const AIEmailAssistantPage: React.FC = () => {
       icon: <Target className="w-6 h-6 text-blue-400" />,
       title: 'Marketing Teams',
       description: 'Segment audiences and personalize email campaigns'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
     }
   ];
 
   return (
     <>
+  return (
       <Helmet>
         <title>AI Email Assistant - Zion Tech Group</title>
         <meta name="description" content="Transform your email management with our AI Email Assistant. Smart classification, auto-responses, sentiment analysis, and automated workflows." />
@@ -223,6 +174,54 @@ const AIEmailAssistantPage: React.FC = () => {
         </section>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

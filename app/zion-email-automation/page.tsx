@@ -4,6 +4,7 @@ import React from 'react';
 const ZionEmailAutomationPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Zion Email Automation - Zion Tech Group</title>
         <meta name="description" content="Zion Email Automation services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const ZionEmailAutomationPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

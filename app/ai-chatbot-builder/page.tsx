@@ -1,12 +1,4 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, Globe, Shield, MessageCircle } from 'lucide-react';
-
-const AiChatbotBuilderPage: React.FC = () => {
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -15,7 +7,6 @@ import { ArrowRight, CheckCircle, Users, Zap, Shield, Brain, BarChart, MessageCi
 const AiChatbotBuilderPage: React.FC = () => {
   // const [isVisible] = useState(true);
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
   const features = [
     {
       title: 'No-Code Builder',
@@ -48,21 +39,13 @@ const AiChatbotBuilderPage: React.FC = () => {
       color: 'from-orange-500 to-red-500'
     },
     {
-<<<<<<< HEAD
-      title: 'AI-Powered Responses',
-      description: 'Natural language processing and machine learning for intelligent, contextual conversations',
-      icon: <Brain className="w-8 h-8 text-yellow-400" />,
-=======
       title: 'AI Training',
       description: 'Train your chatbot with your own data and knowledge base for personalized responses',
       icon: Brain,
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
       color: 'from-yellow-500 to-orange-500'
     }
   ];
 
-<<<<<<< HEAD
-=======
   const useCases = [
     {
       title: 'Customer Support',
@@ -90,17 +73,12 @@ const AiChatbotBuilderPage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
   const pricingPlans = [
     {
       name: 'Starter',
       price: '$99',
       period: '/month',
-<<<<<<< HEAD
-      description: 'Perfect for small businesses getting started with chatbots',
-=======
       description: 'Perfect for small businesses',
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
       features: [
         'Up to 1,000 conversations/month',
         'Basic AI responses',
@@ -117,20 +95,12 @@ const AiChatbotBuilderPage: React.FC = () => {
       description: 'Ideal for growing businesses with advanced needs',
       features: [
         'Up to 10,000 conversations/month',
-<<<<<<< HEAD
-        'Advanced AI with custom training',
-        'Priority support',
-        'Advanced integrations',
-        'Detailed analytics & reporting',
-        'Multi-language support'
-=======
         'Advanced chatbot builder',
         'Priority support',
         'All integrations',
         'Advanced analytics',
         'Custom branding',
         'API access'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
       ],
       popular: true
     },
@@ -138,11 +108,7 @@ const AiChatbotBuilderPage: React.FC = () => {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
-<<<<<<< HEAD
-      description: 'Tailored solutions for large organizations',
-=======
       description: 'For large organizations',
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
       features: [
         'Unlimited conversations',
         'Custom AI models',
@@ -181,6 +147,7 @@ const AiChatbotBuilderPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+  return (
       <Helmet>
         <title>AI Chatbot Builder - Zion Tech Group | No-Code Chatbot Platform</title>
         <meta name="description" content="Build intelligent chatbots without coding. Our no-code platform offers advanced AI, multi-language support, and enterprise-grade security." />
@@ -213,8 +180,6 @@ const AiChatbotBuilderPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -232,7 +197,6 @@ const AiChatbotBuilderPage: React.FC = () => {
         </div>
       </section>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -353,6 +317,67 @@ const AiChatbotBuilderPage: React.FC = () => {
           </div>
         </div>
       </section>
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
     </div>
   );
 };

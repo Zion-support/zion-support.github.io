@@ -1,10 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async'
 import { Users, Search, Shield, Phone, CheckCircle, ArrowRight, BarChart3, Clock } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import { Link } from 'react-router-dom'
 
 const EmployeeDirectoryPage: React.FC = () => {
@@ -87,6 +83,7 @@ const EmployeeDirectoryPage: React.FC = () => {
 
   return (
     <>
+  return (
       <Helmet>
         <title>AI Employee Directory - Smart Team Management | Zion Tech Group</title>
         <meta name="description" content="Create a smart employee directory with advanced search, team organization, and privacy controls. Perfect for companies of all sizes." />

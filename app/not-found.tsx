@@ -5,6 +5,7 @@ import { Home, ArrowLeft } from 'lucide-react';
 const NotFound: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+  return (
       <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center">
         <div className="flex justify-center mb-6">
           <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center">

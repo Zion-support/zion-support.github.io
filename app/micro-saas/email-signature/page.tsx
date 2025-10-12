@@ -1,10 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
-import { Palette, ArrowRight } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async'
 import { Mail, Palette, Users, Zap, CheckCircle, ArrowRight, BarChart3, Shield, Clock } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import { Link } from 'react-router-dom'
 
 const EmailSignaturePage: React.FC = () => {
@@ -87,6 +83,7 @@ const EmailSignaturePage: React.FC = () => {
 
   return (
     <>
+  return (
       <Helmet>
         <title>AI Email Signature Manager - Professional Email Signatures | Zion Tech Group</title>
         <meta name="description" content="Create and manage professional email signatures for your team. Beautiful templates, team management, and analytics included." />

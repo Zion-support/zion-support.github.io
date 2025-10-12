@@ -1,10 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async'
 import { Network, Zap, Shield, Globe, BarChart3, CheckCircle, ArrowRight, Cpu, Smartphone } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import { Link } from 'react-router-dom'
 
 const FiveGSolutionsPage: React.FC = () => {
@@ -85,6 +81,7 @@ const FiveGSolutionsPage: React.FC = () => {
 
   return (
     <>
+  return (
       <Helmet>
         <title>5G Solutions - Next-Generation Network Technology | Zion Tech Group</title>
         <meta name="description" content="Transform your business with cutting-edge 5G solutions. Network infrastructure, IoT, edge computing, and mobile applications powered by 5G technology." />

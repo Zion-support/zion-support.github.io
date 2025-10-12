@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 
-const FuturisticBackground: React.FC = () => {
+const FuturisticBackground: React.FC = ($2) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const FuturisticBackground: React.FC = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const resizeCanvas = () => {
+    const resizeCanvas = ($2) => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
@@ -45,7 +45,7 @@ const FuturisticBackground: React.FC = () => {
       });
     }
 
-    const animate = () => {
+    const animate = ($2) => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
@@ -96,6 +96,7 @@ const FuturisticBackground: React.FC = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0">
+  return (
       <canvas
         ref={canvasRef}
         className="w-full h-full opacity-30"
@@ -113,6 +114,19 @@ const FuturisticBackground: React.FC = () => {
       
       {/* Plasma effect */}
       <div className="absolute inset-0 plasma-effect opacity-20" />
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
     </div>
   );
 };

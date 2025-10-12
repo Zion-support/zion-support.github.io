@@ -5,9 +5,10 @@ import {ArrowRight} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const AdvertisingbannerPage: React.FC = () => {
+const AdvertisingbannerPage: React.FC = ($2) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (
       <Helmet>
         <title>Advertisingbanner - Zion Tech Group</title>
         <meta name="description" content="Professional advertisingbanner services and solutions." />
@@ -30,6 +31,18 @@ const AdvertisingbannerPage: React.FC = () => {
       </main>
       
       <Footer />
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
     </div>
   );
 };

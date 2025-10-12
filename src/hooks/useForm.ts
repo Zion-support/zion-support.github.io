@@ -42,6 +42,17 @@ import { useState, useCallback, ChangeEvent } from 'react';
         [field]: result.errors
       }));
     [values, validationSchema]
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
   // Validate all fields
   
@@ -65,6 +76,18 @@ import { useState, useCallback, ChangeEvent } from 'react';
         setTimeout(() => validateSingleField(fieldName), 0);
       }
     [validateOnChange, touched, validateSingleField]
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
   // Handle input blur
   
@@ -75,6 +98,18 @@ import { useState, useCallback, ChangeEvent } from 'react';
         validateSingleField(fieldName);
       }
     [validateOnBlur, validateSingleField]
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
   // Handle form submission
   
@@ -95,6 +130,19 @@ import { useState, useCallback, ChangeEvent } from 'react';
         setIsSubmitting(false);
       }
     [values, validateAllFields, onSubmit]
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
   // Set field value programmatically
   

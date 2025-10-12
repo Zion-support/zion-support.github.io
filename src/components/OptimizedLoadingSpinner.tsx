@@ -24,6 +24,7 @@
             />
           );
         case 'skeleton':
+  return (
             <div className='space-y-2' role='status' aria-label='Loading'>
               
               />
@@ -32,19 +33,27 @@
               
               />
             </div>
-          );
+      </div>
+    </div>
+  );
         case 'bars':
             <div className='flex space-x-1' role='status' aria-label='Loading'>
                 
                 />
               ))}
             </div>
-          );
+      </div>
+      </div>
+    </div>
+  );
         case 'spinner':
         default:
             
             />
-          );
+      </div>
+      </div>
+    </div>
+  );
       }
     }, [size, variant, color, sizeClasses, colorClasses, baseClasses]);
     
@@ -59,8 +68,20 @@
           )}
         </div>
       </div>
-    );
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  );
   }
-);
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;

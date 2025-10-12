@@ -4,6 +4,7 @@ import React from 'react';
 const CookiesPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Cookies - Zion Tech Group</title>
         <meta name="description" content="Cookies services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const CookiesPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

@@ -4,6 +4,7 @@ import React from 'react';
 const ZionAiSupplyChainOptimizerPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Zion Ai Supply Chain Optimizer - Zion Tech Group</title>
         <meta name="description" content="Zion Ai Supply Chain Optimizer services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

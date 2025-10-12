@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react'
 const SupportPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+  return (
       <Helmet>
         <title>Support - Zion Tech Group</title>
         <meta name="description" content="Professional support services by Zion Tech Group. Transform your business with our expert solutions." />
@@ -19,6 +20,13 @@ const SupportPage: React.FC = () => {
           Contact Us
           <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
+      </div>
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       </div>
     </div>
   );

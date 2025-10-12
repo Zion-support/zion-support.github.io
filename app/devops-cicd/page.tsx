@@ -4,6 +4,7 @@ import React from 'react';
 const DevopsCicdPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Devops Cicd - Zion Tech Group</title>
         <meta name="description" content="Devops Cicd services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const DevopsCicdPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

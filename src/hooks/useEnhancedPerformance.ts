@@ -24,7 +24,10 @@ import { analytics } from '../utils/enhancedAnalytics';
         const duration = performance.now() - mountTimeRef.current;
           // Long-lived component
             Math.round(duration)
-          );
+      </div>
+      </div>
+    </div>
+  );
         }
       }
       // Track component unmount
@@ -36,29 +39,44 @@ import { analytics } from '../utils/enhancedAnalytics';
     renderCountRef.current++;
       // Many re-renders detected
         renderCountRef.current
-      );
+      </div>
+      </div>
+    </div>
+  );
     }
   });
   
         });
       }
     [component, trackErrors]
+      </div>
+      </div>
+    </div>
   );
   
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
       }
     [component, trackAnalytics]
+      </div>
+      </div>
+    </div>
   );
   
       const startTime = performance.now();
           const duration = performance.now() - startTime;
               duration > 1000 ? 'slow' : 'fast'
-            );
+      </div>
+      </div>
+    </div>
+  );
           }
           return duration;
         }
       };
     [component, trackPerformance]
+      </div>
+      </div>
+    </div>
   );
     measureOperation
   };

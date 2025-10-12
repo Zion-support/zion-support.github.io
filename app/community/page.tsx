@@ -4,6 +4,7 @@ import React from 'react';
 const CommunityPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Community - Zion Tech Group</title>
         <meta name="description" content="Community services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const CommunityPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

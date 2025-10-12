@@ -5,9 +5,10 @@ import {ArrowRight} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const AccessibilityenhancerPage: React.FC = () => {
+const AccessibilityenhancerPage: React.FC = ($2) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (
       <Helmet>
         <title>Accessibilityenhancer - Zion Tech Group</title>
         <meta name="description" content="Professional accessibilityenhancer services and solutions." />
@@ -30,6 +31,18 @@ const AccessibilityenhancerPage: React.FC = () => {
       </main>
       
       <Footer />
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
     </div>
   );
 };

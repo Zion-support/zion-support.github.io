@@ -22,14 +22,14 @@ const SearchBar: React.FC<SearchBarProps> = ({
     }
   }, [isOpen]);
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = ($2) => {
     e.preventDefault();
     if (query.trim() && onSearch) {
       onSearch(query.trim());
     }
   };
 
-  const handleClear = () => {
+  const handleClear = ($2) => {
     setQuery('');
     setIsOpen(false);
     if (inputRef.current) {
@@ -41,6 +41,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
     <div className={`relative ${className}`}>
       <form onSubmit={handleSearch} className="relative">
         <div className="relative">
+  return (
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
           <input
             ref={inputRef}
@@ -86,6 +87,20 @@ const SearchBar: React.FC<SearchBarProps> = ({
           </div>
         </div>
       )}
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
     </div>
   );
 };

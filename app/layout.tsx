@@ -76,6 +76,7 @@ const Layout: React.FC<LayoutProps> = ({
 
   return (
     <ErrorBoundary>
+  return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Helmet>
           <title>{title}</title>
@@ -123,6 +124,34 @@ const Layout: React.FC<LayoutProps> = ({
         </div>
       </div>
     </ErrorBoundary>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

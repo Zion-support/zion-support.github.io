@@ -4,6 +4,7 @@ import React from 'react';
 const AiHolographicWorkspacePage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Ai Holographic Workspace - Zion Tech Group</title>
         <meta name="description" content="Ai Holographic Workspace services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const AiHolographicWorkspacePage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

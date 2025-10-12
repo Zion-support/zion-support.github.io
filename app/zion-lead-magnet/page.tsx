@@ -4,6 +4,7 @@ import React from 'react';
 const ZionLeadMagnetPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Zion Lead Magnet - Zion Tech Group</title>
         <meta name="description" content="Zion Lead Magnet services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const ZionLeadMagnetPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

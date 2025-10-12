@@ -1,10 +1,10 @@
 'use client';
 import { useEffect } from 'react';
 
-const PerformanceOptimizer: React.FC = () => {
+const PerformanceOptimizer: React.FC = ($2) => {
   useEffect(() => {
     // Preload critical resources
-    const preloadCriticalResources = () => {
+    const preloadCriticalResources = ($2) => {
       const criticalImages = [
         '/images/hero-bg.jpg',
         '/images/logo.png'
@@ -20,7 +20,7 @@ const PerformanceOptimizer: React.FC = () => {
     };
 
     // Optimize images
-    const optimizeImages = () => {
+    const optimizeImages = ($2) => {
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -37,7 +37,7 @@ const PerformanceOptimizer: React.FC = () => {
     };
 
     // Defer non-critical scripts
-    const deferNonCriticalScripts = () => {
+    const deferNonCriticalScripts = ($2) => {
       const scripts = document.querySelectorAll('script[data-defer]');
       scripts.forEach(script => {
         const newScript = document.createElement('script');

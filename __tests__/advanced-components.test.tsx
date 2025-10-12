@@ -28,6 +28,7 @@ describe('AdvancedErrorBoundary', () => {
 describe('Advanced Components', () => {
   it('renders test content without error', () => {
     render(
+  return (
       <MemoryRouter>
         <ThrowError shouldThrow={false} />
       </MemoryRouter>
@@ -252,7 +253,45 @@ describe('AdvancedPerformanceMonitor', () => {
         <MemoryRouter>
           <ThrowError shouldThrow={true} />
         </MemoryRouter>
-      );
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  );
     }).not.toThrow();
     consoleSpy.mockRestore();
   });

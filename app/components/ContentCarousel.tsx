@@ -57,19 +57,19 @@ const defaultSlides: Slide[] = [
     }
   }, [isPlaying, slides.length, interval]);
 
-  const nextSlide = () => {
+  const nextSlide = ($2) => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
   };
 
-  const prevSlide = () => {
+  const prevSlide = ($2) => {
     setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
   };
 
-  const togglePlayPause = () => {
+  const togglePlayPause = ($2) => {
     setIsPlaying(!isPlaying);
   };
 
-  const goToSlide = (index: number) => {
+  const goToSlide = ($2) => {
     setCurrentSlide(index);
   };
 
@@ -77,6 +77,7 @@ const defaultSlides: Slide[] = [
     <div className="relative w-full max-w-4xl mx-auto">
       {/* Main Carousel */}
       <div className="relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20">
+  return (
         <div 
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -146,6 +147,28 @@ const defaultSlides: Slide[] = [
             />
           ))}
         </div>
+      </div>
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       </div>
     </div>
   );

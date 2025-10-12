@@ -4,6 +4,7 @@ import React from 'react';
 const DataAnalyticsBiPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Data Analytics Bi - Zion Tech Group</title>
         <meta name="description" content="Data Analytics Bi services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const DataAnalyticsBiPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

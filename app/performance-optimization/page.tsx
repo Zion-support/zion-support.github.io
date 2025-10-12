@@ -4,6 +4,7 @@ import React from 'react';
 const PerformanceOptimizationPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Performance Optimization - Zion Tech Group</title>
         <meta name="description" content="Performance Optimization services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const PerformanceOptimizationPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

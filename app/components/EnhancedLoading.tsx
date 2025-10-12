@@ -28,6 +28,7 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
   }
 
   const spinner = (
+  return (
     <div className="flex flex-col items-center justify-center space-y-4">
       <div className={`${sizeClasses[size]} ${colorClasses[color as keyof typeof colorClasses]} border-2 border-t-transparent rounded-full animate-spin`} />
       {text && (

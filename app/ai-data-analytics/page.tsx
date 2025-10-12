@@ -4,6 +4,7 @@ import React from 'react';
 const AiDataAnalyticsPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Ai Data Analytics - Zion Tech Group</title>
         <meta name="description" content="Ai Data Analytics services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const AiDataAnalyticsPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

@@ -10,6 +10,7 @@ describe('Component Tests', () => {
   })
   test('SEOHead renders without crashing', () => {
     render(
+  return (
       <HelmetProvider>
         <SEOHead />
       </HelmetProvider>

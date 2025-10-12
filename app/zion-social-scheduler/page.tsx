@@ -4,6 +4,7 @@ import React from 'react';
 const ZionSocialSchedulerPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Zion Social Scheduler - Zion Tech Group</title>
         <meta name="description" content="Zion Social Scheduler services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const ZionSocialSchedulerPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

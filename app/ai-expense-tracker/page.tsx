@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Receipt, ArrowRight, Bot, RotateCcw, RotateCw } from 'lucide-react'
-import { Link } from 'react-router-dom'
-  )
-}
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Brain, TrendingUp } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 
 const Page: React.FC = () => {
   const features = [
@@ -33,6 +25,7 @@ const Page: React.FC = () => {
 
   return (
     <>
+  return (
       <Helmet>
         <title>AI Expense Tracker - Zion Tech Group</title>
         <meta name="description" content="Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs." />
@@ -128,6 +121,44 @@ const Page: React.FC = () => {
         </section>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

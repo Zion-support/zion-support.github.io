@@ -4,6 +4,7 @@ import React from 'react';
 const FaqPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Faq - Zion Tech Group</title>
         <meta name="description" content="Faq services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const FaqPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

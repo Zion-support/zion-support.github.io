@@ -4,6 +4,7 @@ import React from 'react';
 const ZionContentStudioPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Zion Content Studio - Zion Tech Group</title>
         <meta name="description" content="Zion Content Studio services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const ZionContentStudioPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

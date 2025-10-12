@@ -1,10 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async'
 import { Server, Shield, Zap, BarChart3, CheckCircle, ArrowRight, Clock, Users, Database } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import { Link } from 'react-router-dom'
 
 const ServerManagementPage: React.FC = () => {
@@ -114,6 +110,7 @@ const ServerManagementPage: React.FC = () => {
 
   return (
     <>
+  return (
       <Helmet>
         <title>Server Management - Professional Server Administration | Zion Tech Group</title>
         <meta name="description" content="Professional server management services including monitoring, security, optimization, and 24/7 support. Keep your servers running at peak performance." />

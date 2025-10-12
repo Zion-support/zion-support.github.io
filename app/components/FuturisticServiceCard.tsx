@@ -1,10 +1,6 @@
 'use client'
 
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-=======
 import { ArrowRight, Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -39,6 +35,7 @@ import { ArrowRight, Brain } from 'lucide-react';
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (
       <Helmet>
         <title>Futuristic Service Card | Zion Tech Group</title>
         <meta name="description" content="Professional futuristic service card solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />

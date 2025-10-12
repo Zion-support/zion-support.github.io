@@ -4,6 +4,7 @@ import React from 'react';
 const DatabaseManagementPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Database Management - Zion Tech Group</title>
         <meta name="description" content="Database Management services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const DatabaseManagementPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-    </div>
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -28,6 +25,7 @@ const Page: React.FC = () => {
 
   return (
     <>
+  return (
       <Helmet>
         <title>System Integration - Zion Tech Group</title>
         <meta name="description" content="Professional system integration services by Zion Tech Group. Expert solutions tailored to your business needs." />
@@ -123,7 +121,44 @@ const Page: React.FC = () => {
         </section>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

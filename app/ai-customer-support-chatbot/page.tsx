@@ -4,13 +4,10 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-const AiCustomerSupportChatbotPage: React.FC = () => {
-=======
 const Page: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
   return (
     <>
+  return (
       <Helmet>
         <title>AI Customer Support Chatbot - Zion Tech Group</title>
         <meta name="description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." />
@@ -80,11 +77,34 @@ const Page: React.FC = () => {
         </section>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 
-<<<<<<< HEAD
-export default AiCustomerSupportChatbotPage;
-=======
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d

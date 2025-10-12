@@ -1,12 +1,8 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-=======
 import { Helmet } from 'react-helmet-async';
 import { Server, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Star, Users, TrendingUp } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -119,6 +115,7 @@ export default function AIDevOpsAutomationPage() {
 
   return (
     <>
+  return (
       <Helmet>
         <title>AI DevOps Automation - Smart CI/CD & Infrastructure Management | Zion Tech Group</title>
         <meta name="description" content="Automate your DevOps with AI-powered CI/CD pipelines, predictive monitoring, and intelligent resource management. Deploy 80% faster with 95% fewer issues." />
@@ -332,5 +329,78 @@ export default function AIDevOpsAutomationPage() {
         </section>
       </FuturisticBackground>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 }

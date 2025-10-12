@@ -4,6 +4,7 @@ import React from 'react';
 const CustomSoftwarePage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Custom Software - Zion Tech Group</title>
         <meta name="description" content="Custom Software services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const CustomSoftwarePage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

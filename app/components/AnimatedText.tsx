@@ -42,7 +42,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
     }
   }, [isVisible, currentIndex, text, type]);
 
-  const getAnimationClasses = () => {
+  const getAnimationClasses = ($2) => {
     const baseClasses = 'transition-all duration-1000';
 
     switch (type) {
@@ -65,7 +65,13 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
       {type === 'typing' && currentIndex < text.length && (
         <span className="animate-pulse">|</span>
       )}
+  return (
     </span>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

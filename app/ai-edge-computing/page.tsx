@@ -4,6 +4,7 @@ import React from 'react';
 const AiEdgeComputingPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Ai Edge Computing - Zion Tech Group</title>
         <meta name="description" content="Ai Edge Computing services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const AiEdgeComputingPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

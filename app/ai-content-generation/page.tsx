@@ -4,6 +4,7 @@ import React from 'react';
 const AiContentGenerationPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Ai Content Generation - Zion Tech Group</title>
         <meta name="description" content="Ai Content Generation services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const AiContentGenerationPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

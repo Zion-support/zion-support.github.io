@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { X, Cookie } from 'lucide-react';
 
-const CookieConsent: React.FC = () => {
+const CookieConsent: React.FC = ($2) => {
   const [showDetails, setShowDetails] = useState(false);
 
   useEffect(() => {
@@ -12,21 +12,21 @@ const CookieConsent: React.FC = () => {
     }
   }, []);
 
-  const acceptAll = () => {
+  const acceptAll = ($2) => {
     localStorage.setItem('cookie-consent', 'accepted');
     localStorage.setItem('analytics-consent', 'accepted');
     localStorage.setItem('marketing-consent', 'accepted');
     setIsVisible(false);
   };
 
-  const acceptNecessary = () => {
+  const acceptNecessary = ($2) => {
     localStorage.setItem('cookie-consent', 'necessary');
     localStorage.setItem('analytics-consent', 'declined');
     localStorage.setItem('marketing-consent', 'declined');
     setIsVisible(false);
   };
 
-  const acceptCustom = () => {
+  const acceptCustom = ($2) => {
     localStorage.setItem('cookie-consent', 'custom');
     setIsVisible(false);
   };
@@ -35,6 +35,7 @@ const CookieConsent: React.FC = () => {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 p-4">
+  return (
       <div className="max-w-4xl mx-auto">
         <div className="bg-slate-800 border border-slate-700 rounded-xl shadow-2xl backdrop-blur-sm">
           {!showDetails ? (
@@ -169,6 +170,51 @@ const CookieConsent: React.FC = () => {
             </div>
           )}
         </div>
+      </div>
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       </div>
     </div>
   );

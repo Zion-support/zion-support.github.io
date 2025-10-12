@@ -4,6 +4,7 @@ import React from 'react';
 const EnterpriseIntegrationPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Enterprise Integration - Zion Tech Group</title>
         <meta name="description" content="Enterprise Integration services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const EnterpriseIntegrationPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

@@ -120,6 +120,7 @@ export default function FiveGSmartCitySolutions() {
       description="Transform your city with 5G-powered smart infrastructure. AI analytics, citizen engagement, and sustainable solutions. Get your free smart city assessment today."
       keywords="5G smart city, urban infrastructure, smart transportation, citizen engagement, sustainable cities, IoT solutions"
     >
+  return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">

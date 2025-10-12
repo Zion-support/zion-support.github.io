@@ -54,10 +54,10 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
   const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
 
   useEffect(() => {
-    const animateValue = (start: number, end: number, duration: number, key: string) => {
+    const animateValue = ($2) => {
       const startTime = performance.now();
 
-      const animate = (currentTime: number) => {
+      const animate = ($2) => {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
 
@@ -94,6 +94,7 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
             key={stat.id}
             className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
           >
+  return (
             <div className="flex justify-center mb-4">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
                 <IconComponent className="w-6 h-6 text-white" />
@@ -113,8 +114,32 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
               {stat.label}
             </div>
           </div>
-        );
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  );
       })}
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
     </div>
   );
 };

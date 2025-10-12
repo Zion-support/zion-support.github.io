@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react'
 export default function AiinsurancePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+  return (
       <Helmet>
         <title>Ai Insurance - Zion Tech Group</title>
         <meta name="description" content="Professional ai insurance services by Zion Tech Group. Transform your business with our expert solutions." />
@@ -19,6 +20,13 @@ export default function AiinsurancePage() {
           Contact Us
           <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
+      </div>
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       </div>
     </div>
   );

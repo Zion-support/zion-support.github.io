@@ -4,6 +4,7 @@ import React from 'react';
 const DataVisualizationPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Data Visualization - Zion Tech Group</title>
         <meta name="description" content="Data Visualization services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const DataVisualizationPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

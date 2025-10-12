@@ -3,12 +3,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const Page: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
   return (
     <>
+  return (
       <Helmet>
         <title> - Zion Tech Group</title>
         <meta name="description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
@@ -77,12 +75,35 @@ const Page: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-}
-=======
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d

@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 
-const EnhancedSkipLink: React.FC = () => {
-  const handleSkipToMain = () => {
+const EnhancedSkipLink: React.FC = ($2) => {
+  const handleSkipToMain = ($2) => {
     const mainContent = document.getElementById('main-content');
     if (mainContent) {
       mainContent.focus();
@@ -10,7 +10,7 @@ const EnhancedSkipLink: React.FC = () => {
     }
   };
 
-  const handleSkipToNavigation = () => {
+  const handleSkipToNavigation = ($2) => {
     const navigation = document.querySelector('nav');
     if (navigation) {
       const firstLink = navigation.querySelector('a');
@@ -23,6 +23,7 @@ const EnhancedSkipLink: React.FC = () => {
 
   return (
     <div className="skip-links">
+  return (
       <button
         onClick={handleSkipToMain}
         className="skip-link"
@@ -70,6 +71,11 @@ const EnhancedSkipLink: React.FC = () => {
           color: #000;
         }
       `}</style>
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
     </div>
   );
 };

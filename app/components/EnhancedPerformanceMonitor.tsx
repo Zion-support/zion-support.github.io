@@ -19,7 +19,7 @@ interface PerformanceReport {
   deviceMemory: number | null
 }
 
-const EnhancedPerformanceMonitor: React.FC = () => {
+const EnhancedPerformanceMonitor: React.FC = ($2) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     inp: null,
@@ -36,7 +36,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     const startTime = performance.now()
 
     // Monitor Core Web Vitals
-    const measureWebVitals = () => {
+    const measureWebVitals = ($2) => {
       onCLS((metric) => {
         setMetrics(prev => ({ ...prev, cls: metric.value }))
       })
@@ -59,7 +59,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     }
 
     // Monitor memory usage
-    const measureMemoryUsage = () => {
+    const measureMemoryUsage = ($2) => {
       if ('memory' in performance) {
         const memory = (performance as any).memory
         setMetrics(prev => ({ 
@@ -70,7 +70,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     }
 
     // Monitor load time
-    const measureLoadTime = () => {
+    const measureLoadTime = ($2) => {
       window.addEventListener('load', () => {
         const loadTime = performance.now() - startTime
         setMetrics(prev => ({ ...prev, loadTime }))
@@ -78,7 +78,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     }
 
     // Monitor resource loading
-    const monitorResourceLoading = () => {
+    const monitorResourceLoading = ($2) => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach((entry) => {
@@ -98,7 +98,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     }
 
     // Monitor layout shifts
-    const monitorLayoutShifts = () => {
+    const monitorLayoutShifts = ($2) => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach((entry) => {
@@ -208,6 +208,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 
   return (
     <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg max-w-sm z-50">
+  return (
       <h3 className="text-sm font-bold mb-2">Performance Monitor</h3>
       <div className="text-xs space-y-1">
         <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'Measuring...'}</div>

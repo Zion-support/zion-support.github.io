@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-}
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -10,6 +7,7 @@ import { ArrowRight } from 'lucide-react';
 const Page: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title> - Zion Tech Group</title>
         <meta name="description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
@@ -79,8 +77,34 @@ const Page: React.FC = () => {
         </section>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d

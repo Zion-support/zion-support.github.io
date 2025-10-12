@@ -4,6 +4,7 @@ import React from 'react';
 const QuantumComputingPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Quantum Computing - Zion Tech Group</title>
         <meta name="description" content="Quantum Computing services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const QuantumComputingPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

@@ -79,7 +79,9 @@
             'X-RateLimit-Reset': String(resetTime)
           }
         }
-      );
+      </div>
+    </div>
+  );
     }
     // Request allowed - headers can be added to response later
     return null;

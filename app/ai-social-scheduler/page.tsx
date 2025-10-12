@@ -1,10 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
-import { Share2, ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async'
 import { Calendar, Share2, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Clock, Globe, Brain } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import { Link } from 'react-router-dom'
 
 const AISocialSchedulerPage: React.FC = () => {
@@ -127,6 +123,7 @@ const AISocialSchedulerPage: React.FC = () => {
 
   return (
     <>
+  return (
       <Helmet>
         <title>AI Social Scheduler - Smart Social Media Management | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered social media management with content generation, smart scheduling, and performance analytics. Increase engagement by 150% and save 10+ hours per week." />

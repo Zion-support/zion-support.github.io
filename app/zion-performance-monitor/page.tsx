@@ -4,6 +4,7 @@ import React from 'react';
 const ZionPerformanceMonitorPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Zion Performance Monitor - Zion Tech Group</title>
         <meta name="description" content="Zion Performance Monitor services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const ZionPerformanceMonitorPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

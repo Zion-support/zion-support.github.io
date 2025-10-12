@@ -28,6 +28,7 @@ const OptimizedLoading: React.FC<OptimizedLoadingProps> = ({
   return (
     <div className={`${containerClasses} ${className}`}>
       <div className="flex flex-col items-center space-y-4">
+  return (
         <Loader2 className={`${sizeClasses[size]} text-cyan-500 animate-spin`} />
         {text && (
           <p className="text-gray-300 text-sm font-medium animate-pulse">

@@ -3,7 +3,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 
-const Breadcrumb: React.FC = () => {
+const Breadcrumb: React.FC = ($2) => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
 
@@ -13,6 +13,7 @@ const Breadcrumb: React.FC = () => {
 
   return (
     <nav className="bg-gray-900/50 border-b border-gray-700 py-3" aria-label="Breadcrumb">
+  return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ol className="flex items-center space-x-2 text-sm">
           <li>
@@ -46,11 +47,31 @@ const Breadcrumb: React.FC = () => {
                   </Link>
                 )}
               </li>
-            );
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  );
           })}
         </ol>
       </div>
     </nav>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

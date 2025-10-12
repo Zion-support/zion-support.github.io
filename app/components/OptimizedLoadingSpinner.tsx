@@ -52,7 +52,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       []
     )
 
-    const renderSpinner = () => {
+    const renderSpinner = ($2) => {
       switch (variant) {
         case 'dots':
           return (
@@ -92,6 +92,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
                   style={{ animationDelay: `${i * 0.2}s` }}
                 />
               ))}
+  return (
             </div>
           )
         case 'pulse':

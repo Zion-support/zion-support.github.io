@@ -26,6 +26,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
   return (
     <div className="flex flex-col items-center justify-center space-y-4">
+  return (
       <div className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}>
         <svg
           className="w-full h-full"
@@ -51,6 +52,13 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {text && (
         <p className="text-gray-400 text-sm animate-pulse">{text}</p>
       )}
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
     </div>
   );
 };

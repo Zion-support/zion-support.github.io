@@ -4,6 +4,7 @@ import React from 'react';
 const MachineLearningPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Machine Learning - Zion Tech Group</title>
         <meta name="description" content="Machine Learning services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const MachineLearningPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

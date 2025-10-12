@@ -4,6 +4,7 @@ import React from 'react';
 const ECommerceDevelopmentPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>E Commerce Development - Zion Tech Group</title>
         <meta name="description" content="E Commerce Development services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const ECommerceDevelopmentPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

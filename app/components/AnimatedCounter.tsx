@@ -22,7 +22,7 @@ interface AnimatedCounterProps {
     let startTime: number;
     let animationFrame: number;
 
-    const animate = (currentTime: number) => {
+    const animate = ($2) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
       
@@ -47,5 +47,8 @@ interface AnimatedCounterProps {
     <span className={className}>
       {prefix}{count.toLocaleString()}{suffix}
     </span>
+      </div>
+      </div>
+    </div>
   );
 }

@@ -14,7 +14,7 @@ interface FuturisticCardProps {
   className = '', 
   onClick 
 }: FuturisticCardProps) {
-  const getVariantStyles = () => {
+  const getVariantStyles = ($2) => {
     switch (variant) {
       case 'service':
         return 'bg-gradient-to-br from-slate-800/60 via-slate-700/40 to-slate-800/60 backdrop-blur-xl border border-cyan-500/30 hover:border-cyan-400/50 shadow-2xl hover:shadow-cyan-500/20';
@@ -56,6 +56,14 @@ interface FuturisticCardProps {
       
       {/* Bottom accent */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+  return (
     </motion.div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 }

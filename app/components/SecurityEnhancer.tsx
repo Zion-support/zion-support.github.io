@@ -13,7 +13,7 @@ import { useEffect } from 'react'
       document.head.appendChild(cspMeta)
 
       // Add security event listeners
-      const handleSecurityEvent = (event: Event) => {
+      const handleSecurityEvent = ($2) => {
         console.log('Security event detected:', event.type)
       }
 
@@ -55,6 +55,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {use
     enhanceSecurity()}, [])
   return <React.Fragment>{children}</React.Fragment>}
 export default SecurityEnhancer
+  return (
   </SecurityEnhancerProps>
 
       // Disable right-click context menu

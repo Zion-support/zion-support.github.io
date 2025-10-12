@@ -1,10 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { Languages, ArrowRight } from 'lucide-react'
-=======
 import { Languages, ArrowRight, CheckCircle, Brain, Star, Target, Clock, FileText } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import Layout from '../layout'
 
 export default function AITranslationService() {
@@ -127,6 +123,7 @@ export default function AITranslationService() {
       description="Transform your global communication with AI-powered translation in 100+ languages. Professional quality, real-time translation, and industry-specific solutions. Start your free trial today."
       keywords="AI translation, machine translation, document translation, multilingual content, translation API, language services"
     >
+  return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">

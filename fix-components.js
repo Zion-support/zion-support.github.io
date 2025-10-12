@@ -15,6 +15,8 @@ const ${componentName}: React.FC = () => {
     <div className="${componentName.toLowerCase()}">
       {/* ${componentName} component placeholder */}
     </div>
+      </div>
+    </div>
   );
 };
 

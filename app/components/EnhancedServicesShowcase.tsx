@@ -2,7 +2,7 @@
 import React from 'react'
 import { ArrowRight } from 'lucide-react';
 
-const EnhancedServicesShowcase: React.FC = () => {
+const EnhancedServicesShowcase: React.FC = ($2) => {
   const services = [
     {
       icon: Brain,
@@ -43,6 +43,7 @@ const EnhancedServicesShowcase: React.FC = () => {
   ];
   return (
     <div className="py-20 px-4 sm:px-6 lg:px-8">
+  return (
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

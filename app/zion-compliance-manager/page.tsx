@@ -4,6 +4,7 @@ import React from 'react';
 const ZionComplianceManagerPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Zion Compliance Manager - Zion Tech Group</title>
         <meta name="description" content="Zion Compliance Manager services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const ZionComplianceManagerPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

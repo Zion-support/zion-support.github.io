@@ -3,6 +3,7 @@ import React from 'react'
 
 import { ArrowRight } from 'lucide-react';
   ];
+  return (
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -78,7 +79,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     }
   }, [isMonitoring, updateMetrics])
 
-  const toggleMonitoring = () => {
+  const toggleMonitoring = ($2) => {
     setIsMonitoring(!isMonitoring)
     if (!isMonitoring) {
       updateMetrics()

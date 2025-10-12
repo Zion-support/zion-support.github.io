@@ -67,15 +67,15 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
     return () => clearInterval(interval);
   }, [isPlaying, autoPlayInterval, items.length]);
 
-  const nextItem = () => {
+  const nextItem = ($2) => {
     setCurrentIndex((prev) => (prev + 1) % items.length);
   };
 
-  const prevItem = () => {
+  const prevItem = ($2) => {
     setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
   };
 
-  const togglePlayPause = () => {
+  const togglePlayPause = ($2) => {
     setIsPlaying(!isPlaying);
   };
 
@@ -86,6 +86,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
     <div className={`relative ${className}`}>
       {/* Controls */}
       <div className="flex items-center justify-between mb-6">
+  return (
         <div className="flex items-center gap-4">
           <button
             onClick={prevItem}
@@ -175,6 +176,37 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
             </div>
           </div>
         </div>
+      </div>
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       </div>
     </div>
   );

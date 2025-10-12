@@ -2,6 +2,7 @@ ursor/website-audit-and-update-with-deployment-a178
 ursor/
                 Enhanced Accessibility
                 EnhancedAccessibilityEnhancer
+  return (
               </span>
               <br />
               <span className="text-white">Enhancer</span>

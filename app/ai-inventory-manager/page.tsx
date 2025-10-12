@@ -1,10 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
-import { ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async'
 import { Package, TrendingUp, BarChart3, AlertTriangle, Zap, CheckCircle, ArrowRight, Star, Brain, Database, Shield, DollarSign } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import { Link } from 'react-router-dom'
 
 const AIInventoryManagerPage: React.FC = () => {
@@ -127,6 +123,7 @@ const AIInventoryManagerPage: React.FC = () => {
 
   return (
     <>
+  return (
       <Helmet>
         <title>AI Inventory Manager - Smart Stock Management | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered inventory management with demand forecasting, automated reordering, and real-time analytics. Reduce costs by 35% and stockouts by 80%." />

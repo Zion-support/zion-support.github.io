@@ -1,8 +1,9 @@
 import React from 'react';
 
-const SEOHead: React.FC = () => {
+const SEOHead: React.FC = ($2) => {
   return (
     <Helmet>
+  return (
       <title>Zion Tech Group - Advanced AI and IT Solutions</title>
       <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
       <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, 5G implementation" />
@@ -59,6 +60,26 @@ const SEOHead: React.FC = () => {
         })}
       </script>
     </Helmet>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

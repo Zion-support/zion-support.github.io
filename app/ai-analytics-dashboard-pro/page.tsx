@@ -1,10 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react'
-=======
 import { BarChart3, ArrowRight, CheckCircle, Brain, Globe, Star, Target } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import Layout from '../layout'
 
 export default function AIAnalyticsDashboardPro() {
@@ -124,6 +120,7 @@ export default function AIAnalyticsDashboardPro() {
       description="Transform your data into actionable insights with AI-powered analytics dashboard. Real-time visualization, predictive analytics, and custom reporting. Start your free trial today."
       keywords="AI analytics, business intelligence, data visualization, predictive analytics, dashboard, reporting"
     >
+  return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">

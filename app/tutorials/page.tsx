@@ -4,6 +4,7 @@ import React from 'react';
 const TutorialsPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Tutorials - Zion Tech Group</title>
         <meta name="description" content="Learn AI and IT solutions with our comprehensive tutorials and guides." />
@@ -126,6 +127,41 @@ const TutorialsPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

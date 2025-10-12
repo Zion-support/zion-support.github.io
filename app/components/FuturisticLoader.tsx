@@ -13,7 +13,7 @@ export default function FuturisticLoader({
   color = 'cyan',
   text = 'Loading...' 
 }: FuturisticLoaderProps) {
-  const getSizeClasses = () => {
+  const getSizeClasses = ($2) => {
     switch (size) {
       case 'sm': return 'w-8 h-8';
       case 'lg': return 'w-16 h-16';
@@ -21,7 +21,7 @@ export default function FuturisticLoader({
     }
   };
 
-  const getColorClasses = () => {
+  const getColorClasses = ($2) => {
     switch (color) {
       case 'purple': return 'border-purple-500 text-purple-400';
       case 'pink': return 'border-pink-500 text-pink-400';
@@ -32,6 +32,7 @@ export default function FuturisticLoader({
 
   return (
     <div className="flex flex-col items-center justify-center space-y-4">
+  return (
       <div className="relative">
         {/* Outer rotating ring */}
         <motion.div
@@ -110,6 +111,14 @@ export default function FuturisticLoader({
           {text}
         </motion.p>
       )}
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
     </div>
   );
 }

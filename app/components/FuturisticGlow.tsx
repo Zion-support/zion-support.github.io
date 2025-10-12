@@ -20,7 +20,7 @@ export default function FuturisticGlow({
     const container = containerRef.current;
     if (!container) return;
 
-    const getIntensityValue = () => {
+    const getIntensityValue = ($2) => {
       switch (intensity) {
         case 'low': return '0.3';
         case 'high': return '0.8';
@@ -28,7 +28,7 @@ export default function FuturisticGlow({
       }
     };
 
-    const getColorValue = () => {
+    const getColorValue = ($2) => {
       switch (color) {
         case 'cyan': return '0, 255, 255';
         case 'purple': return '168, 85, 247';
@@ -65,6 +65,9 @@ export default function FuturisticGlow({
       `}
     >
       {children}
+    </div>
+      </div>
+      </div>
     </div>
   );
 }

@@ -1,12 +1,7 @@
 'use client';
 
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { HardDrive } from 'lucide-react';
-=======
 import React, { useState, useEffect } from 'react';
 import { Activity, Wifi, HardDrive } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 
 interface PerformanceMetrics {
   lcp: number;
@@ -26,7 +21,7 @@ interface PerformanceMetrics {
   };
 }
 
-const PerformanceDashboard: React.FC = () => {
+const PerformanceDashboard: React.FC = ($2) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: 0,
     fid: 0,
@@ -101,7 +96,7 @@ const PerformanceDashboard: React.FC = () => {
       navigationObserver.observe({ entryTypes: ['navigation'] });
 
       // Memory usage
-      const updateMemory = () => {
+      const updateMemory = ($2) => {
         if ('memory' in performance) {
           setMetrics(prev => ({ 
             ...prev, 
@@ -138,13 +133,13 @@ const PerformanceDashboard: React.FC = () => {
 
   if (!isVisible) return null;
 
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
+  const getScoreColor = ($2) => {
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
     return 'text-red-400';
   };
 
-  const formatBytes = (bytes: number) => {
+  const formatBytes = ($2) => {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
@@ -154,6 +149,7 @@ const PerformanceDashboard: React.FC = () => {
 
   return (
     <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-white text-xs max-w-xs z-50">
+  return (
       <div className="flex items-center justify-between mb-3">
         <h3 className="font-semibold text-cyan-400 flex items-center">
           <Activity className="w-4 h-4 mr-1" />
@@ -229,6 +225,34 @@ const PerformanceDashboard: React.FC = () => {
             </div>
           </div>
         )}
+      </div>
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       </div>
     </div>
   );

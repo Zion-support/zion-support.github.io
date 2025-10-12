@@ -4,6 +4,7 @@ import React from 'react';
 const WorkflowAutomationPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Workflow Automation - Zion Tech Group</title>
         <meta name="description" content="Workflow Automation services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const WorkflowAutomationPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

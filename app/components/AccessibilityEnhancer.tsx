@@ -1,10 +1,10 @@
 'use client';
 import { useEffect } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
+const AccessibilityEnhancer: React.FC = ($2) => {
   useEffect(() => {
     // Add keyboard navigation support
-    const addKeyboardNavigation = () => {
+    const addKeyboardNavigation = ($2) => {
       document.addEventListener('keydown', (e) => {
         // Skip to main content with Alt + M
         if (e.altKey && e.key === 'm') {
@@ -31,7 +31,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
 
     // Add focus indicators
-    const addFocusIndicators = () => {
+    const addFocusIndicators = ($2) => {
       const style = document.createElement('style');
       style.textContent = `
         *:focus {
@@ -48,7 +48,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
 
     // Add ARIA labels to interactive elements
-    const addAriaLabels = () => {
+    const addAriaLabels = ($2) => {
       const buttons = document.querySelectorAll('button:not([aria-label])');
       buttons.forEach(button => {
         if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
@@ -65,9 +65,10 @@ const AccessibilityEnhancer: React.FC = () => {
     };
 
     // Add skip links
-    const addSkipLinks = () => {
+    const addSkipLinks = ($2) => {
       const skipLinks = document.createElement('div');
       skipLinks.innerHTML = `
+  return (
         <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
           Skip to main content
         </a>

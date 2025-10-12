@@ -26,13 +26,13 @@ interface AnalyticsProviderProps {
     // Analytics initialization logic here
   }, []);
 
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
+  const trackEvent = ($2) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
     }
   };
 
-  const trackPageView = (pageName: string) => {
+  const trackPageView = ($2) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: pageName,
@@ -50,5 +50,9 @@ interface AnalyticsProviderProps {
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 }

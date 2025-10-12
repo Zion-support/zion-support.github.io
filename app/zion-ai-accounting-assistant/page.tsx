@@ -4,6 +4,7 @@ import React from 'react';
 const ZionAiAccountingAssistantPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Zion Ai Accounting Assistant - Zion Tech Group</title>
         <meta name="description" content="Zion Ai Accounting Assistant services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const ZionAiAccountingAssistantPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

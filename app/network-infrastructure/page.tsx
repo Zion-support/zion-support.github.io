@@ -4,6 +4,7 @@ import React from 'react';
 const NetworkInfrastructurePage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Network Infrastructure - Zion Tech Group</title>
         <meta name="description" content="Network Infrastructure services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const NetworkInfrastructurePage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

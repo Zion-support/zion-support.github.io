@@ -61,6 +61,7 @@ const AIAutomationPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+  return (
       <Helmet>
         <title>AI Automation Services - Zion Tech Group</title>
         <meta name="description" content="Transform your business with AI-powered automation solutions. Reduce costs, increase efficiency, and eliminate manual processes." />
@@ -152,19 +153,6 @@ const AIAutomationPage: React.FC = () => {
                 ))}
               </ul>
             </div>
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-2xl p-8 border border-cyan-500/30">
-              <h3 className="text-2xl font-bold text-white mb-4">Ready to Automate?</h3>
-              <p className="text-gray-300 mb-6">
-                Let our AI experts help you identify automation opportunities and implement solutions that deliver immediate value.
-              </p>
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 inline-flex items-center gap-2"
-              >
-                Start Your Automation Journey <ArrowRight className="w-5 h-5" />
-              </Link>
-=======
             <div className="relative">
               <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
                 <div className="text-center">
@@ -176,7 +164,6 @@ const AIAutomationPage: React.FC = () => {
                   <div className="text-gray-300">Automated Operations</div>
                 </div>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
             </div>
           </div>
         </div>
@@ -207,6 +194,58 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
     </div>
   );
 };

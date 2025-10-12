@@ -1,10 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react'
-=======
 import { Shield, Eye, CheckCircle, ArrowRight, Brain, Globe, Star } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import Layout from '../layout'
 
 export default function AIContentModerationPro() {
@@ -124,6 +120,7 @@ export default function AIContentModerationPro() {
       description="Protect your platform with AI-powered content moderation. Real-time detection, multi-format support, and 99.7% accuracy. Start your free trial today."
       keywords="AI content moderation, content safety, platform protection, automated moderation, content filtering"
     >
+  return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">

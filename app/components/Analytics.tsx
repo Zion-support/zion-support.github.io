@@ -8,7 +8,7 @@ interface AnalyticsProps {
 
   useEffect(() => {
     // Initialize analytics tracking
-    const initAnalytics = () => {
+    const initAnalytics = ($2) => {
       // Google Analytics initialization
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('config', 'GA_MEASUREMENT_ID', {

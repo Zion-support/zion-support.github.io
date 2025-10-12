@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
 
-const MobileOptimizer: React.FC = () => {
+const MobileOptimizer: React.FC = ($2) => {
   useEffect(() => {
     // Prevent zoom on input focus for iOS
-    const preventZoom = () => {
+    const preventZoom = ($2) => {
       const viewport = document.querySelector('meta[name="viewport"]')
       if (viewport) {
         viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
@@ -11,7 +11,7 @@ const MobileOptimizer: React.FC = () => {
     }
 
     // Add touch-friendly classes
-    const addTouchClasses = () => {
+    const addTouchClasses = ($2) => {
       const buttons = document.querySelectorAll('button, a, [role="button"]')
       buttons.forEach(button => {
         if (!button.classList.contains('touch-manipulation')) {
@@ -21,7 +21,7 @@ const MobileOptimizer: React.FC = () => {
     }
 
     // Optimize images for mobile
-    const optimizeImagesForMobile = () => {
+    const optimizeImagesForMobile = ($2) => {
       const images = document.querySelectorAll('img')
       images.forEach(img => {
         const imageElement = img as HTMLImageElement
@@ -35,7 +35,7 @@ const MobileOptimizer: React.FC = () => {
     }
 
     // Add mobile-specific event listeners
-    const addMobileEventListeners = () => {
+    const addMobileEventListeners = ($2) => {
       // Prevent double-tap zoom
       let lastTouchEnd = 0
       document.addEventListener('touchend', (event) => {
@@ -47,7 +47,7 @@ const MobileOptimizer: React.FC = () => {
       }, false)
 
       // Add haptic feedback for supported devices
-      const addHapticFeedback = (element: Element) => {
+      const addHapticFeedback = ($2) => {
         element.addEventListener('touchstart', () => {
           if ('vibrate' in navigator) {
             navigator.vibrate(10) // Short vibration
@@ -60,14 +60,14 @@ const MobileOptimizer: React.FC = () => {
     }
 
     // Optimize scroll performance
-    const optimizeScrollPerformance = () => {
+    const optimizeScrollPerformance = ($2) => {
       let ticking = false
-      const updateScrollPosition = () => {
+      const updateScrollPosition = ($2) => {
         // Add scroll-based optimizations here
         ticking = false
       }
 
-      const requestTick = () => {
+      const requestTick = ($2) => {
         if (!ticking) {
           requestAnimationFrame(updateScrollPosition)
           ticking = true

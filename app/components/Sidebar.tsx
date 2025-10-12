@@ -21,6 +21,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     <div className={`fixed inset-0 z-50 transform transition-transform duration-300 ease-in-out ${
       isOpen ? 'translate-x-0' : '-translate-x-full'
     }`}>
+  return (
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
       <div className="relative flex flex-col w-64 h-full bg-gray-900 shadow-xl">
         <div className="flex items-center justify-between p-4">
@@ -44,6 +45,15 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             </Link>
           ))}
         </nav>
+      </div>
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       </div>
     </div>
   );

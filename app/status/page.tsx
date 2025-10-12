@@ -4,6 +4,7 @@ import React from 'react';
 const StatusPage: React.FC = () => {
   return (
     <>
+  return (
       <Helmet>
         <title>Status - Zion Tech Group</title>
         <meta name="description" content="Status services by Zion Tech Group. Professional AI and IT solutions." />
@@ -36,6 +37,20 @@ const StatusPage: React.FC = () => {
         </div>
       </div>
     </>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

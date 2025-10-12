@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Sun, Moon } from 'lucide-react';
 
-const ThemeToggle: React.FC = () => {
+const ThemeToggle: React.FC = ($2) => {
   const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const ThemeToggle: React.FC = () => {
     }
   }, []);
 
-  const toggleTheme = () => {
+  const toggleTheme = ($2) => {
     const newTheme = !isDark;
     setIsDark(newTheme);
 
@@ -41,9 +41,14 @@ const ThemeToggle: React.FC = () => {
       {isDark ? (
         <Sun className="w-5 h-5" />
       ) : (
+  return (
         <Moon className="w-5 h-5" />
       )}
     </button>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 }
 
-const PerformanceOptimizer: React.FC = () => {
+const PerformanceOptimizer: React.FC = ($2) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
@@ -13,7 +13,7 @@ const PerformanceOptimizer: React.FC = () => {
 
   useEffect(() => {
     // Preload critical resources
-    const preloadCriticalResources = () => {
+    const preloadCriticalResources = ($2) => {
       const criticalResources = [
         '/fonts/inter.woff2',
         '/images/hero-bg.jpg',
@@ -33,7 +33,7 @@ const PerformanceOptimizer: React.FC = () => {
     }
 
     // Optimize images
-    const optimizeImages = () => {
+    const optimizeImages = ($2) => {
       const images = document.querySelectorAll('img[data-src]')
       images.forEach(img => {
         const imageElement = img as HTMLImageElement
@@ -45,7 +45,7 @@ const PerformanceOptimizer: React.FC = () => {
     }
 
     // Lazy load non-critical components
-    const lazyLoadComponents = () => {
+    const lazyLoadComponents = ($2) => {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach(entry => {
@@ -64,7 +64,7 @@ const PerformanceOptimizer: React.FC = () => {
     }
 
     // Monitor Core Web Vitals
-    const monitorWebVitals = () => {
+    const monitorWebVitals = ($2) => {
 import { onCLS, onFID, onFCP, onLCP, onTTFB } 
         onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
         onFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))

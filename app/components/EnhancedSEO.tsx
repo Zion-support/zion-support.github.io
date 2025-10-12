@@ -76,6 +76,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="keywords" content={keywords} />
       <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-image-preview:large, max-snippet:-1, max-video-preview:-1`} />
       <meta name="author" content="Zion Tech Group" />
+  return (
       <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
       <meta name="theme-color" content="#8b5cf6" />
       <meta name="color-scheme" content="dark light" />

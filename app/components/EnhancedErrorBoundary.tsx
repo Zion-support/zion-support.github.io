@@ -34,7 +34,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     console.error('Error caught by boundary:', error, errorInfo);
   }
 
-  handleRetry = () => {
+  handleRetry = ($2) => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
 
@@ -46,6 +46,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center px-4">
+  return (
           <div className="max-w-md w-full bg-gray-800 rounded-xl p-8 text-center border border-gray-700">
             <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="h-8 w-8 text-white" />
@@ -114,7 +115,29 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  );
     }
 
     return this.props.children;

@@ -25,7 +25,7 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
   onButtonClick,
   variant = 'default'
 }) => {
-  const getVariantStyles = () => {
+  const getVariantStyles = ($2) => {
     switch (variant) {
       case 'premium':
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
@@ -40,6 +40,7 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
     <div className={`relative overflow-hidden rounded-2xl ${getVariantStyles()} p-8 text-white`}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
+  return (
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12"></div>
       </div>
 
@@ -69,6 +70,19 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
             </button>
           </div>
         </div>
+      </div>
+    </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       </div>
     </div>
   );

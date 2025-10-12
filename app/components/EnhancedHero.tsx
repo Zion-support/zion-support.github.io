@@ -2,7 +2,7 @@
 import React from 'react'
 import { ArrowRight } from 'lucide-react';
 
-const EnhancedHero: React.FC = () => {
+const EnhancedHero: React.FC = ($2) => {
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -35,6 +35,7 @@ const EnhancedHero: React.FC = () => {
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+  return (
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
       
       {/* Main Content */}

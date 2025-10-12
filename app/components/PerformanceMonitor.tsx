@@ -1,13 +1,11 @@
 'use client';
 import React, { useEffect } from 'react';
-=======
 import { useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
 
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC = ($2) => {
   useEffect(() => {
     // Monitor Core Web Vitals
-    const monitorCoreWebVitals = () => {
+    const monitorCoreWebVitals = ($2) => {
       if ('web-vitals' in window) {
 import { getCLS, getFID, getFCP, getLCP, getTTFB } 
           getCLS(console.log);
@@ -20,7 +18,7 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB }
     };
 
     // Monitor performance metrics
-    const monitorPerformance = () => {
+    const monitorPerformance = ($2) => {
       if ('performance' in window) {
         window.addEventListener('load', () => {
           setTimeout(() => {
@@ -39,7 +37,7 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB }
     };
 
     // Monitor memory usage
-    const monitorMemory = () => {
+    const monitorMemory = ($2) => {
       if ('memory' in performance) {
         setInterval(() => {
           const memory = (performance as any).memory;
