@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/analyze-improve-and-deploy-application-edcb
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17c
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -218,7 +221,10 @@ export default OptimizedImagePage
       </section>
     </div>)};export default OptimizedImagePage
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-fabc
 =======
 'use client'
 >>>>>>> cursor/analyze-improve-and-deploy-application-072b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17c

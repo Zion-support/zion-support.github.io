@@ -1,6 +1,6 @@
 import React from 'react'
 import SEOHead from '../components/SEOHead'
-import { CheckCircle, ArrowRight, MessageSquare, Clock, Users, Zap, Star, Sparkles, Bot, Headphones, Globe, Shield } from 'lucide-react'
+import { CheckCircle, ArrowRight, MessageSquare, Clock, Users, Zap, Star, Sparkles, Bot, Globe, Shield } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export default function AICustomerSupportBotPage() {

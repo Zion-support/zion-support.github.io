@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
@@ -14,6 +15,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react';
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7720
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17c
 
 export default function Footer() {
   const aiServices = [
@@ -22,20 +28,22 @@ export default function Footer() {
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
     { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Automation Suite', path: '/ai-automation' },
-    { name: 'AI 3D Generation', path: '/ai-3d-generation' },
-    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
+    { name: 'AI Automation Suite', path: '/ai-automation' }
   ];
 
   const itServices = [
     { name: 'Cloud Migration', path: '/cloud-migration' },
     { name: 'DevOps Solutions', path: '/devops-solutions' },
     { name: 'Cybersecurity', path: '/cybersecurity' },
+<<<<<<< HEAD
     { name: 'Data Analytics', path: '/data-analytics' },
 <<<<<<< HEAD
     { name: 'Mobile Development', path: '/mobile-development' },
     { name: 'Blockchain Solutions', path: '/blockchain' },
     { name: 'Quantum Computing', path: '/quantum-computing-solutions' }
+=======
+    { name: 'Data Analytics', path: '/data-analytics' }
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17c
   ];
 
   const microSaasServices = [
@@ -73,10 +81,9 @@ export default function Footer() {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'IT Services', path: '/it-services' },
-    { name: 'Micro SAAS', path: '/micro-saas-services' },
-    { name: '5G Solutions', path: '/5g-implementation' },
     { name: 'Contact', path: '/contact' }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -86,6 +93,8 @@ export default function Footer() {
     { name: 'Terms of Service', path: '/terms' }
   ];
 >>>>>>> cursor/analyze-improve-and-deploy-application-41ac
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17c
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -134,6 +143,7 @@ export default function Footer() {
               Leading the future of AI and IT solutions. We transform businesses through 
               innovative technology and cutting-edge artificial intelligence.
             </p>
+<<<<<<< HEAD
             <div className="flex space-x-4">
               <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="h-6 w-6" />
@@ -146,10 +156,13 @@ export default function Footer() {
               </a>
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7720
             </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17c
           </div>
 
           {/* AI Services */}
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -162,10 +175,15 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7720
+=======
+            <h3 className="text-lg font-semibold mb-4 text-white">AI Services</h3>
+            <ul className="space-y-2">
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17c
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link 
                     to={service.path} 
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className="text-gray-400 hover:text-white transition-colors flex items-center"
                   >
@@ -175,6 +193,11 @@ export default function Footer() {
                   >
                     <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform" />
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7720
+=======
+                    className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17c
                     {service.name}
                   </Link>
                 </li>
@@ -185,6 +208,7 @@ export default function Footer() {
           {/* IT Services */}
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4">IT Services</h3>
             <ul className="space-y-2">
 =======
@@ -194,10 +218,15 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7720
+=======
+            <h3 className="text-lg font-semibold mb-4 text-white">IT Services</h3>
+            <ul className="space-y-2">
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17c
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link 
                     to={service.path} 
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className="text-gray-400 hover:text-white transition-colors flex items-center"
                   >
@@ -207,12 +236,18 @@ export default function Footer() {
                   >
                     <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform" />
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7720
+=======
+                    className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17c
                     {service.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
 
           {/* Micro SAAS Services */}
           <div>
@@ -370,10 +405,27 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
+=======
+        </div>
+
+        {/* Quick Links */}
+        <div className="mt-8 pt-8 border-t border-gray-800">
+          <div className="flex flex-wrap gap-6 justify-center">
+            {quickLinks.map((link, index) => (
+              <Link
+                key={index}
+                to={link.path}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17c
           </div>
         </div>
 
         {/* Contact Info */}
+<<<<<<< HEAD
         <div className="border-t border-white/10 mt-12 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center">
@@ -405,12 +457,34 @@ export default function Footer() {
                 Terms of Service
               </Link>
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7720
+=======
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center mb-4 md:mb-0">
+              <Mail className="w-5 h-5 text-gray-400 mr-3" />
+              <span className="text-gray-400">contact@ziontech.com</span>
             </div>
+            <div className="flex items-center space-x-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17c
+            </div>
+          </div>
+          <div className="mt-4 text-center text-gray-400 text-sm">
+            © 2024 Zion Tech Group. All rights reserved.
           </div>
         </div>
       </div>
     </footer>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -420,3 +494,6 @@ export default function Footer() {
 =======
 };
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7720
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17c

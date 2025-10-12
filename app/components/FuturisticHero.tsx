@@ -156,11 +156,14 @@ const FuturisticHeroPage: React.FC = () => {
               </button>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-fabc
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-072b
 =======
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7720
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17c
           </div>
         </div>
       </section>

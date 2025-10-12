@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/enhance-app-with-new-services-and-futuristic-design-00bf
 ursor/website-audit-and-update-with-deployment-a178
   )
 }
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17c
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -95,10 +98,13 @@ import React from 'react'
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-fabc
 =======
   )
 }
 >>>>>>> cursor/analyze-improve-and-deploy-application-072b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17c
 
 export default FuturisticBackgroundPage
