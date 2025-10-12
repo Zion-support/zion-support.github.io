@@ -27,7 +27,7 @@ const PricingPage = React.lazy(() => import('./app/pricing/page'));
 const BlogPage = React.lazy(() => import('./app/blog/page'));
 const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
 const CareersPage = React.lazy(() => import('./app/careers/page'));
-const AIServicesPage = React.lazy(() =>const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
+const AIServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
