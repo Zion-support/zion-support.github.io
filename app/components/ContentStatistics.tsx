@@ -86,14 +86,14 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
         return (
     <div
             const key = {stat.id}
-            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-allduration-300" />
+            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20-transition-all duration-300" />
             <div className="flexjustify-centermb-4">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flexitems-centerjustify-center">
-                <IconComponent className="w-6h-6text-white" / />
+                <IconComponent className="w-6-h-6text-white" / />
               </div>
             </div>
 
-            <div className="text-3 xl font-boldtext-whitemb-2"  />{stat.prefix}
+            <div className="text-3 xl font-boldtext-white mb-2"  />{stat.prefix}
               {stat.suffix === '%'
                 ? animatedValue.toFixed(1)
                 : Math.floor(animatedValue).toLocaleString()
@@ -101,7 +101,7 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
               {stat.suffix}
             </div>
 
-            <div className="text-gray-300text-sm"  />{stat.label}
+            <div className="text-gray-300-text-sm"  />{stat.label}
             </div>
           </div>
         );

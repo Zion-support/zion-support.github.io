@@ -14,7 +14,7 @@ const HomePage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white  mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Your Business with
               <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Advanced AI & IT Solutions
@@ -36,9 +36,9 @@ const HomePage: React.FC = () => {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Learn More
-                      </Link>
-      </div>
-    </div>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </>

@@ -5,9 +5,9 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7-xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center">
-          <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+          <h3 className="text-2-xl font-bold mb-4">Zion Tech Group</h3>
           <p className="text-gray-400 mb-4">
             Advanced AI & IT Solutions
           </p>

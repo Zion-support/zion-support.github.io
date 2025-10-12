@@ -36,21 +36,21 @@ export default function AdvancedSecuritySuite() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7-xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">
                 <Shield className="w-4 h-4 mr-2" />
                 Enterprise Cybersecurity
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4-xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
                 Advanced Security Suite
               </h1>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3-xl mx-auto mb-8">
                 Protect your business with our comprehensive cybersecurity solution. AI-powered threat detection, 
                 24/7 monitoring, and compliance tools to keep your data and systems secure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact" className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                <Link to="/contact" className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600  hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   Get Free Assessment
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
@@ -64,12 +64,12 @@ export default function AdvancedSecuritySuite() {
 
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7-xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3-xl sm:text-4xl font-bold text-white mb-4">
                 Comprehensive Security Features
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-300 max-w-2-xl mx-auto">
                 Advanced protection against the latest cyber threats
               </p>
             </div>
@@ -94,15 +94,15 @@ export default function AdvancedSecuritySuite() {
 
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
+          <div className="max-w-4-xl mx-auto text-center">
+            <h2 className="text-3-xl font-bold text-white mb-4">
               Secure Your Business Today
             </h2>
             <p className="text-lg text-gray-300 mb-8">
               Don't wait for a cyber attack. Get comprehensive protection with Advanced Security Suite
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300">
+              <Link to="/contact" className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600  hover:to-purple-700 transition-all duration-300">
                 Get Free Security Assessment
               </Link>
               <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">

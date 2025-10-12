@@ -88,7 +88,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
               {[0, 1, 2].map(i => (</div>
                 <div}
                   key="{i}"
-                  className="{`${sizeClasses[size]}" rounded-full bg-current animate-pulse`}
+                  className="{`${size-Classes[size]}" rounded-full bg-current animate-pulse`}
                   style="{{" animationDelay: `${i * 0.2}s` }}
                 /  />))}
             </div>
@@ -96,7 +96,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
         case 'pulse':
           return (
     <div
-              className="{`${sizeClasses[size]}" rounded-full bg-current animate-pulse`}
+              className="{`${size-Classes[size]}" rounded-full bg-current animate-pulse`}
             / />
           )
         case 'skeleton':
@@ -123,7 +123,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
         default:
           return (
     <div
-              className="{`${sizeClasses[size]}" border-2 border-current border-t-transparent rounded-full animate-spin`}
+              className="{`${size-Classes[size]}" border-2 border-current border-t-transparent rounded-full animate-spin`}
             / />
           )
       }
@@ -133,7 +133,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       ? 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center'
       : 'flex items-center justify-center p-8'
 
-      <div className="{containerClasses}"></div>
+      <div className="{container-Classes}"></div>
         <div className="'text-center'"></div>
           {renderSpinner}
           {text && (</div>}

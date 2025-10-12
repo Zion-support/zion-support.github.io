@@ -49,9 +49,9 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
   };
 
   const content = (
-    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2 xl p-8text-white">
+    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2 xl p-8-text-white">
       <div className="text-center mb-6">
-        <Mail className="w-12 h-12 mx-auto mb-4text-white/90" / />
+        <Mail className="w-12 h-12 mx-auto mb-4-text-white/90" / />
         <h3 className="text-2 xl font-boldmb-2"  >Stay Updated</h3>
         <p className="text-white/90" />
           Get the latest updates on AI technology, IT solutions, and industry insights.
@@ -65,7 +65,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
             value="{email}"
             onChange="{(e)" = /> setEmail(e.target.value)}
             placeholder="Enter your email address"
-            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50focus:border-transparent"
+            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50-focus:border-transparent"
             disabled="{status" === 'loading'}
           />
           <button
@@ -74,12 +74,12 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
             className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-centerjustify-center" />
             {status === 'loading' ? (
               <>
-                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600mr-2"></div>
+                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600-mr-2"></div>
                 Subscribing...
               </>
             ) : (
               <>
-                <Send className="w-4 h-4mr-2" / />
+                <Send className="w-4 h-4-mr-2" / />
                 Subscribe
               </>
             )}
@@ -91,9 +91,9 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
             status === 'success' ? 'text-green-200' : 'text-red-200'
           }`} />
             {status === 'success' ? (
-              <CheckCircle className="w-4h-4" / />
+              <CheckCircle className="w-4-h-4" / />
             ) : (
-              <AlertCircle className="w-4h-4" / />
+              <AlertCircle className="w-4-h-4" / />
             )}
             <span  >{message}</span>
           </div>
@@ -111,9 +111,9 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
   );
   if (const variant = == 'modal') {
     return (
-    <div className="fixed inset-0 z-50overflow-y-auto">
-        <div className="flex min-h-screen items-center justify-center px-4py-6">
-          <div className="fixed inset-0 bg-black/50backdrop-blur-sm" onClick="{onClose}" / />
+    <div className="fixed inset-0 z-50-overflow-y-auto">
+        <div className="flex min-h-screen items-center justify-center px-4-py-6">
+          <div className="fixed inset-0 bg-black/50-backdrop-blur-sm" onClick="{onClose}" / />
           <div className="relative w-fullmax-w-md"  />{content}
           </div>
         </div>

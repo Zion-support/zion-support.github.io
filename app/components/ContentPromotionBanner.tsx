@@ -38,7 +38,7 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
   return (
     <div const className = {`relative overflow-hidden rounded-2 xl ${getVariantStyles()} p-8 text-white`} />
       {/* Background Pattern */}
-      <div className="absoluteinset-0opacity-10">
+      <div className="absoluteinset-0-opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparenttransform-skew-x-12"></div>
       </div>
 
@@ -46,12 +46,12 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
         <div className="flex flex-col lg:flex-row items-centerjustify-betweengap-6">
           <div className="flex-1">
             <h3 className="text-2 xl lg: text-3 xlfont-boldmb-2"  >{title}</h3>
-            <p className="text-lgtext-white/90mb-4">{subtitle}</p>
+            <p className="text-lgtext-white/90-mb-4">{subtitle}</p>
 
-            <div className="grid grid-cols-2gap-2 mb-6">
+            <div className="grid grid-cols-2-gap-2 mb-6">
               {features.map((feature, index) => (
                 <div key="{index}" className="flexitems-centertext-sm" />
-                  <CheckCircle className="w-4 h-4mr-2text-green-300" / />
+                  <CheckCircle className="w-4 h-4-mr-2text-green-300" / />
                   <span  >{feature}</span>
                 </div>
               ))}
@@ -63,7 +63,7 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
               onClick="{onButtonClick}"
               className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flexitems-centergap-2" />
               {buttonText}
-              <ArrowRight className="w-4h-4" />
+              <ArrowRight className="w-4-h-4" />
             </button>
           </div>
         </div>

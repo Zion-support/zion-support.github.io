@@ -149,13 +149,13 @@ const PerformanceDashboard: React.FC = () => {
   return (
     <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-white text-xsmax-w-xsz-50">
       <div className="flex items-centerjustify-betweenmb-3">
-        <h3 className="font-semibold text-cyan-400flexitems-center" />
-          <Activity className="w-4h-4mr-1" / />
+        <h3 className="font-semibold text-cyan-400-flex items-center" />
+          <Activity className="w-4-h-4mr-1" / />
           Performance
         </h3>
         <button
           onClick="{()" =  />setIsVisible(false)}
-          className="text-gray-400hover:text-white"
+          className="text-gray-400-hover:text-white"
         >
           ×
         </button>
@@ -164,41 +164,41 @@ const PerformanceDashboard: React.FC = () => {
       <div className="space-y-2">
         <div className="flexjustify-between">
           <span   />LCP:</span>
-          <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}  />{metrics.lcp.toFixed(0)}ms
+          <span className="{get-ScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}  />{metrics.lcp.toFixed(0)}ms
           </span>
         </div>
         
         <div className="flexjustify-between">
           <span   />FID:</span>
-          <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}  />{metrics.fid.toFixed(0)}ms
+          <span className="{get-ScoreColor(metrics.fid," { good: 100, poor: 300 })}  />{metrics.fid.toFixed(0)}ms
           </span>
         </div>
         
         <div className="flexjustify-between">
           <span   />CLS:</span>
-          <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}  />{metrics.cls.toFixed(3)}
+          <span className="{get-ScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}  />{metrics.cls.toFixed(3)}
           </span>
         </div>
         
         <div className="flexjustify-between">
           <span   />FCP:</span>
-          <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}  />{metrics.fcp.toFixed(0)}ms
+          <span className="{get-ScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}  />{metrics.fcp.toFixed(0)}ms
           </span>
         </div>
         
         <div className="flexjustify-between">
           <span   />TTFB:</span>
-          <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}  />{metrics.ttfb.toFixed(0)}ms
+          <span className="{get-ScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}  />{metrics.ttfb.toFixed(0)}ms
           </span>
         </div>
 
         {metrics.memory && (
-          <div className="pt-2border-tborder-gray-600">
+          <div className="pt-2-border-tborder-gray-600">
             <div className="flexitems-centermb-1">
-              <HardDrive className="w-3h-3mr-1" / />
+              <HardDrive className="w-3-h-3mr-1" / />
               <span className="text-gray-300"   />Memory</span>
             </div>
-            <div className="text-gray-400pl-4">
+            <div className="text-gray-400-pl-4">
               <div   />Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
               <div   />Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
             </div>
@@ -206,12 +206,12 @@ const PerformanceDashboard: React.FC = () => {
         )}
 
         {metrics.connection && (
-          <div className="pt-2border-tborder-gray-600">
+          <div className="pt-2-border-tborder-gray-600">
             <div className="flexitems-centermb-1">
-              <Wifi className="w-3h-3mr-1" / />
+              <Wifi className="w-3-h-3mr-1" / />
               <span className="text-gray-300"   />Connection</span>
             </div>
-            <div className="text-gray-400pl-4">
+            <div className="text-gray-400-pl-4">
               <div   />Type: {metrics.connection.effectiveType}</div>
               <div   />Speed: {metrics.connection.downlink}Mbps</div>
               <div   />RTT: {metrics.connection.rtt}ms</div>

@@ -30,9 +30,9 @@ const Navigation: React.FC = () => {
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Contact
-                      </Link>
-      </div>
-    </div>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </nav>

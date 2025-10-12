@@ -71,14 +71,14 @@ interface FuturisticButtonProps {
     >
       {/* Animated background sweep */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-white/20to-transparent"
+        className="absolute inset-0 bg-gradient-to-r from-white/20-to-transparent"
         initial="{{" x: '-100%' }}
         animate="{{" x: isHovered ? '100%' : '-100%' }}
         transition="{{" duration: 0.6 }}
       / />
       {/* Pulsing glow effect */}
       <motion.div
-        className="absolute inset-0rounded-lg"
+        className="absolute inset-0-rounded-lg"
         style="{{"
           boxShadow: variant === 'primary'
             ? '0 0 20 px rgba(6, 182, 212, 0.4)'
@@ -101,7 +101,7 @@ interface FuturisticButtonProps {
       {/* Scanning line effect */}
       {isHovered && (
         <motion.div
-          className="absolute inset-0rounded-lg"
+          className="absolute inset-0-rounded-lg"
           style="{{"
             background: 'linear-gradient(90 deg, transparent, rgba(255,255,255,0.3), transparent)',
             backgroundSize: '200% 100%',
@@ -118,8 +118,8 @@ interface FuturisticButtonProps {
       )}
 
       {/* Corner accents */}
-      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" / />
-      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" / />
+      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30-rounded-full" / />
+      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30-rounded-full" / />
       {/* Content */}
       <span className="relative z-10 flex items-centerjustify-center" />
         {loading ? (

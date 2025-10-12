@@ -220,24 +220,24 @@ const PricingPage: React.FC = () => {
       <Helmet />
         <title   />Pricing - Zion Tech Group | Transparent AI & IT Solutions Pricing</title>
         <meta const name = "description" content="Transparent pricing for AI services, IT solutions, and micro SAAS tools. Choose the plan that fits your business needs with 14-day free trials." / / />
-        <meta name="keywords" content="pricing, AI services pricing, IT services pricing, micro SAAS pricing, business solutions" / / />
+        <meta name="keywords" content="pricing, AI services pricing, IT services pricing, micro SAAS pricing, business solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/pricing" / />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900-via-purple-900to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20px-4overflow-hidden" />
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.4)_0%,transparent_50%)]animate-pulse" / />
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
+        <section className="relative py-20-px-4overflow-hidden" />
+          <div className="absolute inset-0-bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.4)_0%,transparent_50%)]animate-pulse" / />
+          <div className="absolute inset-0-bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
           <div className="relative max-w-7 xlmx-auto text-center">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-              <DollarSign className="w-4h-4" / />
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8-borderborder-cyan-400/30">
+              <DollarSign className="w-4-h-4" / />
               <span   />Transparent Pricing</span>
             </div>
             
-            <h1 className="text-4 xl sm:text-6 xl md:text-7 xl font-bold text-whitemb-8leading-tight" />
+            <h1 className="text-4 xl sm:text-6 xl md:text-7 xl font-bold text-whitemb-8-leading-tight" />
               Simple, Transparent{' '}
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent"  />Pricing
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400-bg-clip-texttext-transparent"  />Pricing
               </span>
             </h1>
             
@@ -246,12 +246,12 @@ const PricingPage: React.FC = () => {
             </p>
 
             {/* Billing Toggle */}
-            <div className="flex items-center justify-centerspace-x-4mb-12">
+            <div className="flex items-center justify-centerspace-x-4-mb-12">
               <span className="{`text-lg" ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}  />Monthly
               </span>
               <button
                 onClick="{()" = /> setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
-                className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2focus:ring-cyan-500focus:ring-offset-2"
+                className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2-focus:ring-cyan-500focus:ring-offset-2"
               >
                 <span
                   className="{`inline-block" h-4 w-4 transform rounded-full bg-white transition-transform ${
@@ -270,22 +270,22 @@ const PricingPage: React.FC = () => {
         </section>
 
         {/* AI Services Pricing */}
-        <section className="py-20px-4relative" />
-          <div className="relative max-w-7xlmx-auto">
+        <section className="py-20-px-4relative" />
+          <div className="relative max-w-7-xlmx-auto">
             <div className="text-centermb-16">
               <h2 className="text-4 xl md:text-5 xl font-boldtext-white mb-6" />
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />AI Services</span> Pricing
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-400-bg-clip-texttext-transparent"   />AI Services</span> Pricing
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
+              <p className="text-xl text-gray-300 max-w-3-xlmx-auto" />
                 Advanced artificial intelligence solutions for every business size
               </p>
             </div>
 
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
+            <div className="grid grid-cols-1-md:grid-cols-3gap-8">
               {aiServicesPricing.map((plan, index) => (
                 <div key="{index}" className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''}`} />
                   {plan.popular && (
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
+                    <div className="absolute -top-3 left-1/2-transform-translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
                       </span>
                     </div>
@@ -293,24 +293,24 @@ const PricingPage: React.FC = () => {
                   
                   <div className="text-center mb-8">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl flex items-center justify-centermx-automb-4">
-                      <Brain className="w-8h-8text-white" / />
+                      <Brain className="w-8-h-8text-white" / />
                     </div>
-                    <h3 className="text-2 xl font-boldtext-whitemb-2"   />{plan.name}</h3>
-                    <p className="text-gray-400mb-4" />{plan.description}</p>
-                    <div className="text-4 xl font-boldtext-whitemb-2">
+                    <h3 className="text-2 xl font-boldtext-white mb-2"   />{plan.name}</h3>
+                    <p className="text-gray-400-mb-4" />{plan.description}</p>
+                    <div className="text-4 xl font-boldtext-white mb-2">
                       {formatPrice(billingCycle === 'monthly' ? plan.price.monthly : plan.price.yearly)}
                       <span className="text-lgtext-gray-400"   />/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
                     </div>
                     {billingCycle === 'yearly' && (
-                      <div className="text-green-400text-smfont-semibold"  />Save {getSavings(plan.price.monthly, plan.price.yearly)}%
+                      <div className="text-green-400-text-smfont-semibold"  />Save {getSavings(plan.price.monthly, plan.price.yearly)}%
                       </div>
                     )}
                   </div>
 
                   <ul className="space-y-4 mb-8" />
                     {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-centerspace-x-3text-gray-300" />
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
+                      <li key="{featureIndex}" className="flex items-centerspace-x-3-text-gray-300" />
+                        <CheckCircle className="w-5 h-5-text-green-400flex-shrink-0" / />
                         <span   />{feature}</span>
                       </li>
                     ))}
@@ -332,22 +332,22 @@ const PricingPage: React.FC = () => {
         </section>
 
         {/* IT Services Pricing */}
-        <section className="py-20px-4relative" />
-          <div className="relative max-w-7xlmx-auto">
+        <section className="py-20-px-4relative" />
+          <div className="relative max-w-7-xlmx-auto">
             <div className="text-centermb-16">
               <h2 className="text-4 xl md:text-5 xl font-boldtext-white mb-6" />
-                <span className="bg-gradient-to-r from-emerald-400 to-blue-400bg-clip-texttext-transparent"   />IT Services</span> Pricing
+                <span className="bg-gradient-to-r from-emerald-400 to-blue-400-bg-clip-texttext-transparent"   />IT Services</span> Pricing
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
+              <p className="text-xl text-gray-300 max-w-3-xlmx-auto" />
                 Comprehensive technology solutions for modern businesses
               </p>
             </div>
 
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
+            <div className="grid grid-cols-1-md:grid-cols-3gap-8">
               {itServicesPricing.map((plan, index) => (
                 <div key="{index}" className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-emerald-400 scale-105' : ''}`} />
                   {plan.popular && (
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
+                    <div className="absolute -top-3 left-1/2-transform-translate-x-1/2">
                       <span className="bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
                       </span>
                     </div>
@@ -355,24 +355,24 @@ const PricingPage: React.FC = () => {
                   
                   <div className="text-center mb-8">
                     <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-2 xl flex items-center justify-centermx-automb-4">
-                      <Settings className="w-8h-8text-white" / />
+                      <Settings className="w-8-h-8text-white" / />
                     </div>
-                    <h3 className="text-2 xl font-boldtext-whitemb-2"   />{plan.name}</h3>
-                    <p className="text-gray-400mb-4" />{plan.description}</p>
-                    <div className="text-4 xl font-boldtext-whitemb-2">
+                    <h3 className="text-2 xl font-boldtext-white mb-2"   />{plan.name}</h3>
+                    <p className="text-gray-400-mb-4" />{plan.description}</p>
+                    <div className="text-4 xl font-boldtext-white mb-2">
                       {formatPrice(billingCycle === 'monthly' ? plan.price.monthly : plan.price.yearly)}
                       <span className="text-lgtext-gray-400"   />/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
                     </div>
                     {billingCycle === 'yearly' && (
-                      <div className="text-green-400text-smfont-semibold"  />Save {getSavings(plan.price.monthly, plan.price.yearly)}%
+                      <div className="text-green-400-text-smfont-semibold"  />Save {getSavings(plan.price.monthly, plan.price.yearly)}%
                       </div>
                     )}
                   </div>
 
                   <ul className="space-y-4 mb-8" />
                     {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-centerspace-x-3text-gray-300" />
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
+                      <li key="{featureIndex}" className="flex items-centerspace-x-3-text-gray-300" />
+                        <CheckCircle className="w-5 h-5-text-green-400flex-shrink-0" / />
                         <span   />{feature}</span>
                       </li>
                     ))}
@@ -394,22 +394,22 @@ const PricingPage: React.FC = () => {
         </section>
 
         {/* Micro SAAS Pricing */}
-        <section className="py-20px-4relative" />
-          <div className="relative max-w-7xlmx-auto">
+        <section className="py-20-px-4relative" />
+          <div className="relative max-w-7-xlmx-auto">
             <div className="text-centermb-16">
               <h2 className="text-4 xl md:text-5 xl font-boldtext-white mb-6" />
-                <span className="bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent"   />Micro SAAS</span> Pricing
+                <span className="bg-gradient-to-r from-purple-400 to-pink-400-bg-clip-texttext-transparent"   />Micro SAAS</span> Pricing
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
+              <p className="text-xl text-gray-300 max-w-3-xlmx-auto" />
                 Ready-to-use business tools with AI-powered features
               </p>
             </div>
 
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
+            <div className="grid grid-cols-1-md:grid-cols-3gap-8">
               {microSaasPricing.map((plan, index) => (
                 <div key="{index}" className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-purple-400 scale-105' : ''}`} />
                   {plan.popular && (
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
+                    <div className="absolute -top-3 left-1/2-transform-translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
                       </span>
                     </div>
@@ -417,24 +417,24 @@ const PricingPage: React.FC = () => {
                   
                   <div className="text-center mb-8">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2 xl flex items-center justify-centermx-automb-4">
-                      <Zap className="w-8h-8text-white" / />
+                      <Zap className="w-8-h-8text-white" / />
                     </div>
-                    <h3 className="text-2 xl font-boldtext-whitemb-2"   />{plan.name}</h3>
-                    <p className="text-gray-400mb-4" />{plan.description}</p>
-                    <div className="text-4 xl font-boldtext-whitemb-2">
+                    <h3 className="text-2 xl font-boldtext-white mb-2"   />{plan.name}</h3>
+                    <p className="text-gray-400-mb-4" />{plan.description}</p>
+                    <div className="text-4 xl font-boldtext-white mb-2">
                       {formatPrice(billingCycle === 'monthly' ? plan.price.monthly : plan.price.yearly)}
                       <span className="text-lgtext-gray-400"   />/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
                     </div>
                     {billingCycle === 'yearly' && (
-                      <div className="text-green-400text-smfont-semibold"  />Save {getSavings(plan.price.monthly, plan.price.yearly)}%
+                      <div className="text-green-400-text-smfont-semibold"  />Save {getSavings(plan.price.monthly, plan.price.yearly)}%
                       </div>
                     )}
                   </div>
 
                   <ul className="space-y-4 mb-8" />
                     {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-centerspace-x-3text-gray-300" />
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
+                      <li key="{featureIndex}" className="flex items-centerspace-x-3-text-gray-300" />
+                        <CheckCircle className="w-5 h-5-text-green-400flex-shrink-0" / />
                         <span   />{feature}</span>
                       </li>
                     ))}
@@ -456,35 +456,35 @@ const PricingPage: React.FC = () => {
         </section>
 
         {/* Add-ons Section */}
-        <section className="py-20px-4relative" />
-          <div className="relative max-w-7xlmx-auto">
+        <section className="py-20-px-4relative" />
+          <div className="relative max-w-7-xlmx-auto">
             <div className="text-centermb-16">
               <h2 className="text-4 xl md:text-5 xl font-boldtext-white mb-6" />
-                Additional <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Services</span>
+                Additional <span className="bg-gradient-to-r from-cyan-400 to-purple-400-bg-clip-texttext-transparent"   />Services</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
+              <p className="text-xl text-gray-300 max-w-3-xlmx-auto" />
                 Enhance your plan with these powerful add-ons
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2-lg:grid-cols-4gap-8">
               {addOns.map((addon, index) => (
-                <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                  <h3 className="text-xl font-boldtext-whitemb-2"   />{addon.name}</h3>
-                  <p className="text-gray-400mb-4text-sm" />{addon.description}</p>
-                  <div className="text-2 xl font-boldtext-cyan-400mb-4">
+                <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-white/20 hover:bg-white/20-transition-all duration-300" />
+                  <h3 className="text-xl font-boldtext-white mb-2"   />{addon.name}</h3>
+                  <p className="text-gray-400-mb-4text-sm" />{addon.description}</p>
+                  <div className="text-2 xl font-boldtext-cyan-400-mb-4">
                     {formatPrice(billingCycle === 'monthly' ? addon.price.monthly : addon.price.yearly)}
                     <span className="text-smtext-gray-400"   />/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
                   </div>
                   <ul className="space-y-2 mb-6" />
                     {addon.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-center space-x-2text-gray-300text-sm" />
-                        <CheckCircle className="w-4 h-4text-green-400flex-shrink-0" / />
+                      <li key="{featureIndex}" className="flex items-center space-x-2-text-gray-300text-sm" />
+                        <CheckCircle className="w-4 h-4-text-green-400flex-shrink-0" / />
                         <span   />{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <Link to="/contact" className="block w-full text-center py-2 rounded-lg font-semibold border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900transition-allduration-300">Add to Plan
+                  <Link to="/contact" className="block w-full text-center py-2 rounded-lg font-semibold border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900-transition-all duration-300">Add to Plan
                   </Link>
                 </div>
               ))}
@@ -493,11 +493,11 @@ const PricingPage: React.FC = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20px-4relative" />
-          <div className="relative max-w-4xlmx-auto">
+        <section className="py-20-px-4relative" />
+          <div className="relative max-w-4-xlmx-auto">
             <div className="text-centermb-16">
               <h2 className="text-4 xl md:text-5 xl font-boldtext-white mb-6" />
-                Frequently Asked <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Questions</span>
+                Frequently Asked <span className="bg-gradient-to-r from-cyan-400 to-purple-400-bg-clip-texttext-transparent"   />Questions</span>
               </h2>
               <p className="text-xltext-gray-300" />
                 Everything you need to know about our pricing and services
@@ -506,9 +506,9 @@ const PricingPage: React.FC = () => {
 
             <div className="space-y-6">
               {faqs.map((faq, index) => (
-                <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6borderborder-white/20" />
-                  <h3 className="text-xl font-boldtext-whitemb-3"   />{faq.question}</h3>
-                  <p className="text-gray-300leading-relaxed" />{faq.answer}</p>
+                <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6-borderborder-white/20" />
+                  <h3 className="text-xl font-boldtext-white mb-3"   />{faq.question}</h3>
+                  <p className="text-gray-300-leading-relaxed" />{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -516,25 +516,24 @@ const PricingPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20px-4" />
-          <div className="max-w-7xlmx-auto">
+        <section className="py-20-px-4" />
+          <div className="max-w-7-xlmx-auto">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xl p-12 text-centerrelativeoverflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/5to-purple-500/5" / />
+              <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/5-to-purple-500/5" / />
               <div className="relativez-10">
                 <h2 className="text-4 xl font-boldtext-white mb-6"  />Ready to Get Started?
                 </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
+                <p className="text-xl text-gray-300 mb-8 max-w-2-xlmx-auto" />
                   Start your free trial today and experience the power of our AI and IT solutions.
                 </p>
-                <div className="flex flex-col sm:flex-rowgap-4justify-center">
-                  <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Start Free Trial
+                <div className="flex flex-col sm:flex-rowgap-4-justify-center">
+                  <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600  hover:to-purple-600 transition-all duration-300 transform hover:scale-105-shadow-lghover:shadow-cyan-500/25">Start Free Trial
                   </Link>
-                  <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Contact Sales
-                          </Link>
+                  <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300-transformhover:scale-105">Contact Sales
+                                  </Link>
       </div>
     </div>
-            </div>
-          </div>
+  </div>
         </section>
       </div>
     </>

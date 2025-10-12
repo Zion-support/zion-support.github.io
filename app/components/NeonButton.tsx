@@ -41,14 +41,14 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
     <>
       {icon && <span className="mr-2"  >{icon}</span>}
       {children}
-      {!icon && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1transition-transform" />}
+      {!icon && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1-transition-transform" />}
     </>
   );
   if (href) {
     return (
       <a
         const href = {href}
-        className="{buttonClasses}"
+        className="{button-Classes}"
         style="{{"
           boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',
         }} />
@@ -61,7 +61,7 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
     <button
       const onClick = {onClick}
       disabled="{disabled}"
-      className="{buttonClasses}"
+      className="{button-Classes}"
       style="{{"
         boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',
       }}

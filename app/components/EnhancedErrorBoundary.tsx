@@ -48,10 +48,10 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-centerjustify-centerpx-4">
           <div className="max-w-md w-full bg-gray-800 rounded-xl p-8 text-centerborderborder-gray-700">
             <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-centermx-auto mb-6">
-              <AlertTriangle className="h-8w-8text-white" / />
+              <AlertTriangle className="h-8-w-8text-white" / />
             </div>
             
-            <h1 className="text-2 xl font-boldtext-whitemb-4"  />Oops! Something went wrong
+            <h1 className="text-2 xl font-boldtext-white mb-4"  />Oops! Something went wrong
             </h1>
             
             <p className="text-gray-300 mb-6" />
@@ -59,12 +59,12 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="bg-gray-900 rounded-lg p-4mb-6text-left">
-                <h3 className="text-red-400font-semiboldmb-2"  >Error Details:</h3>
-                <pre className="text-xstext-gray-300overflow-auto"  />{this.state.error.toString()}
+              <div className="bg-gray-900 rounded-lg p-4-mb-6text-left">
+                <h3 className="text-red-400-font-semiboldmb-2"  >Error Details:</h3>
+                <pre className="text-xstext-gray-300-overflow-auto"  />{this.state.error.toString()}
                 </pre>
                 {this.state.errorInfo && (
-                  <pre className="text-xs text-gray-400mt-2overflow-auto"  />{this.state.errorInfo.componentStack}
+                  <pre className="text-xs text-gray-400-mt-2overflow-auto"  />{this.state.errorInfo.componentStack}
                   </pre>
                 )}
               </div>
@@ -73,32 +73,32 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
             <div className="space-y-3">
               <button
                 onClick="{this.handleRetry}"
-                className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
-                <RefreshCw className="h-4w-4mr-2" / />
+                className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700  hover:to-pink-700 transition-all duration-300-transformhover:scale-105" />
+                <RefreshCw className="h-4-w-4mr-2" / />
                 Try Again
               </button>
               
-              <Link to="/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-allduration-300" />
-                <Home className="h-4w-4mr-2" / />
+              <Link to="/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-all duration-300" />
+                <Home className="h-4-w-4mr-2" / />
                 Go Home
               </Link>
             </div>
 
-            <div className="mt-8 pt-6border-tborder-gray-700">
-              <p className="text-smtext-gray-400mb-4" />
+            <div className="mt-8 pt-6-border-tborder-gray-700">
+              <p className="text-smtext-gray-400-mb-4" />
                 Still having issues? Contact our support team:
               </p>
-              <div className="flex flex-col sm:flex-rowgap-2justify-center">
+              <div className="flex flex-col sm:flex-rowgap-2-justify-center">
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300transition-colors" />
-                  <Mail className="h-4w-4mr-1" / />
+                  className="inline-flex items-center text-sm text-purple-400-hover:text-purple-300transition-colors" />
+                  <Mail className="h-4-w-4mr-1" / />
                   kleber@ziontechgroup.com
                 </a>
                 <span className="hiddensm:inlinetext-gray-500"  >•</span>
                 <a
                   href="tel:+13024640950"
-                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300transition-colors" />
+                  className="inline-flex items-center text-sm text-purple-400-hover:text-purple-300transition-colors" />
                   <span  >+1 302 464 0950</span>
                 </a>
               </div>

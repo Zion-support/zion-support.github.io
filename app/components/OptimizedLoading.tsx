@@ -26,9 +26,9 @@ const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
     : 'flex items-center justify-center p-4'
 
   return (
-    <div className="{`${containerClasses}" ${className}`} />
+    <div className="{`${container-Classes}" ${className}`} />
       <div className="flex flex-col items-centerspace-y-4">
-        <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`} / />
+        <Loader2 className="{`${size-Classes[size]}" text-cyan-500 animate-spin`} / />
         {text && (
           <p className="text-gray-300 text-sm font-mediumanimate-pulse" />
             {text}

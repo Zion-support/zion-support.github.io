@@ -9,22 +9,22 @@ import Layout from '../layout';
 export default function AISmartScheduler() {
   const features = [
     {
-      icon: <Brain className="w-6h-6text-cyan-400" / />,
+      icon: <Brain className="w-6-h-6text-cyan-400" / />,
       title: 'AI-Powered Scheduling',
       description: 'Intelligent scheduling that learns from your patterns and preferences'
     },
     {
-      icon: <Users className="w-6h-6text-purple-400" / />,
+      icon: <Users className="w-6-h-6text-purple-400" / />,
       title: 'Team Coordination',
       description: 'Seamlessly coordinate meetings across multiple time zones and schedules'
     },
     {
-      icon: <Zap className="w-6h-6text-yellow-400" / />,
+      icon: <Zap className="w-6-h-6text-yellow-400" / />,
       title: 'Auto-Optimization',
       description: 'Automatically finds the best meeting times for maximum productivity'
     },
     {
-      icon: <Globe className="w-6h-6text-green-400" / />,
+      icon: <Globe className="w-6-h-6text-green-400" / />,
       title: 'Global Integration',
       description: 'Works with all major calendar platforms and time zones'
     }
@@ -103,13 +103,13 @@ export default function AISmartScheduler() {
       title="AI Smart Scheduler - Intelligent Meeting Optimization | Zion Tech Group"
       description="Revolutionary AI-powered scheduling tool that optimizes meetings, coordinates teams, and maximizes productivity. Start your free trial today."
       keywords="AI scheduler, meeting optimization, team coordination, calendar management, productivity tools" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900-via-purple-900to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto">
+        <section className="pt-20 pb-16 px-4-sm:px-6 lg:px-8" />
+          <div className="max-w-7-xlmx-auto">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 rounded-full text-cyan-400 text-smfont-medium mb-6">
-                <Sparkles className="w-4h-4mr-2" / />
+                <Sparkles className="w-4-h-4mr-2" / />
                 AI-Powered Scheduling
               </div>
               <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-white mb-6"  />AI Smart Scheduler
@@ -118,12 +118,12 @@ export default function AISmartScheduler() {
                 Transform your scheduling chaos into organized efficiency with our intelligent AI-powered scheduler. 
                 Optimize meetings, coordinate teams, and maximize productivity automatically.
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
+              <div className="flex flex-col sm:flex-rowgap-4-justify-center">
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600  hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
                   Start Free Trial
-                  <ArrowRight className="w-5h-5 ml-2" />
+                  <ArrowRight className="w-5-h-5 ml-2" />
                 </Link>
-                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Watch Demo
+                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10-transition-colors">Watch Demo
                         </Link>
       </div>
     </div>
@@ -131,19 +131,19 @@ export default function AISmartScheduler() {
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto">
+        <section className="py-16 px-4-sm:px-6 lg:px-8" />
+          <div className="max-w-7-xlmx-auto">
             <div className="text-centermb-16">
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4"  />Intelligent Scheduling Features
+              <h2 className="text-3 xl sm:text-4 xl font-boldtext-white mb-4"  />Intelligent Scheduling Features
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
+              <p className="text-lg text-gray-300 max-w-2-xlmx-auto" />
                 Powered by advanced AI to make scheduling effortless and efficient
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2-lg:grid-cols-4gap-8">
               {features.map((feature, index) => (
-                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40transition-allduration-300" />
+                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40-transition-all duration-300" />
                   <div className="flexitems-centermb-4">
                     {feature.icon}
                     <h3 className="text-xl font-semiboldtext-whiteml-3"   />{feature.title}</h3>
@@ -156,17 +156,17 @@ export default function AISmartScheduler() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
-          <div className="max-w-7xlmx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30-to-purple-900/30" />
+          <div className="max-w-7-xlmx-auto">
             <div className="text-centermb-16">
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4"  />Simple, Transparent Pricing
+              <h2 className="text-3 xl sm:text-4 xl font-boldtext-white mb-4"  />Simple, Transparent Pricing
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
+              <p className="text-lg text-gray-300 max-w-2-xlmx-auto" />
                 Choose the plan that fits your team size and needs
               </p>
             </div>
             
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
+            <div className="grid grid-cols-1-md:grid-cols-3gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key="{index}" className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
@@ -175,20 +175,20 @@ export default function AISmartScheduler() {
                 }`} />
                   {plan.popular && (
                     <div className="inline-flex items-center px-3 py-1 bg-cyan-500/20 rounded-full text-cyan-400 text-smfont-mediummb-4">
-                      <Star className="w-4h-4mr-1" / />
+                      <Star className="w-4-h-4mr-1" / />
                       Most Popular
                     </div>
                   )}
-                  <h3 className="text-2 xl font-boldtext-whitemb-2"   />{plan.name}</h3>
+                  <h3 className="text-2 xl font-boldtext-white mb-2"   />{plan.name}</h3>
                   <p className="text-gray-300 mb-6" />{plan.description}</p>
                   <div className="mb-6">
-                    <span className="text-4 xlfont-boldtext-white"   />{plan.price}</span>
+                    <span className="text-4 xlfont-bold text-white"   />{plan.price}</span>
                     <span className="text-gray-400"   />{plan.period}</span>
                   </div>
                   <ul className="space-y-3 mb-8" />
                     {plan.features.map((feature, featureIndex) => (
                       <li key="{featureIndex}" className="flexitems-centertext-gray-300" />
-                        <CheckCircle className="w-5 h-5text-green-400mr-3" / />
+                        <CheckCircle className="w-5 h-5-text-green-400mr-3" / />
                         {feature}
                       </li>
                     ))}
@@ -209,24 +209,24 @@ export default function AISmartScheduler() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto">
+        <section className="py-16 px-4-sm:px-6 lg:px-8" />
+          <div className="max-w-7-xlmx-auto">
             <div className="text-centermb-12">
-              <h2 className="text-3 xl font-boldtext-whitemb-4"  />Trusted by Teams Worldwide
+              <h2 className="text-3 xl font-boldtext-white mb-4"  />Trusted by Teams Worldwide
               </h2>
               <p className="text-gray-300" />
                 See what our customers say about AI Smart Scheduler
               </p>
             </div>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
+            <div className="grid grid-cols-1-md:grid-cols-3gap-8">
               {testimonials.map((testimonial, index) => (
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
+                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6-borderborder-slate-700" />
                   <div className="flexitems-centermb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" / />
+                      <Star key="{i}" className="w-5 h-5-text-yellow-400fill-current" / />
                     ))}
                   </div>
-                  <p className="text-gray-300mb-4" />"{testimonial.content}"</p>
+                  <p className="text-gray-300-mb-4" />"{testimonial.content}"</p>
                   <div />
                     <div className="font-semiboldtext-white"   />{testimonial.name}</div>
                     <div className="text-smtext-gray-400"   />{testimonial.company}</div>
@@ -238,18 +238,18 @@ export default function AISmartScheduler() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4sm:px-6lg:px-8" />
+        <section className="py-16 px-4-sm:px-6 lg:px-8" />
           <div className="max-w-4 xlmx-auto text-center">
-            <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-8borderborder-cyan-500/30">
-              <h2 className="text-3 xl font-boldtext-whitemb-4"  />Ready to Transform Your Scheduling?
+            <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-8-borderborder-cyan-500/30">
+              <h2 className="text-3 xl font-boldtext-white mb-4"  />Ready to Transform Your Scheduling?
               </h2>
               <p className="text-lgtext-gray-300 mb-8" />
                 Join thousands of teams already using AI Smart Scheduler to optimize their productivity
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
+              <div className="flex flex-col sm:flex-rowgap-4-justify-center">
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600  hover:to-purple-700-transition-all duration-300">Start Your Free Trial
                 </Link>
-                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
+                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10-transition-colors">Learn More
                         </Link>
       </div>
     </div>
