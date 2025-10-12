@@ -22,6 +22,7 @@ ai-autonomous-systems
 ai-blockchain-analytics
 ai-blockchain-solutions
 ai-business-intelligence
+ai-business-intelligence-pro
 ai-chatbot-builder
 ai-chatbot-enterprise
 ai-climate-prediction-engine
@@ -44,6 +45,7 @@ ai-conversation-analytics
 ai-crm
 ai-crm-assistant
 ai-customer-churn
+ai-customer-insights
 ai-customer-service
 ai-customer-support
 ai-customer-support-bot
@@ -72,6 +74,7 @@ ai-energy
 ai-energy-grid-management-pro
 ai-enterprise-solutions
 ai-expense-tracker
+ai-expense-tracker-pro
 ai-fashion-design
 ai-financial-advisor
 ai-financial-analyzer
@@ -159,8 +162,10 @@ ai-services/process-automation
 ai-services/quality-assurance
 ai-services/supply-chain
 ai-smart-calendar
+ai-smart-city-solutions
 ai-smart-contract-auditor
 ai-smart-home-controller
+ai-smart-invoice
 ai-social-media-manager
 ai-social-media-scheduler
 ai-solutions
@@ -340,6 +345,7 @@ project-management-pro
 quantum-ai
 quantum-computing
 quantum-computing-solutions
+resources
 robotics
 robotics-integration
 search
