@@ -27,6 +27,7 @@ export default function Footer() {
     { name: 'Cloud Services', path: '/cloud-services' },
     { name: 'Cybersecurity', path: '/cybersecurity' },
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
+    { name: 'AI DevOps Automation', path: '/ai-devops-automation' },
     { name: 'Blockchain Solutions', path: '/blockchain' },
     { name: 'Quantum Computing', path: '/quantum-computing-solutions' }
   ];
@@ -37,11 +38,12 @@ export default function Footer() {
     { name: 'AI Password Manager', path: '/ai-password-manager' },
     { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
     { name: 'AI Health Tracker', path: '/ai-health-tracker' },
-    { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
-    { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
-    { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
     { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
-    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
+    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' },
+    { name: 'AI Financial Advisor', path: '/ai-financial-advisor' },
+    { name: 'AI Recruitment Assistant', path: '/ai-recruitment-assistant' },
+    { name: 'AI Supply Chain Optimizer', path: '/ai-supply-chain-optimizer' },
+    { name: 'AI Legal Assistant', path: '/ai-legal-assistant' }
   ];
 
   const fiveGServices = [
@@ -239,14 +241,18 @@ export default function Footer() {
               <Mail className="w-5 h-5 text-cyan-400 mr-3" />
               <div>
                 <p className="text-sm text-gray-400">Email</p>
-                <p className="text-white">kleber@ziontechgroup.com</p>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-400 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
               </div>
             </div>
             <div className="flex items-center">
               <Phone className="w-5 h-5 text-purple-400 mr-3" />
               <div>
                 <p className="text-sm text-gray-400">Phone</p>
-                <p className="text-white">+1 (302) 464-0950</p>
+                <a href="tel:+13024640950" className="text-white hover:text-purple-400 transition-colors">
+                  +1 (302) 464-0950
+                </a>
               </div>
             </div>
             <div className="flex items-center">

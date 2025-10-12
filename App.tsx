@@ -49,6 +49,12 @@ const AIHealthTrackerPage = React.lazy(() => import('./app/ai-health-tracker/pag
 const AISmartCalendarPage = React.lazy(() => import('./app/ai-smart-calendar/page'))
 const AIClimateSolutionsProPage = React.lazy(() => import('./app/ai-climate-solutions-pro/page'))
 
+// New Micro SAAS Services
+const AIFinancialAdvisorPage = React.lazy(() => import('./app/ai-financial-advisor/page'))
+const AIRecruitmentAssistantPage = React.lazy(() => import('./app/ai-recruitment-assistant/page'))
+const AISupplyChainOptimizerPage = React.lazy(() => import('./app/ai-supply-chain-optimizer/page'))
+const AILegalAssistantPage = React.lazy(() => import('./app/ai-legal-assistant/page'))
+
 // Additional AI Services Pages
 const AIMeetingAssistantPage = React.lazy(() => import('./app/ai-meeting-assistant/page'))
 const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'))
@@ -60,6 +66,7 @@ const AIEmailMarketingAutomationPage = React.lazy(() => import('./app/ai-email-m
 const BlockchainPage = React.lazy(() => import('./app/blockchain/page'))
 const QuantumComputingSolutionsPage = React.lazy(() => import('./app/quantum-computing-solutions/page'))
 const AICybersecuritySuitePage = React.lazy(() => import('./app/ai-cybersecurity-suite/page'))
+const AIDevOpsAutomationPage = React.lazy(() => import('./app/ai-devops-automation/page'))
 
 // Additional 5G Services Pages
 const FiveGDataAnalyticsPage = React.lazy(() => import('./app/5g-data-analytics/page'))
@@ -134,6 +141,12 @@ function App() {
                 <Route path="/ai-smart-calendar" element={<AISmartCalendarPage />} />
                 <Route path="/ai-climate-solutions-pro" element={<AIClimateSolutionsProPage />} />
                 
+                {/* New Micro SAAS Routes */}
+                <Route path="/ai-financial-advisor" element={<AIFinancialAdvisorPage />} />
+                <Route path="/ai-recruitment-assistant" element={<AIRecruitmentAssistantPage />} />
+                <Route path="/ai-supply-chain-optimizer" element={<AISupplyChainOptimizerPage />} />
+                <Route path="/ai-legal-assistant" element={<AILegalAssistantPage />} />
+                
                 {/* Additional AI Services Routes */}
                 <Route path="/ai-meeting-assistant" element={<AIMeetingAssistantPage />} />
                 <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
@@ -145,6 +158,7 @@ function App() {
                 <Route path="/blockchain" element={<BlockchainPage />} />
                 <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
                 <Route path="/ai-cybersecurity-suite" element={<AICybersecuritySuitePage />} />
+                <Route path="/ai-devops-automation" element={<AIDevOpsAutomationPage />} />
                 
                 {/* Additional 5G Services Routes */}
                 <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />

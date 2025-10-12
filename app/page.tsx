@@ -20,6 +20,7 @@ import {
 import FuturisticBackground from './components/FuturisticBackground';
 import FuturisticCard from './components/FuturisticCard';
 import FuturisticButton from './components/FuturisticButton';
+import FuturisticLoader from './components/FuturisticLoader';
 
 // Note: Lazy loading components will be implemented in future iterations
 
@@ -37,28 +38,44 @@ export default function HomePage() {
 
   const services = [
     {
-      title: 'AI Content Generation',
-      description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      link: '/ai-content-generator',
-      features: ['Automated content creation', 'SEO optimization', 'Multi-language support'],
+      title: 'AI Financial Advisor',
+      description: 'Transform your financial future with AI-powered investment analysis and automated budget management.',
+      icon: <TrendingUp className="w-8 h-8 text-green-400" />,
+      link: '/ai-financial-advisor',
+      features: ['Investment analysis', 'Budget automation', 'Risk management'],
+      price: 'Starting at $29/month'
+    },
+    {
+      title: 'AI Recruitment Assistant',
+      description: 'Revolutionize hiring with AI-powered candidate screening and automated scheduling.',
+      icon: <Users className="w-8 h-8 text-blue-400" />,
+      link: '/ai-recruitment-assistant',
+      features: ['AI screening', 'Auto scheduling', 'Predictive analytics'],
       price: 'Starting at $99/month'
     },
     {
-      title: 'AI CRM Assistant',
-      description: 'Boost sales by 45% with AI-powered lead scoring, email automation, and predictive analytics.',
-      icon: <Users className="w-8 h-8 text-purple-400" />,
-      link: '/ai-crm-assistant',
-      features: ['AI lead scoring', 'Email automation', 'Predictive analytics'],
-      price: 'Starting at $49/month'
+      title: 'AI Supply Chain Optimizer',
+      description: 'Optimize your supply chain with AI-powered demand forecasting and route optimization.',
+      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
+      link: '/ai-supply-chain-optimizer',
+      features: ['Demand forecasting', 'Route optimization', 'Inventory management'],
+      price: 'Starting at $199/month'
     },
     {
-      title: 'AI Social Media Manager',
-      description: 'Increase engagement by 200% with AI-powered social media automation and content generation.',
-      icon: <MessageSquare className="w-8 h-8 text-pink-400" />,
-      link: '/ai-social-media-manager',
-      features: ['AI content generation', 'Smart scheduling', 'Analytics insights'],
-      price: 'Starting at $29/month'
+      title: 'AI Legal Assistant',
+      description: 'Streamline your legal practice with AI-powered document analysis and contract generation.',
+      icon: <Shield className="w-8 h-8 text-cyan-400" />,
+      link: '/ai-legal-assistant',
+      features: ['Document analysis', 'Contract generation', 'Legal research'],
+      price: 'Starting at $149/month'
+    },
+    {
+      title: 'AI DevOps Automation',
+      description: 'Automate your DevOps with AI-powered CI/CD pipelines and predictive monitoring.',
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      link: '/ai-devops-automation',
+      features: ['CI/CD automation', 'Predictive monitoring', 'Smart scaling'],
+      price: 'Starting at $299/month'
     },
     {
       title: 'AI Cybersecurity Suite',
@@ -67,22 +84,6 @@ export default function HomePage() {
       link: '/ai-cybersecurity-suite',
       features: ['AI threat detection', 'Zero trust security', 'Automated response'],
       price: 'Starting at $199/month'
-    },
-    {
-      title: 'AI Smart City Solutions',
-      description: 'Transform urban infrastructure with AI-powered smart city technologies and IoT integration.',
-      icon: <Globe className="w-8 h-8 text-green-400" />,
-      link: '/ai-smart-city-solutions',
-      features: ['Traffic optimization', 'Energy management', 'IoT integration'],
-      price: 'Starting at $50,000/project'
-    },
-    {
-      title: '5G Implementation',
-      description: 'Leverage the power of 5G technology for ultra-fast connectivity and IoT solutions.',
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      link: '/5g-implementation',
-      features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing'],
-      price: 'Starting at $5,000/project'
     }
   ];
 
@@ -223,15 +224,8 @@ export default function HomePage() {
 
             {/* Stats Section */}
             <Suspense fallback={
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20">
-                {[...Array(8)].map((_, index) => (
-                  <div key={index} className="text-center px-2">
-                    <div className="animate-pulse">
-                      <div className="h-8 bg-gray-700 rounded mb-2"></div>
-                      <div className="h-4 bg-gray-600 rounded"></div>
-                    </div>
-                  </div>
-                ))}
+              <div className="flex justify-center items-center py-16">
+                <FuturisticLoader size="lg" color="cyan" text="Loading statistics..." />
               </div>
             }>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20" role="region" aria-label="Company statistics">

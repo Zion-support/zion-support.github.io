@@ -63,7 +63,8 @@ export default function Navigation() {
     { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Cloud Services', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite', icon: <Shield className="w-4 h-4" /> }
+    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI DevOps Automation', path: '/ai-devops-automation', icon: <Zap className="w-4 h-4" /> }
   ];
 
   const fiveGServices = [
@@ -79,16 +80,15 @@ export default function Navigation() {
   const microSaasServices = [
     { name: 'AI Task Manager', path: '/ai-task-manager' },
     { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
-    { name: 'AI Expense Tracker Pro', path: '/ai-expense-tracker-pro' },
     { name: 'AI Password Manager', path: '/ai-password-manager' },
     { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
-    { name: 'AI Smart Invoice', path: '/ai-smart-invoice' },
     { name: 'AI Health Tracker', path: '/ai-health-tracker' },
-    { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
-    { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
-    { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
     { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
-    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
+    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' },
+    { name: 'AI Financial Advisor', path: '/ai-financial-advisor' },
+    { name: 'AI Recruitment Assistant', path: '/ai-recruitment-assistant' },
+    { name: 'AI Supply Chain Optimizer', path: '/ai-supply-chain-optimizer' },
+    { name: 'AI Legal Assistant', path: '/ai-legal-assistant' }
   ];
 
   return (

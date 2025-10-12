@@ -3,61 +3,61 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Users, 
-  Search, 
-  Brain, 
-  Target, 
+  Truck, 
+  Package, 
+  TrendingUp, 
+  Shield, 
   Clock, 
   CheckCircle,
   ArrowRight,
   Star,
-  TrendingUp,
-  Shield,
+  BarChart3,
   Zap,
-  BarChart3
+  Globe,
+  Target
 } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-export default function AIRecruitmentAssistantPage() {
+export default function AISupplyChainOptimizerPage() {
   const features = [
     {
-      title: 'AI-Powered Candidate Screening',
-      description: 'Advanced algorithms analyze resumes, assess skills, and match candidates to job requirements with 95% accuracy.',
-      icon: <Search className="w-6 h-6 text-blue-400" />,
-      benefits: ['Resume parsing', 'Skill assessment', 'Cultural fit analysis', 'Bias reduction']
+      title: 'Predictive Demand Forecasting',
+      description: 'AI algorithms analyze historical data, market trends, and external factors to predict demand with 92% accuracy.',
+      icon: <TrendingUp className="w-6 h-6 text-green-400" />,
+      benefits: ['Demand prediction', 'Seasonal analysis', 'Market trend insights', 'Inventory optimization']
     },
     {
-      title: 'Intelligent Interview Scheduling',
-      description: 'Automated scheduling with calendar integration, timezone handling, and conflict resolution.',
-      icon: <Clock className="w-6 h-6 text-green-400" />,
-      benefits: ['Auto-scheduling', 'Calendar sync', 'Timezone management', 'Reminder system']
+      title: 'Smart Route Optimization',
+      description: 'Advanced logistics algorithms optimize delivery routes, reduce fuel costs, and improve delivery times.',
+      icon: <Truck className="w-6 h-6 text-blue-400" />,
+      benefits: ['Route optimization', 'Fuel cost reduction', 'Delivery time improvement', 'Real-time tracking']
     },
     {
-      title: 'Predictive Analytics Dashboard',
-      description: 'Data-driven insights on hiring trends, candidate success rates, and recruitment performance.',
-      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
-      benefits: ['Hiring metrics', 'Success predictions', 'Trend analysis', 'ROI tracking']
+      title: 'Automated Inventory Management',
+      description: 'Intelligent inventory control with automated reordering, stock level monitoring, and waste reduction.',
+      icon: <Package className="w-6 h-6 text-purple-400" />,
+      benefits: ['Auto reordering', 'Stock monitoring', 'Waste reduction', 'Cost optimization']
     },
     {
-      title: 'Automated Communication',
-      description: 'AI-powered email and SMS campaigns to engage candidates throughout the recruitment process.',
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      benefits: ['Personalized messaging', 'Multi-channel outreach', 'Response tracking', 'Follow-up automation']
+      title: 'Risk Management & Compliance',
+      description: 'Comprehensive risk assessment and compliance monitoring to ensure supply chain resilience.',
+      icon: <Shield className="w-6 h-6 text-red-400" />,
+      benefits: ['Risk assessment', 'Compliance monitoring', 'Disruption alerts', 'Mitigation strategies']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Startup',
-      price: '$99',
+      name: 'Starter',
+      price: '$199',
       period: '/month',
-      description: 'Perfect for small teams and startups',
+      description: 'Perfect for small to medium businesses',
       features: [
-        'Up to 50 job postings',
-        '500 candidate screenings',
-        'Basic analytics',
+        'Up to 5 warehouses',
+        'Basic demand forecasting',
+        'Route optimization',
         'Email support',
         'Standard integrations'
       ],
@@ -65,29 +65,29 @@ export default function AIRecruitmentAssistantPage() {
     },
     {
       name: 'Professional',
-      price: '$299',
+      price: '$599',
       period: '/month',
       description: 'Advanced features for growing companies',
       features: [
-        'Unlimited job postings',
-        '2,000 candidate screenings',
-        'Advanced analytics',
+        'Up to 25 warehouses',
+        'Advanced AI forecasting',
+        'Multi-modal optimization',
         'Priority support',
         'Custom integrations',
-        'Team collaboration'
+        'Real-time analytics'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$799',
+      price: '$1,999',
       period: '/month',
       description: 'Complete solution for large organizations',
       features: [
-        'Unlimited everything',
+        'Unlimited warehouses',
+        'Custom AI models',
         'White-label options',
         'Dedicated account manager',
-        'Custom AI training',
         'API access',
         'Advanced security'
       ],
@@ -97,42 +97,42 @@ export default function AIRecruitmentAssistantPage() {
 
   const testimonials = [
     {
-      name: 'Jennifer Martinez',
-      role: 'HR Director',
-      company: 'TechCorp Solutions',
-      content: 'AI Recruitment Assistant reduced our time-to-hire by 60% and improved candidate quality significantly. The AI screening is incredibly accurate.',
+      name: 'Robert Chen',
+      role: 'Supply Chain Director',
+      company: 'Global Logistics Inc.',
+      content: 'AI Supply Chain Optimizer reduced our logistics costs by 35% and improved delivery times by 40%. The predictive analytics are game-changing.',
       rating: 5
     },
     {
-      name: 'David Kim',
-      role: 'Talent Acquisition Manager',
-      company: 'InnovateLabs',
-      content: 'The automated scheduling feature alone saved us 20 hours per week. Now we can focus on building relationships with top candidates.',
+      name: 'Maria Rodriguez',
+      role: 'Operations Manager',
+      company: 'RetailMax Corp',
+      content: 'The automated inventory management saved us from stockouts and overstocking. Our inventory turnover improved by 50%.',
       rating: 5
     },
     {
-      name: 'Sarah Thompson',
+      name: 'James Wilson',
       role: 'CEO',
-      company: 'StartupXYZ',
-      content: 'As a startup, we needed to hire fast and smart. This AI tool helped us find the perfect candidates in half the time.',
+      company: 'Manufacturing Solutions',
+      content: 'This AI tool transformed our entire supply chain. We can now predict disruptions before they happen and optimize accordingly.',
       rating: 5
     }
   ];
 
   const stats = [
-    { number: '60%', label: 'Faster Hiring', icon: <Clock className="w-6 h-6" /> },
-    { number: '95%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6" /> },
-    { number: '2,500+', label: 'Companies Using', icon: <Users className="w-6 h-6" /> },
-    { number: '50,000+', label: 'Candidates Processed', icon: <TrendingUp className="w-6 h-6" /> }
+    { number: '35%', label: 'Cost Reduction', icon: <TrendingUp className="w-6 h-6" /> },
+    { number: '92%', label: 'Forecast Accuracy', icon: <Target className="w-6 h-6" /> },
+    { number: '500+', label: 'Companies Using', icon: <Globe className="w-6 h-6" /> },
+    { number: '40%', label: 'Delivery Improvement', icon: <Clock className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Recruitment Assistant - Smart Hiring & Talent Management | Zion Tech Group</title>
-        <meta name="description" content="Revolutionize your hiring process with AI-powered candidate screening, automated scheduling, and predictive analytics. Reduce time-to-hire by 60% with 95% accuracy." />
-        <meta name="keywords" content="AI recruitment, talent acquisition, candidate screening, hiring automation, recruitment AI, HR technology" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-recruitment-assistant" />
+        <title>AI Supply Chain Optimizer - Smart Logistics & Inventory Management | Zion Tech Group</title>
+        <meta name="description" content="Optimize your supply chain with AI-powered demand forecasting, route optimization, and inventory management. Reduce costs by 35% and improve delivery times by 40%." />
+        <meta name="keywords" content="AI supply chain, logistics optimization, inventory management, demand forecasting, supply chain AI, logistics technology" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer" />
       </Helmet>
 
       <FuturisticBackground variant="services">
@@ -141,11 +141,11 @@ export default function AIRecruitmentAssistantPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                AI Recruitment Assistant
+                AI Supply Chain Optimizer
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your hiring process with AI-powered candidate screening, automated scheduling, 
-                and predictive analytics. Reduce time-to-hire by 60% with 95% accuracy.
+                Revolutionize your supply chain with AI-powered demand forecasting, route optimization, 
+                and intelligent inventory management. Reduce costs by 35% and improve efficiency by 40%.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <FuturisticButton
@@ -186,10 +186,10 @@ export default function AIRecruitmentAssistantPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful AI Features
+                Advanced AI Features
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
-                Advanced artificial intelligence meets recruitment expertise to streamline your hiring process
+                Cutting-edge artificial intelligence meets supply chain expertise to optimize your operations
               </p>
             </div>
             
@@ -223,7 +223,7 @@ export default function AIRecruitmentAssistantPage() {
                 Choose Your Plan
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
-                Flexible pricing options to match your hiring needs
+                Scalable pricing options to match your supply chain needs
               </p>
             </div>
 
@@ -281,7 +281,7 @@ export default function AIRecruitmentAssistantPage() {
                 What Our Clients Say
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
-                Join thousands of companies transforming their hiring process
+                Join hundreds of companies optimizing their supply chains
               </p>
             </div>
 
@@ -312,10 +312,10 @@ export default function AIRecruitmentAssistantPage() {
           <div className="max-w-7xl mx-auto">
             <FuturisticCard variant="feature" className="text-center">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Transform Your Hiring Process?
+                Ready to Optimize Your Supply Chain?
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Start your free 14-day trial today. No credit card required. Join 2,500+ companies hiring smarter.
+                Start your free 14-day trial today. No credit card required. Join 500+ companies optimizing their supply chains.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <FuturisticButton

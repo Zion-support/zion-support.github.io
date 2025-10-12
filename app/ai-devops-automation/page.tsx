@@ -3,91 +3,91 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Users, 
-  Search, 
-  Brain, 
-  Target, 
+  Server, 
+  Zap, 
+  Shield, 
+  BarChart3, 
   Clock, 
   CheckCircle,
   ArrowRight,
   Star,
+  Users,
   TrendingUp,
-  Shield,
-  Zap,
-  BarChart3
+  Globe,
+  Target
 } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-export default function AIRecruitmentAssistantPage() {
+export default function AIDevOpsAutomationPage() {
   const features = [
     {
-      title: 'AI-Powered Candidate Screening',
-      description: 'Advanced algorithms analyze resumes, assess skills, and match candidates to job requirements with 95% accuracy.',
-      icon: <Search className="w-6 h-6 text-blue-400" />,
-      benefits: ['Resume parsing', 'Skill assessment', 'Cultural fit analysis', 'Bias reduction']
+      title: 'Intelligent CI/CD Pipeline',
+      description: 'AI-powered continuous integration and deployment with automatic testing, code quality checks, and smart rollback capabilities.',
+      icon: <Zap className="w-6 h-6 text-yellow-400" />,
+      benefits: ['Auto testing', 'Code quality checks', 'Smart rollbacks', 'Performance optimization']
     },
     {
-      title: 'Intelligent Interview Scheduling',
-      description: 'Automated scheduling with calendar integration, timezone handling, and conflict resolution.',
-      icon: <Clock className="w-6 h-6 text-green-400" />,
-      benefits: ['Auto-scheduling', 'Calendar sync', 'Timezone management', 'Reminder system']
+      title: 'Predictive Infrastructure Monitoring',
+      description: 'Advanced AI algorithms predict system failures, optimize resource allocation, and prevent downtime before it happens.',
+      icon: <BarChart3 className="w-6 h-6 text-blue-400" />,
+      benefits: ['Failure prediction', 'Resource optimization', 'Proactive alerts', 'Performance tuning']
     },
     {
-      title: 'Predictive Analytics Dashboard',
-      description: 'Data-driven insights on hiring trends, candidate success rates, and recruitment performance.',
-      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
-      benefits: ['Hiring metrics', 'Success predictions', 'Trend analysis', 'ROI tracking']
+      title: 'Automated Security Scanning',
+      description: 'AI-driven security analysis that continuously scans for vulnerabilities, compliance issues, and potential threats.',
+      icon: <Shield className="w-6 h-6 text-red-400" />,
+      benefits: ['Vulnerability scanning', 'Compliance monitoring', 'Threat detection', 'Auto remediation']
     },
     {
-      title: 'Automated Communication',
-      description: 'AI-powered email and SMS campaigns to engage candidates throughout the recruitment process.',
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      benefits: ['Personalized messaging', 'Multi-channel outreach', 'Response tracking', 'Follow-up automation']
+      title: 'Smart Resource Management',
+      description: 'Intelligent auto-scaling and resource allocation based on real-time demand patterns and predictive analytics.',
+      icon: <Server className="w-6 h-6 text-green-400" />,
+      benefits: ['Auto-scaling', 'Cost optimization', 'Load balancing', 'Capacity planning']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Startup',
-      price: '$99',
+      price: '$299',
       period: '/month',
       description: 'Perfect for small teams and startups',
       features: [
-        'Up to 50 job postings',
-        '500 candidate screenings',
-        'Basic analytics',
+        'Up to 5 applications',
+        'Basic CI/CD automation',
+        'Standard monitoring',
         'Email support',
-        'Standard integrations'
+        'Basic security scanning'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$299',
+      price: '$799',
       period: '/month',
       description: 'Advanced features for growing companies',
       features: [
-        'Unlimited job postings',
-        '2,000 candidate screenings',
-        'Advanced analytics',
+        'Up to 25 applications',
+        'Advanced AI automation',
+        'Predictive monitoring',
         'Priority support',
-        'Custom integrations',
-        'Team collaboration'
+        'Advanced security',
+        'Custom integrations'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$799',
+      price: '$2,499',
       period: '/month',
       description: 'Complete solution for large organizations',
       features: [
-        'Unlimited everything',
+        'Unlimited applications',
+        'Custom AI models',
         'White-label options',
         'Dedicated account manager',
-        'Custom AI training',
         'API access',
         'Advanced security'
       ],
@@ -97,42 +97,42 @@ export default function AIRecruitmentAssistantPage() {
 
   const testimonials = [
     {
-      name: 'Jennifer Martinez',
-      role: 'HR Director',
-      company: 'TechCorp Solutions',
-      content: 'AI Recruitment Assistant reduced our time-to-hire by 60% and improved candidate quality significantly. The AI screening is incredibly accurate.',
+      name: 'Alex Chen',
+      role: 'DevOps Engineer',
+      company: 'TechFlow Solutions',
+      content: 'AI DevOps Automation reduced our deployment time by 80% and eliminated 95% of production issues. The predictive monitoring is incredible.',
       rating: 5
     },
     {
-      name: 'David Kim',
-      role: 'Talent Acquisition Manager',
+      name: 'Maria Rodriguez',
+      role: 'CTO',
       company: 'InnovateLabs',
-      content: 'The automated scheduling feature alone saved us 20 hours per week. Now we can focus on building relationships with top candidates.',
+      content: 'The automated security scanning caught vulnerabilities we never would have found manually. Our security posture improved dramatically.',
       rating: 5
     },
     {
-      name: 'Sarah Thompson',
-      role: 'CEO',
-      company: 'StartupXYZ',
-      content: 'As a startup, we needed to hire fast and smart. This AI tool helped us find the perfect candidates in half the time.',
+      name: 'James Wilson',
+      role: 'Platform Engineer',
+      company: 'CloudScale Inc',
+      content: 'Smart resource management reduced our cloud costs by 40% while improving performance. The AI optimization is game-changing.',
       rating: 5
     }
   ];
 
   const stats = [
-    { number: '60%', label: 'Faster Hiring', icon: <Clock className="w-6 h-6" /> },
-    { number: '95%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6" /> },
-    { number: '2,500+', label: 'Companies Using', icon: <Users className="w-6 h-6" /> },
-    { number: '50,000+', label: 'Candidates Processed', icon: <TrendingUp className="w-6 h-6" /> }
+    { number: '80%', label: 'Faster Deployments', icon: <Zap className="w-6 h-6" /> },
+    { number: '95%', label: 'Issue Reduction', icon: <Shield className="w-6 h-6" /> },
+    { number: '300+', label: 'Companies Using', icon: <Users className="w-6 h-6" /> },
+    { number: '40%', label: 'Cost Reduction', icon: <TrendingUp className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Recruitment Assistant - Smart Hiring & Talent Management | Zion Tech Group</title>
-        <meta name="description" content="Revolutionize your hiring process with AI-powered candidate screening, automated scheduling, and predictive analytics. Reduce time-to-hire by 60% with 95% accuracy." />
-        <meta name="keywords" content="AI recruitment, talent acquisition, candidate screening, hiring automation, recruitment AI, HR technology" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-recruitment-assistant" />
+        <title>AI DevOps Automation - Smart CI/CD & Infrastructure Management | Zion Tech Group</title>
+        <meta name="description" content="Automate your DevOps with AI-powered CI/CD pipelines, predictive monitoring, and intelligent resource management. Deploy 80% faster with 95% fewer issues." />
+        <meta name="keywords" content="AI DevOps, CI/CD automation, infrastructure monitoring, DevOps AI, deployment automation, cloud management" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-devops-automation" />
       </Helmet>
 
       <FuturisticBackground variant="services">
@@ -141,11 +141,11 @@ export default function AIRecruitmentAssistantPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                AI Recruitment Assistant
+                AI DevOps Automation
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your hiring process with AI-powered candidate screening, automated scheduling, 
-                and predictive analytics. Reduce time-to-hire by 60% with 95% accuracy.
+                Revolutionize your DevOps with AI-powered CI/CD pipelines, predictive monitoring, 
+                and intelligent resource management. Deploy 80% faster with 95% fewer issues.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <FuturisticButton
@@ -186,10 +186,10 @@ export default function AIRecruitmentAssistantPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful AI Features
+                Advanced AI Features
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
-                Advanced artificial intelligence meets recruitment expertise to streamline your hiring process
+                Cutting-edge artificial intelligence meets DevOps expertise to automate your operations
               </p>
             </div>
             
@@ -223,7 +223,7 @@ export default function AIRecruitmentAssistantPage() {
                 Choose Your Plan
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
-                Flexible pricing options to match your hiring needs
+                Scalable pricing options to match your DevOps needs
               </p>
             </div>
 
@@ -281,7 +281,7 @@ export default function AIRecruitmentAssistantPage() {
                 What Our Clients Say
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
-                Join thousands of companies transforming their hiring process
+                Join hundreds of companies automating their DevOps
               </p>
             </div>
 
@@ -312,10 +312,10 @@ export default function AIRecruitmentAssistantPage() {
           <div className="max-w-7xl mx-auto">
             <FuturisticCard variant="feature" className="text-center">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Transform Your Hiring Process?
+                Ready to Automate Your DevOps?
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Start your free 14-day trial today. No credit card required. Join 2,500+ companies hiring smarter.
+                Start your free 14-day trial today. No credit card required. Join 300+ companies automating their DevOps.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <FuturisticButton

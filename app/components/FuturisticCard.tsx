@@ -143,23 +143,40 @@ export default function FuturisticCard({
         />
       )}
 
-      {/* Scanning line effect */}
+      {/* Enhanced scanning line effect */}
       {isHovered && (
-        <motion.div
-          className="absolute inset-0 rounded-2xl"
-          style={{
-            background: 'linear-gradient(90deg, transparent, rgba(6,182,212,0.3), transparent)',
-            backgroundSize: '200% 100%',
-          }}
-          animate={{
-            backgroundPosition: ['200% 0', '-200% 0'],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-        />
+        <>
+          <motion.div
+            className="absolute inset-0 rounded-2xl"
+            style={{
+              background: 'linear-gradient(90deg, transparent, rgba(6,182,212,0.4), transparent)',
+              backgroundSize: '200% 100%',
+            }}
+            animate={{
+              backgroundPosition: ['200% 0', '-200% 0'],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: 'linear',
+            }}
+          />
+          <motion.div
+            className="absolute inset-0 rounded-2xl"
+            style={{
+              background: 'linear-gradient(45deg, transparent, rgba(168,85,247,0.2), transparent)',
+              backgroundSize: '300% 300%',
+            }}
+            animate={{
+              backgroundPosition: ['0% 0%', '100% 100%'],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: 'linear',
+            }}
+          />
+        </>
       )}
 
       {/* Content */}
