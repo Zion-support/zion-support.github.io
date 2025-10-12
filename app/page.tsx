@@ -32,6 +32,9 @@ import {
   Twitter,
   Loader2
 } from 'lucide-react';
+import FuturisticBackground from './components/FuturisticBackground';
+import FuturisticCard from './components/FuturisticCard';
+import FuturisticButton from './components/FuturisticButton';
 
 // Note: Lazy loading components will be implemented in future iterations
 
@@ -210,7 +213,7 @@ export default function HomePage() {
         </script>
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <FuturisticBackground variant="hero">
         {/* Hero Section */}
         <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20" role="banner" aria-labelledby="hero-title">
           <div className="max-w-7xl mx-auto">
@@ -223,21 +226,21 @@ export default function HomePage() {
                 Join 1,200+ satisfied clients with 99.8% satisfaction rate.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/about" 
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-blue-500/50"
-                  aria-label="Learn more about our services and company"
+                <FuturisticButton
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.open('/about', '_blank')}
                 >
                   Learn More
                   <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
-                </Link>
-                <Link 
-                  to="/contact" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors focus:outline-none focus:ring-4 focus:ring-white/50"
-                  aria-label="Get started with our services"
+                </FuturisticButton>
+                <FuturisticButton
+                  variant="ghost"
+                  size="lg"
+                  onClick={() => window.open('/contact', '_blank')}
                 >
                   Get Started
-                </Link>
+                </FuturisticButton>
               </div>
             </div>
 
@@ -298,14 +301,14 @@ export default function HomePage() {
             }>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
                 {services.map((service, index) => (
-                  <Link 
-                    key={index} 
-                    to={service.link} 
-                    className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
-                    aria-label={`Learn more about ${service.title}`}
+                  <FuturisticCard
+                    key={index}
+                    variant="service"
+                    className="h-full"
+                    onClick={() => window.open(service.link, '_blank')}
                   >
-                    <div className="mb-4 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">{service.icon}</div>
-                    <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{service.title}</h3>
+                    <div className="mb-4" aria-hidden="true">{service.icon}</div>
+                    <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
                     <div className="text-cyan-400 font-semibold mb-4 text-sm">
                       {service.price}
@@ -318,11 +321,11 @@ export default function HomePage() {
                         </li>
                       ))}
                     </ul>
-                    <div className="mt-6 flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
+                    <div className="mt-6 flex items-center text-blue-400">
                       Learn More
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                      <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
                     </div>
-                  </Link>
+                  </FuturisticCard>
                 ))}
               </div>
             </Suspense>
@@ -360,7 +363,11 @@ export default function HomePage() {
             }>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
                 {testimonials.map((testimonial, index) => (
-                  <article key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 sm:p-8 border border-white/20" role="article">
+                  <FuturisticCard
+                    key={index}
+                    variant="testimonial"
+                    className="h-full"
+                  >
                     <div className="flex items-center mb-4" role="img" aria-label={`${testimonial.rating} star rating`}>
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <span key={i} className="text-yellow-400" aria-hidden="true">★</span>
@@ -373,7 +380,7 @@ export default function HomePage() {
                       <p className="font-semibold text-white">{testimonial.name}</p>
                       <p className="text-gray-400 text-sm">{testimonial.company}</p>
                     </footer>
-                  </article>
+                  </FuturisticCard>
                 ))}
               </div>
             </Suspense>
@@ -384,35 +391,35 @@ export default function HomePage() {
         <section className="py-12 sm:py-16 lg:py-20 px-4" role="region" aria-labelledby="cta-title">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+              <FuturisticCard variant="feature" className="text-center">
                 <h2 id="cta-title" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Transform Your Business?</h2>
                 <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
                   Let's discuss how our AI and IT solutions can drive your success. Join 1,200+ satisfied clients today.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
-                    to="/contact" 
-                    className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors focus:outline-none focus:ring-4 focus:ring-white/50"
-                    aria-label="Get started with our services today"
+                  <FuturisticButton
+                    variant="primary"
+                    size="lg"
+                    onClick={() => window.open('/contact', '_blank')}
                   >
                     Get Started Today
-                  </Link>
-                  <Link 
-                    to="/about" 
-                    className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors focus:outline-none focus:ring-4 focus:ring-white/50"
-                    aria-label="Learn more about our company and services"
+                  </FuturisticButton>
+                  <FuturisticButton
+                    variant="secondary"
+                    size="lg"
+                    onClick={() => window.open('/about', '_blank')}
                   >
                     Learn More
-                  </Link>
+                  </FuturisticButton>
                 </div>
                 <div className="mt-8 text-white/80 text-sm">
                   <p>✓ Free consultation • ✓ 24/7 support • ✓ 99.8% satisfaction rate</p>
                 </div>
-              </div>
+              </FuturisticCard>
             </div>
           </div>
         </section>
-      </div>
+      </FuturisticBackground>
     </>
   );
 }

@@ -1,57 +1,136 @@
 'use client';
-
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;
   hover?: boolean;
   glow?: boolean;
-  border?: boolean;
+  neon?: boolean;
+  variant?: 'default' | 'service' | 'feature' | 'testimonial';
+  onClick?: () => void;
 }
 
-const FuturisticCard: React.FC<FuturisticCardProps> = ({
-  children,
-  className = '',
-  hover = true,
-  glow = true,
-  border = true
-}) => {
-  const baseClasses = 'relative rounded-2xl transition-all duration-300 group';
-  
-  const backgroundClasses = 'bg-white/10 backdrop-blur-lg';
-  
-  const borderClasses = border 
-    ? 'border border-white/20 hover:border-blue-400/50' 
-    : '';
-  
-  const hoverClasses = hover 
-    ? 'hover:bg-white/15 hover:scale-105 hover:shadow-2xl' 
-    : '';
-  
-  const glowClasses = glow 
-    ? 'hover:shadow-blue-500/20 hover:shadow-2xl' 
-    : '';
+export default function FuturisticCard({ 
+  children, 
+  className = '', 
+  hover = true, 
+  glow = true, 
+  neon = true,
+  variant = 'default',
+  onClick 
+}: FuturisticCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const cardRef = useRef<HTMLDivElement>(null);
 
-  const cardClasses = `${baseClasses} ${backgroundClasses} ${borderClasses} ${hoverClasses} ${glowClasses} ${className}`;
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+    
+    const rect = cardRef.current.getBoundingClientRect();
+    setMousePosition({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
+    });
+  };
+
+  const getVariantClasses = () => {
+    switch (variant) {
+      case 'service':
+        return 'bg-white/5 backdrop-blur-lg border border-cyan-500/30';
+      case 'feature':
+        return 'bg-gradient-to-br from-purple-500/10 to-cyan-500/10 backdrop-blur-lg border border-purple-500/30';
+      case 'testimonial':
+        return 'bg-gradient-to-br from-green-500/10 to-blue-500/10 backdrop-blur-lg border border-green-500/30';
+      default:
+        return 'bg-white/10 backdrop-blur-lg border border-white/20';
+    }
+  };
+
+  const getGlowEffect = () => {
+    if (!glow) return '';
+    
+    const baseGlow = 'shadow-2xl';
+    if (isHovered) {
+      switch (variant) {
+        case 'service':
+          return `${baseGlow} shadow-cyan-500/25`;
+        case 'feature':
+          return `${baseGlow} shadow-purple-500/25`;
+        case 'testimonial':
+          return `${baseGlow} shadow-green-500/25`;
+        default:
+          return `${baseGlow} shadow-cyan-500/25`;
+      }
+    }
+    return baseGlow;
+  };
+
+  const getNeonEffect = () => {
+    if (!neon) return '';
+    
+    if (isHovered) {
+      switch (variant) {
+        case 'service':
+          return 'shadow-[0_0_20px_rgba(6,182,212,0.3)]';
+        case 'feature':
+          return 'shadow-[0_0_20px_rgba(168,85,247,0.3)]';
+        case 'testimonial':
+          return 'shadow-[0_0_20px_rgba(34,197,94,0.3)]';
+        default:
+          return 'shadow-[0_0_20px_rgba(6,182,212,0.3)]';
+      }
+    }
+    return '';
+  };
 
   return (
-    <div className={cardClasses}>
-      {/* Animated border effect */}
-      {border && (
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-sm" />
-      )}
+    <motion.div
+      ref={cardRef}
+      className={`
+        relative rounded-2xl p-6 transition-all duration-300 cursor-pointer
+        ${getVariantClasses()}
+        ${getGlowEffect()}
+        ${getNeonEffect()}
+        ${hover ? 'hover:scale-105 hover:rotate-1' : ''}
+        ${className}
+      `}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onMouseMove={handleMouseMove}
+      onClick={onClick}
+      whileHover={{ y: -5 }}
+      whileTap={{ scale: 0.98 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* Animated border */}
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       
-      {/* Inner glow effect */}
-      {glow && (
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      {/* Mouse follow effect */}
+      {isHovered && (
+        <div
+          className="absolute pointer-events-none rounded-full bg-gradient-to-r from-cyan-400/20 to-purple-400/20 blur-xl"
+          style={{
+            left: mousePosition.x - 50,
+            top: mousePosition.y - 50,
+            width: 100,
+            height: 100,
+            transform: 'translate(-50%, -50%)',
+          }}
+        />
       )}
-      
+
+      {/* Content */}
       <div className="relative z-10">
         {children}
       </div>
-    </div>
-  );
-};
 
-export default FuturisticCard;
+      {/* Corner accents */}
+      <div className="absolute top-2 right-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60" />
+      <div className="absolute bottom-2 left-2 w-2 h-2 bg-purple-400 rounded-full opacity-60" />
+    </motion.div>
+  );
+}
