@@ -1,179 +1,75 @@
-import React  from 'react';
-import { Helmet  } from "react-helmet-async";
-import { Server, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Star, Users, TrendingUp  } from "lucide-react";
-import FuturisticBackground from '../components/FuturisticBackground';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud } from 'lucide-react';
 
-export default function AIDevOpsAutomationPage() {
-  const features = [
-    {
-      title: 'Intelligent CI/CD Pipeline',
-      description: 'AI-powered continuous integration and deployment with automatic testing, code quality checks, and smart rollback capabilities.',
-      icon: <><Zap className="w-6h-6text-yellow-400" />,
-      benefits: ['Auto testing', 'Code quality checks', 'Smart rollbacks', 'Performance optimization']
-    },
-    {
-      title: 'Predictive Infrastructure Monitoring',
-      description: 'Advanced AI algorithms predict system failures, optimize resource allocation, and prevent downtime before it happens.',
-      icon: <BarChart3 className="w-6h-6text-blue-400" />,
-      benefits: ['Failure prediction', 'Resource optimization', 'Proactive alerts', 'Performance tuning']
-    },
-    {
-      title: 'Automated Security Scanning',
-      description: 'AI-driven security analysis that continuously scans for vulnerabilities, compliance issues, and potential threats.',
-      icon: <Shield className="w-6h-6text-red-400" />,
-      benefits: ['Vulnerability scanning', 'Compliance monitoring', 'Threat detection', 'Auto remediation']
-    },
-    {title: 'Smart Resource Management',
-      description: 'Intelligent auto-scaling and resource allocation based on real-time demand patterns and predictive analytics.',
-      icon: <Server className="w-6h-6text-green-400" />,
-      benefits: ['Auto-scaling', 'Cost optimization', 'Load balancing', 'Capacity planning']
-    }
-  ];
-  const pricingPlans = [
-    {
-      name: 'Startup',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small teams and startups',
-      features: [
-        'Up to 5 applications',
-        'Basic CI/CD automation',
-        'Standard monitoring',
-        'Email support',
-        'Basic security scanning'
-      ],
-      popular: false;
-    },
-    {
-      name: 'Professional',
-      price: '$799',
-      period: '/month',
-      description: 'Advanced features for growing companies',
-      features: [
-        'Up to 25 applications',
-        'Advanced AI automation',
-        'Predictive monitoring',
-        'Priority support',
-        'Advanced security',
-        'Custom integrations'
-      ],
-      popular: true;
-    },
-    {name: 'Enterprise',
-      price: '$2,499',
-      period: '/month',
-      description: 'Complete solution for large organizations',
-      features: [
-        'Unlimited applications',
-        'Custom AI models',
-        'White-label options',
-        'Dedicated account manager',
-        'API access',
-        'Advanced security'
-      ],
-      popular: false;
-    }
-  ];
-  const testimonials = [
-    {
-      name: 'Alex Chen',
-      role: 'DevOps Engineer',
-      company: 'TechFlow Solutions',
-      content: 'AI DevOps Automation reduced our deployment time by 80% and eliminated 95% of production issues. The predictive monitoring is incredible.',
-      rating: 5;
-    },
-    {
-      name: 'Maria Rodriguez',
-      role: 'CTO',
-      company: 'InnovateLabs',
-      content: 'The automated security scanning caught vulnerabilities we never would have found manually. Our security posture improved dramatically.',
-      rating: 5;
-    },
-    {name: 'James Wilson',
-      role: 'Platform Engineer',
-      company: 'CloudScale Inc',
-      content: 'Smart resource management reduced our cloud costs by 40% while improving performance. The AI optimization is game-changing.',
-      rating: 5;
-    }
-  ];
-  const stats = [
-
-                <FuturisticButton;></FuturisticButton>
-                  variant="primary" size="lg"></FuturisticButton>
-                  onClick="{()" = /> window.open('/contact', '_blank')}
-                >
-                  Start Free Trial;
-    <>ArrowRight className="w-5h-5ml-2" />
-                </FuturisticButton></>
-                <FuturisticButton;></FuturisticButton>
-                  variant="ghost" size="lg"></FuturisticButton>
-                  onClick="{()" =  />window.open('#demo', '_blank')}
-                >
-                  Watch Demo;
-    <>/FuturisticButton>
+const AiDevopsAutomation: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>AI DevopsAutomation | Zion Tech Group</title>
+        <meta name="description" content="Professional AI DevopsAutomation services and solutions for your business needs." />
+        <meta name="keywords" content="AI, IT solutions, ai devopsautomation, technology, innovation" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-slate-900 text-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+              AI DevopsAutomation
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-12 leading-relaxed">
+              Professional AI DevopsAutomation services and solutions for your business needs.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Advanced AI Solutions</h3>
+                <p className="text-gray-300">
+                  Cutting-edge artificial intelligence technologies to transform your business operations.
+                </p>
               </div>
-
-              {features.map((feature, index) => (
-    <>FuturisticCard key="{index}" variant="service" className="h-full" />
-
-              {pricingPlans.map((plan, index) => (
-                <FuturisticCard;></FuturisticCard>
-                  key="{index}" variant="{plan.popular" ? "feature" : "service"} ></FuturisticCard>
-                  className="{`h-full" ${plan.popular ? 'ring-2 ring-purple-500' : ''}`} />
-                  {plan.popular && (
-
-              {testimonials.map((testimonial, index) => (
-    <>FuturisticCard key="{index}" variant="testimonial" className="h-full" />
-                  <>div className="flex items-centermb-4" ></div>
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-4 h-4text-yellow-400fill-current" /></Star>
-                    ))}
-    <>/div>
-                  <blockquote className="text-gray-300 mb-6italic" />"{testimonial.content}"
-                  </blockquote>
-                  <footer /></footer>
-                    <p className="font-semiboldtext-white" ></p>
-              {testimonial.name}</p>
-                    <p className="text-gray-400text-sm" ></p>
-              {testimonial.role}</p>
-                    <p className="text-gray-500text-sm" ></p>
-              {testimonial.company}</p>
-                  </footer>
-                </FuturisticCard></>
-              ))}
-    <>/div>
-        </section></>
-
-        {/* CTA Section */}
-    <>section className="py-12 sm:py-16lg:py-20px-4" />
-          <><div className="max-w-7xlmx-auto" ></div><FuturisticCard variant="feature" className="text-center" /></></FuturisticCard>
-              <h2 className="text-2 xl sm:text-3 xl md:text-4xl font-bold text-white mb-4" />Ready to Automate Your DevOps?
-              </h2>
-              <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xlmx-auto" ></p>
-              Start your free 14-day trial today. No credit card required. Join 300+ companies automating their DevOps.
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center" ></div>
-                <FuturisticButton;></FuturisticButton>
-                  variant="primary" size="lg"></FuturisticButton>
-                  onClick="{()" =>window.open('/contact', '_blank')}
-                >
-                  Start Free Trial;
-                </FuturisticButton><FuturisticButton;></FuturisticButton></>
-                  variant="secondary" size="lg"></FuturisticButton>
-                  onClick="{()" =  />window.open('/contact', '_blank')}
-                >
-                  Schedule Demo;
-    <>/FuturisticButton>
-              </div><div className="mt-8text-white/80text-sm" ></div></>
-                <p />✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
+              
+              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Enterprise Security</h3>
+                <p className="text-gray-300">
+                  Robust security measures to protect your data and ensure compliance.
+                </p>
               </div>
-            </FuturisticCard>
+              
+              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Performance Optimization</h3>
+                <p className="text-gray-300">
+                  Optimize your systems for maximum efficiency and scalability.
+                </p>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </div>
-        </section>
-      </FuturisticBackground></>
-  );
-}
+        </div>
+      </div>
     </>
-}}}))))
+  );
+};
+
+export default AiDevopsAutomation;

@@ -1,53 +1,75 @@
-import React  from 'react';
-const AiAnalyticsPage: React.FC = () => {
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud } from 'lucide-react';
+
+const AiAnalytics: React.FC = () => {
   return (
-  return (
-  return (
-    <>Helmet>
-        <title>Ai Analytics - Zion Tech Group</title>
-        <meta name="description" content="Ai Analytics services by Zion Tech Group. Professional AI and IT solutions." / / /></meta>
-        <meta name="keywords" content="ai-analytics, AI solutions, IT services" / / /></meta>
-      </Helmet></>
+    <>
+      <Helmet>
+        <title>AI Analytics | Zion Tech Group</title>
+        <meta name="description" content="Professional AI Analytics services and solutions for your business needs." />
+        <meta name="keywords" content="AI, IT solutions, ai analytics, technology, innovation" />
+      </Helmet>
       
-      <>div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" ></div><div className="container mx-autopx-4py-16" ></div></>
-          <div className="text-centermb-16" ></div>
-            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" /></h1>
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent" />Ai Analytics;
-              </span>
+      <div className="min-h-screen bg-slate-900 text-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+              AI Analytics
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto" ></p>
-              Professional ai analytics services by Zion Tech Group.
-    <>/p>
-          </div></>
-
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center" ></div>
-            <h2 className="text-2 xl font-bold text-white mb-4" >Coming Soon</h2>
-            <p className="text-gray-300 mb-6" ></p>
-              We're working on bringing you comprehensive ai analytics solutions. 
-              Contact us to learn more about our services.
-    <>/p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300" >Contact Us;
-            </button>
+            
+            <p className="text-xl text-gray-300 mb-12 leading-relaxed">
+              Professional AI Analytics services and solutions for your business needs.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Advanced AI Solutions</h3>
+                <p className="text-gray-300">
+                  Cutting-edge artificial intelligence technologies to transform your business operations.
+                </p>
+              </div>
+              
+              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Enterprise Security</h3>
+                <p className="text-gray-300">
+                  Robust security measures to protect your data and ensure compliance.
+                </p>
+              </div>
+              
+              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Performance Optimization</h3>
+                <p className="text-gray-300">
+                  Optimize your systems for maximum efficiency and scalability.
+                </p>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </div>
-
-      </div>
-          </div>
         </div>
       </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div></>
-  );
-
-  );
-
+    </>
   );
 };
 
-export default AiAnalyticsPage;
-    </>
+export default AiAnalytics;

@@ -50,7 +50,7 @@ function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
-      id: newRequest.id;
+      id: newRequest.id,
     }));
   } catch (error) {
     // Log error for debugging in development;

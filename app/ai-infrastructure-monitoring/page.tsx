@@ -1,21 +1,75 @@
-import React  from 'react';
-import { Link  } from "react-router-dom";
-import { ArrowRight  } from "lucide-react";
-export default function AiinfrastructuremonitoringPage() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20" ></div>
-      <Helmet></Helmet>
-        <title>Ai Infrastructure Monitoring - Zion Tech Group</title>
-        <meta name="description" content="Professional ai infrastructure monitoring services by Zion Tech Group. Transform your business with our expert solutions." / / /></meta>
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud } from 'lucide-react';
+
+const AiInfrastructureMonitoring: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>AI InfrastructureMonitoring | Zion Tech Group</title>
+        <meta name="description" content="Professional AI InfrastructureMonitoring services and solutions for your business needs." />
+        <meta name="keywords" content="AI, IT solutions, ai infrastructuremonitoring, technology, innovation" />
       </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center" ></div>
-        <h1 className="text-4xl font-bold text-white mb-6" >Ai Infrastructure Monitoring</h1>
-        <p className="text-lg text-gray-300 mb-8" >Professional ai infrastructure monitoring services coming soon.</p>
-        <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" ></Link>
-          Contact Us;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
+      
+      <div className="min-h-screen bg-slate-900 text-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+              AI InfrastructureMonitoring
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-12 leading-relaxed">
+              Professional AI InfrastructureMonitoring services and solutions for your business needs.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Advanced AI Solutions</h3>
+                <p className="text-gray-300">
+                  Cutting-edge artificial intelligence technologies to transform your business operations.
+                </p>
+              </div>
+              
+              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Enterprise Security</h3>
+                <p className="text-gray-300">
+                  Robust security measures to protect your data and ensure compliance.
+                </p>
+              </div>
+              
+              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Performance Optimization</h3>
+                <p className="text-gray-300">
+                  Optimize your systems for maximum efficiency and scalability.
+                </p>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
-  );
-}
     </>
-</div>
+  );
+};
+
+export default AiInfrastructureMonitoring;

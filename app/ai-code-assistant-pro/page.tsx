@@ -1,289 +1,75 @@
-import React from 'react'
-import { Link  } from "react-router-dom";
-export default function AICodeAssistantProPage() {
-  const features = [
-    {
-      icon: <><Bot className="w-6h-6text-cyan-400" />,
-      title: 'AI Code Generation',
-      description: 'Generate high-quality code from natural language descriptions with 95% accuracy'
-    },
-    {
-      icon: <Code className="w-6h-6text-emerald-400" />,
-      title: 'Smart Code Completion',
-      description: 'Intelligent autocomplete that understands context and suggests optimal solutions'
-    },
-    {
-      icon: <Search className="w-6h-6text-purple-400" />,
-      title: 'Code Analysis & Debugging',
-      description: 'Automatically detect bugs, security vulnerabilities, and performance issues'
-    },
-    {
-      icon: <GitBranch className="w-6h-6text-orange-400" />,
-      title: 'Version Control Integration',
-      description: 'Seamless integration with Git, GitHub, GitLab, and other version control systems'
-    },
-    {
-      icon: <Database className="w-6h-6text-pink-400" />,
-      title: 'Multi-Language Support',
-      description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, and more'
-    },
-    {icon: <Shield className="w-6h-6text-red-400" />,
-      title: 'Security & Compliance',
-      description: 'Built-in security scanning and compliance checking for enterprise-grade code quality'
-    }
-  ]
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud } from 'lucide-react';
 
-  const pricingPlans = [
-    {
-      name: 'Developer',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for individual developers',
-      features: [
-        'Up to 1,000 code generations/month',
-        'Basic AI features',
-        '5 programming languages',
-        'Email support',
-        'Basic analytics',
-        'VS Code extension'
-      ],
-      popular: false;
-    },
-    {
-      name: 'Team',
-      price: '$99',
-      period: '/month',
-      description: 'Ideal for development teams',
-      features: [
-        'Up to 10,000 code generations/month',
-        'Advanced AI features',
-        'All programming languages',
-        'Priority support',
-        'Advanced analytics',
-        'Team collaboration',
-        'Custom integrations',
-        'API access'
-      ],
-      popular: true;
-    },
-    {name: 'Enterprise',
-      price: '$299',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited code generations',
-        'All AI features',
-        'Custom integrations',
-        'Dedicated support',
-        'White-label option',
-        'Advanced security',
-        'Custom reporting',
-        'SLA guarantee'
-      ],
-      popular: false;
-    }
-  ]
-
-  const testimonials = [
-    {
-      name: 'Alex Chen',
-      company: 'Senior Software Engineer',
-      content: 'Increased my coding speed by 300% and reduced bugs by 80%. The AI suggestions are incredibly accurate.',
-      rating: 5,
-      avatar: 'AC'
-    },
-    {
-      name: 'Sarah Johnson',
-      company: 'Tech Startup CTO',
-      content: 'Our team productivity skyrocketed. The code generation quality is enterprise-grade and saves us hours daily.',
-      rating: 5,
-      avatar: 'SJ'
-    },
-    {name: 'Michael Rodriguez',
-      company: 'Full-Stack Developer',
-      content: 'The debugging features are game-changing. It catches issues I would have missed and suggests perfect fixes.',
-      rating: 5,
-      avatar: 'MR'
-    }
-  ]
-
-  const benefits = [
-    {
-      icon: <TrendingUp className="w-8h-8text-cyan-400" />,
-      title: '300% Faster Development',
-      description: 'AI-powered code generation accelerates development cycles'
-    },
-    {
-      icon: <Target className="w-8h-8text-emerald-400" />,
-      title: '80% Fewer Bugs',
-      description: 'Advanced analysis and debugging reduce code issues significantly'
-    },
-    {
-      icon: <Clock className="w-8h-8text-purple-400" />,
-      title: 'Save 20+ Hours Weekly',
-      description: 'Automated code generation and optimization eliminate repetitive tasks'
-    },
-    {icon: <Shield className="w-8h-8text-orange-400" />,
-      title: 'Enterprise Security',
-      description: 'Built-in security scanning ensures code quality and compliance'
-    }
-  ]
-
-  const integrations = [
-    { name: 'VS Code', icon: '💻' },
-    { name: 'IntelliJ IDEA', icon: '☕' },
-    { name: 'Sublime Text', icon: '📝' },
-    { name: 'Atom', icon: '⚛️' },
-    { name: 'Vim', icon: '📄' },
-    { name: 'GitHub', icon: '🐙' },
-    { name: 'GitLab', icon: '🦊' },
-    { name: 'Bitbucket', icon: '🪣' },
-    { name: 'Docker', icon: '🐳' },
-    {name: 'Kubernetes', icon: '⚓' }
-  ]
-
-  const supportedLanguages = [
-    'Python', 'JavaScript', 'TypeScript', 'Java', 'C++', 'C#', 'Go', 'Rust',
-    'PHP', 'Ruby', 'Swift', 'Kotlin', 'Scala', 'R', 'MATLAB', 'SQL',
-    'HTML', 'CSS', 'React', 'Vue.js', 'Angular', 'Node.js', 'Django', 'Flask'
-  ]
-
+const AiCodeAssistantPro: React.FC = () => {
   return (
-    <>div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20" ></div>
-      <Helmet /></Helmet>
-        <title   />AI Code Assistant Pro - Zion Tech Group | Intelligent Code Generation</title>
-        <meta name="description" content="Revolutionary AI-powered code assistant with intelligent generation, debugging, and analysis. Increase development speed by 300%. Starting at $29/month." / / /></meta>
-        <meta name="keywords" content="AI code assistant, code generation, intelligent debugging, code analysis, programming AI, development tools" / / /></meta>
-        <meta name="robots" content="index, follow" / / /></meta>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-code-assistant-pro" /></link>
+    <>
+      <Helmet>
+        <title>AI CodeAssistantPro | Zion Tech Group</title>
+        <meta name="description" content="Professional AI CodeAssistantPro services and solutions for your business needs." />
+        <meta name="keywords" content="AI, IT solutions, ai codeassistantpro, technology, innovation" />
       </Helmet>
-
-      {/* Hero Section */}
-    <>section className="relative py-20px-4overflow-hidden" />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.1)_0%,transparent_50%)]" /></div><div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1)_0%,transparent_50%)]" /></div></>
-        <>div className="relative max-w-7xlmx-autotext-center" ></div><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30" ></div></>
-            <Code className="w-4h-4" /></Code>
-            <span   />AI-Powered Code Generation</span>
-          </div>
-          
-          <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" /></h1>
-            AI Code Assistant;
-    <>br / />
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent" >Pro;
-            </span>
-          </h1>
-          
-          <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed" ></p>
-              Transform your development workflow with AI-powered code generation, intelligent debugging, and analysis. 
-            Increase development speed by 300% while reducing bugs by 80%.
-          </p>
-          
-          <>div className="flex flex-col sm:flex-row gap-6justify-centermb-16" ></div>
-            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" ></Link>
-          <span    /></span>
-        </Link>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" /></ArrowRight>
-            </Link><Link to="#pricing" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" ></Link></>
-          <span    /></span>
-        </Link>View Pricing</span>
-              <><ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" /></ArrowRight>
-            </Link>
-          </div>
-
-          {/* Key Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xlmx-auto" ></div><div className="text-center" ></div></>
-              <>div className="text-3 xl font-boldtext-cyan-400mb-2" />300%</div><div className="text-gray-300text-sm" />Faster Development</div></>
-            <>div className="text-center" ></div><div className="text-3 xl font-boldtext-purple-400mb-2" />80%</div></>
-              <>div className="text-gray-300text-sm" />Fewer Bugs</div><div className="text-center" ></div></>
-              <>div className="text-3 xl font-boldtext-pink-400mb-2" />50+</div><div className="text-gray-300text-sm" />Languages Supported</div></>
-            <>div className="text-center" ></div><div className="text-3 xl font-boldtext-emerald-400mb-2" />25 K+</div></>
-              <>div className="text-gray-300text-sm" />Active Developers</div>
-          </div>
-      </section>
-
-      {/* Benefits Section */}
-    <>section className="py-20px-4relative" />
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" /></div><div className="relative max-w-7xlmx-auto" ></div></>
-          <>div className="text-centermb-16" ></div>
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" /></h2>
-              Why Choose Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent" />AI Code Assistant?</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto" ></p>
-              Experience the future of software development with cutting-edge AI technology that works for your team.
-    <>/p>
-          </div><div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" ></div></>
-            {benefits.map((benefit, index) => (
-    <>div key="{index}" className="text-centergroup" />
-                <>div className="flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 mx-auto group-hover:scale-110transition-transformduration-300" >{benefit.icon}
+      
+      <div className="min-h-screen bg-slate-900 text-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+              AI CodeAssistantPro
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-12 leading-relaxed">
+              Professional AI CodeAssistantPro services and solutions for your business needs.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                  <Brain className="w-6 h-6 text-white" />
                 </div>
-
-            {supportedLanguages.map((language, index) => (
-    <>div key="{index}" className="grouptext-center" />
-                <div className="w-full h-16 bg-white/10 backdrop-blur-lg rounded-xl flex items-center justify-center mx-auto mb-2 group-hover:bg-white/20 transition-allduration-300group-hover:scale-105" ></div>
-            {features.map((feature, index) => (
-    <>div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300" >{feature.icon}
-                </div>
-
-            {pricingPlans.map((plan, index) => (
-              <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
-                plan.popular;
-                  ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' ></div>
-                  : 'border-white/20 hover: border-cyan-400/30'></div>
-              }`} />
-                {plan.popular && (
-
-            {testimonials.map((testimonial, index) => (
-    <>div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <div className="flex items-centermb-4" ></div><div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4" />{testimonial.avatar}
-                  </div></>
-                  <>div /></div><div className="font-semiboldtext-white" />{testimonial.name}</div></>
-                    <>div className="text-gray-400text-sm" />{testimonial.company}</div>
-                </div><div className="flexmb-4" ></div></>
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" /></Star>
-                  ))}
-    <>/div>
-                <p className="text-gray-300italic" ></p>
-              "{testimonial.content}"</p>
-              </div>
-            ))}
-    <>/div>
-      </section>
-
-      {/* CTA Section */}
-    <>section className="py-20px-4relative" />
-        <>div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" /></div><div className="relative max-w-7xlmx-auto" ></div></>
-          <>div className="text-center" ></div><div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden" ></div></>
-              <>div className="relativez-10" ></div>
-                <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" /></h2>
-                  Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent" />Development Workflow?</span>
-                </h2>
-                
-                <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed" ></p>
-              Join thousands of developers already coding 300% faster with our AI-powered code assistant. 
-                  Start your free trial today and experience the future of software development.
+                <h3 className="text-xl font-semibold mb-3">Advanced AI Solutions</h3>
+                <p className="text-gray-300">
+                  Cutting-edge artificial intelligence technologies to transform your business operations.
                 </p>
-                
-                <div className="flex flex-col sm:flex-row gap-6justify-centermb-8" ></div>
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" ></Link>
-          <span    /></span>
-        </Link>Start Free Trial</span>
-                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" /></ArrowRight>
-                  </Link><Link to="#pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" ></Link></>
-          <span    /></span>
-        </Link>View All Plans</span>
-                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" /></ArrowRight>
-                  </Link>
-                </div><div className="text-white/80text-sm" ></div></>
-                  <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
+              </div>
+              
+              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-white" />
                 </div>
+                <h3 className="text-xl font-semibold mb-3">Enterprise Security</h3>
+                <p className="text-gray-300">
+                  Robust security measures to protect your data and ensure compliance.
+                </p>
+              </div>
+              
+              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Performance Optimization</h3>
+                <p className="text-gray-300">
+                  Optimize your systems for maximum efficiency and scalability.
+                </p>
+              </div>
             </div>
+            
+            <div className="text-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
         </div>
-      </section>
-    </div>
-  );
-}
+      </div>
     </>
-                              </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
-}}}}})))))))))
+  );
+};
+
+export default AiCodeAssistantPro;
