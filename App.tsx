@@ -3,8 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import Header from './app/components/Header'
 import Footer from './app/components/Footer'
-import ErrorBoundary from './app/components/EnhancedErrorBoundary'
-import PerformanceMonitor from './app/components/PerformanceMonitor'
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary'
+import EnhancedPerformanceMonitor from './app/components/EnhancedPerformanceMonitor'
+import EnhancedAccessibility from './app/components/EnhancedAccessibility'
+import EnhancedLoading from './app/components/EnhancedLoading'
+import MobileOptimizer from './app/components/MobileOptimizer'
 import Breadcrumb from './app/components/Breadcrumb'
 import CookieConsent from './app/components/CookieConsent'
 
@@ -87,13 +90,15 @@ import EmployeeDirectoryPage from './app/micro-saas/employee-directory/page'
 const App: React.FC = () => {
   return (
     <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-gray-900 text-white">
-          <Header />
-          <Breadcrumb />
-          <main>
-            <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400"></div></div>}>
-              <Routes>
+      <EnhancedErrorBoundary>
+        <Router>
+          <EnhancedAccessibility>
+            <div className="min-h-screen bg-gray-900 text-white">
+              <Header />
+              <Breadcrumb />
+              <main>
+                <Suspense fallback={<EnhancedLoading fullScreen text="Loading application..." />}>
+                  <Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
@@ -173,14 +178,17 @@ const App: React.FC = () => {
                 
                 {/* 404 Page */}
                 <Route path="*" element={<NotFoundPage />} />
-              </Routes>
-            </Suspense>
-          </main>
-          <Footer />
-          <CookieConsent />
-          <PerformanceMonitor />
-        </div>
-      </Router>
+                  </Routes>
+                </Suspense>
+              </main>
+              <Footer />
+              <CookieConsent />
+              <EnhancedPerformanceMonitor />
+              <MobileOptimizer />
+            </div>
+          </EnhancedAccessibility>
+        </Router>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
   );
 };

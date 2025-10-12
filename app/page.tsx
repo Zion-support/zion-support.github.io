@@ -1,8 +1,11 @@
 import React, { Suspense, lazy } from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import PerformanceOptimizer from './components/PerformanceOptimizer'
+<<<<<<< HEAD
+=======
+import EnhancedSEO from './components/EnhancedSEO'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4fc3
 import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, TrendingUp, Sparkles, Layers, Target, Award, Lightbulb, Monitor, Server, CircuitBoard, Atom, Satellite, Wrench, BarChart, PieChart, LineChart, Activity, Eye, Search, Filter, Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, FileText, Package } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
@@ -189,111 +192,73 @@ const HomePage: React.FC = () => {
   return (
     <>
       <PerformanceOptimizer />
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company</title>
-        <meta name="description" content="Zion Tech Group: Premier AI solutions, IT services, 5G implementation & micro SAAS platforms. 99.8% client satisfaction, 24/7 support. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, artificial intelligence, IT services, 5G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-        <meta name="theme-color" content="#8b5cf6" />
-        <meta name="color-scheme" content="dark light" />
-        <meta name="format-detection" content="telephone=no,address=no,email=no" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://ziontechgroup.com/" />
-        
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company" />
-        <meta property="og:description" content="Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:secure_url" content="https://ziontechgroup.com/og-image.jpg" />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        <meta property="og:locale" content="en_US" />
-        
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
-        <meta name="twitter:image:alt" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta name="twitter:image:width" content="1200" />
-        <meta name="twitter:image:height" content="630" />
-        <meta name="twitter:site" content="@ziontechgroup" />
-        <meta name="twitter:creator" content="@ziontechgroup" />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.png",
-            "description": "Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms.",
-            "foundingDate": "2020",
-            "founder": {
-              "@type": "Person",
-              "name": "Dr. Kleber Santos"
+      <EnhancedSEO
+        title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
+        description="Zion Tech Group: Premier AI solutions, IT services, 5G implementation & micro SAAS platforms. 99.8% client satisfaction, 24/7 support. Transform your business with cutting-edge technology."
+        keywords="AI solutions, artificial intelligence, IT services, 5G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company"
+        canonical="https://ziontechgroup.com/"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.png",
+          "description": "Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms.",
+          "foundingDate": "2020",
+          "founder": {
+            "@type": "Person",
+            "name": "Dr. Kleber Santos"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          },
+          "sameAs": [
+            "https://linkedin.com/company/ziontechgroup",
+            "https://twitter.com/ziontechgroup",
+            "https://github.com/ziontechgroup"
+          ],
+          "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": "50+",
+            "lowPrice": "99",
+            "highPrice": "2999",
+            "priceCurrency": "USD"
+          },
+          "service": [
+            {
+              "@type": "Service",
+              "name": "AI Solutions",
+              "description": "Advanced artificial intelligence solutions for business automation and optimization"
             },
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "364 E Main St STE 1008",
-              "addressLocality": "Middletown",
-              "addressRegion": "DE",
-              "postalCode": "19709",
-              "addressCountry": "US"
+            {
+              "@type": "Service", 
+              "name": "IT Services",
+              "description": "Comprehensive IT infrastructure and cloud migration services"
             },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+1-302-464-0950",
-              "contactType": "customer service",
-              "email": "kleber@ziontechgroup.com"
+            {
+              "@type": "Service",
+              "name": "5G Implementation", 
+              "description": "Next-generation 5G network solutions and IoT integration"
             },
-            "sameAs": [
-              "https://linkedin.com/company/ziontechgroup",
-              "https://twitter.com/ziontechgroup",
-              "https://github.com/ziontechgroup"
-            ],
-            "offers": {
-              "@type": "AggregateOffer",
-              "offerCount": "50+",
-              "lowPrice": "99",
-              "highPrice": "2999",
-              "priceCurrency": "USD"
-            },
-            "service": [
-              {
-                "@type": "Service",
-                "name": "AI Solutions",
-                "description": "Advanced artificial intelligence solutions for business automation and optimization"
-              },
-              {
-                "@type": "Service", 
-                "name": "IT Services",
-                "description": "Comprehensive IT infrastructure and cloud migration services"
-              },
-              {
-                "@type": "Service",
-                "name": "5G Implementation", 
-                "description": "Next-generation 5G network solutions and IoT integration"
-              },
-              {
-                "@type": "Service",
-                "name": "Micro SAAS",
-                "description": "Ready-to-deploy micro software solutions for business growth"
-              }
-            ]
-          })}
-        </script>
-      </Helmet>
+            {
+              "@type": "Service",
+              "name": "Micro SAAS",
+              "description": "Ready-to-deploy micro software solutions for business growth"
+            }
+          ]
+        }}
+      />
       
       <Navigation />
       
