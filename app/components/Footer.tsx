@@ -2,90 +2,88 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shield, Database, Workflow, Link as LinkIcon, Linkedin, Twitter, Github } from 'lucide-react';
 
-const Footer: React.F C = () => {
-  const current Year = new Date().get Full Year();
+const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
   
-  const ai Services = [
-    { name: 'A I Analytics & B I', url: '/ai-analytics', description: 'Business intelligence' },
-    { name: 'A I Automation', url: '/ai-automation', description: 'Process automation' },
-    { name: 'A I Chatbots & N LP', url: '/ai-chatbot-builder', description: 'Conversational A I' },
-    { name: 'A I Content Generation', url: '/ai-content-generation', description: 'Automated content' },
-    { name: 'A I Cybersecurity', url: '/ai-cybersecurity', description: 'A I security' },
-    { name: 'A I C RM', url: '/ai-crm', description: 'Smart C RM' },
-    { name: 'A I Data Analytics', url: '/ai-data-analytics', description: 'Data insights' },
-    { name: 'A I Healthcare', url: '/ai-healthcare', description: 'Medical A I' },
-    { name: 'A I Computer Vision', url: '/ai-computer-vision', description: 'Image analysis' },
-    { name: 'A I Voice Solutions', url: '/ai-voice-solutions', description: 'Speech recognition' },
-    { name: 'A I Financial Services', url: '/ai-financial-services', description: 'Fintech A I' },
-    { name: 'A I E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce A I' }
+  const aiServices = [
+    { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
+    { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'Security solutions' },
+    { name: 'AI CRM', url: '/ai-crm', description: 'Customer management' },
+    { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical solutions' },
+    { name: 'AI Financial Services', url: '/ai-financial-services', description: 'Fintech solutions' },
   ];
 
-  const it Services = [
-    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud solutions' },
-    { name: 'Dev Ops & C I/C D', url: '/devops', description: 'Development operations' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'Database Management', url: '/database', description: 'Database services' },
-    { name: 'A PI Development', url: '/api', description: 'A PI solutions' },
-    { name: 'Mobile App Development', url: '/mobile-development', description: 'Mobile apps' },
-    { name: 'Web Development', url: '/web-development', description: 'Web solutions' },
-    { name: 'I T Consulting', url: '/it-consulting', description: 'I T advisory' },
-    { name: 'System Integration', url: '/system-integration', description: 'System solutions' },
-    { name: 'Data Management', url: '/data-management', description: 'Data solutions' },
-    { name: 'Network Security', url: '/network-security', description: 'Network protection' },
-    { name: 'I T Support', url: '/it-support', description: 'Technical support' }
-  ];
-
-  const company = [
-    { name: 'About Us', url: '/about' },
-    { name: 'Our Team', url: '/team' },
-    { name: 'Careers', url: '/careers' },
-    { name: 'News & Blog', url: '/news' },
-    { name: 'Case Studies', url: '/case-studies' },
-    { name: 'Partners', url: '/partners' },
-    { name: 'Investors', url: '/investors' },
-    { name: 'Contact', url: '/contact' }
-  ];
-
-  const resources = [
-    { name: 'Documentation', url: '/docs' },
-    { name: 'A PI Reference', url: '/api-docs' },
-    { name: 'Tutorials', url: '/tutorials' },
-    { name: 'White Papers', url: '/white-papers' },
-    { name: 'Webinars', url: '/webinars' },
-    { name: 'Support Center', url: '/support' },
-    { name: 'Community', url: '/community' },
-    { name: 'Status Page', url: '/status' }
-  ];
-
-  const social Links = [
-    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: <T witter class Name="w-5 h-5" /> },
-    { name: 'Linked In', url: 'https://linkedin.com/company/ziontechgroup', icon: <L inkedin class Name="w-5 h-5" /> },
-    { name: 'Git Hub', url: 'https://github.com/ziontechgroup', icon: <G ithub class Name="w-5 h-5" /> }
+  const itServices = [
+    { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'Cloud solutions' },
+    { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Security services' },
+    { name: 'Web Development', url: '/web-development', description: 'Custom websites' },
+    { name: 'Mobile Development', url: '/mobile-development', description: 'Mobile apps' },
+    { name: 'API Development', url: '/api-development', description: 'API services' },
+    { name: 'Database Management', url: '/database-management', description: 'Data solutions' },
   ];
 
   return (
-    <f ooter class Name="b g-gray-900 text-white">
-      <d iv class Name="m ax-w-7-xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <d iv class Name="t ext-center">
-          <h3 c lass Name="t ext-2-xl font-bold mb-4">Zion Tech Group</h3>
-
-const Footer: React.F C = () => {
-  const current Year = new Date().get Full Year();
-
-  return (
-    <f ooter class Name="b g-gray-900 text-white">
-      <d iv class Name="m ax-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <d iv class Name="t ext-center">
-          <h3 c lass Name="t ext-2xl font-bold mb-4">Zion Tech Group</h3>
-          <p c lass Name="t ext-gray-400 mb-4">
-            Advanced A I & I T Solutions
-          </p>
-          <p c lass Name="t ext-gray-500 text-sm">
-            © {current Year} Zion Tech Group. All rights reserved.
-          </p>
-        </d iv>
-      </d iv>
-    </f ooter>
+    <footer className="bg-slate-900 border-t border-slate-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-6">
+              Leading provider of AI and IT solutions for businesses worldwide.
+            </p>
+            <div className="flex space-x-4">
+              <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">AI Services</h4>
+            <ul className="space-y-2">
+              {aiServices.map((service, index) => (
+                <li key={index}>
+                  <a href={service.url} className="text-gray-300 hover:text-cyan-400 transition-colors">
+                    {service.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">IT Services</h4>
+            <ul className="space-y-2">
+              {itServices.map((service, index) => (
+                <li key={index}>
+                  <a href={service.url} className="text-gray-300 hover:text-cyan-400 transition-colors">
+                    {service.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        
+        <div className="border-t border-slate-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <a href="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
+                Privacy Policy
+              </a>
+              <a href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
+                Terms of Service
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };
 

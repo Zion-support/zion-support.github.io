@@ -1,23 +1,23 @@
 import React from 'react'
-import React DO M from 'react-dom/client'
+import ReactDOM from 'react-dom/client'
 import App from './App'
 import './app/globals.css'
 
-React DO M.create Root(document.get Element By Id('root')!).render(
-  <R eact.Strict Mode>
-    <A pp />
-  </R eact.Strict Mode>
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
 
-// Register service worker for P WA functionality
-if ('service Worker' in navigator) {
-  window.add Event Listener('load', () => {
-    navigator.service Worker.register('/sw.js')
+// Register service worker for PWA functionality
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
-        console.log('S W registered: ', registration);
+        console.log('SW registered: ', registration);
       })
-      .catch((registration Error) => {
-        console.log('S W registration failed: ', registration Error);
+      .catch((registrationError) => {
+        console.log('SW registration failed: ', registrationError);
       });
   });
 }
