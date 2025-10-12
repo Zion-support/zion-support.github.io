@@ -1,19 +1,9 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, BarChart3, Zap, Globe, Cpu, Clock, TrendingUp } from 'lucide-react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 export default function FiveGDataAnalyticsPage() {
-  const features = [
-    {
-      title: "Feature 1",
-      description: "Description of feature 1"
-    },
-    {
-      title: "Feature 2",
-      description: "Description of feature 2"
-    }
-  ];
 
   const analyticsFeatures = [
     {
@@ -32,29 +22,6 @@ export default function FiveGDataAnalyticsPage() {
     "Cost optimization"
   ];
 
-  return (
-
-    {
-      title: 'Real-time Insights',
-      description: 'Get instant insights into network performance and user experience',
-      icon: <Zap className="w-6 h-6 text-blue-500" />
-    },
-    {
-      title: 'Predictive Analytics',
-      description: 'Anticipate issues and optimize performance with AI-powered predictions',
-      icon: <TrendingUp className="w-6 h-6 text-green-500" />
-    },
-    {
-      title: 'Custom Dashboards',
-      description: 'Tailored dashboards for different stakeholders and use cases',
-      icon: <BarChart3 className="w-6 h-6 text-purple-500" />
-    },
-    {
-      title: 'Automated Reporting',
-      description: 'Automated reports and alerts for proactive network management',
-      icon: <Clock className="w-6 h-6 text-orange-500" />
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
@@ -105,22 +72,21 @@ export default function FiveGDataAnalyticsPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-20">
-            {analyticsServices.map((service, index) => (
-              {features.map((feature, index) => (
+            {analyticsFeatures.map((feature, index) => (
 
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 mb-6">{feature.description}</p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
+                  {benefits.map((benefit, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      {benefit}
                     </li>
                   ))}
                 </ul>
-                <div className="text-2xl font-bold text-white mb-4">{service.pricing}</div>
+                <div className="text-2xl font-bold text-white mb-4">Contact for pricing</div>
                 <Link 
                   to="/contact"
                   className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -146,7 +112,6 @@ export default function FiveGDataAnalyticsPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {analyticsFeatures.map((feature, index) => (
-              {features.map((feature, index) => (
 
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                 <div className="mb-4 flex justify-center">{feature.icon}</div>
@@ -190,5 +155,3 @@ export default function FiveGDataAnalyticsPage() {
 };
 
 export default FiveGDataAnalyticsPage;
-  );
-}

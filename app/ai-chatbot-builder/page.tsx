@@ -1,11 +1,7 @@
-import React from 'react';
-import { ArrowRight, MessageCircle, Users, Zap, Shield } from 'lucide-react';
+import React, { useState } from 'react';
+import { CheckCircle, ArrowRight, MessageCircle, Users, Zap, Shield, Brain, Globe, Clock, Star, Target, DollarSign, BarChart3 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { CheckCircle, ArrowRight, MessageCircle, Users, Zap, Shield, Brain, Globe, Clock, Star, Target, DollarSign } from 'lucide-react'
 
 export default function AIChatbotBuilderPage() {
 
@@ -51,8 +47,7 @@ export default function AIChatbotBuilderPage() {
     'Order tracking',
     'Technical support',
     'Sales consultation'
-    }
-  ]
+  ];
 
   const pricingPlans = [
     {
@@ -377,5 +372,5 @@ export default function AIChatbotBuilderPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import { CheckCircle, ArrowRight, BarChart3, FileText, TrendingUp, Clock, Shield, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-ursor/website-audit-and-update-with-deployment-a178
 
 const AIAutomatedReportingPage: React.FC = () => {
   const features = [
