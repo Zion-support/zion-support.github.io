@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { CheckCircle, Users, Target, Award, Globe, Zap, Shield, Database, ArrowRight, Star, Clock, TrendingUp } from 'lucide-react';
+=======
+import { Users, Target, Award, Globe, Zap, Shield, Database } from 'lucide-react';
+>>>>>>> main
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 

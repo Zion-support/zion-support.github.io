@@ -49,12 +49,16 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="bg-white/10 backdrop-blur-lg border-b border-white/20 sticky top-0 z-50">
+    <nav className="bg-white/10 backdrop-blur-lg border-b border-white/20 sticky top-0 z-50" role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+          <Link 
+            to="/" 
+            className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-lg"
+            aria-label="Zion Tech Group - Go to homepage"
+          >
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center" aria-hidden="true">
               <span className="text-white font-bold text-sm">Z</span>
             </div>
             <span className="text-white font-bold text-xl">Zion Tech Group</span>
@@ -64,13 +68,15 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               to="/"
-              className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+              aria-label="Go to homepage"
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+              aria-label="Learn about our company"
             >
               About
             </Link>
@@ -79,23 +85,32 @@ export default function Navigation() {
             <div className="relative">
               <button
                 onClick={toggleServices}
-                className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                aria-expanded={isServicesOpen}
+                aria-haspopup="true"
+                aria-label="Services menu"
               >
                 Services
-                <ChevronDown className={`ml-1 w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`ml-1 w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white/10 backdrop-blur-lg rounded-lg border border-white/20 shadow-lg z-50">
+                <div 
+                  className="absolute top-full left-0 mt-2 w-64 bg-white/10 backdrop-blur-lg rounded-lg border border-white/20 shadow-lg z-50"
+                  role="menu"
+                  aria-label="Services submenu"
+                >
                   <div className="py-2">
                     {services.map((service, index) => (
                       <Link
                         key={index}
                         to={service.href}
-                        className="flex items-center px-4 py-3 text-white hover:bg-white/10 transition-colors"
+                        className="flex items-center px-4 py-3 text-white hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-inset"
                         onClick={() => setIsServicesOpen(false)}
+                        role="menuitem"
+                        aria-label={`Go to ${service.title} page`}
                       >
-                        <div className="mr-3">{service.icon}</div>
+                        <div className="mr-3" aria-hidden="true">{service.icon}</div>
                         <div>
                           <div className="font-medium">{service.title}</div>
                           <div className="text-sm text-gray-300">{service.description}</div>
@@ -109,13 +124,15 @@ export default function Navigation() {
             
             <Link
               to="/contact"
-              className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+              aria-label="Contact us"
             >
               Contact
             </Link>
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
+              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+              aria-label="Get started with our services"
             >
               Get Started
             </Link>
@@ -125,9 +142,11 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-white hover:text-purple-300 p-2 rounded-md transition-colors"
+              className="text-white hover:text-purple-300 p-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+              aria-expanded={isOpen}
+              aria-label="Toggle mobile menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
@@ -135,18 +154,22 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/10 backdrop-blur-lg rounded-lg mt-2 border border-white/20">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/10 backdrop-blur-lg rounded-lg mt-2 border border-white/20" role="menu" aria-label="Mobile navigation menu">
               <Link 
                 to="/" 
-                className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium"
+                className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-inset"
                 onClick={() => setIsOpen(false)}
+                role="menuitem"
+                aria-label="Go to homepage"
               >
                 Home
               </Link>
               <Link 
                 to="/about" 
-                className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium"
+                className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-inset"
                 onClick={() => setIsOpen(false)}
+                role="menuitem"
+                aria-label="Learn about our company"
               >
                 About
               </Link>
@@ -154,15 +177,17 @@ export default function Navigation() {
               {/* Mobile Services */}
               <div className="px-3 py-2">
                 <div className="text-white font-medium mb-2">Services</div>
-                <div className="space-y-1 ml-4">
+                <div className="space-y-1 ml-4" role="menu" aria-label="Mobile services submenu">
                   {services.map((service, index) => (
                     <Link
                       key={index}
                       to={service.href}
-                      className="flex items-center text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm"
+                      className="flex items-center text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-inset"
                       onClick={() => setIsOpen(false)}
+                      role="menuitem"
+                      aria-label={`Go to ${service.title} page`}
                     >
-                      <div className="mr-2">{service.icon}</div>
+                      <div className="mr-2" aria-hidden="true">{service.icon}</div>
                       {service.title}
                     </Link>
                   ))}
@@ -171,15 +196,19 @@ export default function Navigation() {
               
               <Link 
                 to="/contact" 
-                className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium"
+                className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-inset"
                 onClick={() => setIsOpen(false)}
+                role="menuitem"
+                aria-label="Contact us"
               >
                 Contact
               </Link>
               <Link 
                 to="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300 text-center mt-4"
+                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300 text-center mt-4 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-inset"
                 onClick={() => setIsOpen(false)}
+                role="menuitem"
+                aria-label="Get started with our services"
               >
                 Get Started
               </Link>

@@ -1,101 +1,105 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'
+
+interface PerformanceMetrics {
+  fcp: number | null
+  lcp: number | null
+  fid: number | null
+  cls: number | null
+  ttfb: number | null
+}
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    // Monitor Core Web Vitals
-<<<<<<< HEAD
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Largest Contentful Paint (LCP)
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-            // Send to analytics
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'web_vitals', {
-                name: 'LCP',
-                value: Math.round(entry.startTime),
-                event_category: 'Web Vitals'
-              });
-            }
-          }
-        }
-      });
-      
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return
 
-      // Monitor First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          console.log('FID:', entry.processingStart - entry.startTime);
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'web_vitals', {
-              name: 'FID',
-              value: Math.round(entry.processingStart - entry.startTime),
-              event_category: 'Web Vitals'
-            });
-          }
-        }
-      });
-      
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Monitor Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
-          }
-        }
-        console.log('CLS:', clsValue);
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'web_vitals', {
-            name: 'CLS',
-            value: Math.round(clsValue * 1000),
-            event_category: 'Web Vitals'
-          });
-        }
-      });
-      
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      // Cleanup observers
-      return () => {
-        observer.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
+    const metrics: PerformanceMetrics = {
+      fcp: null,
+      lcp: null,
+      fid: null,
+      cls: null,
+      ttfb: null
     }
-=======
-    const observer = new PerformanceObserver((list) => {
+
+    // Measure FCP (First Contentful Paint)
+    const fcpObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (entry.entryType === 'largest-contentful-paint') {
-          console.log('LCP:', entry.startTime);
-        } else if (entry.entryType === 'first-input') {
-          console.log('FID:', (entry as any).processingStart - entry.startTime);
-        } else if (entry.entryType === 'layout-shift') {
-          console.log('CLS:', (entry as any).value);
+        if (entry.name === 'first-contentful-paint') {
+          metrics.fcp = entry.startTime
         }
       }
-    });
+    })
+    fcpObserver.observe({ entryTypes: ['paint'] })
 
-    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+    // Measure LCP (Largest Contentful Paint)
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries()
+      const lastEntry = entries[entries.length - 1]
+      metrics.lcp = lastEntry.startTime
+    })
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
 
-    // Monitor page load time
-    window.addEventListener('load', () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      console.log('Page Load Time:', navigation.loadEventEnd - navigation.loadEventStart);
-      console.log('DOM Content Loaded:', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart);
-    });
+    // Measure FID (First Input Delay)
+    const fidObserver = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        metrics.fid = (entry as any).processingStart - entry.startTime
+      }
+    })
+    fidObserver.observe({ entryTypes: ['first-input'] })
+
+    // Measure CLS (Cumulative Layout Shift)
+    let clsValue = 0
+    const clsObserver = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (!(entry as any).hadRecentInput) {
+          clsValue += (entry as any).value
+        }
+      }
+      metrics.cls = clsValue
+    })
+    clsObserver.observe({ entryTypes: ['layout-shift'] })
+
+    // Measure TTFB (Time to First Byte)
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+    if (navigationEntry) {
+      metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart
+    }
+
+    // Send metrics after page load
+    const sendMetrics = () => {
+      // Send to analytics service (replace with your preferred service)
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', 'web_vitals', {
+          event_category: 'Performance',
+          event_label: 'Core Web Vitals',
+          value: Math.round(metrics.lcp || 0),
+          custom_map: {
+            fcp: metrics.fcp,
+            lcp: metrics.lcp,
+            fid: metrics.fid,
+            cls: metrics.cls,
+            ttfb: metrics.ttfb
+          }
+        })
+      }
+
+      // Log to console for debugging
+      console.log('Performance Metrics:', metrics)
+    }
+
+    // Send metrics after a delay to ensure all measurements are complete
+    const timeoutId = setTimeout(sendMetrics, 5000)
 
     return () => {
-      observer.disconnect();
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-cbf2
-  }, []);
+      clearTimeout(timeoutId)
+      fcpObserver.disconnect()
+      lcpObserver.disconnect()
+      fidObserver.disconnect()
+      clsObserver.disconnect()
+    }
+  }, [])
 
-  return null;
-};
+  return null
+}
 
-export default PerformanceMonitor;
+export default PerformanceMonitor

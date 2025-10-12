@@ -4,6 +4,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -121,6 +122,9 @@ const Layout: React.FC<LayoutProps> = ({
         <div className="fixed bottom-6 right-6 z-50">
           <ThemeToggle />
         </div>
+        
+        {/* Performance Monitoring */}
+        <PerformanceMonitor />
       </div>
     </ErrorBoundary>
   );

@@ -62,10 +62,13 @@ const FuturisticBackgroundPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Futuristic Background
+<<<<<<< HEAD
               <br />
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Solutions
               </span>
+=======
+>>>>>>> main
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your digital presence with cutting-edge futuristic background technology. 

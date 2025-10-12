@@ -1,9 +1,9 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Smartphone, Cpu, Database } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
+import SEOOptimizer from './components/SEOOptimizer'
 
 export default function HomePage() {
   const features = [
@@ -60,11 +60,11 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, IT services, 5G implementation, cloud services, digital transformation, Zion Tech Group" />
-      </Helmet>
+      <SEOOptimizer
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. Transform your business with cutting-edge technology."
+        keywords="AI solutions, IT services, 5G implementation, cloud services, digital transformation, Zion Tech Group"
+      />
       
       <Navigation />
       

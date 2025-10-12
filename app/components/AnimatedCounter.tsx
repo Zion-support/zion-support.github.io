@@ -32,9 +32,13 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       
       setCount(currentCount)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-55ae
+=======
+      
+>>>>>>> main
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate)
       }

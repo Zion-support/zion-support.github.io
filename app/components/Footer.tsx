@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin } from 'lucide-react'
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react'
 
 export default function Footer() {
   const aiServices = [
@@ -31,14 +31,23 @@ export default function Footer() {
     { name: 'Contact', path: '/contact' }
   ]
 
+  const companyLinks = [
+    { name: 'About Us', path: '/about' },
+    { name: 'Our Team', path: '/team' },
+    { name: 'Careers', path: '/careers' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Press Kit', path: '/press' }
+  ]
+
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white" role="contentinfo" aria-label="Site footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2" aria-hidden="true">
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
@@ -47,14 +56,28 @@ export default function Footer() {
               Advanced AI and IT solutions for modern businesses. We help you transform your digital infrastructure with cutting-edge technology.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Mail className="w-5 h-5" />
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+                aria-label="Send us an email"
+              >
+                <Mail className="w-5 h-5" aria-hidden="true" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Phone className="w-5 h-5" />
+              <a 
+                href="tel:+13024640950" 
+                className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+                aria-label="Call us"
+              >
+                <Phone className="w-5 h-5" aria-hidden="true" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <MapPin className="w-5 h-5" />
+              <a 
+                href="https://maps.google.com/?q=364+E+Main+St+STE+1008,+Middletown,+DE+19709" 
+                className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+                aria-label="View our location on map"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MapPin className="w-5 h-5" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -62,12 +85,13 @@ export default function Footer() {
           {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">AI Services</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2" role="list">
               {aiServices.map((service) => (
                 <li key={service.name}>
                   <Link
                     to={service.path}
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+                    aria-label={`Go to ${service.name} page`}
                   >
                     {service.name}
                   </Link>
@@ -79,12 +103,13 @@ export default function Footer() {
           {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">IT Services</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2" role="list">
               {itServices.map((service) => (
                 <li key={service.name}>
                   <Link
                     to={service.path}
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+                    aria-label={`Go to ${service.name} page`}
                   >
                     {service.name}
                   </Link>
@@ -96,12 +121,13 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2" role="list">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+                    aria-label={`Go to ${link.name} page`}
                   >
                     {link.name}
                   </Link>
@@ -118,10 +144,18 @@ export default function Footer() {
               © 2024 Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link 
+                to="/privacy" 
+                className="text-gray-400 hover:text-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+                aria-label="Read our privacy policy"
+              >
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link 
+                to="/terms" 
+                className="text-gray-400 hover:text-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+                aria-label="Read our terms of service"
+              >
                 Terms of Service
               </Link>
             </div>

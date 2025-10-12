@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { Send, CheckCircle, AlertCircle } from 'lucide-react'
 
 interface FormData {
   name: string
@@ -70,6 +70,7 @@ const ContactForm: React.FC = () => {
         message: ''
       })
 <<<<<<< HEAD
+<<<<<<< HEAD
     } catch (error) {
       console.error('Error sending message:', error);
 =======
@@ -79,6 +80,10 @@ const ContactForm: React.FC = () => {
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again later.'
       })
+=======
+    } catch {
+      setStatus({ type: 'error', message: 'Failed to send message. Please try again.' })
+>>>>>>> main
     }
   }
 
