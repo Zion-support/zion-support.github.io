@@ -11,6 +11,7 @@ import {
   Shield, Brain, Cpu, Rocket, Network
 } from 'lucide-react'
 
+const AiChatbotBuilderPage: React.FC = () => {
   const features = [
     {
       icon: <Zap className="w-6 h-6 text-cyan-400" />,
@@ -298,3 +299,5 @@ import {
     </>
   )
 }
+
+export default AiChatbotBuilderPage;

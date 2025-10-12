@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Brain, BarChart, ArrowRight } from 'lucide-react';
+import { Brain, BarChart, ArrowRight, Zap, Shield } from 'lucide-react';
 
 const EnhancedPerformanceOptimizer: React.FC = () => {
   const features = [
@@ -162,3 +162,5 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     </div>
   )
 }
+
+export default EnhancedPerformanceOptimizer;
