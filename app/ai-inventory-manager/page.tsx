@@ -1,7 +1,7 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Package, TrendingUp, BarChart3, AlertTriangle, Zap, CheckCircle, ArrowRight, Star, Brain, Database, Shield, DollarSign } from 'lucide-react'
+import { ArrowRight, Brain, BarChart3, Shield, Zap, CheckCircle, Star } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 const AIInventoryManagerPage: React.FC = () => {
   const features = [

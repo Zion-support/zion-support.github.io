@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { Activity, Wifi, HardDrive } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { HardDrive } from 'lucide-react';
 
 interface PerformanceMetrics {
   lcp: number;
@@ -29,7 +29,6 @@ const PerformanceDashboard: React.FC = () => {
     ttfb: 0,
     fcp: 0,
   });
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Only show in development or if user has enabled debug mode

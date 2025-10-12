@@ -1,6 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Shield, BarChart3, TrendingUp, Target, Zap, CheckCircle, ArrowRight, Star, Globe, Play, Mail, Phone, MapPin } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const AIBlockchainAnalyticsPage: React.FC = () => {

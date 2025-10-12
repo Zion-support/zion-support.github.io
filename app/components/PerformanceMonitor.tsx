@@ -1,12 +1,15 @@
 'use client';
 import React, { useEffect } from 'react';
+=======
+import { useEffect } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-1443
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     const monitorCoreWebVitals = () => {
       if ('web-vitals' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+import { getCLS, getFID, getFCP, getLCP, getTTFB } 
           getCLS(console.log);
           getFID(console.log);
           getFCP(console.log);

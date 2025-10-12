@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface AnimatedTextProps {
   text: string;
@@ -17,7 +17,6 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   // duration = 1000,
   type = 'fade'
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
 

@@ -1,11 +1,19 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Link as LinkIcon, Package, TrendingUp, Calendar, Globe, Database, Monitor, Mail } from 'lucide-react';
+<<<<<<< HEAD
+import { 
+  ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
+  BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
+  Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
+  TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
+  Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock
+} from 'lucide-react';
+=======
+import { ArrowRight, ShoppingCart } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-1443
 
 const MicroSaasPage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);

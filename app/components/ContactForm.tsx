@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Mail, MessageSquare, Send } from 'lucide-react';
+import { useState } from 'react';
+import { MessageSquare } from 'lucide-react';
 
 interface FormData {
   name: string;
@@ -12,6 +12,7 @@ interface FormData {
   service: string;
 }
 
+export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',

@@ -1,7 +1,6 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Code, CheckCircle, Clock, Target, TrendingUp, Shield, Bot, Star, Database, GitBranch, Search } from 'lucide-react'
+import { ArrowRight, Bot } from 'lucide-react'
 
 export default function AICodeAssistantProPage() {
   const features = [

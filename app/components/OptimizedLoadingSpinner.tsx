@@ -1,5 +1,5 @@
 'use client'
-import React, { memo, useMemo } from 'react'
+import { memo, useMemo } from 'react'
 
 interface OptimizedLoadingSpinnerProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'

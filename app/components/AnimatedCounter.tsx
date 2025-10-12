@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 interface AnimatedCounterProps {
   end: number;
@@ -10,6 +10,7 @@ interface AnimatedCounterProps {
   suffix?: string;
 }
 
+export default function AnimatedCounter({ 
   end, 
   duration = 2000, 
   className = '', 

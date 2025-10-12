@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 interface AnalyticsProps {
   children: React.ReactNode;
 }
 
+export default function Analytics({ children }: AnalyticsProps) {
   useEffect(() => {
     // Initialize analytics tracking
     const initAnalytics = () => {

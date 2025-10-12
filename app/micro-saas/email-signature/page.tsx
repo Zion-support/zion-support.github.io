@@ -1,6 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Mail, Palette, Users, Zap, CheckCircle, ArrowRight, BarChart3, Shield, Clock } from 'lucide-react'
+import { Palette, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const EmailSignaturePage: React.FC = () => {

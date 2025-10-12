@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
-const Page: React.FC = () => {
+export default function AIInvoiceGeneratorPage() {
   return (
     <>
       <Helmet>
@@ -77,6 +77,4 @@ const Page: React.FC = () => {
       </div>
     </>
   );
-};
-
-export default Page;
+}

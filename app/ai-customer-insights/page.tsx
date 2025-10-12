@@ -1,6 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Brain, BarChart3, Users, TrendingUp, Target, Zap, CheckCircle, ArrowRight, Star, Shield, Play, Heart, Calendar, Mail, Phone, MapPin } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const AICustomerInsightsPage: React.FC = () => {

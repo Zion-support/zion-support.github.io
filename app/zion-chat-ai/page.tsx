@@ -1,11 +1,9 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Brain, BarChart, MessageCircle, Heart, Link as LinkIcon, Globe, Play } from 'lucide-react';
+import { ArrowRight, ShoppingCart } from 'lucide-react';
 
 const ZionChatAiPage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);

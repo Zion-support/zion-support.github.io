@@ -1,7 +1,6 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Calendar, BarChart3, Users, Zap, CheckCircle, Target, TrendingUp, Shield, Bot, Star } from 'lucide-react'
+import { ArrowRight, Bot, MessageSquare } from 'lucide-react'
 
 export default function AIProjectManagerPage() {
   const features = [

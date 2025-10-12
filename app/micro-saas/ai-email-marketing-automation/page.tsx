@@ -1,7 +1,6 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Mail, BarChart3, Users, Zap, CheckCircle, Clock, Target, TrendingUp, Shield, Bot, Star, Eye } from 'lucide-react'
+import { ArrowRight, Bot, MessageSquare } from 'lucide-react'
 
 export default function AIEmailMarketingAutomationPage() {
   const features = [

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Shield, ArrowRight, CheckCircle, Brain, Lock, Star, Eye } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import Layout from '../layout'
 
 export default function AdvancedSecuritySuite() {

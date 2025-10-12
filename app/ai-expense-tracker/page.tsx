@@ -1,34 +1,16 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, Brain, TrendingUp } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
-const Page: React.FC = () => {
-  const features = [
-    {
-      icon: <Brain className="w-12 h-12 text-cyan-400" />,
-      title: "AI-Powered Analysis",
-      description: "Advanced AI algorithms analyze your spending patterns and provide intelligent insights."
-    },
-    {
-      icon: <TrendingUp className="w-12 h-12 text-purple-400" />,
-      title: "Real-time Tracking",
-      description: "Track your expenses in real-time with automatic categorization and smart notifications."
-    },
-    {
-      icon: <Shield className="w-12 h-12 text-green-400" />,
-      title: "Secure & Private",
-      description: "Bank-level security ensures your financial data is protected and private."
-    }
-  ];
-
+export default function AIExpenseTrackerPage() {
   return (
     <>
       <Helmet>
         <title>AI Expense Tracker - Zion Tech Group</title>
         <meta name="description" content="Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="AI expense tracking, financial management, Zion Tech Group" />
+        <meta name="keywords" content="AI solutions, expense tracking, IT services, Zion Tech Group" />
         <meta property="og:title" content="AI Expense Tracker - Zion Tech Group" />
         <meta property="og:description" content="Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta property="og:type" content="website" />
@@ -65,32 +47,6 @@ const Page: React.FC = () => {
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Why Choose Our AI Expense Tracker?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our advanced AI technology helps you manage your finances more efficiently
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50 transition-all duration-300">
-                  <div className="flex justify-center mb-4">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -121,6 +77,4 @@ const Page: React.FC = () => {
       </div>
     </>
   );
-};
-
-export default Page;
+}

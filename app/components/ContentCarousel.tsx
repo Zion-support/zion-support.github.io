@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Slide {
@@ -41,6 +41,7 @@ const defaultSlides: Slide[] = [
   }
 ];
 
+export default function ContentCarousel({ 
   slides = defaultSlides, 
   autoPlay = true, 
   interval = 5000 

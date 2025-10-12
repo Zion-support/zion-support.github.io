@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Wifi, ArrowRight, CheckCircle, Building, Users } from 'lucide-react'
+import { ArrowRight, Building } from 'lucide-react'
 import Layout from '../layout'
 
 export default function FiveGSmartCitySolutions() {
