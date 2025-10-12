@@ -2,41 +2,52 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Clock, Target } from 'lucide-react';
+import { ArrowRight, Brain, Clock, Target, BarChart3 } from 'lucide-react';
 export default function AICustomerSupportChatbot() {
   const features = [
+    {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
       title: 'Natural Language Processing',
       description: 'Advanced AI understands context, intent, and provides human-like responses'
     },
+    {
       icon: <Clock className="w-6 h-6 text-purple-400" />,
       title: '24/7 Availability',
       description: 'Provide instant support around the clock without additional staffing costs'
     },
+    {
       icon: <Target className="w-6 h-6 text-yellow-400" />,
       title: 'Intelligent Routing',
       description: 'Automatically route complex queries to the right human agents when needed'
     },
+    {
       icon: <BarChart3 className="w-6 h-6 text-green-400" />,
       title: 'Analytics & Insights',
       description: 'Track customer satisfaction, response times, and identify improvement opportunities'
-  ]
+    }
+  ];
 
   const chatbotFeatures = [
+    {
       category: 'Conversation Management',
       items: ['Multi-language Support', 'Context Awareness', 'Sentiment Analysis', 'Conversation History', 'Quick Responses', 'Escalation Rules']
     },
+    {
       category: 'Integration',
       items: ['Website Widget', 'Mobile Apps', 'Social Media', 'Email Integration', 'CRM Systems', 'Help Desk Tools']
     },
+    {
       category: 'Customization',
       items: ['Brand Styling', 'Custom Responses', 'Knowledge Base', 'FAQ Management', 'Personality Settings', 'Response Templates']
     },
+    {
       category: 'Analytics',
       items: ['Response Metrics', 'Customer Satisfaction', 'Resolution Rates', 'Popular Queries', 'Performance Reports', 'ROI Tracking']
-  ]
+    }
+  ];
 
   const pricingPlans = [
+    {
       name: 'Starter',
       price: '$29',
       period: '/month',
