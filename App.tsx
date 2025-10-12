@@ -20,13 +20,13 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import FuturisticBackground from './app/components/FuturisticBackground';
 
 // Lazy load pages for better performance
-const AboutPage = React.lazy(() =>const AboutPage = React.lazy(() => import('./app/about/page'));
-const ContactPage = React.lazy(() =>const ContactPage = React.lazy(() => import('./app/contact/page'));
-const ServicesPage = React.lazy(() =>const ServicesPage = React.lazy(() => import('./app/services/page'));
-const PricingPage = React.lazy(() =>const PricingPage = React.lazy(() => import('./app/pricing/page'));
-const BlogPage = React.lazy(() =>const BlogPage = React.lazy(() => import('./app/blog/page'));
-const CaseStudiesPage = React.lazy(() =>const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
-const CareersPage = React.lazy(() =>const CareersPage = React.lazy(() => import('./app/careers/page'));
+const AboutPage = React.lazy(() => import('./app/about/page'));
+const ContactPage = React.lazy(() => import('./app/contact/page'));
+const ServicesPage = React.lazy(() => import('./app/services/page'));
+const PricingPage = React.lazy(() => import('./app/pricing/page'));
+const BlogPage = React.lazy(() => import('./app/blog/page'));
+const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
+const CareersPage = React.lazy(() => import('./app/careers/page'));
 const AIServicesPage = React.lazy(() =>const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
