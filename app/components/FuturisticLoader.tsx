@@ -14,6 +14,4 @@ export default function FuturisticLoader() {
       </Link>
     </div>
   );
-};
-
-export default FuturisticLoader;
+}

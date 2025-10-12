@@ -6,6 +6,12 @@ interface NeonButtonProps {
   className?: string;
   title?: string;
   description?: string;
+  href?: string;
+  onClick?: () => void;
+  variant?: 'primary' | 'secondary' | 'accent';
+  size?: 'sm' | 'md' | 'lg';
+  icon?: React.ReactNode;
+  disabled?: boolean;
 }
 
 const NeonButton: React.FC<NeonButtonProps> = ({
