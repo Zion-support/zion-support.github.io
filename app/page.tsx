@@ -1,46 +1,12 @@
-'use client'
 import React from 'react'
-import SEOHead from './components/SEOHead'
+import { Helmet } from 'react-helmet-async'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock } from 'lucide-react'
+import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, TrendingUp } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const HomePage: React.FC = () => {
   const features = [
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Database, 
-  Code, 
-  Smartphone, 
-  ArrowRight, 
-  CheckCircle, 
-  Star,
-  Users,
-  TrendingUp,
-  Lock,
-  Cpu,
-  Wifi,
-  BarChart3,
-  MessageSquare,
-  FileText,
-  Camera,
-  Mail,
-  Phone,
-  MapPin,
-  Github,
-  Linkedin,
-  Twitter
-} from 'lucide-react';
-
-export default function HomePage() {
-  const aiServices = [
     {
       icon: <Brain className="w-8 h-8 text-blue-500" />,
       title: 'AI-Powered Solutions',
@@ -62,31 +28,6 @@ export default function HomePage() {
       description: 'Transform your data into actionable insights with our advanced analytics platform.'
     }
   ]
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Home</h1>
-          <p className="text-xl text-gray-300 mb-8">Welcome to Zion Tech Group - Advanced AI and IT Solutions</p>
-          <a
-            href="/"
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-          >
-            Go Home
-          </a>
-        </div>
-import { Link } from 'react-router-dom';
-import SEOHead from './components/SEOHead';
-import FuturisticBackground from './components/FuturisticBackground';
-import FuturisticCard from './components/FuturisticCard';
-import NeonButton from './components/NeonButton';
-import AnimatedText from './components/AnimatedText';
-
-export default function HomePage() {
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99%', label: 'Success Rate' },
-    { number: '24/7', label: 'Support' }
-  ];
 
   const services = [
     {
@@ -120,11 +61,11 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOHead 
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI-powered IT solutions, cloud infrastructure, cybersecurity, and digital transformation services."
-        keywords="AI solutions, IT services, cloud computing, cybersecurity, digital transformation"
-      />
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of AI-powered IT solutions, cloud infrastructure, cybersecurity, and digital transformation services." />
+        <meta name="keywords" content="AI solutions, IT services, cloud computing, cybersecurity, digital transformation" />
+      </Helmet>
       
       <Navigation />
       
@@ -245,18 +186,16 @@ export default function HomePage() {
                   Contact Us
                 </Link>
                 <Link 
-                  to="/ai-services" 
+                  to="/pricing" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Explore AI Services
+                  View Pricing
                 </Link>
-                </NeonButton>
               </div>
             </div>
           </div>
         </div>
       </section>
-        </section>
 
       <Footer />
     </div>
@@ -264,7 +203,3 @@ export default function HomePage() {
 }
 
 export default HomePage
-      </div>
-    </>
-  );
-}

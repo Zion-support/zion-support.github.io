@@ -1,11 +1,16 @@
-'use client';
-
 import React from 'react';
 import { Users, Target, Award, Globe, Zap, Shield, Database, Brain, Clock, Star, TrendingUp, Cloud, ArrowRight, CheckCircle, Phone, Mail, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const AboutPage: React.FC = () => {
+  const stats = [
+    { number: '500+', label: 'Projects Completed', icon: <Award className="w-8 h-8 text-yellow-400" /> },
+    { number: '100+', label: 'Happy Clients', icon: <Users className="w-8 h-8 text-blue-400" /> },
+    { number: '24/7', label: 'Support Available', icon: <Clock className="w-8 h-8 text-green-400" /> },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8 text-purple-400" /> }
+  ];
+
   const values = [
     {
       icon: <Brain className="w-8 h-8 text-blue-500" />,
@@ -171,8 +176,7 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
-      </div>
-    </>
+    </div>
   );
 };
 
