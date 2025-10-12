@@ -154,7 +154,8 @@ const AboutPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Team Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
