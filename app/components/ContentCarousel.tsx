@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Play, Pause, Zap, Shield, Cloud, BarChart3, Users, Target, CheckCircle } from 'lucide-react';
+import {ChevronLeft, ChevronRight, Play, Pause, CheckCircle} from 'lucide-react';
 
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

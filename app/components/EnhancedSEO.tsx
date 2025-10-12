@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import {CheckCircle, ArrowRight} from 'lucide-react'
 
 const EnhancedSEOPage: React.FC = () => {
   const features = [
@@ -13,30 +13,17 @@ const EnhancedSEOPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Real-time Optimization',
-<<<<<<< HEAD
       description: 'Get instant SEO insights and recommendations for better search performance'
     },
     {
       icon: Shield,
       title: 'Technical SEO',
       description: 'Comprehensive technical SEO audits and optimization for better search visibility'
-=======
-      description: 'Lightning-fast SEO analysis and optimization with instant results'
-    },
-    {
-      icon: Shield,
-      title: 'White-Hat Techniques',
-      description: 'Ethical SEO practices with long-term sustainable results'
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
     },
     {
       icon: Globe,
       title: 'Global SEO',
-<<<<<<< HEAD
       description: 'Optimize your website for international markets and multiple languages'
-=======
-      description: 'Worldwide SEO optimization and support for international businesses'
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
     }
   ]
 
@@ -54,15 +41,9 @@ const EnhancedSEOPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>Enhanced SEO | Zion Tech Group</title>
         <meta name="description" content="Professional Enhanced SEO services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SEO, search engine optimization, AI solutions, IT services, Zion Tech Group" />
-=======
-        <title>Enhanced SEO Solutions | Zion Tech Group</title>
-        <meta name="description" content="Professional SEO services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="SEO optimization, AI solutions, IT services, Zion Tech Group, search engine optimization" />
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
       </Helmet>
       
       {/* Hero Section */}
@@ -77,13 +58,8 @@ const EnhancedSEOPage: React.FC = () => {
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Optimize your website for search engines with our advanced AI-powered SEO solutions. 
               Improve rankings and drive more organic traffic.
-=======
-              Transform your business with our advanced SEO optimization solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
@@ -106,11 +82,7 @@ const EnhancedSEOPage: React.FC = () => {
               Why Choose Our SEO Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Our SEO solutions deliver unmatched performance, security, and scalability.
-=======
-              Our SEO optimization solutions deliver unmatched performance, security, and scalability.
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -135,11 +107,7 @@ const EnhancedSEOPage: React.FC = () => {
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Experience the power of our SEO solutions for your business.
-=======
-              Experience the power of our SEO optimization solutions for your business.
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -153,25 +121,6 @@ const EnhancedSEOPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact us today to learn more about our SEO solutions and how they can transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-              Contact Us
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-              Learn More
-            </button>
-=======
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -190,7 +139,6 @@ const EnhancedSEOPage: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
           </div>
         </div>
       </section>

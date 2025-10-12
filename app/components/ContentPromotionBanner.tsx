@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3 } from 'lucide-react';
+import {CheckCircle, ArrowRight, Zap} from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
   const features = [

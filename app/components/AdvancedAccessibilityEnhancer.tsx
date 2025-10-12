@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { CheckCircle, Eye, Volume2, Keyboard, MousePointer, Settings } from 'lucide-react';
+import {CheckCircle, Settings} from 'lucide-react';
 
 interface AdvancedAccessibilityEnhancerProps {
   enableHighContrast?: boolean;

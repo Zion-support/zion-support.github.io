@@ -1,9 +1,9 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from './Navigation'
+import Footer from './Footer'
+import {CheckCircle, ArrowRight} from 'lucide-react'
 
 const FuturisticBackgroundPage: React.FC = () => {
   const features = [
@@ -33,7 +33,6 @@ const FuturisticBackgroundPage: React.FC = () => {
     }
   ]
 
-<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -45,39 +44,15 @@ const FuturisticBackgroundPage: React.FC = () => {
     'Proven track record of success'
   ]
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>Futuristic Background | Zion Tech Group</title>
         <meta name="description" content="Professional Futuristic Background services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="futuristic background, AI solutions, IT services, Zion Tech Group, advanced technology" />
-=======
-        <title>Futuristic Background Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced futuristic background solutions powered by AI technology." />
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
       </Helmet>
       
       <Navigation />
-<<<<<<< HEAD
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Futuristic Background
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Experience the future of technology with our cutting-edge futuristic background solutions. 
-              Powered by advanced AI and innovative design.
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -94,7 +69,6 @@ const FuturisticBackgroundPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your digital presence with cutting-edge futuristic background technology. 
               Powered by advanced AI and modern design principles.
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
@@ -106,38 +80,6 @@ const FuturisticBackgroundPage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Futuristic Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our futuristic background solutions deliver unmatched performance, innovation, and scalability.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-=======
         </section>
 
         {/* Features Section */}
@@ -190,11 +132,9 @@ const FuturisticBackgroundPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                   Schedule Demo
                 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
               </div>
-            ))}
+            </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -243,12 +183,6 @@ const FuturisticBackgroundPage: React.FC = () => {
 
       <Footer />
     </div>
-=======
-        </section>
-      </div>
-      <Footer />
-    </React.Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
   )
 }
 

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ExternalLink, Award, Handshake, TrendingUp } from 'lucide-react';
+import {CheckCircle, ExternalLink, Handshake, TrendingUp} from 'lucide-react';
 
 interface Partner {
   name: string;

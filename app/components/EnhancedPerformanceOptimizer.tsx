@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Brain, Zap, Shield, BarChart, ArrowRight, CheckCircle } from 'lucide-react'
+import {ArrowRight, CheckCircle} from 'lucide-react'
 
 const EnhancedPerformanceOptimizer: React.FC = () => {
   const features = [

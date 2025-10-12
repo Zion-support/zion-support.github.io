@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { CheckCircle, ArrowRight, Shield, FileText, Lock, Award, Users, Globe } from 'lucide-react';
+import {CheckCircle, ArrowRight, Shield, FileText} from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const CompliancePage: React.FC = () => {
