@@ -2,25 +2,19 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Brain, Code, Cpu, Wifi, ChevronDown } from 'lucide-react';
 
-<<<<<<< HEAD
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  return (
-    <nav className="bg-gray-900/90 backdrop-blur-lg border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <span className="text-2xl font-bold text-white">
-                Zion Tech Group
-              </span>
-=======
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
-  }
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
 
   const services = [
     {
@@ -40,21 +34,6 @@ const Navigation = () => {
       ]
     },
     {
-      title: 'IT Services',
-      href: '/it-services',
-      icon: <Code className="w-4 h-4" />,
-      description: 'Comprehensive IT solutions',
-      submenu: [
-        { title: 'Cloud Migration', href: '/cloud-migration' },
-        { title: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
-        { title: 'DevOps & CI/CD', href: '/devops-cicd' },
-        { title: 'Data Analytics', href: '/data-analytics' },
-        { title: 'Mobile Development', href: '/mobile-development' },
-        { title: 'Web Development', href: '/web-development' },
-        { title: 'Quantum Computing', href: '/quantum-computing-solutions' }
-      ]
-    },
-    {
       title: 'Micro SAAS',
       href: '/micro-saas-services',
       icon: <Cpu className="w-4 h-4" />,
@@ -67,6 +46,21 @@ const Navigation = () => {
         { title: 'AI Health Tracker', href: '/ai-health-tracker' },
         { title: 'AI Smart Calendar', href: '/ai-smart-calendar' },
         { title: 'AI Climate Solutions', href: '/ai-climate-solutions-pro' }
+      ]
+    },
+    {
+      title: 'IT Services',
+      href: '/it-services',
+      icon: <Code className="w-4 h-4" />,
+      description: 'Comprehensive IT solutions',
+      submenu: [
+        { title: 'Cloud Migration', href: '/cloud-migration' },
+        { title: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
+        { title: 'DevOps & CI/CD', href: '/devops-cicd' },
+        { title: 'Data Analytics', href: '/data-analytics' },
+        { title: 'Mobile Development', href: '/mobile-development' },
+        { title: 'Web Development', href: '/web-development' },
+        { title: 'Quantum Computing', href: '/quantum-computing-solutions' }
       ]
     },
     {
@@ -83,12 +77,12 @@ const Navigation = () => {
         { title: '5G Data Analytics', href: '/5g-data-analytics' }
       ]
     }
-  ]
+  ];
 
   const quickLinks = [
     { title: 'About', href: '/about' },
     { title: 'Contact', href: '/contact' }
-  ]
+  ];
 
   return (
     <nav className="bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 fixed w-full top-0 z-50" role="navigation" aria-label="Main navigation">
@@ -101,45 +95,9 @@ const Navigation = () => {
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
               <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
             </Link>
           </div>
           
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <Link
-                to="/about"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                About
-              </Link>
-              <Link
-                to="/ai-services"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                AI Services
-              </Link>
-              <Link
-                to="/it-services"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                IT Services
-              </Link>
-              <Link
-                to="/contact"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Contact
-              </Link>
-            </div>
-          </div>
-
-<<<<<<< HEAD
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2"
-=======
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
@@ -194,14 +152,11 @@ const Navigation = () => {
             <button
               onClick={toggleMenu}
               className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
         {/* Mobile Navigation */}
         {isOpen && (
@@ -228,8 +183,8 @@ const Navigation = () => {
                           to={item.href}
                           className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm transition-colors"
                           onClick={() => {
-                            setActiveDropdown(null)
-                            setIsOpen(false)
+                            setActiveDropdown(null);
+                            setIsOpen(false);
                           }}
                         >
                           {item.title}
@@ -253,43 +208,7 @@ const Navigation = () => {
             </div>
           </div>
         )}
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
       </div>
-
-      {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900/95">
-            <Link
-              to="/about"
-              className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </Link>
-            <Link
-              to="/ai-services"
-              className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              AI Services
-            </Link>
-            <Link
-              to="/it-services"
-              className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              IT Services
-            </Link>
-            <Link
-              to="/contact"
-              className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
-      )}
     </nav>
   );
 };

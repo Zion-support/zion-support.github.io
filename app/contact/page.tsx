@@ -1,38 +1,10 @@
-<<<<<<< HEAD
 'use client';
 
-import React from 'react';
-=======
 import React, { useState } from 'react';
 import { CheckCircle, Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
-import { Helmet } from 'react-helmet-async';
+import SEOHead from '../components/SEOHead';
 
 export default function ContactPage() {
-<<<<<<< HEAD
-  return (
-    <>
-      <Helmet>
-        <title>Contact - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Contact</h1>
-          <p className="text-xl text-gray-300 mb-8">Get in touch with Zion Tech Group for AI and IT solutions</p>
-          <a
-            href="/"
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-          >
-            Go Home
-          </a>
-        </div>
-      </div>
-    </>
-  );
-}
-=======
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -114,24 +86,31 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. We're here to help your business succeed." />
-        <meta name="keywords" content="contact, AI services, IT solutions, digital transformation, Zion Tech Group" />
-      </Helmet>
+    <>
+      <SEOHead 
+        title="Contact Us - Zion Tech Group | Get in Touch for AI & IT Solutions"
+        description="Get in touch with Zion Tech Group for AI solutions, micro SAAS services, IT services, and digital transformation. We're here to help your business succeed. Call +1 302 464 0950."
+        keywords="contact, AI services, micro SAAS, IT solutions, digital transformation, Zion Tech Group, business consultation"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse"></div>
 
-      {/* Hero Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
-              Get In Touch
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-              Ready to transform your business? Let's discuss how our AI and IT solutions can drive your success.
-            </p>
-          </div>
+        {/* Hero Section */}
+        <section className="relative pt-20 px-4 py-12 sm:py-16 lg:py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 mb-6">
+                <span className="text-blue-300 text-sm font-medium">📞 Get In Touch</span>
+              </div>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
+                Get In Touch
+              </h1>
+              <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+                Ready to transform your business? Let's discuss how our AI and IT solutions can drive your success.
+                <span className="block mt-2 text-lg">Contact us: <span className="font-semibold text-blue-300">+1 302 464 0950</span> | <span className="font-semibold text-blue-300">kleber@ziontechgroup.com</span></span>
+              </p>
+            </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Form */}
@@ -325,10 +304,10 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
