@@ -212,7 +212,6 @@ const CloudMigrationProPage = () => {
                 <h3 className="text-xl font-semibold text-white mb-3 text-center">{feature.title}</h3>
                 <p className="text-gray-300 text-center">{feature.description}</p>
               </div>
-            ))}
           </div>
 <<<<<<< HEAD
 

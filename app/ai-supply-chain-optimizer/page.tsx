@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Truck, Package, TrendingUp, Shield, Target, Globe, Clock, CheckCircle } from 'lucide-react';
-import { Truck, Package, TrendingUp, Shield } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -349,6 +348,7 @@ const AISupplyChainOptimizerPage = () => {
               </div>
             </div>
           </section>
+<<<<<<< HEAD
 
             {/* CTA Section */}
             <div className="text-center">
@@ -410,6 +410,8 @@ const AISupplyChainOptimizerPage = () => {
             </Link>
 >>>>>>> cursor/fix-errors-and-merge-to-main-c493
           </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2d8f
         </div>
       </section>
 

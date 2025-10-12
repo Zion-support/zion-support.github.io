@@ -1,6 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 interface OptimizedImageProps {
+<<<<<<< HEAD
   children?: React.ReactNode;
   className?: string;
 }
@@ -17,3 +20,35 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 };
 
 export default OptimizedImage;
+=======
+  src: string;
+  alt: string;
+  className?: string;
+  width?: number;
+  height?: number;
+}
+
+export default function OptimizedImage({ src, alt, className = '', width, height }: OptimizedImageProps) {
+  return (
+    <>
+      <div className="optimized-image-container">
+        <img
+          src={src}
+          alt={alt}
+          className={className}
+          width={width}
+          height={height}
+          loading="lazy"
+        />
+        <Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+        >
+          Contact Us
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </Link>
+      </div>
+    </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2d8f

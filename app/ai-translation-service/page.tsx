@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 import { Languages, Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
-import { Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
 import Layout from '../layout';
 =======
 import { ArrowRight, Globe, Zap, Shield } from 'lucide-react';
@@ -79,7 +78,7 @@ const AITranslationServicePage = () => {
         'Priority support',
         'API access',
         'Team collaboration',
-        'Custom terminology'
+        'Custom terminology',
         'Advanced quality checks',
         'Priority support',
         'Custom integrations',
