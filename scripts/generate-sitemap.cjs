@@ -21,21 +21,6 @@ const pages = [
   { url: 'https://ziontechgroup.com/case-studies', priority: '0.7', changefreq: 'monthly' },
   
   // AI Services
-<<<<<<< HEAD
-  { url: '/ai-content-generator', priority: '0.8', changefreq: 'monthly' },
-  { url: '/ai-chatbot-enterprise', priority: '0.8', changefreq: 'monthly' },
-  { url: '/ai-analytics-dashboard', priority: '0.8', changefreq: 'monthly' },
-  { url: '/ai-3d-generation', priority: '0.7', changefreq: 'monthly' },
-  { url: '/ai-drug-discovery-pro', priority: '0.7', changefreq: 'monthly' },
-  { url: '/ai-cybersecurity-suite', priority: '0.8', changefreq: 'monthly' },
-  { url: '/ai-crm-assistant', priority: '0.8', changefreq: 'monthly' },
-  { url: '/ai-email-marketing', priority: '0.7', changefreq: 'monthly' },
-  { url: '/ai-document-processing', priority: '0.7', changefreq: 'monthly' },
-  { url: '/ai-voice-assistant', priority: '0.7', changefreq: 'monthly' },
-  { url: '/ai-customer-insights', priority: '0.7', changefreq: 'monthly' },
-  { url: '/ai-workflow-automation', priority: '0.7', changefreq: 'monthly' },
-  { url: '/ai-blockchain-analytics', priority: '0.7', changefreq: 'monthly' },
-=======
   { url: 'https://ziontechgroup.com/ai-content-generator', priority: '0.8', changefreq: 'monthly' },
   { url: 'https://ziontechgroup.com/ai-chatbot-enterprise', priority: '0.8', changefreq: 'monthly' },
   { url: 'https://ziontechgroup.com/ai-analytics-dashboard', priority: '0.8', changefreq: 'monthly' },
@@ -46,7 +31,9 @@ const pages = [
   { url: 'https://ziontechgroup.com/ai-email-marketing', priority: '0.7', changefreq: 'monthly' },
   { url: 'https://ziontechgroup.com/ai-document-processing', priority: '0.7', changefreq: 'monthly' },
   { url: 'https://ziontechgroup.com/ai-voice-assistant', priority: '0.7', changefreq: 'monthly' },
->>>>>>> cursor/analyze-improve-and-deploy-application-4fc3
+  { url: 'https://ziontechgroup.com/ai-customer-insights', priority: '0.7', changefreq: 'monthly' },
+  { url: 'https://ziontechgroup.com/ai-workflow-automation', priority: '0.7', changefreq: 'monthly' },
+  { url: 'https://ziontechgroup.com/ai-blockchain-analytics', priority: '0.7', changefreq: 'monthly' },
   
   // IT Services
   { url: 'https://ziontechgroup.com/cloud-migration', priority: '0.8', changefreq: 'monthly' },
@@ -79,29 +66,17 @@ const pages = [
   { url: 'https://ziontechgroup.com/api-docs', priority: '0.5', changefreq: 'weekly' },
   
   // Additional Pages
-<<<<<<< HEAD
-  { url: '/devops-solutions', priority: '0.7', changefreq: 'monthly' },
-  { url: '/system-integration', priority: '0.7', changefreq: 'monthly' },
-  { url: '/ai-content-management', priority: '0.6', changefreq: 'monthly' },
-  { url: '/cookie-policy', priority: '0.3', changefreq: 'yearly' },
-  { url: '/gdpr-compliance', priority: '0.3', changefreq: 'yearly' },
-  { url: '/resources', priority: '0.5', changefreq: 'monthly' }
-=======
   { url: 'https://ziontechgroup.com/devops-solutions', priority: '0.7', changefreq: 'monthly' },
   { url: 'https://ziontechgroup.com/system-integration', priority: '0.7', changefreq: 'monthly' },
   { url: 'https://ziontechgroup.com/ai-content-management', priority: '0.6', changefreq: 'monthly' },
   { url: 'https://ziontechgroup.com/cookie-policy', priority: '0.3', changefreq: 'yearly' },
   { url: 'https://ziontechgroup.com/gdpr-compliance', priority: '0.3', changefreq: 'yearly' },
   { url: 'https://ziontechgroup.com/resources', priority: '0.5', changefreq: 'monthly' }
->>>>>>> cursor/analyze-improve-and-deploy-application-4fc3
 ]
 
 // Generate sitemap XML
 const generateSitemap = () => {
-<<<<<<< HEAD
   const baseUrl = 'https://ziontechgroup.com'
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-4fc3
   const currentDate = new Date().toISOString()
   
   let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'

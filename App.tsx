@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import Header from './app/components/Header'
 import Footer from './app/components/Footer'
-import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary'
+import ErrorBoundary from './app/components/ErrorBoundary'
 import EnhancedPerformanceMonitor from './app/components/EnhancedPerformanceMonitor'
-import EnhancedAccessibility from './app/components/EnhancedAccessibility'
-import EnhancedLoading from './app/components/EnhancedLoading'
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
+import LoadingSpinner from './app/components/LoadingSpinner'
 import MobileOptimizer from './app/components/MobileOptimizer'
 import Breadcrumb from './app/components/Breadcrumb'
 import CookieConsent from './app/components/CookieConsent'
@@ -90,14 +90,13 @@ import EmployeeDirectoryPage from './app/micro-saas/employee-directory/page'
 const App: React.FC = () => {
   return (
     <HelmetProvider>
-      <EnhancedErrorBoundary>
+      <ErrorBoundary>
         <Router>
-          <EnhancedAccessibility>
-            <div className="min-h-screen bg-gray-900 text-white">
-              <Header />
-              <Breadcrumb />
-              <main>
-                <Suspense fallback={<EnhancedLoading fullScreen text="Loading application..." />}>
+          <div className="min-h-screen bg-gray-900 text-white">
+            <Header />
+            <Breadcrumb />
+            <main>
+              <Suspense fallback={<LoadingSpinner fullScreen text="Loading application..." />}>
                   <Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
@@ -184,11 +183,11 @@ const App: React.FC = () => {
               <Footer />
               <CookieConsent />
               <EnhancedPerformanceMonitor />
+              <AccessibilityEnhancer />
               <MobileOptimizer />
             </div>
-          </EnhancedAccessibility>
         </Router>
-      </EnhancedErrorBoundary>
+      </ErrorBoundary>
     </HelmetProvider>
   );
 };
