@@ -1,7 +1,11 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone, Star, TrendingUp, Users, Award } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import FuturisticBackground from './components/FuturisticBackground';
+import NeonButton from './components/NeonButton';
+import FuturisticCard from './components/FuturisticCard';
+import NeonText from './components/NeonText';
 
 export default function HomePage() {
   const stats = [
@@ -83,71 +87,100 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
+    <div className="min-h-screen relative overflow-hidden">
+      <FuturisticBackground />
+      
       <Helmet>
         <title>Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI solutions, IT services, cybersecurity, cloud computing, data analytics, digital transformation" />
       </Helmet>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-d11d
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 z-10">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <div className="mb-8">
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6">
+              🚀 Next-Gen Technology Solutions
+            </span>
+          </div>
+          
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Transform Your Business with
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              {' '}AI & IT Solutions
+            <br />
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+              AI & IT Solutions
             </span>
           </h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          
+          <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
             Leading provider of artificial intelligence, cybersecurity, and digital transformation services. 
-            Empower your business with cutting-edge technology solutions.
+            Empower your business with cutting-edge technology solutions that drive innovation and growth.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <NeonButton
+              href="/contact"
+              variant="primary"
+              size="lg"
+              className="group"
             >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              to="/about"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              Get Started Today
+            </NeonButton>
+            <NeonButton
+              href="/about"
+              variant="secondary"
+              size="lg"
             >
               Learn More
-            </Link>
+            </NeonButton>
+          </div>
+          
+          {/* Trust indicators */}
+          <div className="mt-16 flex flex-wrap justify-center items-center gap-8 text-gray-400">
+            <div className="flex items-center gap-2">
+              <Award className="w-5 h-5 text-yellow-400" />
+              <span className="text-sm">Award Winning</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Shield className="w-5 h-5 text-green-400" />
+              <span className="text-sm">Enterprise Security</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-blue-400" />
+              <span className="text-sm">Proven Results</span>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-white mb-2">
+              <FuturisticCard key={index} className="text-center p-8 group">
+                <div className="text-4xl sm:text-5xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                   {stat.number}
                 </div>
-                <div className="text-gray-300">
+                <div className="text-gray-300 text-sm font-medium">
                   {stat.label}
                 </div>
-              </div>
+                <div className="mt-4 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </FuturisticCard>
             ))}
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Our Services
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Our Services
+              </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive technology solutions tailored to your business needs
@@ -156,31 +189,39 @@ export default function HomePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+              <FuturisticCard key={index} className="p-6 group">
                 <div className="flex items-center mb-4">
-                  {service.icon}
+                  <div className="p-3 rounded-xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30">
+                    {service.icon}
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 mb-6 text-sm leading-relaxed">
+                  {service.description}
+                </p>
                 <Link 
                   to={service.link}
-                  className="text-purple-400 hover:text-purple-300 transition-colors flex items-center"
+                  className="text-purple-400 hover:text-cyan-400 transition-colors flex items-center group-hover:translate-x-1 transform duration-300"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
-              </div>
+              </FuturisticCard>
             ))}
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Why Choose Zion Tech?
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Why Choose Zion Tech?
+              </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We deliver exceptional results through innovation, expertise, and dedication
@@ -189,24 +230,30 @@ export default function HomePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4">
+              <FuturisticCard key={index} className="text-center p-8 group">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </FuturisticCard>
             ))}
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              What Our Clients Say
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                What Our Clients Say
+              </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Real results from real businesses
@@ -215,47 +262,57 @@ export default function HomePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <FuturisticCard key={index} className="p-6 group">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400">★</span>
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
-                  <p className="font-semibold text-white">{testimonial.name}</p>
+                <p className="text-gray-300 mb-6 italic text-sm leading-relaxed">
+                  "{testimonial.content}"
+                </p>
+                <div className="border-t border-white/10 pt-4">
+                  <p className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                    {testimonial.name}
+                  </p>
                   <p className="text-gray-400 text-sm">{testimonial.company}</p>
                 </div>
-              </div>
+              </FuturisticCard>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of businesses already using our solutions to drive growth and innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Start Your Journey
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              to="/ai-services" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-            >
-              Explore AI Services
-            </Link>
-          </div>
+          <FuturisticCard className="p-12 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border-purple-400/30">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Ready to Transform Your Business?
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+              Join thousands of businesses already using our solutions to drive growth and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <NeonButton
+                href="/contact"
+                variant="primary"
+                size="lg"
+                className="group"
+              >
+                Start Your Journey
+              </NeonButton>
+              <NeonButton
+                href="/ai-services"
+                variant="secondary"
+                size="lg"
+              >
+                Explore AI Services
+              </NeonButton>
+            </div>
+          </FuturisticCard>
         </div>
       </section>
     </div>

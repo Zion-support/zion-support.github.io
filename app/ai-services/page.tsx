@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, MessageSquare, BarChart3, Clock, TrendingUp } from 'lucide-react';
-=======
-import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, Eye, MessageSquare, BarChart3 } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-d11d
+import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, MessageSquare, BarChart3, Clock, TrendingUp, Eye } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -107,43 +103,13 @@ export default function AIServicesPage() {
       content: 'Outstanding support and implementation. Our automation workflows are now running flawlessly.',
       rating: 5
     }
-<<<<<<< HEAD
-  ];
-
-  const processSteps = [
-    {
-      step: '01',
-      title: 'Consultation',
-      description: 'We analyze your business needs and identify AI opportunities.'
-    },
-    {
-      step: '02',
-      title: 'Custom Solution',
-      description: 'We design and develop tailored AI solutions for your specific requirements.'
-    },
-    {
-      step: '03',
-      title: 'Implementation',
-      description: 'Seamless deployment and integration with your existing systems.'
-    },
-    {
-      step: '04',
-      title: 'Optimization',
-      description: 'Continuous monitoring and optimization for maximum performance.'
-    }
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-d11d
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Transform your business with our comprehensive AI services including content generation, chatbots, analytics, and automation solutions." />
-=======
         <meta name="description" content="Discover our comprehensive AI services including content generation, chatbots, analytics, and more. Transform your business with cutting-edge artificial intelligence solutions." />
->>>>>>> cursor/website-audit-and-update-with-deployment-d11d
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, chatbot, analytics, automation" />
       </Helmet>
 
@@ -280,57 +246,6 @@ export default function AIServicesPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Process Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Our Process
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              How we deliver exceptional AI solutions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4 text-white font-bold text-xl">
-                  {step.step}
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-3">{step.title}</h3>
-                <p className="text-gray-300">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business with AI?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of businesses already using our AI solutions to drive growth and innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Start Your AI Journey
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              to="/it-services" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-            >
-              Explore IT Services
-            </Link>
-=======
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -355,16 +270,9 @@ export default function AIServicesPage() {
                 View All Services
               </Link>
             </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-d11d
           </div>
         </div>
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-};
-
-export default AIServicesPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-d11d
