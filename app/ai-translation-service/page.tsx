@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Languages, Brain, FileText, Clock, Target } from 'lucide-react';
@@ -9,6 +10,12 @@ import { Link } from 'react-router-dom'
 import { Brain, FileText, Clock, Target, Languages } from 'lucide-react'
 import Layout from '../layout'
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
+import Layout from '../layout';
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 
 export default function AITranslationService() {
   const features = [
@@ -33,10 +40,14 @@ export default function AITranslationService() {
       description: 'Specialized translation models for legal, medical, technical, and business content'
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
 =======
   ]
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 
   const translationFeatures = [
     {
@@ -56,23 +67,35 @@ export default function AITranslationService() {
       items: ['API Access', 'CMS Integration', 'Website Widgets', 'Mobile Apps', 'Desktop Software', 'Cloud Storage']
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
 =======
   ]
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 
   const pricingPlans = [
     {
       name: 'Starter',
       price: '$49',
       period: '/month',
+<<<<<<< HEAD
       description: 'Perfect for small businesses and individuals',
+=======
+      description: 'Perfect for individuals and small projects',
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
       features: [
         'Up to 10,000 words/month',
         '50+ languages',
         'Basic document translation',
         'Email support',
+<<<<<<< HEAD
         'API access'
+=======
+        'Web interface'
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
       ],
       popular: false
     },
@@ -80,14 +103,21 @@ export default function AITranslationService() {
       name: 'Professional',
       price: '$149',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for businesses and teams',
       features: [
         'Up to 100,000 words/month',
         '100+ languages',
+<<<<<<< HEAD
         'Advanced document processing',
         'Priority support',
         'Custom terminology',
         'Quality assurance'
+=======
+        'Advanced document translation',
+        'API access',
+        'Priority support',
+        'Custom terminology'
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
       ],
       popular: true
     },
@@ -100,6 +130,7 @@ export default function AITranslationService() {
         'Unlimited words',
         'All languages',
         'Custom AI models',
+<<<<<<< HEAD
         'Dedicated support',
         'White-label solution',
         'Custom integrations'
@@ -107,16 +138,29 @@ export default function AITranslationService() {
       popular: false
     }
 <<<<<<< HEAD
+=======
+        'White-label options',
+        'Dedicated support',
+        'Advanced security'
+      ],
+      popular: false
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
   ];
 
   const testimonials = [
     {
+<<<<<<< HEAD
       name: 'Maria Santos',
+=======
+      name: 'Sarah Johnson',
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
       company: 'Global Marketing Agency',
-      content: 'AI Translation Service helped us expand to 15 new markets. The quality is exceptional and cost-effective.',
+      content: 'The AI translation service has revolutionized our international campaigns. The quality is incredible and saves us weeks of work.',
       rating: 5
     },
     {
+<<<<<<< HEAD
       name: 'James Wilson',
       company: 'E-learning Platform',
       content: 'Translating our courses into 8 languages was seamless. The educational content translation is spot-on.',
@@ -131,6 +175,20 @@ export default function AITranslationService() {
   ];
 =======
   ]
+=======
+      name: 'Dr. Michael Chen',
+      company: 'Medical Research Institute',
+      content: 'Translating complex medical documents has never been easier. The specialized terminology handling is outstanding.',
+      rating: 5
+    },
+    {
+      name: 'Elena Rodriguez',
+      company: 'E-commerce Platform',
+      content: 'Our product descriptions are now available in 20+ languages with perfect accuracy. Customer engagement has increased significantly.',
+      rating: 5
+    }
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 
   const testimonials = [
     {
@@ -157,6 +215,7 @@ export default function AITranslationService() {
   return (
     <Layout>
       {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         <div className="container mx-auto px-4 text-center">
@@ -196,6 +255,34 @@ export default function AITranslationService() {
           </div>
         </div>
 <<<<<<< HEAD
+=======
+      <section className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 min-h-screen flex items-center">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Translation Service
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Break down language barriers with our advanced AI translation service. 
+              Translate documents, websites, and conversations in 100+ languages with human-level accuracy.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Start Free Trial
+              </Link>
+              <Link 
+                to="#demo" 
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              >
+                Watch Demo
+              </Link>
+            </div>
+          </div>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
       </section>
 
       {/* Features Section */}
@@ -206,11 +293,16 @@ export default function AITranslationService() {
               Advanced Translation Features
             </h2>
             <p className="text-gray-300 text-lg">
+<<<<<<< HEAD
               Powered by cutting-edge AI to deliver accurate, contextually-aware translations
+=======
+              Powered by state-of-the-art AI for accurate, context-aware translations
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
+<<<<<<< HEAD
               <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-cyan-500 transition-colors">
 =======
       </div>
@@ -242,6 +334,22 @@ export default function AITranslationService() {
 
       {/* Translation Features Section */}
       <section className="py-20 bg-black">
+=======
+              <div key={index} className="bg-gray-800 p-6 rounded-lg">
+                <div className="flex items-center mb-4">
+                  {feature.icon}
+                  <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
+                </div>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Translation Features Grid */}
+      <section className="py-20 bg-gray-800">
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -251,6 +359,7 @@ export default function AITranslationService() {
               Everything you need for professional translation services
             </p>
           </div>
+<<<<<<< HEAD
 =======
       </div>
 
@@ -276,6 +385,16 @@ export default function AITranslationService() {
 =======
                       <Languages className="w-4 h-4 text-blue-400 mr-2" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {translationFeatures.map((category, index) => (
+              <div key={index} className="bg-gray-900 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
+                <ul className="space-y-2">
+                  {category.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                       {item}
                     </li>
                   ))}
@@ -284,6 +403,7 @@ export default function AITranslationService() {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </section>
 
@@ -323,6 +443,27 @@ export default function AITranslationService() {
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-gray-300 text-lg">
+              Choose the plan that fits your translation needs
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`bg-gray-800 p-8 rounded-lg relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-cyan-400 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold">
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                       Most Popular
                     </span>
                   </div>
@@ -337,14 +478,19 @@ export default function AITranslationService() {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <Languages className="w-5 h-5 text-cyan-400 mr-3" />
 =======
                       <Languages className="w-5 h-5 text-blue-400 mr-3" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                       {feature}
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Link 
                   to="#contact" 
@@ -353,13 +499,20 @@ export default function AITranslationService() {
                       ? 'bg-cyan-500 text-white hover:bg-cyan-600' 
                       : 'bg-gray-700 text-white hover:bg-gray-600'
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                 <Link
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
+<<<<<<< HEAD
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
                       : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10'
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                   }`}
                 >
                   Get Started
@@ -368,6 +521,7 @@ export default function AITranslationService() {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </section>
 
@@ -435,12 +589,66 @@ export default function AITranslationService() {
             </Link>
             <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
               Schedule Demo
+=======
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Trusted by Global Companies
+            </h2>
+            <p className="text-gray-300 text-lg">
+              See what our customers say about our AI translation service
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-gray-900 p-6 rounded-lg">
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <CheckCircle key={i} className="w-5 h-5 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+                <div className="font-semibold text-white">{testimonial.name}</div>
+                <div className="text-sm text-gray-400">{testimonial.company}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Break Down Language Barriers?
+          </h2>
+          <p className="text-gray-200 text-lg mb-8">
+            Join thousands of companies already using our AI translation service to reach global audiences
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+            >
+              Start Your Free Trial
+            </Link>
+            <Link 
+              to="/about" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            >
+              Learn More
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
             </Link>
           </div>
         </div>
       </section>
     </Layout>
   );
+<<<<<<< HEAD
 =======
       </div>
 
@@ -466,4 +674,6 @@ export default function AITranslationService() {
     </Layout>
   )
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 }

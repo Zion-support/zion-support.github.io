@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Shield, Zap, Globe, Lock } from 'lucide-react';
 import Layout from '../layout';
 
@@ -46,6 +47,9 @@ export default function BlockchainWeb3() {
       items: ['Blockchain Strategy', 'Technology Selection', 'Architecture Design', 'Implementation Planning', 'Training & Support', 'Maintenance']
 =======
 import { Shield, Zap, Globe, Database, Lock } from 'lucide-react';
+=======
+import { ArrowRight, Shield, Zap, Globe, Lock } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 import Layout from '../layout';
 
 export default function BlockchainWeb3Page() {
@@ -53,11 +57,16 @@ export default function BlockchainWeb3Page() {
     {
       icon: <Shield className="w-6 h-6 text-cyan-400" />,
       title: 'Smart Contracts',
+<<<<<<< HEAD
       description: 'Secure, automated contracts that execute without intermediaries'
+=======
+      description: 'Secure, self-executing contracts with transparent terms and automated enforcement'
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
     },
     {
       icon: <Zap className="w-6 h-6 text-purple-400" />,
       title: 'DeFi Solutions',
+<<<<<<< HEAD
       description: 'Decentralized finance applications for lending, trading, and yield farming'
     },
     {
@@ -195,12 +204,49 @@ export default function BlockchainWeb3Page() {
       content: 'Their Web3 integration expertise helped us modernize our existing platform seamlessly.',
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
       rating: 5
+=======
+      description: 'Decentralized finance applications for lending, borrowing, and trading'
+    },
+    {
+      icon: <Globe className="w-6 h-6 text-yellow-400" />,
+      title: 'Web3 Integration',
+      description: 'Seamless integration with Web3 protocols and decentralized applications'
+    },
+    {
+      icon: <Lock className="w-6 h-6 text-green-400" />,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security with regulatory compliance and audit capabilities'
+    }
+  ];
+
+  const services = [
+    {
+      title: 'Blockchain Development',
+      description: 'Custom blockchain solutions tailored to your business needs',
+      features: ['Smart contract development', 'DApp creation', 'Token development', 'Blockchain consulting']
+    },
+    {
+      title: 'DeFi Platforms',
+      description: 'Decentralized finance applications for modern financial services',
+      features: ['Lending protocols', 'DEX development', 'Yield farming', 'Staking solutions']
+    },
+    {
+      title: 'NFT Marketplaces',
+      description: 'Complete NFT marketplace solutions with advanced features',
+      features: ['Minting platform', 'Trading engine', 'Royalty system', 'Metadata management']
+    },
+    {
+      title: 'Web3 Integration',
+      description: 'Integrate Web3 capabilities into existing applications',
+      features: ['Wallet integration', 'API development', 'Frontend development', 'Backend services']
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
     }
   ];
 
   return (
     <Layout>
       {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         <div className="container mx-auto px-4 text-center">
@@ -241,6 +287,34 @@ export default function BlockchainWeb3Page() {
           </div>
         </div>
 <<<<<<< HEAD
+=======
+      <section className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 min-h-screen flex items-center">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+              Blockchain & Web3 Solutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with cutting-edge blockchain technology and Web3 solutions. 
+              Build secure, decentralized applications that revolutionize how you do business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Start Your Project
+              </Link>
+              <Link 
+                to="#demo" 
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              >
+                View Portfolio
+              </Link>
+            </div>
+          </div>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
       </section>
 
       {/* Features Section */}
@@ -248,14 +322,22 @@ export default function BlockchainWeb3Page() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD
               Cutting-Edge Blockchain Solutions
             </h2>
             <p className="text-gray-300 text-lg">
               Leverage the power of blockchain technology to build secure, transparent, and decentralized applications
+=======
+              Blockchain Technology Features
+            </h2>
+            <p className="text-gray-300 text-lg">
+              Leverage the power of blockchain for secure, transparent, and efficient solutions
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
+<<<<<<< HEAD
               <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-cyan-500 transition-colors">
 =======
       </div>
@@ -273,6 +355,9 @@ export default function BlockchainWeb3Page() {
             {features.map((feature, index) => (
               <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-purple-400 transition-colors">
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+              <div key={index} className="bg-gray-800 p-6 rounded-lg">
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                 <div className="flex items-center mb-4">
                   {feature.icon}
                   <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
@@ -282,6 +367,7 @@ export default function BlockchainWeb3Page() {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </section>
 
@@ -371,10 +457,35 @@ export default function BlockchainWeb3Page() {
 =======
                       <Shield className="w-5 h-5 text-purple-400 mr-3" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Our Blockchain Services
+            </h2>
+            <p className="text-gray-300 text-lg">
+              Comprehensive blockchain development and Web3 integration services
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-gray-900 p-8 rounded-lg">
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <ul className="space-y-3">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <ArrowRight className="w-4 h-4 text-cyan-400 mr-3" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                       {feature}
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Link 
                   to="#contact" 
@@ -394,10 +505,13 @@ export default function BlockchainWeb3Page() {
                 >
                   Get Started
                 </Link>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
               </div>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </section>
 
@@ -486,12 +600,40 @@ export default function BlockchainWeb3Page() {
               Start Your Project
             </Link>
             <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+=======
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Build the Future?
+          </h2>
+          <p className="text-gray-200 text-lg mb-8">
+            Join the blockchain revolution with our expert development team
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+            >
+              Start Your Project
+            </Link>
+            <Link 
+              to="/about" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            >
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
               Learn More
             </Link>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+      </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
     </Layout>
   );
 }

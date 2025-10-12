@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Brain, Users, Zap, Globe } from 'lucide-react';
@@ -9,6 +10,12 @@ import { Link } from 'react-router-dom'
 import { Brain, Users, Zap, Globe, Calendar } from 'lucide-react'
 import Layout from '../layout'
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Brain, Users, Zap, Globe, Clock, CheckCircle } from 'lucide-react';
+import Layout from '../layout';
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 
 export default function AISmartScheduler() {
   const features = [
@@ -33,10 +40,14 @@ export default function AISmartScheduler() {
       description: 'Works with all major calendar platforms and time zones'
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
 =======
   ]
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 
   const pricingPlans = [
     {
@@ -84,10 +95,14 @@ export default function AISmartScheduler() {
       popular: false
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
 =======
   ]
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 
   const testimonials = [
     {
@@ -109,14 +124,19 @@ export default function AISmartScheduler() {
       rating: 5
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
 =======
   ]
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 
   return (
     <Layout>
       {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         <div className="container mx-auto px-4 text-center">
@@ -152,6 +172,34 @@ export default function AISmartScheduler() {
           </div>
         </div>
 <<<<<<< HEAD
+=======
+      <section className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 min-h-screen flex items-center">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+              AI-Powered Scheduling
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your scheduling chaos into organized efficiency with our intelligent AI-powered scheduler. 
+              Optimize meetings, coordinate teams, and maximize productivity automatically.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Start Free Trial
+              </Link>
+              <Link 
+                to="#demo" 
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              >
+                Watch Demo
+              </Link>
+            </div>
+          </div>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
       </section>
 
       {/* Features Section */}
@@ -167,6 +215,7 @@ export default function AISmartScheduler() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
+<<<<<<< HEAD
               <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-cyan-500 transition-colors">
 =======
       </div>
@@ -184,6 +233,9 @@ export default function AISmartScheduler() {
             {features.map((feature, index) => (
               <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-cyan-400 transition-colors">
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+              <div key={index} className="bg-gray-800 p-6 rounded-lg">
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                 <div className="flex items-center mb-4">
                   {feature.icon}
                   <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
@@ -193,6 +245,7 @@ export default function AISmartScheduler() {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </section>
 
@@ -232,6 +285,27 @@ export default function AISmartScheduler() {
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-gray-300 text-lg">
+              Choose the plan that fits your team size and needs
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`bg-gray-900 p-8 rounded-lg relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-cyan-400 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold">
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                       Most Popular
                     </span>
                   </div>
@@ -245,11 +319,16 @@ export default function AISmartScheduler() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
+<<<<<<< HEAD
                       <Calendar className="w-5 h-5 text-cyan-400 mr-3" />
+=======
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                       {feature}
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Link 
                   to="#contact" 
@@ -258,13 +337,18 @@ export default function AISmartScheduler() {
                       ? 'bg-cyan-500 text-white hover:bg-cyan-600' 
                       : 'bg-gray-700 text-white hover:bg-gray-600'
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                 <Link
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                   }`}
                 >
                   Get Started
@@ -273,6 +357,7 @@ export default function AISmartScheduler() {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </section>
 
@@ -340,12 +425,66 @@ export default function AISmartScheduler() {
             </Link>
             <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
               Schedule Demo
+=======
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Trusted by Teams Worldwide
+            </h2>
+            <p className="text-gray-300 text-lg">
+              See what our customers say about AI Smart Scheduler
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-gray-800 p-6 rounded-lg">
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Clock key={i} className="w-5 h-5 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+                <div className="font-semibold text-white">{testimonial.name}</div>
+                <div className="text-sm text-gray-400">{testimonial.company}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Scheduling?
+          </h2>
+          <p className="text-gray-200 text-lg mb-8">
+            Join thousands of teams already using AI Smart Scheduler to optimize their productivity
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+            >
+              Start Your Free Trial
+            </Link>
+            <Link 
+              to="/about" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            >
+              Learn More
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
             </Link>
           </div>
         </div>
       </section>
     </Layout>
   );
+<<<<<<< HEAD
 =======
       </div>
 
@@ -371,4 +510,6 @@ export default function AISmartScheduler() {
     </Layout>
   )
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 }

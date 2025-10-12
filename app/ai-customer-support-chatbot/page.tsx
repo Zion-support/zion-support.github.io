@@ -28,7 +28,10 @@ export default function AICustomerSupportChatbot() {
     }
   ];
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 
   return (
     <>

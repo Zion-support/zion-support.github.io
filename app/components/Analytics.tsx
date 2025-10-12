@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 import React, { useEffect } from 'react';
 
 declare global {
@@ -20,6 +23,7 @@ const Analytics: React.FC = () => {
     initAnalytics();
   }, []);
 
+<<<<<<< HEAD
   return null; // Analytics component doesn't render anything
 };
 
@@ -86,3 +90,11 @@ export default function Analytics({ className = '' }: AnalyticsProps) {
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+  return (
+    <div>Analytics Component</div>
+  );
+};
+
+export default Analytics;
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb

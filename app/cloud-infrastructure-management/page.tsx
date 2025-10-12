@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cloud, Shield, TrendingUp, Server } from 'lucide-react';
@@ -9,6 +10,12 @@ import { Link } from 'react-router-dom'
 import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3 } from 'lucide-react'
 import Layout from '../layout'
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Cloud, Shield, TrendingUp, Server, CheckCircle } from 'lucide-react';
+import Layout from '../layout';
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 
 export default function CloudInfrastructureManagement() {
   const features = [
@@ -29,6 +36,7 @@ export default function CloudInfrastructureManagement() {
     },
     {
       icon: <Server className="w-6 h-6 text-green-400" />,
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: '24/7 Monitoring',
       description: 'Proactive monitoring with automated scaling, performance optimization, and incident response'
@@ -69,6 +77,35 @@ export default function CloudInfrastructureManagement() {
     }
   ]
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+      title: 'Automated Scaling',
+      description: 'Auto-scale resources based on demand to ensure optimal performance and cost efficiency'
+    }
+  ];
+
+  const services = [
+    {
+      title: 'Cloud Migration',
+      description: 'Seamless migration to cloud platforms with zero downtime',
+      features: ['Assessment & Planning', 'Data Migration', 'Application Migration', 'Testing & Validation']
+    },
+    {
+      title: 'Infrastructure as Code',
+      description: 'Manage infrastructure using code for consistency and reliability',
+      features: ['Terraform', 'CloudFormation', 'Ansible', 'GitOps']
+    },
+    {
+      title: 'Monitoring & Alerting',
+      description: 'Comprehensive monitoring and alerting for all cloud resources',
+      features: ['Real-time Monitoring', 'Custom Dashboards', 'Automated Alerts', 'Performance Analytics']
+    },
+    {
+      title: 'Disaster Recovery',
+      description: 'Robust disaster recovery solutions to ensure business continuity',
+      features: ['Backup Strategies', 'Recovery Planning', 'Testing', 'Compliance']
+    }
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 
   const pricingPlans = [
     {
@@ -80,8 +117,13 @@ export default function CloudInfrastructureManagement() {
         'Up to 10 cloud accounts',
         'Basic monitoring',
         'Email support',
+<<<<<<< HEAD
         'Standard integrations',
         'Cost optimization reports'
+=======
+        'Standard templates',
+        'Monthly reports'
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
       ],
       popular: false
     },
@@ -89,14 +131,24 @@ export default function CloudInfrastructureManagement() {
       name: 'Professional',
       price: '$799',
       period: '/month',
+<<<<<<< HEAD
       description: 'Ideal for growing enterprises',
+=======
+      description: 'Ideal for growing companies',
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
       features: [
         'Up to 50 cloud accounts',
         'Advanced monitoring',
         'Priority support',
+<<<<<<< HEAD
         'Custom integrations',
         'Automated scaling',
         'Security compliance'
+=======
+        'Custom configurations',
+        'Weekly reports',
+        'API access'
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
       ],
       popular: true
     },
@@ -106,6 +158,7 @@ export default function CloudInfrastructureManagement() {
       period: '/month',
       description: 'For large-scale operations',
       features: [
+<<<<<<< HEAD
         'Unlimited cloud accounts',
         'Custom dashboards',
         'Dedicated support',
@@ -140,6 +193,18 @@ export default function CloudInfrastructureManagement() {
   ];
 =======
   ]
+=======
+        'Unlimited servers',
+        'Custom monitoring',
+        'Dedicated support',
+        'White-label options',
+        'Real-time reports',
+        'Custom integrations'
+      ],
+      popular: false
+    }
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 
   const testimonials = [
     {
@@ -166,6 +231,7 @@ export default function CloudInfrastructureManagement() {
   return (
     <Layout>
       {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         <div className="container mx-auto px-4 text-center">
@@ -205,6 +271,34 @@ export default function CloudInfrastructureManagement() {
           </div>
         </div>
 <<<<<<< HEAD
+=======
+      <section className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 min-h-screen flex items-center">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+              Cloud Infrastructure Management
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Optimize your cloud infrastructure with our comprehensive management services. 
+              Reduce costs, improve security, and ensure high availability across all cloud platforms.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Get Started
+              </Link>
+              <Link 
+                to="#demo" 
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              >
+                View Demo
+              </Link>
+            </div>
+          </div>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
       </section>
 
       {/* Features Section */}
@@ -212,14 +306,22 @@ export default function CloudInfrastructureManagement() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD
               Comprehensive Cloud Management
             </h2>
             <p className="text-gray-300 text-lg">
               Everything you need to manage, secure, and optimize your cloud infrastructure
+=======
+              Cloud Management Features
+            </h2>
+            <p className="text-gray-300 text-lg">
+              Comprehensive cloud infrastructure management for all major platforms
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
+<<<<<<< HEAD
               <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-cyan-500 transition-colors">
 =======
       </div>
@@ -269,6 +371,41 @@ export default function CloudInfrastructureManagement() {
                     <li key={itemIndex} className="text-gray-300 flex items-center">
                       <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                       {item}
+=======
+              <div key={index} className="bg-gray-800 p-6 rounded-lg">
+                <div className="flex items-center mb-4">
+                  {feature.icon}
+                  <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
+                </div>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Our Cloud Services
+            </h2>
+            <p className="text-gray-300 text-lg">
+              End-to-end cloud infrastructure solutions
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-gray-900 p-8 rounded-lg">
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <ul className="space-y-3">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+                      {feature}
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                     </li>
                   ))}
                 </ul>
@@ -277,6 +414,7 @@ export default function CloudInfrastructureManagement() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Pricing Section */}
       <section className="py-20 bg-gray-900">
@@ -314,6 +452,26 @@ export default function CloudInfrastructureManagement() {
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Flexible Pricing Plans
+            </h2>
+            <p className="text-gray-300 text-lg">
+              Choose the plan that fits your infrastructure needs
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`bg-gray-800 p-8 rounded-lg relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-cyan-400 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold">
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                       Most Popular
                     </span>
                   </div>
@@ -327,11 +485,16 @@ export default function CloudInfrastructureManagement() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
+<<<<<<< HEAD
                       <Cloud className="w-5 h-5 text-cyan-400 mr-3" />
+=======
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                       {feature}
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Link 
                   to="#contact" 
@@ -340,13 +503,20 @@ export default function CloudInfrastructureManagement() {
                       ? 'bg-cyan-500 text-white hover:bg-cyan-600' 
                       : 'bg-gray-700 text-white hover:bg-gray-600'
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                 <Link
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
+<<<<<<< HEAD
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
                   }`}
                 >
                   Get Started
@@ -355,6 +525,7 @@ export default function CloudInfrastructureManagement() {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </section>
 
@@ -422,12 +593,38 @@ export default function CloudInfrastructureManagement() {
             </Link>
             <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
               Schedule Demo
+=======
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Optimize Your Cloud Infrastructure?
+          </h2>
+          <p className="text-gray-200 text-lg mb-8">
+            Let us help you maximize the value of your cloud investment
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+            >
+              Get Started
+            </Link>
+            <Link 
+              to="/about" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            >
+              Learn More
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
             </Link>
           </div>
         </div>
       </section>
     </Layout>
   );
+<<<<<<< HEAD
 =======
       </div>
 
@@ -453,4 +650,6 @@ export default function CloudInfrastructureManagement() {
     </Layout>
   )
 >>>>>>> cursor/fix-errors-and-merge-to-main-01e6
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4ebb
 }
