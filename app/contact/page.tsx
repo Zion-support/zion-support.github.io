@@ -1,12 +1,6 @@
 'use client'
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
-import ContactForm from '../components/ContactForm'
-
-const ContactPage: React.FC = () => {
-=======
 import { CheckCircle, Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
@@ -64,16 +58,11 @@ export default function ContactPage() {
     'Other'
   ]
 
->>>>>>> cursor/fix-errors-and-merge-to-main-93a1
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6 text-blue-500" />,
       title: 'Email Us',
-<<<<<<< HEAD
-      details: 'info@ziontechgroup.com',
-=======
       details: 'contact@ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-93a1
       description: 'Send us an email anytime'
     },
     {
@@ -87,10 +76,6 @@ export default function ContactPage() {
       title: 'Visit Us',
       details: 'San Francisco, CA',
       description: 'Come say hello at our office'
-<<<<<<< HEAD
-    }
-  ]
-=======
     },
     {
       icon: <Clock className="w-6 h-6 text-purple-500" />,
@@ -118,72 +103,11 @@ export default function ContactPage() {
       text: '24/7 support and maintenance'
     }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-93a1
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Get in touch with Zion Tech Group. We're here to help with your AI and IT solutions needs. Contact us today for a consultation." />
-        <meta name="keywords" content="contact, Zion Tech Group, AI solutions, IT services, consultation" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Get in
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Touch</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Ready to transform your business? Let's discuss how our AI and IT solutions can help you achieve your goals.
-          </p>
-        </div>
-      </section>
-
-      {/* Contact Info & Form */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-8">Contact Information</h2>
-              <div className="space-y-6">
-                {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      {info.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>
-                      <p className="text-blue-400 text-lg mb-1">{info.details}</p>
-                      <p className="text-gray-400">{info.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-12">
-                <h3 className="text-xl font-semibold text-white mb-4">Why Choose Us?</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                    Expert AI and IT professionals
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                    24/7 customer support
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                    Proven track record of success
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                    Custom solutions for your business
-                  </li>
-=======
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Free consultation and custom solutions for your business." />
       </Helmet>
 
@@ -367,17 +291,9 @@ export default function ContactPage() {
                       <span className="ml-3">{feature.text}</span>
                     </li>
                   ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-93a1
                 </ul>
               </div>
-            </div>
 
-<<<<<<< HEAD
-            {/* Contact Form */}
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-8">Send us a Message</h2>
-              <ContactForm />
-=======
               <div className="bg-gray-100 rounded-2xl p-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Quick Response</h3>
                 <p className="text-gray-600 mb-4">
@@ -391,45 +307,10 @@ export default function ContactPage() {
                   Explore our AI Services
                 </Link>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-93a1
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Don't wait - let's discuss your project and see how we can help you succeed.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:info@ziontechgroup.com"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Email Us Now
-            </a>
-            <a
-              href="tel:+15551234567"
-              className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-            >
-              Call Us Today
-            </a>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
-
-export default ContactPage
-=======
-    </div>
-  )
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-93a1
