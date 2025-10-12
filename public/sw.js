@@ -1,41 +1,43 @@
 // Service Worker for Zion Tech Group
-const CACHE_NAME = 'zion-tech-group-v1'
-const STATIC_CACHE = 'zion-static-v1'
-const DYNAMIC_CACHE = 'zion-dynamic-v1'
+const CACHE_NAME = 'zion-tech-group-v1';
+const STATIC_CACHE = 'static-v1';
+const DYNAMIC_CACHE = 'dynamic-v1';
 
-// Assets to cache immediately
-const STATIC_ASSETS = [
+// Files to cache for offline functionality
+const STATIC_FILES = [
   '/',
   '/about',
   '/contact',
-  '/pricing',
+  '/ai-services',
+  '/it-services',
+  '/micro-saas',
   '/manifest.json',
-  '/robots.txt'
-]
+  '/favicon.ico'
+];
 
-// Install event - cache static assets
+// Install event - cache static files
 self.addEventListener('install', (event) => {
-  console.log('Service Worker installing...')
+  console.log('Service Worker: Installing...');
   
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Caching static assets')
-        return cache.addAll(STATIC_ASSETS)
+        console.log('Service Worker: Caching static files');
+        return cache.addAll(STATIC_FILES);
       })
       .then(() => {
-        console.log('Static assets cached successfully')
-        return self.skipWaiting()
+        console.log('Service Worker: Installation complete');
+        return self.skipWaiting();
       })
       .catch((error) => {
-        console.error('Failed to cache static assets:', error)
+        console.error('Service Worker: Installation failed', error);
       })
-  )
-})
+  );
+});
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker activating...')
+  console.log('Service Worker: Activating...');
   
   event.waitUntil(
     caches.keys()
@@ -43,130 +45,180 @@ self.addEventListener('activate', (event) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Deleting old cache:', cacheName)
-              return caches.delete(cacheName)
+              console.log('Service Worker: Deleting old cache', cacheName);
+              return caches.delete(cacheName);
             }
           })
-        )
+        );
       })
       .then(() => {
-        console.log('Service Worker activated')
-        return self.clients.claim()
+        console.log('Service Worker: Activation complete');
+        return self.clients.claim();
       })
-  )
-})
+  );
+});
 
-// Fetch event - serve from cache, fallback to network
+// Fetch event - serve from cache or network
 self.addEventListener('fetch', (event) => {
-  const { request } = event
-  const url = new URL(request.url)
-  
+  const { request } = event;
+  const url = new URL(request.url);
+
   // Skip non-GET requests
   if (request.method !== 'GET') {
-    return
+    return;
   }
-  
-  // Skip chrome-extension and other non-http requests
-  if (!url.protocol.startsWith('http')) {
-    return
+
+  // Skip external requests
+  if (url.origin !== location.origin) {
+    return;
   }
-  
+
   event.respondWith(
     caches.match(request)
       .then((cachedResponse) => {
         // Return cached version if available
         if (cachedResponse) {
-          console.log('Serving from cache:', request.url)
-          return cachedResponse
+          console.log('Service Worker: Serving from cache', request.url);
+          return cachedResponse;
         }
-        
+
         // Otherwise fetch from network
         return fetch(request)
           .then((response) => {
             // Don't cache non-successful responses
             if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response
+              return response;
             }
-            
+
             // Clone the response
-            const responseToCache = response.clone()
-            
+            const responseToCache = response.clone();
+
             // Cache dynamic content
             caches.open(DYNAMIC_CACHE)
               .then((cache) => {
-                cache.put(request, responseToCache)
-              })
-              .catch((error) => {
-                console.error('Failed to cache dynamic content:', error)
-              })
-            
-            return response
+                cache.put(request, responseToCache);
+              });
+
+            return response;
           })
           .catch((error) => {
-            console.error('Fetch failed:', error)
+            console.error('Service Worker: Fetch failed', error);
             
             // Return offline page for navigation requests
-            if (request.destination === 'document') {
-              return caches.match('/offline.html')
+            if (request.mode === 'navigate') {
+              return caches.match('/') || new Response('Offline', {
+                status: 503,
+                statusText: 'Service Unavailable'
+              });
             }
             
-            throw error
-          })
+            throw error;
+          });
       })
-  )
-})
+  );
+});
 
-// Background sync for form submissions
+// Background sync for offline form submissions
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'contact-form') {
-    event.waitUntil(
-      // Handle form submission sync
-      console.log('Syncing contact form submission')
-    )
+  if (event.tag === 'background-sync') {
+    console.log('Service Worker: Background sync triggered');
+    event.waitUntil(doBackgroundSync());
   }
-})
+});
+
+async function doBackgroundSync() {
+  // Handle offline form submissions or other background tasks
+  try {
+    // Get pending submissions from IndexedDB
+    const pendingSubmissions = await getPendingSubmissions();
+    
+    for (const submission of pendingSubmissions) {
+      try {
+        await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(submission.data)
+        });
+        
+        // Remove from pending submissions
+        await removePendingSubmission(submission.id);
+        console.log('Service Worker: Synced submission', submission.id);
+      } catch (error) {
+        console.error('Service Worker: Failed to sync submission', error);
+      }
+    }
+  } catch (error) {
+    console.error('Service Worker: Background sync failed', error);
+  }
+}
 
 // Push notifications
 self.addEventListener('push', (event) => {
-  if (event.data) {
-    const data = event.data.json()
-    
-    const options = {
-      body: data.body,
-      icon: '/icon-192x192.png',
-      badge: '/badge-72x72.png',
-      vibrate: [100, 50, 100],
-      data: {
-        dateOfArrival: Date.now(),
-        primaryKey: data.primaryKey
+  console.log('Service Worker: Push received');
+  
+  const options = {
+    body: event.data ? event.data.text() : 'New update available!',
+    icon: '/favicon.ico',
+    badge: '/favicon.ico',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    },
+    actions: [
+      {
+        action: 'explore',
+        title: 'View Updates',
+        icon: '/favicon.ico'
       },
-      actions: [
-        {
-          action: 'explore',
-          title: 'Learn More',
-          icon: '/icon-192x192.png'
-        },
-        {
-          action: 'close',
-          title: 'Close',
-          icon: '/icon-192x192.png'
-        }
-      ]
-    }
-    
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    )
-  }
-})
+      {
+        action: 'close',
+        title: 'Close',
+        icon: '/favicon.ico'
+      }
+    ]
+  };
+
+  event.waitUntil(
+    self.registration.showNotification('Zion Tech Group', options)
+  );
+});
 
 // Notification click
 self.addEventListener('notificationclick', (event) => {
-  event.notification.close()
+  console.log('Service Worker: Notification clicked');
   
+  event.notification.close();
+
   if (event.action === 'explore') {
     event.waitUntil(
       clients.openWindow('/')
-    )
+    );
   }
-})
+});
+
+// Helper functions for IndexedDB operations
+async function getPendingSubmissions() {
+  // Implementation would depend on your IndexedDB setup
+  return [];
+}
+
+async function removePendingSubmission(id) {
+  // Implementation would depend on your IndexedDB setup
+  return true;
+}
+
+// Performance monitoring
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'PERFORMANCE_METRIC') {
+    // Log performance metrics
+    console.log('Service Worker: Performance metric', event.data.metric);
+    
+    // Send to analytics if needed
+    // sendToAnalytics(event.data.metric);
+  }
+});
+
+console.log('Service Worker: Script loaded');

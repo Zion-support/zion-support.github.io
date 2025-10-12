@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,8 +11,15 @@ export default defineConfig({
       fastRefresh: true,
       // Enable JSX runtime
       jsxRuntime: 'automatic',
+    }),
+    // Bundle analyzer
+    process.env.ANALYZE && visualizer({
+      filename: 'dist/stats.html',
+      open: true,
+      gzipSize: true,
+      brotliSize: true,
     })
-  ],
+  ].filter(Boolean),
   resolve: {
     alias: {
       '@': resolve(__dirname, './app'),
@@ -31,6 +39,10 @@ export default defineConfig({
     minify: 'esbuild',
     target: 'es2020',
     cssCodeSplit: true,
+    // Enable compression
+    reportCompressedSize: true,
+    // Optimize chunk size
+    chunkSizeWarningLimit: 500,
     
     rollupOptions: {
       output: {
@@ -90,12 +102,8 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Optimize bundle size
-    chunkSizeWarningLimit: 1000,
     // Enable tree shaking
     treeshake: true,
-    // Enable compression
-    reportCompressedSize: true,
   },
   server: {
     port: 3000,

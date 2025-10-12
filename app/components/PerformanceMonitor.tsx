@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react'
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'
-=======
 'use client';
 import React, { useEffect, useState } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 import { useAnalytics } from './EnhancedAnalytics';
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -28,225 +23,208 @@ const PerformanceMonitor: React.FC = () => {
   const analytics = useAnalytics();
 
   useEffect(() => {
-    // Monitor Core Web Vitals
+    // Track LCP (Largest Contentful Paint)
+    onLCP((metric) => {
+      setMetrics(prev => ({ ...prev, lcp: metric.value }));
+      analytics.trackEvent('performance_metric', {
+        metric: 'lcp',
+        value: metric.value,
+        rating: metric.rating
+      });
+    });
+
+    // Track FID (First Input Delay) - now INP (Interaction to Next Paint)
+    onINP((metric) => {
+      setMetrics(prev => ({ ...prev, fid: metric.value }));
+      analytics.trackEvent('performance_metric', {
+        metric: 'inp',
+        value: metric.value,
+        rating: metric.rating
+      });
+    });
+
+    // Track CLS (Cumulative Layout Shift)
+    onCLS((metric) => {
+      setMetrics(prev => ({ ...prev, cls: metric.value }));
+      analytics.trackEvent('performance_metric', {
+        metric: 'cls',
+        value: metric.value,
+        rating: metric.rating
+      });
+    });
+
+    // Track FCP (First Contentful Paint)
+    onFCP((metric) => {
+      setMetrics(prev => ({ ...prev, fcp: metric.value }));
+      analytics.trackEvent('performance_metric', {
+        metric: 'fcp',
+        value: metric.value,
+        rating: metric.rating
+      });
+    });
+
+    // Track TTFB (Time to First Byte)
+    onTTFB((metric) => {
+      setMetrics(prev => ({ ...prev, ttfb: metric.value }));
+      analytics.trackEvent('performance_metric', {
+        metric: 'ttfb',
+        value: metric.value,
+        rating: metric.rating
+      });
+    });
+  }, [analytics]);
+
+  // Track page load time
+  useEffect(() => {
+    const startTime = performance.now();
+    
+    const handleLoad = () => {
+      const loadTime = performance.now() - startTime;
+      analytics.trackEvent('page_load_time', {
+        loadTime,
+        url: window.location.href
+      });
+    };
+
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
+    }
+  }, [analytics]);
+
+  // Track resource loading performance
+  useEffect(() => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (entry.entryType === 'largest-contentful-paint') {
-          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-          analytics.trackEvent('performance_metric', { 
-            metric: 'LCP', 
-            value: entry.startTime 
-          });
-        }
-        
-        if (entry.entryType === 'first-input') {
-          const fidEntry = entry as PerformanceEventTiming;
-          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
-          analytics.trackEvent('performance_metric', { 
-            metric: 'FID', 
-            value: fidEntry.processingStart - fidEntry.startTime 
-          });
-        }
-        
-        if (entry.entryType === 'layout-shift') {
-          const clsEntry = entry as PerformanceEntry & { value: number };
-          if (!clsEntry.hadRecentInput) {
-            setMetrics(prev => ({ 
-              ...prev, 
-              cls: (prev.cls || 0) + clsEntry.value 
-            }));
-          }
-        }
-      }
-    });
-
-    try {
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-    } catch (e) {
-      console.warn('Performance Observer not supported');
-    }
-
-    // Monitor FCP
-    const fcpObserver = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (entry.name === 'first-contentful-paint') {
-          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-          analytics.trackEvent('performance_metric', { 
-            metric: 'FCP', 
-            value: entry.startTime 
+        if (entry.entryType === 'resource') {
+          const resourceEntry = entry as PerformanceResourceTiming;
+          analytics.trackEvent('resource_load', {
+            name: resourceEntry.name,
+            duration: resourceEntry.duration,
+            size: resourceEntry.transferSize,
+            type: resourceEntry.initiatorType
           });
         }
       }
     });
 
-    try {
-      fcpObserver.observe({ entryTypes: ['paint'] });
-    } catch (e) {
-      console.warn('Paint Timing not supported');
-    }
+    observer.observe({ entryTypes: ['resource'] });
 
-    // Monitor TTFB
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      setMetrics(prev => ({ ...prev, ttfb }));
-      analytics.trackEvent('performance_metric', { 
-        metric: 'TTFB', 
-        value: ttfb 
-      });
-    }
+    return () => observer.disconnect();
+  }, [analytics]);
 
-<<<<<<< HEAD
-=======
-'use client'
-import React, { useEffect, useState } from 'react'
-
-interface PerformanceMetrics {
-  fcp?: number
-  lcp?: number
-  fid?: number
-  cls?: number
-  ttfb?: number
-}
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({})
-
+  // Track navigation timing
   useEffect(() => {
-    // Monitor Core Web Vitals
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }))
-            }
-          } else if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime }))
-          } else if (entry.entryType === 'first-input') {
-            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))
-          } else if (entry.entryType === 'layout-shift') {
-            if (!entry.hadRecentInput) {
-              setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }))
-            }
-          }
-        }
-      })
-
-<<<<<<< HEAD
-      try {
-        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] })
-      } catch (e) {
-        // Fallback for browsers that don't support all entry types
-        observer.observe({ entryTypes: ['navigation'] })
-      }
-=======
-      // Monitor First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          console.log('FID:', entry.processingStart - entry.startTime);
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'web_vitals', {
-              name: 'FID',
-              value: Math.round(entry.processingStart - entry.startTime),
-              event_category: 'Web Vitals'
-            });
-          }
-        }
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    
+    if (navigation) {
+      analytics.trackEvent('navigation_timing', {
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+        domInteractive: navigation.domInteractive - navigation.navigationStart,
+        redirect: navigation.redirectEnd - navigation.redirectStart,
+        dns: navigation.domainLookupEnd - navigation.domainLookupStart,
+        tcp: navigation.connectEnd - navigation.connectStart,
+        request: navigation.responseStart - navigation.requestStart,
+        response: navigation.responseEnd - navigation.responseStart
       });
-      
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Monitor Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
-            clsValue += (entry as PerformanceEntry & { value: number }).value;
-          }
-        }
-        console.log('CLS:', clsValue);
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'web_vitals', {
-            name: 'CLS',
-            value: Math.round(clsValue * 1000),
-            event_category: 'Web Vitals'
-          });
-        }
-      });
-      
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      // Cleanup observers
-      return () => {
-        observer.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
     }
+  }, [analytics]);
 
-    // Start measuring after a short delay to ensure page is loaded
-    const timeout = setTimeout(() => {
-      if (typeof window !== 'undefined' && window.performance) {
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        if (navigation) {
-          setMetrics(prev => ({
-            ...prev,
-            ttfb: navigation.responseStart - navigation.requestStart
-          }))
-        }
-      }
-    }, 1000)
-
-    return () => {
-      clearTimeout(timeout)
-      if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-        observer.disconnect()
-      }
-    }
-  }, [])
-
-  // Log metrics for debugging (only in development)
+  // Track memory usage (if available)
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && Object.keys(metrics).length > 0) {
-      console.log('Performance Metrics:', metrics)
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      analytics.trackEvent('memory_usage', {
+        usedJSHeapSize: memory.usedJSHeapSize,
+        totalJSHeapSize: memory.totalJSHeapSize,
+        jsHeapSizeLimit: memory.jsHeapSizeLimit
+      });
     }
-  }, [metrics])
+  }, [analytics]);
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
-  return null
-}
-=======
-    // Track page load
-    const handleLoad = () => {
-      analytics.trackPageView(window.location.pathname);
+  // Track connection information
+  useEffect(() => {
+    if ('connection' in navigator) {
+      const connection = (navigator as any).connection;
+      analytics.trackEvent('connection_info', {
+        effectiveType: connection.effectiveType,
+        downlink: connection.downlink,
+        rtt: connection.rtt,
+        saveData: connection.saveData
+      });
+    }
+  }, [analytics]);
+
+  // Track viewport changes
+  useEffect(() => {
+    const trackViewport = () => {
+      analytics.trackEvent('viewport_change', {
+        width: window.innerWidth,
+        height: window.innerHeight,
+        devicePixelRatio: window.devicePixelRatio
+      });
     };
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
 
-    window.addEventListener('load', handleLoad);
+    window.addEventListener('resize', trackViewport);
+    trackViewport(); // Initial measurement
 
+    return () => window.removeEventListener('resize', trackViewport);
+  }, [analytics]);
+
+  // Track scroll performance
+  useEffect(() => {
+    let scrollTimeout: NodeJS.Timeout;
+    
+    const trackScroll = () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        analytics.trackEvent('scroll_performance', {
+          scrollY: window.scrollY,
+          scrollX: window.scrollX,
+          documentHeight: document.documentElement.scrollHeight,
+          viewportHeight: window.innerHeight
+        });
+      }, 100);
+    };
+
+    window.addEventListener('scroll', trackScroll, { passive: true });
     return () => {
-      observer.disconnect();
-      fcpObserver.disconnect();
-      window.removeEventListener('load', handleLoad);
+      window.removeEventListener('scroll', trackScroll);
+      clearTimeout(scrollTimeout);
     };
   }, [analytics]);
 
-  // Log performance issues
+  // Track errors
   useEffect(() => {
-    if (metrics.lcp && metrics.lcp > 2500) {
-      console.warn('Poor LCP:', metrics.lcp);
-    }
-    if (metrics.fid && metrics.fid > 100) {
-      console.warn('Poor FID:', metrics.fid);
-    }
-    if (metrics.cls && metrics.cls > 0.1) {
-      console.warn('Poor CLS:', metrics.cls);
-    }
-  }, [metrics]);
+    const trackError = (event: ErrorEvent) => {
+      analytics.trackEvent('javascript_error', {
+        message: event.message,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+        error: event.error?.toString()
+      });
+    };
 
-  // Don't render anything visible
+    const trackUnhandledRejection = (event: PromiseRejectionEvent) => {
+      analytics.trackEvent('unhandled_promise_rejection', {
+        reason: event.reason?.toString()
+      });
+    };
+
+    window.addEventListener('error', trackError);
+    window.addEventListener('unhandledrejection', trackUnhandledRejection);
+
+    return () => {
+      window.removeEventListener('error', trackError);
+      window.removeEventListener('unhandledrejection', trackUnhandledRejection);
+    };
+  }, [analytics]);
+
+  // Return null as this is a monitoring component
   return null;
 };
 
