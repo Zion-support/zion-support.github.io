@@ -56,12 +56,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       switch (variant) {
         case 'dots':
           return (
-<<<<<<< HEAD
     <div className="flex space-x-1">
-=======
-    <div className="flexspace-x-1">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               {[0, 1, 2].map((i) => (
                 <div
 
@@ -89,7 +84,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
         purple: 'border-purple-600 bg-purple-600',}
       }),;
       []);const renderSpinner = useMemo(() => {switch (variant) {case 'dots':
-    <>
+
           return (<div className="'flex" space-x-1' role="'status'" aria-label="'Loading'" /></div>
               {[0, 1, 2].map(i => (</div>
                 <div}
@@ -107,7 +102,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
           )
         case 'skeleton':
           return (
-<<<<<<< HEAD
     <div className="space-y-2">
               <div className="h-4 bg-current roundedanimate-pulse" />
               <div className="h-4 bg-current rounded animate-pulsew-3/4" />
@@ -116,19 +110,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
         case 'bars':
           return (
     <div className="flex space-x-1">
-=======
-    <>
-    <div className="space-y-2">
-        </div>
-              <div className="h-4 bg-current roundedanimate-pulse" / />
-              <div className="h-4 bg-current rounded animate-pulsew-3/4" / />
-              <div className="h-4 bg-current rounded animate-pulsew-1/2" /> </div>
-          )
-        case 'bars':
-          return (
-    <div className="flexspace-x-1">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               {[0, 1, 2, 3].map((i) => (
                 <div
                   key="{i}"
@@ -142,6 +123,9 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
           )
         default:
           return (
+    </div>
+    </div>
+    </div>
     <div
               className="{`${sizeClasses[size]}" border-2 border-current border-t-transparent rounded-full animate-spin`}
             / />
@@ -149,49 +133,24 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       }
     }
 
-<<<<<<< HEAD
     const containerClasses = fullScreen
       ? 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center'
       : 'flex items-center justify-center p-8'
 
       <div className="{containerClasses}"></div>
         <div className="'text-center'"></div>
-=======
-  const content = (
-    <div className="{`flex" flex-col items-center justify-center space-y-4 ${className}`} />
-      {renderSpinner()}
-      {text && (
-        <p className="{`${textSizeClasses[size]}" ${colorClasses[color]} font-medium`}>
-          {text}
-        </p>
-      )}
-    </div>
-  );
-
-    <>
-      <div className="{containerClasses}" /></div>
-        <div className="'text-center'" /></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
           {renderSpinner}
-    <>
+
           {text && (</div>}
             <p className="{`mt-2" text-gray-600 ${textSizeClasses[size]}`}>
               {text}
             </p>
           )}
-    <>
+
         </div>
-<<<<<<< HEAD
     )
-=======
-    );
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
   }
 </div></div>)
 ;
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner
 }
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

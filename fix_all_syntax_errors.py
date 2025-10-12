@@ -1,52 +1,60 @@
 #!/usr/bin/env python3
 """
-Comprehensive script to fix all remaining syntax errors in React/TypeScript files.
+Comprehensive script to fix all remaining syntax errors
 """
-
 import os
 import re
 import glob
 
 def fix_syntax_errors(file_path):
-    """Fix syntax errors in a single file."""
+    """Fix syntax errors in a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
+        # Fix malformed class declarations
+        content = re.sub(r'class\s+(\w+)\s+extends\s+Component<[^>]+>\s*/>', r'class \1 extends Component<\2>', content)
+        
+        # Fix malformed state declarations
+        content = re.sub(r'public\s+state:\s*const\s+(\w+)\s*=\s*\{,\s*', r'public state: \1 = {\n    ', content)
+        
+        # Fix malformed JSX attributes
+        content = re.sub(r'style=\{\{\s*([^}]+)\s*\}\}', r'style={{\1}}', content)
+        
+        # Fix malformed className attributes
+        content = re.sub(r'className="([^"]*?)([a-zA-Z])([a-zA-Z])', r'className="\1\2 \3', content)
+        
+        # Fix missing spaces in className
+        content = re.sub(r'className="([^"]*?)([a-zA-Z])([A-Z])', r'className="\1\2 \3', content)
+        
+        # Fix malformed JSX closing tags
+        content = re.sub(r'<(\w+)\s*/>', r'</\1>', content)
+        
+        # Fix malformed style objects
+        content = re.sub(r'style=\{\{\s*([^}]+)\s*\}\}', r'style={{\1}}', content)
+        
+        # Fix missing spaces in style values
+        content = re.sub(r'(\w+):\s*\'([^\']*?)([a-zA-Z])([a-zA-Z])', r'\1: \'\2\3 \4', content)
+        
         # Fix malformed function declarations
-        content = re.sub(r'const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\n\s*\{[^}]*\},', r'const \1: React.FC = () => {\n  const data = [', content)
-        content = re.sub(r'const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\n\s*\{[^}]*\},', r'const \1: React.FC = () => {\n  const data = [', content)
+        content = re.sub(r'const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{', r'const \1 = () => {', content)
         
-        # Fix malformed function declarations without proper opening brace
-        content = re.sub(r'const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\n\s*\{[^}]*\},', r'const \1: React.FC = () => {\n  const data = [', content)
+        # Fix malformed return statements
+        content = re.sub(r'return\s*\(\s*<', r'return (\n    <', content)
         
-        # Fix common patterns where function body is missing
-        content = re.sub(r'const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\n\s*\{[^}]*\},', r'const \1: React.FC = () => {\n  return (\n    <div>\n      <h1>Page Content</h1>\n    </div>\n  );\n};', content)
+        # Fix malformed JSX fragments
+        content = re.sub(r'<>\s*<', r'<>\n    <', content)
+        content = re.sub(r'</>\s*\)', r'</>\n  )', content)
         
-        # Fix malformed JSX expressions
-        content = re.sub(r'\{>\}', '>', content)
-        content = re.sub(r'\{<\}', '<', content)
-        content = re.sub(r'\{/\}', '/', content)
-        content = re.sub(r'\{}\}', '}', content)
-        content = re.sub(r'\{{\}', '{', content)
-        
-        # Fix unclosed JSX expressions
-        content = re.sub(r'\{[^}]*$', '', content, flags=re.MULTILINE)
-        
-        # Fix malformed array declarations
-        content = re.sub(r'const\s+(\w+)\s*=\s*\[\s*\n\s*\{[^}]*\},', r'const \1 = [', content)
-        
-        # Clean up extra whitespace and empty lines
+        # Clean up extra whitespace
         content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
-        content = content.strip() + '\n'
         
-        # Only write if content changed
+        # Write back if changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed syntax errors in: {file_path}")
             return True
         
         return False
@@ -56,13 +64,12 @@ def fix_syntax_errors(file_path):
         return False
 
 def main():
-    """Main function to process all files."""
-    # Find all TypeScript/JavaScript files
+    """Main function to process all files"""
     patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts', 
-        'app/**/*.js',
-        'app/**/*.jsx'
+        '**/*.tsx',
+        '**/*.ts', 
+        '**/*.js',
+        '**/*.jsx'
     ]
     
     files_processed = 0
@@ -70,13 +77,14 @@ def main():
     
     for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
-            # Skip node_modules and other irrelevant directories
-            if 'node_modules' in file_path or '.git' in file_path:
+            # Skip node_modules
+            if 'node_modules' in file_path:
                 continue
                 
             files_processed += 1
             if fix_syntax_errors(file_path):
                 files_fixed += 1
+                print(f"Fixed syntax errors in: {file_path}")
     
     print(f"\nProcessed {files_processed} files")
     print(f"Fixed syntax errors in {files_fixed} files")

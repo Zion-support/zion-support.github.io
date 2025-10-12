@@ -216,6 +216,12 @@ import Footer from '../components/Footer';
         <Footer />
       </div>
   );
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
 };
 
 export default ITServicesPage;

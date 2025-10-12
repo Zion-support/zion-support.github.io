@@ -1,11 +1,7 @@
 'use client'
 import React from 'react'
 
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
-=======
-import { Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
 const SEOEnhancer: React.FC = () => {
   const features = [
     {
@@ -40,3 +36,5 @@ const SEOEnhancer: React.FC = () => {
     'Proven track record of success'
   ];
   return (
+
+  )

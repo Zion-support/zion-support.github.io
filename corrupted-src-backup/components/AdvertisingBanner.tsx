@@ -31,6 +31,7 @@ const AdvertisingbannerPage: React.FC = () => {
       <Footer />
     </div>
   );
+    </div>
 };
 
 export default AdvertisingbannerPage;

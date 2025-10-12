@@ -165,6 +165,9 @@ class AdvancedErrorBoundary extends Component
               </div>
     </div>
   );
+    </div>
+    </div>
+    </div>
     }
     return this.props.children;
   }

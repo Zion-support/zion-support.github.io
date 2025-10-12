@@ -52,30 +52,17 @@ const LazyImage: React.FC<LazyImageProps /> = ({
   }
 
   return (
+    </div>
     <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
       {!isInView && (
-<<<<<<< HEAD
         <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-centerjustify-center">
           <Loader2 className="w-8 h-8text-gray-400animate-spin" />
-=======
-    <>
-        <div className="absolute inset-0 bg-gray-800 animate-pulse flexitems-centerjustify-center">
-        </div>
-          <Loader2 className="w-8 h-8text-gray-400animate-spin" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
         </div>
       )}
       
       {isInView && !isLoaded && !hasError && (
-<<<<<<< HEAD
         <div className="absolute inset-0 bg-gray-800 flex items-centerjustify-center">
           <Loader2 className="w-8 h-8text-gray-400animate-spin" />
-=======
-    <>
-        <div className="absolute inset-0 bg-gray-800 flexitems-centerjustify-center">
-        </div>
-          <Loader2 className="w-8 h-8text-gray-400animate-spin" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
         </div>
       )}
       
@@ -93,18 +80,9 @@ const LazyImage: React.FC<LazyImageProps /> = ({
       )}
       
       {hasError && (
-<<<<<<< HEAD
         <div className="absolute inset-0 bg-gray-800 flex items-centerjustify-center">
           <div className="text-centertext-gray-400">
             <div className="w-8 h-8mx-automb-2"  >📷</div>
-=======
-    <>
-        <div className="absolute inset-0 bg-gray-800 flexitems-centerjustify-center">
-        </div>
-          <div className="text-centertext-gray-400">
-        </div>
-            <div className="w-8 h-8mx-automb-2">📷</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             <p className="text-sm">Image failed to load</p>
           </div>
       )}
@@ -113,4 +91,3 @@ const LazyImage: React.FC<LazyImageProps /> = ({
 }
 
 export default LazyImage;
-    </>

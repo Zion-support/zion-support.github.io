@@ -14,17 +14,13 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps /> = ({
     <div className={`animate-pulse ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (
         <div
-<<<<<<< HEAD
           key={index}
           className="h-4 bg-gray-300 rounded mb-2"
         />
       ))}
     </div>
   );
+    </div>
 };
 
 export default LoadingSkeleton;
-=======
-          key="{index}"
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

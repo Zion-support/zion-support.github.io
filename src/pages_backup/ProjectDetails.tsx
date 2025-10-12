@@ -29,6 +29,7 @@ import Footer from '../components/Footer'
       <Footer />
     </div>
   );
+    </div>
 };
 
 export default ProjectdetailsPage;

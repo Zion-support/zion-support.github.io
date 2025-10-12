@@ -137,6 +137,9 @@
         </div>
     </div>
   );
+    </div>
+    </div>
+    </div>
 }
 /**
  * Get error type from error object

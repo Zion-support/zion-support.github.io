@@ -32,13 +32,8 @@ import { useEffect } from 'react'
   }, [])
 
   return (
-<<<<<<< HEAD
     <div className={`security-enhanced ${className}`}>
       {children}
-=======
-    <>
-    <div className="{`security-enhanced" ${className}`}>{children}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
     </div>
   )
 }
@@ -67,8 +62,4 @@ export default SecurityEnhancer
       });// Disable F12 and other dev tools shortcuts
       document.addEventListener('keydown', (e) => {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
         }
-<<<<<<< HEAD
-=======
 ;
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

@@ -1,10 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface FuturisticButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
@@ -121,18 +118,12 @@ interface FuturisticButtonProps {
       )}
 
       {/* Corner accents */}
-<<<<<<< HEAD
       <div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" />
       <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" />
-=======
-    <>
-      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" / />
-      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
       {/* Content */}
       <span className="relative z-10 flex items-centerjustify-center" />
         {loading ? (
-          <>
+
             <motion.div
               className="w-4 h-4 border-2 border-white/30 border-t-white rounded-fullmr-2"
               animate="{{" rotate: 360 }}
@@ -142,16 +133,10 @@ interface FuturisticButtonProps {
         ) : (
           children
         )}
-    <>
+
       </span>
     </motion.button>
   </div>
   );
-<<<<<<< HEAD
+    </div>
 }
-=======
-};
-
-export default FuturisticButton;
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

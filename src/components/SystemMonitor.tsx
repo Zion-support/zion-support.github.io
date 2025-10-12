@@ -350,5 +350,27 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
       )}
     </div>
   );
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
 };
 export default SystemMonitor;

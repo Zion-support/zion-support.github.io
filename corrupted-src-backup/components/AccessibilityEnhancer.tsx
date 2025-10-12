@@ -31,6 +31,7 @@ const AccessibilityenhancerPage: React.FC = () => {
       <Footer />
     </div>
   );
+    </div>
 };
 
 export default AccessibilityenhancerPage;

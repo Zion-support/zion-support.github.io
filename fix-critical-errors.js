@@ -48,3 +48,6 @@ const filesToFix = findFilesToFix(srcDir);`
 console.log(`Processing ${filesToFix.length} files`)
 
 console.log(`Fixed ${fixedCount} files`);"`
+
+    </div>
+    </div>

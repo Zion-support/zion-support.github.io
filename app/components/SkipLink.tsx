@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-'use client';
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const SkipLink: React.FC = () => {
   return (
     <a

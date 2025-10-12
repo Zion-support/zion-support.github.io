@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Star, Shield, Cloud, MessageCircle } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
-<<<<<<< HEAD
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,7 +15,6 @@ const ContactPage: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-<<<<<<< HEAD
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -88,7 +86,7 @@ const ContactPage: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <>
+
         <Helmet>
           <title>Thank You - Zion Tech Group | Message Received</title>
           <meta name="description" content="Thank you for contacting Zion Tech Group. We have received your message and will get back to you within 2 hours." />
@@ -119,16 +117,6 @@ const ContactPage: React.FC = () => {
               >
                 Call Us Now
               </a>
-=======
-=======
-  return (
-    <>
-      <Helmet>
-        <title>Contact - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations and support." />
-      </Helmet>
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7-xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
           <div className="text-center">
@@ -138,7 +126,6 @@ const ContactPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3-xl mx-auto">
               Ready to transform your business? Get in touch with our team of experts.
             </p>
-<<<<<<< HEAD
             <div className="max-w-md mx-auto">
               <form className="space-y-4">
                 <input
@@ -163,16 +150,15 @@ const ContactPage: React.FC = () => {
                   Send Message
                 </button>
               </form>
->>>>>>> cursor/fix-errors-and-merge-to-main-bff1
             </div>
           </div>
         </div>
-      </>
+
     );
   }
 
   return (
-    <>
+
       <Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch for AI & IT Solutions</title>
         <meta name="description" content="Contact Zion Tech Group for AI solutions, cloud infrastructure, cybersecurity, and custom software development. Call +1 302 464 0950 or email kleber@ziontechgroup.com" />
@@ -221,23 +207,6 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div className="text-gray-300 text-sm">
                     {stat.label}
-=======
-            <div className="max-w-2xl mx-auto">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">Get In Touch</h2>
-                <p className="text-gray-300 mb-6">
-                  Contact us for consultations, support, or to learn more about our services.
-                </p>
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                    />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -261,7 +230,6 @@ const ContactPage: React.FC = () => {
                     Send Message
                   </button>
                 </div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -381,15 +349,15 @@ const ContactPage: React.FC = () => {
                     className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                   >
                     {isLoading ? (
-                      <>
+
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                         <span>Sending...</span>
-                      </>
+
                     ) : (
-                      <>
+
                         <Send className="w-5 h-5" />
                         <span>Send Message</span>
-                      </>
+
                     )}
                   </button>
                 </form>
@@ -447,15 +415,20 @@ const ContactPage: React.FC = () => {
                     </li>
                   </ul>
                 </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               </div>
             </div>
           </div>
         </section>
       </div>
-    </>
+
   );
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
 };
 
 export default ContactPage;

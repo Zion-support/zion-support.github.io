@@ -177,6 +177,9 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
       </div>
     </footer>
   );
+    </div>
+    </div>
+    </div>
 };
 
 export default Footer;

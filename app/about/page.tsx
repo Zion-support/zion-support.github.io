@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -97,7 +96,7 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-    <>
+
       <Helmet>
         <title>About Us - Zion Tech Group | Leading AI & IT Solutions Company</title>
         <meta name="description" content="Learn about Zion Tech Group, a leading technology company specializing in AI solutions, cloud infrastructure, cybersecurity, and custom software development. Founded in 2019." />
@@ -106,7 +105,6 @@ const AboutPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.4)_0%,transparent_50%)] animate-pulse" />
@@ -129,15 +127,6 @@ const AboutPage: React.FC = () => {
               Founded in 2019, Zion Tech Group is a leading technology company that specializes in 
               artificial intelligence, cloud infrastructure, cybersecurity, and custom software development. 
               We help businesses transform their operations with cutting-edge technology solutions.
-=======
-        <div className="max-w-7-xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4-xl md:text-6xl font-bold text-white  mb-6">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3-xl mx-auto">
-              We are a leading technology company dedicated to transforming businesses through innovative AI and IT solutions.
->>>>>>> cursor/fix-errors-and-merge-to-main-bff1
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -312,13 +301,12 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const AboutPage: React.FC = () => {
   return (
-    <>
+
       <Helmet>
         <title>About - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions." />
@@ -354,10 +342,13 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
       </div>
-    </>
+
   );
+    </div>
+    </div>
+    </div>
+    </div>
 };
 
 export default AboutPage;

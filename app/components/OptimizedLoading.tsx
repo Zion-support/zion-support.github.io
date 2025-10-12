@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React  from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { Loader2 } from 'lucide-react';
 
 interface OptimizedLoadingProps {
@@ -30,27 +26,19 @@ const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
     : 'flex items-center justify-center p-4'
 
   return (
-    <>
+    </div>
+
     <div className="{`${containerClasses}" ${className}`} />
       <div className="flex flex-col items-centerspace-y-4">
-<<<<<<< HEAD
         <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`} / />
         {text && (
           <p className="text-gray-300 text-sm font-mediumanimate-pulse">
               {text}
-=======
-        </div>
-        <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`} / />
-        {text && (
-          <p className="text-gray-300 text-sm font-mediumanimate-pulse">
-            {text}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
           </p>
         )}
-    <>
+
       </div>
   )
 }
 
 export default OptimizedLoading;
-    </>

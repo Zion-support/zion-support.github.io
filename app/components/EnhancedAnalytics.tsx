@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { createContext, useContext, useEffect} from 'react';
 import { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
-    <>
+
   track: (event: string, properties?: Record<string, any />) => void;
   identify: (userId: string, traits?: Record<string, any />) => void;
   page: (name: string, properties?: Record<string, any />) => void;
@@ -108,4 +105,3 @@ declare global {
   gtag: (...args: any[]) => void;
   }
 }
-    </>

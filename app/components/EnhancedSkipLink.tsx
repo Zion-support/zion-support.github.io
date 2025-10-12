@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import React  from 'react';
-=======
-'use client';
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const EnhancedSkipLink: React.FC = () => {
   const handleSkipToMain = () => {
     const mainContent = document.getElementById('main-content');
@@ -37,7 +31,7 @@ const EnhancedSkipLink: React.FC = () => {
         className="skip-link"
         aria-label="Skip to navigation"
         />Skip to navigation
-    <>
+
       </button>
       <style jsx  />{`
         .skip-links {;
@@ -71,11 +65,10 @@ const EnhancedSkipLink: React.FC = () => {
   background: #00 ffff;,
   color: #000;
         }
-    <>
+
       `}</style>
     </div>
   );
 };
 
 export default EnhancedSkipLink;
-    </>

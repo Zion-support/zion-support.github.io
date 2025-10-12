@@ -217,6 +217,14 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
       </div>
     </nav>
   );
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
 };
 
 export default Navigation;

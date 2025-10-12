@@ -1,32 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { 
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
-=======
-import { Zap, BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users, Award, Star } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
 
 const MicroSaasServicesPage: React.FC = () => {
   const services = [
@@ -110,17 +92,9 @@ const MicroSaasServicesPage: React.FC = () => {
   ];
 
   return (
-    <>
-    <>
+
       <Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
         <title>Micro SaaS Services - Zion Tech Group</title>
         <meta name="description" content="Powerful micro SaaS solutions including analytics, chatbots, security, cloud backup, workflow automation, and CRM intelligence for modern businesses." />
         <meta name="keywords" content="micro SaaS, business software, analytics, chatbots, security, cloud backup, workflow automation, CRM" />
@@ -368,21 +342,9 @@ const MicroSaasServicesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+
   );
 };
 
 export default MicroSaasServicesPage;
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
