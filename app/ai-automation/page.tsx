@@ -87,88 +87,6 @@ const AIAutomationPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Key Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI automation solutions are designed to handle complex business processes with intelligence and precision.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gradient-to-r from-slate-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-purple-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Use Cases</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how AI automation can transform different aspects of your business operations.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-gradient-to-r from-slate-800/50 to-purple-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                      <useCase.icon className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                    <p className="text-gray-300">{useCase.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our AI Automation?</h2>
-              <p className="text-lg text-gray-300 mb-8">
-                Our AI automation solutions deliver measurable results that transform your business operations and drive growth.
-              </p>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="relative">
-              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-white mb-2">70%</div>
-                  <div className="text-gray-300 mb-6">Average Cost Reduction</div>
-                  <div className="text-4xl font-bold text-white mb-2">3-6</div>
-                  <div className="text-gray-300 mb-6">Months to ROI</div>
-                  <div className="text-4xl font-bold text-white mb-2">24/7</div>
-                  <div className="text-gray-300">Automated Operations</div>
-                </div>
-=======
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -272,7 +190,6 @@ const AIAutomationPage: React.FC = () => {
                     <div className="text-gray-300">Average savings achieved by our clients</div>
                   </div>
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
               </div>
             </div>
           </div>
@@ -324,10 +241,9 @@ const AIAutomationPage: React.FC = () => {
                 </Link>
               </div>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 };
