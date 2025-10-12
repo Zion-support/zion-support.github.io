@@ -1,7 +1,10 @@
 import { useState, useEffect} from 'react';
 import { Sun, Moon} from 'lucide-react';
+'use client';
 
+const ThemeToggle: React.FC = () => {
   const [isDark, setIsDark] = useState(true);
+  useEffect(() => {
     // Check for saved theme preference or default to dark
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -11,8 +14,10 @@ import { Sun, Moon} from 'lucide-react';
     } else {
       setIsDark(true);
       document.documentElement.classList.add('dark');
+    }
   }, []);
 
+  const toggleTheme = () => {
     const newTheme = !isDark;
     setIsDark(newTheme);
 
@@ -22,14 +27,21 @@ import { Sun, Moon} from 'lucide-react';
     } else {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
+    }
   };
 
   return (
-
+    <button
+      const onClick = {toggleTheme}
+      className="p-2rou nded-lg bg-slate-700/50 hover:bg-slate-700 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+      aria-label="{`Switch" to ${isDark ? 'light' : 'dark'} mode`}
+     />
       {isDark ? (
+        <Sun className="w-5h-5ml-2" />
       ) : (
-
+        <Moon className="w-5h-5ml-2" />
       )}
+    </button>
   );
 };
 

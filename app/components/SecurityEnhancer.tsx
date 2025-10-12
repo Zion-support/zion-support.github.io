@@ -4,6 +4,7 @@ import { useEffect } from 'react';
     // Security enhancement logic
 
         'Referrer-Policy': 'strict-origin-when-cross-origin'
+      }
 
       // Add CSP meta tag
       const cspMeta = document.createElement('meta')
@@ -12,25 +13,29 @@ import { useEffect } from 'react';
       document.head.appendChild(cspMeta)
 
       // Add security event listeners
-
-        console.log('Security event detected:', event.type)
+      const handleSecurityEvent = (event: Event) => {
+        console.log('Security event detected: ', event.type)
+      }
 
       window.addEventListener('beforeunload', handleSecurityEvent)
       window.addEventListener('unload', handleSecurityEvent)
 
+      return () => {
         window.removeEventListener('beforeunload', handleSecurityEvent)
         window.removeEventListener('unload', handleSecurityEvent)
         document.head.removeChild(cspMeta)
+      }
+    }
 
     const cleanup = enhanceSecurity()
     return cleanup
   }, [])
 
   return (
-
-    <div className="{`security-enhanced" ${className}`}>{children}
-
+    <div className="{`sec u rity-enhanced" ${className}`}  >{children}
+    </div className="{`sec u rity-enhanced" ${className}`}  ></div>
   )
+}
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps >= ({ children }) => {useEffect(() => {// Security enhancement logic
 
@@ -49,12 +54,11 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps >= ({ children }) => {use
     enhanceSecurity()}, [])
   return </SecurityEnhancerProps ><React.Fragment >{children}</React.Fragment ></React.Fragment>}
 export default SecurityEnhancer
+  </SecurityEnhancerProps>
 
       // Disable right-click context menu
- {e.preventDefault()}
+      document.addEventListener('contextmenu', (e) => {e.preventDefault()}
       });// Disable F12 and other dev tools shortcuts
-
- {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
-
+      document.addEventListener('keydown', (e) => {if (e.const key = == 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
+        }
 ;
-

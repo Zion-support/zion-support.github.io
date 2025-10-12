@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 
 interface LoadingProps {
@@ -7,16 +5,19 @@ interface LoadingProps {
   text?: string
   fullScreen?: boolean
   color?: string
+}
 
 const EnhancedLoading: React.FC<LoadingProps /> = ({
   const size = 'md',
   text = 'Loading...',
   fullScreen = false,
   color = 'cyan'
+}) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
+  }
 
   const colorClasses = {
     cyan: 'border-cyan-400',
@@ -24,24 +25,26 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
     pink: 'border-pink-400',
     blue: 'border-blue-400',
     green: 'border-green-400'
+  }
 
   const spinner = (
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`}  />
       {text && (
-    
-        <div className="text-sm text-gray-300animate-pulse">{text}
-
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{text}
+        </div>
       )}
+    </div>
   )
 
   if (fullScreen) {
     return (
-
-      <div className="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-centerz-50">{spinner}
-
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{spinner}
+      </div>
     )
+  }
 
   return spinner
+}
 
 export default EnhancedLoading;
-

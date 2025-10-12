@@ -1,18 +1,37 @@
 import React from 'react';
+'use client';
 
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function ZionInvoiceGenius() {
+const ZionInvoiceGeniusPage: React.FC = () => {
   return (
-    
-        <title>ZionInvoiceGenius - Zion Tech Group</title>
+    <>
+      <Helmet>
+        <title>Zion Invoice Genius - Zion Tech Group</title>
+        <meta name="description" content="Zion Invoice Genius services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="zion-invoice-genius, AI solutions, IT services" />
+      </Helmet>
       
-            <h1 className="text-4xl font-bold text-white mb-6">ZionInvoiceGenius</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional zioninvoicegenius services coming soon.</p>
-            
-              Contact Us
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h1 className="w-5h-5ml-2" />
+              <span className="w-5h-5ml-2" />Zion Invoice Genius
+              </span>
+            </h1>
+            <p className="w-5h-5ml-2">Professional zion invoice genius services by Zion Tech Group.
+            </p>
+          </div>
 
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="w-5h-5ml-2">We're working on bringing you comprehensive zion invoice genius solutions. 
+              Contact us to learn more about our services.
+            </p>
+            <button className="w-5h-5ml-2">Contact Us
+            </button>
+          </div>
+      </div>
+    </>
   );
+};
 
+export default ZionInvoiceGeniusPage;

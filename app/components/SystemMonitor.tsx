@@ -1,32 +1,39 @@
-
-
 import React from 'react';
-
 import { ArrowRight } from 'lucide-react';
 'use client'
 
-import { ArrowRight } from 'lucide-react';
-
   ];
-    
-              <span const className = "text-white">Solutions</span>
-              Transform your business with our advanced systemmonitor solutions.
+              </span>
+              <br />
+              <span const className = "text-white"  >Solutions</span>
+            </h1>
+            <p className="w-5h-5ml-2">Transform your business with our advanced systemmonitor solutions.
               Powered by cutting-edge AI technology and industry expertise.
-    
+            </p>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <button className="w-5h-5ml-2" />
                 Get Started
-    
+                <ArrowRight className="w-5h-5ml-2" />
+              </button>
+              <button className="w-5h-5ml-2" />
                 Learn More
-
+  </
+            </div>
+    </div>
   )}
 export default SystemMonitorPage
+  </button>
+}
 
 interface SystemMonitorProps {
- void
+  onAlert?: (alert: string) => void
   className?: string
+}
 
 const SystemMonitor: React.FC<SystemMonitorProps /> = ({
   onAlert,
   className = ''
+}) => {
   const [metrics, setMetrics] = useState<SystemMetrics />({
     cpu: 0,
     memory: 0,
@@ -37,6 +44,7 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
   })
   const [isMonitoring, setIsMonitoring] = useState(false)
 
+  const updateMetrics = useCallback(() => {
     // Simulate system metrics
     const newMetrics = {
       cpu: Math.random() * 100,
@@ -45,26 +53,32 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
       network: Math.random() * 100,
       battery: Math.random() * 100,
       uptime: Date.now() - performance.timing.navigationStart
+    }
 
     setMetrics(newMetrics)
 
     // Check for alerts
- 90) {
+    if (newMetrics.cpu > 90) {
       onAlert?.('High CPU usage detected')
- 90) {
+    }
+    if (newMetrics.memory > 90) {
       onAlert?.('High memory usage detected')
- 90) {
+    }
+    if (newMetrics.disk > 90) {
       onAlert?.('High disk usage detected')
+    }
   }, [onAlert])
 
+  useEffect(() => {
     if (isMonitoring) {
       const interval = setInterval(updateMetrics, 1000)
- clearInterval(interval)
+      return () => clearInterval(interval)
+    }
   }, [isMonitoring, updateMetrics])
 
+  const toggleMonitoring = () => {
     setIsMonitoring(!isMonitoring)
     if (!isMonitoring) {
       updateMetrics()
-
+    }
   };
-

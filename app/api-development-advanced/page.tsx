@@ -1,18 +1,37 @@
 import React from 'react';
+'use client';
 
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function ApiDevelopmentAdvanced() {
+const ApiDevelopmentAdvancedPage: React.FC = () => {
   return (
-    
-        <title>ApiDevelopmentAdvanced - Zion Tech Group</title>
+    <>
+      <Helmet>
+        <title>Api Development Advanced - Zion Tech Group</title>
+        <meta name="description" content="Api Development Advanced services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="api-development-advanced, AI solutions, IT services" />
+      </Helmet>
       
-            <h1 className="text-4xl font-bold text-white mb-6">ApiDevelopmentAdvanced</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional apidevelopmentadvanced services coming soon.</p>
-            
-              Contact Us
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h1 className="w-5h-5ml-2" />
+              <span className="w-5h-5ml-2" />Api Development Advanced
+              </span>
+            </h1>
+            <p className="w-5h-5ml-2">Professional api development advanced services by Zion Tech Group.
+            </p>
+          </div>
 
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="w-5h-5ml-2">We're working on bringing you comprehensive api development advanced solutions. 
+              Contact us to learn more about our services.
+            </p>
+            <button className="w-5h-5ml-2">Contact Us
+            </button>
+          </div>
+      </div>
+    </>
   );
+};
 
+export default ApiDevelopmentAdvancedPage;

@@ -6,8 +6,9 @@ interface LazyImageProps {
   alt: string
   className?: string
   placeholder?: string
- void
- void
+  onLoad?: () => void
+  onError?: () => void
+}
 
 const LazyImage: React.FC<LazyImageProps /> = ({
   src,
@@ -16,50 +17,76 @@ const LazyImage: React.FC<LazyImageProps /> = ({
   placeholder,
   onLoad,
   onError
+}) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
   const [hasError, setHasError] = useState(false)
   const imgRef = useRef<HTMLImageElement />(null)
 
+  useEffect(() => {
     const observer = new IntersectionObserver(
+      ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true)
           observer.disconnect()
+        }
       },
       { threshold: 0.1 }
     )
 
     if (imgRef.current) {
       observer.observe(imgRef.current)
+    }
 
- observer.disconnect()
+    return () => observer.disconnect()
   }, [])
 
+  const handleLoad = () => {
     setIsLoaded(true)
     onLoad?.()
+  }
 
+  const handleError = () => {
     setHasError(true)
     onError?.()
+  }
 
   return (
+    <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
       {!isInView && (
-
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <Loader2 className="w-5h-5ml-2" />
+        </div>
       )}
       
       {isInView && !isLoaded && !hasError && (
-
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <Loader2 className="w-5h-5ml-2" />
+        </div>
       )}
       
       {isInView && (
+        <img
+          src="{src}"
+          alt="{alt}"
+          onLoad="{handleLoad}"
+          onError="{handleError}"
+          className={`w-full h-full object-cover transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          loading="lazy"
+         />
       )}
       
       {hasError && (
-
-            <div className="w-8 h-8mx-automb-2">📷</div>
-
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="w-8 h-8mx-au tomb-2"  >📷</div>
             <p className="text-sm">Image failed to load</p>
+          </div>
       )}
+    </div>
   )
+}
 
 export default LazyImage;
-

@@ -1,25 +1,57 @@
 import React, { useEffect } from 'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import { getCLS, getFID, getFCP, getLCP, getTTFB };
+'use client';
+import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
 
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
     // Monitor Core Web Vitals
-
+    const monitorCoreWebVitals = () => {
+      if (typeof window !== 'undefined') {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
+      if ('web-vitals' in, window) {
+          getCLS(console.log);
+          getFID(console.log);
+          getFCP(console.log);
+          getLCP(console.log);
+          getTTFB(console.log);
+        });
+      if ('web-vitals' in window) {
+        onCLS(console.log);
+        onINP(console.log);
+        onFCP(console.log);
+        onLCP(console.log);
+        onTTFB(console.log);
+      }
     };
 
     // Monitor performance metrics
+    const monitorPerformance = () => {
       if ('performance' in, window) {
+        window.addEventListener('load', () => {
+          setTimeout(() => {
             const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
             const paint = performance.getEntriesByType('paint');
             console.log('Performance Metrics: ', {
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
               loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
- entry.name === 'first-paint')?.startTime,
- entry.name === 'first-contentful-paint')?.startTime,
+              firstPaint: paint.find(const entry = > entry.name === 'first-paint')?.startTime,
+              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
             });
           }, 0);
         });
+      }
     };
 
     // Monitor memory usage
+    const monitorMemory = () => {
       if ('memory' in, performance) {
+        setInterval(() => {
           const memory = (performance as, any).memory;
           console.log('Memory Usage: ', {
             used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
@@ -27,6 +59,7 @@ import React, { useEffect } from 'react';
             limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
           });
         }, 30000); // Check every 30 seconds
+      }
     };
 
     // Initialize monitoring
@@ -35,6 +68,7 @@ import React, { useEffect } from 'react';
     monitorMemory();
 
     // Cleanup
+    return () => {
       // Cleanup if needed
     };
   }, []);
@@ -43,3 +77,4 @@ import React, { useEffect } from 'react';
 };
 
 export default PerformanceMonitor;
+}

@@ -1,6 +1,6 @@
-
-
+import { useEffect, useState} from 'react';
 'use client';
+
 
 interface AnimatedTextProps {
   text: string;
@@ -8,6 +8,7 @@ interface AnimatedTextProps {
   delay?: number;
   duration?: number;
   type?: 'fade' | 'slide' | 'glow' | 'typing';
+}
 
 const AnimatedText: React.FC<AnimatedTextProps >= ({
   text,
@@ -15,27 +16,33 @@ const AnimatedText: React.FC<AnimatedTextProps >= ({
   delay = 0,
   // duration = 1000,
   type = 'fade'
+}) => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
       setIsVisible(true);
     }, delay);
 
- clearTimeout(timer);
+    return () => clearTimeout(timer);
   }, [delay]);
 
+  useEffect(() => {
     if (const type = == 'typing' && isVisible) {
-
-      if (currentIndex 
-
+      if (currentIndex </AnimatedTextProps >< text.length) {
+        const timer = setTimeout(() => {
           setDisplayText(text.slice(0, currentIndex + 1));
           setCurrentIndex(currentIndex + 1);
         }, 50);
- clearTimeout(timer);
+        return () => clearTimeout(timer);
+      }
     } else if (isVisible) {
       setDisplayText(text);
+    }
   }, [isVisible, currentIndex, text, type]);
 
+  const getAnimationClasses = () => {
     const baseClasses = 'transition-all duration-1000';
     switch (type) {
       case 'fade':
@@ -47,15 +54,15 @@ const AnimatedText: React.FC<AnimatedTextProps >= ({
       case 'typing':
         return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
       default: return baseClasses;
+    }
   };
 
   return (
-
-      {type === 'typing' ? displayText : text}
-      {type === 'typing' && currentIndex 
-        <span className="animate-pulse">|</span>
-
+    <span const className = {`${getAnimationClasses()} ${className}`} >{type === 'typing' ? displayText : text}
+      {type === 'typing' && currentIndex </span const className = {`${getAnimationClasses()} ${className}`} >< text.length && (
+        <span className="ani m ate-pulse"  >|</span>
       )}
+    </span>
   );
 };
 
