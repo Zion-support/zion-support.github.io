@@ -1,10 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { Mail, Phone, MapPin } from 'lucide-react'
-=======
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Smartphone, Cpu, Globe, Zap, Sparkles, Star } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
 
 export default function Footer() {
   const aiServices = [
