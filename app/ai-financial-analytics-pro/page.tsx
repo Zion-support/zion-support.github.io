@@ -1,5 +1,6 @@
 'use client';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight, Calculator, Building2, Wallet} from 'lucide-react';
 <<<<<<< HEAD
 import { useState } from 'react';
@@ -8,6 +9,9 @@ import { useState } from 'react';
 import React from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { Link } from 'react-router-dom';
+=======
+import { Brain, TrendingUp, Zap, CheckCircle, ArrowRight, Star, BarChart3, DollarSign, Shield, Target, PieChart, Activity, Globe, Monitor, Sparkles, Calculator, FileText, Database, Lock, Building2, CreditCard, Wallet } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 export default function AiFinancialAnalyticsProPage() {
 

@@ -1,5 +1,9 @@
 import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
 import { Brain, BarChart3, Users, TrendingUp, Target, Zap, CheckCircle, ArrowRight, Star, Shield, Play, Heart, Calendar, Mail, Phone, MapPin } from 'lucide-react'
+=======
+import { Brain, BarChart3, Users, TrendingUp, Target, Zap, CheckCircle, ArrowRight, Star, Shield, Play, Heart, Calendar, Mail, Phone, MapPin } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 import { Link } from 'react-router-dom'
 <<<<<<< HEAD
 import React  from 'react';

@@ -6,10 +6,137 @@ import { ArrowRight } from 'lucide-react';
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const Page: React.FC = () => {
+=======
+import { ArrowRight, Users, Brain } from 'lucide-react';
+
+export default function AISocialMediaManager() {
+  const features = [
+    {
+      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+      title: 'AI Content Creation',
+      description: 'Generate engaging posts, captions, and hashtags using advanced AI algorithms'
+    },
+    {
+      icon: <Calendar className="w-6 h-6 text-purple-400" />,
+      title: 'Smart Scheduling',
+      description: 'Optimize posting times based on audience engagement patterns and analytics'
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6 text-yellow-400" />,
+      title: 'Performance Analytics',
+      description: 'Track engagement, reach, and ROI with detailed analytics and insights'
+    },
+    {
+      icon: <Users className="w-6 h-6 text-green-400" />,
+      title: 'Audience Insights',
+      description: 'Understand your audience demographics, interests, and behavior patterns'
+    }
+  ]
+
+  const platformFeatures = [
+    {
+      platform: 'Instagram',
+      features: ['Story Templates', 'Reels Optimization', 'Hashtag Research', 'IGTV Scheduling', 'Stories Analytics', 'Shopping Integration']
+    },
+    {
+      platform: 'Facebook',
+      features: ['Page Management', 'Event Promotion', 'Group Management', 'Live Streaming', 'Ad Integration', 'Community Building']
+    },
+    {
+      platform: 'Twitter',
+      features: ['Thread Creation', 'Trend Monitoring', 'Hashtag Tracking', 'Reply Management', 'Moment Creation', 'Engagement Optimization']
+    },
+    {
+      platform: 'LinkedIn',
+      features: ['Professional Content', 'Company Updates', 'Article Publishing', 'Event Promotion', 'Lead Generation', 'B2B Analytics']
+    },
+    {
+      platform: 'TikTok',
+      features: ['Video Optimization', 'Trend Analysis', 'Sound Selection', 'Effect Recommendations', 'Challenge Participation', 'Viral Content Strategy']
+    },
+    {
+      platform: 'YouTube',
+      features: ['Video SEO', 'Thumbnail Optimization', 'Title Generation', 'Description Writing', 'Tag Research', 'Analytics Tracking']
+    }
+  ]
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$49',
+      period: '/month',
+      description: 'Perfect for small businesses and influencers',
+      features: [
+        'Up to 3 social accounts',
+        'Basic AI content generation',
+        'Standard scheduling',
+        'Basic analytics',
+        'Email support',
+        'Mobile app access'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$99',
+      period: '/month',
+      description: 'Ideal for growing businesses and agencies',
+      features: [
+        'Up to 10 social accounts',
+        'Advanced AI features',
+        'Smart scheduling',
+        'Detailed analytics',
+        'Priority support',
+        'Team collaboration',
+        'Custom templates'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
+      description: 'For large organizations and agencies',
+      features: [
+        'Unlimited social accounts',
+        'Custom AI training',
+        'White-label solution',
+        'Advanced analytics',
+        'Dedicated support',
+        'API access',
+        'Custom integrations'
+      ],
+      popular: false
+    }
+  ]
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'Fashion Brand Co.',
+      content: 'AI Social Media Manager increased our engagement by 150% and saved us 20 hours per week on content creation.',
+      rating: 5
+    },
+    {
+      name: 'Mike Chen',
+      company: 'Tech Startup',
+      content: 'The AI content suggestions are spot-on. Our social media presence has never been stronger.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'Marketing Agency',
+      content: 'Managing multiple client accounts is now effortless. The analytics insights are incredibly valuable.',
+      rating: 5
+    }
+  ]
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
   return (
     <>
     <>
@@ -108,6 +235,7 @@ const Page: React.FC = () => {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
         </div>
       </div>
           </div>
@@ -131,3 +259,6 @@ export default Page;
 =======
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de

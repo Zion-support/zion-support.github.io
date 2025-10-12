@@ -7,7 +7,11 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function FiveGIoTSolutionsPage() {
+=======
+export default function FiveGIotSolutionsPage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900pt-20">

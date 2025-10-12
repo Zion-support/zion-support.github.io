@@ -6,7 +6,10 @@ import React from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { Helmet } from 'react-helmet-async';
 import { Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Globe, Target } from 'lucide-react';
+<<<<<<< HEAD
 import { Truck, ArrowRight} from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

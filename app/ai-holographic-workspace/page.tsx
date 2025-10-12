@@ -1,5 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React  from 'react';
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Box, Users, Zap, CheckCircle, ArrowRight, Star, Brain, Eye } from 'lucide-react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 const AiHolographicWorkspacePage: React.FC = () => {
   return (
     <>

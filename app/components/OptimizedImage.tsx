@@ -8,7 +8,11 @@ ursor/analyze-improve-and-deploy-application-edcb
 ursor/analyze-improve-and-deploy-application-edcb
 'use client'
 
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
+=======
+import { ArrowRight, Mail } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">

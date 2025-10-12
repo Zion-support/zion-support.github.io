@@ -1,5 +1,9 @@
 import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
 import { FileText, Clock, Shield, Users, CheckCircle, ArrowRight, BarChart3, Calendar } from 'lucide-react'
+=======
+import { FileText, Clock, Shield, Users, CheckCircle, ArrowRight, BarChart3, Calendar } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 import { Link } from 'react-router-dom'
 <<<<<<< HEAD
 import React  from 'react';

@@ -1,7 +1,11 @@
 import { ArrowRight } from 'lucide-react';
 'use client'
 
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
+=======
+import { ArrowRight, Brain } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',

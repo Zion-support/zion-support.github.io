@@ -2,7 +2,11 @@
 import React from 'react';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Globe, Database, Sparkles, Star } from 'lucide-react';
+=======
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shield, Database, Workflow, Link as LinkIcon, Linkedin, Twitter, Github } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

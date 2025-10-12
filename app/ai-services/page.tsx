@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import {;
   Brain, Zap, Shield, BarChart, MessageCircle, Eye, Mic, 
   FileText, Users, Heart, DollarSign, Target, Settings, 
@@ -9,6 +10,9 @@ import {;
   Cpu
 } from 'lucide-react';
 import { Brain, Zap, Shield, BarChart, MessageCircle, Eye, Mic, FileText, Users, Target, Settings, CheckCircle, ArrowRight, Clock, TrendingUp, Workflow } from 'lucide-react';
+=======
+import { Brain, Shield, BarChart, MessageCircle, Eye, Mic, FileText, Users, CheckCircle, ArrowRight, Clock, TrendingUp, Workflow } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 const AiServicesPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');

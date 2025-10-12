@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React  from 'react';
 =======
 import React from 'react';
@@ -9,6 +10,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Palette, Brain, Users, Type, Copy} from 'lucide-react';
+=======
+import { ArrowRight, Brain, FileText, CheckCircle, Star, Clock, Users, BarChart3, Sparkles, Target, Globe, Shield, MessageCircle, Mail, Phone, MapPin, Play, Copy, Share, Palette, Type } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 export default function AIContentGeneratorPage() {
 

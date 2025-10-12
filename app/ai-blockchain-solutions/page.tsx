@@ -1,5 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React  from 'react';
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Link as LinkIcon, Shield, Zap, CheckCircle, ArrowRight, Coins, Lock, Activity } from 'lucide-react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 const AiBlockchainSolutionsPage: React.FC = () => {
   return (
     <>

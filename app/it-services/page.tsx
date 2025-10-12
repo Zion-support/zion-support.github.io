@@ -1,10 +1,14 @@
 'use client';
 import { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight, ShoppingCart } from 'lucide-react';
 import { ArrowRight, ShoppingCart} from 'lucide-react';
 <<<<<<< HEAD
 =======
+=======
+import { ArrowRight, CheckCircle, Users, Shield, Cloud, Code, Settings, Link as LinkIcon, Database, Smartphone } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const ItServicesPage: React.FC = () => {

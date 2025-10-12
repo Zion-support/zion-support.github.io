@@ -7,12 +7,16 @@ import { ArrowRight, AlertCircle, Building2, Bug} from 'lucide-react';
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight, AlertCircle, Building2, Bug } from 'lucide-react';
 import { ArrowRight, AlertCircle, Building2, Bug} from 'lucide-react';
 
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 export default function AiCybersecurityMonitorProPage() {
+=======
+import { Shield, Eye, Lock, Zap, CheckCircle, ArrowRight, Brain, Target, Network, Clock } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
   const features = [
     {

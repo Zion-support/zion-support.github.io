@@ -6,6 +6,10 @@ import React from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
+=======
+import { CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 const PageFixedPage: React.FC = () => {
     const features = [
     {

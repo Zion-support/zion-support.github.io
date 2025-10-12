@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React  from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -18,6 +19,12 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Star, Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings} from 'lucide-react';
 'use client';
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Mail, Brain, Zap, CheckCircle, Users, Award, Star, Globe, Settings } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const AIEmailAssistantPage: React.FC = () => {
@@ -65,6 +72,10 @@ const AIEmailAssistantPage: React.FC = () => {
       icon: Shield
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
   return (
     <>
     <>

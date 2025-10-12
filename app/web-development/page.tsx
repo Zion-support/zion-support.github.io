@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Code, CheckCircle, ArrowRight, Star, Zap, Shield, Smartphone, Database, Clock, Link as LinkIcon } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 const WebDevelopmentPage: React.FC = () => {
   const services = [

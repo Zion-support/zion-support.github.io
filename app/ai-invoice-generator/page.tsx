@@ -6,10 +6,129 @@ import { ArrowRight } from 'lucide-react';
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const Page: React.FC = () => {
+=======
+import { ArrowRight, Brain } from 'lucide-react';
+
+export default function AIInvoiceGenerator() {
+  const features = [
+    {
+      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+      title: 'AI-Powered Generation',
+      description: 'Automatically generate professional invoices with smart data extraction and formatting'
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-purple-400" />,
+      title: 'Automated Billing',
+      description: 'Set up recurring invoices and automated payment reminders to streamline your billing process'
+    },
+    {
+      icon: <CreditCard className="w-6 h-6 text-yellow-400" />,
+      title: 'Payment Integration',
+      description: 'Accept payments directly through invoices with integrated payment gateways'
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
+      title: 'Financial Analytics',
+      description: 'Track revenue, outstanding payments, and financial performance with detailed reports'
+    }
+  ]
+
+  const invoiceFeatures = [
+    {
+      category: 'Invoice Creation',
+      items: ['AI Template Generation', 'Custom Branding', 'Multi-currency Support', 'Tax Calculations', 'Line Item Management', 'Discount Application']
+    },
+    {
+      category: 'Automation',
+      items: ['Recurring Invoices', 'Auto-reminders', 'Payment Tracking', 'Status Updates', 'Expense Integration', 'Time Tracking']
+    },
+    {
+      category: 'Payment Processing',
+      items: ['Online Payments', 'Credit Card Processing', 'Bank Transfers', 'Payment Links', 'Mobile Payments', 'International Payments']
+    },
+    {
+      category: 'Reporting',
+      items: ['Revenue Reports', 'Outstanding Invoices', 'Payment History', 'Tax Reports', 'Client Analytics', 'Export Options']
+    }
+  ]
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$19',
+      period: '/month',
+      description: 'Perfect for freelancers and small businesses',
+      features: [
+        'Up to 50 invoices/month',
+        'Basic AI features',
+        'Standard templates',
+        'Email support',
+        'Basic reporting',
+        'Mobile app access'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$49',
+      period: '/month',
+      description: 'Ideal for growing businesses',
+      features: [
+        'Up to 500 invoices/month',
+        'Advanced AI features',
+        'Custom branding',
+        'Priority support',
+        'Advanced reporting',
+        'Payment integration',
+        'API access'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$99',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited invoices',
+        'Custom AI training',
+        'White-label solution',
+        'Dedicated support',
+        'Custom integrations',
+        'Advanced analytics',
+        'SLA guarantee'
+      ],
+      popular: false
+    }
+  ]
+
+  const testimonials = [
+    {
+      name: 'Mark Thompson',
+      company: 'Freelance Designer',
+      content: 'AI Invoice Generator saves me 5 hours per week. The automated reminders ensure I get paid on time.',
+      rating: 5
+    },
+    {
+      name: 'Sarah Wilson',
+      company: 'Consulting Firm',
+      content: 'Professional invoices with zero effort. Our clients love the automated payment options.',
+      rating: 5
+    },
+    {
+      name: 'David Chen',
+      company: 'Service Provider',
+      content: 'The financial analytics help us track our business performance. Highly recommended!',
+      rating: 5
+    }
+  ]
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
   return (
     <>
     <>
@@ -108,6 +227,7 @@ const Page: React.FC = () => {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
         </div>
       </div>
           </div>
@@ -131,3 +251,6 @@ export default Page;
 =======
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de

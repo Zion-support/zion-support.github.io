@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -18,12 +15,16 @@ import { Zap, BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, U
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 const MicroSaasServicesPage: React.FC = () => {
   const services = [
     {
-<<<<<<< HEAD
-=======
       icon: BarChart,
       title: 'Zion Analytics Pro',
       description: 'Advanced business intelligence platform with real-time analytics and custom dashboards.',
@@ -101,7 +102,6 @@ const MicroSaasServicesPage: React.FC = () => {
       description: 'Grow with confidence knowing our solutions scale with your business needs.'
     }
   ];
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 
   return (
     <>
@@ -109,8 +109,11 @@ const MicroSaasServicesPage: React.FC = () => {
       <Helmet>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
         <title>Micro SaaS Services - Zion Tech Group</title>
         <meta name="description" content="Powerful micro SaaS solutions including analytics, chatbots, security, cloud backup, workflow automation, and CRM intelligence for modern businesses." />
         <meta name="keywords" content="micro SaaS, business software, analytics, chatbots, security, cloud backup, workflow automation, CRM" />
@@ -363,6 +366,7 @@ const MicroSaasServicesPage: React.FC = () => {
 };
 
 export default MicroSaasServicesPage;
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 =======
         <title>5G Data Analytics - Zion Tech Group</title>
@@ -370,3 +374,5 @@ export default MicroSaasServicesPage;
       </Helmet>
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de

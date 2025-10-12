@@ -1,5 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
+=======
+import { BarChart3, ArrowRight, CheckCircle, Brain, Globe, Star, Target } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 import Layout from '../layout'
 <<<<<<< HEAD
 import React  from 'react';

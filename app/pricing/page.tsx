@@ -1,9 +1,13 @@
 'use client';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 <<<<<<< HEAD
 =======
+=======
+import { CheckCircle, Zap, Cloud, Brain, DollarSign, Settings } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const PricingPage: React.FC = () => {

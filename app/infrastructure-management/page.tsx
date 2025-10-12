@@ -2,7 +2,10 @@
 import React  from 'react';
 =======
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 import { ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';

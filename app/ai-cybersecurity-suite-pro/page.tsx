@@ -1,12 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React  from 'react';
 =======
 import React from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { Link } from 'react-router-dom';
 import { ArrowRight, Bot, Key} from 'lucide-react';
+=======
+import { ArrowRight, Shield, CheckCircle, Clock, Target, Smartphone, Lock, Bot, AlertTriangle, Star, Smartphone as Mobile, Key, Lock as LockIcon, AlertTriangle as Alert, Activity, Network } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 export default function AICybersecuritySuiteProPage() {
   const features = [

@@ -6,6 +6,10 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 'use client'
 
+<<<<<<< HEAD
+=======
+import { ArrowRight } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
   ];
     <>
               </span>

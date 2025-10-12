@@ -5,7 +5,11 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Users, Zap, Shield, Brain, BarChart, MessageCircle, Target, ShoppingCart, Globe, Clock } from 'lucide-react';
+=======
+import { MessageCircle, Brain, CheckCircle, ArrowRight, Star, Zap, BarChart, Clock, Link as LinkIcon } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 const AiChatbotBuilderPage: React.FC = () => {
   const features = [

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Mic, Brain, CheckCircle, ArrowRight, Zap, Settings, Globe, Clock, Link as LinkIcon, Workflow } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 export default function AIVoiceAssistant() {
   const features = [

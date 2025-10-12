@@ -1,12 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React  from 'react';
 =======
 import React from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { Link } from 'react-router-dom';
 import { ArrowRight, Bot} from 'lucide-react';
+=======
+import { ArrowRight, Package, BarChart3, Zap, CheckCircle, Target, Smartphone, Shield, Bot, Star, Smartphone as Mobile, DollarSign, Activity } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 export default function AIInventoryManagerPage() {
   const features = [

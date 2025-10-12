@@ -4,9 +4,14 @@ import { HardDrive } from 'lucide-react';
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { useState, useEffect } from 'react';
 import { HardDrive } from 'lucide-react';
+=======
+import React, { useState, useEffect } from 'react';
+import { Activity, Wifi, HardDrive } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 interface PerformanceMetrics {
   lcp: number;,

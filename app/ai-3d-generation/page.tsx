@@ -1,6 +1,77 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React  from 'react';
 const Ai3dGenerationPage: React.FC = () => {
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Box, Palette, Zap, CheckCircle, ArrowRight, Star, Brain, Layers } from 'lucide-react';
+
+const Ai3DGenerationPage: React.FC = () => {
+  const features = [
+    {
+      icon: <Box className="w-8 h-8 text-cyan-400" />,
+      title: 'AI 3D Model Generation',
+      description: 'Create stunning 3D models from text descriptions or 2D images using advanced AI',
+      benefits: ['10x faster than traditional methods', 'Unlimited creativity', 'Professional quality output']
+    },
+    {
+      icon: <Palette className="w-8 h-8 text-purple-400" />,
+      title: 'Intelligent Texturing',
+      description: 'AI-powered material and texture generation for realistic 3D models',
+      benefits: ['Photorealistic textures', 'Automatic UV mapping', 'Material optimization']
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-green-400" />,
+      title: 'Real-time Rendering',
+      description: 'High-quality 3D rendering with real-time preview and optimization',
+      benefits: ['Instant preview', 'GPU acceleration', 'Multiple output formats']
+    },
+    {
+      icon: <Layers className="w-8 h-8 text-red-400" />,
+      title: 'Animation Generation',
+      description: 'Create smooth 3D animations and motion graphics with AI assistance',
+      benefits: ['Automated keyframing', 'Natural motion', 'Export to all formats']
+    }
+  ];
+
+  const useCases = [
+    {
+      title: 'Product Visualization',
+      description: 'Create photorealistic 3D models for e-commerce and marketing',
+      price: '$199/month',
+      features: ['Product modeling', '360° views', 'AR integration', 'Marketing assets']
+    },
+    {
+      title: 'Architectural Visualization',
+      description: 'Generate 3D architectural models and walkthroughs',
+      price: '$299/month',
+      features: ['Building models', 'Interior design', 'Landscape design', 'Virtual tours']
+    },
+    {
+      title: 'Game Development',
+      description: 'Create 3D assets and characters for games and VR experiences',
+      price: '$399/month',
+      features: ['Character modeling', 'Environment design', 'Asset optimization', 'Game integration']
+    },
+    {
+      title: 'Medical Visualization',
+      description: 'Generate 3D medical models for education and research',
+      price: '$499/month',
+      features: ['Anatomical models', 'Surgical planning', 'Educational content', 'Research tools']
+    }
+  ];
+
+  const stats = [
+    { number: '50,000+', label: '3D Models Generated', icon: <Box className="w-6 h-6 text-cyan-400" /> },
+    { number: '95%', label: 'Client Satisfaction', icon: <Star className="w-6 h-6 text-green-400" /> },
+    { number: '10x', label: 'Faster Creation', icon: <Zap className="w-6 h-6 text-purple-400" /> },
+    { number: '24/7', label: 'AI Processing', icon: <Brain className="w-6 h-6 text-red-400" /> }
+  ];
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
   return (
     <>
       <Helmet>

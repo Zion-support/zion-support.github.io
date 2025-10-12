@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight, HardDrive, Laptop, Tablet, Router } from 'lucide-react';
+=======
+import { ArrowRight, Zap, Cloud, CheckCircle, Star, Clock, BarChart3, Sparkles, Target, Shield, MessageCircle, Mail, Phone, MapPin, Play, Settings, Database, Search, Server, Network, Database as DatabaseIcon } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 export default function CloudMigrationPage() {
 
