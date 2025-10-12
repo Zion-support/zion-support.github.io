@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, Eye, MessageSquare, BarChart3 } from 'lucide-react';
-=======
-import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -44,7 +40,6 @@ const AIServicesPage: React.FC = () => {
       pricing: 'Starting at $39/month',
       link: '/ai-analytics',
       popular: false
-<<<<<<< HEAD
     },
     {
       icon: <Brain className="w-8 h-8 text-orange-500" />,
@@ -126,33 +121,17 @@ const AIServicesPage: React.FC = () => {
       content: 'The predictive analytics dashboard gives us insights we never had before. Game-changing technology.',
       rating: 5
     }
-=======
-    }
-  ];
-
-  const stats = [
-    { number: '1000+', label: 'AI Models' },
-    { number: '99.9%', label: 'Accuracy' },
-    { number: '24/7', label: 'Support' },
-    { number: '50+', label: 'Languages' }
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Discover our comprehensive AI services including content generation, chatbots, analytics, and more. Transform your business with cutting-edge artificial intelligence solutions." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, chatbot, analytics, automation" />
-=======
-        <meta name="description" content="Advanced AI services including content generation, automation, cybersecurity, and analytics solutions." />
-        <meta name="keywords" content="AI services, artificial intelligence, content generation, automation, cybersecurity, analytics" />
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
       </Helmet>
 
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -178,42 +157,6 @@ const AIServicesPage: React.FC = () => {
             >
               Explore Services
             </Link>
-=======
-      <section className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Advanced AI Services
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Harness the power of artificial intelligence to transform your business with our cutting-edge AI solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
-                to="/about" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
-            ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
           </div>
         </div>
       </section>
