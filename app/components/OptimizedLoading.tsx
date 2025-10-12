@@ -1,41 +1,43 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
 interface OptimizedLoadingProps {
   children?: React.ReactNode;
   className?: string;
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
 }
 
 const OptimizedLoading: React.FC<OptimizedLoadingProps> = ({
   children,
-  className = ''
+  className = '',
+  size = 'md',
+  text = 'Loading...'
 }) => {
+  const sizeClasses = {
+    sm: 'w-6 h-6',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
+  const textSizeClasses = {
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg'
+  };
+
   return (
-    <div className={className}>
+    <div className={`optimized-loading ${className}`}>
+      <div className="flex flex-col items-center justify-center min-h-[200px]">
+        <div className="relative mb-4">
+          <div className={`${sizeClasses[size]} border-4 border-cyan-500/30 border-t-cyan-500 rounded-full animate-spin`}></div>
+          <div className={`absolute inset-0 ${sizeClasses[size]} border-4 border-purple-500/30 border-t-purple-500 rounded-full animate-spin`} style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
+        </div>
+        <p className={`text-white font-semibold ${textSizeClasses[size]} mb-2`}>{text}</p>
+        <p className="text-gray-300 text-sm">Please wait while we optimize your experience</p>
+      </div>
       {children}
     </div>
   );
 };
 
 export default OptimizedLoading;
-=======
-export default function OptimizedLoading() {
-  return (
-    <div className="optimized-loading-container">
-      <div className="loading-content">
-        <div className="spinner"></div>
-        <p>Loading...</p>
-      </div>
-      <Link
-        to="/contact"
-        className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-      >
-        Contact Us
-        <ArrowRight className="w-5 h-5 ml-2" />
-      </Link>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-2d8f

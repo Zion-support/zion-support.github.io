@@ -1,8 +1,7 @@
-import React from 'react';
-<<<<<<< HEAD
+import React, { useEffect } from 'react';
 
 interface MobileOptimizerProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   className?: string;
 }
 
@@ -10,39 +9,38 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   children,
   className = ''
 }) => {
+  useEffect(() => {
+    // Add mobile-specific optimizations
+    const viewport = document.querySelector('meta[name="viewport"]');
+    if (!viewport) {
+      const meta = document.createElement('meta');
+      meta.name = 'viewport';
+      meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+      document.head.appendChild(meta);
+    }
+
+    // Prevent zoom on double tap
+    let lastTouchEnd = 0;
+    const preventZoom = (e: TouchEvent) => {
+      const now = new Date().getTime();
+      if (now - lastTouchEnd <= 300) {
+        e.preventDefault();
+      }
+      lastTouchEnd = now;
+    };
+
+    document.addEventListener('touchend', preventZoom, { passive: false });
+
+    return () => {
+      document.removeEventListener('touchend', preventZoom);
+    };
+  }, []);
+
   return (
-    <div className={className}>
+    <div className={`mobile-optimizer ${className}`}>
       {children}
     </div>
   );
 };
 
 export default MobileOptimizer;
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function MobileOptimizer() {
-  return (
-    <>
-      <Helmet>
-        <title>Mobile Optimizer - Zion Tech Group</title>
-      </Helmet>
-      <div className="mobile-optimizer-container">
-        <div className="mobile-optimization-content">
-          <h2>Mobile Optimization</h2>
-          <p>Optimizing your mobile experience</p>
-        </div>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-2d8f

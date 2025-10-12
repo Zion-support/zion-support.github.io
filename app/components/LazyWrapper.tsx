@@ -1,46 +1,48 @@
-import React from 'react';
-<<<<<<< HEAD
+import React, { useState, useRef, useEffect } from 'react';
 
 interface LazyWrapperProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   className?: string;
+  threshold?: number;
+  rootMargin?: string;
 }
 
 const LazyWrapper: React.FC<LazyWrapperProps> = ({
   children,
-  className = ''
+  className = '',
+  threshold = 0.1,
+  rootMargin = '0px'
 }) => {
+  const [isInView, setIsInView] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold, rootMargin }
+    );
+
+    if (wrapperRef.current) {
+      observer.observe(wrapperRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [threshold, rootMargin]);
+
   return (
-    <div className={className}>
-      {children}
+    <div ref={wrapperRef} className={`lazy-wrapper ${className}`}>
+      {isInView ? children : (
+        <div className="flex items-center justify-center min-h-[200px]">
+          <div className="w-8 h-8 border-4 border-cyan-500/30 border-t-cyan-500 rounded-full animate-spin"></div>
+        </div>
+      )}
     </div>
   );
 };
 
 export default LazyWrapper;
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-interface LazyWrapperProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export default function LazyWrapper({ children, className = '' }: LazyWrapperProps) {
-  return (
-    <>
-      <div className={`lazy-wrapper ${className}`}>
-        {children}
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-2d8f
