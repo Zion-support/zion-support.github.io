@@ -1,50 +1,37 @@
 import fs from 'fs';
-// import path from 'path';
-// // const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
+import path from 'path';
 
-// Read the current App.tsx;
-const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8');
+// This script is used to add missing routes to the application
+// It reads from a navigation analysis file and generates the necessary route imports
 
-// Read the missing pages from the analysis;
 const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'));
 const missingPages = analysisData.missingPagesList;
 
-// Generate import statements for missing pages;
- l.toUpperCase()) + 'Page';
- import('.${route}/page'));`;
+// Generate import statements for missing pages
+const generateImportStatement = (route) => {
+  const pageName = route.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join('') + 'Page';
+  
+  return `const ${pageName} = React.lazy(() => import('./app/${route}/page'));`;
 };
 
-// Generate route statements;
- l.toUpperCase()) + 'Page';
-  return `            <Route path="${route}" element={<${componentName} />} />`;
+// Generate route statements
+const generateRouteStatement = (route) => {
+  const pageName = route.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join('') + 'Page';
+  
+  return `<Route path="/${route}" element={<${pageName} />} />`;
 };
 
-// Generate all import statements;
-const importStatements = missingPages.map(generateImportStatement).join('\n');
+// Generate all imports
+const imports = missingPages.map(generateImportStatement).join('\n');
 
-// Generate all route statements;
-const routeStatements = missingPages.map(generateRouteStatement).join('\n');
+// Generate all routes
+const routes = missingPages.map(generateRouteStatement).join('\n');
 
-// Find the position to insert the imports (after the, existing, imports)
-const importInsertionPoint = appContent.lastIndexOf('// Blog Pages');
-const beforeImports = appContent.substring(0, importInsertionPoint);
-const afterImports = appContent.substring(importInsertionPoint);
-
-// Insert the new imports;
-const newImports = beforeImports + '\n// Missing Pages\n' + importStatements + '\n\n' + afterImports;
-
-// Find the position to insert the routes (before the, 404, route)
-const routeInsertionPoint = newImports.lastIndexOf('            {/* 404 Page */}');
-const beforeRoutes = newImports.substring(0, routeInsertionPoint);
-const afterRoutes = newImports.substring(routeInsertionPoint);
-
-// Insert the new routes;
-const newAppContent = beforeRoutes + '\n            {/* Missing Pages */}\n' + routeStatements + '\n            \n' + afterRoutes;
-
-// Write the updated App.tsx;
-fs.writeFileSync('/workspace/src/App.tsx', newAppContent);
-
-// Log success for debugging in development;
-console.log(`✅ Added ${missingPages.length} missing routes to App.tsx`);
-console.log('All navigation links should now work properly!');
+console.log('Generated imports:');
+console.log(imports);
+console.log('\nGenerated routes:');
+console.log(routes);

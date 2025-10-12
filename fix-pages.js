@@ -1,46 +1,87 @@
 import fs from 'fs';
 import path from 'path';
-import React from 'react';
-export default ${componentName};`;
+import { fileURLToPath } from 'url';
 
-// List of pages that need to be fixed;
-const pagesToFix = [
-  'cookies', 'privacy', 'terms', 'consultation', 'pricing', 'blog', 
-  'case-studies', 'careers', 'ai-services', 'it-services', 'micro-saas'
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// List of files that need fixing based on the error output
+const filesToFix = [
+  'app/ai-services/content-generation/page.tsx',
+  'app/ai-services/customer-experience/page.tsx',
+  'app/ai-services/document-processing/page.tsx',
+  'app/ai-services/energy-management/page.tsx',
+  'app/ai-services/fraud-detection/page.tsx',
+  'app/ai-services/hr-analytics/page.tsx',
+  'app/ai-services/marketing-automation/page.tsx',
+  'app/ai-services/predictive-maintenance/page.tsx',
+  'app/ai-services/process-automation/page.tsx',
+  'app/ai-services/quality-assurance/page.tsx',
+  'app/ai-services/supply-chain/page.tsx',
+  'app/analytics-tools/page.tsx',
+  'app/ar-vr-platform/page.tsx',
+  'app/autonomous-systems/page.tsx',
+  'app/backup-recovery/page.tsx',
+  'app/blockchain-integration-services/page.tsx',
+  'app/blockchain-web3/page.tsx',
+  'app/business-apps/page.tsx',
+  'app/business-intelligence/page.tsx',
+  'app/cloud-infrastructure-manager/page.tsx',
+  'app/cloud-migration-services/page.tsx',
+  'app/cloud-security/page.tsx',
+  'app/cloud-services/page.tsx',
+  'app/community/page.tsx',
+  'app/compliance/page.tsx'
 ];
 
- `'use client';
+// Template for a basic page component
+const pageTemplate = (pageName, title) => `import React from 'react';
+
+export default function ${pageName}() {
   return (
-    
-        <title>${title} - Zion Tech Group</title>
-                ${title}
-              Professional ${title.toLowerCase()} services by Zion Tech Group.
-
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-              We're working on bringing you comprehensive ${title.toLowerCase()} solutions. 
-              Contact us to learn more about our services.
-              Contact Us;
+    <>
+      <title>${title} - Zion Tech Group</title>
+      <h1 className="text-4xl font-bold text-white mb-6">${title}</h1>
+      <p className="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>
+      <a href="/contact" className="text-blue-400 hover:text-blue-300">
+        Contact Us
+      </a>
+    </>
   );
-};
+}`;
 
+// Function to fix a single file
+function fixFile(filePath) {
+  try {
+    const fullPath = path.join(__dirname, filePath);
+    
+    if (!fs.existsSync(fullPath)) {
+      console.log(`File not found: ${filePath}`);
+      return;
+    }
 
-// Fix pages;
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
+    const content = fs.readFileSync(fullPath, 'utf8');
+    
+    // Extract page name from file path
+    const pathParts = filePath.split('/');
+    const fileName = pathParts[pathParts.length - 2]; // Get the directory name
+    const pageName = fileName.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('') + 'Page';
+    
+    const title = fileName.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join('') + 'Page';
-  
-  const pageDir = path.join('/workspace/app', pageName);
-  const pageFile = path.join(pageDir, 'page.tsx');
-  
-  // Create directory if it doesn't exist;
-  if (!fs.existsSync(pageDir)) {
-    fs.mkdirSync(pageDir, { recursive: true });
-  
-  // Overwrite page file with correct template;
-  fs.writeFileSync(pageFile, pageTemplate(pageName, title, componentName));
-  console.log(`Fixed: ${pageFile}`);
-});
+    // Write the fixed content
+    fs.writeFileSync(fullPath, pageTemplate(pageName, title));
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
 
-console.log('Page fixes completed!');
+// Fix all files
+console.log('Fixing page files...');
+filesToFix.forEach(fixFile);
+console.log('Done fixing page files.');

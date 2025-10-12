@@ -1,33 +1,13 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
+import React from 'react';
 
-interface Props {
-  children: ReactNode;
+interface ErrorBoundaryProps {
+  // Add props as needed
 }
 
-interface State {
-  hasError: boolean;
-  error?: Error;
+export default function ErrorBoundary({ ...props }: ErrorBoundaryProps) {
+  return (
+    <div className="errorboundary">
+      {/* Component content */}
+    </div>
+  );
 }
-
-class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false
-  };
-
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error: ', error, errorInfo);
-  }
-
-  public render() {
-    if (this.state.hasError) {
-      return (
-
-    return this.props.children;
-  }
-}
-
-

@@ -1,4 +1,3 @@
-import React from 'react';
 
 
             <h1 className="text-4xl font-bold text-white mb-6">Partners</h1>

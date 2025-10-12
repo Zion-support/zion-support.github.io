@@ -1,14 +1,13 @@
-import React from 'react';
 
-export default function CloudinfrastructuremanagerPage() {
+export default function CloudInfrastructureManagerPage() {
   return (
-
-        <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-        <title>Cloud Infrastructure Manager - Zion Tech Group</title>
-        <h1 className="text-4 xl font-boldtext-whitemb-6">Cloud Infrastructure Manager</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional cloud infrastructure manager services coming soon.</p>
-          Contact Us
-    
-
-
+    <>
+      <title>Cloud Infrastructure Manager - Zion Tech Group</title>
+      <h1 className="text-4xl font-bold text-white mb-6">Cloud Infrastructure Manager</h1>
+      <p className="text-lg text-gray-300 mb-8">Professional cloud infrastructure manager services coming soon.</p>
+      <a href="/contact" className="text-blue-400 hover:text-blue-300">
+        Contact Us
+      </a>
+    </>
+  );
+}

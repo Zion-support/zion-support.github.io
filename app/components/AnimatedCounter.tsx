@@ -1,34 +1,13 @@
+import React from 'react';
 
-  end, 
-  const duration = 2000, 
-  className = '', 
-  prefix = '', 
-  suffix = '' 
-}: AnimatedCounterProps) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    let startTime: number;
-    let animationFrame: number;
+interface AnimatedCounterProps {
+  // Add props as needed
+}
 
-
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      setCount(Math.floor(easeOutQuart * end));
-
-
-        const animationFrame = requestAnimationFrame(animate);
-      }
-    };
-    const animationFrame = requestAnimationFrame(animate);
-    return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
-    };
-  }, [end, duration]);
+export default function AnimatedCounter({ ...props }: AnimatedCounterProps) {
   return (
-
+    <div className="animatedcounter">
+      {/* Component content */}
+    </div>
   );
 }
-    </>

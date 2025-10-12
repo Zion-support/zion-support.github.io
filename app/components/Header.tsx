@@ -1,4 +1,13 @@
 import React from 'react';
-import Navigation from './Navigation';
-  return (
 
+interface HeaderProps {
+  // Add props as needed
+}
+
+export default function Header({ ...props }: HeaderProps) {
+  return (
+    <div className="header">
+      {/* Component content */}
+    </div>
+  );
+}

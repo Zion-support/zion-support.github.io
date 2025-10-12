@@ -1,9 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
+interface ContentPromotionBannerProps {
+  // Add props as needed
+}
 
-export default function ContentPromotionBanner() {
+export default function ContentPromotionBanner({ ...props }: ContentPromotionBannerProps) {
   return (
-
+    <div className="contentpromotionbanner">
+      {/* Component content */}
+    </div>
+  );
+}
