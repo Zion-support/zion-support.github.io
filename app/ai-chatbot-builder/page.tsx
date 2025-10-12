@@ -296,5 +296,7 @@ import {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
+
+export default AiChatbotBuilderPage;

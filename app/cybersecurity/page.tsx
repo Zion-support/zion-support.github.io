@@ -21,5 +21,6 @@ import { ArrowRight } from 'lucide-react'
         </Link>
       </div>
     </div>
-  );
-}
+  );};
+
+export default CybersecurityPage;
