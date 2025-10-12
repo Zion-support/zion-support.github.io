@@ -1,10 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { Mail, Phone, MapPin } from 'lucide-react'
-=======
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Smartphone, Cpu, Globe, Zap, Sparkles, Star } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
 
 export default function Footer() {
   const aiServices = [
@@ -12,28 +8,47 @@ export default function Footer() {
     { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
     { name: 'AI Email Assistant', path: '/ai-email-assistant' },
-<<<<<<< HEAD
-    { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Automation Suite', path: '/ai-automation' }
+    { name: 'AI Meeting Assistant', path: '/ai-meeting-assistant' },
+    { name: 'AI Project Manager', path: '/ai-project-manager' }
   ]
 
   const itServices = [
-    { name: 'Cloud Migration', path: '/cloud-migration' },
-    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions' },
-    { name: 'DevOps & CI/CD', path: '/devops-cicd' },
-    { name: 'Data Analytics', path: '/data-analytics' },
-    { name: 'Mobile Development', path: '/mobile-development' },
-    { name: 'Web Development', path: '/web-development' }
+    { name: 'Cloud Migration', path: '/cloud-services' },
+    { name: 'Cybersecurity', path: '/ai-cybersecurity' },
+    { name: 'Mobile Development', path: '/it-services' },
+    { name: 'Data Analytics', path: '/ai-data-analytics' },
+    { name: '5G Implementation', path: '/5g-implementation' },
+    { name: 'Digital Transformation', path: '/digital-transformation' }
   ]
 
-  const quickLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'AI Services', path: '/ai-services' },
-    { name: 'IT Services', path: '/it-services' },
-    { name: 'Micro SAAS', path: '/micro-saas-services' },
-    { name: '5G Solutions', path: '/5g-implementation' },
-    { name: 'Contact', path: '/contact' }
+  const microSaasServices = [
+    { name: 'AI Task Manager', path: '/micro-saas-services' },
+    { name: 'AI Expense Tracker', path: '/micro-saas-services' },
+    { name: 'AI Password Manager', path: '/micro-saas-services' },
+    { name: 'AI Invoice Generator', path: '/micro-saas-services' },
+    { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot' },
+    { name: 'AI Website Builder', path: '/micro-saas-services' }
+  ]
+
+  const companyLinks = [
+    { name: 'About Us', path: '/about' },
+    { name: 'Our Team', path: '/about' },
+    { name: 'Careers', path: '/contact' },
+    { name: 'Blog', path: '/contact' }
+  ]
+
+  const supportLinks = [
+    { name: 'Help Center', path: '/contact' },
+    { name: 'Documentation', path: '/contact' },
+    { name: 'API Reference', path: '/contact' },
+    { name: 'Status', path: '/contact' }
+  ]
+
+  const legalLinks = [
+    { name: 'Privacy Policy', path: '/contact' },
+    { name: 'Terms of Service', path: '/contact' },
+    { name: 'Cookie Policy', path: '/contact' },
+    { name: 'GDPR Compliance', path: '/contact' }
   ]
 
   return (

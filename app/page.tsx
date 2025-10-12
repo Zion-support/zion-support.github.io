@@ -1,60 +1,11 @@
 import React from 'react'
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async'
-=======
 import SEOHead from './components/SEOHead'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, CheckCircle, Star, Sparkles, Rocket, Cpu, Wifi, Smartphone } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Smartphone, Cpu, Database } from 'lucide-react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
+import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, CheckCircle, Star, Sparkles, Rocket, Cpu, Wifi, Smartphone } from 'lucide-react'
 
 export default function HomePage() {
   const features = [
     {
-<<<<<<< HEAD
-      icon: <Brain className="w-12 h-12 text-blue-500" />,
-      title: 'AI Services',
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      link: '/ai-services'
-    },
-    {
-      icon: <Cpu className="w-12 h-12 text-green-500" />,
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including cloud migration, cybersecurity, and infrastructure management.',
-      benefits: ['Cloud Migration', 'Cybersecurity', 'DevOps', 'Infrastructure Management'],
-      link: '/it-services'
-    },
-    {
-      icon: <Smartphone className="w-12 h-12 text-purple-500" />,
-      title: 'Micro SaaS',
-      description: 'Specialized micro software solutions designed for specific business needs and workflows.',
-      benefits: ['Custom Solutions', 'Rapid Deployment', 'Scalable Architecture', 'Cost Effective'],
-      link: '/micro-saas-services'
-    },
-    {
-      icon: <Zap className="w-12 h-12 text-yellow-500" />,
-      title: '5G Implementation',
-      description: 'Next-generation 5G network implementation and optimization for enhanced connectivity.',
-      benefits: ['Network Design', 'Infrastructure Setup', 'Performance Optimization', 'Security Implementation'],
-      link: '/5g-implementation'
-    },
-    {
-      icon: <Cloud className="w-12 h-12 text-orange-500" />,
-      title: 'Cloud Services',
-      description: 'Professional cloud services including migration, infrastructure setup, security, and optimization.',
-      benefits: ['Cloud Migration', 'Infrastructure Setup', 'Security Solutions', 'Cost Optimization'],
-      link: '/cloud-services'
-    },
-    {
-      icon: <Database className="w-12 h-12 text-red-500" />,
-      title: 'Digital Transformation',
-      description: 'Transform your business for the digital age with comprehensive digital transformation services.',
-      benefits: ['Process Automation', 'Digital Workforce', 'Customer Experience', 'Data Strategy'],
-      link: '/digital-transformation'
-=======
       icon: <Zap className="w-8 h-8 text-cyan-400" />,
       title: 'AI-Powered Solutions',
       description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.',
@@ -125,58 +76,18 @@ export default function HomePage() {
       content: 'Professional, reliable, and innovative. Zion Tech Group is our go-to technology partner.',
       rating: 5,
       avatar: 'ER'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
     }
   ]
 
   const stats = [
-<<<<<<< HEAD
-    { number: '500+', label: 'Projects Completed' },
-    { number: '99%', label: 'Client Satisfaction' },
-    { number: '24/7', label: 'Support Available' },
-    { number: '50+', label: 'Expert Team Members' }
-=======
     { number: '500+', label: 'Projects Completed', icon: <Rocket className="w-6 h-6" /> },
     { number: '50+', label: 'Enterprise Clients', icon: <Cpu className="w-6 h-6" /> },
     { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> },
     { number: '24/7', label: 'Support Available', icon: <Globe className="w-6 h-6" /> }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, IT services, 5G implementation, cloud services, digital transformation, Zion Tech Group" />
-      </Helmet>
-      
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-              Advanced AI & IT Solutions
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8 px-4">
-              Transform your business with cutting-edge artificial intelligence and information technology solutions designed to accelerate growth and efficiency.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/about"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-              >
-=======
       <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your business with cutting-edge technology."
@@ -217,7 +128,6 @@ export default function HomePage() {
                 to="/about" 
                 className="group border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm"
               >
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
                 Learn More
               </Link>
             </div>
@@ -225,19 +135,6 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-300 text-sm">
-                  {stat.label}
-=======
           {/* Stats Section with Neon Effects */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 mb-20">
             {stats.map((stat, index) => (
@@ -250,7 +147,6 @@ export default function HomePage() {
                   </div>
                   <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">{stat.number}</div>
                   <div className="text-gray-300 text-xs sm:text-sm group-hover:text-white transition-colors">{stat.label}</div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
                 </div>
               </div>
             ))}
@@ -258,21 +154,6 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive solutions tailored to your business needs.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-=======
       {/* Features Section with Futuristic Cards */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
@@ -286,7 +167,6 @@ export default function HomePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-20">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
             {features.map((feature, index) => (
               <Link key={index} to={feature.link} className="group">
                 <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group-hover:bg-white/15 group-hover:shadow-2xl group-hover:shadow-cyan-500/20 transform group-hover:scale-105">
@@ -408,7 +288,6 @@ export default function HomePage() {
                   </Link>
                 </div>
               </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
             </div>
           </div>
         </div>
