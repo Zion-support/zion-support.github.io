@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi } from 'lucide-react'
+import SkipLink from './SkipLink'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,6 +14,29 @@ export default function Navigation() {
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
   }
+
+  // Close mobile menu on escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false)
+        setActiveDropdown(null)
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscape)
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape)
+      document.body.style.overflow = 'unset'
+    }
+  }, [isOpen])
 
   const aiServices = [
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
@@ -42,7 +66,9 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="bg-white/10 backdrop-blur-lg shadow-lg fixed w-full top-0 z-50 border-b border-white/20">
+    <>
+      <SkipLink />
+      <nav className="bg-white/10 backdrop-blur-lg shadow-lg fixed w-full top-0 z-50 border-b border-white/20" role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -139,6 +165,9 @@ export default function Navigation() {
             <button
               onClick={toggleMenu}
               className="text-white hover:text-purple-300 p-2 rounded-md transition-colors"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -147,7 +176,7 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
+          <div className="md:hidden" id="mobile-menu" role="menu" aria-label="Mobile navigation">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/10 backdrop-blur-lg rounded-lg mt-2 border border-white/20">
               <Link to="/" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium transition-colors">
                 Home
@@ -213,5 +242,6 @@ export default function Navigation() {
         )}
       </div>
     </nav>
+    </>
   )
 }

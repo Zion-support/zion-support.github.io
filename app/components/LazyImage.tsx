@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Loader2 } from 'lucide-react';
 
 interface LazyImageProps {
   src: string;
@@ -13,7 +14,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
   className = '',
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIj5Mb2FkaW5nLi4uPC90ZXh0Pjwvc3ZnPg==',
+  placeholder,
   onLoad,
   onError
 }) => {
@@ -53,27 +54,28 @@ const LazyImage: React.FC<LazyImageProps> = ({
   return (
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
       {!isLoaded && !hasError && (
-        <img
-          src={placeholder}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover blur-sm"
-        />
-      )}
-      {isInView && (
-        <img
-          src={src}
-          alt={alt}
-          onLoad={handleLoad}
-          onError={handleError}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-        />
-      )}
-      {hasError && (
-        <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
-          <span className="text-gray-500 text-sm">Failed to load image</span>
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700">
+          <Loader2 className="w-8 h-8 animate-spin text-gray-400" />
         </div>
+      )}
+      
+      {hasError ? (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700">
+          <span className="text-gray-400 text-sm">Failed to load image</span>
+        </div>
+      ) : (
+        isInView && (
+          <img
+            src={src}
+            alt={alt}
+            onLoad={handleLoad}
+            onError={handleError}
+            className={`transition-opacity duration-300 ${
+              isLoaded ? 'opacity-100' : 'opacity-0'
+            } ${className}`}
+            loading="lazy"
+          />
+        )
       )}
     </div>
   );
