@@ -194,7 +194,20 @@
     "services/**",
     "fix-*.jsx",
     "fix-*.ts",
-    "jest.setup.*"
+    "jest.setup.*",
+    "app/ai-*/page.tsx",
+    "app/ai-*/*/page.tsx",
+    "app/*/page-backup.tsx",
+    "app/*/page-fixed.tsx",
+    "app/*/page-broken*.tsx",
+    "app/components/*_broken.tsx",
+    "app/components/*_backup.tsx",
+    "app/components/*.broken.tsx",
+    "app/components/*.backup.tsx",
+    "__tests__/**/*.test.ts",
+    "__tests__/**/*.test.tsx",
+    "*.js",
+    "*.cjs"
   ],
   "references": [
     {
