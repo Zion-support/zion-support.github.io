@@ -154,10 +154,13 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-e118
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-51d9
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -175,6 +178,7 @@ export default function HomePage() {
       
       <Navigation />
       
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Hero Section */}
 <<<<<<< HEAD
@@ -367,6 +371,8 @@ export default function HomePage() {
                 </Link>
               </div>
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
       <main>
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -394,7 +400,10 @@ export default function HomePage() {
               >
                 Learn More
               </Link>
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-51d9
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
             </div>
           </div>
 <<<<<<< HEAD
@@ -467,33 +476,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Join hundreds of businesses already using our solutions to drive growth and efficiency
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              >
-                Start Your Journey
-              </Link>
-              <Link
-                to="/about"
-                className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
-              >
-                Learn More
-              </Link>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8">
+                Join hundreds of businesses already using our solutions to drive growth and efficiency
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                >
+                  Start Your Journey
+                </Link>
+                <Link
+                  to="/about"
+                  className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
+=======
+        </section>
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
       </main>
       
       <Footer />

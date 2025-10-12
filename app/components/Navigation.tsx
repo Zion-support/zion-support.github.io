@@ -2,7 +2,11 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
+=======
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Users } from 'lucide-react'
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -157,6 +161,7 @@ export default function Navigation() {
 <<<<<<< HEAD
       icon: <Code className="w-4 h-4" />,
       description: 'Transform your digital presence'
+<<<<<<< HEAD
 =======
       icon: Database,
       description: 'Business Digitalization',
@@ -169,6 +174,20 @@ export default function Navigation() {
         { title: 'Technology Consulting', href: '/digital-transformation' }
       ]
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-51d9
+=======
+    },
+    {
+      title: 'Careers',
+      href: '/careers',
+      icon: <Users className="w-4 h-4" />,
+      description: 'Join our team'
+    },
+    {
+      title: 'Blog',
+      href: '/blog',
+      icon: <Globe className="w-4 h-4" />,
+      description: 'Technology insights'
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
     }
 =======
       icon: Wifi,

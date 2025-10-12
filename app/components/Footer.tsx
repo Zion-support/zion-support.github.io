@@ -44,6 +44,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
+<<<<<<< HEAD
               <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
               <li><Link to="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
@@ -59,6 +60,28 @@ export default function Footer() {
               <li><Link to="/api-docs" className="text-gray-400 hover:text-white transition-colors">API Documentation</Link></li>
               <li><Link to="/support" className="text-gray-400 hover:text-white transition-colors">Support Center</Link></li>
               <li><Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link></li>
+=======
+              <li>
+                <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/careers" className="text-gray-400 hover:text-white transition-colors">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-gray-400 hover:text-white transition-colors">
+                  Blog
+                </Link>
+              </li>
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
             </ul>
           </div>
 
@@ -308,11 +331,12 @@ export default function Footer() {
               © 2024 Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              </Link>
+              <Link to="/terms-of-service" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
+<<<<<<< HEAD
               </a>
 =======
         {/* Bottom Footer */}
@@ -390,6 +414,9 @@ export default function Footer() {
                 </Link>
               ))}
 >>>>>>> cursor/analyze-improve-and-deploy-application-b46d
+=======
+              </Link>
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
             </div>
           </div>
         </div>

@@ -5,6 +5,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, Eye, MessageSquare, BarChart3 } from 'lucide-react';
 =======
 import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star } from 'lucide-react';
@@ -20,6 +21,13 @@ import { CheckCircle, ArrowRight, Brain, Database, Shield, Code, Smartphone, Glo
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Star, Brain, Zap, Shield, Globe, BarChart3, MessageSquare, Users, Code, Eye, FileText, Target, Clock, DollarSign, TrendingUp, Database, Cloud, Smartphone } from 'lucide-react';
+=======
+import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, Eye, MessageSquare, BarChart3 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
 
 export default function AIServicesPage() {
   const services = [
@@ -75,6 +83,7 @@ export default function AIServicesPage() {
       useCases: ['Business Intelligence', 'Sales Forecasting', 'Customer Analytics', 'Performance Monitoring']
     },
     {
+<<<<<<< HEAD
       id: 'ai-customer-service',
       icon: <Users className="w-8 h-8 text-purple-500" />,
       title: 'AI Customer Service Solutions',
@@ -134,6 +143,32 @@ export default function AIServicesPage() {
       pricing: 'Starting at $149/month',
 <<<<<<< HEAD
       link: '/predictive-analytics',
+=======
+      icon: <Globe className="w-8 h-8 text-green-500" />,
+      title: 'AI Analytics',
+      description: 'Transform your data into actionable insights with powerful AI-driven analytics tools.',
+      features: ['Predictive analytics', 'Data visualization', 'Custom dashboards', 'Real-time insights'],
+      pricing: 'Starting at $39/month',
+      link: '/ai-analytics',
+      popular: false
+    },
+    {
+      icon: <MessageSquare className="w-8 h-8 text-orange-500" />,
+      title: 'AI Chatbot',
+      description: 'Intelligent conversational AI chatbots for customer support, sales, and engagement.',
+      features: ['Natural language processing', 'Multi-channel support', 'Custom training', 'Analytics dashboard'],
+      pricing: 'Starting at $59/month',
+      link: '/ai-chatbot',
+      popular: true
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-cyan-500" />,
+      title: 'AI Business Intelligence',
+      description: 'Advanced AI-powered business intelligence and data analysis solutions.',
+      features: ['Predictive modeling', 'Automated reporting', 'Data integration', 'Custom insights'],
+      pricing: 'Starting at $79/month',
+      link: '/ai-business-intelligence',
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
       popular: false
 =======
       description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI technology.',
@@ -382,8 +417,9 @@ export default function AIServicesPage() {
     }
   ];
 
-  const benefits = [
+  const features = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -517,11 +553,35 @@ export default function AIServicesPage() {
   ];
 
 >>>>>>> cursor/analyze-improve-and-deploy-application-b46d
+=======
+      icon: <Brain className="w-6 h-6 text-blue-500" />,
+      title: 'Advanced AI Models',
+      description: 'Cutting-edge AI technology powered by the latest machine learning models'
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-green-500" />,
+      title: 'Enterprise Security',
+      description: 'Bank-level security and compliance with industry standards'
+    },
+    {
+      icon: <Zap className="w-6 h-6 text-purple-500" />,
+      title: 'Real-time Processing',
+      description: 'Lightning-fast AI processing and instant results'
+    },
+    {
+      icon: <Globe className="w-6 h-6 text-orange-500" />,
+      title: 'Global Scale',
+      description: 'Deploy AI solutions across multiple regions and languages'
+    }
+  ];
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -585,10 +645,28 @@ export default function AIServicesPage() {
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
               Transform your business with cutting-edge artificial intelligence solutions designed to drive growth, efficiency, and innovation.
 >>>>>>> cursor/analyze-improve-and-deploy-application-b46d
+=======
+        <meta name="description" content="Comprehensive AI services including content generation, automation, cybersecurity, analytics, and chatbots. Transform your business with cutting-edge AI technology." />
+        <meta name="keywords" content="AI services, artificial intelligence, content generation, automation, cybersecurity, analytics, chatbots, business intelligence" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Advanced <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">AI Services</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our comprehensive suite of AI-powered solutions designed to drive growth, efficiency, and innovation.
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
+<<<<<<< HEAD
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
 =======
               Transform your business with cutting-edge artificial intelligence solutions. From content generation to predictive analytics, 
@@ -620,12 +698,22 @@ export default function AIServicesPage() {
                 to="#services"
                 className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-51d9
+=======
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                to="/about"
+                className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
               >
                 Explore Services
               </Link>
             </div>
 <<<<<<< HEAD
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -714,11 +802,38 @@ export default function AIServicesPage() {
               >
                 <div className="flex items-center justify-between mb-4">
                   {service.icon}
+=======
+        </section>
+
+        {/* AI Services Grid */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Our AI Service Portfolio
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose from our comprehensive range of AI services tailored to meet your business needs
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {aiServices.map((service, index) => (
+                <div
+                  key={index}
+                  className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group relative ${
+                    service.popular ? 'ring-2 ring-purple-400' : ''
+                  }`}
+                >
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
                   {service.popular && (
-                    <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
-                      Popular
-                    </span>
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
                   )}
+<<<<<<< HEAD
 =======
         </section>
 
@@ -814,11 +929,25 @@ export default function AIServicesPage() {
                   <ul className="space-y-2">
                     {industry.services.map((service, serviceIndex) => (
                       <li key={serviceIndex} className="flex items-center text-gray-300 text-sm">
+=======
+                  
+                  <div className="mb-6">
+                    {service.icon}
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
+                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {service}
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
                 </div>
 <<<<<<< HEAD
 
@@ -1174,6 +1303,22 @@ export default function AIServicesPage() {
 >>>>>>> cursor/analyze-improve-and-deploy-application-b46d
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-51d9
+=======
+                  
+                  <div className="mb-6">
+                    <p className="text-2xl font-bold text-white mb-2">{service.pricing}</p>
+                  </div>
+                  
+                  <Link
+                    to={service.link}
+                    className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:scale-105"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              ))}
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
             </div>
 =======
       <section className="py-12 sm:py-16 lg:py-20 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
@@ -1201,6 +1346,7 @@ export default function AIServicesPage() {
 >>>>>>> cursor/website-audit-and-update-with-deployment-e118
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
       </section>
 <<<<<<< HEAD
@@ -1208,6 +1354,66 @@ export default function AIServicesPage() {
 
       <Footer />
 >>>>>>> cursor/analyze-improve-and-deploy-application-b46d
+=======
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our AI Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We deliver cutting-edge AI solutions with enterprise-grade security and support
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-white/10 backdrop-blur-lg rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Transform Your Business with AI?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8">
+                Join thousands of businesses already using our AI solutions to drive growth and efficiency
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                >
+                  Start Your AI Journey
+                </Link>
+                <Link
+                  to="/about"
+                  className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
     </div>
 =======
         </section>
@@ -1218,6 +1424,7 @@ export default function AIServicesPage() {
 <<<<<<< HEAD
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1234,3 +1441,6 @@ export default AIServicesPage;
 =======
 export default AIServicesPage;
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-51d9
+=======
+export default AIServicesPage;
+>>>>>>> cursor/website-audit-and-update-with-deployment-7aba
