@@ -1,25 +1,27 @@
-
-import { Shield, BarChart3, TrendingUp, Target, Zap, CheckCircle, ArrowRight, Star, Globe, Play, Volume2, VolumeX, Search, Upload, Mail, Phone, MapPin, Users, Brain, Cpu, Rocket, Network, Monitor, Server, CircuitBoard, Atom, Satellite, Wrench, BarChart, PieChart, LineChart, Activity, Settings } from 'lucide-react'
-
-import { Link } from 'react-router-dom'
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function AiBlockchainAnalytics() {
+export default function Page() {
   return (
-    
-        <title>AiBlockchainAnalytics - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AiBlockchainAnalytics</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional aiblockchainanalytics services coming soon.</p>
-            
-              Contact Us
-
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Page</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional page services coming soon.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-cyan-600 text-white font-semibold rounded-lg hover:bg-cyan-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+    </>
   );
-
+}

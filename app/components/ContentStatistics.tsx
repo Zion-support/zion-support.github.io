@@ -1,89 +1,112 @@
-
-
 'use client';
+import React, { useState, useEffect } from 'react';
+import { Users, TrendingUp, Award, Globe } from 'lucide-react';
 
 interface StatItem {
-  id: string;,
-  value: number;,
-  label: string;,
+  id: string;
+  value: number;
+  label: string;
   icon: React.ComponentType<{ className?: string }>;
   suffix?: string;
   prefix?: string;
+}
 
 interface ContentStatisticsProps {
   stats?: StatItem[];
   animationDuration?: number;
   className?: string;
+}
 
-const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
-  const stats = [
+const ContentStatistics: React.FC<ContentStatisticsProps> = ({
+  stats = [
+    {
       id: 'users',
-      value: 1200,
+      value: 10000,
       label: 'Active Users',
       icon: Users,
       suffix: '+'
     },
-      id: 'projects',
-      value: 99.8,
-      label: 'Success Rate',
-      icon: Award,
+    {
+      id: 'growth',
+      value: 150,
+      label: 'Growth Rate',
+      icon: TrendingUp,
       suffix: '%'
     },
-      id: 'uptime',
-      value: 99.9,
-      label: 'Uptime',
-      icon: CheckCircle,
-      suffix: '%'
+    {
+      id: 'awards',
+      value: 25,
+      label: 'Industry Awards',
+      icon: Award
     },
-      id: 'performance',
-      value: 300,
-      label: 'Performance Boost',
-      icon: Zap,
-      suffix: '%'
+    {
+      id: 'countries',
+      value: 50,
+      label: 'Countries Served',
+      icon: Globe
+    }
   ],
   animationDuration = 2000,
   className = ''
-  const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
-      const startTime = performance.now();
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        // Easing function
-        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-        const currentValue = start + (end - start) * easeOutCubic;
- ({
+}) => {
+  const [animatedValues, setAnimatedValues] = useState<Record<string, number>>({});
+
+  useEffect(() => {
+    const animateValue = (key: string, endValue: number) => {
+      let startTime: number;
+      let animationFrame: number;
+
+      const animate = (currentTime: number) => {
+        if (!startTime) startTime = currentTime;
+        const progress = Math.min((currentTime - startTime) / animationDuration, 1);
+        
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        const currentValue = Math.floor(easeOutQuart * endValue);
+        
+        setAnimatedValues(prev => ({
           ...prev,
           [key]: currentValue
         }));
-        if (progress 
-          requestAnimationFrame(animate);
+        
+        if (progress < 1) {
+          animationFrame = requestAnimationFrame(animate);
+        }
       };
 
-      requestAnimationFrame(animate);
+      animationFrame = requestAnimationFrame(animate);
+
+      return () => {
+        if (animationFrame) {
+          cancelAnimationFrame(animationFrame);
+        }
+      };
     };
 
-      animateValue(0, stat.value, animationDuration, stat.id);
+    stats.forEach(stat => {
+      animateValue(stat.id, stat.value);
     });
   }, [stats, animationDuration]);
 
   return (
-        const animatedValue = animatedValues[stat.id] || 0;
+    <div className={`grid grid-cols-2 md:grid-cols-4 gap-6 ${className}`}>
+      {stats.map((stat) => {
         const IconComponent = stat.icon;
+        const animatedValue = animatedValues[stat.id] || 0;
+        
         return (
-
-            <div className="text-3 xl font-boldtext-whitemb-2">{stat.prefix}
-
-              {stat.suffix === '%'
-                ? animatedValue.toFixed(1)
-                : Math.floor(animatedValue).toLocaleString()
-              {stat.suffix}
-
-            <div className="text-gray-300text-sm">{stat.label}
-
+          <div key={stat.id} className="text-center">
+            <div className="flex justify-center mb-2">
+              <IconComponent className="w-8 h-8 text-cyan-400" />
+            </div>
+            <div className="text-3xl font-bold text-white mb-1">
+              {stat.prefix || ''}{animatedValue.toLocaleString()}{stat.suffix || ''}
+            </div>
+            <div className="text-sm text-gray-300">{stat.label}</div>
+          </div>
         );
-
       })}
+    </div>
   );
 };
 
 export default ContentStatistics;
-

@@ -1,94 +1,27 @@
-
-
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-import ErrorBoundary from './components/ErrorBoundary';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import ThemeToggle from './components/ThemeToggle';
-
-interface LayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-
-const Layout: React.FC<LayoutProps /> = ({
-  children,
-  const title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-  keywords = "AI solutions, IT services, cloud computing, digital transformation, 5 G implementation"
-  const structuredData = {
-    "@context": "https: //schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-    "url": "https: //ziontechgroup.com",
-    "logo": "https: //ziontechgroup.com/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "sameAs": [
-      "https: //github.com/ziontechgroup",
-      "https: //linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup"
-    ],
-    "offers": [
-        "@type": "Offer",
-        "name": "AI Services",
-        "description": "Comprehensive AI solutions including content generation, chatbots, and automation",
-        "price": "500",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "500",
-          "priceCurrency": "USD",
-          "unitText": "MONTH"
-      },
-        "@type": "Offer",
-        "name": "IT Services",
-        "description": "Complete IT infrastructure services including cloud migration, cybersecurity, and mobile development",
-        "price": "2500",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "2500",
-          "priceCurrency": "USD",
-          "unitText": "PROJECT"
-    ];
-  };
-
+export default function Component() {
   return (
-
+    <>
+      <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-          <title>{title}</title>
-          {/* Open Graph Meta Tags */}
-    
-          {/* Twitter Card Meta Tags */}
-    
-          {/* Additional SEO Meta Tags */}
-    
-          {/* Structured Data */}
-    
-          <script type="application/ld+json">{JSON.stringify(structuredData)}
-
-        <main className=" pt-20">{children}
-
-        {/* Theme Toggle - Fixed Position */}
-
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Component</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional component services coming soon.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-cyan-600 text-white font-semibold rounded-lg hover:bg-cyan-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+    </>
   );
-};
-
-export default Layout;
-
+}
