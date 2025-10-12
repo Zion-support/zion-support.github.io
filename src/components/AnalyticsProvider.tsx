@@ -1,8 +1,8 @@
-  const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
+  GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
   
     // Initialize Google Analytics
     
-      const script = document.createElement('script');
+      script = document.createElement('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
       document.head.appendChild(script);
@@ -28,22 +28,22 @@
     };
     // Track user interactions
     
-        const target = e.target as HTMLElement;
-          const text = target.textContent?.trim() || '';
-          const href = target.getAttribute('href') || '';
+        target = e.target as HTMLElement;
+          text = target.textContent?.trim() || '';
+          href = target.getAttribute('href') || '';
               value: href
             });
           }
         }
       });
       // Track form submissions
-        const form = e.target as HTMLFormElement;
+        form = e.target as HTMLFormElement;
             event_label: form.id || 'contact_form'
           });
         }
       });
       // Track phone number clicks
-        const target = e.target as HTMLElement;
+        target = e.target as HTMLElement;
               value: target.getAttribute('href')
             });
           }

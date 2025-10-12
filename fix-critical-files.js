@@ -20,14 +20,14 @@ import { execSync } from 'child_process';
 
     // Fix common JSX issues
     // Fix unclosed tags by ensuring proper structure
-    const lines = content.split('\n');
-    const fixedLines = [];
+    lines = content.split('\n');
+    fixedLines = [];
     let openTags = [];
     
     for (let i = 0; i 
-      const openTagMatch = trimmedLine.match(/<(\w+)([^>]*)>/);
-        const tagName = openTagMatch[1];
-        const attributes = openTagMatch[2];
+      openTagMatch = trimmedLine.match(/<(\w+)([^>]*)>/);
+        tagName = openTagMatch[1];
+        attributes = openTagMatch[2];
         
         // Skip self-closing tags
           openTags.push({ tag: tagName, line: i });
@@ -37,9 +37,9 @@ import { execSync } from 'child_process';
       }
       
       // Check for closing tags
-      const closeTagMatch = trimmedLine.match(/<\/(\w+)>/);
-        const tagName = closeTagMatch[1];
-        const lastOpenTag = openTags[openTags.length - 1];
+      closeTagMatch = trimmedLine.match(/<\/(\w+)>/);
+        tagName = closeTagMatch[1];
+        lastOpenTag = openTags[openTags.length - 1];
         
           openTags.pop();
           // This might be an extra closing tag, skip it
@@ -74,7 +74,7 @@ import { execSync } from 'child_process';
       modified = true;
     }
     
-    const newContent = fixedLines.join('\n');
+    newContent = fixedLines.join('\n');
     
     // Clean up extra whitespace
     
@@ -96,7 +96,7 @@ import { execSync } from 'child_process';
   
   let fixedCount = 0;
   
-    const fullPath = path.join(process.cwd(), file);
+    fullPath = path.join(process.cwd(), file);
         fixedCount++;
       }
       console.log(`File not found: ${file}`);

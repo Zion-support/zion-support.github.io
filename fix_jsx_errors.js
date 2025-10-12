@@ -3,12 +3,12 @@ import path from 'path';
 
 // Find all page.tsx files
 function findPageFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
+  files = [];
+  items = fs.readdirSync(dir);
   
   for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
+    fullPath = path.join(dir, item);
+    stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
       files.push(...findPageFiles(fullPath));
@@ -26,23 +26,23 @@ function fixJSXErrors(filePath) {
   let modified = false;
   
   // Fix malformed JSX tags like "Page\n  </\n  <br />"
-  const malformedTagRegex = /(\s+Page\s*\n\s*<\/\s*\n\s*<br \/>)/g;
+  malformedTagRegex = /(\s+Page\s*\n\s*<\/\s*\n\s*<br \/>)/g;
   if (malformedTagRegex.test(content)) {
     content = content.replace(malformedTagRegex, (match) => {
       // Extract the page name from the file path
-      const pageName = path.basename(path.dirname(filePath)).split('-').map(word => 
+      pageName = path.basename(path.dirname(filePath)).split('-').map(word => 
         word.charAt(0).toUpperCase() + word.slice(1)
       ).join(' ');
       
-      return `\n              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">\n                ${pageName}\n              </span>\n              <br />`;
+      return `\n              <span className="b g-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">\n                ${pageName}\n              </span>\n              <br />`;
     });
     modified = true;
   }
   
   // Fix generic "page solutions" text
-  const pageSolutionsRegex = /Transform your business with our advanced page solutions\./g;
+  pageSolutionsRegex = /Transform your business with our advanced page solutions\./g;
   if (pageSolutionsRegex.test(content)) {
-    const pageName = path.basename(path.dirname(filePath)).split('-').map(word => 
+    pageName = path.basename(path.dirname(filePath)).split('-').map(word => 
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join(' ');
     
@@ -57,7 +57,7 @@ function fixJSXErrors(filePath) {
 }
 
 // Find and fix all page files
-const pageFiles = findPageFiles('/workspace/app');
+pageFiles = findPageFiles('/workspace/app');
 console.log(`Found ${pageFiles.length} page files`);
 
 let fixedCount = 0;

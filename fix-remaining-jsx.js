@@ -39,7 +39,7 @@ function fixRemainingJSX(content) {
   
   // Fix specific patterns for 5G pages
   fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="([^"]+)"\s*\/>\s*Contact Us\s*<ArrowRight[^>]*\/>/g,
-    '<Link to="/contact" className="$1">\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
+    '<Link to="/contact" className="$1">\n          Contact Us\n          <ArrowRight className="w-5 h-5 m l-2" />\n        </Link>');
   
   // Fix malformed p tags
   fixed = fixed.replace(/<p className="([^"]*)" \/>\s*([^<]+)\s*<\/p>/g, '<p className="$1">\n              $2\n            </p>');
@@ -57,8 +57,8 @@ function fixRemainingJSX(content) {
 // Function to process a single file
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixRemainingJSX(content);
+    content = fs.readFileSync(filePath, 'utf8');
+    fixed = fixRemainingJSX(content);
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
@@ -77,7 +77,7 @@ async function main() {
   console.log('Starting to fix remaining JSX issues...');
   
   // Get all TypeScript/TSX files
-  const files = await glob('**/*.{ts,tsx}', {
+  files = await glob('**/*.{ts,tsx}', {
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
   });
   

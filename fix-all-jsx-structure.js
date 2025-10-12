@@ -47,8 +47,8 @@ function fixJSXStructure(content) {
 // Function to process a single file
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJSXStructure(content);
+    content = fs.readFileSync(filePath, 'utf8');
+    fixed = fixJSXStructure(content);
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
@@ -67,7 +67,7 @@ async function main() {
   console.log('Starting to fix all JSX structure issues...');
   
   // Get all TypeScript/TSX files
-  const files = await glob('**/*.{ts,tsx}', {
+  files = await glob('**/*.{ts,tsx}', {
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
   });
   

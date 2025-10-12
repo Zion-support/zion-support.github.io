@@ -13,7 +13,7 @@ interface LazyImageProps {
 const LazyImage: React.FC<LazyImageProps /> = ({
   src,
   alt,
-  const className = '',
+  className = '',
   placeholder,
   onLoad,
   onError
@@ -21,10 +21,10 @@ const LazyImage: React.FC<LazyImageProps /> = ({
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
   const [hasError, setHasError] = useState(false)
-  const imgRef = useRef<HTMLImageElement />(null)
+  imgRef = useRef<HTMLImageElement />(null)
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true)
@@ -41,41 +41,27 @@ const LazyImage: React.FC<LazyImageProps /> = ({
     return () => observer.disconnect()
   }, [])
 
-  const handleLoad = () => {
+  handleLoad = () => {
     setIsLoaded(true)
     onLoad?.()
   }
 
-  const handleError = () => {
+  handleError = () => {
     setHasError(true)
     onError?.()
   }
 
   return (
-    <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
+    <div ref="{imgRef}" className="{`relativ e" overflow-hidden ${className}`} />
       {!isInView && (
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-centerjustify-center">
-          <Loader2 className="w-8 h-8text-gray-400animate-spin" />
-=======
-    <>
-        <div className="absolute inset-0 bg-gray-800 animate-pulse flexitems-centerjustify-center">
-        </div>
-          <Loader2 className="w-8 h-8text-gray-400animate-spin" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <div className="absolut e inset-0 bg-gray-800 animate-pulse flex items-centerjustify-center">
+          <Loader2 className="w-8 h-8tex t-gray-400animate-spin" />
         </div>
       )}
       
       {isInView && !isLoaded && !hasError && (
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gray-800 flex items-centerjustify-center">
-          <Loader2 className="w-8 h-8text-gray-400animate-spin" />
-=======
-    <>
-        <div className="absolute inset-0 bg-gray-800 flexitems-centerjustify-center">
-        </div>
-          <Loader2 className="w-8 h-8text-gray-400animate-spin" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <div className="absolut e inset-0 bg-gray-800 flex items-centerjustify-center">
+          <Loader2 className="w-8 h-8tex t-gray-400animate-spin" />
         </div>
       )}
       
@@ -85,7 +71,7 @@ const LazyImage: React.FC<LazyImageProps /> = ({
           alt="{alt}"
           onLoad="{handleLoad}"
           onError="{handleError}"
-          className="{`w-full" h-full object-cover transition-opacity duration-300 ${
+          className="{`w-ful l" h-full object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           loading="lazy"
@@ -93,19 +79,10 @@ const LazyImage: React.FC<LazyImageProps /> = ({
       )}
       
       {hasError && (
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gray-800 flex items-centerjustify-center">
-          <div className="text-centertext-gray-400">
-            <div className="w-8 h-8mx-automb-2"  >📷</div>
-=======
-    <>
-        <div className="absolute inset-0 bg-gray-800 flexitems-centerjustify-center">
-        </div>
-          <div className="text-centertext-gray-400">
-        </div>
-            <div className="w-8 h-8mx-automb-2">📷</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            <p className="text-sm">Image failed to load</p>
+        <div className="absolut e inset-0 bg-gray-800 flex items-centerjustify-center">
+          <div className="tex t-centertext-gray-400">
+            <div className="w-8 h-8m x-automb-2"  >📷</div>
+            <p className="tex t-sm">Image failed to load</p>
           </div>
       )}
     </div>

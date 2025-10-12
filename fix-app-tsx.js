@@ -4,7 +4,7 @@ import fs from 'fs';
 
 // Function to fix the app/App.tsx file
 function fixAppTsx() {
-  const filePath = '/workspace/app/App.tsx';
+  filePath = '/workspace/app/App.tsx';
   
   try {
     let content = fs.readFileSync(filePath, 'utf8');

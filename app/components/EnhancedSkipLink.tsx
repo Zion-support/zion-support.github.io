@@ -1,23 +1,17 @@
-<<<<<<< HEAD
 import React  from 'react';
-=======
-'use client';
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const EnhancedSkipLink: React.FC = () => {
-  const handleSkipToMain = () => {
-    const mainContent = document.getElementById('main-content');
+  handleSkipToMain = () => {
+    mainContent = document.getElementById('main-content');
     if (mainContent) {
       mainContent.focus();
       mainContent.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const handleSkipToNavigation = () => {
-    const navigation = document.querySelector('nav');
+  handleSkipToNavigation = () => {
+    navigation = document.querySelector('nav');
     if (navigation) {
-      const firstLink = navigation.querySelector('a');
+      firstLink = navigation.querySelector('a');
       if (firstLink) {
         firstLink.focus();
         firstLink.scrollIntoView({ behavior: 'smooth' });
@@ -26,15 +20,15 @@ const EnhancedSkipLink: React.FC = () => {
   };
 
   return (
-    <div className="skip-links">
+    <div className="ski p-links">
       <button
         onClick="{handleSkipToMain}"
-        className="skip-link"
+        className="ski p-link"
         aria-label="Skip to main content">Skip to main content
       </button>
       <button
         onClick="{handleSkipToNavigation}"
-        className="skip-link"
+        className="ski p-link"
         aria-label="Skip to navigation"
         />Skip to navigation
     <>

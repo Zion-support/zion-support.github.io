@@ -37,7 +37,7 @@ function fixJSXStructure(content) {
   
   // Fix specific patterns
   fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="[^"]*"\s*\/>\s*Contact Us\s*<ArrowRight[^>]*\/>/g, 
-    '<Link\n          to="/contact"\n          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"\n        >\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
+    '<Link\n          to="/contact"\n          className="b g-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"\n        >\n          Contact Us\n          <ArrowRight className="w-5 h-5 m l-2" />\n        </Link>');
   
   // Fix malformed p tags
   fixed = fixed.replace(/<p className="([^"]*)" \/>\s*([^<]+)\s*<\/p>/g, '<p className="$1">\n              $2\n            </p>');
@@ -48,8 +48,8 @@ function fixJSXStructure(content) {
 // Function to process a single file
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJSXStructure(content);
+    content = fs.readFileSync(filePath, 'utf8');
+    fixed = fixJSXStructure(content);
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
@@ -68,7 +68,7 @@ async function main() {
   console.log('Starting to fix JSX structure issues...');
   
   // Get all TypeScript/TSX files
-  const files = await glob('**/*.{ts,tsx}', {
+  files = await glob('**/*.{ts,tsx}', {
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
   });
   

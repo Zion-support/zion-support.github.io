@@ -21,8 +21,8 @@
   /**
    * Check if an element has proper alt text for images
    */
-    const hasAlt = element.hasAttribute('alt');
-    const altText = element.getAttribute('alt') || '';
+    hasAlt = element.hasAttribute('alt');
+    altText = element.getAttribute('alt') || '';
 
         element
       };
@@ -39,15 +39,15 @@
   /**
    * Check if form inputs have proper labels
    */
-    const id = element.getAttribute('id');
-    const ariaLabel = element.getAttribute('aria-label');
-    const ariaLabelledBy = element.getAttribute('aria-labelledby');
+    id = element.getAttribute('id');
+    ariaLabel = element.getAttribute('aria-label');
+    ariaLabelledBy = element.getAttribute('aria-labelledby');
 
         element
       };
     }
 
-      const label = document.querySelector(`label[for="${id}"]`);
+      label = document.querySelector(`label[for="${id}"]`);
           element
         };
       }
@@ -60,11 +60,11 @@
   /**
    * Check if headings are properly structured
    */
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     const results: AccessibilityCheckResult[] = [];
     let previousLevel = 0;
 
-      const level = parseInt(heading.tagName.charAt(1));
+      level = parseInt(heading.tagName.charAt(1));
 
           element: heading as HTMLElement
         });
@@ -83,9 +83,9 @@
   /**
    * Check color contrast ratio
    */
-    const styles = window.getComputedStyle(element);
-    const color = styles.color;
-    const backgroundColor = styles.backgroundColor;
+    styles = window.getComputedStyle(element);
+    color = styles.color;
+    backgroundColor = styles.backgroundColor;
 
     // you would calculate the actual contrast ratio
         element
@@ -99,8 +99,8 @@
   /**
    * Check if interactive elements are keyboard accessible
    */
-    const tabIndex = element.getAttribute('tabindex');
-    const isInteractive = ['button', 'a', 'input', 'select', 'textarea'].includes(element.tagName.toLowerCase());
+    tabIndex = element.getAttribute('tabindex');
+    isInteractive = ['button', 'a', 'input', 'select', 'textarea'].includes(element.tagName.toLowerCase());
 
         element
       };
@@ -116,12 +116,12 @@
     this.results = [];
 
     // Check images
-    const images = document.querySelectorAll('img');
+    images = document.querySelectorAll('img');
       this.results.push(this.checkImageAltText(img));
     });
 
     // Check form elements
-    const formElements = document.querySelectorAll('input, select, textarea');
+    formElements = document.querySelectorAll('input, select, textarea');
       this.results.push(this.checkFormLabels(element as HTMLInputElement));
     });
 
@@ -129,19 +129,19 @@
     this.results.push(...this.checkHeadingStructure());
 
     // Check color contrast for text elements
-    const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
+    textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
       this.results.push(this.checkColorContrast(element as HTMLElement));
     });
 
     // Check keyboard accessibility
-    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
+    interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
       this.results.push(this.checkKeyboardAccessibility(element as HTMLElement));
     });
 
-    const totalChecks = this.results.length;
-    const passedChecks = this.results.filter(r => r.passed).length;
-    const failedChecks = this.results.filter(r => !r.passed).length;
-    const warnings = this.results.filter(r => r.severity === 'warning').length;
+    totalChecks = this.results.length;
+    passedChecks = this.results.filter(r => r.passed).length;
+    failedChecks = this.results.filter(r => !r.passed).length;
+    warnings = this.results.filter(r => r.severity === 'warning').length;
 
       results: this.results
     };
@@ -150,15 +150,15 @@
   /**
    * Get accessibility score as percentage
    */
-    const report = this.runAllChecks();
+    report = this.runAllChecks();
     return Math.round((report.passedChecks / report.totalChecks) * 100);
   }
 
   /**
    * Generate accessibility report summary
    */
-    const report = this.runAllChecks();
-    const score = this.getAccessibilityScore();
+    report = this.runAllChecks();
+    score = this.getAccessibilityScore();
 
     return `
 Accessibility Report
@@ -178,9 +178,9 @@ ${report.results
 }
 
 // Export a default instance
-export const accessibilityChecker = new AccessibilityChecker();
+export accessibilityChecker = new AccessibilityChecker();
 
 // Export utility functions
-export const checkPageAccessibility = () => accessibilityChecker.runAllChecks();
-export const getAccessibilityScore = () => accessibilityChecker.getAccessibilityScore();
-export const generateAccessibilityReport = () => accessibilityChecker.generateReport();
+export checkPageAccessibility = () => accessibilityChecker.runAllChecks();
+export getAccessibilityScore = () => accessibilityChecker.getAccessibilityScore();
+export generateAccessibilityReport = () => accessibilityChecker.generateReport();

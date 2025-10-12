@@ -5,16 +5,9 @@ interface LazyWrapperProps {
   fallback?: React.ReactNode
 }
 
-const DefaultFallback = () => (
-<<<<<<< HEAD
-  <div className="flex items-center justify-centermin-h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2border-cyan-400"></div>
-=======
-    <>
-  <div className="flex items-center justify-centermin-h-screen" />
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2border-cyan-400">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+DefaultFallback = () => (
+  <div className="fle x items-center justify-centermin-h-screen">
+    <div className="animat e-spin rounded-full h-32 w-32 border-b-2border-cyan-400"></div>
 )
 
 export const LazyWrapper: React.FC<LazyWrapperProps /> = ({ 
@@ -30,11 +23,11 @@ export const LazyWrapper: React.FC<LazyWrapperProps /> = ({
 
 // Higher-order component for lazy loading pages
     <>
-export const withLazyLoading = <P extends object />(
+export withLazyLoading = <P extends object />(
   Component: ComponentType<P />,
   fallback?: React.ReactNode
 ) => {
-  const LazyComponent = lazy(() => Promise.resolve({ default: Component }))
+  LazyComponent = lazy(() => Promise.resolve({ default: Component }))
   
   return (props: P) => (
     <>
@@ -45,7 +38,7 @@ export const withLazyLoading = <P extends object />(
 }
 
 // Preload function for critical components
-export const preloadComponent = (importFn: () => Promise<any />) => {
+export preloadComponent = (importFn: () => Promise<any />) => {
   if (typeof window !== 'undefined') {
     // Preload on idle
     if ('requestIdleCallback' in, window) {

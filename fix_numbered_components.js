@@ -3,12 +3,12 @@ import path from 'path';
 
 // Find all page.tsx files
 function findPageFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
+  files = [];
+  items = fs.readdirSync(dir);
   
   for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
+    fullPath = path.join(dir, item);
+    stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
       files.push(...findPageFiles(fullPath));
@@ -26,16 +26,16 @@ function fixNumberedComponents(filePath) {
   let modified = false;
   
   // Fix component names that start with numbers
-  const numberedComponentRegex = /const (\d+[a-zA-Z]*)Page: React\.FC = \(\) => \{/g;
-  const matches = content.match(numberedComponentRegex);
+  numberedComponentRegex = /const (\d+[a-zA-Z]*)Page: React\.FC = \(\) => \{/g;
+  matches = content.match(numberedComponentRegex);
   
   if (matches) {
     for (const match of matches) {
-      const numberMatch = match.match(/const (\d+[a-zA-Z]*)Page/);
+      numberMatch = match.match(/const (\d+[a-zA-Z]*)Page/);
       if (numberMatch) {
-        const oldName = numberMatch[1];
-        const newName = oldName.replace(/^(\d+)/, (match, num) => {
-          const numberWords = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+        oldName = numberMatch[1];
+        newName = oldName.replace(/^(\d+)/, (match, num) => {
+          numberWords = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
           return numberWords[parseInt(num)] || num;
         });
         
@@ -54,7 +54,7 @@ function fixNumberedComponents(filePath) {
 }
 
 // Find and fix all page files
-const pageFiles = findPageFiles('/workspace/app');
+pageFiles = findPageFiles('/workspace/app');
 console.log(`Found ${pageFiles.length} page files`);
 
 let fixedCount = 0;

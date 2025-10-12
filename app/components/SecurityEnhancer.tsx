@@ -7,13 +7,13 @@ import { useEffect } from 'react'
       }
 
       // Add CSP meta tag
-      const cspMeta = document.createElement('meta')
+      cspMeta = document.createElement('meta')
       cspMeta.setAttribute('http-equiv', 'Content-Security-Policy')
       cspMeta.setAttribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;")
       document.head.appendChild(cspMeta)
 
       // Add security event listeners
-      const handleSecurityEvent = (event: Event) => {
+      handleSecurityEvent = (event: Event) => {
         console.log('Security event detected:', event.type)
       }
 
@@ -27,18 +27,13 @@ import { useEffect } from 'react'
       }
     }
 
-    const cleanup = enhanceSecurity()
+    cleanup = enhanceSecurity()
     return cleanup
   }, [])
 
   return (
-<<<<<<< HEAD
     <div className={`security-enhanced ${className}`}>
       {children}
-=======
-    <>
-    <div className="{`security-enhanced" ${className}`}>{children}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
     </div>
   )
 }
@@ -67,8 +62,5 @@ export default SecurityEnhancer
       });// Disable F12 and other dev tools shortcuts
       document.addEventListener('keydown', (e) => {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
         }
-<<<<<<< HEAD
-=======
 ;
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

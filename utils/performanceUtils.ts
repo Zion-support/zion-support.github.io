@@ -52,9 +52,9 @@ export function measurePerformance(name: string, fn: () => void): void {
     return;
   }
 
-  const start = performance.now();
+  start = performance.now();
   fn();
-  const end = performance.now();
+  end = performance.now();
   
   if (process.env.NODE_ENV === 'development') {
     console.log(`${name} took ${end - start} milliseconds`);
@@ -74,14 +74,14 @@ export function getMemoryUsage(): any {
 export function preloadCriticalResources(): void {
   if (typeof window === 'undefined') return;
   
-  const criticalResources = [
+  criticalResources = [
     '/fonts/inter.woff2',
     '/images/logo.png',
     '/images/og-image.jpg'
   ];
   
   criticalResources.forEach(resource => {
-    const link = document.createElement('link');
+    link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
     link.as = resource.endsWith('.woff2') ? 'font' : 'image';
@@ -95,7 +95,7 @@ export function preloadCriticalResources(): void {
 // Image optimization utility
 export function optimizeImage(src: string, width?: number, height?: number): string {
   // Add image optimization parameters if needed
-  const url = new URL(src, window.location.origin);
+  url = new URL(src, window.location.origin);
   if (width) url.searchParams.set('w', width.toString());
   if (height) url.searchParams.set('h', height.toString());
   url.searchParams.set('q', '80'); // Quality
@@ -108,8 +108,8 @@ export function createLazyImageObserver(): IntersectionObserver | null {
   return createIntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement;
-        const src = img.dataset.src;
+        img = entry.target as HTMLImageElement;
+        src = img.dataset.src;
         if (src) {
           img.src = src;
           img.classList.remove('lazy');
@@ -124,11 +124,11 @@ export function createLazyImageObserver(): IntersectionObserver | null {
 export function checkPerformanceBudget(): void {
   if (typeof window === 'undefined') return;
   
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   if (!navigation) return;
   
-  const loadTime = navigation.loadEventEnd - navigation.fetchStart;
-  const budget = 3000; // 3 seconds
+  loadTime = navigation.loadEventEnd - navigation.fetchStart;
+  budget = 3000; // 3 seconds
   
   if (loadTime > budget) {
     console.warn(`Performance budget exceeded: ${loadTime}ms > ${budget}ms`);
@@ -139,7 +139,7 @@ export function checkPerformanceBudget(): void {
 export function addResourceHints(): void {
   if (typeof window === 'undefined') return;
   
-  const hints = [
+  hints = [
     { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
     { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -147,7 +147,7 @@ export function addResourceHints(): void {
   ];
   
   hints.forEach(hint => {
-    const link = document.createElement('link');
+    link = document.createElement('link');
     Object.assign(link, hint);
     document.head.appendChild(link);
   });

@@ -43,7 +43,7 @@
 /**
  * Generate secure token
  */
-  const array = new Uint8Array(length);
+  array = new Uint8Array(length);
     window.crypto.getRandomValues(array);
     // Fallback for non-browser environments
     for (let i = 0; i 

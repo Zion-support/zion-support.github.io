@@ -44,7 +44,7 @@ import { fileURLToPath } from 'url'
 
 // Function to find all files that need fixing
   
-const filesToFix = findFilesToFix(srcDir);`
+filesToFix = findFilesToFix(srcDir);`
 console.log(`Processing ${filesToFix.length} files`)
 
 console.log(`Fixed ${fixedCount} files`);"`

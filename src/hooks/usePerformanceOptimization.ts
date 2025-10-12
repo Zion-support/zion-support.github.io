@@ -9,7 +9,7 @@ import { useEffect, useCallback } from 'react';
     }
     
     )[0] as PerformanceNavigationTiming;
-    const paintEntries = performance.getEntriesByType('paint');
+    paintEntries = performance.getEntriesByType('paint');
       loadTime: navigation
         ? navigation.loadEventEnd - navigation.loadEventStart
       firstContentfulPaint:
@@ -18,8 +18,8 @@ import { useEffect, useCallback } from 'react';
     };
     // Measure LCP
     
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
+      entries = list.getEntries();
+      lastEntry = entries[entries.length - 1];
         metrics.largestContentfulPaint = lastEntry.startTime;
       }
     });
@@ -52,9 +52,9 @@ import { useEffect, useCallback } from 'react';
     return metrics;
   }, []);
   
-    const images = document.querySelectorAll('img[data-src]');
+    images = document.querySelectorAll('img[data-src]');
     
-          const img = entry.target as HTMLImageElement;
+          img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
           imageObserver.unobserve(img);
@@ -64,8 +64,8 @@ import { useEffect, useCallback } from 'react';
     images.forEach(img => imageObserver.observe(img));
   }, []);
   
-    const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
-      const link = document.createElement('link');
+    criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
+      link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
       link.as = resource.endsWith('.woff2') ? 'font' : 'style';
@@ -76,7 +76,7 @@ import { useEffect, useCallback } from 'react';
   }, []);
     // Measure performance after page load
     
-      const metrics = measurePerformance();
+      metrics = measurePerformance();
         // Send metrics to analytics in production
           // Track metrics in production
         }

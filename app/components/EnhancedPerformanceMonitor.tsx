@@ -33,10 +33,10 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   const [isMonitoring, setIsMonitoring] = useState(false)
 
   useEffect(() => {
-    const startTime = performance.now()
+    startTime = performance.now()
 
     // Monitor Core Web Vitals
-    const measureWebVitals = () => {
+    measureWebVitals = () => {
       onCLS((metric) => {
         setMetrics(prev => ({ ...prev, cls: metric.value }))
       })
@@ -59,9 +59,9 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     }
 
     // Monitor memory usage
-    const measureMemoryUsage = () => {
+    measureMemoryUsage = () => {
       if ('memory' in, performance) {
-        const memory = (performance as, any).memory
+        memory = (performance as, any).memory
         setMetrics(prev => ({ 
           ...prev, 
           memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
@@ -70,20 +70,20 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     }
 
     // Monitor load time
-    const measureLoadTime = () => {
+    measureLoadTime = () => {
       window.addEventListener('load', () => {
-        const loadTime = performance.now() - startTime
+        loadTime = performance.now() - startTime
         setMetrics(prev => ({ ...prev, loadTime }))
       })
     }
 
     // Monitor resource loading
-    const monitorResourceLoading = () => {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
+    monitorResourceLoading = () => {
+      observer = new PerformanceObserver((list) => {
+        entries = list.getEntries()
         entries.forEach((entry) => {
           if (entry.entryType === 'resource') {
-            const resource = entry as PerformanceResourceTiming
+            resource = entry as PerformanceResourceTiming
             if (resource.duration > 1000) { // Log slow resources
               console.warn('Slow resource detected: ', {
                 name: resource.name,
@@ -98,12 +98,12 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     }
 
     // Monitor layout shifts
-    const monitorLayoutShifts = () => {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
+    monitorLayoutShifts = () => {
+      observer = new PerformanceObserver((list) => {
+        entries = list.getEntries()
         entries.forEach((entry) => {
           if (entry.entryType === 'layout-shift') {
-            const layoutShift = entry as PerformanceEntry & { value: number }
+            layoutShift = entry as PerformanceEntry & { value: number }
             if (layoutShift.value > 0.1) { // Log significant layout shifts
               console.warn('Significant layout shift detected: ', {
                 value: layoutShift.value,
@@ -117,7 +117,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     }
 
     // Generate performance report
-    const generatePerformanceReport = (): PerformanceReport => {
+    generatePerformanceReport = (): PerformanceReport => {
       const report: PerformanceReport = {
         metrics,
         timestamp: new Date().toISOString(),
@@ -156,8 +156,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     monitorLayoutShifts()
 
     // Generate report after 5 seconds
-    const reportTimer = setTimeout(() => {
-      const report = generatePerformanceReport()
+    reportTimer = setTimeout(() => {
+      report = generatePerformanceReport()
       console.log('Performance Report: ', report)
     }, 5000)
 
@@ -169,7 +169,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   }, [metrics])
 
   // Performance optimization suggestions
-  const getPerformanceSuggestions = (): string[] => {
+  getPerformanceSuggestions = (): string[] => {
     const suggestions: string[] = []
 
     if (metrics.lcp && metrics.lcp > 2500) {
@@ -199,7 +199,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     return suggestions
   }
 
-  const suggestions = getPerformanceSuggestions()
+  suggestions = getPerformanceSuggestions()
 
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
@@ -207,10 +207,9 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   }
 
   return (
-<<<<<<< HEAD
-    <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg max-w-smz-50">
-      <h3 className="text-sm font-boldmb-2"  >Performance Monitor</h3>
-      <div className="text-xsspace-y-1">
+    <div className="fixe d bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg max-w-smz-50">
+      <h3 className="tex t-sm font-boldmb-2"  >Performance Monitor</h3>
+      <div className="tex t-xsspace-y-1">
         <div  >LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'Measuring...'}</div>
         <div  >INP: {metrics.inp ? `${metrics.inp.toFixed(0)}ms` : 'Measuring...'}</div>
         <div  >CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}</div>
@@ -220,32 +219,11 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         <div  >Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'Measuring...'}</div>
       
       {suggestions.length > 0 && (
-        <div className="mt-2 pt-2 border-tborder-gray-600">
-          <div className="text-xs font-semiboldmb-1"  >Suggestions:</div>
-=======
-    <>
-    <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg max-w-smz-50">
-        </div>
-      <h3 className="text-sm font-boldmb-2">Performance Monitor</h3>
-      <div className="text-xsspace-y-1">
-        </div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div>INP: {metrics.inp ? `${metrics.inp.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}</div>
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div>Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}MB` : 'N/A'}</div>
-        <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'Measuring...'}</div>
-      
-      {suggestions.length > 0 && (
-    <>
-        <div className="mt-2 pt-2 border-tborder-gray-600">
-        </div>
-          <div className="text-xs font-semiboldmb-1">Suggestions:</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          <ul className="text-xsspace-y-1" />
+        <div className="m t-2 pt-2 border-tborder-gray-600">
+          <div className="tex t-xs font-semiboldmb-1"  >Suggestions:</div>
+          <ul className="tex t-xsspace-y-1" />
             {suggestions.map((suggestion, index) => (
-              <li key="{index}" className="text-yellow-300">• {suggestion}</li>
+              <li key="{index}" className="tex t-yellow-300">• {suggestion}</li>
             ))}
     <>
           </ul>

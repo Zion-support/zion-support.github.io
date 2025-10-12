@@ -3,12 +3,12 @@ import path from 'path';
 
 // Find all page.tsx files that might be broken
 function findPageFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
+  files = [];
+  items = fs.readdirSync(dir);
   
   for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
+    fullPath = path.join(dir, item);
+    stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
       files.push(...findPageFiles(fullPath));
@@ -23,7 +23,7 @@ function findPageFiles(dir) {
 // Check if a page file is broken
 function isBrokenPage(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    content = fs.readFileSync(filePath, 'utf8');
     
     // Check for common issues
     if (content.includes('export default function') && content.includes('return (')) {
@@ -46,7 +46,7 @@ function isBrokenPage(filePath) {
 }
 
 // Template for a basic page
-const pageTemplate = (pageName, title, description, keywords) => `import React from 'react'
+pageTemplate = (pageName, title, description, keywords) => `import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Layout from '../layout'
 
@@ -57,26 +57,26 @@ const ${pageName}Page: React.FC = () => {
       description="${description}"
       keywords="${keywords}"
     >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      <div className="mi n-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="ma x-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="tex t-center mb-16">
+            <h1 className="tex t-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="b g-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 ${title}
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="tex t-xl text-gray-300 max-w-3xl mx-auto">
               ${description}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
-              <p className="text-gray-300 mb-4">
+          <div className="gri d grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="b g-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="tex t-xl font-semibold text-white mb-4">Feature 1</h3>
+              <p className="tex t-gray-300 mb-4">
                 Description of the first key feature or service.
               </p>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="tex t-gray-300 space-y-2">
                 <li>• Benefit 1</li>
                 <li>• Benefit 2</li>
                 <li>• Benefit 3</li>
@@ -84,12 +84,12 @@ const ${pageName}Page: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="b g-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="tex t-xl font-semibold text-white mb-4">Feature 2</h3>
+              <p className="tex t-gray-300 mb-4">
                 Description of the second key feature or service.
               </p>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="tex t-gray-300 space-y-2">
                 <li>• Benefit 1</li>
                 <li>• Benefit 2</li>
                 <li>• Benefit 3</li>
@@ -97,12 +97,12 @@ const ${pageName}Page: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="b g-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="tex t-xl font-semibold text-white mb-4">Feature 3</h3>
+              <p className="tex t-gray-300 mb-4">
                 Description of the third key feature or service.
               </p>
-              <ul className="text-gray-300 space-y-2">
+              <ul className="tex t-gray-300 space-y-2">
                 <li>• Benefit 1</li>
                 <li>• Benefit 2</li>
                 <li>• Benefit 3</li>
@@ -120,9 +120,9 @@ export default ${pageName}Page`;
 
 // Generate page configuration from file path
 function generatePageConfig(filePath) {
-  const relativePath = filePath.replace('/workspace/app/', '').replace('/page.tsx', '');
-  const pageName = relativePath.split('/').pop();
-  const title = pageName.split('-').map(word => 
+  relativePath = filePath.replace('/workspace/app/', '').replace('/page.tsx', '');
+  pageName = relativePath.split('/').pop();
+  title = pageName.split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');
   
@@ -134,16 +134,16 @@ function generatePageConfig(filePath) {
 }
 
 // Find and fix all broken page files
-const pageFiles = findPageFiles('/workspace/app');
+pageFiles = findPageFiles('/workspace/app');
 console.log(`Found ${pageFiles.length} page files`);
 
 let fixedCount = 0;
 for (const file of pageFiles) {
   try {
     if (isBrokenPage(file)) {
-      const config = generatePageConfig(file);
-      const componentName = config.title.replace(/\s+/g, '');
-      const content = pageTemplate(componentName, config.title, config.description, config.keywords);
+      config = generatePageConfig(file);
+      componentName = config.title.replace(/\s+/g, '');
+      content = pageTemplate(componentName, config.title, config.description, config.keywords);
       
       fs.writeFileSync(file, content);
       console.log(`Fixed broken page: ${file}`);

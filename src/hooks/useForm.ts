@@ -35,9 +35,9 @@ import { useState, useCallback, ChangeEvent } from 'react';
   // Validate a single field
   
       if (!validationSchema[field]) return;
-      const fieldValue = values[field];
-      const rules = validationSchema[field];
-      const result = validateField(fieldValue, rules);
+      fieldValue = values[field];
+      rules = validationSchema[field];
+      result = validateField(fieldValue, rules);
         [field]: result.errors
       }));
     [values, validationSchema]
@@ -45,15 +45,15 @@ import { useState, useCallback, ChangeEvent } from 'react';
   // Validate all fields
   
     if (Object.keys(validationSchema).length === 0) return true;
-    const validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>);
-    const formErrors = getFormErrors(validationResults);
+    validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>);
+    formErrors = getFormErrors(validationResults);
     setErrors(formErrors);
     return isFormValid(validationResults);
   }, [values, validationSchema]);
   // Handle input change
   
       const { name, value, type } = e.target;
-      const fieldName = name as keyof T;
+      fieldName = name as keyof T;
       // Handle checkbox inputs
       let fieldValue: unknown = value;
         fieldValue = (e.target as HTMLInputElement).checked;
@@ -67,7 +67,7 @@ import { useState, useCallback, ChangeEvent } from 'react';
   );
   // Handle input blur
   
-      const fieldName = e.target.name as keyof T;
+      fieldName = e.target.name as keyof T;
         [fieldName]: true
       }));
       // Validate on blur if enabled
@@ -85,7 +85,7 @@ import { useState, useCallback, ChangeEvent } from 'react';
       }, {} as Record<keyof T, boolean>);
       setTouched(allTouched);
       // Validate all fields
-      const isValid = validateAllFields();
+      isValid = validateAllFields();
         return;
       }
       setIsSubmitting(true);

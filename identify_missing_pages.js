@@ -1,10 +1,10 @@
 import fs from 'fs';
 
 // Read existing pages
-const existingPages = fs.readFileSync('/workspace/existing_pages.txt', 'utf8').split('\n').filter(Boolean);
+existingPages = fs.readFileSync('/workspace/existing_pages.txt', 'utf8').split('\n').filter(Boolean);
 
 // Navigation links from Navigation.tsx
-const navigationLinks = [
+navigationLinks = [
   '/ai-services',
   '/ai-content-generator',
   '/ai-chatbot-enterprise', 
@@ -50,7 +50,7 @@ const navigationLinks = [
 ];
 
 // Footer links from Footer.tsx
-const footerLinks = [
+footerLinks = [
   '/ai-content-generator',
   '/ai-chatbot-enterprise',
   '/ai-analytics-dashboard',
@@ -94,7 +94,7 @@ const footerLinks = [
 ];
 
 // App.tsx routes
-const appRoutes = [
+appRoutes = [
   '/',
   '/about',
   '/contact',
@@ -146,17 +146,17 @@ const appRoutes = [
 ];
 
 // Combine all links and remove duplicates
-const allLinks = [...new Set([...navigationLinks, ...footerLinks, ...appRoutes])];
+allLinks = [...new Set([...navigationLinks, ...footerLinks, ...appRoutes])];
 
 // Find missing pages
-const missingPages = allLinks.filter(link => {
-  const path = link.replace('/', '');
+missingPages = allLinks.filter(link => {
+  path = link.replace('/', '');
   return !existingPages.includes(path);
 });
 
 // Find broken links (pages that exist but have no route)
-const brokenLinks = existingPages.filter(page => {
-  const link = `/${page}`;
+brokenLinks = existingPages.filter(page => {
+  link = `/${page}`;
   return !allLinks.includes(link) && page !== 'page.tsx';
 });
 

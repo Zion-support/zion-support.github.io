@@ -3,12 +3,12 @@ import path from 'path';
 
 // Find all page.tsx files
 function findPageFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
+  files = [];
+  items = fs.readdirSync(dir);
   
   for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
+    fullPath = path.join(dir, item);
+    stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
       files.push(...findPageFiles(fullPath));
@@ -38,7 +38,7 @@ function fixLayoutImports(filePath) {
 }
 
 // Find and fix all page files
-const pageFiles = findPageFiles('/workspace/app');
+pageFiles = findPageFiles('/workspace/app');
 console.log(`Found ${pageFiles.length} page files`);
 
 let fixedCount = 0;

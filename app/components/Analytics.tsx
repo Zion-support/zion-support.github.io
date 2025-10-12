@@ -1,18 +1,11 @@
-<<<<<<< HEAD
 import { useEffect } from 'react';
-=======
-'use client';
-import { useEffect } from 'react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface AnalyticsProps {
   children: React.ReactNode;
 }
 
   useEffect(() => {
     // Initialize analytics tracking
-    const initAnalytics = () => {
+    initAnalytics = () => {
       // Google Analytics initialization
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('config', 'GA_MEASUREMENT_ID', {

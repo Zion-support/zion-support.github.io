@@ -27,14 +27,8 @@
 }
 
   private baseURL: string;
-<<<<<<< HEAD
   private defaultHeaders: Record<string, string>;
   private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
-=======
-    <>
-  private defaultHeaders: Record<string, string />;
-  private cache: Map<string, { data: unknown; timestamp: number; ttl: number } /> = new Map();
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 
     this.baseURL = baseURL;
       ...defaultHeaders
@@ -48,18 +42,18 @@
       cacheTTL = 300000 // 5 minutes default
     } = config;
 
-    const url = `${this.baseURL}${endpoint}`;
-    const cacheKey = `${method}:${url}:${JSON.stringify(body || {})}`;
+    url = `${this.baseURL}${endpoint}`;
+    cacheKey = `${method}:${url}:${JSON.stringify(body || {})}`;
 
     // Check cache first
-      const cached = this.getFromCache(cacheKey);
+      cached = this.getFromCache(cacheKey);
         return cached;
       }
     }
 
       });
 
-      const data = await response.json();
+      data = await response.json();
 
         headers: this.parseHeaders(response.headers)
       };
@@ -113,10 +107,10 @@
   /**
    * Get data from cache
    */
-    const cached = this.cache.get(key);
+    cached = this.cache.get(key);
     if (!cached) return null;
 
-    const now = Date.now();
+    now = Date.now();
       this.cache.delete(key);
       return null;
     }
@@ -161,7 +155,7 @@
   new APIClient(baseURL, headers);
 
 // Default API client instance
-export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
+export apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
 
 // Export types and classes
 export type { RequestConfig, APIResponse };

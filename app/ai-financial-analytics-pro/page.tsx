@@ -1,62 +1,54 @@
 'use client';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ArrowRight, Calculator, Building2, Wallet} from 'lucide-react';
-<<<<<<< HEAD
 import { useState } from 'react';
-=======
-
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { Link } from 'react-router-dom';
-=======
 import { Brain, TrendingUp, Zap, CheckCircle, ArrowRight, Star, BarChart3, DollarSign, Shield, Target, PieChart, Activity, Globe, Monitor, Sparkles, Calculator, FileText, Database, Lock, Building2, CreditCard, Wallet } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
 export default function AiFinancialAnalyticsProPage() {
 
-  const features = [
+  features = [
     {
-      icon: <Brain className="w-8h-8text-cyan-400" />,
+      icon: <Brain className="w-8 h-8text-cyan-400" />,
       title: 'AI-Powered Insights',
       description: 'Advanced machine learning algorithms analyze your financial data to provide actionable insights',
       benefits: ['Predictive analytics', 'Risk assessment', 'Trend identification', 'Anomaly detection']
     },
     {
-      icon: <BarChart3 className="w-8h-8text-green-400" />,
+      icon: <BarChart3 className="w-8 h-8text-green-400" />,
       title: 'Real-Time Analytics',
       description: 'Monitor your financial performance with live dashboards and instant reporting',
       benefits: ['Live data feeds', 'Instant alerts', 'Real-time KPIs', 'Dynamic reporting']
     },
     {
-      icon: <Shield className="w-8h-8text-purple-400" />,
+      icon: <Shield className="w-8 h-8text-purple-400" />,
       title: 'Enterprise Security',
       description: 'Bank-grade security with end-to-end encryption and compliance standards',
       benefits: ['256-bit encryption', 'SOC 2 compliance', 'GDPR ready', 'Audit trails']
     },
     {
-      icon: <Target className="w-8h-8text-orange-400" />,
+      icon: <Target className="w-8 h-8text-orange-400" />,
       title: 'Custom Dashboards',
       description: 'Create personalized financial dashboards tailored to your business needs',
       benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based views', 'Mobile optimization']
     },
     {
-      icon: <Zap className="w-8h-8text-red-400" />,
+      icon: <Zap className="w-8 h-8text-red-400" />,
       title: 'Automated Reporting',
       description: 'Generate comprehensive financial reports automatically with AI-driven insights',
       benefits: ['Scheduled reports', 'Custom templates', 'Multi-format export', 'Email delivery']
     },
     {
-      icon: <Globe className="w-8h-8text-blue-400" />,
+      icon: <Globe className="w-8 h-8text-blue-400" />,
       title: 'Multi-Currency Support',
       description: 'Handle multiple currencies and global financial operations seamlessly',
       benefits: ['Real-time exchange rates', 'Currency conversion', 'Global compliance', 'Tax calculations']
     }
   ];
-  const analyticsTypes = [
+  analyticsTypes = [
     {
       category: 'Revenue Analytics',
-      icon: <DollarSign className="w-6h-6text-green-400" />,
+      icon: <DollarSign className="w-6 h-6text-green-400" />,
       items: [
         'Revenue forecasting',
         'Sales performance tracking',
@@ -67,7 +59,7 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Expense Management',
-      icon: <Calculator className="w-6h-6text-red-400" />,
+      icon: <Calculator className="w-6 h-6text-red-400" />,
       items: [
         'Cost center analysis',
         'Budget variance tracking',
@@ -78,7 +70,7 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Cash Flow Analysis',
-      icon: <Activity className="w-6h-6text-blue-400" />,
+      icon: <Activity className="w-6 h-6text-blue-400" />,
       items: [
         'Cash flow forecasting',
         'Working capital analysis',
@@ -89,7 +81,7 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Investment Analytics',
-      icon: <TrendingUp className="w-6h-6text-purple-400" />,
+      icon: <TrendingUp className="w-6 h-6text-purple-400" />,
       items: [
         'Portfolio performance',
         'Risk-return analysis',
@@ -100,7 +92,7 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Compliance & Audit',
-      icon: <Lock className="w-6h-6text-orange-400" />,
+      icon: <Lock className="w-6 h-6text-orange-400" />,
       items: [
         'Regulatory compliance',
         'Audit trail management',
@@ -111,7 +103,7 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Predictive Modeling',
-      icon: <Brain className="w-6h-6text-cyan-400" />,
+      icon: <Brain className="w-6 h-6text-cyan-400" />,
       items: [
         'Financial forecasting',
         'Scenario planning',
@@ -121,7 +113,7 @@ export default function AiFinancialAnalyticsProPage() {
       ]
     }
   ];
-  const pricingPlans = [
+  pricingPlans = [
     {
       name: 'Starter',
       price: '$199',
@@ -175,7 +167,7 @@ export default function AiFinancialAnalyticsProPage() {
       cta: 'Contact Sales'
     }
   ];
-  const testimonials = [
+  testimonials = [
     {
       name: 'Jennifer Walsh',
       company: 'FinTech Solutions',
@@ -204,61 +196,32 @@ export default function AiFinancialAnalyticsProPage() {
       results: '20+ hours saved weekly'
     }
   ];
-  const stats = [
-<<<<<<< HEAD
-    { number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-6h-6" /> },
-    { number: '1 M+', label: 'Transactions Analyzed', icon: <Database className="w-6h-6" /> },
-    { number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-6h-6" /> },
-    { number: '50%', label: 'Faster Reporting', icon: <Zap className="w-6h-6" /> }
+  stats = [
+    { number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-6 h-6" /> },
+    { number: '1 M+', label: 'Transactions Analyzed', icon: <Database className="w-6 h-6" /> },
+    { number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-6 h-6" /> },
+    { number: '50%', label: 'Faster Reporting', icon: <Zap className="w-6 h-6" /> }
   ];
-  const integrations = [
-    { name: 'QuickBooks', icon: <Calculator className="w-6h-6" />, category: 'Accounting' },
-    { name: 'Xero', icon: <FileText className="w-6h-6" />, category: 'Accounting' },
-    { name: 'SAP', icon: <Database className="w-6h-6" />, category: 'ERP' },
-    { name: 'Oracle', icon: <Building2 className="w-6h-6" />, category: 'ERP' },
-    { name: 'Salesforce', icon: <TrendingUp className="w-6h-6" />, category: 'CRM' },
-    { name: 'HubSpot', icon: <Target className="w-6h-6" />, category: 'CRM' },
-    { name: 'Stripe', icon: <CreditCard className="w-6h-6" />, category: 'Payments' },
-    { name: 'PayPal', icon: <Wallet className="w-6h-6" />, category: 'Payments' }
+  integrations = [
+    { name: 'QuickBooks', icon: <Calculator className="w-6 h-6" />, category: 'Accounting' },
+    { name: 'Xero', icon: <FileText className="w-6 h-6" />, category: 'Accounting' },
+    { name: 'SAP', icon: <Database className="w-6 h-6" />, category: 'ERP' },
+    { name: 'Oracle', icon: <Building2 className="w-6 h-6" />, category: 'ERP' },
+    { name: 'Salesforce', icon: <TrendingUp className="w-6 h-6" />, category: 'CRM' },
+    { name: 'HubSpot', icon: <Target className="w-6 h-6" />, category: 'CRM' },
+    { name: 'Stripe', icon: <CreditCard className="w-6 h-6" />, category: 'Payments' },
+    { name: 'PayPal', icon: <Wallet className="w-6 h-6" />, category: 'Payments' }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+    <div className="mi n-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
       <Helmet />
         <title   />AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform</title>
-=======
-    <>
-    { number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-6h-6" / /> },
-    { number: '1 M+', label: 'Transactions Analyzed', icon: <Database className="w-6h-6" / /> },
-    { number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-6h-6" / /> },
-    { number: '50%', label: 'Faster Reporting', icon: <Zap className="w-6h-6" / /> }
-  ];
-  const integrations = [
-    <>
-    { name: 'QuickBooks', icon: <Calculator className="w-6h-6" / />, category: 'Accounting' },
-    { name: 'Xero', icon: <FileText className="w-6h-6" / />, category: 'Accounting' },
-    { name: 'SAP', icon: <Database className="w-6h-6" / />, category: 'ERP' },
-    { name: 'Oracle', icon: <Building2 className="w-6h-6" / />, category: 'ERP' },
-    { name: 'Salesforce', icon: <TrendingUp className="w-6h-6" / />, category: 'CRM' },
-    { name: 'HubSpot', icon: <Target className="w-6h-6" / />, category: 'CRM' },
-    { name: 'Stripe', icon: <CreditCard className="w-6h-6" / />, category: 'Payments' },
-    { name: 'PayPal', icon: <Wallet className="w-6h-6" / />, category: 'Payments' }
-  ];
-  return (
-    <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900 pt-20">
-        </div>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-        <title>AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <meta name="description" content="Transform your financial analysis with AI Financial Analytics Pro. Advanced machine learning, real-time insights, and predictive analytics for smarter financial decisions. Start your free trial today." / / />
-        <meta name="keywords" content="AI financial analytics, financial intelligence, predictive analytics, financial reporting, business intelligence, Zion Tech Group" / / />
-        <meta name="robots" content="index, follow" / / />
-        <meta name="author" content="Zion Tech Group" / / />
+        <meta name="description" content="Transform your financial analysis with AI Financial Analytics Pro. Advanced machine learning, real-time insights, and predictive analytics for smarter financial decisions. Start your free trial today." />
+        <meta name="keywords" content="AI financial analytics, financial intelligence, predictive analytics, financial reporting, business intelligence, Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Zion Tech Group" />
         <meta name="viewport" content="width="device-width," initial-scale=1.0" / / />
-        <meta name="theme-color" content="#8 b5 cf6" / / />
+        <meta name="theme-color" content="#8 b5 cf6" />
         {/* Open Graph Meta Tags */}
     <>
         <meta property="og:title" content="AI Financial Analytics Pro - Advanced Financial Intelligence Platform" / / />
@@ -269,11 +232,11 @@ export default function AiFinancialAnalyticsProPage() {
         <meta property="og:site_name" content="Zion Tech Group" / / />
         {/* Twitter Card Meta Tags */}
     <>
-        <meta name="twitter:card" content="summary_large_image" / / />
-        <meta name="twitter:title" content="AI Financial Analytics Pro - Advanced Financial Intelligence Platform" / / />
-        <meta name="twitter: description" content="Transform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling." / / />
-        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-ai-financial-analytics.jpg" / / />
-        <meta name="twitter:site" content="@ziontechgroup" / / />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Financial Analytics Pro - Advanced Financial Intelligence Platform" />
+        <meta name="twitter: description" content="Transform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-ai-financial-analytics.jpg" />
+        <meta name="twitter:site" content="@ziontechgroup" />
         {/* Structured Data */}
         <script type="application/ld+json"  />{JSON.stringify({
             "@context": "https: //schema.org",
@@ -304,79 +267,45 @@ export default function AiFinancialAnalyticsProPage() {
         </script>
       </Helmet>
 
-<<<<<<< HEAD
-      <div className="max-w-7xl mx-auto px-4 sm:px-6lg:px-8py-16">
+      <div className="ma x-w-7xl mx-auto px-4 sm:px-6lg:px-8py-16">
         {/* Hero Section */}
-        <div className="text-centermb-16">
-          <h1 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6" />
-=======
-      <div className="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8py-16">
-        </div>
-        {/* Hero Section */}
-    <>
-        <div className="text-centermb-16">
-        </div>
-          <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <div className="tex t-centermb-16">
+          <h1 className="tex t-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6" />
             AI Financial Analytics{' '}
     <>
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500bg-clip-texttext-transparent">Pro
+            <span className="b g-gradient-to-r from-cyan-400 to-purple-500bg-clip-texttext-transparent">Pro
             </span>
           </h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-4 xlmx-automb-8">
+          <p className="tex t-lg sm:text-xl text-gray-300 max-w-4 xlmx-automb-8">
               Transform your financial analysis with AI-powered insights, real-time analytics, 
             and predictive modeling. Make smarter financial decisions with advanced intelligence.
     <>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4justify-centermb-8">
-<<<<<<< HEAD
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-center" >
+          <div className="fle x flex-col sm:flex-row gap-4justify-centermb-8">
+            <Link to="/contact" className="b g-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-center" >
           Start Free Trial
               
-          <ArrowRight className="w-5h-5ml-2"  />
+          <ArrowRight className="w-5 h-5ml-2"  />
         </Link>
-            <Link to="/ai-services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-centerjustify-center">View All AI Services
-=======
-        </div>
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
-              Start Free Trial
-    <>
-              <ArrowRight className="w-5h-5ml-2" />
-            </Link>
-            <Link to="/ai-services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flexitems-centerjustify-center">View All AI Services
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <Link to="/ai-services" className="borde r-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-centerjustify-center">View All AI Services
             </Link>
           </div>
-          <div className="text-smtext-gray-400">✓ 14-day free trial • ✓ No credit card required • ✓ Bank-grade security
+          <div className="tex t-smtext-gray-400">✓ 14-day free trial • ✓ No credit card required • ✓ Bank-grade security
           </div>
 
         {/* Stats Section */}
     <>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xlmb-16" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="grid grid-cols-2md:grid-cols-4gap-8">
-=======
-        </div>
-            <div className="grid grid-cols-2md:grid-cols-4gap-8">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <section className="p y-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xlmb-16" />
+          <div className="ma x-w-7xlmx-auto">
+            <div className="gri d grid-cols-2md:grid-cols-4gap-8">
               {stats.map((stat, index) => (
     <>
-                <div key="{index}" className="text-center" />
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-fullmx-automb-4">
-<<<<<<< HEAD
-                    <stat.icon className="h-8w-8text-white" />
+                <div key="{index}" className="tex t-center" />
+                  <div className="fle x items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-fullmx-automb-4">
+                    <stat.icon className="h-8 w-8text-white" />
                   </div>
-                  <div className="text-3 xl md: text-4xl font-bold text-white mb-2"   />{stat.number}</div>
-                  <div className="text-gray-300"   />{stat.label}</div>
-=======
-        </div>
-                    <stat.icon className="h-8w-8text-white" / />
-                  </div>
-                  <div className="text-3 xl md: text-4 xl font-boldtext-whitemb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <div className="tex t-3 xl md: text-4xl font-bold text-white mb-2"   />{stat.number}</div>
+                  <div className="tex t-gray-300"   />{stat.label}</div>
               ))}
     <>
             </div>
@@ -384,49 +313,32 @@ export default function AiFinancialAnalyticsProPage() {
 
         {/* Features Section */}
     <>
-        <section className="mb-16" />
-          <div className="text-centermb-12">
-<<<<<<< HEAD
-            <h2 className="text-3 xl font-bold text-white mb-4"   />Advanced AI Features</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto">
-=======
-        </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Advanced AI Features</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <section className="m b-16" />
+          <div className="tex t-centermb-12">
+            <h2 className="tex t-3 xl font-bold text-white mb-4"   />Advanced AI Features</h2>
+            <p className="tex t-lg text-gray-300 max-w-3xlmx-auto">
               Our AI Financial Analytics Pro leverages cutting-edge machine learning 
               to provide unprecedented insights into your financial data.
     <>
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
+          <div className="gri d grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             {features.map((feature, index) => (
     <>
-              <div key="{index}" className="bg-slate-800/50 rounded-2 xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-allduration-300group" />
-                <div className="mb-6">
-<<<<<<< HEAD
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4group-hover:scale-110transition-transform"  />{feature.icon}
+              <div key="{index}" className="b g-slate-800/50 rounded-2 xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-allduration-300group" />
+                <div className="m b-6">
+                  <div className="fle x items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4group-hover:scale-110transition-transform"  />{feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3text-center"   />{feature.title}</h3>
-                  <p className="text-gray-300 mb-4text-center">
+                  <h3 className="tex t-xl font-semibold text-white mb-3text-center"   />{feature.title}</h3>
+                  <p className="tex t-gray-300 mb-4text-center">
               {feature.description}</p>
-=======
-        </div>
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4group-hover:scale-110transition-transform">{feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-whitemb-3text-center">{feature.title}</h3>
-                  <p className="text-gray-300mb-4text-center">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  <ul className="space-y-2" />
+                  <ul className="spac e-y-2" />
                     {feature.benefits.map((benefit, benefitIndex) => (
     <>
-                      <li key="{benefitIndex}" className="flex items-centertext-smtext-gray-300" />
-                        <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" />
+                      <li key="{benefitIndex}" className="fle x items-centertext-smtext-gray-300" />
+                        <CheckCircle className="w-4 h-4 tex t-green-400mr-2flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
@@ -440,44 +352,30 @@ export default function AiFinancialAnalyticsProPage() {
 
         {/* Analytics Types Section */}
     <>
-        <section className="mb-16" />
-          <div className="text-centermb-12">
-<<<<<<< HEAD
-            <h2 className="text-3 xl font-bold text-white mb-4"   />Comprehensive Analytics</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto">
-=======
-        </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Comprehensive Analytics</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <section className="m b-16" />
+          <div className="tex t-centermb-12">
+            <h2 className="tex t-3 xl font-bold text-white mb-4"   />Comprehensive Analytics</h2>
+            <p className="tex t-lg text-gray-300 max-w-3xlmx-auto">
               Cover every aspect of your financial operations with our comprehensive analytics suite.
     <>
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">
-<<<<<<< HEAD
-=======
+          <div className="gri d grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             {analyticsTypes.map((type, index) => (
     <>
-              <div key="{index}" className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30transition-allduration-300" />
-<<<<<<< HEAD
-                <div className="flex items-centermb-4">
-=======
-                <div className="flexitems-centermb-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              <div key="{index}" className="b g-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30transition-allduration-300" />
+                <div className="fle x items-centermb-4">
                   {type.icon}
     <>
-                  <h3 className="text-lg font-semiboldtext-whiteml-3">{type.category}</h3>
+                  <h3 className="tex t-lg font-semiboldtext-whiteml-3">{type.category}</h3>
                 </div>
-                <ul className="space-y-2" />
+                <ul className="spac e-y-2" />
                   {type.items.map((item, itemIndex) => (
     <>
-                    <li key="{itemIndex}" className="flex items-centertext-smtext-gray-300" />
-                      <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" />
+                    <li key="{itemIndex}" className="fle x items-centertext-smtext-gray-300" />
+                      <CheckCircle className="w-4 h-4 tex t-green-400mr-2flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -491,39 +389,25 @@ export default function AiFinancialAnalyticsProPage() {
 
         {/* Integrations Section */}
     <>
-        <section className="mb-16" />
-          <div className="text-centermb-12">
-<<<<<<< HEAD
-            <h2 className="text-3 xl font-bold text-white mb-4"   />Seamless Integrations</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto">
-=======
-        </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Seamless Integrations</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <section className="m b-16" />
+          <div className="tex t-centermb-12">
+            <h2 className="tex t-3 xl font-bold text-white mb-4"   />Seamless Integrations</h2>
+            <p className="tex t-lg text-gray-300 max-w-3xlmx-auto">
               Connect with your existing financial systems and tools for a unified analytics experience.
     <>
             </p>
           </div>
           
-          <div className="grid grid-cols-2md:grid-cols-4gap-6">
-<<<<<<< HEAD
-=======
+          <div className="gri d grid-cols-2md:grid-cols-4gap-6">
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             {integrations.map((integration, index) => (
     <>
-              <div key="{index}" className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300text-centergroup" />
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-3group-hover:scale-110transition-transform">{integration.icon}
+              <div key="{index}" className="b g-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300text-centergroup" />
+                <div className="fle x items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-3group-hover:scale-110transition-transform">{integration.icon}
                 </div>
-<<<<<<< HEAD
-                <h3 className="text-whitefont-semiboldmb-1"   />{integration.name}</h3>
-                <p className="text-gray-400text-sm">
+                <h3 className="tex t-whitefont-semiboldmb-1"   />{integration.name}</h3>
+                <p className="tex t-gray-400text-sm">
               {integration.category}</p>
-=======
-                <h3 className="text-whitefont-semiboldmb-1">{integration.name}</h3>
-                <p className="text-gray-400text-sm">{integration.category}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               </div>
             ))}
     <>
@@ -532,100 +416,57 @@ export default function AiFinancialAnalyticsProPage() {
 
         {/* Pricing Section */}
     <>
-        <section className="mb-16" />
-          <div className="text-centermb-12">
-<<<<<<< HEAD
-            <h2 className="text-3 xl font-bold text-white mb-4"   />Choose Your Plan</h2>
-            <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-=======
-        </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Choose Your Plan</h2>
-            <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <section className="m b-16" />
+          <div className="tex t-centermb-12">
+            <h2 className="tex t-3 xl font-bold text-white mb-4"   />Choose Your Plan</h2>
+            <p className="tex t-lg text-gray-300 max-w-2xlmx-auto">
               Flexible pricing plans designed to meet your financial analytics needs at any scale.
     <>
             </p>
           </div>
           
-          <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
+          <div className="gri d grid-cols-1md:grid-cols-3gap-8">
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             {pricingPlans.map((plan, index) => (
-              <div key="{index}" className="{`bg-slate-800/50" rounded-2 xl p-8 border transition-all duration-300 relative ${
+              <div key="{index}" className="{`b g-slate-800/50" rounded-2 xl p-8 border transition-all duration-300 relative ${
                 plan.popular ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' : 'border-slate-700 hover: border-cyan-500/30'
               }`} />
                 {plan.popular && (
-<<<<<<< HEAD
-                  <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
-=======
-    <>
-                  <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-        </div>
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <div className="absolut e -top-3 left-1/2transform-translate-x-1/2">
+                    <span className="b g-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
                     </span>
                   </div>
                 )}
                 
-<<<<<<< HEAD
-                <div className="text-centermb-6">
-                  <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                  <div className="flex items-baselinejustify-centermb-2">
-                    <span className="text-4xlfont-boldtext-cyan-400"   />{plan.price}</span>
-                    <span className="text-gray-400ml-1"   />{plan.period}</span>
+                <div className="tex t-centermb-6">
+                  <h3 className="tex t-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
+                  <div className="fle x items-baselinejustify-centermb-2">
+                    <span className="tex t-4xlfont-boldtext-cyan-400"   />{plan.price}</span>
+                    <span className="tex t-gray-400ml-1"   />{plan.period}</span>
                   </div>
-                  <p className="text-gray-300">
+                  <p className="tex t-gray-300">
               {plan.description}</p>
-=======
-    <>
-                <div className="text-centermb-6">
-        </div>
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <div className="flex items-baselinejustify-centermb-2">
-        </div>
-                    <span className="text-4 xlfont-boldtext-cyan-400">{plan.price}</span>
-                    <span className="text-gray-400ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300">{plan.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                 </div>
                 
-                <ul className="space-y-3mb-8" />
+                <ul className="spac e-y-3mb-8" />
                   {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-                    <li key="{featureIndex}" className="flex items-center text-gray-300" />
-                      <CheckCircle className="w-5 h-5 text-green-400mr-3flex-shrink-0" />
-=======
-    <>
-                    <li key="{featureIndex}" className="flexitems-centertext-gray-300" />
-                      <CheckCircle className="w-5 h-5 text-green-400mr-3flex-shrink-0" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <li key="{featureIndex}" className="fle x items-center text-gray-300" />
+                      <CheckCircle className="w-5 h-5 tex t-green-400mr-3flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 
                 <Link to="/contact"
-                  className="{`w-full" py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
+                  className="{`w-ful l" py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                       : 'border-2 border-cyan-500 text-cyan-400 hover: bg-cyan-500 hover:text-white'
-<<<<<<< HEAD
                   }`} >
           {plan.cta}
                   
-          <ArrowRight className="w-4h-4ml-2"  />
+          <ArrowRight className="w-4 h-4ml-2"  />
         </Link>
-=======
-                  }`} />
-                  {plan.cta}
-    <>
-                  <ArrowRight className="w-4h-4ml-2" />
-                </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               </div>
             ))}
     <>
@@ -634,71 +475,39 @@ export default function AiFinancialAnalyticsProPage() {
 
         {/* Testimonials */}
     <>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xlmb-16" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-12">
-              <h2 className="text-3 xl font-bold text-white mb-4"   />What Our Customers Say</h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
+        <section className="p y-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xlmb-16" />
+          <div className="ma x-w-7xlmx-auto">
+            <div className="tex t-centermb-12">
+              <h2 className="tex t-3 xl font-bold text-white mb-4"   />What Our Customers Say</h2>
+              <p className="tex t-lg text-gray-300 max-w-2xlmx-auto">
               Join hundreds of finance professionals who trust AI Financial Analytics Pro.
-=======
-        </div>
-            <div className="text-centermb-12">
-        </div>
-              <h2 className="text-3 xl font-boldtext-whitemb-4">What Our Customers Say</h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
-                Join hundreds of finance professionals who trust AI Financial Analytics Pro.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               </p>
             </div>
             
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
+            <div className="gri d grid-cols-1md:grid-cols-3gap-8">
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               {testimonials.map((testimonial, index) => (
     <>
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-<<<<<<< HEAD
-                  <div className="flex items-centermb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4"  />{testimonial.avatar}
+                <div key="{index}" className="b g-slate-800/50 rounded-xl p-6borderborder-slate-700" />
+                  <div className="fle x items-centermb-4">
+                    <div className="w-1 2 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4"  />{testimonial.avatar}
                     </div>
                     <div>
-            <h4 className="text-whitefont-semibold"   />{testimonial.name}</h4>
-                      <p className="text-gray-400text-sm">
+            <h4 className="tex t-whitefont-semibold"   />{testimonial.name}</h4>
+                      <p className="tex t-gray-400text-sm">
               {testimonial.role}</p>
-                      <p className="text-cyan-400text-smfont-semibold">
+                      <p className="tex t-cyan-400text-smfont-semibold">
               {testimonial.company}</p>
                     </div>
-                  <div className="flex items-centermb-3">
-=======
-                  <div className="flexitems-centermb-4">
-        </div>
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar}
-                    </div>
-                    <div />
-                      <h4 className="text-whitefont-semibold">{testimonial.name}</h4>
-                      <p className="text-gray-400text-sm">{testimonial.role}</p>
-                      <p className="text-cyan-400text-smfont-semibold">{testimonial.company}</p>
-                    </div>
-                  <div className="flexitems-centermb-3">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <div className="fle x items-centermb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-4 h-4text-yellow-400fill-current" />
+                      <Star key="{i}" className="w-4 h-4tex t-yellow-400fill-current" />
                     ))}
     <>
                   </div>
-<<<<<<< HEAD
-                  <p className="text-gray-300italicmb-3">
+                  <p className="tex t-gray-300italicmb-3">
               "{testimonial.content}"</p>
-                  <div className="text-cyan-400font-semiboldtext-sm"  />Result: {testimonial.results}
-=======
-                  <p className="text-gray-300italicmb-3">"{testimonial.content}"</p>
-                  <div className="text-cyan-400font-semiboldtext-sm">Result: {testimonial.results}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <div className="tex t-cyan-400font-semiboldtext-sm"  />Result: {testimonial.results}
                   </div>
               ))}
     <>
@@ -707,52 +516,29 @@ export default function AiFinancialAnalyticsProPage() {
 
         {/* CTA Section */}
     <>
-        <section className="text-center" />
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-12borderborder-cyan-500/30">
-<<<<<<< HEAD
-            <h2 className="text-3 xl font-bold text-white mb-4"  />Ready to Transform Your Financial Analysis?
-=======
-        </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Ready to Transform Your Financial Analysis?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <section className="tex t-center" />
+          <div className="b g-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-12borderborder-cyan-500/30">
+            <h2 className="tex t-3 xl font-bold text-white mb-4"  />Ready to Transform Your Financial Analysis?
             </h2>
-            <p className="text-lg text-gray-300 mb-8 max-w-3xlmx-auto">
+            <p className="tex t-lg text-gray-300 mb-8 max-w-3xlmx-auto">
               Start your free trial today and experience the power of AI-driven financial analytics. 
               Join hundreds of finance professionals making smarter decisions with data.
     <>
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-centerjustify-center" >
+            <div className="fle x flex-col sm:flex-rowgap-4justify-center">
+              <Link to="/contact" className="b g-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-centerjustify-center" >
           Start Free Trial
                 
-          <Sparkles className="w-5h-5ml-2" /  />
+          <Sparkles className="w-5 h-5ml-2" /  />
         </Link>
-              <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-centerjustify-center" >
+              <Link to="/about" className="borde r-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-centerjustify-center" >
           Learn More
                 
-          <PieChart className="w-5h-5ml-2" /  />
+          <PieChart className="w-5 h-5ml-2" /  />
         </Link>
             </div>
-            <div className="mt-8text-white/80text-sm">
+            <div className="m t-8text-white/80text-sm">
               <p />✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime</p>
-=======
-        </div>
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flexitems-centerjustify-center" />
-                Start Free Trial
-    <>
-                <Sparkles className="w-5h-5ml-2" / />
-              </Link>
-              <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flexitems-centerjustify-center" />
-                Learn More
-    <>
-                <PieChart className="w-5h-5ml-2" / />
-              </Link>
-            </div>
-            <div className="mt-8text-white/80text-sm">
-        </div>
-              <p>✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             </div>
         </section>
       </div>

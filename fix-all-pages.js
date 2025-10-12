@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 // Get all AI service pages from App.tsx
-const aiServicePages = [
+aiServicePages = [
   'ai-analytics', 'ai-automation', 'ai-chatbot-builder', 'ai-cybersecurity', 
   'ai-crm', 'ai-data-analytics', 'ai-healthcare', 'ai-financial-services', 
   'ai-computer-vision', 'ai-voice-solutions', 'ai-ecommerce-solutions', 
@@ -17,7 +17,7 @@ const aiServicePages = [
   'ai-voice-assistant', 'ai-content-generation-pro'
 ];
 
-const itServicePages = [
+itServicePages = [
   'cloud-infrastructure', 'cybersecurity-solutions', 'web-development', 
   'mobile-development', 'api-development', 'database-management', 'devops-cicd', 
   'it-support', 'data-analytics-bi', 'custom-software', 'network-infrastructure', 
@@ -31,7 +31,7 @@ const itServicePages = [
   'workflow-automation', 'cloud-native-security'
 ];
 
-const microSaasPages = [
+microSaasPages = [
   'zion-analytics-pro', 'zion-chat-ai', 'zion-security-shield', 'zion-cloud-vault', 
   'zion-content-studio', 'zion-crm-intelligence', 'zion-data-sync', 'zion-lead-magnet', 
   'zion-project-master', 'zion-email-automation', 'zion-inventory-smart', 
@@ -46,21 +46,21 @@ const microSaasPages = [
   'zion-ai-document-ai'
 ];
 
-const emergingTechPages = [
+emergingTechPages = [
   '5g-implementation', 'ai-3d-generation', 'ai-holographic-workspace', 
   'ai-autonomous-systems', 'ai-blockchain-solutions', 'quantum-computing', 
   'ar-vr-solutions', 'iot-integration', 'machine-learning'
 ];
 
-const companyPages = [
+companyPages = [
   'team', 'partners', 'status'
 ];
 
-const resourcePages = [
+resourcePages = [
   'faq', 'docs', 'api-docs', 'community', 'compliance'
 ];
 
-const allPages = [
+allPages = [
   ...aiServicePages, 
   ...itServicePages, 
   ...microSaasPages, 
@@ -69,7 +69,7 @@ const allPages = [
   ...resourcePages
 ];
 
-const pageTemplate = (pageName, title, componentName) => `'use client';
+pageTemplate = (pageName, title, componentName) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -82,26 +82,26 @@ const ${componentName}: React.FC = () => {
         <meta name="keywords" content="${pageName}, AI solutions, IT services" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+      <div className="mi n-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="containe r mx-auto px-4 py-16">
+          <div className="tex t-center mb-16">
+            <h1 className="tex t-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="b g-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 ${title}
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="tex t-xl text-gray-300 max-w-3xl mx-auto">
               Professional ${title.toLowerCase()} services by Zion Tech Group.
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300 mb-6">
+          <div className="b g-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
+            <h2 className="tex t-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="tex t-gray-300 mb-6">
               We're working on bringing you comprehensive ${title.toLowerCase()} solutions. 
               Contact us to learn more about our services.
             </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+            <button className="b g-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
               Contact Us
             </button>
           </div>
@@ -115,16 +115,16 @@ export default ${componentName};`;
 
 // Fix all pages
 allPages.forEach(pageName => {
-  const title = pageName.split('-').map(word => 
+  title = pageName.split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');
   
-  const componentName = pageName.split('-').map(word => 
+  componentName = pageName.split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
   
-  const pageDir = path.join('/workspace/app', pageName);
-  const pageFile = path.join(pageDir, 'page.tsx');
+  pageDir = path.join('/workspace/app', pageName);
+  pageFile = path.join(pageDir, 'page.tsx');
   
   // Create directory if it doesn't exist
   if (!fs.existsSync(pageDir)) {

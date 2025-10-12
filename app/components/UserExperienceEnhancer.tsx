@@ -22,7 +22,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
 
   useEffect(() => {
     // UX enhancement logic
-    const enhanceUX = () => {
+    enhanceUX = () => {
       // Add smooth scrolling
       document.documentElement.style.scrollBehavior = 'smooth'
 

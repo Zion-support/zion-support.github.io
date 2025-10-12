@@ -1,13 +1,9 @@
 'use client'
 import React from 'react'
 
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
-=======
-import { Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
 const SEOEnhancer: React.FC = () => {
-  const features = [
+  features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -29,7 +25,7 @@ const SEOEnhancer: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-  const benefits = [
+  benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',

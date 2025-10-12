@@ -21,15 +21,15 @@ const PerformanceOptimizer: React.FC = () => {
 
   useEffect(() => {
     // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalResources = [
+    preloadCriticalResources = () => {
+      criticalResources = [
         '/fonts/inter.woff2',
         '/images/hero-bg.jpg',
         '/images/logo.png'
       ];
 
       criticalResources.forEach(resource => {
-        const link = document.createElement('link');
+        link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
         link.as = resource.endsWith('.woff2') ? 'font' : 'image';
@@ -41,8 +41,8 @@ const PerformanceOptimizer: React.FC = () => {
     };
 
     // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
+    optimizeImages = () => {
+      images = document.querySelectorAll('img');
       images.forEach(img => {
         if (!img.loading) {
           img.loading = 'lazy';
@@ -58,7 +58,7 @@ const PerformanceOptimizer: React.FC = () => {
     optimizeImages();
   }, []);
 
-  const features = [
+  features = [
     {
       title: "Image Optimization",
       description: "Automatic image compression and lazy loading"
@@ -78,25 +78,25 @@ const PerformanceOptimizer: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="mi n-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      <section className="relativ e py-20 px-4 sm:px-6 lg:px-8">
+        <div className="ma x-w-7xl mx-auto">
+          <div className="tex t-center">
+            <h1 className="tex t-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="b g-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Performance Optimizer
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="tex t-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Optimize your application's performance with our advanced optimization tools and techniques.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+            <div className="fle x flex-col sm:flex-row gap-4 justify-center">
+              <button className="b g-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="m l-2 h-5 w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              <button className="borde r border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
             </div>
@@ -105,25 +105,25 @@ const PerformanceOptimizer: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="p y-20 px-4 sm:px-6 lg:px-8">
+        <div className="ma x-w-7xl mx-auto">
+          <div className="tex t-center mb-16">
+            <h2 className="tex t-3xl md:text-4xl font-bold text-white mb-4">
               Our Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="tex t-xl text-gray-300 max-w-3xl mx-auto">
               Discover the powerful features that make our performance optimizer solutions stand out.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="gri d grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <Zap className="h-6 w-6 text-white" />
+              <div key={index} className="b g-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                <div className="fle x items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <Zap className="h-6 w-6 tex t-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="tex t-xl font-bold text-white mb-2">{feature.title}</h3>
+                <p className="tex t-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>

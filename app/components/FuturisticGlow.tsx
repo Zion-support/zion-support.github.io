@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import { useEffect, useRef} from 'react';
-=======
-'use client';
-import { useEffect, useRef} from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface FuturisticGlowProps {
   children: React.ReactNode;
   intensity?: 'low' | 'medium' | 'high';
@@ -14,16 +8,16 @@ interface FuturisticGlowProps {
 
 export default function FuturisticGlow({ 
   children, 
-  const intensity = 'medium', 
+  intensity = 'medium', 
   color = 'cyan',
   className = '' 
 }: FuturisticGlowProps) {
-  const containerRef = useRef<HTMLDivElement />(null);
+  containerRef = useRef<HTMLDivElement />(null);
   useEffect(() => {
-    const container = containerRef.current;
+    container = containerRef.current;
     if (!container) return;
 
-    const getIntensityValue = () => {
+    getIntensityValue = () => {
       switch (intensity) {
         case 'low': return '0.3';
         case 'high': return '0.8';
@@ -31,7 +25,7 @@ export default function FuturisticGlow({
       }
     };
 
-    const getColorValue = () => {
+    getColorValue = () => {
       switch (color) {
         case 'cyan': return '0, 255, 255';
         case 'purple': return '168, 85, 247';
@@ -43,8 +37,8 @@ export default function FuturisticGlow({
       }
     };
 
-    const rgb = getColorValue();
-    const opacity = getIntensityValue();
+    rgb = getColorValue();
+    opacity = getIntensityValue();
     // Apply CSS custom properties for dynamic glow
     container.style.setProperty('--glow-color', `rgba(${rgb}, ${opacity})`);
     container.style.setProperty('--glow-color-strong', `rgba(${rgb}, ${parseFloat(opacity) + 0.3})`);
@@ -52,7 +46,7 @@ export default function FuturisticGlow({
 
   return (
     <div
-      const ref = {containerRef}
+      ref = {containerRef}
       className="{`"
         relative
         before: absolute before:inset-0 before:rounded-inherit,

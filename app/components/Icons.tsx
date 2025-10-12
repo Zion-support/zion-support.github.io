@@ -119,7 +119,7 @@ export {
 } from 'lucide-react'
 
 // Create a centralized icon registry for better tree-shaking
-export const IconRegistry = {
+export IconRegistry = {
   // Navigation
   Menu,
   X,

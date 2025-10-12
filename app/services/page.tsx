@@ -1,425 +1,152 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Brain, Cloud, Shield, Code, BarChart3, Smartphone, Database } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
-  const mainServices = [
+  const services = [
     {
-      icon: Brain,
+      icon: <Brain className="w-12 h-12 text-cyan-400" />,
       title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      color: 'from-purple-500 to-pink-500',
-      href: '/ai-services'
+      description: 'Cutting-edge artificial intelligence solutions including machine learning, natural language processing, and computer vision.',
+      features: ['Machine Learning Models', 'AI Chatbots', 'Predictive Analytics', 'Computer Vision'],
+      link: '/ai-services'
     },
     {
-      icon: Cloud,
-      title: 'Cloud Computing',
-      description: 'Scalable and secure cloud infrastructure solutions for modern businesses.',
-      features: ['AWS Migration', 'Azure Solutions', 'Google Cloud', 'Hybrid Cloud'],
-      color: 'from-cyan-500 to-blue-500',
-      href: '/cloud-services'
+      icon: <Cloud className="w-12 h-12 text-purple-400" />,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions to modernize your infrastructure and improve performance.',
+      features: ['Cloud Migration', 'DevOps & CI/CD', 'Container Orchestration', 'Serverless Architecture'],
+      link: '/cloud-services'
     },
     {
-      icon: Shield,
+      icon: <Shield className="w-12 h-12 text-green-400" />,
       title: 'Cybersecurity',
-      description: 'Protect your digital assets with comprehensive security solutions and best practices.',
-      features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
-      color: 'from-red-500 to-orange-500',
-      href: '/cybersecurity'
+      description: 'Comprehensive security solutions to protect your business from evolving cyber threats.',
+      features: ['Security Audits', 'Penetration Testing', 'Compliance Management', 'Incident Response'],
+      link: '/cybersecurity'
     },
     {
-      icon: Code,
+      icon: <Code className="w-12 h-12 text-blue-400" />,
       title: 'Custom Development',
-      description: 'Tailored software solutions built with modern technologies and best practices.',
+      description: 'Tailored software solutions built to meet your specific business requirements and goals.',
       features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
-      color: 'from-green-500 to-emerald-500',
-      href: '/custom-development'
-    }
-  ];
-  const additionalServices = [
+      link: '/custom-development'
+    },
     {
-      icon: Database,
+      icon: <BarChart3 className="w-12 h-12 text-yellow-400" />,
       title: 'Data Analytics',
-      description: 'Unlock insights from your data with advanced analytics and visualization tools.',
-      href: '/data-analytics'
+      description: 'Transform your data into actionable insights with advanced analytics and visualization tools.',
+      features: ['Business Intelligence', 'Data Visualization', 'Predictive Modeling', 'Real-time Analytics'],
+      link: '/data-analytics'
     },
     {
-      icon: Smartphone,
+      icon: <Smartphone className="w-12 h-12 text-pink-400" />,
       title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android.',
-      href: '/mobile-development'
-    },
-    {
-      icon: Globe,
-      title: 'Web Development',
-      description: 'Modern, responsive websites and web applications that drive engagement.',
-      href: '/web-development'
-    },
-    {
-      icon: Lock,
-      title: 'IT Support',
-      description: 'Comprehensive IT support and maintenance services for your business.',
-      href: '/it-support'
+      description: 'Native and cross-platform mobile applications that deliver exceptional user experiences.',
+      features: ['iOS Development', 'Android Development', 'React Native', 'Flutter Apps'],
+      link: '/mobile-development'
     }
   ];
-  const processSteps = [
-    {
-      step: '01',
-      title: 'Discovery',
-      description: 'We analyze your business needs and technical requirements to understand your goals.',
-      icon: Users
-    },
-    {
-      step: '02',
-      title: 'Strategy',
-      description: 'We develop a comprehensive strategy and roadmap tailored to your specific needs.',
-      icon: Brain
-    },
-    {
-      step: '03',
-      title: 'Implementation',
-      description: 'Our expert team implements the solution with precision and attention to detail.',
-      icon: Code
-    },
-    {
-      step: '04',
-      title: 'Support',
-      description: 'We provide ongoing support and maintenance to ensure optimal performance.',
-      icon: Zap
-    }
-  ];
+
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
-=======
-    <>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
         <title>Our Services - Zion Tech Group</title>
-        <meta const name = "description" content="Explore our comprehensive range of AI and IT services. From AI solutions to cloud computing, cybersecurity, and custom development - we have you covered." / / />
-        <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, custom development, data analytics, mobile development" / / />
+        <meta name="description" content="Explore our comprehensive range of AI and IT services. From AI solutions to cloud computing, cybersecurity, and custom development - we have you covered." />
+        <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, custom development, data analytics, mobile development" />
       </Helmet>
-    </>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         {/* Hero Section */}
-    <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="max-w-4 xlmx-autotext-center">
-              <h1 className="text-5 xl md:text-6 xl font-bold text-white mb-6" />
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  >Services</span>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Services</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8leading-relaxed">
-              Comprehensive AI and IT solutions designed to transform your business and drive growth. 
-=======
-        </div>
-            <div className="max-w-4 xlmx-autotext-center">
-        </div>
-              <h1 className="text-5 xl md:text-6 xl font-boldtext-whitemb-6" />
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Services</span>
-              </h1>
-              <p className="text-xl text-gray-300mb-8leading-relaxed" />
-    </>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Comprehensive AI and IT solutions designed to transform your business and drive growth. 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                 We offer end-to-end services from strategy to implementation and support.
-    <>
               </p>
             </div>
+          </div>
         </section>
-    </>
 
         {/* Main Services Section */}
-    <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6"  >Core Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Our flagship services that have helped hundreds of businesses transform and grow
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6">Core Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Core Services</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our flagship services that have helped hundreds of businesses transform and grow
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               </p>
             </div>
-    </>
 
-            <div className="grid grid-cols-1md:grid-cols-2gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {mainServices.map((service, index) => (
-                <div 
-                  key="{index}"
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
-    <>
-                  <div className="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`} />
-                    <service.icon className="w-8h-8text-white" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 group">
+                  <div className="mb-6">
+                    {service.icon}
                   </div>
-    </>
-                  
-<<<<<<< HEAD
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{service.title}
-=======
-    <>
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{service.title}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                    {service.title}
                   </h3>
-    </>
-                  
-<<<<<<< HEAD
-                  <p className="text-gray-300 mb-6leading-relaxed">
-              {service.description}
-=======
-                  <p className="text-gray-300mb-6leading-relaxed">
+                  <p className="text-gray-300 mb-6 leading-relaxed">
                     {service.description}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                   </p>
-                  
-                  <ul className="space-y-2mb-6" />
+                  <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-                      <li key="{featureIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-4 h-4 text-cyan-400mr-3flex-shrink-0" />
-                        <span className="text-sm"  >{feature}</span>
-=======
-    <>
-                      <li key="{featureIndex}" className="flexitems-centertext-gray-300" />
-                        <CheckCircle className="w-4 h-4 text-cyan-400mr-3flex-shrink-0" / />
-                        <span className="text-sm">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                      <li key={featureIndex} className="text-gray-400 flex items-center">
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                        {feature}
                       </li>
-    </>
                     ))}
                   </ul>
-                  
-<<<<<<< HEAD
-                  <Link to="{service.href}" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colorsfont-semiboldgroup-hover:translate-x-1" >
-          Learn More
-                    
-          <ArrowRight className="ml-2"  />
-        </Link>
-=======
-                  <Link to="{service.href}" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colorsfont-semiboldgroup-hover:translate-x-1" />
+                  <Link 
+                    to={service.link}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:translate-x-2 transition-all duration-300"
+                  >
                     Learn More
-    <>
-                    <ArrowRight className="ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                 </div>
-    </>
               ))}
-    <>
             </div>
+          </div>
         </section>
-    </>
-
-        {/* Additional Services Section */}
-    <>
-        <section className="py-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6"  >Additional Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Specialized services to complement your core technology needs
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6">Additional Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
-                Specialized services to complement your core technology needs
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
-
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-6">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {additionalServices.map((service, index) => (
-                <Link
-                  key="{index}"
-                  to="{service.href}"
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transformhover:scale-105text-center" />
-<<<<<<< HEAD
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110transition-transformduration-300">
-                    <service.icon className="w-6h-6text-cyan-400" />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-2group-hover:text-cyan-400 transition-colors"  />{service.title}
-                  </h3>
-                  <p className="text-gray-300text-smleading-relaxed">
-              {service.description}
-=======
-    <>
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110transition-transformduration-300">
-        </div>
-                    <service.icon className="w-6h-6text-cyan-400" / />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-2group-hover:text-cyan-400transition-colors">{service.title}
-                  </h3>
-                  <p className="text-gray-300text-smleading-relaxed" />
-    </>
-                    {service.description}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </p>
-                </Link>
-    </>
-              ))}
-    <>
-            </div>
-        </section>
-    </>
-
-        {/* Process Section */}
-    <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6"  >Our Process</h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              How we work with you to deliver exceptional results
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6">Our Process</h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
-                How we work with you to deliver exceptional results
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
-
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {processSteps.map((step, index) => (
-                <div 
-                  key="{index}"
-                  className="text-centergroup" />
-<<<<<<< HEAD
-                  <div className="relativemb-6">
-                    <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300borderborder-cyan-500/30">
-                      <step.icon className="w-8h-8text-cyan-400" />
-=======
-    <>
-                  <div className="relativemb-6">
-        </div>
-                    <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300borderborder-cyan-500/30">
-        </div>
-                      <step.icon className="w-8h-8text-cyan-400" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-whitefont-boldtext-sm">{step.step}
-                    </div>
-<<<<<<< HEAD
-                  <h3 className="text-xl font-bold text-white mb-3group-hover:text-cyan-400 transition-colors"  />{step.title}
-                  </h3>
-                  <p className="text-gray-300leading-relaxed">
-              {step.description}
-=======
-                  <h3 className="text-xl font-bold text-white mb-3group-hover:text-cyan-400transition-colors">{step.title}
-                  </h3>
-                  <p className="text-gray-300leading-relaxed" />
-    </>
-                    {step.description}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </p>
-                </div>
-    </>
-              ))}
-    <>
-            </div>
-        </section>
-    </>
 
         {/* CTA Section */}
-    <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center">
-              <h2 className="text-4xl font-bold text-white mb-6"  />Ready to Get Started?
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-12 text-center border border-cyan-500/20">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto">
-              Let's discuss your project and how our services can help you achieve your business goals.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Let's discuss how our AI and IT solutions can help you achieve your goals and drive growth.
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-        </div>
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6">Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
-    </>
-                Let's discuss your project and how our services can help you achieve your business goals.
-    <>
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Get a Free Consultation
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
-                <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
+                <Link 
+                  to="/consultation"
+                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300"
+                >
+                  Free Consultation
                 </Link>
               </div>
+            </div>
           </div>
         </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
       </div>
     </>
   );
 };
 
 export default ServicesPage;
-    </>

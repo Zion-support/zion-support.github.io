@@ -3,16 +3,16 @@ import { useEffect } from 'react'
 const MobileOptimizer: React.FC = () => {
   useEffect(() => {
     // Prevent zoom on input focus for iOS
-    const preventZoom = () => {
-      const viewport = document.querySelector('meta[name="viewport"]')
+    preventZoom = () => {
+      viewport = document.querySelector('meta[name="viewport"]')
       if (viewport) {
         viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
       }
     }
 
     // Add touch-friendly classes
-    const addTouchClasses = () => {
-      const buttons = document.querySelectorAll('button, a, [role="button"]')
+    addTouchClasses = () => {
+      buttons = document.querySelectorAll('button, a, [role="button"]')
       buttons.forEach(button => {
         if (!button.classList.contains('touch-manipulation')) {
           button.classList.add('touch-manipulation')
@@ -21,10 +21,10 @@ const MobileOptimizer: React.FC = () => {
     }
 
     // Optimize images for mobile
-    const optimizeImagesForMobile = () => {
-      const images = document.querySelectorAll('img')
+    optimizeImagesForMobile = () => {
+      images = document.querySelectorAll('img')
       images.forEach(img => {
-        const imageElement = img as HTMLImageElement
+        imageElement = img as HTMLImageElement
         if (!imageElement.loading) {
           imageElement.loading = 'lazy'
         }
@@ -35,11 +35,11 @@ const MobileOptimizer: React.FC = () => {
     }
 
     // Add mobile-specific event listeners
-    const addMobileEventListeners = () => {
+    addMobileEventListeners = () => {
       // Prevent double-tap zoom
       let lastTouchEnd = 0
       document.addEventListener('touchend', (event) => {
-        const now = new Date().getTime()
+        now = new Date().getTime()
         if (now - lastTouchEnd <= 300) {
           event.preventDefault()
         }
@@ -47,7 +47,7 @@ const MobileOptimizer: React.FC = () => {
       }, false)
 
       // Add haptic feedback for supported devices
-      const addHapticFeedback = (element: Element) => {
+      addHapticFeedback = (element: Element) => {
         element.addEventListener('touchstart', () => {
           if ('vibrate' in navigator) {
             navigator.vibrate(10) // Short vibration
@@ -55,19 +55,19 @@ const MobileOptimizer: React.FC = () => {
         })
       }
 
-      const interactiveElements = document.querySelectorAll('button, a, [role="button"]')
+      interactiveElements = document.querySelectorAll('button, a, [role="button"]')
       interactiveElements.forEach(addHapticFeedback)
     }
 
     // Optimize scroll performance
-    const optimizeScrollPerformance = () => {
+    optimizeScrollPerformance = () => {
       let ticking = false
-      const updateScrollPosition = () => {
+      updateScrollPosition = () => {
         // Add scroll-based optimizations here
         ticking = false
       }
 
-      const requestTick = () => {
+      requestTick = () => {
         if (!ticking) {
           requestAnimationFrame(updateScrollPosition)
           ticking = true

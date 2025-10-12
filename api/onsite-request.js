@@ -1,11 +1,11 @@
-const fs = require('fs');
-const path = require('path');
+fs = require('fs');
+path = require('path');
 
 // Simple wrapper function to replace withSentry
-// const withSentry = (handler) => handler;
+// withSentry = (handler) => handler;
 
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'onsite-requests.json');
+dir = path.join(process.cwd(), 'data');
+file = path.join(dir, 'onsite-requests.json');
 
 function handler(req, res) {
   if (req.method !== 'POST') {
@@ -24,7 +24,7 @@ function handler(req, res) {
   let existing = [];
   try {
     if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
+      data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
@@ -34,7 +34,7 @@ function handler(req, res) {
     existing = [];
   }
 
-  const newRequest = {
+  newRequest = {
     id: Date.now().toString(),
     name,
     email,

@@ -35,33 +35,33 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
   // Removed specializedServices as it was unused
 
     }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="containe r mx-auto px-4">
+        <div className="fle x items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
+          <a href="/" className="fle x items-center space-x-2" onClick={closeAllMenus}>
+            <div className="w-8 h-8 b g-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+              <Brain className="w-5 h-5 tex t-white" />
             </div>
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+            <span className="tex t-xl font-bold text-white neon-text">Zion Tech Group</span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <div className="relative group">
+          <div className="hidde n lg:flex items-center space-x-8">
+            <div className="relativ e group">
               
               >
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
-                  <div className="grid grid-cols-3 gap-6">
+                <div className="absolut e top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
+                  <div className="gri d grid-cols-3 gap-6">
                     <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Zap className="w-4 h-4 mr-2" />
+                      <h3 className="tex t-cyan-400 font-semibold mb-3 flex items-center">
+                        <Zap className="w-4 h-4 m r-2" />
                         Micro SAAS
                       </h3>
-                      <div className="space-y-2">
+                      <div className="spac e-y-2">
                           
                           >
                             <service.icon className="w-3 h-3" />
@@ -70,11 +70,11 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                         ))}
                       </div>
                     <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Brain className="w-4 h-4 mr-2" />
+                      <h3 className="tex t-cyan-400 font-semibold mb-3 flex items-center">
+                        <Brain className="w-4 h-4 m r-2" />
                         AI Services
                       </h3>
-                      <div className="space-y-2">
+                      <div className="spac e-y-2">
                           
                           >
                             <service.icon className="w-3 h-3" />
@@ -83,11 +83,11 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                         ))}
                       </div>
                     <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Settings className="w-4 h-4 mr-2" />
+                      <h3 className="tex t-cyan-400 font-semibold mb-3 flex items-center">
+                        <Settings className="w-4 h-4 m r-2" />
                         IT Services
                       </h3>
-                      <div className="space-y-2">
+                      <div className="spac e-y-2">
                           
                           >
                             <service.icon className="w-3 h-3" />
@@ -96,8 +96,8 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                         ))}
                       </div>
                   </div>
-                  <div className="mt-4 pt-4 border-t border-gray-700">
-                    <div className="grid grid-cols-2 gap-4">
+                  <div className="m t-4 pt-4 border-t border-gray-700">
+                    <div className="gri d grid-cols-2 gap-4">
                       
                       >
                         <span>View All Services</span>
@@ -113,27 +113,27 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
               )}
             </div>
 
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
+            <a href="/about" className="tex t-white hover:text-cyan-400 transition-colors">
               About
             </a>
-            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
+            <a href="/blog" className="tex t-white hover:text-cyan-400 transition-colors">
               Blog
             </a>
-            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
+            <a href="/case-studies" className="tex t-white hover:text-cyan-400 transition-colors">
               Case Studies
             </a>
-            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+            <a href="/pricing" className="tex t-white hover:text-cyan-400 transition-colors">
               Pricing
             </a>
-            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
+            <a href="/contact" className="tex t-white hover:text-cyan-400 transition-colors">
               Contact
             </a>
             
-            <div className="flex items-center space-x-4">
+            <div className="fle x items-center space-x-4">
               
               >
                 <Phone className="w-4 h-4" />
-                <span className="hidden sm:inline">+1 302 464 0950</span>
+                <span className="hidde n sm:inline">+1 302 464 0950</span>
               </a>
               
               >
@@ -149,8 +149,8 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
         </div>
 
         {/* Mobile Menu */}
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-            <div className="px-4 py-6 space-y-4">
+          <div className="l g:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
+            <div className="p x-4 py-6 space-y-4">
               <div>
                 
                 >
@@ -158,10 +158,10 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                   <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 
-                  <div className="mt-4 pl-4 space-y-3">
+                  <div className="m t-4 pl-4 space-y-3">
                     <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
-                      <div className="space-y-2">
+                      <h4 className="tex t-cyan-400 font-semibold mb-2">Micro SAAS</h4>
+                      <div className="spac e-y-2">
                           
                           >
                             {service.name}
@@ -169,8 +169,8 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                         ))}
                       </div>
                     <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
-                      <div className="space-y-2">
+                      <h4 className="tex t-cyan-400 font-semibold mb-2">AI Services</h4>
+                      <div className="spac e-y-2">
                           
                           >
                             {service.name}
@@ -185,23 +185,23 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                 )}
               </div>
 
-              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a href="/about" className="bloc k text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 About
               </a>
-              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a href="/blog" className="bloc k text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Blog
               </a>
-              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a href="/case-studies" className="bloc k text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Case Studies
               </a>
-              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a href="/pricing" className="bloc k text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Pricing
               </a>
-              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a href="/contact" className="bloc k text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Contact
               </a>
               
-              <div className="pt-4 border-t border-gray-700">
+              <div className="p t-4 border-t border-gray-700">
                 
                 >
                   <Phone className="w-4 h-4" />

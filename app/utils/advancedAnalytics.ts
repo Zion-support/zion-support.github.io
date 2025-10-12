@@ -85,13 +85,13 @@
   /**
    * Track page view
    */
-    const currentPage = page || window.location.pathname;
+    currentPage = page || window.location.pathname;
 
     this.userBehavior.pageViews++;
     this.userBehavior.userJourney.push(currentPage);
 
     // Update top pages
-    const existingPage = this.userBehavior.topPages.find(p => p.page === currentPage);
+    existingPage = this.userBehavior.topPages.find(p => p.page === currentPage);
       existingPage.views++;
       this.userBehavior.topPages.push({ page: currentPage, views: 1 });
     }
@@ -119,8 +119,8 @@
    */
     if (typeof window === 'undefined') return;
 
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paintEntries = performance.getEntriesByType('paint');
+        navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        paintEntries = performance.getEntriesByType('paint');
 
           largestContentfulPaint: 0, // Would need to be calculated with LCP API
           firstInputDelay: 0, // Would need to be calculated with FID API
@@ -139,13 +139,13 @@
     if (typeof window === 'undefined') return;
 
     // Track clicks
-      const target = event.target as HTMLElement;
+      target = event.target as HTMLElement;
       this.trackClick(target);
     });
 
     // Track scroll depth
     let maxScrollDepth = 0;
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
         maxScrollDepth = scrollDepth;
         this.trackEvent('scroll_depth', { depth: scrollDepth });
       }
@@ -159,7 +159,7 @@
 
     let maxScrollDepth = 0;
 
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
         maxScrollDepth = scrollDepth;
         this.trackEvent('scroll_depth', { depth: scrollDepth });
       }
@@ -173,7 +173,7 @@
    */
     if (typeof window === 'undefined') return;
 
-      const form = event.target as HTMLFormElement;
+      form = event.target as HTMLFormElement;
       this.trackFormSubmission(form);
     });
   }
@@ -235,7 +235,7 @@
 }
 
 // Export utility functions
-export const createAnalytics = (config: AnalyticsConfig) => new AdvancedAnalytics(config);
+export createAnalytics = (config: AnalyticsConfig) => new AdvancedAnalytics(config);
 
   console.log('Track event:', eventName, properties);
 };

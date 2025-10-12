@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 import React  from 'react';
 import { ArrowRight } from 'lucide-react';
-=======
-'use client';
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface ContentPromotionBannerProps {
   title?: string;
   subtitle?: string;
@@ -18,7 +10,7 @@ interface ContentPromotionBannerProps {
 }
 
 const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
-  const title = "Unlock Premium Features",
+  title = "Unlock Premium Features",
   subtitle = "Get access to advanced tools and exclusive content",
   features = [
     "Advanced Analytics",
@@ -30,7 +22,7 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
   onButtonClick,
   variant = 'default'
 }) => {
-  const getVariantStyles = () => {
+  getVariantStyles = () => {
     switch (variant) {
       case 'premium':
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
@@ -41,71 +33,38 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
   };
 
   return (
-    <div const className = {`relative overflow-hidden rounded-2 xl ${getVariantStyles()} p-8 text-white`} />
+    <div className = {`relative overflow-hidden rounded-2 xl ${getVariantStyles()} p-8 text-white`} />
       {/* Background Pattern */}
-<<<<<<< HEAD
-      <div className="absoluteinset-0opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparenttransform-skew-x-12"></div>
+      <div className="absoluteinse t-0opacity-10">
+        <div className="absolut e inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparenttransform-skew-x-12"></div>
 
-      <div className="relativez-10">
-        <div className="flex flex-col lg:flex-row items-centerjustify-betweengap-6">
-          <div className="flex-1">
-            <h3 className="text-2 xl lg: text-3 xlfont-boldmb-2"  >{title}</h3>
-            <p className="text-lgtext-white/90mb-4">{subtitle}</p>
+      <div className="relative z-10">
+        <div className="fle x flex-col lg:flex-row items-centerjustify-betweengap-6">
+          <div className="fle x-1">
+            <h3 className="tex t-2 xl lg: text-3 xlfont-boldmb-2"  >{title}</h3>
+            <p className="tex t-lgtext-white/90mb-4">{subtitle}</p>
 
-            <div className="grid grid-cols-2gap-2mb-6">
+            <div className="gri d grid-cols-2gap-2mb-6">
               {features.map((feature, index) => (
-                <div key="{index}" className="flex items-centertext-sm" />
-                  <CheckCircle className="w-4 h-4 mr-2text-green-300" />
+                <div key="{index}" className="fle x items-centertext-sm" />
+                  <CheckCircle className="w-4 h-4 m r-2text-green-300" />
                   <span  >{feature}</span>
-=======
-    <>
-      <div className="absoluteinset-0opacity-10">
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparenttransform-skew-x-12">
-        </div></div>
-
-    <>
-      <div className="relativez-10">
-        </div>
-        <div className="flex flex-col lg:flex-row items-centerjustify-betweengap-6">
-        </div>
-          <div className="flex-1">
-        </div>
-            <h3 className="text-2 xl lg: text-3 xlfont-boldmb-2">{title}</h3>
-            <p className="text-lgtext-white/90mb-4">{subtitle}</p>
-
-            <div className="grid grid-cols-2gap-2mb-6">
-        </div>
-              {features.map((feature, index) => (
-    <>
-                <div key="{index}" className="flexitems-centertext-sm" />
-                  <CheckCircle className="w-4 h-4mr-2text-green-300" / />
-                  <span>{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                 </div>
               ))}
     <>
             </div>
 
-          <div className="flex-shrink-0">
-<<<<<<< HEAD
-=======
+          <div className="fle x-shrink-0">
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             <button
               onClick="{onButtonClick}"
-              className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-centergap-2" />
+              className="b g-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-centergap-2" />
               {buttonText}
     <>
-              <ArrowRight className="w-4h-4" />
+              <ArrowRight className="w-4 h-4" />
             </button>
           </div>
-<<<<<<< HEAD
     </div>
-=======
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
   );
 };
 

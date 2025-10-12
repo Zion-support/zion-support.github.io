@@ -45,7 +45,7 @@ function fixJSXSyntax(content) {
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+    originalContent = content;
     
     // Apply fixes
     content = fixJSXSyntax(content);
@@ -67,7 +67,7 @@ function fixFile(filePath) {
 console.log('Starting final JSX syntax fixes...');
 
 // Focus on the most problematic files first
-const criticalFiles = [
+criticalFiles = [
   '/workspace/app/about/page.tsx',
   '/workspace/app/5g-implementation/page.tsx',
   '/workspace/app/accessibility/page.tsx',

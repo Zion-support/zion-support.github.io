@@ -10,11 +10,11 @@ import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+__filename = fileURLToPath(import.meta.url);
+__dirname = path.dirname(__filename);
 
-const DIST_DIR = path.join(__dirname, '..', 'dist');
-const ANALYSIS_DIR = path.join(__dirname, '..', 'analysis');
+DIST_DIR = path.join(__dirname, '..', 'dist');
+ANALYSIS_DIR = path.join(__dirname, '..', 'analysis');
 
 // Ensure analysis directory exists
 if (!fs.existsSync(ANALYSIS_DIR)) {
@@ -31,12 +31,12 @@ function analyzeBundle() {
   }
 
   // Get all JS files in dist
-  const jsFiles = [];
+  jsFiles = [];
   function findJSFiles(dir) {
-    const files = fs.readdirSync(dir);
+    files = fs.readdirSync(dir);
     files.forEach(file => {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
+      filePath = path.join(dir, file);
+      stat = fs.statSync(filePath);
       if (stat.isDirectory()) {
         findJSFiles(filePath);
       } else if (file.endsWith('.js')) {
@@ -48,7 +48,7 @@ function analyzeBundle() {
   findJSFiles(DIST_DIR);
 
   // Analyze each JS file
-  const analysis = {
+  analysis = {
     totalFiles: jsFiles.length,
     totalSize: 0,
     files: [],
@@ -56,9 +56,9 @@ function analyzeBundle() {
   };
 
   jsFiles.forEach(filePath => {
-    const stats = fs.statSync(filePath);
-    const size = stats.size;
-    const relativePath = path.relative(DIST_DIR, filePath);
+    stats = fs.statSync(filePath);
+    size = stats.size;
+    relativePath = path.relative(DIST_DIR, filePath);
     
     analysis.totalSize += size;
     analysis.files.push({
@@ -75,7 +75,7 @@ function analyzeBundle() {
   generateRecommendations(analysis);
 
   // Write analysis report
-  const reportPath = path.join(ANALYSIS_DIR, 'bundle-analysis.json');
+  reportPath = path.join(ANALYSIS_DIR, 'bundle-analysis.json');
   fs.writeFileSync(reportPath, JSON.stringify(analysis, null, 2));
 
   // Generate HTML report
@@ -101,14 +101,14 @@ function analyzeBundle() {
 
 function formatBytes(bytes) {
   if (bytes === 0) return '0 Bytes';
-  const k = 1024;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  k = 1024;
+  sizes = ['Bytes', 'KB', 'MB', 'GB'];
+  i = Math.floor(Math.log(bytes) / Math.log(k));
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
 }
 
 function generateRecommendations(analysis) {
-  const recommendations = [];
+  recommendations = [];
 
   // Check total bundle size
   if (analysis.totalSize > 2 * 1024 * 1024) { // 2MB
@@ -116,23 +116,23 @@ function generateRecommendations(analysis) {
   }
 
   // Check for large individual files
-  const largeFiles = analysis.files.filter(file => file.size > 500 * 1024); // 500KB
+  largeFiles = analysis.files.filter(file => file.size > 500 * 1024); // 500KB
   if (largeFiles.length > 0) {
     recommendations.push(`Large files detected: ${largeFiles.map(f => f.path).join(', ')}. Consider splitting these files.`);
   }
 
   // Check for vendor files
-  const vendorFiles = analysis.files.filter(file => file.path.includes('vendor'));
+  vendorFiles = analysis.files.filter(file => file.path.includes('vendor'));
   if (vendorFiles.length > 0) {
-    const vendorSize = vendorFiles.reduce((sum, file) => sum + file.size, 0);
+    vendorSize = vendorFiles.reduce((sum, file) => sum + file.size, 0);
     if (vendorSize > 1024 * 1024) { // 1MB
       recommendations.push('Vendor bundle is large. Consider tree shaking and removing unused dependencies.');
     }
   }
 
   // Check for duplicate chunks
-  const chunkNames = analysis.files.map(f => f.path.split('-')[0]);
-  const duplicates = chunkNames.filter((name, index) => chunkNames.indexOf(name) !== index);
+  chunkNames = analysis.files.map(f => f.path.split('-')[0]);
+  duplicates = chunkNames.filter((name, index) => chunkNames.indexOf(name) !== index);
   if (duplicates.length > 0) {
     recommendations.push('Duplicate chunks detected. Consider optimizing chunk splitting strategy.');
   }
@@ -150,7 +150,7 @@ function generateRecommendations(analysis) {
 }
 
 function generateHTMLReport(analysis) {
-  const html = `
+  html = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -287,7 +287,7 @@ function generateHTMLReport(analysis) {
 </html>
   `;
 
-  const htmlPath = path.join(ANALYSIS_DIR, 'bundle-report.html');
+  htmlPath = path.join(ANALYSIS_DIR, 'bundle-report.html');
   fs.writeFileSync(htmlPath, html);
 }
 

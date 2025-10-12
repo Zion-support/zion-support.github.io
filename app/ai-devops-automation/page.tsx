@@ -1,47 +1,38 @@
-<<<<<<< HEAD
 import React  from 'react';
-=======
-'use client';
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { Helmet } from 'react-helmet-async';
 import { Server, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Star, Users, TrendingUp } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 export default function AIDevOpsAutomationPage() {
-  const features = [
+  features = [
     {
       title: 'Intelligent CI/CD Pipeline',
       description: 'AI-powered continuous integration and deployment with automatic testing, code quality checks, and smart rollback capabilities.',
-      icon: <Zap className="w-6h-6text-yellow-400" />,
+      icon: <Zap className="w-6 h-6text-yellow-400" />,
       benefits: ['Auto testing', 'Code quality checks', 'Smart rollbacks', 'Performance optimization']
     },
     {
       title: 'Predictive Infrastructure Monitoring',
       description: 'Advanced AI algorithms predict system failures, optimize resource allocation, and prevent downtime before it happens.',
-      icon: <BarChart3 className="w-6h-6text-blue-400" />,
+      icon: <BarChart3 className="w-6 h-6text-blue-400" />,
       benefits: ['Failure prediction', 'Resource optimization', 'Proactive alerts', 'Performance tuning']
     },
     {
       title: 'Automated Security Scanning',
       description: 'AI-driven security analysis that continuously scans for vulnerabilities, compliance issues, and potential threats.',
-      icon: <Shield className="w-6h-6text-red-400" />,
+      icon: <Shield className="w-6 h-6text-red-400" />,
       benefits: ['Vulnerability scanning', 'Compliance monitoring', 'Threat detection', 'Auto remediation']
     },
     {
       title: 'Smart Resource Management',
       description: 'Intelligent auto-scaling and resource allocation based on real-time demand patterns and predictive analytics.',
-      icon: <Server className="w-6h-6text-green-400" />,
+      icon: <Server className="w-6 h-6text-green-400" />,
       benefits: ['Auto-scaling', 'Cost optimization', 'Load balancing', 'Capacity planning']
     }
   ];
-  const pricingPlans = [
+  pricingPlans = [
     {
       name: 'Startup',
       price: '$299',
@@ -87,7 +78,7 @@ export default function AIDevOpsAutomationPage() {
       popular: false
     }
   ];
-  const testimonials = [
+  testimonials = [
     {
       name: 'Alex Chen',
       role: 'DevOps Engineer',
@@ -110,19 +101,11 @@ export default function AIDevOpsAutomationPage() {
       rating: 5
     }
   ];
-  const stats = [
-<<<<<<< HEAD
-    { number: '80%', label: 'Faster Deployments', icon: <Zap className="w-6h-6" /> },
-    { number: '95%', label: 'Issue Reduction', icon: <Shield className="w-6h-6" /> },
-    { number: '300+', label: 'Companies Using', icon: <Users className="w-6h-6" /> },
-    { number: '40%', label: 'Cost Reduction', icon: <TrendingUp className="w-6h-6" /> }
-=======
-    <>
-    { number: '80%', label: 'Faster Deployments', icon: <Zap className="w-6h-6" / /> },
-    { number: '95%', label: 'Issue Reduction', icon: <Shield className="w-6h-6" / /> },
-    { number: '300+', label: 'Companies Using', icon: <Users className="w-6h-6" / /> },
-    { number: '40%', label: 'Cost Reduction', icon: <TrendingUp className="w-6h-6" / /> }
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+  stats = [
+    { number: '80%', label: 'Faster Deployments', icon: <Zap className="w-6 h-6" /> },
+    { number: '95%', label: 'Issue Reduction', icon: <Shield className="w-6 h-6" /> },
+    { number: '300+', label: 'Companies Using', icon: <Users className="w-6 h-6" /> },
+    { number: '40%', label: 'Cost Reduction', icon: <TrendingUp className="w-6 h-6" /> }
   ];
   return (
     <>
@@ -132,8 +115,8 @@ export default function AIDevOpsAutomationPage() {
         <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
         <title>AI DevOps Automation - Smart CI/CD & Infrastructure Management | Zion Tech Group</title>
-        <meta const name = "description" content="Automate your DevOps with AI-powered CI/CD pipelines, predictive monitoring, and intelligent resource management. Deploy 80% faster with 95% fewer issues." / / />
-        <meta name="keywords" content="AI DevOps, CI/CD automation, infrastructure monitoring, DevOps AI, deployment automation, cloud management" / / />
+        <meta name = "description" content="Automate your DevOps with AI-powered CI/CD pipelines, predictive monitoring, and intelligent resource management. Deploy 80% faster with 95% fewer issues." / / />
+        <meta name="keywords" content="AI DevOps, CI/CD automation, infrastructure monitoring, DevOps AI, deployment automation, cloud management" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-devops-automation" />
       </Helmet>
     </>
@@ -141,33 +124,19 @@ export default function AIDevOpsAutomationPage() {
       <FuturisticBackground variant="services" />
         {/* Hero Section */}
     <>
-        <section className="pt-20 px-4 py-12sm:py-16lg:py-20" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-12">
-              <h1 className="text-3 xl sm:text-4xl md:text-5 xl lg:text-6 xl font-bold text-white mb-6"  />AI DevOps Automation
+        <section className="p t-20 px-4 py-12sm:py-16lg:py-20" />
+          <div className="ma x-w-7xlmx-auto">
+            <div className="tex t-centermb-12">
+              <h1 className="tex t-3 xl sm:text-4xl md:text-5 xl lg:text-6 xl font-bold text-white mb-6"  />AI DevOps Automation
               </h1>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8">
+              <p className="tex t-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8">
               Revolutionize your DevOps with AI-powered CI/CD pipelines, predictive monitoring, 
-=======
-        </div>
-            <div className="text-centermb-12">
-        </div>
-              <h1 className="text-3 xl sm:text-4 xl md:text-5 xl lg:text-6 xl font-boldtext-whitemb-6">AI DevOps Automation
-              </h1>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8" />
-    </>
-                Revolutionize your DevOps with AI-powered CI/CD pipelines, predictive monitoring, 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                 and intelligent resource management. Deploy 80% faster with 95% fewer issues.
     <>
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-=======
+              <div className="fle x flex-col sm:flex-rowgap-4justify-center">
         </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                 <FuturisticButton
                   variant="primary"
                   size="lg"
@@ -175,7 +144,7 @@ export default function AIDevOpsAutomationPage() {
                 >
                   Start Free Trial
     <>
-                  <ArrowRight className="w-5h-5ml-2" />
+                  <ArrowRight className="w-5 h-5ml-2" />
                 </FuturisticButton>
     </>
                 <FuturisticButton
@@ -187,30 +156,16 @@ export default function AIDevOpsAutomationPage() {
     <>
                 </FuturisticButton>
               </div>
-<<<<<<< HEAD
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4gap-6mb-16">
-=======
-    </>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4gap-6mb-16">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <div className="gri d grid-cols-2 md:grid-cols-4gap-6mb-16">
               {stats.map((stat, index) => (
     <>
-                <div key="{index}" className="text-center" />
-                  <div className="flex items-centerjustify-centermb-2">{stat.icon}
+                <div key="{index}" className="tex t-center" />
+                  <div className="fle x items-centerjustify-centermb-2">{stat.icon}
                   </div>
-<<<<<<< HEAD
-                  <div className="text-3 xl font-bold text-white mb-2"   />{stat.number}</div>
-                  <div className="text-gray-300"   />{stat.label}</div>
-=======
-                  <div className="text-3 xl font-boldtext-whitemb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <div className="tex t-3 xl font-bold text-white mb-2"   />{stat.number}</div>
+                  <div className="tex t-gray-300"   />{stat.label}</div>
               ))}
     <>
             </div>
@@ -219,65 +174,35 @@ export default function AIDevOpsAutomationPage() {
 
         {/* Features Section */}
     <>
-        <section className="py-12 sm:py-16lg:py-20px-4" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-12">
-              <h2 className="text-2 xl sm:text-3 xl md:text-4xl font-bold text-white mb-4"  />Advanced AI Features
+        <section className="p y-12 sm:py-16lg:py-20px-4" />
+          <div className="ma x-w-7xlmx-auto">
+            <div className="tex t-centermb-12">
+              <h2 className="tex t-2 xl sm:text-3 xl md:text-4xl font-bold text-white mb-4"  />Advanced AI Features
               </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xlmx-auto">
+              <p className="tex t-lg sm:text-xl text-gray-300 max-w-2xlmx-auto">
               Cutting-edge artificial intelligence meets DevOps expertise to automate your operations
-=======
-        </div>
-            <div className="text-centermb-12">
-        </div>
-              <h2 className="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4">Advanced AI Features
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xlmx-auto" />
-    </>
-                Cutting-edge artificial intelligence meets DevOps expertise to automate your operations
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               </p>
             </div>
     </>
             
-            <div className="grid grid-cols-1 md:grid-cols-2gap-8mb-16">
-<<<<<<< HEAD
-=======
+            <div className="gri d grid-cols-1 md:grid-cols-2gap-8mb-16">
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               {features.map((feature, index) => (
     <>
-                <FuturisticCard key="{index}" variant="service" className="h-full" />
-<<<<<<< HEAD
-                  <div className="flex items-startmb-4">
-=======
-                  <div className="flexitems-startmb-4">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <FuturisticCard key="{index}" variant="service" className="h-ful l" />
+                  <div className="fle x items-startmb-4">
                     {feature.icon}
     <>
-                    <h3 className="text-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
+                    <h3 className="tex t-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
                   </div>
-<<<<<<< HEAD
-                  <p className="text-gray-300 mb-6">
+                  <p className="tex t-gray-300 mb-6">
               {feature.description}</p>
-=======
-                  <p className="text-gray-300mb-6">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  <ul className="space-y-2" />
+                  <ul className="spac e-y-2" />
     </>
                     {feature.benefits.map((benefit, benefitIndex) => (
     <>
-                      <li key="{benefitIndex}" className="flex items-centertext-smtext-gray-300" />
-<<<<<<< HEAD
-                        <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" />
-=======
-                        <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" / />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                      <li key="{benefitIndex}" className="fle x items-centertext-smtext-gray-300" />
+                        <CheckCircle className="w-4 h-4 tex t-green-400mr-2flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
@@ -293,88 +218,48 @@ export default function AIDevOpsAutomationPage() {
 
         {/* Pricing Section */}
     <>
-        <section className="py-12 sm:py-16 lg:py-20px-4bg-white/5" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-12">
-              <h2 className="text-2 xl sm:text-3 xl md:text-4xl font-bold text-white mb-4"  />Choose Your Plan
+        <section className="p y-12 sm:py-16 lg:py-20px-4bg-white/5" />
+          <div className="ma x-w-7xlmx-auto">
+            <div className="tex t-centermb-12">
+              <h2 className="tex t-2 xl sm:text-3 xl md:text-4xl font-bold text-white mb-4"  />Choose Your Plan
               </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xlmx-auto">
+              <p className="tex t-lg sm:text-xl text-gray-300 max-w-2xlmx-auto">
               Scalable pricing options to match your DevOps needs
-=======
-        </div>
-            <div className="text-centermb-12">
-        </div>
-              <h2 className="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4">Choose Your Plan
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xlmx-auto" />
-    </>
-                Scalable pricing options to match your DevOps needs
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               </p>
             </div>
     </>
 
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
+            <div className="gri d grid-cols-1md:grid-cols-3gap-8">
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               {pricingPlans.map((plan, index) => (
                 <FuturisticCard 
                   key="{index}" 
                   variant="{plan.popular" ? "feature" : "service"} 
-                  className="{`h-full" ${plan.popular ? 'ring-2 ring-purple-500' : ''}`} />
+                  className="{`h-ful l" ${plan.popular ? 'ring-2 ring-purple-500' : ''}`} />
                   {plan.popular && (
-<<<<<<< HEAD
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
-=======
-    <>
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-        </div>
-                      <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <div className="absolut e -top-3 left-1/2transform-translate-x-1/2">
+                      <span className="b g-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
                       </span>
                     </div>
     </>
                   )}
                   
-<<<<<<< HEAD
-                  <div className="text-centermb-6">
-                    <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                    <div className="flex items-baselinejustify-centermb-2">
-                      <span className="text-4xlfont-bold text-white"   />{plan.price}</span>
-                      <span className="text-gray-400ml-1"   />{plan.period}</span>
+                  <div className="tex t-centermb-6">
+                    <h3 className="tex t-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
+                    <div className="fle x items-baselinejustify-centermb-2">
+                      <span className="tex t-4xlfont-bold text-white"   />{plan.price}</span>
+                      <span className="tex t-gray-400ml-1"   />{plan.period}</span>
                     </div>
-                    <p className="text-gray-300text-sm">
+                    <p className="tex t-gray-300text-sm">
               {plan.description}</p>
-=======
-    <>
-                  <div className="text-centermb-6">
-        </div>
-                    <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                    <div className="flex items-baselinejustify-centermb-2">
-        </div>
-                      <span className="text-4 xlfont-boldtext-white">{plan.price}</span>
-                      <span className="text-gray-400ml-1">{plan.period}</span>
-                    </div>
-                    <p className="text-gray-300text-sm">{plan.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                   </div>
     </>
 
-                  <ul className="space-y-3mb-8" />
+                  <ul className="spac e-y-3mb-8" />
                     {plan.features.map((feature, featureIndex) => (
     <>
-                      <li key="{featureIndex}" className="flex items-centertext-smtext-gray-300" />
-<<<<<<< HEAD
-                        <CheckCircle className="w-4 h-4 text-green-400mr-3flex-shrink-0" />
-=======
-                        <CheckCircle className="w-4 h-4 text-green-400mr-3flex-shrink-0" / />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                      <li key="{featureIndex}" className="fle x items-centertext-smtext-gray-300" />
+                        <CheckCircle className="w-4 h-4 tex t-green-400mr-3flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -382,7 +267,7 @@ export default function AIDevOpsAutomationPage() {
 
                   <FuturisticButton
                     variant="{plan.popular" ? "primary" : "ghost"}
-                    className="w-full"
+                    className="w-ful l"
                     onClick="{()" =  />window.open('/contact', '_blank')}
                   >
                     Get Started
@@ -398,67 +283,37 @@ export default function AIDevOpsAutomationPage() {
 
         {/* Testimonials Section */}
     <>
-        <section className="py-12 sm:py-16lg:py-20px-4" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-12">
-              <h2 className="text-2 xl sm:text-3 xl md:text-4xl font-bold text-white mb-4"  />What Our Clients Say
+        <section className="p y-12 sm:py-16lg:py-20px-4" />
+          <div className="ma x-w-7xlmx-auto">
+            <div className="tex t-centermb-12">
+              <h2 className="tex t-2 xl sm:text-3 xl md:text-4xl font-bold text-white mb-4"  />What Our Clients Say
               </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xlmx-auto">
+              <p className="tex t-lg sm:text-xl text-gray-300 max-w-2xlmx-auto">
               Join hundreds of companies automating their DevOps
-=======
-        </div>
-            <div className="text-centermb-12">
-        </div>
-              <h2 className="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4">What Our Clients Say
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xlmx-auto" />
-    </>
-                Join hundreds of companies automating their DevOps
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               </p>
             </div>
     </>
 
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
+            <div className="gri d grid-cols-1md:grid-cols-3gap-8">
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               {testimonials.map((testimonial, index) => (
     <>
-                <FuturisticCard key="{index}" variant="testimonial" className="h-full" />
-<<<<<<< HEAD
-                  <div className="flex items-centermb-4">
-=======
-                  <div className="flexitems-centermb-4">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                <FuturisticCard key="{index}" variant="testimonial" className="h-ful l" />
+                  <div className="fle x items-centermb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-4 h-4text-yellow-400fill-current" />
+                      <Star key="{i}" className="w-4 h-4tex t-yellow-400fill-current" />
                     ))}
     <>
                   </div>
-<<<<<<< HEAD
-                  <blockquote className="text-gray-300 mb-6italic"  />"{testimonial.content}"
+                  <blockquote className="tex t-gray-300 mb-6italic"  />"{testimonial.content}"
                   </blockquote>
                   <footer />
-                    <p className="font-semiboldtext-white">
+                    <p className="fon t-semiboldtext-white">
               {testimonial.name}</p>
-                    <p className="text-gray-400text-sm">
+                    <p className="tex t-gray-400text-sm">
               {testimonial.role}</p>
-                    <p className="text-gray-500text-sm">
+                    <p className="tex t-gray-500text-sm">
               {testimonial.company}</p>
-=======
-                  <blockquote className="text-gray-300mb-6italic">"{testimonial.content}"
-                  </blockquote>
-                  <footer />
-                    <p className="font-semiboldtext-white">{testimonial.name}</p>
-                    <p className="text-gray-400text-sm">{testimonial.role}</p>
-                    <p className="text-gray-500text-sm">{testimonial.company}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                   </footer>
                 </FuturisticCard>
     </>
@@ -470,30 +325,15 @@ export default function AIDevOpsAutomationPage() {
 
         {/* CTA Section */}
     <>
-        <section className="py-12 sm:py-16lg:py-20px-4" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <FuturisticCard variant="feature" className="text-center" />
-              <h2 className="text-2 xl sm:text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Automate Your DevOps?
+        <section className="p y-12 sm:py-16lg:py-20px-4" />
+          <div className="ma x-w-7xlmx-auto">
+            <FuturisticCard variant="feature" className="tex t-center" />
+              <h2 className="tex t-2 xl sm:text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Automate Your DevOps?
               </h2>
-              <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xlmx-auto">
+              <p className="tex t-lg sm:text-xl text-white/90 mb-8 max-w-2xlmx-auto">
               Start your free 14-day trial today. No credit card required. Join 300+ companies automating their DevOps.
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-        </div>
-            <FuturisticCard variant="feature" className="text-center" />
-              <h2 className="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4">Ready to Automate Your DevOps?
-              </h2>
-              <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xlmx-auto" />
-    </>
-                Start your free 14-day trial today. No credit card required. Join 300+ companies automating their DevOps.
-    <>
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              <div className="fle x flex-col sm:flex-rowgap-4justify-center">
                 <FuturisticButton
                   variant="primary"
                   size="lg"
@@ -510,13 +350,8 @@ export default function AIDevOpsAutomationPage() {
     <>
                 </FuturisticButton>
               </div>
-              <div className="mt-8text-white/80text-sm">
-<<<<<<< HEAD
+              <div className="m t-8text-white/80text-sm">
                 <p />✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
-=======
-        </div>
-                <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               </div>
             </FuturisticCard>
           </div>

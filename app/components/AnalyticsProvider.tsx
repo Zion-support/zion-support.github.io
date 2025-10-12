@@ -1,19 +1,12 @@
-<<<<<<< HEAD
 import { createContext, useContext, useEffect} from 'react';
-=======
-'use client';
-import { createContext, useContext, useEffect} from 'react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any />) => void;
   trackPageView: (pageName: string) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
+AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
 export function useAnalytics() {
-  const context = useContext(AnalyticsContext);
+  context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
@@ -29,13 +22,13 @@ interface AnalyticsProviderProps {
     // Analytics initialization logic here
   }, []);
 
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown />) => {
+  trackEvent = (eventName: string, parameters?: Record<string, unknown />) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
     }
   };
 
-  const trackPageView = (pageName: string) => {
+  trackPageView = (pageName: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: pageName,
@@ -44,12 +37,12 @@ interface AnalyticsProviderProps {
     }
   };
 
-  const value: const AnalyticsContextType = {
+  const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
   };
   return (
-    <AnalyticsContext.Provider const value = {value} />
+    <AnalyticsContext.Provider value = {value} />
       {children}
     </AnalyticsContext.Provider>
   );

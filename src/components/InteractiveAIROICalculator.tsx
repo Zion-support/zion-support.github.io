@@ -2,12 +2,12 @@
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
   
-    const annualSavings = (currentCost * efficiencyGain) / 100;
-    const totalSavings = annualSavings * (timeframe / 12);
-    const roi = ((totalSavings - currentCost) / currentCost) * 100;
+    annualSavings = (currentCost * efficiencyGain) / 100;
+    totalSavings = annualSavings * (timeframe / 12);
+    roi = ((totalSavings - currentCost) / currentCost) * 100;
     return Math.max(0, roi);
   };
-  const roi = calculateROI();
+  roi = calculateROI();
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>

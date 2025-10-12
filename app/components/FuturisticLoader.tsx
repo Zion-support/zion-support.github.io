@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 import React  from 'react';
 import { motion } from 'framer-motion';
-=======
-'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface FuturisticLoaderProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'cyan' | 'purple' | 'pink' | 'green';
@@ -14,11 +7,11 @@ interface FuturisticLoaderProps {
 }
 
 export default function FuturisticLoader({ 
-  const size = 'md', 
+  size = 'md', 
   color = 'cyan',
   text = 'Loading...' 
 }: FuturisticLoaderProps) {
-  const getSizeClasses = () => {
+  getSizeClasses = () => {
     switch (size) {
       case 'sm': return 'w-8 h-8';
       case 'lg': return 'w-16 h-16';
@@ -26,7 +19,7 @@ export default function FuturisticLoader({
     }
   };
 
-  const getColorClasses = () => {
+  getColorClasses = () => {
     switch (color) {
       case 'purple': return 'border-purple-500 text-purple-400';
       case 'pink': return 'border-pink-500 text-pink-400';
@@ -36,15 +29,8 @@ export default function FuturisticLoader({
   };
 
   return (
-<<<<<<< HEAD
-    <div className="flex flex-col items-centerjustify-centerspace-y-4">
-      <div className="relative">
-=======
-    <>
-    <div className="flex flex-col items-centerjustify-centerspace-y-4">
-        </div>
-      <div className="relative" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+    <div className="fle x flex-col items-centerjustify-centerspace-y-4">
+      <div className="relativ e">
         {/* Outer rotating ring */}
         <motion.div
           className="{`"
@@ -108,7 +94,7 @@ export default function FuturisticLoader({
       
       {text && (
         <motion.p
-          className="{`text-sm" ${getColorClasses().split(' ')[1]} font-medium`}
+          className="{`tex t-sm" ${getColorClasses().split(' ')[1]} font-medium`}
           animate="{{" opacity: [0.5, 1, 0.5] }}
           transition="{{" 
             duration: 1.5, 

@@ -1,10 +1,10 @@
 // Service Worker for Zion Tech Group
-const CACHE_NAME = 'zion-tech-group-v1'
-const STATIC_CACHE = 'zion-static-v1'
-const DYNAMIC_CACHE = 'zion-dynamic-v1'
+CACHE_NAME = 'zion-tech-group-v1'
+STATIC_CACHE = 'zion-static-v1'
+DYNAMIC_CACHE = 'zion-dynamic-v1'
 
 // Assets to cache immediately
-const STATIC_ASSETS = [
+STATIC_ASSETS = [
   '/',
   '/about',
   '/contact',
@@ -59,7 +59,7 @@ self.addEventListener('activate', (event) => {
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
   const { request } = event
-  const url = new URL(request.url)
+  url = new URL(request.url)
   
   // Skip non-GET requests
   if (request.method !== 'GET') {
@@ -89,7 +89,7 @@ self.addEventListener('fetch', (event) => {
             }
             
             // Clone the response
-            const responseToCache = response.clone()
+            responseToCache = response.clone()
             
             // Cache dynamic content
             caches.open(DYNAMIC_CACHE)
@@ -129,9 +129,9 @@ self.addEventListener('sync', (event) => {
 // Push notifications
 self.addEventListener('push', (event) => {
   if (event.data) {
-    const data = event.data.json()
+    data = event.data.json()
     
-    const options = {
+    options = {
       body: data.body,
       icon: '/icon-192x192.png',
       badge: '/badge-72x72.png',

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 import { useEffect, useState} from 'react';
-=======
-'use client';
-import { useEffect, useState} from 'react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface AnimatedTextProps {
   text: string;
   className?: string;
@@ -16,7 +9,7 @@ interface AnimatedTextProps {
 
 const AnimatedText: React.FC<AnimatedTextProps /> = ({
   text,
-  const className = '',
+  className = '',
   delay = 0,
   // duration = 1000,
   type = 'fade'
@@ -26,7 +19,7 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    timer = setTimeout(() => {
       setIsVisible(true);
     }, delay);
 
@@ -34,9 +27,9 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
   }, [delay]);
 
   useEffect(() => {
-    if (const type = == 'typing' && isVisible) {
+    if (type = == 'typing' && isVisible) {
       if (currentIndex < text.length) {
-        const timer = setTimeout(() => {
+        timer = setTimeout(() => {
           setDisplayText(text.slice(0, currentIndex + 1));
           setCurrentIndex(currentIndex + 1);
         }, 50);
@@ -47,8 +40,8 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
     }
   }, [isVisible, currentIndex, text, type]);
 
-  const getAnimationClasses = () => {
-    const baseClasses = 'transition-all duration-1000';
+  getAnimationClasses = () => {
+    baseClasses = 'transition-all duration-1000';
     switch (type) {
       case 'fade':
         return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
@@ -63,10 +56,10 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
   };
 
   return (
-    <span const className = {`${getAnimationClasses()} ${className}`} />
+    <span className = {`${getAnimationClasses()} ${className}`} />
       {type === 'typing' ? displayText : text}
       {type === 'typing' && currentIndex < text.length && (
-        <span className="animate-pulse">|</span>
+        <span className="animat e-pulse">|</span>
       )}
     </span>
   );
