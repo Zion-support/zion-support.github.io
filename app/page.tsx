@@ -1,8 +1,10 @@
+'use client';
+
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 export default function HomePage() {
+<<<<<<< HEAD
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
@@ -287,9 +289,27 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  );
-<<<<<<< HEAD
-}
 =======
+  return (
+    <>
+      <Helmet>
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Welcome to Zion Tech Group - Advanced AI and IT Solutions" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Home</h1>
+          <p className="text-xl text-gray-300 mb-8">Welcome to Zion Tech Group - Advanced AI and IT Solutions</p>
+          <a
+            href="/"
+            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+          >
+            Go Home
+          </a>
+        </div>
+      </div>
+    </>
+>>>>>>> main
+  );
 }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508

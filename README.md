@@ -1,22 +1,23 @@
 # Zion Tech Group - Advanced AI and IT Solutions
 
-A modern, high-performance website built with Next.js 15, featuring cutting-edge AI and IT solutions. This website showcases our comprehensive range of services including AI solutions, quantum computing, autonomous systems, and digital transformation services.
+A modern, high-performance website built with React + Vite, featuring cutting-edge AI and IT solutions. This website showcases our comprehensive range of services including AI solutions, cybersecurity, cloud computing, and digital transformation services.
 
 ## 🚀 Features
 
 ### Core Technologies
-- **Next.js 15** - Latest React framework with App Router
+- **React 18** - Latest React with modern hooks and concurrent features
+- **Vite** - Lightning-fast build tool and development server
 - **TypeScript** - Type-safe development
 - **Tailwind CSS** - Utility-first CSS framework
 - **Framer Motion** - Smooth animations and transitions
 - **Lucide React** - Beautiful, customizable icons
 
 ### Performance Optimizations
-- **Image Optimization** - Next.js Image component with lazy loading
 - **Code Splitting** - Dynamic imports for better performance
-- **Bundle Analysis** - Webpack bundle analyzer integration
+- **Bundle Analysis** - Vite bundle analyzer integration
 - **Performance Monitoring** - Real-time Core Web Vitals tracking
 - **SEO Optimization** - Comprehensive meta tags and structured data
+- **PWA Support** - Progressive Web App capabilities
 
 ### Accessibility Features
 - **WCAG 2.1 AA Compliance** - Full accessibility support
@@ -76,19 +77,18 @@ npm run dev
 ## 📁 Project Structure
 
 ```
-├── app/                    # Next.js App Router
+├── app/                    # React application
 │   ├── components/         # Reusable components
 │   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout
 │   ├── page.tsx           # Home page
-│   ├── loading.tsx        # Loading UI
-│   ├── error.tsx          # Error UI
-│   └── not-found.tsx      # 404 page
+│   ├── about/             # About page
+│   ├── contact/           # Contact page
+│   └── ai-services/       # AI services pages
 ├── public/                # Static assets
-│   ├── sitemap.xml        # XML sitemap
+│   ├── manifest.json      # PWA manifest
 │   ├── robots.txt         # Robots.txt
-│   └── site.webmanifest   # PWA manifest
-├── next.config.js         # Next.js configuration
+│   └── favicon.svg        # Favicon
+├── vite.config.ts         # Vite configuration
 ├── tailwind.config.js     # Tailwind CSS configuration
 ├── tsconfig.json          # TypeScript configuration
 └── package.json           # Dependencies and scripts

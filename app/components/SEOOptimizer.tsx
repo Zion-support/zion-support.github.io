@@ -3,7 +3,6 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 
-interface SEOOptimizerProps {
   title?: string;
   description?: string;
   keywords?: string[];
@@ -12,30 +11,12 @@ interface SEOOptimizerProps {
   structuredData?: Record<string, unknown>;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
   structuredData
-}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullDescription = description || 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.';
 
-  useEffect(() => {
     // Add structured data for breadcrumbs
-    const breadcrumbData = {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://ziontechgroup.com"
-        }
-      ]
+    
     };
 
     const script = document.createElement('script');
@@ -45,20 +26,16 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     
     // Remove existing breadcrumb data
     const existing = document.getElementById('breadcrumb-structured-data');
-    if (existing) {
       existing.remove();
     }
     document.head.appendChild(script);
 
-    return () => {
       const scriptToRemove = document.getElementById('breadcrumb-structured-data');
-      if (scriptToRemove) {
         scriptToRemove.remove();
       }
     };
   }, []);
 
-  return (
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -98,31 +75,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
       {/* Structured Data */}
-      {structuredData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "description": fullDescription,
-              "url": canonicalUrl,
-              "logo": "https://ziontechgroup.com/logo.png",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-555-123-4567",
-                "contactType": "customer service",
-                "availableLanguage": "English"
-              },
-              "sameAs": [
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://github.com/ziontechgroup"
-              ],
-              ...structuredData
-            })
-          }}
+        
         />
       )}
     </Head>

@@ -1,17 +1,14 @@
 'use client';
-import React, { useState } from 'react';
-const InteractiveAIROICalculator: React.FC = () => {
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
-  const calculateROI = () => {
+  
     const annualSavings = (currentCost * efficiencyGain) / 100;
     const totalSavings = annualSavings * (timeframe / 12);
     const roi = ((totalSavings - currentCost) / currentCost) * 100;
     return Math.max(0, roi);
   };
   const roi = calculateROI();
-  return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
@@ -24,9 +21,7 @@ const InteractiveAIROICalculator: React.FC = () => {
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
                   Current Annual Cost ($)
                 </label>
-                <input
-                  type='number'
-                  value={currentCost}
+                
                   onChange={e => setCurrentCost(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                 />
@@ -35,11 +30,7 @@ const InteractiveAIROICalculator: React.FC = () => {
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
                   Expected Efficiency Gain (%)
                 </label>
-                <input
-                  type='range'
-                  min='10'
-                  max='90'
-                  value={efficiencyGain}
+                
                   onChange={e => setEfficiencyGain(Number(e.target.value))}
                   className='w-full'
                 />
@@ -51,8 +42,7 @@ const InteractiveAIROICalculator: React.FC = () => {
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
                   Implementation Timeframe (months)
                 </label>
-                <select
-                  value={timeframe}
+                
                   onChange={e => setTimeframe(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                 >

@@ -1,65 +1,14 @@
 'use client';
 
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3 } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Star, Users, Cloud3 } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {
-  const features = [
-    {
-      icon: Zap,
-      title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence to automate and optimize your business processes'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions for modern business needs'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with advanced encryption and compliance standards'
-    },
-    {
-      icon: BarChart3,
-      title: 'Analytics & Insights',
-      description: 'Real-time analytics and business intelligence to drive informed decisions'
-    }
   ];
 
-  const benefits = [
-    'Reduce operational costs by up to 40%',
-    'Increase productivity and efficiency',
-    'Enhance customer experience',
-    'Improve data security and compliance',
-    'Scale your business faster',
-    'Gain competitive advantage',
-    'Access to expert support',
-    'Future-proof your technology'
   ];
 
-  const stats = [
-    {
-      icon: Users,
-      value: '500+',
-      label: 'Happy Clients',
-      description: 'Satisfied customers worldwide'
-    },
-    {
-      icon: TrendingUp,
-      value: '99.9%',
-      label: 'Uptime',
-      description: 'Reliable service delivery'
-    },
-    {
-      icon: Star,
-      value: '4.9/5',
-      label: 'Rating',
-      description: 'Highly rated by clients'
-    }
   ];
 
-  return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -85,7 +34,6 @@ const ContentPromotionBanner: React.FC = () => {
 
         {/* Stats Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <stat.icon className="w-8 h-8 text-white" />
@@ -99,7 +47,6 @@ const ContentPromotionBanner: React.FC = () => {
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <feature.icon className="w-8 h-8 text-white" />
@@ -120,7 +67,6 @@ const ContentPromotionBanner: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300">{benefit}</span>

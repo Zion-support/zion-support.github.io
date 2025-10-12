@@ -51,6 +51,7 @@ const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
 
 // Micro SaaS
 const MicroSaasPage = lazy(() => import('./micro-saas/page'));
+const AIContentWriterProPage = lazy(() => import('./micro-saas/ai-content-writer-pro/page'));
 
 // Support Pages
 const DocsPage = lazy(() => import('./docs/page'));
@@ -60,16 +61,9 @@ const StatusPage = lazy(() => import('./status/page'));
 const ConsultationPage = lazy(() => import('./consultation/page'));
 
 // Loading component
-const AppLoadingSpinner = () => (
-  <LoadingSpinner 
-    size="xl" 
-    text="Loading Zion Tech Group..." 
-    fullScreen 
-  />
+
 );
 
-const App: React.FC = () => {
-  return (
     <ErrorBoundary>
       <HelmetProvider>
         <BrowserRouter>
@@ -122,6 +116,7 @@ const App: React.FC = () => {
                 
                 {/* Micro SaaS */}
                 <Route path="/micro-saas" element={<MicroSaasPage />} />
+                <Route path="/micro-saas/ai-content-writer-pro" element={<AIContentWriterProPage />} />
                 {/* Support Pages */}
                 <Route path="/docs" element={<DocsPage />} />
                 <Route path="/api-docs" element={<ApiDocsPage />} />
