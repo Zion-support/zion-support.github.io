@@ -1,282 +1,179 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { ArrowRight } from 'lucide-react';
+import React from 'react';import { ArrowRight  } from 'lucide-react';
 ursor/analyze-improve-and-deploy-application-edcb
 ursor/analyze-improve-and-deploy-application-edcb
 'use client'
-
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-=======
-import { ArrowRight, Mail } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-      <Helmet />
-        <title   />OptimizedImage | Zion Tech Group</title>
-=======
+import { ArrowRight, Mail  } from 'lucide-react';  r etu rn (
     <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
+    </><d iv c las sNa me="m in-h-s cre en bg-g rad ient-to-br from-s late-900via-purple-900to-s late-900">
+        </d iv>
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
       </Helmet>
-        <title>OptimizedImage | Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <meta name="description" content="Professional OptimizedImage services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
+        <title>OptimizedImage | Zion Tech Group</title>        <meta name="description" content="Professional OptimizedImage services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
         <meta name="keywords" content="OptimizedImage, AI solutions, IT services, Zion Tech Group, optimizedimage" / / />
       </Helmet>
-      {/* Hero Section */}
+      {/* H ero S ection */}
     <>
-      <section className="relative py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent"  />OptimizedImage
-=======
-        </div>
-          <div className="text-center" />
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent">OptimizedImage
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </span>
+      </><s ection c las sNa me="r e lat ive py-20 px-4-sm:px-6-lg:px-8" />
+        <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv>
+          <d iv c las sNa me="t e xt-c ent er" />
+            <h1 c las sNa me="t e xt-4 xl md:t ext-6 xl f ont-b old text-w hit em-b-6" />
+              <s pan c las sNa me="b g-g rad ient-to-r from-purple-400 to-b lue-400bg-clip-t exttext-transpare-n-t">OptimizedImage              </s pan>
               <br / />
-              <span className="text-white">Solutions</span>
+              <s pan c las sNa me="t e xt-w hite">S olutions</s pan>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
+            <p c las sNa me="t e xt-xl t ext-g ra-y-300 mb-8 m ax-w-3x lmx-a uto">
               Transform your business with our advanced optimizedimage solutions.
               Powered by cutting-edge AI technology and industry expertise.
-<<<<<<< HEAD
-            </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" />
-=======
     <>
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Get Started
+            <d iv c las sNa me="f l ex f lex-c ol sm:f lex-rowg ap-4j ust ify-c ent er">
+        </d iv>
+              <b utt on c las sNa me="b g-g rad ient-to-r from-purple-500 to-b lue-600 t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:from-purple-600 hover:to-b lue-700 transition-all duration-300f lexitems-c ent er" />                Get Star ted
     <>
-                <ArrowRight className="ml-2h-5w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
+                </><ArrowRight c las sNa me="m l-2h-5w-5" />
+              </b utt on>
+              <b utt on c las sNa me="b order b ord er-w hite t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:bg-w hite hover:t ext-g ra-y-900transition-allduration-300" />
                 Learn More
-<<<<<<< HEAD
-  </
-=======
     <>
-              </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </div>
-        </div>
-      </section>
-      {/* Features Section */}
+              </b utt on>            </d iv>
+        </d iv>
+      </s ection>
+      {/* Feat ures S ection */}
     <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Why Choose Our OptimizedImage?
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Why Choose Our OptimizedImage?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Our optimizedimage solutions deliver unmatched performance, security, and scalability.
+      </><s ection c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" />
+        <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv>
+          <d iv c las sNa me="t e xt-c ent ermb-16">
+        </d iv>
+            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-w hit em-b-4">Why Choose Our OptimizedImage?            </h2>
+            <p c las sNa me="t e xt-xl t ext-g ra-y-300 m ax-w-3x lmx-a uto">
+              Our optimizedimage solutions deli ver unmatched performance, s ecurity, and scalability.
     <>
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            {features.map((feature, index) => (
+          </d iv>
+          <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-8">
+            {feat ures.map((feat ure, index) => (
     <>
-              <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4">
-<<<<<<< HEAD
-                  <feature.icon className="h-6w-6text-white" />
-                </div>
-                <h3 className="text-xl font-semiboldtext-white mb-3"   />{feature.title}</h3>
-                <p className="text-gray-300">
-              {feature.description}</p>
-=======
-        </div>
-                  <feature.icon className="h-6w-6text-white" / />
-                </div>
-                <h3 className="text-xl font-semiboldtext-whitemb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </div>
+              </><d iv key="{index}" c las sNa me="b g-w hite/10 b ack drop-b lur-sm rounded-xl p-6 b ord er b ord er-w hite/20 hover:bg-w hite/20transition-allduration-300" />
+                <d iv c las sNa me="f l ex i tems-c ent er j ust ify-c ent er w-12 h-12 bg-g rad ient-to-r from-purple-500 to-b lue-600rounded-l gmb-4">
+                  <feat ure.i con c las sNa me="h-6w-6t e xt-w hite" />
+                </d iv>
+                <h3 c las sNa me="t e xt-xl f ont-semibol dte xt-w hit-e mb-3"   />{feat ure.title}</h3>
+                <p c las sNa me="t e xt-g ray-300">
+              {feat ure.description}</p>              </d iv>
             ))}
     <>
-          </div>
-      </section>
-      {/* Benefits Section */}
+          </d iv>
+      </s ection>
+      {/* Bene fits S ection */}
     <>
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4" />
-              Key Benefits
+      </><s ection c las sNa me="p y-20 px-4 sm:px-6-lg:px-8-bg-w hite/5" />
+        <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv>
+          <d iv c las sNa me="t e xt-c ent ermb-16">
+        </d iv>
+            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-w hit em-b-4" />
+              K ey Bene fits
   </
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4" />
-              Key Benefits
-  </
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Experience the power of our optimizedimage solutions for your business.
+            <p c las sNa me="t e xt-xl t ext-g ra-y-300 m ax-w-3x lmx-a uto" />              Experience the power of our optimizedimage solutions for your business.
     <>
             </p>
-          </div>
-          <div className="grid grid-cols-1md:grid-cols-2gap-6">
-<<<<<<< HEAD
-            {benefits.map((benefit, index) => (
-              <div key="{index}" className="flex items-startspace-x-3" />
-                <CheckCircle className="h-6 w-6 text-purple-400mt-1flex-shrink-0" />
-                <p className="text-gray-300text-lg">
-              {benefit}</p>
-=======
-        </div>
-            {benefits.map((benefit, index) => (
+          </d iv>
+          <d iv c las sNa me="g r id g rid-c ols-1md:g rid-c ols-2g ap-6">
+        </d iv>
+            {bene fits.map((bene fit, index) => (
     <>
-              <div key="{index}" className="flexitems-startspace-x-3" />
-                <CheckCircle className="h-6 w-6 text-purple-400mt-1flex-shrink-0" / />
-                <p className="text-gray-300text-lg">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </div>
+              </><d iv key="{index}" c las sNa me="f l exi tems-s tar tsp ace-x-3" />
+                <C hec kCi rcle c las sNa me="h-6 w-6 t e xt-purple-400mt-1-f lex-s hri nk-0" / />
+                <p c las sNa me="t e xt-g ray-300t ext-l-g">{bene fit}</p>              </d iv>
             ))}
     <>
-          </div>
-      </section>
-      {/* CTA Section */}
+          </d iv>
+      </s ection>
+      {/* C TA S ection */}
     <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-4 xlmx-autotext-center">
-<<<<<<< HEAD
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xlp-8md:p-12">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Get Started?
-=======
-        </div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xlp-8md:p-12">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Ready to Get Started?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xltext-purple-100mb-8">
+      </><s ection c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" />
+        <d iv c las sNa me="m ax-w-4 x lmx-a uto text-c ente-r">
+        </d iv>
+          <d iv c las sNa me="b g-g rad ient-to-r from-purple-600 to-b lue-600 rounded-2 xlp-8md:p-12">
+        </d iv>
+            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-w hit em-b-4">Ready to Get Star ted?            </h2>
+            <p c las sNa me="t e xt-x lte xt-purpl-e-100mb-8">
               Contact our experts to discuss your optimizedimage needs and get a customized solution.
     <>
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-centerjustify-center" />
-                <Phone className="mr-2h-5w-5" />
-                Call Now
-  </
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-centerjustify-center" />
-                <Mail className="mr-2h-5w-5" />
-                Email Us
-  </
-=======
-        </div>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flexitems-centerjustify-center" />
-                <Phone className="mr-2h-5w-5" / />
-                Call Now
+            <d iv c las sNa me="f l ex f lex-c ol sm:f lex-rowg ap-4j ust ify-c ent er">
+        </d iv>
+              <b utt on c las sNa me="b g-w hite t ext-purpl-e-600 px-8 py-3 rounded-lg f ont-semibold hover:bg-g ray-100 transition-all duration-300 f lexitems-c ent erj ust ify-c ent er" />
+                <P hone c las sNa me="m r-2h-5w-5" / />
+                C all N ow
   </
     <>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flexitems-centerjustify-center" />
-                <Mail className="mr-2h-5w-5" / />
-                Email Us
+              </><b utt on c las sNa me="b order b ord er-w hite t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:bg-w hite hover:t ext-purpl-e-600 transition-all duration-300 f lexitems-c ent erj ust ify-c ent er" />
+                <Mail c las sNa me="m r-2h-5w-5" / />
+                E mail Us
     <>
-              </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </div>
-        </div>
-      </section>
-    </div>
+              </b utt on>            </d iv>
+        </d iv>
+      </s ection>
+    </d iv>
   )}
 export default OptimizedImagePage
-  </button>
-  </button>
+  </b utt on>
+  </b utt on>
   </h2>
-  </button>
-  </span>
-
-interface OptimizedImageProps {
-  src: string,
-  alt: string
-  className?: string
-  width?: number
-  height?: number
-  quality?: number
+  </b utt on>
+  </s pan>
+interfa ce OptimizedImagePr ops {
+  s rc: string,
+  a lt: string
+  c las sNa me?: string
+  w idth?: n umb er
+  h eight?: n umb er
+  quality?: n umb er
   priority?: boolean
-  placeholder?: 'blur' | 'empty'
-  blurDataURL?: string
+  placeho lder?: 'b lur' | 'empty'
+  b lurDataURL?: string
   onLoad?: () => void
   onError?: () => void
 }
-
-const OptimizedImage: React.FC<OptimizedImageProps /> = ({
-  src,
-  alt,
-  className = '',
-  width,
-  height,
-  priority = false,
-  placeholder = 'empty',
-  blurDataURL,
+const OptimizedImage: React.FC<OptimizedImagePr ops /> = ({
+  s rc,
+  a lt,
+  c las sNa me = '',
+  w idth,
+  h eight,
+  priority = f alse,
+  placeho lder = 'empty',
+  b lurDataURL,
   onLoad,
   onError
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(f alse)
   const [isInView, setIsInView] = useState(priority)
-  const [hasError, setHasError] = useState(false)
+  const [hasError, setHasError] = useState(f alse)
   const imgRef = useRef<HTMLImageElement />(null)
-
-  useEffect(() => {
-    if (priority) return
-
-    const observer = new IntersectionObserver(
+  useEffe ct(() => {
+    if (priority) r etu rn
+    const observer = new Interse ctionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersec ting) {
           setIsInView(true)
           observer.disconnect()
         }
       },
-      { threshold: 0.1 }
+      { thresho ld: 0.1 }
     )
-
     if (imgRef.current) {
       observer.observe(imgRef.current)
     }
-
-    return () => observer.disconnect()
+    r etu rn () => observer.disconnect()
   }, [priority])
-
   const handleLoad = () => {
     setIsLoaded(true)
     onLoad?.()
-<<<<<<< HEAD
-  };
-=======
   };
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

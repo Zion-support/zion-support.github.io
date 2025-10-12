@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
 'use client';
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import Navigation from '../components/Navigation';
+import React from 'react';import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
-import { CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
 const PageFixedPage: React.FC = () => {
     const features = [
     {
@@ -39,48 +30,31 @@ const PageFixedPage: React.FC = () => {
     ]
 return (
     <>
-    <>
+    </>
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
       </Helmet><title>Page Fixed - Zion Tech Group</title>
         <meta / />
       </Helmet>
       <Navigation / />
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"></div>
-        {/* Hero Section */}
-        <section className="py-20px-4"  > </section><div className="
-           </div><divclassName="text-center mb-16"  > </div><h2 className="text-4xl font-bold text-white mb-4"  >Section Title</h2>
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div></div>
-    </>
-        {/* Hero Section */}
-    <>
-        <section className="py-20px-4"> </section><div className="
-           </div /><divclassName="text-center mb-16"> </div><h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <p className="text-xltext-gray-300">Section description</p>
-            </div>
-        </section>
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" /></div>
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / /></div>
-<<<<<<< HEAD
-          <div className="relative max-w-7xlmx-autotext-center"></div>
-            <h1  />Page Fixed
-=======
-          <div className="relative max-w-7 xlmx-autotext-center">
-        </div></div>
-            <h1>Page Fixed
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h1>
+      <d iv c las sName="m in-h-scre en bg-g rad ient-to-br from-s late-900via-purple-900to-s late-900"></d iv>
+        {/* H ero S ection */}
+        <s ection c las sName="p y-20px-4"  > </s ection><d iv c las sName="
+           </d iv><d ivc las sName="t e xt-c enter mb-16"  > </d iv><h2 c las sName="t e xt-4xl f ont-b old t ext-w hit-e mb-4"  >S ection T itle</h2>              <p c las sName="t e xt-x lte xt-g ra-y-300">S ection description</p>
+            </d iv>
+        </s ection>
+          <d iv c las sName="a b solute inset-0bg-[r adi al-g rad ient(c ircle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]a nimate-p ulse" /></d iv>
+          <d iv c las sName="a b solute inset-0bg-[r adi al-g rad ient(c ircle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]a nimate-p ulse" style="{{" a nimationDelay: '1 s' }} / /></d iv>
+          <d iv c las sName="r e lative m ax-w-7 x lmx-a utotext-c ente-r">
+        </d iv></d iv>
+            <h1>Page Fixed            </h1>
             <p /></p>
     </>
               Advanced page fixed solutions powered by AI technology.
     <>
             </p>
-            <div className="flex flex-col sm: flex-rowgap-4justify-center" / / /></div>
+            <d iv c las sName="f l ex f lex-c ol sm: f lex-rowg ap-4j ust ify-c enter" / / /></d iv>
               <button /></button>
     </>
                 Get Started
@@ -91,45 +65,30 @@ return (
                 Learn More,
     <>
               </button>
-            </div>
-        </section>
-        <section className="relative py-20px-4overflow-hidden" />
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" />
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
-<<<<<<< HEAD
-          <div className="relative max-w-7xlmx-autotext-center">
-            <h1 className="text-5 xl md:text-7 xl font-bold text-white mb-6leading-tight" />Page Fixed
-            <p className="text-xl text-gray-300 mb-8 max-w-3 xlmx-autoleading-relaxed">
-              Advanced page fixed solutions powered by AI technology.
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-          <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-            <h1 className="text-5 xl md:text-7 xl font-bold text-whitemb-6leading-tight" />Page Fixed
-            <p className="text-xl text-gray-300 mb-8 max-w-3 xlmx-autoleading-relaxed" />
+            </d iv>
+        </s ection>
+        <s ection c las sName="r e lative py-20-px-4-o ver flow-h idd en" />
+          <d iv c las sName="a b solute inset-0bg-[r adi al-g rad ient(c ircle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]a nimate-p ulse" />
+          <d iv c las sName="a b solute inset-0bg-[r adi al-g rad ient(c ircle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]a nimate-p ulse" style="{{" a nimationDelay: '1 s' }} / />
+          <d iv c las sName="r e lative m ax-w-7 x lmx-a utotext-c ente-r">
+        </d iv>
+            <h1 c las sName="t e xt-5 xl md:t ext-7 xl f ont-b old t ext-w hitem-b-6leading-t ight" /></h1>Page Fixed
+            <p c las sName="t e xt-xl t ext-g ra-y-300 mb-8 m ax-w-3 x lmx-a utolea ding-relaxed" />
     </>
               Advanced page fixed solutions powered by AI technology.
     <>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105" />Get Started
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lgtransition-allduration-300" />Learn More
+            </><d iv c las sName="f l ex f lex-c ol sm:f lex-rowg ap-4j ust ify-c enter">
+        </d iv>              <button c las sName="b g-g rad ient-to-r from-purple-500 to-b lue-600 hover:from-purple-600 hover:to-b lue-700 t ext-w hit-e f ont-b old py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105" />Get Started
+              <button c las sName="b o rder b ord er-purple-400 t ext-purpl-e-400 hover:bg-purple-400 hover:t ext-w hit-e f ont-b old py-4 px-8 rounded-lgtransition-allduration-300" />Learn More
     </>
-        {/* Features Section */}
-<<<<<<< HEAD
-        <section className="py-20px-4"  > </section><div className="
-           </div><divclassName="text-center mb-16"  > </div><h2 className="text-4xl font-bold text-white mb-4"  >Section Title</h2>
-=======
+        {/* Features S ection */}
     <>
-        <section className="py-20px-4"> </section><div className="
-           </div /><divclassName="text-center mb-16"> </div><h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <p className="text-xltext-gray-300">Section description</p>
-            </div>
-        </section>
-          <div className="max-w-7xlmx-auto" / / /></div>
-            <div className="text-centermb-16" / / /></div>
+        </><s ection c las sName="p y-20px-4"> </s ection><d iv c las sName="
+           </d iv /><d ivc las sName="t e xt-c enter mb-16"> </d iv><h2 c las sName="t e xt-4 xl f ont-b old text-w hitem-b-4">S ection T itle</h2>              <p c las sName="t e xt-x lte xt-g ra-y-300">S ection description</p>
+            </d iv>
+        </s ection>
+          <d iv c las sName="m ax-w-7x lmx-a uto" / / /></d iv>
+            <d iv c las sName="t e xt-c entermb-16" / / /></d iv>
               <h2 /></h2>
     </>
                 Key Features
@@ -140,106 +99,66 @@ return (
                 Powerful AI technology that drives results
     <>
               </p>
-            </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8"></div>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-        </div></div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {features.map((feature, index) => (
+            </d iv>
+            <d iv c las sName="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-8">
+        </d iv></d iv>
+    </>              {features.map((feature, index) => (
     <>
-                <div key="{index}" className="bg-white/5 backdrop-blur-sm rounded-2 xl p-8 hover:bg-white/10 transition-allduration-300group" /></div>
-<<<<<<< HEAD
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2 xl flex items-center justify-center mb-6group-hover:scale-110transition-transform"></div>
+                </><d iv k ey="{index}" c las sName="b g-w hite/5 b ack drop-b lur-sm rounded-2 xl p-8 hover:bg-w hite/10 transition-allduration-300group" /></d iv>
+                  <d iv c las sName="w-16 h-16 b g-g rad ient-to-br from-purple-500 to-b lue-600 rounded-2 xl f lex items-c enter j ust ify-c enter mb-6-group-hover:scale-110transition-transform">
+        </d iv></d iv>
                     <feature / />
-                  <h3 className="text-xl font-bold text-white mb-4"  >{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-=======
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2 xl flex items-center justify-center mb-6group-hover:scale-110transition-transform">
-        </div></div>
-                    <feature / />
-                  <h3 className="text-xl font-boldtext-whitemb-4">{feature.title}</h3>
-                  <p className="text-gray-300mb-4">{feature.description}</p>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  {
+                  <h3 c las sName="t e xt-xl f ont-b old text-w hitem-b-4">{feature.title}</h3>
+                  <p c las sName="t e xt-g ray-300mb-4">{feature.description}</p>
+    </>                  {
     feature.benefits && (;
                     <ul>{feature.benefits.map((benefit, idx) => (
   }
-                        </ul><li> </li><CheckCircle />
+                        </ul><li></li><CheckCi rcle />
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   )}
-                </div>
+                </d iv>
               ))}
-
     <>
-            </div>
-        </section>
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />Key Features
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">Powerful AI technology that drives results
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />Key Features
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />Powerful AI technology that drives results
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {features.map((feature, index) => (
+            </d iv>
+        </s ection>
+          <d iv c las sName="m ax-w-7x lmx-a uto">
+        </d iv>
+            <d iv c las sName="t e xt-c entermb-16">
+        </d iv>
+              <h2 c las sName="t e xt-4 xl md:t ext-5 xl f ont-b old text-w hitem-b-6" />Key Features
+              <p c las sName="t e xt-xl t ext-g ra-y-300 m ax-w-3x lmx-a uto" />Powerful AI technology that drives results
+            <d iv c las sName="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-8">
+        </d iv>
+    </>              {features.map((feature, index) => (
     <>
-                <div key="{index}" className="bg-white/5 backdrop-blur-sm rounded-2 xl p-8 hover:bg-white/10 transition-allduration-300group" />
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2 xl flex items-center justify-center mb-6group-hover:scale-110transition-transform">
-<<<<<<< HEAD
-                    <feature.icon className="w-8h-8text-white" />
-                  <h3 className="text-xl font-bold text-white mb-4" />{feature.title}
-                  <p className="text-gray-300 mb-4">{feature.description}
-=======
-        </div>
-                    <feature.icon className="w-8h-8text-white" / />
-                  <h3 className="text-xl font-boldtext-whitemb-4" />{feature.title}
-                  <p className="text-gray-300mb-4" />{feature.description}
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  {feature.benefits && (
-                    <ul className="space-y-2" />
+                </><d iv k ey="{index}" c las sName="b g-w hite/5 b ack drop-b lur-sm rounded-2 xl p-8 hover:bg-w hite/10 transition-allduration-300group" />
+                  <d iv c las sName="w-16 h-16 b g-g rad ient-to-br from-purple-500 to-b lue-600 rounded-2 xl f lex items-c enter j ust ify-c enter mb-6-group-hover:scale-110transition-transform">
+        </d iv>
+                    <feature.icon c las sName="w-8h-8t e xt-w hite" / />
+                  <h3 c las sName="t e xt-xl f ont-b old text-w hitem-b-4" /></h3>{feature.title}
+                  <p c las sName="t e xt-g ray-300mb-4" />{feature.description}
+    </>                  {feature.benefits && (
+                    <ul c las sName="s p ace-y-2" />
                       {feature.benefits.map((benefit, idx) => (
     <>
-                        <li key="{idx}" className="flex items-centertext-smtext-gray-400" />
-<<<<<<< HEAD
-                          <CheckCircle className="w-4 h-4text-green-400mr-2" />
-=======
-                          <CheckCircle className="w-4 h-4text-green-400mr-2" / />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                          {benefit}
+                        </><li k ey="{idx}" c las sName="f l ex items-c entert ext-s mtex-t-g ray-400" />
+                          <CheckCi rcle c las sName="w-4 h-4t e xt-g reen-400mr-2" / />
+    </>                          {benefit}
                       ))}
                   )}
               ))}
-        {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20px-4"  > </section><div className="
-           </div><divclassName="text-center mb-16"  > </div><h2 className="text-4xl font-bold text-white mb-4"  >Section Title</h2>
-=======
+        {/* C TA S ection */}
     <>
-        <section className="py-20px-4"> </section><div className="
-           </div /><divclassName="text-center mb-16"> </div><h2 className="text-4 xl font-boldtext-whitemb-4">Section Title</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <p className="text-xltext-gray-300">Section description</p>
-            </div>
-        </section>
-          <div className="max-w-4 xlmx-autotext-center" / / /></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xlp-12" / / /></div>
+        </><s ection c las sName="p y-20px-4"> </s ection><d iv c las sName="
+           </d iv /><d ivc las sName="t e xt-c enter mb-16"> </d iv><h2 c las sName="t e xt-4 xl f ont-b old text-w hitem-b-4">S ection T itle</h2>              <p c las sName="t e xt-x lte xt-g ra-y-300">S ection description</p>
+            </d iv>
+        </s ection>
+          <d iv c las sName="m ax-w-4 x lmx-a utotext-c ente-r" / / /></d iv>
+            <d iv c las sName="b g-w hite/5 b ack drop-b lur-sm rounded-3x lp-12" / / /></d iv>
               <h2 /></h2>
     </>
                 Ready to Get Started?
@@ -250,7 +169,7 @@ return (
                 Contact our experts to discuss your requirements and get started today.
     <>
               </p>
-              <div className="flex flex-col sm: flex-rowgap-4justify-center" / / /></div>
+              <d iv c las sName="f l ex f lex-c ol sm: f lex-rowg ap-4j ust ify-c enter" / / /></d iv>
                 <button /></button>
     </>
                   Contact Us
@@ -261,10 +180,10 @@ return (
                   Learn More
     <>
                 </button>
-              </div>
-          </div>
-        </section>
-      </div>
+              </d iv>
+          </d iv>
+        </s ection>
+      </d iv>
       <Footer /></Footer>
     </>
   ),

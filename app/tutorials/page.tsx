@@ -1,300 +1,168 @@
-<<<<<<< HEAD
-import React  from 'react';
-const TutorialsPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-=======
 'use client';
 import React from 'react';
-
 const TutorialsPage: React.FC = () => {
   return (
     <>
-    <>
+    </>
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>Tutorials - Zion Tech Group</title>
+        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
+      </Helmet>        <title>Tutorials - Zion Tech Group</title>
         <meta name="description" content="Learn AI and IT solutions with our comprehensive tutorials and guides." / / />
         <meta name="keywords" content="tutorials, AI tutorials, IT tutorials, learning, guides, education" / / />
       </Helmet>
     </>
-      
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        <div className="container mx-autopx-4py-16">
-          <div className="text-centermb-16">
-            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Tutorials & Learning Center
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-=======
     <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
-        <div className="container mx-autopx-4py-16">
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Tutorials & Learning Center
-              </span>
+      </><d iv c las sName="m in-h-scre en bg-g rad ient-to-br from-s late-900via-purple-900to-s late-900">
+        </d iv>
+        <d iv c las sName="c onta iner mx-a uto px-4-py-16">
+        </d iv>
+          <d iv c las sName="t e xt-c ent ermb-16">
+        </d iv>
+            <h1 c las sName="t e xt-4 xl md:t ext-6 xl f ont-b old text-w hit em-b-6" />
+              <s pan c las sName="b g-g rad ient-to-r from-c yan-400 to-purple-400bg-clip-t exttext-transpare-n-t">Tutorials & Learning Cent er
+              </s pan>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Master AI and IT technologies with our comprehensive tutorials, guides, and hands-on learning resources.
+            <p c las sName="t e xt-xl t ext-g ra-y-300 m ax-w-3x lmx-a uto" />
+    </>              Mast er AI and IT technologies with our comprehensive tutorials, guides, and hands-on learning resources.
     <>
             </p>
-          </div>
+          </d iv>
     </>
-
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-            {/* AI Tutorials */}
-            <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 hover:border-purple-400/40transition-allduration-300">
-              <h3 className="text-2 xl font-bold text-white mb-4"  >AI Tutorials</h3>
-              <p className="text-gray-300 mb-4">
-              Learn artificial intelligence from basics to advanced implementations.
-              </p>
-              <ul className="space-y-2text-smtext-gray-400">
-              <li  >• Machine Learning Fundamentals</li>
-                <li  >• Deep Learning with TensorFlow</li>
-                <li  >• Natural Language Processing</li>
-                <li  >• Computer Vision Applications</li>
-=======
-        </div>
+          <d iv c las sName="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-3gap-8">
+        </d iv>
             {/* AI Tutorials */}
     <>
-            <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 hover:border-purple-400/40transition-allduration-300">
-        </div>
-              <h3 className="text-2 xl font-boldtext-whitemb-4">AI Tutorials</h3>
-              <p className="text-gray-300mb-4" />
+            </><d iv c las sName="b g-g rad ient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 hover:border-purple-400/40transition-allduration-300">
+        </d iv>
+              <h3 c las sName="t e xt-2 xl f ont-b old text-w hit em-b-4">AI Tutorials</h3>
+              <p c las sName="t e xt-g ray-300mb-4" />
     </>
                 Learn artificial intelligence from basics to advanced implementations.
     <>
               </p>
-              <ul className="space-y-2text-smtext-gray-400" />
-                <li>• Machine Learning Fundamentals</li>
-                <li>• Deep Learning with TensorFlow</li>
-                <li>• Natural Language Processing</li>
-                <li>• Computer Vision Applications</li>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </ul>
-            </div>
+              <ul c las sName="s p ace-y-2t ext-s mtex-t-g ray-400" />
+                <li>* Machine Learning Fundamentals</li>
+                <li>* Deep Learning with TensorFlow</li>
+                <li>* Natural Language Processing</li>
+                <li>* Computer Vision Applications</li>              </ul>
+            </d iv>
     </>
-
-            {/* IT Infrastructure */}
-<<<<<<< HEAD
-            <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40transition-allduration-300">
-              <h3 className="text-2 xl font-bold text-white mb-4"  >IT Infrastructure</h3>
-              <p className="text-gray-300 mb-4">
-              Master cloud computing, DevOps, and system administration.
-              </p>
-              <ul className="space-y-2text-smtext-gray-400">
-              <li  >• Cloud Architecture Design</li>
-                <li  >• Container Orchestration</li>
-                <li  >• CI/CD Pipeline Setup</li>
-                <li  >• Security Best Practices</li>
-=======
+            {/* IT Infr ast ruc ture */}
     <>
-            <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40transition-allduration-300">
-        </div>
-              <h3 className="text-2 xl font-boldtext-whitemb-4">IT Infrastructure</h3>
-              <p className="text-gray-300mb-4" />
+            </><d iv c las sName="b g-g rad ient-to-br from-c yan-900/50 to-blue-900/50 backdrop-blur-sm border border-c yan-500/20 rounded-xl p-6 hover:border-c yan-400/40transition-allduration-300">
+        </d iv>
+              <h3 c las sName="t e xt-2 xl f ont-b old text-w hit em-b-4">IT Infr ast ruc ture</h3>
+              <p c las sName="t e xt-g ray-300mb-4" />
     </>
-                Master cloud computing, DevOps, and system administration.
+                Mast er cloud computing, DevOps, and syst em adminis tration.
     <>
               </p>
-              <ul className="space-y-2text-smtext-gray-400" />
-                <li>• Cloud Architecture Design</li>
-                <li>• Container Orchestration</li>
-                <li>• CI/CD Pipeline Setup</li>
-                <li>• Security Best Practices</li>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </ul>
-            </div>
+              <ul c las sName="s p ace-y-2t ext-s mtex-t-g ray-400" />
+                <li>* Cloud Arch itectu re Design</li>
+                <li>* Cont ain er Orchestration</li>
+                <li>* CI/CD Pipeline Setup</li>
+                <li>* Security Best Practices</li>              </ul>
+            </d iv>
     </>
-
-            {/* Web Development */}
-<<<<<<< HEAD
-            <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 backdrop-blur-sm border border-green-500/20 rounded-xl p-6 hover:border-green-400/40transition-allduration-300">
-              <h3 className="text-2 xl font-bold text-white mb-4"  >Web Development</h3>
-              <p className="text-gray-300 mb-4">
-              Build modern, scalable web applications with cutting-edge technologies.
-              </p>
-              <ul className="space-y-2text-smtext-gray-400">
-              <li  >• React & Next.js Mastery</li>
-                <li  >• Full-Stack Development</li>
-                <li  >• API Design & Integration</li>
-                <li  >• Performance Optimization</li>
-=======
+            {/* Web Deve lop ment */}
     <>
-            <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 backdrop-blur-sm border border-green-500/20 rounded-xl p-6 hover:border-green-400/40transition-allduration-300">
-        </div>
-              <h3 className="text-2 xl font-boldtext-whitemb-4">Web Development</h3>
-              <p className="text-gray-300mb-4" />
+            </><d iv c las sName="b g-g rad ient-to-br from-g reen-900/50 to-emerald-900/50 backdrop-blur-sm border border-g reen-500/20 rounded-xl p-6 hover:border-g reen-400/40transition-allduration-300">
+        </d iv>
+              <h3 c las sName="t e xt-2 xl f ont-b old text-w hit em-b-4">Web Deve lop ment</h3>
+              <p c las sName="t e xt-g ray-300mb-4" />
     </>
                 Build modern, scalable web applications with cutting-edge technologies.
     <>
               </p>
-              <ul className="space-y-2text-smtext-gray-400" />
-                <li>• React & Next.js Mastery</li>
-                <li>• Full-Stack Development</li>
-                <li>• API Design & Integration</li>
-                <li>• Performance Optimization</li>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </ul>
-            </div>
+              <ul c las sName="s p ace-y-2t ext-s mtex-t-g ray-400" />
+                <li>* React & Next.js Mast ery</li>
+                <li>* Full-Stack Deve lop ment</li>
+                <li>* API Design & Integration</li>
+                <li>* Performance Optimization</li>              </ul>
+            </d iv>
     </>
-
-            {/* Data Science */}
-<<<<<<< HEAD
-            <div className="bg-gradient-to-br from-orange-900/50 to-red-900/50 backdrop-blur-sm border border-orange-500/20 rounded-xl p-6 hover:border-orange-400/40transition-allduration-300">
-              <h3 className="text-2 xl font-bold text-white mb-4"  >Data Science</h3>
-              <p className="text-gray-300 mb-4">
-              Extract insights from data using advanced analytics and visualization.
-              </p>
-              <ul className="space-y-2text-smtext-gray-400">
-              <li  >• Data Analysis with Python</li>
-                <li  >• Statistical Modeling</li>
-                <li  >• Data Visualization</li>
-                <li  >• Big Data Processing</li>
-=======
+            {/* Data S cience */}
     <>
-            <div className="bg-gradient-to-br from-orange-900/50 to-red-900/50 backdrop-blur-sm border border-orange-500/20 rounded-xl p-6 hover:border-orange-400/40transition-allduration-300">
-        </div>
-              <h3 className="text-2 xl font-boldtext-whitemb-4">Data Science</h3>
-              <p className="text-gray-300mb-4" />
+            </><d iv c las sName="b g-g rad ient-to-br from-o ran ge-900/50 to-red-900/50 backdrop-blur-sm border border-o ran ge-500/20 rounded-xl p-6 hover:border-o ran ge-400/40transition-allduration-300">
+        </d iv>
+              <h3 c las sName="t e xt-2 xl f ont-b old text-w hit em-b-4">Data S cience</h3>
+              <p c las sName="t e xt-g ray-300mb-4" />
     </>
                 Extract insights from data using advanced analytics and visualization.
     <>
               </p>
-              <ul className="space-y-2text-smtext-gray-400" />
-                <li>• Data Analysis with Python</li>
-                <li>• Statistical Modeling</li>
-                <li>• Data Visualization</li>
-                <li>• Big Data Processing</li>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </ul>
-            </div>
+              <ul c las sName="s p ace-y-2t ext-s mtex-t-g ray-400" />
+                <li>* Data Analysis with Python</li>
+                <li>* Statistical Modeling</li>
+                <li>* Data Visualization</li>
+                <li>* Big Data Processing</li>              </ul>
+            </d iv>
     </>
-
-            {/* Cybersecurity */}
-<<<<<<< HEAD
-            <div className="bg-gradient-to-br from-red-900/50 to-pink-900/50 backdrop-blur-sm border border-red-500/20 rounded-xl p-6 hover:border-red-400/40transition-allduration-300">
-              <h3 className="text-2 xl font-bold text-white mb-4"  >Cybersecurity</h3>
-              <p className="text-gray-300 mb-4">
-              Protect systems and data with comprehensive security strategies.
-              </p>
-              <ul className="space-y-2text-smtext-gray-400">
-              <li  >• Threat Detection & Response</li>
-                <li  >• Penetration Testing</li>
-                <li  >• Security Architecture</li>
-                <li  >• Compliance & Governance</li>
-=======
+            {/* Cybe rsecurity */}
     <>
-            <div className="bg-gradient-to-br from-red-900/50 to-pink-900/50 backdrop-blur-sm border border-red-500/20 rounded-xl p-6 hover:border-red-400/40transition-allduration-300">
-        </div>
-              <h3 className="text-2 xl font-boldtext-whitemb-4">Cybersecurity</h3>
-              <p className="text-gray-300mb-4" />
+            </><d iv c las sName="b g-g rad ient-to-br from-red-900/50 to-p ink-900/50 backdrop-blur-sm border border-red-500/20 rounded-xl p-6 hover:border-red-400/40transition-allduration-300">
+        </d iv>
+              <h3 c las sName="t e xt-2 xl f ont-b old text-w hit em-b-4">Cybe rsecurity</h3>
+              <p c las sName="t e xt-g ray-300mb-4" />
     </>
-                Protect systems and data with comprehensive security strategies.
+                Protect syst ems and data with comprehensive s ecurity s tra tegies.
     <>
               </p>
-              <ul className="space-y-2text-smtext-gray-400" />
-                <li>• Threat Detection & Response</li>
-                <li>• Penetration Testing</li>
-                <li>• Security Architecture</li>
-                <li>• Compliance & Governance</li>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </ul>
-            </div>
+              <ul c las sName="s p ace-y-2t ext-s mtex-t-g ray-400" />
+                <li>* Threat Detection & Response</li>
+                <li>* Penetration Testing</li>
+                <li>* Security Arch itectu re</li>
+                <li>* Compliance & Governance</li>              </ul>
+            </d iv>
     </>
-
-            {/* Mobile Development */}
-<<<<<<< HEAD
-            <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 hover:border-indigo-400/40transition-allduration-300">
-              <h3 className="text-2 xl font-bold text-white mb-4"  >Mobile Development</h3>
-              <p className="text-gray-300 mb-4">
-              Create cross-platform mobile applications with modern frameworks.
-              </p>
-              <ul className="space-y-2text-smtext-gray-400">
-              <li  >• React Native Development</li>
-                <li  >• Flutter Applications</li>
-                <li  >• Native iOS & Android</li>
-                <li  >• Mobile UI/UX Design</li>
-              </ul>
-            </div>
-
-          <div className="text-centermt-16">
-            <h2 className="text-3 xl font-bold text-white mb-6"  >Ready to Start Learning?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xlmx-auto">
-=======
+            {/* Mobile Deve lop ment */}
     <>
-            <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 hover:border-indigo-400/40transition-allduration-300">
-        </div>
-              <h3 className="text-2 xl font-boldtext-whitemb-4">Mobile Development</h3>
-              <p className="text-gray-300mb-4" />
+            </><d iv c las sName="b g-g rad ient-to-br from-i ndi go-900/50 to-purple-900/50 backdrop-blur-sm border border-i ndi go-500/20 rounded-xl p-6 hover:border-i ndi go-400/40transition-allduration-300">
+        </d iv>
+              <h3 c las sName="t e xt-2 xl f ont-b old text-w hit em-b-4">Mobile Deve lop ment</h3>
+              <p c las sName="t e xt-g ray-300mb-4" />
     </>
-                Create cross-platform mobile applications with modern frameworks.
+                Crea te cross-platform mobile applications with modern f rameworks.
     <>
               </p>
-              <ul className="space-y-2text-smtext-gray-400" />
-                <li>• React Native Development</li>
-                <li>• Flutter Applications</li>
-                <li>• Native iOS & Android</li>
-                <li>• Mobile UI/UX Design</li>
+              <ul c las sName="s p ace-y-2t ext-s mtex-t-g ray-400" />
+                <li>* React Native Deve lop ment</li>
+                <li>* Flutter Applications</li>
+                <li>* Native iOS & Android</li>
+                <li>* Mobile UI/UX Design</li>
               </ul>
-            </div>
+            </d iv>
     </>
-
     <>
-          <div className="text-centermt-16">
-        </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-6">Ready to Start Learning?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Join thousands of developers and IT professionals who are advancing their careers with our tutorials.
+          </><d iv c las sName="t e xt-c ent ermt-16">
+        </d iv>
+            <h2 c las sName="t e xt-3 xl f ont-b old text-w hit em-b-6">Ready to Start Learning?</h2>
+            <p c las sName="t e xt-g ray-300 mb-8 m ax-w-2x lmx-a uto" />
+    </>              Join thousands of deve lopers and IT professionals who are advancing their careers with our tutorials.
     <>
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300"  />Browse All Tutorials
-=======
-        </div>
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300">Browse All Tutorials
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </button>
-              <button className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500/10transition-allduration-300">Get Personalized Recommendations
-              </button>
-            </div>
-<<<<<<< HEAD
-        </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-    </>
+            <d iv c las sName="f l ex f lex-c ol sm:f lex-r owgap-4j ustify-c ent er">
+        </d iv>
+              <b utt on c las sName="b g-g rad ient-to-r from-c yan-500 to-purple-500 t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:from-c yan-600 hover:to-purple-600transition-allduration-300">Browse All Tutorials              </b utt on>
+              <b utt on c las sName="b order border-c yan-500 t ext-c ya-n-400 px-8 py-3 rounded-lg f ont-semibold hover:bg-c yan-500/10transition-allduration-300">Get Personalized Recommendations
+              </b utt on>
+            </d iv>
+        </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+      </d iv>    </>
   );
 };
-
 export default TutorialsPage;
     </>

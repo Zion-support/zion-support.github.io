@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-
 interface SEOProps {
   title?: string
   description?: string
@@ -16,7 +11,6 @@ interface SEOProps {
   noindex?: boolean
   nofollow?: boolean
 }
-
 const EnhancedSEO: React.FC<SEOProps /> = ({
   const title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, 5 G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
@@ -68,18 +62,16 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       "priceCurrency": "USD"
     }
   }
-
   const finalStructuredData = structuredData || defaultStructuredData
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
-
   return (
     <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
       </Helmet>
       {/* Basic Meta Tags */}
     <>
-      <title>{title}</title>
+      </><title>{title}</title>
         <meta name="description" content="{description}" / / />
       <meta name="keywords" content="{keywords}" / / />
       <meta name="robots" content="{`${noindex" ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-image-preview: large, max-snippet: -1, max-video-preview: -1`} / / />
@@ -93,7 +85,7 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       <link rel="canonical" href="{canonicalUrl}" />
       {/* Open Graph Meta Tags */}
     <>
-      <meta property="og: title" content="{title}" / / />
+      </><meta property="og: title" content="{title}" / / />
       <meta property="og: description" content="{description}" / / />
       <meta property="og: type" content="{ogType}" / / />
       <meta property="og: url" content="{canonicalUrl}" / / />
@@ -107,7 +99,7 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       <meta property="og:locale" content="en_US" / / />
       {/* Twitter Card Meta Tags */}
     <>
-      <meta name="twitter: card" content="{twitterCard}" / / />
+      </><meta name="twitter: card" content="{twitterCard}" / / />
       <meta name="twitter: title" content="{title}" / / />
       <meta name="twitter: description" content="{description}" / / />
       <meta name="twitter: image" content="{ogImage}" / / />
@@ -118,29 +110,20 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       <meta name="twitter:creator" content="@ziontechgroup" / / />
       {/* Additional SEO Meta Tags */}
     <>
-      <meta name="google-site-verification" content="your-google-verification-code" / / />
+      </><meta name="google-site-verification" content="your-google-verification-code" / / />
       <meta name="msvalidate.01" content="your-bing-verification-code" / / />
       <meta name="yandex-verification" content="your-yandex-verification-code" / / />
       {/* Performance Hints */}
-<<<<<<< HEAD
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-=======
     <>
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" / />
+      </><link rel="dns-prefetch" href="//fonts.googleapis.com" / />
       <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" / />
       <link rel="preconnect" href="https://fonts.googleapis.com" / />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-      {/* Structured Data */}
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" / />      {/* Structured Data */}
     <>
-      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
+      </><script type="application/ld+json">{JSON.stringify(finalStructuredData)}
       </script>
     </Helmet>
   )
 }
-
 export default EnhancedSEO;
     </>

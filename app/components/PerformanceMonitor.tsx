@@ -1,10 +1,5 @@
 import React, { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB };
-<<<<<<< HEAD
-=======
-'use client';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
@@ -18,7 +13,6 @@ const PerformanceMonitor: React.FC = () => {
         });
       }
     };
-
     // Monitor performance metrics
     const monitorPerformance = () => {
       if ('performance' in, window) {
@@ -36,7 +30,6 @@ const PerformanceMonitor: React.FC = () => {
         });
       }
     };
-
     // Monitor memory usage
     const monitorMemory = () => {
       if ('memory' in, performance) {
@@ -50,19 +43,15 @@ const PerformanceMonitor: React.FC = () => {
         }, 30000); // Check every 30 seconds
       }
     };
-
     // Initialize monitoring
     monitorCoreWebVitals();
     monitorPerformance();
     monitorMemory();
-
     // Cleanup
     return () => {
       // Cleanup if needed
     };
   }, []);
-
   return null;
 };
-
 export default PerformanceMonitor;

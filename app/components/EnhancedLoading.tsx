@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg'
   text?: string
   fullScreen?: boolean
   color?: string
 }
-
 const EnhancedLoading: React.FC<LoadingProps /> = ({
   const size = 'md',
   text = 'Loading...',
@@ -22,7 +16,6 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
   }
-
   const colorClasses = {
     cyan: 'border-cyan-400',
     purple: 'border-purple-400',
@@ -30,34 +23,25 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
     blue: 'border-blue-400',
     green: 'border-green-400'
   }
-
-  const spinner = (
-<<<<<<< HEAD
-    <div className="flex flex-col items-center justify-centerspace-y-4">
-=======
+  const s pin ner = (
     <>
-    <div className="flex flex-col items-center justify-centerspace-y-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`} / />
+    </><d iv c las sNa me="f l ex f lex-col i tems-c enter j ust ify-c enters pace-y-4">
+        </d iv>      <d iv c las sNa me="{`${s izeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-s pin`} / />
       {text && (
     <>
-        <div className="text-sm text-gray-300animate-pulse">{text}
-        </div>
+        </><d iv c las sNa me="t ext-sm text-g ra-y-300animate-p ulse">{text}
+        </d iv>
       )}
-    </div>
+    </d iv>
   )
-
   if (fullScreen) {
-    return (
+    r etu rn (
     <>
-      <div className="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-centerz-50">{spinner}
-      </div>
+      </><d iv c las sNa me="f i xed i nset-0 bg-g ray-900 bg-o pac ity-90 f lex i tems-c enter j ust ify-c enterz-50">{s pin ner}
+      </d iv>
     )
   }
-
-  return spinner
+  r etu rn s pin ner
 }
-
 export default EnhancedLoading;
     </>

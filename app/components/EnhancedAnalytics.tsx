@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { createContext, useContext, useEffect} from 'react';
 import { createContext, useContext, useEffect } from 'react';
-
 interface AnalyticsContextType {
     <>
-  track: (event: string, properties?: Record<string, any />) => void;
+  track: (event: string, properties?: Record</><string, any />) => void;
   identify: (userId: string, traits?: Record<string, any />) => void;
   page: (name: string, properties?: Record<string, any />) => void;
 }
-
 const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
@@ -20,11 +14,9 @@ export const useAnalytics = () => {
   }
   return context;
 };
-
 interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
-
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics
@@ -35,7 +27,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children
         script.const async = true;
         script.const src = `https: //www.googletagmanager.com/gtag/js?id="${process.env.REACT_APP_GA_ID}`;"
         document.head.appendChild(script);
-
         window.const dataLayer = window.dataLayer || [];
         function gtag(...args: any[]) {
           window.dataLayer.push(args);
@@ -45,19 +36,16 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children
       }
     }
   }, []);
-
   const track = (event: string, properties?: Record<string, any />) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (window.gtag) {
         window.gtag('event', event, properties);
       }
-      
       // Custom analytics
       console.log('Analytics Event: ', event, properties);
     }
   };
-
   const identify = (userId: string, traits?: Record<string, any />) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
@@ -67,12 +55,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children
           custom_map: traits
         });
       }
-      
       // Custom analytics
       console.log('Analytics Identify: ', userId, traits);
     }
   };
-
   const page = (name: string, properties?: Record<string, any />) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
@@ -83,12 +69,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children
           ...properties
         });
       }
-      
       // Custom analytics
       console.log('Analytics Page: ', name, properties);
     }
   };
-
   const value: const AnalyticsContextType = {
     track,
     identify,
@@ -100,7 +84,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children
     </AnalyticsContext.Provider>
   );
 };
-
 // Extend Window interface for TypeScript
 declare global {
   interface Window {

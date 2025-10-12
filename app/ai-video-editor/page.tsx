@@ -1,140 +1,12 @@
-<<<<<<< HEAD
-import React  from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-=======
 'use client';
 import React from 'react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const Page: React.FC = () => {
-=======
-import { ArrowRight, Brain, Cloud } from 'lucide-react';
-
-export default function AIVideoEditor() {
-  const features = [
-    {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI-Powered Editing',
-      description: 'Automatically edit videos with intelligent scene detection, color correction, and audio enhancement'
-    },
-    {
-      icon: <Scissors className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Cut Detection',
-      description: 'AI automatically identifies the best moments and creates seamless cuts and transitions'
-    },
-    {
-      icon: <Play className="w-6 h-6 text-yellow-400" />,
-      title: 'Auto-Generated Content',
-      description: 'Create engaging videos from text, images, and audio with AI-generated animations and effects'
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6 text-green-400" />,
-      title: 'Performance Analytics',
-      description: 'Track video performance, engagement metrics, and optimize content for better results'
-    }
-  ]
-
-  const editingFeatures = [
-    {
-      category: 'AI Editing',
-      items: ['Auto Scene Detection', 'Smart Cuts', 'Color Correction', 'Audio Enhancement', 'Stabilization', 'Background Removal']
-    },
-    {
-      category: 'Content Creation',
-      items: ['Text to Video', 'Image Animation', 'Voice Synthesis', 'Music Generation', 'Template Library', 'Custom Branding']
-    },
-    {
-      category: 'Export & Sharing',
-      items: ['Multiple Formats', 'Social Media Optimization', 'Cloud Storage', 'Direct Publishing', 'Collaboration Tools', 'Version Control']
-    },
-    {
-      category: 'Analytics',
-      items: ['View Metrics', 'Engagement Tracking', 'A/B Testing', 'Performance Reports', 'Audience Insights', 'ROI Analysis']
-    }
-  ]
-
-  const pricingPlans = [
-    {
-      name: 'Creator',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for content creators and influencers',
-      features: [
-        'Up to 10 hours of video/month',
-        'Basic AI features',
-        'Standard templates',
-        'Email support',
-        'Basic analytics',
-        'Mobile app access'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for businesses and agencies',
-      features: [
-        'Up to 50 hours of video/month',
-        'Advanced AI features',
-        'Custom templates',
-        'Priority support',
-        'Advanced analytics',
-        'Team collaboration',
-        'API access'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited video processing',
-        'Custom AI training',
-        'White-label solution',
-        'Dedicated support',
-        'Custom integrations',
-        'Advanced analytics',
-        'SLA guarantee'
-      ],
-      popular: false
-    }
-  ]
-
-  const testimonials = [
-    {
-      name: 'Alex Rodriguez',
-      company: 'YouTube Creator',
-      content: 'AI Video Editor cut my editing time by 70%. The auto-generated content is incredibly engaging.',
-      rating: 5
-    },
-    {
-      name: 'Sarah Kim',
-      company: 'Marketing Agency',
-      content: 'Creating professional videos for clients is now effortless. The AI quality is outstanding.',
-      rating: 5
-    },
-    {
-      name: 'Mike Johnson',
-      company: 'E-learning Platform',
-      content: 'The analytics help us understand what content performs best. Our engagement increased by 150%.',
-      rating: 5
-    }
-  ]
-
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
+import { Link  } from 'react-router-dom';
   return (
     <>
-    <>
+    </>
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
       </Helmet>
         <title>- Zion Tech Group</title>
         <meta const name = "description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." / / />
@@ -145,112 +17,67 @@ export default function AIVideoEditor() {
         <meta property="og:url" content="https://ziontechgroup.com/ai-video-editor" / / />
       </Helmet>
     </>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        {/* Hero Section */}
+      <d iv c las sName="m in-h-scre en bg-g rad ient-to-br from-s late-900 via-purple-900to-s late-900pt-16">
+        {/* H ero S ection */}
     <>
-        <section className="py-20" />
-          <div className="container mx-autopx-4text-center">
-<<<<<<< HEAD
-            <h1 className="text-5 xl md:text-6 xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent"   / />
+        </><s ection c las sName="p y-20" />
+          <d iv c las sName="c onta iner mx-a uto px-4-t ext-c ente-r">
+            <h1 c las sName="t e xt-5 xl md:t ext-6 xl f ont-b old t ext-w hit-e mb-6" />
+              <s pan c las sName="b g-g rad ient-to-r from-c yan-400 via-purple-400 to-pink-400bg-clip-t exttext-transpare-n-t"   / />
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
-=======
-        </div>
-            <h1 className="text-5 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent"   / />
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
+            <p c las sName="t e xt-xl t ext-g ra-y-300 mb-8 m ax-w-3x lmx-a uto">              Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
     <>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4justify-centermb-12">
-<<<<<<< HEAD
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" >
-          Get Started
-                
-          <ArrowRight className="ml-2group-hover:translate-x-1transition-transform"  />
-        </Link>
-=======
-        </div>
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" />
+            <d iv c las sName="f l ex f lex-c ol sm:f lex-r ow g ap-4j ust ify-c entermb-12">
+        </d iv>
+              <Link to="/cont act" c las sName="b g-g rad ient-to-r from-c yan-500 to-purple-500 t ext-w hit-e px-8 py-4 rounded-lg f ont-semibold t ext-l-g hover:from-c yan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-c yan-500/25 f lex items-c enterj ust ify-c entergroup" />
     </>
-                Get Started
+                Get Star ted
     <>
-                <ArrowRight className="ml-2group-hover:translate-x-1transition-transform" />
+                </><A rro wRi ght c las sName="m l-2group-hover:tran sla te-x-1transition-transform" />
+              </Link>              <Link to="/cont act" c las sName="b order b ord er-c yan-500 t ext-c ya-n-400 px-8 py-4 rounded-lg f ont-semibold t ext-l-g hover:bg-c yan-500/10 transition-all duration-300transformhover:scale-105">Learn More
               </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More
-              </Link>
-            </div>
-        </section>
+            </d iv>
+        </s ection>
     </>
-
-        {/* CTA Section */}
+        {/* C TA S ection */}
     <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center">
-              <h2 className="text-4xl font-bold text-white mb-6"  />Ready to Get Started?
+        </><s ection c las sName="p y-20" />
+          <d iv c las sName="c onta inermx-a uto px-4">
+        </d iv>
+            <d iv c las sName="b g-g rad ient-to-r from-c yan-900/50 to-purple-900/50 backdrop-blur-sm b ord er b ord er-c yan-500/20 rounded-2 xlp-12t ext-c ente-r">
+        </d iv>
+              <h2 c las sName="t e xt-4 xl f ont-b old text-w hitem-b-6">Ready to Get Star ted?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto">
-              Contact us to learn more about our solutions and how we can help your business.
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-        </div>
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6">Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
+              <p c las sName="t e xt-xl t ext-g ra-y-300 mb-8 m ax-w-2x lmx-a uto" />
     </>
-                Contact us to learn more about our solutions and how we can help your business.
+                Cont act us to learn more about our solutions and how we can help your business.
     <>
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Contact Us
+              <d iv c las sName="f l ex f lex-c ol sm:f lex-r owg ap-4j ust ify-c enter">
+        </d iv>                <Link to="/cont act" c las sName="b g-g rad ient-to-r from-c yan-500 to-purple-500 t ext-w hit-e px-8 py-4 rounded-lg f ont-semibold t ext-l-g hover:from-c yan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-c yan-500/25">Cont act Us
                 </Link>
-                <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All Services
+                <Link to="/services" c las sName="b order b ord er-c yan-500 t ext-c ya-n-400 px-8 py-4 rounded-lg f ont-semibold t ext-l-g hover:bg-c yan-500/10 transition-all duration-300transformhover:scale-105">View All Services
                 </Link>
-              </div>
-          </div>
-        </section>
-      </div>
-<<<<<<< HEAD
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
+              </d iv>
+          </d iv>
+        </s ection>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+      </d iv>
     </>
   );
 };
-
 export default Page;
 ;
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-33de

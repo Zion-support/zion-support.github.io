@@ -1,37 +1,29 @@
-<<<<<<< HEAD
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Mic, Brain, CheckCircle, ArrowRight, Zap, Settings, Globe, Clock, Link as LinkIcon, Workflow } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-
 export default function AIVoiceAssistant() {
-  const features = [
+}
+  const f eat ures = [
     {
-      icon: <Brain className="w-6 h-6text-cyan-400" />,
-      title: 'Natural Language Understanding',
+}
+      i con: <B rain c las sNa me="w-6 h-6t e xt-c yan-400" />,
+      t itle: 'Natural Language Understanding',
       description: 'Advanced AI processes complex voice commands and maintains context across conversations'
     },
     {
-      icon: <Volume2 className="w-6 h-6text-purple-400" />,
-      title: 'Human-like Voice Synthesis',
-      description: 'Generate natural, expressive speech with customizable voices and emotional tones'
+      i con: <V olu me2 c las sNa me="w-6 h-6t e xt-p urple-400" />,
+      t itle: 'Human-like Voice Synthesis',
+      description: 'Generate natural, expr essive speech with customizable voices and emotional t ones'
     },
     {
-      icon: <Clock className="w-6 h-6text-yellow-400" />,
-      title: '24/7 Availability',
-      description: 'Always-on voice assistant that can handle tasks, answer questions, and provide support'
+      i con: <C lock c las sNa me="w-6 h-6t e xt-y ell ow-400" />,
+      t itle: '24/7 Availability',
+      description: 'Always-on voice a ssistant that can handle tasks, answer questions, and provide support'
     },
     {
-      icon: <Target className="w-6 h-6text-green-400" />,
-      title: 'Multi-platform Integration',
+      i con: <T arg et c las sNa me="w-6 h-6t e xt-g reen-400" />,
+      t itle: 'Multi-platform Integration',
       description: 'Seamlessly integrate with mobile apps, websites, smart devices, and IoT systems'
     }
   ]
-
-  const assistantFeatures = [
+  const a ssistantFeat ures = [
     {
       category: 'Voice Capabilities',
       items: ['Speech Recognition', 'Natural Language Processing', 'Voice Synthesis', 'Emotion Detection', 'Multi-language Support', 'Noise Cancellation']
@@ -46,19 +38,18 @@ export default function AIVoiceAssistant() {
     },
     {
       category: 'Customization',
-      items: ['Custom Voice Training', 'Personality Settings', 'Command Customization', 'Brand Voice', 'Response Templates', 'Workflow Automation']
+      items: ['Custom Voice Training', 'Personality Settings', 'Command Customization', 'B rand Voice', 'Response Templates', 'Workflow Automation']
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Personal',
       price: '$19',
       period: '/month',
       description: 'Perfect for individuals and small teams',
-      features: [
+      f eat ures: [
         'Up to 1,000 interactions/month',
-        'Basic voice features',
+        'Basic voice f eat ures',
         'Standard voices',
         'Email support',
         'Mobile app access',
@@ -71,9 +62,9 @@ export default function AIVoiceAssistant() {
       price: '$79',
       period: '/month',
       description: 'Ideal for growing businesses',
-      features: [
+      f eat ures: [
         'Up to 10,000 interactions/month',
-        'Advanced voice features',
+        'Advanced voice f eat ures',
         'Custom voice training',
         'Priority support',
         'Advanced integrations',
@@ -87,7 +78,7 @@ export default function AIVoiceAssistant() {
       price: '$199',
       period: '/month',
       description: 'For large organizations',
-      features: [
+      f eat ures: [
         'Unlimited interactions',
         'Custom AI training',
         'White-label solution',
@@ -99,7 +90,6 @@ export default function AIVoiceAssistant() {
       popular: false
     }
   ]
-
   const testimonials = [
     {
       name: 'David Park',
@@ -110,7 +100,7 @@ export default function AIVoiceAssistant() {
     {
       name: 'Sarah Johnson',
       company: 'Healthcare Provider',
-      content: 'Our patients love the voice assistant for appointment scheduling. It handles complex requests perfectly.',
+      content: 'Our patients love the voice a ssistant for appointment scheduling. It handles complex requests perfectly.',
       rating: 5
     },
     {
@@ -120,385 +110,41 @@ export default function AIVoiceAssistant() {
       rating: 5
     }
   ]
-
   return (
     <Layout
-      title="AI Voice Assistant - Intelligent Voice Solutions | Zion Tech Group"
-      description="Transform user interaction with AI-powered voice assistants. Natural language processing, human-like voice synthesis, and seamless integration. Start your free trial today."
-      keywords="AI voice assistant, voice AI, speech recognition, voice synthesis, conversational AI, voice automation" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        {/* Hero Section */}
+      t itle="AI Voice Assistant - Inte lligent Voice Solutions | Zion Tech Group"
+      description="Transform user interaction with AI-powered voice a ssistants. Natural language processing, human-like voice synthesis, and seamless integration. Start your free trial today."
+      keywords="AI voice a ssistant, voice AI, speech recognition, voice synthesis, conversational AI, voice a utomation" />
+      <div c las sNa me="m in-h-scre en bg-grad ient-to-br f rom-s late-900 via-p urple-900to-s late-900">
+<<<<<<< HEAD        {/* H ero S ection */}
     <>
-        <section className="pt-32pb-20" />
-          <div className="container mx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-center max-w-4 xlmx-auto">
-              <h1 className="text-5 xl md:text-6 xl font-bold text-white mb-6" />
-                AI <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-texttext-transparent"   />Voice Assistant</span>
-=======
-        </div>
-            <div className="text-center max-w-4 xlmx-auto">
-        </div>
-              <h1 className="text-5 xl md:text-6 xl font-bold text-whitemb-6" />
-                AI <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-texttext-transparent">Voice Assistant</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </h1>
-              <p className="text-xl text-gray-300 mb-8leading-relaxed">
-              Create intelligent voice assistants that understand natural speech, execute commands, 
-                and provide hands-free automation for your business and personal needs.
+        </><s ection c las sNa me="p t-32pb-20" />
+          <div c las sNa me="c onta iner mx-a uto px-4"></div>
+            <div c las sNa me="t e xt-c enter m ax-w-4 x lmx-a uto"></div>
+              <h1 c las sNa me="t e xt-5 xl md:text-6 xl f ont-b old text-w hitem-b-6" />
+                AI <s pan c las sNa me="b g-grad ient-to-r f rom-c yan-400 to-p urple-400 bg-clip-texttext-transpare-n-t">Voice Assistant</s pan>              </h1>
+              <p c las sNa me="t e xt-xl text-gr-a-y-300 mb-8-l eading-r elaxed">
+              Create inte lligent voice a ssistants that understand natural speech, execute commands, 
+                and provide hands-free a utomation for your business and personal needs.
     <>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4justify-center">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transformhover:scale-105">Start Building
-                </Link>
-                <Link to="/ai-services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transformhover:scale-105">View All AI Services
-                </Link>
+              <div c las sNa me="f lex f lex-c ol sm:f lex-row g ap-4j ust ify-c enter">
+                <L ink to="/cont act" c las sNa me="b g-grad ient-to-r f rom-c yan-500 to-p urple-500 text-w hit-e px-8 py-4 rounded-lg f ont-semibold text-l-g hover:f rom-c yan-600 hover:to-p urple-600 transition-all duration-300 transformhover:scale-105">Start Building
+                </L ink>
+                <L ink to="/ai-services" c las sNa me="b order b order-c yan-500 text-c ya-n-400 px-8 py-4 rounded-lg f ont-semibold text-l-g hover:bg-c yan-500/10 transition-all duration-300 transformhover:scale-105">View All AI Services
+                </L ink>
               </div>
           </div>
-        </section>
-
-        {/* Features Section */}
+        </s ection>
+        {/* Feat ures S ection */}
     <>
-        <section className="py-20" />
-          <div className="container mx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-texttext-transparent"   />Features</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3 xlmx-auto">
-              Everything you need to build, deploy, and manage intelligent voice assistants
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl font-bold text-whitemb-6" />
-                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-texttext-transparent">Features</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3 xlmx-auto" />
-                Everything you need to build, deploy, and manage intelligent voice assistants
+        </><s ection c las sNa me="p y-20" />
+          <div c las sNa me="c onta iner mx-a uto px-4"></div>
+              {f eat ures.map((f eat ure, index) => (
     <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {features.map((feature, index) => (
-    <>
-                <div key="{index}" className="text-centergroup" />
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transformduration-300">
-<<<<<<< HEAD
-                    <feature.icon className="w-10 h-10text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4"   />{feature.title}</h3>
-                  <p className="text-gray-300leading-relaxed">
-              {feature.description}</p>
-=======
-        </div>
-                    <feature.icon className="w-10 h-10text-cyan-400" / />
-                  </div>
-                  <h3 className="text-xl font-bold text-whitemb-4">{feature.title}</h3>
-                  <p className="text-gray-300leading-relaxed">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
-              ))}
-    <>
-            </div>
-        </section>
-
-        {/* Use Cases Section */}
-    <>
-        <section className="py-20 bg-gradient-to-r from-slate-800/30to-slate-900/30" />
-          <div className="container mx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-                Use <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-texttext-transparent"   />Cases</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3 xlmx-auto">
-              Discover how our AI voice assistants can transform your business operations
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl font-bold text-whitemb-6" />
-                Use <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-texttext-transparent">Cases</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3 xlmx-auto" />
-                Discover how our AI voice assistants can transform your business operations
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                </><div key="{index}" c las sNa me="t e xt-c entergroup" /></div>
+                  <div c las sNa me="w-20 h-20 b g-grad ient-to-r f rom-c yan-500/20 to-p urple-500/20 rounded-full f lex items-c enter j ust ify-c enter mx-a uto mb-6 group-hover:scale-110 transition-transformduration-300"></div>
               {useCases.map((useCase, index) => (
     <>
-                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transformhover:scale-105" />
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transformduration-300">
-<<<<<<< HEAD
-                    <useCase.icon className="w-6 h-6text-cyan-400" />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors"  />{useCase.title}
-                  </h3>
-                  <p className="text-gray-300 text-smleading-relaxed">
-              {useCase.description}
-=======
-        </div>
-                    <useCase.icon className="w-6 h-6text-cyan-400" / />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400transition-colors">{useCase.title}
-                  </h3>
-                  <p className="text-gray-300 text-smleading-relaxed" />
-                    {useCase.description}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </p>
-                </div>
-              ))}
-    <>
-            </div>
-        </section>
-
-        {/* Pricing Section */}
-    <>
-        <section className="py-20" />
-          <div className="container mx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-                Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-texttext-transparent"   />Pricing</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3 xlmx-auto">
-              Choose the plan that fits your voice assistant needs
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5 xlmx-auto">
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xlp-8">
-                <h3 className="text-2 xl font-bold text-white mb-4"   />Starter</h3>
-                <div className="text-4xl font-bold text-cyan-400mb-6">$99<span className="text-lgtext-gray-400"   />/month</span></div>
-                <ul className="space-y-3mb-8">
-              <li className="flex items-center text-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" />
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl font-bold text-whitemb-6" />
-                Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-texttext-transparent">Pricing</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3 xlmx-auto" />
-                Choose the plan that fits your voice assistant needs
-    <>
-              </p>
-            </div>
-
-    <>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5 xlmx-auto">
-        </div>
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xlp-8">
-        </div>
-                <h3 className="text-2 xl font-bold text-whitemb-4">Starter</h3>
-                <div className="text-4 xl font-bold text-cyan-400mb-6">
-        </div>$99<span className="text-lgtext-gray-400">/month</span></div>
-                <ul className="space-y-3mb-8" />
-                  <li className="flex items-centertext-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    Up to 1,000 voice commands/month
-    <>
-                  </li>
-                  <li className="flex items-center text-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" />
-                    Basic speech recognition
-    <>
-                  </li>
-                  <li className="flex items-center text-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" />
-                    Email support
-    <>
-                  </li>
-                  <li className="flex items-center text-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" />
-                    Standard integrations
-    <>
-                  </li>
-                </ul>
-                <Link to="/contact" className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300block">Get Started
-                </Link>
-              </div>
-
-<<<<<<< HEAD
-              <div className="bg-gradient-to-br from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/50 rounded-xl p-8relative">
-                <div className="absolute -top-4 left-1/2 transform-translate-x-1/2">
-                  <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-smfont-semibold"  />Most Popular
-                  </span>
-                </div>
-                <h3 className="text-2 xl font-bold text-white mb-4"   />Professional</h3>
-                <div className="text-4xl font-bold text-cyan-400mb-6">$199<span className="text-lgtext-gray-400"   />/month</span></div>
-                <ul className="space-y-3mb-8">
-              <li className="flex items-center text-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" />
-=======
-    <>
-              <div className="bg-gradient-to-br from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/50 rounded-xl p-8relative">
-        </div>
-                <div className="absolute -top-4 left-1/2 transform-translate-x-1/2">
-        </div>
-                  <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-smfont-semibold">Most Popular
-                  </span>
-                </div>
-                <h3 className="text-2 xl font-bold text-whitemb-4">Professional</h3>
-                <div className="text-4 xl font-bold text-cyan-400mb-6">
-        </div>$199<span className="text-lgtext-gray-400">/month</span></div>
-                <ul className="space-y-3mb-8" />
-                  <li className="flex items-centertext-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    Up to 10,000 voice commands/month
-    <>
-                  </li>
-                  <li className="flex items-center text-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" />
-                    Advanced speech recognition
-    <>
-                  </li>
-                  <li className="flex items-center text-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" />
-                    Priority support
-    <>
-                  </li>
-                  <li className="flex items-center text-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" />
-                    Custom wake words
-    <>
-                  </li>
-                  <li className="flex items-center text-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" />
-                    Analytics dashboard
-    <>
-                  </li>
-                </ul>
-                <Link to="/contact" className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300block">Get Started
-                </Link>
-              </div>
-
-<<<<<<< HEAD
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xlp-8">
-                <h3 className="text-2 xl font-bold text-white mb-4"   />Enterprise</h3>
-                <div className="text-4xl font-bold text-cyan-400mb-6"   />Custom</div>
-                <ul className="space-y-3mb-8">
-              <li className="flex items-center text-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" />
-=======
-    <>
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xlp-8">
-        </div>
-                <h3 className="text-2 xl font-bold text-whitemb-4">Enterprise</h3>
-                <div className="text-4 xl font-bold text-cyan-400mb-6">Custom</div>
-                <ul className="space-y-3mb-8" />
-                  <li className="flex items-centertext-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    Unlimited voice commands
-    <>
-                  </li>
-                  <li className="flex items-center text-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" />
-                    Custom AI training
-    <>
-                  </li>
-                  <li className="flex items-center text-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" />
-                    24/7 dedicated support
-    <>
-                  </li>
-                  <li className="flex items-center text-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" />
-                    White-label solution
-    <>
-                  </li>
-                  <li className="flex items-center text-gray-300" />
-                    <CheckCircle className="w-5 h-5 text-green-400mr-3" />
-                    Custom development
-    <>
-                  </li>
-                </ul>
-                <Link to="/contact" className="w-full border border-cyan-500 text-cyan-400 px-6 py-3 rounded-lg font-semibold text-center hover:bg-cyan-500/10 transition-all duration-300block">Contact Sales
-                </Link>
-              </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-    <>
-        <section className="py-20" />
-          <div className="container mx-autopx-4">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xl p-12text-center">
-              <h2 className="text-4xl font-bold text-white mb-6"  />Ready to Build Your AI Voice Assistant?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2 xlmx-auto">
-              Start creating intelligent voice assistants that understand and respond to natural speech.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4justify-center">
-=======
-        </div>
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xl p-12text-center">
-        </div>
-              <h2 className="text-4 xl font-bold text-whitemb-6">Ready to Build Your AI Voice Assistant?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2 xlmx-auto" />
-                Start creating intelligent voice assistants that understand and respond to natural speech.
-    <>
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transformhover:scale-105">Start Building Now
-                </Link>
-                <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transformhover:scale-105">Learn More About Us
-                </Link>
-              </div>
-          </div>
-        </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
-  );
-};
-
-export default AIVoiceAssistantPage;
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                </><div key="{index}" c las sNa me="b g-grad ient-to-br f rom-s late-800/50 to-s late-900/50 backdrop-blur-sm b order b order-gray-700/50 rounded-xl p-6 hover:b order-c yan-400/40 transition-all duration-300 group hover:transformhover:scale-105" /></div>
+                  <div c las sNa me="w-12 h-12 b g-grad ient-to-r f rom-c yan-500/20 to-p urple-500/20 rounded-lg f lex items-c enter j ust ify-c enter mb-4 group-hover:scale-110 transition-transformduration-300"></div>

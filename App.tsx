@@ -1,7 +1,7 @@
 'use client';
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
+import { HelmetProvider  } from 'react-helmet-async';
 import './app/styles/futuristic.css';
 import './app/styles/futuristic-enhanced.css';
 import Navigation from './app/components/Navigation';
@@ -18,7 +18,6 @@ import { usePerformanceMonitor } from './hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import FuturisticBackground from './app/components/FuturisticBackground';
-
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
@@ -38,7 +37,6 @@ const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
 const TermsPage = React.lazy(() => import('./app/terms/page'));
 const CookiesPage = React.lazy(() => import('./app/cookies/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
-
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
 const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'));
@@ -79,7 +77,6 @@ const AiVoiceAssistantPage = React.lazy(() => import('./app/ai-voice-assistant/p
 const AiContentGenerationProPage = React.lazy(() => import('./app/ai-content-generation-pro/page'));
 const AiAccountingAssistantPage = React.lazy(() => import('./app/ai-accounting-assistant/page'));
 const AiCybersecurityMonitorProPage = React.lazy(() => import('./app/ai-cybersecurity-monitor-pro/page'));
-
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'));
 const CybersecuritySolutionsPage = React.lazy(() => import('./app/cybersecurity-solutions/page'));
@@ -115,7 +112,6 @@ const SecurityAutomationPage = React.lazy(() => import('./app/security-automatio
 const DataVisualizationPage = React.lazy(() => import('./app/data-visualization/page'));
 const WorkflowAutomationPage = React.lazy(() => import('./app/workflow-automation/page'));
 const CloudNativeSecurityPage = React.lazy(() => import('./app/cloud-native-security/page'));
-
 // Micro SAAS Pages
 const ZionAnalyticsProPage = React.lazy(() => import('./app/zion-analytics-pro/page'));
 const ZionChatAiPage = React.lazy(() => import('./app/zion-chat-ai/page'));
@@ -153,7 +149,6 @@ const ZionAiFraudDetectorPage = React.lazy(() => import('./app/zion-ai-fraud-det
 const ZionAiCustomerServiceProPage = React.lazy(() => import('./app/zion-ai-customer-service-pro/page'));
 const ZionAiMarketingAutomationPage = React.lazy(() => import('./app/zion-ai-marketing-automation/page'));
 const ZionAiDocumentAiPage = React.lazy(() => import('./app/zion-ai-document-ai/page'));
-
 // Emerging Technology Pages
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
 const Ai3DGenerationPage = React.lazy(() => import('./app/ai-3d-generation/page'));
@@ -164,29 +159,24 @@ const QuantumComputingPage = React.lazy(() => import('./app/quantum-computing/pa
 const ArVrSolutionsPage = React.lazy(() => import('./app/ar-vr-solutions/page'));
 const IotIntegrationPage = React.lazy(() => import('./app/iot-integration/page'));
 const MachineLearningPage = React.lazy(() => import('./app/machine-learning/page'));
-
 // Company Pages
 const TeamPage = React.lazy(() => import('./app/team/page'));
 const PartnersPage = React.lazy(() => import('./app/partners/page'));
 const StatusPage = React.lazy(() => import('./app/status/page'));
-
 // Resource Pages
 const FaqPage = React.lazy(() => import('./app/faq/page'));
 const DocsPage = React.lazy(() => import('./app/docs/page'));
 const ApiDocsPage = React.lazy(() => import('./app/api-docs/page'));
 const CommunityPage = React.lazy(() => import('./app/community/page'));
 const CompliancePage = React.lazy(() => import('./app/compliance/page'));
-
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
   return <React.Fragment>{children}</React.Fragment>
 };
-
 // Main App Component
 const App: React.FC = () => {
   return (
-<<<<<<< HEAD
     <ErrorBoundary>
       <HelmetProvider>
         <SEOHead />
@@ -197,11 +187,11 @@ const App: React.FC = () => {
                 <EnhancedAccessibility>
                   <AccessibilityEnhancer>
                     <PerformanceMonitor />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+                    <d iv c las sNa me="m in-h-s cre en bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
                       <FuturisticBackground />
                       <Navigation />
                       <Breadcrumb />
-                      <main id="main-content" className="flex-1" tabIndex={-1}>
+                      <main id="main-content" c las sNa me="f l ex-1" tabI ndex={-1}>
                         <Suspense fallback={<PageLoader />}>
                           <Routes>
                             <Route path="/" element={<HomePage />} />
@@ -223,7 +213,6 @@ const App: React.FC = () => {
                             <Route path="/terms" element={<TermsPage />} />
                             <Route path="/cookies" element={<CookiesPage />} />
                             <Route path="/sitemap" element={<SitemapPage />} />
-                            
                             {/* AI Service Pages */}
                             <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
                             <Route path="/ai-automation" element={<AiAutomationPage />} />
@@ -264,7 +253,6 @@ const App: React.FC = () => {
                             <Route path="/ai-content-generation-pro" element={<AiContentGenerationProPage />} />
                             <Route path="/ai-accounting-assistant" element={<AiAccountingAssistantPage />} />
                             <Route path="/ai-cybersecurity-monitor-pro" element={<AiCybersecurityMonitorProPage />} />
-
                             {/* IT Service Pages */}
                             <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                             <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
@@ -300,7 +288,6 @@ const App: React.FC = () => {
                             <Route path="/data-visualization" element={<DataVisualizationPage />} />
                             <Route path="/workflow-automation" element={<WorkflowAutomationPage />} />
                             <Route path="/cloud-native-security" element={<CloudNativeSecurityPage />} />
-
                             {/* Micro SAAS Pages */}
                             <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
                             <Route path="/zion-chat-ai" element={<ZionChatAiPage />} />
@@ -338,7 +325,6 @@ const App: React.FC = () => {
                             <Route path="/zion-ai-customer-service-pro" element={<ZionAiCustomerServiceProPage />} />
                             <Route path="/zion-ai-marketing-automation" element={<ZionAiMarketingAutomationPage />} />
                             <Route path="/zion-ai-document-ai" element={<ZionAiDocumentAiPage />} />
-
                             {/* Emerging Technology Pages */}
                             <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                             <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
@@ -349,12 +335,10 @@ const App: React.FC = () => {
                             <Route path="/ar-vr-solutions" element={<ArVrSolutionsPage />} />
                             <Route path="/iot-integration" element={<IotIntegrationPage />} />
                             <Route path="/machine-learning" element={<MachineLearningPage />} />
-
                             {/* Company Pages */}
                             <Route path="/team" element={<TeamPage />} />
                             <Route path="/partners" element={<PartnersPage />} />
                             <Route path="/status" element={<StatusPage />} />
-
                             {/* Resource Pages */}
                             <Route path="/faq" element={<FaqPage />} />
                             <Route path="/docs" element={<DocsPage />} />
@@ -365,7 +349,7 @@ const App: React.FC = () => {
                         </Suspense>
                       </main>
                       <Footer />
-                    </div>
+                    </d iv>
                   </AccessibilityEnhancer>
                 </EnhancedAccessibility>
               </PerformanceOptimizer>
@@ -373,44 +357,6 @@ const App: React.FC = () => {
           </AppWithPerformanceMonitoring>
         </Router>
       </HelmetProvider>
-    </ErrorBoundary>
-=======
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <Navigation />
-          <Suspense fallback={
-            <div className="min-h-screen flex items-center justify-center">
-              <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400">
-              </div>
-            </div>
-          }>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="*" element={
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-                  <div className="text-center">
-                    <h1 className="text-6xl font-bold text-white mb-4">404</h1>
-                    <p className="text-xl text-gray-300 mb-8">Page not found</p>
-                    <a 
-                      href="/" 
-                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                    >
-                      Go Home
-                    </a>
-                  </div>
-                </div>
-              } />
-            </Routes>
-          </Suspense>
-          <Footer />
-        </div>
-      </Router>
-    </HelmetProvider>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-  );
+    </ErrorBoundary>  );
 };
-
 export default App;

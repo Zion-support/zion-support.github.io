@@ -32,7 +32,6 @@
     }
   }
     // Enhanced error reporting logic
-    
     };
     // Log to console in development
       console.group('🚨 Error Boundary Caught Error');
@@ -43,7 +42,6 @@
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
       console.log('Error report prepared:', errorReport);
-       
       // Example: Send to error reporting service
       //   body: JSON.stringify(errorReport)
       // });
@@ -65,7 +63,6 @@
   };
     window.location.href = '/';
   };
-    
     };
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
         // Show success message
@@ -83,7 +80,6 @@
         return this.props.fallback;
       }
       const { retryCount, error } = this.state;
-      
       );
     }
     return this.props.children;

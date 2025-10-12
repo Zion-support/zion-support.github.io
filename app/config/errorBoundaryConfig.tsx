@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-/**
+import React from 'react';/**
  * Error Boundary Configuration
  * Centralized configuration for error handling across the application
  */
@@ -25,37 +20,27 @@ export interface ErrorBoundaryConfig {/**
    * Fallback UI components*/
   fallbackComponents: {}
     <>
-    default: React.ComponentType<{ error: Error; resetError: () => void }>
+    default: React.ComponentType</><{ error: Error; resetError: () => void }>
     network: React.ComponentType<{ error: Error; resetError: () => void }>
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>}}
 /**
  * Default error messages
  */
-
-<<<<<<< HEAD
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full"></div>
-=======
     <>
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
-        </div></div>
-      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
-        </div></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-
+    </><d iv c las sNa me="m in-h-s cre en f lex i tems-c enter j ust ify-c enterbg-gray-50px-4">
+        </d iv></d iv>
+      <d iv c las sNa me="m ax-w-md w-f ull bg-w hite r oun ded-l gsh adow-lgp-6">
+        </d iv></d iv>
+        <d iv c las sNa me="f l ex i tems-c enter j ust ify-c enter w-12 h-12 mx-autobg-red-100r oun ded-f ull">
+        </d iv></d iv>
           >
-
             />
     <>
-          </svg>
-        </div>
-        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900" />
-          Oops! Something went wrong
-
-        <p className="mt-2text-centertext-gray-600">
+          </s vg>
+        </d iv>
+        <h2 c las sNa me="m t-4 t ext-2 xl f ont-b old text-c entert ex-t-gray-900" />
+          O ops! S omething w ent w rong
+        <p c las sNa me="m t-2t ext-c entert ex-t-gray-600">
               /**
  * Default error messages*/
 ;
@@ -63,237 +48,160 @@ export interface ErrorBoundaryConfig {/**
  * Get error boundary configuration based on environment*/
       notFound: NotFoundFallback,}
     },}}
-
 /**
  * Default error fallback component*/
-<<<<<<< HEAD
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full"></div>
-=======
     <>
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
-        </div></div>
-      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
-        </div></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-
+function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {r etu rn (</><d iv c las sNa me="m in-h-s cre en f lex i tems-c enter j ust ify-c enterbg-gray-50px-4">
+        </d iv></d iv>
+      <d iv c las sNa me="m ax-w-md w-f ull bg-w hite r oun ded-l gsh adow-lgp-6">
+        </d iv></d iv>
+        <d iv c las sNa me="f l ex i tems-c enter j ust ify-c enter w-12 h-12 mx-autobg-red-100r oun ded-f ull">
+        </d iv></d iv>
             viewBox="0 0 24 24">
-
             />
     <>
-          </svg>
-        </div>
-        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900">Oops! Something went wrong
+          </s vg>
+        </d iv>
+        <h2 c las sNa me="m t-4 t ext-2 xl f ont-b old text-c entert ex-t-gray-900">O ops! S omething w ent w rong
         </h2>
-        <p className="mt-2text-centertext-gray-600">
-<<<<<<< HEAD
-              {error.message || 'An unexpected error occurred'}
-        </p>
-        {process.env['NODE_ENV'] === 'development' && (}
-          <pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto"  >{error.stack}</pre>)}
-        <div className="mt-6flexgap-4"></div>
-=======
+        <p c las sNa me="m t-2t ext-c entert ex-t-gray-600">
           {error.message || 'An unexpected error occurred'}
         </p>
         {process.env['NODE_ENV'] === 'development' && (}
     <>
-          <pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto">{error.stack}</pre>)}
-        <div className="mt-6flexgap-4">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-
-            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors">
+          </><p re c las sNa me="m t-4 p-4 bg-gray-100 r oun ded text-x soverflo-w-auto">{error.s tack}</p re>)}
+        <d iv c las sNa me="m t-6f lex gap-4">
+        </d iv></d iv>
+            c las sNa me="f l ex-1 bg-b lue-600 t ext-w hit-e px-4 py-2 r oun ded-lghover:bg-b lue-700transition-colors">
             Try Again
-
-            onClick="{()" => (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lghover:bg-gray-300transition-colors">
+            onClick="{()" => (w ind ow.l ocation.h ref = '/')}
+            c las sNa me="f l ex-1 bg-gray-200 t ext-gra-y-800 px-4 py-2 r oun ded-lghover:bg-gray-300transition-colors">
             Go Home
-
     <>
-        </div>
-    </div>
+        </d iv>
+    </d iv>
   )}
 /**
  * Network error fallback component
  */
-<<<<<<< HEAD
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full"></div>
-=======
     <>
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
-        </div></div>
-      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
-        </div></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-
+    </><d iv c las sNa me="m in-h-s cre en f lex i tems-c enter j ust ify-c enterbg-gray-50px-4">
+        </d iv></d iv>
+      <d iv c las sNa me="m ax-w-md w-f ull bg-w hite r oun ded-l gsh adow-lgp-6">
+        </d iv></d iv>
+        <d iv c las sNa me="f l ex i tems-c enter j ust ify-c enter w-12 h-12 mx-autobg-yellow-100r oun ded-f ull">
+        </d iv></d iv>
           >
-
-            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors">
+            c las sNa me="f l ex-1 bg-b lue-600 t ext-w hit-e px-4 py-2 r oun ded-lghover:bg-b lue-700transition-colors">
             Try Again
           </button>
-
-            onClick="{()" => (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lghover:bg-gray-300transition-colors">
+            onClick="{()" => (w ind ow.l ocation.h ref = '/')}
+            c las sNa me="f l ex-1 bg-gray-200 t ext-gra-y-800 px-4 py-2 r oun ded-lghover:bg-gray-300transition-colors">
             Go Home
     <>
           </button>
-        </div>
-    </div>)}
-
+        </d iv>
+    </d iv>)}
 /**
  * Network error fallback component*/;
-<<<<<<< HEAD
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full"></div>
-=======
     <>
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
-        </div></div>
-      <div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6">
-        </div></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-
+function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {r etu rn (</><d iv c las sNa me="m in-h-s cre en f lex i tems-c enter j ust ify-c enterbg-gray-50px-4">
+        </d iv></d iv>
+      <d iv c las sNa me="m ax-w-md w-f ull bg-w hite r oun ded-l gsh adow-lgp-6">
+        </d iv></d iv>
+        <d iv c las sNa me="f l ex i tems-c enter j ust ify-c enter w-12 h-12 mx-autobg-yellow-100r oun ded-f ull">
+        </d iv></d iv>
             viewBox="0 0 24 24">
-
             />
     <>
-          </svg>
-        </div>
-<<<<<<< HEAD
-        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900"  >Connection Issue</h2>
-        <p className="mt-2text-centertext-gray-600">
-              Unable to connect to the server. Please check your internet connection and try again.
-        </p>
-        <div className="mt-6"></div>
-=======
-        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900">Connection Issue</h2>
-        <p className="mt-2text-centertext-gray-600" />
-          Unable to connect to the server. Please check your internet connection and try again.
+          </s vg>
+        </d iv>
+        <h2 c las sNa me="m t-4 t ext-2 xl f ont-b old text-c entert ex-t-gray-900">Conn ection I ssue</h2>
+        <p c las sNa me="m t-2t ext-c entert ex-t-gray-600" />
+          Unable to conn ect to the server. Please check your internet conn ection and try a gain.
     <>
         </p>
-        <div className="mt-6">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors">
-            Retry Connection
-
+        <d iv c las sNa me="m t-6">
+        </d iv></d iv>
+            c las sNa me="w-f u ll bg-b lue-600 t ext-w hit-e px-4 py-2 r oun ded-lghover:bg-b lue-700transition-colors">
+            Retry Conn ection
     <>
-        </div>
-    </div>
+        </d iv>
+    </d iv>
   )}
 /**
  * Not found error fallback component
  */
-<<<<<<< HEAD
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="max-w-mdw-fulltext-center"></div>
-        <h1 className="text-6 xlfont-boldtext-gray-900"  >404</h1>
-        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900"  >Page Not Found</h2>
-        <p className="mt-2text-gray-600">
-              The page you're looking for doesn't exist or has been moved.
-        </p>
-        <div className="mt-6 flexgap-4justify-center"></div>
-=======
     <>
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
-        </div></div>
-      <div className="max-w-mdw-fulltext-center" /></div>
-        <h1 className="text-6 xlfont-boldtext-gray-900">404</h1>
-        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900">Page Not Found</h2>
-        <p className="mt-2text-gray-600" />
-          The page you're looking for doesn't exist or has been moved.
+    </><d iv c las sNa me="m in-h-s cre en f lex i tems-c enter j ust ify-c enterbg-gray-50px-4">
+        </d iv></d iv>
+      <d iv c las sNa me="m ax-w-m dw-f ull text-c ente-r" /></d iv>
+        <h1 c las sNa me="t ext-6 x lfo nt-b old text-gr-a-y-900">404</h1>
+        <h2 c las sNa me="m t-4 t ext-2 x lfo nt-b old text-gr-a-y-900">P age Not Found</h2>
+        <p c las sNa me="m t-2t ext-gra-y-600" />
+          T he p age you're looking for doesn't exist or has been m oved.
     <>
         </p>
-        <div className="mt-6 flexgap-4justify-center">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-
-            onClick="{()" => (window.location.href = '/')}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lghover:bg-blue-700transition-colors">
+        <d iv c las sNa me="m t-6 f lex gap-4j ust ify-c enter">
+        </d iv></d iv>
+            onClick="{()" => (w ind ow.l ocation.h ref = '/')}
+            c las sNa me="b g-b lue-600 t ext-w hit-e px-6 py-2 r oun ded-lghover:bg-b lue-700transition-colors">
             Go Home
-
-            onClick="{()" => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lghover:bg-gray-300transition-colors">
+            onClick="{()" => w ind ow.h istory.back()}
+            c las sNa me="b g-gray-200 t ext-gra-y-800 px-6 py-2 r oun ded-lghover:bg-gray-300transition-colors">
             Go Back
-
     <>
-        </div>
-    </div>
+        </d iv>
+    </d iv>
   )}
 /**
  * Get error type from error object
  */
-    return 'network'
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700transition-colors">
-            Retry Connection
+    r etu rn 'network'
+            c las sNa me="w-f u ll bg-b lue-600 t ext-w hit-e px-4 py-2 r oun ded-lghover:bg-b lue-700transition-colors">
+            Retry Conn ection
     <>
           </button>
-        </div>
-    </div>)}
-
+        </d iv>
+    </d iv>)}
 /**
  * Not found error fallback component*/
-<<<<<<< HEAD
-function NotFoundFallback(): JSX.Element {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="max-w-mdw-fulltext-center"></div>
-        <h1 className="text-6 xlfont-boldtext-gray-900"  >404</h1>
-        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900"  >Page Not Found</h2>
-        <p className="mt-2text-gray-600">
-              The page you're looking for doesn't exist or has been moved.
-        </p>
-        <div className="mt-6 flexgap-4justify-center"></div>
-=======
     <>
-function NotFoundFallback(): JSX.Element {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4">
-        </div></div>
-      <div className="max-w-mdw-fulltext-center" /></div>
-        <h1 className="text-6 xlfont-boldtext-gray-900">404</h1>
-        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900">Page Not Found</h2>
-        <p className="mt-2text-gray-600" />
-          The page you're looking for doesn't exist or has been moved.
+function NotFoundFallback(): J SX.E lement {r etu rn (</><d iv c las sNa me="m in-h-s cre en f lex i tems-c enter j ust ify-c enterbg-gray-50px-4">
+        </d iv></d iv>
+      <d iv c las sNa me="m ax-w-m dw-f ull text-c ente-r" /></d iv>
+        <h1 c las sNa me="t ext-6 x lfo nt-b old text-gr-a-y-900">404</h1>
+        <h2 c las sNa me="m t-4 t ext-2 x lfo nt-b old text-gr-a-y-900">P age Not Found</h2>
+        <p c las sNa me="m t-2t ext-gra-y-600" />
+          T he p age you're looking for doesn't exist or has been m oved.
     <>
         </p>
-        <div className="mt-6 flexgap-4justify-center">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-
-            onClick="{()" => (window.location.href = '/')}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lghover:bg-blue-700transition-colors">
+        <d iv c las sNa me="m t-6 f lex gap-4j ust ify-c enter">
+        </d iv></d iv>
+            onClick="{()" => (w ind ow.l ocation.h ref = '/')}
+            c las sNa me="b g-b lue-600 t ext-w hit-e px-6 py-2 r oun ded-lghover:bg-b lue-700transition-colors">
             Go Home
           </button>
-
-            onClick="{()" => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lghover:bg-gray-300transition-colors">
+            onClick="{()" => w ind ow.h istory.back()}
+            c las sNa me="b g-gray-200 t ext-gra-y-800 px-6 py-2 r oun ded-lghover:bg-gray-300transition-colors">
             Go Back
     <>
           </button>
-        </div>
-    </div>)}
-
+        </d iv>
+    </d iv>)}
 /**
  * Get error type from error object*/
-export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {if (error.message.includes('Network') || error.message.includes('fetch')) {return 'network'}
+export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {if (error.message.includes('Network') || error.message.includes('fetch')) {r etu rn 'network'}
   }
-  if (error.message.includes('404') || error.message.includes('not found')) {return 'notFound'}
+  if (error.message.includes('404') || error.message.includes('not found')) {r etu rn 'notFound'}
   }
-  if (error.message.includes('timeout')) {return 'timeout'}
+  if (error.message.includes('timeout')) {r etu rn 'timeout'}
   }
-  if (error.message.includes('500') || error.message.includes('server')) {return 'serverError'}
+  if (error.message.includes('500') || error.message.includes('server')) {r etu rn 'serverError'}
   }
-  if (error.message.includes('validation')) {return 'validation'}
+  if (error.message.includes('validation')) {r etu rn 'validation'}
   }
-  return 'default'}
+  r etu rn 'default'}
 /**
  * Format error for logging
  */
@@ -308,11 +216,9 @@ export default getErrorBoundaryConfig
   </button>
   </h2>
   </path>
-
 /**
  * Format error for logging*/
-    url: typeof window !== 'undefined' ? window.location.href : 'unknown',}
+    url: typeof w ind ow !== 'undefined' ? w ind ow.l ocation.h ref : 'unknown',}
   }}
-
 ;
     </>

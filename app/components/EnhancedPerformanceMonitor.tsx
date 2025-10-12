@@ -1,6 +1,5 @@
 import { useEffect, useState} from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB} from 'web-vitals';
-
 interface PerformanceMetrics {
   lcp: number | null,
   inp: number | null,
@@ -10,7 +9,6 @@ interface PerformanceMetrics {
   memoryUsage: number | null,
   loadTime: number | null
 }
-
 interface PerformanceReport {
   metrics: PerformanceMetrics,
   timestamp: string,
@@ -18,7 +16,6 @@ interface PerformanceReport {
   connectionType: string,
   deviceMemory: number | null
 }
-
 const EnhancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics />({
     lcp: null,
@@ -29,35 +26,27 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     memoryUsage: null,
     loadTime: null
   })
-
   const [isMonitoring, setIsMonitoring] = useState(false)
-
   useEffect(() => {
     const startTime = performance.now()
-
     // Monitor Core Web Vitals
     const measureWebVitals = () => {
       onCLS((metric) => {
         setMetrics(prev => ({ ...prev, cls: metric.value }))
       })
-
       onINP((metric) => {
         setMetrics(prev => ({ ...prev, inp: metric.value }))
       })
-
       onFCP((metric) => {
         setMetrics(prev => ({ ...prev, fcp: metric.value }))
       })
-
       onLCP((metric) => {
         setMetrics(prev => ({ ...prev, lcp: metric.value }))
       })
-
       onTTFB((metric) => {
         setMetrics(prev => ({ ...prev, ttfb: metric.value }))
       })
     }
-
     // Monitor memory usage
     const measureMemoryUsage = () => {
       if ('memory' in, performance) {
@@ -68,7 +57,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         }))
       }
     }
-
     // Monitor load time
     const measureLoadTime = () => {
       window.addEventListener('load', () => {
@@ -76,7 +64,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         setMetrics(prev => ({ ...prev, loadTime }))
       })
     }
-
     // Monitor resource loading
     const monitorResourceLoading = () => {
       const observer = new PerformanceObserver((list) => {
@@ -96,7 +83,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       })
       observer.observe({ entryTypes: ['resource'] })
     }
-
     // Monitor layout shifts
     const monitorLayoutShifts = () => {
       const observer = new PerformanceObserver((list) => {
@@ -115,7 +101,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       })
       observer.observe({ entryTypes: ['layout-shift'] })
     }
-
     // Generate performance report
     const generatePerformanceReport = (): PerformanceReport => {
       const report: PerformanceReport = {
@@ -125,7 +110,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         connectionType: (navigator as, any).connection?.effectiveType || 'unknown',
         deviceMemory: (navigator as, any).deviceMemory || null
       }
-
       // Send to analytics (in a real app, you'd send this to your analytics, service)
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'performance_metrics', {
@@ -143,10 +127,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
           }
         })
       }
-
       return report
     }
-
     // Initialize monitoring
     setIsMonitoring(true)
     measureWebVitals()
@@ -154,106 +136,73 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     measureLoadTime()
     monitorResourceLoading()
     monitorLayoutShifts()
-
     // Generate report after 5 seconds
     const reportTimer = setTimeout(() => {
       const report = generatePerformanceReport()
       console.log('Performance Report: ', report)
     }, 5000)
-
     // Cleanup
     return () => {
       clearTimeout(reportTimer)
       setIsMonitoring(false)
     }
   }, [])
-
   // Performance optimization suggestions
   const getPerformanceSuggestions = (): string[] => {
     const suggestions: string[] = []
-
     if (metrics.lcp && metrics.lcp > 2500) {
       suggestions.push('LCP is above 2.5 s - consider optimizing images and reducing render-blocking resources')
     }
-
     if (metrics.inp && metrics.inp > 200) {
       suggestions.push('INP is above 200 ms - consider reducing JavaScript execution time')
     }
-
     if (metrics.cls && metrics.cls > 0.1) {
       suggestions.push('CLS is above 0.1 - consider fixing layout shifts and adding size attributes to images')
     }
-
     if (metrics.fcp && metrics.fcp > 1800) {
       suggestions.push('FCP is above 1.8 s - consider optimizing critical rendering path')
     }
-
     if (metrics.ttfb && metrics.ttfb > 600) {
       suggestions.push('TTFB is above 600 ms - consider optimizing server response time')
     }
-
     if (metrics.memoryUsage && metrics.memoryUsage > 50) {
       suggestions.push('High memory usage detected - consider optimizing memory leaks and reducing bundle size')
     }
-
     return suggestions
   }
-
   const suggestions = getPerformanceSuggestions()
-
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
     return null
   }
-
   return (
-<<<<<<< HEAD
-    <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg max-w-smz-50">
-      <h3 className="text-sm font-boldmb-2"  >Performance Monitor</h3>
-      <div className="text-xsspace-y-1">
-        <div  >LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div  >INP: {metrics.inp ? `${metrics.inp.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div  >CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}</div>
-        <div  >FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div  >TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div  >Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}MB` : 'N/A'}</div>
-        <div  >Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'Measuring...'}</div>
-      
-      {suggestions.length > 0 && (
-        <div className="mt-2 pt-2 border-tborder-gray-600">
-          <div className="text-xs font-semiboldmb-1"  >Suggestions:</div>
-=======
     <>
-    <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg max-w-smz-50">
-        </div>
-      <h3 className="text-sm font-boldmb-2">Performance Monitor</h3>
-      <div className="text-xsspace-y-1">
-        </div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div>INP: {metrics.inp ? `${metrics.inp.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}</div>
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div>Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}MB` : 'N/A'}</div>
-        <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'Measuring...'}</div>
-      
-      {suggestions.length > 0 && (
+    </><d iv c las sName="f i xed b ottom-4 r ight-4 bg-g ray-800 t ext-whit-e p-4 rounded-lg shadow-lg m ax-w-s mz-50">
+        </d iv>
+      <h3 c las sName="t e xt-sm f ont-b old mb-2">Performance Monitor</h3>
+      <d iv c las sName="t e xt-x ssp ace-y-1">
+        </d iv>
+        <d iv>LCP: {metrics.lcp ? `${metrics.lcp.toFi xed(0)}ms` : 'Measuring...'}</d iv>
+        <d iv>INP: {metrics.inp ? `${metrics.inp.toFi xed(0)}ms` : 'Measuring...'}</d iv>
+        <d iv>CLS: {metrics.cls ? metrics.cls.toFi xed(3) : 'Measuring...'}</d iv>
+        <d iv>FCP: {metrics.fcp ? `${metrics.fcp.toFi xed(0)}ms` : 'Measuring...'}</d iv>
+        <d iv>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFi xed(0)}ms` : 'Measuring...'}</d iv>
+        <d iv>Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFi xed(1)}MB` : 'N/A'}</d iv>
+        <d iv>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFi xed(0)}ms` : 'Measuring...'}</d iv>
+      {suggestions.l eng th > 0 && (
     <>
-        <div className="mt-2 pt-2 border-tborder-gray-600">
-        </div>
-          <div className="text-xs font-semiboldmb-1">Suggestions:</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          <ul className="text-xsspace-y-1" />
+        </><d iv c las sName="m t-2 pt-2 b order-t bor der-g ray-600">
+        </d iv>
+          <d iv c las sName="t e xt-xs f ont-s emi bol dmb-1">Suggestions:</d iv>          <ul c las sName="t e xt-x ssp ace-y-1" />
             {suggestions.map((suggestion, index) => (
-              <li key="{index}" className="text-yellow-300">• {suggestion}</li>
+              <li k ey="{index}" c las sName="t e xt-y ellow-300">* {suggestion}</li>
             ))}
     <>
           </ul>
-        </div>
+        </d iv>
       )}
-    </div>
+    </d iv>
   )
 }
-
 export default EnhancedPerformanceMonitor;
     </>

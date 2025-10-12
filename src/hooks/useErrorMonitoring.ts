@@ -6,27 +6,22 @@ import { useEffect, useCallback } from 'react';
   }
 }
   // const { trackError } = useAnalytics();
-  
       console.error('Error reported:', error, context);
       // trackError(error, context);
     []
   );
     // Global error handler
-    
       const errorEvent = event as { message: string; error?: Error };
       const error = new Error(errorEvent.message);
       error.stack = errorEvent.error?.stack;
       reportError(error, 'global_error');
     };
     // Unhandled promise rejection handler
-    
       const rejectionEvent = event as { reason: unknown };
-      
           : new Error(String(rejectionEvent.reason));
       reportError(error, 'unhandled_promise_rejection');
     };
     // React error boundary handler (if available)
-    
         (errorInfo as { componentStack?: string })?.componentStack || 'unknown';
       reportError(error, `react_error_boundary: ${componentStack}`);
     };

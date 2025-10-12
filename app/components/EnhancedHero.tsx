@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { ArrowRight } from 'lucide-react';
+import React from 'react';import { ArrowRight  } from 'lucide-react';
 'use client'
-
 const EnhancedHero: React.FC = () => {
   const benefits = [
     'Advanced AI technology integration',
@@ -32,178 +26,103 @@ const EnhancedHero: React.FC = () => {
       icon: MapPin,
       title: 'Visit Us',
       details: 'San Francisco, CA',
-      description: 'Schedule a meeting'
+      description: 'Schedule a m eet ing'
     }
   ];
-  return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900overflow-hidden">
-<<<<<<< HEAD
-      {/* Background Effects */}
-      <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" />
-      <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
-      {/* Main Content */}
-      <div className="relative z-10 flex flex-col lg:flex-rowitems-centermin-h-screen">
-        {/* Left Content */}
-        <div className="flex-1 px-4 sm:px-6lg:px-8py-20">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" />
-=======
-        </div>
-      {/* Background Effects */}
+  r etu rn (
+    <d iv c las sNa me="r e lat ive m in-h-scre en bg-grad ient-to-br from-slate-900 via-purple-900to-slate-900overflow-hidden">
+        </d iv>
+      {/* B ack gro und E ffe cts */}
     <>
-      <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" / />
-      <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
-      {/* Main Content */}
-      <div className="relative z-10 flex flex-col lg:flex-rowitems-centermin-h-screen">
-        </div>
-        {/* Left Content */}
+      </><d iv c las sNa me="a b solute i nset-0bg-[radi al-grad ient(c ircle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]a nim ate-p ulse" / />
+      <d iv c las sNa me="a b solute i nset-0bg-[radi al-grad ient(c ircle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]a nim ate-p ulse" style="{{" a nim ationDelay: '1 s' }} / />
+      {/* Main C ont ent */}
+      <d iv c las sNa me="r e lat ive z-10 flex flex-c ol lg:flex-rowitems-centerm in-h-scre en">
+        </d iv>
+        {/* L eft C ont ent */}
     <>
-        <div className="flex-1 px-4 sm:px-6lg:px-8py-20">
-        </div>
-          <div className="max-w-2xl">
-        </div>
-            <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-whitemb-6leading-tight" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Transform Your Business with{' '}
+        </><d iv c las sNa me="f lex-1 px-4 sm:px-6-lg:px-8-py-20">
+        </d iv>
+          <d iv c las sNa me="m ax-w-2xl">
+        </d iv>
+            <h1 c las sNa me="t e xt-4 xl sm:t ext-5 xl md:t ext-6 xl f ont-bold t ext-whitem-b-6leading-tight" />              Transform Your Business with{' '}
     <>
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">AI & IT Solutions
+              </><span c las sNa me="b g-grad ient-to-r from-c yan-400 to-purple-400bg-clip-t exttext-transpare-n-t">AI & IT Solutions
               </span>
             </h1>
-            
-<<<<<<< HEAD
-            <p className="text-lg sm:text-xl text-gray-300 mb-8leading-relaxed">
-=======
-            <p className="text-lg sm:text-xl text-gray-300mb-8leading-relaxed">
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Harness the power of cutting-edge artificial intelligence and information technology 
-              to drive innovation, efficiency, and growth in your organization.
+            <p c las sNa me="t e xt-lg sm:t ext-x-l t ext-gra-y-300 mb-8-leading-relaxed">              Harness the power of cutt ing-edge artificial intelligence and information technology 
+              to drive innovation, efficiency, and growth in your orga nization.
             </p>
-
-            {/* Benefits List */}
-<<<<<<< HEAD
-            <div className="mb-8">
-              <h3 className="text-lg font-semiboldtext-white mb-4"  >Why Choose Us?</h3>
-              <div className="grid grid-cols-1sm:grid-cols-2gap-3">
-                {benefits.map((benefit, index) => (
-                  <div key="{index}" className="flex items-center text-gray-300" />
-                    <CheckCircle className="h-5 w-5 text-cyan-400mr-3flex-shrink-0" />
-                    <span className="text-sm"  >{benefit}</span>
-=======
+            {/* Benefits L ist */}
     <>
-            <div className="mb-8">
-        </div>
-              <h3 className="text-lg font-semiboldtext-whitemb-4">Why Choose Us?</h3>
-              <div className="grid grid-cols-1sm:grid-cols-2gap-3">
-        </div>
+            </><d iv c las sNa me="m b-8">
+        </d iv>
+              <h3 c las sNa me="t e xt-lg f ont-s emi bol dte xt-whitem-b-4">W hy C hoo se Us?</h3>
+              <d iv c las sNa me="g r id g rid-c ols-1sm:g rid-c ols-2g ap-3">
+        </d iv>
                 {benefits.map((benefit, index) => (
     <>
-                  <div key="{index}" className="flexitems-centertext-gray-300" />
-                    <CheckCircle className="h-5 w-5 text-cyan-400mr-3flex-shrink-0" / />
-                    <span className="text-sm">{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </div>
+                  </><d iv k ey="{index}" c las sNa me="f lexitems-centert ext-gra-y-300" />
+                    <C hec kCi rcle c las sNa me="h-5 w-5 t e xt-c yan-400mr-3-flex-s hri nk-0" / />
+                    <span c las sNa me="t e xt-sm">{benefit}</span>                  </d iv>
                 ))}
     <>
-              </div>
-
-            {/* CTA Buttons */}
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-rowgap-4mb-8">
-              <button className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-centerjustify-center" />
-=======
+              </d iv>
+            {/* C TA B utt ons */}
     <>
-            <div className="flex flex-col sm:flex-rowgap-4mb-8">
-        </div>
-              <button className="cyber-button px-8 py-4 text-lg font-semibold inline-flexitems-centerjustify-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Get Started
+            </><d iv c las sNa me="f lex flex-c ol sm:flex-rowg ap-4mb-8">
+        </d iv>
+              <b utt on c las sNa me="c y ber-b utt on px-8 py-4 t ext-l-g f ont-s emi bold inline-flex items-centerjustify-center" />                Get Star ted
     <>
-                <ArrowRight className="ml-2h-5w-5" />
-              </button>
-              <button className="cyber-button-secondary px-8 py-4text-lgfont-semibold">Learn More
-              </button>
-            </div>
-
-            {/* Contact Info */}
-            <div className="grid grid-cols-1sm:grid-cols-3gap-4">
-<<<<<<< HEAD
-              {contactInfo.map((contact, index) => (
-                <div key="{index}" className="flex items-center text-gray-300" />
-                  <contact.icon className="h-5 w-5 text-cyan-400mr-3flex-shrink-0" />
-                  <div />
-                    <div className="text-smfont-mediumtext-white"  >{contact.title}</div>
-                    <div className="text-xstext-gray-400"  >{contact.details}</div>
-=======
-        </div>
+                </><ArrowRight c las sNa me="m l-2h-5w-5" />
+              </b utt on>
+              <b utt on c las sNa me="c y ber-b utt on-seconda ry px-8 py-4-t ext-l gfon-t-s emi bold">Learn More
+              </b utt on>
+            </d iv>
+            {/* C ontact Info */}
+            <d iv c las sNa me="g r id g rid-c ols-1sm:g rid-c ols-3g ap-4">
+        </d iv>
               {contactInfo.map((contact, index) => (
     <>
-                <div key="{index}" className="flexitems-centertext-gray-300" />
-                  <contact.icon className="h-5 w-5 text-cyan-400mr-3flex-shrink-0" / />
-                  <div />
-                    <div className="text-smfont-mediumtext-white">{contact.title}</div>
-                    <div className="text-xstext-gray-400">{contact.details}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
+                </><d iv k ey="{index}" c las sNa me="f lexitems-centert ext-gra-y-300" />
+                  <contact.icon c las sNa me="h-5 w-5 t e xt-c yan-400mr-3-flex-s hri nk-0" / />
+                  <d iv />
+                    <d iv c las sNa me="t e xt-s mfont-m edi umt ext-whit-e">{contact.title}</d iv>
+                    <d iv c las sNa me="t e xt-x ste xt-gra-y-400">{contact.details}</d iv>                </d iv>
               ))}
     <>
-            </div>
-        </div>
-
-        {/* Right Content - Visual Elements */}
-<<<<<<< HEAD
-        <div className="flex-1 px-4 sm:px-6lg:px-8py-20">
-          <div className="relative">
-            {/* Floating Cards */}
-            <div className="absolute top-0 left-0 w-64 h-40 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2 xl backdrop-blur-sm borderborder-cyan-500/30animate-float">
-              <div className="p-6">
-                <Brain className="h-8 w-8text-cyan-400mb-3" />
-                <h3 className="text-lg font-bold text-white mb-2"  >AI Solutions</h3>
-=======
+            </d iv>
+        </d iv>
+        {/* Right C ont ent - Visu al E lements */}
     <>
-        <div className="flex-1 px-4 sm:px-6lg:px-8py-20">
-        </div>
-          <div className="relative" />
-            {/* Floating Cards */}
+        </><d iv c las sNa me="f lex-1 px-4 sm:px-6-lg:px-8-py-20">
+        </d iv>
+          <d iv c las sNa me="r e lat ive" />
+            {/* F loating C ards */}
     <>
-            <div className="absolute top-0 left-0 w-64 h-40 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2 xl backdrop-blur-sm borderborder-cyan-500/30animate-float">
-        </div>
-              <div className="p-6">
-        </div>
-                <Brain className="h-8 w-8text-cyan-400mb-3" / />
-                <h3 className="text-lg font-boldtext-whitemb-2">AI Solutions</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <p className="text-smtext-gray-300">Machine Learning & Analytics</p>
-              </div>
-
+            </><d iv c las sNa me="a b solute t op-0 l eft-0 w-64 h-40 bg-grad ient-to-br from-c yan-500/20 to-purple-500/20 rounded-2 xl backdrop-blur-sm borderborder-c yan-500/30a nim ate-float">
+        </d iv>
+              <d iv c las sNa me="p-6">
+        </d iv>
+                <B rain c las sNa me="h-8 w-8t e xt-c yan-400mb-3" / />
+                <h3 c las sNa me="t e xt-lg f ont-bold text-white-m-b-2">AI Solutions</h3>                <p c las sNa me="t e xt-s mte xt-gra-y-300">M achine Lear ning & Analytics</p>
+              </d iv>
     <>
-            <div className="absolute top-20 right-0 w-64 h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2 xl backdrop-blur-sm borderborder-purple-500/30animate-float" style="{{" animationDelay: '1 s' }} />
-              <div className="p-6">
-<<<<<<< HEAD
-                <Shield className="h-8 w-8text-purple-400mb-3" />
-                <h3 className="text-lg font-bold text-white mb-2"  >Security</h3>
-=======
-        </div>
-                <Shield className="h-8 w-8text-purple-400mb-3" / />
-                <h3 className="text-lg font-boldtext-whitemb-2">Security</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <p className="text-smtext-gray-300">Cybersecurity & Compliance</p>
-              </div>
-
+            </><d iv c las sNa me="a b solute t op-20 r ight-0 w-64 h-40 bg-grad ient-to-br from-purple-500/20 to-pink-500/20 rounded-2 xl backdrop-blur-sm borderborder-purple-500/30a nim ate-float" style="{{" a nim ationDelay: '1 s' }} />
+              <d iv c las sNa me="p-6">
+        </d iv>
+                <S hie ld c las sNa me="h-8 w-8t e xt-purple-400mb-3" / />
+                <h3 c las sNa me="t e xt-lg f ont-bold text-white-m-b-2">S ecurity</h3>                <p c las sNa me="t e xt-s mte xt-gra-y-300">C ybe rsecurity & Compliance</p>
+              </d iv>
     <>
-            <div className="absolute top-40 left-1/2 transform -translate-x-1/2 w-64 h-40 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-2 xl backdrop-blur-sm borderborder-green-500/30animate-float" style="{{" animationDelay: '2 s' }} />
-              <div className="p-6">
-<<<<<<< HEAD
-                <Globe className="h-8 w-8text-green-400mb-3" />
-                <h3 className="text-lg font-bold text-white mb-2"  >Cloud Services</h3>
-=======
-        </div>
-                <Globe className="h-8 w-8text-green-400mb-3" / />
-                <h3 className="text-lg font-boldtext-whitemb-2">Cloud Services</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <p className="text-smtext-gray-300">Infrastructure & Migration</p>
-              </div>
-          </div>
-      </div>
+            </><d iv c las sNa me="a b solute t op-40 l eft-1/2 transform -translate-x-1/2 w-64 h-40 bg-grad ient-to-br from-green-500/20 to-blue-500/20 rounded-2 xl backdrop-blur-sm borderborder-green-500/30a nim ate-float" style="{{" a nim ationDelay: '2 s' }} />
+              <d iv c las sNa me="p-6">
+        </d iv>
+                <G lobe c las sNa me="h-8 w-8t e xt-green-400mb-3" / />
+                <h3 c las sNa me="t e xt-lg f ont-bold text-white-m-b-2">C loud S erv ices</h3>                <p c las sNa me="t e xt-s mte xt-gra-y-300">Infr ast ruc ture & Migration</p>
+              </d iv>
+          </d iv>
+      </d iv>
   )
 };
     </>

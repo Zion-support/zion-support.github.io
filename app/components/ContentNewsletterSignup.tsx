@@ -1,197 +1,143 @@
 import { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight  } from 'lucide-react';
 'use client'
-
 interface ContentNewsletterSignupProps {
   title?: string
   subtitle?: string
   placeholder?: string
   buttonText?: string
   features?: Array<{
-    icon: React.ComponentType<{ className?: string }>
-    text: string
+    i con: R eact.C omp onentT ype<{ c las sNa me?: string }>
+    t ext: string
   }>
-  onSubscribe?: (email: string) => void
+  o nSu bscribe?: (email: string) => void
 }
-
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
-  const title = "Stay Updated with Our Latest Insights",
-  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
+c onst ContentNewsletterSignup: R eact.FC<ContentNewsletterSignupProps /> = ({
+  c onst title = "Stay Updated with Our Latest Insights",
+  subtitle = "Get exclusive c ontent, industry insights, and early access to new features delivered to your inbox.",
   placeholder = "Enter your email address",
-  buttonText = "Subscribe",
+  buttonText = "S ubscribe",
   features = [
-    { icon: Star, text: "Exclusive content" },
-    { icon: Users, text: "Industry insights" },
-    { icon: Globe, text: "Global updates" },
-    { icon: Zap, text: "Early access" }
+    { i con: Star, t ext: "Exclusive c ontent" },
+    { i con: Users, t ext: "Industry insights" },
+    { i con: Globe, t ext: "Global updates" },
+    { i con: Zap, t ext: "Early access" }
   ],
-  onSubscribe
+  o nSu bscribe
 }) => {
-  const [email, setEmail] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubscribed, setIsSubscribed] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  c onst [email, setEmail] = useState('')
+  c onst [isSubmitting, setIsSubmitting] = useState(false)
+  c onst [isSu bscribed, setIsSu bscribed] = useState(false)
+  c onst handleS ubmit = async (e: R eact.FormEvent) => {
     e.preventDefault()
     if (!email) return
-
     setIsSubmitting(true)
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000))
-      if (onSubscribe) {
-        onSubscribe(email)
+      if (o nSu bscribe) {
+        o nSu bscribe(email)
       }
-      setIsSubscribed(true)
+      setIsSu bscribed(true)
       setEmail('')
     } catch (error) {
-      console.error('Subscription error: ', error)
+      c onsole.error('S ubscription error: ', error)
     } finally {
       setIsSubmitting(false)
     }
   }
-
-  if (isSubscribed) {
+  if (isSu bscribed) {
     return (
-<<<<<<< HEAD
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        <div className="max-w-4 xlmx-autotext-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
-            <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-automb-6">
-              <CheckCircle className="w-10h-10text-white" />
-            </div>
-            <h2 className="text-3 xl font-bold text-white mb-4"  />Thank You for Subscribing!
-            </h2>
-            <p className="text-xltext-gray-300 mb-8">
-=======
     <>
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
-        <div className="max-w-4 xlmx-autotext-center">
-        </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
-        </div>
-            <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-centermx-automb-6">
-        </div>
-              <CheckCircle className="w-10h-10text-white" / />
-            </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Thank You for Subscribing!
+    </><d iv c las sNa me="p y-20 px-4 sm:px-6 lg:px-8 bg-g rad ient-to-br from-slate-900via-purple-900to-slate-900">
+        </d iv>
+        <d iv c las sNa me="m ax-w-4 x lmx-a uto text-c ente-r">
+        </d iv>
+          <d iv c las sNa me="b g-w hite/5 b ack drop-b lur-sm r oun ded-3 xl p-12borderborder-w hite/20">
+        </d iv>
+            <d iv c las sNa me="w-20 h-20 b g-g rad ient-to-r from-g reen-500 to-emerald-600 r oun ded-full flex i tems-c enter justify-c entermx-a utomb-6">
+        </d iv>
+              <C hec kCi rcle c las sNa me="w-10h-10t ext-w hite" / />
+            </d iv>
+            <h2 c las sNa me="t ext-3 xl f ont-b old text-w hitem-b-4">T hank You for S ubscri bing!
             </h2>
-            <p className="text-xltext-gray-300mb-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              You'll receive our latest insights and updates soon.
+            <p c las sNa me="t ext-x ltext-g ra-y-300mb-8">              You'll receive our latest insights and updates soon.
             </p>
             <button
-              onClick="{()" =  />setIsSubscribed(false)}
-              className="text-blue-400hover:text-blue-300transition-colors"
+              onClick="{()" =  />setIsSu bscribed(false)}
+              c las sNa me="t ext-b lue-400h over:t ext-b lu-e-300t ransition-colors"
             >
-              Subscribe another email
+              S ubscribe another email
     <>
             </button>
-          </div>
-      </div>
+          </d iv>
+      </d iv>
     )
   }
-
   return (
-<<<<<<< HEAD
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-      <div className="max-w-4xlmx-auto">
-        <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
-          <div className="text-centermb-12">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />{title}
-=======
     <>
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
-      <div className="max-w-4xlmx-auto">
-        </div>
-        <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
-        </div>
-          <div className="text-centermb-12">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">{title}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xlmx-auto">
+    </><d iv c las sNa me="p y-20 px-4 sm:px-6 lg:px-8 bg-g rad ient-to-br from-slate-900via-purple-900to-slate-900">
+        </d iv>
+      <d iv c las sNa me="m ax-w-4x lmx-a uto">
+        </d iv>
+        <d iv c las sNa me="b g-w hite/5 b ack drop-b lur-sm r oun ded-3 xl p-12borderborder-w hite/20">
+        </d iv>
+          <d iv c las sNa me="t ext-c entermb-12">
+        </d iv>
+            <h2 c las sNa me="t ext-3 xl md:t ext-4 xl f ont-b old text-w hitem-b-4">{title}            </h2>
+            <p c las sNa me="t ext-xl t ext-g ra-y-300 m ax-w-2x lmx-a uto">
               {subtitle}
     <>
             </p>
-          </div>
-
+          </d iv>
     <>
-          <form onSubmit="{handleSubmit}" className="max-w-mdmx-automb-12" />
-            <div className="flex flex-colsm:flex-rowgap-4">
-<<<<<<< HEAD
-              <div className="flex-1">
-=======
-        </div>
-              <div className="flex-1">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <input
+          </><form o nSubmit="{handleS ubmit}" c las sNa me="m ax-w-m dmx-a utomb-12" />
+            <d iv c las sNa me="f lex flex-colsm:flex-rowg ap-4">
+        </d iv>
+              <d iv c las sNa me="f lex-1">
+        </d iv>                <input
                   type="email"
                   value="{email}"
                   onChange="{(e)" = /> setEmail(e.target.value)}
                   placeholder="{placeholder}"
-                  required
-                  className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
+                  r equ ired
+                  c las sNa me="w-f ull px-6 py-4 bg-w hite/10 border border-w hite/20 r oun ded-lg t ext-w hit-e placeholder-g ray-400 focus:outline-none focus:ring-2focus:ring-b lue-500focus:border-t ransparent"
                 />
-              </div>
+              </d iv>
               <button
                 type="submit"
-                disabled="{isSubmitting}"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]" />
+                disa bled="{isSubmitting}"
+                c las sNa me="b g-g rad ient-to-r from-b lue-600 to-purple-600 h over:from-b lue-700 h over:to-purple-700 disa bled:from-g ray-600 disa bled:to-g ray-700 t ext-w hit-e f ont-semibold px-8 py-4 r oun ded-lg t ransition-all duration-300 flex i tems-c enter justify-c enter space-x-2min-w-[140,px]" />
                 {isSubmitting ? (
     <>
-                  <>
-<<<<<<< HEAD
-                    <div className="animate-spin rounded-full h-5 w-5border-b-2border-white"></div>
-                    <span  >Subscribing...</span>
-=======
-                    <div className="animate-spin rounded-full h-5 w-5border-b-2border-white">
-        </div></div>
-                    <span>Subscribing...</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                   </>
+                    <d iv c las sNa me="a n imate-s pin r oun ded-full h-5 w-5border-b-2border-w hite">
+        </d iv></d iv>
+                    <span>S ubscri bing...</span>                  </>
                 ) : (
     <>
-                  <>
+                  </>
                     <span>{buttonText}</span>
-                    <ArrowRight className="h-5w-5" />
+                    <ArrowRight c las sNa me="h-5w-5" />
                   </>
                 )}
     <>
               </button>
-            </div>
+            </d iv>
           </form>
-
-          <div className="grid grid-cols-2md:grid-cols-4gap-6">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <d iv c las sNa me="g r id g rid-cols-2md:g rid-cols-4g ap-6">
             {features.map((feature, index) => (
-
     <>
-                <div key="{index}" className="text-center" />
-<<<<<<< HEAD
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-automb-3">
-                  <feature.icon className="h-6w-6text-white" />
-=======
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-centermx-automb-3">
-        </div>
-                  <feature.icon className="h-6w-6text-white" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
-                <p className="text-gray-300text-sm">{feature.text}</p>
-              </div>
+                </><d iv k ey="{index}" c las sNa me="t ext-c enter" />
+                <d iv c las sNa me="w-12 h-12 b g-g rad ient-to-r from-b lue-500 to-purple-600 r oun ded-full flex i tems-c enter justify-c enter mx-a utomb-3">
+                  <feature.i con c las sNa me="h-6w-6t ext-w hite" />                </d iv>
+                <p c las sNa me="t ext-g ray-300t ext-s-m">{feature.t ext}</p>
+              </d iv>
             ))}
     <>
-          </div>
-      </div>
+          </d iv>
+      </d iv>
   )
 }
-
 export default ContentNewsletterSignup;
     </>

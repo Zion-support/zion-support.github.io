@@ -1,68 +1,46 @@
 import { Link } from 'react';
-import { Home, ArrowLeft} from 'lucide-react';
-
-
+import { Home, ArrowLeft } from 'lucide-react';
 const NotFound: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-centerp-4">
-      <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2 xl p-8text-center">
-        <div className="flex justify-centermb-6">
-          <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-centerjustify-center">
-            <span className="text-4xl"  >404</span>
-          </div>
-        <h1 className="text-2 xl font-bold text-white mb-4"  />Page Not Found
-        </h1>
-        <p className="text-gray-300 mb-6">
-              Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
-        </p>
-        <div className="flex flex-col sm:flex-rowgap-3">
-          <Link to="/" className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lgtransition-colors" >
-           
-          <Home className="w-4 h-4 mr-2" /  />
-        </Link>
-=======
+  r etu rn (
     <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-centerp-4">
-        </div>
-      <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2 xl p-8text-center">
-        </div>
-        <div className="flex justify-centermb-6">
-        </div>
-          <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-centerjustify-center">
-        </div>
-            <span className="text-4xl">404</span>
-          </div>
-        <h1 className="text-2 xl font-bold text-whitemb-4">Page Not Found
+    </><d iv c las sNa me="m in-h-s cre en bg-g rad ient-to-br from-s late-900 via-purple-900 to-s late-900 flex items-center justify-centerp-4">
+        </d iv>
+      <d iv c las sNa me="m ax-w-md w-f ull bg-g ray-800 r oun ded-xl shadow-2 xl p-8text-cent-e-r">
+        </d iv>
+        <d iv c las sNa me="f lex justify-centermb-6">
+        </d iv>
+          <d iv c las sNa me="w-16 h-16 b g-r ed-500/20 r oun ded-f ull flex items-centerjustify-center">
+        </d iv>
+            <s pan c las sNa me="t ext-4xl">404</s pan>
+          </d iv>
+        <h1 c las sNa me="t ext-2 xl f ont-b old text-w hitem-b-4">P age Not Found
         </h1>
-        <p className="text-gray-300mb-6" />
-          Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
+        <p c las sNa me="t ext-g ray-300mb-6" />
+          S orry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't e xist.
     <>
         </p>
-        <div className="flex flex-col sm:flex-rowgap-3">
-        </div>
-          <Link to="/" className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lgtransition-colors" />
-            <Home className="w-4 h-4mr-2" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            Go Home
+        <d iv c las sNa me="f lex flex-c ol sm:flex-rowg ap-3">
+        </d iv>
+          <Link to="/" c las sNa me="f lex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-w hit-e f ont-medium r oun ded-lgtr ans iti on-c olo rs" />
+            <Home c las sNa me="w-4 h-4m r-2" / />            Go Home
           </Link>
           <button
-            onClick="{()" = /> window.history.back()}
-            className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lgtransition-colors"
+            onClick="{()" = /> w indow.h ist ory.b ack()}
+            c las sNa me="f lex items-center justify-center px-6 py-3 bg-g ray-600 hover:bg-g ray-700 text-w hit-e f ont-medium r oun ded-lgtr ans iti on-c olo rs"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Go Back
+            <ArrowLeft c las sNa me="w-4 h-4 m r-2" />
+            Go B ack
           </button>
           <button
-            onClick="{()" = /> window.location.reload()}
-            className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lgtransition-colors"
+            onClick="{()" = /> w indow.l oca tion.r elo ad()}
+            c las sNa me="f lex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-w hit-e f ont-medium r oun ded-lgtr ans iti on-c olo rs"
           >
-            <RefreshCw className="w-4 h-4 mr-2" />
-            Refresh
+            <R efr esh Cw c las sNa me="w-4 h-4 m r-2" />
+            R efr esh
     <>
           </button>
-        </div>
-    </div>
+        </d iv>
+    </d iv>
   )
 };
     </>

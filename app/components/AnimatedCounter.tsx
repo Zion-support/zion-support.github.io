@@ -1,53 +1,42 @@
-<<<<<<< HEAD
-import { useState, useEffect} from 'react';
-=======
 'use client';
 import { useState, useEffect} from 'react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface AnimatedCounterProps {
-  end: number;
-  duration?: number;
-  className?: string;
-  prefix?: string;
-  suffix?: string;
+  e nd: n umb er;
+  d ura tion?: n umb er;
+  c las sNa me?: s tri ng;
+  p ref ix?: s tri ng;
+  s uff ix?: s tri ng;
 }
-
-  end, 
-  const duration = 2000, 
-  className = '', 
-  prefix = '', 
-  suffix = '' 
+  e nd, 
+  c onst d ura tion = 2000, 
+  c las sNa me = '', 
+  p ref ix = '', 
+  s uff ix = '' 
 }: AnimatedCounterProps) {
-  const [count, setCount] = useState(0);
+  c onst [count, setCount] = useState(0);
   useEffect(() => {
-    let startTime: number;
-    let animationFrame: number;
-
-    const animate = (currentTime: number) => {
+    let startTime: n umb er;
+    let animati onFrame: n umb er;
+    c onst animate = (currentTime: n umb er) => {
       if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      setCount(Math.floor(easeOutQuart * end));
-
+      c onst progress = Math.min((currentTime - startTime) / d ura tion, 1);
+      c onst easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      setCount(Math.floor(easeOutQuart * e nd));
       if (progress < 1) {
-        const animationFrame = requestAnimationFrame(animate);
+        c onst animati onFrame = requestAnimat ionFra me(animate);
       }
     };
-
-    const animationFrame = requestAnimationFrame(animate);
+    c onst animati onFrame = requestAnimat ionFra me(animate);
     return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
+      if (animati onFrame) {
+        cancelAnimati onFrame(animati onFrame);
       }
     };
-  }, [end, duration]);
-
+  }, [e nd, d ura tion]);
   return (
     <>
-    <span const className = {className}>{prefix}{count.toLocaleString()}{suffix}
-    </span>
+    </><s pan c onst c las sNa me = {c las sNa me}>{p ref ix}{count.t oLo cal eSt ring()}{s uff ix}
+    </s pan>
   );
 }
     </>

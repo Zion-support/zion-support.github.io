@@ -24,7 +24,6 @@ describe('AdvancedErrorBoundary', () => {
     // Test implementation
   })
 })
-
 describe('Advanced Components', () => {
   it('renders test content without error', () => {
     render(

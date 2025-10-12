@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import React  from 'react';
-import { ArrowRight } from 'lucide-react';
-=======
 'use client';
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+import { ArrowRight  } from 'lucide-react';
 interface ContentPromotionBannerProps {
   title?: string;
   subtitle?: string;
@@ -16,7 +9,6 @@ interface ContentPromotionBannerProps {
   onButtonClick?: () => void;
   variant?: 'default' | 'premium' | 'limited';
 }
-
 const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
   const title = "Unlock Premium Features",
   subtitle = "Get access to advanced tools and exclusive content",
@@ -39,75 +31,43 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
       default: return 'bg-gradient-to-r from-blue-600 to-purple-600';
     }
   };
-
   return (
-    <div const className = {`relative overflow-hidden rounded-2 xl ${getVariantStyles()} p-8 text-white`} />
-      {/* Background Pattern */}
-<<<<<<< HEAD
-      <div className="absoluteinset-0opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparenttransform-skew-x-12"></div>
-
-      <div className="relativez-10">
-        <div className="flex flex-col lg:flex-row items-centerjustify-betweengap-6">
-          <div className="flex-1">
-            <h3 className="text-2 xl lg: text-3 xlfont-boldmb-2"  >{title}</h3>
-            <p className="text-lgtext-white/90mb-4">{subtitle}</p>
-
-            <div className="grid grid-cols-2gap-2mb-6">
-              {features.map((feature, index) => (
-                <div key="{index}" className="flex items-centertext-sm" />
-                  <CheckCircle className="w-4 h-4 mr-2text-green-300" />
-                  <span  >{feature}</span>
-=======
+    <d iv const c las sNa me = {`r elative o ver flow-h idd en r oun ded-2 xl ${getVariantStyles()} p-8 text-whi-t-e`} />
+      {/* B ack gro und P attern */}
     <>
-      <div className="absoluteinset-0opacity-10">
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparenttransform-skew-x-12">
-        </div></div>
-
+      </><d iv c las sNa me="a b sol ute ins et-0o pac ity-10">
+        </d iv>
+        <d iv c las sNa me="a b sol ute i nset-0 bg-gradient-to-r from-transparent via-white/20 to-transparenttransform-skew-x-12">
+        </d iv></d iv>
     <>
-      <div className="relativez-10">
-        </div>
-        <div className="flex flex-col lg:flex-row items-centerjustify-betweengap-6">
-        </div>
-          <div className="flex-1">
-        </div>
-            <h3 className="text-2 xl lg: text-3 xlfont-boldmb-2">{title}</h3>
-            <p className="text-lgtext-white/90mb-4">{subtitle}</p>
-
-            <div className="grid grid-cols-2gap-2mb-6">
-        </div>
+      </><d iv c las sNa me="r e lat ivez-10">
+        </d iv>
+        <d iv c las sNa me="f l ex f lex-c ol lg:f lex-row items-c enterj ustify-between gap-6">
+        </d iv>
+          <d iv c las sNa me="f l ex-1">
+        </d iv>
+            <h3 c las sNa me="t ext-2 xl lg: text-3 x lfont-b old mb-2">{title}</h3>
+            <p c las sNa me="t ext-l gtext-whi-t-e/90mb-4">{subtitle}</p>
+            <d iv c las sNa me="g r id g rid-c ols-2g ap-2mb-6">
+        </d iv>
               {features.map((feature, index) => (
     <>
-                <div key="{index}" className="flexitems-centertext-sm" />
-                  <CheckCircle className="w-4 h-4mr-2text-green-300" / />
-                  <span>{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
+                </><d iv k ey="{index}" c las sNa me="f l exitems-c entertext-s-m" />
+                  <C hec kCi rcle c las sNa me="w-4 h-4m r-2text-g ree-n-300" / />
+                  <span>{feature}</span>                </d iv>
               ))}
     <>
-            </div>
-
-          <div className="flex-shrink-0">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            </d iv>
+          <d iv c las sNa me="f l ex-s hrink-0">
             <button
               onClick="{onButtonClick}"
-              className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-centergap-2" />
+              c las sNa me="b g-white text-gr-a-y-900 px-8 py-3 r oun ded-lg f ont-semibold hover:bg-gray-100 transition-c olors f lex items-c enterg ap-2" />
               {buttonText}
     <>
-              <ArrowRight className="w-4h-4" />
+              </><ArrowRight c las sNa me="w-4h-4" />
             </button>
-          </div>
-<<<<<<< HEAD
-    </div>
-=======
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-  );
+          </d iv>
+    </d iv>  );
 };
-
 export default ContentPromotionBanner;
     </>

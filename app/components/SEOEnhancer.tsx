@@ -1,12 +1,6 @@
 'use client'
 import React from 'react'
-
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-=======
-import { Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-const SEOEnhancer: React.FC = () => {
+import { ArrowRight  } from 'lucide-react';const SEOEnhancer: React.FC = () => {
   const features = [
     {
       icon: Brain,

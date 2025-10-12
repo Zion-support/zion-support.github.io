@@ -1,35 +1,29 @@
 #!/usr/bin/env node
-
 /**
  * Bundle analysis script for Zion Tech Group application
  * Analyzes the built bundle and provides optimization recommendations
  */
-
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 const DIST_DIR = path.join(__dirname, '..', 'dist');
 const ANALYSIS_DIR = path.join(__dirname, '..', 'analysis');
-
 // Ensure analysis directory exists
 if (!fs.existsSync(ANALYSIS_DIR)) {
   fs.mkdirSync(ANALYSIS_DIR, { recursive: true });
 }
-
 function analyzeBundle() {
+}
   console.log('🔍 Analyzing bundle...\n');
-
   // Check if dist directory exists
+}
   if (!fs.existsSync(DIST_DIR)) {
     console.error('❌ Dist directory not found. Please run "npm run build" first.');
     process.exit(1);
   }
-
   // Get all JS files in dist
   const jsFiles = [];
   function findJSFiles(dir) {
@@ -44,9 +38,7 @@ function analyzeBundle() {
       }
     });
   }
-
   findJSFiles(DIST_DIR);
-
   // Analyze each JS file
   const analysis = {
     totalFiles: jsFiles.length,
@@ -54,12 +46,10 @@ function analyzeBundle() {
     files: [],
     recommendations: []
   };
-
   jsFiles.forEach(filePath => {
     const stats = fs.statSync(filePath);
     const size = stats.size;
     const relativePath = path.relative(DIST_DIR, filePath);
-    
     analysis.totalSize += size;
     analysis.files.push({
       path: relativePath,
@@ -67,38 +57,29 @@ function analyzeBundle() {
       sizeFormatted: formatBytes(size)
     });
   });
-
   // Sort files by size
   analysis.files.sort((a, b) => b.size - a.size);
-
   // Generate recommendations
   generateRecommendations(analysis);
-
   // Write analysis report
   const reportPath = path.join(ANALYSIS_DIR, 'bundle-analysis.json');
   fs.writeFileSync(reportPath, JSON.stringify(analysis, null, 2));
-
   // Generate HTML report
   generateHTMLReport(analysis);
-
   console.log('📊 Bundle Analysis Complete!\n');
   console.log(`Total files: ${analysis.totalFiles}`);
   console.log(`Total size: ${formatBytes(analysis.totalSize)}\n`);
-  
   console.log('📁 Largest files:');
   analysis.files.slice(0, 10).forEach(file => {
     console.log(`  ${file.path}: ${file.sizeFormatted}`);
   });
-
   console.log('\n💡 Recommendations:');
   analysis.recommendations.forEach(rec => {
-    console.log(`  • ${rec}`);
+    console.log(`  * ${rec}`);
   });
-
   console.log(`\n📄 Detailed report saved to: ${reportPath}`);
   console.log(`🌐 HTML report saved to: ${path.join(ANALYSIS_DIR, 'bundle-report.html')}`);
 }
-
 function formatBytes(bytes) {
   if (bytes === 0) return '0 Bytes';
   const k = 1024;
@@ -106,21 +87,17 @@ function formatBytes(bytes) {
   const i = Math.floor(Math.log(bytes) / Math.log(k));
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
 }
-
 function generateRecommendations(analysis) {
   const recommendations = [];
-
   // Check total bundle size
   if (analysis.totalSize > 2 * 1024 * 1024) { // 2MB
     recommendations.push('Bundle size is large (>2MB). Consider code splitting and lazy loading.');
   }
-
   // Check for large individual files
   const largeFiles = analysis.files.filter(file => file.size > 500 * 1024); // 500KB
   if (largeFiles.length > 0) {
     recommendations.push(`Large files detected: ${largeFiles.map(f => f.path).join(', ')}. Consider splitting these files.`);
   }
-
   // Check for vendor files
   const vendorFiles = analysis.files.filter(file => file.path.includes('vendor'));
   if (vendorFiles.length > 0) {
@@ -129,26 +106,21 @@ function generateRecommendations(analysis) {
       recommendations.push('Vendor bundle is large. Consider tree shaking and removing unused dependencies.');
     }
   }
-
   // Check for duplicate chunks
   const chunkNames = analysis.files.map(f => f.path.split('-')[0]);
   const duplicates = chunkNames.filter((name, index) => chunkNames.indexOf(name) !== index);
   if (duplicates.length > 0) {
     recommendations.push('Duplicate chunks detected. Consider optimizing chunk splitting strategy.');
   }
-
   // Performance recommendations
   if (analysis.totalSize > 1024 * 1024) { // 1MB
     recommendations.push('Enable gzip compression on your server to reduce bundle size by ~70%.');
   }
-
   recommendations.push('Use dynamic imports for route-based code splitting.');
   recommendations.push('Consider using a CDN for static assets.');
   recommendations.push('Implement service worker for caching strategies.');
-
   analysis.recommendations = recommendations;
 }
-
 function generateHTMLReport(analysis) {
   const html = `
 <!DOCTYPE html>
@@ -206,7 +178,7 @@ function generateHTMLReport(analysis) {
         }
         th, td {
             padding: 12px 16px;
-            text-align: left;
+            text-ali-g-n: left;
             border-bottom: 1px solid #334155;
         }
         th {
@@ -241,7 +213,6 @@ function generateHTMLReport(analysis) {
 <body>
     <div class="container">
         <h1>📊 Bundle Analysis Report</h1>
-        
         <div class="stats">
             <div class="stat-card">
                 <div class="stat-value">${analysis.totalFiles}</div>
@@ -256,7 +227,6 @@ function generateHTMLReport(analysis) {
                 <div class="stat-label">Largest File</div>
             </div>
         </div>
-
         <div class="files-table">
             <table>
                 <thead>
@@ -275,7 +245,6 @@ function generateHTMLReport(analysis) {
                 </tbody>
             </table>
         </div>
-
         <div class="recommendations">
             <h3>💡 Optimization Recommendations</h3>
             <ul>
@@ -286,10 +255,8 @@ function generateHTMLReport(analysis) {
 </body>
 </html>
   `;
-
   const htmlPath = path.join(ANALYSIS_DIR, 'bundle-report.html');
   fs.writeFileSync(htmlPath, html);
 }
-
 // Run analysis
 analyzeBundle();

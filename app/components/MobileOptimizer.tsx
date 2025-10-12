@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-
 const MobileOptimizer: React.FC = () => {
   useEffect(() => {
     // Prevent zoom on input focus for iOS
@@ -9,7 +8,6 @@ const MobileOptimizer: React.FC = () => {
         viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
       }
     }
-
     // Add touch-friendly classes
     const addTouchClasses = () => {
       const buttons = document.querySelectorAll('button, a, [role="button"]')
@@ -19,7 +17,6 @@ const MobileOptimizer: React.FC = () => {
         }
       })
     }
-
     // Optimize images for mobile
     const optimizeImagesForMobile = () => {
       const images = document.querySelectorAll('img')
@@ -33,7 +30,6 @@ const MobileOptimizer: React.FC = () => {
         }
       })
     }
-
     // Add mobile-specific event listeners
     const addMobileEventListeners = () => {
       // Prevent double-tap zoom
@@ -45,7 +41,6 @@ const MobileOptimizer: React.FC = () => {
         }
         lastTouchEnd = now
       }, false)
-
       // Add haptic feedback for supported devices
       const addHapticFeedback = (element: Element) => {
         element.addEventListener('touchstart', () => {
@@ -54,11 +49,9 @@ const MobileOptimizer: React.FC = () => {
           }
         })
       }
-
       const interactiveElements = document.querySelectorAll('button, a, [role="button"]')
       interactiveElements.forEach(addHapticFeedback)
     }
-
     // Optimize scroll performance
     const optimizeScrollPerformance = () => {
       let ticking = false
@@ -66,32 +59,26 @@ const MobileOptimizer: React.FC = () => {
         // Add scroll-based optimizations here
         ticking = false
       }
-
       const requestTick = () => {
         if (!ticking) {
           requestAnimationFrame(updateScrollPosition)
           ticking = true
         }
       }
-
       window.addEventListener('scroll', requestTick, { passive: true })
     }
-
     // Initialize mobile optimizations
     preventZoom()
     addTouchClasses()
     optimizeImagesForMobile()
     addMobileEventListeners()
     optimizeScrollPerformance()
-
     // Cleanup
     return () => {
       window.removeEventListener('touchend', () => {})
       window.removeEventListener('scroll', () => {})
     }
   }, [])
-
   return null
 }
-
 export default MobileOptimizer

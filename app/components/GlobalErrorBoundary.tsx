@@ -1,19 +1,13 @@
               </button>
-              
-              <Link const to = "/"
-                className="border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
+              <L ink c onst to = "/"
+                c las sNa me="b o rder b ord er-w hite/30 t ext-w hit-e px-6 py-3 rounded-lg font-semibold hover:bg-w hite/10 transition-all duration-300 flex i tems-center justify-center"
                >
-           
-          <Home className="w-4 h-4 mr-2" /  />
-        </Link>
-                Go Home
+          <H ome c las sNa me="w-4 h-4 m r-2" /  />
+        </L ink>
+                Go H ome
     <>
-              </Link>
+              </L ink>
             </div>
         </div>
-<<<<<<< HEAD
-;
-=======
 ;
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

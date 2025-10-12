@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-
 // List of pages that need to be completely rewritten
 const pagesToRewrite = [
   'enterprise-security',
@@ -8,12 +7,10 @@ const pagesToRewrite = [
   'smart-city-infrastructure',
   'task-manager-pro'
 ];
-
 // Template for a basic page
 const pageTemplate = (pageName, title, description, keywords) => `import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Layout from '../../layout'
-
 const ${pageName}Page: React.FC = () => {
   return (
     <Layout
@@ -21,67 +18,62 @@ const ${pageName}Page: React.FC = () => {
       description="${description}"
       keywords="${keywords}"
     >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      <d iv c las sName="m in-h-scre en bg-g rad ient-to-br from-s late-900 via-purple-900 to-s late-900 py-20">
+        <d iv c las sName="m ax-w-7xl mx-a uto px-4 sm:px-6 lg:px-8">
+          <d iv c las sName="t e xt-c enter mb-16">
+            <h1 c las sName="t e xt-4xl md:t ext-6xl f ont-b old t ext-w hit-e mb-6">
+              <s pan c las sName="b g-g rad ient-to-r from-purple-400 to-b lue-400 bg-clip-t ext t ext-transparen-t">
                 ${title}
-              </span>
+              </s pan>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p c las sName="t e xt-xl t ext-g ra-y-300 m ax-w-3xl mx-a uto">
               ${description}
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
-              <p className="text-gray-300 mb-4">
-                Description of the first key feature or service.
+          </d iv>
+          <d iv c las sName="g r id g rid-c ols-1 md:g rid-c ols-2 lg:g rid-c ols-3 g ap-8">
+            <d iv c las sName="b g-w hite/10 b ack drop-b lur-sm roun ded-xl p-6 bord er bord er-w hite/20">
+              <h3 c las sName="t e xt-xl f ont-s emi bold t ext-w hit-e mb-4">F eature 1</h3>
+              <p c las sName="t e xt-g ray-300 mb-4">
+                D escription of the first key feature or service.
               </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
+              <ul c las sName="t e xt-g ray-300 s pace-y-2">
+                <li>* Benefit 1</li>
+                <li>* Benefit 2</li>
+                <li>* Benefit 3</li>
+                <li>* Benefit 4</li>
               </ul>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
-              <p className="text-gray-300 mb-4">
-                Description of the second key feature or service.
+            </d iv>
+            <d iv c las sName="b g-w hite/10 b ack drop-b lur-sm roun ded-xl p-6 bord er bord er-w hite/20">
+              <h3 c las sName="t e xt-xl f ont-s emi bold t ext-w hit-e mb-4">F eature 2</h3>
+              <p c las sName="t e xt-g ray-300 mb-4">
+                D escription of the second key feature or service.
               </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
+              <ul c las sName="t e xt-g ray-300 s pace-y-2">
+                <li>* Benefit 1</li>
+                <li>* Benefit 2</li>
+                <li>* Benefit 3</li>
+                <li>* Benefit 4</li>
               </ul>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
-              <p className="text-gray-300 mb-4">
-                Description of the third key feature or service.
+            </d iv>
+            <d iv c las sName="b g-w hite/10 b ack drop-b lur-sm roun ded-xl p-6 bord er bord er-w hite/20">
+              <h3 c las sName="t e xt-xl f ont-s emi bold t ext-w hit-e mb-4">F eature 3</h3>
+              <p c las sName="t e xt-g ray-300 mb-4">
+                D escription of the third key feature or service.
               </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
+              <ul c las sName="t e xt-g ray-300 s pace-y-2">
+                <li>* Benefit 1</li>
+                <li>* Benefit 2</li>
+                <li>* Benefit 3</li>
+                <li>* Benefit 4</li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+            </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
     </Layout>
   )
 }
-
 export default ${pageName}Page`;
-
 // Page configurations
 const pageConfigs = {
   'enterprise-security': {
@@ -91,7 +83,7 @@ const pageConfigs = {
   },
   'services-advertising': {
     title: 'Services Advertising',
-    description: 'Professional advertising services to promote your business and reach your target audience effectively.',
+    description: 'Professional advertising services to promote your business and reach your target audi ence effectively.',
     keywords: 'advertising services, marketing, digital marketing, business promotion'
   },
   'smart-city-infrastructure': {
@@ -101,21 +93,18 @@ const pageConfigs = {
   },
   'task-manager-pro': {
     title: 'Task Manager Pro',
-    description: 'Professional task management solution with advanced features for project planning and team collaboration.',
-    keywords: 'task management, project planning, team collaboration, productivity tools'
+    description: 'Professional task management solution with advanced features for project planning and team c ollaboration.',
+    keywords: 'task management, project planning, team c ollaboration, productivity tools'
   }
 };
-
 // Rewrite pages
 for (const page of pagesToRewrite) {
-  const pagePath = `/workspace/app/${page}/page.tsx`;
+  const pagePath = `/workspa ce/app/${page}/page.tsx`;
   const config = pageConfigs[page];
   const componentName = page.split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('');
-  
   const content = pageTemplate(componentName, config.title, config.description, config.keywords);
-  
   try {
     fs.writeFileSync(pagePath, content);
     console.log(`Rewrote ${page} page`);
@@ -123,5 +112,4 @@ for (const page of pagesToRewrite) {
     console.error(`Error rewriting ${page}:`, error.message);
   }
 }
-
 console.log('Page rewriting completed');

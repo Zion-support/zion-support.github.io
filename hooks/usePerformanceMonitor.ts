@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-
 export const usePerformanceMonitor = () => {
   useEffect(() => {
     // Monitor page load performance
@@ -9,7 +8,6 @@ export const usePerformanceMonitor = () => {
           setTimeout(() => {
             const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
             const paint = performance.getEntriesByType('paint');
-            
             // Log performance metrics
             console.log('Page Load Performance:', {
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -21,7 +19,6 @@ export const usePerformanceMonitor = () => {
         });
       }
     };
-
     // Monitor resource loading
     const monitorResourceLoading = () => {
       if ('performance' in window) {
@@ -36,17 +33,13 @@ export const usePerformanceMonitor = () => {
             }
           });
         });
-        
         observer.observe({ entryTypes: ['resource'] });
-        
         return () => observer.disconnect();
       }
     };
-
     // Initialize monitoring
     monitorPageLoad();
     const cleanup = monitorResourceLoading();
-
     // Cleanup
     return () => {
       cleanup?.();

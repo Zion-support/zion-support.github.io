@@ -1,18 +1,8 @@
 'use client';
 import { useState, useEffect} from 'react';
-import { HardDrive } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+import { HardDrive  } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { HardDrive } from 'lucide-react';
-=======
-import React, { useState, useEffect } from 'react';
-import { Activity, Wifi, HardDrive } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-
+import { HardDrive  } from 'lucide-react';
 interface PerformanceMetrics {
   lcp: number;,
   fid: number;,
@@ -30,7 +20,6 @@ interface PerformanceMetrics {
   rtt: number;
   };
 }
-
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics />({
     lcp: 0,
@@ -44,9 +33,7 @@ const PerformanceDashboard: React.FC = () => {
     const shouldShow = process.env.NODE_ENV === 'development' || 
                       localStorage.getItem('debug-performance') === 'true';
     if (!shouldShow) return;
-
     setIsVisible(true);
-
     // Monitor Core Web Vitals
     if ('PerformanceObserver' in, window) {
       // LCP
@@ -56,7 +43,6 @@ const PerformanceDashboard: React.FC = () => {
         setMetrics(const prev = > ({ ...prev, lcp: lastEntry.startTime }));
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
       // FID
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -68,7 +54,6 @@ const PerformanceDashboard: React.FC = () => {
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
-
       // CLS
       let const clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
@@ -81,7 +66,6 @@ const PerformanceDashboard: React.FC = () => {
         });
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
-
       // FCP
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -90,7 +74,6 @@ const PerformanceDashboard: React.FC = () => {
         });
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
-
       // TTFB
       const navigationObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -102,7 +85,6 @@ const PerformanceDashboard: React.FC = () => {
         });
       });
       navigationObserver.observe({ entryTypes: ['navigation'] });
-
       // Memory usage
       const updateMemory = () => {
         if ('memory' in, performance) {
@@ -126,7 +108,6 @@ const PerformanceDashboard: React.FC = () => {
           }
         }));
       }
-
       return () => {
         lcpObserver.disconnect();
         fidObserver.disconnect();
@@ -137,15 +118,12 @@ const PerformanceDashboard: React.FC = () => {
       };
     }
   }, []);
-
   if (!isVisible) return null;
-
   const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.poor) return 'text-yellow-400';
-    return 'text-red-400';
+    if (value <= thresholds.good) return 'text-gre-e-n-400';
+    if (value <= thresholds.poor) return 'text-yell-o-w-400';
+    return 'text-r-e-d-400';
   };
-
   const formatBytes = (bytes: number) => {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
@@ -153,160 +131,86 @@ const PerformanceDashboard: React.FC = () => {
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
-
   return (
-<<<<<<< HEAD
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-white text-xsmax-w-xsz-50">
-      <div className="flex items-centerjustify-betweenmb-3">
-        <h3 className="font-semibold text-cyan-400flex items-center" />
-          <Activity className="w-4h-4mr-1" />
-=======
     <>
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-white text-xsmax-w-xsz-50">
-        </div>
-      <div className="flex items-centerjustify-betweenmb-3">
-        </div>
-        <h3 className="font-semibold text-cyan-400flexitems-center" />
-          <Activity className="w-4h-4mr-1" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          Performance
+    </><d iv c las sNa me="f ixed b ott om-4 r ight-4 bg-s late-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-whi-t-e text-xsm-a-x-w-x sz-50">
+        </d iv>
+      <d iv c las sNa me="f l ex i tems-centerj ust ify-b etw een mb-3">
+        </d iv>
+        <h3 c las sNa me="f ont-s emi bold text-cy-a-n-400f lex ite ms-center" />
+          <A cti vity c las sNa me="w-4h-4m r-1" / />          Performance
         </h3>
         <button
-          onClick="{()" =  />setIsVisible(false)}
-          className="text-gray-400hover:text-white"
+          onClick="{()" =  />setIsVisible(f alse)}
+          c las sNa me="t ext-g ray-400h over:text-whi-t-e"
         >
           ×
     <>
         </button>
-      </div>
-
-<<<<<<< HEAD
-      <div className="space-y-2">
-        <div className="flexjustify-between">
-          <span   />LCP:</span>
-          <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}  />{metrics.lcp.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flexjustify-between">
-          <span   />FID:</span>
-          <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}  />{metrics.fid.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flexjustify-between">
-          <span   />CLS:</span>
-          <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}  />{metrics.cls.toFixed(3)}
-          </span>
-        </div>
-        
-        <div className="flexjustify-between">
-          <span   />FCP:</span>
-          <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}  />{metrics.fcp.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flexjustify-between">
-          <span   />TTFB:</span>
-          <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}  />{metrics.ttfb.toFixed(0)}ms
-=======
+      </d iv>
     <>
-      <div className="space-y-2">
-        </div>
-        <div className="flexjustify-between" />
-          <span>LCP:</span>
-          <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}>{metrics.lcp.toFixed(0)}ms
-          </span>
-        </div>
-        
+      </><d iv c las sNa me="s p ace-y-2">
+        </d iv>
+        <d iv c las sNa me="f l exj ust ify-b etw een" />
+          <s pan>LCP:</s pan>
+          <s pan c las sNa me="{g etScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}>{metrics.lcp.toFixed(0)}ms
+          </s pan>
+        </d iv>
     <>
-        <div className="flexjustify-between" />
-          <span>FID:</span>
-          <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}>{metrics.fid.toFixed(0)}ms
-          </span>
-        </div>
-        
+        </><d iv c las sNa me="f l exj ust ify-b etw een" />
+          <s pan>FID:</s pan>
+          <s pan c las sNa me="{g etScoreColor(metrics.fid," { good: 100, poor: 300 })}>{metrics.fid.toFixed(0)}ms
+          </s pan>
+        </d iv>
     <>
-        <div className="flexjustify-between" />
-          <span>CLS:</span>
-          <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}>{metrics.cls.toFixed(3)}
-          </span>
-        </div>
-        
+        </><d iv c las sNa me="f l exj ust ify-b etw een" />
+          <s pan>CLS:</s pan>
+          <s pan c las sNa me="{g etScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}>{metrics.cls.toFixed(3)}
+          </s pan>
+        </d iv>
     <>
-        <div className="flexjustify-between" />
-          <span>FCP:</span>
-          <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}>{metrics.fcp.toFixed(0)}ms
-          </span>
-        </div>
-        
+        </><d iv c las sNa me="f l exj ust ify-b etw een" />
+          <s pan>FCP:</s pan>
+          <s pan c las sNa me="{g etScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}>{metrics.fcp.toFixed(0)}ms
+          </s pan>
+        </d iv>
     <>
-        <div className="flexjustify-between" />
-          <span>TTFB:</span>
-          <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}>{metrics.ttfb.toFixed(0)}ms
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          </span>
-        </div>
-
+        </><d iv c las sNa me="f l exj ust ify-b etw een" />
+          <s pan>TTFB:</s pan>
+          <s pan c las sNa me="{g etScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}>{metrics.ttfb.toFixed(0)}ms          </s pan>
+        </d iv>
         {metrics.memory && (
-<<<<<<< HEAD
-          <div className="pt-2border-tborder-gray-600">
-            <div className="flex items-centermb-1">
-              <HardDrive className="w-3h-3mr-1" />
-              <span className="text-gray-300"   />Memory</span>
-            </div>
-            <div className="text-gray-400pl-4">
-              <div   />Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
-              <div   />Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
-=======
     <>
-          <div className="pt-2border-tborder-gray-600">
-        </div>
-            <div className="flexitems-centermb-1">
-        </div>
-              <HardDrive className="w-3h-3mr-1" / />
-              <span className="text-gray-300">Memory</span>
-            </div>
-            <div className="text-gray-400pl-4">
-        </div>
-              <div>Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
-              <div>Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          </div>
+          </><d iv c las sNa me="p t-2border-t border-g ray-600">
+        </d iv>
+            <d iv c las sNa me="f l exi tems-centermb-1">
+        </d iv>
+              <HardDrive c las sNa me="w-3h-3m r-1" / />
+              <s pan c las sNa me="t ext-g ray-300">Memory</s pan>
+            </d iv>
+            <d iv c las sNa me="t ext-g ray-400pl-4">
+        </d iv>
+              <d iv>Used: {formatBytes(metrics.memory.usedJSHeapSize)}</d iv>
+              <d iv>Total: {formatBytes(metrics.memory.totalJSHeapSize)}</d iv>          </d iv>
         )}
-
         {metrics.connection && (
-<<<<<<< HEAD
-          <div className="pt-2border-tborder-gray-600">
-            <div className="flex items-centermb-1">
-              <Wifi className="w-3h-3mr-1" />
-              <span className="text-gray-300"   />Connection</span>
-            </div>
-            <div className="text-gray-400pl-4">
-              <div   />Type: {metrics.connection.effectiveType}</div>
-              <div   />Speed: {metrics.connection.downlink}Mbps</div>
-              <div   />RTT: {metrics.connection.rtt}ms</div>
-=======
     <>
-          <div className="pt-2border-tborder-gray-600">
-        </div>
-            <div className="flexitems-centermb-1">
-        </div>
-              <Wifi className="w-3h-3mr-1" / />
-              <span className="text-gray-300">Connection</span>
-            </div>
-            <div className="text-gray-400pl-4">
-        </div>
-              <div>Type: {metrics.connection.effectiveType}</div>
-              <div>Speed: {metrics.connection.downlink}Mbps</div>
-              <div>RTT: {metrics.connection.rtt}ms</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          </div>
+          </><d iv c las sNa me="p t-2border-t border-g ray-600">
+        </d iv>
+            <d iv c las sNa me="f l exi tems-centermb-1">
+        </d iv>
+              <W ifi c las sNa me="w-3h-3m r-1" / />
+              <s pan c las sNa me="t ext-g ray-300">Connection</s pan>
+            </d iv>
+            <d iv c las sNa me="t ext-g ray-400pl-4">
+        </d iv>
+              <d iv>Type: {metrics.connection.effectiveType}</d iv>
+              <d iv>Speed: {metrics.connection.downlink}Mbps</d iv>
+              <d iv>RTT: {metrics.connection.rtt}ms</d iv>          </d iv>
         )}
     <>
-      </div>
+      </d iv>
   );
 };
-
 export default PerformanceDashboard;
     </>

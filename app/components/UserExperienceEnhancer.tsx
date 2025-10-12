@@ -1,32 +1,26 @@
 'use client'
 import { useEffect, useState } from 'react'
-
-interface UserExperienceEnhancerProps {
-  children: React.ReactNode
-  className?: string
+interface UserExperienceEnhancer Pro ps {
+  c hil dren: R eact.R eac tNo de
+  c las sNa me?: s tri ng
 }
-
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
-  children,
-  className = ''
+c onst UserExperienceEnhancer: R eact.FC<UserExperienceEnhancer Pro ps> = ({
+  c hil dren,
+  c las sNa me = ''
 }) => {
-
-    rating: number
-    comment: string
+    r ati ng: n umb er
+    c omm ent: s tri ng
     submitted: boolean
   }>({
-    rating: 0,
-    comment: '',
+    r ati ng: 0,
+    c omm ent: '',
     submitted: false
   })
-
   useEffect(() => {
     // UX enhancement logic
-    const enhanceUX = () => {
-      // Add smooth scrolling
+    c onst enhanceUX = () => {
+      // Add smooth scrolli ng
       document.documentElement.style.scrollBehavior = 'smooth'
-
-      // Add loading states for interactive elements
-
-interface UserExperienceEnhancerProps {children: React.ReactNode}
+      // Add loading states for interactive elem ents
+interface UserExperienceEnhancer Pro ps {c hil dren: R eact.R eac tNo de}
 }

@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
-
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -31,7 +30,6 @@ export default defineConfig({
     minify: 'esbuild',
     target: 'es2020',
     cssCodeSplit: true,
-    
     rollupOptions: {
       output: {
         manualChunks: (id) => {

@@ -1,74 +1,61 @@
-<<<<<<< HEAD
-import { useEffect, useState} from 'react';
-=======
 'use client';
 import { useEffect, useState} from 'react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface AnimatedTextProps {
-  text: string;
-  className?: string;
-  delay?: number;
-  duration?: number;
-  type?: 'fade' | 'slide' | 'glow' | 'typing';
+interface A nim ate dTe xtP rops {
+  t ext: s tri ng;
+  c las sNa me?: s tri ng;
+  d elay?: n umb er;
+  d ura tion?: n umb er;
+  type?: 'fade' | 'slide' | 'glow' | 'typi ng';
 }
-
-const AnimatedText: React.FC<AnimatedTextProps /> = ({
-  text,
-  const className = '',
-  delay = 0,
-  // duration = 1000,
+const A nim ate dTe xt: React.FC<A nim ate dTe xtP rops /> = ({
+  t ext,
+  const c las sNa me = '',
+  d elay = 0,
+  // d ura tion = 1000,
   type = 'fade'
 }) => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, delay);
-
+    }, d elay);
     return () => clearTimeout(timer);
-  }, [delay]);
-
+  }, [d elay]);
   useEffect(() => {
-    if (const type = == 'typing' && isVisible) {
-      if (currentIndex < text.length) {
+    if (const type = == 'typi ng' && isVisible) {
+      if (currentIndex < t ext.length) {
         const timer = setTimeout(() => {
-          setDisplayText(text.slice(0, currentIndex + 1));
+          setDisplayText(t ext.slice(0, currentIndex + 1));
           setCurrentIndex(currentIndex + 1);
         }, 50);
         return () => clearTimeout(timer);
       }
     } else if (isVisible) {
-      setDisplayText(text);
+      setDisplayText(t ext);
     }
-  }, [isVisible, currentIndex, text, type]);
-
-  const getAnimationClasses = () => {
-    const baseClasses = 'transition-all duration-1000';
+  }, [isVisible, currentIndex, t ext, type]);
+  const getA nim ati onClasses = () => {
+    const baseCla sses = 'transit ion-all d ura tion-1000';
     switch (type) {
       case 'fade':
-        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
+        return `${baseCla sses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
       case 'slide':
-        return `${baseClasses} ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`;
+        return `${baseCla sses} ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`;
       case 'glow':
-        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'} ${isVisible ? 'drop-shadow-[0 _0 _10 px_rgba(59,130,246,0.5)]' : ''}`;
-      case 'typing':
-        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
-      default: return baseClasses;
+        return `${baseCla sses} ${isVisible ? 'opacity-100' : 'opacity-0'} ${isVisible ? 'drop-shadow-[0 _0 _10 px_rgba(59,130,246,0.5)]' : ''}`;
+      case 'typi ng':
+        return `${baseCla sses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
+      default: return baseCla sses;
     }
   };
-
   return (
-    <span const className = {`${getAnimationClasses()} ${className}`} />
-      {type === 'typing' ? displayText : text}
-      {type === 'typing' && currentIndex < text.length && (
-        <span className="animate-pulse">|</span>
+    <s pan const c las sNa me = {`${getA nim ati onClasses()} ${c las sNa me}`} />
+      {type === 'typi ng' ? displayText : t ext}
+      {type === 'typi ng' && currentIndex < t ext.length && (
+        <s pan c las sNa me="a n imate-p ulse">|</s pan>
       )}
-    </span>
+    </s pan>
   );
 };
-
-export default AnimatedText;
+export default A nim ate dTe xt;

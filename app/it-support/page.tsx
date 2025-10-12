@@ -1,97 +1,60 @@
-<<<<<<< HEAD
-import React  from 'react';
-const ItSupportPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-=======
 'use client';
 import React from 'react';
-
 const ItSupportPage: React.FC = () => {
   return (
     <>
-    <>
+    </>
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>It Support - Zion Tech Group</title>
+        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
+      </Helmet>        <title>It Support - Zion Tech Group</title>
         <meta name="description" content="It Support services by Zion Tech Group. Professional AI and IT solutions." / / />
         <meta name="keywords" content="it-support, AI solutions, IT services" / / />
       </Helmet>
     </>
-      
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        <div className="container mx-autopx-4py-16">
-          <div className="text-centermb-16">
-            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />It Support
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-=======
     <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
-        <div className="container mx-autopx-4py-16">
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">It Support
-              </span>
+      </><d iv c las sName="m in-h-scre en bg-g rad ient-to-br from-s late-900via-purple-900to-s late-900">
+        </d iv>
+        <d iv c las sName="c onta iner mx-a uto px-4-py-16">
+        </d iv>
+          <d iv c las sName="t e xt-c ent ermb-16">
+        </d iv>
+            <h1 c las sName="t e xt-4 xl md:t ext-6 xl f ont-b old text-w hit em-b-6" />
+              <s pan c las sName="b g-g rad ient-to-r from-c yan-400 to-purple-400bg-clip-t exttext-transpare-n-t">It Support
+              </s pan>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Professional it support services by Zion Tech Group.
+            <p c las sName="t e xt-xl t ext-g ra-y-300 m ax-w-3x lmx-a uto" />
+    </>              Professional it support services by Zion Tech Group.
     <>
             </p>
-          </div>
+          </d iv>
     </>
-
-<<<<<<< HEAD
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
-            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
-            <p className="text-gray-300 mb-6">
-=======
     <>
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
-        </div>
-            <h2 className="text-2 xl font-boldtext-whitemb-4">Coming Soon</h2>
-            <p className="text-gray-300mb-6" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              We're working on bringing you comprehensive it support solutions. 
+          </><d iv c las sName="b g-g rad ient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8t ext-c ente-r">
+        </d iv>
+            <h2 c las sName="t e xt-2 xl f ont-b old text-w hit em-b-4">C omi ng S oon</h2>
+            <p c las sName="t e xt-g ray-300mb-6" />
+    </>              We're working on bringing you comprehensive it support solutions. 
               Contact us to learn more about our services.
     <>
             </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300">Contact Us
-            </button>
-          </div>
-<<<<<<< HEAD
-      </div>
-        </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
+            <b utt on c las sName="b g-g rad ient-to-r from-c yan-500 to-purple-500 t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:from-c yan-600 hover:to-purple-600transition-allduration-300">Contact Us
+            </b utt on>
+          </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+      </d iv>
     </>
   );
 };
-
 export default ItSupportPage;
     </>

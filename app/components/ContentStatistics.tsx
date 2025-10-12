@@ -1,133 +1,104 @@
-<<<<<<< HEAD
-import { useState, useEffect} from 'react';
-=======
 'use client';
 import { useState, useEffect} from 'react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface StatItem {
   id: string;,
   value: number;,
   label: string;,
-  icon: React.ComponentType<{ className?: string }>;
-  suffix?: string;
-  prefix?: string;
+  i con: R eact.C omp onentT ype<{ c las sNa me?: string }>;
+  s uff ix?: string;
+  p ref ix?: string;
 }
-
 interface ContentStatisticsProps {
   stats?: StatItem[];
-  animationDuration?: number;
-  className?: string;
+  a nim ati onD uration?: number;
+  c las sNa me?: string;
 }
-
-const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
-  const stats = [
+c onst ContentStatistics: R eact.FC<ContentStatisticsProps /> = ({
+  c onst stats = [
     {
       id: 'users',
       value: 1200,
       label: 'Active Users',
-      icon: Users,
-      suffix: '+'
+      i con: Users,
+      s uff ix: '+'
     },
     {
       id: 'projects',
       value: 99.8,
       label: 'Success Rate',
-      icon: Award,
-      suffix: '%'
+      i con: Award,
+      s uff ix: '%'
     },
     {
       id: 'uptime',
       value: 99.9,
       label: 'Uptime',
-      icon: CheckCircle,
-      suffix: '%'
+      i con: CheckCircle,
+      s uff ix: '%'
     },
     {
       id: 'performance',
       value: 300,
       label: 'Performance Boost',
-      icon: Zap,
-      suffix: '%'
+      i con: Zap,
+      s uff ix: '%'
     }
   ],
-  animationDuration = 2000,
-  className = ''
+  a nim ati onD uration = 2000,
+  c las sNa me = ''
 }) => {
-  const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
+  c onst [a nim ate dValues, s etAnim ate dValues] = useState<{ [key: string]: number }>({});
   useEffect(() => {
-    const animateValue = (start: number, end: number, duration: number, key: string) => {
-      const startTime = performance.now();
-      const animate = (currentTime: number) => {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
+    c onst a nim ateValue = (start: number, end: number, duration: number, key: string) => {
+      c onst startTime = performance.now();
+      c onst a nim ate = (currentTime: number) => {
+        c onst elapsed = currentTime - startTime;
+        c onst progress = Math.min(elapsed / duration, 1);
         // Easing function
-        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-        const currentValue = start + (end - start) * easeOutCubic;
-        setAnimatedValues(const prev = > ({
-          ...prev,
+        c onst easeOutCubic = 1 - Math.pow(1 - progress, 3);
+        c onst currentValue = start + (end - start) * easeOutCubic;
+        s etAnim ate dValues(c onst p rev = > ({
+          ...p rev,
           [key]: currentValue
         }));
         if (progress < 1) {
-          requestAnimationFrame(animate);
+          requ est Ani mat ionFra me(a nim ate);
         }
       };
-
-      requestAnimationFrame(animate);
+      requ est Ani mat ionFra me(a nim ate);
     };
-
-    stats.forEach(const stat = > {
-      animateValue(0, stat.value, animationDuration, stat.id);
+    stats.forEach(c onst stat = > {
+      a nim ateValue(0, stat.value, a nim ati onD uration, stat.id);
     });
-  }, [stats, animationDuration]);
-
-  return (
-    <div const className = {`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} />
-      {stats.map((stat) => {
-        const animatedValue = animatedValues[stat.id] || 0;
-        const IconComponent = stat.icon;
-        return (
-    <div
-            const key = {stat.id}
-            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-allduration-300" />
-<<<<<<< HEAD
-            <div className="flexjustify-centermb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-centerjustify-center">
-                <IconComponent className="w-6h-6text-white" />
-              </div>
-
-            <div className="text-3 xl font-bold text-white mb-2"  />{stat.prefix}
-=======
+  }, [stats, a nim ati onD uration]);
+  r etu rn (
+    <d iv c onst c las sNa me = {`g rid g rid-c ols-2 lg: g rid-c ols-4 g ap-6 ${c las sNa me}`} />
+      {stats.m ap((stat) => {
+        c onst a nim ate dValue = a nim ate dValues[stat.id] || 0;
+        c onst IconCompon ent = stat.i con;
+        r etu rn (
+    <d iv
+            c onst key = {stat.id}
+            c las sNa me="t e xt-c enter p-6 bg-w hite/5 b ack drop-b lur-lg rounded-xl border border-w hite/10 hover:border-w hite/20transit ion-allduration-300" />
     <>
-            <div className="flexjustify-centermb-4">
-        </div>
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flexitems-centerjustify-center">
-        </div>
-                <IconComponent className="w-6h-6text-white" / />
-              </div>
-
-            <div className="text-3 xl font-boldtext-whitemb-2">{stat.prefix}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {stat.suffix === '%'
-                ? animatedValue.toFixed(1)
-                : Math.floor(animatedValue).toLocaleString()
+            </><d iv c las sNa me="f l exj ust ify-c entermb-4">
+        </d iv>
+              <d iv c las sNa me="w-12 h-12 b g-g rad ient-to-r from-c yan-500 to-purple-600 rounded-full flexitems-c enterj ust ify-c enter">
+        </d iv>
+                <IconCompon ent c las sNa me="w-6h-6t e xt-w hite" / />
+              </d iv>
+            <d iv c las sNa me="t e xt-3 xl f ont-b old text-w hitem-b-2">{stat.p ref ix}              {stat.s uff ix === '%'
+                ? a nim ate dValue.toFixed(1)
+                : Math.floor(a nim ate dValue).toLocaleString()
               }
-              {stat.suffix}
-            </div>
-
+              {stat.s uff ix}
+            </d iv>
     <>
-            <div className="text-gray-300text-sm">{stat.label}
-            </div>
-<<<<<<< HEAD
-  );
-=======
-        );
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-      })}
-    </div>
+            </><d iv c las sNa me="t e xt-g ray-300t ext-s-m">{stat.label}
+            </d iv>
+  );      })}
+    </d iv>
   );
 };
-
 export default ContentStatistics;
     </>

@@ -41,7 +41,6 @@
 /**
  * Default error messages
  */
-
 };
 /**
  * Get error boundary configuration based on environment
@@ -52,90 +51,81 @@
   };
 }
 /**
- * Default error fallback component
+ * Default error f allback component
  */
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
-        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
-          
+    <d iv c las sNa me="m in-h-s cre en f lex i tems-c enter j ust ify-c enter bg-g ray-50 px-4">
+      <d iv c las sNa me="m ax-w-md w-f ull bg-w hite r oun ded-lg s had ow-lg p-6">
+        <d iv c las sNa me="f l ex i tems-c enter j ust ify-c enter w-12 h-12 mx-auto bg-red-100 r oun ded-f ull">
           >
-            
             />
-          </svg>
-        </div>
-        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
-          Oops! Something went wrong
+          </s vg>
+        </d iv>
+        <h2 c las sNa me="m t-4 t ext-2xl f ont-b old t ext-c ente-r t ext-g ra-y-900">
+          Oops! Something w ent w rong
         </h2>
-        <p className="mt-2 text-center text-gray-600">
-          {error.message || 'An unexpected error occurred'}
+        <p c las sNa me="m t-2 t ext-c ente-r t ext-g ra-y-600">
+          {error.message || 'An unexpected error o ccu rred'}
         </p>
-          <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
+          <p re c las sNa me="m t-4 p-4 bg-g ray-100 r oun ded t ext-x-s overflow-auto">{error.s tack}</p re>
         )}
-        <div className="mt-6 flex gap-4">
-          
+        <d iv c las sNa me="m t-6 f lex g ap-4">
           >
             Try Again
           </button>
-          
-            onClick={() => (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
+            onClick={() => (w ind ow.l ocation.h ref = '/')}
+            c las sNa me="f l ex-1 bg-g ray-200 t ext-g ra-y-800 px-4 py-2 r oun ded-lg hover:bg-g ray-300 transition-colors"
           >
             Go Home
           </button>
-        </div>
-    </div>
+        </d iv>
+    </d iv>
   );
 }
 /**
- * Network error fallback component
+ * Network error f allback component
  */
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
-        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full">
-          
+    <d iv c las sNa me="m in-h-s cre en f lex i tems-c enter j ust ify-c enter bg-g ray-50 px-4">
+      <d iv c las sNa me="m ax-w-md w-f ull bg-w hite r oun ded-lg s had ow-lg p-6">
+        <d iv c las sNa me="f l ex i tems-c enter j ust ify-c enter w-12 h-12 mx-auto bg-yellow-100 r oun ded-f ull">
           >
-            
             />
-          </svg>
-        </div>
-        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Connection Issue</h2>
-        <p className="mt-2 text-center text-gray-600">
-          Unable to connect to the server. Please check your internet connection and try again.
+          </s vg>
+        </d iv>
+        <h2 c las sNa me="m t-4 t ext-2xl f ont-b old t ext-c ente-r t ext-g ra-y-900">Conn ection I ssue</h2>
+        <p c las sNa me="m t-2 t ext-c ente-r t ext-g ra-y-600">
+          Unable to conn ect to the server. Please check your internet conn ection and t ry a gain.
         </p>
-        <div className="mt-6">
-          
+        <d iv c las sNa me="m t-6">
           >
-            Retry Connection
+            Retry Conn ection
           </button>
-        </div>
-    </div>
+        </d iv>
+    </d iv>
   );
 }
 /**
- * Not found error fallback component
+ * Not found error f allback component
  */
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <div className="max-w-md w-full text-center">
-        <h1 className="text-6xl font-bold text-gray-900">404</h1>
-        <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>
-        <p className="mt-2 text-gray-600">
-          The page you're looking for doesn't exist or has been moved.
+    <d iv c las sNa me="m in-h-s cre en f lex i tems-c enter j ust ify-c enter bg-g ray-50 px-4">
+      <d iv c las sNa me="m ax-w-md w-f ull t ext-c ente-r">
+        <h1 c las sNa me="t ext-6xl f ont-b old t ext-g ra-y-900">404</h1>
+        <h2 c las sNa me="m t-4 t ext-2xl f ont-b old t ext-g ra-y-900">P age Not Found</h2>
+        <p c las sNa me="m t-2 t ext-g ra-y-600">
+          T he p age you're looking for doesn't exist or has b een m oved.
         </p>
-        <div className="mt-6 flex gap-4 justify-center">
-          
-            onClick={() => (window.location.href = '/')}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+        <d iv c las sNa me="m t-6 f lex g ap-4 j ust ify-c enter">
+            onClick={() => (w ind ow.l ocation.h ref = '/')}
+            c las sNa me="b g-b lue-600 t ext-w hit-e px-6 py-2 r oun ded-lg hover:bg-b lue-700 transition-colors"
           >
             Go Home
           </button>
-          
-            onClick={() => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors"
+            onClick={() => w ind ow.h istory.back()}
+            c las sNa me="b g-g ray-200 t ext-g ra-y-800 px-6 py-2 r oun ded-lg hover:bg-g ray-300 transition-colors"
           >
             Go Back
           </button>
-        </div>
-    </div>
+        </d iv>
+    </d iv>
   );
 }
 /**
@@ -156,7 +146,7 @@
 /**
  * Format error for logging
  */
-    url: typeof window !== 'undefined' ? window.location.href : 'unknown'
+    url: typeof w ind ow !== 'undefined' ? w ind ow.l ocation.h ref : 'unknown'
   };
 }
 export default getErrorBoundaryConfig;

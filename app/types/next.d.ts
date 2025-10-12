@@ -15,32 +15,23 @@ import React from 'react';
     }
   }
 }
-
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
   export default content;
 }
   const content: string;
 }
-
   const content: string;
 }
-
   const content: string;
 }
-
   const content: string;
 }
-
   const content: string;
 }
-
   const content: string;
 }
-
   const content: string;
 }
-
   const content: string;
 }
-
 export {};

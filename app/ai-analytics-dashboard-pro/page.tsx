@@ -1,485 +1,112 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-=======
-import { BarChart3, ArrowRight, CheckCircle, Brain, Globe, Star, Target } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
 import Layout from '../layout'
-<<<<<<< HEAD
-import React  from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import Layout from '../layout';
-
-export default function AIAnalyticsDashboardPro() {
-  const features = [
-    {
-      icon: <Brain className="w-6h-6text-cyan-400" />,
-      title: 'AI-Powered Insights',
-      description: 'Advanced machine learning algorithms provide actionable business insights'
-    },
-    {
-      icon: <BarChart3 className="w-6h-6text-purple-400" />,
-      title: 'Real-time Analytics',
-      description: 'Live data visualization with instant updates and interactive dashboards'
-    },
-    {
-      icon: <Target className="w-6h-6text-yellow-400" />,
-      title: 'Predictive Analytics',
-      description: 'Forecast trends and make data-driven decisions with confidence'
-    },
-    {
-      icon: <Globe className="w-6h-6text-green-400" />,
-      title: 'Multi-Platform Integration',
-      description: 'Connect all your data sources in one unified dashboard'
-    }
-  ]
-
-  const dashboardFeatures = [
-    {
-      category: 'Data Sources',
-      items: ['Google Analytics', 'Facebook Ads', 'Salesforce CRM', 'Shopify', 'Stripe', 'Custom APIs']
-    },
-    {
-      category: 'Visualizations',
-      items: ['Interactive Charts', 'Heat Maps', 'Funnel Analysis', 'Cohort Analysis', 'Custom Reports', 'Real-time Alerts']
-    },
-    {
-      category: 'AI Features',
-      items: ['Anomaly Detection', 'Trend Prediction', 'Customer Segmentation', 'Churn Analysis', 'ROI Optimization', 'Smart Alerts']
-    },
-    {
-      category: 'Collaboration',
-      items: ['Team Dashboards', 'Custom Permissions', 'Scheduled Reports', 'Export Options', 'API Access', 'White-label']
-    }
-  ]
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$49',
-      period: '/month',
-      description: 'Perfect for small businesses',
-      features: [
-        'Up to 5 data sources',
-        'Basic AI insights',
-        'Standard visualizations',
-        'Email support',
-        'Monthly reports'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$149',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Up to 20 data sources',
-        'Advanced AI analytics',
-        'Custom dashboards',
-        'Priority support',
-        'Real-time alerts',
-        'API access'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$399',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited data sources',
-        'Custom AI models',
-        'White-label solution',
-        'Dedicated support',
-        'Custom integrations',
-        'SLA guarantee'
-      ],
-      popular: false
-    }
-  ]
-
-  const testimonials = [
-    {
-      name: 'Alex Thompson',
-      company: 'E-commerce Plus',
-      content: 'AI Analytics Dashboard Pro transformed our decision-making process. ROI increased by 60% in just 3 months.',
-      rating: 5
-    },
-    {
-      name: 'Sarah Kim',
-      company: 'Marketing Agency Pro',
-      content: 'The predictive analytics helped us optimize campaigns before problems occurred. Game-changer for our clients.',
-      rating: 5
-    },
-    {
-      name: 'Michael Davis',
-      company: 'SaaS Startup',
-      content: 'Real-time insights and AI recommendations saved us countless hours of manual analysis. Highly recommended.',
-      rating: 5
-    }
-  ]
-
-  return (
-    <Layout
-      title="AI Analytics Dashboard Pro - Advanced Business Intelligence | Zion Tech Group"
-      description="Transform your data into actionable insights with AI-powered analytics dashboard. Real-time visualization, predictive analytics, and custom reporting. Start your free trial today."
-      keywords="AI analytics, business intelligence, data visualization, predictive analytics, dashboard, reporting" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        {/* Hero Section */}
+        {/* H ero S ect ion */}
     <>
-        <section className="pt-20 pb-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-green-500/20 rounded-full text-green-400 text-smfont-mediummb-6">
-                <BarChart3 className="w-4h-4mr-2" />
-=======
-        </div>
-            <div className="text-center" />
-              <div className="inline-flex items-center px-4 py-2 bg-green-500/20 rounded-full text-green-400 text-smfont-mediummb-6">
-        </div>
-                <BarChart3 className="w-4h-4mr-2" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Advanced Analytics
+        </><s ect ion c las sNa me="p t-20 pb-16 px-4-sm:px-6-lg:px-8" />
+          <d iv c las sNa me="m ax-w-7x lmx-a uto">
+              {f eat ures.map((f eat ure, index) => (
     <>
-              </div>
-<<<<<<< HEAD
-              <h1 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6"  />AI Analytics Dashboard Pro
-=======
-              <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6">AI Analytics Dashboard Pro
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </h1>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8">
-              Transform your data into powerful insights with our AI-powered analytics platform. 
-                Real-time visualization, predictive analytics, and intelligent recommendations.
+                </><d iv k ey="{index}" c las sNa me="b g-g rad ient-to-br from-s late-800/50 to-purple-900/30 rounded-xl p-6 border border-green-500/20 hover:border-green-400/40transit ion-allduration-300" />
+              {dashboardFeat ures.map((f eat ure, index) => (
     <>
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-                <Link to="/contact" className="bg-gradient-to-r from-green-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-center" >
-          Start Free Trial
-                  
-          <ArrowRight className="w-5h-5ml-2"  />
-        </Link>
-=======
-        </div>
-                <Link to="/contact" className="bg-gradient-to-r from-green-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
-                  Start Free Trial
-    <>
-                  <ArrowRight className="w-5h-5ml-2" />
-                </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">View Demo
-                </Link>
-              </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-    <>
-        <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-3 xl sm:text-4xl font-bold text-white mb-4"  />Powerful Analytics Features
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              Everything you need to make data-driven decisions
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Powerful Analytics Features
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
-                Everything you need to make data-driven decisions
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {features.map((feature, index) => (
-    <>
-                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-green-500/20 hover:border-green-400/40transition-allduration-300" />
-<<<<<<< HEAD
-                  <div className="flex items-centermb-4">
-=======
-                  <div className="flexitems-centermb-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    {feature.icon}
-    <>
-                    <h3 className="text-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
-                  </div>
-<<<<<<< HEAD
-                  <p className="text-gray-300">
-              {feature.description}</p>
-=======
-                  <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
-              ))}
-    <>
-            </div>
-        </section>
-
-        {/* Dashboard Features */}
-    <>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-3 xl sm:text-4xl font-bold text-white mb-4"  />Comprehensive Dashboard Capabilities
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              Connect, analyze, and visualize all your data in one place
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Comprehensive Dashboard Capabilities
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
-                Connect, analyze, and visualize all your data in one place
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {dashboardFeatures.map((feature, index) => (
-    <>
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-<<<<<<< HEAD
-                  <h3 className="text-xl font-semiboldtext-white mb-4"   />{feature.category}</h3>
-                  <ul className="space-y-2" />
-                    {feature.items.map((item, itemIndex) => (
-                      <li key="{itemIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-4 h-4text-green-400mr-2" />
-=======
-                  <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.category}</h3>
-                  <ul className="space-y-2" />
-                    {feature.items.map((item, itemIndex) => (
-    <>
-                      <li key="{itemIndex}" className="flexitems-centertext-gray-300" />
-                        <CheckCircle className="w-4 h-4text-green-400mr-2" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                        {item}
-                      </li>
-                    ))}
-    <>
-                  </ul>
-                </div>
-              ))}
-    <>
-            </div>
-        </section>
-
-        {/* Pricing Section */}
-    <>
-        <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-3 xl sm:text-4xl font-bold text-white mb-4"  />Flexible Pricing Plans
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              Choose the plan that fits your analytics needs
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Flexible Pricing Plans
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
-                Choose the plan that fits your analytics needs
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                </><d iv k ey="{index}" c las sNa me="b g-s late-800/50 rounded-xl p-6borderborder-s late-700" />
               {pricingPlans.map((plan, index) => (
-                <div key="{index}" className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
+                <d iv k ey="{index}" c las sNa me="{`b g-g rad ient-to-br" from-s late-800/50 to-purple-900/30 rounded-xl p-8 border transit ion-all duration-300 ${
                   plan.popular 
                     ? 'border-green-400/40 scale-105 shadow-2 xl shadow-green-500/20' 
                     : 'border-green-500/20 hover: border-green-400/40'
                 }`} />
                   {plan.popular && (
-<<<<<<< HEAD
-                    <div className="inline-flex items-center px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-smfont-mediummb-4">
-                      <Star className="w-4h-4mr-1" />
-                      Most Popular
-                    </div>
+                    <d iv c las sNa me="i n line-f lex i tems-c enter px-3 py-1 bg-green-500/20 rounded-full text-gre-e-n-400 text-smfo-n-t-m edi ummb-4">
+                      <S tar c las sNa me="w-4h-4m r-1" />
+                      M ost Popular
+                    </d iv>
                   )}
-                  <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                  <p className="text-gray-300 mb-6">
-              {plan.description}</p>
-                  <div className="mb-6">
-                    <span className="text-4xlfont-bold text-white"   />{plan.price}</span>
-                    <span className="text-gray-400"   />{plan.period}</span>
-                  </div>
-                  <ul className="space-y-3mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5text-green-400mr-3" />
-=======
-    <>
-                    <div className="inline-flex items-center px-3 py-1 bg-green-500/20 rounded-full text-green-400 text-smfont-mediummb-4">
-        </div>
-                      <Star className="w-4h-4mr-1" / />
-                      Most Popular
-                    </div>
-                  )}
-    <>
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300mb-6">{plan.description}</p>
-                  <div className="mb-6">
-        </div>
-                    <span className="text-4 xlfont-boldtext-white">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
-                  </div>
-                  <ul className="space-y-3mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-    <>
-                      <li key="{featureIndex}" className="flexitems-centertext-gray-300" />
-                        <CheckCircle className="w-5 h-5text-green-400mr-3" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                        {feature}
+                  <h3 c las sNa me="t ext-2 xl font-b old text-w hit-e mb-2"   />{plan.n ame}</h3>
+                  <p c las sNa me="t ext-g ray-300 mb-6">
+              {plan.d esc rip tion}</p>
+                  <d iv c las sNa me="m b-6">
+                    <s pan c las sNa me="t ext-4x lfo nt-b old text-w hit-e"   />{plan.price}</s pan>
+                    <s pan c las sNa me="t ext-g ray-400"   />{plan.p eri od}</s pan>
+                  </d iv>
+                  <ul c las sNa me="s p ace-y-3mb-8" />
+                    {plan.f eat ures.map((f eat ure, f eat ureIndex) => (
+                      <li k ey="{f eat ureIndex}" c las sNa me="f l ex i tems-c enter text-g ra-y-300" />
+                        <C hec kCi rcle c las sNa me="w-5 h-5t ext-green-400mr-3" />                        {f eat ure}
                       </li>
                     ))}
                   </ul>
                   <Link
-                    to="/contact"
-                    className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    to="/c ont act"
+                    c las sNa me="{`w-f ull" b lock text-c ente-r py-3 px-6 rounded-lg font-semibold transit ion-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-green-500 to-purple-600 text-white hover:from-green-600 hover:to-purple-700'
-                        : 'border-2 border-green-400 text-green-400 hover: bg-green-400/10'
+                        ? 'bg-g rad ient-to-r from-green-500 to-purple-600 text-w hit-e hover:from-green-600 hover:to-purple-700'
+                        : 'border-2 border-green-400 text-gre-e-n-400 hover: bg-green-400/10'
                     }`}
-                    />Get Started
+                    />Get S tarted
     <>
                   </Link>
-                </div>
+                </d iv>
               ))}
     <>
-            </div>
-        </section>
-
-        {/* Testimonials */}
+            </d iv>
+        </s ect ion>
+        {/* T est imo nia ls */}
     <>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-12">
-              <h2 className="text-3 xl font-bold text-white mb-4"  />Trusted by Data-Driven Companies
+        </><s ect ion c las sNa me="p y-16 px-4 sm:px-6 lg:px-8 bg-g rad ient-to-rfrom-s late-800/30to-purple-900/30" />
+          <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv>
+            <d iv c las sNa me="t ext-c entermb-12">
+        </d iv>
+              <h2 c las sNa me="t ext-3 xl font-b old text-w hit em-b-4">T rusted by Data-Driven Comp ani es
               </h2>
-              <p className="text-gray-300">
-              See how our analytics platform transforms business decisions
-              </p>
-            </div>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-=======
-        </div>
-            <div className="text-centermb-12">
-        </div>
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Trusted by Data-Driven Companies
-              </h2>
-              <p className="text-gray-300" />
-                See how our analytics platform transforms business decisions
+              <p c las sNa me="t ext-g ray-300" />
+                S ee h ow our analytics platform transforms busi ness decisions
     <>
               </p>
-            </div>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {testimonials.map((testimonial, index) => (
+            </d iv>
+            <d iv c las sNa me="g r id g rid-c ols-1md:g rid-c ols-3g ap-8">
+        </d iv>              {test imo nia ls.map((test imo nial, index) => (
     <>
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-<<<<<<< HEAD
-                  <div className="flex items-centermb-4">
-=======
-                  <div className="flexitems-centermb-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
+                </><d iv k ey="{index}" c las sNa me="b g-s late-800/50 rounded-xl p-6borderborder-s late-700" />
+                  <d iv c las sNa me="f l exi tems-c entermb-4">
+        </d iv>                    {[...Array(test imo nial.rating)].map((_, i) => (
+                      <S tar k ey="{i}" c las sNa me="w-5 h-5t ext-y ell ow-400f ill-c urr ent" />
                     ))}
     <>
-                  </div>
-<<<<<<< HEAD
-                  <p className="text-gray-300 mb-4">
-              "{testimonial.content}"</p>
-                  <div />
-                    <div className="font-semiboldtext-white"   />{testimonial.name}</div>
-                    <div className="text-smtext-gray-400"   />{testimonial.company}</div>
-=======
-                  <p className="text-gray-300mb-4">"{testimonial.content}"</p>
-                  <div />
-                    <div className="font-semiboldtext-white">{testimonial.name}</div>
-                    <div className="text-smtext-gray-400">{testimonial.company}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
+                  </d iv>
+                  <p c las sNa me="t ext-g ray-300 mb-4">
+              "{test imo nial.c ontent}"</p>
+                  <d iv />
+                    <d iv c las sNa me="f o nt-semibol dtext-w hit-e"   />{test imo nial.n ame}</d iv>
+                    <d iv c las sNa me="t ext-s mtext-g ra-y-400"   />{test imo nial.comp any}</d iv>                </d iv>
               ))}
     <>
-            </div>
-        </section>
-
-        {/* CTA Section */}
+            </d iv>
+        </s ect ion>
+        {/* C TA S ect ion */}
     <>
-        <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-4 xlmx-autotext-center">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-green-500/20 to-purple-500/20 rounded-2 xl p-8borderborder-green-500/30">
-              <h2 className="text-3 xl font-bold text-white mb-4"  />Start Making Data-Driven Decisions Today
+        </><s ect ion c las sNa me="p y-16 px-4-sm:px-6-lg:px-8" />
+          <d iv c las sNa me="m ax-w-4 x lmx-a uto text-c ente-r">
+        </d iv>
+            <d iv c las sNa me="b g-g rad ient-to-r from-green-500/20 to-purple-500/20 rounded-2 xl p-8borderborder-green-500/30">
+        </d iv>
+              <h2 c las sNa me="t ext-3 xl font-b old text-w hit em-b-4">S tart Making Data-Driven Decisions Today
               </h2>
-              <p className="text-lg text-gray-300 mb-8">
-              Join thousands of businesses using AI Analytics Dashboard Pro to unlock their data potential
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-        </div>
-            <div className="bg-gradient-to-r from-green-500/20 to-purple-500/20 rounded-2 xl p-8borderborder-green-500/30">
-        </div>
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Start Making Data-Driven Decisions Today
-              </h2>
-              <p className="text-lgtext-gray-300mb-8" />
-                Join thousands of businesses using AI Analytics Dashboard Pro to unlock their data potential
+              <p c las sNa me="t ext-l gtext-g ra-y-300mb-8" />
+                Join thousands of busi nesses using AI Analytics Dashboard Pro to unlo ck their data pote nti al
     <>
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-green-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
+              <d iv c las sNa me="f l ex f lex-c ol sm:f lex-r owg ap-4j ust ify-c enter">
+        </d iv>                <Link to="/c ont act" c las sNa me="b g-g rad ient-to-r from-green-500 to-purple-600 text-w hit-e px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-purple-700transit ion-allduration-300">S tart Your Free Trial
                 </Link>
-                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
+                <Link to="/a bout" c las sNa me="b order-2 border-w hite text-w hit-e px-8 py-4 rounded-lg font-semiboldhover:bg-w hite/10transit ion-c olors">Learn More
                 </Link>
-              </div>
-          </div>
-        </section>
-      </div>
+              </d iv>
+          </d iv>
+        </s ect ion>
+      </d iv>
     </Layout>
   )
 };

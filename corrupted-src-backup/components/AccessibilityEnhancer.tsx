@@ -4,33 +4,28 @@ import {Helmet} from 'react-helmet-async'
 import {ArrowRight} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-
 const AccessibilityenhancerPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  r etu rn (
+    <d iv c las sNa me="m in-h-s cre en bg-g rad ient-to-br from-s late-900 via-purple-900 to-s late-900">
       <Helmet>
         <title>Accessibilityenhancer - Zion Tech Group</title>
         <meta name="description" content="Professional accessibilityenhancer services and solutions." />
         <meta name="keywords" content="accessibilityenhancer, services, solutions, technology" />
       </Helmet>
-      
       <Navigation />
-      
-      <main className="pt-16">
-        <div className="flex items-center justify-center min-h-screen">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Accessibilityenhancer</h1>
-            <p className="text-gray-300 mb-8">This page is under construction.</p>
-            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center mx-auto">
-              Learn More
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
-          </div>
-      </main>
-      
+      <m ain c las sNa me="p t-16">
+        <d iv c las sNa me="f l ex i tems-c enter j ust ify-c enter m in-h-s cre en">
+          <d iv c las sNa me="t e xt-c enter">
+            <h1 c las sNa me="t e xt-4xl f ont-b old t ext-w hit-e mb-4">Accessibilityenhancer</h1>
+            <p c las sNa me="t e xt-g ray-300 mb-8">T his p age is u nder cons tru ction.</p>
+            <b utt on c las sNa me="b g-g rad ient-to-r from-purple-500 to-p ink-500 t ext-w hit-e px-8 py-3 roun ded-lg f ont-semibold hover:from-purple-600 hover:to-p ink-600 transition-all duration-300 flex i tems-c enter j ust ify-c enter mx-auto">
+              L earn M ore
+              <ArrowRight c las sNa me="w-5 h-5 m l-2" />
+            </b utt on>
+          </d iv>
+      </m ain>
       <Footer />
-    </div>
+    </d iv>
   );
 };
-
 export default AccessibilityenhancerPage;

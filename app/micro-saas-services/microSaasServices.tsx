@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-'use client'
-import { Helmet } from 'react-helmet-async';
-
-import { ArrowRight, Mail, Brain } from 'lucide-react';
+import React from 'react';'use client'
+import { Helmet  } from 'react-helmet-async';
+import { ArrowRight, Mail, Brain  } from 'lucide-react';
 const MicroSaasServicesPage: React.FC = () => {
   const features = [
     {
@@ -38,199 +32,139 @@ const MicroSaasServicesPage: React.FC = () => {
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
+    'Proven track record of s uccess'
   ];
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-      <Helmet>
-=======
+  r etu rn (
     <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
+    </><d iv c las sNa me="m in-h-scre en bg-grad ient-to-br from-s late-900via-purple-900to-s late-900">
+        </d iv>
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>MicroSaasServices | Zion Tech Group</title>
+        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
+      </Helmet>        <title>MicroSaasServices | Zion Tech Group</title>
         <meta name="description" content="Professional MicroSaasServices services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="microSaasServices, AI solutions, IT services, Zion Tech Group, microsaasservices" />
       </Helmet>
-      {/* Hero Section */}
+      {/* H ero Section */}
     <>
-      <section className="relative py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" />
-=======
-        </div>
-          <div className="text-center" />
-            <h1 className="text-4xl md:text-6xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent" />
+      </><section c las sNa me="r e lative py-20 px-4-sm:px-6-lg:px-8" />
+        <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv>
+          <d iv c las sNa me="t e xt-c enter" />
+            <h1 c las sNa me="t e xt-4xl md:t ext-6xl f ont-b old text-w hitem-b-6" />              <s pan c las sNa me="b g-grad ient-to-r from-purple-400 to-b lue-400bg-clip-t exttext-transpare-n-t" />
                 MicroSaasServices
-
     <>
-              <span className="text-white">Solutions</span>
+              </><s pan c las sNa me="t e xt-w hite">Solutions</s pan>
             </h1>
-            <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
+            <p c las sNa me="t e xt-xl t ext-gra-y-300 mb-8-m ax-w-3x lmx-a uto">
               Transform your business with our advanced microsaasservices solutions.
               Powered by cutting-edge AI technology and industry expertise.
     <>
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" />
-=======
-        </div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Get Started
+            <d iv c las sNa me="f lex flex-c ol sm:flex-rowg ap-4j ust ify-c enter">
+        </d iv>
+              <b utt on c las sNa me="b g-grad ient-to-r from-purple-500 to-b lue-600 t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:from-purple-600 hover:to-b lue-700 transition-all duration-300flexitems-c enter" />                Get Star ted
     <>
-                <ArrowRight className="ml-2h-5w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
+                </><ArrowRight c las sNa me="m l-2h-5w-5" />
+              </b utt on>
+              <b utt on c las sNa me="b order b ord er-w hite t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:bg-w hite hover:t ext-gra-y-900transition-allduration-300" />
                 Learn More
   </
     <>
-            </div>
-        </div>
+            </d iv>
+        </d iv>
       </section>
       {/* Features Section */}
     <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" />
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3xl md:text-4xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Why Choose Our MicroSaasServices?
+      </><section c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" />
+        <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv>
+          <d iv c las sNa me="t e xt-c entermb-16">
+        </d iv>
+            <h2 c las sNa me="t e xt-3xl md:t ext-4xl f ont-b old text-w hitem-b-4" />              Why Choose Our MicroSaasServices?
     <>
             </h2>
-            <p className="text-xl text-gray-300max-w-3xlmx-auto">
+            <p c las sNa me="t e xt-xl t ext-gra-y-300m ax-w-3x lmx-a uto">
               Our microsaasservices solutions deliver unmatched performance, security, and scalability.
     <>
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          </d iv>
+          <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-8">
             {features.map((feature, index) => (
     <>
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  <feature.icon className="h-6w-6text-white" />
-                </div>
-                <h3 className="text-xl font-semiboldtext-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+              </><d iv key={index} c las sNa me="b g-w hite/10 b ack drop-b lur-sm rounded-xl p-6 b ord er b ord er-w hite/20 hover:bg-w hite/20transition-allduration-300" />
+                <d iv c las sNa me="f lex i tems-c enter j ust ify-c enter w-12 h-12 bg-grad ient-to-r from-purple-500 to-b lue-600rounded-lgmb-4">
+<<<<<<< H EAD                  <feature.icon c las sNa me="h-6w-6t e xt-w hite" />
+                </d iv>
+                <h3 c las sNa me="t e xt-xl f ont-semibol dte xt-w hit-e mb-3">{feature.title}</h3>
+                <p c las sNa me="t e xt-gray-300">{feature.description}</p>
+              </d iv>
             ))}
     <>
-          </div>
+          </d iv>
       </section>
       {/* Benefits Section */}
     <>
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" />
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3xl md:text-4xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Key Benefits
+      </><section c las sNa me="p y-20 px-4 sm:px-6-lg:px-8-bg-w hite/5" />
+        <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv>
+          <d iv c las sNa me="t e xt-c entermb-16">
+        </d iv>
+            <h2 c las sNa me="t e xt-3xl md:t ext-4xl f ont-b old text-w hitem-b-4" />              K ey Benefits
   </
-            <p className="text-xl text-gray-300max-w-3xlmx-auto">
+            <p c las sNa me="t e xt-xl t ext-gra-y-300m ax-w-3x lmx-a uto">
               Experience the power of our microsaasservices solutions for your business.
     <>
             </p>
-          </div>
-          <div className="grid grid-cols-1md:grid-cols-2gap-6">
-<<<<<<< HEAD
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-startspace-x-3" />
-=======
-        </div>
+          </d iv>
+          <d iv c las sNa me="g r id g rid-c ols-1md:g rid-c ols-2g ap-6">
+        </d iv>
             {benefits.map((benefit, index) => (
     <>
-              <div key={index} className="flexitems-startspace-x-3" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <CheckCircle className="h-6 w-6 text-purple-400mt-1flex-shrink-0" />
-                <p className="text-gray-300text-lg">{benefit}</p>
-              </div>
+              </><d iv key={index} c las sNa me="f lexi tems-star tsp ace-x-3" />                <C hec kCi rcle c las sNa me="h-6 w-6 t e xt-purple-400mt-1-flex-s hri nk-0" />
+                <p c las sNa me="t e xt-gray-300t ext-l-g">{benefit}</p>
+              </d iv>
             ))}
     <>
-          </div>
+          </d iv>
       </section>
-      {/* CTA Section */}
+      {/* C TA Section */}
     <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-4xlmx-autotext-center">
-<<<<<<< HEAD
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xlp-8md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" />
-=======
-        </div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xlp-8md:p-12">
-        </div>
-            <h2 className="text-3xl md:text-4xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Ready to Get Started?
+      </><section c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" />
+        <d iv c las sNa me="m ax-w-4x lmx-a uto text-c ente-r">
+        </d iv>
+          <d iv c las sNa me="b g-grad ient-to-r from-purple-600 to-b lue-600 rounded-2xlp-8md:p-12">
+        </d iv>
+            <h2 c las sNa me="t e xt-3xl md:t ext-4xl f ont-b old text-w hitem-b-4" />              Ready to Get Star ted?
     <>
             </h2>
-            <p className="text-xltext-purple-100mb-8">
+            <p c las sNa me="t e xt-x lte xt-purpl-e-100mb-8">
               Contact our experts to discuss your microsaasservices needs and get a customized solution.
     <>
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-centerjustify-center" />
-                <Phone className="mr-2h-5w-5" />
-                Call Now
-  </
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-centerjustify-center" />
-=======
-        </div>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flexitems-centerjustify-center" />
-                <Phone className="mr-2h-5w-5" />
-                Call Now
+            <d iv c las sNa me="f lex flex-c ol sm:flex-rowg ap-4j ust ify-c enter">
+        </d iv>
+              <b utt on c las sNa me="b g-w hite t ext-purpl-e-600 px-8 py-3 rounded-lg f ont-semibold hover:bg-gray-100 transition-all duration-300 flexitems-c enterj ust ify-c enter" />
+                <P hone c las sNa me="m r-2h-5w-5" />
+                C all N ow
   </
     <>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flexitems-centerjustify-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Mail className="mr-2h-5w-5" />
-                Email Us
+              </><b utt on c las sNa me="b order b ord er-w hite t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:bg-w hite hover:t ext-purpl-e-600 transition-all duration-300 flexitems-c enterj ust ify-c enter" />                <Mail c las sNa me="m r-2h-5w-5" />
+                E mail Us
   </
     <>
-            </div>
-        </div>
+            </d iv>
+        </d iv>
       </section>
-    </div>
+    </d iv>
   )}
 export default MicroSaasServicesPage
     <>
-  </button>
-  </button>
+  </b utt on>
+  </b utt on>
   </h2>
-  </button>
-  </span>
-
+  </b utt on>
+  </s pan>
     {icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'}
@@ -255,182 +189,127 @@ export default MicroSaasServicesPage
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
-<<<<<<< HEAD
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"></div>
-      <Helmet>
-=======
+    'Proven track record of s uccess'
     <>
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div></div>
+  ];r etu rn (</><d iv c las sNa me="m in-h-scre en bg-grad ient-to-br from-s late-900via-purple-900to-s late-900">
+        </d iv></d iv>
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>MicroSaasServices | Zion Tech Group</title>
+        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
+      </Helmet>        <title>MicroSaasServices | Zion Tech Group</title>
         <meta name="description" content="Professional MicroSaasServices services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="microSaasServices, AI solutions, IT services, Zion Tech Group, microsaasservices" />
       </Helmet>
-      {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="relative py-20 px-4sm:px-6lg:px-8"></section>
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" />
-=======
+      {/* H ero Section */}
     <>
-      <section className="relative py-20 px-4sm:px-6lg:px-8" /></section>
-        <div className="max-w-7xlmx-auto">
-        </div></div>
-          <div className="text-center" /></div>
-            <h1 className="text-4xl md:text-6xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent" />
+      </><section c las sNa me="r e lative py-20 px-4-sm:px-6-lg:px-8" /></section>
+        <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv></d iv>
+          <d iv c las sNa me="t e xt-c enter" /></d iv>
+            <h1 c las sNa me="t e xt-4xl md:t ext-6xl f ont-b old text-w hitem-b-6" />              <s pan c las sNa me="b g-grad ient-to-r from-purple-400 to-b lue-400bg-clip-t exttext-transpare-n-t" />
                 MicroSaasServices
     <>
-              </span>
+              </s pan>
               <br />
-              <span className="text-white">Solutions</span>
+              <s pan c las sNa me="t e xt-w hite">Solutions</s pan>
             </h1>
-            <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
+            <p c las sNa me="t e xt-xl t ext-gra-y-300 mb-8-m ax-w-3x lmx-a uto">
               Transform your business with our advanced microsaasservices solutions.
               Powered by cutting-edge AI technology and industry expertise.
     <>
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-rowgap-4justify-center"></div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" />
-=======
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div></div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Get Started
+            <d iv c las sNa me="f lex flex-c ol sm:flex-rowg ap-4j ust ify-c enter">
+        </d iv></d iv>
+              <b utt on c las sNa me="b g-grad ient-to-r from-purple-500 to-b lue-600 t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:from-purple-600 hover:to-b lue-700 transition-all duration-300flexitems-c enter" />                Get Star ted
     <>
-                <ArrowRight className="ml-2h-5w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
+                </><ArrowRight c las sNa me="m l-2h-5w-5" />
+              </b utt on>
+              <b utt on c las sNa me="b order b ord er-w hite t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:bg-w hite hover:t ext-gra-y-900transition-allduration-300" />
                 Learn More
     <>
-              </button>
-            </div>
-        </div>
+              </b utt on>
+            </d iv>
+        </d iv>
       </section>
       {/* Features Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4sm:px-6lg:px-8"></section>
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-centermb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" />
-=======
     <>
-      <section className="py-20 px-4sm:px-6lg:px-8" /></section>
-        <div className="max-w-7xlmx-auto">
-        </div></div>
-          <div className="text-centermb-16">
-        </div></div>
-            <h2 className="text-3xl md:text-4xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Why Choose Our MicroSaasServices?
+      </><section c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" /></section>
+        <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv></d iv>
+          <d iv c las sNa me="t e xt-c entermb-16">
+        </d iv></d iv>
+            <h2 c las sNa me="t e xt-3xl md:t ext-4xl f ont-b old text-w hitem-b-4" />              Why Choose Our MicroSaasServices?
     <>
             </h2>
-            <p className="text-xl text-gray-300max-w-3xlmx-auto">
+            <p c las sNa me="t e xt-xl t ext-gra-y-300m ax-w-3x lmx-a uto">
               Our microsaasservices solutions deliver unmatched performance, security, and scalability.
     <>
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-        </div></div>
+          </d iv>
+          <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-8">
+        </d iv></d iv>
             {features.map((feature, index) => (}
     <>
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" /></div>
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4">
-        </div></div>
-                  <feature.icon className="h-6w-6text-white" />
-                </div>
-                <h3 className="text-xl font-semiboldtext-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>))}
-          </div>
+              </><d iv key={index} c las sNa me="b g-w hite/10 b ack drop-b lur-sm rounded-xl p-6 b ord er b ord er-w hite/20 hover:bg-w hite/20transition-allduration-300" /></d iv>
+                <d iv c las sNa me="f lex i tems-c enter j ust ify-c enter w-12 h-12 bg-grad ient-to-r from-purple-500 to-b lue-600rounded-lgmb-4">
+        </d iv></d iv>
+                  <feature.icon c las sNa me="h-6w-6t e xt-w hite" />
+                </d iv>
+                <h3 c las sNa me="t e xt-xl f ont-semibol dte xt-w hit-e mb-3">{feature.title}</h3>
+                <p c las sNa me="t e xt-gray-300">{feature.description}</p>
+              </d iv>))}
+          </d iv>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5"></section>
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-centermb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" />
-=======
     <>
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" /></section>
-        <div className="max-w-7xlmx-auto">
-        </div></div>
-          <div className="text-centermb-16">
-        </div></div>
-            <h2 className="text-3xl md:text-4xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Key Benefits
+      </><section c las sNa me="p y-20 px-4 sm:px-6-lg:px-8-bg-w hite/5" /></section>
+        <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv></d iv>
+          <d iv c las sNa me="t e xt-c entermb-16">
+        </d iv></d iv>
+            <h2 c las sNa me="t e xt-3xl md:t ext-4xl f ont-b old text-w hitem-b-4" />              K ey Benefits
     <>
             </h2>
-            <p className="text-xl text-gray-300max-w-3xlmx-auto">
+            <p c las sNa me="t e xt-xl t ext-gra-y-300m ax-w-3x lmx-a uto">
               Experience the power of our microsaasservices solutions for your business.
     <>
             </p>
-          </div>
-          <div className="grid grid-cols-1md:grid-cols-2gap-6">
-        </div></div>
+          </d iv>
+          <d iv c las sNa me="g r id g rid-c ols-1md:g rid-c ols-2g ap-6">
+        </d iv></d iv>
             {benefits.map((benefit, index) => (}
-<<<<<<< HEAD
-              <div key={index} className="flex items-startspace-x-3"></div>
-=======
     <>
-              <div key={index} className="flexitems-startspace-x-3" /></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <CheckCircle className="h-6 w-6 text-purple-400mt-1flex-shrink-0" />
-                <p className="text-gray-300text-lg">{benefit}</p>
-              </div>))}
-          </div>
+              </><d iv key={index} c las sNa me="f lexi tems-star tsp ace-x-3" /></d iv>                <C hec kCi rcle c las sNa me="h-6 w-6 t e xt-purple-400mt-1-flex-s hri nk-0" />
+                <p c las sNa me="t e xt-gray-300t ext-l-g">{benefit}</p>
+              </d iv>))}
+          </d iv>
       </section>
-      {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4sm:px-6lg:px-8"></section>
-        <div className="max-w-4xlmx-autotext-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xlp-8md:p-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" />
-=======
+      {/* C TA Section */}
     <>
-      <section className="py-20 px-4sm:px-6lg:px-8" /></section>
-        <div className="max-w-4xlmx-autotext-center">
-        </div></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xlp-8md:p-12">
-        </div></div>
-            <h2 className="text-3xl md:text-4xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Ready to Get Started?
+      </><section c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" /></section>
+        <d iv c las sNa me="m ax-w-4x lmx-a uto text-c ente-r">
+        </d iv></d iv>
+          <d iv c las sNa me="b g-grad ient-to-r from-purple-600 to-b lue-600 rounded-2xlp-8md:p-12">
+        </d iv></d iv>
+            <h2 c las sNa me="t e xt-3xl md:t ext-4xl f ont-b old text-w hitem-b-4" />              Ready to Get Star ted?
     <>
             </h2>
-            <p className="text-xltext-purple-100mb-8">
+            <p c las sNa me="t e xt-x lte xt-purpl-e-100mb-8">
               Contact our experts to discuss your microsaasservices needs and get a customized solution.
     <>
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-rowgap-4justify-center"></div>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-centerjustify-center" />
-=======
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div></div>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flexitems-centerjustify-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Phone className="mr-2h-5w-5" />
-                Call Now
+            <d iv c las sNa me="f lex flex-c ol sm:flex-rowg ap-4j ust ify-c enter">
+        </d iv></d iv>
+              <b utt on c las sNa me="b g-w hite t ext-purpl-e-600 px-8 py-3 rounded-lg f ont-semibold hover:bg-gray-100 transition-all duration-300 flexitems-c enterj ust ify-c enter" />                <P hone c las sNa me="m r-2h-5w-5" />
+                C all N ow
     <>
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-centerjustify-center" />
-                <Mail className="mr-2h-5w-5" />
-                Email Us
+              </b utt on>
+              <b utt on c las sNa me="b order b ord er-w hite t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:bg-w hite hover:t ext-purpl-e-600 transition-all duration-300 flex i tems-c enterj ust ify-c enter" />
+                <Mail c las sNa me="m r-2h-5w-5" />
+                E mail Us
     <>
-              </button>
-            </div>
-        </div>
+              </b utt on>
+            </d iv>
+        </d iv>
       </section>
     </>

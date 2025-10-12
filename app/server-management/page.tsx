@@ -1,86 +1,73 @@
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
-import { Server, Shield, Zap, BarChart3, CheckCircle, ArrowRight, Clock, Users, Database } from 'lucide-react'
-=======
-import { Server, Shield, Zap, BarChart3, CheckCircle, ArrowRight, Clock, Users, Database } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import React  from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import { Server, Shield, Zap, BarChart3, CheckCircle, ArrowRight, Clock, Users, Database  } from 'lucide-react';import { Link } from 'react-router-dom'
+import React from 'react';import { ArrowRight  } from 'lucide-react';
+import { Link  } from 'react-router-dom';
 const ServerManagementPage: React.FC = () => {
-  const features = [
+  const f eat ures = [
     {
-      icon: <Server className="w-6h-6text-cyan-400" />,
-      title: '24/7 Server Monitoring',
-      description: 'Continuous monitoring of server performance, uptime, and health with instant alerts.'
+      i con: <Server c las sNa me="w-6h-6t e xt-c yan-400" />,
+      t itle: '24/7 Server Monitoring',
+      description: 'Continuous monitoring of server performance, uptime, and health with instant aler ts.'
     },
     {
-      icon: <Shield className="w-6h-6text-emerald-400" />,
-      title: 'Advanced Security',
-      description: 'Comprehensive security measures including firewalls, intrusion detection, and threat prevention.'
+      i con: <Shield c las sNa me="w-6h-6t e xt-emer ald-400" />,
+      t itle: 'Advanced Security',
+      description: 'Comprehensive security measures including firewalls, intrusion detection, and thre at prev ention.'
     },
     {
-      icon: <Zap className="w-6h-6text-purple-400" />,
-      title: 'Performance Optimization',
-      description: 'Automatic optimization of server resources for maximum performance and efficiency.'
+      i con: <Zap c las sNa me="w-6h-6t e xt-p urp le-400" />,
+      t itle: 'Performance Optimization',
+      description: 'Automatic optimization of server r esources for maximum performance and efficiency.'
     },
     {
-      icon: <BarChart3 className="w-6h-6text-orange-400" />,
-      title: 'Analytics & Reporting',
-      description: 'Detailed analytics and reports on server performance, usage patterns, and trends.'
+      i con: <BarChart3 c las sNa me="w-6h-6t e xt-o ran ge-400" />,
+      t itle: 'Analytics & Reporting',
+      description: 'Detailed analytics and reports on server performance, usage patterns, and t ren ds.'
     },
     {
-      icon: <Clock className="w-6h-6text-pink-400" />,
-      title: 'Automated Backups',
-      description: 'Regular automated backups with point-in-time recovery and disaster recovery planning.'
+      i con: <Clock c las sNa me="w-6h-6t e xt-p ink-400" />,
+      t itle: 'Automated Backups',
+      description: 'Regular automated backups with point-in-time recovery and disaster recovery plan ning.'
     },
     {
-      icon: <Users className="w-6h-6text-blue-400" />,
-      title: 'Expert Support',
-      description: '24/7 expert support from certified server administrators and engineers.'
+      i con: <Users c las sNa me="w-6h-6t e xt-b lue-400" />,
+      t itle: 'Expe rt Support',
+      description: '24/7 expe rt support from certified server administrators and engineers.'
     }
   ]
-
-  const services = [
+  const serv ices = [
     {
-      icon: <Server className="w-8h-8text-cyan-400" />,
-      title: 'Server Setup & Configuration',
-      description: 'Complete server setup, configuration, and optimization for your specific needs.',
-      features: ['OS installation', 'Software configuration', 'Security hardening', 'Performance tuning']
+      i con: <Server c las sNa me="w-8h-8t e xt-c yan-400" />,
+      t itle: 'Server Setup & Configuration',
+      description: 'Comp lete server setup, configuration, and optimization for your specific needs.',
+      f eat ures: ['OS installation', 'Software configuration', 'Security hardening', 'Performance tuning']
     },
     {
-      icon: <Shield className="w-8h-8text-emerald-400" />,
-      title: 'Security Management',
-      description: 'Comprehensive security management including firewalls, antivirus, and threat monitoring.',
-      features: ['Firewall configuration', 'Antivirus setup', 'Intrusion detection', 'Security audits']
+      i con: <Shield c las sNa me="w-8h-8t e xt-emer ald-400" />,
+      t itle: 'Security Management',
+      description: 'Comprehensive security management including firewalls, antivirus, and thre at monitoring.',
+      f eat ures: ['Firewall configuration', 'Antivirus setup', 'Intrusion detection', 'Security a udi ts']
     },
     {
-      icon: <Zap className="w-8h-8text-purple-400" />,
-      title: 'Performance Monitoring',
-      description: 'Real-time monitoring and optimization of server performance and resource usage.',
-      features: ['CPU monitoring', 'Memory tracking', 'Disk usage', 'Network analysis']
+      i con: <Zap c las sNa me="w-8h-8t e xt-p urp le-400" />,
+      t itle: 'Performance Monitoring',
+      description: 'Real-time monitoring and optimization of server performance and r esource usage.',
+      f eat ures: ['CPU monitoring', 'Memory tracking', 'Disk usage', 'Network analysis']
     },
     {
-      icon: <Database className="w-8h-8text-orange-400" />,
-      title: 'Database Management',
-      description: 'Expert database administration, optimization, and maintenance services.',
-      features: ['Database optimization', 'Query tuning', 'Backup management', 'Replication setup']
+      i con: <Database c las sNa me="w-8h-8t e xt-o ran ge-400" />,
+      t itle: 'Database Management',
+      description: 'Expe rt database administration, optimization, and maintenance serv ices.',
+      f eat ures: ['Database optimization', 'Query tuning', 'Backup management', 'Replication setup']
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Basic',
       price: '$199',
       period: '/month',
       description: 'Perfect for small businesses',
-      features: [
+      f eat ures: [
         '1-2 servers',
         'Basic monitoring',
         'Email support',
@@ -93,7 +80,7 @@ const ServerManagementPage: React.FC = () => {
       price: '$499',
       period: '/month',
       description: 'Ideal for growing companies',
-      features: [
+      f eat ures: [
         'Up to 10 servers',
         'Advanced monitoring',
         '24/7 support',
@@ -107,435 +94,139 @@ const ServerManagementPage: React.FC = () => {
       price: '$999',
       period: '/month',
       description: 'For large organizations',
-      features: [
+      f eat ures: [
         'Unlimited servers',
         'Full monitoring suite',
         'Dedicated support',
         'Custom solutions',
-        'SLA guarantee'
+        'SLA guar antee'
       ],
       popular: false
     }
   ]
-
   return (
     <>
-    <>
+    </>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <t itle>5G Data Analytics - Zion Tech Group</t itle>
+        <meta name="description" content="Professional 5G data analytics serv ices by Zion Tech Group. Transform your business with our expe rt solutions." />
       </Helmet>
-        <title>Server Management - Professional Server Administration | Zion Tech Group</title>
-        <meta name="description" content="Professional server management services including monitoring, security, optimization, and 24/7 support. Keep your servers running at peak performance." / / />
+        <t itle>Server Management - Professional Server Administration | Zion Tech Group</t itle>
+        <meta name="description" content="Professional server management serv ices including monitoring, security, optimization, and 24/7 support. Keep your servers runn ing at peak performance." / / />
         <meta name="keywords" content="server management, server administration, server monitoring, server security, IT infrastructure, server optimization" / / />
         <link rel="canonical" href="https://ziontechgroup.com/server-management" />
       </Helmet>
     </>
-
-      <div className="min-h-screenbg-gray-900text-white">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        {/* Hero Section */}
+      <d iv c las sNa me="m in-h-scre enbg-g ray-900t ext-w hit-e">
+        {/* H ero Section */}
     <>
-        <section className="relative py-20px-4overflow-hidden" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/10to-purple-500/10" />
-          <div className="relative max-w-7xlmx-autotext-center">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-              <Server className="w-4h-4" />
-              <span   />Server Management</span>
-=======
-          <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/10to-purple-500/10" / />
-          <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-        </div>
-              <Server className="w-4h-4" / />
-              <span>Server Management</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </div>
-    </>
-            
-<<<<<<< HEAD
-            <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
-              Professional <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Server Management</span>
-=======
+        </><section c las sNa me="r e lative py-20-px-4-over flow-h idden" />
+              {f eat ures.map((f eat ure, index) => (
     <>
-            <h1 className="text-4 xl sm:text-6 xl md:text-7 xl font-bold text-whitemb-8leading-tight" />
-              Professional <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Server Management</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h1>
-    </>
-            
-            <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
-              Keep your servers running at peak performance with our comprehensive management services. 
-              Monitoring, security, optimization, and 24/7 expert support.
-            </p>
-            
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-              <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" >
-           
-          <span    />
-        </Link>Get Started</span>
-                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-              </Link>
-              <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>View Demo</span>
-=======
+                </><d iv key="{index}" c las sNa me="g roup bg-w hite/10 back drop-b lur-lg rounded-2 xl p-8 border border-w hite/20 hover:bg-w hite/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-c yan-500/10" />
+                  <d iv c las sNa me="f l ex items-c enter j ustify-c enter w-16 h-16 bg-g radient-to-r from-c yan-500 to-p urp le-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{f eat ure.i con}
+                  </d iv>
+              {serv ices.map((serv ice, index) => (
     <>
-            <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-        </div>
-              <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
-                <span>Get Started</span>
-                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-              </Link>
-              <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                <span>View Demo</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-              </Link>
-            </div>
-        </section>
-    </>
-
-        {/* Features Section */}
-    <>
-        <section className="py-20px-4relative" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Comprehensive <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Server Management</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Everything you need to keep your servers secure, optimized, and running smoothly.
-=======
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" / />
-          <div className="relative max-w-7xlmx-auto">
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Comprehensive <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Server Management</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                Everything you need to keep your servers secure, optimized, and running smoothly.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {features.map((feature, index) => (
-    <>
-                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
-                  </div>
-<<<<<<< HEAD
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{feature.title}
-                  </h3>
-                  <p className="text-gray-300leading-relaxed">
-              {feature.description}
-=======
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title}
-                  </h3>
-                  <p className="text-gray-300leading-relaxed" />
-    </>
-                    {feature.description}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </p>
-                </div>
-    </>
+                </><d iv key="{index}" c las sNa me="g roup bg-w hite/10 back drop-b lur-lg rounded-2 xl p-8 border border-w hite/20 hover:bg-w hite/20 transition-allduration-300hover:scale-105" />
+                  <d iv c las sNa me="f l ex items-c enters pace-x-4mb-6">
               ))}
     <>
-            </div>
+            </d iv>
         </section>
     </>
-
-        {/* Services Section */}
-    <>
-        <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
-          <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Services</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Professional server management services tailored to your business needs.
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Services</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                Professional server management services tailored to your business needs.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
-            
-            <div className="grid grid-cols-1md:grid-cols-2gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {services.map((service, index) => (
-    <>
-                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                  <div className="flex items-centerspace-x-4mb-6">
-<<<<<<< HEAD
-                    <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl group-hover:scale-110transition-transformduration-300"  />{service.icon}
-                    </div>
-                    <h3 className="text-2 xl font-bold text-whitegroup-hover:text-cyan-400 transition-colors"  />{service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300 mb-6leading-relaxed">
-              {service.description}
-                  </p>
-                  <div className="space-y-2">
-=======
-        </div>
-                    <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl group-hover:scale-110transition-transformduration-300">{service.icon}
-                    </div>
-                    <h3 className="text-2 xl font-bold text-whitegroup-hover:text-cyan-400transition-colors">{service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300mb-6leading-relaxed" />
-    </>
-                    {service.description}
-    <>
-                  </p>
-                  <div className="space-y-2">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    {service.features.map((feature, featureIndex) => (
-    <>
-                      <div key="{featureIndex}" className="flex items-center space-x-2text-gray-400text-sm" />
-<<<<<<< HEAD
-                        <CheckCircle className="w-4h-4text-green-400" />
-                        <span   />{feature}</span>
-=======
-                        <CheckCircle className="w-4h-4text-green-400" / />
-                        <span>{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </div>
-    </>
-                    ))}
-    <>
-                  </div>
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              ))}
-    <>
-            </div>
-        </section>
-    </>
-
         {/* Pricing Section */}
     <>
-        <section className="py-20px-4relative" />
-          <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Flexible <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Choose the plan that fits your server infrastructure needs. All plans include 24/7 support.
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Flexible <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
-                Choose the plan that fits your server infrastructure needs. All plans include 24/7 support.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
-            
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        </><section c las sNa me="p y-20px-4-relative" />
+          <d iv c las sNa me="r e lative max-w-7x lmx-auto">
               {pricingPlans.map((plan, index) => (
-                <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
+                <d iv key="{index}" c las sNa me="{`r e lative" bg-w hite/10 back drop-b lur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
                   plan.popular 
-                    ? 'border-cyan-400/50 shadow-2 xl shadow-cyan-500/20' 
-                    : 'border-white/20 hover: border-cyan-400/30'
+                    ? 'border-c yan-400/50 shadow-2 xl shadow-c yan-500/20' 
+                    : 'border-w hite/20 hover: border-c yan-400/30'
                 }`} />
                   {plan.popular && (
-<<<<<<< HEAD
-                    <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold"  />Most Popular
-                      </div>
+                    <d iv c las sNa me="a b solute -t op-4 l eft-1/2transform-tran slate-x-1/2">
+                      <d iv c las sNa me="b g-g radient-to-r from-c yan-500 to-p urp le-600 t ext-w hit-e px-6 py-2 rounded-fulltext-smfo-n-t-semibold"  />Most Popular
+                      </d iv>
                   )}
-                  
-                  <div className="text-centermb-8">
-                    <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">
+                  <d iv c las sNa me="t e xt-c entermb-8">
+                    <h3 c las sNa me="t e xt-2 xl font-bold t ext-w hit-e mb-2"   />{plan.name}</h3>
+                    <p c las sNa me="t e xt-g ray-300 mb-4">
               {plan.description}</p>
-                    <div className="flex items-baselinejustify-center">
-                      <span className="text-5 xlfont-bold text-white"   />{plan.price}</span>
-                      <span className="text-gray-400ml-2"   />{plan.period}</span>
-                    </div>
-                  
-                  <ul className="space-y-4mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-centerspace-x-3" />
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" />
-                        <span className="text-gray-300"   />{feature}</span>
-=======
-    <>
-                    <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-        </div>
-                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
-                      </div>
-    </>
-                  )}
-                  
-    <>
-                  <div className="text-centermb-8">
-        </div>
-                    <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                    <p className="text-gray-300mb-4">{plan.description}</p>
-                    <div className="flexitems-baselinejustify-center" />
-                      <span className="text-5 xlfont-boldtext-white">{plan.price}</span>
-                      <span className="text-gray-400ml-2">{plan.period}</span>
-                    </div>
-    </>
-                  
-                  <ul className="space-y-4mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-    <>
-                      <li key="{featureIndex}" className="flexitems-centerspace-x-3" />
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
-                        <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </li>
+                    <d iv c las sNa me="f l ex items-base lin ejusti fy-c enter">
+                      <s pan c las sNa me="t e xt-5 x lfont-bold t ext-w hit-e"   />{plan.price}</s pan>
+                      <s pan c las sNa me="t e xt-g ray-400ml-2"   />{plan.period}</s pan>
+                    </d iv>
+                  <ul c las sNa me="s p ace-y-4mb-8" />
+                    {plan.f eat ures.map((f eat ure, f eat ureIndex) => (
+                      <li key="{f eat ureIndex}" c las sNa me="f l ex items-c enters pace-x-3" />
+                        <CheckCircle c las sNa me="w-5 h-5t e xt-g reen-400f lex-s hrink-0" />
+                        <s pan c las sNa me="t e xt-g ray-300"   />{f eat ure}</s pan>                      </li>
     </>
                     ))}
                   </ul>
-                  
                   <Link 
-                    to="/contact" 
-                    className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                    to="/cont act" 
+                    c las sNa me="{`b lock" w-full t ext-c ente-r py-3 rounded-xl font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
+                        ? 'bg-g radient-to-r from-c yan-500 to-p urp le-600 t ext-w hit-e hover:from-c yan-600 hover:to-p urp le-700'
+                        : 'border-2 border-c yan-400 t ext-c ya-n-400 hover: bg-c yan-400 hover:t ext-g ra-y-900'
                     }`}
                     />Get Started
     <>
                   </Link>
-                </div>
+                </d iv>
     </>
               ))}
     <>
-            </div>
+            </d iv>
         </section>
     </>
-
-        {/* CTA Section */}
+        {/* C TA Section */}
     <>
-        <section className="py-20px-4relative" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" />
-          <div className="relative max-w-7xlmx-autotext-center">
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8sm:p-12lg:p-16">
-              <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" />
-                Ready to Optimize Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Server Infrastructure?</span>
-=======
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" / />
-          <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8sm:p-12lg:p-16">
-        </div>
-              <h2 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-whitemb-6leading-tight" />
-                Ready to Optimize Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">Server Infrastructure?</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </h2>
+        </><section c las sNa me="p y-20px-4-relative" />
+          <d iv c las sNa me="a b solute inset-0 bg-g radient-to-r from-c yan-500/10via-p urp le-500/10to-p ink-500/10" / />
+          <d iv c las sNa me="r e lative max-w-7 x lmx-auto text-c ente-r">
+        </d iv>
+            <d iv c las sNa me="b g-g radient-to-r from-c yan-600 via-p urp le-600 to-p ink-600 rounded-3 xl p-8sm:p-12lg:p-16">
+        </d iv>
+              <h2 c las sNa me="t e xt-4 xl sm:t ext-5 xl md:t ext-6 xl font-bold t ext-w hit em-b-6leading-tight" />
+                Ready to Optimize Y our <s pan c las sNa me="b g-g radient-to-r from-c yan-300 to-p ink-300bg-clip-t exttext-transpare-n-t">Server Infrastructure?</s pan>              </h2>
     </>
-              
-              <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
-<<<<<<< HEAD
-              Let our expert team manage your servers so you can focus on your business. 
-                Get started with our professional server management services today.
+              <p c las sNa me="t e xt-xl sm:t ext-2 xl t ext-w hit-e/90 mb-8 sm:mb-12 max-w-4 x lmx-autoleading-relaxed">
+              Let our expe rt team manage your servers so you can focus on your business. 
+                Get started with our professional server management serv ices today.
               </p>
-              
-              <div className="flex flex-col sm:flex-rowgap-6justify-center">
-                <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
-           
-          <span    />
-        </Link>Get Started</span>
-                  <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+              <d iv c las sNa me="f l ex f lex-c ol sm:f lex-rowg ap-6j ustify-c enter">
+                <Link to="/cont act" c las sNa me="g roup bg-w hite t ext-c ya-n-600 px-10 py-4 rounded-xl font-bold t ext-l-g hover:bg-g ray-100 transition-all duration-300 f lex items-c enter j ustify-c enter s pace-x-2 shadow-lg hover:shadow-xltr ansformhover:scale-105" >
+          <s pan    />
+        </Link>Get Started</s pan>
+                  <ArrowRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
                 </Link>
-                <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>View Pricing</span>
-=======
-                Let our expert team manage your servers so you can focus on your business. 
-                Get started with our professional server management services today.
-              </p>
-              
-    <>
-              <div className="flex flex-col sm:flex-rowgap-6justify-center">
-        </div>
-                <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
-                  <span>Get Started</span>
-                  <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+                <Link to="/pricing" c las sNa me="g roup border-2 border-w hite t ext-w hit-e px-10 py-4 rounded-xl font-bold t ext-l-g hover:bg-w hite/10 transition-all duration-300 f lex items-c enter j ustify-c enters pace-x-2back drop-b lur-sm" >
+          <s pan    />
+        </Link>View Pricing</s pan>                  <ArrowRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
                 </Link>
-                <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                  <span>View Pricing</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                </Link>
-              </div>
-          </div>
+              </d iv>
+          </d iv>
         </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+      </d iv>
     </>
   )
 }
-
 export default ServerManagementPage;
     </>

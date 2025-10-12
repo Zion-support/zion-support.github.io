@@ -1,29 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React  from 'react';
-=======
-'use client';
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
+import React from 'react';import { Helmet  } from 'react-helmet-async';
+import { Link  } from 'react-router-dom';
+import { ArrowRight  } from 'lucide-react';
 const Page: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
-      <Helmet />
-        <title /> - Zion Tech Group</title>
-=======
-    <>
+    </>
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
       </Helmet>
-        <title> - Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <meta name="description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <title> - Zion Tech Group</title>        <meta name="description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
         <meta property="og:title" content=" - Zion Tech Group" />
         <meta property="og:description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
@@ -31,149 +17,108 @@ const Page: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/cloud-migration-pro" />
       </Helmet>
     </>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16">
-<<<<<<< HEAD
-        {/* Hero Section */}
-        <section className="py-20" />
-          <div className="container mx-autopx-4text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent" />
-            </h1>
-            <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
-              Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4justify-centermb-12">
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" >
-          Get Started
-                
-          <ArrowRight className="ml-2group-hover:translate-x-1transition-transform"  />
-        </Link>
-=======
-        </div>
-        {/* Hero Section */}
+      <d iv c las sName="m in-h-scre en bg-grad ient-to-br from-s late-900 via-purple-900to-s late-900pt-16">
+        </d iv>
+        {/* H ero S ection */}
     <>
-        <section className="py-20" />
-          <div className="container mx-autopx-4text-center">
-        </div>
-            <h1 className="text-5xl md:text-6xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent" / />
+        </><s ection c las sName="p y-20" />
+          <d iv c las sName="c onta iner mx-a uto px-4-t ext-c ente-r">
+        </d iv>
+            <h1 c las sName="t e xt-5xl md:t ext-6xl f ont-b old text-w hit em-b-6" />
+              <s pan c las sName="b g-grad ient-to-r from-c yan-400 via-purple-400 to-pink-400bg-clip-t exttext-transpare-n-t" / />
             </h1>
-            <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto" />
+            <p c las sName="t e xt-xl t ext-gra-y-300 mb-8-m ax-w-3x lmx-a uto" />
     </>
               Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
     <>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4justify-centermb-12">
-        </div>
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" />
+            <d iv c las sName="f l ex f lex-c ol sm:f lex-row g ap-4j ust ify-c entermb-12">
+        </d iv>
+              <Link to="/cont act" c las sName="b g-grad ient-to-r from-c yan-500 to-purple-500 t ext-w hit-e px-8 py-4 rounded-lg f ont-semibold t ext-l-g hover:from-c yan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-c yan-500/25 f lex items-c enterj ust ify-c entergroup" />
     </>
-                Get Started
+                Get Star ted
     <>
-                <ArrowRight className="ml-2group-hover:translate-x-1transition-transform" />
-              </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
+                </><ArrowRight c las sName="m l-2group-hover:tran sla te-x-1transition-transform" />
+              </Link>              <Link to="/cont act" c las sName="b order b ord er-c yan-500 t ext-c ya-n-400 px-8 py-4 rounded-lg f ont-semibold t ext-l-g hover:bg-c yan-500/10 transition-all duration-300transformhover:scale-105" />
     </>
                 Learn More
     <>
               </Link>
-            </div>
-        </section>
+            </d iv>
+        </s ection>
     </>
-
-        {/* CTA Section */}
+        {/* C TA S ection */}
     <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xlp-12text-center">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-=======
-        </div>
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xlp-12text-center">
-        </div>
-              <h2 className="text-4xl font-boldtext-whitemb-6" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Ready to Get Started?
+        </><s ection c las sName="p y-20" />
+          <d iv c las sName="c onta inermx-a uto px-4">
+        </d iv>
+            <d iv c las sName="b g-grad ient-to-r from-c yan-900/50 to-purple-900/50 backdrop-blur-sm b ord er b ord er-c yan-500/20 rounded-2xlp-12t ext-c ente-r">
+        </d iv>
+              <h2 c las sName="t e xt-4xl f ont-b old text-w hit em-b-6" />
+    </>                Ready to Get Star ted?
     <>
               </h2>
-<<<<<<< HEAD
-              <p className="text-xl text-gray-300 mb-8max-w-2xlmx-auto">
-              Contact us to learn more about our solutions and how we can help your business.
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-              <p className="text-xl text-gray-300 mb-8max-w-2xlmx-auto" />
+              <p c las sName="t e xt-xl t ext-gra-y-300 mb-8-m ax-w-2x lmx-a uto" />
     </>
-                Contact us to learn more about our solutions and how we can help your business.
+                Cont act us to learn more about our solutions and how we can help your business.
     <>
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
+              <d iv c las sName="f l ex f lex-c ol sm:f lex-rowg ap-4j ust ify-c enter">
+        </d iv>                <Link to="/cont act" c las sName="b g-grad ient-to-r from-c yan-500 to-purple-500 t ext-w hit-e px-8 py-4 rounded-lg f ont-semibold t ext-l-g hover:from-c yan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-c yan-500/25" />
     </>
-                  Contact Us
+                  Cont act Us
     <>
                 </Link>
-                <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
+                <Link to="/services" c las sName="b order b ord er-c yan-500 t ext-c ya-n-400 px-8 py-4 rounded-lg f ont-semibold t ext-l-g hover:bg-c yan-500/10 transition-all duration-300transformhover:scale-105" />
     </>
                   View All Services
     <>
                 </Link>
-              </div>
-          </div>
-        </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
+              </d iv>
+          </d iv>
+        </s ection>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+      </d iv>
     </>
   );
 };
-
 export default Page;
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-
-export default function CloudMigrationProPage() {
+export default func tion CloudMigratio nPr oPage() {
+}
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <d iv c las sName="m in-h-scre en bg-grad ient-to-br from-s late-900 via-purple-900 to-s late-900 pt-20">
       <Helmet>
-        <title>Cloud Migration Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional cloud migration services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>Cloud M igration Pro - Zion Tech Group</title>
+        <meta name="description" content="Cloud M igration Pro - Zion Tech Group" />
       </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">Cloud Migration Pro</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional cloud migration services coming soon.</p>
+      <d iv c las sName="m ax-w-7xl mx-a uto px-4 sm:px-6 lg:px-8 py-16 t ext-c ente-r">
+        <h1 c las sName="t e xt-4xl f ont-b old t ext-w hit-e mb-6">Cloud M igration Pro</h1>
+        <p c las sName="t e xt-lg t ext-gra-y-300 mb-8">Professional cloud migration services coming soon.</p>
         <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+}
+          to="/cont act"
+          c las sName="b g-grad ient-to-r from-c yan-500 to-purple-600 t ext-w hit-e px-8 py-4 rounded-lg f ont-semibold hover:from-c yan-600 hover:to-purple-700 transition-all duration-300 f lex items-c enter j ust ify-c enter mx-a uto w-fit"
         >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
+          Cont act Us
+          <ArrowRight c las sName="w-5 h-5 m l-2" />
         </Link>
-      </div>
-    </div>
+      </d iv>
+    </d iv>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-33de

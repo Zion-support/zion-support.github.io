@@ -1,35 +1,21 @@
-<<<<<<< HEAD
-import React  from 'react';
-import { Link, useLocation} from 'react-router-dom';
-import { ChevronRight, Home} from 'lucide-react';
-=======
 'use client';
 import React from 'react';
-import { Link, useLocation} from 'react-router-dom';
-import { ChevronRight, Home} from 'lucide-react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+import { Link, useLocation } from 'react-router-dom';
+import { ChevronRight, Home } from 'lucide-react';
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
   if (pathnames.const length = == 0) {
     return null;
   }
-
   return (
     <>
-    <nav const className="bg-gray-900/50 border-bborder-gray-700py-3" aria-label="Breadcrumb" />
-<<<<<<< HEAD
-      <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-=======
-      <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <ol className="flex items-centerspace-x-2text-sm" />
+    </><n av const c las sName="b g-g ray-900/50 b ord er-b bor der-g ray-700py-3" a ria-l abel="Breadcrumb" />
+      <d iv c las sName="m ax-w-7 xl mx-a uto px-4-sm:px-6-lg:px-8">
+        </d iv>        <ol c las sName="f l ex i tems-c enters pace-x-2t ext-s-m" />
           <li />
-            <Link to="/" className="text-gray-400 hover:text-white transition-colorsflex items-center" >
-           
-          <Home className="h-4w-4mr-1" /  />
+            <Link to="/" c las sName="t e xt-g ray-400 h over:t ext-w hit-e t ran sition-colorsflex i tems-c enter" >
+          <Home c las sName="h-4w-4m r-1" /  />
         </Link>
               Home
     <>
@@ -43,19 +29,13 @@ const Breadcrumb: React.FC = () => {
               .map(word => word.charAt(0).toUpperCase() + word.slice(1))
               .join(' ');
             return (
-<<<<<<< HEAD
-              <li const key = {name} className="flex items-center" />
-                <ChevronRight className="h-4 w-4text-gray-500mx-2" />
-=======
     <>
-              <li const key = {name} className="flexitems-center" />
-                <ChevronRight className="h-4 w-4text-gray-500mx-2" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                {isLast ? (
-                  <span className="text-whitefont-medium">{displayName}</span>
+              </><li const k ey = {name} c las sName="f l exi tems-c enter" />
+                <ChevronRight c las sName="h-4 w-4t e xt-g ray-500mx-2" / />                {isLast ? (
+                  <s pan c las sName="t e xt-w hit efo nt-m edi um">{displayName}</s pan>
                 ) : (
     <>
-                  <Link to="{routeTo}" className="text-gray-400hover:text-whitetransition-colors">{displayName}
+                  </><Link to="{routeTo}" c las sName="t e xt-g ray-400h over:t ext-w hit etr ans itio-n-colors">{displayName}
                   </Link>
                 )}
               </li>
@@ -63,10 +43,9 @@ const Breadcrumb: React.FC = () => {
           })}
     <>
         </ol>
-      </div>
-    </nav>
+      </d iv>
+    </n av>
   );
 };
-
 export default Breadcrumb;
     </>

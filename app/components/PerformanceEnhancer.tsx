@@ -1,11 +1,5 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight  } from 'lucide-react';
 'use client'
-
-<<<<<<< HEAD
-=======
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-
   const features = [
     {
       title: "Feature 1",
@@ -26,148 +20,89 @@ import { ArrowRight } from 'lucide-react';
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-  return (
+  r etu rn (
     <>
-    <div const className = {`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 ${className}`} />
-      <div className="flex items-centerjustify-betweenmb-6">
-<<<<<<< HEAD
-        <div className="flex items-centerspace-x-3">
-          <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-centerjustify-center">
-            <Zap className="w-5h-5text-white" />
-          </div>
-          <div>
-            <h3 className="text-whitefont-semibold"  >Performance Enhancer</h3>
-=======
-        </div>
-        <div className="flexitems-centerspace-x-3">
-        </div>
-          <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flexitems-centerjustify-center">
-        </div>
-            <Zap className="w-5h-5text-white" / />
-          </div>
-          <div />
-            <h3 className="text-whitefont-semibold">Performance Enhancer</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            <p className="text-gray-300text-sm">Monitor and optimize your app's performance</p>
-          </div>
+    </><d iv const c las sNa me = {`bg-w hite/10 b ack drop-b lur-sm r oun ded-xl p-6 b ord er b ord er-w hite/20 ${c las sNa me}`} />
+      <d iv c las sNa me="f lex i tems-c enterj ust ify-b etw een mb-6">
+        <d iv c las sNa me="f lex i tems-c enters pace-x-3">
+          <d iv c las sNa me="w-10 h-10 b g-grad ient-to-r from-b lue-600 to-purple-600 r oun ded-lg flex i tems-c enterj ust ify-c enter">
+            <Z ap c las sNa me="w-5h-5t e xt-w hite" />
+          </d iv>
+          <d iv>
+            <h3 c las sNa me="t e xt-w hit efo nt-s emi bold"  >P erf orm ance E nhancer</h3>            <p c las sNa me="t e xt-gray-300t ext-s-m">M oni tor and o pti mize your app's perf orm ance</p>
+          </d iv>
         <button
-          onClick="{optimizePerformance}"
-          disabled="{isOptimizing}"
-          className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-centerspace-x-2" />
-          {isOptimizing ? (
+          onClick="{o pti mizePe rfo rmance}"
+          d isabled="{i sOptimizing}"
+          c las sNa me="b g-grad ient-to-r from-b lue-600 to-purple-600 t ext-w hit-e px-4 py-2 r oun ded-lg f ont-s emi bold hover:from-b lue-700 hover:to-purple-700 transition-all duration-300 d isabled:opacity-50 d isabled:cursor-not-allowed flex i tems-c enters pace-x-2" />
+          {i sOptimizing ? (
     <>
-            <>
-<<<<<<< HEAD
-              <div className="w-4 h-4 border-2 border-white border-t-transparentrounded-fullanimate-spin" />
-              <span  >Optimizing...</span>
-=======
-              <div className="w-4 h-4 border-2 border-white border-t-transparentrounded-fullanimate-spin" / />
-              <span>Optimizing...</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             </>
+              <d iv c las sNa me="w-4 h-4 b order-2 b ord er-w hite b ord er-t-transparentro und ed-fullanimate-spin" />
+              <s pan  >O pti miz ing...</s pan>            </>
           ) : (
     <>
-            <>
-<<<<<<< HEAD
-              <Zap className="w-4h-4" />
-              <span  >Optimize</span>
-=======
-              <Zap className="w-4h-4" / />
-              <span>Optimize</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
             </>
+              <Z ap c las sNa me="w-4h-4" />
+              <s pan  >O pti mize</s pan>            </>
           )}
     <>
         </button>
-      </div>
-
-      {/* Performance Metrics */}
-<<<<<<< HEAD
-      <div className="grid grid-cols-2 md:grid-cols-4gap-4mb-6">
-        <div className="text-center">
-          <div className="text-2 xl font-bold text-white mb-1"  />{metrics.loadTime.toFixed(0)}ms
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-=======
+      </d iv>
+      {/* P erf orm ance M etrics */}
     <>
-      <div className="grid grid-cols-2 md:grid-cols-4gap-4mb-6">
-        </div>
-        <div className="text-center" />
-          <div className="text-2 xl font-boldtext-whitemb-1">{metrics.loadTime.toFixed(0)}ms
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            {features.map((feature, index) => (
+      </><d iv c las sNa me="g r id g rid-c ols-2 md:g rid-c ols-4g ap-4mb-6">
+        </d iv>
+        <d iv c las sNa me="t e xt-c enter" />
+          <d iv c las sNa me="t e xt-2 xl f ont-b old text-w hitem-b-1">{m etrics.loadTime.toFixed(0)}ms
+          </d iv>
+          <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-8">
+        </d iv>            {features.map((feature, index) => (
               {features.map((feature, index) => (
-
     <>
-                <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4">
-<<<<<<< HEAD
-                  <feature.icon className="h-6w-6text-white" />
-                </div>
-                <h3 className="text-xl font-semiboldtext-white mb-3"  >{feature.title}</h3>
-=======
-        </div>
-                  <feature.icon className="h-6w-6text-white" / />
-                </div>
-                <h3 className="text-xl font-semiboldtext-whitemb-3">{feature.title}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+                </><d iv k ey="{index}" c las sNa me="b g-w hite/10 b ack drop-b lur-sm r oun ded-xl p-6 b ord er b ord er-w hite/20 hover:bg-w hite/20transition-allduration-300" />
+                <d iv c las sNa me="f lex i tems-c enter j ust ify-c enter w-12 h-12 bg-grad ient-to-r from-purple-500 to-b lue-600r oun ded-lgmb-4">
+        </d iv>
+                  <feature.i con c las sNa me="h-6w-6t e xt-w hite" / />
+                </d iv>
+                <h3 c las sNa me="t e xt-xl f ont-s emi bol dte xt-w hitem-b-3">{feature.title}</h3>                <p c las sNa me="t e xt-gray-300">{feature.description}</p>
+              </d iv>
             ))}
     <>
-          </div>
+          </d iv>
       </section>
-      {/* Benefits Section */}
+      {/* Benefits S ection */}
     <>
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4" />
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Key Benefits
+      </><section c las sNa me="p y-20 px-4 sm:px-6-lg:px-8-bg-w hite/5" />
+        <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv>
+          <d iv c las sNa me="t e xt-c entermb-16">
+        </d iv>
+            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-w hitem-b-4" />              K ey Benefits
   </
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Experience the power of our performanceenhancer solutions for your business.
+            <p c las sNa me="t e xt-xl t ext-gra-y-300 m ax-w-3x lmx-a uto">
+              Experience the power of our perf orm anceen hancer solutions f or your business.
     <>
             </p>
-          </div>
-          <div className="grid grid-cols-1md:grid-cols-2gap-6">
-<<<<<<< HEAD
+          </d iv>
+          <d iv c las sNa me="g r id g rid-c ols-1md:g rid-c ols-2g ap-6">
+        </d iv>
             {benefits.map((benefit, index) => (
               {features.map((feature, index) => (
-
-                <div key="{index}" className="flex items-startspace-x-3" />
-                <CheckCircle className="h-6 w-6 text-purple-400mt-1flex-shrink-0" />
-=======
-        </div>
-            {benefits.map((benefit, index) => (
-              {features.map((feature, index) => (
-
     <>
-                <div key="{index}" className="flexitems-startspace-x-3" />
-                <CheckCircle className="h-6 w-6 text-purple-400mt-1flex-shrink-0" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <p className="text-gray-300text-lg">{benefit}</p>
-              </div>
+                </><d iv k ey="{index}" c las sNa me="f lexi tems-s tar tsp ace-x-3" />
+                <C hec kCi rcle c las sNa me="h-6 w-6 t e xt-purple-400mt-1-flex-s hri nk-0" / />                <p c las sNa me="t e xt-gray-300t ext-l-g">{benefit}</p>
+              </d iv>
             ))}
     <>
-          </div>
+          </d iv>
       </section>
 }
     <>
   </h2>
   </button>
-  </span>
-  </div>
+  </s pan>
+  </d iv>
 };
   ];const benefits = [
     'Advanced AI technology integration',
@@ -179,153 +114,91 @@ import { ArrowRight } from 'lucide-react';
     'Cost-effective pricing plans',
     'Proven track record of success'
 ;
-<<<<<<< HEAD
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"></div>
-      <Helmet>
-=======
     <>
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div></div>
-      <Helmet>
+  ];r etu rn (</><d iv c las sNa me="m in-h-scre en bg-grad ient-to-br from-s late-900via-purple-900to-s late-900">
+        </d iv></d iv>
+      <Helm et>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>PerformanceEnhancer | Zion Tech Group</title>
-        <meta name="description" content="Professional PerformanceEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
-        <meta name="keywords" content="PerformanceEnhancer, AI solutions, IT services, Zion Tech Group, performanceenhancer" / / />
-      </Helmet>
-      {/* Hero Section */}
+        <m eta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transfo rm your business with our expert solutions." />
+      </Helm et>        <title>P erf orm anceEn hancer | Zion Tech Group</title>
+        <m eta name="description" content="Professional P erf orm anceEn hancer services by Zion Tech Group. Advanced AI and IT solutions f or your business." / / />
+        <m eta name="k eywords" content="P erf orm anceEn hancer, AI solutions, IT services, Zion Tech Group, perf orm anceen hancer" / / />
+      </Helm et>
+      {/* H ero S ection */}
     <>
-      <section className="relative py-20 px-4sm:px-6lg:px-8" /></section>
-<<<<<<< HEAD
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent"  />PerformanceEnhancer
-=======
-        <div className="max-w-7xlmx-auto">
-        </div></div>
-          <div className="text-center" /></div>
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent">PerformanceEnhancer
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </span>
+      </><section c las sNa me="r e lative py-20 px-4-sm:px-6-lg:px-8" /></section>
+        <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv></d iv>
+          <d iv c las sNa me="t e xt-c enter" /></d iv>
+            <h1 c las sNa me="t e xt-4 xl md:t ext-6 xl f ont-b old text-w hitem-b-6" />
+              <s pan c las sNa me="b g-grad ient-to-r from-purple-400 to-b lue-400bg-clip-t exttext-transpare-n-t">P erf orm anceEn hancer              </s pan>
               <br / />
-              <span className="text-white">Solutions</span>
+              <s pan c las sNa me="t e xt-w hite">S olutions</s pan>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
-              Transform your business with our advanced performanceenhancer solutions.
-              Powered by cutting-edge AI technology and industry expertise.
+            <p c las sNa me="t e xt-xl t ext-gra-y-300 mb-8 m ax-w-3x lmx-a uto">
+              Transfo rm your business with our advanced perf orm anceen hancer solutions.
+              Powered by cutting-edge AI technology and indu stry expertise.
     <>
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-rowgap-4justify-center"></div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" />
-=======
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div></div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Get Started
+            <d iv c las sNa me="f lex flex-c ol sm:flex-rowg ap-4j ust ify-c enter">
+        </d iv></d iv>
+              <button c las sNa me="b g-grad ient-to-r from-purple-500 to-b lue-600 t ext-w hit-e px-8 py-3 r oun ded-lg f ont-s emi bold hover:from-purple-600 hover:to-b lue-700 transition-all duration-300flex items-c enter" />                Get Star ted
     <>
-                <ArrowRight className="ml-2h-5w-5" />
+                </><ArrowRight c las sNa me="m l-2h-5w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Learn More
+              <button c las sNa me="b order b ord er-w hite t ext-w hit-e px-8 py-3 r oun ded-lg f ont-s emi bold hover:bg-w hite hover:t ext-gra-y-900transition-allduration-300">Learn More
               </button>
-            </div>
-        </div>
+            </d iv>
+        </d iv>
       </section>
-      {/* Features Section */}
+      {/* Features S ection */}
     <>
-      <section className="py-20 px-4sm:px-6lg:px-8" /></section>
-<<<<<<< HEAD
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-centermb-16"></div>
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Why Choose Our PerformanceEnhancer?
-=======
-        <div className="max-w-7xlmx-auto">
-        </div></div>
-          <div className="text-centermb-16">
-        </div></div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Why Choose Our PerformanceEnhancer?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Our performanceenhancer solutions deliver unmatched performance, security, and scalability.
+      </><section c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" /></section>
+        <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv></d iv>
+          <d iv c las sNa me="t e xt-c entermb-16">
+        </d iv></d iv>
+            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-w hitem-b-4">Why Choose Our P erf orm anceEn hancer?            </h2>
+            <p c las sNa me="t e xt-xl t ext-gra-y-300 m ax-w-3x lmx-a uto">
+              Our perf orm anceen hancer solutions deliver unmatched perf orm ance, security, and scalability.
     <>
             </p>
-          </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8"></div>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            {features.map((feature, index) => (}
+          </d iv>
+          <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-8">
+        </d iv></d iv>            {features.map((feature, index) => (}
               {features.map((feature, index) => (
-
     <>
-                <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" /></div>
-<<<<<<< HEAD
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4"></div>
-                  <feature.icon className="h-6w-6text-white" />
-                </div>
-                <h3 className="text-xl font-semiboldtext-white mb-3"  >{feature.title}</h3>
-=======
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4">
-        </div></div>
-                  <feature.icon className="h-6w-6text-white" / />
-                </div>
-                <h3 className="text-xl font-semiboldtext-whitemb-3">{feature.title}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <p className="text-gray-300">{feature.description}</p>
-              </div>))}
-          </div>
+                </><d iv k ey="{index}" c las sNa me="b g-w hite/10 b ack drop-b lur-sm r oun ded-xl p-6 b ord er b ord er-w hite/20 hover:bg-w hite/20transition-allduration-300" /></d iv>
+                <d iv c las sNa me="f lex i tems-c enter j ust ify-c enter w-12 h-12 bg-grad ient-to-r from-purple-500 to-b lue-600r oun ded-lgmb-4">
+        </d iv></d iv>
+                  <feature.i con c las sNa me="h-6w-6t e xt-w hite" / />
+                </d iv>
+                <h3 c las sNa me="t e xt-xl f ont-s emi bol dte xt-w hitem-b-3">{feature.title}</h3>                <p c las sNa me="t e xt-gray-300">{feature.description}</p>
+              </d iv>))}
+          </d iv>
       </section>
-      {/* Benefits Section */}
+      {/* Benefits S ection */}
     <>
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" /></section>
-<<<<<<< HEAD
-        <div className="max-w-7xlmx-auto"></div>
-          <div className="text-centermb-16"></div>
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Key Benefits
-=======
-        <div className="max-w-7xlmx-auto">
-        </div></div>
-          <div className="text-centermb-16">
-        </div></div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Key Benefits
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Experience the power of our performanceenhancer solutions for your business.
+      </><section c las sNa me="p y-20 px-4 sm:px-6-lg:px-8-bg-w hite/5" /></section>
+        <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv></d iv>
+          <d iv c las sNa me="t e xt-c entermb-16">
+        </d iv></d iv>
+            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-w hitem-b-4">K ey Benefits            </h2>
+            <p c las sNa me="t e xt-xl t ext-gra-y-300 m ax-w-3x lmx-a uto">
+              Experience the power of our perf orm anceen hancer solutions f or your business.
     <>
             </p>
-          </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1md:grid-cols-2gap-6"></div>
+          </d iv>
+          <d iv c las sNa me="g r id g rid-c ols-1md:g rid-c ols-2g ap-6">
+        </d iv></d iv>
             {benefits.map((benefit, index) => (}
               {features.map((feature, index) => (
-
-                <div key="{index}" className="flex items-startspace-x-3" /></div>
-                <CheckCircle className="h-6 w-6 text-purple-400mt-1flex-shrink-0" />
-                <p className="text-gray-300text-lg">{benefit}</p>
-              </div>))}
-          </div>
-};
-=======
-          <div className="grid grid-cols-1md:grid-cols-2gap-6">
-        </div></div>
-            {benefits.map((benefit, index) => (}
-              {features.map((feature, index) => (
-
     <>
-                <div key="{index}" className="flexitems-startspace-x-3" /></div>
-                <CheckCircle className="h-6 w-6 text-purple-400mt-1flex-shrink-0" / />
-                <p className="text-gray-300text-lg">{benefit}</p>
-              </div>))}
-          </div>
+                </><d iv k ey="{index}" c las sNa me="f lexi tems-s tar tsp ace-x-3" /></d iv>
+                <C hec kCi rcle c las sNa me="h-6 w-6 t e xt-purple-400mt-1-flex-s hri nk-0" / />
+                <p c las sNa me="t e xt-gray-300t ext-l-g">{benefit}</p>
+              </d iv>))}
+          </d iv>
 };
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

@@ -6,7 +6,6 @@ import { useEffect, useCallback } from 'react';
     }
   }, []);
       // Monitor Core Web Vitals
-      
           });
         }
       });

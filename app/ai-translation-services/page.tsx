@@ -1,82 +1,69 @@
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
-import { Globe, Zap, Shield, Users, CheckCircle, ArrowRight, BarChart3, Brain, FileText, Mic } from 'lucide-react'
-=======
-import { Globe, Zap, Shield, Users, CheckCircle, ArrowRight, BarChart3, Brain, FileText, Mic } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import React  from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import { Globe, Zap, Shield, Users, CheckCircle, ArrowRight, BarChart3, Brain, FileText, Mic  } from 'lucide-react';import { Link } from 'react-router-dom'
+import React from 'react';import { ArrowRight  } from 'lucide-react';
+import { Link  } from 'react-router-dom';
 const AITranslationServicesPage: React.FC = () => {
-  const features = [
+  const f eat ures = [
     {
-      icon: <Globe className="w-6h-6text-cyan-400" />,
-      title: '100+ Languages',
-      description: 'Support for over 100 languages with native-level accuracy and cultural context.'
+      i con: <Globe c las sNa me="w-6h-6t ext-c yan-400" />,
+      t itle: '100+ Languages',
+      description: 'Support for over 100 languages with native-level accuracy and cult ural cont ext.'
     },
     {
-      icon: <Zap className="w-6h-6text-emerald-400" />,
-      title: 'Real-time Translation',
+      i con: <Zap c las sNa me="w-6h-6t ext-e merald-400" />,
+      t itle: 'Real-time Translation',
       description: 'Instant translation for live conversations, meetings, and customer support.'
     },
     {
-      icon: <Brain className="w-6h-6text-purple-400" />,
-      title: 'AI-Powered Context',
-      description: 'Advanced AI understands context, tone, and cultural nuances for accurate translations.'
+      i con: <Brain c las sNa me="w-6h-6t ext-p urp le-400" />,
+      t itle: 'AI-Powered Cont ext',
+      description: 'Advanced AI understands cont ext, tone, and cult ural nuances for accurate translations.'
     },
     {
-      icon: <FileText className="w-6h-6text-orange-400" />,
-      title: 'Document Translation',
-      description: 'Translate documents, websites, and content while preserving formatting and structure.'
+      i con: <FileText c las sNa me="w-6h-6t ext-o ran ge-400" />,
+      t itle: 'Document Translation',
+      description: 'Translate documents, websites, and content while preserving formatting and stru ctu re.'
     },
     {
-      icon: <Mic className="w-6h-6text-pink-400" />,
-      title: 'Voice Translation',
-      description: 'Convert speech to text and translate in real-time with natural voice synthesis.'
+      i con: <Mic c las sNa me="w-6h-6t ext-p ink-400" />,
+      t itle: 'Voice Translation',
+      description: 'Convert speech to t ext and translate in real-time with natural voice synthes is.'
     },
     {
-      icon: <Shield className="w-6h-6text-blue-400" />,
-      title: 'Enterprise Security',
+      i con: <Shield c las sNa me="w-6h-6t ext-b lue-400" />,
+      t itle: 'Enterprise Security',
       description: 'Bank-level security with end-to-end encryption for sensitive business communications.'
     }
   ]
-
   const useCases = [
     {
-      title: 'Global Customer Support',
-      description: 'Provide support in any language with instant translation and cultural adaptation.',
-      icon: <Users className="w-8h-8text-cyan-400" />
+      t itle: 'Global Customer Support',
+      description: 'Provide support in any language with instant translation and cult ural a dap tation.',
+      i con: <Users c las sNa me="w-8h-8t ext-c yan-400" />
     },
     {
-      title: 'Multilingual Content',
-      description: 'Translate websites, apps, and marketing materials for global audiences.',
-      icon: <FileText className="w-8h-8text-emerald-400" />
+      t itle: 'Multilingual Content',
+      description: 'Translate websites, apps, and marketing materials for global a udi ences.',
+      i con: <FileText c las sNa me="w-8h-8t ext-e merald-400" />
     },
     {
-      title: 'International Meetings',
-      description: 'Break down language barriers in real-time during video conferences and calls.',
-      icon: <Globe className="w-8h-8text-purple-400" />
+      t itle: 'International Meetings',
+      description: 'Break down language barriers in real-time during video conf erences and c alls.',
+      i con: <Globe c las sNa me="w-8h-8t ext-p urp le-400" />
     },
     {
-      title: 'E-commerce Expansion',
+      t itle: 'E-comm erce Expansion',
       description: 'Expand to new markets with localized product descriptions and customer communications.',
-      icon: <BarChart3 className="w-8h-8text-orange-400" />
+      i con: <BarChart3 c las sNa me="w-8h-8t ext-o ran ge-400" />
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Starter',
       price: '$49',
       period: '/month',
       description: 'Perfect for small businesses',
-      features: [
+      f eat ures: [
         'Up to 50,000 words/month',
         '50+ languages',
         'Basic API access',
@@ -89,21 +76,21 @@ const AITranslationServicesPage: React.FC = () => {
       price: '$149',
       period: '/month',
       description: 'Ideal for growing companies',
-      features: [
+      f eat ures: [
         'Up to 500,000 words/month',
         '100+ languages',
         'Real-time translation',
         'Priority support',
         'Custom integrations'
       ],
-      popular: true
+      popular: t rue
     },
     {
       name: 'Enterprise',
       price: '$499',
       period: '/month',
       description: 'For large organizations',
-      features: [
+      f eat ures: [
         'Unlimited words',
         'All languages',
         'Custom AI training',
@@ -113,403 +100,120 @@ const AITranslationServicesPage: React.FC = () => {
       popular: false
     }
   ]
-
   return (
     <>
-    <>
+    </>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <t itle>5G Data Analytics - Zion Tech Group</t itle>
         <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
-        <title>AI Translation Services - Multilingual Communication | Zion Tech Group</title>
+        <t itle>AI Translation Services - Multilingual Communication | Zion Tech Group</t itle>
         <meta name="description" content="Break language barriers with AI-powered translation services. Real-time translation, document processing, and multilingual support for global businesses." / / />
         <meta name="keywords" content="AI translation, multilingual, language services, real-time translation, document translation, global communication" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-translation-services" />
+        <link rel="canonic al" href="https://zion techgroup.com/ai-translation-services" />
       </Helmet>
     </>
-
-      <div className="min-h-screenbg-gray-900text-white">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        {/* Hero Section */}
+      <d iv c las sNa me="m in-h-scre enbg-gray-900t ext-whit-e">
+        {/* H ero Section */}
     <>
-        <section className="relative py-20px-4overflow-hidden" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/10to-purple-500/10" />
-          <div className="relative max-w-7xlmx-autotext-center">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-              <Globe className="w-4h-4" />
-              <span   />AI Translation Services</span>
-=======
-          <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/10to-purple-500/10" / />
-          <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-        </div>
-              <Globe className="w-4h-4" / />
-              <span>AI Translation Services</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </div>
-    </>
-            
-<<<<<<< HEAD
-            <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
-              Break Language <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Barriers</span>
-=======
+        </><section c las sNa me="r e lative py-20-px-4-over flow-h idd en" />
+              {f eat ures.map((f eat ure, index) => (
     <>
-            <h1 className="text-4 xl sm:text-6 xl md:text-7 xl font-bold text-whitemb-8leading-tight" />
-              Break Language <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Barriers</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h1>
-    </>
-            
-            <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
-              Connect with global audiences using AI-powered translation services. 
-              Real-time translation, document processing, and multilingual support for businesses worldwide.
-            </p>
-            
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-              <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" >
-           
-          <span    />
-        </Link>Start Free Trial</span>
-                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-              </Link>
-              <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>View Demo</span>
-=======
-    <>
-            <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-        </div>
-              <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
-                <span>Start Free Trial</span>
-                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-              </Link>
-              <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                <span>View Demo</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-              </Link>
-            </div>
-        </section>
-    </>
-
-        {/* Features Section */}
-    <>
-        <section className="py-20px-4relative" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Translation Features</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Everything you need to communicate effectively across languages and cultures.
-=======
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" / />
-          <div className="relative max-w-7xlmx-auto">
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Translation Features</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                Everything you need to communicate effectively across languages and cultures.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {features.map((feature, index) => (
-    <>
-                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
-                  </div>
-<<<<<<< HEAD
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{feature.title}
-                  </h3>
-                  <p className="text-gray-300leading-relaxed">
-              {feature.description}
-=======
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title}
-                  </h3>
-                  <p className="text-gray-300leading-relaxed" />
-    </>
-                    {feature.description}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </p>
-                </div>
-    </>
-              ))}
-    <>
-            </div>
-        </section>
-    </>
-
-        {/* Use Cases Section */}
-    <>
-        <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
-          <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Perfect for <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Every Business</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Discover how AI translation can transform your business operations and global reach.
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Perfect for <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Every Business</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
-                Discover how AI translation can transform your business operations and global reach.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
-            
-            <div className="grid grid-cols-1md:grid-cols-2gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                </><d iv key="{index}" c las sNa me="g roup bg-white/10 b ack drop-b lur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-a ll duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-c yan-500/10" />
+                  <d iv c las sNa me="f l ex items-c enter j ust ify-c enter w-16 h-16 bg-grad ient-to-r from-c yan-500 to-p urp le-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{f eat ure.i con}
+                  </d iv>
               {useCases.map((useCase, index) => (
     <>
-                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                  <div className="flex items-centerspace-x-4mb-6">
-<<<<<<< HEAD
-                    <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl group-hover:scale-110transition-transformduration-300"  />{useCase.icon}
-                    </div>
-                    <h3 className="text-2 xl font-bold text-whitegroup-hover:text-cyan-400 transition-colors"  />{useCase.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300leading-relaxed">
-              {useCase.description}
-=======
-        </div>
-                    <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl group-hover:scale-110transition-transformduration-300">{useCase.icon}
-                    </div>
-                    <h3 className="text-2 xl font-bold text-whitegroup-hover:text-cyan-400transition-colors">{useCase.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300leading-relaxed" />
-    </>
-                    {useCase.description}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </p>
-                </div>
-    </>
-              ))}
-    <>
-            </div>
-        </section>
-    </>
-
-        {/* Pricing Section */}
-    <>
-        <section className="py-20px-4relative" />
-          <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Choose the plan that fits your translation needs. All plans include a 14-day free trial.
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
-                Choose the plan that fits your translation needs. All plans include a 14-day free trial.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
-            
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                </><d iv key="{index}" c las sNa me="g roup bg-white/10 b ack drop-b lur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-a llduration-300hover:scale-105" />
+                  <d iv c las sNa me="f l ex items-c enters pace-x-4mb-6">
               {pricingPlans.map((plan, index) => (
-                <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
+                <d iv key="{index}" c las sNa me="{`r e lative" bg-white/10 b ack drop-b lur-lg rounded-2 xl p-8 border transition-a ll duration-300 hover:scale-105 ${
                   plan.popular 
-                    ? 'border-cyan-400/50 shadow-2 xl shadow-cyan-500/20' 
-                    : 'border-white/20 hover: border-cyan-400/30'
+                    ? 'border-c yan-400/50 shadow-2 xl shadow-c yan-500/20' 
+                    : 'border-white/20 hover: border-c yan-400/30'
                 }`} />
                   {plan.popular && (
-<<<<<<< HEAD
-                    <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold"  />Most Popular
-                      </div>
+                    <d iv c las sNa me="a b solute -t op-4 l eft-1/2transform-translate-x-1/2">
+                      <d iv c las sNa me="b g-grad ient-to-r from-c yan-500 to-p urp le-600 t ext-whit-e px-6 py-2 rounded-fulltext-smfo-n-t-semibold"  />Most Popular
+                      </d iv>
                   )}
-                  
-                  <div className="text-centermb-8">
-                    <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">
+                  <d iv c las sNa me="t ext-c entermb-8">
+                    <h3 c las sNa me="t ext-2 xl font-bold t ext-whit-e mb-2"   />{plan.name}</h3>
+                    <p c las sNa me="t ext-gray-300 mb-4">
               {plan.description}</p>
-                    <div className="flex items-baselinejustify-center">
-                      <span className="text-5 xlfont-bold text-white"   />{plan.price}</span>
-                      <span className="text-gray-400ml-2"   />{plan.period}</span>
-                    </div>
-                  
-                  <ul className="space-y-4mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-centerspace-x-3" />
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" />
-                        <span className="text-gray-300"   />{feature}</span>
-=======
-    <>
-                    <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-        </div>
-                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
-                      </div>
-    </>
-                  )}
-                  
-    <>
-                  <div className="text-centermb-8">
-        </div>
-                    <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                    <p className="text-gray-300mb-4">{plan.description}</p>
-                    <div className="flexitems-baselinejustify-center" />
-                      <span className="text-5 xlfont-boldtext-white">{plan.price}</span>
-                      <span className="text-gray-400ml-2">{plan.period}</span>
-                    </div>
-    </>
-                  
-                  <ul className="space-y-4mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-    <>
-                      <li key="{featureIndex}" className="flexitems-centerspace-x-3" />
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
-                        <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </li>
+                    <d iv c las sNa me="f l ex items-b ase lin ejusti fy-c enter">
+                      <s pan c las sNa me="t ext-5 x lfo nt-bold t ext-whit-e"   />{plan.price}</s pan>
+                      <s pan c las sNa me="t ext-gray-400ml-2"   />{plan.period}</s pan>
+                    </d iv>
+                  <ul c las sNa me="s p ace-y-4mb-8" />
+                    {plan.f eat ures.map((f eat ure, f eat ureIndex) => (
+                      <li key="{f eat ureIndex}" c las sNa me="f l ex items-c enters pace-x-3" />
+                        <CheckCircle c las sNa me="w-5 h-5t ext-g reen-400f lex-s hrink-0" />
+                        <s pan c las sNa me="t ext-gray-300"   />{f eat ure}</s pan>                      </li>
     </>
                     ))}
                   </ul>
-                  
                   <Link 
-                    to="/contact" 
-                    className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                    to="/cont act" 
+                    c las sNa me="{`b lock" w-full t ext-c ente-r py-3 rounded-xl font-semibold transition-a ll duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
+                        ? 'bg-grad ient-to-r from-c yan-500 to-p urp le-600 t ext-whit-e hover:from-c yan-600 hover:to-p urp le-700'
+                        : 'border-2 border-c yan-400 t ext-c ya-n-400 hover: bg-c yan-400 hover:t ext-gra-y-900'
                     }`}
                     />Get Started
     <>
                   </Link>
-                </div>
+                </d iv>
     </>
               ))}
     <>
-            </div>
+            </d iv>
         </section>
     </>
-
-        {/* CTA Section */}
+        {/* C TA Section */}
     <>
-        <section className="py-20px-4relative" />
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" />
-          <div className="relative max-w-7xlmx-autotext-center">
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8sm:p-12lg:p-16">
-              <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" />
-                Ready to Go <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Global?</span>
-=======
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" / />
-          <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8sm:p-12lg:p-16">
-        </div>
-              <h2 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-whitemb-6leading-tight" />
-                Ready to Go <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">Global?</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </h2>
+        </><section c las sNa me="p y-20px-4-relative" />
+          <d iv c las sNa me="a b solute inset-0 bg-grad ient-to-r from-c yan-500/10via-p urp le-500/10to-p ink-500/10" / />
+          <d iv c las sNa me="r e lative m ax-w-7 x lmx-a uto text-c ente-r">
+        </d iv>
+            <d iv c las sNa me="b g-grad ient-to-r from-c yan-600 via-p urp le-600 to-p ink-600 rounded-3 xl p-8sm:p-12lg:p-16">
+        </d iv>
+              <h2 c las sNa me="t ext-4 xl sm:t ext-5 xl md:t ext-6 xl font-bold t ext-whit em-b-6leading-tight" />
+                Ready to Go <s pan c las sNa me="b g-grad ient-to-r from-c yan-300 to-p ink-300bg-clip-t exttext-transpare-n-t">Global?</s pan>              </h2>
     </>
-              
-              <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
-<<<<<<< HEAD
-              Break down language barriers and connect with global audiences. 
+              <p c las sNa me="t ext-xl sm:t ext-2 xl t ext-whit-e/90 mb-8 sm:mb-12 m ax-w-4 x lmx-a utoleading-relaxed">
+              Break down language barriers and connect with global a udi ences. 
                 Start your free trial today and experience the power of AI translation.
               </p>
-              
-              <div className="flex flex-col sm:flex-rowgap-6justify-center">
-                <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
-           
-          <span    />
-        </Link>Start Free Trial</span>
-                  <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+              <d iv c las sNa me="f l ex f lex-c ol sm:f lex-rowg ap-6j ust ify-c enter">
+                <Link to="/cont act" c las sNa me="g roup bg-white t ext-c ya-n-600 px-10 py-4 rounded-xl font-bold t ext-l-g hover:bg-gray-100 transition-a ll duration-300 f lex items-c enter j ust ify-c enter s pace-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
+          <s pan    />
+        </Link>Start Free Trial</s pan>
+                  <ArrowRight c las sNa me="w-5 h-5g roup-hover:translate-x-1transition-transform" />
                 </Link>
-                <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>View All Plans</span>
-=======
-                Break down language barriers and connect with global audiences. 
-                Start your free trial today and experience the power of AI translation.
-              </p>
-              
-    <>
-              <div className="flex flex-col sm:flex-rowgap-6justify-center">
-        </div>
-                <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
-                  <span>Start Free Trial</span>
-                  <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+                <Link to="/pricing" c las sNa me="g roup border-2 border-white t ext-whit-e px-10 py-4 rounded-xl font-bold t ext-l-g hover:bg-white/10 transition-a ll duration-300 f lex items-c enter j ust ify-c enters pace-x-2b ack drop-b lur-sm" >
+          <s pan    />
+        </Link>View All Plans</s pan>                  <ArrowRight c las sNa me="w-5 h-5g roup-hover:translate-x-1transition-transform" />
                 </Link>
-                <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                  <span>View All Plans</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                </Link>
-              </div>
-          </div>
+              </d iv>
+          </d iv>
         </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+      </d iv>
     </>
   )
 }
-
 export default AITranslationServicesPage;
     </>

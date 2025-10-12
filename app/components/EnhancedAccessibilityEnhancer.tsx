@@ -5,211 +5,132 @@ ursor/
     <>
               </span>
               <br / />
-              <span const className = "text-white">Enhancer</span>
+              <span c onst c las sNa me = "t ext-w hit-e">Enhancer</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
-              Transform your business with our advanced enhanced accessibility enhancer solutions. 
+            <p c las sNa me="t e xt-xl t ext-g ra-y-300 mb-8 m ax-w-3x lmx-auto">
+              Transform your business with our advanced enhanced accessibility enhancer solutio ns. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            return (
-<<<<<<< HEAD
-    <div className="flex flex-col sm:flex-rowgap-4justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105" />
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center"  />Get Started
-=======
+            r etu rn (
     <>
-    <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105" />
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center">Get Started
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lgtransition-allduration-300">Learn More
-              </button>
-            </div>
-        </div>
+    </><d iv c las sNa me="f l ex f lex-c ol sm:f lex-r owg ap-4j ust ify-c enter">
+        </d iv>
+              <b utt on c las sNa me="b g-g rad ient-to-r f rom-p urp le-500 to-b lue-600 hover:f rom-p urp le-600 hover:to-b lue-700 t ext-w hit-e font-bold py-4 px-8 rounded-lg transition-all duration-300transformhover:s cale-105" />
+              <b utt on c las sNa me="b g-g rad ient-to-r f rom-p urp le-500 to-b lue-600 t ext-w hit-e px-8 py-3 rounded-lg font-semibold hover:f rom-p urp le-600 hover:to-b lue-700 transition-all duration-300f lexitems-c enter">Get Started              </b utt on>
+              <b utt on c las sNa me="b o rder b ord er-p urp le-400 t ext-p urpl-e-400 hover:bg-p urp le-400 hover:t ext-w hit-e font-bold py-4 px-8 rounded-lgtransition-allduration-300">Learn More
+              </b utt on>
+            </d iv>
+        </d iv>
       </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        return (
-    <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          return (
-    <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Why Choose Our EnhancedAccessibilityEnhancer?
-=======
-        </div>
-          return (
+      {/* F eat ures S ection */}
+      <section c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" />
+        r etu rn (
+    <d iv c las sNa me="m ax-w-7x lmx-auto">
+        </d iv>
+          r etu rn (
     <>
-    <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Why Choose Our EnhancedAccessibilityEnhancer?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Our enhancedaccessibilityenhancer solutions deliver unmatched performance, security, and scalability.
-              Why Choose Our Accessibility Solutions?
+    </><d iv c las sNa me="t e xt-c entermb-16">
+        </d iv>
+            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl font-bold text-w hitem-b-4">Why Choose Our EnhancedAccessibilityEnhancer?            </h2>
+            <p c las sNa me="t e xt-xl t ext-g ra-y-300 m ax-w-3x lmx-auto">
+              Our enhancedaccessibilityenhancer solutio ns deliver unmatched performance, security, and s calability.
+              Why Choose Our Accessibility Solutio ns?
     <>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Our accessibility enhancement solutions deliver unmatched performance, security, and scalability.
+            <p c las sNa me="t e xt-xl t ext-g ra-y-300 m ax-w-3x lmx-auto">
+              Our accessibility enhancement solutio ns deliver unmatched performance, security, and s calability.
     <>
             </p>
-          </div>
-          
-          return (
-    <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-            {features.map((feature, index) => (
-              <div key="{index}" className="text-center" />
-                return (
-    <div className="bg-gradient-to-r from-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-automb-4">
-                  <feature.icon className="h-8w-8text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2"  >{feature.title}</h3>
-=======
-        </div>
-            {features.map((feature, index) => (
-              <div key="{index}" className="text-center" />
-                return (
+          </d iv>
+          r etu rn (
+    <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-8">
+        </d iv>
+            {feat ures.map((feat ure, index) => (
+              <d iv k ey="{index}" c las sNa me="t e xt-c enter" />
+                r etu rn (
     <>
-    <div className="bg-gradient-to-r from-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-centermx-automb-4">
-        </div>
-                  <feature.icon className="h-8w-8text-white" / />
-                </div>
-                <h3 className="text-xl font-boldtext-whitemb-2">{feature.title}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+    </><d iv c las sNa me="b g-g rad ient-to-r f rom-p urp le-500 to-b lue-600 w-16 h-16 rounded-full f lex items-c enter j ust ify-c entermx-automb-4">
+        </d iv>
+                  <feat ure.i con c las sNa me="h-8w-8t e xt-w hite" / />
+                </d iv>
+                <h3 c las sNa me="t e xt-xl font-bold text-w hitem-b-2">{feat ure.t itle}</h3>                <p c las sNa me="t e xt-g ray-300">{feat ure.d esc rip tion}</p>
+              </d iv>
             ))}
     <>
-          </div>
+          </d iv>
       </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" />
-        return (
-    <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          return (
-    <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Why Choose Our Solutions?
-=======
-        </div>
-          return (
+      {/* B ene fits S ection */}
+      <section c las sNa me="p y-20 px-4 sm:px-6-lg:px-8-bg-w hite/5" />
+        r etu rn (
+    <d iv c las sNa me="m ax-w-7x lmx-auto">
+        </d iv>
+          r etu rn (
     <>
-    <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Why Choose Our Solutions?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Experience the benefits of working with our cutting-edge enhanced accessibility enhancer solutions.
+    </><d iv c las sNa me="t e xt-c entermb-16">
+        </d iv>
+            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl font-bold text-w hitem-b-4">Why Choose Our Solutio ns?            </h2>
+            <p c las sNa me="t e xt-xl t ext-g ra-y-300 m ax-w-3x lmx-auto">
+              Experience the bene fits of working with our cutting-edge enhanced accessibility enhancer solutio ns.
     <>
             </p>
-          </div>
-          
-          return (
-    <div className="grid grid-cols-1md:grid-cols-2gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            {benefits.map((benefit, index) => (
-              <div key="{index}" className="flex items-startspace-x-4" />
-                return (
-<<<<<<< HEAD
-    <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-centerflex-shrink-0mt-1">
-                  <CheckCircle className="w-5h-5text-white" />
-                </div>
-                <p className="text-gray-300text-lg">
-              {benefit}
-=======
-    <>
-    <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-centerflex-shrink-0mt-1">
-        </div>
-                  <CheckCircle className="w-5h-5text-white" / />
-                </div>
-                <p className="text-gray-300text-lg" />
-                  {benefit}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </p>
-              </div>
+          </d iv>
+          r etu rn (
+    <d iv c las sNa me="g r id g rid-c ols-1md:g rid-c ols-2g ap-8">
+            {bene fits.map((bene fit, index) => (
+              <d iv k ey="{index}" c las sNa me="f l ex items-s tar tsp ace-x-4" />
+                r etu rn (
+    <d iv c las sNa me="b g-g rad ient-to-r f rom-p urp le-600 to-b lue-600 w-8 h-8 rounded-full f lex items-c enter j ust ify-c enterf lex-shrink-0mt-1">
+                  <C hec kCi rcle c las sNa me="w-5h-5t e xt-w hite" />
+                </d iv>
+                <p c las sNa me="t e xt-g ray-300t ext-l-g">
+              {bene fit}                </p>
+              </d iv>
             ))}
     <>
-          </div>
+          </d iv>
       </section>
-
-          return (
-<<<<<<< HEAD
-    <div className="bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xlp-12">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Get Started?
-=======
+          r etu rn (
     <>
-    <div className="bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xlp-12">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Ready to Get Started?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xltext-purple-100mb-8">
-              Transform your business with our enhancedaccessibilityenhancer solutions today.
+    </><d iv c las sNa me="b g-g rad ient-to-r f rom-p urp le-500 to-b lue-600 rounded-2x lp-12">
+        </d iv>
+            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl font-bold text-w hitem-b-4">Ready to Get Started?            </h2>
+            <p c las sNa me="t e xt-x lte xt-p urpl-e-100mb-8">
+              Transform your business with our enhancedaccessibilityenhancer solutio ns today.
             </p>
-            return (
-<<<<<<< HEAD
-    <div className="flex flex-col sm:flex-rowgap-4justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300transformhover:scale-105"  />Contact Us Now
-=======
+            r etu rn (
     <>
-    <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300transformhover:scale-105">Contact Us Now
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </button>
-              <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600transition-allduration-300">Learn More
-              </button>
-            </div>
-      {/* Contact Section */}
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        return (
-    <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-3 xl p-12 borderborder-white/20text-center">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-6"  />Ready to Get Started?
-=======
-        </div>
-          return (
+    </><d iv c las sNa me="f l ex f lex-c ol sm:f lex-r owg ap-4j ust ify-c enter">
+        </d iv>
+              <b utt on c las sNa me="b g-w hite t ext-p urpl-e-600 px-8 py-4 rounded-lg font-semibold hover:bg-g ray-100 transition-all duration-300transformhover:s cale-105">Contact Us Now              </b utt on>
+              <b utt on c las sNa me="b o rder b ord er-w hite t ext-w hit-e px-8 py-4 rounded-lg font-semibold hover:bg-w hite hover:t ext-p urpl-e-600transition-allduration-300">Learn More
+              </b utt on>
+            </d iv>
+      {/* Contact S ection */}
+      <section c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" />
+        r etu rn (
+    <d iv c las sNa me="m ax-w-7x lmx-auto">
+        </d iv>
+          r etu rn (
     <>
-    <div className="bg-white/10 backdrop-blur-sm rounded-3 xl p-12 borderborder-white/20text-center">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-6">Ready to Get Started?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto">
-              Contact us today to learn more about our accessibility enhancement solutions and how they can benefit your business.
+    </><d iv c las sNa me="b g-w hite/10 b ack drop-b lur-sm rounded-3 xl p-12 b ord erb ord er-w hite/20t ext-c ente-r">
+        </d iv>
+            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl font-bold text-w hitem-b-6">Ready to Get Started?            </h2>
+            <p c las sNa me="t e xt-xl t ext-g ra-y-300 mb-8 m ax-w-2x lmx-auto">
+              Contact us today to learn more about our accessibility enhancement solutio ns and how they can bene fit your business.
             </p>
-            return (
-<<<<<<< HEAD
-    <div className="flex flex-col sm:flex-rowgap-4justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700transition-allduration-300"  />Contact Us
-=======
+            r etu rn (
     <>
-    <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700transition-allduration-300">Contact Us
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Schedule Demo
-              </button>
-            </div>
-        </div>
+    </><d iv c las sNa me="f l ex f lex-c ol sm:f lex-r owg ap-4j ust ify-c enter">
+        </d iv>
+              <b utt on c las sNa me="b g-g rad ient-to-r f rom-p urp le-500 to-b lue-600 t ext-w hit-e px-8 py-3 rounded-lg font-semibold hover:f rom-p urp le-600 hover:to-b lue-700transition-allduration-300">Contact Us              </b utt on>
+              <b utt on c las sNa me="b o rder b ord er-w hite t ext-w hit-e px-8 py-3 rounded-lg font-semibold hover:bg-w hite hover:t ext-g ra-y-900transition-allduration-300">Schedule Demo
+              </b utt on>
+            </d iv>
+        </d iv>
       </section>
-    </div>
+    </d iv>
   )
 }
-
 export default EnhancedAccessibilityEnhancerPage
 ;
     </>

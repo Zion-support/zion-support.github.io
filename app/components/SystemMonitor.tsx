@@ -1,103 +1,80 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { ArrowRight } from 'lucide-react';
+import React from 'react';import { ArrowRight  } from 'lucide-react';
 'use client'
-
-<<<<<<< HEAD
-=======
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
   ];
     <>
               </span>
               <br / />
-              <span const className = "text-white">Solutions</span>
+              <span c onst c las sNa me = "t ext-w hit-e">S olu tio ns</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
-              Transform your business with our advanced systemmonitor solutions.
+            <p c las sNa me="t e xt-xl t ext-g ra-y-300 mb-8 m ax-w-3x lmx-auto">
+              Transform your business with our advanced systemmonitor solu tio ns.
               Powered by cutting-edge AI technology and industry expertise.
     <>
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" />
-=======
-        </div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Get Started
+            <d iv c las sNa me="f l ex f lex-c ol sm:f lex-rowg ap-4j ust ify-c ent er">
+              <b utt on c las sNa me="b g-g rad ient-to-r from-p urp le-500 to-b lue-600 t ext-w hit-e px-8 py-3 rounded-lg font-semibold hover:from-p urp le-600 hover:to-b lue-700 transit ion-all duration-300f lex items-c ent er" />                Get Star ted
     <>
-                <ArrowRight className="ml-2h-5w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
+                </><ArrowRight c las sNa me="m l-2h-5w-5" />
+              </b utt on>
+              <b utt on c las sNa me="b o rder b ord er-w hite t ext-w hit-e px-8 py-3 rounded-lg font-semibold hover:bg-w hite hover:t ext-g ra-y-900transit ion-allduration-300" />
                 Learn More
   </
     <>
-            </div>
-    </div>
+            </d iv>
+    </d iv>
   )}
 export default SystemMonitorPage
-  </button>
+  </b utt on>
 }
-
 interface SystemMonitorProps {
-  onAlert?: (alert: string) => void
-  className?: string
+  o nAl ert?: (a lert: string) => v oid
+  c las sNa me?: string
 }
-
-const SystemMonitor: React.FC<SystemMonitorProps /> = ({
-  onAlert,
-  className = ''
+c onst SystemMonitor: React.FC<SystemMonitorProps /> = ({
+  o nAl ert,
+  c las sNa me = ''
 }) => {
-  const [metrics, setMetrics] = useState<SystemMetrics />({
+  c onst [m etr ics, s etM etr ics] = useState<SystemM etr ics />({
     cpu: 0,
     memory: 0,
     disk: 0,
     network: 0,
-    battery: 100,
+    batt ery: 100,
     uptime: 0
   })
-  const [isMonitoring, setIsMonitoring] = useState(false)
-
-  const updateMetrics = useCallback(() => {
-    // Simulate system metrics
-    const newMetrics = {
+  c onst [isMonitoring, s etIsMonitoring] = useState(false)
+  c onst updateM etr ics = useCallback(() => {
+    // Simulate system m etr ics
+    c onst newM etr ics = {
       cpu: Math.random() * 100,
       memory: Math.random() * 100,
       disk: Math.random() * 100,
       network: Math.random() * 100,
-      battery: Math.random() * 100,
-      uptime: Date.now() - performance.timing.navigationStart
+      batt ery: Math.random() * 100,
+      uptime: Date.now() - performance.timing.navigat ionSta rt
     }
-
-    setMetrics(newMetrics)
-
-    // Check for alerts
-    if (newMetrics.cpu > 90) {
-      onAlert?.('High CPU usage detected')
+    s etM etr ics(newM etr ics)
+    // Check for a lerts
+    if (newM etr ics.cpu > 90) {
+      o nAl ert?.('High CPU usage detected')
     }
-    if (newMetrics.memory > 90) {
-      onAlert?.('High memory usage detected')
+    if (newM etr ics.memory > 90) {
+      o nAl ert?.('High memory usage detected')
     }
-    if (newMetrics.disk > 90) {
-      onAlert?.('High disk usage detected')
+    if (newM etr ics.disk > 90) {
+      o nAl ert?.('High disk usage detected')
     }
-  }, [onAlert])
-
+  }, [o nAl ert])
   useEffect(() => {
     if (isMonitoring) {
-      const interval = setInterval(updateMetrics, 1000)
-      return () => clearInterval(interval)
+      c onst interval = s etInterval(updateM etr ics, 1000)
+      return () => clearIn terval(interval)
     }
-  }, [isMonitoring, updateMetrics])
-
-  const toggleMonitoring = () => {
-    setIsMonitoring(!isMonitoring)
+  }, [isMonitoring, updateM etr ics])
+  c onst toggleMonitor ing = () => {
+    s etIsMonitoring(!isMonitoring)
     if (!isMonitoring) {
-      updateMetrics()
+      updateM etr ics()
     }
   };
     </>

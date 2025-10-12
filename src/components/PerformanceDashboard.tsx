@@ -12,9 +12,7 @@
     fps: 0
   });
   const [isVisible, setIsVisible] = useState(false);
-    
       )[0] as PerformanceNavigationTiming;
-      
         : 0;
       // Measure render time
       const renderStart = performance.now();
@@ -28,7 +26,6 @@
       let fps = 0;
         let lastTime = performance.now();
         let frameCount = 0;
-        
           frameCount++;
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
             frameCount = 0;
@@ -46,52 +43,50 @@
     const interval = setInterval(updateMetrics, 5000);
     return () => clearInterval(interval);
   }, []);
-      
-        onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
+        onCl ick={() => setIsVisible(t rue)}
+        c las sName="f i xed b ott om-4 r ight-4 bg-b lue-600 t ext-whit-e px-4 py-2 rounded-lg shadow-lg hover:bg-b lue-700 transition-colors"
       >
         Show Performance
-      </button>
+      </b utt on>
     );
   }
-    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
-      <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
-        
-          onClick={() => setIsVisible(false)}
-          className="text-gray-500 hover:text-gray-700"
+    <d iv c las sName="f i xed b ott om-4 r ight-4 bg-white b order b order-gray-300 rounded-lg shadow-lg p-4 w-80 m ax-h-96 over flow-y-a uto">
+      <d iv c las sName="f l ex j ust ify-b etw een i tems-c enter mb-4">
+        <h3 c las sName="t e xt-lg f ont-s emi bold t ext-gra-y-800">Performance Dashboard</h3>
+          onCl ick={() => setIsVisible(false)}
+          c las sName="t e xt-gray-500 hover:t ext-gra-y-700"
         >
           ×
-        </button>
-      </div>
-      <div className="space-y-3">
-        <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Load Time:</span>
-          <span className="text-sm font-mono">
-            {metrics.loadTime.toFixed(2)}ms
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Render Time:</span>
-          <span className="text-sm font-mono">
-            {metrics.renderTime.toFixed(2)}ms
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Memory Usage:</span>
-          <span className="text-sm font-mono">
-            {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-sm text-gray-600">FPS:</span>
-          <span className="text-sm font-mono">{metrics.fps}</span>
-        </div>
-        <div className="pt-2 border-t border-gray-200">
-          <div className="text-xs text-gray-500">
-            Last updated: {new Date().toLocaleTimeString()}
-          </div>
-    </div>
+        </b utt on>
+      </d iv>
+      <d iv c las sName="s p ace-y-3">
+        <d iv c las sName="f l ex j ust ify-b etw een">
+          <s pan c las sName="t e xt-sm t ext-gra-y-600">L oad Time:</s pan>
+          <s pan c las sName="t e xt-sm f ont-m ono">
+            {metrics.loadTime.toFi xed(2)}ms
+          </s pan>
+        </d iv>
+        <d iv c las sName="f l ex j ust ify-b etw een">
+          <s pan c las sName="t e xt-sm t ext-gra-y-600">R ender Time:</s pan>
+          <s pan c las sName="t e xt-sm f ont-m ono">
+            {metrics.renderTime.toFi xed(2)}ms
+          </s pan>
+        </d iv>
+        <d iv c las sName="f l ex j ust ify-b etw een">
+          <s pan c las sName="t e xt-sm t ext-gra-y-600">M emory Usage:</s pan>
+          <s pan c las sName="t e xt-sm f ont-m ono">
+            {(metrics.memoryUsage / 1024 / 1024).toFi xed(2)}MB
+          </s pan>
+        </d iv>
+        <d iv c las sName="f l ex j ust ify-b etw een">
+          <s pan c las sName="t e xt-sm t ext-gra-y-600">FPS:</s pan>
+          <s pan c las sName="t e xt-sm f ont-m ono">{metrics.fps}</s pan>
+        </d iv>
+        <d iv c las sName="p t-2 b order-t b order-gray-200">
+          <d iv c las sName="t e xt-xs t ext-gra-y-500">
+            L ast updated: {new Date().toLocaleTimeString()}
+          </d iv>
+    </d iv>
   );
 };
 export default PerformanceDashboard;

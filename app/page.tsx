@@ -1,34 +1,19 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
-import { ArrowRight, CheckCircle, Star, Users, Award, Shield, Brain, Cloud, Code, Smartphone, FileText, MessageCircle, Link as LinkIcon, Workflow, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-
+import { Helmet  } from 'react-helmet-async';
+import { Link  } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart  } from 'lucide-react';
 const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
     { number: '50+', label: 'Happy Clients', icon: Users },
     { number: '99%', label: 'Client Satisfaction', icon: Star },
     { number: '24/7', label: 'Support Available', icon: Award },
   ];
-
   const features = [
     {
       icon: Brain,
@@ -55,7 +40,6 @@ const HomePage: React.FC = () => {
       color: 'from-green-500 to-emerald-500'
     }
   ];
-
   const aiServices = [
     {
       title: 'AI Analytics Dashboard',
@@ -90,7 +74,6 @@ const HomePage: React.FC = () => {
       color: 'from-orange-500 to-red-500'
     }
   ];
-
   const itServices = [
     {
       title: 'Cloud Migration',
@@ -125,7 +108,6 @@ const HomePage: React.FC = () => {
       color: 'from-purple-500 to-pink-500'
     }
   ];
-
   const microSaasProducts = [
     {
       title: 'Zion Analytics Pro',
@@ -160,10 +142,9 @@ const HomePage: React.FC = () => {
       color: 'from-purple-500 to-pink-500'
     }
   ];
-
   return (
     <>
-      <Helmet>
+      </><Helmet>
         <title>Zion Tech Group - Advanced AI & IT Solutions | Leading Technology Company</title>
         <meta name="description" content="Zion Tech Group provides cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development. Transform your business with our innovative technology services." />
         <meta name="keywords" content="AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics" />
@@ -175,283 +156,243 @@ const HomePage: React.FC = () => {
         <meta name="twitter:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
         <meta name="twitter:description" content="Transform your business with cutting-edge AI and IT solutions." />
       </Helmet>
-<<<<<<< HEAD
-
-      <div className="min-h-screen">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="absolute inset-0 opacity-20" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-            <div className="text-center">
-              <h1 className={`text-4xl md:text-6xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                Transform Your Business with
-                <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+      <d iv c las sName="m in-h-screen">
+        {/* H ero Section */}
+        <section c las sName="r elative o ver flow-h idden bg-grad ient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <d iv c las sName="a b solute inset-0 o pac ity-20" s tyle={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-o pac ity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          }}></d iv>
+          <d iv c las sName="r elative m ax-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+            <d iv c las sName="t ext-c enter">
+              <h1 c las sName={`t ext-4xl md:t ext-6xl f ont-b old t ext-w hit-e mb-6 transition-all duration-1000 ${isVisible ? 'o pac ity-100 translate-y-0' : 'o pac ity-0 translate-y-10'}`}>
+                Transform Y our B usiness with
+                <s pan c las sName="b l ock bg-grad ient-to-r from-purple-400 to-pink-400 bg-clip-t ext t ext-transparen-t">
                   Advanced AI & IT Solutions
-                </span>
+                </s pan>
               </h1>
-              <p className={`text-xl text-gray-300 mb-8 max-w-3xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <p c las sName={`t ext-x-l t ext-gra-y-300 mb-8 m ax-w-3xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'o pac ity-100 translate-y-0' : 'o pac ity-0 translate-y-10'}`}>
                 Leading technology company providing cutting-edge artificial intelligence, cloud infrastructure, 
                 cybersecurity, and custom software development services to businesses worldwide.
               </p>
-              <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <d iv c las sName={`f lex f lex-col sm:f lex-row g ap-4 j ustify-c enter transition-all duration-1000 delay-500 ${isVisible ? 'o pac ity-100 translate-y-0' : 'o pac ity-0 translate-y-10'}`}>
                 <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  to="/cont act"
+                  c las sName="i n line-f lex items-c enter px-8 py-4 bg-grad ient-to-r from-purple-600 to-pink-600 t ext-w hit-e f ont-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  Get Started Today
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  Get Star ted T oday
+                  <ArrowRight c las sName="m l-2 h-5 w-5" />
                 </Link>
                 <Link
-                  to="/demo"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
+                  to="/d emo"
+                  c las sName="i n line-f lex items-c enter px-8 py-4 border-2 border-purple-400 t ext-purpl-e-400 f ont-semibold rounded-lg hover:bg-purple-400 hover:t ext-w hit-e transition-all duration-300 transform hover:scale-105"
                 >
                   View Demo
                 </Link>
-              </div>
-            </div>
-          </div>
+              </d iv>
+            </d iv>
+          </d iv>
         </section>
-
         {/* Stats Section */}
-        <section className="py-16 bg-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <section c las sName="p y-16 bg-gray-900">
+          <d iv c las sName="m ax-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <d iv c las sName="g r id g rid-cols-2 md:g rid-cols-4 g ap-8">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4">
-                    <stat.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-400">{stat.label}</div>
-                </div>
+                <d iv key={index} c las sName="t ext-c enter">
+                  <d iv c las sName="i n line-f lex items-c enter j ustify-c enter w-16 h-16 bg-grad ient-to-r from-purple-500 to-pink-500 rounded-full mb-4">
+                    <stat.icon c las sName="h-8 w-8 t ext-w hite" />
+                  </d iv>
+                  <d iv c las sName="t ext-3xl f ont-b old t ext-w hit-e mb-2">{stat.number}</d iv>
+                  <d iv c las sName="t ext-gray-400">{stat.label}</d iv>
+                </d iv>
               ))}
-            </div>
-          </div>
+            </d iv>
+          </d iv>
         </section>
-
-        {/* Features Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        {/* F eatures Section */}
+        <section c las sName="p y-20 bg-grad ient-to-br from-slate-900 to-gray-900">
+          <d iv c las sName="m ax-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <d iv c las sName="t ext-c enter mb-16">
+              <h2 c las sName="t ext-3xl md:t ext-4xl f ont-b old t ext-w hit-e mb-4">
                 Why Choose Zion Tech Group?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p c las sName="t ext-xl t ext-gra-y-300 m ax-w-3xl mx-auto">
                 We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
               </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </d iv>
+            <d iv c las sName="g r id g rid-cols-1 md:g rid-cols-2 lg:g rid-cols-4 g ap-8">
               {features.map((feature, index) => (
-                <div key={index} className="group">
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
-                      <feature.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                    <p className="text-gray-300">{feature.description}</p>
-                  </div>
-                </div>
+                <d iv key={index} c las sName="g roup">
+                  <d iv c las sName="b g-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
+                    <d iv c las sName={`i nline-f lex items-c enter j ustify-c enter w-12 h-12 bg-grad ient-to-r ${feature.color} rounded-lg mb-4`}>
+                      <feature.icon c las sName="h-6 w-6 t ext-w hite" />
+                    </d iv>
+                    <h3 c las sName="t ext-xl f ont-semibold t ext-w hit-e mb-3">{feature.title}</h3>
+                    <p c las sName="t ext-gray-300">{feature.description}</p>
+                  </d iv>
+                </d iv>
               ))}
-            </div>
-          </div>
+            </d iv>
+          </d iv>
         </section>
-
         {/* AI Services Section */}
-        <section className="py-20 bg-gradient-to-br from-purple-900 to-slate-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section c las sName="p y-20 bg-grad ient-to-br from-purple-900 to-slate-900">
+          <d iv c las sName="m ax-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <d iv c las sName="t ext-c enter mb-16">
+              <h2 c las sName="t ext-3xl md:t ext-4xl f ont-b old t ext-w hit-e mb-4">
                 AI-Powered Solutions
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p c las sName="t ext-xl t ext-gra-y-300 m ax-w-3xl mx-auto">
                 Harness the power of artificial intelligence to transform your business operations and drive growth.
               </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </d iv>
+            <d iv c las sName="g r id g rid-cols-1 md:g rid-cols-2 lg:g rid-cols-4 g ap-8">
               {aiServices.map((service, index) => (
-                <div key={index} className="group">
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg mb-4`}>
-                      <service.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    <div className="text-2xl font-bold text-purple-400 mb-4">{service.price}</div>
-                    <ul className="space-y-2 mb-6">
+                <d iv key={index} c las sName="g roup">
+                  <d iv c las sName="b g-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
+                    <d iv c las sName={`i nline-f lex items-c enter j ustify-c enter w-12 h-12 bg-grad ient-to-r ${service.color} rounded-lg mb-4`}>
+                      <service.icon c las sName="h-6 w-6 t ext-w hite" />
+                    </d iv>
+                    <h3 c las sName="t ext-xl f ont-semibold t ext-w hit-e mb-3">{service.title}</h3>
+                    <p c las sName="t ext-gray-300 mb-4">{service.description}</p>
+                    <d iv c las sName="t ext-2xl f ont-b old t ext-purpl-e-400 mb-4">{service.price}</d iv>
+                    <ul c las sName="s p ace-y-2 mb-6">
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        <li key={idx} c las sName="f l ex items-c enter t ext-s-m t ext-gra-y-300">
+                          <CheckCircle c las sName="h-4 w-4 t ext-green-400 mr-2" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                     <Link
-                      to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+                      to="/cont act"
+                      c las sName="w-f ull i nline-f lex items-c enter j ustify-c enter px-4 py-2 bg-grad ient-to-r from-purple-600 to-pink-600 t ext-w hit-e f ont-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
                     >
-                      Get Started
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      Get Star ted
+                      <ArrowRight c las sName="m l-2 h-4 w-4" />
                     </Link>
-                  </div>
-                </div>
+                  </d iv>
+                </d iv>
               ))}
-            </div>
-          </div>
+            </d iv>
+          </d iv>
         </section>
-
         {/* IT Services Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section c las sName="p y-20 bg-grad ient-to-br from-slate-900 to-gray-900">
+          <d iv c las sName="m ax-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <d iv c las sName="t ext-c enter mb-16">
+              <h2 c las sName="t ext-3xl md:t ext-4xl f ont-b old t ext-w hit-e mb-4">
                 IT Infrastructure & Development
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p c las sName="t ext-xl t ext-gra-y-300 m ax-w-3xl mx-auto">
                 Comprehensive IT services to build, secure, and optimize your technology infrastructure.
               </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </d iv>
+            <d iv c las sName="g r id g rid-cols-1 md:g rid-cols-2 lg:g rid-cols-4 g ap-8">
               {itServices.map((service, index) => (
-                <div key={index} className="group">
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg mb-4`}>
-                      <service.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
-                    <ul className="space-y-2 mb-6">
+                <d iv key={index} c las sName="g roup">
+                  <d iv c las sName="b g-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
+                    <d iv c las sName={`i nline-f lex items-c enter j ustify-c enter w-12 h-12 bg-grad ient-to-r ${service.color} rounded-lg mb-4`}>
+                      <service.icon c las sName="h-6 w-6 t ext-w hite" />
+                    </d iv>
+                    <h3 c las sName="t ext-xl f ont-semibold t ext-w hit-e mb-3">{service.title}</h3>
+                    <p c las sName="t ext-gray-300 mb-4">{service.description}</p>
+                    <d iv c las sName="t ext-2xl f ont-b old t ext-cya-n-400 mb-4">{service.price}</d iv>
+                    <ul c las sName="s p ace-y-2 mb-6">
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        <li key={idx} c las sName="f l ex items-c enter t ext-s-m t ext-gra-y-300">
+                          <CheckCircle c las sName="h-4 w-4 t ext-green-400 mr-2" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                     <Link
-                      to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300"
+                      to="/cont act"
+                      c las sName="w-f ull i nline-f lex items-c enter j ustify-c enter px-4 py-2 bg-grad ient-to-r from-cyan-600 to-blue-600 t ext-w hit-e f ont-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300"
                     >
-                      Get Quote
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      Get Q uote
+                      <ArrowRight c las sName="m l-2 h-4 w-4" />
                     </Link>
-                  </div>
-                </div>
+                  </d iv>
+                </d iv>
               ))}
-            </div>
-          </div>
+            </d iv>
+          </d iv>
         </section>
-
         {/* Micro SAAS Products Section */}
-        <section className="py-20 bg-gradient-to-br from-gray-900 to-purple-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section c las sName="p y-20 bg-grad ient-to-br from-gray-900 to-purple-900">
+          <d iv c las sName="m ax-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <d iv c las sName="t ext-c enter mb-16">
+              <h2 c las sName="t ext-3xl md:t ext-4xl f ont-b old t ext-w hit-e mb-4">
                 Micro SAAS Products
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p c las sName="t ext-xl t ext-gra-y-300 m ax-w-3xl mx-auto">
                 Ready-to-use software solutions designed to solve specific business challenges with minimal setup.
               </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </d iv>
+            <d iv c las sName="g r id g rid-cols-1 md:g rid-cols-2 lg:g rid-cols-4 g ap-8">
               {microSaasProducts.map((product, index) => (
-                <div key={index} className="group">
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${product.color} rounded-lg mb-4`}>
-                      <product.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{product.title}</h3>
-                    <p className="text-gray-300 mb-4">{product.description}</p>
-                    <div className="text-2xl font-bold text-green-400 mb-4">{product.price}</div>
-                    <ul className="space-y-2 mb-6">
+                <d iv key={index} c las sName="g roup">
+                  <d iv c las sName="b g-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
+                    <d iv c las sName={`i nline-f lex items-c enter j ustify-c enter w-12 h-12 bg-grad ient-to-r ${product.color} rounded-lg mb-4`}>
+                      <product.icon c las sName="h-6 w-6 t ext-w hite" />
+                    </d iv>
+                    <h3 c las sName="t ext-xl f ont-semibold t ext-w hit-e mb-3">{product.title}</h3>
+                    <p c las sName="t ext-gray-300 mb-4">{product.description}</p>
+                    <d iv c las sName="t ext-2xl f ont-b old t ext-gree-n-400 mb-4">{product.price}</d iv>
+                    <ul c las sName="s p ace-y-2 mb-6">
                       {product.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        <li key={idx} c las sName="f l ex items-c enter t ext-s-m t ext-gra-y-300">
+                          <CheckCircle c las sName="h-4 w-4 t ext-green-400 mr-2" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                     <Link
-                      to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
+                      to="/cont act"
+                      c las sName="w-f ull i nline-f lex items-c enter j ustify-c enter px-4 py-2 bg-grad ient-to-r from-green-600 to-emerald-600 t ext-w hit-e f ont-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
                     >
-                      Start Free Trial
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      Start Free T rial
+                      <ArrowRight c las sName="m l-2 h-4 w-4" />
                     </Link>
-                  </div>
-                </div>
+                  </d iv>
+                </d iv>
               ))}
-            </div>
-          </div>
+            </d iv>
+          </d iv>
         </section>
-
-        {/* Contact Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Transform Your Business?
+        {/* Cont act Section */}
+        <section c las sName="p y-20 bg-grad ient-to-br from-slate-900 to-gray-900">
+          <d iv c las sName="m ax-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <d iv c las sName="t ext-c enter">
+              <h2 c las sName="t ext-3xl md:t ext-4xl f ont-b old t ext-w hit-e mb-4">
+                Ready to Transform Y our B usiness?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Contact us today to discuss your project and discover how our AI and IT solutions can drive your success.
+              <p c las sName="t ext-xl t ext-gra-y-300 mb-8 m ax-w-3xl mx-auto">
+                Cont act us today to discuss your project and discover how our AI and IT solutions can drive your success.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <d iv c las sName="f l ex f lex-col sm:f lex-row g ap-4 j ustify-c enter">
                 <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  to="/cont act"
+                  c las sName="i n line-f lex items-c enter px-8 py-4 bg-grad ient-to-r from-purple-600 to-pink-600 t ext-w hit-e f ont-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  Contact Us Now
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  Cont act Us N ow
+                  <ArrowRight c las sName="m l-2 h-5 w-5" />
                 </Link>
                 <a
                   href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
+                  c las sName="i n line-f lex items-c enter px-8 py-4 border-2 border-purple-400 t ext-purpl-e-400 f ont-semibold rounded-lg hover:bg-purple-400 hover:t ext-w hit-e transition-all duration-300 transform hover:scale-105"
                 >
                   Call +1 302 464 0950
                 </a>
-              </div>
-              <div className="mt-8 text-gray-400">
+              </d iv>
+              <d iv c las sName="m t-8 t ext-gra-y-400">
                 <p>Email: kleber@ziontechgroup.com</p>
                 <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-              </div>
-            </div>
-          </div>
-        </section>
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Advanced AI & IT Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence, cloud infrastructure, 
-              and cybersecurity solutions tailored to your needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/about"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-      </div>
+              </d iv>
+            </d iv>
+          </d iv>
+        </section>      </d iv>
     </>
   );
 };
-
 export default HomePage;

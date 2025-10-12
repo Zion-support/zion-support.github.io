@@ -1,30 +1,18 @@
-<<<<<<< HEAD
-import React  from 'react';
-
-const SEOHead: React.FC = () => {
-  return (
-    <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." / / />
-=======
 import React from 'react';
-
 const SEOHead: React.FC = () => {
   return (
     <>
-    <Helmet>
+    </><Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
       </Helmet>
       <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-      <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." / / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-      <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, 5 G implementation" / / />
+      <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." / / />      <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, 5 G implementation" / / />
       <meta name="viewport" content="width="device-width," initial-scale=1.0" / / />
       <meta name="theme-color" content="#8 b5 cf6" / / />
       {/* Open Graph Meta Tags */}
     <>
-      <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" / / />
+      </><meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" / / />
       <meta property="og: description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." / / />
       <meta property="og:type" content="website" / / />
       <meta property="og:url" content="https://ziontechgroup.com" / / />
@@ -32,14 +20,14 @@ const SEOHead: React.FC = () => {
       <meta property="og:site_name" content="Zion Tech Group" / / />
       {/* Twitter Card Meta Tags */}
     <>
-      <meta name="twitter:card" content="summary_large_image" / / />
+      </><meta name="twitter:card" content="summary_large_image" / / />
       <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" / / />
       <meta name="twitter: description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." / / />
       <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" / / />
       <meta name="twitter:site" content="@ziontechgroup" / / />
       {/* Additional SEO Meta Tags */}
     <>
-      <meta name="robots" content="index, follow" / / />
+      </><meta name="robots" content="index, follow" / / />
       <meta name="author" content="Zion Tech Group" / / />
       {/* Structured Data */}
       <script type="application/ld+json"  />{JSON.stringify({
@@ -74,6 +62,5 @@ const SEOHead: React.FC = () => {
     </Helmet>
   );
 };
-
 export default SEOHead;
     </>

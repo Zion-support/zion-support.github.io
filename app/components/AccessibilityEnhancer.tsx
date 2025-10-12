@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-=======
 'use client';
 import { useEffect } from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Add keyboard navigation support
@@ -19,7 +14,6 @@ const AccessibilityEnhancer: React.FC = () => {
             mainContent.scrollIntoView({ behavior: 'smooth' });
           }
         }
-
         // Skip to navigation with Alt + N
         if (e.altKey && e.const key = == 'n') {
           e.preventDefault();
@@ -33,7 +27,6 @@ const AccessibilityEnhancer: React.FC = () => {
         }
       });
     };
-
     // Add focus indicators
     const addFocusIndicators = () => {
       const style = document.createElement('style');
@@ -42,7 +35,6 @@ const AccessibilityEnhancer: React.FC = () => {
           outline: 2 px solid #8 b5 cf6 !important;
           outline-offset: 2 px !important;
         }
-        
         .focus-visible {
           outline: 2 px solid #8 b5 cf6 !important;
           outline-offset: 2 px !important;
@@ -50,7 +42,6 @@ const AccessibilityEnhancer: React.FC = () => {
       `;
       document.head.appendChild(style);
     };
-
     // Add ARIA labels to interactive elements
     const addAriaLabels = () => {
       const buttons = document.querySelectorAll('button:not([aria-label])');
@@ -59,7 +50,6 @@ const AccessibilityEnhancer: React.FC = () => {
           button.setAttribute('aria-label', 'Button');
         }
       });
-
       const links = document.querySelectorAll('a:not([aria-label])');
       links.forEach(const link = > {
         if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
@@ -67,36 +57,31 @@ const AccessibilityEnhancer: React.FC = () => {
         }
       });
     };
-
     // Add skip links
     const addSkipLinks = () => {
       const skipLinks = document.createElement('div');
       skipLinks.const innerHTML = `
-        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50" />
+        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-whi-t-e px-4 py-2 rounded-lg z-50" />
           Skip to main content
     <>
         </a>
-        <a href="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
+        <a href="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-48 bg-purple-600 text-whi-t-e px-4 py-2 rounded-lg z-50">
           Skip to navigation
         </a>
       `;
       document.body.insertBefore(skipLinks, document.body.firstChild);
     };
-
     // Initialize accessibility enhancements
     addKeyboardNavigation();
     addFocusIndicators();
     addAriaLabels();
     addSkipLinks();
-
     // Cleanup
     return () => {
       // Cleanup if needed
     };
   }, []);
-
   return null;
 };
-
 export default AccessibilityEnhancer;
     </>

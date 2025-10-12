@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-
 // Get all AI service pages from App.tsx
 const aiServicePages = [
   'ai-analytics', 'ai-automation', 'ai-chatbot-builder', 'ai-cybersecurity', 
@@ -16,7 +15,6 @@ const aiServicePages = [
   'ai-knowledge-management', 'ai-customer-churn', 'ai-automated-reporting', 
   'ai-voice-assistant', 'ai-content-generation-pro'
 ];
-
 const itServicePages = [
   'cloud-infrastructure', 'cybersecurity-solutions', 'web-development', 
   'mobile-development', 'api-development', 'database-management', 'devops-cicd', 
@@ -30,7 +28,6 @@ const itServicePages = [
   'cloud-cost-optimization', 'security-automation', 'data-visualization', 
   'workflow-automation', 'cloud-native-security'
 ];
-
 const microSaasPages = [
   'zion-analytics-pro', 'zion-chat-ai', 'zion-security-shield', 'zion-cloud-vault', 
   'zion-content-studio', 'zion-crm-intelligence', 'zion-data-sync', 'zion-lead-magnet', 
@@ -45,21 +42,17 @@ const microSaasPages = [
   'zion-ai-fraud-detector', 'zion-ai-customer-service-pro', 'zion-ai-marketing-automation', 
   'zion-ai-document-ai'
 ];
-
 const emergingTechPages = [
   '5g-implementation', 'ai-3d-generation', 'ai-holographic-workspace', 
   'ai-autonomous-systems', 'ai-blockchain-solutions', 'quantum-computing', 
   'ar-vr-solutions', 'iot-integration', 'machine-learning'
 ];
-
 const companyPages = [
   'team', 'partners', 'status'
 ];
-
 const resourcePages = [
   'faq', 'docs', 'api-docs', 'community', 'compliance'
 ];
-
 const allPages = [
   ...aiServicePages, 
   ...itServicePages, 
@@ -68,72 +61,61 @@ const allPages = [
   ...companyPages, 
   ...resourcePages
 ];
-
 const pageTemplate = (pageName, title, componentName) => `'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import { Helmet  } from 'react-helmet-async';
 const ${componentName}: React.FC = () => {
   return (
     <>
-      <Helmet>
+      </><Helmet>
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${title} services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="${pageName}, AI solutions, IT services" />
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+      <d iv c las sName="m in-h-scre en bg-grad ient-to-br from-slate-900 via-p urple-900 to-slate-900">
+        <d iv c las sName="c ontainer mx-auto px-4 py-16">
+          <d iv c las sName="t e xt-c enter mb-16">
+            <h1 c las sName="t e xt-4xl md:t ext-6xl f ont-b old t ext-w hit-e mb-6">
+              <span c las sName="b g-grad ient-to-r from-c yan-400 to-p urple-400 bg-clip-t ext t ext-transparen-t">
                 ${title}
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p c las sName="t e xt-xl t ext-gra-y-300 m ax-w-3xl mx-auto">
               Professional ${title.toLowerCase()} services by Zion Tech Group.
             </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300 mb-6">
+          </d iv>
+          <d iv c las sName="b g-grad ient-to-br from-p urple-900/50 to-blue-900/50 backdrop-blur-sm border border-p urple-500/20 rounded-xl p-8 t ext-c ente-r">
+            <h2 c las sName="t e xt-2xl f ont-b old t ext-w hit-e mb-4">C oming S oon</h2>
+            <p c las sName="t e xt-gray-300 mb-6">
               We're working on bringing you comprehensive ${title.toLowerCase()} solutions. 
               Contact us to learn more about our services.
             </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+            <b utton c las sName="b g-grad ient-to-r from-c yan-500 to-p urple-500 t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:from-c yan-600 hover:to-p urple-600 transition-all duration-300">
               Contact Us
-            </button>
-          </div>
-        </div>
-      </div>
+            </b utton>
+          </d iv>
+        </d iv>
+      </d iv>
     </>
   );
 };
-
 export default ${componentName};`;
-
 // Fix all pages
 allPages.forEach(pageName => {
   const title = pageName.split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');
-  
   const componentName = pageName.split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
-  
   const pageDir = path.join('/workspace/app', pageName);
   const pageFile = path.join(pageDir, 'page.tsx');
-  
   // Create directory if it doesn't exist
   if (!fs.existsSync(pageDir)) {
     fs.mkdirSync(pageDir, { recursive: true });
   }
-  
   // Overwrite page file with correct template
   fs.writeFileSync(pageFile, pageTemplate(pageName, title, componentName));
   console.log(`Fixed: ${pageFile}`);
 });
-
 console.log('All pages fixed!');

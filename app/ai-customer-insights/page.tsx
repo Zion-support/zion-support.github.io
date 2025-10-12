@@ -1,103 +1,90 @@
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
-import { Brain, BarChart3, Users, TrendingUp, Target, Zap, CheckCircle, ArrowRight, Star, Shield, Play, Heart, Calendar, Mail, Phone, MapPin } from 'lucide-react'
-=======
-import { Brain, BarChart3, Users, TrendingUp, Target, Zap, CheckCircle, ArrowRight, Star, Shield, Play, Heart, Calendar, Mail, Phone, MapPin } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import React  from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import { Brain, BarChart3, Users, TrendingUp, Target, Zap, CheckCircle, ArrowRight, Star, Shield, Play, Heart, Calendar, Mail, Phone, MapPin  } from 'lucide-react';import { Link } from 'react-router-dom'
+import React from 'react';import { ArrowRight  } from 'lucide-react';
+import { Link  } from 'react-router-dom';
 const AICustomerInsightsPage: React.FC = () => {
-  const features = [
+  const f eat ures = [
     {
-      icon: <Brain className="w-8h-8text-cyan-400" />,
-      title: 'AI-Powered Analytics',
-      description: 'Advanced machine learning algorithms analyze customer behavior patterns and predict future trends with 95% accuracy.',
+      i con: <Brain c las sNa me="w-8h-8t e xt-c yan-400" />,
+      t itle: 'AI-Powered Analytics',
+      description: 'Advanced machine learning algorithms analyze customer behavior patterns and predict futu re trends with 95% accuracy.',
       price: '$299/month',
       benefits: ['Real-time insights', 'Predictive analytics', 'Behavioral analysis', 'Trend forecasting']
     },
     {
-      icon: <BarChart3 className="w-8h-8text-emerald-400" />,
-      title: 'Customer Segmentation',
+      i con: <BarChart3 c las sNa me="w-8h-8t e xt-e merald-400" />,
+      t itle: 'Customer Segmentation',
       description: 'Automatically segment customers based on behavior, preferences, and value with dynamic clustering algorithms.',
       price: '$199/month',
       benefits: ['Dynamic segmentation', 'Behavioral clustering', 'Value-based grouping', 'Custom criteria']
     },
     {
-      icon: <Users className="w-8h-8text-purple-400" />,
-      title: 'Customer Journey Mapping',
-      description: 'Visualize complete customer journeys across all touchpoints with interactive journey maps and conversion funnels.',
+      i con: <Users c las sNa me="w-8h-8t e xt-p urp le-400" />,
+      t itle: 'Customer Journey Mapping',
+      description: 'Visualize comp lete customer journeys across all touchpoints with inte ractive journey maps and conversion funnels.',
       price: '$249/month',
       benefits: ['Journey visualization', 'Touchpoint analysis', 'Conversion tracking', 'Optimization insights']
     },
     {
-      icon: <TrendingUp className="w-8h-8text-orange-400" />,
-      title: 'Churn Prediction',
+      i con: <TrendingUp c las sNa me="w-8h-8t e xt-oran ge-400" />,
+      t itle: 'Churn Prediction',
       description: 'Predict customer churn with 92% accuracy using advanced ML models and proactive retention strategies.',
       price: '$179/month',
-      benefits: ['Churn prediction', 'Risk scoring', 'Retention strategies', 'Early warning alerts']
+      benefits: ['Churn prediction', 'Risk scoring', 'Retention strategies', 'Early warning aler ts']
     },
     {
-      icon: <Target className="w-8h-8text-pink-400" />,
-      title: 'Personalization Engine',
+      i con: <Target c las sNa me="w-8h-8t e xt-pink-400" />,
+      t itle: 'Personalization Engine',
       description: 'Create hyper-personalized experiences with AI-driven content recommendations and dynamic pricing.',
       price: '$399/month',
-      benefits: ['Content personalization', 'Dynamic pricing', 'Recommendation engine', 'A/B testing']
+      benefits: ['Content personalization', 'Dynamic pricing', 'Recommendation engine', 'A/B t esting']
     },
     {
-      icon: <Zap className="w-8h-8text-yellow-400" />,
-      title: 'Real-time Insights',
+      i con: <Zap c las sNa me="w-8h-8t e xt-y ell ow-400" />,
+      t itle: 'Real-time Insights',
       description: 'Get instant customer insights with real-time data processing and live dashboard updates.',
       price: '$149/month',
-      benefits: ['Live dashboards', 'Real-time alerts', 'Instant notifications', 'Live data streams']
+      benefits: ['Live dashboards', 'Real-time aler ts', 'Instant notifications', 'Live data streams']
     }
   ]
-
   const useCases = [
     {
-      title: 'E-commerce Personalization',
+      t itle: 'E-commerce Personalization',
       description: 'Increase conversion rates by 35% with personalized product recommendations and dynamic pricing.',
-      metrics: ['35% conversion increase', '28% higher AOV', '42% repeat purchases'],
-      icon: <ShoppingCart className="w-6h-6text-cyan-400" />
+      metrics: ['35% conversion increase', '28% higher AOV', '42% repe at p urc hases'],
+      i con: <S hoppin gCart c las sNa me="w-6h-6t e xt-c yan-400" />
     },
     {
-      title: 'SaaS Customer Success',
+      t itle: 'SaaS Customer Success',
       description: 'Reduce churn by 50% with predictive analytics and proactive customer success management.',
-      metrics: ['50% churn reduction', '60% faster onboarding', '45% feature adoption'],
-      icon: <Monitor className="w-6h-6text-emerald-400" />
+      metrics: ['50% churn reduction', '60% faster onboarding', '45% f eat ure a doption'],
+      i con: <M oni tor c las sNa me="w-6h-6t e xt-e merald-400" />
     },
     {
-      title: 'Financial Services',
-      description: 'Improve risk assessment and fraud detection with advanced customer behavior analysis.',
-      metrics: ['85% fraud detection', '30% risk reduction', '25% faster approvals'],
-      icon: <Shield className="w-6h-6text-purple-400" />
+      t itle: 'Financial Services',
+      description: 'Improve risk a ssessment and fraud detection with advanced customer behavior analysis.',
+      metrics: ['85% fraud detection', '30% risk reduction', '25% faster approva ls'],
+      i con: <Shield c las sNa me="w-6h-6t e xt-p urp le-400" />
     },
     {
-      title: 'Healthcare Analytics',
+      t itle: 'Healthcare Analytics',
       description: 'Enhance patient engagement and treatment outcomes with personalized healthcare insights.',
-      metrics: ['40% engagement increase', '25% better outcomes', '35% cost reduction'],
-      icon: <Heart className="w-6h-6text-pink-400" />
+      metrics: ['40% engagement increase', '25% better outcomes', '35% c ost reduction'],
+      i con: <Heart c las sNa me="w-6h-6t e xt-pink-400" />
     }
   ]
-
   const pricing = [
     {
       name: 'Starter',
       price: '$99',
       period: '/month',
       description: 'Perfect for small businesses getting started with customer insights',
-      features: [
+      f eat ures: [
         'Up to 10,000 customers',
         'Basic analytics dashboard',
         'Email support',
         'Standard integrations',
-        'Monthly reports',
+        'M onthly reports',
         'Basic segmentation'
       ],
       popular: false
@@ -106,8 +93,8 @@ const AICustomerInsightsPage: React.FC = () => {
       name: 'Professional',
       price: '$299',
       period: '/month',
-      description: 'Advanced features for growing businesses with complex customer data',
-      features: [
+      description: 'Advanced f eat ures for growing businesses with comp lex customer data',
+      f eat ures: [
         'Up to 100,000 customers',
         'Advanced AI analytics',
         'Priority support',
@@ -123,22 +110,21 @@ const AICustomerInsightsPage: React.FC = () => {
       name: 'Enterprise',
       price: '$599',
       period: '/month',
-      description: 'Complete solution for large enterprises with unlimited customers',
-      features: [
+      description: 'Comp lete solution for large enterprises with unlimited customers',
+      f eat ures: [
         'Unlimited customers',
         'Full AI suite',
         '24/7 dedicated support',
         'White-label solution',
         'Custom development',
         'Advanced security',
-        'SLA guarantee',
+        'SLA guar antee',
         'Dedicated account manager'
       ],
       popular: false
     }
   ]
-
-  const testimonials = [
+  const t estimo nia ls = [
     {
       name: 'Sarah Chen',
       company: 'TechFlow Inc.',
@@ -151,7 +137,7 @@ const AICustomerInsightsPage: React.FC = () => {
       name: 'Michael Rodriguez',
       company: 'DataDriven Solutions',
       role: 'Head of Analytics',
-      content: 'The predictive analytics are incredibly accurate. We can now prevent churn before it happens and optimize our customer journey.',
+      content: 'The predictive analytics are incredibly accurate. We can now prevent churn before it happens and o ptimize our customer journey.',
       rating: 5,
       avatar: 'MR'
     },
@@ -159,599 +145,188 @@ const AICustomerInsightsPage: React.FC = () => {
       name: 'Emily Johnson',
       company: 'GrowthCorp',
       role: 'Customer Success Director',
-      content: 'The personalization engine has revolutionized our customer experience. Our NPS score increased by 25 points.',
+      content: 'The personalization engine h as revolutionized our customer experience. Our NPS score increased by 25 points.',
       rating: 5,
       avatar: 'EJ'
     }
   ]
-
   return (
     <>
-    <>
+    </>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <t itle>5G Data Analytics - Zion Tech Group</t itle>
+        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expe rt solutions." />
       </Helmet>
-        <title>AI Customer Insights - Advanced Analytics & Personalization | Zion Tech Group</title>
-        <meta name="description" content="Transform customer data into actionable insights with AI-powered analytics, churn prediction, and personalization. Increase retention by 40% and boost revenue with intelligent customer insights." / / />
+        <t itle>AI Customer Insights - Advanced Analytics & Personalization | Zion Tech Group</t itle>
+        <meta name="description" content="Transform customer data into actionable insights with AI-powered analytics, churn prediction, and personalization. Increase retention by 40% and boost revenue with inte lligent customer insights." / / />
         <meta name="keywords" content="AI customer insights, customer analytics, churn prediction, personalization engine, customer segmentation, behavioral analysis, customer journey mapping, Zion Tech Group" / / />
-        <meta name="robots" content="index, follow" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-customer-insights" />
+        <meta name="robots" content="index, foll ow" / / />
+        <link rel="cano nical" href="https://ziontechgroup.com/ai-customer-insights" />
       </Helmet>
     </>
-
-      {/* Hero Section */}
+      {/* H ero S ection */}
     <>
-      <section className="relative py-20px-4overflow-hidden" />
-        <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)]animate-pulse" />
-        <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
-<<<<<<< HEAD
-        <div className="relative max-w-7xlmx-autotext-center">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-            <Brain className="w-4h-4" />
-            <span   />AI-Powered Customer Intelligence</span>
-=======
-        <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-        </div>
-            <Brain className="w-4h-4" / />
-            <span>AI-Powered Customer Intelligence</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          </div>
+      </><section c las sNa me="r e lative py-20-px-4-over flow-h idd en" />
+        <d iv c las sNa me="a b solute inset-0bg-[r adial-grad ient(c ircle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)]a nimate-pulse" />
+        <d iv c las sNa me="a b solute inset-0bg-[r adial-grad ient(c ircle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]a nimate-pulse" style="{{" a nimationD elay: '1 s' }} / />
+        <d iv c las sNa me="r e lative m ax-w-7 x lmx-a uto text-c ente-r">
+        </d iv>
+          <d iv c las sNa me="i nline-f lex i tems-c enter space-x-2 bg-grad ient-to-r from-c yan-500/20 to-p urp le-500/20 t ext-c ya-n-400 px-6 py-3 rounded-full t ext-s-m font-medium mb-8-borderborder-c yan-400/30">
+        </d iv>
+            <Brain c las sNa me="w-4h-4" / />
+            <span>AI-Powered Customer Inte lligence</span>          </d iv>
     </>
-          
-          <h1 className="text-6 xl md:text-8 xl font-bold text-white mb-8leading-tight" />
+          <h1 c las sNa me="t e xt-6 xl md:t ext-8 xl font-b old t ext-w hit-e mb-8-leading-tight" />
             AI Customer
     <>
-            <br / />
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-texttext-transparentanimate-pulse">Insights
+            </><br / />
+            <span c las sNa me="b g-grad ient-to-r from-c yan-400 v ia-p urp le-400 to-pink-400 bg-clip-t exttext-transparenta-n imat-e-pulse">Insights
             </span>
           </h1>
     </>
-          
-          <p className="text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
+          <p c las sNa me="t e xt-2 xl t ext-gra-y-300 mb-12 m ax-w-4 x lmx-a utolea ding-relaxed">
               Transform customer data into actionable insights with advanced AI analytics, 
             churn prediction, and hyper-personalization. 
     <>
-            <br / />
-            <span className="text-cyan-400font-semibold">Increase retention by 40% and boost revenue with intelligent customer insights.</span>
+            </><br / />
+            <span c las sNa me="t e xt-c yan-400font-s emi bold">Increase retention by 40% and boost revenue with inte lligent customer insights.</span>
           </p>
     </>
-          
-<<<<<<< HEAD
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" >
-           
+          <d iv c las sNa me="f lex f lex-c ol sm:f lex-row g ap-6justify-c entermb-16">
+            <Link to="/cont act" c las sNa me="g roup bg-grad ient-to-r from-c yan-500 to-p urp le-600 t ext-w hit-e px-10 py-4 rounded-xl font-s emi bold hover:from-c yan-600 hover:to-p urp le-700 transition-all duration-300 f lex i tems-c enter justify-c enter space-x-2 shadow-lg shadow-c yan-500/25 hover:shadow-c yan-500/40transformhover:scale-105" >
           <span    />
-        </Link>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+        </Link>Start Free T rial</span>
+              <ArrowRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
             </Link>
-            <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
+            <Link to="/d emo" c las sNa me="g roup border-2 border-c yan-400 t ext-c ya-n-400 px-10 py-4 rounded-xl font-s emi bold hover:bg-c yan-400 hover:t ext-gra-y-900 transition-all duration-300 f lex i tems-c enter justify-c enterspace-x-2backdrop-blur-sm" >
           <span    />
-        </Link>Watch Demo</span>
-              <Play className="w-5 h-5group-hover:translate-x-1transition-transform" />
-=======
-    <>
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-        </div>
-            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
-              <span>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-            <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-              <span>Watch Demo</span>
-              <Play className="w-5 h-5group-hover:translate-x-1transition-transform" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </Link>
-          </div>
+        </Link>W atch D emo</span>
+              <Play c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />            </Link>
+          </d iv>
       </section>
     </>
-
-      {/* Features Section */}
+      {/* Feat ures S ection */}
     <>
-      <section className="py-20px-4relative" />
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />AI Features</span>
+      </><section c las sNa me="p y-20px-4-relative" />
+        <d iv c las sNa me="a b solute inset-0 bg-grad ient-to-br from-p urp le-500/5v ia-c yan-500/5to-pink-500/5" / />
+        <d iv c las sNa me="r e lative m ax-w-7x lmx-a uto">
+        </d iv>
+          <d iv c las sNa me="t e xt-c entermb-16">
+        </d iv>
+            <h2 c las sNa me="t e xt-4 xl md:t ext-5 xl font-b old text-w hit em-b-6" />
+              Powerful <span c las sNa me="b g-grad ient-to-r from-c yan-400 to-p urp le-400bg-clip-t exttext-transpare-n-t">AI Feat ures</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-=======
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" / />
-        <div className="relative max-w-7xlmx-auto">
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">AI Features</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Advanced AI-powered customer insights that help you understand, predict, and optimize customer behavior 
-              for maximum business growth and retention.
+            <p c las sNa me="t e xt-xl t ext-gra-y-300 m ax-w-4x lmx-a uto" />
+    </>              Advanced AI-powered customer insights that help you understand, predict, and o ptimize customer behavior 
+              for m aximum business growth and retention.
     <>
             </p>
-          </div>
+          </d iv>
     </>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            {features.map((feature, index) => (
+          <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-3g ap-8">
+            {f eat ures.map((f eat ure, index) => (
     <>
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
-                </div>
-<<<<<<< HEAD
-                <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{feature.title}
-                </h3>
-                <p className="text-gray-300 mb-6leading-relaxed">
-              {feature.description}
-                </p>
-                <div className="space-y-2mb-6">
-=======
-                <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title}
-                </h3>
-                <p className="text-gray-300mb-6leading-relaxed" />
-    </>
-                  {feature.description}
-    <>
-                </p>
-                <div className="space-y-2mb-6">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  {feature.benefits.map((benefit, benefitIndex) => (
-    <>
-                    <div key="{benefitIndex}" className="flex items-center space-x-2text-gray-400text-sm" />
-<<<<<<< HEAD
-                      <CheckCircle className="w-4h-4text-green-400" />
-                      <span   />{benefit}</span>
-=======
-                      <CheckCircle className="w-4h-4text-green-400" / />
-                      <span>{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </div>
-    </>
-                  ))}
-    <>
-                </div>
-<<<<<<< HEAD
-                <div className="flex items-centerjustify-between">
-                  <span className="text-cyan-400font-semiboldtext-lg"  />{feature.price}
-                  </span>
-                  <Link to="/contact" className="group/link flex items-center space-x-2 text-cyan-400hover:text-cyan-300transition-colors" >
-           
-          <span className="text-smfont-medium"    />
-        </Link>Learn More</span>
-                    <ArrowRight className="w-4 h-4group-hover/link:translate-x-1transition-transform" />
-                  </Link>
-                </div>
-=======
-                <div className="flexitems-centerjustify-between" />
-                  <span className="text-cyan-400font-semiboldtext-lg">{feature.price}
-                  </span>
-                  <Link to="/contact" className="group/link flex items-center space-x-2 text-cyan-400hover:text-cyan-300transition-colors" />
-                    <span className="text-smfont-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4group-hover/link:translate-x-1transition-transform" />
-                  </Link>
-                </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            ))}
-    <>
-          </div>
-      </section>
-    </>
-
-      {/* Use Cases Section */}
-    <>
-      <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
-<<<<<<< HEAD
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-centermb-16">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-6borderborder-cyan-400/30">
-              <Target className="w-4h-4" />
-              <span   />Real-World Applications</span>
-            </div>
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Proven <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Use Cases</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-=======
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.1)_0%,transparent_50%)]" / />
-        <div className="relative max-w-7xlmx-auto">
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-6borderborder-cyan-400/30">
-        </div>
-              <Target className="w-4h-4" / />
-              <span>Real-World Applications</span>
-            </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Proven <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Use Cases</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              See how leading companies use AI Customer Insights to drive growth, 
-              reduce churn, and create exceptional customer experiences.
-    <>
-            </p>
-          </div>
-    </>
-          
-          <div className="grid grid-cols-1md:grid-cols-2gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              </><d iv key="{index}" c las sNa me="g roup bg-w hite/10 backdrop-blur-lg rounded-2 xl p-8 border border-w hite/20 hover:bg-w hite/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-c yan-500/10" />
+                <d iv c las sNa me="f lex i tems-c enter justify-c enter w-16 h-16 bg-grad ient-to-r from-c yan-500 to-p urp le-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{f eat ure.i con}
+                </d iv>
             {useCases.map((useCase, index) => (
     <>
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                <div className="flex items-centerspace-x-4mb-6">
-<<<<<<< HEAD
-                  <div className="p-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl group-hover:scale-110transition-transformduration-300"  />{useCase.icon}
-                  </div>
-                  <h3 className="text-2 xl font-bold text-whitegroup-hover:text-cyan-400 transition-colors"  />{useCase.title}
-                  </h3>
-                </div>
-                <p className="text-gray-300 mb-6leading-relaxed">
-              {useCase.description}
-                </p>
-                <div className="space-y-2">
-=======
-        </div>
-                  <div className="p-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl group-hover:scale-110transition-transformduration-300">{useCase.icon}
-                  </div>
-                  <h3 className="text-2 xl font-bold text-whitegroup-hover:text-cyan-400transition-colors">{useCase.title}
-                  </h3>
-                </div>
-                <p className="text-gray-300mb-6leading-relaxed" />
-    </>
-                  {useCase.description}
-    <>
-                </p>
-                <div className="space-y-2">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  {useCase.metrics.map((metric, metricIndex) => (
-    <>
-                    <div key="{metricIndex}" className="flex items-center space-x-2text-cyan-400font-semibold" />
-<<<<<<< HEAD
-                      <TrendingUp className="w-4h-4" />
-                      <span   />{metric}</span>
-=======
-                      <TrendingUp className="w-4h-4" / />
-                      <span>{metric}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </div>
-    </>
-                  ))}
-    <>
-                </div>
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              </><d iv key="{index}" c las sNa me="g roup bg-w hite/10 backdrop-blur-lg rounded-2 xl p-8 border border-w hite/20 hover:bg-w hite/20 transition-allduration-300hover:scale-105" />
+                <d iv c las sNa me="f lex i tems-c enterspace-x-4mb-6">
             ))}
     <>
-          </div>
+          </d iv>
       </section>
     </>
-
-      {/* Pricing Section */}
+      {/* Pricing S ection */}
     <>
-      <section className="py-20px-4relative" />
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5via-purple-500/5to-pink-500/5" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-=======
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5via-purple-500/5to-pink-500/5" / />
-        <div className="relative max-w-7xlmx-auto">
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Choose the perfect plan for your business needs. All plans include our core AI features 
-              with no hidden fees or setup costs.
-    <>
-            </p>
-          </div>
-    </>
-          
-          <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      </><section c las sNa me="p y-20px-4-relative" />
             {pricing.map((plan, index) => (
-              <div key="{index}" className="{`relative" group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
+              <d iv key="{index}" c las sNa me="{`r e lative" group bg-w hite/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
                 plan.popular 
-                  ? 'border-cyan-400/50 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
-                  : 'border-white/20 hover: bg-white/20'
+                  ? 'border-c yan-400/50 bg-grad ient-to-br from-c yan-500/10 to-p urp le-500/10' 
+                  : 'border-w hite/20 hover: bg-w hite/20'
               }`} />
                 {plan.popular && (
-<<<<<<< HEAD
-                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold"  />Most Popular
-                    </div>
-                )}
-                
-                <div className="text-centermb-8">
-                  <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                  <p className="text-gray-300text-smmb-4">
-              {plan.description}</p>
-                  <div className="flex items-baselinejustify-center">
-                    <span className="text-5 xlfont-bold text-white"   />{plan.price}</span>
-                    <span className="text-gray-400ml-2"   />{plan.period}</span>
-                  </div>
-                
-                <div className="space-y-4mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <div key="{featureIndex}" className="flex items-centerspace-x-3" />
-                      <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" />
-                      <span className="text-gray-300"   />{feature}</span>
-=======
+            {t estimo nia ls.map((t estimo nial, index) => (
     <>
-                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-        </div>
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
-                    </div>
-    </>
-                )}
-                
-    <>
-                <div className="text-centermb-8">
-        </div>
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300text-smmb-4">{plan.description}</p>
-                  <div className="flexitems-baselinejustify-center" />
-                    <span className="text-5 xlfont-boldtext-white">{plan.price}</span>
-                    <span className="text-gray-400ml-2">{plan.period}</span>
-                  </div>
-    </>
-                
-                <div className="space-y-4mb-8">
-        </div>
-                  {plan.features.map((feature, featureIndex) => (
-    <>
-                    <div key="{featureIndex}" className="flexitems-centerspace-x-3" />
-                      <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
-                      <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </div>
-    </>
+              </><d iv key="{index}" c las sNa me="g roup bg-w hite/10 backdrop-blur-lg rounded-2 xl p-8 border border-w hite/20 hover:bg-w hite/20 transition-allduration-300hover:scale-105" />
+                <d iv c las sNa me="f lex i tems-c enterspace-x-4mb-6">
+                  <d iv c las sNa me="w-12 h-12 b g-grad ient-to-r from-c yan-500 to-p urp le-600 rounded-full f lex i tems-c enter justify-c entert ext-w hitefon-t-b old"  />{t estimo nial.avatar}
+                  </d iv>
+                  <d iv>
+            <h4 c las sNa me="t e xt-l gfont-s emi bol dte xt-w hit-e"   />{t estimo nial.name}</h4>
+                    <p c las sNa me="t e xt-gray-400t ext-s-m">
+              {t estimo nial.role}</p>
+                    <p c las sNa me="t e xt-gray-500t ext-s-m">
+              {t estimo nial.company}</p>
+                  </d iv>
+                <d iv c las sNa me="f lex i tems-c enterspace-x-1mb-4">                  {[...Array(t estimo nial.rating)].map((_, i) => (
+                    <Star key="{i}" c las sNa me="w-5 h-5t e xt-y ell ow-400f ill-current" />
                   ))}
-                </div>
-                
-                <Link 
-                  to="/contact"
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
-                      : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
-                  }`}
-                  />Get Started
-    <>
-                </Link>
-              </div>
+                </d iv>
+                <p c las sNa me="t e xt-gray-300leading-relaxed italic" />
+                  "{t estimo nial.content}"
+    <>                </p>
+              </d iv>
     </>
             ))}
     <>
-          </div>
+          </d iv>
       </section>
     </>
-
-      {/* Testimonials Section */}
+      {/* C TA S ection */}
     <>
-      <section className="py-20 px-4 bg-gradient-to-br from-purple-900/50to-pink-900/50relative" />
-<<<<<<< HEAD
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_70%_30%,rgba(236,72,153,0.1)_0%,transparent_50%)]" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              What Our <span className="bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent"   />Customers Say</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-=======
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_70%_30%,rgba(236,72,153,0.1)_0%,transparent_50%)]" / />
-        <div className="relative max-w-7xlmx-auto">
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              What Our <span className="bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent">Customers Say</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
+      </><section c las sNa me="p y-20px-4-relative" />
+        <d iv c las sNa me="a b solute inset-0 bg-grad ient-to-r from-c yan-500/10v ia-p urp le-500/10to-pink-500/10" / />
+        <d iv c las sNa me="r e lative m ax-w-7x lmx-a uto">
+        </d iv>
+          <d iv c las sNa me="t e xt-c enter" />
+            <d iv c las sNa me="b g-grad ient-to-r from-c yan-600 v ia-p urp le-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverf low-h idd en">
+        </d iv>
+              <d iv c las sNa me="r e lativez-10">
+        </d iv>
+                <h2 c las sNa me="t e xt-4 xl sm:t ext-5 xl md:t ext-6 xl font-b old t ext-w hit em-b-6leading-tight" />
+                  Ready to Transform Y our <span c las sNa me="b g-grad ient-to-r from-c yan-300 to-pink-300bg-clip-t exttext-transpare-n-t">Customer Experience?</span>                </h2>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Join thousands of businesses that trust AI Customer Insights to drive growth and customer success.
-    <>
-            </p>
-          </div>
-    </>
-          
-          <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            {testimonials.map((testimonial, index) => (
-    <>
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                <div className="flex items-centerspace-x-4mb-6">
-<<<<<<< HEAD
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-centertext-whitefont-bold"  />{testimonial.avatar}
-                  </div>
-                  <div>
-            <h4 className="text-lgfont-semiboldtext-white"   />{testimonial.name}</h4>
-                    <p className="text-gray-400text-sm">
-              {testimonial.role}</p>
-                    <p className="text-gray-500text-sm">
-              {testimonial.company}</p>
-                  </div>
-                
-                <div className="flex items-centerspace-x-1mb-4">
-=======
-        </div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-centertext-whitefont-bold">{testimonial.avatar}
-                  </div>
-                  <div />
-                    <h4 className="text-lgfont-semiboldtext-white">{testimonial.name}</h4>
-                    <p className="text-gray-400text-sm">{testimonial.role}</p>
-                    <p className="text-gray-500text-sm">{testimonial.company}</p>
-                  </div>
-    </>
-                
-                <div className="flex items-centerspace-x-1mb-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
-                  ))}
-                </div>
-                
-<<<<<<< HEAD
-                <p className="text-gray-300leading-relaxeditalic">
-              "{testimonial.content}"
-=======
-                <p className="text-gray-300leading-relaxeditalic" />
-                  "{testimonial.content}"
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </p>
-              </div>
-    </>
-            ))}
-    <>
-          </div>
-      </section>
-    </>
-
-      {/* CTA Section */}
-    <>
-      <section className="py-20px-4relative" />
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
-              <div className="relativez-10">
-                <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" />
-                  Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Customer Experience?</span>
-=======
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" / />
-        <div className="relative max-w-7xlmx-auto">
-        </div>
-          <div className="text-center" />
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
-        </div>
-              <div className="relativez-10">
-        </div>
-                <h2 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-whitemb-6leading-tight" />
-                  Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">Customer Experience?</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </h2>
-    </>
-                
-                <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
-<<<<<<< HEAD
+                <p c las sNa me="t e xt-xl sm:t ext-2 xl t ext-w hit-e/90 mb-8 sm:mb-12 m ax-w-4 x lmx-a utolea ding-relaxed">
               Start your free trial today and see how AI Customer Insights can help you 
-                  understand, predict, and optimize customer behavior for maximum growth.
+                  understand, predict, and o ptimize customer behavior for m aximum growth.
                 </p>
-                
-                <div className="flex flex-col sm:flex-row gap-6justify-centermb-8">
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
-           
+                <d iv c las sNa me="f lex f lex-c ol sm:f lex-row g ap-6justify-c entermb-8">
+                  <Link to="/cont act" c las sNa me="g roup bg-w hite t ext-c ya-n-600 px-10 py-4 rounded-xl font-b old t ext-l-g hover:bg-gray-100 transition-all duration-300 f lex i tems-c enter justify-c enter space-x-2 shadow-lg hover:shadow-xltr ansformhover:scale-105" >
           <span    />
-        </Link>Start Free Trial</span>
-                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+        </Link>Start Free T rial</span>
+                    <ArrowRight c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />
                   </Link>
-                  <Link to="/demo" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
+                  <Link to="/d emo" c las sNa me="g roup border-2 border-w hite t ext-w hit-e px-10 py-4 rounded-xl font-b old t ext-l-g hover:bg-w hite/10 transition-all duration-300 f lex i tems-c enter justify-c enterspace-x-2backdrop-blur-sm" >
           <span    />
-        </Link>Schedule Demo</span>
-                    <Calendar className="w-5 h-5group-hover:translate-x-1transition-transform" />
-=======
-                  Start your free trial today and see how AI Customer Insights can help you 
-                  understand, predict, and optimize customer behavior for maximum growth.
-                </p>
-                
-    <>
-                <div className="flex flex-col sm:flex-row gap-6justify-centermb-8">
-        </div>
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
-                    <span>Start Free Trial</span>
-                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                  </Link>
-                  <Link to="/demo" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                    <span>Schedule Demo</span>
-                    <Calendar className="w-5 h-5group-hover:translate-x-1transition-transform" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </Link>
-                </div>
+        </Link>Schedule D emo</span>
+                    <Calendar c las sNa me="w-5 h-5g roup-hover:tran slate-x-1transition-transform" />                  </Link>
+                </d iv>
     </>
-                
-<<<<<<< HEAD
-                <div className="grid grid-cols-1 md:grid-cols-3gap-6text-white/80">
-                  <div className="flex items-centerjustify-centerspace-x-3">
-                    <Phone className="w-5h-5text-cyan-300" />
-                    <span className="text-sm"   />+1 302 464 0950</span>
-                  </div>
-                  <div className="flex items-centerjustify-centerspace-x-3">
-                    <Mail className="w-5h-5text-purple-300" />
-                    <span className="text-sm"   />kleber@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-centerjustify-centerspace-x-3">
-                    <MapPin className="w-5h-5text-pink-300" />
-                    <span className="text-sm"   />Middletown DE 19709</span>
-=======
     <>
-                <div className="grid grid-cols-1 md:grid-cols-3gap-6text-white/80">
-        </div>
-                  <div className="flex items-centerjustify-centerspace-x-3">
-        </div>
-                    <Phone className="w-5h-5text-cyan-300" / />
-                    <span className="text-sm">+1 302 464 0950</span>
-                  </div>
-                  <div className="flex items-centerjustify-centerspace-x-3">
-        </div>
-                    <Mail className="w-5h-5text-purple-300" / />
-                    <span className="text-sm">kleber@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-centerjustify-centerspace-x-3">
-        </div>
-                    <MapPin className="w-5h-5text-pink-300" / />
-                    <span className="text-sm">Middletown DE 19709</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </div>
-              </div>
-          </div>
+                </><d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-3g ap-6t ext-w hit-e/80">
+        </d iv>
+                  <d iv c las sNa me="f lex i tems-c enterjustify-c enterspace-x-3">
+        </d iv>
+                    <Phone c las sNa me="w-5h-5t e xt-c yan-300" / />
+                    <span c las sNa me="t e xt-sm">+1 302 464 0950</span>
+                  </d iv>
+                  <d iv c las sNa me="f lex i tems-c enterjustify-c enterspace-x-3">
+        </d iv>
+                    <Mail c las sNa me="w-5h-5t e xt-p urp le-300" / />
+                    <span c las sNa me="t e xt-sm">k leb er@ziontechgroup.com</span>
+                  </d iv>
+                  <d iv c las sNa me="f lex i tems-c enterjustify-c enterspace-x-3">
+        </d iv>
+                    <MapPin c las sNa me="w-5h-5t e xt-pink-300" / />
+                    <span c las sNa me="t e xt-sm">M idd let own DE 19709</span>                  </d iv>
+              </d iv>
+          </d iv>
       </section>
     </>
   );
 };
-
 export default AICustomerInsightsPage;
     </>

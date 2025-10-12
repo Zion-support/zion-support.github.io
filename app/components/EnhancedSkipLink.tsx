@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
 'use client';
 import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 const EnhancedSkipLink: React.FC = () => {
   const handleSkipToMain = () => {
     const mainContent = document.getElementById('main-content');
@@ -13,7 +8,6 @@ const EnhancedSkipLink: React.FC = () => {
       mainContent.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
   const handleSkipToNavigation = () => {
     const navigation = document.querySelector('nav');
     if (navigation) {
@@ -24,58 +18,53 @@ const EnhancedSkipLink: React.FC = () => {
       }
     }
   };
-
-  return (
-    <div className="skip-links">
-      <button
-        onClick="{handleSkipToMain}"
-        className="skip-link"
-        aria-label="Skip to main content">Skip to main content
-      </button>
-      <button
-        onClick="{handleSkipToNavigation}"
-        className="skip-link"
-        aria-label="Skip to navigation"
+  r etu rn (
+    <d iv c las sNa me="s kip-l inks">
+      <b utt on
+        o nCl ick="{handleSkipToMain}"
+        c las sNa me="s kip-l ink"
+        a ria-l abel="Skip to main content">Skip to main content
+      </b utt on>
+      <b utt on
+        o nCl ick="{handleSkipToNavigation}"
+        c las sNa me="s kip-l ink"
+        a ria-l abel="Skip to navigation"
         />Skip to navigation
     <>
-      </button>
+      </b utt on>
       <style jsx  />{`
-        .skip-links {;
+        .skip-l inks {;
           position: absolute;,
   top: -100 px;,
   left: 0;
           z-index: 1000;
         }
-        
-        .skip-link {
+        .skip-l ink {
           position: absolute;,
   top: -100 px;,
   left: 0;,
   background: #000;,
   color: #fff;,
   padding: 8 px 16 px;
-          text-decoration: none;,
+          text-decorati-o-n: none;,
   border: 2 px solid #00 ffff;
           border-radius: 4 px;
           font-weight: bold;,
   transition: top 0.3 s;
           z-index: 1001;
         }
-        
-        .skip-link: focus {,
+        .skip-l ink: focus {,
   top: 10 px;,
   left: 10 px;
         }
-        
-        .skip-link: hover {,
+        .skip-l ink: hover {,
   background: #00 ffff;,
   color: #000;
         }
     <>
       `}</style>
-    </div>
+    </d iv>
   );
 };
-
 export default EnhancedSkipLink;
     </>

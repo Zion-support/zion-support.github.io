@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { ArrowRight } from 'lucide-react';
+import React from 'react';import { ArrowRight  } from 'lucide-react';
 'use client'
-
-
 const EnhancedLoadingSkeletonPage: React.FC = () => {
   const features = [
     {
@@ -38,181 +31,115 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
+    'Proven track record of s uccess'
   ];
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-      <Helmet>
-=======
+  r etu rn (
     <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
+    </><d iv c las sNa me="m in-h-scre en bg-grad ient-to-br from-s late-900via-purple-900to-s late-900">
+        </d iv>
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>EnhancedLoadingSkeleton | Zion Tech Group</title>
+        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
+      </Helmet>        <title>EnhancedLoadingSkeleton | Zion Tech Group</title>
         <meta name="description" content="Professional EnhancedLoadingSkeleton services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
         <meta name="keywords" content="EnhancedLoadingSkeleton, AI solutions, IT services, Zion Tech Group, enhancedloadingskeleton" / / />
       </Helmet>
-
-      {/* Hero Section */}
+      {/* H ero Section */}
     <>
-      <section className="relative py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent"  />EnhancedLoadingSkeleton
-=======
-        </div>
-          <div className="text-center" />
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent">EnhancedLoadingSkeleton
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </span>
+      </><section c las sNa me="r e lative py-20 px-4-sm:px-6-lg:px-8" />
+        <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv>
+          <d iv c las sNa me="t e xt-c enter" />
+            <h1 c las sNa me="t e xt-4 xl md:t ext-6 xl f ont-b old text-w hitem-b-6" />
+              <s pan c las sNa me="b g-grad ient-to-r from-purple-400 to-b lue-400bg-clip-t exttext-transpare-n-t">EnhancedLoadingSkeleton              </s pan>
               <br / />
-              <span className="text-white">Solutions</span>
+              <s pan c las sNa me="t e xt-w hite">Solutions</s pan>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
+            <p c las sNa me="t e xt-xl t ext-gra-y-300 mb-8 m ax-w-3x lmx-a uto">
               Transform your business with our advanced enhancedloadingskeleton solutions.
               Powered by cutting-edge AI technology and industry expertise.
     <>
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105"  />Get Started
-=======
-        </div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105">Get Started
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lgtransition-allduration-300">Learn More
-              </button>
-            </div>
-        </div>
+            <d iv c las sNa me="f lex flex-c ol sm:flex-rowg ap-4j ust ify-c enter">
+        </d iv>
+              <b utton c las sNa me="b g-grad ient-to-r from-purple-500 to-b lue-600 hover:from-purple-600 hover:to-b lue-700 t ext-w hit-e f ont-b old py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105">Get Started              </b utton>
+              <b utton c las sNa me="b order b ord er-purple-400 t ext-purpl-e-400 hover:bg-purple-400 hover:t ext-w hit-e f ont-b old py-4 px-8 rounded-lgtransition-allduration-300">Learn More
+              </b utton>
+            </d iv>
+        </d iv>
       </section>
-
       {/* Features Section */}
     <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Why Choose Our EnhancedLoadingSkeleton Solutions?
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Why Choose Our EnhancedLoadingSkeleton Solutions?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Our comprehensive approach ensures maximum efficiency and results for your business.
+      </><section c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" />
+        <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv>
+          <d iv c las sNa me="t e xt-c entermb-16">
+        </d iv>
+            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-w hitem-b-4">Why Choose Our EnhancedLoadingSkeleton Solutions?            </h2>
+            <p c las sNa me="t e xt-xl t ext-gra-y-300 m ax-w-3x lmx-a uto">
+              Our comprehensive approach ensures m aximum efficiency and results for your business.
     <>
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          </d iv>
+          <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-8">
             {features.map((feature, index) => (
     <>
-              <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
-<<<<<<< HEAD
-                <div className="flex items-centermb-4">
-                  <feature.icon className="h-8 w-8text-purple-400mr-3" />
-                  <h3 className="text-xlfont-semiboldtext-white"  >{feature.title}</h3>
-=======
-                <div className="flexitems-centermb-4">
-        </div>
-                  <feature.icon className="h-8 w-8text-purple-400mr-3" / />
-                  <h3 className="text-xlfont-semiboldtext-white">{feature.title}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+              </><d iv key="{index}" c las sNa me="b g-w hite/10 b ack drop-b lur-sm rounded-xl p-6 b ord er b ord er-w hite/20 hover:bg-w hite/20transition-allduration-300" />
+                <d iv c las sNa me="f lex i tems-c entermb-4">
+                  <feature.icon c las sNa me="h-8 w-8t e xt-purple-400mr-3" />
+                  <h3 c las sNa me="t e xt-x lfont-s emi bol dte xt-w hit-e"  >{feature.title}</h3>                </d iv>
+                <p c las sNa me="t e xt-gray-300">{feature.description}</p>
+              </d iv>
             ))}
     <>
-          </div>
+          </d iv>
       </section>
-
       {/* Benefits Section */}
     <>
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Key Benefits
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Key Benefits
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+      </><section c las sNa me="p y-20 px-4 sm:px-6-lg:px-8-bg-w hite/5" />
+        <d iv c las sNa me="m ax-w-7x lmx-a uto">
+        </d iv>
+          <d iv c las sNa me="t e xt-c entermb-16">
+        </d iv>
+            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-w hitem-b-4">Key Benefits            </h2>
+            <p c las sNa me="t e xt-xl t ext-gra-y-300 m ax-w-3x lmx-a uto">
               Discover the advantages of our enhancedloadingskeleton solutions.
     <>
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-6">
-<<<<<<< HEAD
-            {benefits.map((benefit, index) => (
-              <div key="{index}" className="flex items-startspace-x-3" />
-                <CheckCircle className="h-6 w-6 text-green-400flex-shrink-0mt-1" />
-=======
-        </div>
+          </d iv>
+          <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2lg:g rid-c ols-4g ap-6">
+        </d iv>
             {benefits.map((benefit, index) => (
     <>
-              <div key="{index}" className="flexitems-startspace-x-3" />
-                <CheckCircle className="h-6 w-6 text-green-400flex-shrink-0mt-1" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <p className="text-gray-300">{benefit}</p>
-              </div>
+              </><d iv key="{index}" c las sNa me="f lexi tems-star tsp ace-x-3" />
+                <C hec kCi rcle c las sNa me="h-6 w-6 t e xt-g reen-400flex-s hri nk-0mt-1" / />                <p c las sNa me="t e xt-gray-300">{benefit}</p>
+              </d iv>
             ))}
     <>
-          </div>
+          </d iv>
       </section>
-
-      {/* CTA Section */}
+      {/* C TA Section */}
     <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-4 xlmx-autotext-center">
-<<<<<<< HEAD
-          <h2 className="text-3 xl md:text-4xl font-bold text-white mb-6"  />Ready to Get Started?
+      </><section c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" />
+        <d iv c las sNa me="m ax-w-4 x lmx-a uto text-c ente-r">
+        </d iv>
+          <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-w hitem-b-6">Ready to Get Started?
           </h2>
-          <p className="text-xltext-gray-300 mb-8">
-              Join thousands of satisfied customers who trust our enhancedloadingskeleton solutions.
-          </p>
-          <div className="flex flex-col sm:flex-rowgap-4justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-centerjustify-center" />
-=======
-        </div>
-          <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-6">Ready to Get Started?
-          </h2>
-          <p className="text-xltext-gray-300mb-8" />
+          <p c las sNa me="t e xt-x lte xt-gra-y-300mb-8" />
             Join thousands of satisfied customers who trust our enhancedloadingskeleton solutions.
     <>
           </p>
-          <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flexitems-centerjustify-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Get Started Now
+          <d iv c las sNa me="f lex flex-c ol sm:flex-rowg ap-4j ust ify-c enter">
+        </d iv>
+            <b utton c las sNa me="b g-grad ient-to-r from-purple-500 to-b lue-600 hover:from-purple-600 hover:to-b lue-700 t ext-w hit-e f ont-b old py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-c enterj ust ify-c enter" />              Get Started N ow
     <>
-              <ArrowRight className="ml-2h-5w-5" />
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lgtransition-allduration-300">Contact Sales
-            </button>
-          </div>
+              </><ArrowRight c las sNa me="m l-2h-5w-5" />
+            </b utton>
+            <b utton c las sNa me="b order b ord er-purple-400 t ext-purpl-e-400 hover:bg-purple-400 hover:t ext-w hit-e f ont-b old py-4 px-8 rounded-lgtransition-allduration-300">Contact Sales
+            </b utton>
+          </d iv>
       </section>
-    </div>
+    </d iv>
   )
 };
     </>

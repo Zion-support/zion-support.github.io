@@ -2,14 +2,12 @@
  * Advanced Analytics Utility
  * Provides comprehensive analytics tracking and reporting functionality
  */
-
   name: string;
   properties?: Record<string, unknown>;
   timestamp?: number;
   userId?: string;
   sessionId?: string;
 }
-
   pageViews: number;
   sessionDuration: number;
   bounceRate: number;
@@ -17,7 +15,6 @@
   topPages: Array<{ page: string; views: number }>;
   userJourney: string[];
 }
-
   pageLoadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
@@ -25,124 +22,97 @@
   cumulativeLayoutShift: number;
   timeToInteractive: number;
 }
-
   trackingId: string;
   enabled: boolean;
   debug: boolean;
   sampleRate: number;
   customDimensions?: Record<string, string>;
 }
-
   private config: AnalyticsConfig;
   private events: AnalyticsEvent[] = [];
     userJourney: []
   };
   private performanceMetrics: PerformanceMetrics | null = null;
-
     this.config = config;
     this.initializeTracking();
   }
-
   /**
    * Initialize analytics tracking
    */
     if (typeof window === 'undefined' || !this.config.enabled) return;
-
     // Track page view
     this.trackPageView();
-
     // Track performance metrics
     this.trackPerformanceMetrics();
-
     // Track user interactions
     this.trackUserInteractions();
-
     // Track scroll depth
     this.trackScrollDepth();
-
     // Track form submissions
     this.trackFormSubmissions();
   }
-
   /**
    * Track a custom event
    */
     if (!this.config.enabled) return;
-
         sessionId: this.getSessionId()
       sessionId: this.getSessionId()
     };
-
     this.events.push(event);
-
       console.log('Analytics Event:', event);
     }
-
     // Send to analytics service
     this.sendToAnalytics(event);
   }
-
   /**
    * Track page view
    */
     const currentPage = page || window.location.pathname;
-
     this.userBehavior.pageViews++;
     this.userBehavior.userJourney.push(currentPage);
-
     // Update top pages
     const existingPage = this.userBehavior.topPages.find(p => p.page === currentPage);
       existingPage.views++;
       this.userBehavior.topPages.push({ page: currentPage, views: 1 });
     }
-
       userAgent: navigator.userAgent
     });
   }
-
   /**
    * Track user click events
    */
       ...properties
     });
   }
-
   /**
    * Track form submissions
    */
       ...properties
     });
   }
-
   /**
    * Track performance metrics
    */
     if (typeof window === 'undefined') return;
-
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paintEntries = performance.getEntriesByType('paint');
-
           largestContentfulPaint: 0, // Would need to be calculated with LCP API
           firstInputDelay: 0, // Would need to be calculated with FID API
           cumulativeLayoutShift: 0, // Would need to be calculated with CLS API
           timeToInteractive: 0 // Would need to be calculated
         };
-
         this.trackEvent('performance_metrics', this.performanceMetrics);
       }, 0);
     });
   }
-
   /**
    * Track user interactions
    */
     if (typeof window === 'undefined') return;
-
     // Track clicks
       const target = event.target as HTMLElement;
       this.trackClick(target);
     });
-
     // Track scroll depth
     let maxScrollDepth = 0;
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
@@ -151,33 +121,26 @@
       }
     });
   }
-
   /**
    * Track scroll depth
    */
     if (typeof window === 'undefined') return;
-
     let maxScrollDepth = 0;
-
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
         maxScrollDepth = scrollDepth;
         this.trackEvent('scroll_depth', { depth: scrollDepth });
       }
     };
-
     window.addEventListener('scroll', trackScrollDepth, { passive: true });
   }
-
   /**
    * Track form submissions
    */
     if (typeof window === 'undefined') return;
-
       const form = event.target as HTMLFormElement;
       this.trackFormSubmission(form);
     });
   }
-
   /**
    * Get user ID from storage or generate new one
    */
@@ -187,7 +150,6 @@
     }
     return userId;
   }
-
   /**
    * Get session ID from storage or generate new one
    */
@@ -197,7 +159,6 @@
     }
     return sessionId;
   }
-
   /**
    * Send event to analytics service
    */
@@ -206,7 +167,6 @@
       console.log('Sending to analytics:', event);
     }
   }
-
   /**
    * Get analytics report
    */
@@ -217,13 +177,11 @@
       totalEvents: this.events.length
     };
   }
-
   /**
    * Export analytics data
    */
     return JSON.stringify(this.getReport(), null, 2);
   }
-
   /**
    * Clear analytics data
    */
@@ -233,12 +191,9 @@
     this.performanceMetrics = null;
   }
 }
-
 // Export utility functions
 export const createAnalytics = (config: AnalyticsConfig) => new AdvancedAnalytics(config);
-
   console.log('Track event:', eventName, properties);
 };
-
   console.log('Track page view:', page);
 };

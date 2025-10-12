@@ -1,358 +1,198 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, Zap, Brain, Settings, Globe, Users, Star, Award, CheckCircle } from 'lucide-react';
-=======
-import { Zap, Workflow, CheckCircle, ArrowRight, Brain, Settings, Clock, TrendingUp, Shield, Link as LinkIcon } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-
+import React from 'react';import { Helmet  } from 'react-helmet-async';
+import { Link  } from 'react-router-dom';
+import { Zap, Workflow, CheckCircle, ArrowRight, Brain, Settings, Clock, TrendingUp, Shield, Link as LinkIcon  } from 'lucide-react';
 const AIAutomationPage: React.FC = () => {
-  const features = [
+  const f eat ures = [
     {
-      icon: <Zap className="w-8h-8text-cyan-400" />,
-      title: 'Workflow Automation',
-      description: 'Automate complex business processes with intelligent workflow management.'
+      i con: <Zap c las sNa me="w-8h-8t e xt-c yan-400" />,
+      t itle: 'Workflow Automation',
+      description: 'Automate complex business processes with intelligent workflow managem ent.'
     },
     {
-      icon: <Brain className="w-8h-8text-purple-400" />,
-      title: 'Intelligent Decision Making',
+      i con: <Brain c las sNa me="w-8h-8t e xt-p urple-400" />,
+      t itle: 'Intelligent Decision Making',
       description: 'AI-powered decision making based on data analysis and business rules.'
     },
     {
-      icon: <Settings className="w-8h-8text-green-400" />,
-      title: 'Custom Integrations',
+      i con: <Settings c las sNa me="w-8h-8t e xt-g reen-400" />,
+      t itle: 'Custom Integrations',
       description: 'Seamlessly integrate with your existing systems and third-party applications.'
     },
     {
-      icon: <Globe className="w-8h-8text-blue-400" />,
-      title: 'Scalable Solutions',
+      i con: <G lobe c las sNa me="w-8h-8t e xt-b lue-400" />,
+      t itle: 'Scalable Solutions',
       description: 'Automation solutions that grow with your business and adapt to changing needs.'
     }
   ];
   const useCases = [
     {
-      title: 'Customer Service',
-      description: 'Automate ticket routing, response generation, and issue resolution.',
-      icon: <Users className="w-6h-6text-blue-400" />
+      t itle: 'Customer Service',
+      description: 'Automate ticket routing, r esponse generation, and i ssue r esolution.',
+      i con: <U sers c las sNa me="w-6h-6t e xt-b lue-400" />
     },
     {
-      title: 'Data Processing',
-      description: 'Automate data collection, validation, and analysis workflows.',
-      icon: <Star className="w-6h-6text-yellow-400" />
+      t itle: 'Data Processing',
+      description: 'Automate data collection, validation, and analysis workflo ws.',
+      i con: <S tar c las sNa me="w-6h-6t e xt-y ellow-400" />
     },
     {
-      title: 'Marketing Automation',
-      description: 'Automate email campaigns, lead scoring, and customer segmentation.',
-      icon: <Award className="w-6h-6text-green-400" />
+      t itle: 'Marketing Automation',
+      description: 'Automate email campaigns, lead scoring, and customer s egm ent ation.',
+      i con: <A ward c las sNa me="w-6h-6t e xt-g reen-400" />
     },
     {
-      title: 'Financial Operations',
-      description: 'Automate invoice processing, expense management, and financial reporting.',
-      icon: <CheckCircle className="w-6h-6text-red-400" />
+      t itle: 'Financial Operations',
+      description: 'Automate invoice processing, expense managem ent, and financial r eporting.',
+      i con: <CheckCircle c las sNa me="w-6h-6t e xt-red-400" />
     }
   ];
   const benefits = [
     'Reduce operational costs by up to 70%',
     'Increase productivity and efficiency',
-    'Eliminate human errors in repetitive tasks',
+    'Eliminate human errors in r epetitive tasks',
     '24/7 automated operations',
     'Scalable and adaptable solutions',
-    'ROI within 3-6 months'
+    'ROI within 3-6 m ont hs'
   ];
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900via-blue-900to-purple-900">
-      <Helmet />
-        <title />AI Automation Services - Zion Tech Group</title>
-=======
+  r etu rn (
     <>
-    <div className="min-h-screen bg-gradient-to-br from-gray-900via-blue-900to-purple-900">
-        </div>
+    </><d iv c las sNa me="m in-h-scre en bg-grad ient-to-br from-gray-900via-b lue-900to-p urple-900">
+        </d iv>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <t itle>5G Data Analytics - Zion Tech Group</t itle>
+        <meta name="description" content="Professional 5G data analytics s ervices by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
-        <title>AI Automation Services - Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <meta name="description" content="Transform your business with AI-powered automation solutions. Reduce costs, increase efficiency, and eliminate manual processes." />
+        <t itle>AI Automation Services - Zion Tech Group</t itle>        <meta name="description" content="Transform your business with AI-powered automation solutions. Reduce costs, increase efficiency, and eliminate manual processes." />
         <meta name="keywords" content="AI automation, business process automation, workflow automation, intelligent automation, RPA" />
       </Helmet>
-
-      {/* Hero Section */}
+      {/* H ero S ection */}
     <>
-      <section className="relative py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-autotext-center">
-<<<<<<< HEAD
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" />
-            AI <span className="text-transparent bg-clip-text bg-gradient-to-rfrom-cyan-400to-purple-400" />Automation</span> Services
+      </><s ection c las sNa me="r e lative py-20 px-4-sm:px-6-lg:px-8" />
+        <d iv c las sNa me="m ax-w-7x lmx-auto text-c ente-r">
+        </d iv>
+          <h1 c las sNa me="t e xt-5xl md:t ext-6xl f ont-b old text-w hitem-b-6" />
+            AI <s pan c las sNa me="t e xt-t ran spa rent bg-c lip-t ext bg-grad ient-to-rfrom-c yan-400to-p urple-400">Automation</s pan> Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
-              Transform your business operations with intelligent automation solutions that reduce costs, increase efficiency, and eliminate repetitive tasks.
-          </p>
-          <div className="flex flex-col sm:flex-rowgap-4justify-center">
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-centergap-2" >
-          Get Started 
-          <ArrowRight className="w-5h-5"  />
-        </Link>
-=======
-        </div>
-          <h1 className="text-5xl md:text-6xl font-boldtext-whitemb-6" />
-            AI <span className="text-transparent bg-clip-text bg-gradient-to-rfrom-cyan-400to-purple-400">Automation</span> Services
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
-            Transform your business operations with intelligent automation solutions that reduce costs, increase efficiency, and eliminate repetitive tasks.
+          <p c las sNa me="t e xt-xl t ext-gra-y-300 mb-8 m ax-w-3x lmx-auto" />
+            Transform your business operations with intelligent automation solutions that reduce costs, increase efficiency, and eliminate r epetitive tasks.
     <>
           </p>
-          <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flexitems-centergap-2" />
-              Get Started <ArrowRight className="w-5h-5" />
-            </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            <Link to="/ai-services" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
+          <d iv c las sNa me="f lex f lex-col sm:f lex-rowg ap-4j ust ify-c enter">
+        </d iv>
+            <Link to="/cont act" c las sNa me="b g-grad ient-to-r from-c yan-600 to-p urple-600 t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:from-c yan-700 hover:to-p urple-700 t ransition-all duration-300 f lexitems-c enterg ap-2" />
+              G et S tar ted <ArrowRight c las sNa me="w-5h-5" />
+            </Link>            <Link to="/ai-s ervices" c las sNa me="b order b ord er-w hite t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:bg-w hite hover:t ext-gra-y-900t ransition-allduration-300" />
               View All AI Services
     <>
             </Link>
-          </div>
-      </section>
-
-      {/* Features Section */}
+          </d iv>
+      </s ection>
+      {/* Feat ures S ection */}
     <>
-      <section className="py-20bg-white" />
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-          <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-boldtext-gray-900mb-4"  />Automation Capabilities
-=======
-        <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-gray-900mb-4">Automation Capabilities
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xlmx-auto">
+      </><s ection c las sNa me="p y-20bg-w hite" />
+        <d iv c las sNa me="m ax-w-7 xl mx-auto px-4-sm:px-6-lg:px-8">
+        </d iv>
+          <d iv c las sNa me="t e xt-c entermb-16">
+        </d iv>
+            <h2 c las sNa me="t e xt-3 xl md:t ext-4 xl f ont-b old text-gr-a-y-900mb-4">Automation Capabil iti es            </h2>
+            <p c las sNa me="t e xt-xl t ext-gra-y-600 m ax-w-3x lmx-auto">
               Our AI automation solutions cover every aspect of your business operations
     <>
             </p>
-          </div>
-          <div className="grid md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            {features.map((feature, index) => (
+          </d iv>
+          <d iv c las sNa me="g r id md:g rid-cols-2lg:g rid-cols-4g ap-8">
+            {f eat ures.map((f eat ure, index) => (
     <>
-              <div key="{index}" className="text-center" />
-<<<<<<< HEAD
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-automb-4">
-                  <feature.icon className="h-8w-8text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semiboldtext-gray-900mb-3"   />{feature.title}</h3>
-                <p className="text-gray-600">
-              {feature.description}</p>
-=======
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-centermx-automb-4">
-        </div>
-                  <feature.icon className="h-8w-8text-blue-600" / />
-                </div>
-                <h3 className="text-xl font-semiboldtext-gray-900mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </div>
-            ))}
-    <>
-          </div>
-      </section>
-
-      {/* Use Cases Section */}
-    <>
-      <section className="py-20bg-gray-50" />
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-          <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-boldtext-gray-900mb-4"  />Common Use Cases
-=======
-        <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-gray-900mb-4">Common Use Cases
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xlmx-auto">
-              See how AI automation can transform different areas of your business
-    <>
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              </><d iv key="{index}" c las sNa me="t e xt-c enter" />
             {useCases.map((useCase, index) => (
     <>
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10transition-allduration-300" />
-                <div className="flex items-centergap-3mb-4">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  {useCase.icon}
+              </><d iv key={index} c las sNa me="b g-w hite/5 b ack drop-b lur-sm rounded-xl p-6 b ord er b ord er-w hite/10 hover:bg-w hite/10t ransition-allduration-300" />
+                <d iv c las sNa me="f lex i tems-c enterg ap-3mb-4">
+<<<<<<< H EAD                  {useCase.i con}
     <>
-                  <h3 className="text-lgfont-semiboldtext-white">{useCase.title}</h3>
-                </div>
-<<<<<<< HEAD
-                <p className="text-gray-300">
-              {useCase.description}</p>
-=======
-                <p className="text-gray-300">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </div>
+                  </><h3 c las sNa me="t e xt-l gfo nt-semibol dte xt-w hit-e">{useCase.t itle}</h3>
+                </d iv>
+                <p c las sNa me="t e xt-gray-300">
+              {useCase.description}</p>              </d iv>
             ))}
     <>
-          </div>
-      </section>
-
-      {/* Benefits Section */}
+          </d iv>
+      </s ection>
+      {/* Benefits S ection */}
     <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="grid lg:grid-cols-2gap-12items-center">
-            <div />
-              <h2 className="text-4xl font-bold text-white mb-6"   />Why Choose Our AI Automation?</h2>
-              <p className="text-lg text-gray-300 mb-8">
-              Our AI automation solutions deliver measurable results that transform your business operations and drive growth.
-              </p>
-              <ul className="space-y-4" />
-                {benefits.map((benefit, index) => (
-                  <li key="{index}" className="flex items-centerspace-x-3" />
-                    <CheckCircle className="w-6 h-6text-cyan-400flex-shrink-0" />
-                    <span className="text-gray-300"   />{benefit}</span>
-=======
-        </div>
-          <div className="grid lg:grid-cols-2gap-12items-center">
-        </div>
-            <div />
-              <h2 className="text-4 xl font-boldtext-whitemb-6">Why Choose Our AI Automation?</h2>
-              <p className="text-lgtext-gray-300mb-8" />
-                Our AI automation solutions deliver measurable results that transform your business operations and drive growth.
+      </><s ection c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" />
+        <d iv c las sNa me="m ax-w-7x lmx-auto">
+        </d iv>
+          <d iv c las sNa me="g r id lg:g rid-cols-2g ap-12i tems-c enter">
+        </d iv>
+            <d iv />
+              <h2 c las sNa me="t e xt-4 xl f ont-b old text-w hitem-b-6">W hy Choose Our AI Automation?</h2>
+              <p c las sNa me="t e xt-l gte xt-gra-y-300mb-8" />
+                Our AI automation solutions deliver measurable r esults that t ransform your business operations and drive growth.
     <>
               </p>
-              <ul className="space-y-4" />
+              <ul c las sNa me="s p ace-y-4" />
                 {benefits.map((benefit, index) => (
     <>
-                  <li key="{index}" className="flexitems-centerspace-x-3" />
-                    <CheckCircle className="w-6 h-6text-cyan-400flex-shrink-0" / />
-                    <span className="text-gray-300">{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </li>
+                  </><li key="{index}" c las sNa me="f lexi tems-c enters pace-x-3" />
+                    <CheckCircle c las sNa me="w-6 h-6t e xt-c yan-400f lex-s hrink-0" / />
+                    <s pan c las sNa me="t e xt-gray-300">{benefit}</s pan>                  </li>
                 ))}
     <>
               </ul>
-            </div>
-            <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-2xl p-8borderborder-cyan-500/30">
-<<<<<<< HEAD
-              <h3 className="text-2xl font-bold text-white mb-4" />Ready to Automate?</h3>
-              <p className="text-gray-300 mb-6">
-              Let our AI experts help you identify automation opportunities and implement solutions that deliver immediate value.
-              </p>
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 inline-flex items-centergap-2" >
-          Start Your Automation Journey 
-          <ArrowRight className="w-5h-5"  />
-        </Link>
-            <div className="relative">
-              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2 xl p-8 backdrop-blur-smborderborder-white/10">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-white mb-2"   />70%</div>
-                  <div className="text-gray-300 mb-6"   />Average Cost Reduction</div>
-                  <div className="text-4xl font-bold text-white mb-2"   />3-6</div>
-                  <div className="text-gray-300 mb-6"   />Months to ROI</div>
-                  <div className="text-4xl font-bold text-white mb-2"   />24/7</div>
-                  <div className="text-gray-300"   />Automated Operations</div>
-              </div>
-              <h3 className="text-xl font-semiboldtext-gray-900mb-3"   />Optimization</h3>
-              <p className="text-gray-600">
-              Continuously monitor and optimize automation performance
-=======
-        </div>
-              <h3 className="text-2xl font-boldtext-whitemb-4">Ready to Automate?</h3>
-              <p className="text-gray-300mb-6" />
-                Let our AI experts help you identify automation opportunities and implement solutions that deliver immediate value.
+            </d iv>
+            <d iv c las sNa me="b g-grad ient-to-r from-c yan-600/20 to-p urple-600/20 rounded-2xl p-8b ord erb ord er-c yan-500/30">
+        </d iv>
+              <h3 c las sNa me="t e xt-2xl f ont-b old text-w hitem-b-4">Ready to Automate?</h3>
+              <p c las sNa me="t e xt-gray-300mb-6" />
+                L et our AI experts help you identify automation opportunit ies and implement solutions that deliver immediate value.
     <>
               </p>
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 inline-flexitems-centergap-2" />
-                Start Your Automation Journey <ArrowRight className="w-5h-5" />
+              <Link to="/cont act" c las sNa me="b g-grad ient-to-r from-c yan-600 to-p urple-600 t ext-w hit-e px-6 py-3 rounded-lg f ont-semibold hover:from-c yan-700 hover:to-p urple-700 t ransition-all duration-300 inline-f lexitems-c enterg ap-2" />
+                S tart Y our Automation J our ney <ArrowRight c las sNa me="w-5h-5" />
               </Link>
-            <div className="relative" />
-              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2 xl p-8 backdrop-blur-smborderborder-white/10">
-        </div>
-                <div className="text-center" />
-                  <div className="text-4 xl font-boldtext-whitemb-2">70%</div>
-                  <div className="text-gray-300mb-6">Average Cost Reduction</div>
-                  <div className="text-4 xl font-boldtext-whitemb-2">3-6</div>
-                  <div className="text-gray-300mb-6">Months to ROI</div>
-                  <div className="text-4 xl font-boldtext-whitemb-2">24/7</div>
-                  <div className="text-gray-300">Automated Operations</div>
-              </div>
-              <h3 className="text-xl font-semiboldtext-gray-900mb-3">Optimization</h3>
-              <p className="text-gray-600" />
-                Continuously monitor and optimize automation performance
+            <d iv c las sNa me="r e lative" />
+              <d iv c las sNa me="b g-grad ient-to-r from-c yan-500/20 to-p urple-600/20 rounded-2 xl p-8 b ack drop-b lur-smborderborder-w hite/10">
+        </d iv>
+                <d iv c las sNa me="t e xt-c enter" />
+                  <d iv c las sNa me="t e xt-4 xl f ont-b old text-w hitem-b-2">70%</d iv>
+                  <d iv c las sNa me="t e xt-gray-300mb-6">A ver age C ost Reduction</d iv>
+                  <d iv c las sNa me="t e xt-4 xl f ont-b old text-w hitem-b-2">3-6</d iv>
+                  <d iv c las sNa me="t e xt-gray-300mb-6">M ont hs to ROI</d iv>
+                  <d iv c las sNa me="t e xt-4 xl f ont-b old text-w hitem-b-2">24/7</d iv>
+                  <d iv c las sNa me="t e xt-gray-300">Automated Operations</d iv>
+              </d iv>
+              <h3 c las sNa me="t e xt-xl f ont-semibol dte xt-gra-y-900mb-3">O ptimiz ation</h3>
+              <p c las sNa me="t e xt-gray-600" />
+                C ontinuously m onitor and optimize automation performance
+    <>              </p>
+            </d iv>
+        </d iv>
+      </s ection>
+      {/* C TA S ection */}
     <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-    <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-4xlmx-autotext-center">
-<<<<<<< HEAD
-          <h2 className="text-3xl font-bold text-white mb-6" />
-=======
-        </div>
-          <h2 className="text-3xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            Transform Your Business with AI Automation
+      </><s ection c las sNa me="p y-20 px-4-sm:px-6-lg:px-8" />
+        <d iv c las sNa me="m ax-w-4x lmx-auto text-c ente-r">
+        </d iv>
+          <h2 c las sNa me="t e xt-3xl f ont-b old text-w hitem-b-6" />            Transform Y our Business with AI Automation
     <>
           </h2>
-<<<<<<< HEAD
-          <p className="text-gray-300text-lgmb-8">
-              Join hundreds of companies that have already revolutionized their operations with our AI automation solutions.
-          </p>
-          <div className="flex flex-col sm:flex-rowgap-4justify-center">
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-centergap-2" >
-          Get Started Today 
-          <ArrowRight className="w-5h-5"  />
-        </Link>
-=======
-          <p className="text-gray-300text-lgmb-8" />
-            Join hundreds of companies that have already revolutionized their operations with our AI automation solutions.
+          <p c las sNa me="t e xt-gray-300t ext-l gm-b-8" />
+            Join hundreds of comp ani es that have already revolutionized their operations with our AI automation solutions.
     <>
           </p>
-          <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-centergap-2" />
-              Get Started Today <ArrowRight className="w-5h-5" />
-            </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            <Link to="/about" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
+          <d iv c las sNa me="f lex f lex-col sm:f lex-rowg ap-4j ust ify-c enter">
+        </d iv>
+            <Link to="/cont act" c las sNa me="b g-grad ient-to-r from-c yan-600 to-p urple-600 t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:from-c yan-700 hover:to-p urple-700 t ransition-all duration-300 f lex i tems-c enterj ust ify-c enterg ap-2" />
+              G et S tar ted T oday <ArrowRight c las sNa me="w-5h-5" />
+            </Link>            <Link to="/a bout" c las sNa me="b order b ord er-w hite t ext-w hit-e px-8 py-3 rounded-lg f ont-semibold hover:bg-w hite hover:t ext-gra-y-900t ransition-allduration-300" />
               Learn More About Us
     <>
             </Link>
-          </div>
-      </section>
-    </div>
+          </d iv>
+      </s ection>
+    </d iv>
   );
 };
-
 export default AIAutomationPage;
     </>

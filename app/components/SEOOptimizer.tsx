@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-
 interface SEOOptimizerProps {
   title?: string
   description?: string
@@ -8,7 +7,6 @@ interface SEOOptimizerProps {
   ogImage?: string
   structuredData?: object
 }
-
 const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
   const title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, 5 G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
@@ -24,13 +22,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       script.type = 'application/ld+json'
       script.text = JSON.stringify(structuredData)
       document.head.appendChild(script)
-      
       return () => {
         document.head.removeChild(script)
       }
     }
   }, [structuredData])
-
   // Generate breadcrumb structured data
   const generateBreadcrumbStructuredData = () => {
     const pathSegments = window.location.pathname.split('/').filter(Boolean)
@@ -40,7 +36,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
       item: `https://ziontechgroup.com/${pathSegments.slice(0, index + 1).join('/')}`
     }))
-
     return {
       '@context': 'https: //schema.org',
       '@type': 'BreadcrumbList',
@@ -55,7 +50,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       ]
     }
   }
-
   // Generate FAQ structured data
   const generateFAQStructuredData = () => {
     return {
@@ -89,19 +83,17 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       ]
     }
   }
-
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
   const breadcrumbData = generateBreadcrumbStructuredData()
   const faqData = generateFAQStructuredData()
-
   return (
     <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name="description" content="5G Data Analytics - Zion Tech Group" />
       </Helmet>
       {/* Basic Meta Tags */}
     <>
-      <title>{title}</title>
+      </><title>{title}</title>
         <meta name="description" content="{description}" / / />
       <meta name="keywords" content="{keywords}" / / />
       <meta name="robots" content="index, follow, max-image-preview: large, max-snippet: -1, max-video-preview:-1" / / />
@@ -115,7 +107,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       <link rel="canonical" href="{canonicalUrl}" />
       {/* Open Graph Meta Tags */}
     <>
-      <meta property="og: title" content="{title}" / / />
+      </><meta property="og: title" content="{title}" / / />
       <meta property="og: description" content="{description}" / / />
       <meta property="og:type" content="website" / / />
       <meta property="og: url" content="{canonicalUrl}" / / />
@@ -129,7 +121,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       <meta property="og:locale" content="en_US" / / />
       {/* Twitter Card Meta Tags */}
     <>
-      <meta name="twitter:card" content="summary_large_image" / / />
+      </><meta name="twitter:card" content="summary_large_image" / / />
       <meta name="twitter: title" content="{title}" / / />
       <meta name="twitter: description" content="{description}" / / />
       <meta name="twitter: image" content="{ogImage}" / / />
@@ -140,36 +132,27 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       <meta name="twitter:creator" content="@ziontechgroup" / / />
       {/* Additional SEO Meta Tags */}
     <>
-      <meta name="google-site-verification" content="your-google-verification-code" / / />
+      </><meta name="google-site-verification" content="your-google-verification-code" / / />
       <meta name="msvalidate.01" content="your-bing-verification-code" / / />
       <meta name="yandex-verification" content="your-yandex-verification-code" / / />
       {/* Performance Hints */}
-<<<<<<< HEAD
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-=======
     <>
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" / />
+      </><link rel="dns-prefetch" href="//fonts.googleapis.com" / />
       <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" / />
       <link rel="preconnect" href="https://fonts.googleapis.com" / />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-      {/* Structured Data */}
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" / />      {/* Structured Data */}
     <>
-      <script type="application/ld+json">{JSON.stringify(breadcrumbData)}
+      </><script type="application/ld+json">{JSON.stringify(breadcrumbData)}
       </script>
       <script type="application/ld+json">{JSON.stringify(faqData)}
       </script>
       {structuredData && (
     <>
-        <script type="application/ld+json">{JSON.stringify(structuredData)}
+        </><script type="application/ld+json">{JSON.stringify(structuredData)}
         </script>
       )}
     </Helmet>
   )
 }
-
 export default SEOOptimizer;
     </>

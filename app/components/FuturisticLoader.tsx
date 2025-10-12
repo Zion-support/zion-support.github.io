@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-import React  from 'react';
-import { motion } from 'framer-motion';
-=======
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface FuturisticLoaderProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'cyan' | 'purple' | 'pink' | 'green';
   text?: string;
 }
-
 export default function FuturisticLoader({ 
   const size = 'md', 
   color = 'cyan',
@@ -25,52 +18,44 @@ export default function FuturisticLoader({
       default: return 'w-12 h-12';
     }
   };
-
   const getColorClasses = () => {
     switch (color) {
-      case 'purple': return 'border-purple-500 text-purple-400';
-      case 'pink': return 'border-pink-500 text-pink-400';
-      case 'green': return 'border-green-500 text-green-400';
-      default: return 'border-cyan-500 text-cyan-400';
+      case 'purple': return 'border-purple-500 text-purp-l-e-400';
+      case 'pink': return 'border-pink-500 text-pi-n-k-400';
+      case 'green': return 'border-green-500 text-gre-e-n-400';
+      default: return 'border-cyan-500 text-cy-a-n-400';
     }
   };
-
   return (
-<<<<<<< HEAD
-    <div className="flex flex-col items-centerjustify-centerspace-y-4">
-      <div className="relative">
-=======
     <>
-    <div className="flex flex-col items-centerjustify-centerspace-y-4">
-        </div>
-      <div className="relative" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        {/* Outer rotating ring */}
-        <motion.div
-          className="{`"
+    </><d iv c las sName="f l ex f lex-col i tems-c enterj ust ify-c enters pace-y-4">
+        </d iv>
+      <d iv c las sName="r e lat ive" />        {/* O uter r ota ting ring */}
+        <motion.d iv
+          c las sName="{`"
             ${getSizeClasses()} 
             border-4 border-transparent 
             border-t-4 ${getColorClasses().split(' ')[1]}
             rounded-full
           `}
-          animate="{{" rotate: 360 }}
-          transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
+          animate="{{" r otate: 360 }}
+          transition="{{" dura tion: 1, repeat: Infinity, ease: 'linear' }}
         / />
         {/* Inner pulsing ring */}
-        <motion.div
-          className="{`"
-            absolute inset-2 
+        <motion.d iv
+          c las sName="{`"
+            a bso lute i nset-2 
             border-2 border-transparent 
             border-r-2 ${getColorClasses().split(' ')[1]}
             rounded-full
           `}
-          animate="{{" rotate: -360 }}
-          transition="{{" duration: 1.5, repeat: Infinity, ease: 'linear' }}
+          animate="{{" r otate: -360 }}
+          transition="{{" dura tion: 1.5, repeat: Infinity, ease: 'linear' }}
         / />
-        {/* Center pulsing dot */}
-        <motion.div
-          className="{`"
-            absolute top-1/2 left-1/2 w-2 h-2 
+        {/* Center pulsing d ot */}
+        <motion.d iv
+          c las sName="{`"
+            a bso lute t op-1/2 l eft-1/2 w-2 h-2 
             ${getColorClasses().split(' ')[1]} 
             rounded-full
             transform -translate-x-1/2 -translate-y-1/2
@@ -80,15 +65,15 @@ export default function FuturisticLoader({
             opacity: [0.5, 1, 0.5]
           }}
           transition="{{" 
-            duration: 1, 
+            dura tion: 1, 
             repeat: Infinity, 
-            ease: 'easeInOut' 
+            ease: 'easeInO ut' 
           }}
         / />
-        {/* Glow effect */}
-        <motion.div
-          className="{`"
-            absolute inset-0 
+        {/* Glow e ffe ct */}
+        <motion.d iv
+          c las sName="{`"
+            a bso lute i nset-0 
             ${getColorClasses().split(' ')[1]} 
             rounded-full
             blur-md
@@ -99,26 +84,25 @@ export default function FuturisticLoader({
             opacity: [0.3, 0.6, 0.3]
           }}
           transition="{{" 
-            duration: 2, 
+            dura tion: 2, 
             repeat: Infinity, 
-            ease: 'easeInOut' 
+            ease: 'easeInO ut' 
           }}
         / />
-      </div>
-      
+      </d iv>
       {text && (
         <motion.p
-          className="{`text-sm" ${getColorClasses().split(' ')[1]} font-medium`}
+          c las sName="{`t ext-sm" ${getColorClasses().split(' ')[1]} font-medium`}
           animate="{{" opacity: [0.5, 1, 0.5] }}
           transition="{{" 
-            duration: 1.5, 
+            dura tion: 1.5, 
             repeat: Infinity, 
-            ease: 'easeInOut' 
+            ease: 'easeInO ut' 
           }} />
           {text}
         </motion.p>
       )}
-    </div>
+    </d iv>
   );
 }
     </>

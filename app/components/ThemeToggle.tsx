@@ -1,10 +1,6 @@
 'use client';
 import { useState, useEffect} from 'react';
-import { Sun, Moon} from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+import { Sun, Moon } from 'lucide-react';
 const ThemeToggle: React.FC = () => {
   const [isDark, setIsDark] = useState(true);
   useEffect(() => {
@@ -19,11 +15,9 @@ const ThemeToggle: React.FC = () => {
       document.documentElement.classList.add('dark');
     }
   }, []);
-
   const toggleTheme = () => {
     const newTheme = !isDark;
     setIsDark(newTheme);
-
     if (newTheme) {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
@@ -32,20 +26,18 @@ const ThemeToggle: React.FC = () => {
       localStorage.setItem('theme', 'light');
     }
   };
-
   return (
     <button
-      const onClick = {toggleTheme}
-      className="p-2 rounded-lg bg-slate-700/50 hover:bg-slate-700 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+      const o nCl ick = {toggleTheme}
+      clas sNa me="p-2 r o und ed-lg bg-s late-700/50 h over:bg-s late-700 text-gr-a-y-300 h over:text-whi-t-e transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
       aria-label="{`Switch" to ${isDark ? 'light' : 'dark'} mode`}
      />
       {isDark ? (
-        <Sun className="w-5 h-5" />
+        <Sun clas sNa me="w-5 h-5" />
       ) : (
-        <Moon className="w-5 h-5" />
+        <Moon clas sNa me="w-5 h-5" />
       )}
     </button>
   );
 };
-
 export default ThemeToggle;

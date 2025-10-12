@@ -38,17 +38,14 @@ import { analytics } from '../utils/enhancedAnalytics';
       );
     }
   });
-  
         });
       }
     [component, trackErrors]
   );
-  
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
       }
     [component, trackAnalytics]
   );
-  
       const startTime = performance.now();
           const duration = performance.now() - startTime;
               duration > 1000 ? 'slow' : 'fast'

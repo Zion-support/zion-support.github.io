@@ -1,114 +1,101 @@
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible] = useState(true);
-  
   ];
   const currentContent = content[currentSlide];
-    
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [content.length]);
   // Removed unused handleClose function
-  if (!isVisible) return null;
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
-      {/* Animated Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-        
-        ></div>
-        
-        ></div>
-      <div className="relative z-10 container mx-auto px-4 py-16">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="text-2xl">🚀</span>
-            <span className="text-cyan-400 font-bold text-xl">
+  if (!isVisible) return n ull;
+    <s ection c las sNa me="r e lat ive m in-h-s cre en bg-g rad ient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      {/* Anim ated B ack gro und E ffe cts */}
+      <d iv c las sNa me="a b sol ute i nset-0">
+        <d iv c las sNa me="a b sol ute t op-1/4 l eft-1/4 w-96 h-96 bg-cyan-500/20 r ounded-full blur-3xl anim ate-pulse"></d iv>
+        ></d iv>
+        ></d iv>
+      <d iv c las sNa me="r e lat ive z-10 cont ain er mx-a uto px-4 py-16">
+        {/* H ead er */}
+        <d iv c las sNa me="t e xt-c enter mb-16">
+          <d iv c las sNa me="f l ex i tems-c enter j ust ify-c enter g ap-3 mb-6">
+            <s pan c las sNa me="t e xt-2xl">🚀</s pan>
+            <s pan c las sNa me="t e xt-cyan-400 f ont-b old t ext-x-l">
               BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
-            </span>
-            <span className='text-2xl'>⚡</span>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
-            {currentContent.title}
+            </s pan>
+            <s pan c las sNa me='t ext-2xl'>⚡</s pan>
+          </d iv>
+          <h1 c las sNa me="t e xt-4xl md:t ext-6xl f ont-e xtr abo ld t ext-whit-e mb-6">
+            {currentContent.t itle}
           </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+          <p c las sNa me="t e xt-xl t ext-g ra-y-300 m ax-w-4xl mx-a uto mb-8">
             {currentContent.description}
           </p>
-        </div>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            
+        </d iv>
+          <d iv c las sNa me="f l ex f lex-c ol sm:f lex-r ow g ap-6 j ust ify-c enter mb-16">
             >
-              Get Started Today
-              <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                
+              G et Star ted T oday
+              <s vg c las sNa me="m l-3 w-6 h-6" f ill="n one" s tro ke="currentColor" viewBox="0 0 24 24">
                 />
-              </svg>
+              </s vg>
             </a>
-            
             >
               Schedule Consultation
             </a>
-          </div>
-          {/* Key Benefits Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                
+          </d iv>
+          {/* K ey B ene fits G rid */}
+          <d iv c las sNa me="g r id g rid-c ols-1 md:g rid-c ols-2 lg:g rid-c ols-4 g ap-8">
+            <d iv c las sNa me="b g-white/10 b ack drop-blur-sm r ounded-2xl p-8 bord er bord er-white/20 hover:bg-white/20 t ransition-a ll d ura tion-300">
+              <d iv c las sNa me="w-16 h-16 b g-g rad ient-to-r from-blue-500 to-cyan-500 r ounded-2xl f lex i tems-c enter j ust ify-c enter mb-6 mx-a uto">
                 >
-                  
                   />
-                </svg>
-              </div>
-            {/* Metrics Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-                <div key={key} className="text-center bg-white/5 rounded-xl p-4">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
-                  <div className="text-sm text-gray-300 capitalize">
-                    {key.replace(/([A-Z])/g, ' $1').trim()}
-                  </div>
+                </s vg>
+              </d iv>
+            {/* M etr ics G rid */}
+            <d iv c las sNa me="g r id g rid-c ols-2 md:g rid-c ols-4 g ap-6 mb-8">
+                <d iv k ey={k ey} c las sNa me="t e xt-c enter bg-white/5 r ounded-xl p-4">
+                  <d iv c las sNa me="t e xt-3xl f ont-b old t ext-cya-n-400 mb-2">{value}</d iv>
+                  <d iv c las sNa me="t e xt-sm t ext-g ra-y-300 c api tal ize">
+                    {k ey.replace(/([A-Z])/g, ' $1').t rim()}
+                  </d iv>
               ))}
-            </div>
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2 mb-8">
-                
+            </d iv>
+            {/* T ags */}
+            <d iv c las sNa me="f l ex f lex-w rap g ap-2 mb-8">
                 >
                   {tag}
-                </span>
+                </s pan>
               ))}
-            </div>
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              
+            </d iv>
+            {/* C TA B utt ons */}
+            <d iv c las sNa me="f l ex f lex-c ol sm:f lex-r ow i tems-c enter j ust ify-c enter g ap-6">
               >
-                <span className="text-xl">📖</span>
-                <span>Read {currentContent.type}</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
+                <s pan c las sNa me="t e xt-xl">📖</s pan>
+                <s pan>Read {currentContent.t ype}</s pan>
+                <s pan c las sNa me="g r oup-hover:t ran slate-x-1 t ransition-t ransform">-></s pan>
               </a>
-              
               >
-                <span className="text-xl">📞</span>
-                <span>Call +1 302 464 0950</span>
+                <s pan c las sNa me="t e xt-xl">📞</s pan>
+                <s pan>Call +1 302 464 0950</s pan>
               </a>
-            </div>
-          {/* Slide Indicators */}
-          <div className="flex justify-center mt-8 space-x-2">
-              
+            </d iv>
+          {/* Slide I ndi cat ors */}
+          <d iv c las sNa me="f l ex j ust ify-c enter mt-8 s pace-x-2">
                 onClick={() => setCurrentSlide(index)}
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
-          </div>
-        {/* Stats Section */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+          </d iv>
+        {/* Stats S ection */}
+        <d iv c las sNa me="m t-16 g rid g rid-c ols-2 md:g rid-c ols-4 g ap-8">
           {[
-            <div key={index} className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
+            <d iv k ey={index} c las sNa me="t e xt-c enter">
+              <d iv c las sNa me="t e xt-3xl f ont-b old t ext-cya-n-400 mb-2">{s tat.value}</d iv>
+              <d iv c las sNa me="t e xt-g ray-300">{s tat.label}</d iv>
           ))}
-        </div>
-    </section>
+        </d iv>
+    </s ection>
   );
 };
-export default UltimateBusinessIntelligence2025Banner;
+export default Ulti mateBusinessIntelligence2025Bann er;

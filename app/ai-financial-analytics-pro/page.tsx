@@ -1,96 +1,85 @@
 'use client';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, Calculator, Building2, Wallet} from 'lucide-react';
-<<<<<<< HEAD
-import { useState } from 'react';
-=======
-
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { Link } from 'react-router-dom';
-=======
-import { Brain, TrendingUp, Zap, CheckCircle, ArrowRight, Star, BarChart3, DollarSign, Shield, Target, PieChart, Activity, Globe, Monitor, Sparkles, Calculator, FileText, Database, Lock, Building2, CreditCard, Wallet } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-
+import { Link  } from 'react-router-dom';
+import { ArrowRight, Calculator, Building2, Wallet } from 'lucide-react';
 export default function AiFinancialAnalyticsProPage() {
-
-  const features = [
+}
+  const f eat ures = [
     {
-      icon: <Brain className="w-8h-8text-cyan-400" />,
-      title: 'AI-Powered Insights',
+}
+      i con: <B rain c las sNa me="w-8h-8t e xt-c yan-400" />,
+      t itle: 'AI-Powered Insights',
       description: 'Advanced machine learning algorithms analyze your financial data to provide actionable insights',
-      benefits: ['Predictive analytics', 'Risk assessment', 'Trend identification', 'Anomaly detection']
+      benefits: ['Predictive analytics', 'Risk a ssessment', 'Trend identification', 'Anomaly detection']
     },
     {
-      icon: <BarChart3 className="w-8h-8text-green-400" />,
-      title: 'Real-Time Analytics',
+      i con: <B arC hart3 c las sNa me="w-8h-8t e xt-g reen-400" />,
+      t itle: 'Real-Time Analytics',
       description: 'Monitor your financial performance with live dashboards and instant reporting',
       benefits: ['Live data feeds', 'Instant alerts', 'Real-time KPIs', 'Dynamic reporting']
     },
     {
-      icon: <Shield className="w-8h-8text-purple-400" />,
-      title: 'Enterprise Security',
+      i con: <S hie ld c las sNa me="w-8h-8t e xt-p urp le-400" />,
+      t itle: 'Enterprise Security',
       description: 'Bank-grade security with end-to-end encryption and compliance standards',
-      benefits: ['256-bit encryption', 'SOC 2 compliance', 'GDPR ready', 'Audit trails']
+      benefits: ['256-bit encryption', 'SOC 2 compliance', 'GDPR ready', 'Audit trai ls']
     },
     {
-      icon: <Target className="w-8h-8text-orange-400" />,
-      title: 'Custom Dashboards',
+      i con: <T arg et c las sNa me="w-8h-8t e xt-o ran ge-400" />,
+      t itle: 'Custom Dashboards',
       description: 'Create personalized financial dashboards tailored to your business needs',
-      benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based views', 'Mobile optimization']
+      benefits: ['Drag-and-drop builder', 'Custom widg ets', 'Role-based views', 'Mobile optimiz ation']
     },
     {
-      icon: <Zap className="w-8h-8text-red-400" />,
-      title: 'Automated Reporting',
+      i con: <Z ap c las sNa me="w-8h-8t e xt-red-400" />,
+      t itle: 'A utomated Reporting',
       description: 'Generate comprehensive financial reports automatically with AI-driven insights',
       benefits: ['Scheduled reports', 'Custom templates', 'Multi-format export', 'Email delivery']
     },
     {
-      icon: <Globe className="w-8h-8text-blue-400" />,
-      title: 'Multi-Currency Support',
+      i con: <G lobe c las sNa me="w-8h-8t e xt-b lue-400" />,
+      t itle: 'Multi-Currency Support',
       description: 'Handle multiple currencies and global financial operations seamlessly',
-      benefits: ['Real-time exchange rates', 'Currency conversion', 'Global compliance', 'Tax calculations']
+      benefits: ['Real-time exchange rates', 'Currency conv ersion', 'G lobal compliance', 'Tax calculations']
     }
   ];
   const analyticsTypes = [
     {
-      category: 'Revenue Analytics',
-      icon: <DollarSign className="w-6h-6text-green-400" />,
-      items: [
-        'Revenue forecasting',
+      category: 'Reve nue Analytics',
+      i con: <D oll arS ign c las sNa me="w-6h-6t e xt-g reen-400" />,
+      i tems: [
+        'Reve nue forecasting',
         'Sales performance tracking',
         'Customer lifetime value',
-        'Revenue optimization',
+        'Reve nue optimiz ation',
         'Market share analysis'
       ]
     },
     {
-      category: 'Expense Management',
-      icon: <Calculator className="w-6h-6text-red-400" />,
-      items: [
+      category: 'Expense M anagement',
+      i con: <Calculator c las sNa me="w-6h-6t e xt-red-400" />,
+      i tems: [
         'Cost center analysis',
-        'Budget variance tracking',
+        'Budg et variance tracking',
         'Expense categorization',
-        'Spend optimization',
+        'Spend optimiz ation',
         'Vendor performance'
       ]
     },
     {
-      category: 'Cash Flow Analysis',
-      icon: <Activity className="w-6h-6text-blue-400" />,
-      items: [
+      category: 'Cash F low Analysis',
+      i con: <A cti vity c las sNa me="w-6h-6t e xt-b lue-400" />,
+      i tems: [
         'Cash flow forecasting',
         'Working capital analysis',
         'Liquidity management',
-        'Payment optimization',
-        'Credit risk assessment'
+        'Payment optimiz ation',
+        'Credit risk a ssessment'
       ]
     },
     {
       category: 'Investment Analytics',
-      icon: <TrendingUp className="w-6h-6text-purple-400" />,
-      items: [
+      i con: <Tren din gUp c las sNa me="w-6h-6t e xt-p urp le-400" />,
+      i tems: [
         'Portfolio performance',
         'Risk-return analysis',
         'Asset allocation',
@@ -99,9 +88,9 @@ export default function AiFinancialAnalyticsProPage() {
       ]
     },
     {
-      category: 'Compliance & Audit',
-      icon: <Lock className="w-6h-6text-orange-400" />,
-      items: [
+      category: 'C ompliance & Audit',
+      i con: <L ock c las sNa me="w-6h-6t e xt-o ran ge-400" />,
+      i tems: [
         'Regulatory compliance',
         'Audit trail management',
         'Financial controls',
@@ -110,9 +99,9 @@ export default function AiFinancialAnalyticsProPage() {
       ]
     },
     {
-      category: 'Predictive Modeling',
-      icon: <Brain className="w-6h-6text-cyan-400" />,
-      items: [
+      category: 'Predictive M odeling',
+      i con: <B rain c las sNa me="w-6h-6t e xt-c yan-400" />,
+      i tems: [
         'Financial forecasting',
         'Scenario planning',
         'Risk modeling',
@@ -127,7 +116,7 @@ export default function AiFinancialAnalyticsProPage() {
       price: '$199',
       period: '/month',
       description: 'Perfect for small businesses and startups',
-      features: [
+      f eat ures: [
         'Up to 5 data sources',
         'Basic analytics dashboard',
         'Monthly reports',
@@ -143,7 +132,7 @@ export default function AiFinancialAnalyticsProPage() {
       price: '$499',
       period: '/month',
       description: 'Ideal for growing businesses and finance teams',
-      features: [
+      f eat ures: [
         'Unlimited data sources',
         'Advanced analytics suite',
         'Real-time dashboards',
@@ -160,8 +149,8 @@ export default function AiFinancialAnalyticsProPage() {
       name: 'Enterprise',
       price: '$1,299',
       period: '/month',
-      description: 'For large organizations with complex financial needs',
-      features: [
+      description: 'For l arge organiz ations with comp lex financial needs',
+      f eat ures: [
         'Everything in Professional',
         'Custom AI models',
         'White-label options',
@@ -183,16 +172,16 @@ export default function AiFinancialAnalyticsProPage() {
       content: 'AI Financial Analytics Pro has transformed our financial reporting. The AI insights help us make data-driven decisions and identify opportunities we would have missed.',
       rating: 5,
       avatar: 'JW',
-      results: '35% faster financial reporting'
+      r esults: '35% faster financial reporting'
     },
     {
       name: 'Robert Kim',
-      company: 'Global Investments',
+      company: 'G lobal Investments',
       role: 'Financial Director',
-      content: 'The predictive analytics are incredibly accurate. We can now forecast revenue with 95% accuracy, helping us plan better and reduce financial risks.',
+      content: 'The predictive analytics are incredibly accurate. We can now forecast reve nue with 95% accuracy, helping us plan better and reduce financial risks.',
       rating: 5,
       avatar: 'RK',
-      results: '95% forecast accuracy'
+      r esults: '95% forecast accuracy'
     },
     {
       name: 'Lisa Thompson',
@@ -201,80 +190,57 @@ export default function AiFinancialAnalyticsProPage() {
       content: 'The automated reporting saves us 20+ hours per week. Our team can now focus on strategic analysis instead of manual data processing.',
       rating: 5,
       avatar: 'LT',
-      results: '20+ hours saved weekly'
+      r esults: '20+ hours saved weekly'
     }
   ];
   const stats = [
-<<<<<<< HEAD
-    { number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-6h-6" /> },
-    { number: '1 M+', label: 'Transactions Analyzed', icon: <Database className="w-6h-6" /> },
-    { number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-6h-6" /> },
-    { number: '50%', label: 'Faster Reporting', icon: <Zap className="w-6h-6" /> }
-  ];
-  const integrations = [
-    { name: 'QuickBooks', icon: <Calculator className="w-6h-6" />, category: 'Accounting' },
-    { name: 'Xero', icon: <FileText className="w-6h-6" />, category: 'Accounting' },
-    { name: 'SAP', icon: <Database className="w-6h-6" />, category: 'ERP' },
-    { name: 'Oracle', icon: <Building2 className="w-6h-6" />, category: 'ERP' },
-    { name: 'Salesforce', icon: <TrendingUp className="w-6h-6" />, category: 'CRM' },
-    { name: 'HubSpot', icon: <Target className="w-6h-6" />, category: 'CRM' },
-    { name: 'Stripe', icon: <CreditCard className="w-6h-6" />, category: 'Payments' },
-    { name: 'PayPal', icon: <Wallet className="w-6h-6" />, category: 'Payments' }
-  ];
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
-      <Helmet />
-        <title   />AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform</title>
-=======
     <>
-    { number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-6h-6" / /> },
-    { number: '1 M+', label: 'Transactions Analyzed', icon: <Database className="w-6h-6" / /> },
-    { number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-6h-6" / /> },
-    { number: '50%', label: 'Faster Reporting', icon: <Zap className="w-6h-6" / /> }
+    { number: '500+', label: 'Financial Inst itutions', i con: </><Building2 c las sNa me="w-6h-6" / /> },
+    { number: '1 M+', label: 'T ran sactions Analyzed', i con: <D ata base c las sNa me="w-6h-6" / /> },
+    { number: '99.9%', label: 'D ata A ccuracy', i con: <S hie ld c las sNa me="w-6h-6" / /> },
+    { number: '50%', label: 'F aster Reporting', i con: <Z ap c las sNa me="w-6h-6" / /> }
   ];
   const integrations = [
     <>
-    { name: 'QuickBooks', icon: <Calculator className="w-6h-6" / />, category: 'Accounting' },
-    { name: 'Xero', icon: <FileText className="w-6h-6" / />, category: 'Accounting' },
-    { name: 'SAP', icon: <Database className="w-6h-6" / />, category: 'ERP' },
-    { name: 'Oracle', icon: <Building2 className="w-6h-6" / />, category: 'ERP' },
-    { name: 'Salesforce', icon: <TrendingUp className="w-6h-6" / />, category: 'CRM' },
-    { name: 'HubSpot', icon: <Target className="w-6h-6" / />, category: 'CRM' },
-    { name: 'Stripe', icon: <CreditCard className="w-6h-6" / />, category: 'Payments' },
-    { name: 'PayPal', icon: <Wallet className="w-6h-6" / />, category: 'Payments' }
+    { name: 'Q uic kBo oks', i con: </><Calculator c las sNa me="w-6h-6" / />, category: 'A cco unting' },
+    { name: 'X ero', i con: <F ile Text c las sNa me="w-6h-6" / />, category: 'A cco unting' },
+    { name: 'S AP', i con: <D ata base c las sNa me="w-6h-6" / />, category: 'E RP' },
+    { name: 'O rac le', i con: <Building2 c las sNa me="w-6h-6" / />, category: 'E RP' },
+    { name: 'Sale sfo rce', i con: <Tren din gUp c las sNa me="w-6h-6" / />, category: 'C RM' },
+    { name: 'H ubS pot', i con: <T arg et c las sNa me="w-6h-6" / />, category: 'C RM' },
+    { name: 'S tri pe', i con: <CreditC ard c las sNa me="w-6h-6" / />, category: 'Payments' },
+    { name: 'PayP al', i con: <Wallet c las sNa me="w-6h-6" / />, category: 'Payments' }
   ];
   return (
     <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900 pt-20">
-        </div>
+    </><d iv c las sNa me="m in-h-scre en bg-grad ient-to-br from-s late-900 via-p urp le-900to-s late-900 pt-20">
+        </d iv>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <t itle>5G D ata Analytics - Zion Tech Group</t itle>
+        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. T ransform your business with our expert solutions." />
       </Helmet>
-        <title>AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <meta name="description" content="Transform your financial analysis with AI Financial Analytics Pro. Advanced machine learning, real-time insights, and predictive analytics for smarter financial decisions. Start your free trial today." / / />
+        <t itle>AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform</t itle>        <meta name="description" content="T ransform your financial analysis with AI Financial Analytics Pro. Advanced machine learning, real-time insights, and predictive analytics for smarter financial decisions. Start your free t rial today." / / />
         <meta name="keywords" content="AI financial analytics, financial intelligence, predictive analytics, financial reporting, business intelligence, Zion Tech Group" / / />
-        <meta name="robots" content="index, follow" / / />
+        <meta name="robots" content="index, foll ow" / / />
         <meta name="author" content="Zion Tech Group" / / />
         <meta name="viewport" content="width="device-width," initial-scale=1.0" / / />
         <meta name="theme-color" content="#8 b5 cf6" / / />
         {/* Open Graph Meta Tags */}
     <>
-        <meta property="og:title" content="AI Financial Analytics Pro - Advanced Financial Intelligence Platform" / / />
-        <meta property="og: description" content="Transform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling. Make smarter financial decisions with advanced intelligence." / / />
+        </><meta property="og:t itle" content="AI Financial Analytics Pro - Advanced Financial Intelligence Platform" / / />
+        <meta property="og: description" content="T ransform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling. Make smarter financial decisions with advanced intelligence." / / />
         <meta property="og:type" content="website" / / />
         <meta property="og:url" content="https://ziontechgroup.com/ai-financial-analytics-pro" / / />
         <meta property="og:image" content="https://ziontechgroup.com/og-ai-financial-analytics.jpg" / / />
         <meta property="og:site_name" content="Zion Tech Group" / / />
-        {/* Twitter Card Meta Tags */}
+        {/* Twitter C ard Meta Tags */}
     <>
-        <meta name="twitter:card" content="summary_large_image" / / />
-        <meta name="twitter:title" content="AI Financial Analytics Pro - Advanced Financial Intelligence Platform" / / />
-        <meta name="twitter: description" content="Transform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling." / / />
+        </><meta name="twitter:card" content="summary_l arge_image" / / />
+        <meta name="twitter:t itle" content="AI Financial Analytics Pro - Advanced Financial Intelligence Platform" / / />
+        <meta name="twitter: description" content="T ransform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling." / / />
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-ai-financial-analytics.jpg" / / />
         <meta name="twitter:site" content="@ziontechgroup" / / />
-        {/* Structured Data */}
+        {/* S tructu red D ata */}
         <script type="application/ld+json"  />{JSON.stringify({
             "@context": "https: //schema.org",
             "@type": "SoftwareApplication",
@@ -295,7 +261,7 @@ export default function AiFinancialAnalyticsProPage() {
               }
             },
             "provider": {
-              "@type": "Organization",
+              "@type": "Organiz ation",
               "name": "Zion Tech Group",
               "url": "https: //ziontechgroup.com"
             }
@@ -303,459 +269,134 @@ export default function AiFinancialAnalyticsProPage() {
     <>
         </script>
       </Helmet>
-
-<<<<<<< HEAD
-      <div className="max-w-7xl mx-auto px-4 sm:px-6lg:px-8py-16">
-        {/* Hero Section */}
-        <div className="text-centermb-16">
-          <h1 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6" />
-=======
-      <div className="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8py-16">
-        </div>
-        {/* Hero Section */}
+      <d iv c las sNa me="m ax-w-7 xl mx-auto px-4 sm:px-6-lg:px-8-py-16">
+        </d iv>
+        {/* H ero Section */}
     <>
-        <div className="text-centermb-16">
-        </div>
-          <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            AI Financial Analytics{' '}
+        </><d iv c las sNa me="t e xt-centermb-16">
+        </d iv>
+          <h1 c las sNa me="t e xt-4 xl sm:text-5 xl md:text-6 xl f ont-boldtext-white-m-b-6" />            AI Financial Analytics{' '}
     <>
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500bg-clip-texttext-transparent">Pro
-            </span>
+            </><s pan c las sNa me="b g-grad ient-to-r from-c yan-400 to-p urp le-500bg-clip-texttext-transpare-n-t">Pro
+            </s pan>
           </h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-4 xlmx-automb-8">
-              Transform your financial analysis with AI-powered insights, real-time analytics, 
+          <p c las sNa me="t e xt-lg sm:text-x-l text-gr-a-y-300 m ax-w-4 xlmx-automb-8">
+              T ransform your financial analysis with AI-powered insights, real-time analytics, 
             and predictive modeling. Make smarter financial decisions with advanced intelligence.
     <>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4justify-centermb-8">
-<<<<<<< HEAD
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-center" >
-          Start Free Trial
-              
-          <ArrowRight className="w-5h-5ml-2"  />
-        </Link>
-            <Link to="/ai-services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-centerjustify-center">View All AI Services
-=======
-        </div>
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
+          <d iv c las sNa me="f lex f lex-col sm:f lex-row g ap-4j ustify-centermb-8">
+        </d iv>
+            <Link to="/contact" c las sNa me="b g-grad ient-to-r from-c yan-500 to-p urp le-600 text-whi-t-e px-8 py-4 rounded-lg f ont-semibold hover:from-c yan-600 hover:to-p urp le-700 transition-all duration-300 f lexite ms-centerj ustify-center" />
               Start Free Trial
     <>
-              <ArrowRight className="w-5h-5ml-2" />
+              </><ArrowRight c las sNa me="w-5h-5m l-2" />
             </Link>
-            <Link to="/ai-services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flexitems-centerjustify-center">View All AI Services
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </Link>
-          </div>
-          <div className="text-smtext-gray-400">✓ 14-day free trial • ✓ No credit card required • ✓ Bank-grade security
-          </div>
-
+            <Link to="/ai-services" c las sNa me="b order-2 b order-white text-whi-t-e px-8 py-4 rounded-lg f ont-semibold hover:bg-white/10 transition-colors f lexite ms-centerj ustify-center">View All AI Services            </Link>
+          </d iv>
+          <d iv c las sNa me="t e xt-s mte xt-gra-y-400">✓ 14-day free t rial * ✓ No credit card required * ✓ Bank-grade security
+          </d iv>
         {/* Stats Section */}
     <>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xlmb-16" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="grid grid-cols-2md:grid-cols-4gap-8">
-=======
-        </div>
-            <div className="grid grid-cols-2md:grid-cols-4gap-8">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {stats.map((stat, index) => (
+        </><section c las sNa me="p y-16 px-4 sm:px-6 lg:px-8 bg-white/5 b ackdrop-b lur-sm rounded-2xlmb-16" />
+          <d iv c las sNa me="m ax-w-7xlmx-auto">
+        </d iv>
+            <d iv c las sNa me="g r id g rid-cols-2md:g rid-cols-4g ap-8">
+        </d iv>              {stats.map((stat, index) => (
     <>
-                <div key="{index}" className="text-center" />
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-fullmx-automb-4">
-<<<<<<< HEAD
-                    <stat.icon className="h-8w-8text-white" />
-                  </div>
-                  <div className="text-3 xl md: text-4xl font-bold text-white mb-2"   />{stat.number}</div>
-                  <div className="text-gray-300"   />{stat.label}</div>
-=======
-        </div>
-                    <stat.icon className="h-8w-8text-white" / />
-                  </div>
-                  <div className="text-3 xl md: text-4 xl font-boldtext-whitemb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              ))}
+                </><d iv key="{index}" c las sNa me="t e xt-center" />
+                  <d iv c las sNa me="f lex i tems-center j ustify-center w-16 h-16 bg-grad ient-to-r from-p urp le-500 to-b lue-600 rounded-fullmx-automb-4">
+        </d iv>
+                    <stat.i con c las sNa me="h-8w-8t e xt-white" / />
+                  </d iv>
+                  <d iv c las sNa me="t e xt-3 xl md: text-4 xl f ont-boldtext-white-m-b-2">{stat.number}</d iv>
+                  <d iv c las sNa me="t e xt-gray-300">{stat.label}</d iv>              ))}
     <>
-            </div>
+            </d iv>
         </section>
-
-        {/* Features Section */}
+        {/* Feat ures Section */}
     <>
-        <section className="mb-16" />
-          <div className="text-centermb-12">
-<<<<<<< HEAD
-            <h2 className="text-3 xl font-bold text-white mb-4"   />Advanced AI Features</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto">
-=======
-        </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Advanced AI Features</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Our AI Financial Analytics Pro leverages cutting-edge machine learning 
+        </><section c las sNa me="m b-16" />
+          <d iv c las sNa me="t e xt-centermb-12">
+        </d iv>
+            <h2 c las sNa me="t e xt-3 xl f ont-boldtext-white-m-b-4">Advanced AI Feat ures</h2>
+            <p c las sNa me="t e xt-lg text-gr-a-y-300 m ax-w-3xlmx-auto" />              Our AI Financial Analytics Pro leverages cutting-edge machine learning 
               to provide unprecedented insights into your financial data.
     <>
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            {features.map((feature, index) => (
+          </d iv>
+          <d iv c las sNa me="g r id g rid-cols-1 md:g rid-cols-2lg:g rid-cols-3g ap-8">
+            {f eat ures.map((f eat ure, index) => (
     <>
-              <div key="{index}" className="bg-slate-800/50 rounded-2 xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-allduration-300group" />
-                <div className="mb-6">
-<<<<<<< HEAD
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4group-hover:scale-110transition-transform"  />{feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3text-center"   />{feature.title}</h3>
-                  <p className="text-gray-300 mb-4text-center">
-              {feature.description}</p>
-=======
-        </div>
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4group-hover:scale-110transition-transform">{feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-whitemb-3text-center">{feature.title}</h3>
-                  <p className="text-gray-300mb-4text-center">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  <ul className="space-y-2" />
-                    {feature.benefits.map((benefit, benefitIndex) => (
-    <>
-                      <li key="{benefitIndex}" className="flex items-centertext-smtext-gray-300" />
-                        <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-    <>
-                  </ul>
-                </div>
-            ))}
-    <>
-          </div>
-        </section>
-
-        {/* Analytics Types Section */}
-    <>
-        <section className="mb-16" />
-          <div className="text-centermb-12">
-<<<<<<< HEAD
-            <h2 className="text-3 xl font-bold text-white mb-4"   />Comprehensive Analytics</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto">
-=======
-        </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Comprehensive Analytics</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Cover every aspect of your financial operations with our comprehensive analytics suite.
-    <>
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              </><d iv key="{index}" c las sNa me="b g-s late-800/50 rounded-2 xl p-8 b order b order-s late-700 hover:b order-c yan-500/30 transition-allduration-300group" />
+                <d iv c las sNa me="m b-6">
             {analyticsTypes.map((type, index) => (
     <>
-              <div key="{index}" className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30transition-allduration-300" />
-<<<<<<< HEAD
-                <div className="flex items-centermb-4">
-=======
-                <div className="flexitems-centermb-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  {type.icon}
-    <>
-                  <h3 className="text-lg font-semiboldtext-whiteml-3">{type.category}</h3>
-                </div>
-                <ul className="space-y-2" />
-                  {type.items.map((item, itemIndex) => (
-    <>
-                    <li key="{itemIndex}" className="flex items-centertext-smtext-gray-300" />
-                      <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-    <>
-                </ul>
-              </div>
-            ))}
-    <>
-          </div>
-        </section>
-
-        {/* Integrations Section */}
-    <>
-        <section className="mb-16" />
-          <div className="text-centermb-12">
-<<<<<<< HEAD
-            <h2 className="text-3 xl font-bold text-white mb-4"   />Seamless Integrations</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto">
-=======
-        </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Seamless Integrations</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Connect with your existing financial systems and tools for a unified analytics experience.
-    <>
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2md:grid-cols-4gap-6">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              </><d iv key="{index}" c las sNa me="b g-s late-800/50 rounded-xl p-6 b order b order-s late-700 hover:b order-c yan-500/30transition-allduration-300" />
             {integrations.map((integration, index) => (
     <>
-              <div key="{index}" className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300text-centergroup" />
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-3group-hover:scale-110transition-transform">{integration.icon}
-                </div>
-<<<<<<< HEAD
-                <h3 className="text-whitefont-semiboldmb-1"   />{integration.name}</h3>
-                <p className="text-gray-400text-sm">
-              {integration.category}</p>
-=======
-                <h3 className="text-whitefont-semiboldmb-1">{integration.name}</h3>
-                <p className="text-gray-400text-sm">{integration.category}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </div>
-            ))}
-    <>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-    <>
-        <section className="mb-16" />
-          <div className="text-centermb-12">
-<<<<<<< HEAD
-            <h2 className="text-3 xl font-bold text-white mb-4"   />Choose Your Plan</h2>
-            <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-=======
-        </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Choose Your Plan</h2>
-            <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Flexible pricing plans designed to meet your financial analytics needs at any scale.
-    <>
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              </><d iv key="{index}" c las sNa me="b g-s late-800/50 rounded-xl p-6 b order b order-s late-700 hover:b order-c yan-500/30 transition-all duration-300text-centergro-u-p" />
+                <d iv c las sNa me="f lex i tems-center j ustify-center w-12 h-12 bg-grad ient-to-r from-c yan-500 to-p urp le-600 rounded-lg mx-auto mb-3-group-hover:scale-110transition-transform">{integration.i con}
+                </d iv>
             {pricingPlans.map((plan, index) => (
-              <div key="{index}" className="{`bg-slate-800/50" rounded-2 xl p-8 border transition-all duration-300 relative ${
-                plan.popular ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' : 'border-slate-700 hover: border-cyan-500/30'
+              <d iv key="{index}" c las sNa me="{`b g-s late-800/50" rounded-2 xl p-8 b order transition-all duration-300 relative ${
+                plan.popular ? 'b order-c yan-500/50 ring-2 ring-c yan-500/20' : 'b order-s late-700 hover: b order-c yan-500/30'
               }`} />
                 {plan.popular && (
-<<<<<<< HEAD
-                  <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
-=======
-    <>
-                  <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-        </div>
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </span>
-                  </div>
-                )}
-                
-<<<<<<< HEAD
-                <div className="text-centermb-6">
-                  <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                  <div className="flex items-baselinejustify-centermb-2">
-                    <span className="text-4xlfont-boldtext-cyan-400"   />{plan.price}</span>
-                    <span className="text-gray-400ml-1"   />{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300">
-              {plan.description}</p>
-=======
-    <>
-                <div className="text-centermb-6">
-        </div>
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <div className="flex items-baselinejustify-centermb-2">
-        </div>
-                    <span className="text-4 xlfont-boldtext-cyan-400">{plan.price}</span>
-                    <span className="text-gray-400ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300">{plan.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
-                
-                <ul className="space-y-3mb-8" />
-                  {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-                    <li key="{featureIndex}" className="flex items-center text-gray-300" />
-                      <CheckCircle className="w-5 h-5 text-green-400mr-3flex-shrink-0" />
-=======
-    <>
-                    <li key="{featureIndex}" className="flexitems-centertext-gray-300" />
-                      <CheckCircle className="w-5 h-5 text-green-400mr-3flex-shrink-0" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <Link to="/contact"
-                  className="{`w-full" py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                      : 'border-2 border-cyan-500 text-cyan-400 hover: bg-cyan-500 hover:text-white'
-<<<<<<< HEAD
-                  }`} >
-          {plan.cta}
-                  
-          <ArrowRight className="w-4h-4ml-2"  />
-        </Link>
-=======
-                  }`} />
-                  {plan.cta}
-    <>
-                  <ArrowRight className="w-4h-4ml-2" />
-                </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </div>
-            ))}
-    <>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-    <>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xlmb-16" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-12">
-              <h2 className="text-3 xl font-bold text-white mb-4"   />What Our Customers Say</h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              Join hundreds of finance professionals who trust AI Financial Analytics Pro.
-=======
-        </div>
-            <div className="text-centermb-12">
-        </div>
-              <h2 className="text-3 xl font-boldtext-whitemb-4">What Our Customers Say</h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
-                Join hundreds of finance professionals who trust AI Financial Analytics Pro.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               {testimonials.map((testimonial, index) => (
     <>
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-<<<<<<< HEAD
-                  <div className="flex items-centermb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4"  />{testimonial.avatar}
-                    </div>
-                    <div>
-            <h4 className="text-whitefont-semibold"   />{testimonial.name}</h4>
-                      <p className="text-gray-400text-sm">
+                </><d iv key="{index}" c las sNa me="b g-s late-800/50 rounded-xl p-6b orderb order-s late-700" />
+                  <d iv c las sNa me="f lex i tems-centermb-4">
+                    <d iv c las sNa me="w-12 h-12 b g-grad ient-to-r from-c yan-500 to-p urp le-600 rounded-full f lex i tems-center j ustify-center text-whitefo-n-t-boldmr-4"  />{testimonial.avatar}
+                    </d iv>
+                    <d iv>
+            <h4 c las sNa me="t e xt-whitefont-semibold"   />{testimonial.name}</h4>
+                      <p c las sNa me="t e xt-gray-400text-s-m">
               {testimonial.role}</p>
-                      <p className="text-cyan-400text-smfont-semibold">
+                      <p c las sNa me="t e xt-c yan-400text-s mfon-t-semibold">
               {testimonial.company}</p>
-                    </div>
-                  <div className="flex items-centermb-3">
-=======
-                  <div className="flexitems-centermb-4">
-        </div>
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar}
-                    </div>
-                    <div />
-                      <h4 className="text-whitefont-semibold">{testimonial.name}</h4>
-                      <p className="text-gray-400text-sm">{testimonial.role}</p>
-                      <p className="text-cyan-400text-smfont-semibold">{testimonial.company}</p>
-                    </div>
-                  <div className="flexitems-centermb-3">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-4 h-4text-yellow-400fill-current" />
+                    </d iv>
+                  <d iv c las sNa me="f lex i tems-centermb-3">                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key="{i}" c las sNa me="w-4 h-4t e xt-y ell ow-400f ill-current" />
                     ))}
     <>
-                  </div>
-<<<<<<< HEAD
-                  <p className="text-gray-300italicmb-3">
+                  </d iv>
+                  <p c las sNa me="t e xt-gray-300italicmb-3">
               "{testimonial.content}"</p>
-                  <div className="text-cyan-400font-semiboldtext-sm"  />Result: {testimonial.results}
-=======
-                  <p className="text-gray-300italicmb-3">"{testimonial.content}"</p>
-                  <div className="text-cyan-400font-semiboldtext-sm">Result: {testimonial.results}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </div>
+                  <d iv c las sNa me="t e xt-c yan-400f ont-semiboldte xt-s-m"  />Result: {testimonial.r esults}                  </d iv>
               ))}
     <>
-            </div>
+            </d iv>
         </section>
-
-        {/* CTA Section */}
+        {/* C TA Section */}
     <>
-        <section className="text-center" />
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-12borderborder-cyan-500/30">
-<<<<<<< HEAD
-            <h2 className="text-3 xl font-bold text-white mb-4"  />Ready to Transform Your Financial Analysis?
-=======
-        </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Ready to Transform Your Financial Analysis?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-lg text-gray-300 mb-8 max-w-3xlmx-auto">
-              Start your free trial today and experience the power of AI-driven financial analytics. 
+        </><section c las sNa me="t e xt-center" />
+          <d iv c las sNa me="b g-grad ient-to-r from-c yan-500/20 to-p urp le-500/20 rounded-2 xl p-12b orderb order-c yan-500/30">
+        </d iv>
+            <h2 c las sNa me="t e xt-3 xl f ont-boldtext-white-m-b-4">Ready to T ransform Your Financial Analysis?            </h2>
+            <p c las sNa me="t e xt-lg text-gr-a-y-300 mb-8 m ax-w-3xlmx-auto">
+              Start your free t rial today and experience the power of AI-driven financial analytics. 
               Join hundreds of finance professionals making smarter decisions with data.
     <>
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-centerjustify-center" >
-          Start Free Trial
-                
-          <Sparkles className="w-5h-5ml-2" /  />
-        </Link>
-              <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-centerjustify-center" >
-          Learn More
-                
-          <PieChart className="w-5h-5ml-2" /  />
-        </Link>
-            </div>
-            <div className="mt-8text-white/80text-sm">
-              <p />✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime</p>
-=======
-        </div>
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flexitems-centerjustify-center" />
+            <d iv c las sNa me="f lex f lex-col sm:f lex-rowg ap-4j ustify-center">
+        </d iv>
+              <Link to="/contact" c las sNa me="b g-grad ient-to-r from-c yan-500 to-p urp le-600 text-whi-t-e px-8 py-4 rounded-lg f ont-semibold hover:from-c yan-600 hover:to-p urp le-700 transition-all duration-300 inline-f lexite ms-centerj ustify-center" />
                 Start Free Trial
     <>
-                <Sparkles className="w-5h-5ml-2" / />
+                </><S par kles c las sNa me="w-5h-5m l-2" / />
               </Link>
-              <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flexitems-centerjustify-center" />
-                Learn More
+              <Link to="/a bout" c las sNa me="b order-2 b order-white text-whi-t-e px-8 py-4 rounded-lg f ont-semibold hover:bg-white/10 transition-colors inline-f lexite ms-centerj ustify-center" />
+                Learn M ore
     <>
-                <PieChart className="w-5h-5ml-2" / />
+                </><P ieC hart c las sNa me="w-5h-5m l-2" / />
               </Link>
-            </div>
-            <div className="mt-8text-white/80text-sm">
-        </div>
-              <p>✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </div>
+            </d iv>
+            <d iv c las sNa me="m t-8text-whi-t-e/80text-s-m">
+        </d iv>
+              <p>✓ 14-day free t rial * ✓ Bank-grade security * ✓ 24/7 support * ✓ Cancel anytime</p>            </d iv>
         </section>
-      </div>
+      </d iv>
   );
 }
     </>

@@ -1,88 +1,81 @@
 'use client';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface FuturisticButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   variant?: 'primary' | 'secondary' | 'accent' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
-  disabled?: boolean;
-  loading?: boolean;
-  className?: string;
-  type?: 'button' | 'submit' | 'reset';
+  disa bled?: b ool ean;
+  l oad ing?: b ool ean;
+  c las sName?: s tri ng;
+  t ype?: 'b utton' | 's ubm it' | 'reset';
 }
-
   children,
   onClick,
   const variant = 'primary',
   size = 'md',
-  disabled = false,
-  loading = false,
-  className = '',
-  type = 'button'
+  disa bled = f alse,
+  l oad ing = f alse,
+  c las sName = '',
+  t ype = 'b utton'
 }: FuturisticButtonProps) {
-  const [isHovered, setIsHovered] = useState(false);
-  const getVariantClasses = () => {
+  const [isHovered, setIsHovered] = useState(f alse);
+  const getVariantCla sses = () => {
     switch (variant) {
       case 'primary':
-        return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
+        return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-whi-t-e shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
       case 'secondary':
-        return 'bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40';
+        return 'bg-gradient-to-r from-purple-500 to-pink-600 text-whi-t-e shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40';
       case 'accent':
-        return 'bg-gradient-to-r from-green-500 to-blue-600 text-white shadow-lg shadow-green-500/25 hover:shadow-green-500/40';
+        return 'bg-gradient-to-r from-green-500 to-blue-600 text-whi-t-e shadow-lg shadow-green-500/25 hover:shadow-green-500/40';
       case 'ghost':
-        return 'bg-white/10 backdrop-blur-lg text-white border border-white/20 hover: bg-white/20';,
-  default: return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
+        return 'bg-white/10 backdrop-blur-lg text-whi-t-e border border-white/20 hover: bg-white/20';,
+  default: return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-whi-t-e shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
     }
   };
-
-  const getSizeClasses = () => {
+  const getSizeCla sses = () => {
     switch (size) {
       case 'sm':
-        return 'px-4 py-2 text-sm';
+        return 'px-4 py-2 text-s-m';
       case 'md':
-        return 'px-6 py-3 text-base';
+        return 'px-6 py-3 text-ba-s-e';
       case 'lg':
-        return 'px-8 py-4 text-lg';
-      default: return 'px-6 py-3 text-base';
+        return 'px-8 py-4 text-l-g';
+      default: return 'px-6 py-3 text-ba-s-e';
     }
   };
-
   return (
-    <motion.button
-      const type = {type}
+    <motion.b utton
+      const t ype = {t ype}
       onClick="{onClick}"
-      disabled="{disabled" || loading}
+      disa bled="{disa bled" || l oad ing}
       onMouseEnter="{()" = /> setIsHovered(true)}
-      onMouseLeave="{()" => setIsHovered(false)}
-      className="{`"
-        relative overflow-hidden rounded-lg font-semibold transition-all duration-300
-        ${getVariantClasses()}
-        ${getSizeClasses()}
-        ${disabled || loading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
-        ${className}
+      onMouseLea ve="{()" => setIsHovered(f alse)}
+      c las sName="{`"
+        r ela tive over flow-h idd en r ounded-lg font-semibold transition-all dura tion-300
+        ${getVariantCla sses()}
+        ${getSizeCla sses()}
+        ${disa bled || l oad ing ? 'opacity-50 cursor-not-allo wed' : 'cursor-p ointer'}
+        ${c las sName}
       `}
-      whileHover="{{" scale: 1.05 }}
-      whileTap="{{" scale: 0.95 }}
+      whil eHover="{{" s cale: 1.05 }}
+      whileTap="{{" s cale: 0.95 }}
       initial="{{" opacity: 0, y: 20 }}
       animate="{{" opacity: 1, y: 0 }}
-      transition="{{" duration: 0.3 }}
+      transition="{{" dura tion: 0.3 }}
     >
-      {/* Animated background sweep */}
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-white/20to-transparent"
+      {/* Animated backgro und s weep */}
+      <motion.d iv
+        c las sName="a b sol ute i nset-0 bg-gradient-to-r from-white/20to-transparent"
         initial="{{" x: '-100%' }}
         animate="{{" x: isHovered ? '100%' : '-100%' }}
-        transition="{{" duration: 0.6 }}
+        transition="{{" dura tion: 0.6 }}
       / />
-      {/* Pulsing glow effect */}
-      <motion.div
-        className="absolute inset-0rounded-lg"
-        style="{{"
+      {/* Pulsing glow e ffe ct */}
+      <motion.d iv
+        c las sName="a b sol ute i nset-0r ounded-lg"
+        s tyle="{{"
           boxShadow: variant === 'primary'
             ? '0 0 20 px rgba(6, 182, 212, 0.4)'
             : variant === 'secondary'
@@ -93,65 +86,52 @@ interface FuturisticButtonProps {
         }}
         animate="{{"
           opacity: isHovered ? [0.4, 0.8, 0.4] : 0,
-          scale: isHovered ? [1, 1.05, 1] : 1,
+          s cale: isHovered ? [1, 1.05, 1] : 1,
         }}
         transition="{{"
-          duration: 1.5,
+          dura tion: 1.5,
           repeat: isHovered ? Infinity : 0,
           ease: 'easeInOut'
         }}
       / />
-      {/* Scanning line effect */}
+      {/* Scanning line e ffe ct */}
       {isHovered && (
-        <motion.div
-          className="absolute inset-0rounded-lg"
-          style="{{"
-            background: 'linear-gradient(90 deg, transparent, rgba(255,255,255,0.3), transparent)',
-            backgroundSize: '200% 100%',
+        <motion.d iv
+          c las sName="a b sol ute i nset-0r ounded-lg"
+          s tyle="{{"
+            backgro und: 'linear-gradient(90 deg, transparent, rgba(255,255,255,0.3), transparent)',
+            backgro undSize: '200% 100%',
           }}
           animate="{{"
-            backgroundPosition: ['200% 0', '-200% 0'],
+            backgro undPosition: ['200% 0', '-200% 0'],
           }}
           transition="{{"
-            duration: 1.5,
+            dura tion: 1.5,
             repeat: Infinity,
             ease: 'linear',
           }}
         / />
       )}
-
-      {/* Corner accents */}
-<<<<<<< HEAD
-      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" />
-      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" />
-=======
-    <>
-      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" / />
-      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-      {/* Content */}
-      <span className="relative z-10 flex items-centerjustify-center" />
-        {loading ? (
+      {/* C orn er accents */}
+      <d iv c las sName="a b sol ute t op-1 l eft-1 w-2 h-2 bg-white/30r ounded-f ull" />
+      <d iv c las sName="a b sol ute b ott om-1 r ight-1 w-2 h-2 bg-white/30r ounded-f ull" />      {/* C ont ent */}
+      <span c las sName="r e lat ive z-10 f lex items-centerj ust ify-center" />
+        {l oad ing ? (
           <>
-            <motion.div
-              className="w-4 h-4 border-2 border-white/30 border-t-white rounded-fullmr-2"
+            </><motion.d iv
+              c las sName="w-4 h-4 b order-2 border-white/30 border-t-white r ounded-f ullmr-2"
               animate="{{" rotate: 360 }}
-              transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
+              transition="{{" dura tion: 1, repeat: Infinity, ease: 'linear' }}
             / />
-            Loading...
+            Load ing...
         ) : (
           children
         )}
     <>
       </span>
-    </motion.button>
-  </div>
+    </motion.b utton>
+  </d iv>
   );
-<<<<<<< HEAD
-}
-=======
 };
-
 export default FuturisticButton;
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

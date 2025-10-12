@@ -1,176 +1,82 @@
 'use client';
 import { Component, ErrorInfo, ReactNode} from 'react';
-import { Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+import { Home  } from 'lucide-react';
+import { Link  } from 'react-router-dom';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
-
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
-
 class EnhancedErrorBoundary extends Component<Props, State /> {
   constructor(props: Props) {
     super(props);
     this.const state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
-
     // Log error to monitoring service
     console.error('Error caught by boundary: ', error, errorInfo);
   }
-
   const handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
-
   render() {
-    if (this.state.hasError) {
+}
+  if (this.state.hasError) {
+}
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       return (
-<<<<<<< HEAD
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-centerjustify-centerpx-4">
-          <div className="max-w-md w-full bg-gray-800 rounded-xl p-8 text-centerborderborder-gray-700">
-            <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-automb-6">
-              <AlertTriangle className="h-8w-8text-white" />
-            </div>
-            
-            <h1 className="text-2 xl font-bold text-white mb-4"  />Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-300 mb-6">
-=======
-    <>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-centerjustify-centerpx-4">
-        </div>
-          <div className="max-w-md w-full bg-gray-800 rounded-xl p-8 text-centerborderborder-gray-700">
-        </div>
-            <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-centermx-automb-6">
-        </div>
-              <AlertTriangle className="h-8w-8text-white" / />
-            </div>
-            
-    <>
-            <h1 className="text-2 xl font-boldtext-whitemb-4">Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-300mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              We encountered an unexpected error. Don't worry, our team has been notified and we're working to fix it.
-            </p>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-<<<<<<< HEAD
-              <div className="bg-gray-900 rounded-lg p-4mb-6text-left">
-                <h3 className="text-red-400font-semiboldmb-2"  >Error Details:</h3>
-                <pre className="text-xstext-gray-300overflow-auto"  />{this.state.error.toString()}
-=======
-    <>
-              <div className="bg-gray-900 rounded-lg p-4mb-6text-left">
-        </div>
-                <h3 className="text-red-400font-semiboldmb-2">Error Details:</h3>
-                <pre className="text-xstext-gray-300overflow-auto">{this.state.error.toString()}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </pre>
-                {this.state.errorInfo && (
-    <>
-                  <pre className="text-xs text-gray-400mt-2overflow-auto">{this.state.errorInfo.componentStack}
-                  </pre>
-                )}
-              </div>
-            )}
-
-            <div className="space-y-3">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               <button
                 onClick="{this.handleRetry}"
-                className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
-                <RefreshCw className="h-4w-4mr-2" />
-                Try Again
+                clas sNa me="w-f u ll i nline-f lex i tems-c enter j ust ify-c enter px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-whi-t-e font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:s cale-105" />
+                <R efr esh Cw clas sNa me="h-4w-4m r-2" />
+                T ry A gain
               </button>
-              
-<<<<<<< HEAD
-              <Link to="/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-allduration-300" >
-           
-          <Home className="h-4w-4mr-2" /  />
-        </Link>
-=======
-    <>
-              <Link to="/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-allduration-300" />
-                <Home className="h-4w-4mr-2" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Go Home
+              <Link to="/" clas sNa me="w-f u ll i nline-f lex i tems-c enter j ust ify-c enter px-6 py-3 border border-gray-600 text-gr-a-y-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransiti-o-n-allduration-300" >
+          <Home clas sNa me="h-4w-4m r-2" /  />
+        </Link>                Go Home
     <>
               </Link>
-            </div>
-
-<<<<<<< HEAD
-            <div className="mt-8 pt-6border-tborder-gray-700">
-              <p className="text-smtext-gray-400mb-4">
-              Still having issues? Contact our support team:
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-2justify-center">
-=======
+            </d iv>
     <>
-            <div className="mt-8 pt-6border-tborder-gray-700">
-        </div>
-              <p className="text-smtext-gray-400mb-4" />
+            </><d iv clas sNa me="m t-8 pt-6-border-t border-gray-700">
+        </d iv>
+              <p clas sNa me="t ext-s mtext-gr-a-y-400mb-4" />
                 Still having issues? Contact our support team:
     <>
               </p>
-              <div className="flex flex-col sm:flex-rowgap-2justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300transition-colors" />
-                  <Mail className="h-4w-4mr-1" />
-                  kleber@ziontechgroup.com
+              <d iv clas sNa me="f l ex f lex-c ol sm:f lex-r owg ap-2j ust ify-c enter">
+        </d iv>                <a
+                  href="mailto:kleb er@z iontec hgroup.com"
+                  clas sNa me="i n line-f lex i tems-c enter text-s-m text-purp-l-e-400hover:text-purp-l-e-300transition-c olo rs" />
+                  <M ail clas sNa me="h-4w-4m r-1" />
+                  kleb er@z iontec hgroup.com
     <>
                 </a>
-                <span className="hiddensm:inlinetext-gray-500">•</span>
+                <s pan clas sNa me="h i dde nsm:i nlinetext-gr-a-y-500">*</s pan>
                 <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300transition-colors" />
+                  href="t el:+13024640950"
+                  clas sNa me="i n line-f lex i tems-c enter text-s-m text-purp-l-e-400hover:text-purp-l-e-300transition-c olo rs" />
     <>
-                  <span>+1 302 464 0950</span>
+                  </><s pan>+1 302 464 0950</s pan>
                 </a>
-              </div>
-<<<<<<< HEAD
-    </div>
-  );
-=======
-          </div>
-      );
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-    }
-
+              </d iv>
+          </d iv>
+      );    }
     return this.props.children;
   }
 }
-
 export default EnhancedErrorBoundary;
     </>

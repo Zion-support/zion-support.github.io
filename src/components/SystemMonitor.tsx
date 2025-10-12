@@ -7,7 +7,6 @@ import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 // Removed unused collectPerformanceMetrics function
 // Helper functions
-
   const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
   let score = 100;
@@ -56,15 +55,14 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
 }
   refreshInterval?: number;
   showDetails?: boolean;
-  enableExport?: boolean;
-  className?: string;
+  e nab leE xport?: boolean;
+  c las sNa me?: string;
 }
-  className = ''
-  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
+  c las sNa me = ''
+  const [metrics, s etMetrics] = useState<SystemMetrics | null>(null);
+  const [isMonitoring, s etIsMonitoring] = useState(false);
+  const [l astUpdate, s etLastUpdate] = useState<Date | null>(null);
   // Update metrics
-  
       const performanceMetrics = performanceOptimizer.getMetrics();
       const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
@@ -72,35 +70,33 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
       const memoryInfo = getMemoryInfo();
       // Get network info
       const networkInfo = getNetworkInfo();
-          largestContentfulPaint: 0, // Not available in current metrics
-          firstInputDelay: 0, // Not available in current metrics
-          cumulativeLayoutShift: 0, // Not available in current metrics
+          largestContentfulPaint: 0, // Not availab le in current metrics
+          firstInputDelay: 0, // Not availab le in current metrics
+          cumulativeLayoutShift: 0, // Not availab le in current metrics
             timestamp: error.context.timestamp
           }))
         network: networkInfo
       };
-      setMetrics(newMetrics);
-      setLastUpdate(new Date());
+      s etMetrics(newMetrics);
+      s etLastUpdate(new Date());
       console.error('Failed to update metrics:', error);
     }
   }, []);
   // Initialize monitoring
-    
-      setIsMonitoring(true);
+      s etIsMonitoring(true);
       updateMetrics();
     };
     initializeMonitoring();
       // Stop monitoring (placeholder - implement as needed)
-      setIsMonitoring(false);
+      s etIsMonitoring(false);
     };
   }, [updateMetrics]);
   // Update metrics periodically
     if (!isMonitoring) return;
-    const interval = setInterval(updateMetrics, refreshInterval);
+    const interval = s etInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
   // Get memory information
-  
       const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
@@ -111,7 +107,6 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
     return { used: 0, total: 0, limit: 0, percentage: 0 };
   };
   // Get network information
-  
       const nav = navigator as NavigatorWithConnection;
       const connection = nav.connection;
         saveData: connection?.saveData || false
@@ -120,12 +115,9 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
       saveData: false
     };
   };
-  // Export data
-  
+  // E xport data
     if (!metrics) return;
-    
     };
-    
     });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -137,218 +129,214 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
     URL.revokeObjectURL(url);
   };
   // Get performance score color
-  
-    if (score >= 90) return 'text-green-600';
-    if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600';
+    if (score >= 90) return 'text-gre-e-n-600';
+    if (score >= 70) return 'text-yell-o-w-600';
+    return 'text-r-e-d-600';
   };
   // Get severity color
-  
-      case 'critical': return 'text-red-600 bg-red-100';
-      case 'high': return 'text-red-500 bg-red-50';
-      case 'medium': return 'text-yellow-600 bg-yellow-100';
-      case 'low': return 'text-green-600 bg-green-100';
-      default: return 'text-gray-600 bg-gray-100';
+      case 'critical': return 'text-r-e-d-600 bg-red-100';
+      case 'high': return 'text-r-e-d-500 bg-red-50';
+      case 'medium': return 'text-yell-o-w-600 bg-yellow-100';
+      case 'low': return 'text-gre-e-n-600 bg-green-100';
+      default: return 'text-gr-a-y-600 bg-gray-100';
     }
   };
-      <div className={`p-4 bg-gray-100 rounded-lg ${className}`}>
-        <div className="flex items-center justify-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-          <span className="ml-2 text-gray-600">Loading system metrics...</span>
-        </div>
+      <d iv c las sNa me={`p-4 bg-gray-100 r oun ded-lg ${c las sNa me}`}>
+        <d iv c las sNa me="f l ex i tems-center j ust ify-center">
+          <d iv c las sNa me="a n imate-s pin r oun ded-full h-8 w-8 b order-b-2 b order-b lue-600"></d iv>
+          <s pan c las sNa me="m l-2 text-gr-a-y-600">L oad ing system metrics...</s pan>
+        </d iv>
   );
   }
-    <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>
-        <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-2">
-            <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
-            <span className="text-sm text-gray-600">
+    <d iv c las sNa me={`bg-w hite r oun ded-lg s hadow-lg p-6 ${c las sNa me}`}>
+      <d iv c las sNa me="f l ex i tems-center j ust ify-b etw een mb-6">
+        <h2 c las sNa me="t ext-2xl f ont-b old text-gr-a-y-900">System Monitor</h2>
+        <d iv c las sNa me="f l ex i tems-center s pace-x-4">
+          <d iv c las sNa me="f l ex i tems-center s pace-x-2">
+            <d iv c las sNa me={`w-3 h-3 r oun ded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></d iv>
+            <s pan c las sNa me="t ext-sm text-gr-a-y-600">
               {isMonitoring ? 'Monitoring' : 'Stopped'}
-            </span>
-          </div>
-            
+            </s pan>
+          </d iv>
             >
-              Export Data
+              E xport Data
             </button>
           )}
-        </div>
-        <p className="text-sm text-gray-500 mb-4">
-          Last updated: {lastUpdate.toLocaleTimeString()}
+        </d iv>
+        <p c las sNa me="t ext-sm text-gr-a-y-500 mb-4">
+          Last updated: {l astUpdate.toLocaleTimeString()}
         </p>
       )}
       {/* Performance Metrics */}
-      <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">Performance Score</span>
-              <span className={`text-2xl font-bold ${getPerformanceScoreColor(metrics.performance.score)}`}>
+      <d iv c las sNa me="m b-8">
+        <h3 c las sNa me="t ext-lg f ont-s emi bold text-gr-a-y-900 mb-4">Performance</h3>
+        <d iv c las sNa me="g r id g rid-cols-1 md:g rid-cols-2 lg:g rid-cols-3 g ap-4">
+          <d iv c las sNa me="b g-gray-50 p-4 r oun ded-lg">
+            <d iv c las sNa me="f l ex i tems-center j ust ify-b etw een">
+              <s pan c las sNa me="t ext-sm f ont-medium text-gr-a-y-600">Performance Score</s pan>
+              <s pan c las sNa me={`text-2xl f ont-b old ${getPerformanceScoreColor(metrics.performance.score)}`}>
                 {metrics.performance.score}
-              </span>
-            </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">Load Time</span>
-              <span className="text-lg font-semibold text-gray-900">
+              </s pan>
+            </d iv>
+          <d iv c las sNa me="b g-gray-50 p-4 r oun ded-lg">
+            <d iv c las sNa me="f l ex i tems-center j ust ify-b etw een">
+              <s pan c las sNa me="t ext-sm f ont-medium text-gr-a-y-600">L oad Time</s pan>
+              <s pan c las sNa me="t ext-lg f ont-s emi bold text-gr-a-y-900">
                 {metrics.performance.loadTime.toFixed(0)}ms
-              </span>
-            </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">FCP</span>
-              <span className="text-lg font-semibold text-gray-900">
+              </s pan>
+            </d iv>
+          <d iv c las sNa me="b g-gray-50 p-4 r oun ded-lg">
+            <d iv c las sNa me="f l ex i tems-center j ust ify-b etw een">
+              <s pan c las sNa me="t ext-sm f ont-medium text-gr-a-y-600">F CP</s pan>
+              <s pan c las sNa me="t ext-lg f ont-s emi bold text-gr-a-y-900">
                 {metrics.performance.firstContentfulPaint.toFixed(0)}ms
-              </span>
-            </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">LCP</span>
-              <span className="text-lg font-semibold text-gray-900">
+              </s pan>
+            </d iv>
+          <d iv c las sNa me="b g-gray-50 p-4 r oun ded-lg">
+            <d iv c las sNa me="f l ex i tems-center j ust ify-b etw een">
+              <s pan c las sNa me="t ext-sm f ont-medium text-gr-a-y-600">L CP</s pan>
+              <s pan c las sNa me="t ext-lg f ont-s emi bold text-gr-a-y-900">
                 {metrics.performance.largestContentfulPaint.toFixed(0)}ms
-              </span>
-            </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">FID</span>
-              <span className="text-lg font-semibold text-gray-900">
+              </s pan>
+            </d iv>
+          <d iv c las sNa me="b g-gray-50 p-4 r oun ded-lg">
+            <d iv c las sNa me="f l ex i tems-center j ust ify-b etw een">
+              <s pan c las sNa me="t ext-sm f ont-medium text-gr-a-y-600">F ID</s pan>
+              <s pan c las sNa me="t ext-lg f ont-s emi bold text-gr-a-y-900">
                 {metrics.performance.firstInputDelay.toFixed(0)}ms
-              </span>
-            </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">CLS</span>
-              <span className="text-lg font-semibold text-gray-900">
+              </s pan>
+            </d iv>
+          <d iv c las sNa me="b g-gray-50 p-4 r oun ded-lg">
+            <d iv c las sNa me="f l ex i tems-center j ust ify-b etw een">
+              <s pan c las sNa me="t ext-sm f ont-medium text-gr-a-y-600">C LS</s pan>
+              <s pan c las sNa me="t ext-lg f ont-s emi bold text-gr-a-y-900">
                 {metrics.performance.cumulativeLayoutShift.toFixed(3)}
-              </span>
-            </div>
-        </div>
+              </s pan>
+            </d iv>
+        </d iv>
       {/* Error Metrics */}
-      <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Errors</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">Total Errors</span>
-              <span className="text-2xl font-bold text-red-600">
+      <d iv c las sNa me="m b-8">
+        <h3 c las sNa me="t ext-lg f ont-s emi bold text-gr-a-y-900 mb-4">Errors</h3>
+        <d iv c las sNa me="g r id g rid-cols-1 md:g rid-cols-2 lg:g rid-cols-4 g ap-4">
+          <d iv c las sNa me="b g-gray-50 p-4 r oun ded-lg">
+            <d iv c las sNa me="f l ex i tems-center j ust ify-b etw een">
+              <s pan c las sNa me="t ext-sm f ont-medium text-gr-a-y-600">T otal Errors</s pan>
+              <s pan c las sNa me="t ext-2xl f ont-b old text-r-e-d-600">
                 {metrics.errors.total}
-              </span>
-            </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">Critical</span>
-              <span className="text-lg font-semibold text-red-600">
+              </s pan>
+            </d iv>
+          <d iv c las sNa me="b g-gray-50 p-4 r oun ded-lg">
+            <d iv c las sNa me="f l ex i tems-center j ust ify-b etw een">
+              <s pan c las sNa me="t ext-sm f ont-medium text-gr-a-y-600">C ritical</s pan>
+              <s pan c las sNa me="t ext-lg f ont-s emi bold text-r-e-d-600">
                 {metrics.errors.bySeverity.critical || 0}
-              </span>
-            </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">High</span>
-              <span className="text-lg font-semibold text-red-500">
+              </s pan>
+            </d iv>
+          <d iv c las sNa me="b g-gray-50 p-4 r oun ded-lg">
+            <d iv c las sNa me="f l ex i tems-center j ust ify-b etw een">
+              <s pan c las sNa me="t ext-sm f ont-medium text-gr-a-y-600">H igh</s pan>
+              <s pan c las sNa me="t ext-lg f ont-s emi bold text-r-e-d-500">
                 {metrics.errors.bySeverity.high || 0}
-              </span>
-            </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-600">Medium</span>
-              <span className="text-lg font-semibold text-yellow-600">
+              </s pan>
+            </d iv>
+          <d iv c las sNa me="b g-gray-50 p-4 r oun ded-lg">
+            <d iv c las sNa me="f l ex i tems-center j ust ify-b etw een">
+              <s pan c las sNa me="t ext-sm f ont-medium text-gr-a-y-600">M edium</s pan>
+              <s pan c las sNa me="t ext-lg f ont-s emi bold text-yell-o-w-600">
                 {metrics.errors.bySeverity.medium || 0}
-              </span>
-            </div>
-        </div>
+              </s pan>
+            </d iv>
+        </d iv>
       {/* Memory and Network */}
-      <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">System Resources</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h4 className="text-sm font-medium text-gray-600 mb-2">Memory Usage</h4>
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
-                <span>Used</span>
-                <span>{metrics.memory.used.toFixed(2)} MB</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span>Total</span>
-                <span>{metrics.memory.total.toFixed(2)} MB</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span>Limit</span>
-                <span>{metrics.memory.limit.toFixed(2)} MB</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
-                
+      <d iv c las sNa me="m b-8">
+        <h3 c las sNa me="t ext-lg f ont-s emi bold text-gr-a-y-900 mb-4">System R eso urc es</h3>
+        <d iv c las sNa me="g r id g rid-cols-1 md:g rid-cols-2 g ap-4">
+          <d iv c las sNa me="b g-gray-50 p-4 r oun ded-lg">
+            <h4 c las sNa me="t ext-sm f ont-medium text-gr-a-y-600 mb-2">Memory U sage</h4>
+            <d iv c las sNa me="s p ace-y-2">
+              <d iv c las sNa me="f l ex j ust ify-b etw een text-s-m">
+                <s pan>Used</s pan>
+                <s pan>{metrics.memory.used.toFixed(2)} MB</s pan>
+              </d iv>
+              <d iv c las sNa me="f l ex j ust ify-b etw een text-s-m">
+                <s pan>T otal</s pan>
+                <s pan>{metrics.memory.total.toFixed(2)} MB</s pan>
+              </d iv>
+              <d iv c las sNa me="f l ex j ust ify-b etw een text-s-m">
+                <s pan>Limit</s pan>
+                <s pan>{metrics.memory.limit.toFixed(2)} MB</s pan>
+              </d iv>
+              <d iv c las sNa me="w-f ull bg-gray-200 r oun ded-full h-2">
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
                   }`}
                   style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
-                ></div>
-            </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h4 className="text-sm font-medium text-gray-600 mb-2">Network</h4>
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
-                <span>Connection</span>
-                <span>{metrics.network.effectiveType}</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span>Downlink</span>
-                <span>{metrics.network.downlink} Mbps</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span>RTT</span>
-                <span>{metrics.network.rtt} ms</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span>Save Data</span>
-                <span>{metrics.network.saveData ? 'Yes' : 'No'}</span>
-              </div>
-          </div>
-      </div>
+                ></d iv>
+            </d iv>
+          <d iv c las sNa me="b g-gray-50 p-4 r oun ded-lg">
+            <h4 c las sNa me="t ext-sm f ont-medium text-gr-a-y-600 mb-2">Network</h4>
+            <d iv c las sNa me="s p ace-y-2">
+              <d iv c las sNa me="f l ex j ust ify-b etw een text-s-m">
+                <s pan>Connection</s pan>
+                <s pan>{metrics.network.effectiveType}</s pan>
+              </d iv>
+              <d iv c las sNa me="f l ex j ust ify-b etw een text-s-m">
+                <s pan>Downlink</s pan>
+                <s pan>{metrics.network.downlink} Mbps</s pan>
+              </d iv>
+              <d iv c las sNa me="f l ex j ust ify-b etw een text-s-m">
+                <s pan>RTT</s pan>
+                <s pan>{metrics.network.rtt} ms</s pan>
+              </d iv>
+              <d iv c las sNa me="f l ex j ust ify-b etw een text-s-m">
+                <s pan>Save Data</s pan>
+                <s pan>{metrics.network.saveData ? 'Yes' : 'No'}</s pan>
+              </d iv>
+          </d iv>
+      </d iv>
       {/* Recent Errors */}
-        <div className="mb-8">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>
-          <div className="space-y-2 max-h-64 overflow-y-auto">
-              <div key={error.id} className="bg-gray-50 p-3 rounded-lg">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-900">{error.message}</span>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}>
+        <d iv c las sNa me="m b-8">
+          <h3 c las sNa me="t ext-lg f ont-s emi bold text-gr-a-y-900 mb-4">Recent Errors</h3>
+          <d iv c las sNa me="s p ace-y-2 max-h-64 over flow-y-a uto">
+              <d iv k ey={error.id} c las sNa me="b g-gray-50 p-3 r oun ded-lg">
+                <d iv c las sNa me="f l ex i tems-center j ust ify-b etw een mb-2">
+                  <s pan c las sNa me="t ext-sm f ont-medium text-gr-a-y-900">{error.mess age}</s pan>
+                  <s pan c las sNa me={`px-2 py-1 r oun ded-full text-x-s f ont-medium ${getSeverityColor(error.severity)}`}>
                     {error.severity}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between text-xs text-gray-500">
-                  <span>{error.type}</span>
-                  <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
-                </div>
+                  </s pan>
+                </d iv>
+                <d iv c las sNa me="f l ex i tems-center j ust ify-b etw een text-x-s text-gr-a-y-500">
+                  <s pan>{error.type}</s pan>
+                  <s pan>{new Date(error.timestamp).toLocaleTimeString()}</s pan>
+                </d iv>
             ))}
-          </div>
+          </d iv>
       )}
-      {/* Error Distribution */}
-        <div className="mb-8">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Distribution</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="text-sm font-medium text-gray-600 mb-2">By Type</h4>
-              <div className="space-y-1">
-                  <div key={type} className="flex justify-between text-sm">
-                    <span className="capitalize">{type}</span>
-                    <span>{count}</span>
-                  </div>
+      {/* Error D istribution */}
+        <d iv c las sNa me="m b-8">
+          <h3 c las sNa me="t ext-lg f ont-s emi bold text-gr-a-y-900 mb-4">Error D istribution</h3>
+          <d iv c las sNa me="g r id g rid-cols-1 md:g rid-cols-2 g ap-4">
+            <d iv c las sNa me="b g-gray-50 p-4 r oun ded-lg">
+              <h4 c las sNa me="t ext-sm f ont-medium text-gr-a-y-600 mb-2">By Type</h4>
+              <d iv c las sNa me="s p ace-y-1">
+                  <d iv k ey={type} c las sNa me="f l ex j ust ify-b etw een text-s-m">
+                    <s pan c las sNa me="c a pitalize">{type}</s pan>
+                    <s pan>{count}</s pan>
+                  </d iv>
                 ))}
-              </div>
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <h4 className="text-sm font-medium text-gray-600 mb-2">By Category</h4>
-              <div className="space-y-1">
-                  <div key={category} className="flex justify-between text-sm">
-                    <span className="capitalize">{category}</span>
-                    <span>{count}</span>
-                  </div>
+              </d iv>
+            <d iv c las sNa me="b g-gray-50 p-4 r oun ded-lg">
+              <h4 c las sNa me="t ext-sm f ont-medium text-gr-a-y-600 mb-2">By Category</h4>
+              <d iv c las sNa me="s p ace-y-1">
+                  <d iv k ey={c ategory} c las sNa me="f l ex j ust ify-b etw een text-s-m">
+                    <s pan c las sNa me="c a pitalize">{c ategory}</s pan>
+                    <s pan>{count}</s pan>
+                  </d iv>
                 ))}
-              </div>
-          </div>
+              </d iv>
+          </d iv>
       )}
-    </div>
+    </d iv>
   );
 };
 export default SystemMonitor;
