@@ -1,60 +1,47 @@
-import { Component, ErrorInfo, ReactNode} from 'react';
+import React, { Component, ReactNode } from 'react'
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
+  hasError: boolean
 }
 
-class ErrorBoundary extends Component<Props, State /> {
-  public state: const State = {,
-  hasError: false
-  };
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    this.state = { hasError: false }
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error: ', error, errorInfo);
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true }
   }
 
-  public render() {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo)
+  }
+
+  render() {
     if (this.state.hasError) {
       return (
-<<<<<<< HEAD
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-centerjustify-center">
+        <div className="min-h-screen flex items-center justify-center bg-slate-900">
           <div className="text-center">
-            <h1 className="text-6 xl font-bold text-white mb-4"  >Oops!</h1>
-            <p className="text-xltext-gray-300 mb-8">Something went wrong.</p>
-=======
-    <>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flexitems-centerjustify-center">
-        </div>
-          <div className="text-center" />
-            <h1 className="text-6 xl font-boldtext-whitemb-4">Oops!</h1>
-            <p className="text-xltext-gray-300mb-8">Something went wrong.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened.</p>
             <button
-              onClick="{()" =  />this.setState({ hasError: false, error: undefined })}
-              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300"
+              onClick={() => window.location.reload()}
+              className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
             >
-              Try Again
-    <>
+              Reload Page
             </button>
           </div>
-<<<<<<< HEAD
-  );
-=======
-      );
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        </div>
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default ErrorBoundary;
-    </>
+export default ErrorBoundary

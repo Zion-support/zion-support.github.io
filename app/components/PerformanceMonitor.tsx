@@ -1,81 +1,53 @@
-import React, { useEffect } from 'react';
-<<<<<<< HEAD
-import { getCLS, getFID, getFCP, getLCP, getTTFB };
-<<<<<<< HEAD
-=======
-'use client';
-=======
-import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
+import React, { useEffect } from 'react'
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor = () => {
   useEffect(() => {
-    // Monitor Core Web Vitals
-    const monitorCoreWebVitals = () => {
-<<<<<<< HEAD
-      if ('web-vitals' in, window) {
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);
-        });
-=======
-      if ('web-vitals' in window) {
-        onCLS(console.log);
-        onINP(console.log);
-        onFCP(console.log);
-        onLCP(console.log);
-        onTTFB(console.log);
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
-      }
-    };
-
     // Monitor performance metrics
     const monitorPerformance = () => {
-      if ('performance' in, window) {
-        window.addEventListener('load', () => {
-          setTimeout(() => {
-            const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-            const paint = performance.getEntriesByType('paint');
-            console.log('Performance Metrics: ', {
-              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-              firstPaint: paint.find(const entry = > entry.name === 'first-paint')?.startTime,
-              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
-            });
-          }, 0);
-        });
+      // Monitor Core Web Vitals
+      if ('web-vitals' in window) {
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          getCLS(console.log)
+          getFID(console.log)
+          getFCP(console.log)
+          getLCP(console.log)
+          getTTFB(console.log)
+        })
       }
-    };
 
-    // Monitor memory usage
-    const monitorMemory = () => {
-      if ('memory' in, performance) {
-        setInterval(() => {
-          const memory = (performance as, any).memory;
-          console.log('Memory Usage: ', {
-            used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-            total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-            limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
-          });
-        }, 30000); // Check every 30 seconds
+      // Monitor memory usage
+      if ('memory' in performance) {
+        const memory = (performance as any).memory
+        console.log('Memory Usage:', {
+          used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
+          total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
+          limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
+        })
       }
-    };
 
-    // Initialize monitoring
-    monitorCoreWebVitals();
-    monitorPerformance();
-    monitorMemory();
+      // Monitor navigation timing
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      if (navigation) {
+        console.log('Navigation Timing:', {
+          domContentLoaded: Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart),
+          loadComplete: Math.round(navigation.loadEventEnd - navigation.loadEventStart),
+          totalTime: Math.round(navigation.loadEventEnd - navigation.fetchStart)
+        })
+      }
+    }
 
-    // Cleanup
+    // Monitor performance on page load
+    monitorPerformance()
+
+    // Monitor performance periodically
+    const interval = setInterval(monitorPerformance, 30000) // Every 30 seconds
+
     return () => {
-      // Cleanup if needed
-    };
-  }, []);
+      clearInterval(interval)
+    }
+  }, [])
 
-  return null;
-};
+  return null
+}
 
-export default PerformanceMonitor;
+export default PerformanceMonitor

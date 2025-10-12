@@ -1,69 +1,81 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-=======
-'use client';
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const EnhancedAccessibility = () => {
   useEffect(() => {
     // Add high contrast mode support
     const addHighContrastSupport = () => {
-      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-      const handleContrastChange = (e: MediaQueryListEvent) => {
-        if (e.matches) {
-          document.documentElement.classList.add('high-contrast');
-        } else {
-          document.documentElement.classList.remove('high-contrast');
+      const style = document.createElement('style')
+      style.textContent = `
+        @media (prefers-contrast: high) {
+          * {
+            background-color: white !important;
+            color: black !important;
+          }
         }
-      };
-
-      mediaQuery.addEventListener('change', handleContrastChange);
-      handleContrastChange(mediaQuery);
-
-      return () => mediaQuery.removeEventListener('change', handleContrastChange);
-    };
+      `
+      document.head.appendChild(style)
+    }
 
     // Add reduced motion support
     const addReducedMotionSupport = () => {
-      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-      const handleMotionChange = (e: MediaQueryListEvent) => {
-        if (e.matches) {
-          document.documentElement.classList.add('reduce-motion');
+      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+      
+      const handleChange = () => {
+        if (mediaQuery.matches) {
+          document.documentElement.style.setProperty('--animation-duration', '0.01ms')
+          document.documentElement.style.setProperty('--animation-iteration-count', '1')
         } else {
-          document.documentElement.classList.remove('reduce-motion');
+          document.documentElement.style.removeProperty('--animation-duration')
+          document.documentElement.style.removeProperty('--animation-iteration-count')
         }
-      };
+      }
 
-      mediaQuery.addEventListener('change', handleMotionChange);
-      handleMotionChange(mediaQuery);
+      handleChange()
+      mediaQuery.addEventListener('change', handleChange)
+      
+      return () => mediaQuery.removeEventListener('change', handleChange)
+    }
 
-      return () => mediaQuery.removeEventListener('change', handleMotionChange);
-    };
+    // Add focus management
+    const addFocusManagement = () => {
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      
+      const trapFocus = (e: KeyboardEvent) => {
+        if (e.key === 'Tab') {
+          const focusable = Array.from(document.querySelectorAll(focusableElements))
+          const firstFocusable = focusable[0] as HTMLElement
+          const lastFocusable = focusable[focusable.length - 1] as HTMLElement
 
-    // Add screen reader announcements
-    const addScreenReaderAnnouncements = () => {
-      const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
-      announcement.const className = 'sr-only';
-      announcement.const id = 'announcements';
-      document.body.appendChild(announcement);
-    };
+          if (e.shiftKey) {
+            if (document.activeElement === firstFocusable) {
+              lastFocusable.focus()
+              e.preventDefault()
+            }
+          } else {
+            if (document.activeElement === lastFocusable) {
+              firstFocusable.focus()
+              e.preventDefault()
+            }
+          }
+        }
+      }
+
+      document.addEventListener('keydown', trapFocus)
+      return () => document.removeEventListener('keydown', trapFocus)
+    }
 
     // Initialize accessibility features
-    const cleanupContrast = addHighContrastSupport();
-    const cleanupMotion = addReducedMotionSupport();
-    addScreenReaderAnnouncements();
+    addHighContrastSupport()
+    const cleanupMotion = addReducedMotionSupport()
+    const cleanupFocus = addFocusManagement()
 
-    // Cleanup
     return () => {
-      cleanupContrast?.();
-      cleanupMotion?.();
-    };
-  }, []);
+      cleanupMotion()
+      cleanupFocus()
+    }
+  }, [])
 
-  return <React.Fragment />{children}</React.Fragment>;
-};
+  return null
+}
 
-export default EnhancedAccessibility;
+export default EnhancedAccessibility

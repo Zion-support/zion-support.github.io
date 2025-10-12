@@ -1,46 +1,62 @@
 #!/usr/bin/env python3
 """
-Script to fix common syntax errors that remain after merge conflict resolution.
+Comprehensive script to fix ALL merge conflicts and syntax errors in the codebase.
 """
 
 import os
 import re
 import glob
 
-def fix_syntax_errors(file_path):
-    """Fix common syntax errors in a single file."""
+def fix_file_completely(file_path):
+    """Completely fix all merge conflicts and syntax errors in a single file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix common syntax errors
+        # Remove all merge conflict markers
+        content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+\n?', '', content, flags=re.DOTALL)
+        content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+', '', content, flags=re.DOTALL)
+        content = re.sub(r'<<<<<<< HEAD.*?\n=======.*?\n>>>>>>> [^\n]+', '', content, flags=re.DOTALL)
         
-        # Fix malformed event handlers like "e.const key = =="
-        content = re.sub(r'e\.const key = ==', 'e.key ===', content)
+        # Fix missing quotes in import statements
+        content = re.sub(r"import ([^']+) from '([^']+)$", r"import \1 from '\2'", content)
+        content = re.sub(r"import ([^']+) from \"([^\"]+)$", r'import \1 from "\2"', content)
+        
+        # Fix missing quotes in 'use client' and other directives
+        content = re.sub(r"'use client$", "'use client'", content)
+        content = re.sub(r'"use client$', '"use client"', content)
+        
+        # Fix malformed event handlers
         content = re.sub(r'e\.const key = =', 'e.key ===', content)
         content = re.sub(r'e\.const key =', 'e.key ===', content)
         
-        # Fix malformed JSX fragments - remove incomplete fragments
+        # Fix malformed JSX fragments
         content = re.sub(r'<>\s*$', '', content, flags=re.MULTILINE)
         content = re.sub(r'^\s*</>\s*$', '', content, flags=re.MULTILINE)
         
-        # Fix malformed JSX tags - remove incomplete opening tags
-        content = re.sub(r'<[^>]*$', '', content, flags=re.MULTILINE)
+        # Fix malformed JSX tags
+        content = re.sub(r'<([^>]*)\s*$', r'<\1>', content, flags=re.MULTILINE)
         
         # Fix malformed closing tags
-        content = re.sub(r'^[^<]*</[^>]*$', '', content, flags=re.MULTILINE)
+        content = re.sub(r'^([^<]*</[^>]*)\s*$', r'\1>', content, flags=re.MULTILINE)
         
         # Fix malformed JSX expressions
-        content = re.sub(r'\{[^}]*$', '', content, flags=re.MULTILINE)
+        content = re.sub(r'\{([^}]*)\s*$', r'{\1}', content, flags=re.MULTILINE)
         
         # Fix malformed template literals
-        content = re.sub(r'`[^`]*$', '', content, flags=re.MULTILINE)
+        content = re.sub(r'`([^`]*)\s*$', r'`\1`', content, flags=re.MULTILINE)
         
         # Fix malformed strings
-        content = re.sub(r'"[^"]*$', '', content, flags=re.MULTILINE)
-        content = re.sub(r"'[^']*$", '', content, flags=re.MULTILINE)
+        content = re.sub(r'"([^"]*)\s*$', r'"\1"', content, flags=re.MULTILINE)
+        content = re.sub(r"'([^']*)\s*$", r"'\1'", content, flags=re.MULTILINE)
+        
+        # Fix malformed function calls
+        content = re.sub(r'(\w+)\s*\(\s*$', r'\1()', content, flags=re.MULTILINE)
+        
+        # Fix malformed object properties
+        content = re.sub(r'(\w+):\s*([^,}\s][^,}]*)\s*$', r'\1: "\2"', content, flags=re.MULTILINE)
         
         # Remove lines with only syntax errors
         lines = content.split('\n')
@@ -74,7 +90,7 @@ def fix_syntax_errors(file_path):
         return False
 
 def main():
-    """Main function to process all files with syntax errors."""
+    """Main function to process all files with merge conflicts."""
     # Find all TypeScript/JavaScript files
     patterns = ['**/*.tsx', '**/*.ts', '**/*.js', '**/*.jsx']
     
@@ -89,11 +105,11 @@ def main():
                 continue
                 
             total_files += 1
-            if fix_syntax_errors(file_path):
+            if fix_file_completely(file_path):
                 fixed_files += 1
                 print(f"Fixed: {file_path}")
     
-    print(f"\nProcessed {total_files} files, fixed {fixed_files} files with syntax errors.")
+    print(f"\nProcessed {total_files} files, fixed {fixed_files} files with merge conflicts.")
 
 if __name__ == "__main__":
     main()

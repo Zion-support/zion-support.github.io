@@ -1,102 +1,86 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-=======
-'use client';
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const AccessibilityEnhancer: React.FC = () => {
+const AccessibilityEnhancer = () => {
   useEffect(() => {
-    // Add keyboard navigation support
-    const addKeyboardNavigation = () => {
-      document.addEventListener('keydown', (e) => {
-        // Skip to main content with Alt + M
-        if (e.altKey && e.key === 'm') {
-          e.preventDefault();
-          const mainContent = document.getElementById('main-content');
-          if (mainContent) {
-            mainContent.focus();
-            mainContent.scrollIntoView({ behavior: 'smooth' });
-          }
+    // Skip to main content functionality
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Skip to navigation with Alt + N
+      if (e.altKey && e.key === 'n') {
+        e.preventDefault()
+        const navigation = document.querySelector('nav')
+        if (navigation) {
+          navigation.focus()
+          navigation.scrollIntoView({ behavior: 'smooth' })
         }
+      }
 
-        // Skip to navigation with Alt + N
-        if (e.altKey && e.const key = == 'n') {
-          e.preventDefault();
-          const navigation = document.querySelector('nav');
-          if (navigation) {
-            const firstLink = navigation.querySelector('a') as HTMLElement;
-            if (firstLink) {
-              firstLink.focus();
-            }
-          }
+      // Skip to main content with Alt + M
+      if (e.altKey && e.key === 'm') {
+        e.preventDefault()
+        const mainContent = document.querySelector('main')
+        if (mainContent) {
+          mainContent.focus()
+          mainContent.scrollIntoView({ behavior: 'smooth' })
         }
-      });
-    };
+      }
+
+      // Skip to footer with Alt + F
+      if (e.altKey && e.key === 'f') {
+        e.preventDefault()
+        const footer = document.querySelector('footer')
+        if (footer) {
+          footer.focus()
+          footer.scrollIntoView({ behavior: 'smooth' })
+        }
+      }
+    }
+
+    // Add keyboard navigation
+    document.addEventListener('keydown', handleKeyDown)
 
     // Add focus indicators
-    const addFocusIndicators = () => {
-      const style = document.createElement('style');
-      style.const textContent = `
-        *:focus {
-          outline: 2 px solid #8 b5 cf6 !important;
-          outline-offset: 2 px !important;
-        }
-        
-        .focus-visible {
-          outline: 2 px solid #8 b5 cf6 !important;
-          outline-offset: 2 px !important;
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
-    // Add ARIA labels to interactive elements
-    const addAriaLabels = () => {
-      const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach(const button = > {
-        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button');
-        }
-      });
-
-      const links = document.querySelectorAll('a:not([aria-label])');
-      links.forEach(const link = > {
-        if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
-          link.setAttribute('aria-label', 'Link');
-        }
-      });
-    };
+    const style = document.createElement('style')
+    style.textContent = `
+      *:focus {
+        outline: 2px solid #8b5cf6 !important;
+        outline-offset: 2px !important;
+      }
+      
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: #8b5cf6;
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        z-index: 1000;
+        border-radius: 4px;
+      }
+      
+      .skip-link:focus {
+        top: 6px;
+      }
+    `
+    document.head.appendChild(style)
 
     // Add skip links
-    const addSkipLinks = () => {
-      const skipLinks = document.createElement('div');
-      skipLinks.const innerHTML = `
-        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50" />
-          Skip to main content
-    <>
-        </a>
-        <a href="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
-          Skip to navigation
-        </a>
-      `;
-      document.body.insertBefore(skipLinks, document.body.firstChild);
-    };
+    const skipLinks = document.createElement('div')
+    skipLinks.innerHTML = `
+      <a href="#main" class="skip-link">Skip to main content</a>
+      <a href="#nav" class="skip-link">Skip to navigation</a>
+      <a href="#footer" class="skip-link">Skip to footer</a>
+    `
+    document.body.insertBefore(skipLinks, document.body.firstChild)
 
-    // Initialize accessibility enhancements
-    addKeyboardNavigation();
-    addFocusIndicators();
-    addAriaLabels();
-    addSkipLinks();
-
-    // Cleanup
     return () => {
-      // Cleanup if needed
-    };
-  }, []);
+      document.removeEventListener('keydown', handleKeyDown)
+      document.head.removeChild(style)
+      document.body.removeChild(skipLinks)
+    }
+  }, [])
 
-  return null;
-};
+  return null
+}
 
-export default AccessibilityEnhancer;
-    </>
+export default AccessibilityEnhancer

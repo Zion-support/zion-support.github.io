@@ -1,97 +1,74 @@
-<<<<<<< HEAD
-import React  from 'react';
-const TermsPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-=======
-'use client';
-import React from 'react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
-const TermsPage: React.FC = () => {
+const TermsPage = () => {
   return (
     <>
-    <>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>Terms of Service - Zion Tech Group</title>
+        <meta name="description" content="Terms of Service for Zion Tech Group. Read our terms and conditions for using our AI and IT services." />
       </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>Terms - Zion Tech Group</title>
-        <meta name="description" content="Terms services by Zion Tech Group. Professional AI and IT solutions." / / />
-        <meta name="keywords" content="terms, AI solutions, IT services" / / />
-      </Helmet>
-    </>
-      
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        <div className="container mx-autopx-4py-16">
-          <div className="text-centermb-16">
-            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Terms
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-=======
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
-        <div className="container mx-autopx-4py-16">
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Terms
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Professional terms services by Zion Tech Group.
-    <>
+
+      <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+            Terms of Service
+          </h1>
+          
+          <div className="prose prose-invert max-w-none">
+            <p className="text-gray-300 mb-8">
+              Last updated: January 1, 2024
             </p>
-          </div>
-    </>
 
-<<<<<<< HEAD
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
-            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">1. Acceptance of Terms</h2>
             <p className="text-gray-300 mb-6">
-=======
-    <>
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
-        </div>
-            <h2 className="text-2 xl font-boldtext-whitemb-4">Coming Soon</h2>
-            <p className="text-gray-300mb-6" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              We're working on bringing you comprehensive terms solutions. 
-              Contact us to learn more about our services.
-    <>
+              By accessing and using Zion Tech Group's services, you accept and agree to be bound by the terms and provision of this agreement.
             </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300">Contact Us
-            </button>
-          </div>
-<<<<<<< HEAD
-      </div>
-        </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
-  );
-};
 
-export default TermsPage;
+            <h2 className="text-2xl font-bold text-white mb-4">2. Use License</h2>
+            <p className="text-gray-300 mb-6">
+              Permission is granted to temporarily download one copy of the materials on Zion Tech Group's website for personal, non-commercial transitory viewing only.
+            </p>
+
+            <h2 className="text-2xl font-bold text-white mb-4">3. Disclaimer</h2>
+            <p className="text-gray-300 mb-6">
+              The materials on Zion Tech Group's website are provided on an 'as is' basis. Zion Tech Group makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties.
+            </p>
+
+            <h2 className="text-2xl font-bold text-white mb-4">4. Limitations</h2>
+            <p className="text-gray-300 mb-6">
+              In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group's website.
+            </p>
+
+            <h2 className="text-2xl font-bold text-white mb-4">5. Accuracy of Materials</h2>
+            <p className="text-gray-300 mb-6">
+              The materials appearing on Zion Tech Group's website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete, or current.
+            </p>
+
+            <h2 className="text-2xl font-bold text-white mb-4">6. Links</h2>
+            <p className="text-gray-300 mb-6">
+              Zion Tech Group has not reviewed all of the sites linked to our website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Zion Tech Group of the site.
+            </p>
+
+            <h2 className="text-2xl font-bold text-white mb-4">7. Modifications</h2>
+            <p className="text-gray-300 mb-6">
+              Zion Tech Group may revise these terms of service for its website at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms of service.
+            </p>
+
+            <h2 className="text-2xl font-bold text-white mb-4">8. Governing Law</h2>
+            <p className="text-gray-300 mb-6">
+              These terms and conditions are governed by and construed in accordance with the laws of the State of California and you irrevocably submit to the exclusive jurisdiction of the courts in that state or location.
+            </p>
+
+            <h2 className="text-2xl font-bold text-white mb-4">9. Contact Information</h2>
+            <p className="text-gray-300 mb-6">
+              If you have any questions about these Terms of Service, please contact us at legal@ziontechgroup.com.
+            </p>
+          </div>
+        </div>
+      </div>
     </>
+  )
+}
+
+export default TermsPage

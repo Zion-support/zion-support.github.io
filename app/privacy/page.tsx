@@ -1,97 +1,79 @@
-<<<<<<< HEAD
-import React  from 'react';
-const PrivacyPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-=======
-'use client';
-import React from 'react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
-const PrivacyPage: React.FC = () => {
+const PrivacyPage = () => {
   return (
     <>
-    <>
       <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>Privacy Policy - Zion Tech Group</title>
+        <meta name="description" content="Privacy Policy for Zion Tech Group. Learn how we collect, use, and protect your personal information." />
       </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>Privacy - Zion Tech Group</title>
-        <meta name="description" content="Privacy services by Zion Tech Group. Professional AI and IT solutions." / / />
-        <meta name="keywords" content="privacy, AI solutions, IT services" / / />
-      </Helmet>
-    </>
-      
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        <div className="container mx-autopx-4py-16">
-          <div className="text-centermb-16">
-            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Privacy
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-=======
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
-        <div className="container mx-autopx-4py-16">
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Privacy
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Professional privacy services by Zion Tech Group.
-    <>
+
+      <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+            Privacy Policy
+          </h1>
+          
+          <div className="prose prose-invert max-w-none">
+            <p className="text-gray-300 mb-8">
+              Last updated: January 1, 2024
             </p>
-          </div>
-    </>
 
-<<<<<<< HEAD
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
-            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">1. Information We Collect</h2>
             <p className="text-gray-300 mb-6">
-=======
-    <>
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
-        </div>
-            <h2 className="text-2 xl font-boldtext-whitemb-4">Coming Soon</h2>
-            <p className="text-gray-300mb-6" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              We're working on bringing you comprehensive privacy solutions. 
-              Contact us to learn more about our services.
-    <>
+              We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.
             </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300">Contact Us
-            </button>
-          </div>
-<<<<<<< HEAD
-      </div>
-        </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
-  );
-};
 
-export default PrivacyPage;
+            <h2 className="text-2xl font-bold text-white mb-4">2. How We Use Your Information</h2>
+            <p className="text-gray-300 mb-6">
+              We use the information we collect to provide, maintain, and improve our services, communicate with you, and ensure the security of our platform.
+            </p>
+
+            <h2 className="text-2xl font-bold text-white mb-4">3. Information Sharing</h2>
+            <p className="text-gray-300 mb-6">
+              We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.
+            </p>
+
+            <h2 className="text-2xl font-bold text-white mb-4">4. Data Security</h2>
+            <p className="text-gray-300 mb-6">
+              We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
+            </p>
+
+            <h2 className="text-2xl font-bold text-white mb-4">5. Your Rights</h2>
+            <p className="text-gray-300 mb-6">
+              You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us.
+            </p>
+
+            <h2 className="text-2xl font-bold text-white mb-4">6. Cookies and Tracking</h2>
+            <p className="text-gray-300 mb-6">
+              We use cookies and similar tracking technologies to enhance your experience on our website. You can control cookie settings through your browser.
+            </p>
+
+            <h2 className="text-2xl font-bold text-white mb-4">7. Third-Party Services</h2>
+            <p className="text-gray-300 mb-6">
+              Our services may contain links to third-party websites or services. We are not responsible for the privacy practices of these third parties.
+            </p>
+
+            <h2 className="text-2xl font-bold text-white mb-4">8. Children's Privacy</h2>
+            <p className="text-gray-300 mb-6">
+              Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.
+            </p>
+
+            <h2 className="text-2xl font-bold text-white mb-4">9. Changes to This Policy</h2>
+            <p className="text-gray-300 mb-6">
+              We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page.
+            </p>
+
+            <h2 className="text-2xl font-bold text-white mb-4">10. Contact Us</h2>
+            <p className="text-gray-300 mb-6">
+              If you have any questions about this Privacy Policy, please contact us at privacy@ziontechgroup.com.
+            </p>
+          </div>
+        </div>
+      </div>
     </>
+  )
+}
+
+export default PrivacyPage
