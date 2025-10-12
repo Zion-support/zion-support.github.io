@@ -34,9 +34,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
       "https://www.linkedin.com/company/zion-tech-group",

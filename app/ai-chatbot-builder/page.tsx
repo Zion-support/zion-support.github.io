@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { ArrowRight, MessageCircle, Users, Zap, Shield } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle, MessageCircle, Brain, Zap, Users, BarChart3, Shield } from 'lucide-react'
->>>>>>> cursor/website-audit-and-update-with-deployment-c78e
 
 export default function AIChatbotBuilderPage() {
   const features = [

@@ -21,7 +21,6 @@ export default function Footer() {
     { name: 'System Integration', path: '/system-integration' }
   ]
 
-<<<<<<< HEAD
   const companyLinks = [
     { name: 'About Us', path: '/about' },
     { name: 'Our Team', path: '/team' },
@@ -38,7 +37,8 @@ export default function Footer() {
     { name: 'Status Page', path: '/status' },
     { name: 'Contact Support', path: '/contact' },
     { name: 'Community', path: '/community' }
-=======
+  ]
+
   const legalPages = [
     { name: 'Privacy Policy', path: '/privacy' },
     { name: 'Terms of Service', path: '/terms' }
@@ -52,29 +52,28 @@ export default function Footer() {
     { name: 'Micro SAAS', path: '/micro-saas-services' },
     { name: '5G Solutions', path: '/5g-implementation' },
     { name: 'Contact', path: '/contact' }
->>>>>>> cursor/website-audit-and-update-with-deployment-c78e
   ]
 
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
             <p className="text-gray-400 mb-4">
               Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">Twitter</span>
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">LinkedIn</span>
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">GitHub</span>
                 <Github className="w-5 h-5" />
               </a>
@@ -117,25 +116,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company & Support */}
+          {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 mb-6">
-              {companyLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to={link.path} 
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {supportLinks.map((link, index) => (
+              {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
                     to={link.path} 
@@ -156,7 +141,7 @@ export default function Footer() {
                 <li key={page.name}>
                   <Link
                     to={page.path}
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors"
                   >
                     {page.name}
                   </Link>
@@ -171,15 +156,15 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center">
               <Mail className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">contact@ziontech.com</span>
+              <span className="text-gray-400">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
               <Phone className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">+1 (555) 123-4567</span>
+              <span className="text-gray-400">+1-302-464-0950</span>
             </div>
             <div className="flex items-center">
               <MapPin className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">San Francisco, CA</span>
+              <span className="text-gray-400">364 E Main St STE 1008, Middletown, DE 19709</span>
             </div>
           </div>
         </div>
