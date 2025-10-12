@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { ArrowRight, MessageSquare, Bot } from 'lucide-react'
+=======
+import { ArrowRight, MessageSquare, BarChart3, Users, Zap, CheckCircle, Clock, Target, TrendingUp, Shield, Bot, Star } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 
 export default function AICustomerSupportChatbotPage() {
   const features = [

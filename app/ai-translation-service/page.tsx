@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { Languages, ArrowRight } from 'lucide-react'
+=======
+import { Languages, ArrowRight, CheckCircle, Brain, Star, Target, Clock, FileText } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import Layout from '../layout'
 
 export default function AITranslationService() {

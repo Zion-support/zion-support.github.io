@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react'
+=======
+import { Shield, ArrowRight, CheckCircle, Brain, Lock, Star, Eye } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import Layout from '../layout'
 
 export default function AdvancedSecuritySuite() {

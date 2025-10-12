@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
   BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
@@ -12,6 +13,9 @@ import {
 =======
 import { ArrowRight, ShoppingCart } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Link as LinkIcon, Package, TrendingUp, Calendar, Globe, Database, Monitor, Mail } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 
 const MicroSaasPage: React.FC = () => {
 

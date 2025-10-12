@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { ArrowRight, Bot, RotateCcw, RotateCw } from 'lucide-react'
+=======
+import { ArrowRight, Zap, Shield, Globe, Database, Cloud, Cpu, Rocket, Network, BarChart3, CheckCircle, DollarSign, TrendingUp, Wrench, Heart } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 
 export default function IoTSolutionsPage() {
   const iotServices = [

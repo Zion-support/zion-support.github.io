@@ -2,7 +2,11 @@
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight, AlertCircle, Calculator, Building2, Wallet, PiggyBank } from 'lucide-react';
+=======
+import { Brain, TrendingUp, Zap, CheckCircle, ArrowRight, Star, BarChart3, DollarSign, Shield, Target, PieChart, Activity, Globe, Monitor, Sparkles, Calculator, FileText, Database, Lock, Building2, CreditCard, Wallet } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 
 export default function AiFinancialAnalyticsProPage() {
 

@@ -1,5 +1,10 @@
 import React from 'react'
+<<<<<<< HEAD
 import { ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react'
+=======
+import { Helmet } from 'react-helmet-async'
+import { Package, TrendingUp, BarChart3, AlertTriangle, Zap, CheckCircle, ArrowRight, Star, Brain, Database, Shield, DollarSign } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import { Link } from 'react-router-dom'
 
 const AIInventoryManagerPage: React.FC = () => {

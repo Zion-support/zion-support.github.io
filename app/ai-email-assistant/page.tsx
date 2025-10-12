@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings } from 'lucide-react';
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { CheckCircle, Mail, Bot, Zap, Shield, BarChart, Users, Clock, Target } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 
 const AIEmailAssistantPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       icon: Mail,
       title: 'Smart Classification',
       description: 'Automatically categorize and prioritize emails based on content and sender.'
@@ -25,11 +33,32 @@ const AIEmailAssistantPage: React.FC = () => {
       icon: Settings,
       title: 'Workflow Automation',
       description: 'Create automated workflows to streamline your email management.'
+=======
+      icon: <Mail className="w-6 h-6 text-cyan-400" />,
+      title: 'Smart Classification',
+      description: 'Automatically categorize emails by priority, type, and sentiment'
+    },
+    {
+      icon: <Bot className="w-6 h-6 text-purple-400" />,
+      title: 'AI Auto-Responses',
+      description: 'Generate intelligent responses based on email content and context'
+    },
+    {
+      icon: <Zap className="w-6 h-6 text-green-400" />,
+      title: 'Workflow Automation',
+      description: 'Create custom rules and automated actions for email management'
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-blue-400" />,
+      title: 'Security & Privacy',
+      description: 'Enterprise-grade security with end-to-end encryption'
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
     }
   ];
 
   const useCases = [
     {
+<<<<<<< HEAD
       title: 'Customer Support',
       description: 'Automate responses to common customer inquiries and support tickets.',
       icon: Users
@@ -48,6 +77,26 @@ const AIEmailAssistantPage: React.FC = () => {
       title: 'Internal Communication',
       description: 'Streamline internal email workflows and team communication.',
       icon: Shield
+=======
+      icon: <BarChart className="w-6 h-6 text-cyan-400" />,
+      title: 'Customer Support',
+      description: 'Automate responses to common inquiries and route complex issues'
+    },
+    {
+      icon: <Users className="w-6 h-6 text-purple-400" />,
+      title: 'Sales Teams',
+      description: 'Prioritize leads and automate follow-up sequences'
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-green-400" />,
+      title: 'Executive Assistants',
+      description: 'Manage calendars and schedule meetings automatically'
+    },
+    {
+      icon: <Target className="w-6 h-6 text-blue-400" />,
+      title: 'Marketing Teams',
+      description: 'Segment audiences and personalize email campaigns'
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
     }
   ];
 
@@ -105,7 +154,7 @@ const AIEmailAssistantPage: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="text-center group">
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-10 h-10 text-cyan-400" />
+                    {feature.icon}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
@@ -131,7 +180,7 @@ const AIEmailAssistantPage: React.FC = () => {
               {useCases.map((useCase, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <useCase.icon className="w-6 h-6 text-cyan-400" />
+                    {useCase.icon}
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                     {useCase.title}

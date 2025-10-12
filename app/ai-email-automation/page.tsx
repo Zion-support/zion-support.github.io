@@ -1,5 +1,10 @@
 import React from 'react'
+<<<<<<< HEAD
 import { } from 'lucide-react'
+=======
+import { Helmet } from 'react-helmet-async'
+import { Mail, Send, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Clock, Brain, Shield, DollarSign } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import { Link } from 'react-router-dom'
 
 const AIEmailAutomationPage: React.FC = () => {

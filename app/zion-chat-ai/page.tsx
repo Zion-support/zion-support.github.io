@@ -1,7 +1,11 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight, ShoppingCart } from 'lucide-react';
+=======
+import { ArrowRight, CheckCircle, Star, Users, Brain, BarChart, MessageCircle, Heart, Link as LinkIcon, Globe, Play } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 
 const ZionChatAiPage: React.FC = () => {
 

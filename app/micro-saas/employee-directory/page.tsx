@@ -1,5 +1,10 @@
 import React from 'react'
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react'
+=======
+import { Helmet } from 'react-helmet-async'
+import { Users, Search, Shield, Phone, CheckCircle, ArrowRight, BarChart3, Clock } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import { Link } from 'react-router-dom'
 
 const EmployeeDirectoryPage: React.FC = () => {

@@ -1,7 +1,12 @@
 'use client';
 
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { HardDrive } from 'lucide-react';
+=======
+import React, { useState, useEffect } from 'react';
+import { Activity, Wifi, HardDrive } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 
 interface PerformanceMetrics {
   lcp: number;

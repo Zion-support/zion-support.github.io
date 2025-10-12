@@ -1,10 +1,21 @@
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, Globe, Shield, MessageCircle } from 'lucide-react';
 
 const AiChatbotBuilderPage: React.FC = () => {
+=======
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Users, Zap, Shield, Brain, BarChart, MessageCircle, Target, ShoppingCart, Globe, Clock } from 'lucide-react';
+
+const AiChatbotBuilderPage: React.FC = () => {
+  // const [isVisible] = useState(true);
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
   const features = [
     {
       title: 'No-Code Builder',
@@ -37,19 +48,59 @@ const AiChatbotBuilderPage: React.FC = () => {
       color: 'from-orange-500 to-red-500'
     },
     {
+<<<<<<< HEAD
       title: 'AI-Powered Responses',
       description: 'Natural language processing and machine learning for intelligent, contextual conversations',
       icon: <Brain className="w-8 h-8 text-yellow-400" />,
+=======
+      title: 'AI Training',
+      description: 'Train your chatbot with your own data and knowledge base for personalized responses',
+      icon: Brain,
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
       color: 'from-yellow-500 to-orange-500'
     }
   ];
 
+<<<<<<< HEAD
+=======
+  const useCases = [
+    {
+      title: 'Customer Support',
+      description: '24/7 automated customer support with instant responses and issue resolution',
+      icon: Users,
+      benefits: ['Reduce support tickets by 60%', 'Instant response time', 'Multilingual support']
+    },
+    {
+      title: 'Lead Generation',
+      description: 'Qualify and nurture leads automatically with intelligent conversation flows',
+      icon: Target,
+      benefits: ['Increase lead conversion by 40%', 'Automated follow-ups', 'Lead scoring']
+    },
+    {
+      title: 'E-commerce Assistant',
+      description: 'Help customers find products, process orders, and handle returns seamlessly',
+      icon: ShoppingCart,
+      benefits: ['Boost sales by 25%', 'Reduce cart abandonment', 'Personalized recommendations']
+    },
+    {
+      title: 'HR Assistant',
+      description: 'Handle employee queries, schedule interviews, and provide company information',
+      icon: Users,
+      benefits: ['Reduce HR workload by 50%', 'Faster response times', 'Consistent information']
+    }
+  ];
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
   const pricingPlans = [
     {
       name: 'Starter',
       price: '$99',
       period: '/month',
+<<<<<<< HEAD
       description: 'Perfect for small businesses getting started with chatbots',
+=======
+      description: 'Perfect for small businesses',
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
       features: [
         'Up to 1,000 conversations/month',
         'Basic AI responses',
@@ -66,11 +117,20 @@ const AiChatbotBuilderPage: React.FC = () => {
       description: 'Ideal for growing businesses with advanced needs',
       features: [
         'Up to 10,000 conversations/month',
+<<<<<<< HEAD
         'Advanced AI with custom training',
         'Priority support',
         'Advanced integrations',
         'Detailed analytics & reporting',
         'Multi-language support'
+=======
+        'Advanced chatbot builder',
+        'Priority support',
+        'All integrations',
+        'Advanced analytics',
+        'Custom branding',
+        'API access'
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
       ],
       popular: true
     },
@@ -78,7 +138,11 @@ const AiChatbotBuilderPage: React.FC = () => {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
+<<<<<<< HEAD
       description: 'Tailored solutions for large organizations',
+=======
+      description: 'For large organizations',
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
       features: [
         'Unlimited conversations',
         'Custom AI models',
@@ -149,6 +213,26 @@ const AiChatbotBuilderPage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-4">
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

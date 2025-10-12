@@ -152,6 +152,7 @@ const AIAutomationPage: React.FC = () => {
                 ))}
               </ul>
             </div>
+<<<<<<< HEAD
             <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-2xl p-8 border border-cyan-500/30">
               <h3 className="text-2xl font-bold text-white mb-4">Ready to Automate?</h3>
               <p className="text-gray-300 mb-6">
@@ -163,6 +164,19 @@ const AIAutomationPage: React.FC = () => {
               >
                 Start Your Automation Journey <ArrowRight className="w-5 h-5" />
               </Link>
+=======
+            <div className="relative">
+              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-white mb-2">70%</div>
+                  <div className="text-gray-300 mb-6">Average Cost Reduction</div>
+                  <div className="text-4xl font-bold text-white mb-2">3-6</div>
+                  <div className="text-gray-300 mb-6">Months to ROI</div>
+                  <div className="text-4xl font-bold text-white mb-2">24/7</div>
+                  <div className="text-gray-300">Automated Operations</div>
+                </div>
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
             </div>
           </div>
         </div>

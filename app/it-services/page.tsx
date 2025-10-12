@@ -1,7 +1,11 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight, ShoppingCart } from 'lucide-react';
+=======
+import { ArrowRight, CheckCircle, Users, Shield, Cloud, Code, BarChart, CheckSquare, DollarSign, Settings, Workflow, Link as LinkIcon, Wifi, TrendingUp, ShoppingCart, Cpu, Database, Smartphone } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 
 const ItServicesPage: React.FC = () => {
 
@@ -41,6 +45,7 @@ const ItServicesPage: React.FC = () => {
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       category: 'Security'
+<<<<<<< HEAD
 
 const ITServicesPage: React.FC = () => {
   const services = [
@@ -61,6 +66,8 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $1,500',
       color: 'from-red-500 to-orange-500',
       link: '/cybersecurity-solutions'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
     },
     {
       icon: Code,
@@ -75,7 +82,6 @@ const ITServicesPage: React.FC = () => {
         'Mobile optimization',
         'Cross-browser compatibility'
       ],
-      icon: Code,
       color: 'from-green-500 to-emerald-500',
       category: 'Development'
     },
@@ -392,6 +398,7 @@ const ITServicesPage: React.FC = () => {
     ? itServices 
     : itServices.filter(service => service.category === selectedCategory);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       description: 'Modern web applications built with cutting-edge technologies',
       features: ['React/Next.js', 'Node.js backend', 'Database design', 'API development'],
@@ -427,6 +434,8 @@ const ITServicesPage: React.FC = () => {
     { number: '24/7', label: 'Support Available', icon: Award },
   ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 
   return (
     <>
@@ -551,7 +560,7 @@ const ITServicesPage: React.FC = () => {
               for maximum performance and security.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
@@ -571,6 +580,7 @@ const ITServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -728,6 +738,8 @@ const ITServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
       </div>
     </>
   );
@@ -735,6 +747,9 @@ const ITServicesPage: React.FC = () => {
 
 export default ItServicesPage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default ITServicesPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-1443
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
