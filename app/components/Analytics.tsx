@@ -30,6 +30,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking])
 
   const initializeGoogleAnalytics = () => {
+<<<<<<< HEAD
     // Load Google Analytics
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
@@ -64,12 +65,17 @@ const Analytics: React.FC<AnalyticsProps> = ({
       window.addEventListener('unhandledrejection', (event) => {
         console.error('Unhandled Promise Rejection:', event.reason)
         // Send to error tracking service
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-55ae
       })
     }
   }
 
   const initializeUserBehaviorTracking = () => {
+<<<<<<< HEAD
     // Initialize user behavior tracking
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-55ae
     if (typeof window !== 'undefined') {
       // Track page views
       const trackPageView = () => {
@@ -84,6 +90,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       // Track clicks
       const trackClick = (event: Event) => {
         const target = event.target as HTMLElement
+<<<<<<< HEAD
         if (target.tagName === 'A' || target.tagName === 'BUTTON') {
           if (window.gtag) {
             window.gtag('event', 'click', {
@@ -91,6 +98,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
               event_label: target.textContent || target.getAttribute('aria-label') || 'unknown'
             })
           }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-55ae
         }
       }
 
@@ -100,21 +109,27 @@ const Analytics: React.FC<AnalyticsProps> = ({
         const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
         if (scrollPercent > maxScroll) {
           maxScroll = scrollPercent
+<<<<<<< HEAD
           if (window.gtag && scrollPercent % 25 === 0) {
             window.gtag('event', 'scroll', {
               event_category: 'engagement',
               event_label: `${scrollPercent}%`,
               value: scrollPercent
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-55ae
             })
           }
         }
       }
 
+<<<<<<< HEAD
       // Initialize tracking
       trackPageView()
       document.addEventListener('click', trackClick)
       window.addEventListener('scroll', trackScroll)
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-55ae
       // Cleanup
       return () => {
         document.removeEventListener('click', trackClick)
