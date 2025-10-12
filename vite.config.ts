@@ -31,6 +31,10 @@ export default defineConfig({
     minify: 'esbuild',
     target: 'es2020',
     cssCodeSplit: true,
+    // Enable compression
+    reportCompressedSize: true,
+    // Optimize chunk size
+    chunkSizeWarningLimit: 1000,
     
     rollupOptions: {
       output: {
