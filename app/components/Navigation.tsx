@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
+import { COMPANY_INFO } from '../../config/constants'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -14,44 +15,19 @@ export default function Navigation() {
     setIsServicesOpen(!isServicesOpen)
   }
 
-  const services = [
-    {
-      title: 'AI Services',
-      href: '/ai-services',
-      icon: <Zap className="w-4 h-4" />,
-      description: 'AI-powered solutions for your business'
-    },
-    {
-      title: 'IT Services',
-      href: '/it-services',
-      icon: <Database className="w-4 h-4" />,
-      description: 'Comprehensive IT infrastructure services'
-    },
-    {
-      title: 'Micro SaaS',
-      href: '/micro-saas-services',
-      icon: <Smartphone className="w-4 h-4" />,
-      description: 'Powerful micro SaaS tools'
-    },
-    {
-      title: 'Cloud Services',
-      href: '/cloud-services',
-      icon: <Cloud className="w-4 h-4" />,
-      description: 'Cloud migration and management'
-    },
-    {
-      title: '5G Implementation',
-      href: '/5g-implementation',
-      icon: <Globe className="w-4 h-4" />,
-      description: 'Next-generation 5G solutions'
-    },
-    {
-      title: 'Digital Transformation',
-      href: '/digital-transformation',
-      icon: <Code className="w-4 h-4" />,
-      description: 'Transform your digital presence'
-    }
-  ]
+  const serviceIcons = {
+    'AI Services': <Zap className="w-4 h-4" />,
+    'IT Services': <Database className="w-4 h-4" />,
+    'Micro SaaS': <Smartphone className="w-4 h-4" />,
+    'Cloud Services': <Cloud className="w-4 h-4" />,
+    '5G Implementation': <Globe className="w-4 h-4" />,
+    'Digital Transformation': <Code className="w-4 h-4" />
+  }
+
+  const services = COMPANY_INFO.services.map(service => ({
+    ...service,
+    icon: serviceIcons[service.title as keyof typeof serviceIcons] || <Code className="w-4 h-4" />
+  }))
 
   return (
     <nav className="bg-gray-900 shadow-lg">
@@ -59,7 +35,7 @@ export default function Navigation() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-white">Zion Tech Group</span>
+              <span className="text-2xl font-bold text-white">{COMPANY_INFO.name}</span>
             </Link>
           </div>
 

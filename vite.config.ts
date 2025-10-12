@@ -28,16 +28,29 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
           ui: ['framer-motion', 'lucide-react'],
+          helmet: ['react-helmet-async'],
         },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       },
     },
+    target: 'es2015',
+    cssCodeSplit: true,
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 1000,
   },
   server: {
     port: 3000,
-    open: true,
+    open: false,
+    host: true,
   },
   preview: {
     port: 4173,
-    open: true,
+    open: false,
+    host: true,
   },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom', 'lucide-react', 'framer-motion', 'react-helmet-async']
+  }
 })

@@ -1,8 +1,10 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import SEO from './components/SEO'
+import StructuredData from './components/StructuredData'
+import { COMPANY_INFO } from '../config/constants'
 
 export default function HomePage() {
   const features = [
@@ -61,11 +63,13 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, cloud migration, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, cybersecurity, cloud migration, digital transformation, IT services, Zion Tech Group" />
-      </Helmet>
+      <SEO 
+        title="Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered solutions, cybersecurity, cloud migration, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords="AI solutions, cybersecurity, cloud migration, digital transformation, IT services, Zion Tech Group"
+      />
+      <StructuredData type="organization" />
+      <StructuredData type="website" />
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin } from 'lucide-react'
+import { COMPANY_INFO } from '../../config/constants'
 
 export default function Footer() {
   return (
@@ -8,9 +9,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+            <h3 className="text-lg font-semibold mb-4">{COMPANY_INFO.name}</h3>
             <p className="text-gray-400 mb-4">
-              Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.
+              {COMPANY_INFO.description}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -31,31 +32,13 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">
-                  AI Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/it-services" className="text-gray-400 hover:text-white transition-colors">
-                  IT Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors">
-                  Micro SaaS
-                </Link>
-              </li>
-              <li>
-                <Link to="/cloud-services" className="text-gray-400 hover:text-white transition-colors">
-                  Cloud Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/5g-implementation" className="text-gray-400 hover:text-white transition-colors">
-                  5G Implementation
-                </Link>
-              </li>
+              {COMPANY_INFO.services.map((service, index) => (
+                <li key={index}>
+                  <Link to={service.href} className="text-gray-400 hover:text-white transition-colors">
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -90,15 +73,21 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Mail className="w-4 h-4 text-gray-400 mr-3" />
-                <span className="text-gray-400">info@ziontechgroup.com</span>
+                <a href={`mailto:${COMPANY_INFO.contact.email}`} className="text-gray-400 hover:text-white transition-colors">
+                  {COMPANY_INFO.contact.email}
+                </a>
               </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 text-gray-400 mr-3" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <a href={`tel:${COMPANY_INFO.contact.phone}`} className="text-gray-400 hover:text-white transition-colors">
+                  {COMPANY_INFO.contact.phone}
+                </a>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 text-gray-400 mr-3" />
-                <span className="text-gray-400">San Francisco, CA</span>
+                <span className="text-gray-400">
+                  {COMPANY_INFO.contact.address.street}, {COMPANY_INFO.contact.address.city}, {COMPANY_INFO.contact.address.state} {COMPANY_INFO.contact.address.zip}
+                </span>
               </div>
             </div>
           </div>
@@ -107,7 +96,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Zion Tech Group. All rights reserved.
+              © 2024 {COMPANY_INFO.name}. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">

@@ -1,38 +1,39 @@
 'use client'
 import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 import ContactForm from '../components/ContactForm'
+import SEO from '../components/SEO'
+import { COMPANY_INFO } from '../../config/constants'
 
 const ContactPage: React.FC = () => {
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6 text-blue-500" />,
       title: 'Email Us',
-      details: 'info@ziontechgroup.com',
+      details: COMPANY_INFO.contact.email,
       description: 'Send us an email anytime'
     },
     {
       icon: <Phone className="w-6 h-6 text-green-500" />,
       title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri from 8am to 6pm'
+      details: COMPANY_INFO.contact.phone,
+      description: COMPANY_INFO.contact.hours
     },
     {
       icon: <MapPin className="w-6 h-6 text-red-500" />,
       title: 'Visit Us',
-      details: 'San Francisco, CA',
+      details: `${COMPANY_INFO.contact.address.city}, ${COMPANY_INFO.contact.address.state}`,
       description: 'Come say hello at our office'
     }
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group. We're here to help with your AI and IT solutions needs. Contact us today for a consultation." />
-        <meta name="keywords" content="contact, Zion Tech Group, AI solutions, IT services, consultation" />
-      </Helmet>
+      <SEO 
+        title="Contact Us"
+        description="Get in touch with Zion Tech Group. We're here to help with your AI and IT solutions needs. Contact us today for a consultation."
+        keywords="contact, Zion Tech Group, AI solutions, IT services, consultation"
+      />
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -112,13 +113,13 @@ const ContactPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:info@ziontechgroup.com"
+              href={`mailto:${COMPANY_INFO.contact.email}`}
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Email Us Now
             </a>
             <a
-              href="tel:+15551234567"
+              href={`tel:${COMPANY_INFO.contact.phone}`}
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
               Call Us Today

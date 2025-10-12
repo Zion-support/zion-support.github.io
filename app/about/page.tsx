@@ -1,9 +1,10 @@
 import React from 'react';
 import { CheckCircle, ArrowRight, Users, Award, Globe, Shield, Zap, Target, TrendingUp, Clock } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
+import { COMPANY_INFO } from '../../config/constants';
 
 const AboutPage: React.FC = () => {
   const values = [
@@ -93,11 +94,11 @@ const AboutPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group - a leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. Discover our mission, values, and expert team." />
-        <meta name="keywords" content="about zion tech group, AI company, technology solutions, team, mission, values" />
-      </Helmet>
+      <SEO 
+        title="About Us"
+        description="Learn about Zion Tech Group - a leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. Discover our mission, values, and expert team."
+        keywords="about zion tech group, AI company, technology solutions, team, mission, values"
+      />
       
       <Navigation />
       
@@ -257,17 +258,24 @@ const AboutPage: React.FC = () => {
                 <div>
                   <div className="text-2xl mb-2">📧</div>
                   <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                  <p className="text-gray-300">kleber@ziontechgroup.com</p>
+                  <a href={`mailto:${COMPANY_INFO.contact.email}`} className="text-gray-300 hover:text-white transition-colors">
+                    {COMPANY_INFO.contact.email}
+                  </a>
                 </div>
                 <div>
                   <div className="text-2xl mb-2">📞</div>
                   <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                  <p className="text-gray-300">+1 302 464 0950</p>
+                  <a href={`tel:${COMPANY_INFO.contact.phone}`} className="text-gray-300 hover:text-white transition-colors">
+                    {COMPANY_INFO.contact.phone}
+                  </a>
                 </div>
                 <div>
                   <div className="text-2xl mb-2">📍</div>
                   <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-                  <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  <p className="text-gray-300">
+                    {COMPANY_INFO.contact.address.street}<br />
+                    {COMPANY_INFO.contact.address.city} {COMPANY_INFO.contact.address.state} {COMPANY_INFO.contact.address.zip}
+                  </p>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
