@@ -5,7 +5,7 @@ export const Validators = {
     console.log('Validators initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

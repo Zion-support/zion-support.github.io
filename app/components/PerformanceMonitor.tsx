@@ -19,7 +19,7 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
+            console.log('FID:', (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime);
           }
         }
       });
@@ -30,8 +30,8 @@ const PerformanceMonitor: React.FC = () => {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+          if (!(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
+            clsValue += (entry as PerformanceEntry & { value: number }).value;
           }
         }
         console.log('CLS:', clsValue);
@@ -45,6 +45,7 @@ const PerformanceMonitor: React.FC = () => {
         clsObserver.disconnect();
       };
     }
+    return undefined;
   }, []);
 
   return null;

@@ -5,7 +5,7 @@ export const Accessibilityutils = {
     console.log('Accessibilityutils initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

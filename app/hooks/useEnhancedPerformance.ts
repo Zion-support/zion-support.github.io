@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export const useEnhancedPerformance = () => {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<unknown>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -11,7 +11,7 @@ export const useEnhancedPerformance = () => {
     setLoading(false);
   }, []);
 
-  const processData = (input: any) => {
+  const processData = (input: unknown) => {
     try {
       setLoading(true);
       // Process data logic here

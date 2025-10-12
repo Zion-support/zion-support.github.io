@@ -5,7 +5,7 @@ export const Performancemetrics = {
     console.log('Performancemetrics initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

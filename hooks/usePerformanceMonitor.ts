@@ -11,7 +11,7 @@ export const usePerformanceMonitor = () => {
     setLoading(false);
   }, []);
 
-  const processData = (input: any) => {
+  const processData = (input: unknown) => {
     try {
       setLoading(true);
       // Process data logic here

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
 interface NeonButtonProps {
@@ -6,6 +5,12 @@ interface NeonButtonProps {
   className?: string;
   title?: string;
   description?: string;
+  href?: string;
+  onClick?: () => void;
+  variant?: 'primary' | 'secondary' | 'accent';
+  size?: 'sm' | 'md' | 'lg';
+  icon?: React.ReactNode;
+  disabled?: boolean;
 }
 
 const NeonButton: React.FC<NeonButtonProps> = ({
@@ -34,7 +39,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
 
   const neonEffect = 'before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10';
   
-  const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
+  const buttonClasses = `${baseClasses} ${sizeClasses[size as keyof typeof sizeClasses]} ${variantClasses[variant as keyof typeof variantClasses]} ${neonEffect} ${className}`;
 
   const content = (
     <>

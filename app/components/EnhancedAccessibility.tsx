@@ -32,7 +32,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       };
 
       mediaQuery.addEventListener('change', handleMotionChange);
-      handleMotionChange(mediaQuery);
+      handleMotionChange(mediaQuery as unknown as MediaQueryListEvent);
 
       return () => mediaQuery.removeEventListener('change', handleMotionChange);
     };

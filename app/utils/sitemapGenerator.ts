@@ -5,7 +5,7 @@ export const Sitemapgenerator = {
     console.log('Sitemapgenerator initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

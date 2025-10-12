@@ -5,7 +5,7 @@ export const Analyticstracker = {
     console.log('Analyticstracker initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

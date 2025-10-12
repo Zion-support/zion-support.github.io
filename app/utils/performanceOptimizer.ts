@@ -5,7 +5,7 @@ export const Performanceoptimizer = {
     console.log('Performanceoptimizer initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

@@ -5,7 +5,7 @@ export const Monitoring = {
     console.log('Monitoring initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

@@ -5,7 +5,7 @@ export const Apiclient = {
     console.log('Apiclient initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

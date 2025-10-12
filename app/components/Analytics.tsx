@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 declare global {
   interface Window {
-    gtag: (...args: unknown[]) => void;
+    gtag: ((...args: unknown[]) => void) & { q?: unknown[] };
   }
 }
 

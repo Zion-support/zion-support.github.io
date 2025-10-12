@@ -1,8 +1,9 @@
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import React, { useEffect, ReactNode } from 'react';
+import { AnalyticsContext } from '../contexts/AnalyticsContext';
 
 declare global {
   interface Window {
-    gtag: (...args: unknown[]) => void;
+    gtag: ((...args: unknown[]) => void) & { q?: unknown[] };
   }
 }
 
@@ -10,16 +11,6 @@ interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
   trackPageView: (pageName: string) => void;
 }
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
 
 interface AnalyticsProviderProps {
   children: ReactNode;
@@ -35,9 +26,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         script.async = true;
         document.head.appendChild(script);
 
-        window.gtag = window.gtag || function(...args: any[]) {
-          (window.gtag as any).q = (window.gtag as any).q || [];
-          (window.gtag as any).q.push(args);
+        window.gtag = window.gtag || function(...args: unknown[]) {
+          window.gtag.q = window.gtag.q || [];
+          window.gtag.q.push(args);
         };
         window.gtag('js', new Date());
         window.gtag('config', process.env.REACT_APP_GA_MEASUREMENT_ID || '');

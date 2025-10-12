@@ -11,14 +11,14 @@ export default function AICustomerSupportChatbot() {
   ];
 
   const pricingPlans = [
-    { name: 'Starter', price: '$299', features: ['Basic chatbot', 'Email support', 'Standard templates'] },
-    { name: 'Professional', price: '$799', features: ['Advanced AI', 'Priority support', 'Custom integrations'] },
-    { name: 'Enterprise', price: '$1999', features: ['Full customization', '24/7 support', 'Dedicated manager'] }
+    { name: 'Starter', price: '$299', period: '/month', description: 'Perfect for small businesses', features: ['Basic chatbot', 'Email support', 'Standard templates'], popular: false },
+    { name: 'Professional', price: '$799', period: '/month', description: 'Ideal for growing companies', features: ['Advanced AI', 'Priority support', 'Custom integrations'], popular: true },
+    { name: 'Enterprise', price: '$1999', period: '/month', description: 'For large organizations', features: ['Full customization', '24/7 support', 'Dedicated manager'], popular: false }
   ];
 
   const testimonials = [
-    { name: 'Sarah Johnson', company: 'TechCorp', text: 'Amazing chatbot solution!' },
-    { name: 'Mike Chen', company: 'StartupXYZ', text: 'Increased customer satisfaction by 40%.' }
+    { name: 'Sarah Johnson', company: 'TechCorp', content: 'Amazing chatbot solution!', rating: 5 },
+    { name: 'Mike Chen', company: 'StartupXYZ', content: 'Increased customer satisfaction by 40%.', rating: 5 }
   ];
   const features = [
     {

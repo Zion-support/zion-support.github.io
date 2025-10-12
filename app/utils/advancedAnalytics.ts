@@ -5,7 +5,7 @@ export const Advancedanalytics = {
     console.log('Advancedanalytics initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

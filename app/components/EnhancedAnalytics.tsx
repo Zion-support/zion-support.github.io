@@ -1,22 +1,13 @@
 'use client';
 
-import React, { createContext, useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { AnalyticsContext } from '../contexts/EnhancedAnalyticsContext';
 
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, unknown>) => void;
   identify: (userId: string, traits?: Record<string, unknown>) => void;
   page: (name: string, properties?: Record<string, unknown>) => void;
 }
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
 
 interface AnalyticsProviderProps {
   children: React.ReactNode;
@@ -103,6 +94,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 declare global {
   interface Window {
     dataLayer: unknown[];
-    gtag: (...args: unknown[]) => void;
+    gtag: ((...args: unknown[]) => void) & { q?: unknown[] };
   }
 }

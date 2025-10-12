@@ -5,7 +5,7 @@ export const Apicache = {
     console.log('Apicache initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   

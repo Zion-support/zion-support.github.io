@@ -5,7 +5,7 @@ export const Performanceutils = {
     console.log('Performanceutils initialized');
   },
   
-  process: (data: any) => {
+  process: (data: unknown) => {
     return data;
   },
   
