@@ -1,16 +1,17 @@
-import { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShoppingCart } from 'lucide-react';
-import { ArrowRight, ShoppingCart} from 'lucide-react';
+import { ArrowRight, ShoppingCart, Cloud, Shield, Code, Database, Zap, Users, Globe, Lock } from 'lucide-react';
 'use client';
 
-const ItServicesPage: React.FC = () => {
+const ITServicesPage: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const itServices = [
+  const services = [
     {
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions with AWS, Azure, and Google Cloud expertise',
@@ -23,7 +24,7 @@ const ItServicesPage: React.FC = () => {
         '24/7 monitoring',
         'Disaster recovery'
       ],
-      icon: Cloud,
+      icon: <Cloud className="w-6 h-6" />,
       color: 'from-cyan-500 to-blue-500',
       category: 'Infrastructure'
     },
@@ -39,661 +40,222 @@ const ItServicesPage: React.FC = () => {
         'Incident response',
         'Staff training'
       ],
-      icon: Shield,
+      icon: <Shield className="w-6 h-6" />,
       color: 'from-red-500 to-orange-500',
       category: 'Security'
-
-const ITServicesPage: React.FC = () => {
-  const services = [
-    {
-      icon: Cloud,
-      title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud with AWS, Azure, and Google Cloud expertise.',
-      features: ['AWS Migration', 'Azure Migration', 'Google Cloud Setup', 'Hybrid Cloud Solutions'],
-      price: 'Starting at $2,500',
-      color: 'from-cyan-500 to-blue-500',
-      link: '/cloud-migration'
     },
     {
-      icon: Shield,
-      title: 'Cybersecurity Solutions',
-      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
-      features: ['Security Audits', 'Penetration Testing', 'Compliance Management', 'Incident Response'],
-      price: 'Starting at $1,500',
-      color: 'from-red-500 to-orange-500',
-      link: '/cybersecurity-solutions'
-    },
-    {
-      icon: Code,
       title: 'Web Development',
-      description: 'Modern, responsive web applications built to scale',
-      price: 'Starting at $8,000',
+      description: 'Modern, responsive web applications built with cutting-edge technologies',
+      price: 'Starting at $2,500',
       features: [
-        'Responsive design',
-        'SEO optimization',
-        'Performance tuning',
-        'Maintenance support',
-        'Mobile optimization',
-        'Cross-browser compatibility'
+        'Custom web applications',
+        'E-commerce solutions',
+        'API development',
+        'Performance optimization',
+        'Mobile responsiveness',
+        'SEO optimization'
       ],
+      icon: <Code className="w-6 h-6" />,
       color: 'from-green-500 to-emerald-500',
       category: 'Development'
     },
     {
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications',
-      price: 'Starting at $12,000',
-      features: [
-        'iOS & Android apps',
-        'Cross-platform development',
-        'App store optimization',
-        'Push notifications',
-        'Offline functionality',
-        'Performance optimization'
-      ],
-      icon: Smartphone,
-      color: 'from-purple-500 to-pink-500',
-      category: 'Development'
-    },
-    {
-      title: 'API Development',
-      description: 'RESTful and GraphQL APIs for seamless integration',
-      price: 'Starting at $4,000',
-      features: [
-        'RESTful API design',
-        'GraphQL implementation',
-        'API documentation',
-        'Rate limiting',
-        'Authentication',
-        'Performance monitoring'
-      ],
-      icon: LinkIcon,
-      color: 'from-indigo-500 to-purple-500',
-      category: 'Development'
-    },
-    {
       title: 'Database Management',
-      description: 'Database design, optimization, and maintenance',
-      price: 'Starting at $2,500',
+      description: 'Efficient database design, optimization, and management services',
+      price: 'Starting at $1,500',
       features: [
         'Database design',
-        'Performance optimization',
-        'Backup and recovery',
-        'Security hardening',
-        'Migration services',
-        '24/7 monitoring'
+        'Performance tuning',
+        'Data migration',
+        'Backup strategies',
+        'Security implementation',
+        'Monitoring setup'
       ],
-      icon: Database,
-      color: 'from-yellow-500 to-orange-500',
-      category: 'Infrastructure'
+      icon: <Database className="w-6 h-6" />,
+      color: 'from-purple-500 to-pink-500',
+      category: 'Data'
     },
     {
       title: 'DevOps & CI/CD',
-      description: 'Automated deployment and continuous integration pipelines',
-      price: 'Starting at $6,000',
+      description: 'Streamline your development process with automated deployment pipelines',
+      price: 'Starting at $4,000',
       features: [
         'CI/CD pipeline setup',
         'Container orchestration',
         'Infrastructure automation',
         'Monitoring and logging',
-        'Security scanning',
-        'Performance optimization'
+        'Deployment strategies',
+        'Team training'
       ],
-      icon: Settings,
-      color: 'from-teal-500 to-cyan-500',
-      category: 'DevOps'
+      icon: <Zap className="w-6 h-6" />,
+      color: 'from-yellow-500 to-orange-500',
+      category: 'Operations'
     },
     {
-      title: 'IT Support',
-      description: '24/7 technical support and maintenance services',
-      price: 'Starting at $1,500/month',
+      title: 'IT Support & Consulting',
+      description: 'Expert IT support and strategic consulting for your business needs',
+      price: 'Starting at $1,000',
       features: [
         '24/7 technical support',
-        'Remote monitoring',
-        'Preventive maintenance',
-        'Hardware support',
-        'Software updates',
-        'User training'
+        'System administration',
+        'IT strategy planning',
+        'Technology assessment',
+        'Vendor management',
+        'Staff training'
       ],
-      icon: Users,
-      color: 'from-blue-500 to-indigo-500',
+      icon: <Users className="w-6 h-6" />,
+      color: 'from-indigo-500 to-purple-500',
       category: 'Support'
-    },
-    {
-      title: 'Blockchain Development',
-      description: 'Custom blockchain solutions, smart contracts, and decentralized applications',
-      price: 'Starting at $15,000',
-      features: [
-        'Smart contract development',
-        'DApp creation',
-        'Token development',
-        'Blockchain integration',
-        'Security auditing',
-        'DeFi solutions'
-      ],
-      icon: LinkIcon,
-      color: 'from-purple-500 to-pink-500',
-      category: 'Development'
-    },
-    {
-      title: 'IoT Development',
-      description: 'Internet of Things solutions with device connectivity and data management',
-      price: 'Starting at $12,000',
-      features: [
-        'Device connectivity',
-        'Data collection',
-        'Real-time monitoring',
-        'Cloud integration',
-        'Mobile apps',
-        'Analytics dashboard'
-      ],
-      icon: Wifi,
-      color: 'from-cyan-500 to-blue-500',
-      category: 'Development'
-    },
-    {
-      title: 'E-commerce Development',
-      description: 'Custom e-commerce platforms with payment integration and inventory management',
-      price: 'Starting at $10,000',
-      features: [
-        'Custom storefront',
-        'Payment integration',
-        'Inventory management',
-        'Order processing',
-        'Customer portal',
-        'Analytics tracking'
-      ],
-      icon: ShoppingCart,
-      color: 'from-green-500 to-emerald-500',
-      category: 'Development'
-    },
-    {
-      title: 'Data Engineering',
-      description: 'Big data processing, ETL pipelines, and data warehouse solutions',
-      price: 'Starting at $8,000',
-      features: [
-        'ETL pipeline design',
-        'Data warehouse setup',
-        'Big data processing',
-        'Real-time streaming',
-        'Data quality assurance',
-        'Performance optimization'
-      ],
-      icon: Database,
-      color: 'from-orange-500 to-red-500',
-      category: 'Infrastructure'
-    },
-    {
-      title: 'Machine Learning Ops',
-      description: 'ML model deployment, monitoring, and maintenance in production environments',
-      price: 'Starting at $12,000',
-      features: [
-        'Model deployment',
-        'Performance monitoring',
-        'A/B testing',
-        'Auto-scaling',
-        'Model versioning',
-        'Continuous training'
-      ],
-      icon: Cpu,
-      color: 'from-indigo-500 to-purple-500',
-      category: 'DevOps'
-    },
-    {
-      title: 'Enterprise Integration',
-      description: 'Seamless integration of disparate systems and applications',
-      price: 'Starting at $6,000',
-      features: [
-        'API integration',
-        'Data synchronization',
-        'Legacy system migration',
-        'Real-time connectivity',
-        'Error handling',
-        'Monitoring dashboard'
-      ],
-      icon: LinkIcon,
-      color: 'from-teal-500 to-cyan-500',
-      category: 'Infrastructure'
-    },
-    {
-      title: 'Performance Optimization',
-      description: 'Application and infrastructure performance tuning for maximum efficiency',
-      price: 'Starting at $4,000',
-      features: [
-        'Performance analysis',
-        'Code optimization',
-        'Database tuning',
-        'Caching strategies',
-        'Load balancing',
-        'Monitoring setup'
-      ],
-      icon: TrendingUp,
-      color: 'from-yellow-500 to-orange-500',
-      category: 'Infrastructure'
-    },
-    {
-      title: 'Disaster Recovery',
-      description: 'Comprehensive backup and disaster recovery solutions',
-      price: 'Starting at $5,000',
-      features: [
-        'Backup strategies',
-        'Recovery planning',
-        'Data replication',
-        'Failover systems',
-        'Testing procedures',
-        'Documentation'
-      ],
-      icon: Shield,
-      color: 'from-red-500 to-pink-500',
-      category: 'Security'
-    },
-    {
-      title: 'Compliance Automation',
-      description: 'Automated compliance monitoring and reporting for various standards',
-      price: 'Starting at $7,000',
-      features: [
-        'Compliance monitoring',
-        'Automated reporting',
-        'Audit trails',
-        'Policy enforcement',
-        'Risk assessment',
-        'Documentation management'
-      ],
-      icon: CheckSquare,
-      color: 'from-gray-500 to-slate-500',
-      category: 'Security'
-    },
-    {
-      title: 'Cloud Cost Optimization',
-      description: 'Cloud resource optimization and cost reduction strategies',
-      price: 'Starting at $3,000',
-      features: [
-        'Cost analysis',
-        'Resource optimization',
-        'Right-sizing recommendations',
-        'Reserved instance planning',
-        'Cost monitoring',
-        'Budget management'
-      ],
-      icon: DollarSign,
-      color: 'from-green-500 to-teal-500',
-      category: 'Infrastructure'
-    },
-    {
-      title: 'Security Automation',
-      description: 'Automated security monitoring, incident response, and threat hunting',
-      price: 'Starting at $8,000',
-      features: [
-        'Threat detection',
-        'Incident response',
-        'Vulnerability scanning',
-        'Security orchestration',
-        'Compliance monitoring',
-        'Forensic analysis'
-      ],
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      category: 'Security'
-    },
-    {
-      title: 'Data Visualization',
-      description: 'Interactive dashboards and data visualization solutions',
-      price: 'Starting at $5,000',
-      features: [
-        'Custom dashboards',
-        'Interactive charts',
-        'Real-time data',
-        'Mobile responsive',
-        'Export capabilities',
-        'User management'
-      ],
-      icon: BarChart,
-      color: 'from-blue-500 to-purple-500',
-      category: 'Development'
-    },
-    {
-      title: 'Workflow Automation',
-      description: 'Business process automation and workflow optimization',
-      price: 'Starting at $6,000',
-      features: [
-        'Process mapping',
-        'Workflow design',
-        'Automation rules',
-        'Integration APIs',
-        'Monitoring dashboard',
-        'Performance analytics'
-      ],
-      icon: Workflow,
-      color: 'from-cyan-500 to-blue-500',
-      category: 'Automation'
-    },
-    {
-      title: 'Cloud Native Security',
-      description: 'Security solutions specifically designed for cloud-native applications',
-      price: 'Starting at $9,000',
-      features: [
-        'Container security',
-        'Kubernetes security',
-        'API security',
-        'Identity management',
-        'Network security',
-        'Compliance monitoring'
-      ],
-      icon: Shield,
-      color: 'from-indigo-500 to-purple-500',
-      category: 'Security'
     }
   ];
-  const categories = ['All', 'Infrastructure', 'Security', 'Development', 'DevOps', 'Support', 'Automation'];
+
+  const categories = ['All', 'Infrastructure', 'Security', 'Development', 'Data', 'Operations', 'Support'];
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredServices = selectedCategory === 'All' 
-    ? itServices 
-    : itServices.filter(service => service.category === selectedCategory);
-      description: 'Modern web applications built with cutting-edge technologies',
-      features: ['React/Next.js', 'Node.js backend', 'Database design', 'API development'],
-      price: 'Starting at $3,000/project'
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'iOS and Android applications for all business needs',
-      features: ['Native development', 'Cross-platform', 'App store deployment', 'Maintenance'],
-      price: 'Starting at $5,000/app'
-    },
-    {
-      icon: Database,
-      title: 'Database Management',
-      description: 'Data processing, storage, and analytics solutions',
-      features: ['Database design', 'Performance optimization', 'Data migration', 'Backup solutions'],
-      price: 'Starting at $1,200/month'
-    },
-    {
-      icon: Settings,
-      title: 'DevOps & CI/CD',
-      description: 'Automated deployment and continuous integration pipelines',
-      features: ['CI/CD setup', 'Container orchestration', 'Monitoring', 'Automated testing'],
-      price: 'Starting at $2,000/month'
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
-    { number: '50+', label: 'Happy Clients', icon: Users },
-    { number: '99%', label: 'Client Satisfaction', icon: Star },
-    { number: '24/7', label: 'Support Available', icon: Award },
-  ];
+    ? services 
+    : services.filter(service => service.category === selectedCategory);
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title />IT Services - Zion Tech Group | Comprehensive IT Solutions</title>
-        <meta const name = "description" content="Professional IT services including cloud infrastructure, cybersecurity, web development, mobile apps, and DevOps. Transform your business with our expert IT solutions." /  />
-        <meta name="keywords" content="IT services, cloud computing, cybersecurity, web development, mobile development, DevOps, database management, IT support" />
+        <title>IT Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, web development, and more." />
+        <meta name="keywords" content="IT services, cloud computing, cybersecurity, web development, DevOps, database management" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        {/* Hero Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                IT Services
-                <span className="w-5h-5ml-2" />& Solutions
-                </span>
-              </h1>
-              <p className="{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                Comprehensive IT services to build, secure, and optimize your technology infrastructure. 
-                From cloud migration to cybersecurity, we have the expertise you need.
-              </p>
-              <div className="{`flex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                <Link
-          to="/contact"
-          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
-        >
-          Get Started Today
-                  
-          <ArrowRight className="w-5h-5ml-2" />
-        </Link>
-                <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300transformhover:scale-105" />
-                  Call +1 302 464 0950
-                </a>
-              </div>
+      
+      {/* Hero Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            IT Services
+            <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              {' '}Solutions
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive IT services designed to modernize your infrastructure, enhance security, 
+            and accelerate your digital transformation journey.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link 
+              to="/demo" 
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              View Demo
+            </Link>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Category Filter */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              {categories.map((category) => (
-                <button
-                  key="{category}"
-                  onClick="{()" =  />setSelectedCategory(category)}
-                  className="{`px-6" py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    selectedCategory === category
-                      ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg'
-                      : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-        </section>
+      {/* Category Filter */}
+      <section className="py-8 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  selectedCategory === category
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        {/* Services Grid */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              {filteredServices.map((service, index) => (
-                <div
-                  key="{index}"
-                  className="group relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 borderborder-gray-700hover:border-cyan-500" />
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="{`inline- flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl mb-4`} />
-                      <service.icon className="h-8w-8text-white"  />
-                    </div>
-                    <h3 className="w-5h-5ml-2" />{service.title}</h3>
-                    <p className="w-5h-5ml-2">{service.description}</p>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{service.price}</div>
-
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    {service.features.map((feature, idx) => (
-                      <div key="{idx}" className="flex items-centertext-sm text-gray-300" />
-                        <CheckCircle className="w-5h-5ml-2" />
-                        <span />{feature}</span>
-                      </div>
-                    ))}
+      {/* Services Grid */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index) => (
+              <div 
+                key={index} 
+                className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 ${
+                  isVisible ? 'animate-fade-in-up' : 'opacity-0'
+                }`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-center mb-4">
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mr-4`}>
+                    {service.icon}
                   </div>
-
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <Link
-          to="/contact"
-          className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300transformhover:scale-105"
-        >
-          Get Quote
-                      
-          <ArrowRight className="w-5h-5ml-2" />
-        </Link>
-                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-whitetransition-all duration-300">Learn More
-                    </Link>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                    <p className="text-cyan-400 font-semibold">{service.price}</p>
                   </div>
-              ))}
-            </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />Ready to Transform Your IT Infrastructure?
-            </h2>
-            <p className="w-5h-5ml-2">Let our expert team help you build, secure, and optimize your technology infrastructure 
-              for maximum performance and security.
-            </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <Link
-          to="/contact"
-          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
-        >
-          Get Started Today
+                </div>
                 
-          <ArrowRight className="w-5h-5ml-2" />
-        </Link>
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300transformhover:scale-105" />
-                Call +1 302 464 0950
-              </a>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <p />Email: kleber@ziontechgroup.com</p>
-              <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
-        </section>
-            </div>
-        </section>
-
-        {/* Services Grid */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />
-                Our <span className="w-5h-5ml-2" />IT Solutions</span>
-              </h2>
-              <p className="w-5h-5ml-2">End-to-end IT services designed to modernize your infrastructure and accelerate your digital transformation
-              </p>
-            </div>
-
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              {services.map((service, index) => (
-                <div 
-                  key="{index}"
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
-                  <div className="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`} />
-                    <service.icon className="w-8 h-8text-white"  />
-                  </div>
-                  
-                  <h3 className="w-5h-5ml-2" />{service.title}
-                  </h3>
-                  
-                  <p className="w-5h-5ml-2">{service.description}
-                  </p>
-
-                  <ul className="w-5h-5ml-2" />
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-centertext-sm text-gray-300" />
-                        <CheckCircle className="w-5h-5ml-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5h-5ml-2" />{service.price}</span>
-                    <Link
-          to="{service.link}"
-          className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1inline-flex items-center"
-        >
-          Learn More 
-          <ArrowRight className="w-5h-5ml-2" />
-        </Link>
-                  </div>
-              ))}
-            </div>
-        </section>
-
-        {/* Process Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />
-                Our <span className="w-5h-5ml-2" />Process</span>
-              </h2>
-              <p className="w-5h-5ml-2">A proven methodology that ensures successful project delivery and maximum value for your investment
-              </p>
-            </div>
-
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              {process.map((step, index) => (
-                <div key={index} className="text-centergroup" />
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5h-5ml-2" />{step.step}</span>
-                  </div>
-                  <h3 className="w-5h-5ml-2" />{step.title}</h3>
-                  <p className="w-5h-5ml-2">{step.description}</p>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <div className="flex space-x-3">
+                  <Link
+                    to="/contact"
+                    className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center flex items-center justify-center"
+                  >
+                    Get Quote
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                  <button className="px-4 py-2 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center">
+                    <ShoppingCart className="w-4 h-4" />
+                  </button>
                 </div>
-              ))}
-            </div>
-        </section>
-
-        {/* Why Choose Us */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />
-                Why Choose <span className="w-5h-5ml-2" />Zion Tech Group</span>?
-              </h2>
-              <p className="w-5h-5ml-2">We deliver exceptional IT solutions through expertise, innovation, and unwavering commitment to your success
-              </p>
-            </div>
-
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Zap className="w-5h-5ml-2" />
-                </div>
-                <h3 className="w-5h-5ml-2" />Rapid Deployment</h3>
-                <p className="w-5h-5ml-2">Fast implementation with minimal downtime. We get your solutions up and running quickly.
-                </p>
               </div>
-
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Users className="w-5h-5ml-2" />
-                </div>
-                <h3 className="w-5h-5ml-2" />Expert Team</h3>
-                <p className="w-5h-5ml-2">Certified professionals with years of experience in enterprise IT solutions and cloud technologies.
-                </p>
-              </div>
-
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Award className="w-5h-5ml-2" />
-                </div>
-                <h3 className="w-5h-5ml-2" />Proven Results</h3>
-                <p className="w-5h-5ml-2">Track record of successful projects with measurable business impact and client satisfaction.
-                </p>
-              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />Ready to Modernize Your IT Infrastructure?
-              </h2>
-              <p className="w-5h-5ml-2">Let's discuss your IT needs and create a customized solution that drives your business forward.
-              </p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project
-                </Link>
-                <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
-                </Link>
-              </div>
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your IT Infrastructure?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let our expert team help you build a robust, scalable, and secure IT environment.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Start Your Project
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link 
+              to="/demo" 
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              Schedule Consultation
+            </Link>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+    </div>
   );
 };
 
-export default ItServicesPage;
 export default ITServicesPage;
-export default ITServicesPage;
-
-}

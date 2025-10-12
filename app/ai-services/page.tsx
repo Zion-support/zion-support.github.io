@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {;
-'use client';
+import { 
   Brain, Zap, Shield, BarChart, MessageCircle, Eye, Mic, 
   FileText, Users, Heart, DollarSign, Target, Settings, 
-  CheckCircle, ArrowRight, Star, TrendingUp,
-  Cpu
+  CheckCircle, ArrowRight, Star, TrendingUp, Clock, Workflow
 } from 'lucide-react';
-import { Brain, Zap, Shield, BarChart, MessageCircle, Eye, Mic, FileText, Users, Target, Settings, CheckCircle, ArrowRight, Clock, TrendingUp, Workflow } from 'lucide-react';
+'use client';
 
 const AiServicesPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -158,10 +156,10 @@ const AiServicesPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
-        <meta const name = "description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and automation. Transform your business with cutting-edge AI technology." /  />
+        <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and automation. Transform your business with cutting-edge AI technology." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI automation, AI consulting" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-services"  />
-        <script type="application/ld+json"  />{JSON.stringify({
+        <script type="application/ld+json">{JSON.stringify({
             "@context": "https: //schema.org",
             "@type": "Service",
             "name": "AI Services",

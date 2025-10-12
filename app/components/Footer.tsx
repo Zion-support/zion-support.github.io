@@ -1,7 +1,7 @@
 import React from 'react';
-
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shield, Database, Workflow, Link as LinkIcon, Linkedin, Twitter, Github } from 'lucide-react';
 
+const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
@@ -63,17 +63,116 @@ import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shiel
   ];
 
   return (
-          <h3 className="text-2-xl font-bold mb-4">Zion Tech Group</h3>
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div>
+            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-4">
+              Advanced AI & IT Solutions for the modern enterprise.
+            </p>
+            <div className="flex space-x-4">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
+          </div>
 
-  const currentYear = new Date().getFullYear();
+          {/* AI Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">AI Services</h4>
+            <ul className="space-y-2">
+              {aiServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <a
+                    href={service.url}
+                    className="text-gray-300 hover:text-white transition-colors duration-300"
+                  >
+                    {service.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-  return (
+          {/* IT Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">IT Services</h4>
+            <ul className="space-y-2">
+              {itServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <a
+                    href={service.url}
+                    className="text-gray-300 hover:text-white transition-colors duration-300"
+                  >
+                    {service.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+          {/* Company & Resources */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <ul className="space-y-2 mb-6">
+              {company.slice(0, 4).map((item, index) => (
+                <li key={index}>
+                  <a
+                    href={item.url}
+                    className="text-gray-300 hover:text-white transition-colors duration-300"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <h4 className="text-lg font-semibold mb-4">Resources</h4>
+            <ul className="space-y-2">
+              {resources.slice(0, 4).map((resource, index) => (
+                <li key={index}>
+                  <a
+                    href={resource.url}
+                    className="text-gray-300 hover:text-white transition-colors duration-300"
+                  >
+                    {resource.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
 
-            Advanced AI & IT Solutions
-            © {currentYear} Zion Tech Group. All rights reserved.
-
+        {/* Bottom Section */}
+        <div className="border-t border-gray-700 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <a href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+                Privacy Policy
+              </a>
+              <a href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+                Terms of Service
+              </a>
+              <a href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+                Cookie Policy
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };
 
