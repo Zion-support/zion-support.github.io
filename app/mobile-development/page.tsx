@@ -1,83 +1,241 @@
-<<<<<<< HEAD
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Smartphone, Zap, Users, BarChart3, Shield, Code } from 'lucide-react'
-
-export default function MobileDevelopmentPage() {
-  const features = [
-    {
-      icon: <Smartphone className="w-8 h-8 text-blue-500" />,
-      title: 'Native & Cross-Platform',
-      description: 'Build native iOS and Android apps or cross-platform solutions for maximum reach and efficiency.'
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-purple-500" />,
-      title: 'High Performance',
-      description: 'Optimized apps that deliver smooth performance and excellent user experience across all devices.'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-green-500" />,
-      title: 'User-Centered Design',
-      description: 'Intuitive and engaging user interfaces designed with your target audience in mind.'
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-red-500" />,
-      title: 'Analytics Integration',
-      description: 'Built-in analytics and tracking to monitor app performance and user engagement.'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-yellow-500" />,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security with compliance features for regulated industries.'
-    },
-    {
-      icon: <Code className="w-8 h-8 text-indigo-500" />,
-      title: 'Scalable Architecture',
-      description: 'Future-proof architecture that scales with your business growth and user base.'
-    }
-  ]
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
+import Layout from '../layout';
+import { Smartphone, CheckCircle, ArrowRight, Code, Zap, Settings, BarChart, Target, Users, Globe } from 'lucide-react';
 
 const MobileDevelopmentPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Mobile Development - Zion Tech Group</title>
-        <meta name="description" content="Mobile Development services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="mobile-development, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Mobile Development
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional mobile development services by Zion Tech Group.
-            </p>
-          </div>
+  const services = [
+    {
+      icon: Smartphone,
+      title: 'iOS App Development',
+      description: 'Native iOS applications built with Swift and SwiftUI',
+      features: ['Native performance', 'App Store optimization', 'iOS design guidelines', 'Push notifications']
+    },
+    {
+      icon: Smartphone,
+      title: 'Android App Development',
+      description: 'Native Android applications built with Kotlin and Jetpack Compose',
+      features: ['Material Design', 'Google Play optimization', 'Android compatibility', 'Background services']
+    },
+    {
+      icon: Globe,
+      title: 'Cross-Platform Development',
+      description: 'React Native and Flutter apps for both iOS and Android',
+      features: ['Single codebase', 'Faster development', 'Cost-effective', 'Consistent UI']
+    },
+    {
+      icon: Zap,
+      title: 'App Optimization',
+      description: 'Performance optimization and app store optimization',
+      features: ['Performance tuning', 'ASO optimization', 'Analytics integration', 'Crash reporting']
+    }
+  ];
 
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300 mb-6">
-              We're working on bringing you comprehensive mobile development solutions. 
-              Contact us to learn more about our services.
-            </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-              Contact Us
-            </button>
+  const pricingTiers = [
+    {
+      name: 'Basic App',
+      price: '$9,999',
+      description: 'Perfect for simple apps',
+      features: [
+        'Up to 10 screens',
+        'Basic functionality',
+        'iOS or Android',
+        'App store submission',
+        '3 months support'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional App',
+      price: '$24,999',
+      description: 'Ideal for business apps',
+      features: [
+        'Up to 25 screens',
+        'Advanced features',
+        'Both platforms',
+        'Backend integration',
+        'Push notifications',
+        '6 months support'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise App',
+      price: '$49,999',
+      description: 'For complex applications',
+      features: [
+        'Unlimited screens',
+        'Custom development',
+        'Advanced integrations',
+        'Performance optimization',
+        'Security features',
+        '12 months support'
+      ],
+      popular: false
+    }
+  ];
+
+  return (
+    <Layout
+      title="Mobile App Development - iOS & Android Apps"
+      description="Professional mobile app development for iOS and Android. We create native and cross-platform apps that engage users and drive business growth."
+      keywords="mobile app development, iOS apps, Android apps, React Native, Flutter, app development"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Mobile App Development
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                Professional mobile app development for iOS and Android. 
+                We create native and cross-platform apps that engage users and drive business growth.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group">
+                  Get Free Quote
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </button>
+                <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105">
+                  View Portfolio
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Mobile Development Services</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive mobile solutions for all platforms and use cases
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {services.map((service, index) => (
+                <div 
+                  key={index}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the mobile app development package that fits your needs
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricingTiers.map((tier, index) => (
+                <div 
+                  key={index}
+                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-xl p-8 hover:transform hover:scale-105 transition-all duration-300 ${
+                    tier.popular 
+                      ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/25' 
+                      : 'border-gray-700/50'
+                  }`}
+                >
+                  {tier.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </div>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                    <p className="text-gray-400 text-sm mb-4">{tier.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-white">{tier.price}</span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-4 mb-8">
+                    {tier.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    tier.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
+                      : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10'
+                  }`}>
+                    {tier.popular ? 'Get Started' : 'Choose Plan'}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
+              <div className="relative z-10">
+                <h2 className="text-4xl font-bold text-white mb-6">
+                  Ready to Build Your Mobile App?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                  Let's discuss your app idea and create a mobile solution that engages users and drives business growth.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
+                    Get Free Quote
+                  </button>
+                  <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105">
+                    View Portfolio
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </>
+    </Layout>
   );
 };
 
