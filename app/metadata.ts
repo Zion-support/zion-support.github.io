@@ -1,5 +1,5 @@
 // Define metadata type for compatibility
-interface Metadata {
+interface Metadata {}
     title: string;,
   description: string;,
     keywords: string[];,
@@ -10,11 +10,11 @@ interface Metadata {
   email: boolean;,
     address: boolean;,
   telephone: boolean;
-  };
+};
   metadataBase: URL;,
   alternates: {,
     canonical: string;
-  };
+};
   openGraph: {,
   title: string;,
     description: string;,
@@ -25,16 +25,16 @@ interface Metadata {
   width: number;,
     height: number;,
   alt: string;
-  }>;
+}>;
     locale: string;,
   type: string;
-  };
+};
   twitter: {,
   card: string;,
     title: string;,
   description: string;,
     images: string[];
-  };
+};
   robots: {,
   index: boolean;,
     follow: boolean;,
@@ -80,7 +80,7 @@ export const metadata: Metadata = {,
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     images: [
-      {
+      {}
     url: '/og-image.jpg',
         width: 1200,
         height: 630,

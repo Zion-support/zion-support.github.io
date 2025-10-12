@@ -7,25 +7,25 @@ const DynamicContentShowcase: React.FC = () => {}
   const [isPlaying, setIsPlaying] = useState(false);
 
   const features = [
-    {
+    {}
     icon: Zap,
       title: 'AI-Powered Automation',
       description: 'Streamline your workflows with intelligent automation that learns and adapts to your business needs.',
       color: 'from-yellow-400 to-orange-500'
   },
-    {
+    {}
     icon: Cloud,
       title: 'Cloud-Native Architecture',
       description: 'Built for the cloud with scalability, reliability, and performance at its core.',
       color: 'from-blue-400 to-cyan-500'
   },
-    {
+    {}
     icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with advanced encryption, compliance, and threat protection.',
       color: 'from-green-400 to-emerald-500'
   },
-    {
+    {}
     icon: BarChart3,
       title: 'Real-Time Analytics',
       description: 'Make data-driven decisions with comprehensive analytics and business intelligence.',
@@ -34,21 +34,21 @@ const DynamicContentShowcase: React.FC = () => {}
   ];
 
   const testimonials = [
-    {
+    {}
     name: 'Sarah Johnson',
       role: 'CEO',
       company: 'TechCorp Solutions',
       content: 'Zion Tech Group transformed our entire IT infrastructure. The AI solutions they implemented have increased our efficiency by 300% and reduced costs significantly.',
       rating: 5
   },
-    {
+    {}
     name: 'Michael Chen',
       role: 'CTO',
       company: 'InnovateLabs',
       content: 'Their cloud migration services were exceptional. We achieved 99.9% uptime and our applications now run 5x faster than before.',
       rating: 5
   },
-    {
+    {}
     name: 'Emily Rodriguez',
       role: 'Operations Director',
       company: 'Global Enterprises',

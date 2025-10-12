@@ -4,22 +4,22 @@ import { CheckCircle, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-reac
 ;
 const EnhancedErrorBoundary: React.FC = () => {}
   const features = [
-    {
+    {}
     icon: Brain,
       title: 'AI-Powered Error Detection',
       description: 'Advanced AI algorithms that automatically detect and prevent errors before they impact users.'
   },
-    {
+    {}
     icon: Zap,
       title: 'Real-time Monitoring',
       description: 'Continuous monitoring and instant error reporting for immediate response and resolution.'
   },
-    {
+    {}
     icon: Shield,
       title: 'Robust Error Handling',
       description: 'Comprehensive error handling that ensures your application remains stable and reliable.'
   },
-    {
+    {}
     icon: Globe,
       title: 'Global Error Tracking',
       description: 'Track errors across all environments and user locations for complete visibility.'

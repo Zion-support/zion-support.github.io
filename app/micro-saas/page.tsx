@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
 
-interface MicroSaasProduct {
+interface MicroSaasProduct {}
     id: string;,
   icon: React.ComponentType<any>;,
     title: string;,
@@ -15,11 +15,11 @@ interface MicroSaasProduct {
     users: string;,
   popular: boolean;,
     category: string;
-  }
+}
 
 const MicroSaasPage: React.FC = () => {}
   const microSaasProducts: MicroSaasProduct[] = [
-    {
+    {}
     id: '1',
       icon: BarChart3,
       title: 'AI Analytics Dashboard',
@@ -29,8 +29,8 @@ const MicroSaasPage: React.FC = () => {}
       users: 'Up to 50 users',
       popular: true,
       category: 'Analytics'
-  },
-    {
+},
+    {}
     id: '2',
       icon: Users,
       title: 'AI-Powered CRM',
@@ -40,8 +40,8 @@ const MicroSaasPage: React.FC = () => {}
       users: 'Up to 100 users',
       popular: false,
       category: 'CRM'
-  },
-    {
+},
+    {}
     id: '3',
       icon: Shield,
       title: 'Security Monitor',
@@ -51,8 +51,8 @@ const MicroSaasPage: React.FC = () => {}
       users: 'Up to 25 users',
       popular: false,
       category: 'Security'
-  },
-    {
+},
+    {}
     id: '4',
       icon: Cloud,
       title: 'Cloud Backup Pro',
@@ -62,8 +62,8 @@ const MicroSaasPage: React.FC = () => {}
       users: 'Unlimited',
       popular: true,
       category: 'Backup'
-  },
-    {
+},
+    {}
     id: '5',
       icon: MessageSquare,
       title: 'AI Chat Support',
@@ -73,8 +73,8 @@ const MicroSaasPage: React.FC = () => {}
       users: 'Up to 200 conversations',
       popular: false,
       category: 'Support'
-  },
-    {
+},
+    {}
     id: '6',
       icon: TrendingUp,
       title: 'Marketing Automation',
@@ -84,32 +84,32 @@ const MicroSaasPage: React.FC = () => {}
       users: 'Up to 75 users',
       popular: true,
       category: 'Marketing'
-  }
+}
   ];
 
   const categories = ['All', 'Analytics', 'CRM', 'Security', 'Backup', 'Support', 'Marketing'];
 
   const benefits = [
-    {
+    {}
     icon: Zap,
       title: 'Quick Setup',
       description: 'Get up and running in minutes with our intuitive setup process'
-  },
-    {
+},
+    {}
     icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
-  },
-    {
+},
+    {}
     icon: Cloud,
       title: 'Cloud-Native',
       description: 'Built for the cloud with automatic scaling and high availability'
-  },
-    {
+},
+    {}
     icon: Users,
       title: 'User-Friendly',
       description: 'Designed for non-technical users with intuitive interfaces'
-  }
+}
   ];
 
   return ()

@@ -4,25 +4,25 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, BarCh
 ;
 const ServiceWorker: React.FC = () => {}
   const features = [
-    {
+    {}
     icon: Brain,
       title: 'AI-Powered Analysis',
       description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {
+    {}
     icon: BarChart,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results.',
       benefits: ['Real-time processing', 'High-speed analytics', 'Optimized performance', 'Scalable solutions']
     },
-    {
+    {}
     icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards.',
       benefits: ['End-to-end encryption', 'Compliance ready', 'Secure data handling', 'Regular audits']
     },
-    {
+    {}
     icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses.',

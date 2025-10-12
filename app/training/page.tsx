@@ -8,10 +8,10 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       <Helmet></Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" /></meta>
-      </Helmet>
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" /></meta>,
+  </Helmet>
 
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>

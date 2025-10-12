@@ -7,7 +7,7 @@ const ContentStatistics: React.FC = () => {}
   const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
 
   const statistics = useMemo(() => [
-    {
+    {}
     icon: Users,
       value: 500,
       suffix: '+',
@@ -15,7 +15,7 @@ const ContentStatistics: React.FC = () => {}
       description: 'Satisfied customers worldwide',
       color: 'text-blue-400'
   },
-    {
+    {}
     icon: TrendingUp,
       value: 99.9,
       suffix: '%',
@@ -23,7 +23,7 @@ const ContentStatistics: React.FC = () => {}
       description: 'Reliable service delivery',
       color: 'text-green-400'
   },
-    {
+    {}
     icon: Award,
       value: 4.9,
       suffix: '/5',
@@ -31,7 +31,7 @@ const ContentStatistics: React.FC = () => {}
       description: 'Highly rated by clients',
       color: 'text-yellow-400'
   },
-    {
+    {}
     icon: Zap,
       value: 300,
       suffix: '%',
@@ -42,25 +42,25 @@ const ContentStatistics: React.FC = () => {}
   ], []);
 
   const features = [
-    {
+    {}
     icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with advanced encryption and compliance standards.',
       stats: ['SOC 2 Certified', 'GDPR Compliant', 'End-to-End Encryption', '24/7 Monitoring']
     },
-    {
+    {}
     icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable, secure, and reliable cloud solutions that grow with your business.',
       stats: ['Auto-scaling', 'High Availability', 'Global CDN', 'Disaster Recovery']
     },
-    {
+    {}
     icon: BarChart3,
       title: 'Analytics & Insights',
       description: 'Make data-driven decisions with comprehensive analytics and business intelligence.',
       stats: ['Real-time Dashboards', 'Custom Reports', 'Predictive Analytics', 'ROI Tracking']
     },
-    {
+    {}
     icon: Zap,
       title: 'AI-Powered Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence and automation.',
@@ -69,22 +69,22 @@ const ContentStatistics: React.FC = () => {}
   ];
 
   const achievements = [
-    {
+    {}
     title: 'Years of Experience',
       value: '10+',
       description: 'Delivering innovative solutions'
   },
-    {
+    {}
     title: 'Projects Completed',
       value: '1000+',
       description: 'Successful implementations'
   },
-    {
+    {}
     title: 'Countries Served',
       value: '50+',
       description: 'Global presence'
   },
-    {
+    {}
     title: 'Team Members',
       value: '100+',
       description: 'Expert professionals'

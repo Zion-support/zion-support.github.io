@@ -21,7 +21,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   enableTextScaling = true
 }) => {}
   const [isActive, setIsActive] = useState(false);
-  const [settings, setSettings] = useState({
+  const [settings, setSettings] = useState({}
     highContrast: false,
     screenReader: false,
     keyboardNav: false,
@@ -65,35 +65,35 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   };
 
   const features = [
-    {
+    {}
     id: 'highContrast',
       name: 'High Contrast',
       description: 'Increase color contrast for better visibility',
       icon: Eye,
       enabled: enableHighContrast
   },
-    {
+    {}
     id: 'screenReader',
       name: 'Screen Reader',
       description: 'Optimize content for screen readers',
       icon: Volume2,
       enabled: enableScreenReader
   },
-    {
+    {}
     id: 'keyboardNav',
       name: 'Keyboard Navigation',
       description: 'Enhanced keyboard navigation support',
       icon: Keyboard,
       enabled: enableKeyboardNavigation
   },
-    {
+    {}
     id: 'voiceControl',
       name: 'Voice Control',
       description: 'Enable voice commands for navigation',
       icon: MousePointer,
       enabled: enableVoiceControl
   },
-    {
+    {}
     id: 'focusManagement',
       name: 'Focus Management',
       description: 'Improved focus indicators and management',

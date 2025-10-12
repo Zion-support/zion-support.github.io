@@ -8,42 +8,42 @@ const ContentCarousel: React.FC = () => {}
   const [isPlaying, setIsPlaying] = useState(true);
 
   const slides = [
-    {
+    {}
     icon: Zap,
       title: 'AI-Powered Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence that automates processes and drives innovation.',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       color: 'from-yellow-400 to-orange-500'
   },
-    {
+    {}
     icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable, secure, and reliable cloud solutions that grow with your business needs.',
       features: ['Auto-scaling', 'High Availability', 'Disaster Recovery', 'Global CDN'],
       color: 'from-blue-400 to-cyan-500'
   },
-    {
+    {}
     icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with advanced encryption, compliance, and threat protection.',
       features: ['End-to-End Encryption', 'Multi-Factor Authentication', 'Compliance Standards', 'Threat Detection'],
       color: 'from-green-400 to-emerald-500'
   },
-    {
+    {}
     icon: BarChart3,
       title: 'Analytics & Insights',
       description: 'Make data-driven decisions with comprehensive analytics and business intelligence.',
       features: ['Real-time Dashboards', 'Custom Reports', 'Data Visualization', 'Predictive Modeling'],
       color: 'from-purple-400 to-pink-500'
   },
-    {
+    {}
     icon: Users,
       title: 'Team Collaboration',
       description: 'Enhance productivity with tools that connect your team and streamline workflows.',
       features: ['Project Management', 'Communication Tools', 'File Sharing', 'Task Automation'],
       color: 'from-indigo-400 to-blue-500'
   },
-    {
+    {}
     icon: Target,
       title: 'Custom Development',
       description: 'Tailored solutions designed specifically for your unique business requirements.',

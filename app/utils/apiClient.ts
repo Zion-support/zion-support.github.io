@@ -11,7 +11,7 @@ interface RequestConfig {}
   cacheTTL?: number;
 }
 
-interface APIResponse<T = any> {
+interface APIResponse<T = any> {}
     data: T;,
   status: number;,
     statusText: string;,
@@ -77,7 +77,7 @@ export class APIClient {}
           ...headers
         },
         body: body ? JSON.stringify(body) : undefined
-  });
+});
 
       const data = await response.json();
 
@@ -86,7 +86,7 @@ export class APIClient {}
         status: response.status,
         statusText: response.statusText,
         headers: this.parseHeaders(response.headers)
-  };
+};
 
       // Cache successful GET requests
       if (cache && method === 'GET' && response.ok) {}
@@ -94,11 +94,11 @@ export class APIClient {}
       }
 
       if (!response.ok) {}
-        throw new APIError({
+        throw new APIError({}
     message: data.message || 'Request failed',
           status: response.status,
           code: data.code
-  });
+});
       }
 
       return apiResponse;
@@ -106,10 +106,10 @@ export class APIClient {}
       if (error instanceof APIError) {}
         throw error;
       }
-      throw new APIError({
+      throw new APIError({}
     message: error instanceof Error ? error.message : 'Network error',
         code: 'NETWORK_ERROR'
-  });
+});
     }
   }
 

@@ -5,43 +5,43 @@ import { Link } from 'react-router-dom';
 
 const ServicesPage: React.FC = () => {}
   const services = [
-    {
+    {}
     icon: <Zap className="w-8 h-8 text-blue-500" />,
       title: 'AI & Machine Learning',
       description: 'Transform your business with cutting-edge AI solutions and machine learning algorithms.',
       features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'Automated Decision Making']
     },
-    {
+    {}
     icon: <Cloud className="w-8 h-8 text-green-500" />,
       title: 'Cloud Solutions',
       description: 'Scalable and secure cloud infrastructure to power your digital transformation.',
       features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Disaster Recovery']
     },
-    {
+    {}
     icon: <Shield className="w-8 h-8 text-red-500" />,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and data.',
       features: ['Threat Detection', 'Security Audits', 'Compliance Management', 'Incident Response']
     },
-    {
+    {}
     icon: <Globe className="w-8 h-8 text-purple-500" />,
       title: '5G Implementation',
       description: 'Next-generation connectivity solutions for ultra-fast and reliable networks.',
       features: ['Network Design', 'IoT Integration', 'Edge Computing', 'Performance Optimization']
     },
-    {
+    {}
     icon: <Database className="w-8 h-8 text-yellow-500" />,
       title: 'Data Analytics',
       description: 'Turn your data into actionable insights with advanced analytics and visualization.',
       features: ['Data Warehousing', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization']
     },
-    {
+    {}
     icon: <Code className="w-8 h-8 text-indigo-500" />,
       title: 'Custom Development',
       description: 'Tailored software solutions designed to meet your specific business requirements.',
       features: ['Web Applications', 'API Development', 'Microservices', 'Legacy Modernization']
     },
-    {
+    {}
     icon: <Smartphone className="w-8 h-8 text-pink-500" />,
       title: 'Mobile Solutions',
       description: 'Native and cross-platform mobile applications for iOS and Android.',
@@ -50,31 +50,31 @@ const ServicesPage: React.FC = () => {}
   ];
 
   const processSteps = [
-    {
+    {}
     step: '01',
       title: 'Discovery & Analysis',
       description: 'We analyze your business needs and technical requirements to create a tailored solution.'
-  },
-    {
+},
+    {}
     step: '02',
       title: 'Strategy & Planning',
       description: 'Our team develops a comprehensive strategy and project roadmap for implementation.'
-  },
-    {
+},
+    {}
     step: '03',
       title: 'Development & Implementation',
       description: 'We build and deploy your solution using industry best practices and cutting-edge technology.'
-  },
-    {
+},
+    {}
     step: '04',
       title: 'Testing & Optimization',
       description: 'Rigorous testing ensures quality and performance optimization for maximum efficiency.'
-  },
-    {
+},
+    {}
     step: '05',
       title: 'Launch & Support',
       description: 'We launch your solution and provide ongoing support and maintenance services.'
-  }
+}
   ];
 
   return ()

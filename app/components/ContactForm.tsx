@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 ;
-interface FormData {
+interface FormData {}
     name: string,
   email: string,
   company: string,
@@ -10,13 +10,13 @@ interface FormData {
   message: string
   }
 
-interface FormStatus {
+interface FormStatus {}
     type: 'idle' | 'loading' | 'success' | 'error',
   message: string
   }
 
 const ContactForm: React.FC = () => {}
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<FormData>({}
     name: '',
     email: '',
     company: '',
@@ -25,7 +25,7 @@ const ContactForm: React.FC = () => {}
     message: ''
   })
 
-  const [status, setStatus] = useState<FormStatus>({
+  const [status, setStatus] = useState<FormStatus>({}
     type: 'idle',
     message: ''
   })
@@ -46,7 +46,7 @@ const ContactForm: React.FC = () => {}
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000))
       setStatus({ type: 'success', message: 'Message sent successfully! We\'ll get back to you soon.' })
-      setFormData({
+      setFormData({}
     name: '',
         email: '',
         company: '',

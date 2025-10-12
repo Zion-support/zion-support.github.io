@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 ;
-interface AnimatedCounterProps {
+interface AnimatedCounterProps {}
     end: number
   duration?: number
   prefix?: string

@@ -5,22 +5,22 @@ import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, B
 
 const ContentPromotionBanner: React.FC = () => {}
   const features = [
-    {
+    {}
     icon: Zap,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence to automate and optimize your business processes'
   },
-    {
+    {}
     icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions for modern business needs'
   },
-    {
+    {}
     icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with advanced encryption and compliance standards'
   },
-    {
+    {}
     icon: BarChart3,
       title: 'Analytics & Insights',
       description: 'Real-time analytics and business intelligence to drive informed decisions'
@@ -39,19 +39,19 @@ const ContentPromotionBanner: React.FC = () => {}
   ];
 
   const stats = [
-    {
+    {}
     icon: Users,
       value: '500+',
       label: 'Happy Clients',
       description: 'Satisfied customers worldwide'
   },
-    {
+    {}
     icon: TrendingUp,
       value: '99.9%',
       label: 'Uptime',
       description: 'Reliable service delivery'
   },
-    {
+    {}
     icon: Star,
       value: '4.9/5',
       label: 'Rating',

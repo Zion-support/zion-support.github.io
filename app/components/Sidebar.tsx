@@ -49,7 +49,7 @@ const Sidebar: React.FC = () => {}
     }
     setExpandedSections(newExpanded)}
   const navigationSections = [
-    {
+    {}
     title: 'Main',
       items: [
         { name: 'Home', path: '/', icon: Home },
@@ -60,7 +60,7 @@ const Sidebar: React.FC = () => {}
         { name: 'Case Studies', path: '/case-studies', icon: BarChart },
       ]
     },
-    {
+    {}
     title: 'AI Services',
       key: 'ai-services',
       items: [
@@ -79,7 +79,7 @@ const Sidebar: React.FC = () => {}
         { name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings },
       ]
     },
-    {
+    {}
     title: 'Micro SaaS',
       key: 'micro-saas',
       items: [
@@ -98,7 +98,7 @@ const Sidebar: React.FC = () => {}
         { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings },
       ]
     },
-    {
+    {}
     title: 'IT Services',
       key: 'it-services',
       items: [
@@ -113,7 +113,7 @@ const Sidebar: React.FC = () => {}
         { name: 'Managed IT', path: '/managed-it', icon: Settings },
       ]
     },
-    {
+    {}
     title: 'Company',
       items: [
         { name: 'Team', path: '/team', icon: Users },
@@ -122,7 +122,7 @@ const Sidebar: React.FC = () => {}
         { name: 'Pricing', path: '/pricing', icon: BarChart },
       ]
     },
-    {
+    {}
     title: 'Resources',
       items: [
         { name: 'Documentation', path: '/docs', icon: Settings },
@@ -132,7 +132,7 @@ const Sidebar: React.FC = () => {}
       ]
     }
   ]
-  const contactInfo = {
+  const contactInfo = {}
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',

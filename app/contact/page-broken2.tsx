@@ -10,7 +10,7 @@ import {Phone,
   CheckCircle}
 } from 'lucide-react'
 const ContactPage: React.FC = () => {}
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({}
     name: '',
     email: '',
     company: '',
@@ -72,25 +72,25 @@ phone: '',
     'Other'
   ]
   const contactInfo = [
-    {
+    {}
     icon: Phone,
       title: 'Phone',
       details: '+1 (302) 464-0950',
       description: 'Mon-Fri 9AM-6PM EST'
   },
-    {
+    {}
     icon: Mail,
       title: 'Email',
       details: 'kleber@ziontechgroup.com',
       description: 'We respond within 24 hours'
   },
-    {
+    {}
     icon: MapPin,
       title: 'Address',
       details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
       description: 'Visit our office'
   },
-    {
+    {}
     icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',

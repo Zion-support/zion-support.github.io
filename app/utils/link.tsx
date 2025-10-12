@@ -1,7 +1,7 @@
-interface LinkProps {
+interface LinkProps {}
     href: string,
     children: React.ReactNode
-interface LinkProps {
+interface LinkProps {}
     href: string,
     children: React.ReactNode
   className?: string
@@ -17,7 +17,7 @@ export const Link: React.FC<LinkProps> = ({}
 
 interface LinkProps {href: string,
     children: React.ReactNode}
-interface LinkProps {
+interface LinkProps {}
     href: string,
   children: React.ReactNode
   className?: string

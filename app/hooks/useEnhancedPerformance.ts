@@ -1,19 +1,19 @@
 import { useState, useEffect, useCallback } from 'react';
 
-interface PerformanceMetrics {
+interface PerformanceMetrics {}
     loadTime: number;,
   renderTime: number;,
     memoryUsage: number;,
   networkLatency: number;
-  }
+}
 
 export const useEnhancedPerformance = () => {}
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({}
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     networkLatency: 0
-  });
+});
   
   const [isOptimized, setIsOptimized] = useState(false);
 
@@ -35,7 +35,7 @@ export const useEnhancedPerformance = () => {}
         loadTime,
         renderTime,
         memoryUsage: memoryUsage / 1024 / 1024 // Convert to MB
-  }));
+}));
     });
   }, []);
 

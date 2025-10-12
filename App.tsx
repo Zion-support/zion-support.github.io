@@ -1,12 +1,12 @@
-import React, { Suspense } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import Navigation from './app/components/Navigation'
-import Footer from './app/components/Footer'
-import ErrorBoundary from './app/components/ErrorBoundary'
-import LoadingSpinner from './app/components/LoadingSpinner'
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import Navigation from './app/components/Navigation';
+import Footer from './app/components/Footer';
+import ErrorBoundary from './app/components/ErrorBoundary';
+import LoadingSpinner from './app/components/LoadingSpinner';
 import SEOHead from './app/components/SEOHead'
-
+;
 // Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./app/page'))
 const AboutPage = React.lazy(() => import('./app/about/page'))
@@ -21,22 +21,22 @@ const CareersPage = React.lazy(() => import('./app/careers/page'))
 const BlogPage = React.lazy(() => import('./app/blog/page'))
 
 // Loading component for Suspense
-const PageLoader = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <LoadingSpinner size="lg" text="Loading page..." />
+const PageLoader = () => ()
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
+    <LoadingSpinner size="lg" text="Loading page..." /></LoadingSpinner>
   </div>
 )
 
-function App() {
-  return (
-    <HelmetProvider>
-      <ErrorBoundary>
-        <Router>
-          <div className="min-h-screen bg-gray-50">
-            <SEOHead />
-            <Navigation />
+function App() {}
+  return ()
+    <HelmetProvider></HelmetProvider>
+      <ErrorBoundary></ErrorBoundary>
+        <Router></Router>
+          <div className="min-h-screen bg-gray-50"></div>
+            <SEOHead /></SEOHead>
+            <Navigation /></Navigation>
             <Suspense fallback={<PageLoader />}>
-              <Routes>
+              <Routes></Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/ai-services" element={<AIServicesPage />} />
@@ -49,15 +49,15 @@ function App() {
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 {/* 404 Route */}
-                <Route path="*" element={
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-                    <div className="text-center">
+                <Route path="*" element={}
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></Route>
+                    <div className="text-center"></div>
                       <h1 className="text-6xl font-bold text-white mb-4">404</h1>
                       <p className="text-xl text-gray-300 mb-8">Page not found</p>
                       <a 
                         href="/" 
                         className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                      >
+                      ></a>
                         Go Home
                       </a>
                     </div>
@@ -65,7 +65,7 @@ function App() {
                 } />
               </Routes>
             </Suspense>
-            <Footer />
+            <Footer /></Footer>
           </div>
         </Router>
       </ErrorBoundary>

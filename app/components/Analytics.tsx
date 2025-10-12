@@ -39,7 +39,7 @@ const Analytics: React.FC<AnalyticsProps> = ({}
       // Track page views
       const trackPageView = () => {}
         if (window.gtag) {}
-          window.gtag('event', 'page_view', {
+          window.gtag('event', 'page_view', {}
     page_title: document.title,
             page_location: window.location.href
   })

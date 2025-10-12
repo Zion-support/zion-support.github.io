@@ -7,7 +7,7 @@ interface ContentNewsletterSignupProps {}
   subtitle?: string
   placeholder?: string
   buttonText?: string
-  features?: Array<{
+  features?: Array<{}
     icon: React.ComponentType<{ className?: string }>
     text: string
   }>

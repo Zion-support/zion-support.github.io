@@ -42,14 +42,14 @@ const PerformanceMonitor: React.FC = () => {}
     // Monitor memory usage
     if ('memory' in performance) {}
       const memory = (performance as any).memory;
-      updateMetrics({
+      updateMetrics({}
     memory: Math.round(memory.usedJSHeapSize / 1024 / 1024)
   });
     }
 
     // Monitor load time
     window.addEventListener('load', () => {}
-      updateMetrics({
+      updateMetrics({}
     loadTime: Math.round(performance.now())
   });
     });

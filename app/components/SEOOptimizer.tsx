@@ -97,7 +97,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({}
       {structuredData && ()
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
+          dangerouslySetInnerHTML={{}
     __html: JSON.stringify({}
               "@context": "https://schema.org",
               "@type": "Organization",

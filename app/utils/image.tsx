@@ -4,7 +4,7 @@ import React from 'react';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {src: string,
     alt: string}
-interface ImageProps {
+interface ImageProps {}
     src: string,
     alt: string
   width?: number
@@ -72,7 +72,7 @@ export const Image: React.FC<ImageProps> = ({,
       left: 0,}
   const imageStyle: React.CSSProperties = {}
     ...style,
-    ...(fill && {
+    ...(fill && {}
     position: 'absolute',
       top: 0,
       left: 0,

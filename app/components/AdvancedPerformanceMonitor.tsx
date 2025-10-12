@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useCallback } from 'react';
 
-interface PerformanceMetrics {
+interface PerformanceMetrics {}
     fcp: number | null;,
   lcp: number | null;,
   fid: number | null;,
@@ -20,7 +20,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({}
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
 }) => {}
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({}
     fcp: null,
     lcp: null,
     fid: null,

@@ -28,7 +28,7 @@ export interface AppError {id: string;,
   severity: ErrorSeverity;,
     message: string,
 // Error interface}
-export interface AppError {
+export interface AppError {}
     id: string,
   type: ErrorType,
   severity: ErrorSeverity,
@@ -52,7 +52,7 @@ export interface ErrorHandlerConfig {enableLogging: boolean;,
   enableConsoleLogging: boolean;,
     enableNetworkLogging: boolean,
 // Error handler configuration}
-export interface ErrorHandlerConfig {
+export interface ErrorHandlerConfig {}
     enableLogging: boolean,
   enableReporting: boolean,
   enableRetry: boolean,
@@ -432,7 +432,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         body: JSON.stringify({)}
           ...error,
           timestamp: error.timestamp.toISOString()
-  })
+})
           ...error,
           timestamp: error.timestamp.toISOString()})} catch (err) {}
       }
@@ -793,7 +793,7 @@ export class ErrorBoundary extends React.Component<{ children: React.ReactNode; 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
     this.errorHandler.handleError(error, errorInfo, {)}
       component: 'ErrorBoundary'
-  })
+})
     render() {}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.errorHandler.handleError(error, errorInfo, {)
@@ -816,7 +816,7 @@ export class ErrorBoundary extends React.Component<{ children: React.ReactNode; 
             <button)
               onClick={() => this.setState({ hasError: false, error: undefined })}
               style={{}
-              style={{
+              style={{}
     padding: '10px 20px',
                 backgroundColor: '#007bff',
                 color: 'white',

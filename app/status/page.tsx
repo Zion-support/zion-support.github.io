@@ -15,57 +15,57 @@ export default function StatusPage() {}
     setIsRefreshing(false)}
   }
   const services = [
-    {
+    {}
     name: 'API Services',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '45ms',
       lastIncident: '2024-01-15',
       description: 'Core API endpoints and authentication'
-  },
-    {
+},
+    {}
     name: 'AI Services',
       status: 'operational',
       uptime: '99.8%',
       responseTime: '120ms',
       lastIncident: '2024-01-10',
       description: 'Machine learning and AI processing'
-  },
-    {
+},
+    {}
     name: 'Cloud Infrastructure',
       status: 'operational',
       uptime: '99.95%',
       responseTime: '25ms',
       lastIncident: '2024-01-05',
       description: 'Cloud hosting and storage services'
-  },
-    {
+},
+    {}
     name: 'Database',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '15ms',
       lastIncident: '2024-01-12',
       description: 'Primary and backup databases'
-  },
-    {
+},
+    {}
     name: 'CDN',
       status: 'operational',
       uptime: '99.99%',
       responseTime: '8ms',
       lastIncident: '2024-01-08',
       description: 'Content delivery network'
-  },
-    {
+},
+    {}
     name: 'Monitoring',
       status: 'operational',
       uptime: '100%',
       responseTime: '5ms',
       lastIncident: 'Never',
       description: 'System monitoring and alerts'
-  }
+}
   ]
   const incidents = [
-    {
+    {}
     id: 1,
       title: 'API Response Time Degradation',
       status: 'resolved',
@@ -75,7 +75,7 @@ export default function StatusPage() {}
       description: 'Some API endpoints experienced increased response times due to high traffic load.',
       affectedServices: ['API Services', 'AI Services']
     },
-    {
+    {}
     id: 2,
       title: 'Database Connection Issues',
       status: 'resolved',

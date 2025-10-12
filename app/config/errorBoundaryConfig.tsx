@@ -67,7 +67,7 @@ import React from 'react';export interface ErrorBoundaryConfig {/**
 /**
  * Default error messages
  */
-const DEFAULT_ERROR_MESSAGES = {
+const DEFAULT_ERROR_MESSAGES = {}
     default: 'Something went wrong. Please try again.',
   network: 'Network connection issue. Please check your internet connection.',
   notFound: 'The requested resource was not found.',
@@ -78,7 +78,7 @@ const DEFAULT_ERROR_MESSAGES = {
 /**
  * Get error boundary configuration based on environment
  */
-export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
+export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {}
     logErrors: true,
     showDetails: isDevelopment,
     reportErrors: !isDevelopment,
@@ -323,7 +323,7 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
  * Format error for logging
  */
 export function formatErrorForLogging(error: Error): Record<string, unknown> {}
-  return {
+  return {}
     message: error.message,
     stack: error.stack,
     name: error.name,

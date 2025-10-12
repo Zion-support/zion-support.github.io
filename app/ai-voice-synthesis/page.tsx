@@ -6,17 +6,17 @@ import Footer from '../components/Footer';
 
 const PagePage: React.FC = () => {}
   const features = [
-    {
+    {}
     title: 'Page',
       description: 'Professional page services for modern businesses.',
       benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
     },
-    {
+    {}
     title: 'Advanced Technology',
       description: 'Cutting-edge tools and technologies to deliver superior results.',
       benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
     },
-    {
+    {}
     title: 'Proven Results',
       description: 'Track record of successful projects and satisfied clients.',
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
