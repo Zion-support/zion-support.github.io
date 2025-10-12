@@ -1,50 +1,21 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-=======
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 export default function HomePage() {
   const features = [
     {
       icon: <Zap className="w-8 h-8 text-blue-500" />,
       title: 'AI-Powered Solutions',
-      description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.'
+      description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.',
+      benefits: ['AI Content Generation - $500/month', 'AI Chatbots - $300/month', 'AI Automation - $800/month', 'AI Analytics - $400/month'],
+      link: '/ai-services'
     },
     {
       icon: <Shield className="w-8 h-8 text-green-500" />,
-<<<<<<< HEAD
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption, compliance standards, and advanced threat protection.'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-purple-500" />,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses with 24/7 technical assistance.'
-    },
-    {
-      icon: <Database className="w-8 h-8 text-orange-500" />,
-      title: 'Data Analytics',
-      description: 'Advanced data processing and analytics to drive informed business decisions.'
-    },
-    {
-      icon: <Code className="w-8 h-8 text-red-500" />,
-      title: 'Custom Development',
-      description: 'Tailored software solutions built to meet your specific business requirements.'
-    },
-    {
-      icon: <Cloud className="w-8 h-8 text-cyan-500" />,
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration services for modern businesses.'
-=======
       title: 'IT Services & Solutions',
       description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
       benefits: ['Cloud Migration - Starting at $2,500', 'Cybersecurity - $1,500/month', 'Mobile Development - Starting at $5,000', 'Data Analytics - $2,000/month'],
@@ -70,32 +41,21 @@ export default function HomePage() {
       description: 'Next-generation connectivity solutions to power your digital transformation with ultra-fast speeds and low latency.',
       benefits: ['Ultra-Fast Speeds - 10+ Gbps', 'Low Latency - 1ms', 'IoT Integration - 1M+ devices/km²', 'Edge Computing Solutions'],
       link: '/5g-implementation'
-<<<<<<< HEAD
     },
     {
-<<<<<<< HEAD
       icon: <Smartphone className="w-8 h-8 text-yellow-500" />,
-=======
-      icon: <Zap className="w-8 h-8 text-red-500" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
       title: 'Digital Transformation',
       description: 'Transform your business for the digital age with comprehensive digital transformation services.',
       benefits: ['Process Automation - $2,000/month', 'Digital Workforce - $1,500/month', 'Customer Experience - $1,800/month', 'Data Strategy - $2,500/month'],
       link: '/digital-transformation'
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
-=======
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-yellow-500" />,
-      title: 'Cloud Services',
-      description: 'Professional cloud services including migration, infrastructure setup, security, and optimization.',
-      benefits: ['Cloud Migration', 'Infrastructure Setup', 'Security Solutions', 'Cost Optimization'],
-      link: '/cloud-services'
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
     }
+  ]
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '99%', label: 'Client Satisfaction' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '5+', label: 'Years Experience' }
   ]
 
   return (
