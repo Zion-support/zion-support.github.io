@@ -15,16 +15,19 @@ interface SEOHeadProps {
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
-const SEOHead: React.FC<SEOHeadProps /> = ({
-  const title = 'Zion Tech Group - Advanced AI & IT Solutions',
+}
+
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.',
   keywords = 'AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics, machine learning, artificial intelligence',
   canonical = 'https: //ziontechgroup.com',
   ogImage = 'https: //ziontechgroup.com/og-image.jpg',
   ogType = 'website',
-  twitterCard = 'summary_large_image',;
-  structuredData;
-const defaultStructuredData = {
+  twitterCard = 'summary_large_image',
+  structuredData
+}) => {
+  const defaultStructuredData = {
     "@context": "https: //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",

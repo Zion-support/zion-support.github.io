@@ -1,26 +1,49 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
-
-  return (
-    <div>Content</div>
-  );
-    <div>Component content</div>
-  );
+interface LoadingOptimizerProps {
+  isLoading: boolean;
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+  delay?: number;
 }
-  return (
-    <div>Content</div>
-  );
-    <>
 
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({
+  isLoading,
+  children,
+  fallback,
+  delay = 200
+}) => {
+  const [showLoading, setShowLoading] = useState(false);
+
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+
+    if (isLoading) {
+      timeoutId = setTimeout(() => {
+        setShowLoading(true);
+      }, delay);
+    } else {
+      setShowLoading(false);
+    }
+
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, [isLoading, delay]);
+
+  if (isLoading && showLoading) {
+    return (
+      fallback || (
+        <div className="flex items-center justify-center min-h-32">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div>
         </div>
-      </div>
-    </>;
-  );
+      )
+    );
+  }
 
+  return <>{children}</>;
+};
+
+export default LoadingOptimizer;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Languages, Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
 import { Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
 import Layout from '../layout';
 
@@ -78,7 +77,7 @@ export default function AITranslationService() {
         'Priority support',
         'API access',
         'Team collaboration',
-        'Custom terminology'
+        'Custom terminology',
         'Advanced quality checks',
         'Priority support',
         'Custom integrations',
@@ -350,29 +349,6 @@ export default function AITranslationService() {
           </div>
         </div>
       </section>
-    </Layout>
-  );
-      </div>
-
-      {/* CTA Section */}
-      <div className="py-20 bg-gray-900">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Break Language Barriers?
-          </h2>
-          <p className="text-gray-300 mb-8">
-            Join thousands of companies using AI translation to reach global audiences
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
-              Start Your Free Trial
-            </Link>
-            <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              Learn More
-            </Link>
-          </div>
-        </div>
-      </div>
     </Layout>
   );
 }

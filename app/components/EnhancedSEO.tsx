@@ -14,8 +14,10 @@ interface SEOProps {
   structuredData?: object;
   noindex?: boolean;
   nofollow?: boolean;
-const EnhancedSEO: React.FC<SEOProps /> = ({
-  const title = 'Zion Tech Group - Advanced AI and IT Solutions',
+}
+
+const EnhancedSEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, 5 G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
   keywords = 'AI solutions, artificial intelligence, IT services, 5 G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
   canonical,
@@ -23,9 +25,10 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
-  noindex = false,;
-  nofollow = false;
-const defaultStructuredData = {
+  noindex = false,
+  nofollow = false
+}) => {
+  const defaultStructuredData = {
     "@context": "https: //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",

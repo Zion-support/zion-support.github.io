@@ -1,104 +1,92 @@
 import React from 'react';
+import { 
+  CpuChipIcon, 
+  CloudIcon, 
+  ShieldCheckIcon, 
+  DevicePhoneMobileIcon, 
+  ChartBarIcon, 
+  GlobeAltIcon 
+} from '@heroicons/react/24/outline';
 
-  const services = [
+interface Service {
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  description: string;
+  features: string[];
+}
+
+const EnhancedServicesShowcase: React.FC = () => {
+  const services: Service[] = [
     {
-      icon: Brain,
+      icon: CpuChipIcon,
       title: 'AI Solutions',
-      description: 'Harness the power of artificial intelligence to automate processes, gain insights, and drive innovation.',
+      description: 'Cutting-edge artificial intelligence solutions to automate and optimize your business processes.',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
     {
-      icon: Cloud,
-      title: 'Cloud Services',
-      description: 'Scalable and secure cloud infrastructure solutions to support your business growth and digital transformation.',
-      features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Cost Optimization']
+      icon: CloudIcon,
+      title: 'Cloud Migration',
+      description: 'Seamless migration to cloud platforms with enhanced security and scalability.',
+      features: ['AWS Migration', 'Azure Solutions', 'Google Cloud', 'Hybrid Cloud']
     },
     {
-      icon: Shield,
+      icon: ShieldCheckIcon,
       title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your business from evolving threats and ensure compliance.',
-      features: ['Threat Detection', 'Security Auditing', 'Incident Response', 'Compliance Management']
+      description: 'Comprehensive security solutions to protect your digital assets and data.',
+      features: ['Security Audits', 'Threat Detection', 'Incident Response', 'Compliance']
     },
     {
-      icon: BarChart,
+      icon: DevicePhoneMobileIcon,
+      title: 'Mobile Development',
+      description: 'Custom mobile applications for iOS and Android platforms.',
+      features: ['Native Apps', 'Cross-Platform', 'UI/UX Design', 'App Store Optimization']
+    },
+    {
+      icon: ChartBarIcon,
       title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics and visualization tools.',
-      features: ['Real-time Analytics', 'Custom Dashboards', 'Data Visualization', 'Business Intelligence']
+      description: 'Transform your data into actionable insights with advanced analytics solutions.',
+      features: ['Business Intelligence', 'Data Visualization', 'Real-time Analytics', 'Custom Dashboards']
     },
     {
-      icon: Zap,
-      title: 'Process Automation',
-      description: 'Streamline your operations with intelligent automation solutions that reduce manual work and errors.',
-      features: ['Workflow Automation', 'RPA Implementation', 'API Integration', 'Process Optimization']
-    },
-    {
-      icon: Globe,
+      icon: GlobeAltIcon,
       title: 'Digital Transformation',
       description: 'Complete digital transformation services to modernize your business and stay competitive.',
       features: ['Strategy Development', 'Technology Integration', 'Change Management', 'Training & Support']
-    };
+    }
   ];
+
   return (
-    <div>Content</div>
-  );
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
-          <h2 className="w-5h-5ml-2" />Our Core Services;
-          </h2>
-          <p className="w-5h-5ml-2">Comprehensive AI and IT solutions designed to transform your business and drive innovation;
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">Our Core Services</h2>
+          <p className="text-lg text-gray-300">
+            Comprehensive AI and IT solutions designed to transform your business and drive innovation
           </p>
         </div>
-        <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-              <div key={index} className="cyber-card p-8 grouphover:scale-105transition-transform" /></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <service.icon className="h-12w-12tex t-cyan-400mr-4"  /></service>
-                <h3 className="w-5h-5ml-2" />{service.title}
-                </h3>
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 group hover:scale-105 transition-transform">
+              <div className="flex items-center mb-4">
+                <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
+                <h3 className="text-xl font-semibold text-white">{service.title}</h3>
               </div>
-              <p className="w-5h-5ml-2">{service.description}
-              </p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <h4 className="text-sm font-semiboldtext-cyan-400mb-3"  >Key Features</h4>
-                <ul className="w-5h-5ml-2" /></ul>
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-centertext-sm text-gray-300" /></li>
-                      <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <button className="w-5h-5ml-2" /></button>;
-                Learn More;
-                <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
-              </button>
+              <p className="text-gray-300 mb-6">{service.description}</p>
+              <ul className="space-y-2">
+                {service.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
-    </div>
-  )
-
-  return (
-    <div>Content</div>
-  );
-    <div>Component content</div>;
-  );
-}
-  return (
-    <div>Content</div>
-  );
-    <>
-
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
       </div>
-    </>;
+    </div>
   );
-}
+};
 
+export default EnhancedServicesShowcase;

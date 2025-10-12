@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 
 
 interface GenericServicePageProps {
-  title: string;,
-  description: string;,
-  icon: React.ComponentType<any />;,
-  features: string[];,
+  title: string;
+  description: string;
+  icon: React.ComponentType<any>;
+  features: string[];
   benefits: string[];
   pricing?: string;
-  category: 'AI' | 'IT' | 'MicroSAAS' | 'Emerging';,
+  category: 'AI' | 'IT' | 'MicroSAAS' | 'Emerging';
   color: string;
 }
-const GenericServicePage: React.FC<GenericServicePageProps /> = ({
+const GenericServicePage: React.FC<GenericServicePageProps> = ({
   title,
   description,
   icon: Icon,
@@ -21,7 +21,7 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
   benefits,
   pricing,
   category,
-  color;
+  color
 }) => {
   const categoryColors = {
     AI: 'from-purple-500 to-pink-600',

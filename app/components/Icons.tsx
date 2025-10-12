@@ -2,6 +2,7 @@
 // Only import icons that are actually used
 // Core icons used across the application
 
+import {
   ArrowRight,
   Zap,
   Shield,
@@ -107,6 +108,4 @@
   Wink,
   Kiss,
   Tongue,
-  FileText,
-
-
+  FileText

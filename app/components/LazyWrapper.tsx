@@ -1,23 +1,47 @@
+import React, { useState, useRef, useEffect, ReactNode } from 'react';
 
-  return (
-    <div>Content</div>
-  );
-    <div>Component content</div>
-  );
-}
-  return (
-    <div>Content</div>
-  );
-    <>
-
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>;
-  );
+interface LazyWrapperProps {
+  children: ReactNode;
+  className?: string;
+  threshold?: number;
+  rootMargin?: string;
 }
 
+const LazyWrapper: React.FC<LazyWrapperProps> = ({
+  children,
+  className = '',
+  threshold = 0.1,
+  rootMargin = '0px'
+}) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold,
+        rootMargin
+      }
+    );
+
+    if (wrapperRef.current) {
+      observer.observe(wrapperRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [threshold, rootMargin]);
+
+  return (
+    <div ref={wrapperRef} className={className}>
+      {isVisible ? children : <div className="h-32 bg-gray-200 animate-pulse rounded" />}
+    </div>
+  );
+};
+
+export default LazyWrapper;
