@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-ursor/analyze-improve-and-deploy-application-edcb
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async';
@@ -142,7 +139,6 @@ const FuturisticHeroPage: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fabc
           </div>
         </div>
       </section>
