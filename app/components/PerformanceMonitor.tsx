@@ -1,13 +1,12 @@
 'use client';
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     const monitorCoreWebVitals = () => {
       if ('web-vitals' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+import { getCLS, getFID, getFCP, getLCP, getTTFB } 
           getCLS(console.log);
           getFID(console.log);
           getFCP(console.log);
@@ -61,53 +60,6 @@ const PerformanceMonitor: React.FC = () => {
     };
   }, []);
 
-=======
-import React, { useEffect, useState } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-
-interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
-}
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    lcp: null,
-    fid: null,
-    cls: null,
-    fcp: null,
-    ttfb: null,
-  });
-
-  useEffect(() => {
-    // Monitor Core Web Vitals
-    onLCP((metric) => {
-      setMetrics(prev => ({ ...prev, lcp: metric.value }));
-    });
-
-    onFCP((metric) => {
-      setMetrics(prev => ({ ...prev, fcp: metric.value }));
-    });
-
-    onCLS((metric) => {
-      setMetrics(prev => ({ ...prev, cls: metric.value }));
-    });
-
-    onTTFB((metric) => {
-      setMetrics(prev => ({ ...prev, ttfb: metric.value }));
-    });
-
-    onINP((metric) => {
-      setMetrics(prev => ({ ...prev, fid: metric.value }));
-    });
-  }, []);
-
-  // This component doesn't render anything visible
-  // It just monitors performance metrics
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
   return null;
 };
 

@@ -1,16 +1,10 @@
 'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, ArrowRight, Star, Zap, Shield, Cloud, 
-  Brain, Users, Clock, Award, TrendingUp, DollarSign,
-  MessageCircle, Settings, BarChart, FileText, Globe
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const PricingPage: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState('monthly');
-  const [selectedPlan, setSelectedPlan] = useState('professional');
 
   const aiServicesPricing = [
     {

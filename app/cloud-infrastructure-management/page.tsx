@@ -1,7 +1,6 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Cloud, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Server, Shield } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import Layout from '../layout'
 
 export default function CloudInfrastructureManagement() {

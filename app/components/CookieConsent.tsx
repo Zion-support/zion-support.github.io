@@ -1,9 +1,8 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { X, Cookie, Shield, BarChart3, Settings } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { X, Cookie } from 'lucide-react';
 
 const CookieConsent: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
 
   useEffect(() => {

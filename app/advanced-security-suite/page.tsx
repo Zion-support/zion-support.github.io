@@ -1,7 +1,6 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Shield, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Lock, BarChart3, Star, Sparkles, AlertTriangle, Users, Target, Eye } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import Layout from '../layout'
 
 export default function AdvancedSecuritySuite() {

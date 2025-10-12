@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 }
 
@@ -65,7 +65,7 @@ const PerformanceOptimizer: React.FC = () => {
 
     // Monitor Core Web Vitals
     const monitorWebVitals = () => {
-      import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+import { onCLS, onFID, onFCP, onLCP, onTTFB } 
         onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
         onFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
         onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))

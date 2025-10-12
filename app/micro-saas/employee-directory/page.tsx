@@ -1,6 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Users, Search, Shield, Phone, Mail, MapPin, Calendar, CheckCircle, Star, ArrowRight, BarChart3, Clock } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const EmployeeDirectoryPage: React.FC = () => {
