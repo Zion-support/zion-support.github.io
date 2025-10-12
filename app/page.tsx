@@ -64,7 +64,11 @@ export default function HomePage() {
   ]
 
   const additionalServices = [
+<<<<<<< HEAD
     { name: 'AI Content Moderation Pro', link: '/ai-content-moderation-pro' },
+=======
+    { name: 'Micro SAAS Services', link: '/micro-saas-services' },
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-0389
     { name: 'Web Development', link: '/web-development' },
     { name: 'Mobile Development', link: '/mobile-development' },
     { name: 'DevOps', link: '/devops' },

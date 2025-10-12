@@ -46,6 +46,7 @@ export default function Navigation() {
     { name: 'AI Computer Vision', path: '/ai-computer-vision', icon: <Smartphone className="w-4 h-4" /> },
     { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Database className="w-4 h-4" /> },
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'AI Cybersecurity', path: '/ai-cybersecurity', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Document Processing', path: '/ai-document-processing', icon: <FileText className="w-4 h-4" /> }
   ]
@@ -62,6 +63,9 @@ export default function Navigation() {
 =======
     { name: 'AI Automation', path: '/ai-automation', icon: <Settings className="w-4 h-4" /> }
 >>>>>>> origin/main
+=======
+    { name: 'Micro SAAS Services', path: '/micro-saas-services', icon: <Zap className="w-4 h-4" /> }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-0389
   ]
 
   const itServices = [

@@ -370,10 +370,14 @@ export default function Footer() {
               <div>
                 <p className="text-sm text-gray-400">Location</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <p className="text-white">364 E Main St STE 1008 Middletown DE 19709</p>
 =======
                 <p className="text-white">364 E Main St STE 1008, Middletown DE 19709</p>
 >>>>>>> origin/main
+=======
+                <p className="text-white">364 E Main St STE 1008, Middletown DE 19709</p>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-0389
               </div>
 =======
           {/* Contact */}
