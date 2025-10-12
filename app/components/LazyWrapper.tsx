@@ -1,24 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 
-interface LazyWrapperProps {
-  children?: React.ReactNode;
-  className?: string;
-}
-
-const LazyWrapper: React.FC<LazyWrapperProps> = ({
-  children,
-  className = ''
-}) => {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
-};
-
-export default LazyWrapper;
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
@@ -43,4 +24,4 @@ export default function LazyWrapper({ children, className = '' }: LazyWrapperPro
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-2d8f
+

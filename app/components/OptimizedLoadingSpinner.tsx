@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
 
-interface OptimizedLoadingSpinnerProps {
-  children?: React.ReactNode;
-  className?: string;
-}
-
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
-  children,
-  className = ''
-}) => {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
-};
-
-export default OptimizedLoadingSpinner;
-=======
 import React, { memo, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -168,4 +148,4 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 
 export default OptimizedLoadingSpinner;
->>>>>>> cursor/fix-errors-and-merge-to-main-2d8f
+

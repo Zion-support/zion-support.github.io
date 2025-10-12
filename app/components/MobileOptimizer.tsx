@@ -1,24 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 
-interface MobileOptimizerProps {
-  children?: React.ReactNode;
-  className?: string;
-}
-
-const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
-  children,
-  className = ''
-}) => {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
-};
-
-export default MobileOptimizer;
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -45,4 +26,4 @@ export default function MobileOptimizer() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-2d8f
+

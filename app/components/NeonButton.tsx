@@ -1,8 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
+
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-2d8f
+
 
 interface NeonButtonProps {
   children?: React.ReactNode;
@@ -13,22 +12,7 @@ interface NeonButtonProps {
 
 const NeonButton: React.FC<NeonButtonProps> = ({
   children,
-<<<<<<< HEAD
-  className = '',
-  title,
-  description
-}) => {
-  return (
-    <div className={`enhanced-component ${className}`}>
-      {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}
-      {description && <p className="text-gray-600 mb-4">{description}</p>}
-      {children}
-    </div>
-  );
-};
 
-export default NeonButton;
-=======
   href,
   onClick,
   variant = 'primary',
@@ -83,4 +67,4 @@ export default NeonButton;
 };
 
 export default NeonButton;
->>>>>>> cursor/fix-errors-and-merge-to-main-2d8f
+
