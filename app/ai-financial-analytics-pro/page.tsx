@@ -1,41 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  TrendingUp, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  BarChart3, 
-  DollarSign, 
-  Shield, 
-  Target,
-  PieChart,
-  Activity,
-  Globe,
-  Smartphone,
-  Monitor,
-  AlertCircle,
-  Sparkles,
-  Calculator,
-  FileText,
-  Database,
-  Lock,
-  Eye,
-  Clock,
-  Users,
-  Building2,
-  CreditCard,
-  Wallet,
-  PiggyBank
-} from 'lucide-react';
+import { ArrowRight, AlertCircle, Calculator, Building2, Wallet, PiggyBank } from 'lucide-react';
 
 export default function AiFinancialAnalyticsProPage() {
-  const [selectedPlan, setSelectedPlan] = useState('pro');
 
   const features = [
     {

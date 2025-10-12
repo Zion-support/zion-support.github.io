@@ -1,7 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Brain, Cloud, Shield, Code, Zap, Users, Globe, Database, Smartphone, Lock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const mainServices = [

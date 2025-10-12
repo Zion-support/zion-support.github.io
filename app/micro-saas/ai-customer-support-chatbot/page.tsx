@@ -1,14 +1,6 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { 
-  ArrowRight, MessageSquare, BarChart3, Users, Zap, CheckCircle, 
-  Clock, Target, TrendingUp, PieChart, Smartphone, Shield, 
-  Lock, RefreshCw, Settings, Bot, FileText, AlertTriangle,
-  CheckSquare, Star, Globe, Monitor, Smartphone as Mobile,
-  Send, Eye, MousePointer, Calendar, Hash, AtSign, Headphones,
-  Phone, Mail, HelpCircle, ThumbsUp, ThumbsDown
-} from 'lucide-react'
+import { ArrowRight, MessageSquare, Bot } from 'lucide-react'
 
 export default function AICustomerSupportChatbotPage() {
   const features = [

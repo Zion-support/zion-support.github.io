@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 import ErrorBoundary from './components/ErrorBoundary';
 import Navigation from './components/Navigation';

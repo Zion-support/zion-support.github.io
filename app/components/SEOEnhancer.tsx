@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 
-import { ArrowRight, Brain } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 const SEOEnhancer: React.FC = () => {
   const features = [
     {

@@ -1,21 +1,10 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
-  BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
-  Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
-  TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
-  Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock, Play
-} from 'lucide-react';
+import { ArrowRight, ShoppingCart, Zap, Brain, CheckCircle, Users, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Heart, Eye, Mic, Workflow, Wifi, Package, TrendingUp, Calendar, Sparkles, Cpu, Globe, Database, Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock, Play } from 'lucide-react';
 
 const AiChatbotBuilderPage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const features = [
     {
@@ -49,8 +38,13 @@ const AiChatbotBuilderPage: React.FC = () => {
       color: 'from-orange-500 to-red-500'
     },
     {
+<<<<<<< HEAD
       title: 'AI Training',
       description: 'Train your chatbot with your own data and knowledge base for personalized responses',
+=======
+      title: 'AI-Powered Responses',
+      description: 'Natural language processing and machine learning for intelligent, contextual conversations',
+>>>>>>> cursor/fix-errors-and-merge-to-main-1443
       icon: Brain,
       color: 'from-yellow-500 to-orange-500'
     }
@@ -83,6 +77,36 @@ const AiChatbotBuilderPage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
+=======
+  const useCases = [
+    {
+      title: 'Customer Support',
+      description: '24/7 customer service with instant responses and intelligent ticket routing',
+      icon: Users,
+      benefits: ['Reduce response time by 90%', 'Handle 10x more inquiries', 'Improve customer satisfaction']
+    },
+    {
+      title: 'Lead Generation',
+      description: 'Qualify leads automatically and nurture prospects through personalized conversations',
+      icon: Target,
+      benefits: ['Increase lead conversion by 40%', 'Qualify leads 24/7', 'Personalize interactions']
+    },
+    {
+      title: 'E-commerce Assistant',
+      description: 'Help customers find products, process orders, and provide shopping assistance',
+      icon: ShoppingCart,
+      benefits: ['Boost sales by 25%', 'Reduce cart abandonment', 'Improve user experience']
+    },
+    {
+      title: 'Internal Support',
+      description: 'Streamline internal processes with HR, IT, and administrative chatbots',
+      icon: Workflow,
+      benefits: ['Reduce internal tickets', 'Faster employee onboarding', 'Automate routine tasks']
+    }
+  ];
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-1443
   const pricingPlans = [
     {
       name: 'Starter',

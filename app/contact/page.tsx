@@ -1,7 +1,17 @@
 'use client';
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+=======
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, AlertCircle, User, Building, RotateCcw, RotateCw } from 'lucide-react';
+
+const ContactPage: React.FC = () => {
+'use client';
+import { useState } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-1443
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -30,7 +40,25 @@ const ContactPage: React.FC = () => {
     // Simulate form submission
     setTimeout(() => {
       setSubmitStatus('success');
+<<<<<<< HEAD
       setIsSubmitting(false);
+=======
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Here you would typically send the form data to your backend
+    console.log('Form submitted:', formData);
+    setIsSubmitted(true);
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+>>>>>>> cursor/fix-errors-and-merge-to-main-1443
       setFormData({
         name: '',
         email: '',
@@ -62,8 +90,19 @@ const ContactPage: React.FC = () => {
     <>
       <Helmet>
         <title>Contact Us - Zion Tech Group | Get In Touch</title>
+<<<<<<< HEAD
         <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get in touch with our experts to discuss your project requirements and discover how we can help transform your business." />
         <meta name="keywords" content="contact zion tech group, ai solutions contact, it services contact, business consultation, project inquiry" />
+=======
+        <meta name="description" content="Contact Zion Tech Group for AI solutions, cloud infrastructure, cybersecurity, and custom software development. Call +1 302 464 0950 or email kleber@ziontechgroup.com" />
+        <meta name="keywords" content="contact us, get in touch, AI solutions, cloud computing, cybersecurity, software development, IT services" />
+  return (
+    <>
+      <Helmet>
+        <title>Contact Us - Zion Tech Group</title>
+        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for a free consultation and project discussion." />
+        <meta name="keywords" content="contact zion tech group, AI consultation, IT services contact, business inquiry" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-1443
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -213,6 +252,7 @@ const ContactPage: React.FC = () => {
                       </>
                     )}
                   </button>
+<<<<<<< HEAD
                 </form>
               </div>
 
@@ -223,12 +263,124 @@ const ContactPage: React.FC = () => {
                   <p className="text-gray-300 mb-8">
                     Ready to start your project? Get in touch with our team of experts. 
                     We're here to help you transform your business with innovative AI and IT solutions.
+=======
+
+                  {submitStatus === 'success' && (
+                    <div className="flex items-center justify-center p-4 bg-green-900/20 border border-green-500 rounded-lg">
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-2" />
+                      <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
+                    </div>
+                  )}
+
+                  {submitStatus === 'error' && (
+                    <div className="flex items-center justify-center p-4 bg-red-900/20 border border-red-500 rounded-lg">
+                      <AlertCircle className="h-5 w-5 text-red-400 mr-2" />
+                      <span className="text-red-400">Failed to send message. Please try again.</span>
+                    </div>
+                  )}
+                </form>
+              </div>
+
+              {/* Additional Info */}
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  Why Choose Us?
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                        <CheckCircle className="h-6 w-6 text-white" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
+                      <p className="text-gray-300">
+                        Our team of experienced professionals brings deep expertise in AI, cloud computing, and cybersecurity.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                        <Clock className="h-6 w-6 text-white" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">24/7 Support</h3>
+                      <p className="text-gray-300">
+                        Round-the-clock support to ensure your systems run smoothly and your business stays operational.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                        <Shield className="h-6 w-6 text-white" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">Security First</h3>
+                      <p className="text-gray-300">
+                        Enterprise-grade security measures to protect your data and ensure compliance with industry standards.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
+                        <Rocket className="h-6 w-6 text-white" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">Fast Delivery</h3>
+                      <p className="text-gray-300">
+                        Agile development processes that deliver results quickly without compromising on quality.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 p-6 bg-gray-800 rounded-xl border border-gray-700">
+                  <h3 className="text-xl font-semibold text-white mb-4">Quick Contact</h3>
+                  <div className="space-y-3">
+                    <a
+                      href="tel:+13024640950"
+                      className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                    >
+                      <Phone className="h-5 w-5 mr-3" />
+                      +1 302 464 0950
+                    </a>
+                    <a
+                      href="mailto:kleber@ziontechgroup.com"
+                      className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                    >
+                      <Mail className="h-5 w-5 mr-3" />
+                      kleber@ziontechgroup.com
+                    </a>
+                    <div className="flex items-start text-gray-300">
+                      <MapPin className="h-5 w-5 mr-3 mt-0.5" />
+                      <div>
+                        <div>364 E Main St STE 1008</div>
+                        <div>Middletown DE 19709, USA</div>
+                      </div>
+                    </div>
+                  </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-1443
                   </p>
                 </div>
 
                 <div className="space-y-6">
+<<<<<<< HEAD
                   <div className="flex items-start">
                     <div className="flex-shrink-0">
+=======
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+>>>>>>> cursor/fix-errors-and-merge-to-main-1443
                       <Phone className="w-6 h-6 text-cyan-400" />
                     </div>
                     <div className="ml-4">
@@ -238,9 +390,15 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
 
+<<<<<<< HEAD
                   <div className="flex items-start">
                     <div className="flex-shrink-0">
                       <Mail className="w-6 h-6 text-cyan-400" />
+=======
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-purple-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-1443
                     </div>
                     <div className="ml-4">
                       <h3 className="text-lg font-semibold text-white">Email</h3>
@@ -249,6 +407,7 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
 
+<<<<<<< HEAD
                   <div className="flex items-start">
                     <div className="flex-shrink-0">
                       <MapPin className="w-6 h-6 text-cyan-400" />
@@ -259,19 +418,35 @@ const ContactPage: React.FC = () => {
                         364 E Main St STE 1008<br />
                         Middletown DE 19709
                       </p>
+=======
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-green-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-1">Office</h3>
+                      <p className="text-gray-300">364 E Main St STE 1008</p>
+                      <p className="text-gray-300">Middletown, DE 19709</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-1443
                       <p className="text-sm text-gray-400">United States</p>
                     </div>
                   </div>
                 </div>
 
+<<<<<<< HEAD
                 <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-6 border border-cyan-500/20">
                   <h3 className="text-lg font-semibold text-white mb-3">Why Choose Us?</h3>
+=======
+                <div className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6">
+                  <h3 className="text-xl font-bold text-white mb-3">Why Choose Us?</h3>
+>>>>>>> cursor/fix-errors-and-merge-to-main-1443
                   <ul className="space-y-2 text-gray-300">
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       Expert AI and IT professionals
                     </li>
                     <li className="flex items-center">
+<<<<<<< HEAD
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       Proven track record of success
                     </li>
@@ -281,6 +456,17 @@ const ContactPage: React.FC = () => {
                     </li>
                     <li className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+=======
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      Custom solutions tailored to your needs
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      Expert team with proven track record
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-1443
                       24/7 support and maintenance
                     </li>
                   </ul>
@@ -294,4 +480,8 @@ const ContactPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ContactPage;
+=======
+export default ContactPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1443

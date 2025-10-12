@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Menu, X, ChevronDown, Zap, Cloud, Globe, Code, Smartphone, Brain, Wifi } from 'lucide-react';
+=======
+import { ChevronDown, Menu, X, ArrowRight, MessageSquare, ShoppingCart } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-1443
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

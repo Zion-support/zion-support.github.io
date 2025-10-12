@@ -1,12 +1,6 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { 
-  ArrowRight, Calendar, BarChart3, Users, Zap, CheckCircle, 
-  Clock, Target, TrendingUp, PieChart, Smartphone, Shield, 
-  Lock, RefreshCw, Settings, Bot, FileText, MessageSquare,
-  AlertTriangle, CheckSquare, Star, Globe, Monitor, Smartphone as Mobile
-} from 'lucide-react'
+import { ArrowRight, Bot, MessageSquare } from 'lucide-react'
 
 export default function AIProjectManagerPage() {
   const features = [
