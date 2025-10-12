@@ -1,3 +1,4 @@
+import React from 'react';
 'use client'
 /**
  * Comprehensive Test Runner and Testing Utilities
@@ -6,7 +7,7 @@
  metrics: PerformanceMetrics }> {async runPerformanceTest()
     testName: string}
   ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {}
-      
+
       });`
       - startTime}ms)`)
       if (this.config.bail) {/* TODO: Fix JSX expression */}
@@ -37,7 +38,7 @@
     return new Promise((resolve, reject) => {timeout: number}
   ): Promise<void> {}
     return new Promise((resolve, reject) => {}
-      
+
     <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style>}</style></<<<styl>body</styl></styl> { font-family: Arial, sans-serif; margin: 20 px}
         .summary { background: #f5 f5 f5; padding: 20 px; border-radius: 5 px; margin-bottom: 20 px}
         .test { margin: 10 px 0; padding: 10 px; border-left: 4 px solid #ccc}
@@ -107,10 +108,10 @@
     const { container } = this.customRender(component)
     // Basic accessibility checks
     // Check for missing alt text on images
-    
+
   ): Promise<{ passed: boolean; error?: string }> {}
     try {}
-      
+
   d: boolean; error?: string }> {/* TODO: Fix JSX expression */}`
   n: 0,})
       return {/* TODO: Fix JSX expression */}
@@ -125,7 +126,7 @@
 
   ): Promise<{ passed: boolean; error?: string }> {}
     try {}
-      
+
     // This would typically use a tool like Percy or Chromatic
     // For now, we'll just return a placeholder}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
@@ -156,7 +157,7 @@
     const coverage: CoverageMetrics = {}
       lines: 85}
     }
-    
+
     results: Array<{ name: string; type: string; passed: boolean; error?: string }>
   }> {}
     const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = []
@@ -196,10 +197,10 @@
     <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${/* TODO: Fix JSX expression */}"
             <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`
-    
+
   ): Promise<{ passed: boolean; error?: string }> {}
     try {}
-      
+
     testName: string,): Promise<{ passed: boolean; diff?: unknown }> {// This would typically use a tool like Percy or Chromatic}
     // For now, we'll just return a placeholder}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
@@ -228,7 +229,7 @@
     // For now, we'll just return a placeholder
       lines: 85}
     }
-    
+
     results: Array<{ name: string; type: string; passed: boolean; error?: string }>}> {}
     for (const test of tests) {let result
       switch (test.type) {case 'component':
@@ -301,7 +302,7 @@
   async runCoverageTest(): Promise
   e: CoverageMetrics }> {/* TODO: Fix JSX expression */}
     }
-    
+
   d: boolean; error?: string }>}> {/* TODO: Fix JSX expression */}
   d: boolean; error?: string }> = []
     for (const test of tests) {/* TODO: Fix JSX expression */}
@@ -309,14 +310,14 @@
   results: unknown[] = []
       results.push({/* TODO: Fix JSX expression */})
   e: test.type })}
-    
-    for (let i = 0; i 
+
+    for (let i = 0; i
   createMockData: (type: string, count: number = 10) => {}
-    for (let i = 0; i 
+    for (let i = 0; i
     return new Promise((resolve, reject) => {// Wait for element to appear}
   waitForElement: (selector: string, timeout: number = 5000) => {}
     return new Promise((resolve, reject) => {}
-      
+
         observer.disconnect();`}
   // Simulate user interaction
   simulateUserInteraction: async (element: HTMLElement, action: string) => {switch (action) {// Simulate user interaction}
