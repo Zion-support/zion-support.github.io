@@ -42,7 +42,7 @@ const Navigation: React.FC = () => {
     },
     {
       name: 'Micro SAAS',
-      path: '/micro-saas-services',
+      path: '/micro-saas',
       icon: Code,
       dropdown: [
         { name: 'AI-Powered CRM', path: '/ai-crm' },

@@ -54,6 +54,9 @@ import TaskManagerProPage from './app/task-manager-pro/page'
 import TrainingPage from './app/training/page'
 import ServicesAdvertisingPage from './app/services-advertising/page'
 import FiveGImplementationPage from './app/5g-implementation/page'
+import AIContentGeneratorPage from './app/ai-content-generator/page'
+import PrivacyPolicyPage from './app/privacy-policy/page'
+import TermsOfServicePage from './app/terms-of-service/page'
 
 const App: React.FC = () => {
   return (
@@ -122,6 +125,13 @@ const App: React.FC = () => {
                   
                   {/* 5G Services */}
                   <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                  
+                  {/* AI Content Generator */}
+                  <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+                  
+                  {/* Legal Pages */}
+                  <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+                  <Route path="/terms-of-service" element={<TermsOfServicePage />} />
                   
                   {/* 404 Page */}
                   <Route path="*" element={<NotFoundPage />} />
