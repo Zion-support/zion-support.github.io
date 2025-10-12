@@ -1,4 +1,4 @@
-import React from \'react\';
+import React from 'react';
 'use client';
 
 const EnhancedSkipLink: React.FC = () => {
@@ -22,16 +22,16 @@ const EnhancedSkipLink: React.FC = () => {
   };
 
   return (
-    <div className="skip-links" />
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <button
         onClick="{handleSkipToMain}"
-        className="skip-link"
+        className="sk ip-link"
         aria-label="Skip to main content"
         />Skip to main content
       </button>
       <button
         onClick="{handleSkipToNavigation}"
-        className="skip-link"
+        className="sk ip-link"
         aria-label="Skip to navigation"
         />Skip to navigation
       </button>

@@ -49,37 +49,37 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
   };
 
   const content = (
-    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2 xl p-8text-white" />
-      <div className="text-centermb-6" />
-        <Mail className="w-12 h-12 mx-auto mb-4text-white/90" / />
-        <h3 className="text-2 xl font-boldmb-2"  >Stay Updated</h3>
-        <p className="text-white/90" />
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <Mail className="w-5h-5 ml-2" />
+        <h3 className="te xt-2 xl font-boldmb-2"  >Stay Updated</h3>
+        <p className="w-5h-5 ml-2" />
           Get the latest updates on AI technology, IT solutions, and industry insights.
         </p>
       </div>
 
-      <form onSubmit="{handleSubmit}" className="space-y-4" />
-        <div className="flex flex-col sm:flex-rowgap-3" />
+      <form onSubmit="{handleSubmit}" className="sp ace-y-4" />
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <input
             type="email"
             value="{email}"
             onChange="{(e)" = /> setEmail(e.target.value)}
             placeholder="Enter your email address"
-            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50focus:border-transparent"
+            className="fl ex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50focus:border-transparent"
             disabled="{status" === 'loading'}
           />
           <button
             type="submit"
             disabled="{status" === 'loading'}
-            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-centerjustify-center" />
+            className="bg-w hite text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center" />
             {status === 'loading' ? (
               <>
-                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600mr-2" /></div>
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 Subscribing...
               </>
             ) : (
               <>
-                <Send className="w-4 h-4mr-2" / />
+                <Send className="w-5h-5 ml-2" />
                 Subscribe
               </>
             )}
@@ -87,38 +87,35 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
         </div>
 
         {message && (
-          <div className="{`flex" items-center space-x-2 text-sm ${
+          <div className="{`fl ex" items-center space-x-2 text-sm ${
             status === 'success' ? 'text-green-200' : 'text-red-200'
           }`} />
             {status === 'success' ? (
-              <CheckCircle className="w-4h-4" / />
+              <CheckCircle className="w-5h-5 ml-2" />
             ) : (
-              <AlertCircle className="w-4h-4" / />
+              <AlertCircle className="w-5h-5 ml-2" />
             )}
             <span  >{message}</span>
           </div>
         )}
       </form>
 
-      <div className="mt-6 text-center text-smtext-white/80" />
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <p />
-          ✓ No spam, unsubscribe anytime<br / />
-          ✓ Weekly updates on latest tech trends<br / />
+          ✓ No spam, unsubscribe anytime<br />
+          ✓ Weekly updates on latest tech trends<br />
           ✓ Exclusive content and early access
         </p>
       </div>
-    </div>
   );
   if (const variant = == 'modal') {
     return (
-    <div className="fixed inset-0 z-50overflow-y-auto" />
-        <div className="flex min-h-screen items-center justify-center px-4py-6" />
-          <div className="fixed inset-0 bg-black/50backdrop-blur-sm" onClick="{onClose}" / />
-          <div className="relative w-fullmax-w-md"  />{content}
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="fi xed inset-0 bg-black/50backdrop-blur-sm" onClick="{onClose}"  />
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{content}
           </div>
-        </div>
-      </div>
-    </div>);
+      </div>);
   }
 
   return content;

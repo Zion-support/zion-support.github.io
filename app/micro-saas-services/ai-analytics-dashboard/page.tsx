@@ -5,17 +5,20 @@ import { ArrowRight } from 'lucide-react'
 
 export default function AianalyticsdashboardPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20" />
-      <Helmet />
-        <title>Ai Analytics Dashboard - Zion Tech Group</title>
-        <meta name="description" content="Professional ai analytics dashboard services by Zion Tech Group. Transform your business with our expert solutions." />
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <Helmet>
+        <title>Service - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8py-16text-center" />
-        <h1 className="text-4xl font-boldtext-whitemb-6">Ai Analytics Dashboard</h1>
+      <div className="max-w-7xlmx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xlfont-boldtext-white mb-6">Ai Analytics Dashboard</h1>
         <p className="text-lgtext-gray-300mb-8">Professional ai analytics dashboard services coming soon.</p>
-        <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-centermx-autow-fit" />
+        <Link
+          to="/contact"
+          className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-centermx-auto w-fit"
+        >
           Contact Us
-          <ArrowRight className="w-5h-5ml-2" />
+          <ArrowRight className="w-5h-5 ml-2" />
         </Link>
       </div>
     </div>

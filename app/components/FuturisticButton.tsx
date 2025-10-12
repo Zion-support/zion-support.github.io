@@ -71,14 +71,14 @@ interface FuturisticButtonProps {
     >
       {/* Animated background sweep */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-white/20to-transparent"
+        className="ab solute inset-0 bg-gradient-to-r from-white/20to-transparent"
         initial="{{" x: '-100%' }}
         animate="{{" x: isHovered ? '100%' : '-100%' }}
         transition="{{" duration: 0.6 }}
-      / />
+       />
       {/* Pulsing glow effect */}
       <motion.div
-        className="absolute inset-0rounded-lg"
+        className="ab solute inset-0rounded-lg"
         style="{{"
           boxShadow: variant === 'primary'
             ? '0 0 20 px rgba(6, 182, 212, 0.4)'
@@ -97,11 +97,11 @@ interface FuturisticButtonProps {
           repeat: isHovered ? Infinity : 0,
           ease: 'easeInOut'
         }}
-      / />
+       />
       {/* Scanning line effect */}
       {isHovered && (
         <motion.div
-          className="absolute inset-0rounded-lg"
+          className="ab solute inset-0rounded-lg"
           style="{{"
             background: 'linear-gradient(90 deg, transparent, rgba(255,255,255,0.3), transparent)',
             backgroundSize: '200% 100%',
@@ -114,21 +114,21 @@ interface FuturisticButtonProps {
             repeat: Infinity,
             ease: 'linear',
           }}
-        / />
+         />
       )}
 
       {/* Corner accents */}
-      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" / />
-      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" / />
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       {/* Content */}
-      <span className="relative z-10 flex items-centerjustify-center" />
+      <span className="w-5h-5 ml-2" />
         {loading ? (
           <>
             <motion.div
-              className="w-4 h-4 border-2 border-white/30 border-t-white rounded-fullmr-2"
+              className="w-4h-4 b o rder-2 border-white/30 border-t-white rounded-full mr-2"
               animate="{{" rotate: 360 }}
               transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
-            / />
+             />
             Loading...
           </>
         ) : (
@@ -136,5 +136,5 @@ interface FuturisticButtonProps {
         )}
       </span>
     </motion.button>
-  </div></div>);
+  </div>);
 }

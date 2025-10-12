@@ -22,7 +22,7 @@ import React from 'react';
   private async runHook(hook: () => void | Promise<void />
   private async runHook()
     hookName: string}
-  ): Promise<void  />{}
+  ): Promise<void />{}
     try {}
       await hook()}
     } catch (error) {}
@@ -266,7 +266,7 @@ import React from 'react';
         ${/* TODO: Fix JSX expression */}"
             <testcase name="${result.name}" time="${result.duration / 1000}" /></testcase>"`
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}"  >${result.error?.stack}</failure>` : ''}
-                ${result.status === 'skipped' ? '<skipped/ />' : ''}
+                ${result.status === 'skipped' ? '<skipped />' : ''}
             </testcase>`
         `)
           .join('')}

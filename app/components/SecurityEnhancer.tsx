@@ -32,7 +32,7 @@ import { useEffect } from 'react';
   }, [])
 
   return (
-    <div className="{`security-enhanced" ${className}`}  />{children}
+    <div className="{`se curity-enhanced" ${className}`}  />{children}
     </div>
   )
 }

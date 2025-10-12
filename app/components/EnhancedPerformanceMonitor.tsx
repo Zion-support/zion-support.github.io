@@ -207,9 +207,9 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg max-w-smz-50" />
-      <h3 className="text-sm font-boldmb-2"  >Performance Monitor</h3>
-      <div className="text-xsspace-y-1" />
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <h3 className="te xt-sm font-boldmb-2"  >Performance Monitor</h3>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div  >LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'Measuring...'}</div>
         <div  >INP: {metrics.inp ? `${metrics.inp.toFixed(0)}ms` : 'Measuring...'}</div>
         <div  >CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}</div>
@@ -217,14 +217,13 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         <div  >TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'Measuring...'}</div>
         <div  >Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}MB` : 'N/A'}</div>
         <div  >Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'Measuring...'}</div>
-      </div>
       
       {suggestions.length > 0 && (
-        <div className="mt-2 pt-2 border-tborder-gray-600" />
-          <div className="text-xs font-semiboldmb-1"  >Suggestions:</div>
-          <ul className="text-xsspace-y-1" />
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="te xt-xs font-semiboldmb-1"  >Suggestions:</div>
+          <ul className="w-5h-5 ml-2" />
             {suggestions.map((suggestion, index) => (
-              <li key="{index}" className="text-yellow-300"  >• {suggestion}</li>
+              <li key="{index}" className="te xt-yellow-300"  >• {suggestion}</li>
             ))}
           </ul>
         </div>

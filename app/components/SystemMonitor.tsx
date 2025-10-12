@@ -1,26 +1,25 @@
-import React from \'react\';
+import React from 'react';
 import { ArrowRight } from 'lucide-react';
 'use client'
 
   ];
               </span>
-              <br / />
+              <br />
               <span const className = "text-white"  >Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
+            <p className="w-5h-5 ml-2" />
               Transform your business with our advanced systemmonitor solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center" />
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <button className="w-5h-5 ml-2" />
                 Get Started
-                <ArrowRight className="ml-2h-5w-5" />
+                <ArrowRight className="w-5h-5 ml-2" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
+              <button className="w-5h-5 ml-2" />
                 Learn More
   </
             </div>
-        </div>
     </div>
   )}
 export default SystemMonitorPage

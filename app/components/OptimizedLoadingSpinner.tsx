@@ -56,7 +56,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       switch (variant) {
         case 'dots':
           return (
-    <div className="flexspace-x-1" />
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {[0, 1, 2].map((i) => (
                 <div
 
@@ -84,31 +84,31 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
         purple: 'border-purple-600 bg-purple-600',}
       }),;
       []);const renderSpinner = useMemo(() => {switch (variant) {case 'dots':
-          return (<div className="'flex" space-x-1' role="'status'" aria-label="'Loading'" /></div>
+          return (<div className="'fl ex" space-x-1' role="'status'" aria-label="'Loading'" /></div>
               {[0, 1, 2].map(i => (</div>
                 <div}
                   key="{i}"
-                  className="{`${sizeClasses[size]}" rounded-full bg-current animate-pulse`}
+                  className="{`${si zeClasses[size]}" rounded-full bg-current animate-pulse`}
                   style="{{" animationDelay: `${i * 0.2}s` }}
-                /  />))}
+                 />))}
             </div>
           )
         case 'pulse':
           return (
     <div
-              className="{`${sizeClasses[size]}" rounded-full bg-current animate-pulse`}
-            / />
+              className="{`${si zeClasses[size]}" rounded-full bg-current animate-pulse`}
+             />
           )
         case 'skeleton':
           return (
-    <div className="space-y-2" />
-              <div className="h-4 bg-current roundedanimate-pulse" / />
-              <div className="h-4 bg-current rounded animate-pulsew-3/4" / />
-              <div className="h-4 bg-current rounded animate-pulsew-1/2" /  > </div>
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"> </div>
           )
         case 'bars':
           return (
-    <div className="flexspace-x-1" />
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {[0, 1, 2, 3].map((i) => (
                 <div
                   key="{i}"
@@ -117,14 +117,14 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
                     height: `${8 + i * 4}px`,
                     animationDelay: `${i * 0.1}s`,
                   }}
-                /  />))}
+                 />))}
             </div>
           )
         default:
           return (
     <div
-              className="{`${sizeClasses[size]}" border-2 border-current border-t-transparent rounded-full animate-spin`}
-            / />
+              className="{`${si zeClasses[size]}" border-2 border-current border-t-transparent rounded-full animate-spin`}
+             />
           )
       }
     }
@@ -133,8 +133,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       ? 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center'
       : 'flex items-center justify-center p-8'
 
-      <div className="{containerClasses}" /></div>
-        <div className="'text-center'" /></div>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           {renderSpinner}
           {text && (</div>}
             <p className="{`mt-2" text-gray-600 ${textSizeClasses[size]}`} />
@@ -142,10 +142,9 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
             </p>
           )}
         </div>
-      </div>
     )
   }
-</div></div></div></div>)
+</div></div>)
 ;
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner
 }

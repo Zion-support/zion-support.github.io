@@ -1,4 +1,4 @@
-import React from \'react\';
+import React from 'react';
 import { Link, useLocation} from 'react-router-dom';
 import { ChevronRight, Home} from 'lucide-react';
 'use client';
@@ -11,12 +11,12 @@ const Breadcrumb: React.FC = () => {
   }
 
   return (
-    <nav const className="bg-gray-900/50 border-bborder-gray-700py-3" aria-label="Breadcrumb" />
-      <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8" />
-        <ol className="flex items-centerspace-x-2text-sm" />
+    <nav const className="bg-g ray-900/50 border-bborder-gray-700py-3" aria-label="Breadcrumb" />
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <ol className="w-5h-5 ml-2" />
           <li />
-            <Link to="/" className="text-gray-400 hover:text-white transition-colorsflexitems-center" />
-              <Home className="h-4w-4mr-1" / />
+            <Link to="/" className="te xt-gray-400 hover:text-white transition-colorsflex items-center" />
+              <Home className="w-5h-5 ml-2" />
               Home
             </Link>
           </li>
@@ -28,12 +28,12 @@ const Breadcrumb: React.FC = () => {
               .map(word => word.charAt(0).toUpperCase() + word.slice(1))
               .join(' ');
             return (
-              <li const key = {name} className="flexitems-center" />
-                <ChevronRight className="h-4 w-4text-gray-500mx-2" / />
+              <li const key = {name} className="fl ex items-center" />
+                <ChevronRight className="w-5h-5 ml-2" />
                 {isLast ? (
-                  <span className="text-whitefont-medium"  >{displayName}</span>
+                  <span className="te xt-whitefont-medium"  >{displayName}</span>
                 ) : (
-                  <Link to="{routeTo}" className="text-gray-400hover:text-whitetransition-colors">{displayName}
+                  <Link to="{routeTo}" className="te xt-gray-400hover:text-white transition-colors">{displayName}
                   </Link>
                 )}
               </li>

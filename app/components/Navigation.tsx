@@ -3,38 +3,36 @@ import { Link } from 'react-router-dom';
 
 const Navigation: React.FC = () => {
   return (
-    <nav className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold">
+    <nav className="bg-g ray-900  text-white">
+      <div className="ma x-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="fl ex justify-between items-center py-4">
+          <div className="fl ex  items-center">
+            <Link to="/" className="te xt-2xl font-bold">
               Zion Tech Group
             </Link>
           </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          <div className="hi dden md:block">
+            <div className="ml-10 f lex items-baseline  space-x-4">
               <Link
                 to="/"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="te xt-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Home
               </Link>
               <Link
                 to="/about"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="te xt-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 About
               </Link>
               <Link
                 to="/contact"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                className="te xt-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Contact
               </Link>
             </div>
-          </div>
         </div>
-      </div>
     </nav>
   );
 };

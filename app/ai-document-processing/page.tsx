@@ -1,37 +1,36 @@
-import React from \'react\';
+import React from 'react';
 'use client';
 
 const AiDocumentProcessingPage: React.FC = () => {
   return (
     <>
-      <Helmet />
+      <Helmet>
         <title>Ai Document Processing - Zion Tech Group</title>
-        <meta name="description" content="Ai Document Processing services by Zion Tech Group. Professional AI and IT solutions." / / />
-        <meta name="keywords" content="ai-document-processing, AI solutions, IT services" / / />
+        <meta name="description" content="Ai Document Processing services by Zion Tech Group. Professional AI and IT solutions." /  />
+        <meta name="keywords" content="ai-document-processing, AI solutions, IT services" /  />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
-        <div className="container mx-autopx-4py-16" />
-          <div className="text-centermb-16" />
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Ai Document Processing
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h1 className="w-5h-5 ml-2" />
+              <span className="w-5h-5 ml-2" />Ai Document Processing
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
+            <p className="w-5h-5 ml-2" />
               Professional ai document processing services by Zion Tech Group.
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center" />
-            <h2 className="text-2 xl font-boldtext-whitemb-4"  >Coming Soon</h2>
-            <p className="text-gray-300mb-6" />
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="te xt-2 xl font-boldtext-white mb-4"  >Coming Soon</h2>
+            <p className="w-5h-5 ml-2" />
               We're working on bringing you comprehensive ai document processing solutions. 
               Contact us to learn more about our services.
             </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300"  />Contact Us
+            <button className="w-5h-5 ml-2" />Contact Us
             </button>
           </div>
-        </div>
       </div>
     </>
   );

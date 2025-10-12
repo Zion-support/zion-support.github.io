@@ -1,4 +1,4 @@
-import React from \'react\';
+import React from 'react';
 import { motion } from 'framer-motion';
 'use client';
 
@@ -31,8 +31,8 @@ export default function FuturisticLoader({
   };
 
   return (
-    <div className="flex flex-col items-centerjustify-centerspace-y-4" />
-      <div className="relative" />
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Outer rotating ring */}
         <motion.div
           className="{`"
@@ -43,7 +43,7 @@ export default function FuturisticLoader({
           `}
           animate="{{" rotate: 360 }}
           transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
-        / />
+         />
         {/* Inner pulsing ring */}
         <motion.div
           className="{`"
@@ -54,7 +54,7 @@ export default function FuturisticLoader({
           `}
           animate="{{" rotate: -360 }}
           transition="{{" duration: 1.5, repeat: Infinity, ease: 'linear' }}
-        / />
+         />
         {/* Center pulsing dot */}
         <motion.div
           className="{`"
@@ -72,7 +72,7 @@ export default function FuturisticLoader({
             repeat: Infinity, 
             ease: 'easeInOut' 
           }}
-        / />
+         />
         {/* Glow effect */}
         <motion.div
           className="{`"
@@ -91,12 +91,12 @@ export default function FuturisticLoader({
             repeat: Infinity, 
             ease: 'easeInOut' 
           }}
-        / />
+         />
       </div>
       
       {text && (
         <motion.p
-          className="{`text-sm" ${getColorClasses().split(' ')[1]} font-medium`}
+          className="{`te xt-sm" ${getColorClasses().split(' ')[1]} font-medium`}
           animate="{{" opacity: [0.5, 1, 0.5] }}
           transition="{{" 
             duration: 1.5, 

@@ -90,20 +90,20 @@ const FuturisticBackground: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0pointer-events-nonez-0" />
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <canvas
         ref="{canvasRef}"
-        className="w-fullh-fullopacity-30"
+        className="w-fu llh-fullopacity-30"
         style="{{" background: 'transparent' }}
-      / />
+       />
       {/* Additional background effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900to-slate-900opacity-90" / />
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       {/* Animated grid overlay */}
-      <div className="absolute inset-0holographic-gridopacity-20" / />
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       {/* Quantum field effect */}
-      <div className="absolute inset-0quantum-fieldopacity-30" / />
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       {/* Plasma effect */}
-      <div className="absolute inset-0plasma-effectopacity-20" /  > </div>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"> </div>
   );
 };
 

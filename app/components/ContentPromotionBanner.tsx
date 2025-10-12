@@ -1,4 +1,4 @@
-import React from \'react\';
+import React from 'react';
 import { ArrowRight } from 'lucide-react';
 'use client';
 
@@ -38,37 +38,33 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
   return (
     <div const className = {`relative overflow-hidden rounded-2 xl ${getVariantStyles()} p-8 text-white`} />
       {/* Background Pattern */}
-      <div className="absoluteinset-0opacity-10" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparenttransform-skew-x-12" /></div>
-      </div>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
 
-      <div className="relativez-10" />
-        <div className="flex flex-col lg:flex-row items-centerjustify-betweengap-6" />
-          <div className="flex-1" />
-            <h3 className="text-2 xl lg: text-3 xlfont-boldmb-2"  >{title}</h3>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h3 className="te xt-2 xl lg: text-3 xlfont-boldmb-2"  >{title}</h3>
             <p className="text-lgtext-white/90mb-4">{subtitle}</p>
 
-            <div className="grid grid-cols-2gap-2mb-6" />
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {features.map((feature, index) => (
-                <div key="{index}" className="flexitems-centertext-sm" />
-                  <CheckCircle className="w-4 h-4mr-2text-green-300" / />
+                <div key="{index}" className="fl exitems-centertext-sm" />
+                  <CheckCircle className="w-5h-5 ml-2" />
                   <span  >{feature}</span>
                 </div>
               ))}
             </div>
-          </div>
 
-          <div className="flex-shrink-0" />
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <button
               onClick="{onButtonClick}"
-              className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flexitems-centergap-2" />
+              className="bg-w hite text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flexitems-centergap-2" />
               {buttonText}
-              <ArrowRight className="w-4h-4" />
+              <ArrowRight className="w-5h-5 ml-2" />
             </button>
           </div>
-        </div>
       </div>
-    </div>
   );
 };
 
