@@ -1,4 +1,8 @@
+import { useEffect } from 'react';
 
+export default function Analytics() {
+  useEffect(() => {
+    const initAnalytics = () => {
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: document.title,
@@ -8,8 +12,6 @@
     };
     initAnalytics();
   }, []);
-  return (
-    <>
-      }
 
-
+  return null;
+}
