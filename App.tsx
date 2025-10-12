@@ -12,6 +12,14 @@ const ContactPage = React.lazy(() => import('./app/contact/page'))
 const AIServicesPage = React.lazy(() => import('./app/ai-services/page'))
 const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'))
+const MicroSaasServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
+
+// Micro SAAS Services
+const AITaskManagerPage = React.lazy(() => import('./app/ai-task-manager/page'))
+const AIExpenseTrackerPage = React.lazy(() => import('./app/ai-expense-tracker/page'))
+const AIPasswordManagerPage = React.lazy(() => import('./app/ai-password-manager/page'))
+const AIInvoiceGeneratorPage = React.lazy(() => import('./app/ai-invoice-generator/page'))
+const AIHealthTrackerPage = React.lazy(() => import('./app/ai-health-tracker/page'))
 
 // Loading component for Suspense
 const PageLoader = () => (
@@ -36,6 +44,14 @@ function App() {
                 <Route path="/ai-services" element={<AIServicesPage />} />
                 <Route path="/it-services" element={<ITServicesPage />} />
                 <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
+                
+                {/* Micro SAAS Services Routes */}
+                <Route path="/ai-task-manager" element={<AITaskManagerPage />} />
+                <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
+                <Route path="/ai-password-manager" element={<AIPasswordManagerPage />} />
+                <Route path="/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
+                <Route path="/ai-health-tracker" element={<AIHealthTrackerPage />} />
                 {/* 404 Route */}
                 <Route path="*" element={
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">

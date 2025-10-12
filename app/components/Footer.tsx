@@ -34,7 +34,17 @@ export default function Footer() {
     { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
     { name: 'AI Health Tracker', path: '/ai-health-tracker' },
     { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
-    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
+    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' },
+    { name: 'AI E-commerce Assistant', path: '/ai-ecommerce-assistant' },
+    { name: 'AI Document Processor', path: '/ai-document-processor' },
+    { name: 'AI Meeting Assistant', path: '/ai-meeting-assistant' },
+    { name: 'AI Code Assistant', path: '/ai-code-assistant' },
+    { name: 'AI Video Editor', path: '/ai-video-editor' },
+    { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+    { name: 'AI Learning Platform', path: '/ai-learning-platform' },
+    { name: 'AI Recruitment Tool', path: '/ai-recruitment-tool' },
+    { name: 'AI Inventory Manager', path: '/ai-inventory-manager' },
+    { name: 'AI Security Monitor', path: '/ai-security-monitor' }
   ];
 
   const fiveGServices = [

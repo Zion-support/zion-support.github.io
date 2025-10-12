@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, BarChart3, Settings } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, BarChart3, Settings, ArrowRight } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -73,7 +73,17 @@ export default function Navigation() {
     { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
     { name: 'AI Health Tracker', path: '/ai-health-tracker' },
     { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
-    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
+    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' },
+    { name: 'AI E-commerce Assistant', path: '/ai-ecommerce-assistant' },
+    { name: 'AI Document Processor', path: '/ai-document-processor' },
+    { name: 'AI Meeting Assistant', path: '/ai-meeting-assistant' },
+    { name: 'AI Code Assistant', path: '/ai-code-assistant' },
+    { name: 'AI Video Editor', path: '/ai-video-editor' },
+    { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+    { name: 'AI Learning Platform', path: '/ai-learning-platform' },
+    { name: 'AI Recruitment Tool', path: '/ai-recruitment-tool' },
+    { name: 'AI Inventory Manager', path: '/ai-inventory-manager' },
+    { name: 'AI Security Monitor', path: '/ai-security-monitor' }
   ];
 
   return (
@@ -107,18 +117,19 @@ export default function Navigation() {
               About
             </Link>
             
-            {/* AI Services Dropdown */}
+            {/* Services Dropdown */}
             <div className="relative">
               <button
-                onClick={() => toggleDropdown('ai')}
+                onClick={() => toggleDropdown('services')}
                 className="flex items-center text-white hover:text-cyan-400 transition-colors"
               >
-                AI Services
+                Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
-              {activeDropdown === 'ai' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
-                  {aiServices.map((service, index) => (
+              {activeDropdown === 'services' && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                  <div className="px-4 py-2 text-sm font-semibold text-cyan-400 border-b border-gray-700 mb-2">AI Services</div>
+                  {aiServices.slice(0, 4).map((service, index) => (
                     <Link
                       key={index}
                       to={service.path}
@@ -129,84 +140,52 @@ export default function Navigation() {
                       <span>{service.name}</span>
                     </Link>
                   ))}
-                </div>
-              )}
-            </div>
-
-            {/* IT Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('it')}
-                className="flex items-center text-white hover:text-cyan-400 transition-colors"
-              >
-                IT Services
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              {activeDropdown === 'it' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
-                  {itServices.map((service, index) => (
+                  <div className="px-4 py-2 text-sm font-semibold text-green-400 border-b border-gray-700 mb-2 mt-4">IT Services</div>
+                  {itServices.slice(0, 4).map((service, index) => (
                     <Link
                       key={index}
                       to={service.path}
                       onClick={closeDropdown}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                      className="flex items-center px-4 py-2 text-gray-300 hover:text-green-400 hover:bg-slate-700/50 transition-colors"
                     >
                       {service.icon}
                       <span className="ml-3">{service.name}</span>
                     </Link>
                   ))}
-                </div>
-              )}
-            </div>
-
-            {/* Micro SAAS Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('saas')}
-                className="flex items-center text-white hover:text-cyan-400 transition-colors"
-              >
-                Micro SAAS
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              {activeDropdown === 'saas' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
-                  {microSaasServices.map((service, index) => (
+                  <div className="px-4 py-2 text-sm font-semibold text-purple-400 border-b border-gray-700 mb-2 mt-4">Micro SAAS</div>
+                  {microSaasServices.slice(0, 4).map((service, index) => (
                     <Link
                       key={index}
                       to={service.path}
                       onClick={closeDropdown}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                      className="flex items-center px-4 py-2 text-gray-300 hover:text-purple-400 hover:bg-slate-700/50 transition-colors"
                     >
                       <Cpu className="w-4 h-4 mr-3" />
                       <span>{service.name}</span>
                     </Link>
                   ))}
-                </div>
-              )}
-            </div>
-
-            {/* 5G Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('5g')}
-                className="flex items-center text-white hover:text-cyan-400 transition-colors"
-              >
-                5G Solutions
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              {activeDropdown === '5g' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
-                  {fiveGServices.map((service, index) => (
+                  <div className="px-4 py-2 text-sm font-semibold text-yellow-400 border-b border-gray-700 mb-2 mt-4">5G Solutions</div>
+                  {fiveGServices.slice(0, 4).map((service, index) => (
                     <Link
                       key={index}
                       to={service.path}
                       onClick={closeDropdown}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                      className="flex items-center px-4 py-2 text-gray-300 hover:text-yellow-400 hover:bg-slate-700/50 transition-colors"
                     >
                       {service.icon}
                       <span className="ml-3">{service.name}</span>
                     </Link>
                   ))}
+                  <div className="border-t border-gray-700 mt-2 pt-2">
+                    <Link
+                      to="/micro-saas-services"
+                      onClick={closeDropdown}
+                      className="flex items-center px-4 py-2 text-cyan-400 hover:text-cyan-300 hover:bg-slate-700/50 transition-colors font-semibold"
+                    >
+                      View All Services
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
