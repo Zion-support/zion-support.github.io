@@ -1,62 +1,62 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Globe, Settings } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Globe, Settings, FileText, BarChart3, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const MicroSAASServicesPage: React.FC = () => {
   const microSAAS = [
     {
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
+      icon: <FileText className="w-8 h-8 text-blue-500" />,
+      title: 'AI Invoice Generator',
+      description: 'Create professional invoices automatically with AI-powered generation and smart templates.',
+      features: ['AI-powered generation', 'Professional templates', 'Auto calculations', 'PDF export'],
+      pricing: 'Starting at $9/month',
+      link: '/ai-invoice-generator',
+      popular: true
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: 'AI Password Manager',
+      description: 'Secure your digital life with AI-powered password management and breach monitoring.',
+      features: ['Zero-knowledge encryption', 'AI generation', 'Breach monitoring', 'Cross-platform sync'],
+      pricing: 'Starting at $3/month',
+      link: '/ai-password-manager',
+      popular: true
+    },
+    {
+      icon: <DollarSign className="w-8 h-8 text-green-500" />,
+      title: 'AI Expense Tracker',
+      description: 'Track expenses effortlessly with AI-powered receipt scanning and smart categorization.',
+      features: ['Receipt scanning', 'Smart categorization', 'Visual analytics', 'Budget tracking'],
+      pricing: 'Starting at $9/month',
+      link: '/ai-expense-tracker',
+      popular: true
+    },
+    {
+      icon: <Brain className="w-8 h-8 text-purple-500" />,
       title: 'AI Content Generator',
       description: 'Generate high-quality content automatically using advanced AI technology.',
       features: ['Multi-language support', 'SEO optimization', 'Brand voice customization'],
       pricing: 'Starting at $29/month',
       link: '/ai-content-generator',
-      popular: true
-    },
-    {
-      icon: <Clock className="w-8 h-8 text-green-500" />,
-      title: 'Task Management Pro',
-      description: 'Streamline your workflow with intelligent task management and automation.',
-      features: ['Smart scheduling', 'Team collaboration', 'Progress tracking'],
-      pricing: 'Starting at $19/month',
-      link: '/task-management',
       popular: false
     },
     {
-      icon: <DollarSign className="w-8 h-8 text-purple-500" />,
-      title: 'Expense Tracker AI',
-      description: 'Automatically track and categorize expenses with AI-powered insights.',
-      features: ['Receipt scanning', 'Smart categorization', 'Budget alerts'],
-      pricing: 'Starting at $15/month',
-      link: '/expense-tracker',
-      popular: true
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'Password Manager',
-      description: 'Secure password management with advanced encryption and AI features.',
-      features: ['Zero-knowledge encryption', 'Password generator', 'Breach monitoring'],
-      pricing: 'Starting at $9/month',
-      link: '/password-manager',
-      popular: false
-    },
-    {
-      icon: <Brain className="w-8 h-8 text-orange-500" />,
+      icon: <BarChart3 className="w-8 h-8 text-orange-500" />,
       title: 'AI Analytics Dashboard',
       description: 'Transform your data into actionable insights with AI-powered analytics.',
       features: ['Real-time analytics', 'Custom dashboards', 'Predictive insights'],
       pricing: 'Starting at $39/month',
-      link: '/analytics-dashboard',
-      popular: true
+      link: '/ai-analytics-dashboard',
+      popular: false
     },
     {
-      icon: <Users className="w-8 h-8 text-indigo-500" />,
-      title: 'Team Collaboration Hub',
-      description: 'Enhance team productivity with integrated communication and project management.',
-      features: ['Real-time chat', 'File sharing', 'Project tracking'],
-      pricing: 'Starting at $25/month',
-      link: '/team-collaboration',
+      icon: <Mail className="w-8 h-8 text-indigo-500" />,
+      title: 'AI Email Assistant',
+      description: 'Boost productivity with AI-powered email management and smart responses.',
+      features: ['Smart replies', 'Email scheduling', 'Priority sorting', 'Template suggestions'],
+      pricing: 'Starting at $15/month',
+      link: '/ai-email-assistant',
       popular: false
     }
   ];

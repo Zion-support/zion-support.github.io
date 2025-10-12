@@ -12,6 +12,15 @@ export default function Footer() {
     { name: 'AI Automation Suite', path: '/ai-automation' }
   ]
 
+  const microSAAS = [
+    { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
+    { name: 'AI Password Manager', path: '/ai-password-manager' },
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
+    { name: 'AI Content Generator', path: '/ai-content-generator' },
+    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
+    { name: 'AI Email Assistant', path: '/ai-email-assistant' }
+  ]
+
   const itServices = [
     { name: 'Cloud Migration', path: '/cloud-migration' },
     { name: 'DevOps Solutions', path: '/devops-solutions' },
@@ -42,7 +51,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
@@ -70,6 +79,24 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">AI Services</h3>
             <ul className="space-y-2">
               {aiServices.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.path} 
+                    className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Micro SaaS */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
+            <ul className="space-y-2">
+              {microSAAS.map((service, index) => (
                 <li key={index}>
                   <Link 
                     to={service.path} 
@@ -138,15 +165,15 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center">
               <Mail className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">contact@ziontech.com</span>
+              <span className="text-gray-400">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
               <Phone className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">+1 (555) 123-4567</span>
+              <span className="text-gray-400">+1 302 464 0950</span>
             </div>
             <div className="flex items-center">
               <MapPin className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">San Francisco, CA</span>
+              <span className="text-gray-400">364 E Main St STE 1008 Middletown DE 19709</span>
             </div>
           </div>
         </div>
