@@ -1,14 +1,14 @@
-  const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
+  const G A_ TR AC KI NG_ ID = process.env.R EA CT_ AP P_ GA_ TR AC KI NG_ ID || 'G-X XX XX XX XX X';
   
     // Initialize Google Analytics
     
-      const script = document.createElement('script');
+      const script = document.create Element('script');
       script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
-      document.head.appendChild(script);
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${G A_ TR AC KI NG_ ID}`;
+      document.head.append Child(script);
       // Initialize gtag
-      (window as { dataLayer: unknown[] }).dataLayer = (window as { dataLayer: unknown[] }).dataLayer || [];
-        (window as { dataLayer: unknown[] }).dataLayer.push(args);
+      (window as { data Layer: unknown[] }).data Layer = (window as { data Layer: unknown[] }).data Layer || [];
+        (window as { data Layer: unknown[] }).data Layer.push(args);
       }
       (window as { gtag: typeof gtag }).gtag = gtag;
       gtag('js', new Date());
@@ -28,36 +28,36 @@
     };
     // Track user interactions
     
-        const target = e.target as HTMLElement;
-          const text = target.textContent?.trim() || '';
-          const href = target.getAttribute('href') || '';
+        const target = e.target as H TM LElement;
+          const text = target.text Content?.trim() || '';
+          const href = target.get Attribute('href') || '';
               value: href
             });
           }
         }
       });
       // Track form submissions
-        const form = e.target as HTMLFormElement;
+        const form = e.target as H TM LForm Element;
             event_label: form.id || 'contact_form'
           });
         }
       });
       // Track phone number clicks
-        const target = e.target as HTMLElement;
-              value: target.getAttribute('href')
+        const target = e.target as H TM LElement;
+              value: target.get Attribute('href')
             });
           }
         }
       });
     };
     // Initialize analytics
-    initAnalytics();
-    trackPageView();
-    trackInteractions();
-    window.addEventListener('popstate', handleRouteChange);
-      window.removeEventListener('popstate', handleRouteChange);
+    init Analytics();
+    track Page View();
+    track Interactions();
+    window.add Event Listener('popstate', handle Route Change);
+      window.remove Event Listener('popstate', handle Route Change);
     };
-  }, [GA_TRACKING_ID]);
+  }, [G A_ TR AC KI NG_ ID]);
   return <>{children}</>;
 };
 export default AnalyticsProvider;

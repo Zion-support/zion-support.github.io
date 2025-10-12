@@ -3,225 +3,225 @@ import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight } from 'lucide-react';
 
-export default function AiDrugDiscoveryProPage() {
+export default function Ai Drug Discovery Pro Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AI Drug Discovery Pro - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered drug discovery platform. Accelerate pharmaceutical research with advanced machine learning and molecular modeling." />
-        <meta name="keywords" content="AI drug discovery, pharmaceutical AI, molecular modeling, drug development, clinical trials, biotechnology" />
-      </Helmet>
+    <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <H elmet>
+        <t itle>A I Drug Discovery Pro - Zion Tech Group</t itle>
+        <m eta name="description" content="Revolutionary A I-powered drug discovery platform. Accelerate pharmaceutical research with advanced machine learning and molecular modeling." />
+        <m eta name="keywords" content="A I drug discovery, pharmaceutical A I, molecular modeling, drug development, clinical trials, biotechnology" />
+      </H elmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Drug Discovery Pro
+      <s ection class Name="r elative py-20 px-4 sm:px-6 lg:px-8">
+        <d iv class Name="m ax-w-7xl mx-auto">
+          <d iv class Name="t ext-center mb-16">
+            <h1 c lass Name="t ext-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+              A I Drug Discovery Pro
             </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize pharmaceutical research with our advanced AI-powered drug discovery platform.
+            <p c lass Name="t ext-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Revolutionize pharmaceutical research with our advanced A I-powered drug discovery platform.
               Accelerate drug development, reduce costs, and improve success rates with cutting-edge technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+            <d iv class Name="f lex flex-col sm:flex-row gap-4 justify-center">
+              <L ink
                 to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                class Name="b g-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
               >
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
+                <A rrow Right class Name="m l-2 w-5 h-5" />
+              </L ink>
+              <L ink
                 to="/demo"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+                class Name="b order border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
                 Request Demo
-              </Link>
-            </div>
-        </div>
-      </section>
+              </L ink>
+            </d iv>
+        </d iv>
+      </s ection>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <s ection class Name="p y-20 px-4 sm:px-6 lg:px-8">
+        <d iv class Name="m ax-w-7xl mx-auto">
+          <d iv class Name="t ext-center mb-16">
+            <h2 c lass Name="t ext-3xl md:text-4xl font-bold text-white mb-4">
               Advanced Drug Discovery Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Cutting-edge AI technology to accelerate pharmaceutical research and development.
+            <p c lass Name="t ext-xl text-gray-300 max-w-3xl mx-auto">
+              Cutting-edge A I technology to accelerate pharmaceutical research and development.
             </p>
-          </div>
+          </d iv>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <d iv class Name="g rid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+              <d iv key={index} class Name="b g-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <d iv class Name="m b-4">{feature.icon}</d iv>
+                <h3 c lass Name="t ext-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p c lass Name="t ext-gray-300">{feature.description}</p>
+              </d iv>
             ))}
-          </div>
-      </section>
+          </d iv>
+      </s ection>
 
       {/* Applications Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <s ection class Name="p y-20 px-4 sm:px-6 lg:px-8">
+        <d iv class Name="m ax-w-7xl mx-auto">
+          <d iv class Name="b g-white/10 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/20">
+            <d iv class Name="t ext-center mb-12">
+              <h2 c lass Name="t ext-3xl md:text-4xl font-bold text-white mb-4">
                 Research Applications
               </h2>
-              <p className="text-xl text-gray-300">
-                Our AI drug discovery platform supports research across multiple therapeutic areas
+              <p c lass Name="t ext-xl text-gray-300">
+                Our A I drug discovery platform supports research across multiple therapeutic areas
               </p>
-            </div>
+            </d iv>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <d iv class Name="g rid grid-cols-2 md:grid-cols-4 gap-6">
               {applications.map((application, index) => (
-                <div key={index} className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-sm">{application}</span>
-                </div>
+                <d iv key={index} class Name="f lex items-center text-gray-300">
+                  <C heck Circle class Name="w-5 h-5 t ext-green-400 mr-3 flex-shrink-0" />
+                  <s pan class Name="t ext-sm">{application}</s pan>
+                </d iv>
               ))}
-            </div>
-        </div>
-      </section>
+            </d iv>
+        </d iv>
+      </s ection>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+      {/* C TA Section */}
+      <s ection class Name="p y-20 px-4 sm:px-6 lg:px-8">
+        <d iv class Name="m ax-w-7xl mx-auto">
+          <d iv class Name="b g-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
+            <h2 c lass Name="t ext-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Accelerate Drug Discovery?
             </h2>
-            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Transform your pharmaceutical research with our AI-powered drug discovery platform.
+            <p c lass Name="t ext-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              Transform your pharmaceutical research with our A I-powered drug discovery platform.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+            <d iv class Name="f lex flex-col sm:flex-row gap-4 justify-center">
+              <L ink
                 to="/contact"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+                class Name="b g-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
               >
                 Contact Our Experts
-              </Link>
-              <Link
+              </L ink>
+              <L ink
                 to="/ai-services"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
+                class Name="b order border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
-                View All AI Services
-              </Link>
-            </div>
-        </div>
-      </section>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AI Drug Discovery Pro - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered drug discovery platform. Accelerate pharmaceutical research with advanced machine learning and molecular modeling." />
-        <meta name="keywords" content="AI drug discovery, pharmaceutical AI, molecular modeling, drug development, clinical trials, biotechnology" />
-      </Helmet>
+                View All A I Services
+              </L ink>
+            </d iv>
+        </d iv>
+      </s ection>    <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <H elmet>
+        <t itle>A I Drug Discovery Pro - Zion Tech Group</t itle>
+        <m eta name="description" content="Revolutionary A I-powered drug discovery platform. Accelerate pharmaceutical research with advanced machine learning and molecular modeling." />
+        <m eta name="keywords" content="A I drug discovery, pharmaceutical A I, molecular modeling, drug development, clinical trials, biotechnology" />
+      </H elmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Drug Discovery Pro
+      <s ection class Name="r elative py-20 px-4 sm:px-6 lg:px-8">
+        <d iv class Name="m ax-w-7xl mx-auto">
+          <d iv class Name="t ext-center mb-16">
+            <h1 c lass Name="t ext-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+              A I Drug Discovery Pro
             </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize pharmaceutical research with our advanced AI-powered drug discovery platform.
+            <p c lass Name="t ext-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Revolutionize pharmaceutical research with our advanced A I-powered drug discovery platform.
               Accelerate drug development, reduce costs, and improve success rates with cutting-edge technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+            <d iv class Name="f lex flex-col sm:flex-row gap-4 justify-center">
+              <L ink
                 to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                class Name="b g-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
               >
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
+                <A rrow Right class Name="m l-2 w-5 h-5" />
+              </L ink>
+              <L ink
                 to="/demo"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+                class Name="b order border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
                 Request Demo
-              </Link>
-            </div>
-        </div>
-      </section>
+              </L ink>
+            </d iv>
+        </d iv>
+      </s ection>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <s ection class Name="p y-20 px-4 sm:px-6 lg:px-8">
+        <d iv class Name="m ax-w-7xl mx-auto">
+          <d iv class Name="t ext-center mb-16">
+            <h2 c lass Name="t ext-3xl md:text-4xl font-bold text-white mb-4">
               Advanced Drug Discovery Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Cutting-edge AI technology to accelerate pharmaceutical research and development.
+            <p c lass Name="t ext-xl text-gray-300 max-w-3xl mx-auto">
+              Cutting-edge A I technology to accelerate pharmaceutical research and development.
             </p>
-          </div>
+          </d iv>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <d iv class Name="g rid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+              <d iv key={index} class Name="b g-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <d iv class Name="m b-4">{feature.icon}</d iv>
+                <h3 c lass Name="t ext-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p c lass Name="t ext-gray-300">{feature.description}</p>
+              </d iv>
             ))}
-          </div>
-      </section>
+          </d iv>
+      </s ection>
 
       {/* Applications Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <s ection class Name="p y-20 px-4 sm:px-6 lg:px-8">
+        <d iv class Name="m ax-w-7xl mx-auto">
+          <d iv class Name="b g-white/10 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/20">
+            <d iv class Name="t ext-center mb-12">
+              <h2 c lass Name="t ext-3xl md:text-4xl font-bold text-white mb-4">
                 Research Applications
               </h2>
-              <p className="text-xl text-gray-300">
-                Our AI drug discovery platform supports research across multiple therapeutic areas
+              <p c lass Name="t ext-xl text-gray-300">
+                Our A I drug discovery platform supports research across multiple therapeutic areas
               </p>
-            </div>
+            </d iv>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <d iv class Name="g rid grid-cols-2 md:grid-cols-4 gap-6">
               {applications.map((application, index) => (
-                <div key={index} className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-sm">{application}</span>
-                </div>
+                <d iv key={index} class Name="f lex items-center text-gray-300">
+                  <C heck Circle class Name="w-5 h-5 t ext-green-400 mr-3 flex-shrink-0" />
+                  <s pan class Name="t ext-sm">{application}</s pan>
+                </d iv>
               ))}
-            </div>
-        </div>
-      </section>
+            </d iv>
+        </d iv>
+      </s ection>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+      {/* C TA Section */}
+      <s ection class Name="p y-20 px-4 sm:px-6 lg:px-8">
+        <d iv class Name="m ax-w-7xl mx-auto">
+          <d iv class Name="b g-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
+            <h2 c lass Name="t ext-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Accelerate Drug Discovery?
             </h2>
-            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Transform your pharmaceutical research with our AI-powered drug discovery platform.
+            <p c lass Name="t ext-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              Transform your pharmaceutical research with our A I-powered drug discovery platform.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+            <d iv class Name="f lex flex-col sm:flex-row gap-4 justify-center">
+              <L ink
                 to="/contact"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+                class Name="b g-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
               >
                 Contact Our Experts
-              </Link>
-              <Link
+              </L ink>
+              <L ink
                 to="/ai-services"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
+                class Name="b order border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
-                View All AI Services
-              </Link>
-            </div>
-        </div>
-      </section>
-    </div>
+                View All A I Services
+              </L ink>
+            </d iv>
+        </d iv>
+      </s ection>
+    </d iv>
   );
 }

@@ -1,25 +1,25 @@
-import { memo, useMemo} from 'react';
+import { memo, use Memo} from 'react';
 'use client'
 
-interface OptimizedLoadingSpinnerProps {
+interface Optimized Loading Spinner Props {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars'
   text?: string
-  className?: string
+  class Name?: string
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
-  fullScreen?: boolean
+  full Screen?: boolean
 }
 
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
+const Optimized Loading Spinner: React.F C<O ptimized Loading Spinner Props /> = memo(
   ({
     const size = 'md',
     variant = 'spinner',
     text = 'Loading...',
-    className = '',
+    class Name = '',
     color = 'blue',
-    fullScreen = false,
+    full Screen = false,
   }) => {
-    const sizeClasses = useMemo(
+    const size Classes = use Memo(
       () => ({
         xs: 'h-3 w-3',
         sm: 'h-4 w-4',
@@ -30,7 +30,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       []
     )
 
-    const textSizeClasses = useMemo(
+    const text Size Classes = use Memo(
       () => ({
         xs: 'text-xs',
         sm: 'text-sm',
@@ -41,7 +41,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       []
     )
 
-    const colorClasses = useMemo(
+    const color Classes = use Memo(
       () => ({
         blue: 'text-blue-500',
         gray: 'text-gray-500',
@@ -52,146 +52,113 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       []
     )
 
-    const renderSpinner = () => {
+    const render Spinner = () => {
       switch (variant) {
         case 'dots':
           return (
-<<<<<<< HEAD
-    <div className="flex space-x-1">
-=======
-    <div className="flexspace-x-1">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+    <d iv class Name="f lexspace-x-1">
+        </d iv>
               {[0, 1, 2].map((i) => (
-                <div
+                <d iv
 
     variant = 'spinner',
     text = 'Loading...',
-    className = '',
+    class Name = '',
     color = 'blue',
-    fullScreen = false,}
-  }) = /> {const sizeClasses = useMemo(() => ({xs: 'h-3 w-3',
+    full Screen = false,}
+  }) = /> {const size Classes = use Memo(() => ({xs: 'h-3 w-3',
         sm: 'h-4 w-4',
         md: 'h-8 w-8',
         lg: 'h-12 w-12',
         xl: 'h-16 w-16',}
       }),;
-      []);const textSizeClasses = useMemo(() => ({xs: 'text-xs',
+      []);const text Size Classes = use Memo(() => ({xs: 'text-xs',
         sm: 'text-sm',
         md: 'text-base',
         lg: 'text-lg',
         xl: 'text-xl',}
       }),;
-      []);const colorClasses = useMemo(() => ({blue: 'border-blue-600 bg-blue-600',
+      []);const color Classes = use Memo(() => ({blue: 'border-blue-600 bg-blue-600',
         gray: 'border-gray-600 bg-gray-600',
         green: 'border-green-600 bg-green-600',
         red: 'border-red-600 bg-red-600',
         purple: 'border-purple-600 bg-purple-600',}
       }),;
-      []);const renderSpinner = useMemo(() => {switch (variant) {case 'dots':
-    <>
-          return (<div className="'flex" space-x-1' role="'status'" aria-label="'Loading'" /></div>
-              {[0, 1, 2].map(i => (</div>
-                <div}
+      []);const render Spinner = use Memo(() => {switch (variant) {case 'dots':
+
+          return (<d iv class Name="'f lex" space-x-1' role="'status'" aria-label="'Loading'" /></d iv>
+              {[0, 1, 2].map(i => (</d iv>
+                <d iv}
                   key="{i}"
-                  className="{`${sizeClasses[size]}" rounded-full bg-current animate-pulse`}
-                  style="{{" animationDelay: `${i * 0.2}s` }}
+                  class Name="{`${s ize Classes[size]}" rounded-full bg-current animate-pulse`}
+                  style="{{" animation Delay: `${i * 0.2}s` }}
                 />))}
-            </div>
+            </d iv>
           )
         case 'pulse':
           return (
-    <div
-              className="{`${sizeClasses[size]}" rounded-full bg-current animate-pulse`}
+    <d iv
+              class Name="{`${s ize Classes[size]}" rounded-full bg-current animate-pulse`}
             / />
           )
         case 'skeleton':
           return (
-<<<<<<< HEAD
-    <div className="space-y-2">
-              <div className="h-4 bg-current roundedanimate-pulse" />
-              <div className="h-4 bg-current rounded animate-pulsew-3/4" />
-              <div className="h-4 bg-current rounded animate-pulsew-1/2" /  > </div>
+
+    <d iv class Name="s pace-y-2">
+        </d iv>
+              <d iv class Name="h-4 b g-current roundedanimate-pulse" / />
+              <d iv class Name="h-4 b g-current rounded animate-pulsew-3/4" / />
+              <d iv class Name="h-4 b g-current rounded animate-pulsew-1/2" /> </d iv>
           )
         case 'bars':
           return (
-    <div className="flex space-x-1">
-=======
-    <>
-    <div className="space-y-2">
-        </div>
-              <div className="h-4 bg-current roundedanimate-pulse" / />
-              <div className="h-4 bg-current rounded animate-pulsew-3/4" / />
-              <div className="h-4 bg-current rounded animate-pulsew-1/2" /> </div>
-          )
-        case 'bars':
-          return (
-    <div className="flexspace-x-1">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+    <d iv class Name="f lexspace-x-1">
+        </d iv>
               {[0, 1, 2, 3].map((i) => (
-                <div
+                <d iv
                   key="{i}"
-                  className="{`w-1" bg-current animate-pulse`}
+                  class Name="{`w-1" bg-current animate-pulse`}
                   style="{{"
                     height: `${8 + i * 4}px`,
-                    animationDelay: `${i * 0.1}s`,
+                    animation Delay: `${i * 0.1}s`,
                   }}
                 />))}
-            </div>
+            </d iv>
           )
         default:
           return (
-    <div
-              className="{`${sizeClasses[size]}" border-2 border-current border-t-transparent rounded-full animate-spin`}
+    <d iv
+              class Name="{`${s ize Classes[size]}" border-2 border-current border-t-transparent rounded-full animate-spin`}
             / />
           )
       }
     }
 
-<<<<<<< HEAD
-    const containerClasses = fullScreen
-      ? 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center'
-      : 'flex items-center justify-center p-8'
-
-      <div className="{containerClasses}"></div>
-        <div className="'text-center'"></div>
-=======
   const content = (
-    <div className="{`flex" flex-col items-center justify-center space-y-4 ${className}`} />
-      {renderSpinner()}
+    <d iv class Name="{`f lex" flex-col items-center justify-center space-y-4 ${class Name}`} />
+      {render Spinner()}
       {text && (
-        <p className="{`${textSizeClasses[size]}" ${colorClasses[color]} font-medium`}>
+        <p c lass Name="{`${t ext Size Classes[size]}" ${color Classes[color]} font-medium`}>
           {text}
         </p>
       )}
-    </div>
+    </d iv>
   );
 
-    <>
-      <div className="{containerClasses}" /></div>
-        <div className="'text-center'" /></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          {renderSpinner}
-    <>
-          {text && (</div>}
-            <p className="{`mt-2" text-gray-600 ${textSizeClasses[size]}`}>
+      <d iv class Name="{c ontainer Classes}" /></d iv>
+        <d iv class Name="'t ext-center'" /></d iv>
+          {render Spinner}
+
+          {text && (</d iv>}
+            <p c lass Name="{`m t-2" text-gray-600 ${text Size Classes[size]}`}>
               {text}
             </p>
           )}
-    <>
-        </div>
-<<<<<<< HEAD
-    )
-=======
+
+        </d iv>
     );
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
   }
-</div></div>)
+</d iv></d iv>)
 ;
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner
+Optimized Loading Spinner.display Name = 'Optimized Loading Spinner';export default Optimized Loading Spinner
 }
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

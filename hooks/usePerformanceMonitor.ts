@@ -1,21 +1,21 @@
-import { useEffect } from 'react';
+import { use Effect } from 'react';
 
 export const usePerformanceMonitor = () => {
-  useEffect(() => {
+  use Effect(() => {
     // Monitor page load performance
-    const monitorPageLoad = () => {
+    const monitor Page Load = () => {
       if ('performance' in window) {
-        window.addEventListener('load', () => {
-          setTimeout(() => {
-            const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-            const paint = performance.getEntriesByType('paint');
+        window.add Event Listener('load', () => {
+          set Timeout(() => {
+            const navigation = performance.get Entries By Type('navigation')[0] as Performance Navigation Timing;
+            const paint = performance.get Entries By Type('paint');
             
             // Log performance metrics
             console.log('Page Load Performance:', {
-              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-              firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+              dom Content Loaded: navigation.dom Content Loaded Event End - navigation.dom Content Loaded Event Start,
+              load Complete: navigation.load Event End - navigation.load Event Start,
+              first Paint: paint.find(entry => entry.name === 'first-paint')?.start Time,
+              first Contentful Paint: paint.find(entry => entry.name === 'first-contentful-paint')?.start Time,
             });
           }, 0);
         });
@@ -23,29 +23,29 @@ export const usePerformanceMonitor = () => {
     };
 
     // Monitor resource loading
-    const monitorResourceLoading = () => {
+    const monitor Resource Loading = () => {
       if ('performance' in window) {
-        const observer = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.entryType === 'resource') {
+        const observer = new Performance Observer((list) => {
+          list.get Entries().for Each((entry) => {
+            if (entry.entry Type === 'resource') {
               console.log('Resource loaded:', {
                 name: entry.name,
                 duration: entry.duration,
-                size: (entry as any).transferSize,
+                size: (entry as any).transfer Size,
               });
             }
           });
         });
         
-        observer.observe({ entryTypes: ['resource'] });
+        observer.observe({ entry Types: ['resource'] });
         
         return () => observer.disconnect();
       }
     };
 
     // Initialize monitoring
-    monitorPageLoad();
-    const cleanup = monitorResourceLoading();
+    monitor Page Load();
+    const cleanup = monitor Resource Loading();
 
     // Cleanup
     return () => {

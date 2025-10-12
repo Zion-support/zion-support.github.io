@@ -1,500 +1,326 @@
 'use client'
 'use client';import React
-, { useState, useCallback } from 'react'
+, { use State, use Callback } from 'react'
 
   CheckCircle}
 } from 'lucide-react'
     message: ''
   })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [is Submitting, set Is Submitting] = use State(false)
+  const [submit Status, set Submit Status] = use State<'i dle' | 'success' | 'error'>('idle')
 
-  });const [isSubmitting, setIsSubmitting] = useState(false)
-    setSubmitStatus('idle');try {// Simulate form submission
-      await new Promise(const resolve = > setTimeout(resolve, 1000))
-      setSubmitStatus('success')
+  });const [is Submitting, set Is Submitting] = use State(false)
+    set Submit Status('idle');try {// Simulate form submission
+      await new Promise(const resolve = > set Timeout(resolve, 1000))
+      set Submit Status('success')
         message: ''}
-      })} catch (error) {setSubmitStatus('error')}
-    } finally {setIsSubmitting(false)}
+      })} catch (error) {set Submit Status('error')}
+    } finally {set Is Submitting(false)}
     }
   }
 
   ];
-    <>
-  ];return (<React.Fragment /></React.Fragment>
-      <Helmet>
-<<<<<<< HEAD
-=======
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta const name = "description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." / / />
-        <meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" / / />
-      </Helmet>
-<<<<<<< HEAD
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900py-20"></div>
-        <div className="containermx-autopx-4"></div>
+
+  ];return (<R eact.Fragment /></R eact.Fragment>
+      <H elmet>
+        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </H elmet>
+        <t itle>Contact Us - Zion Tech Group | Get in Touch</t itle>
+        <m eta const name = "description" content="Get in touch with Zion Tech Group for A I and I T solutions. Contact us for consultations, support, or to discuss your project needs." / / />
+        <m eta name="keywords" content="contact us, Zion Tech Group, A I consultation, I T support, get in touch" / / />
+      </H elmet>
+<d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900py-20">
+        </d iv></d iv>
+        <d iv class Name="c ontainermx-autopx-4">
+        </d iv></d iv>
           {/* Header */}
-          <div className="text-centermb-16"></div>
-            <h1 className="text-5 xl lg:text-7 xl font-bold text-white mb-6" />
-=======
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900py-20">
-        </div></div>
-        <div className="containermx-autopx-4">
-        </div></div>
-          {/* Header */}
-    <>
-          <div className="text-centermb-16">
-        </div></div>
-            <h1 className="text-5 xl lg:text-7 xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+          <d iv class Name="t ext-centermb-16">
+        </d iv></d iv>
+            <h1 c lass Name="t ext-5 xl lg:text-7 xl font-boldtext-whitemb-6" />
               Get in
-    <>
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-500bg-clip-texttext-transparent">{' '}Touch
-              </span>
+
+              <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-500bg-clip-texttext-transparent">{' '}Touch
+              </s pan>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+            <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto">
               Ready to transform your business? Let's discuss your project and explore
-              how our AI and IT solutions can help you achieve your goals.
-    <>
+              how our A I and I T solutions can help you achieve your goals.
+
             </p>
-          </div>
-        </section>
-<<<<<<< HEAD
-<div className="grid grid-cols-1lg:grid-cols-2gap-12"></div>
+          </d iv>
+        </s ection>
+<d iv class Name="g rid grid-cols-1lg:grid-cols-2gap-12">
+        </d iv></d iv>
             {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2 xl p-8borderborder-white/10"></div>
-              <h2 className="text-3 xl font-bold text-white mb-6"  >Send us a Message</h2>
-              {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-centergap-3"></div>
-                  <CheckCircle className="w-5h-5text-green-400" />
-                  <span className="text-green-400"  >Message sent successfully! We'll get back to you soon.</span>
-                </div>}
+
+            <d iv class Name="b g-white/5 backdrop-blur-lg rounded-2 xl p-8borderborder-white/10">
+        </d iv></d iv>
+              <h2 c lass Name="t ext-3 xl font-boldtext-whitemb-6">Send us a Message</h2>
+              {submit Status === 'success' && (<d iv class Name="m b-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flexitems-centergap-3">
+        </d iv></d iv>
+                  <C heck Circle class Name="w-5h-5t ext-green-400" / />
+                  <s pan class Name="t ext-green-400">Message sent successfully! We'll get back to you soon.</s pan>
+                </d iv>}
               )}
 
-              {submitStatus === 'error' && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-centergap-3"></div>
-                  <span className="text-red-400"  >Failed to send message. Please try again.</span>
-=======
-<div className="grid grid-cols-1lg:grid-cols-2gap-12">
-        </div></div>
-            {/* Contact Form */}
-    <>
-            <div className="bg-white/5 backdrop-blur-lg rounded-2 xl p-8borderborder-white/10">
-        </div></div>
-              <h2 className="text-3 xl font-boldtext-whitemb-6">Send us a Message</h2>
-              {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flexitems-centergap-3">
-        </div></div>
-                  <CheckCircle className="w-5h-5text-green-400" / />
-                  <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
-                </div>}
+              {submit Status === 'error' && (<d iv class Name="m b-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flexitems-centergap-3">
+        </d iv></d iv>
+                  <s pan class Name="t ext-red-400">Failed to send message. Please try again.</s pan>
+                </d iv>}
               )}
 
-    <>
-              {submitStatus === 'error' && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flexitems-centergap-3">
-        </div></div>
-                  <span className="text-red-400">Failed to send message. Please try again.</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>}
-              )}
+              <f orm on Submit="{handle Submit}" class Name="s pace-y-6" />
+                <d iv class Name="g rid grid-cols-1md:grid-cols-2gap-6">
+        </d iv></d iv>
+                  <d iv /></d iv>
+                    <l abel class Name="b lock text-sm font-mediumtext-gray-300mb-2">Full Name *
+                    </l abel>
+                    <d iv class Name="r elative"></d iv>
+                      <U ser class Name="a bsolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
+                      />
 
-    <>
-              <form onSubmit="{handleSubmit}" className="space-y-6" />
-<<<<<<< HEAD
-                <div className="grid grid-cols-1md:grid-cols-2gap-6"></div>
-                  <div /></div>
-                    <label className="block text-sm font-mediumtext-gray-300 mb-2"  />Full Name *
-=======
-                <div className="grid grid-cols-1md:grid-cols-2gap-6">
-        </div></div>
-                  <div /></div>
-                    <label className="block text-sm font-mediumtext-gray-300mb-2">Full Name *
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </label>
-                    <div className="relative"></div>
-                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
+                    </d iv>
+                  <d iv /></d iv>
+                    <l abel class Name="b lock text-sm font-mediumtext-gray-300mb-2">Email Address *
+                    </l abel>
+                    <d iv class Name="r elative"></d iv>
+                      <M ail class Name="a bsolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
                       />
-    <>
-                    </div>
-                  <div /></div>
-<<<<<<< HEAD
-                    <label className="block text-sm font-mediumtext-gray-300 mb-2"  />Email Address *
-=======
-                    <label className="block text-sm font-mediumtext-gray-300mb-2">Email Address *
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </label>
-                    <div className="relative"></div>
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
+
+                    </d iv>
+                </d iv>
+                <d iv class Name="g rid grid-cols-1md:grid-cols-2gap-6">
+        </d iv></d iv>
+                  <d iv /></d iv>
+                    <l abel class Name="b lock text-sm font-mediumtext-gray-300mb-2">Company
+                    </l abel>
+                    <d iv class Name="r elative"></d iv>
+                      <B uilding class Name="a bsolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
                       />
-    <>
-                    </div>
-                </div>
-<<<<<<< HEAD
-                <div className="grid grid-cols-1md:grid-cols-2gap-6"></div>
-                  <div /></div>
-                    <label className="block text-sm font-mediumtext-gray-300 mb-2"  />Company
-=======
-                <div className="grid grid-cols-1md:grid-cols-2gap-6">
-        </div></div>
-                  <div /></div>
-                    <label className="block text-sm font-mediumtext-gray-300mb-2">Company
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </label>
-                    <div className="relative"></div>
-                      <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
+
+                    </d iv>
+                  <d iv /></d iv>
+                    <l abel class Name="b lock text-sm font-mediumtext-gray-300mb-2">Phone Number
+                    </l abel>
+                    <d iv class Name="r elative"></d iv>
+                      <P hone class Name="a bsolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
                       />
-    <>
-                    </div>
-                  <div /></div>
-<<<<<<< HEAD
-                    <label className="block text-sm font-mediumtext-gray-300 mb-2"  />Phone Number
-=======
-                    <label className="block text-sm font-mediumtext-gray-300mb-2">Phone Number
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </label>
-                    <div className="relative"></div>
-                      <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
-                      />
-    <>
-                    </div>
-                </div>
-                <div /></div>
-<<<<<<< HEAD
-                  <label className="block text-sm font-mediumtext-gray-300 mb-2"  />Service Interest
-=======
-                  <label className="block text-sm font-mediumtext-gray-300mb-2">Service Interest
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </label>
-                  <div className="relative"></div>
-                    <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
-                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-whitefocus:outline-nonefocus:border-cyan-500">
-                      <option value="">Select a service</option>
+
+                    </d iv>
+                </d iv>
+                <d iv /></d iv>
+                  <l abel class Name="b lock text-sm font-mediumtext-gray-300mb-2">Service Interest
+                  </l abel>
+                  <d iv class Name="r elative"></d iv>
+                    <G lobe class Name="a bsolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
+                      class Name="w-f ull pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-whitefocus:outline-nonefocus:border-cyan-500">
+                      <o ption value="">Select a service</o ption>
                       {services.map((service) => (}
-    <>
-                        <option key="{service}" value="{service}">{service}
-                        </option>))}
-                    </select>
-                  </div>
-                <div />
-<<<<<<< HEAD
-                  <label className="block text-sm font-mediumtext-gray-300 mb-2"  />Message *
-=======
-                  <label className="block text-sm font-mediumtext-gray-300mb-2">Message *
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </label>
-                  <div className="relative">
-                    <MessageCircle className="absolute left-3 top-3 w-5h-5text-gray-400" />
-                    </select>
-                  </div>
-                <div /></div>
-<<<<<<< HEAD
-                  <label className="block text-sm font-mediumtext-gray-300 mb-2"  />Message *
-=======
-                  <label className="block text-sm font-mediumtext-gray-300mb-2">Message *
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </label>
-                  <div className="relative"></div>
-                    <MessageCircle className="absolute left-3 top-3 w-5h-5text-gray-400" />
-                    />
-    <>
-                  </div>
 
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-centerjustify-centerspace-x-2">
-    <>
-                    <React.Fragment />
-<<<<<<< HEAD
-                      <div className="w-5 h-5 border-2 border-white border-t-transparentrounded-fullanimate-spin"></div>
-                      <span  >Sending...</span>
-                    </React.Fragment>
-                    <React.Fragment />
-                      <Send className="w-5h-5" />
-                      <span  >Send Message</span>
-=======
-                      <div className="w-5 h-5 border-2 border-white border-t-transparentrounded-fullanimate-spin">
-        </div></div>
-                      <span>Sending...</span>
-                    </React.Fragment>
-                    <React.Fragment />
-                      <Send className="w-5h-5" / />
-                      <span>Send Message</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </React.Fragment>
+                        <o ption key="{service}" value="{service}">{service}
+                        </o ption>))}
+                    </s elect>
+                  </d iv>
+                <d iv />
+                  <l abel class Name="b lock text-sm font-mediumtext-gray-300mb-2">Message *
+                  </l abel>
+                  <d iv class Name="r elative">
+                    <M essage Circle class Name="a bsolute left-3 top-3 w-5h-5text-gray-400" />
+                    </s elect>
+                  </d iv>
+                <d iv /></d iv>
+                  <l abel class Name="b lock text-sm font-mediumtext-gray-300mb-2">Message *
+                  </l abel>
+                  <d iv class Name="r elative"></d iv>
+                    <M essage Circle class Name="a bsolute left-3 top-3 w-5h-5text-gray-400" />
+                    />
+
+                  </d iv>
+
+                  class Name="w-f ull bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-centerjustify-centerspace-x-2">
+
+                    <R eact.Fragment />
+                      <d iv class Name="w-5 h-5 b order-2 border-white border-t-transparentrounded-fullanimate-spin">
+        </d iv></d iv>
+                      <s pan>Sending...</s pan>
+                    </R eact.Fragment>
+                    <R eact.Fragment />
+                      <S end class Name="w-5h-5" / />
+                      <s pan>Send Message</s pan>
+                    </R eact.Fragment>
                   )}
-    <>
-                </button>
-              </form>
-            </div>
+
+                </b utton>
+              </f orm>
+            </d iv>
             {/* Contact Information */}
-<<<<<<< HEAD
-            <div className="space-y-8">
-              <div />
-                <h2 className="text-3 xl font-bold text-white mb-6"  >Contact Information</h2>
-                <p className="text-lg text-gray-300 mb-8">
-              We're here to help! Reach out to us through any of these channels
-=======
-    <>
-            <div className="space-y-8">
-        </div>
-              <div />
-                <h2 className="text-3 xl font-boldtext-whitemb-6">Contact Information</h2>
-                <p className="text-lgtext-gray-300mb-8" />
+
+            <d iv class Name="s pace-y-8">
+        </d iv>
+              <d iv />
+                <h2 c lass Name="t ext-3 xl font-boldtext-whitemb-6">Contact Information</h2>
+                <p c lass Name="t ext-lgtext-gray-300mb-8" />
                   We're here to help! Reach out to us through any of these channels
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                   and we'll get back to you as soon as possible.
-    <>
+
                 </p>
-              </div>
+              </d iv>
               {/* Contact Information */}
-<<<<<<< HEAD
-              <div className="space-y-8">
-                <div />
-                  <h2 className="text-3 xl font-bold text-white mb-6"  >Get in Touch</h2>
-                  <p className="text-gray-300 mb-8">
-              We're here to help you transform your business with cutting-edge AI and technology solutions.
+
+              <d iv class Name="s pace-y-8">
+        </d iv>
+                <d iv />
+                  <h2 c lass Name="t ext-3 xl font-boldtext-whitemb-6">Get in Touch</h2>
+                  <p c lass Name="t ext-gray-300mb-8" />
+                    We're here to help you transform your business with cutting-edge A I and technology solutions.
+
                   </p>
-                </div>
-                <div className="space-y-6">
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-centerjustify-centermr-4">
-                      <Phone className="w-6h-6text-white" />
-=======
-    <>
-              <div className="space-y-8">
-        </div>
-                <div />
-                  <h2 className="text-3 xl font-boldtext-whitemb-6">Get in Touch</h2>
-                  <p className="text-gray-300mb-8" />
-                    We're here to help you transform your business with cutting-edge AI and technology solutions.
-    <>
-                  </p>
-                </div>
-                <div className="space-y-6">
-        </div>
-                  <div className="flexitems-center" />
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-centerjustify-centermr-4">
-        </div>
-                      <Phone className="w-6h-6text-white" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </div>
-                    <div>
-            <h3 className="text-lg font-semiboldtext-white mb-1" />
-                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-nonefocus:border-cyan-500resize-none"
+                </d iv>
+                <d iv class Name="s pace-y-6">
+        </d iv>
+                  <d iv class Name="f lexitems-center" />
+                    <d iv class Name="w-12 h-12 b g-cyan-500 rounded-lg flex items-centerjustify-centermr-4">
+        </d iv>
+                      <P hone class Name="w-6h-6t ext-white" / />
+                    </d iv>
+                    <d iv>
+            <h3 c lass Name="t ext-lg font-semiboldtext-white mb-1" />
+                      class Name="w-f ull pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-nonefocus:border-cyan-500resize-none"
                       placeholder="Tell us about your project, goals, or any questions you have..."
                     />
-    <>
-                  </div>
 
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-centerjustify-centerspace-x-2">
-    <>
-                  {isSubmitting ? (<React.Fragment /></React.Fragment>
-<<<<<<< HEAD
-                      <div className="w-5 h-5 border-2 border-white border-t-transparentrounded-fullanimate-spin"></div>
-                      <span  >Sending...</span>
-                    </>) : (<React.Fragment /></React.Fragment>
-                      <Send className="w-5h-5" />
-                      <span  >Send Message</span>
-=======
-                      <div className="w-5 h-5 border-2 border-white border-t-transparentrounded-fullanimate-spin">
-        </div></div>
-                      <span>Sending...</span>
-                      <Send className="w-5h-5" / />
-                      <span>Send Message</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </>}
-    </>
+                  </d iv>
+
+                  class Name="w-f ull bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-centerjustify-centerspace-x-2">
+
+                  {is Submitting ? (<R eact.Fragment /></R eact.Fragment>
+                      <d iv class Name="w-5 h-5 b order-2 border-white border-t-transparentrounded-fullanimate-spin">
+        </d iv></d iv>
+                      <s pan>Sending...</s pan>
+                      <S end class Name="w-5h-5" / />
+                      <s pan>Send Message</s pan>
+}
+
                   )}
-    <>
-                </button>
-              </form>
-            </div>
+
+                </b utton>
+              </f orm>
+            </d iv>
             {/* Contact Information */}
-<<<<<<< HEAD
-            <div className="space-y-8"></div>
-              <div /></div>
-                <h2 className="text-3 xl font-bold text-white mb-6"  >Contact Information</h2>
-                <p className="text-lg text-gray-300 mb-8">
-              We're here to help! Reach out to us through any of these channels
-=======
-    <>
-            <div className="space-y-8">
-        </div></div>
-              <div /></div>
-                <h2 className="text-3 xl font-boldtext-whitemb-6">Contact Information</h2>
-                <p className="text-lgtext-gray-300mb-8" />
+
+            <d iv class Name="s pace-y-8">
+        </d iv></d iv>
+              <d iv /></d iv>
+                <h2 c lass Name="t ext-3 xl font-boldtext-whitemb-6">Contact Information</h2>
+                <p c lass Name="t ext-lgtext-gray-300mb-8" />
                   We're here to help! Reach out to us through any of these channels
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                   and we'll get back to you as soon as possible.
-    <>
+
                 </p>
-              </div>
+              </d iv>
               {/* Contact Information */}
-<<<<<<< HEAD
-              <div className="space-y-8"></div>
-                <div /></div>
-                  <h2 className="text-3 xl font-bold text-white mb-6"  >Get in Touch</h2>
-                  <p className="text-gray-300 mb-8">
-              We're here to help you transform your business with cutting-edge AI and technology solutions.
+
+              <d iv class Name="s pace-y-8">
+        </d iv></d iv>
+                <d iv /></d iv>
+                  <h2 c lass Name="t ext-3 xl font-boldtext-whitemb-6">Get in Touch</h2>
+                  <p c lass Name="t ext-gray-300mb-8" />
+                    We're here to help you transform your business with cutting-edge A I and technology solutions.
+
                   </p>
-                </div>
-                <div className="space-y-6"></div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-centerjustify-centermr-4"></div>
-                      <Phone className="w-6h-6text-white" />
-                    </div>
-                    <div /></div>
-<h3 className="text-lg font-semiboldtext-white mb-1"  />{info.title}
+                </d iv>
+                <d iv class Name="s pace-y-6">
+        </d iv></d iv>
+                  <d iv class Name="f lexitems-center" /></d iv>
+                    <d iv class Name="w-12 h-12 b g-cyan-500 rounded-lg flex items-centerjustify-centermr-4">
+        </d iv></d iv>
+                      <P hone class Name="w-6h-6t ext-white" / />
+                    </d iv>
+                    <d iv /></d iv>
+<h3 c lass Name="t ext-lg font-semiboldtext-whitemb-1">{info.title}
                       </h3>
-                      <p className="text-cyan-400font-mediummb-1">
-              {info.details}
-                      </p>
-                      <p className="text-gray-300text-sm">
-              {info.description}
-                      </p>
-                    </div>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-centerjustify-centermr-4">
-                      <Mail className="w-6h-6text-white" />
-                    </div>
-                    <div>
-            <h3 className="text-lgfont-semiboldtext-white"  >Email</h3>
-                      <p className="text-gray-300">info@ziontechgroup.com</p>
-                    </div>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-centerjustify-centermr-4">
-                      <MapPin className="w-6h-6text-white" />
-                    </div>
-                    <div>
-            <h3 className="text-lgfont-semiboldtext-white"  >Address</h3>
-                      <p className="text-gray-300">123 Tech Street<br / />San Francisco, CA 94105</p>
-                    </div>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-centerjustify-centermr-4">
-                      <Clock className="w-6h-6text-white" />
-                    </div>
-                    <div>
-            <h3 className="text-lgfont-semiboldtext-white"  >Business Hours</h3>
-                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br / />Sat: 10:00 AM - 4:00 PM</p>
-=======
-    <>
-              <div className="space-y-8">
-        </div></div>
-                <div /></div>
-                  <h2 className="text-3 xl font-boldtext-whitemb-6">Get in Touch</h2>
-                  <p className="text-gray-300mb-8" />
-                    We're here to help you transform your business with cutting-edge AI and technology solutions.
-    <>
-                  </p>
-                </div>
-                <div className="space-y-6">
-        </div></div>
-                  <div className="flexitems-center" /></div>
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-centerjustify-centermr-4">
-        </div></div>
-                      <Phone className="w-6h-6text-white" / />
-                    </div>
-                    <div /></div>
-<h3 className="text-lg font-semiboldtext-whitemb-1">{info.title}
-                      </h3>
-                      <p className="text-cyan-400font-mediummb-1" />
+                      <p c lass Name="t ext-cyan-400font-mediummb-1" />
                         {info.details}
-    <>
+
                       </p>
-                      <p className="text-gray-300text-sm" />
+                      <p c lass Name="t ext-gray-300text-sm" />
                         {info.description}
-    <>
+
                       </p>
-                    </div>
-                  <div className="flexitems-center" />
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-centerjustify-centermr-4">
-        </div>
-                      <Mail className="w-6h-6text-white" / />
-                    </div>
-                    <div />
-                      <h3 className="text-lgfont-semiboldtext-white">Email</h3>
-                      <p className="text-gray-300">info@ziontechgroup.com</p>
-                    </div>
-                  <div className="flexitems-center" />
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-centerjustify-centermr-4">
-        </div>
-                      <MapPin className="w-6h-6text-white" / />
-                    </div>
-                    <div />
-                      <h3 className="text-lgfont-semiboldtext-white">Address</h3>
-                      <p className="text-gray-300" />123 Tech Street<br / />San Francisco, CA 94105</p>
-                    </div>
-                  <div className="flexitems-center" />
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-centerjustify-centermr-4">
-        </div>
-                      <Clock className="w-6h-6text-white" / />
-                    </div>
-                    <div />
-                      <h3 className="text-lgfont-semiboldtext-white">Business Hours</h3>
-                      <p className="text-gray-300" />Mon - Fri: 9:00 AM - 6:00 PM<br / />Sat: 10:00 AM - 4:00 PM</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </div>
-                </div>
-            </div>
-        </section>
-      </div>
+                    </d iv>
+                  <d iv class Name="f lexitems-center" />
+                    <d iv class Name="w-12 h-12 b g-purple-500 rounded-lg flex items-centerjustify-centermr-4">
+        </d iv>
+                      <M ail class Name="w-6h-6t ext-white" / />
+                    </d iv>
+                    <d iv />
+                      <h3 c lass Name="t ext-lgfont-semiboldtext-white">Email</h3>
+                      <p c lass Name="t ext-gray-300">info@ziontechgroup.com</p>
+                    </d iv>
+                  <d iv class Name="f lexitems-center" />
+                    <d iv class Name="w-12 h-12 b g-pink-500 rounded-lg flex items-centerjustify-centermr-4">
+        </d iv>
+                      <M ap Pin class Name="w-6h-6t ext-white" / />
+                    </d iv>
+                    <d iv />
+                      <h3 c lass Name="t ext-lgfont-semiboldtext-white">Address</h3>
+                      <p c lass Name="t ext-gray-300" />123 Tech Street<b r / />San Francisco, C A 94105</p>
+                    </d iv>
+                  <d iv class Name="f lexitems-center" />
+                    <d iv class Name="w-12 h-12 b g-green-500 rounded-lg flex items-centerjustify-centermr-4">
+        </d iv>
+                      <C lock class Name="w-6h-6t ext-white" / />
+                    </d iv>
+                    <d iv />
+                      <h3 c lass Name="t ext-lgfont-semiboldtext-white">Business Hours</h3>
+                      <p c lass Name="t ext-gray-300" />Mon - Fri: 9:00 A M - 6:00 P M<b r / />Sat: 10:00 A M - 4:00 P M</p>
+                    </d iv>
+                </d iv>
+            </d iv>
+        </s ection>
+      </d iv>
   )}
-export default ContactPage
-    <>
-  </textarea>
-  </label>
-  </label>
-  </label>
-  </span>
-  </HTMLInputElement>
+export default Contact Page
+
+  </t extarea>
+  </l abel>
+  </l abel>
+  </l abel>
+  </s pan>
+  </H T M LInput Element>
                       </p>
-                    </div>
-<<<<<<< HEAD
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-centerjustify-centermr-4"></div>
-                      <Mail className="w-6h-6text-white" />
-=======
-                  <div className="flexitems-center" /></div>
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-centerjustify-centermr-4">
-        </div></div>
-                      <Mail className="w-6h-6text-white" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </div>
-                    <div /></div>
-                      <h3 className="text-lgfont-semiboldtext-white">Email</h3>
-                      <p className="text-gray-300">info@ziontechgroup.com</p>
-                    </div>
-<<<<<<< HEAD
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-centerjustify-centermr-4"></div>
-                      <MapPin className="w-6h-6text-white" />
-=======
-                  <div className="flexitems-center" /></div>
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-centerjustify-centermr-4">
-        </div></div>
-                      <MapPin className="w-6h-6text-white" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </div>
-                    <div /></div>
-                      <h3 className="text-lgfont-semiboldtext-white">Address</h3>
-                      <p className="text-gray-300" />123 Tech Street<br / />San Francisco, CA 94105</p>
-                    </div>
-<<<<<<< HEAD
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-centerjustify-centermr-4"></div>
-                      <Clock className="w-6h-6text-white" />
-=======
-                  <div className="flexitems-center" /></div>
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-centerjustify-centermr-4">
-        </div></div>
-                      <Clock className="w-6h-6text-white" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </div>
-                    <div /></div>
-                      <h3 className="text-lgfont-semiboldtext-white">Business Hours</h3>
-                      <p className="text-gray-300" />Mon - Fri: 9:00 AM - 6:00 PM<br / />Sat: 10:00 AM - 4:00 PM</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-      </div>
+                    </d iv>
+                  <d iv class Name="f lexitems-center" /></d iv>
+                    <d iv class Name="w-12 h-12 b g-purple-500 rounded-lg flex items-centerjustify-centermr-4">
+        </d iv></d iv>
+                      <M ail class Name="w-6h-6t ext-white" / />
+                    </d iv>
+                    <d iv /></d iv>
+                      <h3 c lass Name="t ext-lgfont-semiboldtext-white">Email</h3>
+                      <p c lass Name="t ext-gray-300">info@ziontechgroup.com</p>
+                    </d iv>
+                  <d iv class Name="f lexitems-center" /></d iv>
+                    <d iv class Name="w-12 h-12 b g-pink-500 rounded-lg flex items-centerjustify-centermr-4">
+        </d iv></d iv>
+                      <M ap Pin class Name="w-6h-6t ext-white" / />
+                    </d iv>
+                    <d iv /></d iv>
+                      <h3 c lass Name="t ext-lgfont-semiboldtext-white">Address</h3>
+                      <p c lass Name="t ext-gray-300" />123 Tech Street<b r / />San Francisco, C A 94105</p>
+                    </d iv>
+                  <d iv class Name="f lexitems-center" /></d iv>
+                    <d iv class Name="w-12 h-12 b g-green-500 rounded-lg flex items-centerjustify-centermr-4">
+        </d iv></d iv>
+                      <C lock class Name="w-6h-6t ext-white" / />
+                    </d iv>
+                    <d iv /></d iv>
+                      <h3 c lass Name="t ext-lgfont-semiboldtext-white">Business Hours</h3>
+                      <p c lass Name="t ext-gray-300" />Mon - Fri: 9:00 A M - 6:00 P M<b r / />Sat: 10:00 A M - 4:00 P M</p>
+                    </d iv>
+                </d iv>
+            </d iv>
+        </s ection>
+      </d iv>
 ;
-    </>

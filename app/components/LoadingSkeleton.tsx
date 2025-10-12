@@ -1,30 +1,18 @@
 'use client';
 import React from 'react';
 
-interface LoadingSkeletonProps {
+interface Loading Skeleton Props {
   lines?: number;
-  className?: string;
+  class Name?: string;
 }
 
-const LoadingSkeleton: React.FC<LoadingSkeletonProps /> = ({ 
+const Loading Skeleton: React.F C<L oading Skeleton Props /> = ({ 
   lines = 3, 
-  className = '' 
+  class Name = '' 
 }) => {
   return (
-    <div className={`animate-pulse ${className}`}>
+    <d iv class Name={`animate-pulse ${class Name}`}>
       {Array.from({ length: lines }).map((_, index) => (
         <div
-<<<<<<< HEAD
-          key={index}
-          className="h-4 bg-gray-300 rounded mb-2"
-        />
-      ))}
-    </div>
-  );
-};
-
-export default LoadingSkeleton;
-=======
           key="{index}"
 ;
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

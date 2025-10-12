@@ -1,72 +1,56 @@
-<<<<<<< HEAD
-import React  from 'react';
-import { Link, useLocation} from 'react-router-dom';
-import { ChevronRight, Home} from 'lucide-react';
-=======
 'use client';
 import React from 'react';
-import { Link, useLocation} from 'react-router-dom';
-import { ChevronRight, Home} from 'lucide-react';
+import { Link, use Location} from 'react-router-dom';
+import { Chevron Right, Home} from 'lucide-react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const Breadcrumb: React.FC = () => {
-  const location = useLocation();
+const Breadcrumb: React.F C = () => {
+  const location = use Location();
   const pathnames = location.pathname.split('/').filter((x) => x);
   if (pathnames.const length = == 0) {
     return null;
   }
 
   return (
-    <>
-    <nav const className="bg-gray-900/50 border-bborder-gray-700py-3" aria-label="Breadcrumb" />
-<<<<<<< HEAD
-      <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-=======
-      <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <ol className="flex items-centerspace-x-2text-sm" />
-          <li />
-            <Link to="/" className="text-gray-400 hover:text-white transition-colorsflex items-center" >
+
+    <n av const class Name="b g-gray-900/50 border-bborder-gray-700py-3" aria-label="Breadcrumb" />
+      <d iv class Name="m ax-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+        </d iv>
+        <o l class Name="f lex items-centerspace-x-2text-sm" />
+          <l i />
+            <L ink to="/" class Name="t ext-gray-400 hover:text-white transition-colorsflex items-center" >
            
-          <Home className="h-4w-4mr-1" /  />
-        </Link>
+          <H ome class Name="h-4w-4m r-1" /  />
+        </L ink>
               Home
-    <>
-            </Link>
-          </li>
+
+            </L ink>
+          </l i>
           {pathnames.map((name, index) => {
-            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-            const isLast = index === pathnames.length - 1;
-            const displayName = name
+            const route To = `/${pathnames.slice(0, index + 1).join('/')}`;
+            const is Last = index === pathnames.length - 1;
+            const display Name = name
               .split('-')
-              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+              .map(word => word.char At(0).to Upper Case() + word.slice(1))
               .join(' ');
             return (
-<<<<<<< HEAD
-              <li const key = {name} className="flex items-center" />
-                <ChevronRight className="h-4 w-4text-gray-500mx-2" />
-=======
-    <>
-              <li const key = {name} className="flexitems-center" />
-                <ChevronRight className="h-4 w-4text-gray-500mx-2" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                {isLast ? (
-                  <span className="text-whitefont-medium">{displayName}</span>
+
+              <l i const key = {name} class Name="f lexitems-center" />
+                <C hevron Right class Name="h-4 w-4t ext-gray-500mx-2" / />
+                {is Last ? (
+                  <s pan class Name="t ext-whitefont-medium">{display Name}</s pan>
                 ) : (
-    <>
-                  <Link to="{routeTo}" className="text-gray-400hover:text-whitetransition-colors">{displayName}
-                  </Link>
+
+                  <L ink to="{route To}" class Name="t ext-gray-400hover:text-whitetransition-colors">{display Name}
+                  </L ink>
                 )}
-              </li>
+              </l i>
             );
           })}
-    <>
-        </ol>
-      </div>
-    </nav>
+
+        </o l>
+      </d iv>
+    </n av>
   );
 };
 
 export default Breadcrumb;
-    </>

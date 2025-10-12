@@ -1,53 +1,53 @@
-import { useState, useEffect, useCallback } from 'react';
+import { use State, use Effect, use Callback } from 'react';
 
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  networkLatency: number;
+  load Time: number;
+  render Time: number;
+  memory Usage: number;
+  network Latency: number;
 }
 
   });
 
-  const [isOptimized, setIsOptimized] = useState(false);
+  const [is Optimized, set Is Optimized] = use State(false);
 
     if (typeof window === 'undefined') return;
 
     // Measure load time
-    const loadTime = performance.now();
+    const load Time = performance.now();
 
     // Measure memory usage
-    const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
+    const memory Usage = (performance as Performance & { memory?: { used JS Heap Size: number } }).memory?.used JS Heap Size || 0;
 
     // Measure render time
-      const renderTime = performance.now() - loadTime;
+      const render Time = performance.now() - load Time;
 
-        memoryUsage: memoryUsage / 1024 / 1024 // Convert to MB
+        memory Usage: memory Usage / 1024 / 1024 // Convert to M B
       }));
     });
   }, []);
 
-    setIsOptimized(true);
+    set Is Optimized(true);
 
     // Preload critical resources
 
       ];
 
-        const link = document.createElement('link');
+        const link = document.create Element('link');
         link.rel = 'preload';
         link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-        document.head.appendChild(link);
+        link.as = resource.ends With('.woff2') ? 'font' : 'image';
+        document.head.append Child(link);
       });
     }
   }, []);
 
-    measurePerformance();
+    measure Performance();
 
-    const interval = setInterval(measurePerformance, 5000);
+    const interval = set Interval(measure Performance, 5000);
 
-    return () => clearInterval(interval);
-  }, [measurePerformance]);
+    return () => clear Interval(interval);
+  }, [measure Performance]);
 
-    measurePerformance
+    measure Performance
   };
 };

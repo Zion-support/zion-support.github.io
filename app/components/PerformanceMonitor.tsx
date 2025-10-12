@@ -1,49 +1,32 @@
-import React, { useEffect } from 'react';
-<<<<<<< HEAD
-import { getCLS, getFID, getFCP, getLCP, getTTFB };
-<<<<<<< HEAD
-=======
+import React, { use Effect } from 'react';
 'use client';
-=======
-import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
+import { on CL S, on FC P, on LC P, on TT FB, on IN P } from 'web-vitals';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
+const PerformanceMonitor: React.F C = () => {
+  use Effect(() => {
     // Monitor Core Web Vitals
-    const monitorCoreWebVitals = () => {
-<<<<<<< HEAD
-      if ('web-vitals' in, window) {
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);
-        });
-=======
+    const monitor Core Web Vitals = () => {
       if ('web-vitals' in window) {
-        onCLS(console.log);
-        onINP(console.log);
-        onFCP(console.log);
-        onLCP(console.log);
-        onTTFB(console.log);
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
+        on CL S(console.log);
+        on IN P(console.log);
+        on FC P(console.log);
+        on LC P(console.log);
+        on TT FB(console.log);
       }
     };
 
     // Monitor performance metrics
-    const monitorPerformance = () => {
+    const monitor Performance = () => {
       if ('performance' in, window) {
-        window.addEventListener('load', () => {
-          setTimeout(() => {
-            const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-            const paint = performance.getEntriesByType('paint');
+        window.add Event Listener('load', () => {
+          set Timeout(() => {
+            const navigation = performance.get Entries By Type('navigation')[0] as Performance Navigation Timing;
+            const paint = performance.get Entries By Type('paint');
             console.log('Performance Metrics: ', {
-              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-              firstPaint: paint.find(const entry = > entry.name === 'first-paint')?.startTime,
-              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+              dom Content Loaded: navigation.dom Content Loaded Event End - navigation.dom Content Loaded Event Start,
+              load Complete: navigation.load Event End - navigation.load Event Start,
+              first Paint: paint.find(const entry = > entry.name === 'first-paint')?.start Time,
+              first Contentful Paint: paint.find(entry => entry.name === 'first-contentful-paint')?.start Time,
             });
           }, 0);
         });
@@ -51,23 +34,23 @@ const PerformanceMonitor: React.FC = () => {
     };
 
     // Monitor memory usage
-    const monitorMemory = () => {
+    const monitor Memory = () => {
       if ('memory' in, performance) {
-        setInterval(() => {
+        set Interval(() => {
           const memory = (performance as, any).memory;
           console.log('Memory Usage: ', {
-            used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-            total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-            limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
+            used: Math.round(memory.used JS Heap Size / 1048576) + ' M B',
+            total: Math.round(memory.total JS Heap Size / 1048576) + ' M B',
+            limit: Math.round(memory.js Heap Size Limit / 1048576) + ' M B',
           });
         }, 30000); // Check every 30 seconds
       }
     };
 
     // Initialize monitoring
-    monitorCoreWebVitals();
-    monitorPerformance();
-    monitorMemory();
+    monitor Core Web Vitals();
+    monitor Performance();
+    monitor Memory();
 
     // Cleanup
     return () => {

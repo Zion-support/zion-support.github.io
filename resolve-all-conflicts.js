@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { execSync } from 'child_process'
-import { readFileSync, writeFileSync } from 'fs'
+import { exec Sync } from 'child_process'
+import { read File Sync, write File Sync } from 'fs'
 console.log('🔧 Resolving all merge conflicts...')
     
       return false; // No conflicts
@@ -11,13 +11,13 @@ console.log('🔧 Resolving all merge conflicts...')
     for (let i = 0; i 
         continue}
       
-        resolvedLines.push(line)}
+        resolved Lines.push(line)}
     }
     
     // Write the resolved content
-    writeFileSync(filePath, resolvedLines.join('\n'))
-    console.log(`✅ Resolved conflicts in ${filePath}`)
-    console.log(`❌ Error resolving ${filePath}: ${error.message}`)
+    write File Sync(file Path, resolved Lines.join('\n'))
+    console.log(`✅ Resolved conflicts in ${file Path}`)
+    console.log(`❌ Error resolving ${file Path}: ${error.message}`)
     return false}
 }
 

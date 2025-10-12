@@ -3,50 +3,50 @@
  */
 
 // Debounce function for performance optimization
-export function debounce<T extends (...args: any[]) => any>(
+export function debounce<T e xtends (...args: any[]) => any>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout;
+  let timeout: Node JS.Timeout;
   return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+    clear Timeout(timeout);
+    timeout = set Timeout(() => func(...args), wait);
   };
 }
 
 // Throttle function for performance optimization
-export function throttle<T extends (...args: any[]) => any>(
+export function throttle<T e xtends (...args: any[]) => any>(
   func: T,
   limit: number
 ): (...args: Parameters<T>) => void {
-  let inThrottle: boolean;
+  let in Throttle: boolean;
   return (...args: Parameters<T>) => {
-    if (!inThrottle) {
+    if (!in Throttle) {
       func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+      in Throttle = true;
+      set Timeout(() => (in Throttle = false), limit);
     }
   };
 }
 
 // Intersection Observer for lazy loading
-export function createIntersectionObserver(
-  callback: IntersectionObserverCallback,
-  options?: IntersectionObserverInit
-): IntersectionObserver | null {
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+export function create Intersection Observer(
+  callback: Intersection Observer Callback,
+  options?: Intersection Observer Init
+): Intersection Observer | null {
+  if (typeof window === 'undefined' || !('Intersection Observer' in window)) {
     return null;
   }
   
-  return new IntersectionObserver(callback, {
-    rootMargin: '50px',
+  return new Intersection Observer(callback, {
+    root Margin: '50px',
     threshold: 0.1,
     ...options,
   });
 }
 
 // Performance monitoring utilities
-export function measurePerformance(name: string, fn: () => void): void {
+export function measure Performance(name: string, fn: () => void): void {
   if (typeof window === 'undefined' || !('performance' in window)) {
     fn();
     return;
@@ -56,13 +56,13 @@ export function measurePerformance(name: string, fn: () => void): void {
   fn();
   const end = performance.now();
   
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env.N OD E_ EN V === 'development') {
     console.log(`${name} took ${end - start} milliseconds`);
   }
 }
 
 // Memory usage monitoring
-export function getMemoryUsage(): any {
+export function get Memory Usage(): any {
   if (typeof window === 'undefined' || !('memory' in performance)) {
     return null;
   }
@@ -71,49 +71,49 @@ export function getMemoryUsage(): any {
 }
 
 // Bundle size optimization - preload critical resources
-export function preloadCriticalResources(): void {
+export function preload Critical Resources(): void {
   if (typeof window === 'undefined') return;
   
-  const criticalResources = [
+  const critical Resources = [
     '/fonts/inter.woff2',
     '/images/logo.png',
     '/images/og-image.jpg'
   ];
   
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
+  critical Resources.for Each(resource => {
+    const link = document.create Element('link');
     link.rel = 'preload';
     link.href = resource;
-    link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-    if (resource.endsWith('.woff2')) {
-      link.crossOrigin = 'anonymous';
+    link.as = resource.ends With('.woff2') ? 'font' : 'image';
+    if (resource.ends With('.woff2')) {
+      link.cross Origin = 'anonymous';
     }
-    document.head.appendChild(link);
+    document.head.append Child(link);
   });
 }
 
 // Image optimization utility
-export function optimizeImage(src: string, width?: number, height?: number): string {
+export function optimize Image(src: string, width?: number, height?: number): string {
   // Add image optimization parameters if needed
-  const url = new URL(src, window.location.origin);
-  if (width) url.searchParams.set('w', width.toString());
-  if (height) url.searchParams.set('h', height.toString());
-  url.searchParams.set('q', '80'); // Quality
-  url.searchParams.set('f', 'webp'); // Format
-  return url.toString();
+  const url = new U RL(src, window.location.origin);
+  if (width) url.search Params.set('w', width.to String());
+  if (height) url.search Params.set('h', height.to String());
+  url.search Params.set('q', '80'); // Quality
+  url.search Params.set('f', 'webp'); // Format
+  return url.to String();
 }
 
 // Lazy loading utility for images
-export function createLazyImageObserver(): IntersectionObserver | null {
-  return createIntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement;
+export function create Lazy Image Observer(): Intersection Observer | null {
+  return create Intersection Observer((entries) => {
+    entries.for Each(entry => {
+      if (entry.is Intersecting) {
+        const img = entry.target as H TM LImage Element;
         const src = img.dataset.src;
         if (src) {
           img.src = src;
-          img.classList.remove('lazy');
-          img.classList.add('loaded');
+          img.class List.remove('lazy');
+          img.class List.add('loaded');
         }
       }
     });
@@ -121,22 +121,22 @@ export function createLazyImageObserver(): IntersectionObserver | null {
 }
 
 // Performance budget monitoring
-export function checkPerformanceBudget(): void {
+export function check Performance Budget(): void {
   if (typeof window === 'undefined') return;
   
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const navigation = performance.get Entries By Type('navigation')[0] as Performance Navigation Timing;
   if (!navigation) return;
   
-  const loadTime = navigation.loadEventEnd - navigation.fetchStart;
+  const load Time = navigation.load Event End - navigation.fetch Start;
   const budget = 3000; // 3 seconds
   
-  if (loadTime > budget) {
-    console.warn(`Performance budget exceeded: ${loadTime}ms > ${budget}ms`);
+  if (load Time > budget) {
+    console.warn(`Performance budget exceeded: ${load Time}ms > ${budget}ms`);
   }
 }
 
 // Resource hints for better performance
-export function addResourceHints(): void {
+export function add Resource Hints(): void {
   if (typeof window === 'undefined') return;
   
   const hints = [
@@ -146,9 +146,9 @@ export function addResourceHints(): void {
     { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
   ];
   
-  hints.forEach(hint => {
-    const link = document.createElement('link');
+  hints.for Each(hint => {
+    const link = document.create Element('link');
     Object.assign(link, hint);
-    document.head.appendChild(link);
+    document.head.append Child(link);
   });
 }

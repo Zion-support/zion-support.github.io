@@ -1,37 +1,20 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { 
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
-=======
-import { Zap, BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users, Award, Star } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
+import { Zap, Bar Chart, Message Square, Shield, Cloud, CheckCircle, ArrowRight, Users, Award, Star } from 'lucide-react';
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
+import { Bar Chart, Message Square, Shield, Cloud, CheckCircle, ArrowRight, Users } from 'lucide-react';
 
-const MicroSaasServicesPage: React.FC = () => {
+const Micro Saas Services Page: React.F C = () => {
   const services = [
     {
-      icon: BarChart,
+      icon: Bar Chart,
       title: 'Zion Analytics Pro',
       description: 'Advanced business intelligence platform with real-time analytics and custom dashboards.',
       features: ['Real-time Analytics', 'Custom Dashboards', 'Data Visualization', 'Export Reports'],
@@ -40,10 +23,10 @@ const MicroSaasServicesPage: React.FC = () => {
       link: '/zion-analytics-pro'
     },
     {
-      icon: MessageSquare,
-      title: 'Zion Chat AI',
+      icon: Message Square,
+      title: 'Zion Chat A I',
       description: 'Intelligent customer support chatbot with natural language processing capabilities.',
-      features: ['24/7 Support', 'Multi-language', 'Integration APIs', 'Analytics Dashboard'],
+      features: ['24/7 Support', 'Multi-language', 'Integration A PIs', 'Analytics Dashboard'],
       price: 'Starting at $79/month',
       color: 'from-purple-500 to-pink-500',
       link: '/zion-chat-ai'
@@ -77,8 +60,8 @@ const MicroSaasServicesPage: React.FC = () => {
     },
     {
       icon: Users,
-      title: 'Zion CRM Intelligence',
-      description: 'AI-powered customer relationship management with predictive analytics.',
+      title: 'Zion C RM Intelligence',
+      description: 'A I-powered customer relationship management with predictive analytics.',
       features: ['Lead Scoring', 'Sales Forecasting', 'Customer Insights', 'Automation Rules'],
       price: 'Starting at $129/month',
       color: 'from-indigo-500 to-purple-500',
@@ -103,286 +86,269 @@ const MicroSaasServicesPage: React.FC = () => {
       description: 'Round-the-clock support from our expert team to ensure your success.'
     },
     {
-      icon: BarChart,
+      icon: Bar Chart,
       title: 'Scalable Solutions',
       description: 'Grow with confidence knowing our solutions scale with your business needs.'
     }
   ];
 
   return (
-    <>
-    <>
-      <Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-        <title>Micro SaaS Services - Zion Tech Group</title>
-        <meta name="description" content="Powerful micro SaaS solutions including analytics, chatbots, security, cloud backup, workflow automation, and CRM intelligence for modern businesses." />
-        <meta name="keywords" content="micro SaaS, business software, analytics, chatbots, security, cloud backup, workflow automation, CRM" />
-      </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <H elmet>
+        <t itle>Micro Saa S Services - Zion Tech Group</t itle>
+        <m eta name="description" content="Powerful micro Saa S solutions including analytics, chatbots, security, cloud backup, workflow automation, and C RM intelligence for modern businesses." />
+        <m eta name="keywords" content="micro Saa S, business software, analytics, chatbots, security, cloud backup, workflow automation, C RM" />
+      </H elmet>
+
+      <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-32 pb-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Micro <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">SaaS Services</span>
+        <s ection class Name="p t-32 pb-20">
+          <d iv class Name="c ontainer mx-auto px-4">
+            <d iv class Name="t ext-center max-w-4xl mx-auto">
+              <h1 c lass Name="t ext-5xl md:text-6xl font-bold text-white mb-6">
+                Micro <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Saa S Services</s pan>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              <p c lass Name="t ext-xl text-gray-300 mb-8 leading-relaxed">
                 Powerful, purpose-built software solutions designed to solve specific business challenges. 
                 Get enterprise-grade functionality without the complexity.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+              <d iv class Name="f lex flex-col sm:flex-row gap-4 justify-center">
+                <L ink 
                   to="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+                  class Name="b g-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Free Trial
-                </Link>
-                <Link 
+                </L ink>
+                <L ink 
                   to="/ai-services"
-                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+                  class Name="b order border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                 >
-                  View AI Services
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+                  View A I Services
+                </L ink>
+              </d iv>
+            </d iv>
+          </d iv>
+        </s ection>
 
         {/* Services Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SaaS Solutions</span>
+        <s ection class Name="p y-20">
+          <d iv class Name="c ontainer mx-auto px-4">
+            <d iv class Name="t ext-center mb-16">
+              <h2 c lass Name="t ext-4xl font-bold text-white mb-6">
+                Our <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro Saa S Solutions</s pan>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p c lass Name="t ext-xl text-gray-300 max-w-3xl mx-auto">
                 Specialized software tools that solve specific business problems with precision and efficiency
               </p>
-            </div>
+            </d iv>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <d iv class Name="g rid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div 
+                <d iv 
                   key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
+                  class Name="b g-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
+                  <d iv class Name={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <s ervice.icon class Name="w-8 h-8 t ext-white" />
+                  </d iv>
                   
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                  <h3 c lass Name="t ext-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                     {service.title}
                   </h3>
                   
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p c lass Name="t ext-gray-300 mb-6 leading-relaxed">
                     {service.description}
                   </p>
 
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                  <u l class Name="s pace-y-2 mb-6">
+                    {service.features.map((feature, feature Index) => (
+                      <l i key={feature Index} class Name="f lex items-center text-sm text-gray-300">
+                        <C heck Circle class Name="w-4 h-4 t ext-green-400 mr-2 flex-shrink-0" />
                         {feature}
-                      </li>
+                      </l i>
                     ))}
-                  </ul>
+                  </u l>
 
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                    <Link 
+                  <d iv class Name="f lex items-center justify-between mb-6">
+                    <s pan class Name="t ext-2xl font-bold text-cyan-400">{service.price}</s pan>
+                    <L ink 
                       to={service.link}
-                      className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-flex items-center"
+                      class Name="t ext-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-flex items-center"
                     >
-                      Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
-                  </div>
-                </div>
+                      Learn More <A rrow Right class Name="w-4 h-4 m l-1" />
+                    </L ink>
+                  </d iv>
+                </d iv>
               ))}
-            </div>
-          </div>
-        </section>
+            </d iv>
+          </d iv>
+        </s ection>
 
         {/* Features Section */}
-        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SaaS</span>?
+        <s ection class Name="p y-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
+          <d iv class Name="c ontainer mx-auto px-4">
+            <d iv class Name="t ext-center mb-16">
+              <h2 c lass Name="t ext-4xl font-bold text-white mb-6">
+                Why Choose <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro Saa S</s pan>?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p c lass Name="t ext-xl text-gray-300 max-w-3xl mx-auto">
                 Get the power of enterprise software without the complexity and cost
               </p>
-            </div>
+            </d iv>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <d iv class Name="g rid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="text-center group">
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-10 h-10 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
-                </div>
+                <d iv key={index} class Name="t ext-center group">
+                  <d iv class Name="w-20 h-20 b g-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <f eature.icon class Name="w-10 h-10 t ext-cyan-400" />
+                  </d iv>
+                  <h3 c lass Name="t ext-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p c lass Name="t ext-gray-300 leading-relaxed">{feature.description}</p>
+                </d iv>
               ))}
-            </div>
-          </div>
-        </section>
+            </d iv>
+          </d iv>
+        </s ection>
 
         {/* Pricing Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
+        <s ection class Name="p y-20">
+          <d iv class Name="c ontainer mx-auto px-4">
+            <d iv class Name="t ext-center mb-16">
+              <h2 c lass Name="t ext-4xl font-bold text-white mb-6">
+                Simple <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</s pan>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p c lass Name="t ext-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the plan that fits your needs. All plans include 24/7 support and regular updates.
               </p>
-            </div>
+            </d iv>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$99<span className="text-lg text-gray-400">/month</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Up to 3 Micro SaaS tools
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+            <d iv class Name="g rid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <d iv class Name="b g-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8">
+                <h3 c lass Name="t ext-2xl font-bold text-white mb-4">Starter</h3>
+                <d iv class Name="t ext-4xl font-bold text-cyan-400 mb-6">$99<s pan class Name="t ext-lg text-gray-400">/month</s pan></d iv>
+                <u l class Name="s pace-y-3 mb-8">
+                  <l i class Name="f lex items-center text-gray-300">
+                    <C heck Circle class Name="w-5 h-5 t ext-green-400 mr-3" />
+                    Up to 3 Micro Saa S tools
+                  </l i>
+                  <l i class Name="f lex items-center text-gray-300">
+                    <C heck Circle class Name="w-5 h-5 t ext-green-400 mr-3" />
                     Basic support
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  </l i>
+                  <l i class Name="f lex items-center text-gray-300">
+                    <C heck Circle class Name="w-5 h-5 t ext-green-400 mr-3" />
                     Standard features
-                  </li>
-                </ul>
-                <Link 
+                  </l i>
+                </u l>
+                <L ink 
                   to="/contact"
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 block"
+                  class Name="w-f ull bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 block"
                 >
                   Get Started
-                </Link>
-              </div>
+                </L ink>
+              </d iv>
 
-              <div className="bg-gradient-to-br from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/50 rounded-xl p-8 relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+              <d iv class Name="b g-gradient-to-br from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/50 rounded-xl p-8 relative">
+                <d iv class Name="a bsolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <s pan class Name="b g-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                     Most Popular
-                  </span>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lg text-gray-400">/month</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Up to 10 Micro SaaS tools
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  </s pan>
+                </d iv>
+                <h3 c lass Name="t ext-2xl font-bold text-white mb-4">Professional</h3>
+                <d iv class Name="t ext-4xl font-bold text-cyan-400 mb-6">$199<s pan class Name="t ext-lg text-gray-400">/month</s pan></d iv>
+                <u l class Name="s pace-y-3 mb-8">
+                  <l i class Name="f lex items-center text-gray-300">
+                    <C heck Circle class Name="w-5 h-5 t ext-green-400 mr-3" />
+                    Up to 10 Micro Saa S tools
+                  </l i>
+                  <l i class Name="f lex items-center text-gray-300">
+                    <C heck Circle class Name="w-5 h-5 t ext-green-400 mr-3" />
                     Priority support
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  </l i>
+                  <l i class Name="f lex items-center text-gray-300">
+                    <C heck Circle class Name="w-5 h-5 t ext-green-400 mr-3" />
                     Advanced features
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  </l i>
+                  <l i class Name="f lex items-center text-gray-300">
+                    <C heck Circle class Name="w-5 h-5 t ext-green-400 mr-3" />
                     Custom integrations
-                  </li>
-                </ul>
-                <Link 
+                  </l i>
+                </u l>
+                <L ink 
                   to="/contact"
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 block"
+                  class Name="w-f ull bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 block"
                 >
                   Get Started
-                </Link>
-              </div>
+                </L ink>
+              </d iv>
 
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
-                <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Unlimited Micro SaaS tools
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+              <d iv class Name="b g-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8">
+                <h3 c lass Name="t ext-2xl font-bold text-white mb-4">Enterprise</h3>
+                <d iv class Name="t ext-4xl font-bold text-cyan-400 mb-6">Custom</d iv>
+                <u l class Name="s pace-y-3 mb-8">
+                  <l i class Name="f lex items-center text-gray-300">
+                    <C heck Circle class Name="w-5 h-5 t ext-green-400 mr-3" />
+                    Unlimited Micro Saa S tools
+                  </l i>
+                  <l i class Name="f lex items-center text-gray-300">
+                    <C heck Circle class Name="w-5 h-5 t ext-green-400 mr-3" />
                     24/7 dedicated support
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  </l i>
+                  <l i class Name="f lex items-center text-gray-300">
+                    <C heck Circle class Name="w-5 h-5 t ext-green-400 mr-3" />
                     All features included
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  </l i>
+                  <l i class Name="f lex items-center text-gray-300">
+                    <C heck Circle class Name="w-5 h-5 t ext-green-400 mr-3" />
                     Custom development
-                  </li>
-                </ul>
-                <Link 
+                  </l i>
+                </u l>
+                <L ink 
                   to="/contact"
-                  className="w-full border border-cyan-500 text-cyan-400 px-6 py-3 rounded-lg font-semibold text-center hover:bg-cyan-500/10 transition-all duration-300 block"
+                  class Name="w-f ull border border-cyan-500 text-cyan-400 px-6 py-3 rounded-lg font-semibold text-center hover:bg-cyan-500/10 transition-all duration-300 block"
                 >
                   Contact Sales
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+                </L ink>
+              </d iv>
+            </d iv>
+          </d iv>
+        </s ection>
 
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">
+        {/* C TA Section */}
+        <s ection class Name="p y-20">
+          <d iv class Name="c ontainer mx-auto px-4">
+            <d iv class Name="b g-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
+              <h2 c lass Name="t ext-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Start your free trial today and experience the power of our Micro SaaS solutions.
+              <p c lass Name="t ext-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Start your free trial today and experience the power of our Micro Saa S solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+              <d iv class Name="f lex flex-col sm:flex-row gap-4 justify-center">
+                <L ink 
                   to="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+                  class Name="b g-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Free Trial
-                </Link>
-                <Link 
+                </L ink>
+                <L ink 
                   to="/about"
-                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+                  class Name="b order border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                 >
                   Learn More About Us
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+                </L ink>
+              </d iv>
+            </d iv>
+          </d iv>
+        </s ection>
+      </d iv>
+
   );
 };
 
-export default MicroSaasServicesPage;
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-=======
+export default Micro Saas Services Page;
+        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </H elmet>
+
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb

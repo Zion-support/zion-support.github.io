@@ -6,23 +6,23 @@
   passed: boolean;
   message: string;
   severity: 'error' | 'warning' | 'info';
-  element?: HTMLElement;
+  element?: H TM LElement;
 }
 
-  totalChecks: number;
-  passedChecks: number;
-  failedChecks: number;
+  total Checks: number;
+  passed Checks: number;
+  failed Checks: number;
   warnings: number;
-  results: AccessibilityCheckResult[];
+  results: Accessibility Check Result[];
 }
 
-  private results: AccessibilityCheckResult[] = [];
+  private results: Accessibility Check Result[] = [];
 
   /**
    * Check if an element has proper alt text for images
    */
-    const hasAlt = element.hasAttribute('alt');
-    const altText = element.getAttribute('alt') || '';
+    const has Alt = element.has Attribute('alt');
+    const alt Text = element.get Attribute('alt') || '';
 
         element
       };
@@ -39,15 +39,15 @@
   /**
    * Check if form inputs have proper labels
    */
-    const id = element.getAttribute('id');
-    const ariaLabel = element.getAttribute('aria-label');
-    const ariaLabelledBy = element.getAttribute('aria-labelledby');
+    const id = element.get Attribute('id');
+    const aria Label = element.get Attribute('aria-label');
+    const aria Labelled By = element.get Attribute('aria-labelledby');
 
         element
       };
     }
 
-      const label = document.querySelector(`label[for="${id}"]`);
+      const label = document.query Selector(`label[for="${id}"]`);
           element
         };
       }
@@ -60,21 +60,21 @@
   /**
    * Check if headings are properly structured
    */
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    const results: AccessibilityCheckResult[] = [];
-    let previousLevel = 0;
+    const headings = document.query Selector All('h1, h2, h3, h4, h5, h6');
+    const results: Accessibility Check Result[] = [];
+    let previous Level = 0;
 
-      const level = parseInt(heading.tagName.charAt(1));
+      const level = parse Int(heading.tag Name.char At(1));
 
-          element: heading as HTMLElement
+          element: heading as H TM LElement
         });
       }
 
-          element: heading as HTMLElement
+          element: heading as H TM LElement
         });
       }
 
-      previousLevel = level;
+      previous Level = level;
     });
 
     return results;
@@ -83,9 +83,9 @@
   /**
    * Check color contrast ratio
    */
-    const styles = window.getComputedStyle(element);
+    const styles = window.get Computed Style(element);
     const color = styles.color;
-    const backgroundColor = styles.backgroundColor;
+    const background Color = styles.background Color;
 
     // you would calculate the actual contrast ratio
         element
@@ -99,8 +99,8 @@
   /**
    * Check if interactive elements are keyboard accessible
    */
-    const tabIndex = element.getAttribute('tabindex');
-    const isInteractive = ['button', 'a', 'input', 'select', 'textarea'].includes(element.tagName.toLowerCase());
+    const tab Index = element.get Attribute('tabindex');
+    const is Interactive = ['button', 'a', 'input', 'select', 'textarea'].includes(element.tag Name.to Lower Case());
 
         element
       };
@@ -116,31 +116,31 @@
     this.results = [];
 
     // Check images
-    const images = document.querySelectorAll('img');
-      this.results.push(this.checkImageAltText(img));
+    const images = document.query Selector All('img');
+      this.results.push(this.check Image Alt Text(img));
     });
 
     // Check form elements
-    const formElements = document.querySelectorAll('input, select, textarea');
-      this.results.push(this.checkFormLabels(element as HTMLInputElement));
+    const form Elements = document.query Selector All('input, select, textarea');
+      this.results.push(this.check Form Labels(element as H TM LInput Element));
     });
 
     // Check heading structure
-    this.results.push(...this.checkHeadingStructure());
+    this.results.push(...this.check Heading Structure());
 
     // Check color contrast for text elements
-    const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
-      this.results.push(this.checkColorContrast(element as HTMLElement));
+    const text Elements = document.query Selector All('p, span, div, h1, h2, h3, h4, h5, h6');
+      this.results.push(this.check Color Contrast(element as H TM LElement));
     });
 
     // Check keyboard accessibility
-    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
-      this.results.push(this.checkKeyboardAccessibility(element as HTMLElement));
+    const interactive Elements = document.query Selector All('button, a, input, select, textarea');
+      this.results.push(this.check Keyboard Accessibility(element as H TM LElement));
     });
 
-    const totalChecks = this.results.length;
-    const passedChecks = this.results.filter(r => r.passed).length;
-    const failedChecks = this.results.filter(r => !r.passed).length;
+    const total Checks = this.results.length;
+    const passed Checks = this.results.filter(r => r.passed).length;
+    const failed Checks = this.results.filter(r => !r.passed).length;
     const warnings = this.results.filter(r => r.severity === 'warning').length;
 
       results: this.results
@@ -150,37 +150,37 @@
   /**
    * Get accessibility score as percentage
    */
-    const report = this.runAllChecks();
-    return Math.round((report.passedChecks / report.totalChecks) * 100);
+    const report = this.run All Checks();
+    return Math.round((report.passed Checks / report.total Checks) * 100);
   }
 
   /**
    * Generate accessibility report summary
    */
-    const report = this.runAllChecks();
-    const score = this.getAccessibilityScore();
+    const report = this.run All Checks();
+    const score = this.get Accessibility Score();
 
     return `
 Accessibility Report
 Score: ${score}%
-Total Checks: ${report.totalChecks}
-Passed: ${report.passedChecks}
-Failed: ${report.failedChecks}
+Total Checks: ${report.total Checks}
+Passed: ${report.passed Checks}
+Failed: ${report.failed Checks}
 Warnings: ${report.warnings}
 
 Issues Found:
 ${report.results
   .filter(r => !r.passed)
-  .map(r => `- ${r.severity.toUpperCase()}: ${r.message}`)
+  .map(r => `- ${r.severity.to Upper Case()}: ${r.message}`)
   .join('\n')}
     `.trim();
   }
 }
 
 // Export a default instance
-export const accessibilityChecker = new AccessibilityChecker();
+export const accessibility Checker = new Accessibility Checker();
 
 // Export utility functions
-export const checkPageAccessibility = () => accessibilityChecker.runAllChecks();
-export const getAccessibilityScore = () => accessibilityChecker.getAccessibilityScore();
-export const generateAccessibilityReport = () => accessibilityChecker.generateReport();
+export const check Page Accessibility = () => accessibility Checker.run All Checks();
+export const get Accessibility Score = () => accessibility Checker.get Accessibility Score();
+export const generate Accessibility Report = () => accessibility Checker.generate Report();

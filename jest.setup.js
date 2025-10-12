@@ -1,21 +1,21 @@
 require("@testing-library/jest-dom");
 
-// Polyfill for TextEncoder/TextDecoder
-const { TextEncoder, TextDecoder } = require('util');
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
+// Polyfill for Text Encoder/Text Decoder
+const { Text Encoder, Text Decoder } = require('util');
+global.Text Encoder = Text Encoder;
+global.Text Decoder = Text Decoder;
 
-// Mock window.matchMedia
+// Mock window.match Media
 });
 
-// Mock IntersectionObserver
+// Mock Intersection Observer
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 };
 
-// Mock ResizeObserver
+// Mock Resize Observer
   constructor() {}
   disconnect() {}
   observe() {}
@@ -25,5 +25,5 @@ global.TextDecoder = TextDecoder;
 // Mock window.gtag
 });
 
-// Mock window.dataLayer
+// Mock window.data Layer
 });

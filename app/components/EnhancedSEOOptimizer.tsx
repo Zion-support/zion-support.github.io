@@ -1,27 +1,27 @@
 ursor/
-      description: 'Advanced AI technology to automatically optimize your website for search engines',
-      description: 'Advanced AI technology to optimize your website for search engines and improve rankings',
+      description: 'Advanced A I technology to automatically optimize your website for search engines',
+      description: 'Advanced A I technology to optimize your website for search engines and improve rankings',
     },
     {
       icon: Brain,
-      title: 'AI-Powered SEO Optimization',
+      title: 'A I-Powered S EO Optimization',
       icon: Zap,
       title: 'Real-time Analysis',
-      description: 'Lightning-fast SEO analysis and optimization with instant recommendations',
+      description: 'Lightning-fast S EO analysis and optimization with instant recommendations',
     },
     {
       icon: Shield,
       title: 'White-Hat Techniques',
-      description: 'Ethical SEO practices with long-term sustainable results and compliance',
+      description: 'Ethical S EO practices with long-term sustainable results and compliance',
     },
     {
       icon: Globe,
       title: 'Global Optimization',
-      description: 'Worldwide SEO optimization and support for international businesses',
+      description: 'Worldwide S EO optimization and support for international businesses',
     }
   ];
   const benefits = [
-    'Advanced AI technology integration',
+    'Advanced A I technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
@@ -31,205 +31,149 @@ ursor/
     'Proven track record of success'
   ];
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-      <Helmet>
-=======
-    <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>Enhanced SEO Optimizer | Zion Tech Group</title>
-        <meta name="description" content="Professional SEO optimization services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
-        <meta name="keywords" content="SEO optimizer, AI solutions, IT services, Zion Tech Group, search engine optimization" / / />
-        <meta name="description" content="Professional Enhanced SEO Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
-        <meta name="keywords" content="SEO optimizer, search engine optimization, AI solutions, IT services, Zion Tech Group" / / />
-      </Helmet>
+
+    <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        </d iv>
+      <H elmet>
+        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </H elmet>
+        <t itle>Enhanced S EO Optimizer | Zion Tech Group</t itle>
+        <m eta name="description" content="Professional S EO optimization services by Zion Tech Group. Advanced A I and I T solutions for your business." / / />
+        <m eta name="keywords" content="S EO optimizer, A I solutions, I T services, Zion Tech Group, search engine optimization" / / />
+        <m eta name="description" content="Professional Enhanced S EO Optimizer services by Zion Tech Group. Advanced A I and I T solutions for your business." / / />
+        <m eta name="keywords" content="S EO optimizer, search engine optimization, A I solutions, I T services, Zion Tech Group" / / />
+      </H elmet>
 
       {/* Hero Section */}
-    <>
-      <section className="relative py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
-=======
-        </div>
-          <div className="text-center" />
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent"  />Enhanced SEO
-                Enhanced SEO Optimizer
-    <>
-              </span>
-              <br / />
-              <span className="text-white">Optimizer</span>
+
+      <s ection class Name="r elative py-20 px-4sm:px-6lg:px-8" />
+        <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-center" />
+            <h1 c lass Name="t ext-4 xl md:text-6 xl font-boldtext-whitemb-6" />
+              <s pan class Name="b g-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent"  />Enhanced S EO
+                Enhanced S EO Optimizer
+
+              </s pan>
+              <b r / />
+              <s pan class Name="t ext-white">Optimizer</s pan>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
-              Transform your business with our advanced SEO optimization solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-              Optimize your website for search engines with our advanced AI-powered SEO optimization solutions.
+            <p c lass Name="t ext-xl text-gray-300 mb-8 max-w-3xlmx-auto">
+              Transform your business with our advanced S EO optimization solutions.
+              Powered by cutting-edge A I technology and industry expertise.
+              Optimize your website for search engines with our advanced A I-powered S EO optimization solutions.
               Improve rankings and drive more organic traffic.
-    <>
+
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" />
-=======
-        </div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+              <b utton class Name="b g-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
                 Get Started
-    <>
-                <ArrowRight className="ml-2h-5w-5" />
-              </button>
-              <button className="border border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Learn More
-              </button>
-            </div>
-        </div>
-      </section>
+
+                <A rrow Right class Name="m l-2h-5w-5" />
+              </b utton>
+              <b utton class Name="b order border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Learn More
+              </b utton>
+            </d iv>
+        </d iv>
+      </s ection>
 
       {/* Features Section */}
-    <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Our Features
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Our Features
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Discover the powerful features that make our enhanced SEO optimizer solutions stand out.
-    <>
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <s ection class Name="p y-20 px-4sm:px-6lg:px-8" />
+        <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-3 xl md:text-4 xl font-boldtext-whitemb-4">Our Features
+            </h2>
+            <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto">
+              Discover the powerful features that make our enhanced S EO optimizer solutions stand out.
+
+            </p>
+          </d iv>
+
+          <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+        </d iv>
             {features.map((feature, index) => (
-    <>
-              <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300borderborder-white/20" />
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-12 h-12 rounded-lg flex items-centerjustify-centermb-4">
-<<<<<<< HEAD
-                  <feature.icon className="w-6h-6text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2"  />{feature.title}
+
+              <d iv key="{index}" class Name="b g-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300borderborder-white/20" />
+                <d iv class Name="b g-gradient-to-r from-purple-600 to-blue-600 w-12 h-12 rounded-lg flex items-centerjustify-centermb-4">
+        </d iv>
+                  <f eature.icon class Name="w-6h-6t ext-white" / />
+                </d iv>
+                <h3 c lass Name="t ext-xl font-boldtext-whitemb-2">{feature.title}
                 </h3>
-                <p className="text-gray-300">
-              {feature.description}
-=======
-        </div>
-                  <feature.icon className="w-6h-6text-white" / />
-                </div>
-                <h3 className="text-xl font-boldtext-whitemb-2">{feature.title}
-                </h3>
-                <p className="text-gray-300" />
+                <p c lass Name="t ext-gray-300" />
                   {feature.description}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
                 </p>
-              </div>
+              </d iv>
             ))}
-    <>
-          </div>
-      </section>
+
+          </d iv>
+      </s ection>
 
       {/* Benefits Section */}
-    <>
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Why Choose Our Solutions?
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Why Choose Our Solutions?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Experience the benefits of working with our cutting-edge enhanced SEO optimizer solutions.
-    <>
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1md:grid-cols-2gap-8">
-<<<<<<< HEAD
+      <s ection class Name="p y-20 px-4 sm:px-6lg:px-8bg-white/5" />
+        <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-3 xl md:text-4 xl font-boldtext-whitemb-4">Why Choose Our Solutions?
+            </h2>
+            <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto">
+              Experience the benefits of working with our cutting-edge enhanced S EO optimizer solutions.
+
+            </p>
+          </d iv>
+
+          <d iv class Name="g rid grid-cols-1md:grid-cols-2gap-8">
+        </d iv>
             {benefits.map((benefit, index) => (
-              <div key="{index}" className="flex items-startspace-x-4" />
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-centerflex-shrink-0mt-1">
-                  <CheckCircle className="w-5h-5text-white" />
-                </div>
-                <p className="text-gray-300text-lg">
-              {benefit}
-=======
-        </div>
-            {benefits.map((benefit, index) => (
-    <>
-              <div key="{index}" className="flexitems-startspace-x-4" />
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-centerflex-shrink-0mt-1">
-        </div>
-                  <CheckCircle className="w-5h-5text-white" / />
-                </div>
-                <p className="text-gray-300text-lg" />
+
+              <d iv key="{index}" class Name="f lexitems-startspace-x-4" />
+                <d iv class Name="b g-gradient-to-r from-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-centerflex-shrink-0mt-1">
+        </d iv>
+                  <C heck Circle class Name="w-5h-5t ext-white" / />
+                </d iv>
+                <p c lass Name="t ext-gray-300text-lg" />
                   {benefit}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
                 </p>
-              </div>
+              </d iv>
             ))}
-    <>
-          </div>
-      </section>
+
+          </d iv>
+      </s ection>
 
       {/* Contact Section */}
-    <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="bg-white/10 backdrop-blur-sm rounded-3 xl p-12 borderborder-white/20text-center">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-6"  />Ready to Get Started?
-=======
-        </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-3 xl p-12 borderborder-white/20text-center">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-6">Ready to Get Started?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+      <s ection class Name="p y-20 px-4sm:px-6lg:px-8" />
+        <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="b g-white/10 backdrop-blur-sm rounded-3 xl p-12 borderborder-white/20text-center">
+        </d iv>
+            <h2 c lass Name="t ext-3 xl md:text-4 xl font-boldtext-whitemb-6">Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto">
-              Contact us today to learn more about our SEO optimization solutions and how they can benefit your business.
-    <>
+            <p c lass Name="t ext-xl text-gray-300 mb-8 max-w-2xlmx-auto">
+              Contact us today to learn more about our S EO optimization solutions and how they can benefit your business.
+
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700transition-allduration-300"  />Contact Us
-=======
-        </div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700transition-allduration-300">Contact Us
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Schedule Demo
-              </button>
-            </div>
-        </div>
-      </section>
-    </div>
+            <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+              <b utton class Name="b g-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700transition-allduration-300">Contact Us
+              </b utton>
+              <b utton class Name="b order border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Schedule Demo
+              </b utton>
+            </d iv>
+        </d iv>
+      </s ection>
+    </d iv>
   )
 }
 
-export default EnhancedSEOOptimizerPage
+export default Enhanced SE OOptimizer Page
 ;
-    </>

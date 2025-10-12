@@ -1,58 +1,53 @@
 /**
- * API Client Utility
- * Provides a centralized API client with error handling and caching
+ * A PI Client Utility
+ * Provides a centralized A PI client with error handling and caching
  */
 
-  method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record<string, string>;
+  method?: 'G ET' | 'P OS T' | 'P UT' | 'D EL ET E' | 'P AT CH';
+  headers?: Record<s tring, string>;
   body?: unknown;
   cache?: boolean;
-  cacheTTL?: number;
+  cache TT L?: number;
 }
 
   data: T;
   status: number;
-  statusText: string;
-  headers: Record<string, string>;
+  status Text: string;
+  headers: Record<s tring, string>;
 }
 
   status?: number;
   code?: string;
 
     super(message);
-    this.name = 'APIError';
+    this.name = 'A PI Error';
     this.status = status;
     this.code = code;
   }
 }
 
-  private baseURL: string;
-<<<<<<< HEAD
-  private defaultHeaders: Record<string, string>;
-  private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
-=======
-    <>
-  private defaultHeaders: Record<string, string />;
-  private cache: Map<string, { data: unknown; timestamp: number; ttl: number } /> = new Map();
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+  private base UR L: string;
 
-    this.baseURL = baseURL;
-      ...defaultHeaders
+  private default Headers: Record<s tring, string />;
+  private cache: Map<s tring, { data: unknown; timestamp: number; ttl: number } /> = new Map();
+
+    this.base UR L = base UR L;
+      ...default Headers
     };
   }
 
   /**
-   * Make an API request
+   * Make an A PI request
    */
-    config: RequestConfig = {}
-      cacheTTL = 300000 // 5 minutes default
+    config: Request Config = {}
+      cache TT L = 300000 // 5 minutes default
     } = config;
 
-    const url = `${this.baseURL}${endpoint}`;
-    const cacheKey = `${method}:${url}:${JSON.stringify(body || {})}`;
+    const url = `${this.base UR L}${endpoint}`;
+    const cache Key = `${method}:${url}:${J SO N.stringify(body || {})}`;
 
     // Check cache first
-      const cached = this.getFromCache(cacheKey);
+      const cached = this.get From Cache(cache Key);
         return cached;
       }
     }
@@ -61,53 +56,53 @@
 
       const data = await response.json();
 
-        headers: this.parseHeaders(response.headers)
+        headers: this.parse Headers(response.headers)
       };
 
-      // Cache successful GET requests
-        this.setCache(cacheKey, apiResponse, cacheTTL);
+      // Cache successful G ET requests
+        this.set Cache(cache Key, api Response, cache TT L);
       }
 
           code: data.code
         });
       }
 
-      return apiResponse;
+      return api Response;
         throw error;
       }
-        code: 'NETWORK_ERROR'
+        code: 'N ET WO RK_ ER RO R'
       });
     }
   }
 
   /**
-   * GET request
+   * G ET request
    */
-    return this.request<T>(endpoint, { ...config, method: 'GET' });
+    return this.request<T>(endpoint, { ...config, method: 'G ET' });
   }
 
   /**
-   * POST request
+   * P OS T request
    */
-    return this.request<T>(endpoint, { ...config, method: 'POST', body });
+    return this.request<T>(endpoint, { ...config, method: 'P OS T', body });
   }
 
   /**
-   * PUT request
+   * P UT request
    */
-    return this.request<T>(endpoint, { ...config, method: 'PUT', body });
+    return this.request<T>(endpoint, { ...config, method: 'P UT', body });
   }
 
   /**
-   * DELETE request
+   * D EL ET E request
    */
-    return this.request<T>(endpoint, { ...config, method: 'DELETE' });
+    return this.request<T>(endpoint, { ...config, method: 'D EL ET E' });
   }
 
   /**
-   * PATCH request
+   * P AT CH request
    */
-    return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
+    return this.request<T>(endpoint, { ...config, method: 'P AT CH', body });
   }
 
   /**
@@ -134,7 +129,7 @@
   /**
    * Parse response headers
    */
-    const result: Record<string, string> = {};
+    const result: Record<s tring, string> = {};
       result[key] = value;
     });
     return result;
@@ -149,21 +144,20 @@
   /**
    * Clear cache for specific endpoint
    */
-    const keysToDelete: string[] = [];
-        keysToDelete.push(key);
+    const keys To Delete: string[] = [];
+        keys To Delete.push(key);
       }
     });
-    keysToDelete.forEach(key => this.cache.delete(key));
+    keys To Delete.for Each(key => this.cache.delete(key));
   }
 }
 
 // Export utility functions
-  new APIClient(baseURL, headers);
+  new A PI Client(base UR L, headers);
 
-// Default API client instance
-export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
+// Default A PI client instance
+export const api Client = new A PI Client(process.env.N EX T_ PU BL IC_ AP I_ UR L || '/api');
 
 // Export types and classes
-export type { RequestConfig, APIResponse };
-export { APIError };
-    </>
+export type { Request Config, A PI Response };
+export { A PI Error };

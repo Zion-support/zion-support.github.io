@@ -10,7 +10,7 @@
  */
 };
 /**
- * CORS configuration
+ * C OR S configuration
  */
 };
 /**
@@ -25,7 +25,7 @@
  * Sanitize user input
  */
   return input
-    .replace(/[<>]/g, '') // Remove < and >
+    .replace(/[<>]/g, '') // Remove < a nd >
     .replace(/javascript:/gi, '') // Remove javascript: protocol
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
     .trim();
@@ -33,21 +33,21 @@
 /**
  * Validate email address
  */
-  return validationPatterns.email.test(email);
+  return validation Patterns.email.test(email);
 }
 /**
- * Validate URL
+ * Validate U RL
  */
-  return validationPatterns.url.test(url);
+  return validation Patterns.url.test(url);
 }
 /**
  * Generate secure token
  */
-  const array = new Uint8Array(length);
-    window.crypto.getRandomValues(array);
+  const array = new Uint8 Array(length);
+    window.crypto.get Random Values(array);
     // Fallback for non-browser environments
     for (let i = 0; i 
-  return Array.from(array, (byte: number) => byte.toString(16).padStart(2, '0')).join('');
+  return Array.from(array, (byte: number) => byte.to String(16).pad Start(2, '0')).join('');
 }
-  generateSecureToken
+  generate Secure Token
 };

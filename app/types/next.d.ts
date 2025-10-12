@@ -1,11 +1,11 @@
 import React from 'react';
 // Type definitions for Next.js
-      NODE_ENV: 'development' | 'production' | 'test'
-      NEXT_PUBLIC_API_URL: string
-      NEXT_PUBLIC_APP_URL: string
-      DATABASE_URL: string
-      NEXTAUTH_SECRET: string
-      NEXTAUTH_URL: string
+      N OD E_ EN V: 'development' | 'production' | 'test'
+      N EX T_ PU BL IC_ AP I_ UR L: string
+      N EX T_ PU BL IC_ AP P_ UR L: string
+      D AT AB AS E_ UR L: string
+      N EX TA UT H_ SE CR ET: string
+      N EX TA UT H_ UR L: string
     }
   }
 }
@@ -16,7 +16,7 @@ import React from 'react';
   }
 }
 
-  const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+  const content: React.Function Component<R eact.S VG Attributes<S VG Element>>;
   export default content;
 }
   const content: string;

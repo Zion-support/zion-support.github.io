@@ -1,58 +1,47 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { ArrowRight } from 'lucide-react';
 'use client'
 
-<<<<<<< HEAD
-=======
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
   ];
-    <>
-              </span>
-              <br / />
-              <span const className = "text-white">Solutions</span>
+
+              </s pan>
+              <b r / />
+              <s pan const class Name = "text-white">Solutions</s pan>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
+            <p c lass Name="t ext-xl text-gray-300 mb-8 max-w-3xlmx-auto">
               Transform your business with our advanced systemmonitor solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-    <>
+              Powered by cutting-edge A I technology and industry expertise.
+
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" />
-=======
-        </div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+              <b utton class Name="b g-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
                 Get Started
-    <>
-                <ArrowRight className="ml-2h-5w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
+
+                <A rrow Right class Name="m l-2h-5w-5" />
+              </b utton>
+              <b utton class Name="b order border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
                 Learn More
   </
-    <>
-            </div>
-    </div>
+
+            </d iv>
+    </d iv>
   )}
-export default SystemMonitorPage
-  </button>
+export default System Monitor Page
+  </b utton>
 }
 
-interface SystemMonitorProps {
-  onAlert?: (alert: string) => void
-  className?: string
+interface System Monitor Props {
+  on Alert?: (alert: string) => void
+  class Name?: string
 }
 
-const SystemMonitor: React.FC<SystemMonitorProps /> = ({
-  onAlert,
-  className = ''
+const System Monitor: React.F C<S ystem Monitor Props /> = ({
+  on Alert,
+  class Name = ''
 }) => {
-  const [metrics, setMetrics] = useState<SystemMetrics />({
+  const [metrics, set Metrics] = use State<S ystem Metrics />({
     cpu: 0,
     memory: 0,
     disk: 0,
@@ -60,44 +49,43 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
     battery: 100,
     uptime: 0
   })
-  const [isMonitoring, setIsMonitoring] = useState(false)
+  const [is Monitoring, set Is Monitoring] = use State(false)
 
-  const updateMetrics = useCallback(() => {
+  const update Metrics = use Callback(() => {
     // Simulate system metrics
-    const newMetrics = {
+    const new Metrics = {
       cpu: Math.random() * 100,
       memory: Math.random() * 100,
       disk: Math.random() * 100,
       network: Math.random() * 100,
       battery: Math.random() * 100,
-      uptime: Date.now() - performance.timing.navigationStart
+      uptime: Date.now() - performance.timing.navigation Start
     }
 
-    setMetrics(newMetrics)
+    set Metrics(new Metrics)
 
     // Check for alerts
-    if (newMetrics.cpu > 90) {
-      onAlert?.('High CPU usage detected')
+    if (new Metrics.cpu > 90) {
+      on Alert?.('High C PU usage detected')
     }
-    if (newMetrics.memory > 90) {
-      onAlert?.('High memory usage detected')
+    if (new Metrics.memory > 90) {
+      on Alert?.('High memory usage detected')
     }
-    if (newMetrics.disk > 90) {
-      onAlert?.('High disk usage detected')
+    if (new Metrics.disk > 90) {
+      on Alert?.('High disk usage detected')
     }
-  }, [onAlert])
+  }, [on Alert])
 
-  useEffect(() => {
-    if (isMonitoring) {
-      const interval = setInterval(updateMetrics, 1000)
-      return () => clearInterval(interval)
+  use Effect(() => {
+    if (is Monitoring) {
+      const interval = set Interval(update Metrics, 1000)
+      return () => clear Interval(interval)
     }
-  }, [isMonitoring, updateMetrics])
+  }, [is Monitoring, update Metrics])
 
-  const toggleMonitoring = () => {
-    setIsMonitoring(!isMonitoring)
-    if (!isMonitoring) {
-      updateMetrics()
+  const toggle Monitoring = () => {
+    set Is Monitoring(!is Monitoring)
+    if (!is Monitoring) {
+      update Metrics()
     }
   };
-    </>

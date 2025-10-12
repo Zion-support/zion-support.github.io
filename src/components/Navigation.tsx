@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { use State, use Effect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight, Database, Settings, Target, MessageSquare, Eye, Cpu3, FileText, Search, Bot, Palette, Camera, Music, Video, ShoppingCart, CreditCard, Heart, Stethoscope, Briefcase, Calculator, Calendar, Smartphone } from 'lucide-react';
+import { Chevron Down, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight, Database, Settings, Target, Message Square, Eye, Cpu3, File Text, Search, Bot, Palette, Camera, Music, Video, Shopping Cart, Credit Card, Heart, Stethoscope, Briefcase, Calculator, Calendar, Smartphone } from 'lucide-react';
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [is Menu Open, set Is Menu Open] = use State(false);
+  const [is Services Open, set Is Services Open] = use State(false);
   // Removed unused state variables
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [is Scrolled, set Is Scrolled] = use State(false);
 
-      setIsScrolled(window.scrollY > 50);
+      set Is Scrolled(window.scroll Y > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.add Event Listener('scroll', handle Scroll);
+    return () => window.remove Event Listener('scroll', handle Scroll);
   }, []);
 
-    setIsMenuOpen(false);
-    setIsServicesOpen(false);
+    set Is Menu Open(false);
+    set Is Services Open(false);
   };
 
-    setIsMenuOpen(!isMenuOpen);
-      closeAllMenus();
+    set Is Menu Open(!is Menu Open);
+      close All Menus();
     }
   };
 
-    setIsServicesOpen(!isServicesOpen);
+    set Is Services Open(!is Services Open);
   };
 
   ];
@@ -32,190 +32,190 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
 
   ];
 
-  // Removed specializedServices as it was unused
+  // Removed specialized Services as it was unused
 
     }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <d iv class Name="c ontainer mx-auto px-4">
+        <d iv class Name="f lex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+          <a h ref="/" class Name="f lex items-center space-x-2" on Click={close All Menus}>
+            <d iv class Name="w-8 h-8 b g-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+              <B rain class Name="w-5 h-5 t ext-white" />
+            </d iv>
+            <s pan class Name="t ext-xl font-bold text-white neon-text">Zion Tech Group</s pan>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <div className="relative group">
+          <d iv class Name="h idden lg:flex items-center space-x-8">
+            <d iv class Name="r elative group">
               
               >
-                <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
+                <s pan>Services</s pan>
+                <C hevron Down class Name={`w-4 h-4 transition-transform ${is Services Open ? 'rotate-180' : ''}`} />
+              </b utton>
               
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
-                  <div className="grid grid-cols-3 gap-6">
-                    <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Zap className="w-4 h-4 mr-2" />
-                        Micro SAAS
+                <d iv class Name="a bsolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
+                  <d iv class Name="g rid grid-cols-3 gap-6">
+                    <d iv>
+                      <h3 c lass Name="t ext-cyan-400 font-semibold mb-3 flex items-center">
+                        <Z ap class Name="w-4 h-4 m r-2" />
+                        Micro S AA S
                       </h3>
-                      <div className="space-y-2">
+                      <d iv class Name="s pace-y-2">
                           
                           >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
+                            <s ervice.icon class Name="w-3 h-3" />
+                            <s pan>{service.name}</s pan>
                           </a>
                         ))}
-                      </div>
-                    <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Brain className="w-4 h-4 mr-2" />
-                        AI Services
+                      </d iv>
+                    <d iv>
+                      <h3 c lass Name="t ext-cyan-400 font-semibold mb-3 flex items-center">
+                        <B rain class Name="w-4 h-4 m r-2" />
+                        A I Services
                       </h3>
-                      <div className="space-y-2">
+                      <d iv class Name="s pace-y-2">
                           
                           >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
+                            <s ervice.icon class Name="w-3 h-3" />
+                            <s pan>{service.name}</s pan>
                           </a>
                         ))}
-                      </div>
-                    <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Settings className="w-4 h-4 mr-2" />
-                        IT Services
+                      </d iv>
+                    <d iv>
+                      <h3 c lass Name="t ext-cyan-400 font-semibold mb-3 flex items-center">
+                        <S ettings class Name="w-4 h-4 m r-2" />
+                        I T Services
                       </h3>
-                      <div className="space-y-2">
+                      <d iv class Name="s pace-y-2">
                           
                           >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
-                          </Link>
+                            <s ervice.icon class Name="w-3 h-3" />
+                            <s pan>{service.name}</s pan>
+                          </L ink>
                         ))}
-                      </div>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-gray-700">
-                    <div className="grid grid-cols-2 gap-4">
+                      </d iv>
+                  </d iv>
+                  <d iv class Name="m t-4 pt-4 border-t border-gray-700">
+                    <d iv class Name="g rid grid-cols-2 gap-4">
                       
                       >
-                        <span>View All Services</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
+                        <s pan>View All Services</s pan>
+                        <A rrow Right class Name="w-4 h-4" />
+                      </L ink>
                       
                       >
-                        <span>Specialized Solutions</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                </div>
+                        <s pan>Specialized Solutions</s pan>
+                        <A rrow Right class Name="w-4 h-4" />
+                      </L ink>
+                    </d iv>
+                </d iv>
               )}
-            </div>
+            </d iv>
 
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
+            <a h ref="/about" class Name="t ext-white hover:text-cyan-400 transition-colors">
               About
             </a>
-            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
+            <a h ref="/blog" class Name="t ext-white hover:text-cyan-400 transition-colors">
               Blog
             </a>
-            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
+            <a h ref="/case-studies" class Name="t ext-white hover:text-cyan-400 transition-colors">
               Case Studies
             </a>
-            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+            <a h ref="/pricing" class Name="t ext-white hover:text-cyan-400 transition-colors">
               Pricing
             </a>
-            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
+            <a h ref="/contact" class Name="t ext-white hover:text-cyan-400 transition-colors">
               Contact
             </a>
             
-            <div className="flex items-center space-x-4">
+            <d iv class Name="f lex items-center space-x-4">
               
               >
-                <Phone className="w-4 h-4" />
-                <span className="hidden sm:inline">+1 302 464 0950</span>
+                <P hone class Name="w-4 h-4" />
+                <s pan class Name="h idden sm:inline">+1 302 464 0950</s pan>
               </a>
               
               >
                 Get Started
               </a>
-            </div>
+            </d iv>
 
           {/* Mobile Menu Button */}
           
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
+            {is Menu Open ? <X c lass Name="w-6 h-6" /> : <M enu class Name="w-6 h-6" />}
+          </b utton>
+        </d iv>
 
         {/* Mobile Menu */}
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-            <div className="px-4 py-6 space-y-4">
-              <div>
+          <d iv class Name="l g:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
+            <d iv class Name="p x-4 py-6 space-y-4">
+              <d iv>
                 
                 >
-                  <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
+                  <s pan>Services</s pan>
+                  <C hevron Down class Name={`w-4 h-4 transition-transform ${is Services Open ? 'rotate-180' : ''}`} />
+                </b utton>
                 
-                  <div className="mt-4 pl-4 space-y-3">
-                    <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
-                      <div className="space-y-2">
+                  <d iv class Name="m t-4 pl-4 space-y-3">
+                    <d iv>
+                      <h4 c lass Name="t ext-cyan-400 font-semibold mb-2">Micro S AA S</h4>
+                      <d iv class Name="s pace-y-2">
                           
                           >
                             {service.name}
                           </a>
                         ))}
-                      </div>
-                    <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
-                      <div className="space-y-2">
+                      </d iv>
+                    <d iv>
+                      <h4 c lass Name="t ext-cyan-400 font-semibold mb-2">A I Services</h4>
+                      <d iv class Name="s pace-y-2">
                           
                           >
                             {service.name}
                           </a>
                         ))}
-                      </div>
+                      </d iv>
                     
                     >
                       View All Services →
                     </a>
-                  </div>
+                  </d iv>
                 )}
-              </div>
+              </d iv>
 
-              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a h ref="/about" class Name="b lock text-white hover:text-cyan-400 transition-colors" on Click={close All Menus}>
                 About
               </a>
-              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a h ref="/blog" class Name="b lock text-white hover:text-cyan-400 transition-colors" on Click={close All Menus}>
                 Blog
               </a>
-              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a h ref="/case-studies" class Name="b lock text-white hover:text-cyan-400 transition-colors" on Click={close All Menus}>
                 Case Studies
               </a>
-              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a h ref="/pricing" class Name="b lock text-white hover:text-cyan-400 transition-colors" on Click={close All Menus}>
                 Pricing
               </a>
-              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a h ref="/contact" class Name="b lock text-white hover:text-cyan-400 transition-colors" on Click={close All Menus}>
                 Contact
               </a>
               
-              <div className="pt-4 border-t border-gray-700">
+              <d iv class Name="p t-4 border-t border-gray-700">
                 
                 >
-                  <Phone className="w-4 h-4" />
-                  <span>+1 302 464 0950</span>
+                  <P hone class Name="w-4 h-4" />
+                  <s pan>+1 302 464 0950</s pan>
                 </a>
                 
                 >
                   Get Started
                 </a>
-              </div>
-          </div>
+              </d iv>
+          </d iv>
         )}
-      </div>
-    </nav>
+      </d iv>
+    </n av>
   );
 };
 

@@ -1,97 +1,97 @@
-import { useEffect } from 'react'
+import { use Effect } from 'react'
 
-const MobileOptimizer: React.FC = () => {
-  useEffect(() => {
-    // Prevent zoom on input focus for iOS
-    const preventZoom = () => {
-      const viewport = document.querySelector('meta[name="viewport"]')
+const Mobile Optimizer: React.F C = () => {
+  use Effect(() => {
+    // Prevent zoom on input focus for i OS
+    const prevent Zoom = () => {
+      const viewport = document.query Selector('meta[name="viewport"]')
       if (viewport) {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+        viewport.set Attribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
       }
     }
 
     // Add touch-friendly classes
-    const addTouchClasses = () => {
-      const buttons = document.querySelectorAll('button, a, [role="button"]')
-      buttons.forEach(button => {
-        if (!button.classList.contains('touch-manipulation')) {
-          button.classList.add('touch-manipulation')
+    const add Touch Classes = () => {
+      const buttons = document.query Selector All('button, a, [role="button"]')
+      buttons.for Each(button => {
+        if (!button.class List.contains('touch-manipulation')) {
+          button.class List.add('touch-manipulation')
         }
       })
     }
 
     // Optimize images for mobile
-    const optimizeImagesForMobile = () => {
-      const images = document.querySelectorAll('img')
-      images.forEach(img => {
-        const imageElement = img as HTMLImageElement
-        if (!imageElement.loading) {
-          imageElement.loading = 'lazy'
+    const optimize Images For Mobile = () => {
+      const images = document.query Selector All('img')
+      images.for Each(img => {
+        const image Element = img as H TM LImage Element
+        if (!image Element.loading) {
+          image Element.loading = 'lazy'
         }
-        if (!imageElement.decoding) {
-          imageElement.decoding = 'async'
+        if (!image Element.decoding) {
+          image Element.decoding = 'async'
         }
       })
     }
 
     // Add mobile-specific event listeners
-    const addMobileEventListeners = () => {
+    const add Mobile Event Listeners = () => {
       // Prevent double-tap zoom
-      let lastTouchEnd = 0
-      document.addEventListener('touchend', (event) => {
-        const now = new Date().getTime()
-        if (now - lastTouchEnd <= 300) {
-          event.preventDefault()
+      let last Touch End = 0
+      document.add Event Listener('touchend', (event) => {
+        const now = new Date().get Time()
+        if (now - last Touch End <= 300) {
+          e vent.prevent Default()
         }
-        lastTouchEnd = now
+        last Touch End = now
       }, false)
 
       // Add haptic feedback for supported devices
-      const addHapticFeedback = (element: Element) => {
-        element.addEventListener('touchstart', () => {
+      const add Haptic Feedback = (element: Element) => {
+        element.add Event Listener('touchstart', () => {
           if ('vibrate' in navigator) {
             navigator.vibrate(10) // Short vibration
           }
         })
       }
 
-      const interactiveElements = document.querySelectorAll('button, a, [role="button"]')
-      interactiveElements.forEach(addHapticFeedback)
+      const interactive Elements = document.query Selector All('button, a, [role="button"]')
+      interactive Elements.for Each(add Haptic Feedback)
     }
 
     // Optimize scroll performance
-    const optimizeScrollPerformance = () => {
+    const optimize Scroll Performance = () => {
       let ticking = false
-      const updateScrollPosition = () => {
+      const update Scroll Position = () => {
         // Add scroll-based optimizations here
         ticking = false
       }
 
-      const requestTick = () => {
+      const request Tick = () => {
         if (!ticking) {
-          requestAnimationFrame(updateScrollPosition)
+          request Animation Frame(update Scroll Position)
           ticking = true
         }
       }
 
-      window.addEventListener('scroll', requestTick, { passive: true })
+      window.add Event Listener('scroll', request Tick, { passive: true })
     }
 
     // Initialize mobile optimizations
-    preventZoom()
-    addTouchClasses()
-    optimizeImagesForMobile()
-    addMobileEventListeners()
-    optimizeScrollPerformance()
+    prevent Zoom()
+    add Touch Classes()
+    optimize Images For Mobile()
+    add Mobile Event Listeners()
+    optimize Scroll Performance()
 
     // Cleanup
     return () => {
-      window.removeEventListener('touchend', () => {})
-      window.removeEventListener('scroll', () => {})
+      window.remove Event Listener('touchend', () => {})
+      window.remove Event Listener('scroll', () => {})
     }
   }, [])
 
   return null
 }
 
-export default MobileOptimizer
+export default Mobile Optimizer

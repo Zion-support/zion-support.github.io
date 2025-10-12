@@ -1,11 +1,7 @@
 'use client';
-import { useState, useEffect} from 'react';
-import { ChevronLeft, ChevronRight} from 'lucide-react';
-<<<<<<< HEAD
-=======
+import { use State, use Effect} from 'react';
+import { Chevron Left, Chevron Right} from 'lucide-react';
 
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface Slide {
   id: number;,
   title: string;,
@@ -14,16 +10,16 @@ interface Slide {
   features: string[];
 }
 
-interface ContentCarouselProps {
+interface Content Carousel Props {
   slides?: Slide[];
-  autoPlay?: boolean;
+  auto Play?: boolean;
   interval?: number;
 }
 
-const defaultSlides: Slide[] = [
+const default Slides: Slide[] = [
   {
     id: 1,
-    title: 'AI-Powered Solutions',
+    title: 'A I-Powered Solutions',
     description: 'Transform your business with cutting-edge artificial intelligence technologies.',
     image: '/api/placeholder/600/400',
     features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision']
@@ -33,7 +29,7 @@ const defaultSlides: Slide[] = [
     title: 'Cloud Infrastructure',
     description: 'Scalable and secure cloud solutions for modern businesses.',
     image: '/api/placeholder/600/400',
-    features: ['Scalable Architecture', '99.9% Uptime', 'Global CDN']
+    features: ['Scalable Architecture', '99.9% Uptime', 'Global C DN']
   },
   {
     id: 3,
@@ -44,160 +40,119 @@ const defaultSlides: Slide[] = [
   }
 ];
 
-  const slides = defaultSlides, 
-  autoPlay = true, 
+  const slides = default Slides, 
+  auto Play = true, 
   interval = 5000 
-}: ContentCarouselProps) {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(autoPlay);
+}: Content Carousel Props) {
+  const [current Slide, set Current Slide] = use State(0);
+  const [is Playing, set Is Playing] = use State(auto Play);
 
-  useEffect(() => {
-    if (isPlaying) {
-      const timer = setInterval(() => {
-        setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+  use Effect(() => {
+    if (is Playing) {
+      const timer = set Interval(() => {
+        set Current Slide((prev Slide) => (prev Slide + 1) % slides.length);
       }, interval);
-      return () => clearInterval(timer);
+      return () => clear Interval(timer);
     }
-  }, [isPlaying, slides.length, interval]);
+  }, [is Playing, slides.length, interval]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+  const next Slide = () => {
+    set Current Slide((prev Slide) => (prev Slide + 1) % slides.length);
   };
 
-  const prevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
+  const prev Slide = () => {
+    set Current Slide((prev Slide) => (prev Slide - 1 + slides.length) % slides.length);
   };
 
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
+  const toggle Play Pause = () => {
+    set Is Playing(!is Playing);
   };
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
+  const go To Slide = (index: number) => {
+    set Current Slide(index);
   };
 
   return (
-    <div className="relative w-full max-w-4xlmx-auto">
-<<<<<<< HEAD
+    <d iv class Name="r elative w-full max-w-4xlmx-auto">
+        </d iv>
       {/* Main Carousel */}
-      <div className="relative overflow-hidden rounded-2 xl bg-white/10 backdrop-blur-lgborderborder-white/20">
-=======
-        </div>
-      {/* Main Carousel */}
-      <div className="relative overflow-hidden rounded-2 xl bg-white/10 backdrop-blur-lgborderborder-white/20">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <div 
-          className="flex transition-transformduration-500ease-in-out"
-          style="{{" transform: `translateX(-${currentSlide * 100}%)` }} />
+      <d iv class Name="r elative overflow-hidden rounded-2 xl bg-white/10 backdrop-blur-lgborderborder-white/20">
+        </d iv>
+        <d iv 
+          class Name="f lex transition-transformduration-500ease-in-out"
+          style="{{" transform: `translate X(-${current Slide * 100}%)` }} />
           {slides.map((slide) => (
-    <>
-            <div key="{slide.id}" className="w-fullflex-shrink-0" />
-              <div className="grid grid-cols-1 lg:grid-cols-2gap-8p-8">
-<<<<<<< HEAD
-                <div className="space-y-6">
-                  <h3 className="text-3 xlfont-bold text-white"  >{slide.title}</h3>
-                  <p className="text-lg text-gray-300">{slide.description}</p>
-                  <ul className="space-y-3" />
+
+            <d iv key="{slide.id}" class Name="w-f ullflex-shrink-0" />
+              <d iv class Name="g rid grid-cols-1 lg:grid-cols-2gap-8p-8">
+        </d iv>
+                <d iv class Name="s pace-y-6">
+        </d iv>
+                  <h3 c lass Name="t ext-3 xlfont-boldtext-white">{slide.title}</h3>
+                  <p c lass Name="t ext-lgtext-gray-300">{slide.description}</p>
+                  <u l class Name="s pace-y-3" />
                     {slide.features.map((feature, index) => (
-                      <li key="{index}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5 text-green-400mr-3flex-shrink-0" />
-=======
-        </div>
-                <div className="space-y-6">
-        </div>
-                  <h3 className="text-3 xlfont-boldtext-white">{slide.title}</h3>
-                  <p className="text-lgtext-gray-300">{slide.description}</p>
-                  <ul className="space-y-3" />
-                    {slide.features.map((feature, index) => (
-    <>
-                      <li key="{index}" className="flexitems-centertext-gray-300" />
-                        <CheckCircle className="w-5 h-5 text-green-400mr-3flex-shrink-0" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+                      <l i key="{index}" class Name="f lexitems-centertext-gray-300" />
+                        <C heck Circle class Name="w-5 h-5 t ext-green-400mr-3flex-shrink-0" / />
                         {feature}
-                      </li>
+                      </l i>
                     ))}
-    <>
-                  </ul>
-                </div>
-<<<<<<< HEAD
-                <div className="flex items-centerjustify-center">
-                  <div className="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-centerjustify-center">
-                    <Cloud className="w-24 h-24text-whiteopacity-50" />
-=======
-                <div className="flexitems-centerjustify-center" />
-                  <div className="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flexitems-centerjustify-center">
-        </div>
-                    <Cloud className="w-24 h-24text-whiteopacity-50" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </div>
-              </div>
+
+                  </u l>
+                </d iv>
+                <d iv class Name="f lexitems-centerjustify-center" />
+                  <d iv class Name="w-f ull h-64 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flexitems-centerjustify-center">
+        </d iv>
+                    <C loud class Name="w-24 h-24t ext-whiteopacity-50" / />
+                  </d iv>
+              </d iv>
           ))}
-        </div>
+        </d iv>
 
         {/* Navigation Arrows */}
-        <button
-          onClick="{prevSlide}"
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-fulltransition-colors"
+        <b utton
+          on Click="{prev Slide}"
+          class Name="a bsolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-fulltransition-colors"
           aria-label="Previous slide" />
-<<<<<<< HEAD
-          <ChevronLeft className="w-6h-6" />
-=======
-    <>
-          <ChevronLeft className="w-6h-6" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        </button>
-        <button
-          onClick="{nextSlide}"
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-fulltransition-colors"
+
+          <C hevron Left class Name="w-6h-6" / />
+        </b utton>
+        <b utton
+          on Click="{next Slide}"
+          class Name="a bsolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-fulltransition-colors"
           aria-label="Next slide" />
-<<<<<<< HEAD
-          <ChevronRight className="w-6h-6" />
-=======
-    <>
-          <ChevronRight className="w-6h-6" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        </button>
-      </div>
+
+          <C hevron Right class Name="w-6h-6" / />
+        </b utton>
+      </d iv>
 
       {/* Controls */}
-      <div className="flex items-center justify-centermt-6space-x-4">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <button
-          onClick="{togglePlayPause}"
-          className="bg-white/20 hover:bg-white/30 text-white p-2rounded-fulltransition-colors"
-          aria-label="{isPlaying" ? 'Pause' : 'Play'} />
-<<<<<<< HEAD
-          {isPlaying ? <Pause className="w-5h-5" /> : <Play className="w-5h-5" />}
-        </button>
+      <d iv class Name="f lex items-center justify-centermt-6space-x-4">
+        </d iv>
+        <b utton
+          on Click="{toggle Play Pause}"
+          class Name="b g-white/20 hover:bg-white/30 text-white p-2rounded-fulltransition-colors"
+          aria-label="{is Playing" ? 'Pause' : 'Play'} />
+
+          {is Playing ? <P ause class Name="w-5h-5" / /> : <P lay class Name="w-5h-5" / />}
+        </b utton>
 
         {/* Slide Indicators */}
-        <div className="flex space-x-2">
-=======
-    <>
-          {isPlaying ? <Pause className="w-5h-5" / /> : <Play className="w-5h-5" / />}
-        </button>
-
-        {/* Slide Indicators */}
-        <div className="flexspace-x-2">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <d iv class Name="f lexspace-x-2">
+        </d iv>
           {slides.map((_, index) => (
-            <button
+            <b utton
               key="{index}"
-              onClick="{()" = /> goToSlide(index)}
-              className="{`w-3" h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-white/30'
+              on Click="{()" = /> go To Slide(index)}
+              class Name="{`w-3" h-3 rounded-full transition-colors ${
+                index === current Slide ? 'bg-white' : 'bg-white/30'
               }`}
               aria-label="{`Go" to slide ${index + 1}`}
             />
           ))}
-    <>
-        </div>
-    </div>
+
+        </d iv>
+    </d iv>
   );
 }
-    </>

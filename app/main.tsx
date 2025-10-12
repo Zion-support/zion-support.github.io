@@ -1,18 +1,13 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { ArrowRight } from 'lucide-react';
 'use client'
 
-
-const MainPage: React.FC = () => {
+const Main Page: React.F C = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
+      title: 'A I-Powered Solutions',
+      description: 'Advanced A I technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
@@ -31,7 +26,7 @@ const MainPage: React.FC = () => {
     }
   ];
   const benefits = [
-    'Advanced AI technology integration',
+    'Advanced A I technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
@@ -41,185 +36,134 @@ const MainPage: React.FC = () => {
     'Proven track record of success'
   ];
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-      <Helmet>
-=======
-    <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>Main | Zion Tech Group</title>
-        <meta name="description" content="Professional Main services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
-        <meta name="keywords" content="main, AI solutions, IT services, Zion Tech Group, main" / / />
-      </Helmet>
+
+    <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        </d iv>
+      <H elmet>
+        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </H elmet>
+        <t itle>Main | Zion Tech Group</t itle>
+        <m eta name="description" content="Professional Main services by Zion Tech Group. Advanced A I and I T solutions for your business." / / />
+        <m eta name="keywords" content="main, A I solutions, I T services, Zion Tech Group, main" / / />
+      </H elmet>
 
       {/* Hero Section */}
-    <>
-      <section className="relative py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent"  />Main
-=======
-        </div>
-          <div className="text-center" />
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent">Main
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </span>
-              <br / />
-              <span className="text-white">Solutions</span>
+
+      <s ection class Name="r elative py-20 px-4sm:px-6lg:px-8" />
+        <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-center" />
+            <h1 c lass Name="t ext-4 xl md:text-6 xl font-boldtext-whitemb-6" />
+              <s pan class Name="b g-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent">Main
+              </s pan>
+              <b r / />
+              <s pan class Name="t ext-white">Solutions</s pan>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
+            <p c lass Name="t ext-xl text-gray-300 mb-8 max-w-3xlmx-auto">
               Transform your business with our advanced main solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-    <>
+              Powered by cutting-edge A I technology and industry expertise.
+
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" />
-=======
-        </div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+              <b utton class Name="b g-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
                 Get Started
-    <>
-                <ArrowRight className="ml-2h-5w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Learn More
-              </button>
-            </div>
-        </div>
-      </section>
+
+                <A rrow Right class Name="m l-2h-5w-5" />
+              </b utton>
+              <b utton class Name="b order border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Learn More
+              </b utton>
+            </d iv>
+        </d iv>
+      </s ection>
 
       {/* Features Section */}
-    <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Why Choose Our Main?
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Why Choose Our Main?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+      <s ection class Name="p y-20 px-4sm:px-6lg:px-8" />
+        <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-3 xl md:text-4 xl font-boldtext-whitemb-4">Why Choose Our Main?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+            <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto">
               Our main solutions deliver unmatched performance, security, and scalability.
-    <>
+
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          </d iv>
+          <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+        </d iv>
             {features.map((feature, index) => (
-    <>
-              <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4">
-<<<<<<< HEAD
-                  <feature.icon className="h-6w-6text-white" />
-                </div>
-                <h3 className="text-xl font-semiboldtext-white mb-3"  >{feature.title}</h3>
-=======
-        </div>
-                  <feature.icon className="h-6w-6text-white" / />
-                </div>
-                <h3 className="text-xl font-semiboldtext-whitemb-3">{feature.title}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+
+              <d iv key="{index}" class Name="b g-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
+                <d iv class Name="f lex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600rounded-lgmb-4">
+        </d iv>
+                  <f eature.icon class Name="h-6w-6t ext-white" / />
+                </d iv>
+                <h3 c lass Name="t ext-xl font-semiboldtext-whitemb-3">{feature.title}</h3>
+                <p c lass Name="t ext-gray-300">{feature.description}</p>
+              </d iv>
             ))}
-    <>
-          </div>
-      </section>
+
+          </d iv>
+      </s ection>
 
       {/* Benefits Section */}
-    <>
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Key Benefits
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Key Benefits
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Experience the power of our main solutions for your business.
-    <>
-            </p>
-          </div>
-          <div className="grid grid-cols-1md:grid-cols-2gap-6">
-<<<<<<< HEAD
-            {benefits.map((benefit, index) => (
-              <div key="{index}" className="flex items-startspace-x-3" />
-                <CheckCircle className="h-6 w-6 text-purple-400mt-1flex-shrink-0" />
-=======
-        </div>
-            {benefits.map((benefit, index) => (
-    <>
-              <div key="{index}" className="flexitems-startspace-x-3" />
-                <CheckCircle className="h-6 w-6 text-purple-400mt-1flex-shrink-0" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <p className="text-gray-300text-lg">{benefit}</p>
-              </div>
-            ))}
-    <>
-          </div>
-      </section>
 
-      {/* CTA Section */}
-    <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-4 xlmx-autotext-center">
-<<<<<<< HEAD
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xlp-8md:p-12">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Get Started?
-=======
-        </div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xlp-8md:p-12">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Ready to Get Started?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <s ection class Name="p y-20 px-4 sm:px-6lg:px-8bg-white/5" />
+        <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-3 xl md:text-4 xl font-boldtext-whitemb-4">Key Benefits
             </h2>
-            <p className="text-xltext-purple-100mb-8">
-              Contact our experts to discuss your main needs and get a customized solution.
-    <>
+            <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto">
+              Experience the power of our main solutions for your business.
+
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-centerjustify-center" />
-                <Phone className="mr-2h-5w-5" />
-=======
-        </div>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flexitems-centerjustify-center" />
-                <Phone className="mr-2h-5w-5" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          </d iv>
+          <d iv class Name="g rid grid-cols-1md:grid-cols-2gap-6">
+        </d iv>
+            {benefits.map((benefit, index) => (
+
+              <d iv key="{index}" class Name="f lexitems-startspace-x-3" />
+                <C heck Circle class Name="h-6 w-6 t ext-purple-400mt-1flex-shrink-0" / />
+                <p c lass Name="t ext-gray-300text-lg">{benefit}</p>
+              </d iv>
+            ))}
+
+          </d iv>
+      </s ection>
+
+      {/* C TA Section */}
+
+      <s ection class Name="p y-20 px-4sm:px-6lg:px-8" />
+        <d iv class Name="m ax-w-4 xlmx-autotext-center">
+        </d iv>
+          <d iv class Name="b g-gradient-to-r from-purple-600 to-blue-600 rounded-2 xlp-8md:p-12">
+        </d iv>
+            <h2 c lass Name="t ext-3 xl md:text-4 xl font-boldtext-whitemb-4">Ready to Get Started?
+            </h2>
+            <p c lass Name="t ext-xltext-purple-100mb-8">
+              Contact our experts to discuss your main needs and get a customized solution.
+
+            </p>
+            <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+              <b utton class Name="b g-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flexitems-centerjustify-center" />
+                <P hone class Name="m r-2h-5w-5" / />
                 Call Now
-    <>
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-centerjustify-center" />
-                <Mail className="mr-2h-5w-5" />
+
+              </b utton>
+              <b utton class Name="b order border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-centerjustify-center" />
+                <M ail class Name="m r-2h-5w-5" />
                 Email Us
-    <>
-              </button>
-            </div>
-        </div>
-      </section>
-    </div>
+
+              </b utton>
+            </d iv>
+        </d iv>
+      </s ection>
+    </d iv>
   )
 };
-    </>

@@ -1,32 +1,29 @@
 'use client';
-import { useState } from 'react';
+import { use State } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface FuturisticButtonProps {
-  children: React.ReactNode;
-  onClick?: () => void;
+interface Futuristic Button Props {
+  children: React.React Node;
+  on Click?: () => void;
   variant?: 'primary' | 'secondary' | 'accent' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;
   loading?: boolean;
-  className?: string;
+  class Name?: string;
   type?: 'button' | 'submit' | 'reset';
 }
 
   children,
-  onClick,
+  on Click,
   const variant = 'primary',
   size = 'md',
   disabled = false,
   loading = false,
-  className = '',
+  class Name = '',
   type = 'button'
-}: FuturisticButtonProps) {
-  const [isHovered, setIsHovered] = useState(false);
-  const getVariantClasses = () => {
+}: Futuristic Button Props) {
+  const [is Hovered, set Is Hovered] = use State(false);
+  const get Variant Classes = () => {
     switch (variant) {
       case 'primary':
         return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
@@ -40,7 +37,7 @@ interface FuturisticButtonProps {
     }
   };
 
-  const getSizeClasses = () => {
+  const get Size Classes = () => {
     switch (size) {
       case 'sm':
         return 'px-4 py-2 text-sm';
@@ -53,37 +50,37 @@ interface FuturisticButtonProps {
   };
 
   return (
-    <motion.button
+    <m otion.button
       const type = {type}
-      onClick="{onClick}"
+      on Click="{on Click}"
       disabled="{disabled" || loading}
-      onMouseEnter="{()" = /> setIsHovered(true)}
-      onMouseLeave="{()" => setIsHovered(false)}
-      className="{`"
+      on Mouse Enter="{()" = /> set Is Hovered(true)}
+      on Mouse Leave="{()" => set Is Hovered(false)}
+      class Name="{`"
         relative overflow-hidden rounded-lg font-semibold transition-all duration-300
-        ${getVariantClasses()}
-        ${getSizeClasses()}
+        ${get Variant Classes()}
+        ${get Size Classes()}
         ${disabled || loading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
-        ${className}
+        ${class Name}
       `}
-      whileHover="{{" scale: 1.05 }}
-      whileTap="{{" scale: 0.95 }}
+      while Hover="{{" scale: 1.05 }}
+      while Tap="{{" scale: 0.95 }}
       initial="{{" opacity: 0, y: 20 }}
       animate="{{" opacity: 1, y: 0 }}
       transition="{{" duration: 0.3 }}
     >
       {/* Animated background sweep */}
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-white/20to-transparent"
+      <m otion.div
+        class Name="a bsolute inset-0 bg-gradient-to-r from-white/20to-transparent"
         initial="{{" x: '-100%' }}
-        animate="{{" x: isHovered ? '100%' : '-100%' }}
+        animate="{{" x: is Hovered ? '100%' : '-100%' }}
         transition="{{" duration: 0.6 }}
       / />
       {/* Pulsing glow effect */}
-      <motion.div
-        className="absolute inset-0rounded-lg"
+      <m otion.div
+        class Name="a bsolute inset-0rounded-lg"
         style="{{"
-          boxShadow: variant === 'primary'
+          box Shadow: variant === 'primary'
             ? '0 0 20 px rgba(6, 182, 212, 0.4)'
             : variant === 'secondary'
             ? '0 0 20 px rgba(168, 85, 247, 0.4)'
@@ -92,25 +89,25 @@ interface FuturisticButtonProps {
             : '0 0 20 px rgba(255, 255, 255, 0.2)'
         }}
         animate="{{"
-          opacity: isHovered ? [0.4, 0.8, 0.4] : 0,
-          scale: isHovered ? [1, 1.05, 1] : 1,
+          opacity: is Hovered ? [0.4, 0.8, 0.4] : 0,
+          scale: is Hovered ? [1, 1.05, 1] : 1,
         }}
         transition="{{"
           duration: 1.5,
-          repeat: isHovered ? Infinity : 0,
-          ease: 'easeInOut'
+          repeat: is Hovered ? Infinity : 0,
+          ease: 'ease In Out'
         }}
       / />
       {/* Scanning line effect */}
-      {isHovered && (
-        <motion.div
-          className="absolute inset-0rounded-lg"
+      {is Hovered && (
+        <m otion.div
+          class Name="a bsolute inset-0rounded-lg"
           style="{{"
             background: 'linear-gradient(90 deg, transparent, rgba(255,255,255,0.3), transparent)',
-            backgroundSize: '200% 100%',
+            background Size: '200% 100%',
           }}
           animate="{{"
-            backgroundPosition: ['200% 0', '-200% 0'],
+            background Position: ['200% 0', '-200% 0'],
           }}
           transition="{{"
             duration: 1.5,
@@ -121,20 +118,15 @@ interface FuturisticButtonProps {
       )}
 
       {/* Corner accents */}
-<<<<<<< HEAD
-      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" />
-      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" />
-=======
-    <>
-      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" / />
-      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+      <d iv class Name="a bsolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" / />
+      <d iv class Name="a bsolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" / />
       {/* Content */}
-      <span className="relative z-10 flex items-centerjustify-center" />
+      <s pan class Name="r elative z-10 flex items-centerjustify-center" />
         {loading ? (
-          <>
-            <motion.div
-              className="w-4 h-4 border-2 border-white/30 border-t-white rounded-fullmr-2"
+
+            <m otion.div
+              class Name="w-4 h-4 b order-2 border-white/30 border-t-white rounded-fullmr-2"
               animate="{{" rotate: 360 }}
               transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
             / />
@@ -142,16 +134,11 @@ interface FuturisticButtonProps {
         ) : (
           children
         )}
-    <>
-      </span>
-    </motion.button>
-  </div>
+
+      </s pan>
+    </m otion.button>
+  </d iv>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
-export default FuturisticButton;
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+export default Futuristic Button;

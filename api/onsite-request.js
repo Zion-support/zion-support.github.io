@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Simple wrapper function to replace withSentry
+// Simple wrapper function to replace with Sentry
 // const withSentry = (handler) => handler;
 
 const dir = path.join(process.cwd(), 'data');

@@ -1,52 +1,45 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { Link } from 'react-router-dom';
 import { ArrowRight, Share2} from 'lucide-react';
-=======
-import { ArrowRight, Calendar, BarChart3, Users, Zap, CheckCircle, Target, Share2, Star, Shield } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
+import { ArrowRight, Calendar, Bar Chart3, Users, Zap, CheckCircle, Target, Share2, Star, Shield } from 'lucide-react';
 
-export default function AISocialMediaSchedulerPage() {
+export default function A ISocial Media Scheduler Page() {
   const features = [
     {
-      icon: <Calendar className="w-6h-6text-cyan-400" />,
+      icon: <C alendar class Name="w-6h-6t ext-cyan-400" />,
       title: 'Smart Scheduling',
-      description: 'AI-powered optimal posting times based on audience engagement patterns'
+      description: 'A I-powered optimal posting times based on audience engagement patterns'
     },
     {
-      icon: <BarChart3 className="w-6h-6text-emerald-400" />,
+      icon: <B ar Chart3 class Name="w-6h-6t ext-emerald-400" />,
       title: 'Analytics Dashboard',
-      description: 'Comprehensive performance metrics and ROI tracking across all platforms'
+      description: 'Comprehensive performance metrics and R OI tracking across all platforms'
     },
     {
-      icon: <Users className="w-6h-6text-purple-400" />,
+      icon: <U sers class Name="w-6h-6t ext-purple-400" />,
       title: 'Audience Insights',
-      description: 'AI-driven audience analysis and content personalization recommendations'
+      description: 'A I-driven audience analysis and content personalization recommendations'
     },
     {
-      icon: <Zap className="w-6h-6text-orange-400" />,
+      icon: <Z ap class Name="w-6h-6t ext-orange-400" />,
       title: 'Auto-Posting',
       description: 'Seamless cross-platform content distribution with smart formatting'
     },
     {
-      icon: <Target className="w-6h-6text-pink-400" />,
+      icon: <T arget class Name="w-6h-6t ext-pink-400" />,
       title: 'Content Optimization',
-      description: 'AI suggestions for hashtags, captions, and optimal posting times'
+      description: 'A I suggestions for hashtags, captions, and optimal posting times'
     },
     {
-      icon: <Shield className="w-6h-6text-red-400" />,
+      icon: <S hield class Name="w-6h-6t ext-red-400" />,
       title: 'Brand Safety',
       description: 'Automated content moderation and brand compliance checking'
     }
   ]
 
-  const pricingPlans = [
+  const pricing Plans = [
     {
       name: 'Starter',
       price: '$29',
@@ -73,7 +66,7 @@ export default function AISocialMediaSchedulerPage() {
         'Advanced analytics',
         'Priority support',
         'Team collaboration',
-        'AI content suggestions',
+        'A I content suggestions',
         'Competitor analysis',
         'Custom branding'
       ],
@@ -90,8 +83,8 @@ export default function AISocialMediaSchedulerPage() {
         'White-label solution',
         'Dedicated support',
         'Custom integrations',
-        'Advanced AI features',
-        'API access',
+        'Advanced A I features',
+        'A PI access',
         'Custom reporting'
       ],
       popular: false
@@ -102,443 +95,283 @@ export default function AISocialMediaSchedulerPage() {
     {
       name: 'Sarah Johnson',
       company: 'Digital Marketing Agency',
-      content: 'Increased our social media engagement by 300% in just 2 months. The AI scheduling is incredibly accurate.',
+      content: 'Increased our social media engagement by 300% in just 2 months. The A I scheduling is incredibly accurate.',
       rating: 5,
-      avatar: 'SJ'
+      avatar: 'S J'
     },
     {
       name: 'Mike Chen',
       company: 'E-commerce Store',
-      content: 'The analytics dashboard gives us insights we never had before. ROI tracking is spot-on.',
+      content: 'The analytics dashboard gives us insights we never had before. R OI tracking is spot-on.',
       rating: 5,
-      avatar: 'MC'
+      avatar: 'M C'
     },
     {
       name: 'Emily Rodriguez',
       company: 'Content Creator',
-      content: 'Saves me 10+ hours per week. The AI content suggestions are always on-brand and engaging.',
+      content: 'Saves me 10+ hours per week. The A I content suggestions are always on-brand and engaging.',
       rating: 5,
-      avatar: 'ER'
+      avatar: 'E R'
     }
   ]
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
-      <Helmet />
-        <title   />AI Social Media Scheduler - Zion Tech Group | Automated Social Media Management</title>
-=======
-    <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900 pt-20">
-        </div>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-        <title>AI Social Media Scheduler - Zion Tech Group | Automated Social Media Management</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <meta name="description" content="Revolutionary AI-powered social media scheduler with smart posting, analytics, and audience insights. Increase engagement by 300% with automated content optimization. Starting at $29/month." / / />
-        <meta name="keywords" content="AI social media scheduler, automated posting, social media management, content optimization, social media analytics, AI marketing tools" / / />
-        <meta name="robots" content="index, follow" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-social-media-scheduler" />
-      </Helmet>
+
+    <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900 pt-20">
+        </d iv>
+      <H elmet>
+        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </H elmet>
+        <t itle>A I Social Media Scheduler - Zion Tech Group | Automated Social Media Management</t itle>
+        <m eta name="description" content="Revolutionary A I-powered social media scheduler with smart posting, analytics, and audience insights. Increase engagement by 300% with automated content optimization. Starting at $29/month." / / />
+        <m eta name="keywords" content="A I social media scheduler, automated posting, social media management, content optimization, social media analytics, A I marketing tools" / / />
+        <m eta name="robots" content="index, follow" / / />
+        <l ink rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-social-media-scheduler" />
+      </H elmet>
 
       {/* Hero Section */}
-    <>
-      <section className="relative py-20px-4overflow-hidden" />
-<<<<<<< HEAD
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1)_0%,transparent_50%)]" />
-        <div className="relative max-w-7xlmx-autotext-center">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-            <Share2 className="w-4h-4" />
-            <span   />AI-Powered Social Media Management</span>
-=======
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.1)_0%,transparent_50%)]" / />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1)_0%,transparent_50%)]" / />
-        <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-        </div>
-            <Share2 className="w-4h-4" / />
-            <span>AI-Powered Social Media Management</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          </div>
+
+      <s ection class Name="r elative py-20px-4overflow-hidden" />
+        <d iv class Name="a bsoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.1)_0%,transparent_50%)]" / />
+        <d iv class Name="a bsoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1)_0%,transparent_50%)]" / />
+        <d iv class Name="r elative max-w-7 xlmx-autotext-center">
+        </d iv>
+          <d iv class Name="i nline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
+        </d iv>
+            <S hare2 class Name="w-4h-4" / />
+            <s pan>A I-Powered Social Media Management</s pan>
+          </d iv>
           
-          <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
-            AI Social Media
-    <>
-            <br / />
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">Scheduler
-            </span>
+          <h1 c lass Name="t ext-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
+            A I Social Media
+
+            <b r / />
+            <s pan class Name="b g-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">Scheduler
+            </s pan>
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
-<<<<<<< HEAD
-              Transform your social media presence with AI-powered scheduling, content optimization, 
+          <p c lass Name="t ext-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
+            Transform your social media presence with A I-powered scheduling, content optimization, 
             and analytics. Increase engagement by up to 300% with intelligent automation.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" >
-           
-          <span    />
-        </Link>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-            <Link to="#pricing" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>View Pricing</span>
-=======
-            Transform your social media presence with AI-powered scheduling, content optimization, 
-            and analytics. Increase engagement by up to 300% with intelligent automation.
-          </p>
-          
-    <>
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-        </div>
-            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
-              <span>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-            <Link to="#pricing" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-              <span>View Pricing</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-          </div>
+
+          <d iv class Name="f lex flex-col sm:flex-row gap-6justify-centermb-16">
+        </d iv>
+            <L ink to="/contact" class Name="g roup bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
+              <s pan>Start Free Trial</s pan>
+              <A rrow Right class Name="w-5 h-5g roup-hover:translate-x-1transition-transform" />
+            </L ink>
+            <L ink to="#pricing" class Name="g roup border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+              <s pan>View Pricing</s pan>
+              <A rrow Right class Name="w-5 h-5g roup-hover:translate-x-1transition-transform" />
+            </L ink>
+          </d iv>
 
           {/* Key Stats */}
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xlmx-auto">
-            <div className="text-center">
-              <div className="text-3 xl font-boldtext-cyan-400mb-2"   />300%</div>
-              <div className="text-gray-300text-sm"   />Avg. Engagement Increase</div>
-            <div className="text-center">
-              <div className="text-3 xl font-boldtext-purple-400mb-2"   />10+</div>
-              <div className="text-gray-300text-sm"   />Platforms Supported</div>
-            <div className="text-center">
-              <div className="text-3 xl font-boldtext-pink-400mb-2"   />50 K+</div>
-              <div className="text-gray-300text-sm"   />Active Users</div>
-            <div className="text-center">
-              <div className="text-3 xl font-boldtext-emerald-400mb-2"   />99.9%</div>
-              <div className="text-gray-300text-sm"   />Uptime Guarantee</div>
-=======
-    <>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xlmx-auto">
-        </div>
-            <div className="text-center" />
-              <div className="text-3 xl font-boldtext-cyan-400mb-2">300%</div>
-              <div className="text-gray-300text-sm">Avg. Engagement Increase</div>
-            <div className="text-center" />
-              <div className="text-3 xl font-boldtext-purple-400mb-2">10+</div>
-              <div className="text-gray-300text-sm">Platforms Supported</div>
-            <div className="text-center" />
-              <div className="text-3 xl font-boldtext-pink-400mb-2">50 K+</div>
-              <div className="text-gray-300text-sm">Active Users</div>
-            <div className="text-center" />
-              <div className="text-3 xl font-boldtext-emerald-400mb-2">99.9%</div>
-              <div className="text-gray-300text-sm">Uptime Guarantee</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          </div>
-      </section>
+
+          <d iv class Name="g rid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-center" />
+              <d iv class Name="t ext-3 xl font-boldtext-cyan-400mb-2">300%</d iv>
+              <d iv class Name="t ext-gray-300text-sm">Avg. Engagement Increase</d iv>
+            <d iv class Name="t ext-center" />
+              <d iv class Name="t ext-3 xl font-boldtext-purple-400mb-2">10+</d iv>
+              <d iv class Name="t ext-gray-300text-sm">Platforms Supported</d iv>
+            <d iv class Name="t ext-center" />
+              <d iv class Name="t ext-3 xl font-boldtext-pink-400mb-2">50 K+</d iv>
+              <d iv class Name="t ext-gray-300text-sm">Active Users</d iv>
+            <d iv class Name="t ext-center" />
+              <d iv class Name="t ext-3 xl font-boldtext-emerald-400mb-2">99.9%</d iv>
+              <d iv class Name="t ext-gray-300text-sm">Uptime Guarantee</d iv>
+          </d iv>
+      </s ection>
 
       {/* Features Section */}
-    <>
-      <section className="py-20px-4relative" />
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Powerful Features for <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Social Success</span>
-=======
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" / />
-        <div className="relative max-w-7xlmx-auto">
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Powerful Features for <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Social Success</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+      <s ection class Name="p y-20px-4relative" />
+        <d iv class Name="a bsolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" / />
+        <d iv class Name="r elative max-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+              Powerful Features for <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Social Success</s pan>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Everything you need to manage, optimize, and grow your social media presence with AI-powered intelligence.
-    <>
+            <p c lass Name="t ext-xl text-gray-300 max-w-4xlmx-auto">
+              Everything you need to manage, optimize, and grow your social media presence with A I-powered intelligence.
+
             </p>
-          </div>
+          </d iv>
           
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
+        </d iv>
             {features.map((feature, index) => (
-    <>
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
-                </div>
-<<<<<<< HEAD
-                <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{feature.title}
+
+              <d iv key="{index}" class Name="g roup bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                <d iv class Name="f lex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
+                </d iv>
+                <h3 c lass Name="t ext-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title}
                 </h3>
-                <p className="text-gray-300leading-relaxed">
-              {feature.description}
-=======
-                <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title}
-                </h3>
-                <p className="text-gray-300leading-relaxed" />
+                <p c lass Name="t ext-gray-300leading-relaxed" />
                   {feature.description}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
                 </p>
-              </div>
+              </d iv>
             ))}
-    <>
-          </div>
-      </section>
+
+          </d iv>
+      </s ection>
 
       {/* Pricing Section */}
-    <>
-      <section id="pricing" className="py-20 px-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
-        <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Simple, Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Simple, Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+      <s ection id="pricing" class Name="p y-20 px-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
+        <d iv class Name="r elative max-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+              Simple, Transparent <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</s pan>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Choose the plan that fits your needs. All plans include our core AI features and 24/7 support.
-    <>
+            <p c lass Name="t ext-xl text-gray-300 max-w-4xlmx-auto">
+              Choose the plan that fits your needs. All plans include our core A I features and 24/7 support.
+
             </p>
-          </div>
+          </d iv>
           
-          <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            {pricingPlans.map((plan, index) => (
-              <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
+          <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+        </d iv>
+            {pricing Plans.map((plan, index) => (
+              <d iv key="{index}" class Name="{`r elative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
                 plan.popular 
                   ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
                   : 'border-white/20 hover: border-cyan-400/30'
               }`} />
                 {plan.popular && (
-<<<<<<< HEAD
-                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold"  />Most Popular
-                    </div>
+
+                  <d iv class Name="a bsolute -top-4 left-1/2transform-translate-x-1/2">
+        </d iv>
+                    <d iv class Name="b g-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
+                    </d iv>
                 )}
+
+                <d iv class Name="t ext-centermb-8">
+        </d iv>
+                  <h3 c lass Name="t ext-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
+                  <p c lass Name="t ext-gray-300text-smmb-4">{plan.description}</p>
+                  <d iv class Name="f lexitems-baselinejustify-center" />
+                    <s pan class Name="t ext-5 xlfont-boldtext-cyan-400">{plan.price}</s pan>
+                    <s pan class Name="t ext-gray-300ml-2">{plan.period}</s pan>
+                  </d iv>
                 
-                <div className="text-centermb-8">
-                  <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                  <p className="text-gray-300text-smmb-4">
-              {plan.description}</p>
-                  <div className="flex items-baselinejustify-center">
-                    <span className="text-5 xlfont-boldtext-cyan-400"   />{plan.price}</span>
-                    <span className="text-gray-300ml-2"   />{plan.period}</span>
-=======
-    <>
-                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-        </div>
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
-                    </div>
-                )}
-                
-    <>
-                <div className="text-centermb-8">
-        </div>
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300text-smmb-4">{plan.description}</p>
-                  <div className="flexitems-baselinejustify-center" />
-                    <span className="text-5 xlfont-boldtext-cyan-400">{plan.price}</span>
-                    <span className="text-gray-300ml-2">{plan.period}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </div>
-                
-                <ul className="space-y-4mb-8" />
-                  {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-                    <li key="{featureIndex}" className="flex items-centerspace-x-3" />
-                      <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" />
-                      <span className="text-gray-300"   />{feature}</span>
-=======
-    <>
-                    <li key="{featureIndex}" className="flexitems-centerspace-x-3" />
-                      <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
-                      <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </li>
+                <u l class Name="s pace-y-4mb-8" />
+                  {plan.features.map((feature, feature Index) => (
+
+                    <l i key="{feature Index}" class Name="f lexitems-centerspace-x-3" />
+                      <C heck Circle class Name="w-5 h-5t ext-green-400flex-shrink-0" / />
+                      <s pan class Name="t ext-gray-300">{feature}</s pan>
+                    </l i>
                   ))}
-                </ul>
+                </u l>
                 
-                <Link 
+                <L ink 
                   to="/contact"
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  class Name="{`b lock" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
                   }`}
                   />Get Started
-    <>
-                </Link>
-              </div>
+
+                </L ink>
+              </d iv>
             ))}
-    <>
-          </div>
-      </section>
+
+          </d iv>
+      </s ection>
 
       {/* Testimonials Section */}
-    <>
-      <section className="py-20px-4relative" />
-        <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Trusted by <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />50,000+</span> Users
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Trusted by <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">50,000+</span> Users
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              See what our customers are saying about their success with our AI social media scheduler.
-    <>
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            {testimonials.map((testimonial, index) => (
-    <>
-              <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
-<<<<<<< HEAD
-                <div className="flex items-centermb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4"  />{testimonial.avatar}
-                  </div>
-                  <div />
-                    <div className="font-semiboldtext-white"   />{testimonial.name}</div>
-                    <div className="text-gray-400text-sm"   />{testimonial.company}</div>
-                </div>
-                <div className="flexmb-4">
-=======
-                <div className="flexitems-centermb-4">
-        </div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar}
-                  </div>
-                  <div />
-                    <div className="font-semiboldtext-white">{testimonial.name}</div>
-                    <div className="text-gray-400text-sm">{testimonial.company}</div>
-                </div>
-                <div className="flexmb-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
-                  ))}
-    <>
-                </div>
-<<<<<<< HEAD
-                <p className="text-gray-300italic">
-              "{testimonial.content}"</p>
-=======
-                <p className="text-gray-300italic">"{testimonial.content}"</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </div>
-            ))}
-    <>
-          </div>
-      </section>
 
-      {/* CTA Section */}
-    <>
-      <section className="py-20px-4relative" />
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
-              <div className="relativez-10">
-                <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" />
-                  Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Social Media?</span>
+      <s ection class Name="p y-20px-4relative" />
+        <d iv class Name="r elative max-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+              Trusted by <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">50,000+</s pan> Users
+            </h2>
+            <p c lass Name="t ext-xl text-gray-300 max-w-4xlmx-auto">
+              See what our customers are saying about their success with our A I social media scheduler.
+
+            </p>
+          </d iv>
+          
+          <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+        </d iv>
+            {testimonials.map((testimonial, index) => (
+
+              <d iv key="{index}" class Name="b g-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
+                <d iv class Name="f lexitems-centermb-4">
+        </d iv>
+                  <d iv class Name="w-12 h-12 b g-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar}
+                  </d iv>
+                  <d iv />
+                    <d iv class Name="f ont-semiboldtext-white">{testimonial.name}</d iv>
+                    <d iv class Name="t ext-gray-400text-sm">{testimonial.company}</d iv>
+                </d iv>
+                <d iv class Name="f lexmb-4">
+        </d iv>
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <S tar key="{i}" class Name="w-5 h-5t ext-yellow-400fill-current" />
+                  ))}
+
+                </d iv>
+                <p c lass Name="t ext-gray-300italic">"{testimonial.content}"</p>
+              </d iv>
+            ))}
+
+          </d iv>
+      </s ection>
+
+      {/* C TA Section */}
+
+      <s ection class Name="p y-20px-4relative" />
+        <d iv class Name="a bsolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" / />
+        <d iv class Name="r elative max-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-center" />
+            <d iv class Name="b g-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
+        </d iv>
+              <d iv class Name="r elativez-10">
+        </d iv>
+                <h2 c lass Name="t ext-4 xl sm:text-5 xl md:text-6 xl font-bold text-whitemb-6leading-tight" />
+                  Ready to Transform Your <s pan class Name="b g-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">Social Media?</s pan>
                 </h2>
                 
-                <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
-              Join thousands of businesses already using our AI-powered social media scheduler 
+                <p c lass Name="t ext-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
+                  Join thousands of businesses already using our A I-powered social media scheduler 
                   to increase engagement, save time, and grow their online presence.
                 </p>
-                
-                <div className="flex flex-col sm:flex-row gap-6justify-centermb-8">
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
-           
-          <span    />
-        </Link>Start Free Trial</span>
-                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                  </Link>
-                  <Link to="#pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>View All Plans</span>
-=======
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" / />
-        <div className="relative max-w-7xlmx-auto">
-        </div>
-          <div className="text-center" />
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
-        </div>
-              <div className="relativez-10">
-        </div>
-                <h2 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-whitemb-6leading-tight" />
-                  Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">Social Media?</span>
-                </h2>
-                
-                <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
-                  Join thousands of businesses already using our AI-powered social media scheduler 
-                  to increase engagement, save time, and grow their online presence.
-                </p>
-                
-    <>
-                <div className="flex flex-col sm:flex-row gap-6justify-centermb-8">
-        </div>
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
-                    <span>Start Free Trial</span>
-                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                  </Link>
-                  <Link to="#pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                    <span>View All Plans</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                  </Link>
-                </div>
-                
-<<<<<<< HEAD
-                <div className="text-white/80text-sm">
-                  <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-=======
-    <>
-                <div className="text-white/80text-sm">
-        </div>
+
+                <d iv class Name="f lex flex-col sm:flex-row gap-6justify-centermb-8">
+        </d iv>
+                  <L ink to="/contact" class Name="g roup bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+                    <s pan>Start Free Trial</s pan>
+                    <A rrow Right class Name="w-5 h-5g roup-hover:translate-x-1transition-transform" />
+                  </L ink>
+                  <L ink to="#pricing" class Name="g roup border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+                    <s pan>View All Plans</s pan>
+                    <A rrow Right class Name="w-5 h-5g roup-hover:translate-x-1transition-transform" />
+                  </L ink>
+                </d iv>
+
+                <d iv class Name="t ext-white/80text-sm">
+        </d iv>
                   <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
-            </div>
-        </div>
-      </section>
-    </div>
+                </d iv>
+            </d iv>
+        </d iv>
+      </s ection>
+    </d iv>
   );
 }
-    </>

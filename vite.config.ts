@@ -1,15 +1,15 @@
-import { defineConfig } from 'vite'
+import { define Config } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default define Config({
   plugins: [
     react({
       // Enable React Fast Refresh
-      fastRefresh: true,
-      // Enable JSX runtime
-      jsxRuntime: 'automatic',
+      fast Refresh: true,
+      // Enable J SX runtime
+      jsx Runtime: 'automatic',
     })
   ],
   resolve: {
@@ -26,15 +26,15 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'dist',
+    out Dir: 'dist',
     sourcemap: false,
     minify: 'esbuild',
     target: 'es2020',
-    cssCodeSplit: true,
+    css Code Split: true,
     
-    rollupOptions: {
+    rollup Options: {
       output: {
-        manualChunks: (id) => {
+        manual Chunks: (id) => {
           // Core React libraries
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
@@ -43,14 +43,14 @@ export default defineConfig({
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // U I libraries
           if (id.includes('framer-motion')) {
             return 'animations'
           }
           if (id.includes('lucide-react')) {
             return 'icons'
           }
-          // SEO and meta
+          // S EO and meta
           if (id.includes('react-helmet')) {
             return 'seo'
           }
@@ -66,15 +66,15 @@ export default defineConfig({
           if (id.includes('web-vitals')) {
             return 'performance'
           }
-          // AI service pages
+          // A I service pages
           if (id.includes('/app/ai-') && id.includes('/page.tsx')) {
             return 'ai-pages'
           }
-          // IT service pages
+          // I T service pages
           if (id.includes('/app/') && (id.includes('cloud-') || id.includes('cybersecurity-') || id.includes('web-development') || id.includes('mobile-development')) && id.includes('/page.tsx')) {
             return 'it-pages'
           }
-          // Micro SAAS pages
+          // Micro S AA S pages
           if (id.includes('/app/zion-') && id.includes('/page.tsx')) {
             return 'saas-pages'
           }
@@ -85,23 +85,23 @@ export default defineConfig({
           // Default chunk for other modules
           return 'vendor'
         },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
+        chunk File Names: 'assets/[name]-[hash].js',
+        entry File Names: 'assets/[name]-[hash].js',
+        asset File Names: 'assets/[name]-[hash].[ext]',
       },
     },
     // Optimize bundle size
-    chunkSizeWarningLimit: 1000,
+    chunk Size Warning Limit: 1000,
     // Enable tree shaking
     treeshake: true,
     // Enable compression
-    reportCompressedSize: true,
+    report Compressed Size: true,
   },
   server: {
     port: 3000,
     open: true,
     host: true,
-    // Enable HMR
+    // Enable H MR
     hmr: {
       overlay: true,
     },
@@ -112,7 +112,7 @@ export default defineConfig({
     host: true,
   },
   // Optimize dependencies
-  optimizeDeps: {
+  optimize Deps: {
     include: [
       'react',
       'react-dom',
@@ -122,8 +122,8 @@ export default defineConfig({
       'lucide-react',
     ],
   },
-  // CSS optimization
+  // C SS optimization
   css: {
-    devSourcemap: true,
+    dev Sourcemap: true,
   },
 })

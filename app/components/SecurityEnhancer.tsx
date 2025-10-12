@@ -1,74 +1,65 @@
 'use client'
-import { useEffect } from 'react'
-  children: React.ReactNode}
+import { use Effect } from 'react'
+  children: React.React Node}
     // Security enhancement logic
 
         'Referrer-Policy': 'strict-origin-when-cross-origin'
       }
 
-      // Add CSP meta tag
-      const cspMeta = document.createElement('meta')
-      cspMeta.setAttribute('http-equiv', 'Content-Security-Policy')
-      cspMeta.setAttribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;")
-      document.head.appendChild(cspMeta)
+      // Add C SP meta tag
+      const csp Meta = document.create Element('meta')
+      csp Meta.set Attribute('http-equiv', 'Content-Security-Policy')
+      csp Meta.set Attribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;")
+      document.head.append Child(csp Meta)
 
       // Add security event listeners
-      const handleSecurityEvent = (event: Event) => {
+      const handle Security Event = (event: Event) => {
         console.log('Security event detected:', event.type)
       }
 
-      window.addEventListener('beforeunload', handleSecurityEvent)
-      window.addEventListener('unload', handleSecurityEvent)
+      window.add Event Listener('beforeunload', handle Security Event)
+      window.add Event Listener('unload', handle Security Event)
 
       return () => {
-        window.removeEventListener('beforeunload', handleSecurityEvent)
-        window.removeEventListener('unload', handleSecurityEvent)
-        document.head.removeChild(cspMeta)
+        window.remove Event Listener('beforeunload', handle Security Event)
+        window.remove Event Listener('unload', handle Security Event)
+        document.head.remove Child(csp Meta)
       }
     }
 
-    const cleanup = enhanceSecurity()
+    const cleanup = enhance Security()
     return cleanup
   }, [])
 
   return (
-<<<<<<< HEAD
-    <div className={`security-enhanced ${className}`}>
-      {children}
-=======
-    <>
-    <div className="{`security-enhanced" ${className}`}>{children}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-    </div>
+
+    <d iv class Name="{`s ecurity-enhanced" ${class Name}`}>{children}
+    </d iv>
   )
 }
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {useEffect(() => {// Security enhancement logic
+const Security Enhancer: React.F C<S ecurity Enhancer Props> = ({ children }) => {use Effect(() => {// Security enhancement logic
 
     $3
   )}
         'Referrer-Policy': 'strict-origin-when-cross-origin'}
-      };// Add CSP meta tag
+      };// Add C SP meta tag
 
-      cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
-      document.head.appendChild(cspMeta)
+      csp Meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+      document.head.append Child(csp Meta)
       // Disable right-click context menu
-        e.preventDefault()})
+        e.prevent Default()})
       // Disable F12 and other dev tools shortcuts
-          e.preventDefault()}
+          e.prevent Default()}
       })}
-    enhanceSecurity()}, [])
-  return <React.Fragment>{children}</React.Fragment>}
-export default SecurityEnhancer
-  </SecurityEnhancerProps>
+    enhance Security()}, [])
+  return <R eact.Fragment>{children}</R eact.Fragment>}
+export default Security Enhancer
+  </S ecurity Enhancer Props>
 
       // Disable right-click context menu
-      document.addEventListener('contextmenu', (e) => {e.preventDefault()}
+      document.add Event Listener('contextmenu', (e) => {e.prevent Default()}
       });// Disable F12 and other dev tools shortcuts
-      document.addEventListener('keydown', (e) => {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
+      document.add Event Listener('keydown', (e) => {if (e.key === 'F12' || (e.ctrl Key && e.shift Key && e.key === 'I')) {e.prevent Default()}
         }
-<<<<<<< HEAD
-=======
 ;
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

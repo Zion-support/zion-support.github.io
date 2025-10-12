@@ -1,176 +1,127 @@
 'use client';
-import { Component, ErrorInfo, ReactNode} from 'react';
+import { Component, Error Info, React Node} from 'react';
 import { Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: React Node;
+  fallback?: React Node;
 }
 
 interface State {
-  hasError: boolean;
+  has Error: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
+  error Info?: Error Info;
 }
 
-class EnhancedErrorBoundary extends Component<Props, State /> {
+class Enhanced ErrorBoundary extends Component<P rops, State /> {
   constructor(props: Props) {
     super(props);
-    this.const state = { hasError: false };
+    this.const state = { has Error: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  static get Derived State From Error(error: Error): State {
+    return { has Error: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
+  component Did Catch(error: Error, error Info: Error Info) {
+    this.set State({
       error,
-      errorInfo
+      error Info
     });
 
     // Log error to monitoring service
-    console.error('Error caught by boundary: ', error, errorInfo);
+    console.error('Error caught by boundary: ', error, error Info);
   }
 
-  const handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  const handle Retry = () => {
+    this.set State({ has Error: false, error: undefined, error Info: undefined });
   };
 
   render() {
-    if (this.state.hasError) {
+    if (this.state.has Error) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
       return (
-<<<<<<< HEAD
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-centerjustify-centerpx-4">
-          <div className="max-w-md w-full bg-gray-800 rounded-xl p-8 text-centerborderborder-gray-700">
-            <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-automb-6">
-              <AlertTriangle className="h-8w-8text-white" />
-            </div>
-            
-            <h1 className="text-2 xl font-bold text-white mb-4"  />Oops! Something went wrong
+
+        <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-centerjustify-centerpx-4">
+        </d iv>
+          <d iv class Name="m ax-w-md w-full bg-gray-800 rounded-xl p-8 text-centerborderborder-gray-700">
+        </d iv>
+            <d iv class Name="w-16 h-16 b g-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-centermx-automb-6">
+        </d iv>
+              <A lert Triangle class Name="h-8w-8t ext-white" / />
+            </d iv>
+
+            <h1 c lass Name="t ext-2 xl font-boldtext-whitemb-4">Oops! Something went wrong
             </h1>
             
-            <p className="text-gray-300 mb-6">
-=======
-    <>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-centerjustify-centerpx-4">
-        </div>
-          <div className="max-w-md w-full bg-gray-800 rounded-xl p-8 text-centerborderborder-gray-700">
-        </div>
-            <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-centermx-automb-6">
-        </div>
-              <AlertTriangle className="h-8w-8text-white" / />
-            </div>
-            
-    <>
-            <h1 className="text-2 xl font-boldtext-whitemb-4">Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-300mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <p c lass Name="t ext-gray-300mb-6">
               We encountered an unexpected error. Don't worry, our team has been notified and we're working to fix it.
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-<<<<<<< HEAD
-              <div className="bg-gray-900 rounded-lg p-4mb-6text-left">
-                <h3 className="text-red-400font-semiboldmb-2"  >Error Details:</h3>
-                <pre className="text-xstext-gray-300overflow-auto"  />{this.state.error.toString()}
-=======
-    <>
-              <div className="bg-gray-900 rounded-lg p-4mb-6text-left">
-        </div>
-                <h3 className="text-red-400font-semiboldmb-2">Error Details:</h3>
-                <pre className="text-xstext-gray-300overflow-auto">{this.state.error.toString()}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </pre>
-                {this.state.errorInfo && (
-    <>
-                  <pre className="text-xs text-gray-400mt-2overflow-auto">{this.state.errorInfo.componentStack}
-                  </pre>
+            {process.env.N OD E_ EN V === 'development' && this.state.error && (
+
+              <d iv class Name="b g-gray-900 rounded-lg p-4mb-6text-left">
+        </d iv>
+                <h3 c lass Name="t ext-red-400font-semiboldmb-2">Error Details:</h3>
+                <p re class Name="t ext-xstext-gray-300overflow-auto">{this.state.error.to String()}
+                </p re>
+                {this.state.error Info && (
+
+                  <p re class Name="t ext-xs text-gray-400mt-2overflow-auto">{this.state.error Info.component Stack}
+                  </p re>
                 )}
-              </div>
+              </d iv>
             )}
 
-            <div className="space-y-3">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <button
-                onClick="{this.handleRetry}"
-                className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
-                <RefreshCw className="h-4w-4mr-2" />
+            <d iv class Name="s pace-y-3">
+        </d iv>
+              <b utton
+                on Click="{this.handle Retry}"
+                class Name="w-f ull inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
+                <R efresh Cw class Name="h-4w-4m r-2" />
                 Try Again
-              </button>
-              
-<<<<<<< HEAD
-              <Link to="/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-allduration-300" >
-           
-          <Home className="h-4w-4mr-2" /  />
-        </Link>
-=======
-    <>
-              <Link to="/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-allduration-300" />
-                <Home className="h-4w-4mr-2" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Go Home
-    <>
-              </Link>
-            </div>
+              </b utton>
 
-<<<<<<< HEAD
-            <div className="mt-8 pt-6border-tborder-gray-700">
-              <p className="text-smtext-gray-400mb-4">
-              Still having issues? Contact our support team:
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-2justify-center">
-=======
-    <>
-            <div className="mt-8 pt-6border-tborder-gray-700">
-        </div>
-              <p className="text-smtext-gray-400mb-4" />
+              <L ink to="/" class Name="w-f ull inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-allduration-300" />
+                <H ome class Name="h-4w-4m r-2" / />
+                Go Home
+
+              </L ink>
+            </d iv>
+
+            <d iv class Name="m t-8 pt-6border-tborder-gray-700">
+        </d iv>
+              <p c lass Name="t ext-smtext-gray-400mb-4" />
                 Still having issues? Contact our support team:
-    <>
+
               </p>
-              <div className="flex flex-col sm:flex-rowgap-2justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              <d iv class Name="f lex flex-col sm:flex-rowgap-2justify-center">
+        </d iv>
                 <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300transition-colors" />
-                  <Mail className="h-4w-4mr-1" />
+                  h ref="mailto:kleber@ziontechgroup.com"
+                  class Name="i nline-flex items-center text-sm text-purple-400hover:text-purple-300transition-colors" />
+                  <M ail class Name="h-4w-4m r-1" />
                   kleber@ziontechgroup.com
-    <>
+
                 </a>
-                <span className="hiddensm:inlinetext-gray-500">•</span>
+                <s pan class Name="h iddensm:inlinetext-gray-500">•</s pan>
                 <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300transition-colors" />
-    <>
-                  <span>+1 302 464 0950</span>
+                  h ref="tel:+13024640950"
+                  class Name="i nline-flex items-center text-sm text-purple-400hover:text-purple-300transition-colors" />
+
+                  <s pan>+1 302 464 0950</s pan>
                 </a>
-              </div>
-<<<<<<< HEAD
-    </div>
-  );
-=======
-          </div>
+              </d iv>
+          </d iv>
       );
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
     }
 
     return this.props.children;
   }
 }
 
-export default EnhancedErrorBoundary;
-    </>
+export default Enhanced ErrorBoundary;

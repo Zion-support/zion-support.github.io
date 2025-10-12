@@ -1,51 +1,48 @@
 'use client';
-import { useState, useEffect} from 'react';
+import { use State, use Effect} from 'react';
 import { Sun, Moon} from 'lucide-react';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const ThemeToggle: React.FC = () => {
-  const [isDark, setIsDark] = useState(true);
-  useEffect(() => {
+const Theme Toggle: React.F C = () => {
+  const [is Dark, set Is Dark] = use State(true);
+  use Effect(() => {
     // Check for saved theme preference or default to dark
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (const savedTheme = == 'light' || (!savedTheme && !prefersDark)) {
-      setIsDark(false);
-      document.documentElement.classList.remove('dark');
+    const saved Theme = local Storage.get Item('theme');
+    const prefers Dark = window.match Media('(prefers-color-scheme: dark)').matches;
+    if (const saved Theme = == 'light' || (!saved Theme && !prefers Dark)) {
+      set Is Dark(false);
+      document.document Element.class List.remove('dark');
     } else {
-      setIsDark(true);
-      document.documentElement.classList.add('dark');
+      set Is Dark(true);
+      document.document Element.class List.add('dark');
     }
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = !isDark;
-    setIsDark(newTheme);
+  const toggle Theme = () => {
+    const new Theme = !is Dark;
+    set Is Dark(new Theme);
 
-    if (newTheme) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
+    if (new Theme) {
+      document.document Element.class List.add('dark');
+      local Storage.set Item('theme', 'dark');
     } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
+      document.document Element.class List.remove('dark');
+      local Storage.set Item('theme', 'light');
     }
   };
 
   return (
-    <button
-      const onClick = {toggleTheme}
-      className="p-2 rounded-lg bg-slate-700/50 hover:bg-slate-700 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
-      aria-label="{`Switch" to ${isDark ? 'light' : 'dark'} mode`}
+    <b utton
+      const on Click = {toggle Theme}
+      class Name="p-2 r ounded-lg bg-slate-700/50 hover:bg-slate-700 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+      aria-label="{`Switch" to ${is Dark ? 'light' : 'dark'} mode`}
      />
-      {isDark ? (
-        <Sun className="w-5 h-5" />
+      {is Dark ? (
+        <S un class Name="w-5 h-5" />
       ) : (
-        <Moon className="w-5 h-5" />
+        <M oon class Name="w-5 h-5" />
       )}
-    </button>
+    </b utton>
   );
 };
 
-export default ThemeToggle;
+export default Theme Toggle;

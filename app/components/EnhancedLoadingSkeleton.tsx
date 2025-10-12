@@ -1,18 +1,13 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { ArrowRight } from 'lucide-react';
 'use client'
 
-
-const EnhancedLoadingSkeletonPage: React.FC = () => {
+const Enhanced Loading Skeleton Page: React.F C = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
+      title: 'A I-Powered Solutions',
+      description: 'Advanced A I technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
@@ -31,7 +26,7 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
     }
   ];
   const benefits = [
-    'Advanced AI technology integration',
+    'Advanced A I technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
@@ -41,178 +36,127 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
     'Proven track record of success'
   ];
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-      <Helmet>
-=======
-    <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>EnhancedLoadingSkeleton | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedLoadingSkeleton services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
-        <meta name="keywords" content="EnhancedLoadingSkeleton, AI solutions, IT services, Zion Tech Group, enhancedloadingskeleton" / / />
-      </Helmet>
+
+    <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        </d iv>
+      <H elmet>
+        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </H elmet>
+        <t itle>Enhanced Loading Skeleton | Zion Tech Group</t itle>
+        <m eta name="description" content="Professional Enhanced Loading Skeleton services by Zion Tech Group. Advanced A I and I T solutions for your business." / / />
+        <m eta name="keywords" content="Enhanced Loading Skeleton, A I solutions, I T services, Zion Tech Group, enhancedloadingskeleton" / / />
+      </H elmet>
 
       {/* Hero Section */}
-    <>
-      <section className="relative py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent"  />EnhancedLoadingSkeleton
-=======
-        </div>
-          <div className="text-center" />
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent">EnhancedLoadingSkeleton
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </span>
-              <br / />
-              <span className="text-white">Solutions</span>
+
+      <s ection class Name="r elative py-20 px-4sm:px-6lg:px-8" />
+        <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-center" />
+            <h1 c lass Name="t ext-4 xl md:text-6 xl font-boldtext-whitemb-6" />
+              <s pan class Name="b g-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent">Enhanced Loading Skeleton
+              </s pan>
+              <b r / />
+              <s pan class Name="t ext-white">Solutions</s pan>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
+            <p c lass Name="t ext-xl text-gray-300 mb-8 max-w-3xlmx-auto">
               Transform your business with our advanced enhancedloadingskeleton solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-    <>
+              Powered by cutting-edge A I technology and industry expertise.
+
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105"  />Get Started
-=======
-        </div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105">Get Started
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lgtransition-allduration-300">Learn More
-              </button>
-            </div>
-        </div>
-      </section>
+            <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+              <b utton class Name="b g-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105">Get Started
+              </b utton>
+              <b utton class Name="b order border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lgtransition-allduration-300">Learn More
+              </b utton>
+            </d iv>
+        </d iv>
+      </s ection>
 
       {/* Features Section */}
-    <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Why Choose Our EnhancedLoadingSkeleton Solutions?
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Why Choose Our EnhancedLoadingSkeleton Solutions?
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Our comprehensive approach ensures maximum efficiency and results for your business.
-    <>
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <s ection class Name="p y-20 px-4sm:px-6lg:px-8" />
+        <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-3 xl md:text-4 xl font-boldtext-whitemb-4">Why Choose Our Enhanced Loading Skeleton Solutions?
+            </h2>
+            <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto">
+              Our comprehensive approach ensures maximum efficiency and results for your business.
+
+            </p>
+          </d iv>
+
+          <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+        </d iv>
             {features.map((feature, index) => (
-    <>
-              <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
-<<<<<<< HEAD
-                <div className="flex items-centermb-4">
-                  <feature.icon className="h-8 w-8text-purple-400mr-3" />
-                  <h3 className="text-xlfont-semiboldtext-white"  >{feature.title}</h3>
-=======
-                <div className="flexitems-centermb-4">
-        </div>
-                  <feature.icon className="h-8 w-8text-purple-400mr-3" / />
-                  <h3 className="text-xlfont-semiboldtext-white">{feature.title}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+
+              <d iv key="{index}" class Name="b g-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
+                <d iv class Name="f lexitems-centermb-4">
+        </d iv>
+                  <f eature.icon class Name="h-8 w-8t ext-purple-400mr-3" / />
+                  <h3 c lass Name="t ext-xlfont-semiboldtext-white">{feature.title}</h3>
+                </d iv>
+                <p c lass Name="t ext-gray-300">{feature.description}</p>
+              </d iv>
             ))}
-    <>
-          </div>
-      </section>
+
+          </d iv>
+      </s ection>
 
       {/* Benefits Section */}
-    <>
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Key Benefits
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Key Benefits
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+      <s ection class Name="p y-20 px-4 sm:px-6lg:px-8bg-white/5" />
+        <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-3 xl md:text-4 xl font-boldtext-whitemb-4">Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+            <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto">
               Discover the advantages of our enhancedloadingskeleton solutions.
-    <>
+
             </p>
-          </div>
+          </d iv>
 
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-6">
-<<<<<<< HEAD
+          <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-6">
+        </d iv>
             {benefits.map((benefit, index) => (
-              <div key="{index}" className="flex items-startspace-x-3" />
-                <CheckCircle className="h-6 w-6 text-green-400flex-shrink-0mt-1" />
-=======
-        </div>
-            {benefits.map((benefit, index) => (
-    <>
-              <div key="{index}" className="flexitems-startspace-x-3" />
-                <CheckCircle className="h-6 w-6 text-green-400flex-shrink-0mt-1" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <p className="text-gray-300">{benefit}</p>
-              </div>
+
+              <d iv key="{index}" class Name="f lexitems-startspace-x-3" />
+                <C heck Circle class Name="h-6 w-6 t ext-green-400flex-shrink-0mt-1" / />
+                <p c lass Name="t ext-gray-300">{benefit}</p>
+              </d iv>
             ))}
-    <>
-          </div>
-      </section>
 
-      {/* CTA Section */}
-    <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-4 xlmx-autotext-center">
-<<<<<<< HEAD
-          <h2 className="text-3 xl md:text-4xl font-bold text-white mb-6"  />Ready to Get Started?
+          </d iv>
+      </s ection>
+
+      {/* C TA Section */}
+
+      <s ection class Name="p y-20 px-4sm:px-6lg:px-8" />
+        <d iv class Name="m ax-w-4 xlmx-autotext-center">
+        </d iv>
+          <h2 c lass Name="t ext-3 xl md:text-4 xl font-boldtext-whitemb-6">Ready to Get Started?
           </h2>
-          <p className="text-xltext-gray-300 mb-8">
-              Join thousands of satisfied customers who trust our enhancedloadingskeleton solutions.
-          </p>
-          <div className="flex flex-col sm:flex-rowgap-4justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-centerjustify-center" />
-=======
-        </div>
-          <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-6">Ready to Get Started?
-          </h2>
-          <p className="text-xltext-gray-300mb-8" />
+          <p c lass Name="t ext-xltext-gray-300mb-8" />
             Join thousands of satisfied customers who trust our enhancedloadingskeleton solutions.
-    <>
+
           </p>
-          <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flexitems-centerjustify-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+            <b utton class Name="b g-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flexitems-centerjustify-center" />
               Get Started Now
-    <>
-              <ArrowRight className="ml-2h-5w-5" />
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lgtransition-allduration-300">Contact Sales
-            </button>
-          </div>
-      </section>
-    </div>
+
+              <A rrow Right class Name="m l-2h-5w-5" />
+            </b utton>
+            <b utton class Name="b order border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lgtransition-allduration-300">Contact Sales
+            </b utton>
+          </d iv>
+      </s ection>
+    </d iv>
   )
 };
-    </>

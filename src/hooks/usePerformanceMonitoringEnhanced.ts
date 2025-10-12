@@ -1,8 +1,8 @@
-import { useEffect, useCallback } from 'react';
-    const body = JSON.stringify(metric);
+import { use Effect, use Callback } from 'react';
+    const body = J SO N.stringify(metric);
     const url = '/api/analytics';
-      navigator.sendBeacon(url, body);
-      fetch(url, { body, method: 'POST', keepalive: true }).catch(console.error);
+      navigator.send Beacon(url, body);
+      fetch(url, { body, method: 'P OS T', keepalive: true }).catch(console.error);
     }
   }, []);
       // Monitor Core Web Vitals
@@ -10,9 +10,9 @@ import { useEffect, useCallback } from 'react';
           });
         }
       });
-      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
+      observer.observe({ entry Types: ['navigation', 'paint', 'largest-contentful-paint'] });
       return () => observer.disconnect();
     }
-  }, [reportWebVitals]);
-  return { reportWebVitals };
+  }, [report Web Vitals]);
+  return { report Web Vitals };
 };

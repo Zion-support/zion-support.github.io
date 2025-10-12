@@ -1,10 +1,10 @@
 import fs from 'fs';
 
 // Read existing pages
-const existingPages = fs.readFileSync('/workspace/existing_pages.txt', 'utf8').split('\n').filter(Boolean);
+const existing Pages = fs.read File Sync('/workspace/existing_pages.txt', 'utf8').split('\n').filter(Boolean);
 
 // Navigation links from Navigation.tsx
-const navigationLinks = [
+const navigation Links = [
   '/ai-services',
   '/ai-content-generator',
   '/ai-chatbot-enterprise', 
@@ -50,7 +50,7 @@ const navigationLinks = [
 ];
 
 // Footer links from Footer.tsx
-const footerLinks = [
+const footer Links = [
   '/ai-content-generator',
   '/ai-chatbot-enterprise',
   '/ai-analytics-dashboard',
@@ -94,7 +94,7 @@ const footerLinks = [
 ];
 
 // App.tsx routes
-const appRoutes = [
+const app Routes = [
   '/',
   '/about',
   '/contact',
@@ -146,32 +146,32 @@ const appRoutes = [
 ];
 
 // Combine all links and remove duplicates
-const allLinks = [...new Set([...navigationLinks, ...footerLinks, ...appRoutes])];
+const all Links = [...new Set([...navigation Links, ...footer Links, ...app Routes])];
 
 // Find missing pages
-const missingPages = allLinks.filter(link => {
+const missing Pages = all Links.filter(link => {
   const path = link.replace('/', '');
-  return !existingPages.includes(path);
+  return !existing Pages.includes(path);
 });
 
 // Find broken links (pages that exist but have no route)
-const brokenLinks = existingPages.filter(page => {
+const broken Links = existing Pages.filter(page => {
   const link = `/${page}`;
-  return !allLinks.includes(link) && page !== 'page.tsx';
+  return !all Links.includes(link) && page !== 'page.tsx';
 });
 
-console.log('=== MISSING PAGES ===');
-missingPages.forEach(page => console.log(page));
+console.log('=== M IS SI NG P AG ES ===');
+missing Pages.for Each(page => console.log(page));
 
-console.log('\n=== BROKEN LINKS (Pages exist but no route) ===');
-brokenLinks.forEach(page => console.log(page));
+console.log('\n=== B RO KE N L IN KS (Pages exist but no route) ===');
+broken Links.for Each(page => console.log(page));
 
-console.log('\n=== SUMMARY ===');
-console.log(`Total links referenced: ${allLinks.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
-console.log(`Broken links: ${brokenLinks.length}`);
-console.log(`Existing pages: ${existingPages.length}`);
+console.log('\n=== S UM MA RY ===');
+console.log(`Total links referenced: ${all Links.length}`);
+console.log(`Missing pages: ${missing Pages.length}`);
+console.log(`Broken links: ${broken Links.length}`);
+console.log(`Existing pages: ${existing Pages.length}`);
 
 // Write results to files
-fs.writeFileSync('/workspace/missing_pages.txt', missingPages.join('\n'));
-fs.writeFileSync('/workspace/broken_links.txt', brokenLinks.join('\n'));
+fs.write File Sync('/workspace/missing_pages.txt', missing Pages.join('\n'));
+fs.write File Sync('/workspace/broken_links.txt', broken Links.join('\n'));

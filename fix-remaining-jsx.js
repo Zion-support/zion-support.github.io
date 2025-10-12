@@ -3,11 +3,11 @@
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix remaining JSX issues
-function fixRemainingJSX(content) {
+// Function to fix remaining J SX issues
+function fix Remaining JS X(content) {
   let fixed = content;
   
-  // Fix remaining className spacing issues
+  // Fix remaining class Name spacing issues
   fixed = fixed.replace(/from-slate-900pt-20/g, 'from-slate-900 pt-20');
   fixed = fixed.replace(/py-16text-center/g, 'py-16 text-center');
   fixed = fixed.replace(/text-whitemb-/g, 'text-white mb-');
@@ -22,74 +22,74 @@ function fixRemainingJSX(content) {
   fixed = fixed.replace(/pt-8text-center/g, 'pt-8 text-center');
   
   // Fix duplicate closing tags
-  fixed = fixed.replace(/<\/Link>\s*<\/Link>/g, '</Link>');
-  fixed = fixed.replace(/<\/div>\s*<\/div>/g, '</div>');
+  fixed = fixed.replace(/<\/L ink>\s*<\/L ink>/g, '</L ink>');
+  fixed = fixed.replace(/<\/d iv>\s*<\/d iv>/g, '</d iv>');
   
   // Fix malformed Link components - single line format
-  fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*\/>\s*([^<]+)\s*<([^>]+)\s*\/>/g, 
-    '<Link to="$1" className="$2">\n          $3\n          <$4 />\n        </Link>');
+  fixed = fixed.replace(/<L ink\s+to="([^"]+)"\s+class Name="([^"]+)"\s*\/>\s*([^<]+)\s*<([^>]+)\s*\/>/g, 
+    '<L ink to="$1" class Name="$2">\n          $3\n          <$4 />\n        </L ink>');
   
   // Fix malformed Link components - multi-line format
-  fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*>\s*([^<]+)\s*<([^>]+)\s*\/>\s*<\/Link>\s*<\/Link>/g,
-    '<Link to="$1" className="$2">\n          $3\n          <$4 />\n        </Link>');
+  fixed = fixed.replace(/<L ink\s+to="([^"]+)"\s+class Name="([^"]+)"\s*>\s*([^<]+)\s*<([^>]+)\s*\/>\s*<\/L ink>\s*<\/L ink>/g,
+    '<L ink to="$1" class Name="$2">\n          $3\n          <$4 />\n        </L ink>');
   
   // Fix Link components with extra spaces and malformed structure
-  fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*>\s*([^<]+)\s*<([^>]+)\s*\/>\s*<\/Link>\s*<\/Link>/g,
-    '<Link to="$1" className="$2">\n          $3\n          <$4 />\n        </Link>');
+  fixed = fixed.replace(/<L ink\s+to="([^"]+)"\s+class Name="([^"]+)"\s*>\s*([^<]+)\s*<([^>]+)\s*\/>\s*<\/L ink>\s*<\/L ink>/g,
+    '<L ink to="$1" class Name="$2">\n          $3\n          <$4 />\n        </L ink>');
   
-  // Fix specific patterns for 5G pages
-  fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="([^"]+)"\s*\/>\s*Contact Us\s*<ArrowRight[^>]*\/>/g,
-    '<Link to="/contact" className="$1">\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
+  // Fix specific patterns for 5 G pages
+  fixed = fixed.replace(/<L ink\s+to="\/contact"\s+class Name="([^"]+)"\s*\/>\s*Contact Us\s*<A rrow Right[^>]*\/>/g,
+    '<L ink to="/contact" class Name="$1">\n          Contact Us\n          <A rrow Right class Name="w-5 h-5 m l-2" />\n        </L ink>');
   
   // Fix malformed p tags
-  fixed = fixed.replace(/<p className="([^"]*)" \/>\s*([^<]+)\s*<\/p>/g, '<p className="$1">\n              $2\n            </p>');
+  fixed = fixed.replace(/<p c lass Name="([^"]*)" \/>\s*([^<]+)\s*<\/p>/g, '<p c lass Name="$1">\n              $2\n            </p>');
   
   // Fix self-closing divs that should be opening tags
-  fixed = fixed.replace(/<div \/>\s*<h4/g, '<div>\n            <h4');
-  fixed = fixed.replace(/<div \/>\s*<h3/g, '<div>\n            <h3');
+  fixed = fixed.replace(/<d iv \/>\s*<h4/g, '<d iv>\n            <h4');
+  f ixed = fixed.replace(/<div \/>\s*<h3/g, '<d iv>\n            <h3');
   
-  // Fix ul tags
-  fixed = fixed.replace(/<ul className="([^"]*)" \/>\s*<li/g, '<ul className="$1">\n              <li');
+  // F ix ul tags
+  fixed = fixed.replace(/<ul class Name="([^"]*)" \/>\s*<l i/g, '<ul class Name="$1">\n              <l i');
   
   return fixed;
 }
 
 // Function to process a single file
-function processFile(filePath) {
+function process File(file Path) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixRemainingJSX(content);
+    const content = fs.read File Sync(file Path, 'utf8');
+    const fixed = fix Remaining JS X(content);
     
     if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed remaining JSX: ${filePath}`);
+      fs.write File Sync(file Path, fixed, 'utf8');
+      console.log(`Fixed remaining J SX: ${file Path}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${file Path}:`, error.message);
     return false;
   }
 }
 
 // Main function
 async function main() {
-  console.log('Starting to fix remaining JSX issues...');
+  console.log('Starting to fix remaining J SX issues...');
   
-  // Get all TypeScript/TSX files
+  // Get all Type Script/T SX files
   const files = await glob('**/*.{ts,tsx}', {
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
   });
   
-  let fixedCount = 0;
+  let fixed Count = 0;
   
-  files.forEach(file => {
-    if (processFile(file)) {
-      fixedCount++;
+  files.for Each(file => {
+    if (process File(file)) {
+      fixed Count++;
     }
   });
   
-  console.log(`\nFixed remaining JSX issues in ${fixedCount} files out of ${files.length} total files.`);
+  console.log(`\n Fixed remaining J SX issues in ${fixed Count} files out of ${files.length} total files.`);
 }
 
 main().catch(console.error);

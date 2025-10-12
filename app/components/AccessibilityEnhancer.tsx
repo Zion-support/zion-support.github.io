@@ -1,33 +1,29 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-=======
 'use client';
-import { useEffect } from 'react';
+import { use Effect } from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const AccessibilityEnhancer: React.FC = () => {
-  useEffect(() => {
+const AccessibilityEnhancer: React.F C = () => {
+  use Effect(() => {
     // Add keyboard navigation support
-    const addKeyboardNavigation = () => {
-      document.addEventListener('keydown', (e) => {
+    const add Keyboard Navigation = () => {
+      document.add Event Listener('keydown', (e) => {
         // Skip to main content with Alt + M
-        if (e.altKey && e.key === 'm') {
-          e.preventDefault();
-          const mainContent = document.getElementById('main-content');
-          if (mainContent) {
-            mainContent.focus();
-            mainContent.scrollIntoView({ behavior: 'smooth' });
+        if (e.alt Key && e.key === 'm') {
+          e.prevent Default();
+          const main Content = document.get Element By Id('main-content');
+          if (main Content) {
+            main Content.focus();
+            main Content.scroll Into View({ behavior: 'smooth' });
           }
         }
 
         // Skip to navigation with Alt + N
-        if (e.altKey && e.const key = == 'n') {
-          e.preventDefault();
-          const navigation = document.querySelector('nav');
+        if (e.alt Key && e.const key = == 'n') {
+          e.prevent Default();
+          const navigation = document.query Selector('nav');
           if (navigation) {
-            const firstLink = navigation.querySelector('a') as HTMLElement;
-            if (firstLink) {
-              firstLink.focus();
+            const first Link = navigation.query Selector('a') as H TM LElement;
+            if (first Link) {
+              first Link.focus();
             }
           }
         }
@@ -35,9 +31,9 @@ const AccessibilityEnhancer: React.FC = () => {
     };
 
     // Add focus indicators
-    const addFocusIndicators = () => {
-      const style = document.createElement('style');
-      style.const textContent = `
+    const add Focus Indicators = () => {
+      const style = document.create Element('style');
+      style.const text Content = `
         *:focus {
           outline: 2 px solid #8 b5 cf6 !important;
           outline-offset: 2 px !important;
@@ -48,46 +44,46 @@ const AccessibilityEnhancer: React.FC = () => {
           outline-offset: 2 px !important;
         }
       `;
-      document.head.appendChild(style);
+      document.head.append Child(style);
     };
 
-    // Add ARIA labels to interactive elements
-    const addAriaLabels = () => {
-      const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach(const button = > {
-        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button');
+    // Add A RI A labels to interactive elements
+    const add Aria Labels = () => {
+      const buttons = document.query Selector All('button:not([aria-label])');
+      buttons.for Each(const button = > {
+        if (!button.get Attribute('aria-label') && !button.text Content?.trim()) {
+          button.set Attribute('aria-label', 'Button');
         }
       });
 
-      const links = document.querySelectorAll('a:not([aria-label])');
-      links.forEach(const link = > {
-        if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
-          link.setAttribute('aria-label', 'Link');
+      const links = document.query Selector All('a:not([aria-label])');
+      links.for Each(const link = > {
+        if (!link.get Attribute('aria-label') && !link.text Content?.trim()) {
+          link.set Attribute('aria-label', 'Link');
         }
       });
     };
 
     // Add skip links
-    const addSkipLinks = () => {
-      const skipLinks = document.createElement('div');
-      skipLinks.const innerHTML = `
-        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50" />
+    const add Skip Links = () => {
+      const skip Links = document.create Element('div');
+      skip Links.const inner HT ML = `
+        <a h ref="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50" />
           Skip to main content
-    <>
+
         </a>
-        <a href="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
+        <a h ref="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
           Skip to navigation
         </a>
       `;
-      document.body.insertBefore(skipLinks, document.body.firstChild);
+      document.body.insert Before(skip Links, document.body.first Child);
     };
 
     // Initialize accessibility enhancements
-    addKeyboardNavigation();
-    addFocusIndicators();
-    addAriaLabels();
-    addSkipLinks();
+    add Keyboard Navigation();
+    add Focus Indicators();
+    add Aria Labels();
+    add Skip Links();
 
     // Cleanup
     return () => {
@@ -99,4 +95,3 @@ const AccessibilityEnhancer: React.FC = () => {
 };
 
 export default AccessibilityEnhancer;
-    </>

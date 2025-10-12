@@ -2,18 +2,18 @@ import fs from 'fs';
 import path from 'path';
 
 // Find all page.tsx files
-function findPageFiles(dir) {
+function find Page Files(dir) {
   const files = [];
-  const items = fs.readdirSync(dir);
+  const items = fs.readdir Sync(dir);
   
   for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
+    const full Path = path.join(dir, item);
+    const stat = fs.stat Sync(full Path);
     
-    if (stat.isDirectory()) {
-      files.push(...findPageFiles(fullPath));
+    if (stat.is Directory()) {
+      files.push(...find Page Files(full Path));
     } else if (item === 'page.tsx') {
-      files.push(fullPath);
+      files.push(full Path);
     }
   }
   
@@ -21,50 +21,50 @@ function findPageFiles(dir) {
 }
 
 // Fix component names that start with numbers
-function fixNumberedComponents(filePath) {
-  let content = fs.readFileSync(filePath, 'utf8');
+function fix Numbered Components(file Path) {
+  let content = fs.read File Sync(file Path, 'utf8');
   let modified = false;
   
   // Fix component names that start with numbers
-  const numberedComponentRegex = /const (\d+[a-zA-Z]*)Page: React\.FC = \(\) => \{/g;
-  const matches = content.match(numberedComponentRegex);
+  const numbered Component Regex = /const (\d+[a-z A-Z]*)Page: React\.F C = \(\) => \{/g;
+  const matches = content.match(numbered Component Regex);
   
   if (matches) {
     for (const match of matches) {
-      const numberMatch = match.match(/const (\d+[a-zA-Z]*)Page/);
-      if (numberMatch) {
-        const oldName = numberMatch[1];
-        const newName = oldName.replace(/^(\d+)/, (match, num) => {
-          const numberWords = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
-          return numberWords[parseInt(num)] || num;
+      const number Match = match.match(/const (\d+[a-z A-Z]*)Page/);
+      if (number Match) {
+        const old Name = number Match[1];
+        const new Name = old Name.replace(/^(\d+)/, (match, num) => {
+          const number Words = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+          return number Words[parse Int(num)] || num;
         });
         
         // Replace component name
-        content = content.replace(new RegExp(`const ${oldName}Page`, 'g'), `const ${newName}Page`);
-        content = content.replace(new RegExp(`export default ${oldName}Page`, 'g'), `export default ${newName}Page`);
+        content = content.replace(new Reg Exp(`const ${old Name}Page`, 'g'), `const ${new Name}Page`);
+        content = content.replace(new Reg Exp(`export default ${old Name}Page`, 'g'), `export default ${new Name}Page`);
         modified = true;
       }
     }
   }
   
   if (modified) {
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed numbered component in: ${filePath}`);
+    fs.write File Sync(file Path, content);
+    console.log(`Fixed numbered component in: ${file Path}`);
   }
 }
 
 // Find and fix all page files
-const pageFiles = findPageFiles('/workspace/app');
-console.log(`Found ${pageFiles.length} page files`);
+const page Files = find Page Files('/workspace/app');
+console.log(`Found ${page Files.length} page files`);
 
-let fixedCount = 0;
-for (const file of pageFiles) {
+let fixed Count = 0;
+for (const file of page Files) {
   try {
-    fixNumberedComponents(file);
-    fixedCount++;
+    fix Numbered Components(file);
+    fixed Count++;
   } catch (error) {
     console.error(`Error fixing ${file}:`, error.message);
   }
 }
 
-console.log(`Fixed ${fixedCount} files`);
+console.log(`Fixed ${fixed Count} files`);

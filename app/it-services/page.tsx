@@ -1,26 +1,18 @@
 'use client';
-import { useState, useEffect} from 'react';
+import { use State, use Effect} from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, ShoppingCart } from 'lucide-react';
-import { ArrowRight, ShoppingCart} from 'lucide-react';
-<<<<<<< HEAD
-=======
-=======
 import { ArrowRight, CheckCircle, Users, Shield, Cloud, Code, Settings, Link as LinkIcon, Database, Smartphone } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const ItServicesPage: React.FC = () => {
+const It Services Page: React.F C = () => {
 
-  useEffect(() => {
-    setIsVisible(true);
+  use Effect(() => {
+    set Is Visible(true);
   }, []);
 
-  const itServices = [
+  const it Services = [
     {
       title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions with AWS, Azure, and Google Cloud expertise',
+      description: 'Scalable cloud solutions with A WS, Azure, and Google Cloud expertise',
       price: 'Starting at $5,000',
       features: [
         'Cloud migration and setup',
@@ -50,13 +42,13 @@ const ItServicesPage: React.FC = () => {
       color: 'from-red-500 to-orange-500',
       category: 'Security'
 
-const ITServicesPage: React.FC = () => {
+const I TServices Page: React.F C = () => {
   const services = [
     {
       icon: Cloud,
       title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud with AWS, Azure, and Google Cloud expertise.',
-      features: ['AWS Migration', 'Azure Migration', 'Google Cloud Setup', 'Hybrid Cloud Solutions'],
+      description: 'Seamlessly migrate your infrastructure to the cloud with A WS, Azure, and Google Cloud expertise.',
+      features: ['A WS Migration', 'Azure Migration', 'Google Cloud Setup', 'Hybrid Cloud Solutions'],
       price: 'Starting at $2,500',
       color: 'from-cyan-500 to-blue-500',
       link: '/cloud-migration'
@@ -77,7 +69,7 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $8,000',
       features: [
         'Responsive design',
-        'SEO optimization',
+        'S EO optimization',
         'Performance tuning',
         'Maintenance support',
         'Mobile optimization',
@@ -91,7 +83,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Native and cross-platform mobile applications',
       price: 'Starting at $12,000',
       features: [
-        'iOS & Android apps',
+        'i OS & Android apps',
         'Cross-platform development',
         'App store optimization',
         'Push notifications',
@@ -103,13 +95,13 @@ const ITServicesPage: React.FC = () => {
       category: 'Development'
     },
     {
-      title: 'API Development',
-      description: 'RESTful and GraphQL APIs for seamless integration',
+      title: 'A PI Development',
+      description: 'R ES Tful and Graph QL A PIs for seamless integration',
       price: 'Starting at $4,000',
       features: [
-        'RESTful API design',
-        'GraphQL implementation',
-        'API documentation',
+        'R ES Tful A PI design',
+        'Graph QL implementation',
+        'A PI documentation',
         'Rate limiting',
         'Authentication',
         'Performance monitoring'
@@ -135,11 +127,11 @@ const ITServicesPage: React.FC = () => {
       category: 'Infrastructure'
     },
     {
-      title: 'DevOps & CI/CD',
+      title: 'Dev Ops & C I/C D',
       description: 'Automated deployment and continuous integration pipelines',
       price: 'Starting at $6,000',
       features: [
-        'CI/CD pipeline setup',
+        'C I/C D pipeline setup',
         'Container orchestration',
         'Infrastructure automation',
         'Monitoring and logging',
@@ -148,10 +140,10 @@ const ITServicesPage: React.FC = () => {
       ],
       icon: Settings,
       color: 'from-teal-500 to-cyan-500',
-      category: 'DevOps'
+      category: 'Dev Ops'
     },
     {
-      title: 'IT Support',
+      title: 'I T Support',
       description: '24/7 technical support and maintenance services',
       price: 'Starting at $1,500/month',
       features: [
@@ -172,18 +164,18 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $15,000',
       features: [
         'Smart contract development',
-        'DApp creation',
+        'D App creation',
         'Token development',
         'Blockchain integration',
         'Security auditing',
-        'DeFi solutions'
+        'De Fi solutions'
       ],
       icon: LinkIcon,
       color: 'from-purple-500 to-pink-500',
       category: 'Development'
     },
     {
-      title: 'IoT Development',
+      title: 'Io T Development',
       description: 'Internet of Things solutions with device connectivity and data management',
       price: 'Starting at $12,000',
       features: [
@@ -210,16 +202,16 @@ const ITServicesPage: React.FC = () => {
         'Customer portal',
         'Analytics tracking'
       ],
-      icon: ShoppingCart,
+      icon: Shopping Cart,
       color: 'from-green-500 to-emerald-500',
       category: 'Development'
     },
     {
       title: 'Data Engineering',
-      description: 'Big data processing, ETL pipelines, and data warehouse solutions',
+      description: 'Big data processing, E TL pipelines, and data warehouse solutions',
       price: 'Starting at $8,000',
       features: [
-        'ETL pipeline design',
+        'E TL pipeline design',
         'Data warehouse setup',
         'Big data processing',
         'Real-time streaming',
@@ -232,7 +224,7 @@ const ITServicesPage: React.FC = () => {
     },
     {
       title: 'Machine Learning Ops',
-      description: 'ML model deployment, monitoring, and maintenance in production environments',
+      description: 'M L model deployment, monitoring, and maintenance in production environments',
       price: 'Starting at $12,000',
       features: [
         'Model deployment',
@@ -244,14 +236,14 @@ const ITServicesPage: React.FC = () => {
       ],
       icon: Cpu,
       color: 'from-indigo-500 to-purple-500',
-      category: 'DevOps'
+      category: 'Dev Ops'
     },
     {
       title: 'Enterprise Integration',
       description: 'Seamless integration of disparate systems and applications',
       price: 'Starting at $6,000',
       features: [
-        'API integration',
+        'A PI integration',
         'Data synchronization',
         'Legacy system migration',
         'Real-time connectivity',
@@ -274,7 +266,7 @@ const ITServicesPage: React.FC = () => {
         'Load balancing',
         'Monitoring setup'
       ],
-      icon: TrendingUp,
+      icon: Trending Up,
       color: 'from-yellow-500 to-orange-500',
       category: 'Infrastructure'
     },
@@ -306,7 +298,7 @@ const ITServicesPage: React.FC = () => {
         'Risk assessment',
         'Documentation management'
       ],
-      icon: CheckSquare,
+      icon: Check Square,
       color: 'from-gray-500 to-slate-500',
       category: 'Security'
     },
@@ -322,7 +314,7 @@ const ITServicesPage: React.FC = () => {
         'Cost monitoring',
         'Budget management'
       ],
-      icon: DollarSign,
+      icon: Dollar Sign,
       color: 'from-green-500 to-teal-500',
       category: 'Infrastructure'
     },
@@ -354,7 +346,7 @@ const ITServicesPage: React.FC = () => {
         'Export capabilities',
         'User management'
       ],
-      icon: BarChart,
+      icon: Bar Chart,
       color: 'from-blue-500 to-purple-500',
       category: 'Development'
     },
@@ -366,7 +358,7 @@ const ITServicesPage: React.FC = () => {
         'Process mapping',
         'Workflow design',
         'Automation rules',
-        'Integration APIs',
+        'Integration A PIs',
         'Monitoring dashboard',
         'Performance analytics'
       ],
@@ -381,7 +373,7 @@ const ITServicesPage: React.FC = () => {
       features: [
         'Container security',
         'Kubernetes security',
-        'API security',
+        'A PI security',
         'Identity management',
         'Network security',
         'Compliance monitoring'
@@ -391,20 +383,20 @@ const ITServicesPage: React.FC = () => {
       category: 'Security'
     }
   ];
-  const categories = ['All', 'Infrastructure', 'Security', 'Development', 'DevOps', 'Support', 'Automation'];
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const categories = ['All', 'Infrastructure', 'Security', 'Development', 'Dev Ops', 'Support', 'Automation'];
+  const [selected Category, set Selected Category] = use State('All');
 
-  const filteredServices = selectedCategory === 'All' 
-    ? itServices 
-    : itServices.filter(service => service.category === selectedCategory);
+  const filtered Services = selected Category === 'All' 
+    ? it Services 
+    : it Services.filter(service => service.category === selected Category);
       description: 'Modern web applications built with cutting-edge technologies',
-      features: ['React/Next.js', 'Node.js backend', 'Database design', 'API development'],
+      features: ['React/Next.js', 'Node.js backend', 'Database design', 'A PI development'],
       price: 'Starting at $3,000/project'
     },
     {
       icon: Smartphone,
       title: 'Mobile Development',
-      description: 'iOS and Android applications for all business needs',
+      description: 'i OS and Android applications for all business needs',
       features: ['Native development', 'Cross-platform', 'App store deployment', 'Maintenance'],
       price: 'Starting at $5,000/app'
     },
@@ -417,9 +409,9 @@ const ITServicesPage: React.FC = () => {
     },
     {
       icon: Settings,
-      title: 'DevOps & CI/CD',
+      title: 'Dev Ops & C I/C D',
       description: 'Automated deployment and continuous integration pipelines',
-      features: ['CI/CD setup', 'Container orchestration', 'Monitoring', 'Automated testing'],
+      features: ['C I/C D setup', 'Container orchestration', 'Monitoring', 'Automated testing'],
       price: 'Starting at $2,000/month'
     }
   ];
@@ -432,574 +424,365 @@ const ITServicesPage: React.FC = () => {
   ];
 
   return (
-    <>
-    <>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-        <title>IT Services - Zion Tech Group | Comprehensive IT Solutions</title>
-        <meta const name = "description" content="Professional IT services including cloud infrastructure, cybersecurity, web development, mobile apps, and DevOps. Transform your business with our expert IT solutions." / / />
-        <meta name="keywords" content="IT services, cloud computing, cybersecurity, web development, mobile development, DevOps, database management, IT support" / / />
-      </Helmet>
-    </>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-cyan-900to-slate-900">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <H elmet>
+        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </H elmet>
+        <t itle>I T Services - Zion Tech Group | Comprehensive I T Solutions</t itle>
+        <m eta const name = "description" content="Professional I T services including cloud infrastructure, cybersecurity, web development, mobile apps, and Dev Ops. Transform your business with our expert I T solutions." / / />
+        <m eta name="keywords" content="I T services, cloud computing, cybersecurity, web development, mobile development, Dev Ops, database management, I T support" / / />
+      </H elmet>
+
+      <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900via-cyan-900to-slate-900">
+        </d iv>
         {/* Hero Section */}
-    <>
-        <section className="relative overflow-hiddenpt-20pb-16" />
-<<<<<<< HEAD
-          <div className="absoluteinset-0opacity-20" />
-          <div className="relative max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-            <div className="text-center">
-=======
-          <div className="absoluteinset-0opacity-20" / />
-          <div className="relative max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
-            <div className="text-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-    </>
-                IT Services
-    <>
-                <span className="block bg-gradient-to-r from-cyan-400 to-blue-400bg-clip-texttext-transparent">& Solutions
-                </span>
+
+        <s ection class Name="r elative overflow-hiddenpt-20pb-16" />
+          <d iv class Name="a bsoluteinset-0opacity-20" / />
+          <d iv class Name="r elative max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+        </d iv>
+            <d iv class Name="t ext-center" />
+              <h1 c lass Name="{`t ext-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${is Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+
+                I T Services
+
+                <s pan class Name="b lock bg-gradient-to-r from-cyan-400 to-blue-400bg-clip-texttext-transparent">& Solutions
+                </s pan>
               </h1>
-              <p className="{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-    </>
-                Comprehensive IT services to build, secure, and optimize your technology infrastructure. 
+              <p c lass Name="{`t ext-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${is Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+
+                Comprehensive I T services to build, secure, and optimize your technology infrastructure. 
                 From cloud migration to cybersecurity, we have the expertise you need.
-    <>
+
               </p>
-              <div className="{`flex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-<<<<<<< HEAD
-                <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" >
-          Get Started Today
-                  
-          <ArrowRight className="ml-2h-5w-5"  />
-        </Link>
-=======
-                <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
-    </>
+              <d iv class Name="{`f lex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${is Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+                <L ink to="/contact" class Name="i nline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
+
                   Get Started Today
-    <>
-                  <ArrowRight className="ml-2h-5w-5" />
-                </Link>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+                  <A rrow Right class Name="m l-2h-5w-5" />
+                </L ink>
+
                 <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300transformhover:scale-105" />
+                  h ref="tel:+13024640950"
+                  class Name="i nline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300transformhover:scale-105" />
                   Call +1 302 464 0950
-    <>
+
                 </a>
-              </div>
-          </div>
-        </section>
-    </>
+              </d iv>
+          </d iv>
+        </s ection>
 
         {/* Category Filter */}
-    <>
-        <section className="py-8bg-gray-900/50" />
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-            <div className="flex flex-wrapjustify-centergap-4">
-=======
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
-            <div className="flex flex-wrapjustify-centergap-4">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+        <s ection class Name="p y-8bg-gray-900/50" />
+          <d iv class Name="m ax-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+        </d iv>
+            <d iv class Name="f lex flex-wrapjustify-centergap-4">
+        </d iv>
+
               {categories.map((category) => (
-                <button
+                <b utton
                   key="{category}"
-                  onClick="{()" =>setSelectedCategory(category)}
-                  className="{`px-6" py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    selectedCategory === category
+                  on Click="{()" =>set Selected Category(category)}
+                  class Name="{`p x-6" py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    selected Category === category
                       ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg'
                       : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'
                   }`}
                 >
                   {category}
-                </button>
+                </b utton>
               ))}
-    <>
-            </div>
-        </section>
-    </>
+
+            </d iv>
+        </s ection>
 
         {/* Services Grid */}
-    <>
-        <section className="py-16" />
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
-=======
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {filteredServices.map((service, index) => (
-                <div
+
+        <s ection class Name="p y-16" />
+          <d iv class Name="m ax-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+        </d iv>
+            <d iv class Name="g rid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
+        </d iv>
+
+              {filtered Services.map((service, index) => (
+                <d iv
                   key="{index}"
-                  className="group relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 borderborder-gray-700hover:border-cyan-500" />
-<<<<<<< HEAD
-                  <div className="text-centermb-6">
-=======
-    <>
-                  <div className="text-centermb-6">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    <div className="{`inline-flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl mb-4`} />
-                      <service.icon className="h-8w-8text-white" />
-                    </div>
-<<<<<<< HEAD
-                    <h3 className="text-xl font-bold text-white mb-2"   />{service.title}</h3>
-                    <p className="text-gray-300text-smmb-4">
-              {service.description}</p>
-                    <div className="text-2 xl font-boldtext-cyan-400mb-4"   />{service.price}</div>
+                  class Name="g roup relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 borderborder-gray-700hover:border-cyan-500" />
 
-                  <div className="space-y-3mb-6">
-=======
-                    <h3 className="text-xl font-boldtext-whitemb-2">{service.title}</h3>
-                    <p className="text-gray-300text-smmb-4">{service.description}</p>
-                    <div className="text-2 xl font-boldtext-cyan-400mb-4">{service.price}</div>
-    </>
+                  <d iv class Name="t ext-centermb-6">
+        </d iv>
+                    <d iv class Name="{`i nline-flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl mb-4`} />
+                      <s ervice.icon class Name="h-8w-8t ext-white" />
+                    </d iv>
+                    <h3 c lass Name="t ext-xl font-boldtext-whitemb-2">{service.title}</h3>
+                    <p c lass Name="t ext-gray-300text-smmb-4">{service.description}</p>
+                    <d iv class Name="t ext-2 xl font-boldtext-cyan-400mb-4">{service.price}</d iv>
 
-                  <div className="space-y-3mb-6">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <d iv class Name="s pace-y-3mb-6">
+        </d iv>
                     {service.features.map((feature, idx) => (
-    <>
-                      <div key="{idx}" className="flex items-centertext-smtext-gray-300" />
-<<<<<<< HEAD
-                        <CheckCircle className="h-4 w-4 text-green-400mr-3flex-shrink-0" />
-                        <span   />{feature}</span>
-=======
-                        <CheckCircle className="h-4 w-4 text-green-400mr-3flex-shrink-0" / />
-                        <span>{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </div>
-    </>
+
+                      <d iv key="{idx}" class Name="f lex items-centertext-smtext-gray-300" />
+                        <C heck Circle class Name="h-4 w-4 t ext-green-400mr-3flex-shrink-0" / />
+                        <s pan>{feature}</s pan>
+                      </d iv>
+
                     ))}
-                  </div>
+                  </d iv>
 
-<<<<<<< HEAD
-                  <div className="space-y-3">
-                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300transformhover:scale-105" >
-          Get Quote
-                      
-          <ArrowRight className="ml-2h-4w-4"  />
-        </Link>
-                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-whitetransition-allduration-300">Learn More
-                    </Link>
-                  </div>
-=======
-    <>
-                  <div className="space-y-3">
-        </div>
-                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300transformhover:scale-105" />
-    </>
+                  <d iv class Name="s pace-y-3">
+        </d iv>
+                    <L ink to="/contact" class Name="w-f ull inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300transformhover:scale-105" />
+
                       Get Quote
-    <>
-                      <ArrowRight className="ml-2h-4w-4" />
-                    </Link>
-                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-whitetransition-allduration-300">Learn More
-                    </Link>
-                  </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              ))}
-    <>
-            </div>
-        </section>
-    </>
 
-        {/* CTA Section */}
-    <>
-        <section className="py-20 bg-gradient-to-brfrom-gray-900to-cyan-900" />
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4 sm:px-6lg:px-8text-center">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Transform Your IT Infrastructure?
+                      <A rrow Right class Name="m l-2h-4w-4" />
+                    </L ink>
+                    <L ink to="/contact" class Name="w-f ull inline-flex items-center justify-center px-4 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-whitetransition-allduration-300">Learn More
+                    </L ink>
+                  </d iv>
+
+              ))}
+
+            </d iv>
+        </s ection>
+
+        {/* C TA Section */}
+
+        <s ection class Name="p y-20 bg-gradient-to-brfrom-gray-900to-cyan-900" />
+          <d iv class Name="m ax-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center">
+        </d iv>
+            <h2 c lass Name="t ext-3 xl md:text-4 xl font-boldtext-whitemb-4">Ready to Transform Your I T Infrastructure?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
-=======
-          <div className="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Ready to Transform Your IT Infrastructure?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <p c lass Name="t ext-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
+
               Let our expert team help you build, secure, and optimize your technology infrastructure 
               for maximum performance and security.
-    <>
+
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" >
-          Get Started Today
-                
-          <ArrowRight className="ml-2h-5w-5"  />
-        </Link>
-=======
-        </div>
-              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
-    </>
+            <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+              <L ink to="/contact" class Name="i nline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
+
                 Get Started Today
-    <>
-                <ArrowRight className="ml-2h-5w-5" />
-              </Link>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+                <A rrow Right class Name="m l-2h-5w-5" />
+              </L ink>
+
               <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300transformhover:scale-105" />
+                h ref="tel:+13024640950"
+                class Name="i nline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300transformhover:scale-105" />
                 Call +1 302 464 0950
-    <>
+
               </a>
-            </div>
-            <div className="mt-8text-gray-400">
-<<<<<<< HEAD
-              <p />Email: kleber@ziontechgroup.com</p>
-              <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-=======
-        </div>
+            </d iv>
+            <d iv class Name="m t-8text-gray-400">
+        </d iv>
               <p>Email: kleber@ziontechgroup.com</p>
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </div>
-        </section>
-            </div>
-        </section>
-    </>
+              <p>Address: 364 E Main St S TE 1008, Middletown D E 19709</p>
+            </d iv>
+        </s ection>
+            </d iv>
+        </s ection>
 
         {/* Services Grid */}
-    <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />IT Solutions</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              End-to-end IT services designed to modernize your infrastructure and accelerate your digital transformation
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6" />
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">IT Solutions</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
-                End-to-end IT services designed to modernize your infrastructure and accelerate your digital transformation
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
 
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <s ection class Name="p y-20" />
+          <d iv class Name="c ontainermx-autopx-4">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-4 xl font-boldtext-whitemb-6" />
+                Our <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">I T Solutions</s pan>
+              </h2>
+              <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto" />
+
+                End-to-end I T services designed to modernize your infrastructure and accelerate your digital transformation
+
+              </p>
+            </d iv>
+
+            <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
+        </d iv>
               {services.map((service, index) => (
-                <div 
+                <d iv 
                   key="{index}"
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
-    <>
-                  <div className="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`} />
-                    <service.icon className="w-8h-8text-white" />
-                  </div>
-    </>
-                  
-<<<<<<< HEAD
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{service.title}
-=======
-    <>
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{service.title}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  class Name="b g-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
+
+                  <d iv class Name="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`} />
+                    <s ervice.icon class Name="w-8h-8t ext-white" />
+                  </d iv>
+
+                  <h3 c lass Name="t ext-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{service.title}
                   </h3>
-    </>
-                  
-<<<<<<< HEAD
-                  <p className="text-gray-300 mb-6leading-relaxed">
-              {service.description}
-=======
-                  <p className="text-gray-300mb-6leading-relaxed">
+
+                  <p c lass Name="t ext-gray-300mb-6leading-relaxed">
                     {service.description}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                   </p>
 
-                  <ul className="space-y-2mb-6" />
-                    {service.features.map((feature, featureIndex) => (
-    <>
-                      <li key="{featureIndex}" className="flex items-centertext-smtext-gray-300" />
-<<<<<<< HEAD
-                        <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" />
-=======
-                        <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" / />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  <u l class Name="s pace-y-2mb-6" />
+                    {service.features.map((feature, feature Index) => (
 
-<<<<<<< HEAD
-                  <div className="flex items-centerjustify-betweenmb-6">
-                    <span className="text-2 xlfont-boldtext-cyan-400"   />{service.price}</span>
-                    <Link to="{service.link}" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1inline-flex items-center" >
-          Learn More 
-          <ArrowRight className="w-4h-4ml-1"  />
-        </Link>
-                  </div>
-=======
-    <>
-                  <div className="flex items-centerjustify-betweenmb-6">
-        </div>
-                    <span className="text-2 xlfont-boldtext-cyan-400">{service.price}</span>
-                    <Link to="{service.link}" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1inline-flexitems-center" />
-                      Learn More <ArrowRight className="w-4h-4ml-1" />
-                    </Link>
-                  </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                      <l i key="{feature Index}" class Name="f lex items-centertext-smtext-gray-300" />
+                        <C heck Circle class Name="w-4 h-4 t ext-green-400mr-2flex-shrink-0" / />
+
+                        {feature}
+                      </l i>
+                    ))}
+                  </u l>
+
+                  <d iv class Name="f lex items-centerjustify-betweenmb-6">
+        </d iv>
+                    <s pan class Name="t ext-2 xlfont-boldtext-cyan-400">{service.price}</s pan>
+                    <L ink to="{service.link}" class Name="t ext-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1inline-flexitems-center" />
+                      Learn More <A rrow Right class Name="w-4h-4m l-1" />
+                    </L ink>
+                  </d iv>
+
               ))}
-    <>
-            </div>
-        </section>
-    </>
+
+            </d iv>
+        </s ection>
 
         {/* Process Section */}
-    <>
-        <section className="py-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Process</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              A proven methodology that ensures successful project delivery and maximum value for your investment
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6" />
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Process</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
-                A proven methodology that ensures successful project delivery and maximum value for your investment
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
 
-            <div className="grid grid-cols-1md:grid-cols-5gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <s ection class Name="p y-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />
+          <d iv class Name="c ontainermx-autopx-4">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-4 xl font-boldtext-whitemb-6" />
+                Our <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Process</s pan>
+              </h2>
+              <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto" />
+
+                A proven methodology that ensures successful project delivery and maximum value for your investment
+
+              </p>
+            </d iv>
+
+            <d iv class Name="g rid grid-cols-1md:grid-cols-5gap-8">
+        </d iv>
               {process.map((step, index) => (
-    <>
-                <div key="{index}" className="text-centergroup" />
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
-<<<<<<< HEAD
-                    <span className="text-2 xlfont-boldtext-cyan-400"   />{step.step}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4"   />{step.title}</h3>
-                  <p className="text-gray-300text-smleading-relaxed">
-              {step.description}</p>
-=======
-        </div>
-                    <span className="text-2 xlfont-boldtext-cyan-400">{step.step}</span>
-                  </div>
-                  <h3 className="text-xl font-boldtext-whitemb-4">{step.title}</h3>
-                  <p className="text-gray-300text-smleading-relaxed">{step.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
-    </>
+
+                <d iv key="{index}" class Name="t ext-centergroup" />
+                  <d iv class Name="w-16 h-16 b g-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
+        </d iv>
+                    <s pan class Name="t ext-2 xlfont-boldtext-cyan-400">{step.step}</s pan>
+                  </d iv>
+                  <h3 c lass Name="t ext-xl font-boldtext-whitemb-4">{step.title}</h3>
+                  <p c lass Name="t ext-gray-300text-smleading-relaxed">{step.description}</p>
+                </d iv>
+
               ))}
-    <>
-            </div>
-        </section>
-    </>
+
+            </d iv>
+        </s ection>
 
         {/* Why Choose Us */}
-    <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Zion Tech Group</span>?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              We deliver exceptional IT solutions through expertise, innovation, and unwavering commitment to your success
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6" />
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Zion Tech Group</span>?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
-                We deliver exceptional IT solutions through expertise, innovation, and unwavering commitment to your success
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-              <div className="text-centergroup">
-                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
-                  <Zap className="w-10h-10text-cyan-400" />
-                </div>
-                <h3 className="text-2 xl font-bold text-white mb-4"   />Rapid Deployment</h3>
-                <p className="text-gray-300leading-relaxed">
-              Fast implementation with minimal downtime. We get your solutions up and running quickly.
-=======
-    <>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-        </div>
-              <div className="text-centergroup" />
-                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
-        </div>
-                  <Zap className="w-10h-10text-cyan-400" / />
-                </div>
-                <h3 className="text-2 xl font-boldtext-whitemb-4">Rapid Deployment</h3>
-                <p className="text-gray-300leading-relaxed" />
-    </>
+        <s ection class Name="p y-20" />
+          <d iv class Name="c ontainermx-autopx-4">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-4 xl font-boldtext-whitemb-6" />
+                Why Choose <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Zion Tech Group</s pan>?
+              </h2>
+              <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto" />
+
+                We deliver exceptional I T solutions through expertise, innovation, and unwavering commitment to your success
+
+              </p>
+            </d iv>
+
+            <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+        </d iv>
+              <d iv class Name="t ext-centergroup" />
+                <d iv class Name="w-20 h-20 b g-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
+        </d iv>
+                  <Z ap class Name="w-10h-10t ext-cyan-400" / />
+                </d iv>
+                <h3 c lass Name="t ext-2 xl font-boldtext-whitemb-4">Rapid Deployment</h3>
+                <p c lass Name="t ext-gray-300leading-relaxed" />
+
                   Fast implementation with minimal downtime. We get your solutions up and running quickly.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </p>
-              </div>
-    </>
 
-<<<<<<< HEAD
-              <div className="text-centergroup">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
-                  <Users className="w-10h-10text-purple-400" />
-                </div>
-                <h3 className="text-2 xl font-bold text-white mb-4"   />Expert Team</h3>
-                <p className="text-gray-300leading-relaxed">
-              Certified professionals with years of experience in enterprise IT solutions and cloud technologies.
-=======
-    <>
-              <div className="text-centergroup" />
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
-        </div>
-                  <Users className="w-10h-10text-purple-400" / />
-                </div>
-                <h3 className="text-2 xl font-boldtext-whitemb-4">Expert Team</h3>
-                <p className="text-gray-300leading-relaxed" />
-    </>
-                  Certified professionals with years of experience in enterprise IT solutions and cloud technologies.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                 </p>
-              </div>
-    </>
+              </d iv>
 
-<<<<<<< HEAD
-              <div className="text-centergroup">
-                <div className="w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
-                  <Award className="w-10h-10text-green-400" />
-                </div>
-                <h3 className="text-2 xl font-bold text-white mb-4"   />Proven Results</h3>
-                <p className="text-gray-300leading-relaxed">
-              Track record of successful projects with measurable business impact and client satisfaction.
-=======
-    <>
-              <div className="text-centergroup" />
-                <div className="w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
-        </div>
-                  <Award className="w-10h-10text-green-400" / />
-                </div>
-                <h3 className="text-2 xl font-boldtext-whitemb-4">Proven Results</h3>
-                <p className="text-gray-300leading-relaxed" />
-    </>
+              <d iv class Name="t ext-centergroup" />
+                <d iv class Name="w-20 h-20 b g-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
+        </d iv>
+                  <U sers class Name="w-10h-10t ext-purple-400" / />
+                </d iv>
+                <h3 c lass Name="t ext-2 xl font-boldtext-whitemb-4">Expert Team</h3>
+                <p c lass Name="t ext-gray-300leading-relaxed" />
+
+                  Certified professionals with years of experience in enterprise I T solutions and cloud technologies.
+
+                </p>
+              </d iv>
+
+              <d iv class Name="t ext-centergroup" />
+                <d iv class Name="w-20 h-20 b g-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
+        </d iv>
+                  <A ward class Name="w-10h-10t ext-green-400" / />
+                </d iv>
+                <h3 c lass Name="t ext-2 xl font-boldtext-whitemb-4">Proven Results</h3>
+                <p c lass Name="t ext-gray-300leading-relaxed" />
+
                   Track record of successful projects with measurable business impact and client satisfaction.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </p>
-              </div>
-          </div>
-        </section>
-    </>
 
-        {/* CTA Section */}
-    <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center">
-              <h2 className="text-4xl font-bold text-white mb-6"  />Ready to Modernize Your IT Infrastructure?
+                </p>
+              </d iv>
+          </d iv>
+        </s ection>
+
+        {/* C TA Section */}
+
+        <s ection class Name="p y-20" />
+          <d iv class Name="c ontainermx-autopx-4">
+        </d iv>
+            <d iv class Name="b g-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center">
+        </d iv>
+              <h2 c lass Name="t ext-4 xl font-boldtext-whitemb-6">Ready to Modernize Your I T Infrastructure?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto">
-              Let's discuss your IT needs and create a customized solution that drives your business forward.
+              <p c lass Name="t ext-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
+
+                Let's discuss your I T needs and create a customized solution that drives your business forward.
+
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-        </div>
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6">Ready to Modernize Your IT Infrastructure?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
-    </>
-                Let's discuss your IT needs and create a customized solution that drives your business forward.
-    <>
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project
-                </Link>
-                <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
-                </Link>
-              </div>
-          </div>
-        </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
+              <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+                <L ink to="/contact" class Name="b g-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project
+                </L ink>
+                <L ink to="/about" class Name="b order border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
+                </L ink>
+              </d iv>
+          </d iv>
+        </s ection>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+      </d iv>
+
   );
 };
 
-export default ItServicesPage;
-export default ITServicesPage;
-export default ITServicesPage;
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+export default It Services Page;
+export default I TServices Page;
+export default I TServices Page;

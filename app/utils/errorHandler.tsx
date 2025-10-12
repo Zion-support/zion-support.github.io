@@ -4,9 +4,9 @@ import React from 'react';
  * Advanced Error Handler
  * Comprehensive error handling utilities for React applications
  */
- resetError: () => void }>
-    onError?: (error: AppError) => void
-  { hasError: boolean; error: AppError | null }
+ reset Error: () => void }>
+    on Error?: (error: App Error) => void
+  { has Error: boolean; error: App Error | null }
     super(props)
-    this.state = { hasError: false, error: null }
+    this.state = { has Error: false, error: null }
   }

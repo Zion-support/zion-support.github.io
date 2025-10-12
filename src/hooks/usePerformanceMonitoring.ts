@@ -1,102 +1,102 @@
-import { useEffect, useCallback } from 'react';
-// import { useAnalytics } from '../components/AnalyticsProvider';
-// PerformanceMetrics interface removed as it's not used in this hook
-  // const { trackPerformance } = useAnalytics();
+import { use Effect, use Callback } from 'react';
+// import { use Analytics } from '../components/AnalyticsProvider';
+// Performance Metrics interface removed as it's not used in this hook
+  // const { track Performance } = use Analytics();
   
       console.log('Performance metric:', name, value);
-      // trackPerformance(name, value);
+      // track Performance(name, value);
     []
   );
       return () => {};
     }
-      // LCP - Largest Contentful Paint
+      // L CP - Largest Contentful Paint
       
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        reportMetric('LCP', lastEntry.startTime);
+        const entries = list.get Entries();
+        const last Entry = entries[entries.length - 1];
+        report Metric('L CP', last Entry.start Time);
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      // FID - First Input Delay
+      lcp Observer.observe({ entry Types: ['largest-contentful-paint'] });
+      // F ID - First Input Delay
       
-        const entries = list.getEntries();
+        const entries = list.get Entries();
             
-              (entry.processingStart || entry.startTime) - entry.startTime;
-            reportMetric('FID', fid);
+              (entry.processing Start || entry.start Time) - entry.start Time;
+            report Metric('F ID', fid);
           }
         );
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      // CLS - Cumulative Layout Shift
-      let clsValue = 0;
+      fid Observer.observe({ entry Types: ['first-input'] });
+      // C LS - Cumulative Layout Shift
+      let cls Value = 0;
       
-        const entries = list.getEntries();
-              hadRecentInput?: boolean;
+        const entries = list.get Entries();
+              had Recent Input?: boolean;
               value?: number;
             }
-              clsValue += entry.value;
+              cls Value += entry.value;
             }
           }
         );
-        reportMetric('CLS', clsValue);
+        report Metric('C LS', cls Value);
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-      // FCP - First Contentful Paint
+      cls Observer.observe({ entry Types: ['layout-shift'] });
+      // F CP - First Contentful Paint
       
-        const entries = list.getEntries();
-            reportMetric('FCP', entry.startTime);
+        const entries = list.get Entries();
+            report Metric('F CP', entry.start Time);
           }
         });
       });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-      // TTFB - Time to First Byte
+      fcp Observer.observe({ entry Types: ['paint'] });
+      // T TF B - Time to First Byte
       
-        const entries = list.getEntries();
-            const navEntry = entry as PerformanceNavigationTiming;
-            const ttfb = navEntry.responseStart - navEntry.requestStart;
-            reportMetric('TTFB', ttfb);
+        const entries = list.get Entries();
+            const nav Entry = entry as Performance Navigation Timing;
+            const ttfb = nav Entry.response Start - nav Entry.request Start;
+            report Metric('T TF B', ttfb);
           }
         });
       });
-      navigationObserver.observe({ entryTypes: ['navigation'] });
+      navigation Observer.observe({ entry Types: ['navigation'] });
       // Resource timing
       
-        const entries = list.getEntries();
-            const resourceEntry = entry as PerformanceResourceTiming;
-            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
+        const entries = list.get Entries();
+            const resource Entry = entry as Performance Resource Timing;
+            const load Time = resource Entry.response End - resource Entry.request Start;
               // Only track slow resources
-              reportMetric('SLOW_RESOURCE', loadTime);
+              report Metric('S LO W_ RE SO UR CE', load Time);
             }
           }
         });
       });
-      resourceObserver.observe({ entryTypes: ['resource'] });
+      resource Observer.observe({ entry Types: ['resource'] });
       // Cleanup
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-        fcpObserver.disconnect();
-        navigationObserver.disconnect();
-        resourceObserver.disconnect();
+        lcp Observer.disconnect();
+        fid Observer.disconnect();
+        cls Observer.disconnect();
+        fcp Observer.disconnect();
+        navigation Observer.disconnect();
+        resource Observer.disconnect();
       };
       console.error('Performance monitoring setup failed:', error);
       return () => {};
     }
-  }, [reportMetric]);
+  }, [report Metric]);
   // Monitor page load performance
     
       if (typeof window === 'undefined') return;
       
-      )[0] as PerformanceNavigationTiming;
+      )[0] as Performance Navigation Timing;
         
         };
-          reportMetric(key.toUpperCase(), value);
+          report Metric(key.to Upper Case(), value);
         });
       }
     };
-    window.addEventListener('load', handleLoad);
-    return () => window.removeEventListener('load', handleLoad);
-  }, [reportMetric]);
-    reportMetric
+    window.add Event Listener('load', handle Load);
+    return () => window.remove Event Listener('load', handle Load);
+  }, [report Metric]);
+    report Metric
   };
 };
 export default usePerformanceMonitoring;

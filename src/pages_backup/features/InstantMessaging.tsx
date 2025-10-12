@@ -5,30 +5,30 @@ import {ArrowRight} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Instantmessaging - Zion Tech Group</title>
-        <meta name="description" content="Professional instantmessaging services and solutions." />
-        <meta name="keywords" content="instantmessaging, services, solutions, technology" />
-      </Helmet>
+    <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <H elmet>
+        <t itle>Instantmessaging - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional instantmessaging services and solutions." />
+        <m eta name="keywords" content="instantmessaging, services, solutions, technology" />
+      </H elmet>
       
-      <Navigation />
+      <N avigation />
       
-      <main className="pt-16">
-        <div className="flex items-center justify-center min-h-screen">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Instantmessaging</h1>
-            <p className="text-gray-300 mb-8">This page is under construction.</p>
-            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center mx-auto">
+      <m ain class Name="p t-16">
+        <d iv class Name="f lex items-center justify-center min-h-screen">
+          <d iv class Name="t ext-center">
+            <h1 c lass Name="t ext-4xl font-bold text-white mb-4">Instantmessaging</h1>
+            <p c lass Name="t ext-gray-300 mb-8">This page is under construction.</p>
+            <b utton class Name="b g-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center mx-auto">
               Learn More
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
-          </div>
-      </main>
+              <A rrow Right class Name="w-5 h-5 m l-2" />
+            </b utton>
+          </d iv>
+      </m ain>
       
-      <Footer />
-    </div>
+      <F ooter />
+    </d iv>
   );
 };
 
-export default InstantmessagingPage;
+export default Instantmessaging Page;

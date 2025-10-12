@@ -1,44 +1,37 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-=======
-import { Cloud, ArrowRight, CheckCircle, Star, TrendingUp, Server, Shield } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
+import { Cloud, ArrowRight, CheckCircle, Star, Trending Up, Server, Shield } from 'lucide-react';
 import Layout from '../layout'
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Layout from '../layout';
 
-export default function CloudInfrastructureManagement() {
+export default function Cloud Infrastructure Management() {
   const features = [
     {
-      icon: <Cloud className="w-6h-6text-cyan-400" />,
+      icon: <C loud class Name="w-6h-6t ext-cyan-400" />,
       title: 'Multi-Cloud Management',
-      description: 'Seamlessly manage infrastructure across AWS, Azure, Google Cloud, and private clouds'
+      description: 'Seamlessly manage infrastructure across A WS, Azure, Google Cloud, and private clouds'
     },
     {
-      icon: <Shield className="w-6h-6text-purple-400" />,
+      icon: <S hield class Name="w-6h-6t ext-purple-400" />,
       title: 'Security & Compliance',
       description: 'Enterprise-grade security with automated compliance monitoring and threat detection'
     },
     {
-      icon: <TrendingUp className="w-6h-6text-yellow-400" />,
+      icon: <T rending Up class Name="w-6h-6t ext-yellow-400" />,
       title: 'Cost Optimization',
       description: 'Reduce cloud costs by up to 40% with intelligent resource optimization and right-sizing'
     },
     {
-      icon: <Server className="w-6h-6text-green-400" />,
+      icon: <S erver class Name="w-6h-6t ext-green-400" />,
       title: '24/7 Monitoring',
       description: 'Proactive monitoring with automated scaling, performance optimization, and incident response'
     }
   ]
 
-  const managementFeatures = [
+  const management Features = [
     {
       category: 'Infrastructure Management',
       items: ['Server Provisioning', 'Load Balancing', 'Auto Scaling', 'Resource Monitoring', 'Backup & Recovery', 'Disaster Recovery']
@@ -57,7 +50,7 @@ export default function CloudInfrastructureManagement() {
     }
   ]
 
-  const pricingPlans = [
+  const pricing Plans = [
     {
       name: 'Starter',
       price: '$299',
@@ -123,367 +116,243 @@ export default function CloudInfrastructureManagement() {
     {
       name: 'David Wilson',
       company: 'Healthcare Provider',
-      content: 'HIPAA compliance was seamless with their security framework. Our auditors were very impressed.',
+      content: 'H IP AA compliance was seamless with their security framework. Our auditors were very impressed.',
       rating: 5
     }
   ]
 
   return (
-    <Layout
+    <L ayout
       title="Cloud Infrastructure Management - Enterprise Cloud Solutions | Zion Tech Group"
       description="Optimize your cloud infrastructure with comprehensive management, security, and cost optimization. Multi-cloud support, 24/7 monitoring, and enterprise-grade security. Get your free assessment today."
       keywords="cloud infrastructure management, cloud optimization, multi-cloud, cloud security, cloud monitoring, cloud cost optimization" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        </d iv>
         {/* Hero Section */}
-    <>
-        <section className="pt-20 pb-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-sky-500/20 rounded-full text-sky-400 text-smfont-mediummb-6">
-                <Cloud className="w-4h-4mr-2" />
-=======
-        </div>
-            <div className="text-center" />
-              <div className="inline-flex items-center px-4 py-2 bg-sky-500/20 rounded-full text-sky-400 text-smfont-mediummb-6">
-        </div>
-                <Cloud className="w-4h-4mr-2" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+        <s ection class Name="p t-20 pb-16 px-4sm:px-6lg:px-8" />
+          <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-center" />
+              <d iv class Name="i nline-flex items-center px-4 py-2 bg-sky-500/20 rounded-full text-sky-400 text-smfont-mediummb-6">
+        </d iv>
+                <C loud class Name="w-4h-4m r-2" / />
                 Enterprise Cloud Management
-    <>
-              </div>
-<<<<<<< HEAD
-              <h1 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6"  />Cloud Infrastructure Management
-=======
-              <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6">Cloud Infrastructure Management
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+              </d iv>
+              <h1 c lass Name="t ext-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6">Cloud Infrastructure Management
               </h1>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8">
+              <p c lass Name="t ext-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8">
               Optimize your cloud infrastructure with comprehensive management, security, and cost optimization. 
                 Multi-cloud support, 24/7 monitoring, and enterprise-grade security.
-    <>
+
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-                <Link to="/contact" className="bg-gradient-to-r from-sky-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-sky-600 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-center" >
-          Get Free Assessment
-                  
-          <ArrowRight className="w-5h-5ml-2"  />
-        </Link>
-=======
-        </div>
-                <Link to="/contact" className="bg-gradient-to-r from-sky-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-sky-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
+              <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+                <L ink to="/contact" class Name="b g-gradient-to-r from-sky-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-sky-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
                   Get Free Assessment
-    <>
-                  <ArrowRight className="w-5h-5ml-2" />
-                </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">View Demo
-                </Link>
-              </div>
-          </div>
-        </section>
+
+                  <A rrow Right class Name="w-5h-5m l-2" />
+                </L ink>
+                <L ink to="#demo" class Name="b order-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">View Demo
+                </L ink>
+              </d iv>
+          </d iv>
+        </s ection>
 
         {/* Features Section */}
-    <>
-        <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-3 xl sm:text-4xl font-bold text-white mb-4"  />Comprehensive Cloud Management
+
+        <s ection class Name="p y-16 px-4sm:px-6lg:px-8" />
+          <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-3 xl sm:text-4 xl font-boldtext-whitemb-4">Comprehensive Cloud Management
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              Enterprise-grade features that optimize your cloud infrastructure performance and costs
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Comprehensive Cloud Management
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
+              <p c lass Name="t ext-lg text-gray-300 max-w-2xlmx-auto" />
                 Enterprise-grade features that optimize your cloud infrastructure performance and costs
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
               </p>
-            </div>
+            </d iv>
             
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+        </d iv>
               {features.map((feature, index) => (
-    <>
-                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-sky-500/20 hover:border-sky-400/40transition-allduration-300" />
-<<<<<<< HEAD
-                  <div className="flex items-centermb-4">
-=======
-                  <div className="flexitems-centermb-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+                <d iv key="{index}" class Name="b g-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-sky-500/20 hover:border-sky-400/40transition-allduration-300" />
+                  <d iv class Name="f lexitems-centermb-4">
+        </d iv>
                     {feature.icon}
-    <>
-                    <h3 className="text-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
-                  </div>
-<<<<<<< HEAD
-                  <p className="text-gray-300">
-              {feature.description}</p>
-=======
-                  <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
+
+                    <h3 c lass Name="t ext-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
+                  </d iv>
+                  <p c lass Name="t ext-gray-300">{feature.description}</p>
+                </d iv>
               ))}
-    <>
-            </div>
-        </section>
+
+            </d iv>
+        </s ection>
 
         {/* Management Features */}
-    <>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-3 xl sm:text-4xl font-bold text-white mb-4"  />Complete Infrastructure Solution
+
+        <s ection class Name="p y-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
+          <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-3 xl sm:text-4 xl font-boldtext-whitemb-4">Complete Infrastructure Solution
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              Everything you need to manage, secure, and optimize your cloud infrastructure
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Complete Infrastructure Solution
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
+              <p c lass Name="t ext-lg text-gray-300 max-w-2xlmx-auto" />
                 Everything you need to manage, secure, and optimize your cloud infrastructure
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
               </p>
-            </div>
+            </d iv>
             
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {managementFeatures.map((feature, index) => (
-    <>
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-<<<<<<< HEAD
-                  <h3 className="text-xl font-semiboldtext-white mb-4"   />{feature.category}</h3>
-                  <ul className="space-y-2" />
-                    {feature.items.map((item, itemIndex) => (
-                      <li key="{itemIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-4 h-4text-sky-400mr-2" />
-=======
-                  <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.category}</h3>
-                  <ul className="space-y-2" />
-                    {feature.items.map((item, itemIndex) => (
-    <>
-                      <li key="{itemIndex}" className="flexitems-centertext-gray-300" />
-                        <CheckCircle className="w-4 h-4text-sky-400mr-2" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+        </d iv>
+              {management Features.map((feature, index) => (
+
+                <d iv key="{index}" class Name="b g-slate-800/50 rounded-xl p-6borderborder-slate-700" />
+                  <h3 c lass Name="t ext-xl font-semiboldtext-whitemb-4">{feature.category}</h3>
+                  <u l class Name="s pace-y-2" />
+                    {feature.items.map((item, item Index) => (
+
+                      <l i key="{item Index}" class Name="f lexitems-centertext-gray-300" />
+                        <C heck Circle class Name="w-4 h-4t ext-sky-400mr-2" / />
                         {item}
-                      </li>
+                      </l i>
                     ))}
-    <>
-                  </ul>
-                </div>
+
+                  </u l>
+                </d iv>
               ))}
-    <>
-            </div>
-        </section>
+
+            </d iv>
+        </s ection>
 
         {/* Pricing Section */}
-    <>
-        <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-3 xl sm:text-4xl font-bold text-white mb-4"  />Transparent Pricing Plans
+
+        <s ection class Name="p y-16 px-4sm:px-6lg:px-8" />
+          <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-3 xl sm:text-4 xl font-boldtext-whitemb-4">Transparent Pricing Plans
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              Choose the plan that fits your infrastructure needs
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Transparent Pricing Plans
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
+              <p c lass Name="t ext-lg text-gray-300 max-w-2xlmx-auto" />
                 Choose the plan that fits your infrastructure needs
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
               </p>
-            </div>
+            </d iv>
             
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {pricingPlans.map((plan, index) => (
-                <div key="{index}" className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
+            <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+        </d iv>
+              {pricing Plans.map((plan, index) => (
+                <d iv key="{index}" class Name="{`b g-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
                     ? 'border-sky-400/40 scale-105 shadow-2 xl shadow-sky-500/20' 
                     : 'border-sky-500/20 hover: border-sky-400/40'
                 }`} />
                   {plan.popular && (
-<<<<<<< HEAD
-                    <div className="inline-flex items-center px-3 py-1 bg-sky-500/20 rounded-full text-sky-400 text-smfont-mediummb-4">
-                      <Star className="w-4h-4mr-1" />
+
+                    <d iv class Name="i nline-flex items-center px-3 py-1 bg-sky-500/20 rounded-full text-sky-400 text-smfont-mediummb-4">
+        </d iv>
+                      <S tar class Name="w-4h-4m r-1" / />
                       Most Popular
-                    </div>
+                    </d iv>
                   )}
-                  <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                  <p className="text-gray-300 mb-6">
-              {plan.description}</p>
-                  <div className="mb-6">
-                    <span className="text-4xlfont-bold text-white"   />{plan.price}</span>
-                    <span className="text-gray-400"   />{plan.period}</span>
-                  </div>
-                  <ul className="space-y-3mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5text-sky-400mr-3" />
-=======
-    <>
-                    <div className="inline-flex items-center px-3 py-1 bg-sky-500/20 rounded-full text-sky-400 text-smfont-mediummb-4">
-        </div>
-                      <Star className="w-4h-4mr-1" / />
-                      Most Popular
-                    </div>
-                  )}
-    <>
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300mb-6">{plan.description}</p>
-                  <div className="mb-6">
-        </div>
-                    <span className="text-4 xlfont-boldtext-white">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
-                  </div>
-                  <ul className="space-y-3mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-    <>
-                      <li key="{featureIndex}" className="flexitems-centertext-gray-300" />
-                        <CheckCircle className="w-5 h-5text-sky-400mr-3" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+                  <h3 c lass Name="t ext-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
+                  <p c lass Name="t ext-gray-300mb-6">{plan.description}</p>
+                  <d iv class Name="m b-6">
+        </d iv>
+                    <s pan class Name="t ext-4 xlfont-boldtext-white">{plan.price}</s pan>
+                    <s pan class Name="t ext-gray-400">{plan.period}</s pan>
+                  </d iv>
+                  <u l class Name="s pace-y-3mb-8" />
+                    {plan.features.map((feature, feature Index) => (
+
+                      <l i key="{feature Index}" class Name="f lexitems-centertext-gray-300" />
+                        <C heck Circle class Name="w-5 h-5t ext-sky-400mr-3" / />
                         {feature}
-                      </li>
+                      </l i>
                     ))}
-                  </ul>
-                  <Link
+                  </u l>
+                  <L ink
                     to="/contact"
-                    className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    class Name="{`w-f ull" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-sky-500 to-purple-600 text-white hover:from-sky-600 hover:to-purple-700'
                         : 'border-2 border-sky-400 text-sky-400 hover: bg-sky-400/10'
                     }`}
                     />Get Started
-    <>
-                  </Link>
-                </div>
+
+                  </L ink>
+                </d iv>
               ))}
-    <>
-            </div>
-        </section>
+
+            </d iv>
+        </s ection>
 
         {/* Testimonials */}
-    <>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-12">
-              <h2 className="text-3 xl font-bold text-white mb-4"  />Trusted by Industry Leaders
-              </h2>
-              <p className="text-gray-300">
-              See how our Cloud Infrastructure Management transforms businesses
-              </p>
-            </div>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-=======
-        </div>
-            <div className="text-centermb-12">
-        </div>
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Trusted by Industry Leaders
-              </h2>
-              <p className="text-gray-300" />
-                See how our Cloud Infrastructure Management transforms businesses
-    <>
-              </p>
-            </div>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {testimonials.map((testimonial, index) => (
-    <>
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-<<<<<<< HEAD
-                  <div className="flex items-centermb-4">
-=======
-                  <div className="flexitems-centermb-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
-                    ))}
-    <>
-                  </div>
-<<<<<<< HEAD
-                  <p className="text-gray-300 mb-4">
-              "{testimonial.content}"</p>
-                  <div />
-                    <div className="font-semiboldtext-white"   />{testimonial.name}</div>
-                    <div className="text-smtext-gray-400"   />{testimonial.company}</div>
-=======
-                  <p className="text-gray-300mb-4">"{testimonial.content}"</p>
-                  <div />
-                    <div className="font-semiboldtext-white">{testimonial.name}</div>
-                    <div className="text-smtext-gray-400">{testimonial.company}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
-              ))}
-    <>
-            </div>
-        </section>
 
-        {/* CTA Section */}
-    <>
-        <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-4 xlmx-autotext-center">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-sky-500/20 to-purple-500/20 rounded-2 xl p-8borderborder-sky-500/30">
-              <h2 className="text-3 xl font-bold text-white mb-4"  />Optimize Your Cloud Infrastructure Today
+        <s ection class Name="p y-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
+          <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-centermb-12">
+        </d iv>
+              <h2 c lass Name="t ext-3 xl font-boldtext-whitemb-4">Trusted by Industry Leaders
               </h2>
-              <p className="text-lg text-gray-300 mb-8">
-              Join thousands of businesses using our Cloud Infrastructure Management to reduce costs and improve performance
+              <p c lass Name="t ext-gray-300" />
+                See how our Cloud Infrastructure Management transforms businesses
+
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-        </div>
-            <div className="bg-gradient-to-r from-sky-500/20 to-purple-500/20 rounded-2 xl p-8borderborder-sky-500/30">
-        </div>
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Optimize Your Cloud Infrastructure Today
+            </d iv>
+            <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+        </d iv>
+              {testimonials.map((testimonial, index) => (
+
+                <d iv key="{index}" class Name="b g-slate-800/50 rounded-xl p-6borderborder-slate-700" />
+                  <d iv class Name="f lexitems-centermb-4">
+        </d iv>
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <S tar key="{i}" class Name="w-5 h-5t ext-yellow-400fill-current" />
+                    ))}
+
+                  </d iv>
+                  <p c lass Name="t ext-gray-300mb-4">"{testimonial.content}"</p>
+                  <d iv />
+                    <d iv class Name="f ont-semiboldtext-white">{testimonial.name}</d iv>
+                    <d iv class Name="t ext-smtext-gray-400">{testimonial.company}</d iv>
+                </d iv>
+              ))}
+
+            </d iv>
+        </s ection>
+
+        {/* C TA Section */}
+
+        <s ection class Name="p y-16 px-4sm:px-6lg:px-8" />
+          <d iv class Name="m ax-w-4 xlmx-autotext-center">
+        </d iv>
+            <d iv class Name="b g-gradient-to-r from-sky-500/20 to-purple-500/20 rounded-2 xl p-8borderborder-sky-500/30">
+        </d iv>
+              <h2 c lass Name="t ext-3 xl font-boldtext-whitemb-4">Optimize Your Cloud Infrastructure Today
               </h2>
-              <p className="text-lgtext-gray-300mb-8" />
+              <p c lass Name="t ext-lgtext-gray-300mb-8" />
                 Join thousands of businesses using our Cloud Infrastructure Management to reduce costs and improve performance
-    <>
+
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-sky-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-sky-600 hover:to-purple-700transition-allduration-300">Get Your Free Assessment
-                </Link>
-                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
-                </Link>
-              </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
+              <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+                <L ink to="/contact" class Name="b g-gradient-to-r from-sky-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-sky-600 hover:to-purple-700transition-allduration-300">Get Your Free Assessment
+                </L ink>
+                <L ink to="/about" class Name="b order-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
+                </L ink>
+              </d iv>
+          </d iv>
+        </s ection>
+      </d iv>
+    </L ayout>
   )
 };
-    </>

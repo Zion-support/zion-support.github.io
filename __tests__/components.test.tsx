@@ -2,16 +2,16 @@ import { describe, test, expect } from '@jest/globals'
 import { render, screen } from '@testing-library/react'
 import { HelmetProvider } from 'react-helmet-async'
 import Loading from '../app/components/Loading'
-import SEOHead from '../app/components/SEOHead'
+import S EO Head from '../app/components/S EO Head'
 describe('Component Tests', () => {
   test('Loading renders correctly', () => {
-    render(<Loading />)
-    expect(screen.getByText('Loading...')).toBeInTheDocument()
+    render(<L oading />)
+    expect(screen.get By Text('Loading...')).to Be In The Document()
   })
-  test('SEOHead renders without crashing', () => {
+  test('S EO Head renders without crashing', () => {
     render(
-      <HelmetProvider>
-        <SEOHead />
-      </HelmetProvider>
+      <H elmet Provider>
+        <S E O Head />
+      </H elmet Provider>
     )
-    expect(document.head).toBeInTheDocument()})})
+    expect(document.head).to Be In The Document()})})

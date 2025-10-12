@@ -1,197 +1,155 @@
-import { useState } from 'react';
+import { use State } from 'react';
 import { ArrowRight } from 'lucide-react';
 'use client'
 
-interface ContentNewsletterSignupProps {
+interface Content Newsletter Signup Props {
   title?: string
   subtitle?: string
   placeholder?: string
-  buttonText?: string
+  button Text?: string
   features?: Array<{
-    icon: React.ComponentType<{ className?: string }>
+    i con: React.Component Type<{ class Name?: string }>
     text: string
   }>
-  onSubscribe?: (email: string) => void
+  on Subscribe?: (email: string) => void
 }
 
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
+const Content Newsletter Signup: React.F C<C ontent Newsletter Signup Props /> = ({
   const title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
   placeholder = "Enter your email address",
-  buttonText = "Subscribe",
+  button Text = "Subscribe",
   features = [
     { icon: Star, text: "Exclusive content" },
     { icon: Users, text: "Industry insights" },
     { icon: Globe, text: "Global updates" },
     { icon: Zap, text: "Early access" }
   ],
-  onSubscribe
+  on Subscribe
 }) => {
-  const [email, setEmail] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [email, set Email] = use State('')
+  const [is Submitting, set Is Submitting] = use State(false)
+  const [is Subscribed, set Is Subscribed] = use State(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+  const handle Submit = async (e: React.Form Event) => {
+    e.prevent Default()
     if (!email) return
 
-    setIsSubmitting(true)
+    set Is Submitting(true)
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      if (onSubscribe) {
-        onSubscribe(email)
+      // Simulate A PI call
+      await new Promise(resolve => set Timeout(resolve, 1000))
+      if (on Subscribe) {
+        on Subscribe(email)
       }
-      setIsSubscribed(true)
-      setEmail('')
+      set Is Subscribed(true)
+      set Email('')
     } catch (error) {
       console.error('Subscription error: ', error)
     } finally {
-      setIsSubmitting(false)
+      set Is Submitting(false)
     }
   }
 
-  if (isSubscribed) {
+  if (is Subscribed) {
     return (
-<<<<<<< HEAD
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        <div className="max-w-4 xlmx-autotext-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
-            <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-automb-6">
-              <CheckCircle className="w-10h-10text-white" />
-            </div>
-            <h2 className="text-3 xl font-bold text-white mb-4"  />Thank You for Subscribing!
+
+    <d iv class Name="p y-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        </d iv>
+        <d iv class Name="m ax-w-4 xlmx-autotext-center">
+        </d iv>
+          <d iv class Name="b g-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
+        </d iv>
+            <d iv class Name="w-20 h-20 b g-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-centermx-automb-6">
+        </d iv>
+              <C heck Circle class Name="w-10h-10t ext-white" / />
+            </d iv>
+            <h2 c lass Name="t ext-3 xl font-boldtext-whitemb-4">Thank You for Subscribing!
             </h2>
-            <p className="text-xltext-gray-300 mb-8">
-=======
-    <>
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
-        <div className="max-w-4 xlmx-autotext-center">
-        </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
-        </div>
-            <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-centermx-automb-6">
-        </div>
-              <CheckCircle className="w-10h-10text-white" / />
-            </div>
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Thank You for Subscribing!
-            </h2>
-            <p className="text-xltext-gray-300mb-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <p c lass Name="t ext-xltext-gray-300mb-8">
               You'll receive our latest insights and updates soon.
             </p>
-            <button
-              onClick="{()" =  />setIsSubscribed(false)}
-              className="text-blue-400hover:text-blue-300transition-colors"
+            <b utton
+              on Click="{()" =  />set Is Subscribed(false)}
+              class Name="t ext-blue-400hover:text-blue-300transition-colors"
             >
               Subscribe another email
-    <>
-            </button>
-          </div>
-      </div>
+
+            </b utton>
+          </d iv>
+      </d iv>
     )
   }
 
   return (
-<<<<<<< HEAD
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-      <div className="max-w-4xlmx-auto">
-        <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
-          <div className="text-centermb-12">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />{title}
-=======
-    <>
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
-      <div className="max-w-4xlmx-auto">
-        </div>
-        <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
-        </div>
-          <div className="text-centermb-12">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">{title}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xlmx-auto">
-              {subtitle}
-    <>
-            </p>
-          </div>
 
-    <>
-          <form onSubmit="{handleSubmit}" className="max-w-mdmx-automb-12" />
-            <div className="flex flex-colsm:flex-rowgap-4">
-<<<<<<< HEAD
-              <div className="flex-1">
-=======
-        </div>
-              <div className="flex-1">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <input
+    <d iv class Name="p y-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        </d iv>
+      <d iv class Name="m ax-w-4xlmx-auto">
+        </d iv>
+        <d iv class Name="b g-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
+        </d iv>
+          <d iv class Name="t ext-centermb-12">
+        </d iv>
+            <h2 c lass Name="t ext-3 xl md:text-4 xl font-boldtext-whitemb-4">{title}
+            </h2>
+            <p c lass Name="t ext-xl text-gray-300 max-w-2xlmx-auto">
+              {subtitle}
+
+            </p>
+          </d iv>
+
+          <f orm on Submit="{handle Submit}" class Name="m ax-w-mdmx-automb-12" />
+            <d iv class Name="f lex flex-colsm:flex-rowgap-4">
+        </d iv>
+              <d iv class Name="f lex-1">
+        </d iv>
+                <i nput
                   type="email"
                   value="{email}"
-                  onChange="{(e)" = /> setEmail(e.target.value)}
+                  on Change="{(e)" = /> set Email(e.target.value)}
                   placeholder="{placeholder}"
                   required
-                  className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
+                  class Name="w-f ull px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
                 />
-              </div>
-              <button
+              </d iv>
+              <b utton
                 type="submit"
-                disabled="{isSubmitting}"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]" />
-                {isSubmitting ? (
-    <>
-                  <>
-<<<<<<< HEAD
-                    <div className="animate-spin rounded-full h-5 w-5border-b-2border-white"></div>
-                    <span  >Subscribing...</span>
-=======
-                    <div className="animate-spin rounded-full h-5 w-5border-b-2border-white">
-        </div></div>
-                    <span>Subscribing...</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </>
-                ) : (
-    <>
-                  <>
-                    <span>{buttonText}</span>
-                    <ArrowRight className="h-5w-5" />
-                  </>
-                )}
-    <>
-              </button>
-            </div>
-          </form>
+                disabled="{is Submitting}"
+                class Name="b g-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]" />
+                {is Submitting ? (
 
-          <div className="grid grid-cols-2md:grid-cols-4gap-6">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                    <d iv class Name="a nimate-spin rounded-full h-5 w-5border-b-2border-white">
+        </d iv></d iv>
+                    <s pan>Subscribing...</s pan>
+
+                ) : (
+
+                    <s pan>{button Text}</s pan>
+                    <A rrow Right class Name="h-5w-5" />
+
+                )}
+
+              </b utton>
+            </d iv>
+          </f orm>
+
+          <d iv class Name="g rid grid-cols-2md:grid-cols-4gap-6">
+        </d iv>
             {features.map((feature, index) => (
 
-    <>
-                <div key="{index}" className="text-center" />
-<<<<<<< HEAD
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-automb-3">
-                  <feature.icon className="h-6w-6text-white" />
-=======
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-centermx-automb-3">
-        </div>
-                  <feature.icon className="h-6w-6text-white" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
-                <p className="text-gray-300text-sm">{feature.text}</p>
-              </div>
+                <d iv key="{index}" class Name="t ext-center" />
+                <d iv class Name="w-12 h-12 b g-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-centermx-automb-3">
+        </d iv>
+                  <f eature.icon class Name="h-6w-6t ext-white" / />
+                </d iv>
+                <p c lass Name="t ext-gray-300text-sm">{feature.text}</p>
+              </d iv>
             ))}
-    <>
-          </div>
-      </div>
+
+          </d iv>
+      </d iv>
   )
 }
 
-export default ContentNewsletterSignup;
-    </>
+export default Content Newsletter Signup;

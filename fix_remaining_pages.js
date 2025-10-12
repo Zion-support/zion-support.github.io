@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 // List of all pages that need to be completely rewritten
-const pagesToFix = [
+const pages To Fix = [
   'ai-website-builder',
   'iot-edge-computing',
   'training',
@@ -18,104 +18,104 @@ const pagesToFix = [
 ];
 
 // Template for a basic page
-const pageTemplate = (pageName, title, description, keywords) => `import React from 'react'
+const page Template = (page Name, title, description, keywords) => `import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Layout from '../../layout'
 
-const ${pageName}Page: React.FC = () => {
+const ${page Name}Page: React.F C = () => {
   return (
-    <Layout
+    <L ayout
       title="${title} - Zion Tech Group"
       description="${description}"
       keywords="${keywords}"
     >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <d iv class Name="m ax-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <d iv class Name="t ext-center mb-16">
+            <h1 c lass Name="t ext-4xl md:text-6xl font-bold text-white mb-6">
+              <s pan class Name="b g-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 ${title}
-              </span>
+              </s pan>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p c lass Name="t ext-xl text-gray-300 max-w-3xl mx-auto">
               ${description}
             </p>
-          </div>
+          </d iv>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
-              <p className="text-gray-300 mb-4">
+          <d iv class Name="g rid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <d iv class Name="b g-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 c lass Name="t ext-xl font-semibold text-white mb-4">Feature 1</h3>
+              <p c lass Name="t ext-gray-300 mb-4">
                 Description of the first key feature or service.
               </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
-              </ul>
-            </div>
+              <u l class Name="t ext-gray-300 space-y-2">
+                <l i>• Benefit 1</l i>
+                <l i>• Benefit 2</l i>
+                <l i>• Benefit 3</l i>
+                <l i>• Benefit 4</l i>
+              </u l>
+            </d iv>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
-              <p className="text-gray-300 mb-4">
+            <d iv class Name="b g-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 c lass Name="t ext-xl font-semibold text-white mb-4">Feature 2</h3>
+              <p c lass Name="t ext-gray-300 mb-4">
                 Description of the second key feature or service.
               </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
-              </ul>
-            </div>
+              <u l class Name="t ext-gray-300 space-y-2">
+                <l i>• Benefit 1</l i>
+                <l i>• Benefit 2</l i>
+                <l i>• Benefit 3</l i>
+                <l i>• Benefit 4</l i>
+              </u l>
+            </d iv>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
-              <p className="text-gray-300 mb-4">
+            <d iv class Name="b g-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 c lass Name="t ext-xl font-semibold text-white mb-4">Feature 3</h3>
+              <p c lass Name="t ext-gray-300 mb-4">
                 Description of the third key feature or service.
               </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Layout>
+              <u l class Name="t ext-gray-300 space-y-2">
+                <l i>• Benefit 1</l i>
+                <l i>• Benefit 2</l i>
+                <l i>• Benefit 3</l i>
+                <l i>• Benefit 4</l i>
+              </u l>
+            </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+    </L ayout>
   )
 }
 
-export default ${pageName}Page`;
+export default ${page Name}Page`;
 
 // Page configurations
-const pageConfigs = {
+const page Configs = {
   'ai-website-builder': {
-    title: 'AI Website Builder',
-    description: 'Build professional websites with AI-powered tools and templates for rapid development.',
-    keywords: 'AI website builder, website creation, web development, AI tools'
+    title: 'A I Website Builder',
+    description: 'Build professional websites with A I-powered tools and templates for rapid development.',
+    keywords: 'A I website builder, website creation, web development, A I tools'
   },
   'iot-edge-computing': {
-    title: 'IoT Edge Computing',
-    description: 'Advanced IoT and edge computing solutions for real-time data processing and analytics.',
-    keywords: 'IoT, edge computing, real-time processing, data analytics'
+    title: 'Io T Edge Computing',
+    description: 'Advanced Io T and edge computing solutions for real-time data processing and analytics.',
+    keywords: 'Io T, edge computing, real-time processing, data analytics'
   },
   'training': {
     title: 'Training Services',
-    description: 'Comprehensive training programs for AI, IT, and technology skills development.',
+    description: 'Comprehensive training programs for A I, I T, and technology skills development.',
     keywords: 'training, education, skills development, technology training'
   },
   'pricing': {
     title: 'Pricing Plans',
-    description: 'Flexible pricing plans for our AI and IT services designed to meet your business needs.',
+    description: 'Flexible pricing plans for our A I and I T services designed to meet your business needs.',
     keywords: 'pricing, plans, services, business solutions'
   },
   'blog': {
     title: 'Blog',
-    description: 'Latest insights, news, and updates from Zion Tech Group on AI, technology, and industry trends.',
-    keywords: 'blog, insights, technology news, AI updates'
+    description: 'Latest insights, news, and updates from Zion Tech Group on A I, technology, and industry trends.',
+    keywords: 'blog, insights, technology news, A I updates'
   },
   'news': {
     title: 'News',
@@ -149,23 +149,23 @@ const pageConfigs = {
   },
   'not-found': {
     title: 'Page Not Found',
-    description: 'The page you are looking for could not be found. Please check the URL or return to the homepage.',
+    description: 'The page you are looking for could not be found. Please check the U RL or return to the homepage.',
     keywords: '404, not found, error, page not found'
   }
 };
 
 // Fix pages
-for (const page of pagesToFix) {
-  const pagePath = `/workspace/app/${page}/page.tsx`;
-  const config = pageConfigs[page];
-  const componentName = page.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
+for (const page of pages To Fix) {
+  const page Path = `/workspace/app/${page}/page.tsx`;
+  const config = page Configs[page];
+  const component Name = page.split('-').map(word => 
+    word.char At(0).to Upper Case() + word.slice(1)
   ).join('');
   
-  const content = pageTemplate(componentName, config.title, config.description, config.keywords);
+  const content = page Template(component Name, config.title, config.description, config.keywords);
   
   try {
-    fs.writeFileSync(pagePath, content);
+    fs.write File Sync(page Path, content);
     console.log(`Fixed ${page} page`);
   } catch (error) {
     console.error(`Error fixing ${page}:`, error.message);

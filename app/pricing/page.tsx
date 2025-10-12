@@ -1,24 +1,17 @@
 'use client';
-import { useState } from 'react';
+import { use State } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
-=======
-import { CheckCircle, Zap, Cloud, Brain, DollarSign, Settings } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
+import { CheckCircle, Zap, Cloud, Brain, Dollar Sign, Settings } from 'lucide-react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const PricingPage: React.FC = () => {
-  const [billingCycle, setBillingCycle] = useState('monthly');
-  const aiServicesPricing = [
+const Pricing Page: React.F C = () => {
+  const [billing Cycle, set Billing Cycle] = use State('monthly');
+  const ai Services Pricing = [
     {
-      name: 'AI Starter',
+      name: 'A I Starter',
       price: { monthly: 999, yearly: 9999 },
-      description: 'Perfect for small businesses exploring AI',
+      description: 'Perfect for small businesses exploring A I',
       features: [
-        'Basic AI chatbot',
+        'Basic A I chatbot',
         'Simple analytics',
         'Email support',
         'Up to 1,000 interactions/month',
@@ -28,43 +21,43 @@ const PricingPage: React.FC = () => {
       category: 'ai'
     },
     {
-      name: 'AI Professional',
+      name: 'A I Professional',
       price: { monthly: 2999, yearly: 29999 },
-      description: 'Advanced AI solutions for growing businesses',
+      description: 'Advanced A I solutions for growing businesses',
       features: [
-        'Advanced AI models',
+        'Advanced A I models',
         'Custom training',
         'Priority support',
         'Up to 10,000 interactions/month',
         'All integrations',
-        'API access',
+        'A PI access',
         'Custom workflows'
       ],
       popular: true,
       category: 'ai'
     },
     {
-      name: 'AI Enterprise',
+      name: 'A I Enterprise',
       price: { monthly: 5999, yearly: 59999 },
-      description: 'Complete AI transformation for large organizations',
+      description: 'Complete A I transformation for large organizations',
       features: [
-        'Unlimited AI models',
-        'Custom AI development',
+        'Unlimited A I models',
+        'Custom A I development',
         '24/7 dedicated support',
         'Unlimited interactions',
         'Custom integrations',
         'Dedicated account manager',
-        'SLA guarantee'
+        'S LA guarantee'
       ],
       popular: false,
       category: 'ai'
     }
   ];
-  const itServicesPricing = [
+  const it Services Pricing = [
     {
-      name: 'IT Basic',
+      name: 'I T Basic',
       price: { monthly: 1499, yearly: 14999 },
-      description: 'Essential IT services for small businesses',
+      description: 'Essential I T services for small businesses',
       features: [
         'Basic web development',
         'Cloud setup',
@@ -76,25 +69,25 @@ const PricingPage: React.FC = () => {
       category: 'it'
     },
     {
-      name: 'IT Professional',
+      name: 'I T Professional',
       price: { monthly: 3999, yearly: 39999 },
-      description: 'Comprehensive IT solutions for growing companies',
+      description: 'Comprehensive I T solutions for growing companies',
       features: [
         'Full-stack development',
         'Cloud migration',
         'Priority support',
         '24/7 monitoring',
         'Advanced security',
-        'DevOps automation',
+        'Dev Ops automation',
         'Database management'
       ],
       popular: true,
       category: 'it'
     },
     {
-      name: 'IT Enterprise',
+      name: 'I T Enterprise',
       price: { monthly: 7999, yearly: 79999 },
-      description: 'Complete IT transformation for large enterprises',
+      description: 'Complete I T transformation for large enterprises',
       features: [
         'Custom enterprise solutions',
         'Multi-cloud architecture',
@@ -102,15 +95,15 @@ const PricingPage: React.FC = () => {
         '24/7 phone support',
         'Enterprise security',
         'Custom integrations',
-        'SLA guarantee'
+        'S LA guarantee'
       ],
       popular: false,
       category: 'it'
     }
   ];
-  const microSaasPricing = [
+  const micro Saas Pricing = [
     {
-      name: 'Micro SAAS Starter',
+      name: 'Micro S AA S Starter',
       price: { monthly: 99, yearly: 999 },
       description: 'Essential business tools for startups',
       features: [
@@ -118,13 +111,13 @@ const PricingPage: React.FC = () => {
         'Basic analytics',
         'Email support',
         'Standard tools',
-        '1 GB storage'
+        '1 G B storage'
       ],
       popular: false,
       category: 'saas'
     },
     {
-      name: 'Micro SAAS Professional',
+      name: 'Micro S AA S Professional',
       price: { monthly: 299, yearly: 2999 },
       description: 'Advanced tools for growing businesses',
       features: [
@@ -132,20 +125,20 @@ const PricingPage: React.FC = () => {
         'Advanced analytics',
         'Priority support',
         'All tools included',
-        '10 GB storage',
+        '10 G B storage',
         'Custom workflows',
-        'API access'
+        'A PI access'
       ],
       popular: true,
       category: 'saas'
     },
     {
-      name: 'Micro SAAS Enterprise',
+      name: 'Micro S AA S Enterprise',
       price: { monthly: 599, yearly: 5999 },
       description: 'Complete business automation suite',
       features: [
         'Unlimited users',
-        'AI-powered insights',
+        'A I-powered insights',
         '24/7 phone support',
         'Custom tools',
         'Unlimited storage',
@@ -156,12 +149,12 @@ const PricingPage: React.FC = () => {
       category: 'saas'
     }
   ];
-  const addOns = [
+  const add Ons = [
     {
-      name: 'AI Content Generation',
+      name: 'A I Content Generation',
       price: { monthly: 199, yearly: 1999 },
-      description: 'Advanced AI-powered content creation',
-      features: ['Blog writing', 'Social media posts', 'Email campaigns', 'SEO optimization']
+      description: 'Advanced A I-powered content creation',
+      features: ['Blog writing', 'Social media posts', 'Email campaigns', 'S EO optimization']
     },
     {
       name: 'Advanced Analytics',
@@ -173,13 +166,13 @@ const PricingPage: React.FC = () => {
       name: 'Priority Support',
       price: { monthly: 199, yearly: 1999 },
       description: '24/7 priority support and faster response times',
-      features: ['Phone support', 'Faster response', 'Dedicated support', 'SLA guarantee']
+      features: ['Phone support', 'Faster response', 'Dedicated support', 'S LA guarantee']
     },
     {
       name: 'Custom Integration',
       price: { monthly: 499, yearly: 4999 },
       description: 'Custom integrations with your existing systems',
-      features: ['API development', 'Custom connectors', 'Data migration', 'Ongoing maintenance']
+      features: ['A PI development', 'Custom connectors', 'Data migration', 'Ongoing maintenance']
     }
   ];
   const faqs = [
@@ -197,7 +190,7 @@ const PricingPage: React.FC = () => {
     },
     {
       question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans.'
+      answer: 'We accept all major credit cards, Pay Pal, and bank transfers for annual plans.'
     },
     {
       question: 'Is there a setup fee?',
@@ -208,650 +201,463 @@ const PricingPage: React.FC = () => {
       answer: 'We will notify you before you reach your limits and offer options to upgrade or purchase additional capacity.'
     }
   ];
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('en-US', {
+  const format Price = (price: number) => {
+    return new Intl.Number Format('en-U S', {
       style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0
+      currency: 'U SD',
+      minimum Fraction Digits: 0
     }).format(price);
   };
 
-  const getSavings = (monthly: number, yearly: number) => {
-    const monthlyTotal = monthly * 12;
-    const savings = monthlyTotal - yearly;
-    return Math.round((savings / monthlyTotal) * 100);
+  const get Savings = (monthly: number, yearly: number) => {
+    const monthly Total = monthly * 12;
+    const savings = monthly Total - yearly;
+    return Math.round((savings / monthly Total) * 100);
   };
 
   return (
-    <>
-    <>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-        <title>Pricing - Zion Tech Group | Transparent AI & IT Solutions Pricing</title>
-        <meta const name = "description" content="Transparent pricing for AI services, IT solutions, and micro SAAS tools. Choose the plan that fits your business needs with 14-day free trials." / / />
-        <meta name="keywords" content="pricing, AI services pricing, IT services pricing, micro SAAS pricing, business solutions" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/pricing" />
-      </Helmet>
-    </>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <H elmet>
+        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </H elmet>
+        <t itle>Pricing - Zion Tech Group | Transparent A I & I T Solutions Pricing</t itle>
+        <m eta const name = "description" content="Transparent pricing for A I services, I T solutions, and micro S AA S tools. Choose the plan that fits your business needs with 14-day free trials." / / />
+        <m eta name="keywords" content="pricing, A I services pricing, I T services pricing, micro S AA S pricing, business solutions" / / />
+        <l ink rel="canonical" href="https://ziontechgroup.com/pricing" />
+      </H elmet>
+
+      <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        </d iv>
         {/* Hero Section */}
-    <>
-        <section className="relative py-20px-4overflow-hidden" />
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.4)_0%,transparent_50%)]animate-pulse" />
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
-<<<<<<< HEAD
-          <div className="relative max-w-7xlmx-autotext-center">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-              <DollarSign className="w-4h-4" />
-              <span   />Transparent Pricing</span>
-=======
-          <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-        </div>
-              <DollarSign className="w-4h-4" / />
-              <span>Transparent Pricing</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </div>
-    </>
-            
-            <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
+
+        <s ection class Name="r elative py-20px-4overflow-hidden" />
+          <d iv class Name="a bsolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.4)_0%,transparent_50%)]animate-pulse" />
+          <d iv class Name="a bsolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)]animate-pulse" style="{{" animation Delay: '1 s' }} / />
+          <d iv class Name="r elative max-w-7 xlmx-autotext-center">
+        </d iv>
+            <d iv class Name="i nline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
+        </d iv>
+              <D ollar Sign class Name="w-4h-4" / />
+              <s pan>Transparent Pricing</s pan>
+            </d iv>
+
+            <h1 c lass Name="t ext-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
               Simple, Transparent{' '}
-    <>
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">Pricing
-              </span>
+
+              <s pan class Name="b g-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">Pricing
+              </s pan>
             </h1>
-    </>
-            
-            <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
+
+            <p c lass Name="t ext-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
               Choose the plan that fits your business needs. All plans include 14-day free trials and no setup fees.
             </p>
 
             {/* Billing Toggle */}
-<<<<<<< HEAD
-            <div className="flex items-center justify-centerspace-x-4mb-12">
-              <span className="{`text-lg" ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}  />Monthly
-=======
-    <>
-            <div className="flex items-center justify-centerspace-x-4mb-12">
-        </div>
-              <span className="{`text-lg" ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </span>
-    </>
-              <button
-                onClick="{()" = /> setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
-                className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2focus:ring-cyan-500focus:ring-offset-2"
+
+            <d iv class Name="f lex items-center justify-centerspace-x-4mb-12">
+        </d iv>
+              <s pan class Name="{`t ext-lg" ${billing Cycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly
+              </s pan>
+
+              <b utton
+                on Click="{()" = /> set Billing Cycle(billing Cycle === 'monthly' ? 'yearly' : 'monthly')}
+                class Name="r elative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2focus:ring-cyan-500focus:ring-offset-2"
               >
-                <span
-                  className="{`inline-block" h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'
+                <s pan
+                  class Name="{`i nline-block" h-4 w-4 transform rounded-full bg-white transition-transform ${
+                    billing Cycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'
                   }`}
                 / />
-    <>
-              </button>
-              <span className="{`text-lg" ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>Yearly
-              </span>
-    </>
-              {billingCycle === 'yearly' && (
-    <>
-                <span className="bg-green-500 text-white px-3 py-1 rounded-fulltext-smfont-semibold">Save up to 20%
-                </span>
-    </>
+
+              </b utton>
+              <s pan class Name="{`t ext-lg" ${billing Cycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>Yearly
+              </s pan>
+
+              {billing Cycle === 'yearly' && (
+
+                <s pan class Name="b g-green-500 text-white px-3 py-1 rounded-fulltext-smfont-semibold">Save up to 20%
+                </s pan>
+
               )}
-    <>
-            </div>
-        </section>
-    </>
 
-        {/* AI Services Pricing */}
-    <>
-        <section className="py-20px-4relative" />
-          <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />AI Services</span> Pricing
+            </d iv>
+        </s ection>
+
+        {/* A I Services Pricing */}
+
+        <s ection class Name="p y-20px-4relative" />
+          <d iv class Name="r elative max-w-7xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+                <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">A I Services</s pan> Pricing
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Advanced artificial intelligence solutions for every business size
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">AI Services</span> Pricing
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
+              <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto" />
+
                 Advanced artificial intelligence solutions for every business size
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
               </p>
-            </div>
-    </>
+            </d iv>
 
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-              {aiServicesPricing.map((plan, index) => (
-                <div key="{index}" className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''}`} />
+            <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+        </d iv>
+              {ai Services Pricing.map((plan, index) => (
+                <d iv key="{index}" class Name="{`b g-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''}`} />
                   {plan.popular && (
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
-=======
-        </div>
-              {aiServicesPricing.map((plan, index) => (
-                <div key="{index}" className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''}`} />
-                  {plan.popular && (
-    <>
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-        </div>
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </span>
-                    </div>
-    </>
+
+                    <d iv class Name="a bsolute -top-3 left-1/2transform-translate-x-1/2">
+        </d iv>
+                      <s pan class Name="b g-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
+                      </s pan>
+                    </d iv>
+
                   )}
-                  
-<<<<<<< HEAD
-                  <div className="text-centermb-8">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl flex items-center justify-center mx-automb-4">
-                      <Brain className="w-8h-8text-white" />
-                    </div>
-                    <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                    <p className="text-gray-400mb-4">
-              {plan.description}</p>
-                    <div className="text-4xl font-bold text-white mb-2">
-=======
-    <>
-                  <div className="text-centermb-8">
-        </div>
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl flex items-center justify-centermx-automb-4">
-        </div>
-                      <Brain className="w-8h-8text-white" / />
-                    </div>
-                    <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                    <p className="text-gray-400mb-4">{plan.description}</p>
-                    <div className="text-4 xl font-boldtext-whitemb-2">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      {formatPrice(billingCycle === 'monthly' ? plan.price.monthly : plan.price.yearly)}
-    <>
-                      <span className="text-lgtext-gray-400">/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
-                    </div>
-    </>
-                    {billingCycle === 'yearly' && (
-    <>
-                      <div className="text-green-400text-smfont-semibold">Save {getSavings(plan.price.monthly, plan.price.yearly)}%
-                      </div>
-    </>
+
+                  <d iv class Name="t ext-centermb-8">
+        </d iv>
+                    <d iv class Name="w-16 h-16 b g-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl flex items-center justify-centermx-automb-4">
+        </d iv>
+                      <B rain class Name="w-8h-8t ext-white" / />
+                    </d iv>
+                    <h3 c lass Name="t ext-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
+                    <p c lass Name="t ext-gray-400mb-4">{plan.description}</p>
+                    <d iv class Name="t ext-4 xl font-boldtext-whitemb-2">
+        </d iv>
+
+                      {format Price(billing Cycle === 'monthly' ? plan.price.monthly : plan.price.yearly)}
+
+                      <s pan class Name="t ext-lgtext-gray-400">/{billing Cycle === 'monthly' ? 'month' : 'year'}</s pan>
+                    </d iv>
+
+                    {billing Cycle === 'yearly' && (
+
+                      <d iv class Name="t ext-green-400text-smfont-semibold">Save {get Savings(plan.price.monthly, plan.price.yearly)}%
+                      </d iv>
+
                     )}
-                  </div>
+                  </d iv>
 
-                  <ul className="space-y-4mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-    <>
-                      <li key="{featureIndex}" className="flex items-centerspace-x-3text-gray-300" />
-<<<<<<< HEAD
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" />
-                        <span   />{feature}</span>
-=======
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
-                        <span>{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </li>
-    </>
+                  <u l class Name="s pace-y-4mb-8" />
+                    {plan.features.map((feature, feature Index) => (
+
+                      <l i key="{feature Index}" class Name="f lex items-centerspace-x-3text-gray-300" />
+                        <C heck Circle class Name="w-5 h-5t ext-green-400flex-shrink-0" / />
+                        <s pan>{feature}</s pan>
+                      </l i>
+
                     ))}
-                  </ul>
+                  </u l>
 
-                  <Link 
+                  <L ink 
                     to="/contact"
-                    className="{`block" w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    class Name="{`b lock" w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
                     }`}
                     />Start Free Trial
-    <>
-                  </Link>
-                </div>
-    </>
+
+                  </L ink>
+                </d iv>
+
               ))}
-    <>
-            </div>
-        </section>
-    </>
 
-        {/* IT Services Pricing */}
-    <>
-        <section className="py-20px-4relative" />
-          <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                <span className="bg-gradient-to-r from-emerald-400 to-blue-400bg-clip-texttext-transparent"   />IT Services</span> Pricing
+            </d iv>
+        </s ection>
+
+        {/* I T Services Pricing */}
+
+        <s ection class Name="p y-20px-4relative" />
+          <d iv class Name="r elative max-w-7xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+                <s pan class Name="b g-gradient-to-r from-emerald-400 to-blue-400bg-clip-texttext-transparent">I T Services</s pan> Pricing
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Comprehensive technology solutions for modern businesses
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                <span className="bg-gradient-to-r from-emerald-400 to-blue-400bg-clip-texttext-transparent">IT Services</span> Pricing
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
+              <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto" />
+
                 Comprehensive technology solutions for modern businesses
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
               </p>
-            </div>
-    </>
+            </d iv>
 
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-              {itServicesPricing.map((plan, index) => (
-                <div key="{index}" className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-emerald-400 scale-105' : ''}`} />
+            <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+        </d iv>
+              {it Services Pricing.map((plan, index) => (
+                <d iv key="{index}" class Name="{`b g-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-emerald-400 scale-105' : ''}`} />
                   {plan.popular && (
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-                      <span className="bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
-=======
-        </div>
-              {itServicesPricing.map((plan, index) => (
-                <div key="{index}" className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-emerald-400 scale-105' : ''}`} />
-                  {plan.popular && (
-    <>
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-        </div>
-                      <span className="bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </span>
-                    </div>
-    </>
+
+                    <d iv class Name="a bsolute -top-3 left-1/2transform-translate-x-1/2">
+        </d iv>
+                      <s pan class Name="b g-gradient-to-r from-emerald-500 to-blue-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
+                      </s pan>
+                    </d iv>
+
                   )}
-                  
-<<<<<<< HEAD
-                  <div className="text-centermb-8">
-                    <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-2 xl flex items-center justify-center mx-automb-4">
-                      <Settings className="w-8h-8text-white" />
-                    </div>
-                    <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                    <p className="text-gray-400mb-4">
-              {plan.description}</p>
-                    <div className="text-4xl font-bold text-white mb-2">
-=======
-    <>
-                  <div className="text-centermb-8">
-        </div>
-                    <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-2 xl flex items-center justify-centermx-automb-4">
-        </div>
-                      <Settings className="w-8h-8text-white" / />
-                    </div>
-                    <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                    <p className="text-gray-400mb-4">{plan.description}</p>
-                    <div className="text-4 xl font-boldtext-whitemb-2">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      {formatPrice(billingCycle === 'monthly' ? plan.price.monthly : plan.price.yearly)}
-    <>
-                      <span className="text-lgtext-gray-400">/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
-                    </div>
-    </>
-                    {billingCycle === 'yearly' && (
-    <>
-                      <div className="text-green-400text-smfont-semibold">Save {getSavings(plan.price.monthly, plan.price.yearly)}%
-                      </div>
-    </>
+
+                  <d iv class Name="t ext-centermb-8">
+        </d iv>
+                    <d iv class Name="w-16 h-16 b g-gradient-to-r from-emerald-500 to-blue-600 rounded-2 xl flex items-center justify-centermx-automb-4">
+        </d iv>
+                      <S ettings class Name="w-8h-8t ext-white" / />
+                    </d iv>
+                    <h3 c lass Name="t ext-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
+                    <p c lass Name="t ext-gray-400mb-4">{plan.description}</p>
+                    <d iv class Name="t ext-4 xl font-boldtext-whitemb-2">
+        </d iv>
+
+                      {format Price(billing Cycle === 'monthly' ? plan.price.monthly : plan.price.yearly)}
+
+                      <s pan class Name="t ext-lgtext-gray-400">/{billing Cycle === 'monthly' ? 'month' : 'year'}</s pan>
+                    </d iv>
+
+                    {billing Cycle === 'yearly' && (
+
+                      <d iv class Name="t ext-green-400text-smfont-semibold">Save {get Savings(plan.price.monthly, plan.price.yearly)}%
+                      </d iv>
+
                     )}
-                  </div>
+                  </d iv>
 
-                  <ul className="space-y-4mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-    <>
-                      <li key="{featureIndex}" className="flex items-centerspace-x-3text-gray-300" />
-<<<<<<< HEAD
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" />
-                        <span   />{feature}</span>
-=======
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
-                        <span>{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </li>
-    </>
+                  <u l class Name="s pace-y-4mb-8" />
+                    {plan.features.map((feature, feature Index) => (
+
+                      <l i key="{feature Index}" class Name="f lex items-centerspace-x-3text-gray-300" />
+                        <C heck Circle class Name="w-5 h-5t ext-green-400flex-shrink-0" / />
+                        <s pan>{feature}</s pan>
+                      </l i>
+
                     ))}
-                  </ul>
+                  </u l>
 
-                  <Link 
+                  <L ink 
                     to="/contact"
-                    className="{`block" w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    class Name="{`b lock" w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-emerald-500 to-blue-600 text-white hover:from-emerald-600 hover:to-blue-700'
                         : 'border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-gray-900'
                     }`}
                     />Start Free Trial
-    <>
-                  </Link>
-                </div>
-    </>
+
+                  </L ink>
+                </d iv>
+
               ))}
-    <>
-            </div>
-        </section>
-    </>
 
-        {/* Micro SAAS Pricing */}
-    <>
-        <section className="py-20px-4relative" />
-          <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                <span className="bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent"   />Micro SAAS</span> Pricing
+            </d iv>
+        </s ection>
+
+        {/* Micro S AA S Pricing */}
+
+        <s ection class Name="p y-20px-4relative" />
+          <d iv class Name="r elative max-w-7xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+                <s pan class Name="b g-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent">Micro S AA S</s pan> Pricing
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Ready-to-use business tools with AI-powered features
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                <span className="bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent">Micro SAAS</span> Pricing
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
-                Ready-to-use business tools with AI-powered features
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto" />
+
+                Ready-to-use business tools with A I-powered features
+
               </p>
-            </div>
-    </>
+            </d iv>
 
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-              {microSaasPricing.map((plan, index) => (
-                <div key="{index}" className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-purple-400 scale-105' : ''}`} />
+            <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+        </d iv>
+              {micro Saas Pricing.map((plan, index) => (
+                <d iv key="{index}" class Name="{`b g-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-purple-400 scale-105' : ''}`} />
                   {plan.popular && (
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
-=======
-        </div>
-              {microSaasPricing.map((plan, index) => (
-                <div key="{index}" className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-purple-400 scale-105' : ''}`} />
-                  {plan.popular && (
-    <>
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-        </div>
-                      <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </span>
-                    </div>
-    </>
+
+                    <d iv class Name="a bsolute -top-3 left-1/2transform-translate-x-1/2">
+        </d iv>
+                      <s pan class Name="b g-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
+                      </s pan>
+                    </d iv>
+
                   )}
-                  
-<<<<<<< HEAD
-                  <div className="text-centermb-8">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2 xl flex items-center justify-center mx-automb-4">
-                      <Zap className="w-8h-8text-white" />
-                    </div>
-                    <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                    <p className="text-gray-400mb-4">
-              {plan.description}</p>
-                    <div className="text-4xl font-bold text-white mb-2">
-=======
-    <>
-                  <div className="text-centermb-8">
-        </div>
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2 xl flex items-center justify-centermx-automb-4">
-        </div>
-                      <Zap className="w-8h-8text-white" / />
-                    </div>
-                    <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                    <p className="text-gray-400mb-4">{plan.description}</p>
-                    <div className="text-4 xl font-boldtext-whitemb-2">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      {formatPrice(billingCycle === 'monthly' ? plan.price.monthly : plan.price.yearly)}
-    <>
-                      <span className="text-lgtext-gray-400">/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
-                    </div>
-    </>
-                    {billingCycle === 'yearly' && (
-    <>
-                      <div className="text-green-400text-smfont-semibold">Save {getSavings(plan.price.monthly, plan.price.yearly)}%
-                      </div>
-    </>
+
+                  <d iv class Name="t ext-centermb-8">
+        </d iv>
+                    <d iv class Name="w-16 h-16 b g-gradient-to-r from-purple-500 to-pink-600 rounded-2 xl flex items-center justify-centermx-automb-4">
+        </d iv>
+                      <Z ap class Name="w-8h-8t ext-white" / />
+                    </d iv>
+                    <h3 c lass Name="t ext-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
+                    <p c lass Name="t ext-gray-400mb-4">{plan.description}</p>
+                    <d iv class Name="t ext-4 xl font-boldtext-whitemb-2">
+        </d iv>
+
+                      {format Price(billing Cycle === 'monthly' ? plan.price.monthly : plan.price.yearly)}
+
+                      <s pan class Name="t ext-lgtext-gray-400">/{billing Cycle === 'monthly' ? 'month' : 'year'}</s pan>
+                    </d iv>
+
+                    {billing Cycle === 'yearly' && (
+
+                      <d iv class Name="t ext-green-400text-smfont-semibold">Save {get Savings(plan.price.monthly, plan.price.yearly)}%
+                      </d iv>
+
                     )}
-                  </div>
+                  </d iv>
 
-                  <ul className="space-y-4mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-    <>
-                      <li key="{featureIndex}" className="flex items-centerspace-x-3text-gray-300" />
-<<<<<<< HEAD
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" />
-                        <span   />{feature}</span>
-=======
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
-                        <span>{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </li>
-    </>
+                  <u l class Name="s pace-y-4mb-8" />
+                    {plan.features.map((feature, feature Index) => (
+
+                      <l i key="{feature Index}" class Name="f lex items-centerspace-x-3text-gray-300" />
+                        <C heck Circle class Name="w-5 h-5t ext-green-400flex-shrink-0" / />
+                        <s pan>{feature}</s pan>
+                      </l i>
+
                     ))}
-                  </ul>
+                  </u l>
 
-                  <Link 
+                  <L ink 
                     to="/contact"
-                    className="{`block" w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    class Name="{`b lock" w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
                         : 'border border-purple-400 text-purple-400 hover: bg-purple-400 hover:text-gray-900'
                     }`}
                     />Start Free Trial
-    <>
-                  </Link>
-                </div>
-    </>
+
+                  </L ink>
+                </d iv>
+
               ))}
-    <>
-            </div>
-        </section>
-    </>
+
+            </d iv>
+        </s ection>
 
         {/* Add-ons Section */}
-    <>
-        <section className="py-20px-4relative" />
-          <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Additional <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Services</span>
+
+        <s ection class Name="p y-20px-4relative" />
+          <d iv class Name="r elative max-w-7xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+                Additional <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Services</s pan>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Enhance your plan with these powerful add-ons
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Additional <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Services</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
+              <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto" />
+
                 Enhance your plan with these powerful add-ons
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
 
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {addOns.map((addon, index) => (
-    <>
-                <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
-<<<<<<< HEAD
-                  <h3 className="text-xl font-bold text-white mb-2"   />{addon.name}</h3>
-                  <p className="text-gray-400mb-4text-sm">
-              {addon.description}</p>
-                  <div className="text-2 xl font-boldtext-cyan-400mb-4">
-=======
-                  <h3 className="text-xl font-boldtext-whitemb-2">{addon.name}</h3>
-                  <p className="text-gray-400mb-4text-sm">{addon.description}</p>
-                  <div className="text-2 xl font-boldtext-cyan-400mb-4">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    {formatPrice(billingCycle === 'monthly' ? addon.price.monthly : addon.price.yearly)}
-    <>
-                    <span className="text-smtext-gray-400">/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
-                  </div>
-                  <ul className="space-y-2mb-6" />
-    </>
-                    {addon.features.map((feature, featureIndex) => (
-    <>
-                      <li key="{featureIndex}" className="flex items-center space-x-2text-gray-300text-sm" />
-<<<<<<< HEAD
-                        <CheckCircle className="w-4 h-4text-green-400flex-shrink-0" />
-                        <span   />{feature}</span>
-=======
-                        <CheckCircle className="w-4 h-4text-green-400flex-shrink-0" / />
-                        <span>{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </li>
-    </>
+              </p>
+            </d iv>
+
+            <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+        </d iv>
+              {add Ons.map((addon, index) => (
+
+                <d iv key="{index}" class Name="b g-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
+                  <h3 c lass Name="t ext-xl font-boldtext-whitemb-2">{addon.name}</h3>
+                  <p c lass Name="t ext-gray-400mb-4text-sm">{addon.description}</p>
+                  <d iv class Name="t ext-2 xl font-boldtext-cyan-400mb-4">
+        </d iv>
+
+                    {format Price(billing Cycle === 'monthly' ? addon.price.monthly : addon.price.yearly)}
+
+                    <s pan class Name="t ext-smtext-gray-400">/{billing Cycle === 'monthly' ? 'month' : 'year'}</s pan>
+                  </d iv>
+                  <u l class Name="s pace-y-2mb-6" />
+
+                    {addon.features.map((feature, feature Index) => (
+
+                      <l i key="{feature Index}" class Name="f lex items-center space-x-2text-gray-300text-sm" />
+                        <C heck Circle class Name="w-4 h-4t ext-green-400flex-shrink-0" / />
+                        <s pan>{feature}</s pan>
+                      </l i>
+
                     ))}
-    <>
-                  </ul>
-                  <Link to="/contact" className="block w-full text-center py-2 rounded-lg font-semibold border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900transition-allduration-300">Add to Plan
-                  </Link>
-                </div>
-    </>
-              ))}
-    <>
-            </div>
-        </section>
-    </>
 
-        {/* FAQ Section */}
-    <>
-        <section className="py-20px-4relative" />
-          <div className="relative max-w-4xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Frequently Asked <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Questions</span>
+                  </u l>
+                  <L ink to="/contact" class Name="b lock w-full text-center py-2 rounded-lg font-semibold border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900transition-allduration-300">Add to Plan
+                  </L ink>
+                </d iv>
+
+              ))}
+
+            </d iv>
+        </s ection>
+
+        {/* F AQ Section */}
+
+        <s ection class Name="p y-20px-4relative" />
+          <d iv class Name="r elative max-w-4xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+                Frequently Asked <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Questions</s pan>
               </h2>
-              <p className="text-xltext-gray-300">
-              Everything you need to know about our pricing and services
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Frequently Asked <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Questions</span>
-              </h2>
-              <p className="text-xltext-gray-300" />
-    </>
+              <p c lass Name="t ext-xltext-gray-300" />
+
                 Everything you need to know about our pricing and services
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
               </p>
-            </div>
-    </>
+            </d iv>
 
-            <div className="space-y-6">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <d iv class Name="s pace-y-6">
+        </d iv>
               {faqs.map((faq, index) => (
-    <>
-                <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6borderborder-white/20" />
-<<<<<<< HEAD
-                  <h3 className="text-xl font-bold text-white mb-3"   />{faq.question}</h3>
-                  <p className="text-gray-300leading-relaxed">
-              {faq.answer}</p>
-=======
-                  <h3 className="text-xl font-boldtext-whitemb-3">{faq.question}</h3>
-                  <p className="text-gray-300leading-relaxed">{faq.answer}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
-    </>
-              ))}
-    <>
-            </div>
-        </section>
-    </>
 
-        {/* CTA Section */}
-    <>
-        <section className="py-20px-4" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xl p-12 text-centerrelativeoverflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/5to-purple-500/5" />
-              <div className="relativez-10">
-                <h2 className="text-4xl font-bold text-white mb-6"  />Ready to Get Started?
+                <d iv key="{index}" class Name="b g-white/10 backdrop-blur-lg rounded-2 xl p-6borderborder-white/20" />
+                  <h3 c lass Name="t ext-xl font-boldtext-whitemb-3">{faq.question}</h3>
+                  <p c lass Name="t ext-gray-300leading-relaxed">{faq.answer}</p>
+                </d iv>
+
+              ))}
+
+            </d iv>
+        </s ection>
+
+        {/* C TA Section */}
+
+        <s ection class Name="p y-20px-4" />
+          <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+            <d iv class Name="b g-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xl p-12 text-centerrelativeoverflow-hidden">
+        </d iv>
+              <d iv class Name="a bsolute inset-0 bg-gradient-to-rfrom-cyan-500/5to-purple-500/5" / />
+              <d iv class Name="r elativez-10">
+        </d iv>
+                <h2 c lass Name="t ext-4 xl font-boldtext-whitemb-6">Ready to Get Started?
                 </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto">
-              Start your free trial today and experience the power of our AI and IT solutions.
+                <p c lass Name="t ext-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
+
+                  Start your free trial today and experience the power of our A I and I T solutions.
+
                 </p>
-                <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-        </div>
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xl p-12 text-centerrelativeoverflow-hidden">
-        </div>
-              <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/5to-purple-500/5" / />
-              <div className="relativez-10">
-        </div>
-                <h2 className="text-4 xl font-boldtext-whitemb-6">Ready to Get Started?
-                </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
-    </>
-                  Start your free trial today and experience the power of our AI and IT solutions.
-    <>
-                </p>
-                <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Start Free Trial
-                  </Link>
-                  <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Contact Sales
-                  </Link>
-                </div>
-            </div>
-        </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
+                <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+                  <L ink to="/contact" class Name="b g-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Start Free Trial
+                  </L ink>
+                  <L ink to="/contact" class Name="b order border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Contact Sales
+                  </L ink>
+                </d iv>
+            </d iv>
+        </s ection>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+      </d iv>
+
   );
 };
 
-export default PricingPage;
-    </>
+export default Pricing Page;

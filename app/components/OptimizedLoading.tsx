@@ -1,56 +1,44 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { Loader2 } from 'lucide-react';
 
-interface OptimizedLoadingProps {
+interface Optimized Loading Props {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   text?: string
-  fullScreen?: boolean
-  className?: string
+  full Screen?: boolean
+  class Name?: string
 }
 
-const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
+const Optimized Loading: React.F C<O ptimized Loading Props /> = ({
   const size = 'md',
   text = 'Loading...',
-  fullScreen = false,
-  className = ''
+  full Screen = false,
+  class Name = ''
 }) => {
-  const sizeClasses = {
+  const size Classes = {
     sm: 'w-4 h-4',
     md: 'w-6 h-6',
     lg: 'w-8 h-8',
     xl: 'w-12 h-12'
   }
 
-  const containerClasses = fullScreen
+  const container Classes = full Screen
     ? 'fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4'
 
   return (
-    <>
-    <div className="{`${containerClasses}" ${className}`} />
-      <div className="flex flex-col items-centerspace-y-4">
-<<<<<<< HEAD
-        <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`} / />
+
+    <d iv class Name="{`${c ontainer Classes}" ${class Name}`} />
+      <d iv class Name="f lex flex-col items-centerspace-y-4">
+        </d iv>
+        <L oader2 class Name="{`${s ize Classes[size]}" text-cyan-500 animate-spin`} / />
         {text && (
-          <p className="text-gray-300 text-sm font-mediumanimate-pulse">
-              {text}
-=======
-        </div>
-        <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`} / />
-        {text && (
-          <p className="text-gray-300 text-sm font-mediumanimate-pulse">
+          <p c lass Name="t ext-gray-300 text-sm font-mediumanimate-pulse">
             {text}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
           </p>
         )}
-    <>
-      </div>
+
+      </d iv>
   )
 }
 
-export default OptimizedLoading;
-    </>
+export default Optimized Loading;

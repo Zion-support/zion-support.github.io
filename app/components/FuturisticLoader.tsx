@@ -1,24 +1,19 @@
-<<<<<<< HEAD
-import React  from 'react';
-import { motion } from 'framer-motion';
-=======
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface FuturisticLoaderProps {
+interface Futuristic Loader Props {
   size?: 'sm' | 'md' | 'lg';
   color?: 'cyan' | 'purple' | 'pink' | 'green';
   text?: string;
 }
 
-export default function FuturisticLoader({ 
+export default function Futuristic Loader({ 
   const size = 'md', 
   color = 'cyan',
   text = 'Loading...' 
-}: FuturisticLoaderProps) {
-  const getSizeClasses = () => {
+}: Futuristic Loader Props) {
+  const get Size Classes = () => {
     switch (size) {
       case 'sm': return 'w-8 h-8';
       case 'lg': return 'w-16 h-16';
@@ -26,7 +21,7 @@ export default function FuturisticLoader({
     }
   };
 
-  const getColorClasses = () => {
+  const get Color Classes = () => {
     switch (color) {
       case 'purple': return 'border-purple-500 text-purple-400';
       case 'pink': return 'border-pink-500 text-pink-400';
@@ -36,42 +31,37 @@ export default function FuturisticLoader({
   };
 
   return (
-<<<<<<< HEAD
-    <div className="flex flex-col items-centerjustify-centerspace-y-4">
-      <div className="relative">
-=======
-    <>
-    <div className="flex flex-col items-centerjustify-centerspace-y-4">
-        </div>
-      <div className="relative" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+    <d iv class Name="f lex flex-col items-centerjustify-centerspace-y-4">
+        </d iv>
+      <d iv class Name="r elative" />
         {/* Outer rotating ring */}
-        <motion.div
-          className="{`"
-            ${getSizeClasses()} 
+        <m otion.div
+          class Name="{`"
+            ${get Size Classes()} 
             border-4 border-transparent 
-            border-t-4 ${getColorClasses().split(' ')[1]}
+            border-t-4 ${get Color Classes().split(' ')[1]}
             rounded-full
           `}
           animate="{{" rotate: 360 }}
           transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
         / />
         {/* Inner pulsing ring */}
-        <motion.div
-          className="{`"
+        <m otion.div
+          class Name="{`"
             absolute inset-2 
             border-2 border-transparent 
-            border-r-2 ${getColorClasses().split(' ')[1]}
+            border-r-2 ${get Color Classes().split(' ')[1]}
             rounded-full
           `}
           animate="{{" rotate: -360 }}
           transition="{{" duration: 1.5, repeat: Infinity, ease: 'linear' }}
         / />
         {/* Center pulsing dot */}
-        <motion.div
-          className="{`"
+        <m otion.div
+          class Name="{`"
             absolute top-1/2 left-1/2 w-2 h-2 
-            ${getColorClasses().split(' ')[1]} 
+            ${get Color Classes().split(' ')[1]} 
             rounded-full
             transform -translate-x-1/2 -translate-y-1/2
           `}
@@ -82,14 +72,14 @@ export default function FuturisticLoader({
           transition="{{" 
             duration: 1, 
             repeat: Infinity, 
-            ease: 'easeInOut' 
+            ease: 'ease In Out' 
           }}
         / />
         {/* Glow effect */}
-        <motion.div
-          className="{`"
+        <m otion.div
+          class Name="{`"
             absolute inset-0 
-            ${getColorClasses().split(' ')[1]} 
+            ${get Color Classes().split(' ')[1]} 
             rounded-full
             blur-md
             opacity-30
@@ -101,24 +91,23 @@ export default function FuturisticLoader({
           transition="{{" 
             duration: 2, 
             repeat: Infinity, 
-            ease: 'easeInOut' 
+            ease: 'ease In Out' 
           }}
         / />
-      </div>
+      </d iv>
       
       {text && (
-        <motion.p
-          className="{`text-sm" ${getColorClasses().split(' ')[1]} font-medium`}
+        <m otion.p
+          class Name="{`t ext-sm" ${get Color Classes().split(' ')[1]} font-medium`}
           animate="{{" opacity: [0.5, 1, 0.5] }}
           transition="{{" 
             duration: 1.5, 
             repeat: Infinity, 
-            ease: 'easeInOut' 
+            ease: 'ease In Out' 
           }} />
           {text}
-        </motion.p>
+        </m otion.p>
       )}
-    </div>
+    </d iv>
   );
 }
-    </>

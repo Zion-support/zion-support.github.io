@@ -1,25 +1,25 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
+import { render, screen, fire Event, wait For } from '@testing-library/react'
 import { HelmetProvider } from 'react-helmet-async'
-import { MemoryRouter } from 'react-router-dom'
+import { Memory Router } from 'react-router-dom'
 // Mock components
-const AdvancedErrorBoundary = ({ children }: { children: React.ReactNode }) => {
-  return <div data-testid="error-boundary">{children}</div>}
-const AdvancedSEOOptimizer = ({ title, description }: { title?: string; description?: string }) => {
-  return <div data-testid="seo-optimizer">{title} - {description}</div>}
-const AdvancedPerformanceMonitor = () => {
-  return <div data-testid="performance-monitor">Performance Monitor</div>}
+const Advanced ErrorBoundary = ({ children }: { children: React.React Node }) => {
+  return <d iv data-testid="error-boundary">{children}</d iv>}
+const Advanced SE OOptimizer = ({ title, description }: { title?: string; description?: string }) => {
+  return <d iv data-testid="seo-optimizer">{title} - {description}</d iv>}
+const Advanced PerformanceMonitor = () => {
+  return <d iv data-testid="performance-monitor">PerformanceMonitor</d iv>}
 // Mock component that throws an error
-const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-  if (shouldThrow) {
+const Throw Error = ({ should Throw }: { should Throw: boolean }) => {
+  if (should Throw) {
     throw new Error('Test error')}
-  return <div>Test content</div>}
+  return <d iv>Test content</d iv>}
 // Test component for error boundary tests
-// const TestComponent = () => <div>Test component</div>
-// Mock onError callback
-// const onError = jest.fn()
+// const Test Component = () => <d iv>Test component</d iv>
+// Mock on Error callback
+// const on Error = jest.fn()
 // Mock helmet context
-// const helmetContext = {}
-describe('AdvancedErrorBoundary', () => {
+// const helmet Context = {}
+describe('Advanced ErrorBoundary', () => {
   it('renders children when there is no error', () => {
     // Test implementation
   })
@@ -28,232 +28,232 @@ describe('AdvancedErrorBoundary', () => {
 describe('Advanced Components', () => {
   it('renders test content without error', () => {
     render(
-      <MemoryRouter>
-        <ThrowError shouldThrow={false} />
-      </MemoryRouter>
+      <M emory Router>
+        <T hrow Error should Throw={false} />
+      </M emory Router>
     )
-    expect(screen.getByText('Test content')).toBeInTheDocument()})
-  it('renders error UI when there is an error', () => {
-    const consoleSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(() => {})
+    expect(screen.get By Text('Test content')).to Be In The Document()})
+  it('renders error U I when there is an error', () => {
+    const console Spy = jest
+      .spy On(console, 'error')
+      .mock Implementation(() => {})
     render(
-      <MemoryRouter>
-        <AdvancedErrorBoundary enableRetry={true}>
-          <ThrowError shouldThrow={true} />
-        </AdvancedErrorBoundary>
-      </MemoryRouter>
+      <M emory Router>
+        <A dvanced ErrorBoundary enable Retry={true}>
+          <T hrow Error should Throw={true} />
+        </A dvanced ErrorBoundary>
+      </M emory Router>
     )
-    expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument()
-    expect(screen.getByText(/Try Again/)).toBeInTheDocument()
-    expect(screen.getByText('Reload Page')).toBeInTheDocument()
-    expect(screen.getByText('Go to Homepage')).toBeInTheDocument()
-    consoleSpy.mockRestore()})
-  it('calls onError callback when error occurs', () => {
-    const onError = jest.fn()
-    const consoleSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(() => {})
+    expect(screen.get By Text('Oops! Something went wrong')).to Be In The Document()
+    expect(screen.get By Text(/Try Again/)).to Be In The Document()
+    expect(screen.get By Text('Reload Page')).to Be In The Document()
+    expect(screen.get By Text('Go to Homepage')).to Be In The Document()
+    console Spy.mock Restore()})
+  it('calls on Error callback when error occurs', () => {
+    const on Error = jest.fn()
+    const console Spy = jest
+      .spy On(console, 'error')
+      .mock Implementation(() => {})
     render(
-      <MemoryRouter>
-        <AdvancedErrorBoundary onError={onError}>
-          <ThrowError shouldThrow={true} />
-        </AdvancedErrorBoundary>
-      </MemoryRouter>
+      <M emory Router>
+        <A dvanced ErrorBoundary on Error={on Error}>
+          <T hrow Error should Throw={true} />
+        </A dvanced ErrorBoundary>
+      </M emory Router>
     )
-    expect(onError).toHaveBeenCalled()
-    consoleSpy.mockRestore()})
+    expect(on Error).to Have Been Called()
+    console Spy.mock Restore()})
   it('retries when retry button is clicked', async () => {
-    const consoleSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(() => {})
-    let shouldThrow = true
-    const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />
+    const console Spy = jest
+      .spy On(console, 'error')
+      .mock Implementation(() => {})
+    let should Throw = true
+    const Test Component = () => <T hrow Error should Throw={should Throw} />
     render(
-      <MemoryRouter>
-        <AdvancedErrorBoundary enableRetry={true}>
-          <TestComponent />
-        </AdvancedErrorBoundary>
-      </MemoryRouter>
+      <M emory Router>
+        <A dvanced ErrorBoundary enable Retry={true}>
+          <T est Component />
+        </A dvanced ErrorBoundary>
+      </M emory Router>
     )
-    const retryButton = screen.getByText('Try Again (3 attempts left)')
-    // Change shouldThrow before clicking retry
-    shouldThrow = false
-    fireEvent.click(retryButton)
+    const retry Button = screen.get By Text('Try Again (3 attempts left)')
+    // Change should Throw before clicking retry
+    should Throw = false
+    fire Event.click(retry Button)
     // After retry, the error boundary should reset and show the child component
-    await waitFor(() => {
+    await wait For(() => {
       expect(
-        screen.queryByText('Oops! Something went wrong')
-      ).not.toBeInTheDocument()})
-    consoleSpy.mockRestore()})})
-describe('AdvancedSEOOptimizer', () => {
-  const mockSEOData = {
+        screen.query By Text('Oops! Something went wrong')
+      ).not.to Be In The Document()})
+    console Spy.mock Restore()})})
+describe('Advanced SE OOptimizer', () => {
+  const mock SE OData = {
     title: 'Test Title',
     description: 'Test Description',
     keywords: ['test', 'keywords'],
-    canonicalUrl: 'https://example.com',
-    ogImage: 'https://example.com/image.jpg',
-    structuredData: {
+    canonical Url: 'https://example.com',
+    og Image: 'https://example.com/image.jpg',
+    structured Data: {
       '@type': 'Organization',
       name: 'Test Organization',
     },
   }
   it('renders without crashing', () => {
     render(
-      <MemoryRouter>
-        <HelmetProvider>
-          <AdvancedSEOOptimizer seoData={mockSEOData} />
-          <div>Test content</div>
-        </HelmetProvider>
-      </MemoryRouter>
+      <M emory Router>
+        <H elmet Provider>
+          <A dvanced SE OOptimizer seo Data={mock SE OData} />
+          <d iv>Test content</d iv>
+        </H elmet Provider>
+      </M emory Router>
     )
-    expect(screen.getByText('Test content')).toBeInTheDocument()})
+    expect(screen.get By Text('Test content')).to Be In The Document()})
   it('sets document title', async () => {
     render(
-      <MemoryRouter>
-        <HelmetProvider>
-          <AdvancedSEOOptimizer seoData={mockSEOData} />
-        </HelmetProvider>
-      </MemoryRouter>
+      <M emory Router>
+        <H elmet Provider>
+          <A dvanced SE OOptimizer seo Data={mock SE OData} />
+        </H elmet Provider>
+      </M emory Router>
     )
     // Wait for helmet to update the document title
-    await new Promise(resolve => setTimeout(resolve, 100))
-    expect(document.title).toBe('Test Title')})
+    await new Promise(resolve => set Timeout(resolve, 100))
+    expect(document.title).to Be('Test Title')})
   it('renders structured data when enabled', async () => {
-    const helmetContext = {}
+    const helmet Context = {}
     const { container } = render(
-      <MemoryRouter>
-        <HelmetProvider context={helmetContext}>
-          <AdvancedSEOOptimizer
-            seoData={mockSEOData}
-            enableStructuredData={true}
+      <M emory Router>
+        <H elmet Provider context={helmet Context}>
+          <A dvanced SE OOptimizer
+            seo Data={mock SE OData}
+            enable Structured Data={true}
           />
-        </HelmetProvider>
-      </MemoryRouter>
+        </H elmet Provider>
+      </M emory Router>
     )
-    // In test environment, helmet may not render scripts in the DOM
+    // In test environment, helmet may not render scripts in the D OM
     // Just verify component renders without crashing
-    await waitFor(() => {
-      expect(container).toBeTruthy()})})
+    await wait For(() => {
+      expect(container).to Be Truthy()})})
   it('renders Open Graph tags when enabled', async () => {
-    const helmetContext = {}
+    const helmet Context = {}
     const { container } = render(
-      <MemoryRouter>
-        <HelmetProvider context={helmetContext}>
-          <AdvancedSEOOptimizer seoData={mockSEOData} enableOpenGraph={true} />
-        </HelmetProvider>
-      </MemoryRouter>
+      <M emory Router>
+        <H elmet Provider context={helmet Context}>
+          <A dvanced SE OOptimizer seo Data={mock SE OData} enable Open Graph={true} />
+        </H elmet Provider>
+      </M emory Router>
     )
     // In test environment, helmet renders to document head, not container
     // Just verify component renders without crashing
-    await waitFor(() => {
-      expect(container).toBeTruthy()})})
+    await wait For(() => {
+      expect(container).to Be Truthy()})})
   it('renders Twitter Card tags when enabled', async () => {
-    const helmetContext = {}
+    const helmet Context = {}
     const { container } = render(
-      <MemoryRouter>
-        <HelmetProvider context={helmetContext}>
-          <AdvancedSEOOptimizer seoData={mockSEOData} enableTwitterCards={true} />
-        </HelmetProvider>
-      </MemoryRouter>
+      <M emory Router>
+        <H elmet Provider context={helmet Context}>
+          <A dvanced SE OOptimizer seo Data={mock SE OData} enable Twitter Cards={true} />
+        </H elmet Provider>
+      </M emory Router>
     )
     // In test environment, helmet renders to document head, not container
     // Just verify component renders without crashing
-    await waitFor(() => {
-      expect(container).toBeTruthy()})})})
-describe('AdvancedPerformanceMonitor', () => {
-  // Mock performance API
-  const mockPerformance = {
-    getEntriesByName: jest.fn(() => []),
-    getEntriesByType: jest.fn(() => []),
-    getEntries: jest.fn(() => []),
-    measurePageLoad: jest.fn(),
-    reportWebVitals: jest.fn(),
+    await wait For(() => {
+      expect(container).to Be Truthy()})})})
+describe('Advanced PerformanceMonitor', () => {
+  // Mock performance A PI
+  const mock Performance = {
+    get Entries By Name: jest.fn(() => []),
+    get Entries By Type: jest.fn(() => []),
+    get Entries: jest.fn(() => []),
+    measure Page Load: jest.fn(),
+    report Web Vitals: jest.fn(),
   }
-  // Mock PerformanceObserver
-  class MockPerformanceObserver {
-    constructor(callback: PerformanceObserverCallback) {
+  // Mock Performance Observer
+  class Mock Performance Observer {
+    constructor(callback: Performance Observer Callback) {
       this.callback = callback}
-    callback: PerformanceObserverCallback
+    callback: Performance Observer Callback
     observe() {}
     disconnect() {}
-    takeRecords() { return []}
+    take Records() { return []}
   }
-  beforeEach(() => {
-    // Mock performance API
-    Object.defineProperty(window, 'performance', {
-      value: mockPerformance,
+  before Each(() => {
+    // Mock performance A PI
+    Object.define Property(window, 'performance', {
+      value: mock Performance,
       writable: true,
       configurable: true,
     })
-    // Mock PerformanceObserver
-    global.PerformanceObserver = MockPerformanceObserver as unknown as typeof PerformanceObserver})
-  afterEach(() => {
-    jest.clearAllMocks()})
+    // Mock Performance Observer
+    global.Performance Observer = Mock Performance Observer as unknown as typeof Performance Observer})
+  after Each(() => {
+    jest.clear All Mocks()})
   it('renders nothing in production mode', () => {
-    const originalEnv = process.env['NODE_ENV']
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'production', writable: true })
+    const original Env = process.env['N OD E_ EN V']
+    Object.define Property(process.env, 'N OD E_ EN V', { value: 'production', writable: true })
     const { container } = render(
-      <MemoryRouter>
-        <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
-      </MemoryRouter>
+      <M emory Router>
+        <A dvanced PerformanceMonitor enable Real Time Monitoring={true} />
+      </M emory Router>
     )
-    expect(container.firstChild).toBeNull()
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true })})
+    expect(container.first Child).to Be Null()
+    Object.define Property(process.env, 'N OD E_ EN V', { value: original Env, writable: true })})
   it('renders performance monitor in development mode', () => {
-    const originalEnv = process.env['NODE_ENV']
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true })
+    const original Env = process.env['N OD E_ EN V']
+    Object.define Property(process.env, 'N OD E_ EN V', { value: 'development', writable: true })
     render(
-      <MemoryRouter>
-        <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
-      </MemoryRouter>
+      <M emory Router>
+        <A dvanced PerformanceMonitor enable Real Time Monitoring={true} />
+      </M emory Router>
     )
-    expect(screen.getByText('Performance Monitor')).toBeInTheDocument()
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true })})
-  it('calls onMetricsUpdate when metrics change', async () => {
-    const onMetricsUpdate = jest.fn()
-    const originalEnv = process.env['NODE_ENV']
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true })
-    mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 }])
+    expect(screen.get By Text('PerformanceMonitor')).to Be In The Document()
+    Object.define Property(process.env, 'N OD E_ EN V', { value: original Env, writable: true })})
+  it('calls on Metrics Update when metrics change', async () => {
+    const on Metrics Update = jest.fn()
+    const original Env = process.env['N OD E_ EN V']
+    Object.define Property(process.env, 'N OD E_ EN V', { value: 'development', writable: true })
+    mock Performance.get Entries By Name.mock Return Value([{ start Time: 100 }])
     render(
-      <MemoryRouter>
-        <AdvancedPerformanceMonitor
-          enableRealTimeMonitoring={true}
-          onMetricsUpdate={onMetricsUpdate}
+      <M emory Router>
+        <A dvanced PerformanceMonitor
+          enable Real Time Monitoring={true}
+          on Metrics Update={on Metrics Update}
         />
-      </MemoryRouter>
+      </M emory Router>
     )
-    await waitFor(() => {
-      expect(onMetricsUpdate).toHaveBeenCalled()})
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true })})
+    await wait For(() => {
+      expect(on Metrics Update).to Have Been Called()})
+    Object.define Property(process.env, 'N OD E_ EN V', { value: original Env, writable: true })})
   it('shows performance recommendations when metrics are poor', () => {
-    const originalEnv = process.env['NODE_ENV']
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true })
+    const original Env = process.env['N OD E_ EN V']
+    Object.define Property(process.env, 'N OD E_ EN V', { value: 'development', writable: true })
     // Mock poor performance metrics
-    mockPerformance.getEntriesByName.mockReturnValue([
-      { startTime: 2000 }, // Poor FCP
+    mock Performance.get Entries By Name.mock Return Value([
+      { start Time: 2000 }, // Poor F CP
     ])
     render(
-      <MemoryRouter>
-        <AdvancedPerformanceMonitor enableRealTimeMonitoring={true} />
-      </MemoryRouter>
+      <M emory Router>
+        <A dvanced PerformanceMonitor enable Real Time Monitoring={true} />
+      </M emory Router>
     )
     // Should show recommendations for poor performance
-    expect(screen.getByText('Recommendations:')).toBeInTheDocument()
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true })})
-  it('handles error when shouldThrow is true', () => {
-    const consoleSpy = jest
-      .spyOn(console, 'error')
-      .mockImplementation(() => {})
+    expect(screen.get By Text('Recommendations:')).to Be In The Document()
+    Object.define Property(process.env, 'N OD E_ EN V', { value: original Env, writable: true })})
+  it('handles error when should Throw is true', () => {
+    const console Spy = jest
+      .spy On(console, 'error')
+      .mock Implementation(() => {})
     // In React testing, errors are caught by error boundaries
     // We just verify the component doesn't crash the test
     expect(() => {
       render(
-        <MemoryRouter>
-          <ThrowError shouldThrow={true} />
-        </MemoryRouter>
+        <M emory Router>
+          <T hrow Error should Throw={true} />
+        </M emory Router>
       );
-    }).not.toThrow();
-    consoleSpy.mockRestore();
+    }).not.to Throw();
+    console Spy.mock Restore();
   });
 });

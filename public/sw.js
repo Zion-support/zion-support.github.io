@@ -1,10 +1,10 @@
 // Service Worker for Zion Tech Group
-const CACHE_NAME = 'zion-tech-group-v1'
-const STATIC_CACHE = 'zion-static-v1'
-const DYNAMIC_CACHE = 'zion-dynamic-v1'
+const C AC HE_ NA ME = 'zion-tech-group-v1'
+const S TA TI C_ CA CH E = 'zion-static-v1'
+const D YN AM IC_ CA CH E = 'zion-dynamic-v1'
 
 // Assets to cache immediately
-const STATIC_ASSETS = [
+const S TA TI C_ AS SE TS = [
   '/',
   '/about',
   '/contact',
@@ -14,18 +14,18 @@ const STATIC_ASSETS = [
 ]
 
 // Install event - cache static assets
-self.addEventListener('install', (event) => {
+self.add Event Listener('install', (event) => {
   console.log('Service Worker installing...')
   
-  event.waitUntil(
-    caches.open(STATIC_CACHE)
+  event.wait Until(
+    caches.open(S TA TI C_ CA CH E)
       .then((cache) => {
         console.log('Caching static assets')
-        return cache.addAll(STATIC_ASSETS)
+        return cache.add All(S TA TI C_ AS SE TS)
       })
       .then(() => {
         console.log('Static assets cached successfully')
-        return self.skipWaiting()
+        return self.skip Waiting()
       })
       .catch((error) => {
         console.error('Failed to cache static assets:', error)
@@ -34,17 +34,17 @@ self.addEventListener('install', (event) => {
 })
 
 // Activate event - clean up old caches
-self.addEventListener('activate', (event) => {
+self.add Event Listener('activate', (event) => {
   console.log('Service Worker activating...')
   
-  event.waitUntil(
+  event.wait Until(
     caches.keys()
-      .then((cacheNames) => {
+      .then((cache Names) => {
         return Promise.all(
-          cacheNames.map((cacheName) => {
-            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Deleting old cache:', cacheName)
-              return caches.delete(cacheName)
+          cache Names.map((cache Name) => {
+            if (cache Name !== S TA TI C_ CA CH E && cache Name !== D YN AM IC_ CA CH E) {
+              console.log('Deleting old cache:', cache Name)
+              return caches.delete(cache Name)
             }
           })
         )
@@ -57,27 +57,27 @@ self.addEventListener('activate', (event) => {
 })
 
 // Fetch event - serve from cache, fallback to network
-self.addEventListener('fetch', (event) => {
+self.add Event Listener('fetch', (event) => {
   const { request } = event
-  const url = new URL(request.url)
+  const url = new U RL(request.url)
   
-  // Skip non-GET requests
-  if (request.method !== 'GET') {
+  // Skip non-G ET requests
+  if (request.method !== 'G ET') {
     return
   }
   
   // Skip chrome-extension and other non-http requests
-  if (!url.protocol.startsWith('http')) {
+  if (!url.protocol.starts With('http')) {
     return
   }
   
-  event.respondWith(
+  event.respond With(
     caches.match(request)
-      .then((cachedResponse) => {
+      .then((cached Response) => {
         // Return cached version if available
-        if (cachedResponse) {
+        if (cached Response) {
           console.log('Serving from cache:', request.url)
-          return cachedResponse
+          return cached Response
         }
         
         // Otherwise fetch from network
@@ -89,12 +89,12 @@ self.addEventListener('fetch', (event) => {
             }
             
             // Clone the response
-            const responseToCache = response.clone()
+            const response To Cache = response.clone()
             
             // Cache dynamic content
-            caches.open(DYNAMIC_CACHE)
+            caches.open(D YN AM IC_ CA CH E)
               .then((cache) => {
-                cache.put(request, responseToCache)
+                cache.put(request, response To Cache)
               })
               .catch((error) => {
                 console.error('Failed to cache dynamic content:', error)
@@ -117,9 +117,9 @@ self.addEventListener('fetch', (event) => {
 })
 
 // Background sync for form submissions
-self.addEventListener('sync', (event) => {
+self.add Event Listener('sync', (event) => {
   if (event.tag === 'contact-form') {
-    event.waitUntil(
+    event.wait Until(
       // Handle form submission sync
       console.log('Syncing contact form submission')
     )
@@ -127,7 +127,7 @@ self.addEventListener('sync', (event) => {
 })
 
 // Push notifications
-self.addEventListener('push', (event) => {
+self.add Event Listener('push', (event) => {
   if (event.data) {
     const data = event.data.json()
     
@@ -137,8 +137,8 @@ self.addEventListener('push', (event) => {
       badge: '/badge-72x72.png',
       vibrate: [100, 50, 100],
       data: {
-        dateOfArrival: Date.now(),
-        primaryKey: data.primaryKey
+        date Of Arrival: Date.now(),
+        primary Key: data.primary Key
       },
       actions: [
         {
@@ -154,19 +154,19 @@ self.addEventListener('push', (event) => {
       ]
     }
     
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
+    event.wait Until(
+      self.registration.show Notification(data.title, options)
     )
   }
 })
 
 // Notification click
-self.addEventListener('notificationclick', (event) => {
+self.add Event Listener('notificationclick', (event) => {
   event.notification.close()
   
   if (event.action === 'explore') {
-    event.waitUntil(
-      clients.openWindow('/')
+    event.wait Until(
+      clients.open Window('/')
     )
   }
 })

@@ -1,23 +1,17 @@
-<<<<<<< HEAD
-import React  from 'react';
-import { ArrowRight } from 'lucide-react';
-=======
 'use client';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface ContentPromotionBannerProps {
+interface Content Promotion Banner Props {
   title?: string;
   subtitle?: string;
   features?: string[];
-  buttonText?: string;
-  onButtonClick?: () => void;
+  button Text?: string;
+  on Button Click?: () => void;
   variant?: 'default' | 'premium' | 'limited';
 }
 
-const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
+const Content Promotion Banner: React.F C<C ontent Promotion Banner Props /> = ({
   const title = "Unlock Premium Features",
   subtitle = "Get access to advanced tools and exclusive content",
   features = [
@@ -26,11 +20,11 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
     "Custom Integrations",
     "24/7 Monitoring"
   ],
-  buttonText = "Upgrade Now",
-  onButtonClick,
+  button Text = "Upgrade Now",
+  on Button Click,
   variant = 'default'
 }) => {
-  const getVariantStyles = () => {
+  const get Variant Styles = () => {
     switch (variant) {
       case 'premium':
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
@@ -41,73 +35,47 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
   };
 
   return (
-    <div const className = {`relative overflow-hidden rounded-2 xl ${getVariantStyles()} p-8 text-white`} />
+    <d iv const class Name = {`relative overflow-hidden rounded-2 xl ${get Variant Styles()} p-8 text-white`} />
       {/* Background Pattern */}
-<<<<<<< HEAD
-      <div className="absoluteinset-0opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparenttransform-skew-x-12"></div>
 
-      <div className="relativez-10">
-        <div className="flex flex-col lg:flex-row items-centerjustify-betweengap-6">
-          <div className="flex-1">
-            <h3 className="text-2 xl lg: text-3 xlfont-boldmb-2"  >{title}</h3>
-            <p className="text-lgtext-white/90mb-4">{subtitle}</p>
+      <d iv class Name="a bsoluteinset-0opacity-10">
+        </d iv>
+        <d iv class Name="a bsolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparenttransform-skew-x-12">
+        </d iv></d iv>
 
-            <div className="grid grid-cols-2gap-2mb-6">
+      <d iv class Name="r elativez-10">
+        </d iv>
+        <d iv class Name="f lex flex-col lg:flex-row items-centerjustify-betweengap-6">
+        </d iv>
+          <d iv class Name="f lex-1">
+        </d iv>
+            <h3 c lass Name="t ext-2 xl lg: text-3 xlfont-boldmb-2">{title}</h3>
+            <p c lass Name="t ext-lgtext-white/90mb-4">{subtitle}</p>
+
+            <d iv class Name="g rid grid-cols-2gap-2mb-6">
+        </d iv>
               {features.map((feature, index) => (
-                <div key="{index}" className="flex items-centertext-sm" />
-                  <CheckCircle className="w-4 h-4 mr-2text-green-300" />
-                  <span  >{feature}</span>
-=======
-    <>
-      <div className="absoluteinset-0opacity-10">
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparenttransform-skew-x-12">
-        </div></div>
 
-    <>
-      <div className="relativez-10">
-        </div>
-        <div className="flex flex-col lg:flex-row items-centerjustify-betweengap-6">
-        </div>
-          <div className="flex-1">
-        </div>
-            <h3 className="text-2 xl lg: text-3 xlfont-boldmb-2">{title}</h3>
-            <p className="text-lgtext-white/90mb-4">{subtitle}</p>
-
-            <div className="grid grid-cols-2gap-2mb-6">
-        </div>
-              {features.map((feature, index) => (
-    <>
-                <div key="{index}" className="flexitems-centertext-sm" />
-                  <CheckCircle className="w-4 h-4mr-2text-green-300" / />
-                  <span>{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
+                <d iv key="{index}" class Name="f lexitems-centertext-sm" />
+                  <C heck Circle class Name="w-4 h-4m r-2text-green-300" / />
+                  <s pan>{feature}</s pan>
+                </d iv>
               ))}
-    <>
-            </div>
 
-          <div className="flex-shrink-0">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            <button
-              onClick="{onButtonClick}"
-              className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-centergap-2" />
-              {buttonText}
-    <>
-              <ArrowRight className="w-4h-4" />
-            </button>
-          </div>
-<<<<<<< HEAD
-    </div>
-=======
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            </d iv>
+
+          <d iv class Name="f lex-shrink-0">
+        </d iv>
+            <b utton
+              on Click="{on Button Click}"
+              class Name="b g-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-centergap-2" />
+              {button Text}
+
+              <A rrow Right class Name="w-4h-4" />
+            </b utton>
+          </d iv>
+      </d iv>
   );
 };
 
-export default ContentPromotionBanner;
-    </>
+export default Content Promotion Banner;

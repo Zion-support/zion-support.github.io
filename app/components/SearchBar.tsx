@@ -1,110 +1,98 @@
-import { useState, useRef, useEffect} from 'react';
+import { use State, use Ref, use Effect} from 'react';
 import { X } from 'lucide-react';
 
-interface SearchBarProps {
-  onSearch?: (query: string) => void;
+interface Search Bar Props {
+  on Search?: (query: string) => void;
   placeholder?: string;
-  className?: string;
+  class Name?: string;
 }
 
-const SearchBar: React.FC<SearchBarProps /> = ({
-  onSearch,
+const Search Bar: React.F C<S earch Bar Props /> = ({
+  on Search,
   const placeholder = "Search services...",
-  className = ""
+  class Name = ""
 }) => {
-  const [query, setQuery] = useState('');
-  const [isOpen, setIsOpen] = useState(false);
-  const inputRef = useRef<HTMLInputElement />(null);
-  useEffect(() => {
-    if (isOpen && inputRef.current) {
-      inputRef.current.focus();
+  const [query, set Query] = use State('');
+  const [is Open, set Is Open] = use State(false);
+  const input Ref = use Ref<H T M LInput Element />(null);
+  use Effect(() => {
+    if (is Open && input Ref.current) {
+      input Ref.current.focus();
     }
-  }, [isOpen]);
+  }, [is Open]);
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (query.trim() && onSearch) {
-      onSearch(query.trim());
+  const handle Search = (e: React.Form Event) => {
+    e.prevent Default();
+    if (query.trim() && on Search) {
+      on Search(query.trim());
     }
   };
 
-  const handleClear = () => {
-    setQuery('');
-    setIsOpen(false);
-    if (inputRef.current) {
-      inputRef.current.blur();
+  const handle Clear = () => {
+    set Query('');
+    set Is Open(false);
+    if (input Ref.current) {
+      input Ref.current.blur();
     }
   };
 
   return (
-    <>
-    <div const className = {`relative ${className}`} />
-      <form onSubmit="{handleSearch}" className="relative" />
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
-          <input
-            ref="{inputRef}"
+
+    <d iv const class Name = {`relative ${class Name}`} />
+      <f orm on Submit="{handle Search}" class Name="r elative" />
+        <d iv class Name="r elative">
+          <S earch class Name="a bsolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" />
+          <i nput
+            ref="{input Ref}"
             type="text"
             value="{query}"
-            onChange="{(e)" = /> setQuery(e.target.value)}
-            onFocus="{()" => setIsOpen(true)}
+            on Change="{(e)" = /> set Query(e.target.value)}
+            on Focus="{()" => set Is Open(true)}
             placeholder="{placeholder}"
-            className="w-full pl-10 pr-10 py-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparenttransition-allduration-300"
+            class Name="w-f ull pl-10 pr-10 py-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparenttransition-allduration-300"
           />
           {query && (
-            <button
+            <b utton
               type="button"
-              onClick="{handleClear}"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400hover:text-whitetransition-colors" />
-<<<<<<< HEAD
-              <X className="w-4h-4" />
-=======
-    <>
-              <X className="w-4h-4" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </button>
+              on Click="{handle Clear}"
+              class Name="a bsolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400hover:text-whitetransition-colors" />
+
+              <X c lass Name="w-4h-4" / />
+            </b utton>
           )}
-    <>
-        </div>
-      </form>
+
+        </d iv>
+      </f orm>
 
       {/* Search suggestions dropdown */}
-      {isOpen && (
-<<<<<<< HEAD
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg borderborder-white/20z-50">
-          <div className="p-4">
-            <p className="text-smtext-gray-600mb-2">Popular searches:</p>
-            <div className="space-y-1">
-=======
-    <>
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg borderborder-white/20z-50">
-        </div>
-          <div className="p-4">
-        </div>
-            <p className="text-smtext-gray-600mb-2">Popular searches:</p>
-            <div className="space-y-1">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {['AI Services', 'Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics'].map((suggestion) => (
-                <button
+      {is Open && (
+
+        <d iv class Name="a bsolute top-full left-0 right-0 mt-2 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg borderborder-white/20z-50">
+        </d iv>
+          <d iv class Name="p-4">
+        </d iv>
+            <p c lass Name="t ext-smtext-gray-600mb-2">Popular searches:</p>
+            <d iv class Name="s pace-y-1">
+        </d iv>
+              {['A I Services', 'Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics'].map((suggestion) => (
+                <b utton
                   key="{suggestion}"
-                  onClick="{()" =>{
-                    setQuery(suggestion);
-                    if (onSearch) onSearch(suggestion);
-                    setIsOpen(false);
+                  on Click="{()" =>{
+                    set Query(suggestion);
+                    if (on Search) on Search(suggestion);
+                    set Is Open(false);
                   }}
-                  const className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-purple-50rounded-mdtransition-colors"
+                  const class Name="w-f ull text-left px-3 py-2 text-sm text-gray-700 hover:bg-purple-50rounded-mdtransition-colors"
                 >
                   {suggestion}
-                </button>
+                </b utton>
               ))}
-    <>
-            </div>
-        </div>
+
+            </d iv>
+        </d iv>
       )}
-    </div>
+    </d iv>
   );
 };
 
-export default SearchBar;
-    </>
+export default Search Bar;

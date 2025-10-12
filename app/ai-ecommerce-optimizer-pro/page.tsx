@@ -1,29 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React  from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users} from 'lucide-react';
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users} from 'lucide-react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const AiEcommerceOptimizerProPage: React.FC = () => {
+const Ai Ecommerce Optimizer Pro Page: React.F C = () => {
   const features = [
     {
       icon: Zap,
-      title: 'AI-Powered Optimization',
+      title: 'A I-Powered Optimization',
       description: 'Advanced machine learning algorithms to optimize your e-commerce performance.'
     },
     {
-      icon: BarChart3,
+      icon: Bar Chart3,
       title: 'Analytics Dashboard',
       description: 'Comprehensive analytics and insights to track your business growth.'
     },
@@ -40,8 +27,8 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
   ];
 import { ArrowRight, CheckCircle, Zap, Shield, Brain } from 'lucide-react';
 
-const Page: React.FC = () => {
-  const pricingPlans = [
+const Page: React.F C = () => {
+  const pricing Plans = [
     {
       name: 'Starter',
       price: '$99',
@@ -49,7 +36,7 @@ const Page: React.FC = () => {
       description: 'Ideal for growing e-commerce businesses',
       features: [
         'Up to 10,000 products',
-        'Basic AI optimization',
+        'Basic A I optimization',
         'Analytics dashboard',
         'Email support'
       ]
@@ -61,7 +48,7 @@ const Page: React.FC = () => {
       description: 'Perfect for established online stores',
       features: [
         'Up to 50,000 products',
-        'Advanced AI optimization',
+        'Advanced A I optimization',
         'Real-time analytics',
         'Priority support',
         'Custom integrations'
@@ -74,118 +61,90 @@ const Page: React.FC = () => {
       description: 'For large-scale e-commerce operations',
       features: [
         'Unlimited products',
-        'Full AI suite',
+        'Full A I suite',
         'Dedicated support',
         'Custom development',
-        'SLA guarantee'
+        'S LA guarantee'
       ]
     }
   ];
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-50to-blue-50">
-      <Helmet />
-        <title />AI E-commerce Optimizer Pro - Zion Tech Group</title>
-=======
-    <>
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-50to-blue-50">
-        </div>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-        <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <meta name="description" content="Advanced AI-powered e-commerce optimization solutions. Boost sales, improve conversion rates, and maximize your online store performance." />
-        <meta name="keywords" content="AI e-commerce, e-commerce optimization, AI solutions, online store optimization, Zion Tech Group" />
-      </Helmet>
+
+    <d iv class Name="m in-h-screen bg-gradient-to-brfrom-slate-50to-blue-50">
+        </d iv>
+      <H elmet>
+        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </H elmet>
+        <t itle>A I E-commerce Optimizer Pro - Zion Tech Group</t itle>
+        <m eta name="description" content="Advanced A I-powered e-commerce optimization solutions. Boost sales, improve conversion rates, and maximize your online store performance." />
+        <m eta name="keywords" content="A I e-commerce, e-commerce optimization, A I solutions, online store optimization, Zion Tech Group" />
+      </H elmet>
 
       {/* Hero Section */}
-    <>
-      <section className="relative py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6 xl font-boldtext-gray-900mb-6" />
-              AI E-commerce <span className="text-blue-600"   />Optimizer Pro</span>
-=======
-        </div>
-          <div className="text-center" />
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-gray-900mb-6" />
-              AI E-commerce <span className="text-blue-600">Optimizer Pro</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+      <s ection class Name="r elative py-20 px-4sm:px-6lg:px-8" />
+        <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-center" />
+            <h1 c lass Name="t ext-4 xl md:text-6 xl font-boldtext-gray-900mb-6" />
+              A I E-commerce <s pan class Name="t ext-blue-600">Optimizer Pro</s pan>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xlmx-auto">
-              Transform your e-commerce business with advanced AI optimization solutions that boost sales, 
+            <p c lass Name="t ext-xl text-gray-600 mb-8 max-w-3xlmx-auto">
+              Transform your e-commerce business with advanced A I optimization solutions that boost sales, 
               improve conversion rates, and maximize your online store performance.
-    <>
+
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lghover:bg-blue-700transition-colors" >
-          Get Started
-                
-          <ArrowRight className="ml-2h-5w-5"  />
-        </Link>
-              <Link to="/services" 
-                className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lghover:bg-blue-50transition-colors"
-    < >
-           
-          <Helmet  />
-        </Link>
-        <title />AI E-commerce Optimizer Pro - Zion Tech Group</title>
-=======
-        </div>
-              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lghover:bg-blue-700transition-colors" />
+            <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+              <L ink to="/contact" class Name="i nline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lghover:bg-blue-700transition-colors" />
                 Get Started
-    <>
-                <ArrowRight className="ml-2h-5w-5" />
-              </Link>
-              <Link 
+
+                <A rrow Right class Name="m l-2h-5w-5" />
+              </L ink>
+              <L ink 
                 to="/services" 
-                className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lghover:bg-blue-50transition-colors"
-    <>
+                class Name="i nline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lghover:bg-blue-50transition-colors"
+
         </Link>
     < />
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-        <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <meta name="description" content="Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="AI e-commerce, optimization, Zion Tech Group" />
-=======
-import { ArrowRight, CheckCircle, Star, Brain, BarChart3, Target, TrendingUp } from 'lucide-react';
+      <H elmet>
+        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </H elmet>
+        <t itle>A I E-commerce Optimizer Pro - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional A I e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <m eta name="keywords" content="A I e-commerce, optimization, Zion Tech Group" />
+import { ArrowRight, CheckCircle, Star, Brain, Bar Chart3, Target, Trending Up } from 'lucide-react';
 
-export default function AIEcommerceOptimizerPro() {
+export default function A IEcommerce Optimizer Pro() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI-Powered Analytics',
+      icon: <B rain class Name="w-6 h-6 t ext-cyan-400" />,
+      title: 'A I-Powered Analytics',
       description: 'Advanced machine learning algorithms analyze your e-commerce data to identify optimization opportunities'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
+      icon: <B ar Chart3 class Name="w-6 h-6 t ext-purple-400" />,
       title: 'Real-time Insights',
       description: 'Get instant insights into customer behavior, conversion rates, and sales performance'
     },
     {
-      icon: <Target className="w-6 h-6 text-yellow-400" />,
+      icon: <T arget class Name="w-6 h-6 t ext-yellow-400" />,
       title: 'Conversion Optimization',
       description: 'Automatically optimize product pages, checkout flows, and marketing campaigns for maximum conversions'
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-green-400" />,
+      icon: <T rending Up class Name="w-6 h-6 t ext-green-400" />,
       title: 'Revenue Growth',
       description: 'Increase your e-commerce revenue by up to 40% with our proven optimization strategies'
     }
   ]
 
-  const optimizationFeatures = [
+  const optimization Features = [
     {
       category: 'Product Optimization',
-      items: ['AI Product Recommendations', 'Dynamic Pricing', 'Inventory Management', 'Product Image Optimization', 'SEO Enhancement', 'Review Management']
+      items: ['A I Product Recommendations', 'Dynamic Pricing', 'Inventory Management', 'Product Image Optimization', 'S EO Enhancement', 'Review Management']
     },
     {
       category: 'Customer Experience',
@@ -196,12 +155,12 @@ export default function AIEcommerceOptimizerPro() {
       items: ['Email Campaigns', 'Social Media Integration', 'Retargeting Ads', 'A/B Testing', 'Customer Segmentation', 'Analytics Dashboard']
     },
     {
-      category: 'Performance Monitoring',
-      items: ['Real-time Analytics', 'Conversion Tracking', 'Revenue Reports', 'Customer Insights', 'Performance Alerts', 'ROI Analysis']
+      category: 'PerformanceMonitoring',
+      items: ['Real-time Analytics', 'Conversion Tracking', 'Revenue Reports', 'Customer Insights', 'Performance Alerts', 'R OI Analysis']
     }
   ]
 
-  const pricingPlans = [
+  const pricing Plans = [
     {
       name: 'Starter',
       price: '$99',
@@ -209,7 +168,7 @@ export default function AIEcommerceOptimizerPro() {
       description: 'Perfect for small e-commerce stores',
       features: [
         'Up to 1,000 products',
-        'Basic AI optimization',
+        'Basic A I optimization',
         'Standard analytics',
         'Email support',
         'Basic integrations',
@@ -224,7 +183,7 @@ export default function AIEcommerceOptimizerPro() {
       description: 'Ideal for growing businesses',
       features: [
         'Up to 10,000 products',
-        'Advanced AI features',
+        'Advanced A I features',
         'Real-time analytics',
         'Priority support',
         'Custom integrations',
@@ -240,7 +199,7 @@ export default function AIEcommerceOptimizerPro() {
       description: 'For large e-commerce platforms',
       features: [
         'Unlimited products',
-        'Custom AI training',
+        'Custom A I training',
         'White-label solution',
         'Dedicated support',
         'Advanced integrations',
@@ -255,471 +214,342 @@ export default function AIEcommerceOptimizerPro() {
     {
       name: 'Michael Rodriguez',
       company: 'Fashion Store',
-      content: 'AI E-commerce Optimizer Pro increased our conversion rate by 35% and boosted revenue by 50% in just 3 months.',
+      content: 'A I E-commerce Optimizer Pro increased our conversion rate by 35% and boosted revenue by 50% in just 3 months.',
       rating: 5
     },
     {
       name: 'Emily Chen',
       company: 'Electronics Retailer',
-      content: 'The AI recommendations and automated optimization features have transformed our online store performance.',
+      content: 'The A I recommendations and automated optimization features have transformed our online store performance.',
       rating: 5
     },
     {
       name: 'David Thompson',
       company: 'Home & Garden',
-      content: 'Our sales have grown consistently since implementing the AI optimization tools. Highly recommended!',
+      content: 'Our sales have grown consistently since implementing the A I optimization tools. Highly recommended!',
       rating: 5
     }
   ]
 
   return (
-    <>
-      <Helmet>
-        <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="AI e-commerce, optimization, conversion, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-        <meta property="og:title" content="AI E-commerce Optimizer Pro - Zion Tech Group" />
-        <meta property="og:description" content="Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-ecommerce-optimizer-pro" />
-      </Helmet>
 
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <H elmet>
+        <t itle>A I E-commerce Optimizer Pro - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional A I e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <m eta name="keywords" content="A I e-commerce, optimization, conversion, Zion Tech Group" />
+        <m eta property="og:title" content="A I E-commerce Optimizer Pro - Zion Tech Group" />
+        <m eta property="og:description" content="Professional A I e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <m eta property="og:type" content="website" />
+        <m eta property="og:url" content="https://ziontechgroup.com/ai-ecommerce-optimizer-pro" />
+      </H elmet>
+
+        </d iv>
         {/* Hero Section */}
-    <>
-        <section className="py-20" />
-          <div className="container mx-autopx-4text-center">
-<<<<<<< HEAD
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" />
-=======
-        </div>
-            <h1 className="text-5xl md:text-6xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent" />
-                AI E-commerce Optimizer Pro
-    <>
-              </span>
+
+        <s ection class Name="p y-20" />
+          <d iv class Name="c ontainer mx-autopx-4text-center">
+        </d iv>
+            <h1 c lass Name="t ext-5xl md:text-6xl font-boldtext-whitemb-6" />
+              <s pan class Name="b g-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent" />
+                A I E-commerce Optimizer Pro
+
+              </s pan>
             </h1>
-            <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
-              Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs.
-    <>
+            <p c lass Name="t ext-xl text-gray-300 mb-8max-w-3xlmx-auto">
+              Professional A I e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs.
+
             </p>
-            <div className="flex flex-col sm:flex-row gap-4justify-centermb-12">
-<<<<<<< HEAD
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" >
-          Get Started
-                
-          <ArrowRight className="ml-2group-hover:translate-x-1transition-transform"  />
-        </Link>
-              <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
+            <d iv class Name="f lex flex-col sm:flex-row gap-4justify-centermb-12">
+        </d iv>
+              <L ink to="/contact" class Name="b g-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" />
+                Get Started
+
+                <A rrow Right class Name="m l-2group-hover:translate-x-1transition-transform" />
+              </L ink>
+              <L ink to="/contact" class Name="b order border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
                 Learn More
                 />View All Services
-=======
-        </div>
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" />
-                Get Started
-    <>
-                <ArrowRight className="ml-2group-hover:translate-x-1transition-transform" />
-              </Link>
-              <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
-                Learn More
-                />View All Services
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </Link>
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+
+              </L ink>
+      <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         {/* Hero Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                AI E-commerce Optimizer Pro
-              </span>
+        <s ection class Name="p y-20">
+          <d iv class Name="c ontainer mx-auto px-4 text-center">
+            <h1 c lass Name="t ext-5xl md:text-6xl font-bold text-white mb-6">
+              <s pan class Name="b g-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                A I E-commerce Optimizer Pro
+              </s pan>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs.
+            <p c lass Name="t ext-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional A I e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link 
+            <d iv class Name="f lex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <L ink 
                 to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group"
+                class Name="b g-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group"
               >
                 Get Started
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link 
+                <A rrow Right class Name="m l-2 group-hover:translate-x-1 transition-transform" />
+              </L ink>
+              <L ink 
                 to="/contact"
-                className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+                class Name="b order border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
               >
                 Learn More
-              </Link>
-            </div>
-          </div>
-        </section>
+              </L ink>
+            </d iv>
+          </d iv>
+        </s ection>
 
         {/* Features Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300">Powerful AI capabilities for superior e-commerce optimization</p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <s ection class Name="p y-20">
+          <d iv class Name="c ontainer mx-auto px-4">
+            <d iv class Name="t ext-center mb-16">
+              <h2 c lass Name="t ext-4xl font-bold text-white mb-4">Key Features</h2>
+              <p c lass Name="t ext-xl text-gray-300">Powerful A I capabilities for superior e-commerce optimization</p>
+            </d iv>
+            <d iv class Name="g rid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300">
-                  <div className="mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
+                <d iv key={index} class Name="b g-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300">
+                  <d iv class Name="m b-4">{feature.icon}</d iv>
+                  <h3 c lass Name="t ext-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p c lass Name="t ext-gray-300">{feature.description}</p>
+                </d iv>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-            </div>
-        </div>
-      </section>
+            </d iv>
+        </d iv>
+      </s ection>
 
-<<<<<<< HEAD
-        {/* Features Section */}
-    <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Why Choose Our AI E-commerce Optimizer?
-    <>
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-4xl font-boldtext-whitemb-6" />
+                Why Choose Our A I E-commerce Optimizer?
+
               </h2>
-<<<<<<< HEAD
-              <p className="text-xl text-gray-300max-w-3xlmx-auto">
-              Our advanced AI technology helps you maximize your e-commerce potential
-=======
-              <p className="text-xl text-gray-300max-w-3xlmx-auto" />
-                Our advanced AI technology helps you maximize your e-commerce potential
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              <p c lass Name="t ext-xl text-gray-300max-w-3xlmx-auto" />
+                Our advanced A I technology helps you maximize your e-commerce potential
+
               </p>
-            </div>
+            </d iv>
             
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+        </d iv>
               {[
                 {
-                  icon: <Brain className="w-12h-12text-cyan-400" />,
-                  title: "AI-Powered Optimization",
+                  icon: <B rain class Name="w-12h-12t ext-cyan-400" />,
+                  title: "A I-Powered Optimization",
                   description: "Advanced machine learning algorithms optimize your product listings, pricing, and recommendations."
                 },
                 {
-                  icon: <Zap className="w-12h-12text-purple-400" />,
+                  icon: <Z ap class Name="w-12h-12t ext-purple-400" />,
                   title: "Real-time Analytics",
                   description: "Get instant insights into customer behavior and sales performance with our comprehensive dashboard."
                 },
                 {
-                  icon: <Shield className="w-12h-12text-green-400" />,
+                  icon: <S hield class Name="w-12h-12t ext-green-400" />,
                   title: "Secure & Reliable",
                   description: "Enterprise-grade security ensures your data is protected while maintaining 99.9% uptime."
                 }
               ].map((feature, index) => (
-    <>
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-allduration-300" />
-                  <div className="flexjustify-centermb-4">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+                <d iv key={index} class Name="b g-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-allduration-300" />
+                  <d iv class Name="f lexjustify-centermb-4">
+        </d iv>
                     {feature.icon}
-    <>
-=======
+
         {/* Detailed Features Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Features</h2>
-              <p className="text-xl text-gray-300">Everything you need for effective e-commerce optimization</p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {optimizationFeatures.map((category, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
-                  <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
-                  <ul className="space-y-2">
-                    {category.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+        <s ection class Name="p y-20">
+          <d iv class Name="c ontainer mx-auto px-4">
+            <d iv class Name="t ext-center mb-16">
+              <h2 c lass Name="t ext-4xl font-bold text-white mb-4">Comprehensive Features</h2>
+              <p c lass Name="t ext-xl text-gray-300">Everything you need for effective e-commerce optimization</p>
+            </d iv>
+            <d iv class Name="g rid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {optimization Features.map((category, index) => (
+                <d iv key={index} class Name="b g-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                  <h3 c lass Name="t ext-xl font-semibold text-white mb-4">{category.category}</h3>
+                  <u l class Name="s pace-y-2">
+                    {category.items.map((item, item Index) => (
+                      <l i key={item Index} class Name="f lex items-center text-gray-300">
+                        <C heck Circle class Name="w-4 h-4 t ext-green-400 mr-2 flex-shrink-0" />
                         {item}
-                      </li>
+                      </l i>
                     ))}
-                  </ul>
-                </div>
+                  </u l>
+                </d iv>
               ))}
-            </div>
-          </div>
-        </section>
+            </d iv>
+          </d iv>
+        </s ection>
 
         {/* Pricing Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Pricing Plans</h2>
-              <p className="text-xl text-gray-300">Choose the perfect plan for your e-commerce needs</p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-cyan-500 scale-105' : 'border-slate-700'}`}>
+        <s ection class Name="p y-20">
+          <d iv class Name="c ontainer mx-auto px-4">
+            <d iv class Name="t ext-center mb-16">
+              <h2 c lass Name="t ext-4xl font-bold text-white mb-4">Pricing Plans</h2>
+              <p c lass Name="t ext-xl text-gray-300">Choose the perfect plan for your e-commerce needs</p>
+            </d iv>
+            <d iv class Name="g rid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricing Plans.map((plan, index) => (
+                <d iv key={index} class Name={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-cyan-500 scale-105' : 'border-slate-700'}`}>
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <d iv class Name="a bsolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <s pan class Name="b g-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
-                      </span>
-                    </div>
+                      </s pan>
+                    </d iv>
                   )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                    <p className="text-gray-300 mt-2">{plan.description}</p>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                  <d iv class Name="t ext-center mb-6">
+                    <h3 c lass Name="t ext-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <d iv class Name="f lex items-baseline justify-center">
+                      <s pan class Name="t ext-4xl font-bold text-white">{plan.price}</s pan>
+                      <s pan class Name="t ext-gray-400 ml-1">{plan.period}</s pan>
+                    </d iv>
+                    <p c lass Name="t ext-gray-300 mt-2">{plan.description}</p>
+                  </d iv>
+                  <u l class Name="s pace-y-3 mb-8">
+                    {plan.features.map((feature, feature Index) => (
+                      <l i key={feature Index} class Name="f lex items-center text-gray-300">
+                        <C heck Circle class Name="w-4 h-4 t ext-green-400 mr-3 flex-shrink-0" />
                         {feature}
-                      </li>
+                      </l i>
                     ))}
-                  </ul>
-                  <Link
+                  </u l>
+                  <L ink
                     to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    class Name={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
                         : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10'
                     }`}
                   >
                     Get Started
-                  </Link>
-                </div>
+                  </L ink>
+                </d iv>
               ))}
-            </div>
-          </div>
-        </section>
+            </d iv>
+          </d iv>
+        </s ection>
 
         {/* Testimonials Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
-              <p className="text-xl text-gray-300">Real results from real businesses</p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <s ection class Name="p y-20">
+          <d iv class Name="c ontainer mx-auto px-4">
+            <d iv class Name="t ext-center mb-16">
+              <h2 c lass Name="t ext-4xl font-bold text-white mb-4">What Our Clients Say</h2>
+              <p c lass Name="t ext-xl text-gray-300">Real results from real businesses</p>
+            </d iv>
+            <d iv class Name="g rid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
-                  <div className="flex items-center mb-4">
+                <d iv key={index} class Name="b g-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                  <d iv class Name="f lex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <S tar key={i} class Name="w-5 h-5 t ext-yellow-400 fill-current" />
                     ))}
-                  </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                  <div>
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-cyan-400">{testimonial.company}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-                  </div>
-<<<<<<< HEAD
-                  <h3 className="text-xl font-semiboldtext-white mb-4" />{feature.title}</h3>
-                  <p className="text-gray-300">
-              {feature.description}</p>
-=======
-                  <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
+                  </d iv>
+                  <p c lass Name="t ext-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  <d iv>
+                    <p c lass Name="f ont-semibold text-white">{testimonial.name}</p>
+                    <p c lass Name="t ext-cyan-400">{testimonial.company}</p>
+                  </d iv>
+                  <h3 c lass Name="t ext-xl font-semiboldtext-whitemb-4">{feature.title}</h3>
+                  <p c lass Name="t ext-gray-300">{feature.description}</p>
+                </d iv>
               ))}
-<<<<<<< HEAD
-    <>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
-            </div>
-        </section>
+            </d iv>
+        </s ection>
 
-<<<<<<< HEAD
-        {/* Pricing Section */}
-    <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-4xl font-boldtext-whitemb-6" />
                 Choose Your Plan
-    <>
+
               </h2>
-<<<<<<< HEAD
-              <p className="text-xl text-gray-300max-w-3xlmx-auto">
-              Flexible pricing options to fit your business needs
-=======
-              <p className="text-xl text-gray-300max-w-3xlmx-auto" />
+              <p c lass Name="t ext-xl text-gray-300max-w-3xlmx-auto" />
                 Flexible pricing options to fit your business needs
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">
+
+        {/* C TA Section */}
+        <s ection class Name="p y-20">
+          <d iv class Name="c ontainer mx-auto px-4">
+            <d iv class Name="b g-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
+              <h2 c lass Name="t ext-4xl font-bold text-white mb-6">
                 Ready to Optimize Your E-commerce?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Contact us to learn more about our AI e-commerce optimization solutions and how we can help your business grow.
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
+              <p c lass Name="t ext-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Contact us to learn more about our A I e-commerce optimization solutions and how we can help your business grow.
               </p>
-            </div>
+            </d iv>
             
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {pricingPlans.map((plan, index) => (
-    <>
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50transition-allduration-300" />
-                  <div className="text-centermb-8">
-<<<<<<< HEAD
-                    <h3 className="text-2xl font-bold text-white mb-2" />{plan.name}</h3>
-                    <div className="text-4xl font-boldtext-cyan-400mb-2">
-=======
-        </div>
-                    <h3 className="text-2xl font-boldtext-whitemb-2">{plan.name}</h3>
-                    <div className="text-4xl font-boldtext-cyan-400mb-2">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+        </d iv>
+              {pricing Plans.map((plan, index) => (
+
+                <d iv key={index} class Name="b g-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50transition-allduration-300" />
+                  <d iv class Name="t ext-centermb-8">
+        </d iv>
+                    <h3 c lass Name="t ext-2xl font-boldtext-whitemb-2">{plan.name}</h3>
+                    <d iv class Name="t ext-4xl font-boldtext-cyan-400mb-2">
+        </d iv>
                       {plan.price}
-    <>
-                      <span className="text-lgtext-gray-400">{plan.period}</span>
-                    </div>
-<<<<<<< HEAD
-                    <p className="text-gray-300">
-              {plan.description}</p>
-=======
-                    <p className="text-gray-300">{plan.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </div>
+
+                      <s pan class Name="t ext-lgtext-gray-400">{plan.period}</s pan>
+                    </d iv>
+                    <p c lass Name="t ext-gray-300">{plan.description}</p>
+                  </d iv>
                   
-                  <ul className="space-y-4mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-                      <li key={featureIndex} className="flex items-center text-gray-300" />
-=======
-    <>
-                      <li key={featureIndex} className="flexitems-centertext-gray-300" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                        <CheckCircle className="w-5 h-5 text-green-400mr-3flex-shrink-0" />
+                  <u l class Name="s pace-y-4mb-8" />
+                    {plan.features.map((feature, feature Index) => (
+
+                      <l i key={feature Index} class Name="f lexitems-centertext-gray-300" />
+                        <C heck Circle class Name="w-5 h-5 t ext-green-400mr-3flex-shrink-0" />
                         {feature}
-                      </li>
+                      </l i>
                     ))}
-                  </ul>
+                  </u l>
                   
-                  <Link to="/contact" className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 rounded-lg font-semibold text-center block hover:from-cyan-600 hover:to-purple-600transition-allduration-300" />
+                  <L ink to="/contact" class Name="w-f ull bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 rounded-lg font-semibold text-center block hover:from-cyan-600 hover:to-purple-600transition-allduration-300" />
                     Get Started
-    <>
-                  </Link>
-                </div>
+
+                  </L ink>
+                </d iv>
               ))}
-    <>
-            </div>
-        </div>
-      </section>
 
-        {/* CTA Section */}
-    <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xlp-12text-center">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-=======
-        </div>
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xlp-12text-center">
-        </div>
-              <h2 className="text-4xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            </d iv>
+        </d iv>
+      </s ection>
+
+        {/* C TA Section */}
+
+        <s ection class Name="p y-20" />
+          <d iv class Name="c ontainermx-autopx-4">
+        </d iv>
+            <d iv class Name="b g-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xlp-12text-center">
+        </d iv>
+              <h2 c lass Name="t ext-4xl font-boldtext-whitemb-6" />
                 Ready to Get Started?
-    <>
-              </h2>
-<<<<<<< HEAD
-              <p className="text-xl text-gray-300 mb-8max-w-2xlmx-auto">
-              Contact us to learn more about our solutions and how we can help your business.
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-              <p className="text-xl text-gray-300 mb-8max-w-2xlmx-auto" />
-                Contact us to learn more about our solutions and how we can help your business.
-    <>
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
-                  Contact Us
-    <>
-                </Link>
-                <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
-                  View Services
-    <>
-                </Link>
-              </div>
-<<<<<<< HEAD
-          </div>
-        </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
-  );
-};
 
-export default Page;
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+              </h2>
+              <p c lass Name="t ext-xl text-gray-300 mb-8max-w-2xlmx-auto" />
+                Contact us to learn more about our solutions and how we can help your business.
+
+              </p>
+              <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+                <L ink to="/contact" class Name="b g-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
+                  Contact Us
+
+                </L ink>
+                <L ink to="/services" class Name="b order border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
+                  View Services
+
+                </L ink>
+              </d iv>
+
+            </d iv>
+          </d iv>
+        </s ection>
+      </d iv>
+
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-33de

@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 // List of pages that need to be completely rewritten
-const pagesToRewrite = [
+const pages To Rewrite = [
   'enterprise-security',
   'services-advertising', 
   'smart-city-infrastructure',
@@ -10,80 +10,80 @@ const pagesToRewrite = [
 ];
 
 // Template for a basic page
-const pageTemplate = (pageName, title, description, keywords) => `import React from 'react'
+const page Template = (page Name, title, description, keywords) => `import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Layout from '../../layout'
 
-const ${pageName}Page: React.FC = () => {
+const ${page Name}Page: React.F C = () => {
   return (
-    <Layout
+    <L ayout
       title="${title} - Zion Tech Group"
       description="${description}"
       keywords="${keywords}"
     >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <d iv class Name="m ax-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <d iv class Name="t ext-center mb-16">
+            <h1 c lass Name="t ext-4xl md:text-6xl font-bold text-white mb-6">
+              <s pan class Name="b g-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 ${title}
-              </span>
+              </s pan>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p c lass Name="t ext-xl text-gray-300 max-w-3xl mx-auto">
               ${description}
             </p>
-          </div>
+          </d iv>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
-              <p className="text-gray-300 mb-4">
+          <d iv class Name="g rid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <d iv class Name="b g-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 c lass Name="t ext-xl font-semibold text-white mb-4">Feature 1</h3>
+              <p c lass Name="t ext-gray-300 mb-4">
                 Description of the first key feature or service.
               </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
-              </ul>
-            </div>
+              <u l class Name="t ext-gray-300 space-y-2">
+                <l i>• Benefit 1</l i>
+                <l i>• Benefit 2</l i>
+                <l i>• Benefit 3</l i>
+                <l i>• Benefit 4</l i>
+              </u l>
+            </d iv>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
-              <p className="text-gray-300 mb-4">
+            <d iv class Name="b g-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 c lass Name="t ext-xl font-semibold text-white mb-4">Feature 2</h3>
+              <p c lass Name="t ext-gray-300 mb-4">
                 Description of the second key feature or service.
               </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
-              </ul>
-            </div>
+              <u l class Name="t ext-gray-300 space-y-2">
+                <l i>• Benefit 1</l i>
+                <l i>• Benefit 2</l i>
+                <l i>• Benefit 3</l i>
+                <l i>• Benefit 4</l i>
+              </u l>
+            </d iv>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
-              <p className="text-gray-300 mb-4">
+            <d iv class Name="b g-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 c lass Name="t ext-xl font-semibold text-white mb-4">Feature 3</h3>
+              <p c lass Name="t ext-gray-300 mb-4">
                 Description of the third key feature or service.
               </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Layout>
+              <u l class Name="t ext-gray-300 space-y-2">
+                <l i>• Benefit 1</l i>
+                <l i>• Benefit 2</l i>
+                <l i>• Benefit 3</l i>
+                <l i>• Benefit 4</l i>
+              </u l>
+            </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+    </L ayout>
   )
 }
 
-export default ${pageName}Page`;
+export default ${page Name}Page`;
 
 // Page configurations
-const pageConfigs = {
+const page Configs = {
   'enterprise-security': {
     title: 'Enterprise Security',
     description: 'Comprehensive enterprise security solutions including cybersecurity, compliance, and risk management.',
@@ -96,8 +96,8 @@ const pageConfigs = {
   },
   'smart-city-infrastructure': {
     title: 'Smart City Infrastructure',
-    description: 'Advanced smart city infrastructure solutions including IoT, data analytics, and urban planning technology.',
-    keywords: 'smart city, infrastructure, IoT, urban planning, data analytics'
+    description: 'Advanced smart city infrastructure solutions including Io T, data analytics, and urban planning technology.',
+    keywords: 'smart city, infrastructure, Io T, urban planning, data analytics'
   },
   'task-manager-pro': {
     title: 'Task Manager Pro',
@@ -107,17 +107,17 @@ const pageConfigs = {
 };
 
 // Rewrite pages
-for (const page of pagesToRewrite) {
-  const pagePath = `/workspace/app/${page}/page.tsx`;
-  const config = pageConfigs[page];
-  const componentName = page.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
+for (const page of pages To Rewrite) {
+  const page Path = `/workspace/app/${page}/page.tsx`;
+  const config = page Configs[page];
+  const component Name = page.split('-').map(word => 
+    word.char At(0).to Upper Case() + word.slice(1)
   ).join('');
   
-  const content = pageTemplate(componentName, config.title, config.description, config.keywords);
+  const content = page Template(component Name, config.title, config.description, config.keywords);
   
   try {
-    fs.writeFileSync(pagePath, content);
+    fs.write File Sync(page Path, content);
     console.log(`Rewrote ${page} page`);
   } catch (error) {
     console.error(`Error rewriting ${page}:`, error.message);

@@ -4,157 +4,157 @@
     }
   }
 };
-  hasError: boolean;
+  has Error: boolean;
   error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
+  error Info: Error Info | null;
+  error Id: string | null;
 }
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  enableRetry?: boolean;
+  children: React Node;
+  fallback?: React Node;
+  on Error?: (error: Error, error Info: Error Info) => void;
+  enable Error Reporting?: boolean;
+  enable Retry?: boolean;
 }
-  errorId: string | null;
+  error Id: string | null;
   error: Error;
-  errorInfo: ErrorInfo;
+  error Info: Error Info;
   message: string;
   stack: string | undefined;
-  componentStack: string | null | undefined;
+  component Stack: string | null | undefined;
   timestamp: string;
-  userAgent: string;
+  user Agent: string;
   url: string;
-  userId: string | null;
-  sessionId: string;
+  user Id: string | null;
+  session Id: string;
 }
-class AdvancedErrorBoundary extends Component
-  private retryCount = 0;
-  private maxRetries = 3;
+class Advanced ErrorBoundary extends Component
+  private retry Count = 0;
+  private max Retries = 3;
     super(props);
-      errorId: null
+      error Id: null
     };
   }
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      error Id: `error_${Date.now()}_${Math.random().to String(36).substr(2, 9)}`
     };
   }
-      errorInfo
+      error Info
     });
     // Log error to console in development
-        errorInfo 
+        error Info 
       });
     }
     // Call custom error handler
-      this.props.onError(error, errorInfo);
+      this.props.on Error(error, error Info);
     }
     // Report error to external service
-      this.reportError(error, errorInfo);
+      this.report Error(error, error Info);
     }
   }
-      sessionId: this.getSessionId()
+      session Id: this.get Session Id()
     };
     // Send to error reporting service
-    this.sendErrorReport(errorReport);
+    this.send Error Report(error Report);
   };
-    // Try to get user ID from localStorage or other sources
-      return localStorage.getItem('userId') || null;
+    // Try to get user I D from local Storage or other sources
+      return local Storage.get Item('user Id') || null;
       return null;
     }
   };
-    // Generate or retrieve session ID
-      let sessionId = sessionStorage.getItem('sessionId');
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-        sessionStorage.setItem('sessionId', sessionId);
+    // Generate or retrieve session I D
+      let session Id = session Storage.get Item('session Id');
+        session Id = `session_${Date.now()}_${Math.random().to String(36).substr(2, 9)}`;
+        session Storage.set Item('session Id', session Id);
       }
-      return sessionId;
-      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      return session Id;
+      return `session_${Date.now()}_${Math.random().to String(36).substr(2, 9)}`;
     }
   };
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `error_${Date.now()}_${Math.random().to String(36).substr(2, 9)}`;
   };
       // Send to your error reporting service
           'Content-Type': 'application/json'
-        body: JSON.stringify(errorReport)
+        body: J SO N.stringify(error Report)
       });
-        error: reportError 
+        error: report Error 
       });
     }
   };
-    if (this.retryCount 
+    if (this.retry Count 
     window.location.reload();
   };
     window.location.href = '/';
   };
-      // Custom fallback UI
+      // Custom fallback U I
         return this.props.fallback;
       }
-      // Default error UI
-        <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
-          <div className='sm:mx-auto sm:w-full sm:max-w-md'>
-            <div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'>
-              <div className='text-center'>
-                <div className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100'>
+      // Default error U I
+        <d iv class Name='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
+          <d iv class Name='sm:mx-auto sm:w-full sm:max-w-md'>
+            <d iv class Name='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'>
+              <d iv class Name='text-center'>
+                <d iv class Name='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100'>
                   
                   >
                     
                     />
-                  </svg>
-                </div>
-                <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>
+                  </s vg>
+                </d iv>
+                <h2 c lass Name='mt-6 text-3xl font-extrabold text-gray-900'>
                   Oops! Something went wrong
                 </h2>
-                <p className='mt-2 text-sm text-gray-600'>
+                <p c lass Name='mt-2 text-sm text-gray-600'>
                   We&apos;re sorry, but something unexpected happened. Our team
                   has been notified.
                 </p>
-              </div>
-                <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
-                  <h3 className='text-sm font-medium text-red-800'>
+              </d iv>
+                <d iv class Name='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
+                  <h3 c lass Name='text-sm font-medium text-red-800'>
                     Error Details:
                   </h3>
-                  <div className='mt-2 text-sm text-red-700'>
+                  <d iv class Name='mt-2 text-sm text-red-700'>
                     <p>
-                      <strong>Error ID:</strong> {this.state.errorId}
+                      <s trong>Error I D:</s trong> {this.state.error Id}
                     </p>
                     <p>
-                      <strong>Message:</strong> {this.state.error?.message}
+                      <s trong>Message:</s trong> {this.state.error?.message}
                     </p>
-                    <details className='mt-2'>
-                      <summary className='cursor-pointer font-medium'>
+                    <d etails class Name='mt-2'>
+                      <s ummary class Name='cursor-pointer font-medium'>
                         Stack Trace
-                      </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>
+                      </s ummary>
+                      <p re class Name='mt-2 text-xs overflow-auto'>
                         {this.state.error?.stack}
-                      </pre>
-                    </details>
-                    <details className='mt-2'>
-                      <summary className='cursor-pointer font-medium'>
+                      </p re>
+                    </d etails>
+                    <d etails class Name='mt-2'>
+                      <s ummary class Name='cursor-pointer font-medium'>
                         Component Stack
-                      </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>
-                        {this.state.errorInfo?.componentStack}
-                      </pre>
-                    </details>
-                  </div>
+                      </s ummary>
+                      <p re class Name='mt-2 text-xs overflow-auto'>
+                        {this.state.error Info?.component Stack}
+                      </p re>
+                    </d etails>
+                  </d iv>
               )}
-              <div className='mt-6 space-y-3'>
-                {this.props.enableRetry &&
-                  this.retryCount 
+              <d iv class Name='mt-6 space-y-3'>
+                {this.props.enable Retry &&
+                  this.retry Count 
                     >
-                      Try Again ({this.maxRetries - this.retryCount} attempts
+                      Try Again ({this.max Retries - this.retry Count} attempts
                       left)
-                    </button>
+                    </b utton>
                   )}
                 
                 >
                   Reload Page
-                </button>
+                </b utton>
                 
                 >
                   Go to Homepage
-                </button>
-              </div>
-              <div className='mt-6 text-center'>
-                <p className='text-xs text-gray-500'>
+                </b utton>
+              </d iv>
+              <d iv class Name='mt-6 text-center'>
+                <p c lass Name='text-xs text-gray-500'>
                   If this problem persists, please contact our support team
                   at&nbsp;
                   
@@ -162,11 +162,11 @@ class AdvancedErrorBoundary extends Component
                     kleber@ziontechgroup.com
                   </a>
                 </p>
-              </div>
-    </div>
+              </d iv>
+    </d iv>
   );
     }
     return this.props.children;
   }
 }
-export default AdvancedErrorBoundary;
+export default Advanced ErrorBoundary;

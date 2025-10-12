@@ -1,2 +1,2 @@
-// Utility file: performanceEnhancer
+// Utility file: performance Enhancer
 };

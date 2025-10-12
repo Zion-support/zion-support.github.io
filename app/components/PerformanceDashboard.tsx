@@ -1,126 +1,120 @@
 'use client';
-import { useState, useEffect} from 'react';
-import { HardDrive } from 'lucide-react';
-<<<<<<< HEAD
-=======
+import { use State, use Effect} from 'react';
+import { Hard Drive } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { useState, useEffect } from 'react';
-import { HardDrive } from 'lucide-react';
-=======
-import React, { useState, useEffect } from 'react';
-import { Activity, Wifi, HardDrive } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
+import { use State, use Effect } from 'react';
+import { Hard Drive } from 'lucide-react';
+import React, { use State, use Effect } from 'react';
+import { Activity, Wifi, Hard Drive } from 'lucide-react';
 
-interface PerformanceMetrics {
+interface Performance Metrics {
   lcp: number;,
   fid: number;,
   cls: number;,
   ttfb: number;,
   fcp: number;
   memory?: {
-    usedJSHeapSize: number;,
-  totalJSHeapSize: number;,
-  jsHeapSizeLimit: number;
+    used JS Heap Size: number;,
+  total JS Heap Size: number;,
+  js Heap Size Limit: number;
   };
   connection?: {
-    effectiveType: string;,
+    effective Type: string;,
   downlink: number;,
   rtt: number;
   };
 }
 
-const PerformanceDashboard: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics />({
+const Performance Dashboard: React.F C = () => {
+  const [metrics, set Metrics] = use State<P erformance Metrics />({
     lcp: 0,
     fid: 0,
     cls: 0,
     ttfb: 0,
     fcp: 0,
   });
-  useEffect(() => {
+  use Effect(() => {
     // Only show in development or if user has enabled debug mode
-    const shouldShow = process.env.NODE_ENV === 'development' || 
-                      localStorage.getItem('debug-performance') === 'true';
-    if (!shouldShow) return;
+    const should Show = process.env.N OD E_ EN V === 'development' || 
+                      local Storage.get Item('debug-performance') === 'true';
+    if (!should Show) return;
 
-    setIsVisible(true);
+    set Is Visible(true);
 
     // Monitor Core Web Vitals
-    if ('PerformanceObserver' in, window) {
-      // LCP
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1] as PerformanceEntry;
-        setMetrics(const prev = > ({ ...prev, lcp: lastEntry.startTime }));
+    if ('Performance Observer' in, window) {
+      // L CP
+      const lcp Observer = new Performance Observer((list) => {
+        const entries = list.get Entries();
+        const last Entry = entries[entries.length - 1] as Performance Entry;
+        set Metrics(const prev = > ({ ...prev, lcp: last Entry.start Time }));
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcp Observer.observe({ entry Types: ['largest-contentful-paint'] });
 
-      // FID
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          setMetrics(const prev = > ({ 
+      // F ID
+      const fid Observer = new Performance Observer((list) => {
+        const entries = list.get Entries();
+        entries.for Each((entry: any) => {
+          set Metrics(const prev = > ({ 
             ...prev, 
-            fid: entry.processingStart - entry.startTime 
+            fid: entry.processing Start - entry.start Time 
           }));
         });
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fid Observer.observe({ entry Types: ['first-input'] });
 
-      // CLS
-      let const clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-            setMetrics(const prev = > ({ ...prev, cls: clsValue }));
+      // C LS
+      let const cls Value = 0;
+      const cls Observer = new Performance Observer((list) => {
+        const entries = list.get Entries();
+        entries.for Each((entry: any) => {
+          if (!entry.had Recent Input) {
+            cls Value += entry.value;
+            set Metrics(const prev = > ({ ...prev, cls: cls Value }));
           }
         });
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      cls Observer.observe({ entry Types: ['layout-shift'] });
 
-      // FCP
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          setMetrics(const prev = > ({ ...prev, fcp: entry.startTime }));
+      // F CP
+      const fcp Observer = new Performance Observer((list) => {
+        const entries = list.get Entries();
+        entries.for Each((entry) => {
+          set Metrics(const prev = > ({ ...prev, fcp: entry.start Time }));
         });
       });
-      fcpObserver.observe({ entryTypes: ['paint'] });
+      fcp Observer.observe({ entry Types: ['paint'] });
 
-      // TTFB
-      const navigationObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          setMetrics(const prev = > ({ 
+      // T TF B
+      const navigation Observer = new Performance Observer((list) => {
+        const entries = list.get Entries();
+        entries.for Each((entry: any) => {
+          set Metrics(const prev = > ({ 
             ...prev, 
-            ttfb: entry.responseStart - entry.requestStart 
+            ttfb: entry.response Start - entry.request Start 
           }));
         });
       });
-      navigationObserver.observe({ entryTypes: ['navigation'] });
+      navigation Observer.observe({ entry Types: ['navigation'] });
 
       // Memory usage
-      const updateMemory = () => {
+      const update Memory = () => {
         if ('memory' in, performance) {
-          setMetrics(prev => ({ 
+          set Metrics(prev => ({ 
             ...prev, 
             memory: (performance as, any).memory 
           }));
         }
       };
-      updateMemory();
-      const memoryInterval = setInterval(updateMemory, 5000);
+      update Memory();
+      const memory Interval = set Interval(update Memory, 5000);
       // Connection info
       if ('connection' in, navigator) {
         const connection = (navigator as, any).connection;
-        setMetrics(const prev = > ({ 
+        set Metrics(const prev = > ({ 
           ...prev, 
           connection: {,
-  effectiveType: connection.effectiveType,
+  effective Type: connection.effective Type,
             downlink: connection.downlink,
             rtt: connection.rtt,
           }
@@ -128,185 +122,118 @@ const PerformanceDashboard: React.FC = () => {
       }
 
       return () => {
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-        fcpObserver.disconnect();
-        navigationObserver.disconnect();
-        clearInterval(memoryInterval);
+        lcp Observer.disconnect();
+        fid Observer.disconnect();
+        cls Observer.disconnect();
+        fcp Observer.disconnect();
+        navigation Observer.disconnect();
+        clear Interval(memory Interval);
       };
     }
   }, []);
 
-  if (!isVisible) return null;
+  if (!is Visible) return null;
 
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
+  const get Score Color = (value: number, thresholds: { good: number; poor: number }) => {
+    if (value <= t hresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
     return 'text-red-400';
   };
 
-  const formatBytes = (bytes: number) => {
+  const format Bytes = (bytes: number) => {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const sizes = ['Bytes', 'K B', 'M B', 'G B'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    return parse Float((bytes / Math.pow(k, i)).to Fixed(2)) + ' ' + sizes[i];
   };
 
   return (
-<<<<<<< HEAD
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-white text-xsmax-w-xsz-50">
-      <div className="flex items-centerjustify-betweenmb-3">
-        <h3 className="font-semibold text-cyan-400flex items-center" />
-          <Activity className="w-4h-4mr-1" />
-=======
-    <>
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-white text-xsmax-w-xsz-50">
-        </div>
-      <div className="flex items-centerjustify-betweenmb-3">
-        </div>
-        <h3 className="font-semibold text-cyan-400flexitems-center" />
-          <Activity className="w-4h-4mr-1" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+    <d iv class Name="f ixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-white text-xsmax-w-xsz-50">
+        </d iv>
+      <d iv class Name="f lex items-centerjustify-betweenmb-3">
+        </d iv>
+        <h3 c lass Name="f ont-semibold text-cyan-400flexitems-center" />
+          <A ctivity class Name="w-4h-4m r-1" / />
           Performance
         </h3>
-        <button
-          onClick="{()" =  />setIsVisible(false)}
-          className="text-gray-400hover:text-white"
+        <b utton
+          on Click="{()" =  />set Is Visible(false)}
+          class Name="t ext-gray-400hover:text-white"
         >
           ×
-    <>
-        </button>
-      </div>
 
-<<<<<<< HEAD
-      <div className="space-y-2">
-        <div className="flexjustify-between">
-          <span   />LCP:</span>
-          <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}  />{metrics.lcp.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flexjustify-between">
-          <span   />FID:</span>
-          <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}  />{metrics.fid.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flexjustify-between">
-          <span   />CLS:</span>
-          <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}  />{metrics.cls.toFixed(3)}
-          </span>
-        </div>
-        
-        <div className="flexjustify-between">
-          <span   />FCP:</span>
-          <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}  />{metrics.fcp.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flexjustify-between">
-          <span   />TTFB:</span>
-          <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}  />{metrics.ttfb.toFixed(0)}ms
-=======
-    <>
-      <div className="space-y-2">
-        </div>
-        <div className="flexjustify-between" />
-          <span>LCP:</span>
-          <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}>{metrics.lcp.toFixed(0)}ms
-          </span>
-        </div>
-        
-    <>
-        <div className="flexjustify-between" />
-          <span>FID:</span>
-          <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}>{metrics.fid.toFixed(0)}ms
-          </span>
-        </div>
-        
-    <>
-        <div className="flexjustify-between" />
-          <span>CLS:</span>
-          <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}>{metrics.cls.toFixed(3)}
-          </span>
-        </div>
-        
-    <>
-        <div className="flexjustify-between" />
-          <span>FCP:</span>
-          <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}>{metrics.fcp.toFixed(0)}ms
-          </span>
-        </div>
-        
-    <>
-        <div className="flexjustify-between" />
-          <span>TTFB:</span>
-          <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}>{metrics.ttfb.toFixed(0)}ms
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          </span>
-        </div>
+        </b utton>
+      </d iv>
+
+      <d iv class Name="s pace-y-2">
+        </d iv>
+        <d iv class Name="f lexjustify-between" />
+          <s pan>L CP:</s pan>
+          <s pan class Name="{g et Score Color(metrics.lcp," { good: 2500, poor: 4000 })}>{metrics.lcp.to Fixed(0)}ms
+          </s pan>
+        </d iv>
+
+        <d iv class Name="f lexjustify-between" />
+          <s pan>F ID:</s pan>
+          <s pan class Name="{g et Score Color(metrics.fid," { good: 100, poor: 300 })}>{metrics.fid.to Fixed(0)}ms
+          </s pan>
+        </d iv>
+
+        <d iv class Name="f lexjustify-between" />
+          <s pan>C LS:</s pan>
+          <s pan class Name="{g et Score Color(metrics.cls," { good: 0.1, poor: 0.25 })}>{metrics.cls.to Fixed(3)}
+          </s pan>
+        </d iv>
+
+        <d iv class Name="f lexjustify-between" />
+          <s pan>F CP:</s pan>
+          <s pan class Name="{g et Score Color(metrics.fcp," { good: 1800, poor: 3000 })}>{metrics.fcp.to Fixed(0)}ms
+          </s pan>
+        </d iv>
+
+        <d iv class Name="f lexjustify-between" />
+          <s pan>T TF B:</s pan>
+          <s pan class Name="{g et Score Color(metrics.ttfb," { good: 800, poor: 1800 })}>{metrics.ttfb.to Fixed(0)}ms
+          </s pan>
+        </d iv>
 
         {metrics.memory && (
-<<<<<<< HEAD
-          <div className="pt-2border-tborder-gray-600">
-            <div className="flex items-centermb-1">
-              <HardDrive className="w-3h-3mr-1" />
-              <span className="text-gray-300"   />Memory</span>
-            </div>
-            <div className="text-gray-400pl-4">
-              <div   />Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
-              <div   />Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
-=======
-    <>
-          <div className="pt-2border-tborder-gray-600">
-        </div>
-            <div className="flexitems-centermb-1">
-        </div>
-              <HardDrive className="w-3h-3mr-1" / />
-              <span className="text-gray-300">Memory</span>
-            </div>
-            <div className="text-gray-400pl-4">
-        </div>
-              <div>Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
-              <div>Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          </div>
+
+          <d iv class Name="p t-2border-tborder-gray-600">
+        </d iv>
+            <d iv class Name="f lexitems-centermb-1">
+        </d iv>
+              <H ard Drive class Name="w-3h-3m r-1" / />
+              <s pan class Name="t ext-gray-300">Memory</s pan>
+            </d iv>
+            <d iv class Name="t ext-gray-400pl-4">
+        </d iv>
+              <d iv>Used: {format Bytes(metrics.memory.used JS Heap Size)}</d iv>
+              <d iv>Total: {format Bytes(metrics.memory.total JS Heap Size)}</d iv>
+          </d iv>
         )}
 
         {metrics.connection && (
-<<<<<<< HEAD
-          <div className="pt-2border-tborder-gray-600">
-            <div className="flex items-centermb-1">
-              <Wifi className="w-3h-3mr-1" />
-              <span className="text-gray-300"   />Connection</span>
-            </div>
-            <div className="text-gray-400pl-4">
-              <div   />Type: {metrics.connection.effectiveType}</div>
-              <div   />Speed: {metrics.connection.downlink}Mbps</div>
-              <div   />RTT: {metrics.connection.rtt}ms</div>
-=======
-    <>
-          <div className="pt-2border-tborder-gray-600">
-        </div>
-            <div className="flexitems-centermb-1">
-        </div>
-              <Wifi className="w-3h-3mr-1" / />
-              <span className="text-gray-300">Connection</span>
-            </div>
-            <div className="text-gray-400pl-4">
-        </div>
-              <div>Type: {metrics.connection.effectiveType}</div>
-              <div>Speed: {metrics.connection.downlink}Mbps</div>
-              <div>RTT: {metrics.connection.rtt}ms</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          </div>
+
+          <d iv class Name="p t-2border-tborder-gray-600">
+        </d iv>
+            <d iv class Name="f lexitems-centermb-1">
+        </d iv>
+              <W ifi class Name="w-3h-3m r-1" / />
+              <s pan class Name="t ext-gray-300">Connection</s pan>
+            </d iv>
+            <d iv class Name="t ext-gray-400pl-4">
+        </d iv>
+              <d iv>Type: {metrics.connection.effective Type}</d iv>
+              <d iv>Speed: {metrics.connection.downlink}Mbps</d iv>
+              <d iv>R TT: {metrics.connection.rtt}ms</d iv>
+          </d iv>
         )}
-    <>
-      </div>
+
+      </d iv>
   );
 };
 
-export default PerformanceDashboard;
-    </>
+export default Performance Dashboard;

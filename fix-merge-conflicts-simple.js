@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 
 // Function to fix merge conflicts in a file
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.read File Sync(file Path, 'utf8');
     
     // Remove merge conflict markers and keep the content
     content = content.replace(/\n?/g, '');
@@ -14,10 +14,10 @@ import path from 'path';
     content = content.replace(/\n\n\n+/g, '\n\n');
     
     // Write the cleaned content back
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed merge conflicts in: ${filePath}`);
+    fs.write File Sync(file Path, content);
+    console.log(`Fixed merge conflicts in: ${file Path}`);
     return true;
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${file Path}:`, error.message);
     return false;
   }
 }
@@ -25,14 +25,14 @@ import path from 'path';
 // Function to find all files with merge conflicts
   const files = [];
   
-    const items = fs.readdirSync(currentPath);
+    const items = fs.readdir Sync(current Path);
     
-      const fullPath = path.join(currentPath, item);
-      const stat = fs.statSync(fullPath);
+      const full Path = path.join(current Path, item);
+      const stat = fs.stat Sync(full Path);
       
-        walkDir(fullPath);
-          const content = fs.readFileSync(fullPath, 'utf8');
-            files.push(fullPath);
+        walk Dir(full Path);
+          const content = fs.read File Sync(full Path, 'utf8');
+            files.push(full Path);
           }
           // Skip files that can't be read
         }
@@ -40,20 +40,20 @@ import path from 'path';
     }
   }
   
-  walkDir(dir);
+  walk Dir(dir);
   return files;
 }
 
 // Main execution
 console.log('Starting merge conflict resolution...');
 
-const filesWithConflicts = findFilesWithMergeConflicts('/workspace');
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
+const files With Conflicts = find Files With Merge Conflicts('/workspace');
+console.log(`Found ${files With Conflicts.length} files with merge conflicts`);
 
-let fixedCount = 0;
-    fixedCount++;
+let fixed Count = 0;
+    fixed Count++;
   }
 }
 
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
+console.log(`Fixed merge conflicts in ${fixed Count} files`);
 console.log('Merge conflict resolution completed!');

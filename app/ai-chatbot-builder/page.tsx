@@ -1,84 +1,77 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import React, { useState } from 'react';
+import React, { use State } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Users, Zap, Shield, Brain, BarChart, MessageCircle, Target, ShoppingCart, Globe, Clock } from 'lucide-react';
-=======
-import { MessageCircle, Brain, CheckCircle, ArrowRight, Star, Zap, BarChart, Clock, Link as LinkIcon } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
+import { Message Circle, Brain, CheckCircle, ArrowRight, Star, Zap, Bar Chart, Clock, Link as LinkIcon } from 'lucide-react';
 
-const AiChatbotBuilderPage: React.FC = () => {
+const Ai Chatbot Builder Page: React.F C = () => {
   const features = [
     {
       title: 'No-Code Builder',
       description: 'Create sophisticated chatbots without any programming knowledge using our visual interface',
-      icon: <Zap className="w-8h-8text-cyan-400" />,
+      icon: <Z ap class Name="w-8h-8t ext-cyan-400" />,
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'AI-Powered Responses',
+      title: 'A I-Powered Responses',
       description: 'Natural language processing and machine learning for intelligent, contextual conversations',
-      icon: <Brain className="w-8h-8text-purple-400" />,
+      icon: <B rain class Name="w-8h-8t ext-purple-400" />,
       color: 'from-yellow-500 to-orange-500'
     },
     {
       title: 'Multi-Channel Deployment',
       description: 'Deploy your chatbot across websites, mobile apps, social media, and messaging platforms',
-      icon: <Globe className="w-8h-8text-green-400" />,
+      icon: <G lobe class Name="w-8h-8t ext-green-400" />,
       color: 'from-green-500 to-emerald-500'
     },
     {
       title: 'Advanced Analytics',
       description: 'Track performance, user engagement, and conversation insights with detailed analytics',
-      icon: <BarChart className="w-8h-8text-indigo-400" />,
+      icon: <B ar Chart class Name="w-8h-8t ext-indigo-400" />,
       color: 'from-indigo-500 to-purple-500'
     },
     {
       title: 'Custom Integrations',
-      description: 'Connect with CRM, helpdesk, payment systems, and other business tools seamlessly',
-      icon: <Shield className="w-8h-8text-red-400" />,
+      description: 'Connect with C RM, helpdesk, payment systems, and other business tools seamlessly',
+      icon: <S hield class Name="w-8h-8t ext-red-400" />,
       color: 'from-red-500 to-pink-500'
     },
     {
       title: 'Real-time Monitoring',
       description: 'Monitor conversations in real-time and intervene when human assistance is needed',
-      icon: <MessageCircle className="w-8h-8text-teal-400" />,
+      icon: <M essage Circle class Name="w-8h-8t ext-teal-400" />,
       color: 'from-teal-500 to-cyan-500'
     }
   ];
 
-  const useCases = [
+  const use Cases = [
     {
       title: 'Customer Support',
       description: '24/7 automated customer support with instant responses and issue resolution',
-      icon: <Users className="w-6h-6text-blue-500" />,
+      icon: <U sers class Name="w-6h-6t ext-blue-500" />,
       benefits: ['Reduce support tickets by 60%', 'Instant response time', 'Multilingual support']
     },
     {
       title: 'Lead Generation',
       description: 'Qualify and nurture leads automatically with intelligent conversation flows',
-      icon: <Target className="w-6h-6text-green-500" />,
+      icon: <T arget class Name="w-6h-6t ext-green-500" />,
       benefits: ['Increase lead conversion by 40%', 'Automated follow-ups', 'Lead scoring']
     },
     {
       title: 'E-commerce Assistant',
       description: 'Help customers find products, process orders, and handle returns seamlessly',
-      icon: <ShoppingCart className="w-6h-6text-purple-500" />,
+      icon: <S hopping Cart class Name="w-6h-6t ext-purple-500" />,
       benefits: ['Boost sales by 25%', 'Reduce cart abandonment', 'Personalized recommendations']
     },
     {
       title: 'Internal Operations',
-      description: 'Streamline internal processes with HR, IT support, and knowledge management bots',
-      icon: <Clock className="w-6h-6text-orange-500" />,
+      description: 'Streamline internal processes with H R, I T support, and knowledge management bots',
+      icon: <C lock class Name="w-6h-6t ext-orange-500" />,
       benefits: ['Improve efficiency by 50%', 'Reduce response time', 'Standardized processes']
     }
   ];
 
-  const pricingPlans = [
+  const pricing Plans = [
     {
       name: 'Starter',
       price: '$29',
@@ -86,7 +79,7 @@ const AiChatbotBuilderPage: React.FC = () => {
       description: 'Perfect for small businesses getting started with chatbots',
       features: [
         'Up to 1,000 conversations/month',
-        'Basic AI responses',
+        'Basic A I responses',
         'Website integration',
         'Email support',
         'Basic analytics'
@@ -100,9 +93,9 @@ const AiChatbotBuilderPage: React.FC = () => {
       description: 'Advanced features for growing businesses',
       features: [
         'Up to 10,000 conversations/month',
-        'Advanced AI with custom training',
+        'Advanced A I with custom training',
         'Multi-channel deployment',
-        'CRM integrations',
+        'C RM integrations',
         'Advanced analytics',
         'Priority support',
         'Custom branding'
@@ -116,7 +109,7 @@ const AiChatbotBuilderPage: React.FC = () => {
       description: 'Full-scale solution for large organizations',
       features: [
         'Unlimited conversations',
-        'Custom AI models',
+        'Custom A I models',
         'White-label solution',
         'Advanced integrations',
         'Real-time monitoring',
@@ -128,301 +121,224 @@ const AiChatbotBuilderPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-      <Helmet>
-=======
-    <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>AI Chatbot Builder - Zion Tech Group</title>
-        <meta name="description" content="Build intelligent chatbots without coding. Deploy across multiple channels with advanced AI capabilities." />
-        <meta name="keywords" content="AI chatbot builder, no-code chatbot, conversational AI, customer support automation" />
-      </Helmet>
+
+    <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        </d iv>
+      <H elmet>
+        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </H elmet>
+        <t itle>A I Chatbot Builder - Zion Tech Group</t itle>
+        <m eta name="description" content="Build intelligent chatbots without coding. Deploy across multiple channels with advanced A I capabilities." />
+        <m eta name="keywords" content="A I chatbot builder, no-code chatbot, conversational A I, customer support automation" />
+      </H elmet>
 
       {/* Hero Section */}
-    <>
-      <section className="relativepy-20px-4" />
-        <div className="max-w-7xlmx-autotext-center">
-<<<<<<< HEAD
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6" />
-=======
-        </div>
-          <h1 className="text-5xl md:text-7xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            AI Chatbot
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent" />
+
+      <s ection class Name="r elativepy-20px-4" />
+        <d iv class Name="m ax-w-7xlmx-autotext-center">
+        </d iv>
+          <h1 c lass Name="t ext-5xl md:text-7xl font-boldtext-whitemb-6" />
+            A I Chatbot
+            <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent" />
               {' '}Builder
-    <>
-            </span>
+
+            </s pan>
           </h1>
-          <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
+          <p c lass Name="t ext-xl text-gray-300 mb-8max-w-3xlmx-auto">
               Create intelligent, conversational chatbots without any coding. Deploy across multiple channels 
-            and scale your customer engagement with advanced AI capabilities.
-    <>
+            and scale your customer engagement with advanced A I capabilities.
+
           </p>
-          <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-center" >
-          Start Building Now
-              
-          <ArrowRight className="ml-2w-5h-5"  />
-        </Link>
-=======
-        </div>
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
+          <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+            <L ink to="/contact" class Name="b g-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
               Start Building Now
-    <>
-              <ArrowRight className="ml-2w-5h-5" />
-            </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            <Link to="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900transition-allduration-300" />
+
+              <A rrow Right class Name="m l-2w-5h-5" />
+            </L ink>
+            <L ink to="/demo" class Name="b order border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900transition-allduration-300" />
               View Demo
-    <>
-            </Link>
-          </div>
-      </section>
+
+            </L ink>
+          </d iv>
+      </s ection>
 
       {/* Features Section */}
-    <>
-      <section className="py-20px-4" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-4xl font-bold text-white mb-4" />
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+      <s ection class Name="p y-20px-4" />
+        <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-4xl font-boldtext-whitemb-4" />
               Powerful Features for Every Need
-    <>
+
             </h2>
-            <p className="text-xl text-gray-300max-w-3xlmx-auto">
+            <p c lass Name="t ext-xl text-gray-300max-w-3xlmx-auto">
               Everything you need to build, deploy, and manage intelligent chatbots that deliver exceptional user experiences.
-    <>
+
             </p>
-          </div>
+          </d iv>
           
-          <div className="grid md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <d iv class Name="g rid md:grid-cols-2lg:grid-cols-3gap-8">
+        </d iv>
             {features.map((feature, index) => (
-    <>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50transition-allduration-300" />
-                <div className="{`w-16" h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`} />
+
+              <d iv key={index} class Name="b g-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50transition-allduration-300" />
+                <d iv class Name="{`w-16" h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`} />
                   {feature.icon}
-    <>
-                </div>
-                <h3 className="text-xl font-semiboldtext-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+
+                </d iv>
+                <h3 c lass Name="t ext-xl font-semiboldtext-white mb-3">{feature.title}</h3>
+                <p c lass Name="t ext-gray-300">{feature.description}</p>
+              </d iv>
             ))}
-    <>
-          </div>
-      </section>
+
+          </d iv>
+      </s ection>
 
       {/* Use Cases Section */}
-    <>
-      <section className="py-20px-4bg-slate-800/30" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-4xl font-bold text-white mb-4" />
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+      <s ection class Name="p y-20px-4bg-slate-800/30" />
+        <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-4xl font-boldtext-whitemb-4" />
               Perfect for Every Business
-    <>
+
             </h2>
-            <p className="text-xl text-gray-300max-w-3xlmx-auto">
+            <p c lass Name="t ext-xl text-gray-300max-w-3xlmx-auto">
               From customer support to lead generation, our chatbot builder adapts to your specific business needs.
-    <>
+
             </p>
-          </div>
+          </d iv>
           
-          <div className="grid md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            {useCases.map((useCase, index) => (
-    <>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6borderborder-slate-700" />
-<<<<<<< HEAD
-                <div className="flex items-centermb-4">
-=======
-                <div className="flexitems-centermb-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  {useCase.icon}
-    <>
-                  <h3 className="text-xl font-semiboldtext-whiteml-3">{useCase.title}</h3>
-                </div>
-                <p className="text-gray-300 mb-4">{useCase.description}</p>
-                <ul className="space-y-2" />
-                  {useCase.benefits.map((benefit, idx) => (
-    <>
-                    <li key={idx} className="flex items-centertext-smtext-gray-400" />
-                      <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" />
+          <d iv class Name="g rid md:grid-cols-2lg:grid-cols-4gap-8">
+        </d iv>
+            {use Cases.map((use Case, index) => (
+
+              <d iv key={index} class Name="b g-slate-800/50 backdrop-blur-sm rounded-xl p-6borderborder-slate-700" />
+                <d iv class Name="f lexitems-centermb-4">
+        </d iv>
+                  {use Case.icon}
+
+                  <h3 c lass Name="t ext-xl font-semiboldtext-whiteml-3">{use Case.title}</h3>
+                </d iv>
+                <p c lass Name="t ext-gray-300 mb-4">{use Case.description}</p>
+                <u l class Name="s pace-y-2" />
+                  {use Case.benefits.map((benefit, idx) => (
+
+                    <l i key={idx} class Name="f lex items-centertext-smtext-gray-400" />
+                      <C heck Circle class Name="w-4 h-4 t ext-green-400mr-2flex-shrink-0" />
                       {benefit}
-                    </li>
+                    </l i>
                   ))}
-    <>
-                </ul>
-              </div>
+
+                </u l>
+              </d iv>
             ))}
-    <>
-          </div>
-      </section>
+
+          </d iv>
+      </s ection>
 
       {/* Pricing Section */}
-    <>
-      <section className="py-20px-4" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-4xl font-bold text-white mb-4" />
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4xl font-boldtext-whitemb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+      <s ection class Name="p y-20px-4" />
+        <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-4xl font-boldtext-whitemb-4" />
               Simple, Transparent Pricing
-    <>
+
             </h2>
-            <p className="text-xl text-gray-300max-w-3xlmx-auto">
+            <p c lass Name="t ext-xl text-gray-300max-w-3xlmx-auto">
               Choose the plan that fits your business needs. No hidden fees, no surprises.
-    <>
+
             </p>
-          </div>
+          </d iv>
           
-          <div className="gridmd:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className="{`bg-slate-800/50" backdrop-blur-sm rounded-xl p-8 border ${
+          <d iv class Name="g ridmd:grid-cols-3gap-8">
+        </d iv>
+            {pricing Plans.map((plan, index) => (
+              <d iv key={index} class Name="{`b g-slate-800/50" backdrop-blur-sm rounded-xl p-8 border ${
                 plan.popular ? 'border-cyan-400/50 ring-2 ring-cyan-400/20' : 'border-slate-700'
               } relative`} />
                 {plan.popular && (
-<<<<<<< HEAD
-                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-=======
-    <>
-                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-fulltext-smfont-semibold" />
+
+                  <d iv class Name="a bsolute -top-4 left-1/2transform-translate-x-1/2">
+        </d iv>
+                    <s pan class Name="b g-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-fulltext-smfont-semibold" />
                       Most Popular
-    <>
-                    </span>
-                  </div>
+
+                    </s pan>
+                  </d iv>
                 )}
-<<<<<<< HEAD
-                <div className="text-centermb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baselinejustify-center">
-                    <span className="text-4xlfont-bold text-white">{plan.price}</span>
-=======
-    <>
-                <div className="text-centermb-6">
-        </div>
-                  <h3 className="text-2xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <div className="flexitems-baselinejustify-center" />
-                    <span className="text-4xlfont-boldtext-white">{plan.price}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    <span className="text-gray-400ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300mt-2">{plan.description}</p>
-                </div>
-                <ul className="space-y-3mb-8" />
+
+                <d iv class Name="t ext-centermb-6">
+        </d iv>
+                  <h3 c lass Name="t ext-2xl font-boldtext-whitemb-2">{plan.name}</h3>
+                  <d iv class Name="f lexitems-baselinejustify-center" />
+                    <s pan class Name="t ext-4xlfont-boldtext-white">{plan.price}</s pan>
+                    <s pan class Name="t ext-gray-400ml-1">{plan.period}</s pan>
+                  </d iv>
+                  <p c lass Name="t ext-gray-300mt-2">{plan.description}</p>
+                </d iv>
+                <u l class Name="s pace-y-3mb-8" />
                   {plan.features.map((feature, idx) => (
-<<<<<<< HEAD
-                    <li key={idx} className="flex items-center text-gray-300" />
-=======
-    <>
-                    <li key={idx} className="flexitems-centertext-gray-300" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      <CheckCircle className="w-5 h-5 text-green-400mr-3flex-shrink-0" />
+
+                    <l i key={idx} class Name="f lexitems-centertext-gray-300" />
+                      <C heck Circle class Name="w-5 h-5 t ext-green-400mr-3flex-shrink-0" />
                       {feature}
-                    </li>
+                    </l i>
                   ))}
-                </ul>
-                <Link
+                </u l>
+                <L ink
                   to="/contact"
-                  className="{`w-full" py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                  class Name="{`w-f ull" py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                   }`} />
                   Get Started
-    <>
-                </Link>
-              </div>
-            ))}
-    <>
-          </div>
-      </section>
 
-      {/* CTA Section */}
-    <>
-      <section className="py-20px-4" />
-        <div className="max-w-4xlmx-autotext-center">
-<<<<<<< HEAD
-          <h2 className="text-4xl font-bold text-white mb-6" />
-=======
-        </div>
-          <h2 className="text-4xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                </L ink>
+              </d iv>
+            ))}
+
+          </d iv>
+      </s ection>
+
+      {/* C TA Section */}
+
+      <s ection class Name="p y-20px-4" />
+        <d iv class Name="m ax-w-4xlmx-autotext-center">
+        </d iv>
+          <h2 c lass Name="t ext-4xl font-boldtext-whitemb-6" />
             Ready to Build Your First Chatbot?
-    <>
+
           </h2>
-<<<<<<< HEAD
-          <p className="text-xltext-gray-300 mb-8">
-              Join thousands of businesses already using our platform to create amazing customer experiences.
-          </p>
-          <div className="flex flex-col sm:flex-rowgap-4justify-center">
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-center" >
-          Start Your Free Trial
-              
-          <ArrowRight className="ml-2w-5h-5"  />
-        </Link>
-=======
-          <p className="text-xltext-gray-300mb-8" />
+          <p c lass Name="t ext-xltext-gray-300mb-8" />
             Join thousands of businesses already using our platform to create amazing customer experiences.
-    <>
+
           </p>
-          <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
+          <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+            <L ink to="/contact" class Name="b g-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
               Start Your Free Trial
-    <>
-              <ArrowRight className="ml-2w-5h-5" />
-            </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            <Link to="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900transition-allduration-300" />
+
+              <A rrow Right class Name="m l-2w-5h-5" />
+            </L ink>
+            <L ink to="/demo" class Name="b order border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900transition-allduration-300" />
               Schedule Demo
-    <>
-            </Link>
-          </div>
-      </section>
-    </div>
+
+            </L ink>
+          </d iv>
+      </s ection>
+    </d iv>
   );
 };
 
-export default AiChatbotBuilderPage;
-    </>
+export default Ai Chatbot Builder Page;

@@ -1,19 +1,16 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Code, CheckCircle, ArrowRight, Star, Zap, Shield, Smartphone, Database, Clock, Link as LinkIcon } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
 
-const WebDevelopmentPage: React.FC = () => {
+const Web Development Page: React.F C = () => {
   const services = [
     {
       icon: Code,
       title: 'Frontend Development',
       description: 'Modern, responsive web applications built with React, Next.js, and cutting-edge technologies.',
-      features: ['React/Next.js', 'TypeScript', 'Tailwind CSS', 'Responsive Design'],
+      features: ['React/Next.js', 'Type Script', 'Tailwind C SS', 'Responsive Design'],
       price: 'Starting at $3,000',
       color: 'from-blue-500 to-cyan-500'
     },
@@ -21,7 +18,7 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Code,
       title: 'Backend Development',
       description: 'Robust server-side applications with Node.js, Python, and scalable architectures.',
-      features: ['Node.js/Python', 'RESTful APIs', 'Database Design', 'Cloud Integration'],
+      features: ['Node.js/Python', 'R ES Tful A PIs', 'Database Design', 'Cloud Integration'],
       price: 'Starting at $4,000',
       color: 'from-green-500 to-emerald-500'
     },
@@ -29,7 +26,7 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Globe,
       title: 'Full-Stack Development',
       description: 'Complete web solutions from frontend to backend with seamless integration.',
-      features: ['End-to-End Development', 'Database Integration', 'API Development', 'Deployment'],
+      features: ['End-to-End Development', 'Database Integration', 'A PI Development', 'Deployment'],
       price: 'Starting at $6,000',
       color: 'from-purple-500 to-pink-500'
     },
@@ -45,404 +42,260 @@ const WebDevelopmentPage: React.FC = () => {
   const technologies = [
     {
       title: 'Frontend',
-      items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion']
+      items: ['React', 'Next.js', 'Type Script', 'Tailwind C SS', 'Framer Motion']
     },
     {
       title: 'Backend',
-      items: ['Node.js', 'Python', 'Express.js', 'FastAPI', 'PostgreSQL']
+      items: ['Node.js', 'Python', 'Express.js', 'Fast AP I', 'Postgre SQ L']
     },
     {
       title: 'Cloud',
-      items: ['AWS', 'Azure', 'Google Cloud', 'Vercel', 'Netlify']
+      items: ['A WS', 'Azure', 'Google Cloud', 'Vercel', 'Netlify']
     },
     {
       title: 'Tools',
-      items: ['Git', 'Docker', 'CI/CD', 'Testing', 'Monitoring']
+      items: ['Git', 'Docker', 'C I/C D', 'Testing', 'Monitoring']
     }
   ];
   return (
-    <>
-<<<<<<< HEAD
-      <Helmet>
-=======
-    <>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <title>Web Development - Zion Tech Group</title>
-        <meta const name = "description" content="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern, responsive, and scalable web applications." / / />
-        <meta name="keywords" content="web development, frontend development, backend development, full-stack development, e-commerce, React, Node.js" / / />
-      </Helmet>
-    </>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <H elmet>
+        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </H elmet>
+        <t itle>Web Development - Zion Tech Group</t itle>
+        <m eta const name = "description" content="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern, responsive, and scalable web applications." / / />
+        <m eta name="keywords" content="web development, frontend development, backend development, full-stack development, e-commerce, React, Node.js" / / />
+      </H elmet>
+
+      <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        </d iv>
         {/* Hero Section */}
-    <>
-        <section className="pt-32pb-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-center max-w-4xlmx-auto">
-              <h1 className="text-5 xl md:text-6 xl font-bold text-white mb-6" />
-                Web <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  >Development</span>
+
+        <s ection class Name="p t-32pb-20" />
+          <d iv class Name="c ontainermx-autopx-4">
+        </d iv>
+            <d iv class Name="t ext-center max-w-4xlmx-auto">
+        </d iv>
+              <h1 c lass Name="t ext-5 xl md:text-6 xl font-boldtext-whitemb-6" />
+                Web <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Development</s pan>
               </h1>
-              <p className="text-xl text-gray-300 mb-8leading-relaxed">
-              Create powerful, modern web applications that engage users and drive business growth. 
-=======
-        </div>
-            <div className="text-center max-w-4xlmx-auto">
-        </div>
-              <h1 className="text-5 xl md:text-6 xl font-boldtext-whitemb-6" />
-                Web <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Development</span>
-              </h1>
-              <p className="text-xl text-gray-300mb-8leading-relaxed" />
-    </>
+              <p c lass Name="t ext-xl text-gray-300mb-8leading-relaxed" />
+
                 Create powerful, modern web applications that engage users and drive business growth. 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                 From simple websites to complex web platforms, we deliver exceptional digital experiences.
-    <>
+
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project
-                </Link>
-                <Link to="/it-services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All IT Services
-                </Link>
-              </div>
-          </div>
-        </section>
-    </>
+              <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+                <L ink to="/contact" class Name="b g-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project
+                </L ink>
+                <L ink to="/it-services" class Name="b order border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All I T Services
+                </L ink>
+              </d iv>
+          </d iv>
+        </s ection>
 
         {/* Services Section */}
-    <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  >Web Solutions</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Comprehensive web development services for all your digital needs
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6" />
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Web Solutions</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
-                Comprehensive web development services for all your digital needs
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
 
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <s ection class Name="p y-20" />
+          <d iv class Name="c ontainermx-autopx-4">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-4 xl font-boldtext-whitemb-6" />
+                Our <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Web Solutions</s pan>
+              </h2>
+              <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto" />
+
+                Comprehensive web development services for all your digital needs
+
+              </p>
+            </d iv>
+
+            <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+        </d iv>
               {services.map((service, index) => (
-                <div 
+                <d iv 
                   key="{index}"
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
-    <>
-                  <div className="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`} />
-                    <service.icon className="w-8h-8text-white" />
-                  </div>
-    </>
-                  
-<<<<<<< HEAD
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{service.title}
-=======
-    <>
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{service.title}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  class Name="b g-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
+
+                  <d iv class Name="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`} />
+                    <s ervice.icon class Name="w-8h-8t ext-white" />
+                  </d iv>
+
+                  <h3 c lass Name="t ext-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{service.title}
                   </h3>
-    </>
-                  
-<<<<<<< HEAD
-                  <p className="text-gray-300 mb-6leading-relaxed">
-              {service.description}
-=======
-                  <p className="text-gray-300mb-6leading-relaxed">
+
+                  <p c lass Name="t ext-gray-300mb-6leading-relaxed">
                     {service.description}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                   </p>
 
-                  <ul className="space-y-2mb-6" />
-                    {service.features.map((feature, featureIndex) => (
-    <>
-                      <li key="{featureIndex}" className="flex items-centertext-smtext-gray-300" />
-<<<<<<< HEAD
-                        <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" />
-=======
-                        <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" / />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  <u l class Name="s pace-y-2mb-6" />
+                    {service.features.map((feature, feature Index) => (
 
-<<<<<<< HEAD
-                  <div className="flex items-centerjustify-betweenmb-6">
-                    <span className="text-2 xlfont-boldtext-cyan-400"  >{service.price}</span>
-                    <Link to="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1inline-flex items-center" >
-          Learn More 
-          <ArrowRight className="w-4h-4ml-1"  />
-        </Link>
-                  </div>
-=======
-    <>
-                  <div className="flex items-centerjustify-betweenmb-6">
-        </div>
-                    <span className="text-2 xlfont-boldtext-cyan-400">{service.price}</span>
-                    <Link to="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1inline-flexitems-center" />
-                      Learn More <ArrowRight className="w-4h-4ml-1" />
-                    </Link>
-                  </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                      <l i key="{feature Index}" class Name="f lex items-centertext-smtext-gray-300" />
+                        <C heck Circle class Name="w-4 h-4 t ext-green-400mr-2flex-shrink-0" / />
+
+                        {feature}
+                      </l i>
+                    ))}
+                  </u l>
+
+                  <d iv class Name="f lex items-centerjustify-betweenmb-6">
+        </d iv>
+                    <s pan class Name="t ext-2 xlfont-boldtext-cyan-400">{service.price}</s pan>
+                    <L ink to="/contact" class Name="t ext-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1inline-flexitems-center" />
+                      Learn More <A rrow Right class Name="w-4h-4m l-1" />
+                    </L ink>
+                  </d iv>
+
               ))}
-    <>
-            </div>
-        </section>
-    </>
+
+            </d iv>
+        </s ection>
 
         {/* Technologies Section */}
-    <>
-        <section className="py-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-                Technologies <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  >We Use</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Modern, proven technologies for building exceptional web applications
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6" />
-                Technologies <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">We Use</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
-                Modern, proven technologies for building exceptional web applications
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
 
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+        <s ection class Name="p y-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />
+          <d iv class Name="c ontainermx-autopx-4">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-4 xl font-boldtext-whitemb-6" />
+                Technologies <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">We Use</s pan>
+              </h2>
+              <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto" />
+
+                Modern, proven technologies for building exceptional web applications
+
+              </p>
+            </d iv>
+
+            <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+        </d iv>
               {technologies.map((tech, index) => (
-    <>
-                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50rounded-xlp-6" />
-<<<<<<< HEAD
-                  <h3 className="text-xl font-bold text-white mb-4text-center"  >{tech.title}</h3>
-=======
-                  <h3 className="text-xl font-bold text-whitemb-4text-center">{tech.title}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  <ul className="space-y-2" />
-    </>
-                    {tech.items.map((item, itemIndex) => (
-<<<<<<< HEAD
-                      <li key="{itemIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" />
-=======
-    <>
-                      <li key="{itemIndex}" className="flexitems-centertext-gray-300" />
-                        <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" / />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+                <d iv key="{index}" class Name="b g-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50rounded-xlp-6" />
+                  <h3 c lass Name="t ext-xl font-bold text-whitemb-4text-center">{tech.title}</h3>
+                  <u l class Name="s pace-y-2" />
+
+                    {tech.items.map((item, item Index) => (
+
+                      <l i key="{item Index}" class Name="f lexitems-centertext-gray-300" />
+                        <C heck Circle class Name="w-4 h-4 t ext-green-400mr-2flex-shrink-0" / />
+
                         {item}
-                      </li>
+                      </l i>
                     ))}
-    <>
-                  </ul>
-                </div>
-    </>
+
+                  </u l>
+                </d iv>
+
               ))}
-    <>
-            </div>
-        </section>
-    </>
+
+            </d iv>
+        </s ection>
 
         {/* Why Choose Us */}
-    <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  >Zion Tech Group</span>?
+
+        <s ection class Name="p y-20" />
+          <d iv class Name="c ontainermx-autopx-4">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-4 xl font-boldtext-whitemb-6" />
+                Why Choose <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Zion Tech Group</s pan>?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              We deliver exceptional web solutions through expertise, innovation, and commitment to quality
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6" />
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Zion Tech Group</span>?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-    </>
+              <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto" />
+
                 We deliver exceptional web solutions through expertise, innovation, and commitment to quality
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-              <div className="text-centergroup">
-                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
-                  <Zap className="w-10h-10text-cyan-400" />
-                </div>
-                <h3 className="text-2 xl font-bold text-white mb-4"  >Fast Development</h3>
-                <p className="text-gray-300leading-relaxed">
-              Rapid development cycles with modern tools and agile methodologies for faster time-to-market.
-=======
-    <>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-        </div>
-              <div className="text-centergroup" />
-                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
-        </div>
-                  <Zap className="w-10h-10text-cyan-400" / />
-                </div>
-                <h3 className="text-2 xl font-boldtext-whitemb-4">Fast Development</h3>
-                <p className="text-gray-300leading-relaxed" />
-    </>
+              </p>
+            </d iv>
+
+            <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+        </d iv>
+              <d iv class Name="t ext-centergroup" />
+                <d iv class Name="w-20 h-20 b g-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
+        </d iv>
+                  <Z ap class Name="w-10h-10t ext-cyan-400" / />
+                </d iv>
+                <h3 c lass Name="t ext-2 xl font-boldtext-whitemb-4">Fast Development</h3>
+                <p c lass Name="t ext-gray-300leading-relaxed" />
+
                   Rapid development cycles with modern tools and agile methodologies for faster time-to-market.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </p>
-              </div>
-    </>
 
-<<<<<<< HEAD
-              <div className="text-centergroup">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
-                  <Users className="w-10h-10text-purple-400" />
-                </div>
-                <h3 className="text-2 xl font-bold text-white mb-4"  >Expert Team</h3>
-                <p className="text-gray-300leading-relaxed">
-              Certified developers with years of experience in modern web technologies and best practices.
-=======
-    <>
-              <div className="text-centergroup" />
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
-        </div>
-                  <Users className="w-10h-10text-purple-400" / />
-                </div>
-                <h3 className="text-2 xl font-boldtext-whitemb-4">Expert Team</h3>
-                <p className="text-gray-300leading-relaxed" />
-    </>
+                </p>
+              </d iv>
+
+              <d iv class Name="t ext-centergroup" />
+                <d iv class Name="w-20 h-20 b g-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
+        </d iv>
+                  <U sers class Name="w-10h-10t ext-purple-400" / />
+                </d iv>
+                <h3 c lass Name="t ext-2 xl font-boldtext-whitemb-4">Expert Team</h3>
+                <p c lass Name="t ext-gray-300leading-relaxed" />
+
                   Certified developers with years of experience in modern web technologies and best practices.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </p>
-              </div>
-    </>
 
-<<<<<<< HEAD
-              <div className="text-centergroup">
-                <div className="w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
-                  <Award className="w-10h-10text-green-400" />
-                </div>
-                <h3 className="text-2 xl font-bold text-white mb-4"  >Quality Assurance</h3>
-                <p className="text-gray-300leading-relaxed">
-              Comprehensive testing and quality assurance to ensure your web application works flawlessly.
-=======
-    <>
-              <div className="text-centergroup" />
-                <div className="w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
-        </div>
-                  <Award className="w-10h-10text-green-400" / />
-                </div>
-                <h3 className="text-2 xl font-boldtext-whitemb-4">Quality Assurance</h3>
-                <p className="text-gray-300leading-relaxed" />
-    </>
+                </p>
+              </d iv>
+
+              <d iv class Name="t ext-centergroup" />
+                <d iv class Name="w-20 h-20 b g-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
+        </d iv>
+                  <A ward class Name="w-10h-10t ext-green-400" / />
+                </d iv>
+                <h3 c lass Name="t ext-2 xl font-boldtext-whitemb-4">Quality Assurance</h3>
+                <p c lass Name="t ext-gray-300leading-relaxed" />
+
                   Comprehensive testing and quality assurance to ensure your web application works flawlessly.
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </p>
-              </div>
-          </div>
-        </section>
-    </>
 
-        {/* CTA Section */}
-    <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center">
-              <h2 className="text-4xl font-bold text-white mb-6"  />Ready to Build Your Web Application?
+                </p>
+              </d iv>
+          </d iv>
+        </s ection>
+
+        {/* C TA Section */}
+
+        <s ection class Name="p y-20" />
+          <d iv class Name="c ontainermx-autopx-4">
+        </d iv>
+            <d iv class Name="b g-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center">
+        </d iv>
+              <h2 c lass Name="t ext-4 xl font-boldtext-whitemb-6">Ready to Build Your Web Application?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto">
-              Let's discuss your web project and create a solution that engages your users and drives business growth.
-              </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-        </div>
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center">
-        </div>
-              <h2 className="text-4 xl font-boldtext-whitemb-6">Ready to Build Your Web Application?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
-    </>
+              <p c lass Name="t ext-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
+
                 Let's discuss your web project and create a solution that engages your users and drives business growth.
-    <>
+
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project
-                </Link>
-                <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
-                </Link>
-              </div>
-          </div>
-        </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
+              <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+                <L ink to="/contact" class Name="b g-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project
+                </L ink>
+                <L ink to="/about" class Name="b order border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
+                </L ink>
+              </d iv>
+          </d iv>
+        </s ection>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+      </d iv>
+
   );
 };
 
-export default WebDevelopmentPage;
-    </>
+export default Web Development Page;

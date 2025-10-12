@@ -1,52 +1,45 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { Link } from 'react-router-dom';
 import { ArrowRight, Bot, Key} from 'lucide-react';
-=======
-import { ArrowRight, Shield, CheckCircle, Clock, Target, Smartphone, Lock, Bot, AlertTriangle, Star, Smartphone as Mobile, Key, Lock as LockIcon, AlertTriangle as Alert, Activity, Network } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
+import { ArrowRight, Shield, CheckCircle, Clock, Target, Smartphone, Lock, Bot, Alert Triangle, Star, Smartphone as Mobile, Key, Lock as Lock Icon, Alert Triangle as Alert, Activity, Network } from 'lucide-react';
 
-export default function AICybersecuritySuiteProPage() {
+export default function A ICybersecurity Suite Pro Page() {
   const features = [
     {
-      icon: <Bot className="w-6h-6text-cyan-400" />,
-      title: 'AI Threat Detection',
+      icon: <B ot class Name="w-6h-6t ext-cyan-400" />,
+      title: 'A I Threat Detection',
       description: 'Advanced machine learning algorithms detect and prevent threats in real-time with 99.9% accuracy'
     },
     {
-      icon: <Shield className="w-6h-6text-emerald-400" />,
+      icon: <S hield class Name="w-6h-6t ext-emerald-400" />,
       title: 'Zero-Trust Architecture',
       description: 'Implement comprehensive zero-trust security model with continuous verification and monitoring'
     },
     {
-      icon: <Activity className="w-6h-6text-purple-400" />,
+      icon: <A ctivity class Name="w-6h-6t ext-purple-400" />,
       title: 'Real-time Monitoring',
       description: '24/7 network monitoring with instant alerts and automated response to security incidents'
     },
     {
-      icon: <Key className="w-6h-6text-orange-400" />,
+      icon: <K ey class Name="w-6h-6t ext-orange-400" />,
       title: 'Advanced Encryption',
       description: 'Military-grade encryption with quantum-resistant algorithms for maximum data protection'
     },
     {
-      icon: <Network className="w-6h-6text-pink-400" />,
+      icon: <N etwork class Name="w-6h-6t ext-pink-400" />,
       title: 'Network Security',
-      description: 'Comprehensive network protection with AI-powered intrusion detection and prevention'
+      description: 'Comprehensive network protection with A I-powered intrusion detection and prevention'
     },
     {
-      icon: <Alert className="w-6h-6text-red-400" />,
+      icon: <A lert class Name="w-6h-6t ext-red-400" />,
       title: 'Incident Response',
-      description: 'Automated incident response with AI-driven forensics and rapid threat containment'
+      description: 'Automated incident response with A I-driven forensics and rapid threat containment'
     }
   ]
 
-  const pricingPlans = [
+  const pricing Plans = [
     {
       name: 'Essential',
       price: '$199',
@@ -54,7 +47,7 @@ export default function AICybersecuritySuiteProPage() {
       description: 'Perfect for small businesses',
       features: [
         'Up to 50 devices',
-        'Basic AI threat detection',
+        'Basic A I threat detection',
         'Email security',
         'Email support',
         'Basic reporting',
@@ -69,7 +62,7 @@ export default function AICybersecuritySuiteProPage() {
       description: 'Ideal for growing businesses',
       features: [
         'Up to 500 devices',
-        'Advanced AI features',
+        'Advanced A I features',
         'Network security',
         'Priority support',
         'Advanced analytics',
@@ -86,13 +79,13 @@ export default function AICybersecuritySuiteProPage() {
       description: 'For large organizations',
       features: [
         'Unlimited devices',
-        'All AI features',
+        'All A I features',
         'Custom integrations',
         'Dedicated support',
         'White-label option',
         'Advanced security',
         'Custom reporting',
-        'SLA guarantee'
+        'S LA guarantee'
       ],
       popular: false
     }
@@ -101,54 +94,54 @@ export default function AICybersecuritySuiteProPage() {
   const testimonials = [
     {
       name: 'David Kim',
-      company: 'Financial Services CISO',
-      content: 'Prevented 3 major cyber attacks in the first month. The AI threat detection is incredibly sophisticated and accurate.',
+      company: 'Financial Services C IS O',
+      content: 'Prevented 3 major cyber attacks in the first month. The A I threat detection is incredibly sophisticated and accurate.',
       rating: 5,
-      avatar: 'DK'
+      avatar: 'D K'
     },
     {
       name: 'Lisa Martinez',
-      company: 'Healthcare IT Director',
-      content: 'Achieved HIPAA compliance in record time. The automated compliance monitoring is a game-changer.',
+      company: 'Healthcare I T Director',
+      content: 'Achieved H IP AA compliance in record time. The automated compliance monitoring is a game-changer.',
       rating: 5,
-      avatar: 'LM'
+      avatar: 'L M'
     },
     {
       name: 'James Wilson',
-      company: 'Manufacturing CTO',
+      company: 'Manufacturing C TO',
       content: 'Our security posture improved by 400%. The real-time monitoring and incident response are exceptional.',
       rating: 5,
-      avatar: 'JW'
+      avatar: 'J W'
     }
   ]
 
   const benefits = [
     {
-      icon: <Shield className="w-8h-8text-cyan-400" />,
+      icon: <S hield class Name="w-8h-8t ext-cyan-400" />,
       title: '99.9% Threat Detection',
-      description: 'AI-powered detection prevents security breaches before they happen'
+      description: 'A I-powered detection prevents security breaches before they happen'
     },
     {
-      icon: <Clock className="w-8h-8text-emerald-400" />,
+      icon: <C lock class Name="w-8h-8t ext-emerald-400" />,
       title: 'Real-time Response',
       description: 'Instant threat containment and automated incident response'
     },
     {
-      icon: <Target className="w-8h-8text-purple-400" />,
+      icon: <T arget class Name="w-8h-8t ext-purple-400" />,
       title: 'Zero False Positives',
-      description: 'Advanced AI eliminates false alarms and focuses on real threats'
+      description: 'Advanced A I eliminates false alarms and focuses on real threats'
     },
     {
-      icon: <Lock className="w-8h-8text-orange-400" />,
+      icon: <L ock class Name="w-8h-8t ext-orange-400" />,
       title: 'Enterprise Security',
       description: 'Military-grade encryption and compliance with industry standards'
     }
   ]
 
-  const securityFeatures = [
+  const security Features = [
     { 
       title: 'Threat Intelligence', 
-      description: 'Global threat intelligence feeds with AI-powered analysis',
+      description: 'Global threat intelligence feeds with A I-powered analysis',
       icon: '🧠',
       benefit: 'Prevent 99.9% of known threats'
     },
@@ -184,578 +177,371 @@ export default function AICybersecuritySuiteProPage() {
     }
   ]
 
-  const complianceStandards = [
-    'SOC 2 Type II', 'ISO 27001', 'HIPAA', 'GDPR', 'PCI DSS', 'NIST', 'CIS Controls', 'COBIT'
+  const compliance Standards = [
+    'S OC 2 Type I I', 'I SO 27001', 'H IP AA', 'G DP R', 'P CI D SS', 'N IS T', 'C IS Controls', 'C OB IT'
   ]
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
-      <Helmet />
-        <title   />AI Cybersecurity Suite Pro - Zion Tech Group | Advanced Security Solutions</title>
-=======
-    <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900 pt-20">
-        </div>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-        <title>AI Cybersecurity Suite Pro - Zion Tech Group | Advanced Security Solutions</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <meta name="description" content="Revolutionary AI-powered cybersecurity suite with threat detection, zero-trust architecture, and real-time monitoring. 99.9% threat detection accuracy. Starting at $199/month." / / />
-        <meta name="keywords" content="AI cybersecurity, threat detection, zero-trust security, network monitoring, incident response, security automation" / / />
-        <meta name="robots" content="index, follow" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-cybersecurity-suite-pro" />
-      </Helmet>
+
+    <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900 pt-20">
+        </d iv>
+      <H elmet>
+        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </H elmet>
+        <t itle>A I Cybersecurity Suite Pro - Zion Tech Group | Advanced Security Solutions</t itle>
+        <m eta name="description" content="Revolutionary A I-powered cybersecurity suite with threat detection, zero-trust architecture, and real-time monitoring. 99.9% threat detection accuracy. Starting at $199/month." / / />
+        <m eta name="keywords" content="A I cybersecurity, threat detection, zero-trust security, network monitoring, incident response, security automation" / / />
+        <m eta name="robots" content="index, follow" / / />
+        <l ink rel="canonical" href="https://ziontechgroup.com/ai-cybersecurity-suite-pro" />
+      </H elmet>
 
       {/* Hero Section */}
-    <>
-      <section className="relative py-20px-4overflow-hidden" />
-<<<<<<< HEAD
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1)_0%,transparent_50%)]" />
-        <div className="relative max-w-7xlmx-autotext-center">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-            <Shield className="w-4h-4" />
-            <span   />AI-Powered Cybersecurity</span>
-=======
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.1)_0%,transparent_50%)]" / />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1)_0%,transparent_50%)]" / />
-        <div className="relative max-w-7 xlmx-autotext-center">
-        </div>
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-        </div>
-            <Shield className="w-4h-4" / />
-            <span>AI-Powered Cybersecurity</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          </div>
+
+      <s ection class Name="r elative py-20px-4overflow-hidden" />
+        <d iv class Name="a bsoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.1)_0%,transparent_50%)]" / />
+        <d iv class Name="a bsoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1)_0%,transparent_50%)]" / />
+        <d iv class Name="r elative max-w-7 xlmx-autotext-center">
+        </d iv>
+          <d iv class Name="i nline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
+        </d iv>
+            <S hield class Name="w-4h-4" / />
+            <s pan>A I-Powered Cybersecurity</s pan>
+          </d iv>
           
-          <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
-            AI Cybersecurity
-    <>
-            <br / />
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">Suite Pro
-            </span>
+          <h1 c lass Name="t ext-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
+            A I Cybersecurity
+
+            <b r / />
+            <s pan class Name="b g-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">Suite Pro
+            </s pan>
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
-<<<<<<< HEAD
-              Protect your organization with AI-powered cybersecurity that detects and prevents threats in real-time. 
+          <p c lass Name="t ext-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
+            Protect your organization with A I-powered cybersecurity that detects and prevents threats in real-time. 
             Achieve 99.9% threat detection accuracy with zero-trust architecture and automated incident response.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" >
-           
-          <span    />
-        </Link>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-            <Link to="#pricing" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>View Pricing</span>
-=======
-            Protect your organization with AI-powered cybersecurity that detects and prevents threats in real-time. 
-            Achieve 99.9% threat detection accuracy with zero-trust architecture and automated incident response.
-          </p>
-          
-    <>
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-        </div>
-            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
-              <span>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-            <Link to="#pricing" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-              <span>View Pricing</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-          </div>
+
+          <d iv class Name="f lex flex-col sm:flex-row gap-6justify-centermb-16">
+        </d iv>
+            <L ink to="/contact" class Name="g roup bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
+              <s pan>Start Free Trial</s pan>
+              <A rrow Right class Name="w-5 h-5g roup-hover:translate-x-1transition-transform" />
+            </L ink>
+            <L ink to="#pricing" class Name="g roup border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+              <s pan>View Pricing</s pan>
+              <A rrow Right class Name="w-5 h-5g roup-hover:translate-x-1transition-transform" />
+            </L ink>
+          </d iv>
 
           {/* Key Stats */}
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xlmx-auto">
-            <div className="text-center">
-              <div className="text-3 xl font-boldtext-cyan-400mb-2"   />99.9%</div>
-              <div className="text-gray-300text-sm"   />Threat Detection</div>
-            <div className="text-center">
-              <div className="text-3 xl font-boldtext-purple-400mb-2"   />24/7</div>
-              <div className="text-gray-300text-sm"   />Real-time Monitoring</div>
-            <div className="text-center">
-              <div className="text-3 xl font-boldtext-pink-400mb-2"   />0</div>
-              <div className="text-gray-300text-sm"   />False Positives</div>
-            <div className="text-center">
-              <div className="text-3 xl font-boldtext-emerald-400mb-2"   />10 K+</div>
-              <div className="text-gray-300text-sm"   />Protected Organizations</div>
-=======
-    <>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xlmx-auto">
-        </div>
-            <div className="text-center" />
-              <div className="text-3 xl font-boldtext-cyan-400mb-2">99.9%</div>
-              <div className="text-gray-300text-sm">Threat Detection</div>
-            <div className="text-center" />
-              <div className="text-3 xl font-boldtext-purple-400mb-2">24/7</div>
-              <div className="text-gray-300text-sm">Real-time Monitoring</div>
-            <div className="text-center" />
-              <div className="text-3 xl font-boldtext-pink-400mb-2">0</div>
-              <div className="text-gray-300text-sm">False Positives</div>
-            <div className="text-center" />
-              <div className="text-3 xl font-boldtext-emerald-400mb-2">10 K+</div>
-              <div className="text-gray-300text-sm">Protected Organizations</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-          </div>
-      </section>
+
+          <d iv class Name="g rid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-center" />
+              <d iv class Name="t ext-3 xl font-boldtext-cyan-400mb-2">99.9%</d iv>
+              <d iv class Name="t ext-gray-300text-sm">Threat Detection</d iv>
+            <d iv class Name="t ext-center" />
+              <d iv class Name="t ext-3 xl font-boldtext-purple-400mb-2">24/7</d iv>
+              <d iv class Name="t ext-gray-300text-sm">Real-time Monitoring</d iv>
+            <d iv class Name="t ext-center" />
+              <d iv class Name="t ext-3 xl font-boldtext-pink-400mb-2">0</d iv>
+              <d iv class Name="t ext-gray-300text-sm">False Positives</d iv>
+            <d iv class Name="t ext-center" />
+              <d iv class Name="t ext-3 xl font-boldtext-emerald-400mb-2">10 K+</d iv>
+              <d iv class Name="t ext-gray-300text-sm">Protected Organizations</d iv>
+          </d iv>
+      </s ection>
 
       {/* Benefits Section */}
-    <>
-      <section className="py-20px-4relative" />
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Why Choose Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />AI Cybersecurity Suite?</span>
-=======
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" / />
-        <div className="relative max-w-7xlmx-auto">
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Why Choose Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">AI Cybersecurity Suite?</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+      <s ection class Name="p y-20px-4relative" />
+        <d iv class Name="a bsolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" / />
+        <d iv class Name="r elative max-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+              Why Choose Our <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">A I Cybersecurity Suite?</s pan>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Experience the future of cybersecurity with cutting-edge AI technology that protects your organization.
-    <>
+            <p c lass Name="t ext-xl text-gray-300 max-w-4xlmx-auto">
+              Experience the future of cybersecurity with cutting-edge A I technology that protects your organization.
+
             </p>
-          </div>
+          </d iv>
           
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+        </d iv>
             {benefits.map((benefit, index) => (
-    <>
-              <div key="{index}" className="text-centergroup" />
-                <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 mx-auto group-hover:scale-110transition-transformduration-300">{benefit.icon}
-                </div>
-<<<<<<< HEAD
-                <h3 className="text-xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{benefit.title}
+
+              <d iv key="{index}" class Name="t ext-centergroup" />
+                <d iv class Name="f lex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 mx-auto group-hover:scale-110transition-transformduration-300">{benefit.icon}
+                </d iv>
+                <h3 c lass Name="t ext-xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{benefit.title}
                 </h3>
-                <p className="text-gray-300">
-              {benefit.description}
-=======
-                <h3 className="text-xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{benefit.title}
-                </h3>
-                <p className="text-gray-300" />
+                <p c lass Name="t ext-gray-300" />
                   {benefit.description}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
                 </p>
-              </div>
+              </d iv>
             ))}
-    <>
-          </div>
-      </section>
+
+          </d iv>
+      </s ection>
 
       {/* Security Features Section */}
-    <>
-      <section className="py-20px-4relative" />
-        <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Comprehensive <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Security Features</span>
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Comprehensive <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Security Features</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+      <s ection class Name="p y-20px-4relative" />
+        <d iv class Name="r elative max-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+              Comprehensive <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Security Features</s pan>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Complete cybersecurity protection across all attack vectors with AI-powered intelligence.
-    <>
+            <p c lass Name="t ext-xl text-gray-300 max-w-4xlmx-auto">
+              Complete cybersecurity protection across all attack vectors with A I-powered intelligence.
+
             </p>
-          </div>
+          </d iv>
           
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            {securityFeatures.map((feature, index) => (
-    <>
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                <div className="text-centermb-6">
-<<<<<<< HEAD
-                  <div className="text-4xlmb-4"   />{feature.icon}</div>
-                  <h3 className="text-xl font-bold text-whitegroup-hover:text-cyan-400 transition-colors"  />{feature.title}
+          <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
+        </d iv>
+            {security Features.map((feature, index) => (
+
+              <d iv key="{index}" class Name="g roup bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                <d iv class Name="t ext-centermb-6">
+        </d iv>
+                  <d iv class Name="t ext-4xlmb-4">{feature.icon}</d iv>
+                  <h3 c lass Name="t ext-xl font-bold text-whitegroup-hover:text-cyan-400transition-colors">{feature.title}
                   </h3>
-                </div>
-                <p className="text-gray-300text-centermb-4">
-              {feature.description}
-=======
-        </div>
-                  <div className="text-4xlmb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-bold text-whitegroup-hover:text-cyan-400transition-colors">{feature.title}
-                  </h3>
-                </div>
-                <p className="text-gray-300text-centermb-4" />
+                </d iv>
+                <p c lass Name="t ext-gray-300text-centermb-4" />
                   {feature.description}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
                 </p>
-                <div className="text-cyan-400 text-smfont-semiboldtext-center">{feature.benefit}
-                </div>
+                <d iv class Name="t ext-cyan-400 text-smfont-semiboldtext-center">{feature.benefit}
+                </d iv>
             ))}
-    <>
-          </div>
-      </section>
+
+          </d iv>
+      </s ection>
 
       {/* Compliance Standards Section */}
-    <>
-      <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
-        <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Industry <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Compliance</span>
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Industry <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Compliance</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+      <s ection class Name="p y-20 px-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
+        <d iv class Name="r elative max-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+              Industry <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Compliance</s pan>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
+            <p c lass Name="t ext-xl text-gray-300 max-w-4xlmx-auto">
               Meet and maintain compliance with major industry standards and regulations.
-    <>
+
             </p>
-          </div>
+          </d iv>
           
-          <div className="grid grid-cols-2md:grid-cols-4gap-4">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            {complianceStandards.map((standard, index) => (
-    <>
-              <div key="{index}" className="grouptext-center" />
-                <div className="w-full h-16 bg-white/10 backdrop-blur-lg rounded-xl flex items-center justify-center mx-auto mb-2 group-hover:bg-white/20 transition-allduration-300group-hover:scale-105">
-<<<<<<< HEAD
-                  <span className="text-gray-300 group-hover:text-whitetransition-colorsfont-medium"  />{standard}
-=======
-        </div>
-                  <span className="text-gray-300 group-hover:text-whitetransition-colorsfont-medium">{standard}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </span>
-                </div>
+          <d iv class Name="g rid grid-cols-2md:grid-cols-4gap-4">
+        </d iv>
+            {compliance Standards.map((standard, index) => (
+
+              <d iv key="{index}" class Name="g rouptext-center" />
+                <d iv class Name="w-f ull h-16 bg-white/10 backdrop-blur-lg rounded-xl flex items-center justify-center mx-auto mb-2 group-hover:bg-white/20 transition-allduration-300group-hover:scale-105">
+        </d iv>
+                  <s pan class Name="t ext-gray-300 group-hover:text-whitetransition-colorsfont-medium">{standard}
+                  </s pan>
+                </d iv>
             ))}
-    <>
-          </div>
-      </section>
+
+          </d iv>
+      </s ection>
 
       {/* Features Section */}
-    <>
-      <section className="py-20px-4relative" />
-        <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Advanced Features for <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Enterprise Security</span>
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Advanced Features for <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Enterprise Security</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+      <s ection class Name="p y-20px-4relative" />
+        <d iv class Name="r elative max-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+              Advanced Features for <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Enterprise Security</s pan>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Everything you need to protect your organization with AI-powered cybersecurity intelligence.
-    <>
+            <p c lass Name="t ext-xl text-gray-300 max-w-4xlmx-auto">
+              Everything you need to protect your organization with A I-powered cybersecurity intelligence.
+
             </p>
-          </div>
+          </d iv>
           
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+          <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
+        </d iv>
             {features.map((feature, index) => (
-    <>
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
-                </div>
-<<<<<<< HEAD
-                <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400 transition-colors"  />{feature.title}
+
+              <d iv key="{index}" class Name="g roup bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                <d iv class Name="f lex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
+                </d iv>
+                <h3 c lass Name="t ext-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title}
                 </h3>
-                <p className="text-gray-300leading-relaxed">
-              {feature.description}
-=======
-                <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title}
-                </h3>
-                <p className="text-gray-300leading-relaxed" />
+                <p c lass Name="t ext-gray-300leading-relaxed" />
                   {feature.description}
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
                 </p>
-              </div>
+              </d iv>
             ))}
-    <>
-          </div>
-      </section>
+
+          </d iv>
+      </s ection>
 
       {/* Pricing Section */}
-    <>
-      <section id="pricing" className="py-20px-4relative" />
-        <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Simple, Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Pricing</span>
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Simple, Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+      <s ection id="pricing" class Name="p y-20px-4relative" />
+        <d iv class Name="r elative max-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+              Simple, Transparent <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</s pan>
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Choose the plan that fits your organization size and security needs. All plans include our core AI features.
-    <>
+            <p c lass Name="t ext-xl text-gray-300 max-w-4xlmx-auto">
+              Choose the plan that fits your organization size and security needs. All plans include our core A I features.
+
             </p>
-          </div>
+          </d iv>
           
-          <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            {pricingPlans.map((plan, index) => (
-              <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
+          <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+        </d iv>
+            {pricing Plans.map((plan, index) => (
+              <d iv key="{index}" class Name="{`r elative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
                 plan.popular 
                   ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
                   : 'border-white/20 hover: border-cyan-400/30'
               }`} />
                 {plan.popular && (
-<<<<<<< HEAD
-                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold"  />Most Popular
-                    </div>
+
+                  <d iv class Name="a bsolute -top-4 left-1/2transform-translate-x-1/2">
+        </d iv>
+                    <d iv class Name="b g-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
+                    </d iv>
                 )}
+
+                <d iv class Name="t ext-centermb-8">
+        </d iv>
+                  <h3 c lass Name="t ext-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
+                  <p c lass Name="t ext-gray-300text-smmb-4">{plan.description}</p>
+                  <d iv class Name="f lexitems-baselinejustify-center" />
+                    <s pan class Name="t ext-5 xlfont-boldtext-cyan-400">{plan.price}</s pan>
+                    <s pan class Name="t ext-gray-300ml-2">{plan.period}</s pan>
+                  </d iv>
                 
-                <div className="text-centermb-8">
-                  <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                  <p className="text-gray-300text-smmb-4">
-              {plan.description}</p>
-                  <div className="flex items-baselinejustify-center">
-                    <span className="text-5 xlfont-boldtext-cyan-400"   />{plan.price}</span>
-                    <span className="text-gray-300ml-2"   />{plan.period}</span>
-=======
-    <>
-                  <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-        </div>
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
-                    </div>
-                )}
-                
-    <>
-                <div className="text-centermb-8">
-        </div>
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300text-smmb-4">{plan.description}</p>
-                  <div className="flexitems-baselinejustify-center" />
-                    <span className="text-5 xlfont-boldtext-cyan-400">{plan.price}</span>
-                    <span className="text-gray-300ml-2">{plan.period}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  </div>
-                
-                <ul className="space-y-4mb-8" />
-                  {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-                    <li key="{featureIndex}" className="flex items-centerspace-x-3" />
-                      <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" />
-                      <span className="text-gray-300"   />{feature}</span>
-=======
-    <>
-                    <li key="{featureIndex}" className="flexitems-centerspace-x-3" />
-                      <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" / />
-                      <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </li>
+                <u l class Name="s pace-y-4mb-8" />
+                  {plan.features.map((feature, feature Index) => (
+
+                    <l i key="{feature Index}" class Name="f lexitems-centerspace-x-3" />
+                      <C heck Circle class Name="w-5 h-5t ext-green-400flex-shrink-0" / />
+                      <s pan class Name="t ext-gray-300">{feature}</s pan>
+                    </l i>
                   ))}
-                </ul>
+                </u l>
                 
-                <Link 
+                <L ink 
                   to="/contact"
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  class Name="{`b lock" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
                   }`}
                   />Get Started
-    <>
-                </Link>
-              </div>
+
+                </L ink>
+              </d iv>
             ))}
-    <>
-          </div>
-      </section>
+
+          </d iv>
+      </s ection>
 
       {/* Testimonials Section */}
-    <>
-      <section className="py-20px-4relative" />
-        <div className="relative max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Trusted by <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />10,000+</span> Organizations
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-              Trusted by <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">10,000+</span> Organizations
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              See what our customers are saying about their success with our AI cybersecurity suite.
-    <>
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            {testimonials.map((testimonial, index) => (
-    <>
-              <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
-<<<<<<< HEAD
-                <div className="flex items-centermb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4"  />{testimonial.avatar}
-                  </div>
-                  <div />
-                    <div className="font-semiboldtext-white"   />{testimonial.name}</div>
-                    <div className="text-gray-400text-sm"   />{testimonial.company}</div>
-                </div>
-                <div className="flexmb-4">
-=======
-                <div className="flexitems-centermb-4">
-        </div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar}
-                  </div>
-                  <div />
-                    <div className="font-semiboldtext-white">{testimonial.name}</div>
-                    <div className="text-gray-400text-sm">{testimonial.company}</div>
-                </div>
-                <div className="flexmb-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
-                  ))}
-    <>
-                </div>
-<<<<<<< HEAD
-                <p className="text-gray-300italic">
-              "{testimonial.content}"</p>
-=======
-                <p className="text-gray-300italic">"{testimonial.content}"</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </div>
-            ))}
-    <>
-          </div>
-      </section>
 
-      {/* CTA Section */}
-    <>
-      <section className="py-20px-4relative" />
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
-              <div className="relativez-10">
-                <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" />
-                  Ready to Secure Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Organization?</span>
+      <s ection class Name="p y-20px-4relative" />
+        <d iv class Name="r elative max-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-4 xl md:text-5 xl font-boldtext-whitemb-6" />
+              Trusted by <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">10,000+</s pan> Organizations
+            </h2>
+            <p c lass Name="t ext-xl text-gray-300 max-w-4xlmx-auto">
+              See what our customers are saying about their success with our A I cybersecurity suite.
+
+            </p>
+          </d iv>
+          
+          <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+        </d iv>
+            {testimonials.map((testimonial, index) => (
+
+              <d iv key="{index}" class Name="b g-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
+                <d iv class Name="f lexitems-centermb-4">
+        </d iv>
+                  <d iv class Name="w-12 h-12 b g-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar}
+                  </d iv>
+                  <d iv />
+                    <d iv class Name="f ont-semiboldtext-white">{testimonial.name}</d iv>
+                    <d iv class Name="t ext-gray-400text-sm">{testimonial.company}</d iv>
+                </d iv>
+                <d iv class Name="f lexmb-4">
+        </d iv>
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <S tar key="{i}" class Name="w-5 h-5t ext-yellow-400fill-current" />
+                  ))}
+
+                </d iv>
+                <p c lass Name="t ext-gray-300italic">"{testimonial.content}"</p>
+              </d iv>
+            ))}
+
+          </d iv>
+      </s ection>
+
+      {/* C TA Section */}
+
+      <s ection class Name="p y-20px-4relative" />
+        <d iv class Name="a bsolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" / />
+        <d iv class Name="r elative max-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-center" />
+            <d iv class Name="b g-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
+        </d iv>
+              <d iv class Name="r elativez-10">
+        </d iv>
+                <h2 c lass Name="t ext-4 xl sm:text-5 xl md:text-6 xl font-bold text-whitemb-6leading-tight" />
+                  Ready to Secure Your <s pan class Name="b g-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">Organization?</s pan>
                 </h2>
                 
-                <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
-              Join thousands of organizations already protected with our AI-powered cybersecurity suite. 
+                <p c lass Name="t ext-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
+                  Join thousands of organizations already protected with our A I-powered cybersecurity suite. 
                   Start your free trial today and experience the future of enterprise security.
                 </p>
-                
-                <div className="flex flex-col sm:flex-row gap-6justify-centermb-8">
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
-           
-          <span    />
-        </Link>Start Free Trial</span>
-                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                  </Link>
-                  <Link to="#pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>View All Plans</span>
-=======
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" / />
-        <div className="relative max-w-7xlmx-auto">
-        </div>
-          <div className="text-center" />
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
-        </div>
-              <div className="relativez-10">
-        </div>
-                <h2 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-whitemb-6leading-tight" />
-                  Ready to Secure Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">Organization?</span>
-                </h2>
-                
-                <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
-                  Join thousands of organizations already protected with our AI-powered cybersecurity suite. 
-                  Start your free trial today and experience the future of enterprise security.
-                </p>
-                
-    <>
-                <div className="flex flex-col sm:flex-row gap-6justify-centermb-8">
-        </div>
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
-                    <span>Start Free Trial</span>
-                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                  </Link>
-                  <Link to="#pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                    <span>View All Plans</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                  </Link>
-                </div>
-                
-<<<<<<< HEAD
-                <div className="text-white/80text-sm">
-                  <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-=======
-    <>
-                <div className="text-white/80text-sm">
-        </div>
+
+                <d iv class Name="f lex flex-col sm:flex-row gap-6justify-centermb-8">
+        </d iv>
+                  <L ink to="/contact" class Name="g roup bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+                    <s pan>Start Free Trial</s pan>
+                    <A rrow Right class Name="w-5 h-5g roup-hover:translate-x-1transition-transform" />
+                  </L ink>
+                  <L ink to="#pricing" class Name="g roup border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+                    <s pan>View All Plans</s pan>
+                    <A rrow Right class Name="w-5 h-5g roup-hover:translate-x-1transition-transform" />
+                  </L ink>
+                </d iv>
+
+                <d iv class Name="t ext-white/80text-sm">
+        </d iv>
                   <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
-            </div>
-        </div>
-      </section>
-    </div>
+                </d iv>
+            </d iv>
+        </d iv>
+      </s ection>
+    </d iv>
   );
 }
-    </>

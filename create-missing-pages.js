@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 // List of pages that need to be created based on App.tsx imports
-const missingPages = [
+const missing Pages = [
   'pricing', 'blog', 'case-studies', 'careers', 'ai-services', 'it-services', 
   'micro-saas', 'consultation', 'support', 'privacy', 'terms', 'cookies', 
   'sitemap', 'ai-analytics', 'ai-automation', 'ai-chatbot-builder', 
@@ -32,68 +32,68 @@ const missingPages = [
 ];
 
 // Template for page components
-const pageTemplate = (pageName, title) => `'use client';
+const page Template = (page Name, title) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ${title}Page: React.FC = () => {
+const ${title}Page: React.F C = () => {
   return (
-    <>
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${title} services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="${pageName}, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                ${title}
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional ${title.toLowerCase()} services by Zion Tech Group.
-            </p>
-          </div>
 
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300 mb-6">
-              We're working on bringing you comprehensive ${title.toLowerCase()} solutions. 
+      <H elmet>
+        <t itle>${title} - Zion Tech Group</t itle>
+        <m eta name="description" content="${title} services by Zion Tech Group. Professional A I and I T solutions." />
+        <m eta name="keywords" content="${page Name}, A I solutions, I T services" />
+      </H elmet>
+      
+      <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <d iv class Name="c ontainer mx-auto px-4 py-16">
+          <d iv class Name="t ext-center mb-16">
+            <h1 c lass Name="t ext-4xl md:text-6xl font-bold text-white mb-6">
+              <s pan class Name="b g-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                ${title}
+              </s pan>
+            </h1>
+            <p c lass Name="t ext-xl text-gray-300 max-w-3xl mx-auto">
+              Professional ${title.to Lower Case()} services by Zion Tech Group.
+            </p>
+          </d iv>
+
+          <d iv class Name="b g-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
+            <h2 c lass Name="t ext-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p c lass Name="t ext-gray-300 mb-6">
+              We're working on bringing you comprehensive ${title.to Lower Case()} solutions. 
               Contact us to learn more about our services.
             </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+            <b utton class Name="b g-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
               Contact Us
-            </button>
-          </div>
-        </div>
-      </div>
-    </>
+            </b utton>
+          </d iv>
+        </d iv>
+      </d iv>
+
   );
 };
 
 export default ${title}Page;`;
 
 // Create missing pages
-missingPages.forEach(pageName => {
-  const title = pageName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
+missing Pages.for Each(page Name => {
+  const title = page Name.split('-').map(word => 
+    word.char At(0).to Upper Case() + word.slice(1)
   ).join(' ');
   
-  const pageDir = path.join('/workspace/app', pageName);
-  const pageFile = path.join(pageDir, 'page.tsx');
+  const page Dir = path.join('/workspace/app', page Name);
+  const page File = path.join(page Dir, 'page.tsx');
   
   // Create directory if it doesn't exist
-  if (!fs.existsSync(pageDir)) {
-    fs.mkdirSync(pageDir, { recursive: true });
+  if (!fs.exists Sync(page Dir)) {
+    fs.mkdir Sync(page Dir, { recursive: true });
   }
   
   // Create page file if it doesn't exist
-  if (!fs.existsSync(pageFile)) {
-    fs.writeFileSync(pageFile, pageTemplate(pageName, title));
-    console.log(`Created: ${pageFile}`);
+  if (!fs.exists Sync(page File)) {
+    fs.write File Sync(page File, page Template(page Name, title));
+    console.log(`Created: ${page File}`);
   }
 });
 

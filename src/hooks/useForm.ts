@@ -1,106 +1,106 @@
 /**
- * useForm Hook
+ * use Form Hook
  * Provides form state management and validation
  */
-import { useState, useCallback, ChangeEvent } from 'react';
+import { use State, use Callback, Change Event } from 'react';
 // import { logger } from '../utils/logger';
 
-} from '../utils/formValidation';
-  initialValues: T;
-  validationSchema?: Partial<Record<keyof T, ValidationRule[]>>;
-  onSubmit: (values: T) => void | Promise<void>;
-  validateOnChange?: boolean;
-  validateOnBlur?: boolean;
+} from '../utils/form Validation';
+  initial Values: T;
+  validation Schema?: Partial<R ecord<keyof T, Validation Rule[]>>;
+  on Submit: (values: T) => void | Promise<v oid>;
+  validate On Change?: boolean;
+  validate On Blur?: boolean;
 }
   values: T;
-  errors: Record<keyof T, string[]>;
-  touched: Record<keyof T, boolean>;
-  isSubmitting: boolean;
-  isValid: boolean;
-  handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
-  handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-  setFieldValue: (field: keyof T, value: T[keyof T]) => void;
-  setFieldError: (field: keyof T, errors: string[]) => void;
-  setFieldTouched: (field: keyof T, touched: boolean) => void;
-  resetForm: () => void;
-  validateField: (field: keyof T) => void;
-  validateAllFields: () => boolean;
+  errors: Record<k eyof T, string[]>;
+  touched: Record<k eyof T, boolean>;
+  is Submitting: boolean;
+  is Valid: boolean;
+  handle Change: (e: Change Event<H T M LInput Element | H TM LText Area Element | H TM LSelect Element>) => void;
+  handle Blur: (e: Change Event<H T M LInput Element | H TM LText Area Element | H TM LSelect Element>) => void;
+  handle Submit: (e: React.Form Event<H T M LForm Element>) => void;
+  set Field Value: (field: keyof T, value: T[keyof T]) => void;
+  set Field Error: (field: keyof T, errors: string[]) => void;
+  set Field Touched: (field: keyof T, touched: boolean) => void;
+  reset Form: () => void;
+  validate Field: (field: keyof T) => void;
+  validate All Fields: () => boolean;
 }
-  initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true
-  const [values, setValues] = useState<T>(initialValues);
-  const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>);
-  const [touched, setTouched] = useState<Record<keyof T, boolean>>({} as Record<keyof T, boolean>);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  initial Values, validation Schema = {}, on Submit, validate On Change = true, validate On Blur = true
+  const [values, set Values] = use State<T>(initial Values);
+  const [errors, set Errors] = use State<R ecord<keyof T, string[]>>({} as Record<k eyof T, string[]>);
+  const [touched, set Touched] = use State<R ecord<keyof T, boolean>>({} as Record<k eyof T, boolean>);
+  const [is Submitting, set Is Submitting] = use State(false);
   // Validate a single field
   
-      if (!validationSchema[field]) return;
-      const fieldValue = values[field];
-      const rules = validationSchema[field];
-      const result = validateField(fieldValue, rules);
+      if (!validation Schema[field]) return;
+      const field Value = values[field];
+      const rules = validation Schema[field];
+      const result = validate Field(field Value, rules);
         [field]: result.errors
       }));
-    [values, validationSchema]
+    [values, validation Schema]
   );
   // Validate all fields
   
-    if (Object.keys(validationSchema).length === 0) return true;
-    const validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>);
-    const formErrors = getFormErrors(validationResults);
-    setErrors(formErrors);
-    return isFormValid(validationResults);
-  }, [values, validationSchema]);
+    if (Object.keys(validation Schema).length === 0) return true;
+    const validation Results = validate Form(values, validation Schema as Record<k eyof T, Validation Rule[]>);
+    const form Errors = get Form Errors(validation Results);
+    set Errors(form Errors);
+    return is Form Valid(validation Results);
+  }, [values, validation Schema]);
   // Handle input change
   
       const { name, value, type } = e.target;
-      const fieldName = name as keyof T;
+      const field Name = name as keyof T;
       // Handle checkbox inputs
-      let fieldValue: unknown = value;
-        fieldValue = (e.target as HTMLInputElement).checked;
+      let field Value: unknown = value;
+        field Value = (e.target as H TM LInput Element).checked;
       }
-        [fieldName]: fieldValue
+        [field Name]: field Value
       }));
       // Validate on change if enabled
-        setTimeout(() => validateSingleField(fieldName), 0);
+        set Timeout(() => validate Single Field(field Name), 0);
       }
-    [validateOnChange, touched, validateSingleField]
+    [validate On Change, touched, validate Single Field]
   );
   // Handle input blur
   
-      const fieldName = e.target.name as keyof T;
-        [fieldName]: true
+      const field Name = e.target.name as keyof T;
+        [field Name]: true
       }));
       // Validate on blur if enabled
-        validateSingleField(fieldName);
+        validate Single Field(field Name);
       }
-    [validateOnBlur, validateSingleField]
+    [validate On Blur, validate Single Field]
   );
   // Handle form submission
   
-      e.preventDefault();
+      e.prevent Default();
       // Mark all fields as touched
       
         acc[key as keyof T] = true;
         return acc;
-      }, {} as Record<keyof T, boolean>);
-      setTouched(allTouched);
+      }, {} as Record<k eyof T, boolean>);
+      set Touched(all Touched);
       // Validate all fields
-      const isValid = validateAllFields();
+      const is Valid = validate All Fields();
         return;
       }
-      setIsSubmitting(true);
-        await onSubmit(values);
+      set Is Submitting(true);
+        await on Submit(values);
         console.error('Form submission error:', error);
-        setIsSubmitting(false);
+        set Is Submitting(false);
       }
-    [values, validateAllFields, onSubmit]
+    [values, validate All Fields, on Submit]
   );
   // Set field value programmatically
   
     }));
-      setTimeout(() => validateSingleField(field), 0);
+      set Timeout(() => validate Single Field(field), 0);
     }
-  }, [validateOnChange, touched, validateSingleField]);
+  }, [validate On Change, touched, validate Single Field]);
   // Set field error programmatically
   
     }));
@@ -111,14 +111,14 @@ import { useState, useCallback, ChangeEvent } from 'react';
   }, []);
   // Reset form to initial values
   
-    setValues(initialValues);
-    setErrors({} as Record<keyof T, string[]>);
-    setTouched({} as Record<keyof T, boolean>);
-    setIsSubmitting(false);
-  }, [initialValues]);
+    set Values(initial Values);
+    set Errors({} as Record<k eyof T, string[]>);
+    set Touched({} as Record<k eyof T, boolean>);
+    set Is Submitting(false);
+  }, [initial Values]);
   // Check if form is valid
   
-    Object.values(errors).every(errorArray => errorArray.length === 0);
-    validateAllFields
+    Object.values(errors).every(error Array => error Array.length === 0);
+    validate All Fields
   };
 }

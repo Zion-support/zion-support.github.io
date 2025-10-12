@@ -1,44 +1,37 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-=======
-import { Languages, ArrowRight, CheckCircle, Brain, Star, Target, Clock, FileText } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
+import { Languages, ArrowRight, CheckCircle, Brain, Star, Target, Clock, File Text } from 'lucide-react';
 import Layout from '../layout'
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { Link } from 'react-router-dom';
 import { Languages, ArrowRight} from 'lucide-react';
 import Layout from '../layout';
 
-export default function AITranslationService() {
+export default function A ITranslation Service() {
   const features = [
     {
-      icon: <Brain className="w-6h-6text-cyan-400" />,
+      icon: <B rain class Name="w-6h-6t ext-cyan-400" />,
       title: 'Neural Machine Translation',
-      description: 'Advanced AI models provide contextually accurate translations in 100+ languages'
+      description: 'Advanced A I models provide contextually accurate translations in 100+ languages'
     },
     {
-      icon: <FileText className="w-6h-6text-purple-400" />,
+      icon: <F ile Text class Name="w-6h-6t ext-purple-400" />,
       title: 'Document Translation',
       description: 'Translate entire documents while preserving formatting, layout, and structure'
     },
     {
-      icon: <Clock className="w-6h-6text-yellow-400" />,
+      icon: <C lock class Name="w-6h-6t ext-yellow-400" />,
       title: 'Real-time Translation',
       description: 'Instant translation for live conversations, meetings, and customer support'
     },
     {
-      icon: <Target className="w-6h-6text-green-400" />,
+      icon: <T arget class Name="w-6h-6t ext-green-400" />,
       title: 'Industry-Specific Translation',
       description: 'Specialized translation models for legal, medical, technical, and business content'
     }
   ]
 
-  const translationFeatures = [
+  const translation Features = [
     {
       category: 'Translation Types',
       items: ['Text Translation', 'Document Translation', 'Website Translation', 'Audio Translation', 'Video Subtitles', 'Live Translation']
@@ -53,11 +46,11 @@ export default function AITranslationService() {
     },
     {
       category: 'Integration',
-      items: ['API Access', 'CMS Integration', 'Website Widgets', 'Mobile Apps', 'Desktop Software', 'Cloud Storage']
+      items: ['A PI Access', 'C MS Integration', 'Website Widgets', 'Mobile Apps', 'Desktop Software', 'Cloud Storage']
     }
   ]
 
-  const pricingPlans = [
+  const pricing Plans = [
     {
       name: 'Starter',
       price: '$29',
@@ -69,7 +62,7 @@ export default function AITranslationService() {
         'Basic document translation',
         'Email support',
         'Standard quality',
-        'API access'
+        'A PI access'
       ],
       popular: false
     },
@@ -101,7 +94,7 @@ export default function AITranslationService() {
         'Dedicated support',
         'Premium quality',
         'White-label solution',
-        'SLA guarantee'
+        'S LA guarantee'
       ],
       popular: false
     }
@@ -111,7 +104,7 @@ export default function AITranslationService() {
     {
       name: 'Maria Santos',
       company: 'Global Marketing Agency',
-      content: 'AI Translation Service helped us expand to 15 new markets. The quality is exceptional and cost-effective.',
+      content: 'A I Translation Service helped us expand to 15 new markets. The quality is exceptional and cost-effective.',
       rating: 5
     },
     {
@@ -129,361 +122,237 @@ export default function AITranslationService() {
   ]
 
   return (
-    <Layout
-      title="AI Translation Service - Professional Translation Solutions | Zion Tech Group"
-      description="Transform your global communication with AI-powered translation in 100+ languages. Professional quality, real-time translation, and industry-specific solutions. Start your free trial today."
-      keywords="AI translation, machine translation, document translation, multilingual content, translation API, language services" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+    <L ayout
+      title="A I Translation Service - Professional Translation Solutions | Zion Tech Group"
+      description="Transform your global communication with A I-powered translation in 100+ languages. Professional quality, real-time translation, and industry-specific solutions. Start your free trial today."
+      keywords="A I translation, machine translation, document translation, multilingual content, translation A PI, language services" />
+      <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        </d iv>
         {/* Hero Section */}
-    <>
-        <section className="pt-20 pb-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-amber-500/20 rounded-full text-amber-400 text-smfont-mediummb-6">
-                <Languages className="w-4h-4mr-2" />
-=======
-        </div>
-            <div className="text-center" />
-              <div className="inline-flex items-center px-4 py-2 bg-amber-500/20 rounded-full text-amber-400 text-smfont-mediummb-6">
-        </div>
-                <Languages className="w-4h-4mr-2" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                AI-Powered Translation
-    <>
-              </div>
-<<<<<<< HEAD
-              <h1 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6"  />AI Translation Service
-=======
-              <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6">AI Translation Service
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+        <s ection class Name="p t-20 pb-16 px-4sm:px-6lg:px-8" />
+          <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-center" />
+              <d iv class Name="i nline-flex items-center px-4 py-2 bg-amber-500/20 rounded-full text-amber-400 text-smfont-mediummb-6">
+        </d iv>
+                <L anguages class Name="w-4h-4m r-2" / />
+                A I-Powered Translation
+
+              </d iv>
+              <h1 c lass Name="t ext-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6">A I Translation Service
               </h1>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8">
-              Transform your global communication with AI-powered translation in 100+ languages. 
+              <p c lass Name="t ext-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8">
+              Transform your global communication with A I-powered translation in 100+ languages. 
                 Professional quality, real-time translation, and industry-specific solutions.
-    <>
+
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-                <Link to="/contact" className="bg-gradient-to-r from-amber-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-center" >
-          Start Free Trial
-                  
-          <ArrowRight className="w-5h-5ml-2"  />
-        </Link>
-=======
-        </div>
-                <Link to="/contact" className="bg-gradient-to-r from-amber-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
+              <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+                <L ink to="/contact" class Name="b g-gradient-to-r from-amber-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700 transition-all duration-300 flexitems-centerjustify-center" />
                   Start Free Trial
-    <>
-                  <ArrowRight className="w-5h-5ml-2" />
-                </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Try Demo
-                </Link>
-              </div>
-          </div>
-        </section>
+
+                  <A rrow Right class Name="w-5h-5m l-2" />
+                </L ink>
+                <L ink to="#demo" class Name="b order-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Try Demo
+                </L ink>
+              </d iv>
+          </d iv>
+        </s ection>
 
         {/* Features Section */}
-    <>
-        <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-3 xl sm:text-4xl font-bold text-white mb-4"  />Intelligent Translation Solutions
+
+        <s ection class Name="p y-16 px-4sm:px-6lg:px-8" />
+          <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-3 xl sm:text-4 xl font-boldtext-whitemb-4">Intelligent Translation Solutions
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              AI-powered features that break down language barriers and enable global communication
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Intelligent Translation Solutions
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
-                AI-powered features that break down language barriers and enable global communication
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+              <p c lass Name="t ext-lg text-gray-300 max-w-2xlmx-auto" />
+                A I-powered features that break down language barriers and enable global communication
+
               </p>
-            </div>
+            </d iv>
             
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+        </d iv>
               {features.map((feature, index) => (
-    <>
-                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-amber-500/20 hover:border-amber-400/40transition-allduration-300" />
-<<<<<<< HEAD
-                  <div className="flex items-centermb-4">
-=======
-                  <div className="flexitems-centermb-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+                <d iv key="{index}" class Name="b g-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-amber-500/20 hover:border-amber-400/40transition-allduration-300" />
+                  <d iv class Name="f lexitems-centermb-4">
+        </d iv>
                     {feature.icon}
-    <>
-                    <h3 className="text-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
-                  </div>
-<<<<<<< HEAD
-                  <p className="text-gray-300">
-              {feature.description}</p>
-=======
-                  <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
+
+                    <h3 c lass Name="t ext-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
+                  </d iv>
+                  <p c lass Name="t ext-gray-300">{feature.description}</p>
+                </d iv>
               ))}
-    <>
-            </div>
-        </section>
+
+            </d iv>
+        </s ection>
 
         {/* Translation Features */}
-    <>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-3 xl sm:text-4xl font-bold text-white mb-4"  />Complete Translation Platform
+
+        <s ection class Name="p y-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
+          <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-3 xl sm:text-4 xl font-boldtext-whitemb-4">Complete Translation Platform
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              Everything you need to translate content across languages and cultures
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Complete Translation Platform
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
+              <p c lass Name="t ext-lg text-gray-300 max-w-2xlmx-auto" />
                 Everything you need to translate content across languages and cultures
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
               </p>
-            </div>
+            </d iv>
             
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {translationFeatures.map((feature, index) => (
-    <>
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-<<<<<<< HEAD
-                  <h3 className="text-xl font-semiboldtext-white mb-4"   />{feature.category}</h3>
-                  <ul className="space-y-2" />
-                    {feature.items.map((item, itemIndex) => (
-                      <li key="{itemIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-4 h-4text-amber-400mr-2" />
-=======
-                  <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.category}</h3>
-                  <ul className="space-y-2" />
-                    {feature.items.map((item, itemIndex) => (
-    <>
-                      <li key="{itemIndex}" className="flexitems-centertext-gray-300" />
-                        <CheckCircle className="w-4 h-4text-amber-400mr-2" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <d iv class Name="g rid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+        </d iv>
+              {translation Features.map((feature, index) => (
+
+                <d iv key="{index}" class Name="b g-slate-800/50 rounded-xl p-6borderborder-slate-700" />
+                  <h3 c lass Name="t ext-xl font-semiboldtext-whitemb-4">{feature.category}</h3>
+                  <u l class Name="s pace-y-2" />
+                    {feature.items.map((item, item Index) => (
+
+                      <l i key="{item Index}" class Name="f lexitems-centertext-gray-300" />
+                        <C heck Circle class Name="w-4 h-4t ext-amber-400mr-2" / />
                         {item}
-                      </li>
+                      </l i>
                     ))}
-    <>
-                  </ul>
-                </div>
+
+                  </u l>
+                </d iv>
               ))}
-    <>
-            </div>
-        </section>
+
+            </d iv>
+        </s ection>
 
         {/* Pricing Section */}
-    <>
-        <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-3 xl sm:text-4xl font-bold text-white mb-4"  />Flexible Pricing Plans
+
+        <s ection class Name="p y-16 px-4sm:px-6lg:px-8" />
+          <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-3 xl sm:text-4 xl font-boldtext-whitemb-4">Flexible Pricing Plans
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              Choose the plan that fits your translation needs
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Flexible Pricing Plans
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto" />
+              <p c lass Name="t ext-lg text-gray-300 max-w-2xlmx-auto" />
                 Choose the plan that fits your translation needs
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
               </p>
-            </div>
+            </d iv>
             
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {pricingPlans.map((plan, index) => (
-                <div key="{index}" className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
+            <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+        </d iv>
+              {pricing Plans.map((plan, index) => (
+                <d iv key="{index}" class Name="{`b g-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
                     ? 'border-amber-400/40 scale-105 shadow-2 xl shadow-amber-500/20' 
                     : 'border-amber-500/20 hover: border-amber-400/40'
                 }`} />
                   {plan.popular && (
-<<<<<<< HEAD
-                    <div className="inline-flex items-center px-3 py-1 bg-amber-500/20 rounded-full text-amber-400 text-smfont-mediummb-4">
-                      <Star className="w-4h-4mr-1" />
+
+                    <d iv class Name="i nline-flex items-center px-3 py-1 bg-amber-500/20 rounded-full text-amber-400 text-smfont-mediummb-4">
+        </d iv>
+                      <S tar class Name="w-4h-4m r-1" / />
                       Most Popular
-                    </div>
+                    </d iv>
                   )}
-                  <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                  <p className="text-gray-300 mb-6">
-              {plan.description}</p>
-                  <div className="mb-6">
-                    <span className="text-4xlfont-bold text-white"   />{plan.price}</span>
-                    <span className="text-gray-400"   />{plan.period}</span>
-                  </div>
-                  <ul className="space-y-3mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5text-amber-400mr-3" />
-=======
-    <>
-                    <div className="inline-flex items-center px-3 py-1 bg-amber-500/20 rounded-full text-amber-400 text-smfont-mediummb-4">
-        </div>
-                      <Star className="w-4h-4mr-1" / />
-                      Most Popular
-                    </div>
-                  )}
-    <>
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300mb-6">{plan.description}</p>
-                  <div className="mb-6">
-        </div>
-                    <span className="text-4 xlfont-boldtext-white">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
-                  </div>
-                  <ul className="space-y-3mb-8" />
-                    {plan.features.map((feature, featureIndex) => (
-    <>
-                      <li key="{featureIndex}" className="flexitems-centertext-gray-300" />
-                        <CheckCircle className="w-5 h-5text-amber-400mr-3" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+                  <h3 c lass Name="t ext-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
+                  <p c lass Name="t ext-gray-300mb-6">{plan.description}</p>
+                  <d iv class Name="m b-6">
+        </d iv>
+                    <s pan class Name="t ext-4 xlfont-boldtext-white">{plan.price}</s pan>
+                    <s pan class Name="t ext-gray-400">{plan.period}</s pan>
+                  </d iv>
+                  <u l class Name="s pace-y-3mb-8" />
+                    {plan.features.map((feature, feature Index) => (
+
+                      <l i key="{feature Index}" class Name="f lexitems-centertext-gray-300" />
+                        <C heck Circle class Name="w-5 h-5t ext-amber-400mr-3" / />
                         {feature}
-                      </li>
+                      </l i>
                     ))}
-                  </ul>
-                  <Link
+                  </u l>
+                  <L ink
                     to="/contact"
-                    className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    class Name="{`w-f ull" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-amber-500 to-purple-600 text-white hover:from-amber-600 hover:to-purple-700'
                         : 'border-2 border-amber-400 text-amber-400 hover: bg-amber-400/10'
                     }`}
                     />Get Started
-    <>
-                  </Link>
-                </div>
+
+                  </L ink>
+                </d iv>
               ))}
-    <>
-            </div>
-        </section>
+
+            </d iv>
+        </s ection>
 
         {/* Testimonials */}
-    <>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
-          <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-            <div className="text-centermb-12">
-              <h2 className="text-3 xl font-bold text-white mb-4"  />Trusted by Global Businesses
-              </h2>
-              <p className="text-gray-300">
-              See how our AI Translation Service enables global communication
-              </p>
-            </div>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-=======
-        </div>
-            <div className="text-centermb-12">
-        </div>
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Trusted by Global Businesses
-              </h2>
-              <p className="text-gray-300" />
-                See how our AI Translation Service enables global communication
-    <>
-              </p>
-            </div>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {testimonials.map((testimonial, index) => (
-    <>
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
-<<<<<<< HEAD
-                  <div className="flex items-centermb-4">
-=======
-                  <div className="flexitems-centermb-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
-                    ))}
-    <>
-                  </div>
-<<<<<<< HEAD
-                  <p className="text-gray-300 mb-4">
-              "{testimonial.content}"</p>
-                  <div />
-                    <div className="font-semiboldtext-white"   />{testimonial.name}</div>
-                    <div className="text-smtext-gray-400"   />{testimonial.company}</div>
-=======
-                  <p className="text-gray-300mb-4">"{testimonial.content}"</p>
-                  <div />
-                    <div className="font-semiboldtext-white">{testimonial.name}</div>
-                    <div className="text-smtext-gray-400">{testimonial.company}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
-              ))}
-    <>
-            </div>
-        </section>
 
-        {/* CTA Section */}
-    <>
-        <section className="py-16 px-4sm:px-6lg:px-8" />
-          <div className="max-w-4 xlmx-autotext-center">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-amber-500/20 to-purple-500/20 rounded-2 xl p-8borderborder-amber-500/30">
-              <h2 className="text-3 xl font-bold text-white mb-4"  />Break Down Language Barriers Today
+        <s ection class Name="p y-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
+          <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+            <d iv class Name="t ext-centermb-12">
+        </d iv>
+              <h2 c lass Name="t ext-3 xl font-boldtext-whitemb-4">Trusted by Global Businesses
               </h2>
-              <p className="text-lg text-gray-300 mb-8">
-              Join thousands of businesses using AI Translation Service to reach global audiences
+              <p c lass Name="t ext-gray-300" />
+                See how our A I Translation Service enables global communication
+
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-        </div>
-            <div className="bg-gradient-to-r from-amber-500/20 to-purple-500/20 rounded-2 xl p-8borderborder-amber-500/30">
-        </div>
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Break Down Language Barriers Today
+            </d iv>
+            <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+        </d iv>
+              {testimonials.map((testimonial, index) => (
+
+                <d iv key="{index}" class Name="b g-slate-800/50 rounded-xl p-6borderborder-slate-700" />
+                  <d iv class Name="f lexitems-centermb-4">
+        </d iv>
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <S tar key="{i}" class Name="w-5 h-5t ext-yellow-400fill-current" />
+                    ))}
+
+                  </d iv>
+                  <p c lass Name="t ext-gray-300mb-4">"{testimonial.content}"</p>
+                  <d iv />
+                    <d iv class Name="f ont-semiboldtext-white">{testimonial.name}</d iv>
+                    <d iv class Name="t ext-smtext-gray-400">{testimonial.company}</d iv>
+                </d iv>
+              ))}
+
+            </d iv>
+        </s ection>
+
+        {/* C TA Section */}
+
+        <s ection class Name="p y-16 px-4sm:px-6lg:px-8" />
+          <d iv class Name="m ax-w-4 xlmx-autotext-center">
+        </d iv>
+            <d iv class Name="b g-gradient-to-r from-amber-500/20 to-purple-500/20 rounded-2 xl p-8borderborder-amber-500/30">
+        </d iv>
+              <h2 c lass Name="t ext-3 xl font-boldtext-whitemb-4">Break Down Language Barriers Today
               </h2>
-              <p className="text-lgtext-gray-300mb-8" />
-                Join thousands of businesses using AI Translation Service to reach global audiences
-    <>
+              <p c lass Name="t ext-lgtext-gray-300mb-8" />
+                Join thousands of businesses using A I Translation Service to reach global audiences
+
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-amber-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
-                </Link>
-                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
-                </Link>
-              </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
+              <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+                <L ink to="/contact" class Name="b g-gradient-to-r from-amber-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
+                </L ink>
+                <L ink to="/about" class Name="b order-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
+                </L ink>
+              </d iv>
+          </d iv>
+        </s ection>
+      </d iv>
+    </L ayout>
   )
 };
-    </>

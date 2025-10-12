@@ -1,69 +1,65 @@
-<<<<<<< HEAD
-import { useEffect } from 'react';
-=======
 'use client';
-import { useEffect } from 'react';
+import { use Effect } from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
+const EnhancedAccessibility: React.F C<{ c hildren: React.React Node }> = ({ children }) => {
+  use Effect(() => {
     // Add high contrast mode support
-    const addHighContrastSupport = () => {
-      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-      const handleContrastChange = (e: MediaQueryListEvent) => {
+    const add High Contrast Support = () => {
+      const media Query = window.match Media('(prefers-contrast: high)');
+      const handle Contrast Change = (e: Media Query List Event) => {
         if (e.matches) {
-          document.documentElement.classList.add('high-contrast');
+          document.document Element.class List.add('high-contrast');
         } else {
-          document.documentElement.classList.remove('high-contrast');
+          document.document Element.class List.remove('high-contrast');
         }
       };
 
-      mediaQuery.addEventListener('change', handleContrastChange);
-      handleContrastChange(mediaQuery);
+      media Query.add Event Listener('change', handle Contrast Change);
+      handle Contrast Change(media Query);
 
-      return () => mediaQuery.removeEventListener('change', handleContrastChange);
+      return () => media Query.remove Event Listener('change', handle Contrast Change);
     };
 
     // Add reduced motion support
-    const addReducedMotionSupport = () => {
-      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-      const handleMotionChange = (e: MediaQueryListEvent) => {
+    const add Reduced Motion Support = () => {
+      const media Query = window.match Media('(prefers-reduced-motion: reduce)');
+      const handle Motion Change = (e: Media Query List Event) => {
         if (e.matches) {
-          document.documentElement.classList.add('reduce-motion');
+          document.document Element.class List.add('reduce-motion');
         } else {
-          document.documentElement.classList.remove('reduce-motion');
+          document.document Element.class List.remove('reduce-motion');
         }
       };
 
-      mediaQuery.addEventListener('change', handleMotionChange);
-      handleMotionChange(mediaQuery);
+      media Query.add Event Listener('change', handle Motion Change);
+      handle Motion Change(media Query);
 
-      return () => mediaQuery.removeEventListener('change', handleMotionChange);
+      return () => media Query.remove Event Listener('change', handle Motion Change);
     };
 
     // Add screen reader announcements
-    const addScreenReaderAnnouncements = () => {
-      const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
-      announcement.const className = 'sr-only';
+    const add Screen Reader Announcements = () => {
+      const announcement = document.create Element('div');
+      announcement.set Attribute('aria-live', 'polite');
+      announcement.set Attribute('aria-atomic', 'true');
+      announcement.const class Name = 'sr-only';
       announcement.const id = 'announcements';
-      document.body.appendChild(announcement);
+      document.body.append Child(announcement);
     };
 
     // Initialize accessibility features
-    const cleanupContrast = addHighContrastSupport();
-    const cleanupMotion = addReducedMotionSupport();
-    addScreenReaderAnnouncements();
+    const cleanup Contrast = add High Contrast Support();
+    const cleanup Motion = add Reduced Motion Support();
+    add Screen Reader Announcements();
 
     // Cleanup
     return () => {
-      cleanupContrast?.();
-      cleanupMotion?.();
+      cleanup Contrast?.();
+      cleanup Motion?.();
     };
   }, []);
 
-  return <React.Fragment />{children}</React.Fragment>;
+  return <R eact.Fragment />{children}</R eact.Fragment>;
 };
 
 export default EnhancedAccessibility;

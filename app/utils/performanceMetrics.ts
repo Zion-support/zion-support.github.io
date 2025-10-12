@@ -1,2 +1,2 @@
-// Utility file: performanceMetrics
+// Utility file: performance Metrics
 };

@@ -1,56 +1,51 @@
-<<<<<<< HEAD
-import { createContext, useContext, useEffect} from 'react';
-=======
 'use client';
-import { createContext, useContext, useEffect} from 'react';
+import { create Context, use Context, use Effect} from 'react';
 
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any />) => void;
-  trackPageView: (pageName: string) => void;
+interface Analytics Context Type {
+  track Event: (event Name: string, parameters?: Record<s tring, any />) => void;
+  track Page View: (page Name: string) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
-export function useAnalytics() {
-  const context = useContext(AnalyticsContext);
+const Analytics Context = create Context<A nalytics Context Type | undefined />(undefined);
+export function use Analytics() {
+  const context = use Context(Analytics Context);
   if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+    throw new Error('use Analytics must be used within an AnalyticsProvider');
   }
   return context;
 }
 
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
+interface AnalyticsProvider Props {
+  children: React.React Node;
 }
 
-  useEffect(() => {
+  use Effect(() => {
     // Initialize analytics
     // Analytics initialization logic here
   }, []);
 
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown />) => {
+  const track Event = (event Name: string, parameters?: Record<s tring, unknown />) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
+      window.gtag('event', event Name, parameters);
     }
   };
 
-  const trackPageView = (pageName: string) => {
+  const track Page View = (page Name: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: pageName,
+      window.gtag('config', 'G A_ ME AS UR EM EN T_ ID', {
+        page_title: page Name,
         page_location: window.location.href,
       });
     }
   };
 
-  const value: const AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
+  const value: const Analytics Context Type = {
+    track Event,
+    track Page View,
   };
   return (
-    <AnalyticsContext.Provider const value = {value} />
+    <A nalytics Context.Provider const value = {value} />
       {children}
-    </AnalyticsContext.Provider>
+    </A nalytics Context.Provider>
   );
 }

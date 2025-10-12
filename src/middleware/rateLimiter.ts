@@ -1,39 +1,39 @@
 /**
  * Rate Limiting Middleware
- * Prevents abuse by limiting the number of requests from a single IP
- * @module rateLimiter
+ * Prevents abuse by limiting the number of requests from a single I P
+ * @module rate Limiter
  */
-  windowMs: number; // Time window in milliseconds
+  window Ms: number; // Time window in milliseconds
   max: number; // Maximum number of requests per window
   message?: string; // Custom error message
-  skipSuccessfulRequests?: boolean;
-  skipFailedRequests?: boolean;
+  skip Successful Requests?: boolean;
+  skip Failed Requests?: boolean;
 }
   count: number;
-  resetTime: number;
+  reset Time: number;
 }
 /**
  * Simple in-memory rate limiter
  * For production, use Redis or similar distributed storage
  */
-  private requests: Map<string, RequestRecord> = new Map();
-  private config: RateLimitConfig;
+  private requests: Map<s tring, Request Record> = new Map();
+  private config: Rate Limit Config;
       ...config
     };
     // Cleanup old entries every minute
-    setInterval(() => this.cleanup(), 60000);
+    set Interval(() => this.cleanup(), 60000);
   }
   /**
    * Check if request is allowed
-   * @param identifier - Unique identifier (e.g., IP address)
+   * @param identifier - Unique identifier (e.g., I P address)
    * @returns Whether the request is allowed
    */
     const now = Date.now();
     const record = this.requests.get(identifier);
     // No record or expired
-      const resetTime = now + this.config.windowMs;
-      this.requests.set(identifier, { count: 1, resetTime });
-      return { allowed: true, remaining: this.config.max - 1, resetTime };
+      const reset Time = now + this.config.window Ms;
+      this.requests.set(identifier, { count: 1, reset Time });
+      return { allowed: true, remaining: this.config.max - 1, reset Time };
     }
     // Increment count
     if (record.count 
@@ -44,7 +44,7 @@
   /**
    * Get current stats
    */
-    return { totalTracked: this.requests.size };
+    return { total Tracked: this.requests.size };
   }
 }
 /**
@@ -54,16 +54,16 @@
 /**
  * Get client identifier from request
  * @param request - Request object
- * @returns Client identifier (IP address or user ID)
+ * @returns Client identifier (I P address or user I D)
  */
-  // Try to get real IP from headers (for proxied requests)
+  // Try to get real I P from headers (for proxied requests)
   const headers = request.headers;
-  const forwardedFor = headers.get('x-forwarded-for');
-  const realIp = headers.get('x-real-ip');
-  const cfConnectingIp = headers.get('cf-connecting-ip');
-  if (cfConnectingIp) return cfConnectingIp;
-  if (realIp) return realIp;
-  if (forwardedFor) return forwardedFor.split(',')[0].trim();
+  const forwarded For = headers.get('x-forwarded-for');
+  const real Ip = headers.get('x-real-ip');
+  const cf Connecting Ip = headers.get('cf-connecting-ip');
+  if (cf Connecting Ip) return cf Connecting Ip;
+  if (real Ip) return real Ip;
+  if (forwarded For) return forwarded For.split(',')[0].trim();
   // Fallback to a default identifier
   return 'unknown';
 }
@@ -72,10 +72,10 @@
  * @param limiter - Rate limiter instance
  * @returns Middleware function
  */
-    const identifier = getClientIdentifier(request);
-    const { allowed, remaining, resetTime } = limiter.check(identifier);
-          retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
-            'X-RateLimit-Reset': String(resetTime)
+    const identifier = get Client Identifier(request);
+    const { allowed, remaining, reset Time } = limiter.check(identifier);
+          retry After: Math.ceil((reset Time - Date.now()) / 1000)
+            'X-Rate Limit-Reset': String(reset Time)
           }
         }
       );
@@ -84,4 +84,4 @@
     return null;
   };
 }
-export default RateLimiter;
+export default Rate Limiter;

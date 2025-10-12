@@ -1,287 +1,173 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React  from 'react';
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
 'use client';
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Shield, Cloud } from 'lucide-react';
 
-<<<<<<< HEAD
-const Page: React.FC = () => {
-  const features = [
-    {
-      icon: <Cloud className="w-12h-12text-cyan-400" />,
-      title: "Cloud Integration",
-      description: "Seamlessly integrate with all major cloud platforms and services."
-    },
-    {
-      icon: <Zap className="w-12h-12text-purple-400" />,
-      title: "Real-time Sync",
-      description: "Keep all your systems synchronized with real-time data updates."
-    },
-    {
-      icon: <Shield className="w-12h-12text-green-400" />,
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security ensures your data is protected during integration."
-    }
-  ];
-
-=======
 export default function Page() {
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
   return (
-    <>
-    <>
-      <Helmet>
-<<<<<<< HEAD
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-        <title>System Integration - Zion Tech Group</title>
-        <meta name="description" content="Professional system integration services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="system integration, IT services, Zion Tech Group" />
-        <meta property="og:title" content="System Integration - Zion Tech Group" />
-        <meta property="og:description" content="Professional system integration services by Zion Tech Group. Expert solutions tailored to your business needs." />
-=======
-        <title>Professional Services - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
-        <meta property="og:title" content=" - Zion Tech Group" />
-        <meta property="og:description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/system-integration" />
-      </Helmet>
-    </>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <H elmet>
+        <t itle>Professional Services - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <m eta name="keywords" content="A I solutions, I T services, Zion Tech Group" />
+        <m eta property="og:title" content=" - Zion Tech Group" />
+        <m eta property="og:description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <m eta property="og:type" content="website" />
+        <m eta property="og:url" content="https://ziontechgroup.com/system-integration" />
+      </H elmet>
+
+      <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16">
+        </d iv>
         {/* Hero Section */}
-<<<<<<< HEAD
-    <>
-        <section className="py-20" />
-          <div className="container mx-autopx-4text-center">
-<<<<<<< HEAD
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" />
-=======
-        </div>
-            <h1 className="text-5xl md:text-6xl font-boldtext-whitemb-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent" />
-    </>
+        </d iv>
+            <h1 c lass Name="t ext-5xl md:text-6xl font-boldtext-whitemb-6" />
+              <s pan class Name="b g-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent" />
+
                 System Integration
-    <>
-              </span>
-=======
-        <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Professional Services</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
+
+              </s pan>
+        <s ection class Name="p y-20">
+          <d iv class Name="c ontainer mx-auto px-4 text-center">
+            <h1 c lass Name="t ext-5xl md:text-6xl font-bold text-white mb-6">
+              <s pan class Name="b g-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Professional Services</s pan>
             </h1>
-<<<<<<< HEAD
-            <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
-=======
-            <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <p c lass Name="t ext-xl text-gray-300 mb-8max-w-3xlmx-auto" />
+
               Professional system integration services by Zion Tech Group. Expert solutions tailored to your business needs.
-    <>
+
             </p>
-            <div className="flex flex-col sm:flex-row gap-4justify-centermb-12">
-<<<<<<< HEAD
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" >
-          Get Started
-                
-          <ArrowRight className="ml-2group-hover:translate-x-1transition-transform"  />
-        </Link>
-=======
-        </div>
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" />
-    </>
+            <d iv class Name="f lex flex-col sm:flex-row gap-4justify-centermb-12">
+        </d iv>
+              <L ink to="/contact" class Name="b g-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" />
+
                 Get Started
-    <>
-                <ArrowRight className="ml-2group-hover:translate-x-1transition-transform" />
-              </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
-    </>
+
+                <A rrow Right class Name="m l-2group-hover:translate-x-1transition-transform" />
+              </L ink>
+              <L ink to="/contact" class Name="b order border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
+
                 Learn More
-    <>
-              </Link>
-            </div>
-        </section>
-    </>
+
+              </L ink>
+            </d iv>
+        </s ection>
 
         {/* Features Section */}
-    <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="text-centermb-16">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-=======
-        </div>
-            <div className="text-centermb-16">
-        </div>
-              <h2 className="text-4xl font-boldtext-whitemb-6" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Why Choose Our System Integration Services?
-    <>
-              </h2>
-<<<<<<< HEAD
-              <p className="text-xl text-gray-300max-w-3xlmx-auto">
-              Our expert team helps you connect and optimize all your business systems
-=======
-              <p className="text-xl text-gray-300max-w-3xlmx-auto" />
-    </>
-                Our expert team helps you connect and optimize all your business systems
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </p>
-            </div>
-    </>
-            
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {features.map((feature, index) => (
-    <>
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-allduration-300" />
-                  <div className="flexjustify-centermb-4">
-<<<<<<< HEAD
-=======
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    {feature.icon}
-    <>
-                  </div>
-<<<<<<< HEAD
-                  <h3 className="text-xl font-semiboldtext-white mb-4" />{feature.title}</h3>
-                  <p className="text-gray-300">
-              {feature.description}</p>
-=======
-                  <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                </div>
-    </>
-              ))}
-    <>
-            </div>
-        </section>
-    </>
 
-        {/* CTA Section */}
-    <>
-        <section className="py-20" />
-          <div className="containermx-autopx-4">
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xlp-12text-center">
-              <h2 className="text-4xl font-bold text-white mb-6" />
-=======
-        </div>
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xlp-12text-center">
-        </div>
-              <h2 className="text-4xl font-boldtext-whitemb-6" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                Ready to Get Started?
-    <>
+        <s ection class Name="p y-20" />
+          <d iv class Name="c ontainermx-autopx-4">
+        </d iv>
+            <d iv class Name="t ext-centermb-16">
+        </d iv>
+              <h2 c lass Name="t ext-4xl font-boldtext-whitemb-6" />
+
+                Why Choose Our System Integration Services?
+
               </h2>
-<<<<<<< HEAD
-              <p className="text-xl text-gray-300 mb-8max-w-2xlmx-auto">
-              Contact us to learn more about our solutions and how we can help your business.
+              <p c lass Name="t ext-xl text-gray-300max-w-3xlmx-auto" />
+
+                Our expert team helps you connect and optimize all your business systems
+
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-=======
-              <p className="text-xl text-gray-300 mb-8max-w-2xlmx-auto" />
-    </>
+            </d iv>
+
+            <d iv class Name="g rid grid-cols-1md:grid-cols-3gap-8">
+        </d iv>
+              {features.map((feature, index) => (
+
+                <d iv key={index} class Name="b g-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-allduration-300" />
+                  <d iv class Name="f lexjustify-centermb-4">
+        </d iv>
+
+                    {feature.icon}
+
+                  </d iv>
+                  <h3 c lass Name="t ext-xl font-semiboldtext-whitemb-4">{feature.title}</h3>
+                  <p c lass Name="t ext-gray-300">{feature.description}</p>
+                </d iv>
+
+              ))}
+
+            </d iv>
+        </s ection>
+
+        {/* C TA Section */}
+
+        <s ection class Name="p y-20" />
+          <d iv class Name="c ontainermx-autopx-4">
+        </d iv>
+            <d iv class Name="b g-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xlp-12text-center">
+        </d iv>
+              <h2 c lass Name="t ext-4xl font-boldtext-whitemb-6" />
+
+                Ready to Get Started?
+
+              </h2>
+              <p c lass Name="t ext-xl text-gray-300 mb-8max-w-2xlmx-auto" />
+
                 Contact us to learn more about our solutions and how we can help your business.
-    <>
+
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
-    </>
+              <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+                <L ink to="/contact" class Name="b g-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
+
                   Contact Us
-    <>
-                </Link>
-                <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
-    </>
+
+                </L ink>
+                <L ink to="/services" class Name="b order border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
+
                   View All Services
-    <>
-                </Link>
-              </div>
-          </div>
-        </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
-<<<<<<< HEAD
-=======
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
+
+                </L ink>
+              </d iv>
+          </d iv>
+        </s ection>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+      </d iv>
+
+    </d iv>
   );
 };
 
-<<<<<<< HEAD
 export default Page;
-=======
-export default Page;
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-=======
+
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 
-export default function SystemIntegrationPage() {
+export default function System Integration Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>System Integration - Zion Tech Group</title>
-        <meta name="description" content="Professional system integration services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">System Integration</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional system integration services coming soon.</p>
-        <Link
+    <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <H elmet>
+        <t itle>System Integration - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional system integration services by Zion Tech Group. Transform your business with our expert solutions." />
+      </H elmet>
+      <d iv class Name="m ax-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 c lass Name="t ext-4xl font-bold text-white mb-6">System Integration</h1>
+        <p c lass Name="t ext-lg text-gray-300 mb-8">Professional system integration services coming soon.</p>
+        <L ink
           to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          class Name="b g-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
         >
           Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </div>
+          <A rrow Right class Name="w-5 h-5 m l-2" />
+        </L ink>
+      </d iv>
+    </d iv>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-33de

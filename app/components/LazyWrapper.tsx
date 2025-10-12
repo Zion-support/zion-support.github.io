@@ -1,60 +1,54 @@
-import { Suspense, lazy, ComponentType} from 'react';
+import { Suspense, lazy, Component Type} from 'react';
 
-interface LazyWrapperProps {
-  children: React.ReactNode
-  fallback?: React.ReactNode
+interface Lazy Wrapper Props {
+  children: React.React Node
+  fallback?: React.React Node
 }
 
-const DefaultFallback = () => (
-<<<<<<< HEAD
-  <div className="flex items-center justify-centermin-h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2border-cyan-400"></div>
-=======
-    <>
-  <div className="flex items-center justify-centermin-h-screen" />
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2border-cyan-400">
-        </div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+const Default Fallback = () => (
+
+  <d iv class Name="f lex items-center justify-centermin-h-screen" />
+    <d iv class Name="a nimate-spin rounded-full h-32 w-32 border-b-2border-cyan-400">
+        </d iv></d iv>
 )
 
-export const LazyWrapper: React.FC<LazyWrapperProps /> = ({ 
+export const Lazy Wrapper: React.F C<L azy Wrapper Props /> = ({ 
   children, 
-  fallback = <DefaultFallback / />
+  fallback = <D efault Fallback / />
 }) => {
   return (
-    <>
-    <Suspense fallback="{fallback}">{children}
-    </Suspense>
+
+    <S uspense fallback="{fallback}">{children}
+    </S uspense>
   )
 }
 
 // Higher-order component for lazy loading pages
-    <>
-export const withLazyLoading = <P extends object />(
-  Component: ComponentType<P />,
-  fallback?: React.ReactNode
+
+export const with Lazy Loading = <P e xtends object />(
+  Component: Component Type<P />,
+  fallback?: React.React Node
 ) => {
-  const LazyComponent = lazy(() => Promise.resolve({ default: Component }))
+  const Lazy Component = lazy(() => Promise.resolve({ default: Component }))
   
   return (props: P) => (
-    <>
-    <LazyWrapper fallback="{fallback}" />
-      <LazyComponent {...props} / />
-    </LazyWrapper>
+
+    <L azy Wrapper fallback="{fallback}" />
+      <L azy Component {...props} / />
+    </L azy Wrapper>
   )
 }
 
 // Preload function for critical components
-export const preloadComponent = (importFn: () => Promise<any />) => {
+export const preload Component = (import Fn: () => Promise<a ny />) => {
   if (typeof window !== 'undefined') {
     // Preload on idle
-    if ('requestIdleCallback' in, window) {
-      requestIdleCallback(() => importFn())
+    if ('request Idle Callback' in, window) {
+      request Idle Callback(() => import Fn())
     } else {
-      setTimeout(() => importFn(), 0)
+      set Timeout(() => import Fn(), 0)
     }
   }
 }
 
-export default LazyWrapper;
-    </>
+export default Lazy Wrapper;

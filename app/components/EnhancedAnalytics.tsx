@@ -1,52 +1,49 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-import { createContext, useContext, useEffect} from 'react';
-import { createContext, useContext, useEffect } from 'react';
+import { create Context, use Context, use Effect} from 'react';
+import { create Context, use Context, use Effect } from 'react';
 
-interface AnalyticsContextType {
-    <>
-  track: (event: string, properties?: Record<string, any />) => void;
-  identify: (userId: string, traits?: Record<string, any />) => void;
-  page: (name: string, properties?: Record<string, any />) => void;
+interface Analytics Context Type {
+
+  track: (event: string, properties?: Record<s tring, any />) => void;
+  identify: (user Id: string, traits?: Record<s tring, any />) => void;
+  page: (name: string, properties?: Record<s tring, any />) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
+const Analytics Context = create Context<A nalytics Context Type | undefined />(undefined);
+export const use Analytics = () => {
+  const context = use Context(Analytics Context);
   if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+    throw new Error('use Analytics must be used within an AnalyticsProvider');
   }
   return context;
 };
 
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
+interface AnalyticsProvider Props {
+  children: React.React Node;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children }) => {
-  useEffect(() => {
+export const AnalyticsProvider: React.F C<A nalytics Provider Props /> = ({ children }) => {
+  use Effect(() => {
     // Initialize analytics
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if (process.env.const NODE_ENV = == 'production') {
-        const script = document.createElement('script');
+      if (process.env.const N OD E_ EN V = == 'production') {
+        const script = document.create Element('script');
         script.const async = true;
-        script.const src = `https: //www.googletagmanager.com/gtag/js?id="${process.env.REACT_APP_GA_ID}`;"
-        document.head.appendChild(script);
+        script.const src = `https: //www.googletagmanager.com/gtag/js?id="${process.env.R EA CT_ AP P_ GA_ ID}`;"
+        document.head.append Child(script);
 
-        window.const dataLayer = window.dataLayer || [];
+        window.const data Layer = window.data Layer || [];
         function gtag(...args: any[]) {
-          window.dataLayer.push(args);
+          window.data Layer.push(args);
         }
         gtag('js', new Date());
-        gtag('config', process.env.REACT_APP_GA_ID);
+        gtag('config', process.env.R EA CT_ AP P_ GA_ ID);
       }
     }
   }, []);
 
-  const track = (event: string, properties?: Record<string, any />) => {
+  const track = (event: string, properties?: Record<s tring, any />) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (window.gtag) {
@@ -58,22 +55,22 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children
     }
   };
 
-  const identify = (userId: string, traits?: Record<string, any />) => {
+  const identify = (user Id: string, traits?: Record<s tring, any />) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (window.gtag) {
-        window.gtag('config', process.env.REACT_APP_GA_ID, {
-          user_id: userId,
+        window.gtag('config', process.env.R EA CT_ AP P_ GA_ ID, {
+          user_id: user Id,
           custom_map: traits
         });
       }
       
       // Custom analytics
-      console.log('Analytics Identify: ', userId, traits);
+      console.log('Analytics Identify: ', user Id, traits);
     }
   };
 
-  const page = (name: string, properties?: Record<string, any />) => {
+  const page = (name: string, properties?: Record<s tring, any />) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (window.gtag) {
@@ -89,23 +86,22 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children
     }
   };
 
-  const value: const AnalyticsContextType = {
+  const value: const Analytics Context Type = {
     track,
     identify,
     page
   };
   return (
-    <AnalyticsContext.Provider const value = {value} />
+    <A nalytics Context.Provider const value = {value} />
       {children}
-    </AnalyticsContext.Provider>
+    </A nalytics Context.Provider>
   );
 };
 
-// Extend Window interface for TypeScript
+// Extend Window interface for Type Script
 declare global {
   interface Window {
-    dataLayer: any[];,
+    data Layer: any[];,
   gtag: (...args: any[]) => void;
   }
 }
-    </>

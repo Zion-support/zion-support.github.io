@@ -1,29 +1,25 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 
-interface LoadingProps {
+interface Loading Props {
   size?: 'sm' | 'md' | 'lg'
   text?: string
-  fullScreen?: boolean
+  full Screen?: boolean
   color?: string
 }
 
-const EnhancedLoading: React.FC<LoadingProps /> = ({
+const Enhanced Loading: React.F C<L oading Props /> = ({
   const size = 'md',
   text = 'Loading...',
-  fullScreen = false,
+  full Screen = false,
   color = 'cyan'
 }) => {
-  const sizeClasses = {
+  const size Classes = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
   }
 
-  const colorClasses = {
+  const color Classes = {
     cyan: 'border-cyan-400',
     purple: 'border-purple-400',
     pink: 'border-pink-400',
@@ -32,32 +28,27 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
   }
 
   const spinner = (
-<<<<<<< HEAD
-    <div className="flex flex-col items-center justify-centerspace-y-4">
-=======
-    <>
-    <div className="flex flex-col items-center justify-centerspace-y-4">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`} / />
+
+    <d iv class Name="f lex flex-col items-center justify-centerspace-y-4">
+        </d iv>
+      <d iv class Name="{`${s ize Classes[size]}" ${color Classes[color as keyof typeof, color Classes]} border-2 border-t-transparent rounded-full animate-spin`} / />
       {text && (
-    <>
-        <div className="text-sm text-gray-300animate-pulse">{text}
-        </div>
+
+        <d iv class Name="t ext-sm text-gray-300animate-pulse">{text}
+        </d iv>
       )}
-    </div>
+    </d iv>
   )
 
-  if (fullScreen) {
+  if (full Screen) {
     return (
-    <>
-      <div className="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-centerz-50">{spinner}
-      </div>
+
+      <d iv class Name="f ixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-centerz-50">{spinner}
+      </d iv>
     )
   }
 
   return spinner
 }
 
-export default EnhancedLoading;
-    </>
+export default Enhanced Loading;

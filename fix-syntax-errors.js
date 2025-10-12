@@ -3,40 +3,40 @@
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix common syntax errors in React/TypeScript files
-    let content = fs.readFileSync(filePath, 'utf8');
+// Function to fix common syntax errors in React/Type Script files
+    let content = fs.read File Sync(file Path, 'utf8');
     let modified = false;
 
-    // Fix JSX fragment issues
+    // Fix J SX fragment issues
         modified = true;
-        return `<div>${inner}</div>`;
+        return `<d iv>${inner}</d iv>`;
       }
       return match;
     });
 
-    // Fix unclosed JSX tags by adding proper closing tags
+    // Fix unclosed J SX tags by adding proper closing tags
     
     ];
 
       // Find unclosed opening tags
-      const openTagRegex = new RegExp(`<${tag}([^>]*)>(?!.*</${tag}>)`, 'gs');
-      const matches = content.match(openTagRegex);
+      const open Tag Regex = new Reg Exp(`<${t ag}([^>]*)>(?!.*</${t ag}>)`, 'gs');
+      const matches = content.match(open Tag Regex);
       
         // This is a complex fix, let's use a simpler approach
         // Just ensure proper closing for common patterns
-        content = content.replace(new RegExp(`<${tag}([^>]*)>\\s*$`, 'gm'), `<${tag}$1></${tag}>`);
+        content = content.replace(new Reg Exp(`<${t ag}([^>]*)>\\s*$`, 'gm'), `<${t ag}$1></${t ag}>`);
         modified = true;
       }
     }
 
     // Fix missing closing tags for self-closing elements
-    const selfClosingElements = ['img', 'br', 'hr', 'input', 'meta', 'link'];
-      content = content.replace(new RegExp(`<${element}([^>]*?)(?<!/)>`, 'g'), `<${element}$1 />`);
+    const self Closing Elements = ['img', 'br', 'hr', 'input', 'meta', 'link'];
+      content = content.replace(new Reg Exp(`<${e lement}([^>]*?)(?<!/)>`, 'g'), `<${e lement}$1 />`);
       modified = true;
     }
 
-    // Fix JSX expressions that need wrapping
+    // Fix J SX expressions that need wrapping
     content = content.replace(/\{([^}]*?)\s*\}\s*\{([^}]*?)\s*\}/g, '{$1}{$2}');
     
-    // Fix missing semicolons in JSX
+    // Fix missing semicolons in J SX
     content = content.replace(/(\w+)\s*(\n\s*

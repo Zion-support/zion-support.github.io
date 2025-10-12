@@ -1,2 +1,2 @@
-// Utility file: performanceOptimizer
+// Utility file: performance Optimizer
 };

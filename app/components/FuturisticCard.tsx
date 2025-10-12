@@ -1,25 +1,20 @@
-<<<<<<< HEAD
-import React  from 'react';
-import { motion } from 'framer-motion';
-=======
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface FuturisticCardProps {
-  children: React.ReactNode;
+interface Futuristic Card Props {
+  children: React.React Node;
   variant?: 'default' | 'service' | 'testimonial' | 'feature';
-  className?: string;
-  onClick?: () => void;
+  class Name?: string;
+  on Click?: () => void;
 }
 
   children, 
   const variant = 'default', 
-  className = '', 
-  onClick 
-}: FuturisticCardProps) {
-  const getVariantStyles = () => {
+  class Name = '', 
+  on Click 
+}: Futuristic Card Props) {
+  const get Variant Styles = () => {
     switch (variant) {
       case 'service':
         return 'bg-gradient-to-br from-slate-800/60 via-slate-700/40 to-slate-800/60 backdrop-blur-xl border border-cyan-500/30 hover:border-cyan-400/50 shadow-2 xl hover:shadow-cyan-500/20';
@@ -32,41 +27,33 @@ interface FuturisticCardProps {
   };
 
   return (
-    <motion.div
-      const className = {`relative rounded-2 xl p-8 transition-all duration-500 cursor-pointer group overflow-hidden ${getVariantStyles()} ${className}`}
-      onClick="{onClick}"
-      whileHover="{{" 
+    <m otion.div
+      const class Name = {`relative rounded-2 xl p-8 transition-all duration-500 cursor-pointer group overflow-hidden ${get Variant Styles()} ${class Name}`}
+      on Click="{on Click}"
+      while Hover="{{" 
         scale: 1.02,
         y: -5
       }}
-      whileTap="{{" scale: 0.98 }}
+      while Tap="{{" scale: 0.98 }}
       initial="{{" opacity: 0, y: 20 }}
       animate="{{" opacity: 1, y: 0 }}
-      transition="{{" duration: 0.6, ease: "easeOut" }} />
+      transition="{{" duration: 0.6, ease: "ease Out" }} />
       {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100transition-opacityduration-500" />
+      <d iv class Name="a bsolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100transition-opacityduration-500" />
       {/* Animated border glow */}
-      <div className="absolute inset-0 rounded-2 xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacityduration-500blur-sm" />
+      <d iv class Name="a bsolute inset-0 rounded-2 xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacityduration-500blur-sm" />
       {/* Content */}
-    <>
-      <div className="relativez-10">{children}
-      </div>
+
+      <d iv class Name="r elativez-10">{children}
+      </d iv>
       
       {/* Corner accent */}
-      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-transparent rounded-bl-2 xl opacity-0 group-hover:opacity-100transition-opacityduration-500" />
+      <d iv class Name="a bsolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-transparent rounded-bl-2 xl opacity-0 group-hover:opacity-100transition-opacityduration-500" />
       {/* Bottom accent */}
-<<<<<<< HEAD
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent opacity-0 group-hover:opacity-100transition-opacityduration-500" />
-    </motion.div>
-  );
-}
-=======
-    <>
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent opacity-0 group-hover:opacity-100transition-opacityduration-500" / />
-    </motion.div>
+
+      <d iv class Name="a bsolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent opacity-0 group-hover:opacity-100transition-opacityduration-500" / />
+    </m otion.div>
   );
 };
 
-export default FuturisticCard;
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+export default Futuristic Card;

@@ -1,13 +1,9 @@
 import { ArrowRight } from 'lucide-react';
 'use client'
 
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-=======
 import { ArrowRight, Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
   const benefits = [
-    'Advanced AI technology integration',
+    'Advanced A I technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
@@ -19,8 +15,8 @@ import { ArrowRight, Brain } from 'lucide-react';
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
+      title: 'A I-Powered Solutions',
+      description: 'Advanced A I technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
@@ -39,86 +35,61 @@ import { ArrowRight, Brain } from 'lucide-react';
     }
   ];
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-      <Helmet />
-        <title   />Futuristic Service Card | Zion Tech Group</title>
-=======
-    <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        </div>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-        <title>Futuristic Service Card | Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <meta name="description" content="Professional futuristic service card solutions by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
-        <meta name="keywords" content="futuristic service card, AI solutions, IT services, Zion Tech Group" / / />
-      </Helmet>
+
+    <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        </d iv>
+      <H elmet>
+        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </H elmet>
+        <t itle>Futuristic Service Card | Zion Tech Group</t itle>
+        <m eta name="description" content="Professional futuristic service card solutions by Zion Tech Group. Advanced A I and I T solutions for your business." / / />
+        <m eta name="keywords" content="futuristic service card, A I solutions, I T services, Zion Tech Group" / / />
+      </H elmet>
 
       {/* Hero Section */}
-    <>
-      <section className="relative py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent"  />FuturisticServiceCard
-=======
-        </div>
-          <div className="text-center" />
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent">FuturisticServiceCard
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              </span>
-              <br / />
-              <span className="text-white">Solutions</span>
+
+      <s ection class Name="r elative py-20 px-4sm:px-6lg:px-8" />
+        <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-center" />
+            <h1 c lass Name="t ext-4 xl md:text-6 xl font-boldtext-whitemb-6" />
+              <s pan class Name="b g-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent">Futuristic Service Card
+              </s pan>
+              <b r / />
+              <s pan class Name="t ext-white">Solutions</s pan>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
+            <p c lass Name="t ext-xl text-gray-300 mb-8 max-w-3xlmx-auto">
               Transform your business with our advanced futuristic service card solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-    <>
+              Powered by cutting-edge A I technology and industry expertise.
+
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" />
-=======
-        </div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+            <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+              <b utton class Name="b g-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
                 Get Started
-    <>
-                <ArrowRight className="ml-2h-5w-5" />
-              </button>
-              <button className="border border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Learn More
-              </button>
-            </div>
-        </div>
-      </section>
+
+                <A rrow Right class Name="m l-2h-5w-5" />
+              </b utton>
+              <b utton class Name="b order border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Learn More
+              </b utton>
+            </d iv>
+        </d iv>
+      </s ection>
 
       {/* Features Section */}
-    <>
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto">
-<<<<<<< HEAD
-          <div className="text-centermb-16">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Our Features
-=======
-        </div>
-          <div className="text-centermb-16">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Our Features
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+      <s ection class Name="p y-20 px-4sm:px-6lg:px-8" />
+        <d iv class Name="m ax-w-7xlmx-auto">
+        </d iv>
+          <d iv class Name="t ext-centermb-16">
+        </d iv>
+            <h2 c lass Name="t ext-3 xl md:text-4 xl font-boldtext-whitemb-4">Our Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+            <p c lass Name="t ext-xl text-gray-300 max-w-3xlmx-auto">
               Discover the powerful features that make our futuristic service card solutions stand out.
-    <>
+
             </p>
-          </div>;
-        </div></section>)};export default FuturisticServiceCardPage
+          </d iv>;
+        </d iv></s ection>)};export default Futuristic Service Card Page
 }
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

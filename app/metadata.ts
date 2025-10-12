@@ -2,20 +2,20 @@
   title: string;
   description: string;
   keywords: string[];
-  authors: Array<{ name: string }>;
+  authors: Array<{ n ame: string }>;
   creator: string;
   publisher: string;
     email: boolean;
     address: boolean;
     telephone: boolean;
   };
-  metadataBase: URL;
+  metadata Base: U RL;
     canonical: string;
   };
     title: string;
     description: string;
     url: string;
-    siteName: string;
+    site Name: string;
     images: Array
     }>;
     locale: string;

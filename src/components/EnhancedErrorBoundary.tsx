@@ -1,65 +1,65 @@
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  maxRetries?: number;
+  children: React Node;
+  fallback?: React Node;
+  on Error?: (error: Error, error Info: Error Info) => void;
+  enable Error Reporting?: boolean;
+  max Retries?: number;
 }
-  hasError: boolean;
+  has Error: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string;
-  retryCount: number;
+  error Info?: Error Info;
+  error Id?: string;
+  retry Count: number;
 }
-  private maxRetries: number;
+  private max Retries: number;
     super(props);
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      error Id: `error_${Date.now()}_${Math.random().to String(36).substr(2, 9)}`
     };
-    this.maxRetries = props.maxRetries || 3;
+    this.max Retries = props.max Retries || 3;
   }
-      retryCount: 0
+      retry Count: 0
     };
   }
-      errorInfo
+      error Info
     });
     // Log error to console in development
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary:', error, error Info);
     }
     // Call custom error handler if provided
-      this.props.onError(error, errorInfo);
+      this.props.on Error(error, error Info);
     }
     // Enhanced error reporting
-      this.reportError(error, errorInfo);
+      this.report Error(error, error Info);
     }
   }
     // Enhanced error reporting logic
     
     };
     // Log to console in development
-      console.group('🚨 Error Boundary Caught Error');
-      console.error('Error Report:', errorReport);
-      console.groupEnd();
+      console.group('🚨 ErrorBoundary Caught Error');
+      console.error('Error Report:', error Report);
+      console.group End();
     }
     // Send to error reporting service (implement as needed)
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
-      console.log('Error report prepared:', errorReport);
+      console.log('Error report prepared:', error Report);
        
       // Example: Send to error reporting service
-      //   body: JSON.stringify(errorReport)
+      //   body: J SO N.stringify(error Report)
       // });
-      console.error('Failed to report error:', reportingError);
+      console.error('Failed to report error:', reporting Error);
     }
   };
-    // Get user ID from localStorage, cookies, or context
-    return localStorage.getItem('userId') || null;
+    // Get user I D from local Storage, cookies, or context
+    return local Storage.get Item('user Id') || null;
   };
-    let sessionId = sessionStorage.getItem('sessionId');
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('sessionId', sessionId);
+    let session Id = session Storage.get Item('session Id');
+      session Id = `session_${Date.now()}_${Math.random().to String(36).substr(2, 9)}`;
+      session Storage.set Item('session Id', session Id);
     }
-    return sessionId;
+    return session Id;
   };
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.set State({ has Error: false, error: undefined, error Info: undefined });
   };
     window.location.reload();
   };
@@ -67,26 +67,26 @@
   };
     
     };
-    navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
+    navigator.clipboard.write Text(J SO N.stringify(error Details, null, 2))
         // Show success message
-        const button = document.getElementById('copy-error-details');
-          const originalText = button.textContent;
-          button.textContent = 'Copied!';
-            button.textContent = originalText;
+        const button = document.get Element By Id('copy-error-details');
+          const original Text = button.text Content;
+          button.text Content = 'Copied!';
+            button.text Content = original Text;
           }, 2000);
         }
       })
         console.error('Failed to copy error details:', error);
       });
   };
-      // Custom fallback UI
+      // Custom fallback U I
         return this.props.fallback;
       }
-      const { retryCount, error } = this.state;
+      const { retry Count, error } = this.state;
       
       );
     }
     return this.props.children;
   }
 }
-export default EnhancedErrorBoundary;
+export default Enhanced ErrorBoundary;

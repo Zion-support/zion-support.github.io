@@ -1,48 +1,41 @@
 'use client';
-import { useState, useEffect} from 'react';
+import { use State, use Effect} from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {;
-=======
 import { 
->>>>>>> cursor/fix-errors-and-merge-to-main-7ceb
   ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
-  BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
+  Bar Chart, File Text, Message Circle, Target, Check Square, Dollar Sign, Box, 
   Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
-  TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
+  Trending Up, Calendar, Shopping Cart, Sparkles, Cpu, Globe, Database, 
   Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock
 } from 'lucide-react';
-import { ArrowRight, ShoppingCart } from 'lucide-react';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Link as LinkIcon, Package, TrendingUp, Calendar, Globe, Database, Monitor, Mail } from 'lucide-react';
-=======
-import { ArrowRight, CheckCircle, Star, Users, Shield, Cloud, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Link as LinkIcon, Database, Mail } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
+import { ArrowRight, Shopping Cart } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, Bar Chart, File Text, Message Circle, Target, Check Square, Dollar Sign, Box, Settings, Link as LinkIcon, Package, Trending Up, Calendar, Globe, Database, Monitor, Mail } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Shield, Cloud, Bar Chart, File Text, Message Circle, Target, Check Square, Dollar Sign, Box, Link as LinkIcon, Database, Mail } from 'lucide-react';
 
-const MicroSaasPage: React.FC = () => {
+const Micro Saas Page: React.F C = () => {
 
-  useEffect(() => {
-    setIsVisible(true);
+  use Effect(() => {
+    set Is Visible(true);
   }, []);
 
-  const microSaasProducts = [
+  const micro Saas Products = [
     {
       id: 'zion-analytics-pro',
       title: 'Zion Analytics Pro',
-      description: 'Advanced business intelligence platform with AI-powered insights and real-time dashboards',
+      description: 'Advanced business intelligence platform with A I-powered insights and real-time dashboards',
       price: '$99/month',
-      originalPrice: '$149/month',
+      original Price: '$149/month',
       features: [
         'Real-time analytics dashboard',
-        'AI-powered predictive insights',
+        'A I-powered predictive insights',
         'Custom report generation',
         'Team collaboration tools',
-        'API integrations',
+        'A PI integrations',
         'Mobile app access',
         'Data visualization tools',
         'Export to multiple formats'
       ],
-      icon: BarChart,
+      icon: Bar Chart,
       color: 'from-blue-500 to-purple-500',
       category: 'Analytics',
       rating: 4.9,
@@ -51,21 +44,21 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-chat-ai',
-      title: 'Zion Chat AI',
+      title: 'Zion Chat A I',
       description: 'Intelligent customer support chatbot with natural language processing and multi-channel support',
       price: '$79/month',
-      originalPrice: '$119/month',
+      original Price: '$119/month',
       features: [
         'Multi-language support',
         'Sentiment analysis',
         'Escalation management',
         'Performance analytics',
         'Custom training',
-        'Integration APIs',
+        'Integration A PIs',
         'Live chat handoff',
         'Knowledge base management'
       ],
-      icon: MessageCircle,
+      icon: Message Circle,
       color: 'from-green-500 to-teal-500',
       category: 'Customer Support',
       rating: 4.8,
@@ -77,7 +70,7 @@ const MicroSaasPage: React.FC = () => {
       title: 'Zion Security Shield',
       description: 'Comprehensive cybersecurity monitoring and threat detection for small to medium businesses',
       price: '$149/month',
-      originalPrice: '$199/month',
+      original Price: '$199/month',
       features: [
         'Real-time threat detection',
         'Vulnerability scanning',
@@ -100,7 +93,7 @@ const MicroSaasPage: React.FC = () => {
       title: 'Zion Cloud Vault',
       description: 'Secure cloud backup and disaster recovery solution with automated backups and instant restore',
       price: '$59/month',
-      originalPrice: '$89/month',
+      original Price: '$89/month',
       features: [
         'Automated daily backups',
         'Instant file recovery',
@@ -121,20 +114,20 @@ const MicroSaasPage: React.FC = () => {
     {
       id: 'zion-content-studio',
       title: 'Zion Content Studio',
-      description: 'AI-powered content creation and management platform for blogs, social media, and marketing',
+      description: 'A I-powered content creation and management platform for blogs, social media, and marketing',
       price: '$69/month',
-      originalPrice: '$99/month',
+      original Price: '$99/month',
       features: [
-        'AI content generation',
+        'A I content generation',
         'Multi-platform publishing',
         'Brand voice training',
         'Content calendar',
-        'SEO optimization',
+        'S EO optimization',
         'Image generation',
         'Video creation tools',
         'Performance tracking'
       ],
-      icon: FileText,
+      icon: File Text,
       color: 'from-purple-500 to-pink-500',
       category: 'Content Creation',
       rating: 4.6,
@@ -143,10 +136,10 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-crm-intelligence',
-      title: 'Zion CRM Intelligence',
-      description: 'Smart customer relationship management with AI insights and automated workflows',
+      title: 'Zion C RM Intelligence',
+      description: 'Smart customer relationship management with A I insights and automated workflows',
       price: '$89/month',
-      originalPrice: '$129/month',
+      original Price: '$129/month',
       features: [
         'Lead scoring automation',
         'Sales forecasting',
@@ -155,11 +148,11 @@ const MicroSaasPage: React.FC = () => {
         'Email marketing',
         'Pipeline management',
         'Team collaboration',
-        'Mobile CRM access'
+        'Mobile C RM access'
       ],
       icon: Users,
       color: 'from-indigo-500 to-purple-500',
-      category: 'CRM',
+      category: 'C RM',
       rating: 4.8,
       reviews: 142,
       popular: true
@@ -169,7 +162,7 @@ const MicroSaasPage: React.FC = () => {
       title: 'Zion Data Sync',
       description: 'Automated data synchronization across multiple platforms and databases',
       price: '$49/month',
-      originalPrice: '$79/month',
+      original Price: '$79/month',
       features: [
         'Real-time data sync',
         'Multiple platform support',
@@ -177,7 +170,7 @@ const MicroSaasPage: React.FC = () => {
         'Error handling',
         'Scheduled syncs',
         'Data validation',
-        'API integrations',
+        'A PI integrations',
         'Monitoring dashboard'
       ],
       icon: Database,
@@ -192,14 +185,14 @@ const MicroSaasPage: React.FC = () => {
       title: 'Zion Lead Magnet',
       description: 'Lead generation and nurturing platform with automated email sequences and landing pages',
       price: '$79/month',
-      originalPrice: '$119/month',
+      original Price: '$119/month',
       features: [
         'Landing page builder',
         'Email automation',
         'Lead scoring',
         'A/B testing',
         'Analytics dashboard',
-        'CRM integration',
+        'C RM integration',
         'Form builder',
         'Social media integration'
       ],
@@ -213,9 +206,9 @@ const MicroSaasPage: React.FC = () => {
     {
       id: 'zion-project-master',
       title: 'Zion Project Master',
-      description: 'Advanced project management with AI-powered insights and team collaboration tools',
+      description: 'Advanced project management with A I-powered insights and team collaboration tools',
       price: '$99/month',
-      originalPrice: '$149/month',
+      original Price: '$149/month',
       features: [
         'Gantt charts',
         'Resource management',
@@ -226,7 +219,7 @@ const MicroSaasPage: React.FC = () => {
         'Progress reporting',
         'Mobile app'
       ],
-      icon: CheckSquare,
+      icon: Check Square,
       color: 'from-violet-500 to-purple-500',
       category: 'Project Management',
       rating: 4.8,
@@ -236,9 +229,9 @@ const MicroSaasPage: React.FC = () => {
     {
       id: 'zion-email-automation',
       title: 'Zion Email Automation',
-      description: 'Intelligent email marketing platform with AI-powered personalization and automation',
+      description: 'Intelligent email marketing platform with A I-powered personalization and automation',
       price: '$59/month',
-      originalPrice: '$89/month',
+      original Price: '$89/month',
       features: [
         'Email templates',
         'Automation workflows',
@@ -247,7 +240,7 @@ const MicroSaasPage: React.FC = () => {
         'Analytics tracking',
         'List management',
         'Drip campaigns',
-        'Integration APIs'
+        'Integration A PIs'
       ],
       icon: Mail,
       color: 'from-pink-500 to-rose-500',
@@ -259,9 +252,9 @@ const MicroSaasPage: React.FC = () => {
     {
       id: 'zion-inventory-smart',
       title: 'Zion Inventory Smart',
-      description: 'AI-powered inventory management with demand forecasting and automated reordering',
+      description: 'A I-powered inventory management with demand forecasting and automated reordering',
       price: '$89/month',
-      originalPrice: '$129/month',
+      original Price: '$129/month',
       features: [
         'Demand forecasting',
         'Automated reordering',
@@ -282,9 +275,9 @@ const MicroSaasPage: React.FC = () => {
     {
       id: 'zion-invoice-genius',
       title: 'Zion Invoice Genius',
-      description: 'Automated invoicing and payment processing with AI-powered expense categorization',
+      description: 'Automated invoicing and payment processing with A I-powered expense categorization',
       price: '$49/month',
-      originalPrice: '$79/month',
+      original Price: '$79/month',
       features: [
         'Automated invoicing',
         'Payment processing',
@@ -295,7 +288,7 @@ const MicroSaasPage: React.FC = () => {
         'Financial reporting',
         'Multi-currency support'
       ],
-      icon: DollarSign,
+      icon: Dollar Sign,
       color: 'from-green-500 to-emerald-500',
       category: 'Finance',
       rating: 4.8,
@@ -304,14 +297,14 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-video-editor',
-      title: 'Zion AI Video Editor',
-      description: 'AI-powered video editing with automatic scene detection, color correction, and smart transitions',
+      title: 'Zion A I Video Editor',
+      description: 'A I-powered video editing with automatic scene detection, color correction, and smart transitions',
       price: '$89/month',
-      originalPrice: '$129/month',
+      original Price: '$129/month',
       features: [
         'Auto scene detection',
         'Smart color correction',
-        'AI-generated transitions',
+        'A I-generated transitions',
         'Voice-over generation',
         'Background removal',
         'Text-to-video',
@@ -327,10 +320,10 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-translator-pro',
-      title: 'Zion AI Translator Pro',
-      description: 'Advanced AI translation with context awareness and industry-specific terminology support',
+      title: 'Zion A I Translator Pro',
+      description: 'Advanced A I translation with context awareness and industry-specific terminology support',
       price: '$69/month',
-      originalPrice: '$99/month',
+      original Price: '$99/month',
       features: [
         '100+ language support',
         'Context-aware translation',
@@ -338,7 +331,7 @@ const MicroSaasPage: React.FC = () => {
         'Real-time translation',
         'Document translation',
         'Voice translation',
-        'API integration',
+        'A PI integration',
         'Quality scoring'
       ],
       icon: Globe,
@@ -350,10 +343,10 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-code-reviewer',
-      title: 'Zion AI Code Reviewer',
+      title: 'Zion A I Code Reviewer',
       description: 'Intelligent code review with automated bug detection, security analysis, and performance optimization',
       price: '$149/month',
-      originalPrice: '$199/month',
+      original Price: '$199/month',
       features: [
         'Automated code review',
         'Bug detection',
@@ -374,9 +367,9 @@ const MicroSaasPage: React.FC = () => {
     {
       id: 'zion-customer-insights',
       title: 'Zion Customer Insights',
-      description: 'AI-powered customer behavior analysis with predictive insights and personalized recommendations',
+      description: 'A I-powered customer behavior analysis with predictive insights and personalized recommendations',
       price: '$119/month',
-      originalPrice: '$159/month',
+      original Price: '$159/month',
       features: [
         'Customer segmentation',
         'Behavior prediction',
@@ -396,12 +389,12 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-email-assistant',
-      title: 'Zion AI Email Assistant',
-      description: 'Smart email management with AI-powered responses, scheduling, and priority classification',
+      title: 'Zion A I Email Assistant',
+      description: 'Smart email management with A I-powered responses, scheduling, and priority classification',
       price: '$59/month',
-      originalPrice: '$89/month',
+      original Price: '$89/month',
       features: [
-        'AI email responses',
+        'A I email responses',
         'Smart scheduling',
         'Priority classification',
         'Spam filtering',
@@ -419,10 +412,10 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-meeting-assistant',
-      title: 'Zion AI Meeting Assistant',
+      title: 'Zion A I Meeting Assistant',
       description: 'Intelligent meeting management with transcription, action items, and follow-up automation',
       price: '$79/month',
-      originalPrice: '$119/month',
+      original Price: '$119/month',
       features: [
         'Real-time transcription',
         'Action item extraction',
@@ -442,21 +435,21 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-seo-optimizer',
-      title: 'Zion AI SEO Optimizer',
-      description: 'AI-powered SEO optimization with content analysis, keyword research, and ranking predictions',
+      title: 'Zion A I S EO Optimizer',
+      description: 'A I-powered S EO optimization with content analysis, keyword research, and ranking predictions',
       price: '$99/month',
-      originalPrice: '$149/month',
+      original Price: '$149/month',
       features: [
         'Content optimization',
         'Keyword research',
         'Ranking predictions',
         'Competitor analysis',
-        'Technical SEO audit',
+        'Technical S EO audit',
         'Link building suggestions',
         'Performance tracking',
         'Automated reports'
       ],
-      icon: TrendingUp,
+      icon: Trending Up,
       color: 'from-yellow-500 to-orange-500',
       category: 'Marketing',
       rating: 4.7,
@@ -465,10 +458,10 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-data-cleaner',
-      title: 'Zion AI Data Cleaner',
+      title: 'Zion A I Data Cleaner',
       description: 'Intelligent data cleaning and validation with automated error detection and correction',
       price: '$89/month',
-      originalPrice: '$129/month',
+      original Price: '$129/month',
       features: [
         'Automated data cleaning',
         'Error detection',
@@ -477,7 +470,7 @@ const MicroSaasPage: React.FC = () => {
         'Format standardization',
         'Missing data imputation',
         'Quality scoring',
-        'API integration'
+        'A PI integration'
       ],
       icon: Database,
       color: 'from-gray-500 to-slate-500',
@@ -488,10 +481,10 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-contract-analyzer',
-      title: 'Zion AI Contract Analyzer',
-      description: 'AI-powered contract analysis with risk assessment, clause extraction, and compliance checking',
+      title: 'Zion A I Contract Analyzer',
+      description: 'A I-powered contract analysis with risk assessment, clause extraction, and compliance checking',
       price: '$199/month',
-      originalPrice: '$299/month',
+      original Price: '$299/month',
       features: [
         'Contract analysis',
         'Risk assessment',
@@ -502,7 +495,7 @@ const MicroSaasPage: React.FC = () => {
         'Legal insights',
         'Document management'
       ],
-      icon: FileText,
+      icon: File Text,
       color: 'from-violet-500 to-purple-500',
       category: 'Legal',
       rating: 4.8,
@@ -511,12 +504,12 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-survey-builder',
-      title: 'Zion AI Survey Builder',
-      description: 'Intelligent survey creation with AI-generated questions, response analysis, and insights',
+      title: 'Zion A I Survey Builder',
+      description: 'Intelligent survey creation with A I-generated questions, response analysis, and insights',
       price: '$69/month',
-      originalPrice: '$99/month',
+      original Price: '$99/month',
       features: [
-        'AI question generation',
+        'A I question generation',
         'Response analysis',
         'Sentiment analysis',
         'Data visualization',
@@ -525,7 +518,7 @@ const MicroSaasPage: React.FC = () => {
         'Real-time analytics',
         'Export capabilities'
       ],
-      icon: CheckSquare,
+      icon: Check Square,
       color: 'from-pink-500 to-rose-500',
       category: 'Research',
       rating: 4.5,
@@ -534,10 +527,10 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-accounting-assistant',
-      title: 'Zion AI Accounting Assistant',
+      title: 'Zion A I Accounting Assistant',
       description: 'Smart accounting automation with expense categorization, tax preparation, and financial insights',
       price: '$129/month',
-      originalPrice: '$179/month',
+      original Price: '$179/month',
       features: [
         'Expense categorization',
         'Tax preparation',
@@ -548,7 +541,7 @@ const MicroSaasPage: React.FC = () => {
         'Reporting automation',
         'Multi-currency support'
       ],
-      icon: DollarSign,
+      icon: Dollar Sign,
       color: 'from-emerald-500 to-green-500',
       category: 'Finance',
       rating: 4.7,
@@ -557,10 +550,10 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-recruitment-pro',
-      title: 'Zion AI Recruitment Pro',
-      description: 'AI-powered recruitment with resume screening, candidate matching, and interview scheduling',
+      title: 'Zion A I Recruitment Pro',
+      description: 'A I-powered recruitment with resume screening, candidate matching, and interview scheduling',
       price: '$179/month',
-      originalPrice: '$249/month',
+      original Price: '$249/month',
       features: [
         'Resume screening',
         'Candidate matching',
@@ -573,17 +566,17 @@ const MicroSaasPage: React.FC = () => {
       ],
       icon: Users,
       color: 'from-blue-500 to-indigo-500',
-      category: 'HR',
+      category: 'H R',
       rating: 4.8,
       reviews: 134,
       popular: true
     },
     {
       id: 'zion-ai-content-moderation',
-      title: 'Zion AI Content Moderation',
-      description: 'Automated content moderation with AI-powered detection of inappropriate content and spam',
+      title: 'Zion A I Content Moderation',
+      description: 'Automated content moderation with A I-powered detection of inappropriate content and spam',
       price: '$149/month',
-      originalPrice: '$199/month',
+      original Price: '$199/month',
       features: [
         'Content filtering',
         'Spam detection',
@@ -592,7 +585,7 @@ const MicroSaasPage: React.FC = () => {
         'Video moderation',
         'Real-time processing',
         'Custom rules',
-        'API integration'
+        'A PI integration'
       ],
       icon: Shield,
       color: 'from-red-500 to-orange-500',
@@ -603,10 +596,10 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-predictive-maintenance',
-      title: 'Zion AI Predictive Maintenance',
-      description: 'AI-powered equipment monitoring with predictive maintenance and failure prevention',
+      title: 'Zion A I Predictive Maintenance',
+      description: 'A I-powered equipment monitoring with predictive maintenance and failure prevention',
       price: '$299/month',
-      originalPrice: '$399/month',
+      original Price: '$399/month',
       features: [
         'Equipment monitoring',
         'Failure prediction',
@@ -614,22 +607,22 @@ const MicroSaasPage: React.FC = () => {
         'Performance analytics',
         'Alert system',
         'Cost optimization',
-        'IoT integration',
+        'Io T integration',
         'Custom dashboards'
       ],
       icon: Settings,
       color: 'from-cyan-500 to-blue-500',
-      category: 'IoT',
+      category: 'Io T',
       rating: 4.7,
       reviews: 67,
       popular: false
     },
     {
       id: 'zion-ai-energy-manager',
-      title: 'Zion AI Energy Manager',
+      title: 'Zion A I Energy Manager',
       description: 'Smart energy management with consumption optimization and cost reduction recommendations',
       price: '$199/month',
-      originalPrice: '$279/month',
+      original Price: '$279/month',
       features: [
         'Energy monitoring',
         'Consumption optimization',
@@ -638,7 +631,7 @@ const MicroSaasPage: React.FC = () => {
         'Automated controls',
         'Sustainability tracking',
         'Reporting dashboard',
-        'IoT integration'
+        'Io T integration'
       ],
       icon: Zap,
       color: 'from-yellow-500 to-orange-500',
@@ -649,10 +642,10 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-supply-chain-optimizer',
-      title: 'Zion AI Supply Chain Optimizer',
-      description: 'AI-powered supply chain optimization with demand forecasting and inventory management',
+      title: 'Zion A I Supply Chain Optimizer',
+      description: 'A I-powered supply chain optimization with demand forecasting and inventory management',
       price: '$249/month',
-      originalPrice: '$349/month',
+      original Price: '$349/month',
       features: [
         'Demand forecasting',
         'Inventory optimization',
@@ -672,10 +665,10 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-fraud-detector',
-      title: 'Zion AI Fraud Detector',
+      title: 'Zion A I Fraud Detector',
       description: 'Advanced fraud detection with machine learning models and real-time transaction monitoring',
       price: '$179/month',
-      originalPrice: '$249/month',
+      original Price: '$249/month',
       features: [
         'Real-time monitoring',
         'Pattern recognition',
@@ -683,7 +676,7 @@ const MicroSaasPage: React.FC = () => {
         'Transaction analysis',
         'Alert system',
         'Machine learning models',
-        'API integration',
+        'A PI integration',
         'Compliance reporting'
       ],
       icon: Shield,
@@ -695,10 +688,10 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-customer-service-pro',
-      title: 'Zion AI Customer Service Pro',
-      description: 'Advanced AI customer service with multi-channel support and intelligent routing',
+      title: 'Zion A I Customer Service Pro',
+      description: 'Advanced A I customer service with multi-channel support and intelligent routing',
       price: '$159/month',
-      originalPrice: '$219/month',
+      original Price: '$219/month',
       features: [
         'Multi-channel support',
         'Intelligent routing',
@@ -709,7 +702,7 @@ const MicroSaasPage: React.FC = () => {
         'Integration capabilities',
         'Custom training'
       ],
-      icon: MessageCircle,
+      icon: Message Circle,
       color: 'from-green-500 to-teal-500',
       category: 'Customer Support',
       rating: 4.7,
@@ -718,10 +711,10 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-marketing-automation',
-      title: 'Zion AI Marketing Automation',
+      title: 'Zion A I Marketing Automation',
       description: 'Intelligent marketing automation with personalized campaigns and customer journey optimization',
       price: '$139/month',
-      originalPrice: '$189/month',
+      original Price: '$189/month',
       features: [
         'Campaign automation',
         'Personalization engine',
@@ -741,21 +734,21 @@ const MicroSaasPage: React.FC = () => {
     },
     {
       id: 'zion-ai-document-ai',
-      title: 'Zion AI Document AI',
-      description: 'Advanced document processing with OCR, data extraction, and intelligent document analysis',
+      title: 'Zion A I Document A I',
+      description: 'Advanced document processing with O CR, data extraction, and intelligent document analysis',
       price: '$119/month',
-      originalPrice: '$159/month',
+      original Price: '$159/month',
       features: [
-        'OCR technology',
+        'O CR technology',
         'Data extraction',
         'Document classification',
         'Form processing',
         'Text analysis',
         'Version control',
         'Search capabilities',
-        'API integration'
+        'A PI integration'
       ],
-      icon: FileText,
+      icon: File Text,
       color: 'from-gray-500 to-slate-500',
       category: 'Document Management',
       rating: 4.7,
@@ -763,340 +756,233 @@ const MicroSaasPage: React.FC = () => {
       popular: false
     }
   ];
-  const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'CRM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance', 'Video Production', 'Translation', 'Development', 'Productivity', 'Research', 'HR', 'IoT', 'Sustainability', 'Supply Chain', 'Legal', 'Document Management'];
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'C RM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance', 'Video Production', 'Translation', 'Development', 'Productivity', 'Research', 'H R', 'Io T', 'Sustainability', 'Supply Chain', 'Legal', 'Document Management'];
+  const [selected Category, set Selected Category] = use State('All');
 
-  const filteredProducts = selectedCategory === 'All' 
-    ? microSaasProducts 
-    : microSaasProducts.filter(product => product.category === selectedCategory);
+  const filtered Products = selected Category === 'All' 
+    ? micro Saas Products 
+    : micro Saas Products.filter(product => product.category === selected Category);
   return (
-    <>
-    <>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-        <title>Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
-        <meta const name = "description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." / / />
-        <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" / / />
-      </Helmet>
-    </>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+      <H elmet>
+        <t itle>5 G Data Analytics - Zion Tech Group</t itle>
+        <m eta name="description" content="Professional 5 G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </H elmet>
+        <t itle>Micro S AA S Products - Zion Tech Group | A I-Powered Business Solutions</t itle>
+        <m eta const name = "description" content="Discover our comprehensive suite of micro S AA S products designed to solve specific business challenges. From A I analytics to cybersecurity, we have the tools you need to succeed." / / />
+        <m eta name="keywords" content="micro saas, business software, A I tools, analytics, C RM, project management, cybersecurity, automation" / / />
+      </H elmet>
+
+      <d iv class Name="m in-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        </d iv>
         {/* Hero Section */}
-    <>
-        <section className="relative overflow-hiddenpt-20pb-16" />
-<<<<<<< HEAD
-          <div className="absoluteinset-0opacity-20" />
-          <div className="relative max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-            <div className="text-center">
-=======
-          <div className="absoluteinset-0opacity-20" / />
-          <div className="relative max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
-            <div className="text-center" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-    </>
-                Micro SAAS
-    <>
-                <span className="block bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent">Business Solutions
-                </span>
+
+        <s ection class Name="r elative overflow-hiddenpt-20pb-16" />
+          <d iv class Name="a bsoluteinset-0opacity-20" / />
+          <d iv class Name="r elative max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+        </d iv>
+            <d iv class Name="t ext-center" />
+              <h1 c lass Name="{`t ext-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${is Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+
+                Micro S AA S
+
+                <s pan class Name="b lock bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent">Business Solutions
+                </s pan>
               </h1>
-              <p className="{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-    </>
+              <p c lass Name="{`t ext-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${is Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+
                 Powerful, ready-to-use software solutions designed to solve specific business challenges. 
                 No complex setup, no lengthy implementations - just instant value.
-    <>
+
               </p>
-              <div className="{`flex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-<<<<<<< HEAD
-                <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" >
-          Start Free Trial
-                  
-          <ArrowRight className="ml-2h-5w-5"  />
-        </Link>
-=======
-                <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
-    </>
+              <d iv class Name="{`f lex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${is Visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+                <L ink to="/contact" class Name="i nline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
+
                   Start Free Trial
-    <>
-                  <ArrowRight className="ml-2h-5w-5" />
-                </Link>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+                  <A rrow Right class Name="m l-2h-5w-5" />
+                </L ink>
+
                 <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
+                  h ref="tel:+13024640950"
+                  class Name="i nline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
                   Call +1 302 464 0950
-    <>
+
                 </a>
-              </div>
-          </div>
-        </section>
-    </>
+              </d iv>
+          </d iv>
+        </s ection>
 
         {/* Category Filter */}
-    <>
-        <section className="py-8bg-gray-900/50" />
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-            <div className="flex flex-wrapjustify-centergap-4">
-=======
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
-            <div className="flex flex-wrapjustify-centergap-4">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+        <s ection class Name="p y-8bg-gray-900/50" />
+          <d iv class Name="m ax-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+        </d iv>
+            <d iv class Name="f lex flex-wrapjustify-centergap-4">
+        </d iv>
+
               {categories.map((category) => (
-                <button
+                <b utton
                   key="{category}"
-                  onClick="{()" =>setSelectedCategory(category)}
-                  className="{`px-6" py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    selectedCategory === category
+                  on Click="{()" =>set Selected Category(category)}
+                  class Name="{`p x-6" py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    selected Category === category
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
                       : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'
                   }`}
                 >
                   {category}
-                </button>
+                </b utton>
               ))}
-    <>
-            </div>
-        </section>
-    </>
+
+            </d iv>
+        </s ection>
 
         {/* Products Grid */}
-    <>
-        <section className="py-16" />
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
-=======
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
-        </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              {filteredProducts.map((product, index) => (
-                <div
+
+        <s ection class Name="p y-16" />
+          <d iv class Name="m ax-w-7 xl mx-auto px-4sm:px-6lg:px-8">
+        </d iv>
+            <d iv class Name="g rid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8">
+        </d iv>
+
+              {filtered Products.map((product, index) => (
+                <d iv
                   key="{product.id}"
-                  className="{`group" relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-purple-500 ${
+                  class Name="{`g roup" relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-purple-500 ${
                     product.popular ? 'ring-2 ring-purple-500' : ''
                   }`} />
                   {product.popular && (
-<<<<<<< HEAD
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
-=======
-    <>
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
-        </div>
-                      <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </span>
-                    </div>
-    </>
+
+                    <d iv class Name="a bsolute -top-3 left-1/2transform-translate-x-1/2">
+        </d iv>
+                      <s pan class Name="b g-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
+                      </s pan>
+                    </d iv>
+
                   )}
-                  
-<<<<<<< HEAD
-                  <div className="text-centermb-6">
-=======
-    <>
-                  <div className="text-centermb-6">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    <div className="{`inline-flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl mb-4`} />
-                      <product.icon className="h-8w-8text-white" />
-                    </div>
-<<<<<<< HEAD
-                    <h3 className="text-xl font-bold text-white mb-2"   />{product.title}</h3>
-                    <p className="text-gray-300text-smmb-4">
-              {product.description}</p>
-                    <div className="flex items-center justify-centerspace-x-2mb-4">
-                      <div className="flex items-center">
-=======
-                    <h3 className="text-xl font-boldtext-whitemb-2">{product.title}</h3>
-                    <p className="text-gray-300text-smmb-4">{product.description}</p>
-                    <div className="flex items-center justify-centerspace-x-2mb-4">
-        </div>
-                      <div className="flexitems-center" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+                  <d iv class Name="t ext-centermb-6">
+        </d iv>
+                    <d iv class Name="{`i nline-flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl mb-4`} />
+                      <p roduct.icon class Name="h-8w-8t ext-white" />
+                    </d iv>
+                    <h3 c lass Name="t ext-xl font-boldtext-whitemb-2">{product.title}</h3>
+                    <p c lass Name="t ext-gray-300text-smmb-4">{product.description}</p>
+                    <d iv class Name="f lex items-center justify-centerspace-x-2mb-4">
+        </d iv>
+                      <d iv class Name="f lexitems-center" />
+
                         {[...Array(5)].map((_, i) => (
-                          <Star
+                          <S tar
                             key="{i}"
-                            className="{`h-4" w-4 ${
+                            class Name="{`h-4" w-4 ${
                               i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'
                             }`}
                           / />
                         ))}
-    <>
-                      </div>
-                      <span className="text-smtext-gray-400">({product.reviews} reviews)</span>
-                    </div>
-<<<<<<< HEAD
 
-                  <div className="text-centermb-6">
-                    <div className="flex items-center justify-centerspace-x-2mb-2">
-                      <span className="text-3 xlfont-bold text-white"   />{product.price}</span>
-                      <span className="text-lgtext-gray-400line-through"   />{product.originalPrice}</span>
-=======
-    </>
+                      </d iv>
+                      <s pan class Name="t ext-smtext-gray-400">({product.reviews} reviews)</s pan>
+                    </d iv>
 
-    <>
-                  <div className="text-centermb-6">
-        </div>
-                    <div className="flex items-center justify-centerspace-x-2mb-2">
-        </div>
-                      <span className="text-3 xlfont-boldtext-white">{product.price}</span>
-                      <span className="text-lgtext-gray-400line-through">{product.originalPrice}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                    </div>
-                    <span className="text-smtext-green-400font-semibold">Save {Math.round((1 - parseInt(product.price.replace('$', '')) / parseInt(product.originalPrice.replace('$', ''))) * 100)}%
-                    </span>
-                  </div>
-    </>
+                  <d iv class Name="t ext-centermb-6">
+        </d iv>
+                    <d iv class Name="f lex items-center justify-centerspace-x-2mb-2">
+        </d iv>
+                      <s pan class Name="t ext-3 xlfont-boldtext-white">{product.price}</s pan>
+                      <s pan class Name="t ext-lgtext-gray-400line-through">{product.original Price}</s pan>
+                    </d iv>
+                    <s pan class Name="t ext-smtext-green-400font-semibold">Save {Math.round((1 - parse Int(product.price.replace('$', '')) / parse Int(product.original Price.replace('$', ''))) * 100)}%
+                    </s pan>
+                  </d iv>
 
-                  <div className="space-y-3mb-6">
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+                  <d iv class Name="s pace-y-3mb-6">
+        </d iv>
                     {product.features.slice(0, 4).map((feature, idx) => (
-    <>
-                      <div key="{idx}" className="flex items-centertext-smtext-gray-300" />
-<<<<<<< HEAD
-                        <CheckCircle className="h-4 w-4 text-green-400mr-3flex-shrink-0" />
-                        <span   />{feature}</span>
-=======
-                        <CheckCircle className="h-4 w-4 text-green-400mr-3flex-shrink-0" / />
-                        <span>{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                      </div>
-    </>
+
+                      <d iv key="{idx}" class Name="f lex items-centertext-smtext-gray-300" />
+                        <C heck Circle class Name="h-4 w-4 t ext-green-400mr-3flex-shrink-0" / />
+                        <s pan>{feature}</s pan>
+                      </d iv>
+
                     ))}
                     {product.features.length > 4 && (
-    <>
-                      <div className="text-smtext-gray-400text-center">+{product.features.length - 4} more features
-                      </div>
-    </>
+
+                      <d iv class Name="t ext-smtext-gray-400text-center">+{product.features.length - 4} more features
+                      </d iv>
+
                     )}
-                  </div>
+                  </d iv>
 
-<<<<<<< HEAD
-                  <div className="space-y-3">
-                    <Link to="{`/${product.id}`}" className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" >
-          View Details
-                      
-          <ArrowRight className="ml-2h-4w-4"  />
-        </Link>
-                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300">Start Free Trial
-                    </Link>
-                  </div>
-=======
-    <>
-                  <div className="space-y-3">
-        </div>
-                    <Link to="{`/${product.id}`}" className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
-    </>
+                  <d iv class Name="s pace-y-3">
+        </d iv>
+                    <L ink to="{`/${product.id}`}" class Name="w-f ull inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
+
                       View Details
-    <>
-                      <ArrowRight className="ml-2h-4w-4" />
-                    </Link>
-                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300">Start Free Trial
-                    </Link>
-                  </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              ))}
-    <>
-            </div>
-        </section>
-    </>
 
-        {/* CTA Section */}
-    <>
-        <section className="py-20 bg-gradient-to-brfrom-gray-900to-purple-900" />
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4 sm:px-6lg:px-8text-center">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Transform Your Business?
+                      <A rrow Right class Name="m l-2h-4w-4" />
+                    </L ink>
+                    <L ink to="/contact" class Name="w-f ull inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300">Start Free Trial
+                    </L ink>
+                  </d iv>
+
+              ))}
+
+            </d iv>
+        </s ection>
+
+        {/* C TA Section */}
+
+        <s ection class Name="p y-20 bg-gradient-to-brfrom-gray-900to-purple-900" />
+          <d iv class Name="m ax-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center">
+        </d iv>
+            <h2 c lass Name="t ext-3 xl md:text-4 xl font-boldtext-whitemb-4">Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
-=======
-          <div className="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center">
-        </div>
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-              Join thousands of businesses already using our micro SAAS solutions to streamline operations, 
+            <p c lass Name="t ext-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
+
+              Join thousands of businesses already using our micro S AA S solutions to streamline operations, 
               increase productivity, and drive growth.
-    <>
+
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-<<<<<<< HEAD
-              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" >
-          Get Started Today
-                
-          <ArrowRight className="ml-2h-5w-5"  />
-        </Link>
-=======
-        </div>
-              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
-    </>
+            <d iv class Name="f lex flex-col sm:flex-rowgap-4justify-center">
+        </d iv>
+              <L ink to="/contact" class Name="i nline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
+
                 Get Started Today
-    <>
-                <ArrowRight className="ml-2h-5w-5" />
-              </Link>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+
+                <A rrow Right class Name="m l-2h-5w-5" />
+              </L ink>
+
               <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
+                h ref="tel:+13024640950"
+                class Name="i nline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
                 Call +1 302 464 0950
-    <>
+
               </a>
-            </div>
-            <div className="mt-8text-gray-400">
-<<<<<<< HEAD
-              <p />Email: kleber@ziontechgroup.com</p>
-              <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-=======
-        </div>
+            </d iv>
+            <d iv class Name="m t-8text-gray-400">
+        </d iv>
               <p>Email: kleber@ziontechgroup.com</p>
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            </div>
-        </section>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-    </>
+              <p>Address: 364 E Main St S TE 1008, Middletown D E 19709</p>
+            </d iv>
+        </s ection>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+        </d iv>
+      </d iv>
+      </d iv>
+
   );
 };
 
-<<<<<<< HEAD
-export default MicroSaasPage;
-=======
-export default MicroSaasPage;
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+export default Micro Saas Page;

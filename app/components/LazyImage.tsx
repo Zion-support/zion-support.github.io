@@ -1,116 +1,99 @@
-import { useState, useRef, useEffect} from 'react';
+import { use State, use Ref, use Effect} from 'react';
 import { Loader2 } from 'lucide-react';
 
-interface LazyImageProps {
+interface Lazy Image Props {
   src: string,
   alt: string
-  className?: string
+  class Name?: string
   placeholder?: string
-  onLoad?: () => void
-  onError?: () => void
+  on Load?: () => void
+  on Error?: () => void
 }
 
-const LazyImage: React.FC<LazyImageProps /> = ({
+const Lazy Image: React.F C<L azy Image Props /> = ({
   src,
   alt,
-  const className = '',
+  const class Name = '',
   placeholder,
-  onLoad,
-  onError
+  on Load,
+  on Error
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isInView, setIsInView] = useState(false)
-  const [hasError, setHasError] = useState(false)
-  const imgRef = useRef<HTMLImageElement />(null)
+  const [is Loaded, set Is Loaded] = use State(false)
+  const [is In View, set Is In View] = use State(false)
+  const [has Error, set Has Error] = use State(false)
+  const img Ref = use Ref<H T M LImage Element />(null)
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
+  use Effect(() => {
+    const observer = new Intersection Observer(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true)
+        if (entry.is Intersecting) {
+          set Is In View(true)
           observer.disconnect()
         }
       },
       { threshold: 0.1 }
     )
 
-    if (imgRef.current) {
-      observer.observe(imgRef.current)
+    if (img Ref.current) {
+      observer.observe(img Ref.current)
     }
 
     return () => observer.disconnect()
   }, [])
 
-  const handleLoad = () => {
-    setIsLoaded(true)
-    onLoad?.()
+  const handle Load = () => {
+    set Is Loaded(true)
+    on Load?.()
   }
 
-  const handleError = () => {
-    setHasError(true)
-    onError?.()
+  const handle Error = () => {
+    set Has Error(true)
+    on Error?.()
   }
 
   return (
-    <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
-      {!isInView && (
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-centerjustify-center">
-          <Loader2 className="w-8 h-8text-gray-400animate-spin" />
-=======
-    <>
-        <div className="absolute inset-0 bg-gray-800 animate-pulse flexitems-centerjustify-center">
-        </div>
-          <Loader2 className="w-8 h-8text-gray-400animate-spin" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        </div>
+    <d iv ref="{img Ref}" class Name="{`r elative" overflow-hidden ${class Name}`} />
+      {!is In View && (
+
+        <d iv class Name="a bsolute inset-0 bg-gray-800 animate-pulse flexitems-centerjustify-center">
+        </d iv>
+          <L oader2 class Name="w-8 h-8t ext-gray-400animate-spin" / />
+        </d iv>
       )}
       
-      {isInView && !isLoaded && !hasError && (
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gray-800 flex items-centerjustify-center">
-          <Loader2 className="w-8 h-8text-gray-400animate-spin" />
-=======
-    <>
-        <div className="absolute inset-0 bg-gray-800 flexitems-centerjustify-center">
-        </div>
-          <Loader2 className="w-8 h-8text-gray-400animate-spin" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        </div>
+      {is In View && !is Loaded && !has Error && (
+
+        <d iv class Name="a bsolute inset-0 bg-gray-800 flexitems-centerjustify-center">
+        </d iv>
+          <L oader2 class Name="w-8 h-8t ext-gray-400animate-spin" / />
+        </d iv>
       )}
       
-      {isInView && (
-        <img
+      {is In View && (
+        <i mg
           src="{src}"
           alt="{alt}"
-          onLoad="{handleLoad}"
-          onError="{handleError}"
-          className="{`w-full" h-full object-cover transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
+          on Load="{handle Load}"
+          on Error="{handle Error}"
+          class Name="{`w-f ull" h-full object-cover transition-opacity duration-300 ${
+            is Loaded ? 'opacity-100' : 'opacity-0'
           }`}
           loading="lazy"
         / />
       )}
       
-      {hasError && (
-<<<<<<< HEAD
-        <div className="absolute inset-0 bg-gray-800 flex items-centerjustify-center">
-          <div className="text-centertext-gray-400">
-            <div className="w-8 h-8mx-automb-2"  >📷</div>
-=======
-    <>
-        <div className="absolute inset-0 bg-gray-800 flexitems-centerjustify-center">
-        </div>
-          <div className="text-centertext-gray-400">
-        </div>
-            <div className="w-8 h-8mx-automb-2">📷</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-            <p className="text-sm">Image failed to load</p>
-          </div>
+      {has Error && (
+
+        <d iv class Name="a bsolute inset-0 bg-gray-800 flexitems-centerjustify-center">
+        </d iv>
+          <d iv class Name="t ext-centertext-gray-400">
+        </d iv>
+            <d iv class Name="w-8 h-8m x-automb-2">📷</d iv>
+            <p c lass Name="t ext-sm">Image failed to load</p>
+          </d iv>
       )}
-    </div>
+    </d iv>
   )
 }
 
-export default LazyImage;
-    </>
+export default Lazy Image;

@@ -1,82 +1,82 @@
-import { useEffect, useCallback } from 'react';
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+import { use Effect, use Callback } from 'react';
+  load Time: number;
+  first Contentful Paint: number;
+  largest Contentful Paint: number;
+  cumulative Layout Shift: number;
+  first Input Delay: number;
 }
       return null;
     }
     
-    )[0] as PerformanceNavigationTiming;
-    const paintEntries = performance.getEntriesByType('paint');
-      loadTime: navigation
-        ? navigation.loadEventEnd - navigation.loadEventStart
-      firstContentfulPaint:
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')
-      firstInputDelay: 0
+    )[0] as Performance Navigation Timing;
+    const paint Entries = performance.get Entries By Type('paint');
+      load Time: navigation
+        ? navigation.load Event End - navigation.load Event Start
+      first Contentful Paint:
+        paint Entries.find(entry => entry.name === 'first-contentful-paint')
+      first Input Delay: 0
     };
-    // Measure LCP
+    // Measure L CP
     
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-        metrics.largestContentfulPaint = lastEntry.startTime;
+      const entries = list.get Entries();
+      const last Entry = entries[entries.length - 1];
+        metrics.largest Contentful Paint = last Entry.start Time;
       }
     });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-    // Measure CLS
-    let clsValue = 0;
+    lcp Observer.observe({ entry Types: ['largest-contentful-paint'] });
+    // Measure C LS
+    let cls Value = 0;
     
-          hadRecentInput?: boolean;
+          had Recent Input?: boolean;
           value?: number;
         };
-          clsValue += layoutShiftEntry.value || 0;
+          cls Value += layout Shift Entry.value || 0;
         }
       }
-      metrics.cumulativeLayoutShift = clsValue;
+      metrics.cumulative Layout Shift = cls Value;
     });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
-    // Measure FID
+    cls Observer.observe({ entry Types: ['layout-shift'] });
+    // Measure F ID
     
-          processingStart?: number;
+          processing Start?: number;
         };
-          (fidEntry.processingStart || 0) - entry.startTime;
+          (fid Entry.processing Start || 0) - entry.start Time;
       }
     });
-    fidObserver.observe({ entryTypes: ['first-input'] });
+    fid Observer.observe({ entry Types: ['first-input'] });
     // Cleanup observers after a delay
-      lcpObserver.disconnect();
-      clsObserver.disconnect();
-      fidObserver.disconnect();
+      lcp Observer.disconnect();
+      cls Observer.disconnect();
+      fid Observer.disconnect();
     }, 10000);
     return metrics;
   }, []);
   
-    const images = document.querySelectorAll('img[data-src]');
+    const images = document.query Selector All('img[data-src]');
     
-          const img = entry.target as HTMLImageElement;
+          const img = entry.target as H TM LImage Element;
           img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
+          img.class List.remove('lazy');
+          image Observer.unobserve(img);
         }
       });
     });
-    images.forEach(img => imageObserver.observe(img));
+    images.for Each(img => image Observer.observe(img));
   }, []);
   
-    const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
-      const link = document.createElement('link');
+    const critical Resources = ['/fonts/inter-var.woff2', '/css/critical.css'];
+      const link = document.create Element('link');
       link.rel = 'preload';
       link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'style';
-        link.crossOrigin = 'anonymous';
+      link.as = resource.ends With('.woff2') ? 'font' : 'style';
+        link.cross Origin = 'anonymous';
       }
-      document.head.appendChild(link);
+      document.head.append Child(link);
     });
   }, []);
     // Measure performance after page load
     
-      const metrics = measurePerformance();
+      const metrics = measure Performance();
         // Send metrics to analytics in production
           // Track metrics in production
         }
@@ -86,11 +86,11 @@ import { useEffect, useCallback } from 'react';
       }
     }, 1000);
     // Optimize images
-    optimizeImages();
+    optimize Images();
     // Preload critical resources
-    preloadCriticalResources();
-    return () => clearTimeout(timer);
-  }, [measurePerformance, optimizeImages, preloadCriticalResources]);
-    preloadCriticalResources
+    preload Critical Resources();
+    return () => clear Timeout(timer);
+  }, [measure Performance, optimize Images, preload Critical Resources]);
+    preload Critical Resources
   };
 };

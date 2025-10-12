@@ -75,46 +75,46 @@ export default {
           glow: '#00ffff',
         }
       },
-      fontFamily: {
+      font Family: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        mono: ['Jet Brains Mono', 'monospace'],
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-out',
-        'slide-down': 'slideDown 0.5s ease-out',
-        'scale-in': 'scaleIn 0.3s ease-out',
+        'fade-in': 'fade In 0.5s ease-in-out',
+        'slide-up': 'slide Up 0.5s ease-out',
+        'slide-down': 'slide Down 0.5s ease-out',
+        'scale-in': 'scale In 0.3s ease-out',
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'bounce-slow': 'bounce 2s infinite',
         'spin-slow': 'spin 3s linear infinite',
         'gradient': 'gradient 15s ease infinite',
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
-        'neon-pulse': 'neonPulse 2s ease-in-out infinite alternate',
-        'cyber-scan': 'cyberScan 3s linear infinite',
-        'matrix-rain': 'matrixRain 20s linear infinite',
+        'neon-pulse': 'neon Pulse 2s ease-in-out infinite alternate',
+        'cyber-scan': 'cyber Scan 3s linear infinite',
+        'matrix-rain': 'matrix Rain 20s linear infinite',
         'hologram': 'hologram 4s ease-in-out infinite',
-        'data-stream': 'dataStream 8s linear infinite',
-        'neon-flicker': 'neonFlicker 0.5s ease-in-out infinite alternate',
-        'cyber-glow': 'cyberGlow 3s ease-in-out infinite',
-        'particle-float': 'particleFloat 10s ease-in-out infinite',
-        'grid-move': 'gridMove 20s linear infinite',
-        'neon-border': 'neonBorder 2s ease-in-out infinite',
+        'data-stream': 'data Stream 8s linear infinite',
+        'neon-flicker': 'neon Flicker 0.5s ease-in-out infinite alternate',
+        'cyber-glow': 'cyber Glow 3s ease-in-out infinite',
+        'particle-float': 'particle Float 10s ease-in-out infinite',
+        'grid-move': 'grid Move 20s linear infinite',
+        'neon-border': 'neon Border 2s ease-in-out infinite',
       },
       keyframes: {
-        fadeIn: {
+        fade In: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+        slide Up: {
+          '0%': { transform: 'translate Y(20px)', opacity: '0' },
+          '100%': { transform: 'translate Y(0)', opacity: '1' },
         },
-        slideDown: {
-          '0%': { transform: 'translateY(-20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+        slide Down: {
+          '0%': { transform: 'translate Y(-20px)', opacity: '0' },
+          '100%': { transform: 'translate Y(0)', opacity: '1' },
         },
-        scaleIn: {
+        scale In: {
           '0%': { transform: 'scale(0.9)', opacity: '0' },
           '100%': { transform: 'scale(1)', opacity: '1' },
         },
@@ -129,83 +129,83 @@ export default {
           },
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
+          '0%, 100%': { transform: 'translate Y(0px)' },
+          '50%': { transform: 'translate Y(-20px)' },
         },
         glow: {
-          '0%': { boxShadow: '0 0 5px rgba(168, 85, 247, 0.5)' },
-          '100%': { boxShadow: '0 0 20px rgba(168, 85, 247, 0.8), 0 0 30px rgba(168, 85, 247, 0.6)' },
+          '0%': { box Shadow: '0 0 5px rgba(168, 85, 247, 0.5)' },
+          '100%': { box Shadow: '0 0 20px rgba(168, 85, 247, 0.8), 0 0 30px rgba(168, 85, 247, 0.6)' },
         },
-        neonPulse: {
+        neon Pulse: {
           '0%': { 
-            boxShadow: '0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff',
-            textShadow: '0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff'
+            box Shadow: '0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff',
+            text Shadow: '0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff'
           },
           '100%': { 
-            boxShadow: '0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff',
-            textShadow: '0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff'
+            box Shadow: '0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff',
+            text Shadow: '0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff'
           },
         },
-        cyberScan: {
-          '0%': { transform: 'translateY(-100%)' },
-          '100%': { transform: 'translateY(100vh)' },
+        cyber Scan: {
+          '0%': { transform: 'translate Y(-100%)' },
+          '100%': { transform: 'translate Y(100vh)' },
         },
-        matrixRain: {
-          '0%': { transform: 'translateY(-100vh)' },
-          '100%': { transform: 'translateY(100vh)' },
+        matrix Rain: {
+          '0%': { transform: 'translate Y(-100vh)' },
+          '100%': { transform: 'translate Y(100vh)' },
         },
         hologram: {
           '0%, 100%': { 
             opacity: '0.8',
-            transform: 'translateY(0px) scale(1)',
+            transform: 'translate Y(0px) scale(1)',
             filter: 'hue-rotate(0deg)'
           },
           '50%': { 
             opacity: '1',
-            transform: 'translateY(-10px) scale(1.02)',
+            transform: 'translate Y(-10px) scale(1.02)',
             filter: 'hue-rotate(90deg)'
           },
         },
-        dataStream: {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(100vw)' },
+        data Stream: {
+          '0%': { transform: 'translate X(-100%)' },
+          '100%': { transform: 'translate X(100vw)' },
         },
-        neonFlicker: {
+        neon Flicker: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.8' },
         },
-        cyberGlow: {
+        cyber Glow: {
           '0%, 100%': { 
-            boxShadow: '0 0 5px #00d4ff, inset 0 0 5px #00d4ff',
-            borderColor: '#00d4ff'
+            box Shadow: '0 0 5px #00d4ff, inset 0 0 5px #00d4ff',
+            border Color: '#00d4ff'
           },
           '50%': { 
-            boxShadow: '0 0 20px #00d4ff, 0 0 30px #00d4ff, inset 0 0 20px #00d4ff',
-            borderColor: '#00ffff'
+            box Shadow: '0 0 20px #00d4ff, 0 0 30px #00d4ff, inset 0 0 20px #00d4ff',
+            border Color: '#00ffff'
           },
         },
-        particleFloat: {
-          '0%, 100%': { transform: 'translateY(0px) translateX(0px)' },
-          '25%': { transform: 'translateY(-20px) translateX(10px)' },
-          '50%': { transform: 'translateY(-10px) translateX(-10px)' },
-          '75%': { transform: 'translateY(-30px) translateX(5px)' },
+        particle Float: {
+          '0%, 100%': { transform: 'translate Y(0px) translate X(0px)' },
+          '25%': { transform: 'translate Y(-20px) translate X(10px)' },
+          '50%': { transform: 'translate Y(-10px) translate X(-10px)' },
+          '75%': { transform: 'translate Y(-30px) translate X(5px)' },
         },
-        gridMove: {
+        grid Move: {
           '0%': { transform: 'translate(0, 0)' },
           '100%': { transform: 'translate(20px, 20px)' },
         },
-        neonBorder: {
+        neon Border: {
           '0%, 100%': { 
-            borderColor: '#00ffff',
-            boxShadow: '0 0 5px #00ffff, inset 0 0 5px #00ffff'
+            border Color: '#00ffff',
+            box Shadow: '0 0 5px #00ffff, inset 0 0 5px #00ffff'
           },
           '50%': { 
-            borderColor: '#ff00ff',
-            boxShadow: '0 0 15px #ff00ff, inset 0 0 15px #ff00ff'
+            border Color: '#ff00ff',
+            box Shadow: '0 0 15px #ff00ff, inset 0 0 15px #ff00ff'
           },
         },
       },
-      backgroundImage: {
+      background Image: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'cyber-grid': 'linear-gradient(rgba(168, 85, 247, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(168, 85, 247, 0.1) 1px, transparent 1px)',
@@ -217,7 +217,7 @@ export default {
         'data-stream': 'linear-gradient(90deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 100%)',
         'hologram-overlay': 'linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 50%, rgba(0, 255, 0, 0.05) 100%)',
       },
-      backgroundSize: {
+      background Size: {
         'cyber-grid': '20px 20px',
         'neon-grid': '30px 30px',
         'matrix-pattern': '25px 25px',
@@ -225,12 +225,12 @@ export default {
         'neon-circuit': '30px 30px',
         'data-stream': '200px 100%',
       },
-      backdropBlur: {
+      backdrop Blur: {
         xs: '2px',
       },
-      boxShadow: {
+      box Shadow: {
         'cyber': '0 0 20px rgba(168, 85, 247, 0.3), inset 0 0 20px rgba(168, 85, 247, 0.1)',
-        'neon': '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
+        'neon': '0 0 5px current Color, 0 0 10px current Color, 0 0 15px current Color',
         'glow': '0 0 20px rgba(168, 85, 247, 0.5)',
         'neon-cyan': '0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff',
         'neon-pink': '0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff',

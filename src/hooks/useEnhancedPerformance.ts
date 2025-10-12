@@ -2,64 +2,64 @@
  * Enhanced Performance Hook
  * Combines performance monitoring, error tracking, and analytics
  */
-import { useEffect, useCallback, useRef } from 'react';
-import { errorTracker } from '../utils/enhancedErrorTracking';
-import { analytics } from '../utils/enhancedAnalytics';
+import { use Effect, use Callback, use Ref } from 'react';
+import { error Tracker } from '../utils/enhanced Error Tracking';
+import { analytics } from '../utils/enhanced Analytics';
   component?: string;
-  trackErrors?: boolean;
-  trackPerformance?: boolean;
-  trackAnalytics?: boolean;
+  track Errors?: boolean;
+  track Performance?: boolean;
+  track Analytics?: boolean;
 }
-    trackAnalytics = true
+    track Analytics = true
   } = _options;
-  const mountTimeRef = useRef<number>(0);
-  const renderCountRef = useRef<number>(0);
-    mountTimeRef.current = performance.now();
-    renderCountRef.current = 0;
+  const mount Time Ref = use Ref<n umber>(0);
+  const render Count Ref = use Ref<n umber>(0);
+    mount Time Ref.current = performance.now();
+    render Count Ref.current = 0;
     // Track component mount
-      analytics.trackCustomEvent('Component', 'Mounted', component);
+      analytics.track Custom Event('Component', 'Mounted', component);
     }
       // Track component unmount duration
-        const duration = performance.now() - mountTimeRef.current;
+        const duration = performance.now() - mount Time Ref.current;
           // Long-lived component
             Math.round(duration)
           );
         }
       }
       // Track component unmount
-        analytics.trackCustomEvent('Component', 'Unmounted', component);
+        analytics.track Custom Event('Component', 'Unmounted', component);
       }
     };
-  }, [component, trackAnalytics, trackPerformance]);
+  }, [component, track Analytics, track Performance]);
   // Track render performance
-    renderCountRef.current++;
+    render Count Ref.current++;
       // Many re-renders detected
-        renderCountRef.current
+        render Count Ref.current
       );
     }
   });
   
         });
       }
-    [component, trackErrors]
+    [component, track Errors]
   );
   
-        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
+        analytics.track Custom Event('User Action', action, component, undefined, metadata);
       }
-    [component, trackAnalytics]
+    [component, track Analytics]
   );
   
-      const startTime = performance.now();
-          const duration = performance.now() - startTime;
+      const start Time = performance.now();
+          const duration = performance.now() - start Time;
               duration > 1000 ? 'slow' : 'fast'
             );
           }
           return duration;
         }
       };
-    [component, trackPerformance]
+    [component, track Performance]
   );
-    measureOperation
+    measure Operation
   };
 }
-export default useEnhancedPerformance;
+export default use Enhanced Performance;

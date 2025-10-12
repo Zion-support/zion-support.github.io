@@ -8,7 +8,7 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
 
   ];
 
-  // Removed specializedServices as it was unused
+  // Removed specialized Services as it was unused
 
   ];
 
@@ -18,164 +18,164 @@ import { Phone, Mail, MapPin, Brain, Zap, ArrowRight } from 'lucide-react';
 
   ];
 
-    <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+    <f ooter class Name="b g-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
+      <d iv class Name="c ontainer mx-auto px-4 py-12">
+        <d iv class Name="g rid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
+          <d iv class Name="l g:col-span-1">
+            <d iv class Name="f lex items-center space-x-2 mb-4">
+              <d iv class Name="w-8 h-8 b g-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+                <B rain class Name="w-5 h-5 t ext-white" />
+              </d iv>
+              <s pan class Name="t ext-xl font-bold text-white neon-text">Zion Tech Group</s pan>
+            </d iv>
+            <p c lass Name="t ext-gray-300 mb-6 leading-relaxed">
+              Leading provider of A I-powered enterprise solutions, quantum computing, and digital transformation services.
             </p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+            <d iv class Name="s pace-y-3">
+              <d iv class Name="f lex items-center space-x-3 text-gray-300">
+                <P hone class Name="w-4 h-4 t ext-cyan-400" />
+                <a h ref="tel:+13024640950" class Name="h over:text-cyan-400 transition-colors">
                   +1 302 464 0950
                 </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+              </d iv>
+              <d iv class Name="f lex items-center space-x-3 text-gray-300">
+                <M ail class Name="w-4 h-4 t ext-cyan-400" />
+                <a h ref="mailto:kleber@ziontechgroup.com" class Name="h over:text-cyan-400 transition-colors">
                   kleber@ziontechgroup.com
                 </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <MapPin className="w-4 h-4 text-cyan-400" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
-          </div>
+              </d iv>
+              <d iv class Name="f lex items-center space-x-3 text-gray-300">
+                <M ap Pin class Name="w-4 h-4 t ext-cyan-400" />
+                <s pan>364 E Main St S TE 1008, Middletown D E 19709</s pan>
+              </d iv>
+          </d iv>
 
-          {/* Micro SAAS Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Zap className="w-4 h-4 mr-2" />
-              Micro SAAS
+          {/* Micro S AA S Services */}
+          <d iv>
+            <h3 c lass Name="t ext-cyan-400 font-semibold mb-4 flex items-center">
+              <Z ap class Name="w-4 h-4 m r-2" />
+              Micro S AA S
             </h3>
-            <ul className="space-y-2">
-                <li key={service.name}>
+            <u l class Name="s pace-y-2">
+                <l i key={service.name}>
                   
                   >
-                    <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                    <s pan>{service.name}</s pan>
+                    <A rrow Right class Name="w-3 h-3 m l-1 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
-                </li>
+                </l i>
               ))}
-            </ul>
+            </u l>
             
             >
-              View All Micro SAAS →
+              View All Micro S AA S →
             </a>
-          </div>
+          </d iv>
 
-          {/* AI & IT Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Brain className="w-4 h-4 mr-2" />
-              AI & IT Services
+          {/* A I & I T Services */}
+          <d iv>
+            <h3 c lass Name="t ext-cyan-400 font-semibold mb-4 flex items-center">
+              <B rain class Name="w-4 h-4 m r-2" />
+              A I & I T Services
             </h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-white font-medium mb-2">AI Services</h4>
-                <ul className="space-y-1">
-                    <li key={service.name}>
+            <d iv class Name="s pace-y-4">
+              <d iv>
+                <h4 c lass Name="t ext-white font-medium mb-2">A I Services</h4>
+                <u l class Name="s pace-y-1">
+                    <l i key={service.name}>
                       
                       >
                         {service.name}
                       </a>
-                    </li>
+                    </l i>
                   ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-white font-medium mb-2">IT Services</h4>
-                <ul className="space-y-1">
-                    <li key={service.name}>
+                </u l>
+              </d iv>
+              <d iv>
+                <h4 c lass Name="t ext-white font-medium mb-2">I T Services</h4>
+                <u l class Name="s pace-y-1">
+                    <l i key={service.name}>
                       
                       >
                         {service.name}
                       </a>
-                    </li>
+                    </l i>
                   ))}
-                </ul>
-              </div>
+                </u l>
+              </d iv>
             
             >
               View All Services →
             </a>
-          </div>
+          </d iv>
 
-          {/* Additional AI Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Zap className="w-4 h-4 mr-2" />
-              AI Tools
+          {/* Additional A I Services */}
+          <d iv>
+            <h3 c lass Name="t ext-cyan-400 font-semibold mb-4 flex items-center">
+              <Z ap class Name="w-4 h-4 m r-2" />
+              A I Tools
             </h3>
-            <ul className="space-y-2">
-                <li key={service.name}>
+            <u l class Name="s pace-y-2">
+                <l i key={service.name}>
                   
                   >
-                    <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Link>
-                </li>
+                    <s pan>{service.name}</s pan>
+                    <A rrow Right class Name="w-3 h-3 m l-1 group-hover:translate-x-1 transition-transform duration-300" />
+                  </L ink>
+                </l i>
               ))}
-            </ul>
-          </div>
+            </u l>
+          </d iv>
 
           {/* Company & Support */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4">Company</h3>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <h4 className="text-white font-medium mb-2">Company</h4>
-                <ul className="space-y-1">
-                    <li key={link.name}>
+          <d iv>
+            <h3 c lass Name="t ext-cyan-400 font-semibold mb-4">Company</h3>
+            <d iv class Name="g rid grid-cols-2 gap-4">
+              <d iv>
+                <h4 c lass Name="t ext-white font-medium mb-2">Company</h4>
+                <u l class Name="s pace-y-1">
+                    <l i key={link.name}>
                       
                       >
                         {link.name}
                       </a>
-                    </li>
+                    </l i>
                   ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-white font-medium mb-2">Support</h4>
-                <ul className="space-y-1">
-                    <li key={link.name}>
+                </u l>
+              </d iv>
+              <d iv>
+                <h4 c lass Name="t ext-white font-medium mb-2">Support</h4>
+                <u l class Name="s pace-y-1">
+                    <l i key={link.name}>
                       
                       >
                         {link.name}
                       </a>
-                    </li>
+                    </l i>
                   ))}
-                </ul>
-              </div>
-          </div>
+                </u l>
+              </d iv>
+          </d iv>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+        <d iv class Name="b order-t border-gray-700 mt-8 pt-8">
+          <d iv class Name="f lex flex-col md:flex-row justify-between items-center">
+            <d iv class Name="t ext-gray-400 text-sm mb-4 md:mb-0">
               © 2024 Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex space-x-6">
+            </d iv>
+            <d iv class Name="f lex space-x-6">
                 
                 >
                   {link.name}
                 </a>
               ))}
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+            </d iv>
+            </d iv>
+          </d iv>
+        </d iv>
+      </d iv>
+    </f ooter>
   );
 };
 

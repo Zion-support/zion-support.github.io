@@ -6,41 +6,41 @@
     version: string;
     environment: 'development' | 'production' | 'test';
   };
-    baseUrl: string;
+    base Url: string;
     timeout: number;
-    retryAttempts: number;
+    retry Attempts: number;
   };
     analytics: boolean;
     monitoring: boolean;
-    errorTracking: boolean;
-    performanceOptimization: boolean;
+    error Tracking: boolean;
+    performance Optimization: boolean;
   };
-    enableLazyLoading: boolean;
-    imageLazyLoadThreshold: number;
-    componentLazyLoadThreshold: number;
-    cacheMaxAge: number;
+    enable Lazy Loading: boolean;
+    image Lazy Load Threshold: number;
+    component Lazy Load Threshold: number;
+    cache Max Age: number;
   };
-    enableCSP: boolean;
-    enableHSTS: boolean;
-    enableXSSProtection: boolean;
+    enable CS P: boolean;
+    enable HS TS: boolean;
+    enable XS SProtection: boolean;
   };
 }
     environment:
-      (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
-    retryAttempts: 3
-    performanceOptimization: true
-    cacheMaxAge: 3600000, // 1 hour in milliseconds
-    enableXSSProtection: true
+      (process.env['N OD E_ EN V'] as 'development' | 'production' | 'test') || 'development'
+    retry Attempts: 3
+    performance Optimization: true
+    cache Max Age: 3600000, // 1 hour in milliseconds
+    enable XS SProtection: true
   }
 };
 /**
  * Get configuration value by key path
- * @example getConfig('app.name') => 'Zion Tech Group'
+ * @example get Config('app.name') => 'Zion Tech Group'
  */
-  const keys = keyPath.split('.');
+  const keys = key Path.split('.');
   let value: unknown = config;
-      value = (value as Record<string, unknown>)[key];
-      throw new Error(`Configuration key "${keyPath}" not found`);
+      value = (value as Record<s tring, unknown>)[key];
+      throw new Error(`Configuration key "${key Path}" not found`);
     }
   }
   return value as T;

@@ -1,64 +1,64 @@
-import { useEffect, useState } from 'react';
+import { use Effect, use State } from 'react';
 import { analytics } from '../utils/analytics';
-  loadTime: number;
-  domContentLoaded: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  load Time: number;
+  dom Content Loaded: number;
+  first Contentful Paint: number;
+  largest Contentful Paint: number;
+  cumulative Layout Shift: number;
+  first Input Delay: number;
 }
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [metrics, set Metrics] = use State<P erformance Metrics | null>(null);
+  const [is Monitoring, set Is Monitoring] = use State(false);
     if (typeof window === 'undefined' || !('performance' in window)) return;
     
-      )[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
+      )[0] as Performance Navigation Timing;
+      const paint Entries = performance.get Entries By Type('paint');
       
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+        paint Entries.find(entry => entry.name === 'first-contentful-paint')?.start Time || 0;
       
-        paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
-      // Measure CLS (Cumulative Layout Shift)
-      let cumulativeLayoutShift = 0;
+        paint Entries.find(entry => entry.name === 'largest-contentful-paint')?.start Time || 0;
+      // Measure C LS (Cumulative Layout Shift)
+      let cumulative Layout Shift = 0;
         
-              cumulativeLayoutShift += (entry as unknown as { value: number }).value;
+              cumulative Layout Shift += (entry as unknown as { value: number }).value;
             }
           }
         });
-        observer.observe({ entryTypes: ['layout-shift'] });
+        observer.observe({ entry Types: ['layout-shift'] });
       }
-      // Measure FID (First Input Delay)
-      let firstInputDelay = 0;
+      // Measure F ID (First Input Delay)
+      let first Input Delay = 0;
         
-                (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
+                (entry as unknown as { processing Start: number }).processing Start - entry.start Time;
             }
           }
         });
-        observer.observe({ entryTypes: ['first-input'] });
+        observer.observe({ entry Types: ['first-input'] });
       }
-        domContentLoaded:
-        firstInputDelay
+        dom Content Loaded:
+        first Input Delay
       };
-      setMetrics(performanceData);
-      setIsMonitoring(false);
-      // Report to analytics using trackTiming
-      analytics.trackTiming('performance', 'load_time', performanceData.loadTime);
-      analytics.trackTiming('performance', 'dom_content_loaded', performanceData.domContentLoaded);
-        performanceData.firstContentfulPaint
+      set Metrics(performance Data);
+      set Is Monitoring(false);
+      // Report to analytics using track Timing
+      analytics.track Timing('performance', 'load_time', performance Data.load Time);
+      analytics.track Timing('performance', 'dom_content_loaded', performance Data.dom Content Loaded);
+        performance Data.first Contentful Paint
       );
-        performanceData.largestContentfulPaint
+        performance Data.largest Contentful Paint
       );
-        performanceData.cumulativeLayoutShift
+        performance Data.cumulative Layout Shift
       );
-      analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay);
+      analytics.track Timing('performance', 'first_input_delay', performance Data.first Input Delay);
     };
     // Start monitoring
-    setIsMonitoring(true);
+    set Is Monitoring(true);
     // Measure performance after page load
-      measurePerformance();
-      window.addEventListener('load', measurePerformance);
+      measure Performance();
+      window.add Event Listener('load', measure Performance);
     }
-      window.removeEventListener('load', measurePerformance);
+      window.remove Event Listener('load', measure Performance);
     };
   }, []);
-  return { metrics, isMonitoring };
+  return { metrics, is Monitoring };
 };
