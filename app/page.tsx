@@ -1,67 +1,11 @@
 import React from 'react'
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
-=======
-import SEOHead from './components/SEOHead'
 import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, CheckCircle, Star, Sparkles, Rocket, Cpu, Wifi, Smartphone } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Smartphone, Cpu, Database } from 'lucide-react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-=======
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react'
-import { Link } from 'react-router-dom'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
 
 export default function HomePage() {
   const features = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: <Brain className="w-12 h-12 text-blue-500" />,
-      title: 'AI Services',
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      link: '/ai-services'
-    },
-    {
-      icon: <Cpu className="w-12 h-12 text-green-500" />,
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including cloud migration, cybersecurity, and infrastructure management.',
-      benefits: ['Cloud Migration', 'Cybersecurity', 'DevOps', 'Infrastructure Management'],
-      link: '/it-services'
-    },
-    {
-      icon: <Smartphone className="w-12 h-12 text-purple-500" />,
-      title: 'Micro SaaS',
-      description: 'Specialized micro software solutions designed for specific business needs and workflows.',
-      benefits: ['Custom Solutions', 'Rapid Deployment', 'Scalable Architecture', 'Cost Effective'],
-      link: '/micro-saas-services'
-    },
-    {
-      icon: <Zap className="w-12 h-12 text-yellow-500" />,
-      title: '5G Implementation',
-      description: 'Next-generation 5G network implementation and optimization for enhanced connectivity.',
-      benefits: ['Network Design', 'Infrastructure Setup', 'Performance Optimization', 'Security Implementation'],
-      link: '/5g-implementation'
-    },
-    {
-      icon: <Cloud className="w-12 h-12 text-orange-500" />,
-      title: 'Cloud Services',
-      description: 'Professional cloud services including migration, infrastructure setup, security, and optimization.',
-      benefits: ['Cloud Migration', 'Infrastructure Setup', 'Security Solutions', 'Cost Optimization'],
-      link: '/cloud-services'
-    },
-    {
-      icon: <Database className="w-12 h-12 text-red-500" />,
-      title: 'Digital Transformation',
-      description: 'Transform your business for the digital age with comprehensive digital transformation services.',
-      benefits: ['Process Automation', 'Digital Workforce', 'Customer Experience', 'Data Strategy'],
-      link: '/digital-transformation'
-=======
       icon: <Zap className="w-8 h-8 text-cyan-400" />,
       title: 'AI-Powered Solutions',
       description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.',
@@ -132,121 +76,23 @@ export default function HomePage() {
       content: 'Professional, reliable, and innovative. Zion Tech Group is our go-to technology partner.',
       rating: 5,
       avatar: 'ER'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
     }
   ]
 
   const stats = [
-<<<<<<< HEAD
-    { number: '500+', label: 'Projects Completed' },
-    { number: '99%', label: 'Client Satisfaction' },
-    { number: '24/7', label: 'Support Available' },
-    { number: '50+', label: 'Expert Team Members' }
-=======
     { number: '500+', label: 'Projects Completed', icon: <Rocket className="w-6 h-6" /> },
     { number: '50+', label: 'Enterprise Clients', icon: <Cpu className="w-6 h-6" /> },
     { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> },
     { number: '24/7', label: 'Support Available', icon: <Globe className="w-6 h-6" /> }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
-=======
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
-      title: 'AI-Powered Solutions',
-      description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.',
-      benefits: ['AI Content Generation - $500/month', 'AI Chatbots - $300/month', 'Process Automation - $800/month', 'AI Analytics - $400/month'],
-      link: '/ai-solutions'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      title: 'IT Services & Solutions',
-      description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
-      benefits: ['Cloud Migration - Starting at $2,500', 'Cybersecurity - $1,500/month', 'Mobile Development - Starting at $5,000', 'Data Analytics - $2,000/month'],
-      link: '/it-services'
-    },
-    {
-      icon: <Cloud className="w-8 h-8 text-orange-500" />,
-      title: 'Cloud Services',
-      description: 'Professional cloud services including migration, infrastructure setup, security, and optimization.',
-      benefits: ['Cloud Migration - $1,200/month', 'Infrastructure Setup - $3,000', 'Security Solutions - $800/month', 'Cost Optimization - $500/month'],
-      link: '/cloud-services'
-    },
-    {
-      icon: <Database className="w-8 h-8 text-red-500" />,
-      title: '5G Implementation',
-      description: 'Next-generation connectivity solutions to power your digital transformation with ultra-fast speeds and low latency.',
-      benefits: ['Ultra-Fast Speeds - 10+ Gbps', 'Low Latency - 1ms', 'IoT Integration - 1M+ devices/km²', 'Edge Computing Solutions'],
-      link: '/5g-implementation'
-    },
-    {
-      icon: <Smartphone className="w-8 h-8 text-yellow-500" />,
-      title: 'Digital Transformation',
-      description: 'Transform your business for the digital age with comprehensive digital transformation services.',
-      benefits: ['Process Automation - $2,000/month', 'Digital Workforce - $1,500/month', 'Customer Experience - $1,800/month', 'Data Strategy - $2,500/month'],
-      link: '/digital-transformation'
-    }
-  ]
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      content: 'Zion Tech Group transformed our entire IT infrastructure. The results exceeded our expectations.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'DataFlow Solutions',
-      content: 'Their AI solutions helped us automate 80% of our processes. Incredible efficiency gains.',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'InnovateTech',
-      content: 'Professional, reliable, and innovative. Zion Tech Group is our go-to technology partner.',
-      rating: 5
-    }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-<<<<<<< HEAD
-        <meta name="description" content="Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, IT services, 5G implementation, cloud services, digital transformation, Zion Tech Group" />
+        <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="AI solutions, IT services, digital transformation, cloud computing, 5G implementation, micro SAAS, artificial intelligence, business automation" />
       </Helmet>
-      
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-              Advanced AI & IT Solutions
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8 px-4">
-              Transform your business with cutting-edge artificial intelligence and information technology solutions designed to accelerate growth and efficiency.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/about"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-              >
-=======
-      <SEOHead 
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your business with cutting-edge technology."
-        keywords="AI solutions, IT services, digital transformation, cloud computing, 5G implementation, micro SAAS, artificial intelligence, business automation"
-      />
       
       {/* Hero Section with Futuristic Design */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -257,15 +103,6 @@ export default function HomePage() {
         </div>
         
         <div className="relative max-w-7xl mx-auto">
-=======
-        <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, IT services, digital transformation, cloud computing, 5G implementation, micro SAAS, artificial intelligence, business automation" />
-      </Helmet>
-      
-      {/* Hero Section */}
-      <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
           <div className="text-center mb-12 sm:mb-16">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-purple-400 mr-2" />
@@ -291,7 +128,6 @@ export default function HomePage() {
                 to="/about" 
                 className="group border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm"
               >
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
                 Learn More
               </Link>
             </div>
