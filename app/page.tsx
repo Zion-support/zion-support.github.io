@@ -63,6 +63,7 @@ export default function HomePage() {
   ]
 
   const additionalServices = [
+    { name: 'Micro SAAS Services', link: '/micro-saas-services' },
     { name: 'Web Development', link: '/web-development' },
     { name: 'Mobile Development', link: '/mobile-development' },
     { name: 'DevOps', link: '/devops' },

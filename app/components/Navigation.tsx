@@ -29,7 +29,8 @@ export default function Navigation() {
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'AI Automation', path: '/ai-automation', icon: <Settings className="w-4 h-4" /> },
     { name: 'AI Computer Vision', path: '/ai-computer-vision', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Database className="w-4 h-4" /> }
+    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Database className="w-4 h-4" /> },
+    { name: 'Micro SAAS Services', path: '/micro-saas-services', icon: <Zap className="w-4 h-4" /> }
   ]
 
   const itServices = [
