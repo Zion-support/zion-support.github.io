@@ -3,9 +3,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Video, 
-  Play, 
-  Scissors, 
+  Cpu, 
+  Cloud, 
   Zap, 
   CheckCircle, 
   Star, 
@@ -13,146 +12,156 @@ import {
   Clock, 
   ArrowRight,
   Brain,
-  Film,
-  Music,
-  Image,
-  Palette,
-  Download,
-  Upload,
+  Shield,
+  Database,
   Settings,
   BarChart3,
   MessageSquare,
   FileText,
+  Play,
+  Download,
+  Upload,
   Sparkles,
-  Camera,
-  Mic,
-  Edit3
+  Atom,
+  Lock,
+  Activity,
+  Target
 } from 'lucide-react';
 
-export default function AIVideoEditorPage() {
+export default function QuantumCloudComputingPage() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI-Powered Editing',
-      description: 'Automatically edit videos with AI that understands context, pacing, and visual appeal.'
+      icon: <Atom className="w-6 h-6 text-cyan-400" />,
+      title: 'Quantum Processing',
+      description: 'Leverage quantum computing power for complex calculations and optimization problems.'
     },
     {
-      icon: <Scissors className="w-6 h-6 text-green-400" />,
-      title: 'Smart Cut Detection',
-      description: 'Intelligent scene detection and automatic cutting for seamless video transitions.'
+      icon: <Cloud className="w-6 h-6 text-green-400" />,
+      title: 'Hybrid Cloud Architecture',
+      description: 'Seamlessly integrate quantum and classical computing resources in a unified platform.'
     },
     {
-      icon: <Music className="w-6 h-6 text-purple-400" />,
-      title: 'Auto Music Sync',
-      description: 'Automatically sync background music to video rhythm and mood with AI analysis.'
+      icon: <Brain className="w-6 h-6 text-purple-400" />,
+      title: 'AI-Quantum Integration',
+      description: 'Combine artificial intelligence with quantum computing for unprecedented processing power.'
     },
     {
-      icon: <Palette className="w-6 h-6 text-pink-400" />,
-      title: 'Color Grading',
-      description: 'Professional color correction and grading with AI-powered enhancement suggestions.'
+      icon: <Shield className="w-6 h-6 text-pink-400" />,
+      title: 'Quantum Security',
+      description: 'Advanced quantum encryption and security protocols for ultra-secure data protection.'
     },
     {
-      icon: <Mic className="w-6 h-6 text-blue-400" />,
-      title: 'Audio Enhancement',
-      description: 'AI-powered noise reduction, voice enhancement, and audio level optimization.'
+      icon: <Zap className="w-6 h-6 text-blue-400" />,
+      title: 'Lightning Fast Processing',
+      description: 'Process complex algorithms and simulations in seconds instead of years.'
     },
     {
-      icon: <Sparkles className="w-6 h-6 text-yellow-400" />,
-      title: 'Visual Effects',
-      description: 'Add stunning visual effects, transitions, and animations with AI assistance.'
+      icon: <Database className="w-6 h-6 text-yellow-400" />,
+      title: 'Quantum Database',
+      description: 'Store and query massive datasets with quantum-enhanced database systems.'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Creator',
-      price: '$19',
+      name: 'Quantum Starter',
+      price: '$2,999',
       period: '/month',
-      description: 'Perfect for content creators',
+      description: 'Perfect for research institutions',
       features: [
-        'Up to 10 hours of video/month',
-        '1080p export quality',
-        'Basic AI editing tools',
-        '5GB cloud storage',
+        'Up to 100 quantum hours/month',
+        'Basic quantum algorithms',
+        'Standard cloud resources',
         'Email support',
-        'Standard templates'
+        '5 quantum circuits',
+        'Basic analytics'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$49',
+      name: 'Quantum Professional',
+      price: '$9,999',
       period: '/month',
-      description: 'For professional video editors',
+      description: 'For enterprise applications',
       features: [
-        'Up to 50 hours of video/month',
-        '4K export quality',
-        'Advanced AI editing tools',
-        '50GB cloud storage',
+        'Up to 1,000 quantum hours/month',
+        'Advanced quantum algorithms',
+        'Premium cloud resources',
         'Priority support',
-        'Premium templates',
-        'Team collaboration',
-        'Custom branding'
+        'Unlimited quantum circuits',
+        'Advanced analytics',
+        'Custom integrations',
+        'SLA guarantee'
       ],
       popular: true
     },
     {
-      name: 'Studio',
-      price: '$99',
+      name: 'Quantum Enterprise',
+      price: '$29,999',
       period: '/month',
-      description: 'For video production studios',
+      description: 'For large-scale operations',
       features: [
-        'Unlimited video processing',
-        '8K export quality',
-        'All AI editing features',
-        '500GB cloud storage',
+        'Unlimited quantum processing',
+        'Full quantum algorithm suite',
+        'Dedicated cloud infrastructure',
         '24/7 dedicated support',
-        'Custom templates',
-        'Advanced analytics',
-        'API access',
-        'White-label options'
+        'Custom quantum circuits',
+        'Real-time analytics',
+        'White-label options',
+        'On-premise deployment'
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: '95%', label: 'Time Saved on Editing', icon: <Clock className="w-6 h-6" /> },
-    { number: '10K+', label: 'Videos Created Daily', icon: <Video className="w-6 h-6" /> },
-    { number: '50K+', label: 'Content Creators', icon: <Users className="w-6 h-6" /> },
-    { number: '4.9/5', label: 'User Rating', icon: <Star className="w-6 h-6" /> }
+    { number: '10,000x', label: 'Faster Processing', icon: <Zap className="w-6 h-6" /> },
+    { number: '99.9%', label: 'Quantum Accuracy', icon: <Target className="w-6 h-6" /> },
+    { number: '50+', label: 'Quantum Algorithms', icon: <Brain className="w-6 h-6" /> },
+    { number: '24/7', label: 'Quantum Availability', icon: <Clock className="w-6 h-6" /> }
   ];
 
   const useCases = [
     {
-      title: 'Social Media Content',
-      description: 'Create engaging TikTok, Instagram, and YouTube videos with AI-powered editing.',
-      icon: <Film className="w-8 h-8 text-cyan-400" />
+      title: 'Drug Discovery',
+      description: 'Accelerate pharmaceutical research with quantum molecular simulations.',
+      icon: <Atom className="w-8 h-8 text-cyan-400" />
     },
     {
-      title: 'Marketing Videos',
-      description: 'Produce professional marketing and promotional videos with automated editing.',
+      title: 'Financial Modeling',
+      description: 'Optimize trading strategies and risk assessment with quantum algorithms.',
       icon: <BarChart3 className="w-8 h-8 text-green-400" />
     },
     {
-      title: 'Educational Content',
-      description: 'Create compelling educational videos with AI-assisted content structuring.',
-      icon: <FileText className="w-8 h-8 text-purple-400" />
+      title: 'Climate Research',
+      description: 'Model complex climate systems and predict environmental changes.',
+      icon: <Cloud className="w-8 h-8 text-purple-400" />
     },
     {
-      title: 'Event Highlights',
-      description: 'Automatically generate event highlight reels from hours of footage.',
-      icon: <Camera className="w-8 h-8 text-pink-400" />
+      title: 'Cryptography',
+      description: 'Develop next-generation encryption and security protocols.',
+      icon: <Lock className="w-8 h-8 text-pink-400" />
     }
+  ];
+
+  const quantumAlgorithms = [
+    'Shor\'s Algorithm',
+    'Grover\'s Algorithm',
+    'Quantum Machine Learning',
+    'Quantum Optimization',
+    'Quantum Simulation',
+    'Quantum Annealing',
+    'Variational Quantum Eigensolver',
+    'Quantum Approximate Optimization'
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Video Editor - Automated Video Editing & Production | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered video editor with automated editing, smart cut detection, and professional effects. Save 95% of editing time. Starting at $19/month." />
-        <meta name="keywords" content="AI video editor, automated video editing, video production, content creation, video effects, video templates" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-video-editor" />
+        <title>Quantum Cloud Computing - Next-Gen Quantum Processing | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary quantum cloud computing platform with 10,000x faster processing. Advanced quantum algorithms, AI integration, and enterprise security. Starting at $2,999/month." />
+        <meta name="keywords" content="quantum computing, quantum cloud, quantum algorithms, quantum security, quantum AI, next-gen computing" />
+        <link rel="canonical" href="https://ziontechgroup.com/quantum-cloud-computing" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -161,15 +170,15 @@ export default function AIVideoEditorPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
-                <Brain className="w-4 h-4 mr-2" />
-                AI-Powered Video Production
+                <Atom className="w-4 h-4 mr-2" />
+                Next-Generation Quantum Computing
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Video Editor
+                Quantum Cloud Computing
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your video production workflow with our AI-powered editor. 
-                Create professional videos in minutes, not hours, with intelligent automation.
+                Experience the future of computing with our quantum cloud platform. 
+                Process complex problems 10,000x faster with quantum algorithms and AI integration.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
@@ -203,10 +212,10 @@ export default function AIVideoEditorPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful AI Features
+                Quantum-Powered Features
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Everything you need to create professional videos with AI assistance
+                Harness the power of quantum computing for your most complex challenges
               </p>
             </div>
 
@@ -227,10 +236,10 @@ export default function AIVideoEditorPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect For Every Use Case
+                Revolutionary Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                From social media content to professional marketing videos
+                Solve previously impossible problems with quantum computing
               </p>
             </div>
 
@@ -248,15 +257,37 @@ export default function AIVideoEditorPage() {
           </div>
         </section>
 
-        {/* Pricing Section */}
+        {/* Algorithms Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your Plan
+                Quantum Algorithms
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Start creating amazing videos today
+                Access to cutting-edge quantum algorithms and protocols
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {quantumAlgorithms.map((algorithm, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 text-center">
+                  <span className="text-white font-medium">{algorithm}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-16 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Quantum Computing Plans
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Access the future of computing today
               </p>
             </div>
 
@@ -306,11 +337,11 @@ export default function AIVideoEditorPage() {
           <div className="max-w-7xl mx-auto">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-3xl p-8 md:p-12 text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Create Amazing Videos?
+                Ready for the Quantum Revolution?
               </h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join thousands of creators who are already saving 95% of their editing time. 
-                Start your free trial today.
+                Join the pioneers of quantum computing. Experience processing power 
+                that was impossible just years ago.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
@@ -323,7 +354,7 @@ export default function AIVideoEditorPage() {
                 </button>
               </div>
               <div className="mt-8 text-white/80 text-sm">
-                <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
+                <p>✓ 14-day free trial • ✓ Quantum expert support • ✓ No long-term contracts</p>
               </div>
             </div>
           </div>

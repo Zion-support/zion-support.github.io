@@ -43,6 +43,10 @@ export default function Navigation() {
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
     { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+    { name: 'AI Code Reviewer', path: '/ai-code-reviewer' },
+    { name: 'AI Video Editor', path: '/ai-video-editor' },
+    { name: 'AI Data Scientist', path: '/ai-data-scientist' },
+    { name: 'AI Personal Trainer', path: '/ai-personal-trainer' },
     { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
     { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
     { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
@@ -57,7 +61,8 @@ export default function Navigation() {
     { name: 'DevOps', path: '/devops', icon: <Server className="w-4 h-4" /> },
     { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Cloud Services', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> }
+    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Quantum Cloud Computing', path: '/quantum-cloud-computing', icon: <Cpu className="w-4 h-4" /> }
   ];
 
   const fiveGServices = [
@@ -75,6 +80,10 @@ export default function Navigation() {
     { name: 'AI Password Manager', path: '/ai-password-manager' },
     { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
     { name: 'AI Health Tracker', path: '/ai-health-tracker' },
+    { name: 'AI Personal Trainer', path: '/ai-personal-trainer' },
+    { name: 'AI Code Reviewer', path: '/ai-code-reviewer' },
+    { name: 'AI Video Editor', path: '/ai-video-editor' },
+    { name: 'AI Data Scientist', path: '/ai-data-scientist' },
     { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
     { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
     { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
@@ -85,7 +94,9 @@ export default function Navigation() {
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20' : 'bg-transparent'
+        scrolled 
+          ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20 shadow-lg shadow-cyan-500/10' 
+          : 'bg-transparent'
       }`}
       role="navigation"
       aria-label="Main navigation"
@@ -95,22 +106,26 @@ export default function Navigation() {
           {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center space-x-2 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 rounded-lg"
+            className="flex items-center space-x-2 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 rounded-lg group"
             aria-label="Zion Tech Group - Go to homepage"
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-white" aria-hidden="true" />
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25 group-hover:shadow-cyan-500/40">
+              <Zap className="w-5 h-5 text-white animate-pulse" aria-hidden="true" />
             </div>
-            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+              Zion Tech Group
+            </span>
           </Link>
 
             {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link to="/" className="text-white hover:text-cyan-400 transition-all duration-300 font-medium relative group">
               Home
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-all duration-300 font-medium relative group">
               About
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             
             {/* AI Services Dropdown */}
@@ -123,16 +138,16 @@ export default function Navigation() {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {activeDropdown === 'ai' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/30 py-2 animate-fade-in">
                   {aiServices.map((service, index) => (
                     <Link
                       key={index}
                       to={service.path}
                       onClick={closeDropdown}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-all duration-300 group"
                     >
-                      <Brain className="w-4 h-4 mr-3" />
-                      <span>{service.name}</span>
+                      <Brain className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform duration-300" />
+                      <span className="group-hover:translate-x-1 transition-transform duration-300">{service.name}</span>
                     </Link>
                   ))}
                 </div>
@@ -239,12 +254,18 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 rounded-lg"
+              className="text-gray-300 hover:text-white p-2 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 rounded-lg transition-all duration-300 hover:bg-white/10"
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
             >
-              {isOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
+              <div className="relative">
+                {isOpen ? (
+                  <X className="w-6 h-6 animate-rotate" aria-hidden="true" />
+                ) : (
+                  <Menu className="w-6 h-6 animate-pulse" aria-hidden="true" />
+                )}
+              </div>
             </button>
           </div>
         </div>
@@ -252,7 +273,7 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden" id="mobile-menu">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-md rounded-lg mt-2 border border-cyan-500/20" role="menu" aria-label="Mobile navigation menu">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-md rounded-lg mt-2 border border-cyan-500/20 shadow-xl animate-slide-in-up" role="menu" aria-label="Mobile navigation menu">
               <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
                 Home
               </Link>

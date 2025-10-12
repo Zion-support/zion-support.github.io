@@ -83,6 +83,10 @@ const Sidebar: React.FC = () => {
         { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro', icon: Brain },
         { name: 'AI Meeting Assistant', path: '/ai-meeting-assistant', icon: Users },
         { name: 'AI Project Manager', path: '/ai-project-manager', icon: Settings },
+        { name: 'AI Code Reviewer', path: '/ai-code-reviewer', icon: Code },
+        { name: 'AI Video Editor', path: '/ai-video-editor', icon: Settings },
+        { name: 'AI Data Scientist', path: '/ai-data-scientist', icon: BarChart3 },
+        { name: 'AI Personal Trainer', path: '/ai-personal-trainer', icon: Users },
       ]
     },
     {
@@ -98,6 +102,7 @@ const Sidebar: React.FC = () => {
         { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
         { name: 'Blockchain Solutions', path: '/blockchain', icon: Database },
         { name: 'Quantum Computing', path: '/quantum-computing-solutions', icon: Cpu },
+        { name: 'Quantum Cloud Computing', path: '/quantum-cloud-computing', icon: Cpu },
       ]
     },
     {
@@ -122,6 +127,10 @@ const Sidebar: React.FC = () => {
         { name: 'AI Password Manager', path: '/ai-password-manager', icon: Shield },
         { name: 'AI Invoice Generator', path: '/ai-invoice-generator', icon: Settings },
         { name: 'AI Health Tracker', path: '/ai-health-tracker', icon: Users },
+        { name: 'AI Personal Trainer', path: '/ai-personal-trainer', icon: Users },
+        { name: 'AI Code Reviewer', path: '/ai-code-reviewer', icon: Code },
+        { name: 'AI Video Editor', path: '/ai-video-editor', icon: Settings },
+        { name: 'AI Data Scientist', path: '/ai-data-scientist', icon: BarChart3 },
         { name: 'AI Smart Calendar', path: '/ai-smart-calendar', icon: Clock },
         { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro', icon: Cloud },
       ]

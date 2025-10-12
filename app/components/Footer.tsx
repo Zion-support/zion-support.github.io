@@ -9,6 +9,10 @@ export default function Footer() {
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
     { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+    { name: 'AI Code Reviewer', path: '/ai-code-reviewer' },
+    { name: 'AI Video Editor', path: '/ai-video-editor' },
+    { name: 'AI Data Scientist', path: '/ai-data-scientist' },
+    { name: 'AI Personal Trainer', path: '/ai-personal-trainer' },
     { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
     { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
     { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
@@ -26,7 +30,8 @@ export default function Footer() {
     { name: 'Cloud Services', path: '/cloud-services' },
     { name: 'Cybersecurity', path: '/cybersecurity' },
     { name: 'Blockchain Solutions', path: '/blockchain' },
-    { name: 'Quantum Computing', path: '/quantum-computing-solutions' }
+    { name: 'Quantum Computing', path: '/quantum-computing-solutions' },
+    { name: 'Quantum Cloud Computing', path: '/quantum-cloud-computing' }
   ];
 
   const microSaasServices = [
@@ -35,6 +40,10 @@ export default function Footer() {
     { name: 'AI Password Manager', path: '/ai-password-manager' },
     { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
     { name: 'AI Health Tracker', path: '/ai-health-tracker' },
+    { name: 'AI Personal Trainer', path: '/ai-personal-trainer' },
+    { name: 'AI Code Reviewer', path: '/ai-code-reviewer' },
+    { name: 'AI Video Editor', path: '/ai-video-editor' },
+    { name: 'AI Data Scientist', path: '/ai-data-scientist' },
     { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
     { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
     { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
@@ -69,17 +78,23 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-white" />
+              <div className="flex items-center space-x-2 group">
+                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25 group-hover:shadow-cyan-500/40">
+                  <Zap className="w-5 h-5 text-white animate-pulse" />
                 </div>
-                <span className="text-xl font-bold">Zion Tech Group</span>
+                <span className="text-xl font-bold group-hover:text-cyan-400 transition-colors duration-300">
+                  Zion Tech Group
+                </span>
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-sm">
@@ -87,33 +102,33 @@ export default function Footer() {
               Transform your business with cutting-edge technology.
             </p>
             <div className="flex space-x-4">
-              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Github className="w-5 h-5" />
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110 group">
+                <Github className="w-5 h-5 group-hover:animate-pulse" />
               </a>
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Linkedin className="w-5 h-5" />
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110 group">
+                <Linkedin className="w-5 h-5 group-hover:animate-pulse" />
               </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110 group">
+                <Twitter className="w-5 h-5 group-hover:animate-pulse" />
               </a>
             </div>
           </div>
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Brain className="w-5 h-5 mr-2 text-cyan-400" />
-              AI Services
+            <h3 className="text-lg font-semibold mb-4 flex items-center group">
+              <Brain className="w-5 h-5 mr-2 text-cyan-400 group-hover:animate-pulse transition-all duration-300" />
+              <span className="group-hover:text-cyan-400 transition-colors duration-300">AI Services</span>
             </h3>
             <ul className="space-y-3">
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
                     to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
+                    className="text-gray-300 hover:text-cyan-400 transition-all duration-300 flex items-center group"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2" />
-                    {service.name}
+                    <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">{service.name}</span>
                   </Link>
                 </li>
               ))}

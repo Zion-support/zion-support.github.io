@@ -3,156 +3,165 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Video, 
-  Play, 
-  Scissors, 
+  BarChart3, 
+  Brain, 
+  Database, 
   Zap, 
   CheckCircle, 
   Star, 
   Users, 
   Clock, 
   ArrowRight,
-  Brain,
-  Film,
-  Music,
-  Image,
-  Palette,
+  TrendingUp,
+  Target,
+  Shield,
+  Settings,
+  FileText,
+  MessageSquare,
   Download,
   Upload,
-  Settings,
-  BarChart3,
-  MessageSquare,
-  FileText,
+  Play,
   Sparkles,
-  Camera,
-  Mic,
-  Edit3
+  Cpu,
+  PieChart,
+  LineChart,
+  Activity
 } from 'lucide-react';
 
-export default function AIVideoEditorPage() {
+export default function AIDataScientistPage() {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI-Powered Editing',
-      description: 'Automatically edit videos with AI that understands context, pacing, and visual appeal.'
+      title: 'AutoML Pipeline',
+      description: 'Automated machine learning pipeline that builds, trains, and optimizes models without coding.'
     },
     {
-      icon: <Scissors className="w-6 h-6 text-green-400" />,
-      title: 'Smart Cut Detection',
-      description: 'Intelligent scene detection and automatic cutting for seamless video transitions.'
+      icon: <Database className="w-6 h-6 text-green-400" />,
+      title: 'Data Preparation',
+      description: 'Intelligent data cleaning, feature engineering, and preprocessing with AI assistance.'
     },
     {
-      icon: <Music className="w-6 h-6 text-purple-400" />,
-      title: 'Auto Music Sync',
-      description: 'Automatically sync background music to video rhythm and mood with AI analysis.'
+      icon: <Target className="w-6 h-6 text-purple-400" />,
+      title: 'Predictive Analytics',
+      description: 'Advanced predictive modeling with 95%+ accuracy for business forecasting and insights.'
     },
     {
-      icon: <Palette className="w-6 h-6 text-pink-400" />,
-      title: 'Color Grading',
-      description: 'Professional color correction and grading with AI-powered enhancement suggestions.'
+      icon: <BarChart3 className="w-6 h-6 text-pink-400" />,
+      title: 'Visual Analytics',
+      description: 'Interactive dashboards and visualizations that automatically adapt to your data patterns.'
     },
     {
-      icon: <Mic className="w-6 h-6 text-blue-400" />,
-      title: 'Audio Enhancement',
-      description: 'AI-powered noise reduction, voice enhancement, and audio level optimization.'
+      icon: <Shield className="w-6 h-6 text-blue-400" />,
+      title: 'Data Security',
+      description: 'Enterprise-grade security with encryption, access controls, and compliance monitoring.'
     },
     {
-      icon: <Sparkles className="w-6 h-6 text-yellow-400" />,
-      title: 'Visual Effects',
-      description: 'Add stunning visual effects, transitions, and animations with AI assistance.'
+      icon: <Cpu className="w-6 h-6 text-yellow-400" />,
+      title: 'Real-time Processing',
+      description: 'Process and analyze data in real-time with scalable cloud infrastructure.'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Creator',
-      price: '$19',
+      name: 'Analyst',
+      price: '$99',
       period: '/month',
-      description: 'Perfect for content creators',
+      description: 'Perfect for data analysts',
       features: [
-        'Up to 10 hours of video/month',
-        '1080p export quality',
-        'Basic AI editing tools',
-        '5GB cloud storage',
+        'Up to 10GB data processing',
+        'Basic AutoML features',
+        'Standard visualizations',
         'Email support',
-        'Standard templates'
+        '5 model deployments',
+        'Basic reporting'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$49',
+      name: 'Scientist',
+      price: '$299',
       period: '/month',
-      description: 'For professional video editors',
+      description: 'For data scientists',
       features: [
-        'Up to 50 hours of video/month',
-        '4K export quality',
-        'Advanced AI editing tools',
-        '50GB cloud storage',
+        'Up to 100GB data processing',
+        'Advanced AutoML features',
+        'Custom visualizations',
         'Priority support',
-        'Premium templates',
-        'Team collaboration',
-        'Custom branding'
+        'Unlimited model deployments',
+        'Advanced analytics',
+        'API access',
+        'Team collaboration'
       ],
       popular: true
     },
     {
-      name: 'Studio',
-      price: '$99',
+      name: 'Enterprise',
+      price: '$799',
       period: '/month',
-      description: 'For video production studios',
+      description: 'For large organizations',
       features: [
-        'Unlimited video processing',
-        '8K export quality',
-        'All AI editing features',
-        '500GB cloud storage',
+        'Unlimited data processing',
+        'Full AutoML suite',
+        'Custom dashboards',
         '24/7 dedicated support',
-        'Custom templates',
-        'Advanced analytics',
-        'API access',
-        'White-label options'
+        'Advanced security features',
+        'Custom integrations',
+        'White-label options',
+        'SLA guarantee'
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: '95%', label: 'Time Saved on Editing', icon: <Clock className="w-6 h-6" /> },
-    { number: '10K+', label: 'Videos Created Daily', icon: <Video className="w-6 h-6" /> },
-    { number: '50K+', label: 'Content Creators', icon: <Users className="w-6 h-6" /> },
-    { number: '4.9/5', label: 'User Rating', icon: <Star className="w-6 h-6" /> }
+    { number: '95%', label: 'Model Accuracy', icon: <Target className="w-6 h-6" /> },
+    { number: '10K+', label: 'Models Deployed', icon: <Brain className="w-6 h-6" /> },
+    { number: '500+', label: 'Data Scientists', icon: <Users className="w-6 h-6" /> },
+    { number: '99.9%', label: 'Uptime', icon: <Shield className="w-6 h-6" /> }
   ];
 
   const useCases = [
     {
-      title: 'Social Media Content',
-      description: 'Create engaging TikTok, Instagram, and YouTube videos with AI-powered editing.',
-      icon: <Film className="w-8 h-8 text-cyan-400" />
+      title: 'Sales Forecasting',
+      description: 'Predict sales trends and optimize revenue with AI-powered forecasting models.',
+      icon: <TrendingUp className="w-8 h-8 text-cyan-400" />
     },
     {
-      title: 'Marketing Videos',
-      description: 'Produce professional marketing and promotional videos with automated editing.',
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />
+      title: 'Customer Analytics',
+      description: 'Understand customer behavior and improve retention with advanced analytics.',
+      icon: <Users className="w-8 h-8 text-green-400" />
     },
     {
-      title: 'Educational Content',
-      description: 'Create compelling educational videos with AI-assisted content structuring.',
-      icon: <FileText className="w-8 h-8 text-purple-400" />
+      title: 'Risk Assessment',
+      description: 'Identify and mitigate business risks with predictive risk modeling.',
+      icon: <Shield className="w-8 h-8 text-purple-400" />
     },
     {
-      title: 'Event Highlights',
-      description: 'Automatically generate event highlight reels from hours of footage.',
-      icon: <Camera className="w-8 h-8 text-pink-400" />
+      title: 'Market Research',
+      description: 'Analyze market trends and competitive intelligence with AI insights.',
+      icon: <BarChart3 className="w-8 h-8 text-pink-400" />
     }
+  ];
+
+  const algorithms = [
+    'Linear Regression',
+    'Random Forest',
+    'Neural Networks',
+    'Support Vector Machines',
+    'Gradient Boosting',
+    'Clustering Algorithms',
+    'Time Series Analysis',
+    'Deep Learning Models'
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Video Editor - Automated Video Editing & Production | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered video editor with automated editing, smart cut detection, and professional effects. Save 95% of editing time. Starting at $19/month." />
-        <meta name="keywords" content="AI video editor, automated video editing, video production, content creation, video effects, video templates" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-video-editor" />
+        <title>AI Data Scientist - Automated Machine Learning & Analytics | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered data science platform with AutoML, predictive analytics, and automated insights. Build models with 95% accuracy. Starting at $99/month." />
+        <meta name="keywords" content="AI data science, AutoML, machine learning, predictive analytics, data visualization, business intelligence" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-data-scientist" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -162,14 +171,14 @@ export default function AIVideoEditorPage() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
                 <Brain className="w-4 h-4 mr-2" />
-                AI-Powered Video Production
+                AI-Powered Data Science
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Video Editor
+                AI Data Scientist
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your video production workflow with our AI-powered editor. 
-                Create professional videos in minutes, not hours, with intelligent automation.
+                Democratize data science with our AI-powered platform. Build, train, and deploy 
+                machine learning models without coding. Get insights that drive business growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
@@ -203,10 +212,10 @@ export default function AIVideoEditorPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful AI Features
+                Advanced AI Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Everything you need to create professional videos with AI assistance
+                Everything you need to turn data into actionable insights
               </p>
             </div>
 
@@ -227,10 +236,10 @@ export default function AIVideoEditorPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect For Every Use Case
+                Real-World Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                From social media content to professional marketing videos
+                Solve complex business problems with AI-powered insights
               </p>
             </div>
 
@@ -248,15 +257,37 @@ export default function AIVideoEditorPage() {
           </div>
         </section>
 
-        {/* Pricing Section */}
+        {/* Algorithms Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your Plan
+                Supported Algorithms
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Start creating amazing videos today
+                Access to 50+ machine learning algorithms and models
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {algorithms.map((algorithm, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 text-center">
+                  <span className="text-white font-medium">{algorithm}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-16 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Flexible Pricing Plans
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Choose the plan that fits your data science needs
               </p>
             </div>
 
@@ -306,10 +337,10 @@ export default function AIVideoEditorPage() {
           <div className="max-w-7xl mx-auto">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-3xl p-8 md:p-12 text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Create Amazing Videos?
+                Ready to Transform Your Data?
               </h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join thousands of creators who are already saving 95% of their editing time. 
+                Join hundreds of companies using AI to unlock insights from their data. 
                 Start your free trial today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -323,7 +354,7 @@ export default function AIVideoEditorPage() {
                 </button>
               </div>
               <div className="mt-8 text-white/80 text-sm">
-                <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
+                <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
               </div>
             </div>
           </div>

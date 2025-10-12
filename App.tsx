@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import Header from './app/components/Header'
 import Footer from './app/components/Footer'
 import ErrorBoundary from './app/components/ErrorBoundary'
+import FuturisticBackground from './app/components/FuturisticBackground'
 
 // Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./app/page'))
@@ -50,10 +51,15 @@ const AIClimateSolutionsProPage = React.lazy(() => import('./app/ai-climate-solu
 // Additional AI Services Pages
 const AIMeetingAssistantPage = React.lazy(() => import('./app/ai-meeting-assistant/page'))
 const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'))
+const AICodeReviewerPage = React.lazy(() => import('./app/ai-code-reviewer/page'))
+const AIVideoEditorPage = React.lazy(() => import('./app/ai-video-editor/page'))
+const AIDataScientistPage = React.lazy(() => import('./app/ai-data-scientist/page'))
+const AIPersonalTrainerPage = React.lazy(() => import('./app/ai-personal-trainer/page'))
 
 // Additional IT Services Pages
 const BlockchainPage = React.lazy(() => import('./app/blockchain/page'))
 const QuantumComputingSolutionsPage = React.lazy(() => import('./app/quantum-computing-solutions/page'))
+const QuantumCloudComputingPage = React.lazy(() => import('./app/quantum-cloud-computing/page'))
 
 // Additional 5G Services Pages
 const FiveGDataAnalyticsPage = React.lazy(() => import('./app/5g-data-analytics/page'))
@@ -81,7 +87,8 @@ function App() {
     <HelmetProvider>
       <ErrorBoundary>
         <Router>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative">
+            <FuturisticBackground />
             <Header />
             <Suspense fallback={<PageLoader />}>
               <Routes>
@@ -129,10 +136,15 @@ function App() {
                 {/* Additional AI Services Routes */}
                 <Route path="/ai-meeting-assistant" element={<AIMeetingAssistantPage />} />
                 <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
+                <Route path="/ai-code-reviewer" element={<AICodeReviewerPage />} />
+                <Route path="/ai-video-editor" element={<AIVideoEditorPage />} />
+                <Route path="/ai-data-scientist" element={<AIDataScientistPage />} />
+                <Route path="/ai-personal-trainer" element={<AIPersonalTrainerPage />} />
                 
                 {/* Additional IT Services Routes */}
                 <Route path="/blockchain" element={<BlockchainPage />} />
                 <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
+                <Route path="/quantum-cloud-computing" element={<QuantumCloudComputingPage />} />
                 
                 {/* Additional 5G Services Routes */}
                 <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />

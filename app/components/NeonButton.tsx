@@ -1,79 +1,67 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { cn } from '../lib/utils';
 
 interface NeonButtonProps {
   children: React.ReactNode;
-  href?: string;
   onClick?: () => void;
   variant?: 'primary' | 'secondary' | 'accent';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
-  icon?: React.ReactNode;
   disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 const NeonButton: React.FC<NeonButtonProps> = ({
   children,
-  href,
   onClick,
   variant = 'primary',
   size = 'md',
-  className = '',
-  icon,
-  disabled = false
+  className,
+  disabled = false,
+  type = 'button',
 }) => {
-  const baseClasses = 'relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100';
+  const baseClasses = 'relative overflow-hidden rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95';
   
+  const variantClasses = {
+    primary: 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40',
+    secondary: 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40',
+    accent: 'bg-gradient-to-r from-green-600 to-cyan-600 text-white shadow-lg shadow-green-500/25 hover:shadow-green-500/40',
+  };
+
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg'
+    lg: 'px-8 py-4 text-lg',
   };
 
-  const variantClasses = {
-    primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-blue-500/25 hover:shadow-2xl',
-    secondary: 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg hover:shadow-purple-500/25 hover:shadow-2xl',
-    accent: 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2xl'
-  };
-
-  const neonEffect = 'before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10';
-
-  const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
-
-  const content = (
-    <>
-      {icon && <span className="mr-2">{icon}</span>}
-      {children}
-      {!icon && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />}
-    </>
-  );
-
-  if (href) {
-    return (
-      <a
-        href={href}
-        className={buttonClasses}
-        style={{
-          boxShadow: '0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(147, 51, 234, 0.2)',
-        }}
-      >
-        {content}
-      </a>
-    );
-  }
+  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed hover:scale-100' : '';
 
   return (
     <button
+      type={type}
       onClick={onClick}
       disabled={disabled}
-      className={buttonClasses}
-      style={{
-        boxShadow: '0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(147, 51, 234, 0.2)',
-      }}
+      className={cn(
+        baseClasses,
+        variantClasses[variant],
+        sizeClasses[size],
+        disabledClasses,
+        className
+      )}
     >
-      {content}
+      {/* Neon glow effect */}
+      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 transition-opacity duration-300 group-hover:opacity-20" />
+      
+      {/* Animated border */}
+      <div className="absolute inset-0 rounded-lg border-2 border-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-border animate-pulse" />
+      
+      {/* Content */}
+      <span className="relative z-10">{children}</span>
+      
+      {/* Shimmer effect */}
+      <div className="absolute inset-0 -top-2 -left-2 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
     </button>
   );
 };

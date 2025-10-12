@@ -1,183 +1,8 @@
-ursor/enhance-app-with-new-services-and-futuristic-design-00bf
-ursor/
-  )
-}
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-const FuturisticBackgroundPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ]
-
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>Futuristic Background Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced futuristic background solutions powered by AI technology." />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          {/* Animated Background Elements */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
-          </div>
-          
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Futuristic Background
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced futuristicbackground solutions powered by AI technology.
-              Transform your digital presence with cutting-edge futuristic background technology. 
-              Powered by advanced AI and modern design principles.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI technology that drives results
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our solutions to drive growth and innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-                Start Your Journey
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </React.Fragment>
-  )}
-export default FuturisticBackgroundPage
-  </button>
-  </button>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </>)};export default FuturisticBackgroundPage
-  )
-}
-
-export default FuturisticBackgroundPage
 'use client';
 
 import React, { useEffect, useRef } from 'react';
 
-const FuturisticBackground = () => {
+const FuturisticBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -192,6 +17,7 @@ const FuturisticBackground = () => {
     let mouseX = 0;
     let mouseY = 0;
 
+    // Particle class
     class Particle {
       x: number;
       y: number;
@@ -200,20 +26,37 @@ const FuturisticBackground = () => {
       size: number;
       opacity: number;
       color: string;
+      life: number;
+      maxLife: number;
 
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 0.5;
-        this.vy = (Math.random() - 0.5) * 0.5;
-        this.size = Math.random() * 2 + 1;
+        this.vx = (Math.random() - 0.5) * 2;
+        this.vy = (Math.random() - 0.5) * 2;
+        this.size = Math.random() * 3 + 1;
         this.opacity = Math.random() * 0.5 + 0.2;
-        this.color = `hsl(${Math.random() * 60 + 200}, 70%, 60%)`;
+        this.color = this.getRandomColor();
+        this.life = 0;
+        this.maxLife = Math.random() * 300 + 200;
+      }
+
+      getRandomColor() {
+        const colors = [
+          '#00ffff', // Cyan
+          '#ff00ff', // Magenta
+          '#00ff00', // Green
+          '#ffff00', // Yellow
+          '#ff0080', // Pink
+          '#0080ff', // Blue
+        ];
+        return colors[Math.floor(Math.random() * colors.length)];
       }
 
       update() {
         this.x += this.vx;
         this.y += this.vy;
+        this.life++;
 
         // Mouse interaction
         const dx = mouseX - this.x;
@@ -222,24 +65,34 @@ const FuturisticBackground = () => {
         
         if (distance < 100) {
           const force = (100 - distance) / 100;
-          this.vx += (dx / distance) * force * 0.01;
-          this.vy += (dy / distance) * force * 0.01;
+          this.vx += (dx / distance) * force * 0.1;
+          this.vy += (dy / distance) * force * 0.1;
         }
 
-        // Boundary check
+        // Bounce off edges
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
 
-        // Keep particles in bounds
-        this.x = Math.max(0, Math.min(canvas.width, this.x));
-        this.y = Math.max(0, Math.min(canvas.height, this.y));
+        // Fade out over time
+        this.opacity = Math.max(0, 1 - (this.life / this.maxLife));
+
+        // Reset particle if it's dead
+        if (this.life >= this.maxLife) {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.vx = (Math.random() - 0.5) * 2;
+          this.vy = (Math.random() - 0.5) * 2;
+          this.life = 0;
+          this.opacity = Math.random() * 0.5 + 0.2;
+          this.color = this.getRandomColor();
+        }
       }
 
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
         ctx.fillStyle = this.color;
-        ctx.shadowBlur = 10;
+        ctx.shadowBlur = 20;
         ctx.shadowColor = this.color;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
@@ -248,6 +101,7 @@ const FuturisticBackground = () => {
       }
     }
 
+    // Initialize particles
     const initParticles = () => {
       particles = [];
       for (let i = 0; i < 50; i++) {
@@ -255,7 +109,17 @@ const FuturisticBackground = () => {
       }
     };
 
-    const drawConnections = () => {
+    // Animation loop
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Update and draw particles
+      particles.forEach(particle => {
+        particle.update();
+        particle.draw();
+      });
+
+      // Draw connections between nearby particles
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -265,10 +129,8 @@ const FuturisticBackground = () => {
           if (distance < 100) {
             ctx.save();
             ctx.globalAlpha = (100 - distance) / 100 * 0.2;
-            ctx.strokeStyle = '#3b82f6';
+            ctx.strokeStyle = '#00ffff';
             ctx.lineWidth = 1;
-            ctx.shadowBlur = 5;
-            ctx.shadowColor = '#3b82f6';
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -277,58 +139,44 @@ const FuturisticBackground = () => {
           }
         }
       }
-    };
-
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      particles.forEach(particle => {
-        particle.update();
-        particle.draw();
-      });
-
-      drawConnections();
 
       animationId = requestAnimationFrame(animate);
     };
 
-    const handleResize = () => {
+    // Resize handler
+    const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      initParticles();
     };
 
+    // Mouse move handler
     const handleMouseMove = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
     };
 
     // Initialize
-    handleResize();
+    resizeCanvas();
+    initParticles();
     animate();
 
     // Event listeners
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', resizeCanvas);
     window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
       cancelAnimationFrame(animationId);
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', resizeCanvas);
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
   return (
-    <div className="fixed inset-0 z-0">
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%)' }}
-      />
-      {/* Gradient overlays for depth */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-slate-900/20" />
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-slate-900/40" />
-    </div>
+    <canvas
+      ref={canvasRef}
+      className="fixed inset-0 w-full h-full pointer-events-none z-0"
+      style={{ background: 'transparent' }}
+    />
   );
 };
 

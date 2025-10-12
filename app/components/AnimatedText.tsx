@@ -1,25 +1,26 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { cn } from '../lib/utils';
 
 interface AnimatedTextProps {
   text: string;
   className?: string;
+  variant?: 'glitch' | 'typing' | 'fade' | 'slide';
   delay?: number;
-  duration?: number;
-  type?: 'fade' | 'slide' | 'glow' | 'typing';
+  speed?: number;
 }
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({
   text,
-  className = '',
+  className,
+  variant = 'fade',
   delay = 0,
-  // duration = 1000,
-  type = 'fade'
+  speed = 100,
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -30,42 +31,44 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   }, [delay]);
 
   useEffect(() => {
-    if (type === 'typing' && isVisible) {
+    if (!isVisible) return;
+
+    if (variant === 'typing') {
       if (currentIndex < text.length) {
         const timer = setTimeout(() => {
-          setDisplayText(text.slice(0, currentIndex + 1));
-          setCurrentIndex(currentIndex + 1);
-        }, 50);
+          setDisplayText(prev => prev + text[currentIndex]);
+          setCurrentIndex(prev => prev + 1);
+        }, speed);
+
         return () => clearTimeout(timer);
       }
-    } else if (isVisible) {
+    } else if (variant === 'fade') {
+      setDisplayText(text);
+    } else if (variant === 'slide') {
+      setDisplayText(text);
+    } else if (variant === 'glitch') {
       setDisplayText(text);
     }
-  }, [isVisible, currentIndex, text, type]);
+  }, [text, currentIndex, isVisible, variant, speed]);
 
   const getAnimationClasses = () => {
-    const baseClasses = 'transition-all duration-1000';
-    
-    switch (type) {
-      case 'fade':
-        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
-      case 'slide':
-        return `${baseClasses} ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`;
-      case 'glow':
-        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'} ${isVisible ? 'drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]' : ''}`;
+    switch (variant) {
+      case 'glitch':
+        return 'animate-pulse text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400';
       case 'typing':
-        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
+        return 'text-white';
+      case 'fade':
+        return 'text-white animate-fade-in';
+      case 'slide':
+        return 'text-white animate-slide-in-up';
       default:
-        return baseClasses;
+        return 'text-white';
     }
   };
 
   return (
-    <span className={`${getAnimationClasses()} ${className}`}>
-      {type === 'typing' ? displayText : text}
-      {type === 'typing' && currentIndex < text.length && (
-        <span className="animate-pulse">|</span>
-      )}
+    <span className={cn(getAnimationClasses(), className)}>
+      {variant === 'typing' ? displayText : text}
     </span>
   );
 };

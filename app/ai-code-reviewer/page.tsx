@@ -3,156 +3,126 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Video, 
-  Play, 
-  Scissors, 
+  Code, 
+  Shield, 
   Zap, 
   CheckCircle, 
+  AlertTriangle, 
   Star, 
   Users, 
   Clock, 
   ArrowRight,
   Brain,
-  Film,
-  Music,
-  Image,
-  Palette,
-  Download,
-  Upload,
-  Settings,
+  GitBranch,
+  Bug,
+  Lock,
   BarChart3,
   MessageSquare,
   FileText,
-  Sparkles,
-  Camera,
-  Mic,
-  Edit3
+  Settings,
+  Play,
+  Download,
+  Upload
 } from 'lucide-react';
 
-export default function AIVideoEditorPage() {
+export default function AICodeReviewerPage() {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI-Powered Editing',
-      description: 'Automatically edit videos with AI that understands context, pacing, and visual appeal.'
+      title: 'AI-Powered Analysis',
+      description: 'Advanced machine learning algorithms analyze your code for bugs, security vulnerabilities, and performance issues.'
     },
     {
-      icon: <Scissors className="w-6 h-6 text-green-400" />,
-      title: 'Smart Cut Detection',
-      description: 'Intelligent scene detection and automatic cutting for seamless video transitions.'
+      icon: <Shield className="w-6 h-6 text-green-400" />,
+      title: 'Security Scanning',
+      description: 'Comprehensive security analysis including OWASP Top 10 vulnerabilities, dependency scanning, and threat modeling.'
     },
     {
-      icon: <Music className="w-6 h-6 text-purple-400" />,
-      title: 'Auto Music Sync',
-      description: 'Automatically sync background music to video rhythm and mood with AI analysis.'
+      icon: <Bug className="w-6 h-6 text-red-400" />,
+      title: 'Bug Detection',
+      description: 'Intelligent bug detection with 99.7% accuracy, identifying potential runtime errors and logic flaws.'
     },
     {
-      icon: <Palette className="w-6 h-6 text-pink-400" />,
-      title: 'Color Grading',
-      description: 'Professional color correction and grading with AI-powered enhancement suggestions.'
+      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
+      title: 'Performance Insights',
+      description: 'Detailed performance analysis with optimization recommendations and bottleneck identification.'
     },
     {
-      icon: <Mic className="w-6 h-6 text-blue-400" />,
-      title: 'Audio Enhancement',
-      description: 'AI-powered noise reduction, voice enhancement, and audio level optimization.'
+      icon: <GitBranch className="w-6 h-6 text-blue-400" />,
+      title: 'Git Integration',
+      description: 'Seamless integration with GitHub, GitLab, and Bitbucket for automated code reviews on every commit.'
     },
     {
-      icon: <Sparkles className="w-6 h-6 text-yellow-400" />,
-      title: 'Visual Effects',
-      description: 'Add stunning visual effects, transitions, and animations with AI assistance.'
+      icon: <MessageSquare className="w-6 h-6 text-yellow-400" />,
+      title: 'Smart Comments',
+      description: 'AI-generated code comments and suggestions to improve code quality and maintainability.'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Creator',
-      price: '$19',
+      name: 'Starter',
+      price: '$29',
       period: '/month',
-      description: 'Perfect for content creators',
+      description: 'Perfect for individual developers',
       features: [
-        'Up to 10 hours of video/month',
-        '1080p export quality',
-        'Basic AI editing tools',
-        '5GB cloud storage',
+        'Up to 10,000 lines of code/month',
+        'Basic security scanning',
+        'GitHub integration',
         'Email support',
-        'Standard templates'
+        'Standard bug detection'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$49',
+      price: '$99',
       period: '/month',
-      description: 'For professional video editors',
+      description: 'Ideal for small teams',
       features: [
-        'Up to 50 hours of video/month',
-        '4K export quality',
-        'Advanced AI editing tools',
-        '50GB cloud storage',
+        'Up to 100,000 lines of code/month',
+        'Advanced security scanning',
+        'All Git platform integrations',
         'Priority support',
-        'Premium templates',
-        'Team collaboration',
-        'Custom branding'
+        'Advanced bug detection',
+        'Performance analysis',
+        'Custom rules engine'
       ],
       popular: true
     },
     {
-      name: 'Studio',
-      price: '$99',
+      name: 'Enterprise',
+      price: '$299',
       period: '/month',
-      description: 'For video production studios',
+      description: 'For large development teams',
       features: [
-        'Unlimited video processing',
-        '8K export quality',
-        'All AI editing features',
-        '500GB cloud storage',
+        'Unlimited code analysis',
+        'Enterprise security scanning',
+        'Custom integrations',
         '24/7 dedicated support',
-        'Custom templates',
-        'Advanced analytics',
-        'API access',
-        'White-label options'
+        'AI-powered code suggestions',
+        'Team collaboration tools',
+        'Advanced reporting',
+        'SLA guarantee'
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: '95%', label: 'Time Saved on Editing', icon: <Clock className="w-6 h-6" /> },
-    { number: '10K+', label: 'Videos Created Daily', icon: <Video className="w-6 h-6" /> },
-    { number: '50K+', label: 'Content Creators', icon: <Users className="w-6 h-6" /> },
-    { number: '4.9/5', label: 'User Rating', icon: <Star className="w-6 h-6" /> }
-  ];
-
-  const useCases = [
-    {
-      title: 'Social Media Content',
-      description: 'Create engaging TikTok, Instagram, and YouTube videos with AI-powered editing.',
-      icon: <Film className="w-8 h-8 text-cyan-400" />
-    },
-    {
-      title: 'Marketing Videos',
-      description: 'Produce professional marketing and promotional videos with automated editing.',
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />
-    },
-    {
-      title: 'Educational Content',
-      description: 'Create compelling educational videos with AI-assisted content structuring.',
-      icon: <FileText className="w-8 h-8 text-purple-400" />
-    },
-    {
-      title: 'Event Highlights',
-      description: 'Automatically generate event highlight reels from hours of footage.',
-      icon: <Camera className="w-8 h-8 text-pink-400" />
-    }
+    { number: '99.7%', label: 'Bug Detection Accuracy', icon: <CheckCircle className="w-6 h-6" /> },
+    { number: '50K+', label: 'Developers Trust Us', icon: <Users className="w-6 h-6" /> },
+    { number: '2M+', label: 'Lines Analyzed Daily', icon: <Code className="w-6 h-6" /> },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Video Editor - Automated Video Editing & Production | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered video editor with automated editing, smart cut detection, and professional effects. Save 95% of editing time. Starting at $19/month." />
-        <meta name="keywords" content="AI video editor, automated video editing, video production, content creation, video effects, video templates" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-video-editor" />
+        <title>AI Code Reviewer - Automated Code Analysis & Security Scanning | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered code review tool with 99.7% bug detection accuracy. Automated security scanning, performance analysis, and intelligent code suggestions. Starting at $29/month." />
+        <meta name="keywords" content="AI code review, automated code analysis, security scanning, bug detection, code quality, developer tools, static analysis" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-code-reviewer" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -162,14 +132,14 @@ export default function AIVideoEditorPage() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
                 <Brain className="w-4 h-4 mr-2" />
-                AI-Powered Video Production
+                AI-Powered Code Analysis
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Video Editor
+                AI Code Reviewer
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your video production workflow with our AI-powered editor. 
-                Create professional videos in minutes, not hours, with intelligent automation.
+                Revolutionize your development workflow with our AI-powered code review tool. 
+                Detect bugs, security vulnerabilities, and performance issues with 99.7% accuracy.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
@@ -203,10 +173,10 @@ export default function AIVideoEditorPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful AI Features
+                Powerful Features
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Everything you need to create professional videos with AI assistance
+                Everything you need to maintain high code quality and security standards
               </p>
             </div>
 
@@ -222,41 +192,15 @@ export default function AIVideoEditorPage() {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Pricing Section */}
         <section className="py-16 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect For Every Use Case
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                From social media content to professional marketing videos
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex items-center justify-center mb-4">
-                    {useCase.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
-                  <p className="text-gray-300">{useCase.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your Plan
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Start creating amazing videos today
+                Choose the plan that fits your development needs
               </p>
             </div>
 
@@ -306,11 +250,11 @@ export default function AIVideoEditorPage() {
           <div className="max-w-7xl mx-auto">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-3xl p-8 md:p-12 text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Create Amazing Videos?
+                Ready to Improve Your Code Quality?
               </h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join thousands of creators who are already saving 95% of their editing time. 
-                Start your free trial today.
+                Join thousands of developers who trust our AI-powered code review tool. 
+                Start your free trial today - no credit card required.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
@@ -323,7 +267,7 @@ export default function AIVideoEditorPage() {
                 </button>
               </div>
               <div className="mt-8 text-white/80 text-sm">
-                <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
+                <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
               </div>
             </div>
           </div>
