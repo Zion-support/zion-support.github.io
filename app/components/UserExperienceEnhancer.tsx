@@ -1,27 +1,18 @@
-
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
+interface UserExperienceEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
+export default function UserExperienceEnhancer({ 
+  className = '',
+  children 
+}: UserExperienceEnhancerProps) {
   return (
-    <div>Content</div>
-  );
-    <div>Component content</div>
+    <div className={`bg-gray-800 rounded-lg p-4 ${className}`}>
+      <h3 className="text-white font-semibold mb-2">UserExperienceEnhancer</h3>
+      {children && <div className="text-gray-300">{children}</div>}
+    </div>
   );
 }
-  return (
-    <div>Content</div>
-  );
-    <>
-
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>;
-  );
-

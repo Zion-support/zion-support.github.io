@@ -1,51 +1,18 @@
+import React from 'react';
 
-    try {
-      const registration = await navigator.serviceWorker.register('/sw.js')
-      setRegistration(registration)
-      setIsRegistered(true)
-      // Listen for updates
-        const newWorker = registration.installing
-        if (newWorker) {
-          newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed') {
-              if (navigator.serviceWorker.controller) {
-                setUpdateAvailable(true)
-                onUpdateAvailable?.()
-              } else {
-                onUpdateInstalled?.()
-              }
-            }
-          })
-        }
-      })
-    } catch (error) {
-      console.error('Service worker registration failed: ', error)
+interface ServiceWorkerRegistrationProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-    setIsUpdating(true)
-    try {
-      await registration.update()
-      setUpdateAvailable(false)
-    } catch (error) {
-      console.error('Service worker update failed: ', error)
-    } finally {
-      setIsUpdating(false)
-
+export default function ServiceWorkerRegistration({ 
+  className = '',
+  children 
+}: ServiceWorkerRegistrationProps) {
   return (
-    <div>Content</div>
+    <div className={`bg-gray-800 rounded-lg p-4 ${className}`}>
+      <h3 className="text-white font-semibold mb-2">ServiceWorkerRegistration</h3>
+      {children && <div className="text-gray-300">{children}</div>}
+    </div>
   );
-    <div className = "{`service-worker-registration" ${className}`} /></div>
-      {updateAvailable && (
-
-                <p className="text-gray-300">{feature.description}</p>
-              </div>))}
-          </div>
-      </section>
-      {/* Benefits Section */}
-
-                <p className="text-gray-300text-lg">{benefit}</p>
-              </div>))}
-          </div>
-      </section>
-      {/* CTA Section */}
-
-
+}

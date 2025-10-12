@@ -1,31 +1,18 @@
-
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
+interface SEOOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
+export default function SEOOptimizer({ 
+  className = '',
+  children 
+}: SEOOptimizerProps) {
   return (
-    <div>Content</div>
-  );
-    <div>Component content</div>
+    <div className={`bg-gray-800 rounded-lg p-4 ${className}`}>
+      <h3 className="text-white font-semibold mb-2">SEOOptimizer</h3>
+      {children && <div className="text-gray-300">{children}</div>}
+    </div>
   );
 }
-  return (
-    <div>Content</div>
-  );
-        <title>5G Data Analytics - Zion Tech Group</title>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-      {/* Canonical URL */}
-      {/* Open Graph Meta Tags */}
-      {/* Twitter Card Meta Tags */}
-      {/* Additional SEO Meta Tags */}
-      {/* Performance Hints */}
-      {/* Structured Data */}
-      <script type = "application/ld+json">{JSON.stringify(breadcrumbData)}
-      <script type="application/ld+json">{JSON.stringify(faqData)}
-      {structuredData && (
-        <script type="application/ld+json">{JSON.stringify(structuredData)}
-      )}
-
-

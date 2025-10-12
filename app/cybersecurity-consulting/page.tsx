@@ -1,209 +1,245 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
-
-
-import Layout from '../layout'
-
 import React from 'react';
-
 import { Link } from 'react-router-dom';
-
+import { Shield, Lock, Eye, Brain, CheckCircle } from 'lucide-react';
 import Layout from '../layout';
 
 export default function CybersecurityConsulting() {
   const features = [
-
-      icon: <Shield className="w-6h-6text-cyan-400" />,
+    {
+      icon: <Shield className="w-6 h-6 text-cyan-400" />,
       title: 'Security Assessment',
       description: 'Comprehensive security audits to identify vulnerabilities and assess your current security posture'
     },
-      icon: <Lock className="w-6h-6text-purple-400" />,
+    {
+      icon: <Lock className="w-6 h-6 text-purple-400" />,
       title: 'Compliance Management',
       description: 'Ensure compliance with GDPR, HIPAA, SOX, PCI-DSS, and other regulatory requirements'
     },
-      icon: <Eye className="w-6h-6text-yellow-400" />,
+    {
+      icon: <Eye className="w-6 h-6 text-yellow-400" />,
       title: 'Threat Intelligence',
       description: 'Advanced threat detection and response with 24/7 monitoring and incident management'
     },
-      icon: <Brain className="w-6h-6text-green-400" />,
+    {
+      icon: <Brain className="w-6 h-6 text-green-400" />,
+      title: 'AI-Powered Security',
+      description: 'Machine learning algorithms for advanced threat detection and automated response'
+    }
+  ];
 
-      title: 'Security Training',
-      description: 'Comprehensive security awareness training for your team to prevent human error attacks'
-  ]
-
-  const consultingFeatures = [
-      category: 'Security Assessment',
-      items: ['Vulnerability Scanning', 'Penetration Testing', 'Risk Assessment', 'Security Audits', 'Compliance Reviews', 'Gap Analysis']
-    },
-      category: 'Implementation',
-      items: ['Security Architecture', 'Policy Development', 'Tool Implementation', 'Process Design', 'Training Programs', 'Change Management']
-    },
-      category: 'Monitoring & Response',
-      items: ['24/7 SOC Services', 'Incident Response', 'Threat Hunting', 'Forensic Analysis', 'Security Monitoring', 'Alert Management']
-    },
-      category: 'Compliance',
-      items: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'PCI-DSS Compliance', 'ISO 27001', 'NIST Framework']
-  ]
+  const services = [
+    'Security Risk Assessment',
+    'Penetration Testing',
+    'Vulnerability Management',
+    'Incident Response Planning',
+    'Security Training & Awareness',
+    'Compliance Auditing',
+    'Security Architecture Review',
+    'Threat Modeling'
+  ];
 
   const pricingPlans = [
-      name: 'Assessment',
+    {
+      name: 'Basic Security',
       price: '$2,999',
-      period: '/project',
-      description: 'Comprehensive security assessment',
+      description: 'Essential security services for small businesses',
       features: [
-        'Security audit',
-        'Vulnerability assessment',
-        'Risk analysis',
-        'Compliance review',
-        'Detailed report',
-        'Recommendations'
+        'Security Assessment',
+        'Basic Compliance Review',
+        'Security Recommendations',
+        'Email Support',
+        '30-day follow-up'
       ],
       popular: false
     },
-      name: 'Implementation',
-      price: '$9,999',
-      period: '/project',
-      description: 'Complete security implementation',
+    {
+      name: 'Professional Security',
+      price: '$7,999',
+      description: 'Comprehensive security for growing enterprises',
       features: [
-        'Security assessment',
-        'Tool implementation',
-        'Policy development',
-        'Team training',
-        '3 months support',
-        'Compliance guidance'
+        'Full Security Audit',
+        'Penetration Testing',
+        'Compliance Management',
+        'Incident Response Plan',
+        'Priority Support',
+        'Quarterly Reviews'
       ],
       popular: true
     },
-      name: 'Ongoing',
-      price: '$4,999',
-      period: '/month',
-      description: 'Continuous security management',
+    {
+      name: 'Enterprise Security',
+      price: 'Custom',
+      description: 'Advanced security for large organizations',
       features: [
-        '24/7 monitoring',
-        'Incident response',
-        'Regular assessments',
-        'Compliance management',
-        'Security updates',
-        'Dedicated support'
+        'Custom Security Framework',
+        'Ongoing Monitoring',
+        'Dedicated Security Team',
+        '24/7 Support',
+        'Custom Training',
+        'Regular Security Updates'
       ],
       popular: false
-  ]
-
-  const testimonials = [
-      name: 'Jennifer Lee',
-      company: 'Healthcare Provider',
-      content: 'Cybersecurity Consulting helped us achieve HIPAA compliance and significantly improve our security posture.',
-      rating: 5
-    },
-      name: 'Michael Rodriguez',
-      company: 'Financial Services',
-      content: 'Their threat intelligence and incident response capabilities prevented a major security breach. Highly recommended.',
-      rating: 5
-    },
-      name: 'Sarah Johnson',
-      company: 'E-commerce Platform',
-      content: 'The security training program transformed our team's awareness. We've seen a 90% reduction in security incidents.',
-      rating: 5
-  ]
+    }
+  ];
 
   return (
+    <Layout>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-red-900 to-gray-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Cybersecurity
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
+                {' '}Consulting
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Protect your business with expert cybersecurity consulting. We provide comprehensive security solutions 
+              to safeguard your digital assets and ensure regulatory compliance.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300"
+              >
+                Get Security Assessment
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-gray-900 transition-all duration-300"
+              >
+                Schedule Consultation
+              </Link>
+            </div>
+          </div>
+        </section>
 
-        {/* Hero Section */
-    
-                Expert Cybersecurity Consulting
-
-              <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6">Cybersecurity Consulting
-
-              Protect your business with expert cybersecurity consulting. Security assessments, compliance management, 
-                threat intelligence, and 24/7 monitoring to keep your data secure.
-    
-                  Get Free Security Audit
-
-                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">View Case Studies
-
-        {/* Features Section */
-    
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Comprehensive Security Solutions
-                Expert cybersecurity services that protect your business from evolving threats
-
- (
-
-                    {feature.icon
-    
-                    <h3 className="text-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
-
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Comprehensive Security Solutions
+              </h2>
+              <p className="text-gray-300 text-lg">
+                Expert cybersecurity consulting to protect your business from evolving threats
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-red-400 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    {feature.icon}
+                    <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
+                  </div>
                   <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-              ))
+        {/* Services Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Our Security Services
+              </h2>
+              <p className="text-gray-300 text-lg">
+                Complete cybersecurity solutions tailored to your business needs
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {services.map((service, index) => (
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 border border-gray-700">
+                  <div className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    <span className="text-white">{service}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        {/* Consulting Features */
-    
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Complete Security Consulting
-                End-to-end cybersecurity services to protect your organization
-
- (
-    
-                  <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.category}</h3>
- (
-
-                        {item
-                    ))
-
-              ))
-
-        {/* Pricing Section */
-    
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Flexible Consulting Packages
-                Choose the security consulting package that fits your needs
-
- (
+        {/* Pricing Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Security Packages
+              </h2>
+              <p className="text-gray-300 text-lg">
+                Choose the security package that fits your needs
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 relative border ${plan.popular ? 'border-red-400' : 'border-gray-700'}`}>
                   {plan.popular && (
-
-                      Most Popular
-                  )
-
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300mb-6">{plan.description}</p>
-                    <span className="text-4 xlfont-boldtext-white">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
- (
-
-                        {feature
-                    ))
-                  
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-red-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
+                  <div className="text-4xl font-bold text-red-400 mb-2">
+                    {plan.price}
+                  </div>
+                  <p className="text-gray-300 mb-6">{plan.description}</p>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
                     to="/contact"
-                    className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-red-500 to-purple-600 text-white hover:from-red-600 hover:to-purple-700'
-                        : 'border-2 border-red-400 text-red-400 hover: bg-red-400/10'
-                    }`
+                        ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700'
+                        : 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-gray-900'
+                    }`}
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-Get Started
-    
-              ))
-
-        {/* Testimonials */
-    
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Trusted by Industry Leaders
-                See how our Cybersecurity Consulting protects organizations worldwide
-
- (
-
- (
-                    ))
-
-                  <p className="text-gray-300mb-4">"{testimonial.content}"</p>
-                    <div className="font-semiboldtext-white">{testimonial.name}</div>
-                    <div className="text-smtext-gray-400">{testimonial.company}</div>
-
-              ))
-
-        {/* CTA Section */
-    
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Secure Your Business Today
-                Don't wait for a security breach. Get expert cybersecurity consulting to protect your organization
-
-                <Link to="/contact" className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700transition-allduration-300">Get Your Free Security Audit
-                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
-  )
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Ready to Secure Your Business?
+            </h2>
+            <p className="text-gray-300 text-lg mb-8">
+              Get a free security assessment and discover how we can protect your digital assets
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300"
+              >
+                Get Free Assessment
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-gray-900 transition-all duration-300"
+              >
+                Schedule Consultation
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+  );
+}

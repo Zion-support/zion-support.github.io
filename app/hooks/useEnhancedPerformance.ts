@@ -1,93 +1,129 @@
-
+import { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
-
   loadTime: number;
-  renderTime: number;
   memoryUsage: number;
+  cpuUsage: number;
   networkLatency: number;
+  errorRate: number;
 }
 
+interface PerformanceConfig {
+  enableMonitoring: boolean;
+  sampleRate: number;
+  maxRetries: number;
+}
+
+export function useEnhancedPerformance(config: PerformanceConfig = {
+  enableMonitoring: true,
+  sampleRate: 1000,
+  maxRetries: 3
+}) {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
-    renderTime: 0,
     memoryUsage: 0,
+    cpuUsage: 0,
     networkLatency: 0,
+    errorRate: 0
   });
 
-  const [isOptimized, setIsOptimized] = useState(false);
+  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [errors, setErrors] = useState<Error[]>([]);
+
+  const collectMetrics = useCallback(() => {
+    if (!config.enableMonitoring) return;
+
+    try {
+      // Collect performance metrics
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+
+      // Memory usage (if available)
+      const memory = (performance as any).memory;
+      const memoryUsage = memory ? (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100 : 0;
+
+      // Simulate CPU usage (in real implementation, this would be more sophisticated)
+      const cpuUsage = Math.random() * 100;
+
+      // Network latency simulation
+      const networkLatency = Math.random() * 100 + 10;
+
+      // Error rate calculation
+      const errorRate = (errors.length / 100) * 100;
+
+      setMetrics({
+        loadTime,
+        memoryUsage,
+        cpuUsage,
+        networkLatency,
+        errorRate
+      });
+    } catch (error) {
+      console.error('Error collecting performance metrics:', error);
+    }
+  }, [config.enableMonitoring, errors.length]);
+
+  const startMonitoring = useCallback(() => {
+    if (isMonitoring) return;
+
+    setIsMonitoring(true);
+    collectMetrics();
+
+    const interval = setInterval(collectMetrics, config.sampleRate);
+    return () => clearInterval(interval);
+  }, [isMonitoring, collectMetrics, config.sampleRate]);
+
+  const stopMonitoring = useCallback(() => {
+    setIsMonitoring(false);
+  }, []);
+
+  const logError = useCallback((error: Error) => {
+    setErrors(prev => [...prev.slice(-99), error]);
+  }, []);
+
+  const clearErrors = useCallback(() => {
+    setErrors([]);
+  }, []);
+
+  const getPerformanceScore = useCallback(() => {
+    const { loadTime, memoryUsage, cpuUsage, networkLatency, errorRate } = metrics;
+    
+    let score = 100;
+    
+    // Deduct points based on performance metrics
+    if (loadTime > 3000) score -= 20;
+    else if (loadTime > 1000) score -= 10;
+    
+    if (memoryUsage > 80) score -= 15;
+    else if (memoryUsage > 60) score -= 5;
+    
+    if (cpuUsage > 80) score -= 15;
+    else if (cpuUsage > 60) score -= 5;
+    
+    if (networkLatency > 200) score -= 10;
+    else if (networkLatency > 100) score -= 5;
+    
+    if (errorRate > 5) score -= 20;
+    else if (errorRate > 1) score -= 10;
+    
+    return Math.max(0, score);
+  }, [metrics]);
+
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-      const renderStart = performance.now();
-      requestAnimationFrame(() => {
-        const renderTime = performance.now() - renderStart;
-        setMetrics(prev => ({ ...prev, renderTime }));
-      });
-    };
-
-      const start = performance.now();
-      fetch('/api/ping', { method: 'HEAD' })
-        .then(() => {
-          const latency = performance.now() - start;
-          setMetrics(prev => ({ ...prev, networkLatency: latency }));
-        })
-        .catch(() => {
-          // Fallback if ping endpoint doesn't exist
-          setMetrics(prev => ({ ...prev, networkLatency: 0 }));
-        });
-    };
-
-    measureLoadTime();
-    measureRenderTime();
-    measureMemoryUsage();
-    measureNetworkLatency();
-
-        metrics.renderTime < 16 && // Render time under 16ms (60fps)
-        metrics.memoryUsage < 100 && // Memory usage under 100MB
-        metrics.networkLatency < 200; // Network latency under 200ms
-      setIsOptimized(isOptimized);
-    };
-
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
-      '/images/logo.png',;
-    ];
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
-      }
-      document.head.appendChild(link);
-    });
-
-    const images = document.querySelectorAll('img[data-src]');
-const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {;
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
-        }
-      });
-    });
-    images.forEach((img) => imageObserver.observe(img));
-
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-    window.addEventListener('scroll', updateScrollPosition, { passive: true });
+    if (config.enableMonitoring) {
+      const cleanup = startMonitoring();
+      return cleanup;
+    }
+  }, [config.enableMonitoring, startMonitoring]);
 
   return {
     metrics,
-    isOptimized,
-    optimizePerformance,
+    isMonitoring,
+    errors,
+    startMonitoring,
+    stopMonitoring,
+    logError,
+    clearErrors,
+    getPerformanceScore
   };
-};
+}

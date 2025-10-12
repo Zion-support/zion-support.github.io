@@ -1,21 +1,26 @@
-
-
 import React from 'react';
-
 import { Link } from 'react-router-dom';
+import Layout from '../layout';
 
-
+export default function PagePage() {
   return (
-
-        <title>Page - Zion Tech Group</title>
-        <h1 className="text-4xl font-bold text-white mb-6">Page</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional page services coming soon.</p>
-          Contact Us
-          
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <h1 className="text-4 xl font-boldtext-whitemb-6">Sla</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional sla services coming soon.</p>
-          Contact Us
-    
+    <Layout>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+        <div className="max-w-4xl mx-auto text-center p-8">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            This page is under construction. Please check back later.
+          </p>
+          <Link
+            to="/"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+          >
+            Go Home
+          </Link>
+        </div>
+      </div>
+    </Layout>
   );
-
+}

@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (...args: unknown[]) => void;
   }
 }
 
@@ -35,9 +35,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         script.async = true;
         document.head.appendChild(script);
 
-        window.gtag = window.gtag || function(...args: any[]) {
-          (window.gtag as any).q = (window.gtag as any).q || [];
-          (window.gtag as any).q.push(args);
+        window.gtag = window.gtag || function(...args: unknown[]) {
+          (window.gtag as { q?: unknown[] }).q = (window.gtag as { q?: unknown[] }).q || [];
+          (window.gtag as { q: unknown[] }).q.push(args);
         };
         window.gtag('js', new Date());
         window.gtag('config', process.env.REACT_APP_GA_MEASUREMENT_ID || '');

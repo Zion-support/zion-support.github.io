@@ -168,49 +168,14 @@ export default function CloudMigrationProPage() {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-
-          {/* Features Section */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-                <div className="flex justify-center mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Migration Process Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Our Migration Process</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {migrationSteps.map((step, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-                  <div className="text-4xl font-bold text-cyan-400 mb-4">{step.step}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-gray-300">{step.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-=======
         </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-9c1a
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
-                Why Choose Our Migration Service?
+                Why Choose Our Migration Service
               </h2>
               <p className="text-gray-300 text-lg">
                 Professional expertise and proven methodologies for successful cloud migration
@@ -218,7 +183,7 @@ export default function CloudMigrationProPage() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     {feature.icon}
                     <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
@@ -243,9 +208,13 @@ export default function CloudMigrationProPage() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {migrationSteps.map((step, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                  <div className="text-3xl font-bold text-cyan-400 mb-4">{step.step}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-cyan-400 text-slate-900 w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                      {step.step}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">{step.title}</h3>
+                  </div>
                   <p className="text-gray-300">{step.description}</p>
                 </div>
               ))}
@@ -266,10 +235,10 @@ export default function CloudMigrationProPage() {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 relative ${plan.popular ? 'border-cyan-400' : ''}`}>
+                <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 relative border ${plan.popular ? 'border-cyan-400' : 'border-slate-700'}`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
+                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -311,12 +280,12 @@ export default function CloudMigrationProPage() {
                 Client Success Stories
               </h2>
               <p className="text-gray-300 text-lg">
-                See how we've helped businesses migrate to the cloud
+                See how we've helped businesses transform with cloud migration
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
                   <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <span key={i} className="text-yellow-400">★</span>

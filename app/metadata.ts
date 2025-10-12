@@ -1,74 +1,42 @@
-// Define metadata type for compatibility
-export interface Metadata {
-  title: string;
-  description: string;
-  keywords: string[];
-  authors: Array<{ name: string }>;
-  creator: string;
-  publisher: string;
-  contact: {
-    email: boolean;
-    address: boolean;
-    telephone: boolean;
-  };
-  metadataBase: URL;
-  alternates: {
-    canonical: string;
-  };
-  openGraph: {
-    title: string;
-    description: string;
-    url: string;
-    siteName: string;
-    images: Array<{ url: string }>;
-  };
-  twitter: {
-    card: string;
-    title: string;
-    description: string;
-    images: string[];
-  };
-  robots: {
-    index: boolean;
-    follow: boolean;
-    googleBot: {
-      index: boolean;
-      follow: boolean;
-      'max-video-preview': number;
-      'max-image-preview': string;
-      'max-snippet': number;
-    };
-  };
+export const siteConfig = {
+  name: 'Zion Tech Group',
+  description: 'Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
+  url: 'https://ziontechgroup.com',
+  ogImage: 'https://ziontechgroup.com/og-image.jpg',
+  links: {
+    twitter: 'https://twitter.com/ziontechgroup',
+    linkedin: 'https://linkedin.com/company/ziontechgroup',
+    github: 'https://github.com/ziontechgroup'
+  }
+};
 
-  keywords: [
-    'technology consulting',
-    'AI solutions',
-    'IT services'
-  ],
+export const defaultMetadata = {
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
+  keywords: 'AI solutions, artificial intelligence, IT services, 5G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  contact: {
-    email: true,
-    address: true,
-    telephone: true
-  },
-  metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
-    canonical: 'https://ziontechgroup.com'
-  },
   openGraph: {
-    title: 'Zion Tech Group',
-    description: 'Advanced AI and IT Solutions',
+    type: 'website',
+    locale: 'en_US',
     url: 'https://ziontechgroup.com',
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms.',
     siteName: 'Zion Tech Group',
-    images: [{ url: '/og-image.jpg' }]
+    images: [
+      {
+        url: 'https://ziontechgroup.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - Advanced AI and IT Solutions'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group',
-    description: 'Advanced AI and IT Solutions',
-    images: ['/og-image.jpg']
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms.',
+    images: ['https://ziontechgroup.com/og-image.jpg']
   },
   robots: {
     index: true,
@@ -80,5 +48,18 @@ export interface Metadata {
       'max-image-preview': 'large',
       'max-snippet': -1
     }
+  },
+  verification: {
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+    yahoo: 'your-yahoo-verification-code'
   }
 };
+
+export function generateMetadata(pageTitle?: string, pageDescription?: string) {
+  return {
+    title: pageTitle || defaultMetadata.title,
+    description: pageDescription || defaultMetadata.description,
+    ...defaultMetadata
+  };
+}

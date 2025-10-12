@@ -1,58 +1,125 @@
 import React from 'react';
+import { Home, RefreshCw } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-;
-};/**
- * Get error boundary configuration based on environment*/
-      notFound: NotFoundFallback,}
-    },}}
 /**
- * Default error fallback component*/
-
-  )}
-/**
- * Network error fallback component;
+ * Error boundary configuration for different environments
  */
+export const errorBoundaryConfig = {
+  development: {
+    showErrorDetails: true,
+    logErrors: true,
+    fallback: 'ErrorFallback'
+  },
+  production: {
+    showErrorDetails: false,
+    logErrors: true,
+    fallback: 'NotFoundFallback'
+  }
+};
 
-    </div>)}
 /**
- * Network error fallback component*/;
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {return (<div className = "min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-
-  )}
-/**
- * Not found error fallback component;
+ * Default error fallback component
  */
-
-  )}
-/**
- * Get error type from error object;
- */
-    return 'network'
-            className = "w-full bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700 transition-colors">;
-            Retry Connection;
-          </button>
+export function ErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-900">
+      <div className="max-w-md mx-auto text-center p-8">
+        <div className="mb-8">
+          <div className="w-16 h-16 mx-auto mb-4 bg-red-500 rounded-full flex items-center justify-center">
+            <span className="text-white text-2xl font-bold">!</span>
+          </div>
+          <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+          <p className="text-gray-300 mb-6">
+            We're sorry, but something unexpected happened. Please try refreshing the page.
+          </p>
         </div>
-    </div>)}
-/**
- * Not found error fallback component*/
+        
+        <div className="space-y-4">
+          <button
+            onClick={resetError}
+            className="w-full px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center"
+          >
+            <RefreshCw className="w-5 h-5 mr-2" />
+            Try Again
+          </button>
+          
+          <Link
+            to="/"
+            className="block w-full px-6 py-3 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-800 transition-colors flex items-center justify-center"
+          >
+            <Home className="w-5 h-5 mr-2" />
+            Go Home
+          </Link>
+        </div>
 
-    </div>)}
+        {process.env.NODE_ENV === 'development' && (
+          <details className="mt-8 text-left">
+            <summary className="text-gray-400 cursor-pointer">Error Details</summary>
+            <pre className="mt-4 p-4 bg-gray-800 rounded text-red-400 text-sm overflow-auto">
+              {error.toString()}
+            </pre>
+          </details>
+        )}
+      </div>
+    </div>
+  );
+}
+
 /**
- * Get error type from error object*/
-  }
-  if (error.message.includes('404') || error.message.includes('not found')) {return 'notFound'}
-  }
-  if (error.message.includes('timeout')) {return 'timeout'}
-  }
-  if (error.message.includes('500') || error.message.includes('server')) {return 'serverError'}
-  }
-  if (error.message.includes('validation')) {return 'validation'}
-  }
-  return 'default'}
-/**
- * Format error for logging;
+ * Not found fallback component
  */
+export function NotFoundFallback() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-900">
+      <div className="max-w-md mx-auto text-center p-8">
+        <div className="mb-8">
+          <div className="w-16 h-16 mx-auto mb-4 bg-gray-500 rounded-full flex items-center justify-center">
+            <span className="text-white text-2xl font-bold">404</span>
+          </div>
+          <h1 className="text-2xl font-bold text-white mb-4">Page Not Found</h1>
+          <p className="text-gray-300 mb-6">
+            The page you're looking for doesn't exist or has been moved.
+          </p>
+        </div>
+        
+        <Link
+          to="/"
+          className="inline-flex items-center px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
+        >
+          <Home className="w-5 h-5 mr-2" />
+          Go Home
+        </Link>
+      </div>
+    </div>
+  );
+}
 
-
+/**
+ * Network error fallback component
+ */
+export function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-900">
+      <div className="max-w-md mx-auto text-center p-8">
+        <div className="mb-8">
+          <div className="w-16 h-16 mx-auto mb-4 bg-yellow-500 rounded-full flex items-center justify-center">
+            <span className="text-white text-2xl font-bold">⚠</span>
+          </div>
+          <h1 className="text-2xl font-bold text-white mb-4">Network Error</h1>
+          <p className="text-gray-300 mb-6">
+            There seems to be a network issue. Please check your connection and try again.
+          </p>
+        </div>
+        
+        <button
+          onClick={resetError}
+          className="w-full px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center"
+        >
+          <RefreshCw className="w-5 h-5 mr-2" />
+          Retry
+        </button>
+      </div>
+    </div>
+  );
+}
