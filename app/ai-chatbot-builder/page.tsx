@@ -1,15 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { ArrowRight, MessageCircle, Users, Zap, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fabc
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle, MessageCircle, Brain, Zap, Users, BarChart3, Shield } from 'lucide-react'
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-c78e
 =======
 import React, { useState } from 'react'
@@ -17,6 +21,8 @@ import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { CheckCircle, ArrowRight, MessageCircle, Users, Zap, Shield, Brain, Globe, Clock, Star, Target, DollarSign } from 'lucide-react'
 >>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fabc
 
 export default function AIChatbotBuilderPage() {
   const [activeTab, setActiveTab] = useState('overview')

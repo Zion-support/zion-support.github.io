@@ -1,12 +1,13 @@
 'use client'
-import React from 'react'
 import React, { memo, useMemo } from 'react'
-interface OptimizedLoadingSpinnerProps {interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+
+interface OptimizedLoadingSpinnerProps {
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars'
   text?: string
   className?: string
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
-  fullScreen?: boolean}
+  fullScreen?: boolean
 }
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({
