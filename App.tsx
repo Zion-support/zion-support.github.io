@@ -9,11 +9,11 @@ import AIServicesPage from './app/ai-services/page'
 import ITServicesPage from './app/it-services/page'
 import MicroSaasServicesPage from './app/micro-saas-services/page'
 import FiveGImplementationPage from './app/5g-implementation/page'
-import FiveGImplementationPage from './app/5g-implementation/page'
-import MicroSaasServicesPage from './app/micro-saas-services/page'
-import ItServicesPage from './app/it-services/page'
 import CloudServicesPage from './app/cloud-services/page'
 import DigitalTransformationPage from './app/digital-transformation/page'
+import AISmartSchedulerPage from './app/ai-smart-scheduler/page'
+import AIDocumentAnalyzerPage from './app/ai-document-analyzer/page'
+import AISocialMediaManagerPage from './app/ai-social-media-manager/page'
 
 function App() {
   return (
@@ -23,23 +23,16 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/ai-services" element={<AIServicesPage />} />
           <Route path="/it-services" element={<ITServicesPage />} />
           <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
-          <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/ai-services" element={<AIServicesPage />} />
-          <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-          <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
-          <Route path="/ai-services" element={<AIServicesPage />} />
-          <Route path="/it-services" element={<ItServicesPage />} />
-          <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
           <Route path="/cloud-services" element={<CloudServicesPage />} />
           <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
           <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/ai-smart-scheduler" element={<AISmartSchedulerPage />} />
+          <Route path="/ai-document-analyzer" element={<AIDocumentAnalyzerPage />} />
+          <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
         </Routes>
         <Footer />
       </div>
