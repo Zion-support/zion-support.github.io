@@ -1,209 +1,129 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle, Users, Zap, Shield, Brain, BarChart, MessageCircle, Target, ShoppingCart, Globe, Clock } from 'lucide-react';
 
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, Users, Award, Shield, Brain, Cloud, Code, Smartphone, FileText, MessageCircle, Link as LinkIcon, Workflow, CheckCircle } from 'lucide-react';
-
-  const [isVisible, setIsVisible] = useState(false);
-
-    setIsVisible(true);
-  }, []);
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
-    { number: '50+', label: 'Happy Clients', icon: Users },
-    { number: '99%', label: 'Client Satisfaction', icon: Star },
-    { number: '24/7', label: 'Support Available', icon: Award },
-  ];
-
+const HomePage = () => {
   const features = [
-      icon: Brain,
+    {
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence to transform your business operations',
-      color: 'from-purple-500 to-pink-500'
-    },
-      icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions with AWS, Azure, and Google Cloud expertise',
-      color: 'from-cyan-500 to-blue-500'
-    },
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets',
-      color: 'from-red-500 to-orange-500'
-    },
-      icon: Code,
-      title: 'Custom Development',
-      description: 'Tailored software solutions built with modern technologies',
-      color: 'from-green-500 to-emerald-500'
-  ];
-
-  const aiServices = [
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence with predictive insights',
-      price: '$299/month',
-      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration'],
-      icon: BarChart,
-      color: 'from-purple-500 to-pink-500'
-    },
-      title: 'AI Content Generator',
-      description: 'Automated content creation for blogs, social media, and marketing',
-      price: '$199/month',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice training', 'Content scheduling'],
-      icon: FileText,
+      icon: <Brain className="w-8 h-8" />,
       color: 'from-blue-500 to-cyan-500'
     },
-      title: 'AI Customer Support',
-      description: '24/7 intelligent customer service with natural language processing',
-      price: '$399/month',
-      features: ['Multi-channel support', 'Sentiment analysis', 'Escalation management', 'Performance analytics'],
-      icon: MessageCircle,
+    {
+      title: 'IT Services',
+      description: 'Comprehensive technology solutions for modern businesses',
+      icon: <Shield className="w-8 h-8" />,
       color: 'from-green-500 to-emerald-500'
     },
-      title: 'AI Workflow Automation',
-      description: 'Streamline business processes with intelligent automation',
-      price: '$249/month',
-      features: ['Process mapping', 'Automated workflows', 'Integration APIs', 'Performance monitoring'],
-      icon: Workflow,
+    {
+      title: 'Micro SAAS',
+      description: 'Ready-to-use software solutions for immediate deployment',
+      icon: <Zap className="w-8 h-8" />,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      title: '5G Solutions',
+      description: 'Next-generation connectivity and infrastructure services',
+      icon: <Globe className="w-8 h-8" />,
       color: 'from-orange-500 to-red-500'
-  ];
-
-  const itServices = [
-      title: 'Cloud Migration',
-      description: 'Seamless migration to AWS, Azure, or Google Cloud',
-      price: 'Starting at $5,000',
-      features: ['Zero-downtime migration', 'Security compliance', 'Cost optimization', '24/7 support'],
-      icon: Cloud,
-      color: 'from-cyan-500 to-blue-500'
-    },
-      title: 'Cybersecurity Audit',
-      description: 'Comprehensive security assessment and implementation',
-      price: 'Starting at $3,000',
-      features: ['Vulnerability assessment', 'Penetration testing', 'Security policies', 'Staff training'],
-      icon: Shield,
-      color: 'from-red-500 to-orange-500'
-    },
-      title: 'Custom Web Development',
-      description: 'Modern, responsive web applications built to scale',
-      price: 'Starting at $8,000',
-      features: ['Responsive design', 'SEO optimization', 'Performance tuning', 'Maintenance support'],
-      icon: Code,
-      color: 'from-green-500 to-emerald-500'
-    },
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications',
-      price: 'Starting at $12,000',
-      features: ['iOS & Android', 'Cross-platform', 'App store optimization', 'Push notifications'],
-      icon: Smartphone,
-      color: 'from-purple-500 to-pink-500'
-  ];
-
-  const microSaasProducts = [
-      title: 'Zion Analytics Pro',
-      description: 'Advanced business intelligence platform with AI insights',
-      price: '$99/month',
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Team collaboration'],
-      icon: BarChart,
-      color: 'from-blue-500 to-purple-500'
-    },
-      title: 'Zion Security Shield',
-      description: 'Comprehensive cybersecurity monitoring and threat detection',
-      price: '$149/month',
-      features: ['Threat detection', 'Vulnerability scanning', 'Incident response', 'Compliance reporting'],
-      icon: Shield,
-      color: 'from-red-500 to-orange-500'
-    },
-      title: 'Zion Content Studio',
-      description: 'AI-powered content creation and management platform',
-      price: '$79/month',
-      features: ['AI content generation', 'Multi-platform publishing', 'Brand consistency', 'Performance tracking'],
-      icon: FileText,
-      color: 'from-green-500 to-teal-500'
-    },
-      title: 'Zion CRM Intelligence',
-      description: 'Smart customer relationship management with AI insights',
-      price: '$129/month',
-      features: ['Lead scoring', 'Sales forecasting', 'Customer insights', 'Automation workflows'],
-      icon: Users,
-      color: 'from-purple-500 to-pink-500'
+    }
   ];
 
   return (
-    
-        <title>Zion Tech Group - Advanced AI & IT Solutions | Leading Technology Company</title>
-
-              Advanced AI & IT Solutions
-              Transform your business with cutting-edge artificial intelligence, cloud infrastructure, 
-              and cybersecurity solutions tailored to your needs.
-                Get Started
-                Learn More
-
-=======
-export default function HomePage() {
-  return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Home - Zion Tech Group</title>
-        <meta name="description" content="Professional home by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
+        <meta name="keywords" content="AI solutions, IT services, digital transformation, business automation, technology consulting" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Home</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional home coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Welcome to
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              {' '}Zion Tech Group
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Leading provider of AI-powered solutions, IT services, and digital transformation 
+            for modern businesses. Transform your operations with cutting-edge technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link 
+              to="/about" 
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-  );
-}
-=======
-export default HomePage;
-const HomePage: React.FC = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Zion Tech Group - Advanced AI & IT Solutions</title>
-        <meta name="description" content="Zion Tech Group provides cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development." /></meta>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white  mb-6"></h1>
-              Transform Your Business with;
-              <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"></span>
-                Advanced AI & IT Solutions;
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl  mx-auto"></p>
-              We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth for businesses worldwide.
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Core Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4  justify-center"></div>
-              <Link;</Link></Link>
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center  justify-center"
-              ></Link>
-                Get Started;
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-              </Link>
-              <Link;</Link></Link>
-                to="/about"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              ></Link>
-                Learn More;
-              </Link>
-            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto`}>
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">{feature.title}</h3>
+                <p className="text-gray-300 text-center">{feature.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
-    </>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of businesses already using our solutions to drive growth and innovation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Start Your Journey
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link 
+              to="/services" 
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              View Services
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
->>>>>>> origin/main
+
+export default HomePage;
