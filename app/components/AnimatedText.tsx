@@ -1,73 +1,85 @@
-'use client';
-
-import React, { useEffect, useState } from 'react';
+'use client'
+import React, { useEffect, useState } from 'react'
 
 interface AnimatedTextProps {
-  text: string;
-  className?: string;
-  delay?: number;
-  duration?: number;
-  type?: 'fade' | 'slide' | 'glow' | 'typing';
+  text: string
+  className?: string
+  delay?: number
+  duration?: number
 }
 
-const AnimatedText: React.FC<AnimatedTextProps> = ({
-  text,
-  className = '',
-  delay = 0,
-  duration = 1000,
-  type = 'fade'
-}) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [displayText, setDisplayText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+export default function AnimatedText({ 
+  text, 
+  className = '', 
+  delay = 0, 
+  duration = 1000 
+}: AnimatedTextProps) {
+  const [displayedText, setDisplayedText] = useState('')
+  const [currentIndex, setCurrentIndex] = useState(0)
+  
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, delay);
-
-    return () => clearTimeout(timer);
-  }, [delay]);
-
-  useEffect(() => {
-    if (type === 'typing' && isVisible) {
       if (currentIndex < text.length) {
-        const timer = setTimeout(() => {
-          setDisplayText(text.slice(0, currentIndex + 1));
-          setCurrentIndex(currentIndex + 1);
-        }, 50);
-        return () => clearTimeout(timer);
+        setDisplayedText(prev => prev + text[currentIndex])
+        setCurrentIndex(prev => prev + 1)
       }
-    } else if (isVisible) {
-      setDisplayText(text);
-    }
-  }, [isVisible, currentIndex, text, type]);
-
-  const getAnimationClasses = () => {
-    const baseClasses = 'transition-all duration-1000';
+    }, delay + (currentIndex * duration / text.length))
     
-    switch (type) {
-      case 'fade':
-        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
-      case 'slide':
-        return `${baseClasses} ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`;
-      case 'glow':
-        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'} ${isVisible ? 'drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]' : ''}`;
-      case 'typing':
-        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
-      default:
-        return baseClasses;
-    }
-  };
-
+    return () => clearTimeout(timer)
+  }, [currentIndex, text, delay, duration])
+  
   return (
-    <span className={`${getAnimationClasses()} ${className}`}>
-      {type === 'typing' ? displayText : text}
-      {type === 'typing' && currentIndex < text.length && (
-        <span className="animate-pulse">|</span>
-      )}
+    <span className={className}>
+      {displayedText}
+      <span className="animate-pulse">|</span>
     </span>
-  );
-};
+  )
+}
 
-export default AnimatedText;
+interface TypewriterTextProps {
+  texts: string[]
+  className?: string
+  delay?: number
+  pauseDuration?: number
+}
+
+export function TypewriterText({ 
+  texts, 
+  className = '', 
+  delay = 0, 
+  pauseDuration = 2000 
+}: TypewriterTextProps) {
+  const [currentTextIndex, setCurrentTextIndex] = useState(0)
+  const [displayedText, setDisplayedText] = useState('')
+  const [isDeleting, setIsDeleting] = useState(false)
+  
+  useEffect(() => {
+    const currentText = texts[currentTextIndex]
+    
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        if (displayedText.length < currentText.length) {
+          setDisplayedText(currentText.slice(0, displayedText.length + 1))
+        } else {
+          setTimeout(() => setIsDeleting(true), pauseDuration)
+        }
+      } else {
+        if (displayedText.length > 0) {
+          setDisplayedText(displayedText.slice(0, -1))
+        } else {
+          setIsDeleting(false)
+          setCurrentTextIndex((prev) => (prev + 1) % texts.length)
+        }
+      }
+    }, delay + (isDeleting ? 50 : 100))
+    
+    return () => clearTimeout(timer)
+  }, [displayedText, currentTextIndex, isDeleting, texts, delay, pauseDuration])
+  
+  return (
+    <span className={className}>
+      {displayedText}
+      <span className="animate-pulse">|</span>
+    </span>
+  )
+}

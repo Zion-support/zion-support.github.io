@@ -1,75 +1,78 @@
 'use client'
 import React from 'react'
-import SEOHead from '../components/SEOHead'
-import { CheckCircle, ArrowRight, BarChart3, FileText, TrendingUp, Clock, Shield, Zap, Brain, Database, Users } from 'lucide-react'
+import SEOHead from '../../components/SEOHead'
+import { Brain, Calendar, Users, BarChart3, CheckCircle, Clock, Target, Zap, DollarSign, Star, ArrowRight, Shield, Globe, FileText, MessageSquare } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-export default function AIAutomatedReportingPage() {
+export default function AIProjectManagerPage() {
   const features = [
     {
-      icon: <BarChart3 className="w-8 h-8 text-blue-500" />,
-      title: 'Real-time Analytics',
-      description: 'Generate reports with live data updates and real-time insights'
+      icon: <Brain className="w-6 h-6 text-blue-500" />,
+      title: 'AI Task Assignment',
+      description: 'Intelligently assign tasks based on team member skills and workload'
     },
     {
-      icon: <Brain className="w-8 h-8 text-purple-500" />,
-      title: 'AI-Powered Insights',
-      description: 'Advanced AI algorithms identify trends and patterns automatically'
-    },
-    {
-      icon: <FileText className="w-8 h-8 text-green-500" />,
-      title: 'Automated Generation',
-      description: 'Reports are generated automatically based on your schedule and criteria'
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
+      icon: <BarChart3 className="w-6 h-6 text-green-500" />,
       title: 'Predictive Analytics',
-      description: 'Forecast future trends and performance based on historical data'
+      description: 'Forecast project completion dates and identify potential bottlenecks'
+    },
+    {
+      icon: <Users className="w-6 h-6 text-purple-500" />,
+      title: 'Team Collaboration',
+      description: 'Seamless communication and file sharing across all team members'
+    },
+    {
+      icon: <Target className="w-6 h-6 text-orange-500" />,
+      title: 'Goal Tracking',
+      description: 'Set and monitor project milestones with automated progress updates'
     }
   ]
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$49',
+      price: '$39',
       period: '/month',
       description: 'Perfect for small teams',
       features: [
-        'Up to 5 reports/month',
-        'Basic templates',
-        'Email delivery',
-        'Standard support',
-        'Basic analytics'
+        'Up to 5 projects',
+        '10 team members',
+        'Basic AI features',
+        'Task management',
+        'Basic reporting',
+        'Email support'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$149',
+      price: '$99',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Unlimited reports',
-        'Custom templates',
-        'Multiple delivery options',
+        'Unlimited projects',
+        '50 team members',
+        'Advanced AI analytics',
+        'Custom workflows',
+        'Advanced reporting',
         'Priority support',
-        'Advanced analytics',
-        'API integration'
+        'Integrations'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$399',
+      price: '$249',
       period: '/month',
       description: 'For large organizations',
       features: [
         'Everything in Professional',
+        'Unlimited team members',
         'Custom AI training',
-        'Dedicated support',
-        'White-label solution',
         'Advanced security',
-        'SLA guarantee'
+        'Dedicated support',
+        'Custom integrations',
+        'API access'
       ],
       popular: false
     }
@@ -78,9 +81,9 @@ export default function AIAutomatedReportingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOHead 
-        title="AI Automated Reporting - Zion Tech Group"
-        description="Transform your reporting process with AI-powered automated reports. Generate insights, track performance, and make data-driven decisions effortlessly."
-        keywords="AI automated reporting, business intelligence, data analytics, automated reports, AI insights"
+        title="AI Project Manager - Zion Tech Group"
+        description="Streamline project management with AI-powered task assignment, predictive analytics, and intelligent collaboration tools."
+        keywords="AI project management, project planning, task management, team collaboration, project analytics"
       />
       
       {/* Hero Section */}
@@ -91,20 +94,20 @@ export default function AIAutomatedReportingPage() {
         <div className="relative max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
             <Brain className="w-5 h-5 text-purple-400 mr-2" />
-            <span className="text-white text-sm font-medium">AI-Powered Reporting</span>
+            <span className="text-white text-sm font-medium">AI-Powered Project Management</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Automated
+            AI Project
             <br />
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Reporting
+              Manager
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform your reporting process with AI-powered automation. Generate comprehensive reports, 
-            gain actionable insights, and make data-driven decisions effortlessly.
+            Take your project management to the next level with AI-powered task assignment, 
+            predictive analytics, and intelligent collaboration tools.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -133,8 +136,8 @@ export default function AIAutomatedReportingPage() {
               <span>Enterprise security</span>
             </div>
             <div className="flex items-center">
-              <Clock className="w-5 h-5 text-purple-400 mr-2" />
-              <span>Real-time updates</span>
+              <Globe className="w-5 h-5 text-purple-400 mr-2" />
+              <span>Global collaboration</span>
             </div>
           </div>
         </div>
@@ -145,10 +148,10 @@ export default function AIAutomatedReportingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful AI Features
+              Intelligent Project Management
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to automate your reporting and gain valuable insights.
+              Everything you need to manage projects efficiently with AI assistance.
             </p>
           </div>
           
@@ -171,10 +174,10 @@ export default function AIAutomatedReportingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple Pricing Plans
+              Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your reporting needs.
+              Choose the plan that fits your team size and project needs.
             </p>
           </div>
           
@@ -233,10 +236,10 @@ export default function AIAutomatedReportingPage() {
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Automate Your Reporting?
+                Ready to Manage Projects Smarter?
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Join thousands of businesses already using our AI automated reporting to make better decisions faster.
+                Join thousands of teams already using our AI Project Manager to deliver projects on time and under budget.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 

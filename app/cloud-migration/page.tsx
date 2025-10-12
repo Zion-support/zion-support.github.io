@@ -1,108 +1,191 @@
+'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import SEOHead from '../components/SEOHead'
+import { Cloud, Server, Shield, Zap, CheckCircle, Star, ArrowRight, Globe, Clock, Users, BarChart3, Database, Lock, RefreshCw } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Cloud, Shield, Zap, Users, BarChart3, Database } from 'lucide-react'
 
 export default function CloudMigrationPage() {
   const features = [
     {
-      icon: <Cloud className="w-8 h-8 text-blue-500" />,
+      icon: <Cloud className="w-6 h-6 text-blue-500" />,
       title: 'Seamless Migration',
-      description: 'Migrate your applications and data to the cloud with zero downtime and minimal disruption.'
+      description: 'Zero-downtime migration to AWS, Azure, or Google Cloud with minimal business disruption'
     },
     {
-      icon: <Shield className="w-8 h-8 text-purple-500" />,
+      icon: <Shield className="w-6 h-6 text-green-500" />,
       title: 'Security First',
-      description: 'Enterprise-grade security measures throughout the migration process and beyond.'
+      description: 'Enterprise-grade security protocols and compliance with industry standards'
     },
     {
-      icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      title: 'Fast Implementation',
-      description: 'Accelerated migration timelines with our proven methodologies and expert team.'
+      icon: <Zap className="w-6 h-6 text-purple-500" />,
+      title: 'Performance Optimization',
+      description: 'Optimize your cloud infrastructure for maximum performance and cost efficiency'
     },
     {
-      icon: <Users className="w-8 h-8 text-green-500" />,
-      title: 'Expert Support',
-      description: 'Dedicated migration specialists and 24/7 support throughout your journey.'
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-red-500" />,
-      title: 'Cost Optimization',
-      description: 'Reduce infrastructure costs by up to 40% with optimized cloud architecture.'
-    },
-    {
-      icon: <Database className="w-8 h-8 text-indigo-500" />,
-      title: 'Data Integrity',
-      description: 'Ensure complete data integrity and consistency throughout the migration process.'
+      icon: <RefreshCw className="w-6 h-6 text-orange-500" />,
+      title: '24/7 Monitoring',
+      description: 'Continuous monitoring and support to ensure optimal cloud performance'
     }
   ]
 
-  const benefits = [
-    'Reduced infrastructure costs',
-    'Improved scalability and flexibility',
-    'Enhanced security and compliance',
-    'Better disaster recovery capabilities',
-    'Increased operational efficiency',
-    'Access to latest cloud technologies',
-    '24/7 monitoring and support',
-    'Future-proof architecture'
+  const migrationSteps = [
+    {
+      step: '01',
+      title: 'Assessment & Planning',
+      description: 'Comprehensive analysis of your current infrastructure and migration requirements',
+      duration: '1-2 weeks'
+    },
+    {
+      step: '02',
+      title: 'Strategy Development',
+      description: 'Custom migration strategy tailored to your business needs and goals',
+      duration: '1 week'
+    },
+    {
+      step: '03',
+      title: 'Migration Execution',
+      description: 'Seamless migration with minimal downtime and maximum data integrity',
+      duration: '2-4 weeks'
+    },
+    {
+      step: '04',
+      title: 'Optimization & Support',
+      description: 'Post-migration optimization and ongoing support for optimal performance',
+      duration: 'Ongoing'
+    }
+  ]
+
+  const pricingPlans = [
+    {
+      name: 'Small Business',
+      price: '$2,999',
+      description: 'Perfect for small businesses',
+      features: [
+        'Up to 10 servers',
+        'Basic migration planning',
+        'Standard security setup',
+        '30 days support',
+        'Performance monitoring',
+        'Cost optimization'
+      ],
+      popular: false
+    },
+    {
+      name: 'Enterprise',
+      price: '$9,999',
+      description: 'Ideal for growing companies',
+      features: [
+        'Up to 50 servers',
+        'Advanced migration planning',
+        'Enhanced security protocols',
+        '90 days support',
+        'Advanced monitoring',
+        'Custom optimization',
+        'Disaster recovery setup'
+      ],
+      popular: true
+    },
+    {
+      name: 'Custom',
+      price: 'Contact Us',
+      description: 'For large organizations',
+      features: [
+        'Unlimited servers',
+        'Custom migration strategy',
+        'Enterprise security',
+        'Dedicated support team',
+        'Custom monitoring solutions',
+        'Full optimization suite',
+        'SLA guarantee'
+      ],
+      popular: false
+    }
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Cloud Migration Services - Zion Tech Group</title>
-        <meta name="description" content="Migrate to the cloud with confidence. Our expert cloud migration services ensure seamless transition with zero downtime and enhanced security." />
-        <meta name="keywords" content="cloud migration, AWS migration, Azure migration, cloud services, infrastructure migration" />
-      </Helmet>
+      <SEOHead 
+        title="Cloud Migration Services - Zion Tech Group"
+        description="Expert cloud migration services for AWS, Azure, and Google Cloud. Seamless, secure, and cost-effective cloud transformation."
+        keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud transformation, cloud consulting"
+      />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              Cloud Migration Services
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Migrate to the cloud with confidence. Our expert team ensures seamless transition 
-              with zero downtime, enhanced security, and optimized performance.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/cloud-services"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-              >
-                View Cloud Services
-              </Link>
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        
+        <div className="relative max-w-7xl mx-auto text-center">
+          <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+            <Cloud className="w-5 h-5 text-purple-400 mr-2" />
+            <span className="text-white text-sm font-medium">Expert Cloud Migration</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Cloud
+            <br />
+            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              Migration
+            </span>
+          </h1>
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Transform your business with seamless cloud migration to AWS, Azure, or Google Cloud. 
+            Expert guidance, zero downtime, and maximum security.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Get Free Assessment
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link 
+              to="#process" 
+              className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              View Process
+            </Link>
+          </div>
+          
+          <div className="flex items-center justify-center space-x-8 text-gray-300">
+            <div className="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span>Zero downtime</span>
+            </div>
+            <div className="flex items-center">
+              <Shield className="w-5 h-5 text-blue-400 mr-2" />
+              <span>Enterprise security</span>
+            </div>
+            <div className="flex items-center">
+              <Globe className="w-5 h-5 text-purple-400 mr-2" />
+              <span>Multi-cloud expertise</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Migration Features
+              Why Choose Our Cloud Migration?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need for a successful cloud migration.
+              Expert guidance and proven methodologies for successful cloud transformation.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -110,54 +193,118 @@ export default function CloudMigrationPage() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Process Section */}
+      <section className="py-20 px-4 bg-white/5" id="process">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Migration Benefits
-              </h2>
-              <p className="text-xl text-gray-300">
-                Transform your business with cloud migration advantages
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-sm">{benefit}</span>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Migration Process
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              A proven 4-step process that ensures successful cloud migration.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {migrationSteps.map((step, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl font-bold text-white">{step.step}</span>
                 </div>
-              ))}
-            </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+                <p className="text-gray-300 mb-4">{step.description}</p>
+                <div className="text-purple-400 font-semibold text-sm">{step.duration}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the migration package that fits your infrastructure needs.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
+                plan.popular 
+                  ? 'border-purple-500 bg-gradient-to-br from-purple-500/20 to-blue-500/20' 
+                  : 'border-white/20'
+              }`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-300 mb-4">{plan.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                  </div>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <Link
+                  to="/contact"
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
+                      : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
+                  }`}
+                >
+                  Get Started
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Migrate to the Cloud?
-            </h2>
-            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Start your cloud migration journey with our expert team and proven methodologies.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-              >
-                Get Started Today
-              </Link>
-              <Link
-                to="/it-services"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
-              >
-                View All IT Services
-              </Link>
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Move to the Cloud?
+              </h2>
+              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                Get a free cloud migration assessment and discover how we can transform your infrastructure.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact" 
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Get Free Assessment
+                </Link>
+                <Link 
+                  to="/contact" 
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                >
+                  Contact Expert
+                </Link>
+              </div>
             </div>
           </div>
         </div>

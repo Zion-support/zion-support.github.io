@@ -1,75 +1,78 @@
 'use client'
 import React from 'react'
-import SEOHead from '../components/SEOHead'
-import { CheckCircle, ArrowRight, BarChart3, FileText, TrendingUp, Clock, Shield, Zap, Brain, Database, Users } from 'lucide-react'
+import SEOHead from '../../components/SEOHead'
+import { Brain, Heart, Activity, Calendar, CheckCircle, Zap, Shield, Globe, Star, ArrowRight, TrendingUp, Target, Users, BarChart3 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-export default function AIAutomatedReportingPage() {
+export default function AIHealthTrackerPage() {
   const features = [
     {
-      icon: <BarChart3 className="w-8 h-8 text-blue-500" />,
-      title: 'Real-time Analytics',
-      description: 'Generate reports with live data updates and real-time insights'
+      icon: <Brain className="w-6 h-6 text-blue-500" />,
+      title: 'AI Health Insights',
+      description: 'Get personalized health recommendations based on your data patterns'
     },
     {
-      icon: <Brain className="w-8 h-8 text-purple-500" />,
-      title: 'AI-Powered Insights',
-      description: 'Advanced AI algorithms identify trends and patterns automatically'
+      icon: <Heart className="w-6 h-6 text-red-500" />,
+      title: 'Vital Signs Monitoring',
+      description: 'Track heart rate, blood pressure, and other vital health metrics'
     },
     {
-      icon: <FileText className="w-8 h-8 text-green-500" />,
-      title: 'Automated Generation',
-      description: 'Reports are generated automatically based on your schedule and criteria'
+      icon: <Activity className="w-6 h-6 text-green-500" />,
+      title: 'Fitness Tracking',
+      description: 'Monitor workouts, steps, calories, and exercise performance'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
-      title: 'Predictive Analytics',
-      description: 'Forecast future trends and performance based on historical data'
+      icon: <TrendingUp className="w-6 h-6 text-purple-500" />,
+      title: 'Progress Analytics',
+      description: 'Visualize your health journey with detailed charts and reports'
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$49',
+      name: 'Basic',
+      price: '$9',
       period: '/month',
-      description: 'Perfect for small teams',
+      description: 'Perfect for individuals',
       features: [
-        'Up to 5 reports/month',
-        'Basic templates',
-        'Email delivery',
-        'Standard support',
-        'Basic analytics'
+        'Basic health tracking',
+        'Simple analytics',
+        'Goal setting',
+        'Basic AI insights',
+        'Mobile app access',
+        'Email support'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$149',
+      name: 'Premium',
+      price: '$19',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for health enthusiasts',
       features: [
-        'Unlimited reports',
-        'Custom templates',
-        'Multiple delivery options',
+        'Advanced health tracking',
+        'Detailed analytics',
+        'AI health coach',
+        'Custom goals',
+        'Wearable integration',
         'Priority support',
-        'Advanced analytics',
-        'API integration'
+        'Health reports'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$399',
+      name: 'Family',
+      price: '$39',
       period: '/month',
-      description: 'For large organizations',
+      description: 'For families and groups',
       features: [
-        'Everything in Professional',
-        'Custom AI training',
+        'Everything in Premium',
+        'Up to 6 family members',
+        'Family health dashboard',
+        'Shared goals',
+        'Health alerts',
         'Dedicated support',
-        'White-label solution',
-        'Advanced security',
-        'SLA guarantee'
+        'Custom integrations'
       ],
       popular: false
     }
@@ -78,9 +81,9 @@ export default function AIAutomatedReportingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOHead 
-        title="AI Automated Reporting - Zion Tech Group"
-        description="Transform your reporting process with AI-powered automated reports. Generate insights, track performance, and make data-driven decisions effortlessly."
-        keywords="AI automated reporting, business intelligence, data analytics, automated reports, AI insights"
+        title="AI Health Tracker - Zion Tech Group"
+        description="Monitor your health with AI-powered insights, fitness tracking, and personalized health recommendations."
+        keywords="AI health tracker, fitness tracking, health monitoring, wellness app, health analytics"
       />
       
       {/* Hero Section */}
@@ -91,20 +94,20 @@ export default function AIAutomatedReportingPage() {
         <div className="relative max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
             <Brain className="w-5 h-5 text-purple-400 mr-2" />
-            <span className="text-white text-sm font-medium">AI-Powered Reporting</span>
+            <span className="text-white text-sm font-medium">AI-Powered Health Tracking</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Automated
+            AI Health
             <br />
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Reporting
+              Tracker
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform your reporting process with AI-powered automation. Generate comprehensive reports, 
-            gain actionable insights, and make data-driven decisions effortlessly.
+            Take control of your health with AI-powered insights, comprehensive fitness tracking, 
+            and personalized wellness recommendations.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -130,11 +133,11 @@ export default function AIAutomatedReportingPage() {
             </div>
             <div className="flex items-center">
               <Shield className="w-5 h-5 text-blue-400 mr-2" />
-              <span>Enterprise security</span>
+              <span>HIPAA compliant</span>
             </div>
             <div className="flex items-center">
-              <Clock className="w-5 h-5 text-purple-400 mr-2" />
-              <span>Real-time updates</span>
+              <Globe className="w-5 h-5 text-purple-400 mr-2" />
+              <span>Global availability</span>
             </div>
           </div>
         </div>
@@ -145,10 +148,10 @@ export default function AIAutomatedReportingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful AI Features
+              Comprehensive Health Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to automate your reporting and gain valuable insights.
+              Everything you need to monitor and improve your health with AI assistance.
             </p>
           </div>
           
@@ -171,10 +174,10 @@ export default function AIAutomatedReportingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple Pricing Plans
+              Affordable Health Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your reporting needs.
+              Choose the plan that fits your health tracking needs and budget.
             </p>
           </div>
           
@@ -233,10 +236,10 @@ export default function AIAutomatedReportingPage() {
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Automate Your Reporting?
+                Ready to Take Control of Your Health?
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Join thousands of businesses already using our AI automated reporting to make better decisions faster.
+                Join thousands of users already using our AI Health Tracker to improve their wellness journey.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
