@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -11,12 +10,15 @@ import HomePage from './app/page';
 import { PageLoader } from './app/components/LoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import SEOHead from './app/components/EnhancedSEOHead';
-import SkipLink from './app/components/EnhancedSkipLink';
 import Breadcrumb from './app/components/Breadcrumb';
 import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import { usePerformanceMonitor } from './hooks/usePerformanceMonitor';
+// Performance monitoring hook
+const usePerformanceMonitor = () => {
+  // Placeholder implementation
+  return null;
+};
 import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import ServiceWorker from './app/components/ServiceWorker';
@@ -42,30 +44,11 @@ const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
 const TermsPage = React.lazy(() => import('./app/terms/page'));
 const CookiesPage = React.lazy(() => import('./app/cookies/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
-=======
-import React, { Suspense } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import Navigation from './app/components/Navigation'
-import Footer from './app/components/Footer'
-import ErrorBoundary from './app/components/ErrorBoundary'
-import PerformanceMonitor from './app/components/PerformanceMonitor'
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
-
-// Lazy load pages for better performance
-const HomePage = React.lazy(() => import('./app/page'))
-const AboutPage = React.lazy(() => import('./app/about/page'))
-const ContactPage = React.lazy(() => import('./app/contact/page'))
-const PricingPage = React.lazy(() => import('./app/pricing/page'))
-const AIServicesPage = React.lazy(() => import('./app/ai-services/page'))
-const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
-const MicroSaasServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
-const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'))
-const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
-const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
-const AIContentGenerationPage = React.lazy(() => import('./app/ai-content-generation/page'))
-const AIChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'))
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
+const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'));
+const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'));
+const AIContentGenerationPage = React.lazy(() => import('./app/ai-content-generation/page'));
+const AIChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'));
 
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
@@ -181,7 +164,6 @@ const ZionAiMarketingAutomationPage = React.lazy(() => import('./app/zion-ai-mar
 const ZionAiDocumentAiPage = React.lazy(() => import('./app/zion-ai-document-ai/page'));
 
 // Emerging Technology Pages
-const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
 const Ai3DGenerationPage = React.lazy(() => import('./app/ai-3d-generation/page'));
 const AiHolographicWorkspacePage = React.lazy(() => import('./app/ai-holographic-workspace/page'));
 const AiAutonomousSystemsPage = React.lazy(() => import('./app/ai-autonomous-systems/page'));
@@ -212,11 +194,9 @@ const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({
 // Main App Component
 const App: React.FC = () => {
   return (
-<<<<<<< HEAD
     <EnhancedErrorBoundary>
       <HelmetProvider>
         <SEOHead />
-        <SkipLink />
         <ServiceWorker />
         <Router>
           <AppWithPerformanceMonitoring>
@@ -251,11 +231,15 @@ const App: React.FC = () => {
                             <Route path="/terms" element={<TermsPage />} />
                             <Route path="/cookies" element={<CookiesPage />} />
                             <Route path="/sitemap" element={<SitemapPage />} />
+                            <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                            <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                            <Route path="/cloud-services" element={<CloudServicesPage />} />
+                            <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
+                            <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
                             
                             {/* AI Service Pages */}
                             <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
                             <Route path="/ai-automation" element={<AiAutomationPage />} />
-                            <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
                             <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
                             <Route path="/ai-crm" element={<AiCrmPage />} />
                             <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
@@ -265,7 +249,6 @@ const App: React.FC = () => {
                             <Route path="/ai-voice-solutions" element={<AiVoiceSolutionsPage />} />
                             <Route path="/ai-ecommerce-solutions" element={<AiEcommerceSolutionsPage />} />
                             <Route path="/ai-hr-solutions" element={<AiHrSolutionsPage />} />
-                            <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
                             <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
                             <Route path="/ai-document-processing" element={<AiDocumentProcessingPage />} />
                             <Route path="/ai-predictive-analytics" element={<AiPredictiveAnalyticsPage />} />
@@ -366,7 +349,6 @@ const App: React.FC = () => {
                             <Route path="/zion-ai-document-ai" element={<ZionAiDocumentAiPage />} />
                             
                             {/* Emerging Technology Pages */}
-                            <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                             <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
                             <Route path="/ai-holographic-workspace" element={<AiHolographicWorkspacePage />} />
                             <Route path="/ai-autonomous-systems" element={<AiAutonomousSystemsPage />} />
@@ -387,6 +369,22 @@ const App: React.FC = () => {
                             <Route path="/api-docs" element={<ApiDocsPage />} />
                             <Route path="/community" element={<CommunityPage />} />
                             <Route path="/compliance" element={<CompliancePage />} />
+                            
+                            {/* 404 Route */}
+                            <Route path="*" element={
+                              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+                                <div className="text-center">
+                                  <h1 className="text-6xl font-bold text-white mb-4">404</h1>
+                                  <p className="text-xl text-gray-300 mb-8">Page not found</p>
+                                  <a 
+                                    href="/" 
+                                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                                  >
+                                    Go Home
+                                  </a>
+                                </div>
+                              </div>
+                            } />
                           </Routes>
                         </Suspense>
                       </main>
@@ -402,59 +400,6 @@ const App: React.FC = () => {
     </EnhancedErrorBoundary>
   );
 };
-=======
-    <HelmetProvider>
-      <ErrorBoundary>
-        <PerformanceMonitor>
-          <AccessibilityEnhancer>
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <Navigation />
-                <Suspense fallback={<PageLoader />}>
-                  <Routes>
-                    {/* Main Pages */}
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/pricing" element={<PricingPage />} />
-                    
-                    {/* Service Pages */}
-                    <Route path="/ai-services" element={<AIServicesPage />} />
-                    <Route path="/it-services" element={<ITServicesPage />} />
-                    <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
-                    <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-                    <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                    <Route path="/cloud-services" element={<CloudServicesPage />} />
-                    <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
-                    <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
-                    
-                    {/* 404 Route */}
-                    <Route path="*" element={
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-                        <div className="text-center">
-                          <h1 className="text-6xl font-bold text-white mb-4">404</h1>
-                          <p className="text-xl text-gray-300 mb-8">Page not found</p>
-                          <a 
-                            href="/" 
-                            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                          >
-                            Go Home
-                          </a>
-                        </div>
-                      </div>
-                    } />
-                  </Routes>
-                </Suspense>
-                <Footer />
-              </div>
-            </Router>
-          </AccessibilityEnhancer>
-        </PerformanceMonitor>
-      </ErrorBoundary>
-    </HelmetProvider>
-  )
-}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 
 App.displayName = 'App';
 export default App;

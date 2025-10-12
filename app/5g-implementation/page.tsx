@@ -3,7 +3,7 @@ import React from 'react';
 import GenericServicePage from '../components/GenericServicePage';
 import { Zap } from 'lucide-react';
 
-const 5gImplementationPage: React.FC = () => {
+const FiveGImplementationPage: React.FC = () => {
   return (
     <GenericServicePage
       title="5G Implementation"
@@ -18,4 +18,4 @@ const 5gImplementationPage: React.FC = () => {
   );
 };
 
-export default 5gImplementationPage;
+export default FiveGImplementationPage;
