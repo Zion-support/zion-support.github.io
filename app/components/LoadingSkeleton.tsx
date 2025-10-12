@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/analyze-improve-and-deploy-application-edcb
 =======
 'use client'
@@ -12,3 +13,8 @@ export default function LoadingSkeleton() {
 =======
 'use client'
 >>>>>>> cursor/analyze-improve-and-deploy-application-072b
+=======
+'use client'
+import React from 'react'
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945

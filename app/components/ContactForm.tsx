@@ -57,7 +57,12 @@ const ContactForm: React.FC = () => {
         service: '',
         message: ''
       })
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-072b
+=======
+    } catch {
+      setStatus({ type: 'error', message: 'Failed to send message. Please try again.' })
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
     }
   }
 

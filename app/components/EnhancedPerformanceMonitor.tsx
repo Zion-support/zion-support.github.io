@@ -56,6 +56,22 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       description: 'Monitor your application performance in real-time with detailed metrics and analytics.'
     },
     {
+<<<<<<< HEAD
+=======
+      icon: <Clock className="w-8 h-8 text-green-500" />,
+      title: 'Performance Tracking',
+      description: 'Track load times, render performance, and user experience metrics.'
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8 text-purple-500" />,
+      title: 'Optimization Insights',
+      description: 'Get actionable insights to optimize your application performance.'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: 'Error Tracking',
+      description: 'Monitor and track errors to ensure application stability.'
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
     }
   ]
 
@@ -88,6 +104,15 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       {/* Metrics Display */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+=======
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Performance Metrics
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Real-time performance data and analytics
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
             </p>
           </div>
           
@@ -139,6 +164,11 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+<<<<<<< HEAD
+=======
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Key Features
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive performance monitoring and optimization tools
@@ -159,7 +189,27 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-072b
+=======
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready to Optimize Your Performance?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Start monitoring your application performance today and unlock its full potential.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center">
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+              Contact Us
+            </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
           </div>
         </div>
       </section>

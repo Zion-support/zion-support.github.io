@@ -1,10 +1,13 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-072b
+=======
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
 
 const FuturisticHeroPage: React.FC = () => {
   const features = [
@@ -44,14 +47,16 @@ const FuturisticHeroPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>Futuristic Hero Solutions | Zion Tech Group</title>
         <meta name="description" content="Professional futuristic hero services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="futuristic hero, AI solutions, IT services, Zion Tech Group, hero solutions" />
       </Helmet>
       
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-072b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -64,10 +69,12 @@ const FuturisticHeroPage: React.FC = () => {
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Transform your business with our advanced futuristic hero solutions. 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-072b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -88,7 +95,6 @@ const FuturisticHeroPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
               Why Choose Our Futuristic Hero Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -102,8 +108,11 @@ const FuturisticHeroPage: React.FC = () => {
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-072b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -116,15 +125,17 @@ const FuturisticHeroPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our futuristic hero solutions for your business.
             </p>
           </div>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-072b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -136,7 +147,6 @@ const FuturisticHeroPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -156,11 +166,14 @@ const FuturisticHeroPage: React.FC = () => {
               </button>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-fabc
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-072b
 =======
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7720
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
           </div>
         </div>
       </section>

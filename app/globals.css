@@ -2,10 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 /* Custom CSS for enhanced accessibility and performance */
 
 /* High contrast mode */
 @media (prefers-contrast: high) {
+=======
+/* Accessibility Enhancements */
+@layer base {
+  /* High contrast mode */
+  @media (prefers-contrast: high) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
   .high-contrast {
     --tw-bg-opacity: 1;
     --tw-text-opacity: 1;
@@ -16,7 +23,97 @@
   }
 }
 
+<<<<<<< HEAD
 /* Reduced motion support */
+=======
+@layer components {
+  /* Button focus states */
+  .btn-focus:focus {
+    @apply ring-2 ring-blue-500 ring-offset-2;
+  }
+  
+  /* Card hover states with better contrast */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:scale-105;
+  }
+  
+  .card-hover:focus {
+    @apply ring-2 ring-blue-500 ring-offset-2;
+  }
+  
+  /* Form input focus states */
+  .input-focus:focus {
+    @apply ring-2 ring-blue-500 border-blue-500;
+  }
+  
+  /* Link focus states */
+  .link-focus:focus {
+    @apply underline ring-2 ring-blue-500 ring-offset-2;
+  }
+}
+
+@layer utilities {
+  /* Custom utilities for accessibility */
+  .focus-visible {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+/* Performance optimizations */
+@layer base {
+  /* Optimize font loading */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300 800;
+    font-display: swap;
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  }
+  
+  /* Optimize image loading */
+  img {
+    content-visibility: auto;
+  }
+  
+  /* Optimize layout shifts */
+  .aspect-ratio {
+    aspect-ratio: 16 / 9;
+  }
+  
+  /* Optimize animations for performance */
+  .animate-optimized {
+    will-change: transform, opacity;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .dark-mode-auto {
+    @apply dark:bg-gray-900 dark:text-white;
+  }
+  .high-contrast .bg-white\/10 {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .high-contrast .text-gray-300 {
+    color: rgb(255, 255, 255);
+  }
+  
+  .high-contrast .text-gray-400 {
+    color: rgb(200, 200, 200);
+  }
+}
+
+/* Reduced motion */
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -100,6 +197,17 @@
     background: white !important;
     color: black !important;
   }
+<<<<<<< HEAD
+=======
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .bg-gradient-to-br {
+    background: white !important;
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
 }
 
 /* Dark mode support */
@@ -151,4 +259,8 @@ select:focus {
 .success {
   border-color: #10b981;
   box-shadow: 0 0 0 1px #10b981;
+<<<<<<< HEAD
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
 }

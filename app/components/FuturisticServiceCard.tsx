@@ -4,10 +4,12 @@ ursor/analyze-improve-and-deploy-application-edcb
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-072b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -98,9 +100,11 @@ export default FuturisticServiceCardPage
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </div>)};export default FuturisticServiceCardPage
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-fabc
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-072b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945

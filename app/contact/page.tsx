@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 
 <<<<<<< HEAD
@@ -25,6 +26,20 @@ import {
   Shield,
   Zap
 } from 'lucide-react';
+=======
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import ContactForm from '../components/ContactForm';
+
+const ContactPage: React.FC = () => {
+import { CheckCircle, Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, Mail, Phone, MapPin, Send, Clock, Star, Users, Globe, Shield, Zap } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
 
 export default function ContactPage() {
 <<<<<<< HEAD
@@ -39,6 +54,7 @@ export default function ContactPage() {
     message: ''
   });
 
+<<<<<<< HEAD
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -406,6 +422,8 @@ export default function ContactPage() {
     message: ''
   });
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -441,19 +459,34 @@ export default function ContactPage() {
     {
       icon: <Mail className="w-6 h-6 text-blue-500" />,
       title: 'Email Us',
+<<<<<<< HEAD
+=======
+      details: 'contact@ziontech.com',
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
       details: 'kleber@ziontechgroup.com',
       description: 'Send us an email anytime'
     },
     {
       icon: <Phone className="w-6 h-6 text-green-500" />,
       title: 'Call Us',
+<<<<<<< HEAD
       details: '+1 302 464 0950',
       description: 'Mon-Fri from 9am to 6pm EST'
+=======
+      details: '+1 (555) 123-4567',
+      description: 'Mon-Fri from 8am to 6pm'
+      details: '+1 (302) 464-0950',
+      description: 'Mon-Fri from 8am to 6pm EST'
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
     },
     {
       icon: <MapPin className="w-6 h-6 text-red-500" />,
       title: 'Visit Us',
+<<<<<<< HEAD
       details: '364 E Main St STE 1008, Middletown, DE 19709',
+=======
+      details: 'San Francisco, CA',
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
       description: 'Come say hello at our office'
     }
   ];
@@ -472,10 +505,113 @@ export default function ContactPage() {
       answer: 'Yes, we offer 24/7 support for all our clients with various support packages to meet your needs.'
     },
     {
+<<<<<<< HEAD
       question: 'What is your pricing model?',
       answer: 'We offer flexible pricing models including project-based, monthly retainer, and hourly rates depending on your specific needs.'
     }
   ];
+=======
+      question: 'Do you work with small businesses?',
+      answer: 'Absolutely! We work with businesses of all sizes, from startups to large enterprises, tailoring our solutions to fit your needs and budget.'
+    }
+      details: '364 E Main St STE 1008',
+      description: 'Middletown DE 19709'
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-purple-500" />,
+      title: 'Business Hours',
+      details: '9:00 AM - 6:00 PM',
+      description: 'Monday to Friday EST'
+    }
+  ];
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    
+    setIsSubmitting(false)
+    setIsSubmitted(true)
+  }
+
+  const contactInfo = [
+    {
+      icon: <Phone className="w-6 h-6" />,
+      title: 'Phone',
+      details: '+1 (302) 464-0950',
+      description: 'Call us for immediate assistance'
+    },
+    {
+      icon: <Mail className="w-6 h-6" />,
+      title: 'Email',
+      details: 'kleber@ziontechgroup.com',
+      description: 'Send us an email anytime'
+    },
+    {
+      icon: <MapPin className="w-6 h-6" />,
+      title: 'Address',
+      details: '364 E Main St STE 1008',
+      description: 'Middletown, DE 19709'
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: 'Business Hours',
+      details: 'Mon - Fri: 9:00 AM - 6:00 PM',
+      description: '24/7 Support Available'
+    }
+  ]
+
+  const services = [
+    'AI Services',
+    'IT Services',
+    'Micro SAAS',
+    'Cloud Services',
+    '5G Implementation',
+    'Digital Transformation',
+    'Quantum Computing',
+    'Other'
+  ];
+
+  const features = [
+    {
+      icon: <Users className="w-8 h-8 text-blue-500" />,
+      title: 'Expert Team',
+      description: 'Our experienced professionals are ready to help you succeed.'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-green-500" />,
+      title: 'Secure & Reliable',
+      description: 'Your data and communications are protected with enterprise-grade security.'
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-purple-500" />,
+      title: 'Fast Response',
+      description: 'We typically respond to inquiries within 24 hours.'
+    }
+  ]
+
+  if (isSubmitted) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+        <div className="max-w-md w-full">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+            <div className="mb-6">
+              <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+              <h1 className="text-2xl font-bold text-white mb-2">
+                Thank You!
+              </h1>
+              <p className="text-gray-300">
+                Your message has been sent successfully. We'll get back to you within 24 hours.
+              </p>
+            </div>
+            <button
+              onClick={() => setIsSubmitted(false)}
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+            >
+              Send Another Message
+            </button>
+          </div>
+        </div>
+      </div>
+    )
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -486,6 +622,37 @@ export default function ContactPage() {
       </Helmet>
 
       {/* Hero Section */}
+<<<<<<< HEAD
+=======
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Get In Touch
+          </h1>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Ready to transform your business? Let's discuss how our AI and IT solutions 
+            can help you achieve your goals.
+          </p>
+        </div>
+      </section>
+
+      {/* Contact Info */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {contactInfo.map((info, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4">
+                  {info.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{info.title}</h3>
+                <p className="text-lg text-gray-300 mb-2">{info.details}</p>
+                <p className="text-gray-400 text-sm">{info.description}</p>
+            </p>
+          </div>
+
+      {/* Contact Info Section */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
@@ -496,6 +663,7 @@ export default function ContactPage() {
               Ready to transform your business? Let's discuss how our AI and IT solutions can drive your success.
             </p>
           </div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Form */}
@@ -577,6 +745,42 @@ export default function ContactPage() {
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                     Service Interest
+=======
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16">
+            {contactInfo.map((info, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+                <div className="flex justify-center mb-4">{info.icon}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{info.title}</h3>
+                <p className="text-blue-600 font-medium mb-2">{info.details}</p>
+                <p className="text-gray-600 text-sm">{info.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">Send us a message</h2>
+              <p className="text-gray-300 mb-8">
+                Fill out the form below and we'll get back to you within 24 hours.
+              </p>
+              <ContactForm />
+            </div>
+
+            {/* FAQ Section */}
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-6">
+                {faqs.map((faq, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                    <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
+                    <p className="text-gray-300">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
                   </label>
                   <select
                     id="service"
@@ -603,6 +807,7 @@ export default function ContactPage() {
                     id="message"
                     name="message"
                     value={formData.message}
+<<<<<<< HEAD
                     onChange={handleChange}
                     required
                     rows={5}
@@ -615,6 +820,103 @@ export default function ContactPage() {
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+=======
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Your full name"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Your company name"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="+1 (555) 123-4567"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                  Service Interest
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  <option value="">Select a service</option>
+                  {services.map((service, index) => (
+                    <option key={index} value={service}>{service}</option>
+                  ))}
+                </select>
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={6}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Tell us about your project or how we can help you..."
+                />
+              </div>
+              
+              <div className="text-center">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto disabled:opacity-50 disabled:cursor-not-allowed"
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
                 >
                   {isSubmitting ? (
                     <>
@@ -650,9 +952,45 @@ export default function ContactPage() {
                   ))}
                 </div>
               </div>
+<<<<<<< HEAD
 
               {/* Business Hours */}
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+=======
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of businesses already using our solutions to drive growth and innovation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Email Us Now
+              <Send className="w-5 h-5 ml-2" />
+            </a>
+            <a 
+              href="tel:+13024640950"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            >
+              Call Us
+            </a>
+          </div>
+        </div>
+      </section>
+
+              <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 rounded-2xl p-6 border border-purple-500/30">
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center">
                   <Clock className="w-5 h-5 mr-2" />
                   Business Hours
@@ -694,8 +1032,14 @@ export default function ContactPage() {
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> cursor/analyze-improve-and-deploy-application-41ac
 =======
 }
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7720
+=======
+};
+
+export default ContactPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-5945
