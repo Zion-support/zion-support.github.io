@@ -113,21 +113,34 @@ const HomePage: React.FC = () => {
   ];
 
   const aiServices = [
-    { name: 'Machine Learning', description: 'Custom ML models for your business needs', icon: Brain },
-    { name: 'Natural Language Processing', description: 'AI-powered text analysis and generation', icon: Code },
-    { name: 'Computer Vision', description: 'Image recognition and analysis solutions', icon: Globe },
-    { name: 'Predictive Analytics', description: 'Data-driven insights and forecasting', icon: BarChart },
-    { name: 'AI Automation', description: 'Intelligent process automation', icon: Zap },
-    { name: 'AI Consulting', description: 'Strategic AI implementation guidance', icon: Target }
+    { name: 'AI Chatbot Development', description: 'Custom AI chatbots for customer service', icon: Brain, price: '$2,500/month', features: ['24/7 Support', 'Multi-language', 'CRM Integration'] },
+    { name: 'AI Content Generation', description: 'Automated content creation and marketing', icon: Code, price: '$1,200/month', features: ['Blog Posts', 'Social Media', 'Email Campaigns'] },
+    { name: 'AI Data Analytics', description: 'Advanced business intelligence and insights', icon: BarChart, price: '$3,000/month', features: ['Real-time Dashboards', 'Predictive Models', 'Custom Reports'] },
+    { name: 'AI Computer Vision', description: 'Image and video analysis solutions', icon: Globe, price: '$2,800/month', features: ['Object Detection', 'Facial Recognition', 'Quality Control'] },
+    { name: 'AI Voice Solutions', description: 'Speech recognition and synthesis', icon: Zap, price: '$1,800/month', features: ['Voice Commands', 'Text-to-Speech', 'Call Analytics'] },
+    { name: 'AI Workflow Automation', description: 'Intelligent process automation', icon: Target, price: '$2,200/month', features: ['RPA Integration', 'Smart Scheduling', 'Document Processing'] }
   ];
 
   const itServices = [
-    { name: 'Cloud Migration', description: 'Seamless cloud infrastructure migration', icon: Cloud },
-    { name: 'DevOps', description: 'Continuous integration and deployment', icon: Code },
-    { name: 'Cybersecurity', description: 'Comprehensive security solutions', icon: Shield },
-    { name: 'Database Management', description: 'Optimized database solutions', icon: BarChart },
-    { name: 'API Development', description: 'RESTful and GraphQL APIs', icon: Code },
-    { name: 'System Integration', description: 'Connect and optimize your systems', icon: Globe }
+    { name: 'Cloud Infrastructure', description: 'AWS, Azure, GCP cloud solutions', icon: Cloud, price: '$1,500/month', features: ['Auto-scaling', '99.9% Uptime', 'Cost Optimization'] },
+    { name: 'DevOps & CI/CD', description: 'Automated deployment pipelines', icon: Code, price: '$2,000/month', features: ['Git Integration', 'Docker Containers', 'Monitoring'] },
+    { name: 'Cybersecurity Solutions', description: 'Advanced threat protection', icon: Shield, price: '$2,500/month', features: ['24/7 Monitoring', 'Penetration Testing', 'Compliance'] },
+    { name: 'Database Management', description: 'Optimized database solutions', icon: BarChart, price: '$1,800/month', features: ['Performance Tuning', 'Backup & Recovery', 'Security'] },
+    { name: 'API Development', description: 'RESTful and GraphQL APIs', icon: Code, price: '$1,200/month', features: ['Documentation', 'Rate Limiting', 'Authentication'] },
+    { name: 'System Integration', description: 'Connect and optimize your systems', icon: Globe, price: '$2,200/month', features: ['Legacy Integration', 'Real-time Sync', 'Data Migration'] }
+  ];
+
+  const microSaasServices = [
+    { name: 'Zion Analytics Pro', description: 'Advanced business intelligence platform', icon: BarChart, price: '$299/month', features: ['Real-time Dashboards', 'Custom Reports', 'Data Visualization'], category: 'Analytics' },
+    { name: 'Zion Chat AI', description: 'AI-powered customer support chatbot', icon: Brain, price: '$199/month', features: ['24/7 Support', 'Multi-language', 'CRM Integration'], category: 'AI' },
+    { name: 'Zion Security Shield', description: 'Comprehensive cybersecurity monitoring', icon: Shield, price: '$399/month', features: ['Threat Detection', 'Real-time Alerts', 'Compliance Reports'], category: 'Security' },
+    { name: 'Zion Cloud Vault', description: 'Secure cloud backup and recovery', icon: Cloud, price: '$149/month', features: ['Automated Backups', 'Version Control', 'Disaster Recovery'], category: 'Storage' },
+    { name: 'Zion Content Studio', description: 'AI-powered content creation platform', icon: Code, price: '$249/month', features: ['Blog Generation', 'Social Media', 'SEO Optimization'], category: 'Content' },
+    { name: 'Zion CRM Intelligence', description: 'AI-enhanced customer relationship management', icon: Users, price: '$349/month', features: ['Lead Scoring', 'Automated Follow-ups', 'Sales Analytics'], category: 'CRM' },
+    { name: 'Zion Email Automation', description: 'Smart email marketing platform', icon: Mail, price: '$179/month', features: ['Drip Campaigns', 'A/B Testing', 'Analytics'], category: 'Marketing' },
+    { name: 'Zion Project Master', description: 'AI-powered project management', icon: Calendar, price: '$229/month', features: ['Task Automation', 'Resource Planning', 'Progress Tracking'], category: 'Productivity' },
+    { name: 'Zion Invoice Genius', description: 'Automated invoicing and billing', icon: DollarSign, price: '$129/month', features: ['Auto-generation', 'Payment Tracking', 'Tax Calculations'], category: 'Finance' },
+    { name: 'Zion Social Scheduler', description: 'AI social media management', icon: Globe, price: '$199/month', features: ['Content Scheduling', 'Engagement Analytics', 'Multi-platform'], category: 'Social Media' }
   ];
 
   return (
@@ -155,6 +168,8 @@ const HomePage: React.FC = () => {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Leading provider of cutting-edge AI and IT solutions that drive innovation, 
                 efficiency, and growth for businesses worldwide. Get results in 30 days or less.
+                <br />
+                <span className="text-cyan-400 font-semibold">Trusted by 500+ companies • 99% success rate • 24/7 support</span>
               </p>
               
               {/* Key Benefits */}
@@ -308,14 +323,37 @@ const HomePage: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {aiServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
-                  <service.icon className="w-12 h-12 text-blue-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">
+                <div key={index} className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                     {service.name}
                   </h3>
-                  <p className="text-gray-300">
+                  <p className="text-gray-300 mb-4 leading-relaxed">
                     {service.description}
                   </p>
+                  <div className="mb-4">
+                    <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                    <span className="text-gray-400 text-sm ml-2">starting</span>
+                  </div>
+                  <div className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-6">
+                    <a 
+                      href="/contact" 
+                      className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 group"
+                    >
+                      Get Started
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>
@@ -331,16 +369,105 @@ const HomePage: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {itServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
-                  <service.icon className="w-12 h-12 text-green-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">
+                <div key={index} className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-400/30 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
                     {service.name}
                   </h3>
-                  <p className="text-gray-300">
+                  <p className="text-gray-300 mb-4 leading-relaxed">
                     {service.description}
                   </p>
+                  <div className="mb-4">
+                    <span className="text-2xl font-bold text-purple-400">{service.price}</span>
+                    <span className="text-gray-400 text-sm ml-2">starting</span>
+                  </div>
+                  <div className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-6">
+                    <a 
+                      href="/contact" 
+                      className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-medium hover:from-purple-600 hover:to-pink-700 transition-all duration-300 group"
+                    >
+                      Get Started
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                  </div>
                 </div>
               ))}
+            </div>
+          </section>
+
+          {/* Micro SAAS Services Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+              Micro SAAS Solutions
+            </h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+              Ready-to-use business tools with AI and automation built-in. Start with a free trial.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {microSaasServices.map((service, index) => (
+                <div key={index} className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-green-400/30 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-full">
+                      {service.category}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
+                    {service.name}
+                  </h3>
+                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <div className="mb-4">
+                    <span className="text-xl font-bold text-green-400">{service.price}</span>
+                    <span className="text-gray-400 text-xs ml-1">/month</span>
+                  </div>
+                  <div className="space-y-1 mb-4">
+                    {service.features.slice(0, 3).map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex gap-2">
+                    <a 
+                      href="/contact" 
+                      className="flex-1 inline-flex items-center justify-center px-3 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg font-medium hover:from-green-600 hover:to-emerald-700 transition-all duration-300 text-sm group"
+                    >
+                      Start Free Trial
+                      <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                    <a 
+                      href={`/micro-saas#${service.name.toLowerCase().replace(/\s+/g, '-')}`} 
+                      className="px-3 py-2 border border-green-400 text-green-400 rounded-lg font-medium hover:bg-green-400 hover:text-slate-900 transition-all duration-300 text-sm"
+                    >
+                      Learn More
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-12">
+              <a 
+                href="/micro-saas" 
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 group shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/40 transform hover:scale-105"
+              >
+                View All Micro SAAS Solutions
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
           </section>
 
@@ -397,8 +524,9 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* CTA Section */}
-          <section className="text-center bg-gradient-to-r from-slate-800/50 to-purple-900/50 rounded-3xl p-12 border border-cyan-500/20">
-            <div className="max-w-4xl mx-auto">
+          <section className="text-center bg-gradient-to-r from-slate-800/50 to-purple-900/50 rounded-3xl p-12 border border-cyan-500/20 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-3xl"></div>
+            <div className="max-w-4xl mx-auto relative z-10">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
@@ -406,6 +534,33 @@ const HomePage: React.FC = () => {
                 Join 500+ companies that have already transformed their operations with our AI and IT solutions. 
                 Get started with a free consultation today.
               </p>
+              
+              {/* Contact Information */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+                  <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
+                  <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
+                    +1 302 464 0950
+                  </a>
+                  <p className="text-gray-400 text-sm mt-1">24/7 Support Available</p>
+                </div>
+                <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-3" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 transition-colors font-medium">
+                    kleber@ziontechgroup.com
+                  </a>
+                  <p className="text-gray-400 text-sm mt-1">Response within 2 hours</p>
+                </div>
+                <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+                  <MapPin className="w-8 h-8 text-green-400 mx-auto mb-3" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
+                  <p className="text-green-400 font-medium">364 E Main St STE 1008</p>
+                  <p className="text-gray-400 text-sm mt-1">Middletown DE 19709</p>
+                </div>
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a 
                   href="/contact" 
@@ -422,9 +577,16 @@ const HomePage: React.FC = () => {
                   <Phone className="w-5 h-5 mr-2" />
                   Call (302) 464-0950
                 </a>
+                <a 
+                  href="mailto:kleber@ziontechgroup.com" 
+                  className="px-8 py-4 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  Email Us
+                </a>
               </div>
               <div className="text-sm text-gray-400">
-                <p>✓ Free consultation • ✓ No obligation • ✓ 30-day results guarantee</p>
+                <p>✓ Free consultation • ✓ No obligation • ✓ 30-day results guarantee • ✓ 24/7 support</p>
               </div>
             </div>
           </section>
