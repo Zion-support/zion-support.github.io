@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Smartphone, Cpu, Database, BarChart3, Users, Settings, Globe, Lock, Code2, MessageSquare, Target, TrendingUp, Star, Sparkles, Rocket } from 'lucide-react'
+import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, BarChart3, Users, Globe, MessageSquare, TrendingUp, Star, Rocket } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 

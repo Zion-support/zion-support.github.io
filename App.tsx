@@ -5,6 +5,7 @@ import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
 import ErrorBoundary from './app/components/ErrorBoundary'
 import OptimizedLoading from './app/components/OptimizedLoading'
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
 import HomePage from './app/page'
 import AboutPage from './app/about/page'
 import ContactPage from './app/contact/page'
@@ -61,8 +62,9 @@ const App: React.FC = () => {
       <ErrorBoundary>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <a href="#main-content" className="skip-link">Skip to main content</a>
             <Navigation />
-            <main className="min-h-screen">
+            <main id="main-content" className="min-h-screen">
               <Suspense fallback={<OptimizedLoading />}>
                 <Routes>
                   {/* Main Pages */}
@@ -129,6 +131,7 @@ const App: React.FC = () => {
               </Suspense>
             </main>
             <Footer />
+            <AccessibilityEnhancer />
           </div>
         </Router>
       </ErrorBoundary>

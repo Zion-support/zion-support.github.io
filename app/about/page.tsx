@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Users, Target, Award, Globe, Zap, Shield, Database, Brain, Cpu, Cloud } from 'lucide-react'
+import { Users, Shield, Database, Brain } from 'lucide-react'
 
 export default function AboutPage() {
   const values = [

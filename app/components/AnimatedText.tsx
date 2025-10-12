@@ -14,7 +14,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   text,
   className = '',
   delay = 0,
-  duration = 1000,
+  // duration = 1000,
   type = 'fade'
 }) => {
   const [isVisible, setIsVisible] = useState(false);
