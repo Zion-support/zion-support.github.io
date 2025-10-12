@@ -1,7 +1,4 @@
 'use client'
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react'
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 const ServiceWorkerRegistrationPage: React.FC = () => {
@@ -147,7 +144,6 @@ export default ServiceWorkerRegistrationPage
   </h2>
   </button>
   </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
     {icon: Brain,
       title: 'AI-Powered Solutions',
