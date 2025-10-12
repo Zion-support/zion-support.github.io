@@ -122,12 +122,12 @@ export default function CloudInfrastructureManagement() {
       title="Cloud Infrastructure Management - Enterprise Cloud Solutions | Zion Tech Group"
       description="Optimize your cloud infrastructure with comprehensive management, security, and cost optimization. Multi-cloud support, 24/7 monitoring, and enterprise-grade security. Get your free assessment today."
       keywords="cloud infrastructure management, cloud optimization, multi-cloud, cloud security, cloud monitoring, cloud cost optimization" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
         <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 <Cloud className="w-5h-5ml-2" />
                 Enterprise Cloud Management
               </div>
@@ -136,16 +136,16 @@ export default function CloudInfrastructureManagement() {
               <p className="w-5h-5ml-2">Optimize your cloud infrastructure with comprehensive management, security, and cost optimization. 
                 Multi-cloud support, 24/7 monitoring, and enterprise-grade security.
               </p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 <Link
           to="/contact"
-          className="bg-gradient-to-rfrom-sky-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-sky-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+          className="bg-gradient-to-rfrom-sky-500to-purple-600text-white px-8 py-4 rounded-lg font-semibold hover:from-sky-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
         >
           Get Free Assessment
                   
           <ArrowRight className="w-5h-5ml-2" />
         </Link>
-                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">View Demo
+                <Link to="#demo" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">View Demo
                 </Link>
               </div>
           </div>
@@ -153,18 +153,18 @@ export default function CloudInfrastructureManagement() {
 
         {/* Features Section */}
         <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <h2 className="w-5h-5ml-2" />Comprehensive Cloud Management
               </h2>
               <p className="w-5h-5ml-2">Enterprise-grade features that optimize your cloud infrastructure performance and costs
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-sky-500/20 hover:border-sky-400/40transition-all duration-300" />
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     {feature.icon}
                     <h3 className="w-5h-5ml-2" />{feature.title}</h3>
                   </div>
@@ -176,17 +176,17 @@ export default function CloudInfrastructureManagement() {
 
         {/* Management Features */}
         <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <h2 className="w-5h-5ml-2" />Complete Infrastructure Solution
               </h2>
               <p className="w-5h-5ml-2">Everything you need to manage, secure, and optimize your cloud infrastructure
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {managementFeatures.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700" />
+                <div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700" />
                   <h3 className="w-5h-5ml-2" />{feature.category}</h3>
                   <ul className="w-5h-5ml-2" />
                     {feature.items.map((item, itemIndex) => (
@@ -203,15 +203,15 @@ export default function CloudInfrastructureManagement() {
 
         {/* Pricing Section */}
         <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <h2 className="w-5h-5ml-2" />Transparent Pricing Plans
               </h2>
               <p className="w-5h-5ml-2">Choose the plan that fits your infrastructure needs
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
@@ -219,14 +219,14 @@ export default function CloudInfrastructureManagement() {
                     : 'border-sky-500/20 hover: border-sky-400/40'
                 }`} />
                   {plan.popular && (
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                       <Star className="w-5h-5ml-2" />
                       Most Popular
                     </div>
                   )}
                   <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                   <p className="w-5h-5ml-2">{plan.description}</p>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     <span className="w-5h-5ml-2" />{plan.price}</span>
                     <span className="w-5h-5ml-2" />{plan.period}</span>
                   </div>
@@ -254,25 +254,25 @@ export default function CloudInfrastructureManagement() {
 
         {/* Testimonials */}
         <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <h2 className="w-5h-5ml-2" />Trusted by Industry Leaders
               </h2>
               <p className="w-5h-5ml-2">See how our Cloud Infrastructure Management transforms businesses
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700" />
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700" />
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5h-5te x t-yellow-400fill-current"  />
+                      <Star key={i} className="w-5h-5tex t-yellow-400fill-current"  />
                     ))}
                   </div>
                   <p className="w-5h-5ml-2">"{testimonial.content}"</p>
                   <div />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
+                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
+                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
                 </div>
               ))}
             </div>
@@ -280,16 +280,16 @@ export default function CloudInfrastructureManagement() {
 
         {/* CTA Section */}
         <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <h2 className="w-5h-5ml-2" />Optimize Your Cloud Infrastructure Today
               </h2>
               <p className="w-5h-5ml-2">Join thousands of businesses using our Cloud Infrastructure Management to reduce costs and improve performance
               </p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link to="/contact" className="bg-gradient-to-rfrom-sky-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-sky-600 hover:to-purple-700transition-all duration-300">Get Your Free Assessment
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Link to="/contact" className="bg-gradient-to-rfrom-sky-500to-purple-600text-white px-8 py-4 rounded-lg font-semibold hover:from-sky-600 hover:to-purple-700transition-all duration-300">Get Your Free Assessment
                 </Link>
-                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More
+                <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More
                 </Link>
               </div>
           </div>

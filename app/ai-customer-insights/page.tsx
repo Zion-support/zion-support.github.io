@@ -160,7 +160,7 @@ const AICustomerInsightsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title />AI Customer Insights - Advanced Analytics & Personalization | Zion Tech Group</title>
+        <title>AI Customer Insights - Advanced Analytics & Personalization | Zion Tech Group</title>
         <meta name="description" content="Transform customer data into actionable insights with AI-powered analytics, churn prediction, and personalization. Increase retention by 40% and boost revenue with intelligent customer insights." />
         <meta name="keywords" content="AI customer insights, customer analytics, churn prediction, personalization engine, customer segmentation, behavioral analysis, customer journey mapping, Zion Tech Group" />
         <meta name="robots" content="index, follow" />
@@ -169,10 +169,10 @@ const AICustomerInsightsPage: React.FC = () => {
 
       {/* Hero Section */}
       <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  />
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <Brain className="w-5h-5ml-2" />
             <span />AI-Powered Customer Intelligence</span>
           </div>
@@ -191,12 +191,12 @@ const AICustomerInsightsPage: React.FC = () => {
             <span className="w-5h-5ml-2" />Increase retention by 40% and boost revenue with intelligent customer insights.</span>
           </p>
           
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <Link to="/contact" className="groupbg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
               <span />Start Free Trial</span>
               <ArrowRight className="w-5h-5ml-2" />
             </Link>
-            <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+            <Link to="/demo" className="groupborder-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
               <span />Watch Demo</span>
               <Play className="w-5h-5ml-2" />
             </Link>
@@ -205,9 +205,9 @@ const AICustomerInsightsPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <h2 className="w-5h-5ml-2" />
               Powerful <span className="w-5h-5ml-2" />AI Features</span>
             </h2>
@@ -216,27 +216,27 @@ const AICustomerInsightsPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {features.map((feature, index) => (
-              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
+              <div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
                 </div>
                 <h3 className="w-5h-5ml-2" />{feature.title}
                 </h3>
                 <p className="w-5h-5ml-2">{feature.description}
                 </p>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <div key="{benefitIndex}" className="flex items-center space-x-2text-gray-400text-sm" />
+                    <div key={benefitIndex} className="flex items-center space-x-2text-gray-400text-sm" />
                       <CheckCircle className="w-5h-5ml-2" />
                       <span />{benefit}</span>
                     </div>
                   ))}
                 </div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   <span className="w-5h-5ml-2" />{feature.price}
                   </span>
-                  <Link to="/contact" className="group/link flex items-center space-x-2 text-cyan-400hover:text-cyan-300 transition-colors" />
+                  <Link to="/contact" className="group/linkflex items-center space-x-2 text-cyan-400hover:text-cyan-300 transition-colors" />
                     <span className="w-5h-5ml-2" />Learn More</span>
                     <ArrowRight className="w-5h-5ml-2" />
                   </Link>
@@ -247,10 +247,10 @@ const AICustomerInsightsPage: React.FC = () => {
 
       {/* Use Cases Section */}
       <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <Target className="w-5h-5ml-2" />
               <span />Real-World Applications</span>
             </div>
@@ -262,20 +262,20 @@ const AICustomerInsightsPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {useCases.map((useCase, index) => (
-              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300hover:scale-105" />
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{useCase.icon}
+              <div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300hover:scale-105" />
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{useCase.icon}
                   </div>
                   <h3 className="w-5h-5ml-2" />{useCase.title}
                   </h3>
                 </div>
                 <p className="w-5h-5ml-2">{useCase.description}
                 </p>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   {useCase.metrics.map((metric, metricIndex) => (
-                    <div key="{metricIndex}" className="flex items-center space-x-2text-cyan-400font-semibold" />
+                    <div key={metricIndex} className="flex items-center space-x-2text-cyan-400font-semibold" />
                       <TrendingUp className="w-5h-5ml-2" />
                       <span />{metric}</span>
                     </div>
@@ -287,9 +287,9 @@ const AICustomerInsightsPage: React.FC = () => {
 
       {/* Pricing Section */}
       <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <h2 className="w-5h-5ml-2" />
               Simple <span className="w-5h-5ml-2" />Pricing</span>
             </h2>
@@ -298,7 +298,7 @@ const AICustomerInsightsPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {pricing.map((plan, index) => (
               <div key={index} className="{`relative" group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
                 plan.popular 
@@ -306,20 +306,20 @@ const AICustomerInsightsPage: React.FC = () => {
                   : 'border-white/20 hover: bg-white/20'
               }`} />
                 {plan.popular && (
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
                     </div>
                 )}
                 
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                   <p className="w-5h-5ml-2">{plan.description}</p>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     <span className="w-5h-5ml-2" />{plan.price}</span>
                     <span className="w-5h-5ml-2" />{plan.period}</span>
                   </div>
                 
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   {plan.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-centerspace-x-3" />
                       <CheckCircle className="w-5h-5ml-2" />
@@ -344,9 +344,9 @@ const AICustomerInsightsPage: React.FC = () => {
 
       {/* Testimonials Section */}
       <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <h2 className="w-5h-5ml-2" />
               What Our <span className="w-5h-5ml-2" />Customers Say</span>
             </h2>
@@ -354,11 +354,11 @@ const AICustomerInsightsPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300hover:scale-105" />
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
+              <div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300hover:scale-105" />
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
                   </div>
                   <div />
                     <h4 className="w-5h-5ml-2" />{testimonial.name}</h4>
@@ -366,9 +366,9 @@ const AICustomerInsightsPage: React.FC = () => {
                     <p className="w-5h-5ml-2">{testimonial.company}</p>
                   </div>
                 
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5h-5te x t-yellow-400fill-current"  />
+                    <Star key={i} className="w-5h-5tex t-yellow-400fill-current"  />
                   ))}
                 </div>
                 
@@ -381,11 +381,11 @@ const AICustomerInsightsPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 <h2 className="w-5h-5ml-2" />
                   Ready to Transform Your <span className="w-5h-5ml-2" />Customer Experience?</span>
                 </h2>
@@ -394,27 +394,27 @@ const AICustomerInsightsPage: React.FC = () => {
                   understand, predict, and optimize customer behavior for maximum growth.
                 </p>
                 
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <Link to="/contact" className="groupbg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
                     <span />Start Free Trial</span>
                     <ArrowRight className="w-5h-5ml-2" />
                   </Link>
-                  <Link to="/demo" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+                  <Link to="/demo" className="groupborder-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
                     <span />Schedule Demo</span>
                     <Calendar className="w-5h-5ml-2" />
                   </Link>
                 </div>
                 
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     <Phone className="w-5h-5ml-2" />
                     <span className="w-5h-5ml-2" />+1 302 464 0950</span>
                   </div>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     <Mail className="w-5h-5ml-2" />
                     <span className="w-5h-5ml-2" />kleber@ziontechgroup.com</span>
                   </div>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     <MapPin className="w-5h-5ml-2" />
                     <span className="w-5h-5ml-2" />Middletown DE 19709</span>
                   </div>

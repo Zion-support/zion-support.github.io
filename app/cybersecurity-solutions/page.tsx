@@ -10,9 +10,9 @@ const CybersecuritySolutionsPage: React.FC = () => {
         <meta name="keywords" content="cybersecurity-solutions, AI solutions, IT services" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <h1 className="w-5h-5ml-2" />
               <span className="w-5h-5ml-2" />Cybersecurity Solutions
               </span>
@@ -21,8 +21,8 @@ const CybersecuritySolutionsPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="text-2xl font-bold text-white mb-4"  >Coming Soon</h2>
             <p className="w-5h-5ml-2">We're working on bringing you comprehensive cybersecurity solutions solutions. 
               Contact us to learn more about our services.
             </p>

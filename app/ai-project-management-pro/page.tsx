@@ -49,7 +49,7 @@ const Page: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title />AI Project Management Pro - Zion Tech Group</title>
+        <title>AI Project Management Pro - Zion Tech Group</title>
         <meta name="description" content="Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta name="keywords" content="AI project management, productivity, Zion Tech Group" />
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3 } from 'lucide-react';
@@ -90,10 +90,10 @@ export default function AIProjectManagementPro() {
         <meta property="og:url" content="https://ziontechgroup.com/ai-project-management-pro" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
         <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <h1 className="w-5h-5ml-2" />
               <span className="w-5h-5ml-2" />
                 AI Project Management Pro
@@ -101,39 +101,39 @@ export default function AIProjectManagementPro() {
             </h1>
             <p className="w-5h-5ml-2">Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs.
             </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <Link
           to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup"
+          className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup"
         >
           Get Started
                 
           <ArrowRight className="w-5h-5ml-2" />
         </Link>
-              <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
+              <Link to="/contact" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
                 Learn More
         <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <div className="containermx-auto px-4 text-center">
+            <h1 className="text-5xlmd:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-rfrom-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 AI Project Management Pro
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto">
               Revolutionize your project management with AI-powered tools. 
               Streamline workflows, boost productivity, and deliver projects on time and within budget.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flexflex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5h-5 ml-2" />
               </Link>
               <Link
                 to="/services"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
+                className="borderborder-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
               >
                 View All Services
               </Link>
@@ -142,8 +142,8 @@ export default function AIProjectManagementPro() {
 
         {/* Features Section */}
         <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <h2 className="w-5h-5ml-2" />
                 Why Choose Our AI Project Management?
               </h2>
@@ -151,7 +151,7 @@ export default function AIProjectManagementPro() {
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {[
                 {
                   icon: <Brain className="w-5h-5ml-2" />,
@@ -169,8 +169,8 @@ export default function AIProjectManagementPro() {
                   description: "Enterprise-grade security ensures your project data is protected while maintaining 99.9% uptime."
                 }
               ].map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-all duration-300" />
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div key={index} className="bg-slate-800/50backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-all duration-300" />
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     {feature.icon}
                   </div>
                   <h3 className="w-5h-5ml-2" />{feature.title}</h3>
@@ -182,8 +182,8 @@ export default function AIProjectManagementPro() {
 
         {/* Pricing Section */}
         <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <h2 className="w-5h-5ml-2" />
                 Choose Your Plan
               </h2>
@@ -191,12 +191,12 @@ export default function AIProjectManagementPro() {
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50transition-all duration-300" />
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div key={index} className="bg-slate-800/50backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50transition-all duration-300" />
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                       {plan.price}
                       <span className="w-5h-5ml-2" />{plan.period}</span>
                     </div>
@@ -212,21 +212,21 @@ export default function AIProjectManagementPro() {
                     ))}
                   </ul>
                   
-                  <Link to="/contact" className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 rounded-lg font-semibold text-center block hover:from-cyan-600 hover:to-purple-600transition-all duration-300" />
+                  <Link to="/contact" className="w-fullbg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 rounded-lg font-semibold text-center block hover:from-cyan-600 hover:to-purple-600transition-all duration-300" />
                     Get Started
                   </Link>
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-white text-center mb-16">
+          <div className="containermx-auto px-4">
+            <h2 className="text-4xlfont-bold text-white text-center mb-16">
               Powerful Features
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="gridmd:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+                <div key={index} className="bg-white/10backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
                   <div className="mb-4">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
+                  <h3 className="text-xlfont-semibold text-white mb-3">
                     {feature.title}
                   </h3>
                   <p className="text-gray-300">
@@ -239,35 +239,35 @@ export default function AIProjectManagementPro() {
 
         {/* CTA Section */}
         <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <h2 className="w-5h-5ml-2" />
                 Ready to Get Started?
               </h2>
               <p className="w-5h-5ml-2">Contact us to learn more about our solutions and how we can help your business.
               </p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
                   Contact Us
                 </Link>
-                <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
+                <Link to="/services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
                   View Services
                 </Link>
               </div>
         <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
+          <div className="containermx-auto px-4 text-center">
+            <h2 className="text-4xlfont-bold text-white mb-6">
               Ready to Transform Your Project Management?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xltext-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of teams already using our AI-powered project management solutions to achieve better results.
             </p>
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
+              className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
             >
               Contact Us Today
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5h-5 ml-2" />
             </Link>
           </div>
         </section>

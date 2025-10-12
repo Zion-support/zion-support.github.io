@@ -113,7 +113,7 @@ export default function AISupplyChainOptimizerPage() {
   return (
     <>
       <Helmet>
-        <title />AI Supply Chain Optimizer - Smart Logistics & Inventory Management | Zion Tech Group</title>
+        <title>AI Supply Chain Optimizer - Smart Logistics & Inventory Management | Zion Tech Group</title>
         <meta const name = "description" content="Optimize your supply chain with AI-powered demand forecasting, route optimization, and inventory management. Reduce costs by 35% and improve delivery times by 40%." /  />
         <meta name="keywords" content="AI supply chain, logistics optimization, inventory management, demand forecasting, supply chain AI, logistics technology" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer"  />
@@ -122,14 +122,14 @@ export default function AISupplyChainOptimizerPage() {
       <FuturisticBackground variant="services" />
         {/* Hero Section */}
         <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <h1 className="w-5h-5ml-2">AI Supply Chain Optimizer
               </h1>
               <p className="w-5h-5ml-2">Revolutionize your supply chain with AI-powered demand forecasting, route optimization, 
                 and intelligent inventory management. Reduce costs by 35% and improve efficiency by 40%.
               </p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 <FuturisticButton
                   variant="primary"
                   size="lg"
@@ -148,38 +148,38 @@ export default function AISupplyChainOptimizerPage() {
               </div>
 
             {/* Stats */}
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center" />
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.icon}
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.icon}
                   </div>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}</div>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}</div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}</div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}</div>
               ))}
             </div>
         </section>
 
         {/* Features Section */}
         <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <h2 className="w-5h-5ml-2" />Advanced AI Features
               </h2>
               <p className="w-5h-5ml-2">Cutting-edge artificial intelligence meets supply chain expertise to optimize your operations
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {features.map((feature, index) => (
                 <FuturisticCard key="{index}" variant="service" className="h-full" />
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     {feature.icon}
                     <h3 className="w-5h-5ml-2" />{feature.title}</h3>
                   </div>
                   <p className="w-5h-5ml-2">{feature.description}</p>
                   <ul className="w-5h-5ml-2" />
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key="{benefitIndex}" className="flex items-centertext-sm text-gray-300" />
+                      <li key={benefitIndex} className="flex items-centertext-sm text-gray-300" />
                         <CheckCircle className="w-5h-5ml-2" />
                         {benefit}
                       </li>
@@ -192,30 +192,30 @@ export default function AISupplyChainOptimizerPage() {
 
         {/* Pricing Section */}
         <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <h2 className="w-5h-5ml-2" />Choose Your Plan
               </h2>
               <p className="w-5h-5ml-2">Scalable pricing options to match your supply chain needs
               </p>
             </div>
 
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {pricingPlans.map((plan, index) => (
                 <FuturisticCard 
                   key="{index}" 
                   variant="{plan.popular" ? "feature" : "service"} 
                   className="{`h-full" ${plan.popular ? 'ring-2 ring-purple-500' : ''}`} />
                   {plan.popular && (
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                       <span className="w-5h-5ml-2" />Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                       <span className="w-5h-5ml-2" />{plan.price}</span>
                       <span className="w-5h-5ml-2" />{plan.period}</span>
                     </div>
@@ -245,20 +245,20 @@ export default function AISupplyChainOptimizerPage() {
 
         {/* Testimonials Section */}
         <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <h2 className="w-5h-5ml-2" />What Our Clients Say
               </h2>
               <p className="w-5h-5ml-2">Join hundreds of companies optimizing their supply chains
               </p>
             </div>
 
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {testimonials.map((testimonial, index) => (
                 <FuturisticCard key="{index}" variant="testimonial" className="h-full" />
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4h-4tex t-yellow-400fill-current"  />
+                      <Star key={i} className="w-4h-4text-yellow-400fill-current"  />
                     ))}
                   </div>
                   <blockquote className="w-5h-5ml-2" />"{testimonial.content}"
@@ -275,13 +275,13 @@ export default function AISupplyChainOptimizerPage() {
 
         {/* CTA Section */}
         <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <FuturisticCard variant="feature" className="text-center" />
               <h2 className="w-5h-5ml-2" />Ready to Optimize Your Supply Chain?
               </h2>
               <p className="w-5h-5ml-2">Start your free 14-day trial today. No credit card required. Join 500+ companies optimizing their supply chains.
               </p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 <FuturisticButton
                   variant="primary"
                   size="lg"
@@ -297,7 +297,7 @@ export default function AISupplyChainOptimizerPage() {
                   Schedule Demo
                 </FuturisticButton>
               </div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 <p />✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
               </div>
             </FuturisticCard>
