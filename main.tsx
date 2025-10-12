@@ -18,4 +18,8 @@ if ('serviceWorker' in navigator) {
     .catch((registrationError) => {
       console.log('SW registration failed: ', registrationError);
     });
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9874
