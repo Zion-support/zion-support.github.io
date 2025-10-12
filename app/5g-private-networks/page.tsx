@@ -1,22 +1,22 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function FiveGPrivateNetworksPage() {
+export default function Page5gPrivateNetworks() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
     <>
       <Helmet>
-        <title>5G Private Networks - Zion Tech Group</title>
+        <title>5G 5g private networks - Zion Tech Group</title>
+        <meta name="description" content="Professional 5g private networks solutions and services." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">5G Private Networks</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional 5G private networks services coming soon.</p>
+          <h1 className="text-4xl font-bold text-white mb-6">5G 5g private networks</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional 5g private networks solutions coming soon.</p>
           <Link 
             to="/contact" 
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
@@ -29,6 +29,7 @@ export default function FiveGPrivateNetworksPage() {
     </>
   );
 }
+<<<<<<< HEAD
 
 =======
   return (
@@ -92,3 +93,5 @@ export default function Page() {
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

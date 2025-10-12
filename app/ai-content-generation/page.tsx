@@ -1,165 +1,36 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, PenTool, FileText, Image, Video, Mic, Globe, Zap, Brain, BarChart, Users } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
-const AiContentGenerationPage: React.FC = () => {
-<<<<<<< HEAD
+export default function AiContentGenerationPage() {
   return (
-
-        <>
-      <title>AiContentGeneration - Zion Tech Group</title>
-
-      </>
-=======
-  const features = [
-    {
-      title: 'AI Text Generation',
-      description: 'Generate high-quality articles, blogs, and marketing copy with advanced language models',
-      icon: <FileText className="w-6 h-6" />,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Image Creation',
-      description: 'Create stunning visuals, illustrations, and graphics using AI-powered image generation',
-      icon: <Image className="w-6 h-6" />,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Video Production',
-      description: 'Generate engaging videos, animations, and multimedia content automatically',
-      icon: <Video className="w-6 h-6" />,
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      title: 'Audio Content',
-      description: 'Create voiceovers, podcasts, and audio content with natural-sounding AI voices',
-      icon: <Mic className="w-6 h-6" />,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Multi-Language Support',
-      description: 'Generate content in multiple languages with cultural context and localization',
-      icon: <Globe className="w-6 h-6" />,
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      title: 'Brand Consistency',
-      description: 'Maintain brand voice and style across all generated content automatically',
-      icon: <PenTool className="w-6 h-6" />,
-      color: 'from-indigo-500 to-purple-500'
-    }
-  ];
-
-  const contentTypes = [
-    {
-      title: 'Blog Posts & Articles',
-      description: 'SEO-optimized content that ranks well and engages readers',
-      benefits: ['Save 80% writing time', 'Consistent quality', 'SEO optimization']
-    },
-    {
-      title: 'Social Media Content',
-      description: 'Engaging posts, captions, and stories for all social platforms',
-      benefits: ['Platform-specific content', 'Trending topics', 'Engagement optimization']
-    },
-    {
-      title: 'Marketing Materials',
-      description: 'Email campaigns, ad copy, and promotional content that converts',
-      benefits: ['Higher conversion rates', 'A/B testing', 'Personalized messaging']
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$49',
-      period: '/month',
-      description: 'Perfect for small businesses and content creators',
-      features: [
-        'Up to 10,000 words/month',
-        'Basic AI models',
-        '5 content types',
-        'Email support',
-        'Basic templates'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$149',
-      period: '/month',
-      description: 'Ideal for marketing teams and agencies',
-      features: [
-        'Up to 50,000 words/month',
-        'Advanced AI models',
-        'All content types',
-        'Priority support',
-        'Custom templates',
-        'Brand voice training',
-        'Analytics dashboard'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'For large organizations with high-volume needs',
-      features: [
-        'Unlimited content generation',
-        'Custom AI models',
-        'White-label solution',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'SLA guarantee'
-      ],
-      popular: false
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <>
       <Helmet>
-        <title>AI Content Generation - Zion Tech Group</title>
-        <meta name="description" content="Generate high-quality content at scale with AI. Create text, images, videos, and audio content for all your marketing needs." />
-        <meta name="keywords" content="AI content generation, automated content, content creation, AI writing, content marketing" />
+        <title>AiContentGeneration - Zion Tech Group</title>
+        <meta name="description" content="Professional ai content generation solutions and services." />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Content
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-              {' '}Generation
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Create high-quality content at scale with our advanced AI. Generate text, images, videos, 
-            and audio content that engages your audience and drives results.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Start Creating
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              to="/demo" 
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              View Demo
-            </Link>
-          </div>
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">AiContentGeneration</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ai content generation solutions coming soon.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Features Section */}
@@ -370,3 +241,9 @@ const AiContentGenerationPage: React.FC = () => {
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 >>>>>>> origin/main
+=======
+      </div>
+    </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

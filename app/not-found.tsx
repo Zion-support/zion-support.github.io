@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -7,11 +8,11 @@ import { ArrowRight } from 'lucide-react';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 import { Link } from 'react';
 import { Home, ArrowLeft} from 'lucide-react';
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 const NotFound: React.FC = () => {
 >>>>>>> origin/main
   return (

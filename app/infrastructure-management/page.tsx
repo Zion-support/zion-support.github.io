@@ -1,24 +1,31 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ArrowRight } from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-b918
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function InfrastructureManagementPage() {
   return (
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 export default function InfrastructureManagementPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <Helmet></Helmet>
-        <title />Infrastructure Management Services - Zion Tech Group</title>
-        <meta name="description" content="Complete IT infrastructure setup, management, and optimization services." /></meta>
+    <>
+      <Helmet>
+        <title>InfrastructureManagement - Zion Tech Group</title>
+        <meta name="description" content="Professional infrastructure management solutions and services." />
       </Helmet>
+<<<<<<< HEAD
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <h1 className="w-5h-5ml-2">Infrastructure Management;
@@ -95,3 +102,21 @@ export default function InfrastructureManagementPage() {
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 >>>>>>> origin/main
+=======
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">InfrastructureManagement</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional infrastructure management solutions coming soon.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

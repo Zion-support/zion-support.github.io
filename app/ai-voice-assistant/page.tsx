@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 
 
 'use client';
@@ -130,8 +134,12 @@ export default AIVoiceAssistantPage;
       rating: 5;
     }
   ]
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 
+export default function AiVoiceAssistantPage() {
   return (
+<<<<<<< HEAD
     <Layout;</Layout></Layout>
       title="AI Voice Assistant - Intelligent Voice Solutions | Zion Tech Group"
       description="Transform user interaction with AI-powered voice assistants. Natural language processing, human-like voice synthesis, and seamless integration. Start your free trial today."
@@ -354,3 +362,26 @@ export default AIVoiceAssistantPage;
 };
 
 >>>>>>> origin/main
+=======
+    <>
+      <Helmet>
+        <title>AiVoiceAssistant - Zion Tech Group</title>
+        <meta name="description" content="Professional ai voice assistant solutions and services." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">AiVoiceAssistant</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ai voice assistant solutions coming soon.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

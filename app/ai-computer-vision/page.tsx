@@ -1,127 +1,36 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Eye, Camera, Brain, Shield, Zap, BarChart, Users, Globe, Clock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
-const AiComputerVisionPage: React.FC = () => {
-<<<<<<< HEAD
+export default function AiComputerVisionPage() {
   return (
-
-        <>
-      <title>AiComputerVision - Zion Tech Group</title>
-
-      </>
-=======
-  const features = [
-    {
-      title: 'Object Detection',
-      description: 'Advanced object detection and recognition with high accuracy across various environments',
-      icon: <Eye className="w-6 h-6" />,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Image Classification',
-      description: 'Intelligent image classification and categorization for automated content organization',
-      icon: <Camera className="w-6 h-6" />,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Facial Recognition',
-      description: 'Secure and accurate facial recognition for authentication and identification systems',
-      icon: <Brain className="w-6 h-6" />,
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      title: 'Real-time Processing',
-      description: 'High-speed image processing and analysis for real-time applications and edge computing',
-      icon: <Zap className="w-6 h-6" />,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Custom Models',
-      description: 'Tailored computer vision models trained specifically for your industry and use case',
-      icon: <Shield className="w-6 h-6" />,
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics and insights from visual data to drive business decisions',
-      icon: <BarChart className="w-6 h-6" />,
-      color: 'from-indigo-500 to-purple-500'
-    }
-  ];
-
-  const useCases = [
-    {
-      title: 'Manufacturing Quality Control',
-      description: 'Automated defect detection and quality assurance in production lines',
-      benefits: ['Reduce defects by 90%', '24/7 monitoring', 'Consistent quality standards']
-    },
-    {
-      title: 'Retail Analytics',
-      description: 'Customer behavior analysis and inventory management through visual data',
-      benefits: ['Optimize store layouts', 'Track customer flow', 'Manage inventory efficiently']
-    },
-    {
-      title: 'Security & Surveillance',
-      description: 'Intelligent surveillance systems with threat detection and alert capabilities',
-      benefits: ['Enhanced security', 'Real-time alerts', 'Automated monitoring']
-    }
-  ];
-
-  const industries = [
-    'Manufacturing',
-    'Healthcare',
-    'Retail',
-    'Automotive',
-    'Agriculture',
-    'Security',
-    'Transportation',
-    'Entertainment'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <>
       <Helmet>
-        <title>AI Computer Vision - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI computer vision solutions for object detection, image classification, and real-time visual analysis." />
-        <meta name="keywords" content="AI computer vision, object detection, image recognition, facial recognition, visual analytics" />
+        <title>AiComputerVision - Zion Tech Group</title>
+        <meta name="description" content="Professional ai computer vision solutions and services." />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Computer
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-              {' '}Vision
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform visual data into actionable insights with our advanced AI computer vision solutions. 
-            From object detection to real-time analysis, we help you see what matters most.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              to="/demo" 
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              View Demo
-            </Link>
-          </div>
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">AiComputerVision</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ai computer vision solutions coming soon.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Features Section */}
@@ -301,3 +210,9 @@ const AiComputerVisionPage: React.FC = () => {
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 >>>>>>> origin/main
+=======
+      </div>
+    </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

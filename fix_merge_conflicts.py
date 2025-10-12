@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Script to fix merge conflicts and syntax errors in the codebase
+Script to fix merge conflicts by removing conflict markers and keeping HEAD version
 """
 import os
 import re
 import glob
-from pathlib import Path
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 def fix_merge_conflicts(file_path):
 <<<<<<< HEAD
@@ -53,10 +53,15 @@ def fix_typescript_errors(content):
 def process_file(file_path):
     """Process a single file to fix errors"""
 >>>>>>> origin/main
+=======
+def fix_merge_conflicts(file_path):
+    """Fix merge conflicts in a single file"""
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         # Check if file has merge conflicts
@@ -107,20 +112,35 @@ def process_file(file_path):
         return True
 =======
         original_content = content
+=======
+        # Pattern to match merge conflict blocks
+        # <<<<<<< HEAD
+        # ... content ...
+        # =======
+        # ... other content ...
+        # >>>>>>> branch-name
+        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n?'
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
         
-        # Apply fixes
-        content = fix_merge_conflicts(content)
-        content = fix_jsx_syntax_errors(content)
-        content = fix_typescript_errors(content)
+        # Replace with just the HEAD content
+        fixed_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
         
-        # Only write if content changed
-        if content != original_content:
+        # Also handle cases where there might be multiple conflict markers in one block
+        # Remove any remaining conflict markers
+        fixed_content = re.sub(r'<<<<<<< HEAD\n?', '', fixed_content)
+        fixed_content = re.sub(r'=======\n?', '', fixed_content)
+        fixed_content = re.sub(r'>>>>>>> [^\n]+\n?', '', fixed_content)
+        
+        # Clean up any double newlines that might have been created
+        fixed_content = re.sub(r'\n\n\n+', '\n\n', fixed_content)
+        
+        if content != fixed_content:
             with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"Fixed: {file_path}")
+                f.write(fixed_content)
+            print(f"Fixed merge conflicts in: {file_path}")
             return True
         else:
-            print(f"No changes needed: {file_path}")
+            print(f"No conflicts found in: {file_path}")
             return False
             
 >>>>>>> origin/main
@@ -161,6 +181,7 @@ def fix_jsx_syntax_errors(file_path):
 def main():
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     """Main function to process all files with merge conflicts."""
     workspace = Path('/workspace')
 =======
@@ -173,27 +194,41 @@ def main():
         '**/*.js'
     ]
 >>>>>>> origin/main
+=======
+    """Main function to fix all merge conflicts"""
+    # Get all files with merge conflicts
+    files_with_conflicts = []
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
     
-    files_processed = 0
-    files_fixed = 0
+    # Search for files with merge conflict markers
+    for root, dirs, files in os.walk('.'):
+        # Skip node_modules and other directories
+        dirs[:] = [d for d in dirs if d not in ['node_modules', '.git', 'dist', 'out', '.next']]
+        
+        for file in files:
+            if file.endswith(('.tsx', '.ts', '.js', '.jsx')):
+                file_path = os.path.join(root, file)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        if '<<<<<<< HEAD' in content:
+                            files_with_conflicts.append(file_path)
+                except:
+                    continue
     
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            # Skip node_modules and other directories
-            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', '.next']):
-                continue
-                
-            files_processed += 1
-            if process_file(file_path):
-                files_fixed += 1
+    print(f"Found {len(files_with_conflicts)} files with merge conflicts")
     
+<<<<<<< HEAD
 <<<<<<< HEAD
     print(f"Found {len(files_with_conflicts)} files with merge conflicts")
     
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
     fixed_count = 0
     for file_path in files_with_conflicts:
         if fix_merge_conflicts(file_path):
             fixed_count += 1
+<<<<<<< HEAD
             print(f"Fixed: {file_path}")
     
     print(f"Successfully fixed {fixed_count} files")
@@ -230,6 +265,10 @@ def main():
     print(f"\nProcessed {files_processed} files")
     print(f"Fixed {files_fixed} files")
 >>>>>>> origin/main
+=======
+    
+    print(f"Fixed merge conflicts in {fixed_count} files")
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 
 if __name__ == "__main__":
     main()

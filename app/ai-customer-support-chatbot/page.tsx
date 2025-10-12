@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -126,18 +127,20 @@ const AiCustomerSupportChatbotPage: React.FC = () => {
       rating: 5;
     }
   ]
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 
+export default function AiCustomerSupportChatbotPage() {
   return (
-    <></>
-      <Helmet></Helmet>
-        <title>AI Customer Support Chatbot - Zion Tech Group</title>
-        <meta name="description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." /></meta>
-        <meta name="keywords" content="AI chatbot, customer support, AI solutions, IT services, Zion Tech Group" /></meta>
-        <meta property="og:title" content="AI Customer Support Chatbot - Zion Tech Group" /  /></meta>
-        <meta property="og:description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." /  /></meta>
-        <meta property="og:type" content="website" /  /></meta>
-        <meta property="og:url" content="https://ziontechgroup.com/ai-customer-support-chatbot" /  /></meta>
+    <>
+      <Helmet>
+        <title>AiCustomerSupportChatbot - Zion Tech Group</title>
+        <meta name="description" content="Professional ai customer support chatbot solutions and services." />
       </Helmet>
+<<<<<<< HEAD
       <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         {/* Hero Section */}
         <section className="w-5h-5ml-2" /></section>
@@ -233,3 +236,21 @@ export default function AiCustomerSupportChatbotPage() {
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 >>>>>>> origin/main
+=======
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">AiCustomerSupportChatbot</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ai customer support chatbot solutions coming soon.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

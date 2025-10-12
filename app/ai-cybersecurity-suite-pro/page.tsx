@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-b918
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default function AICybersecuritySuitePro() {
@@ -190,15 +194,17 @@ export default function AICybersecuritySuiteProPage() {
   ]
 
 >>>>>>> origin/main
+=======
+
+export default function AiCybersecuritySuiteProPage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
   return (
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <Helmet></Helmet>
-        <title>AI Cybersecurity Suite Pro - Zion Tech Group | Advanced Security Solutions</title>
-        <meta name="description" content="Revolutionary AI-powered cybersecurity suite with threat detection, zero-trust architecture, and real-time monitoring. 99.9% threat detection accuracy. Starting at $199/month." /></meta>
-        <meta name="keywords" content="AI cybersecurity, threat detection, zero-trust security, network monitoring, incident response, security automation" /></meta>
-        <meta name="robots" content="index, follow" /></meta>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-cybersecurity-suite-pro"  /></link>
+    <>
+      <Helmet>
+        <title>AiCybersecuritySuitePro - Zion Tech Group</title>
+        <meta name="description" content="Professional ai cybersecurity suite pro solutions and services." />
       </Helmet>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <>
@@ -490,3 +496,21 @@ export default function AICybersecuritySuiteProPage() {
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 >>>>>>> origin/main
+=======
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">AiCybersecuritySuitePro</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ai cybersecurity suite pro solutions coming soon.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

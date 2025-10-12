@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 <<<<<<< HEAD
@@ -118,67 +119,21 @@ export default function IoTSolutionsPage() {
       description: 'Scale your IoT solutions as your business grows with our flexible platform'
     }
   ]
-
-  return (
-<<<<<<< HEAD
-
-        <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-        <title>IoT Solutions - Zion Tech Group | Smart Device Management & Analytics</title>
-
-                    Ready to Connect Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">World?</span>
-
-                    Transform your business with our comprehensive IoT solutions. Get started today and unlock the power of connected devices.
-
-                      <span>Get Started</span>
-                      <span>View Pricing</span>
-
-      </>
-  );
-
 =======
-    <></>
-      <Helmet></Helmet>
-        <title />IoT Solutions - Zion Tech Group | Smart Device Management & Analytics</title>
-        <meta name="description" content="Comprehensive IoT solutions including device management, data analytics, security, and cloud platforms. Transform your business with smart connected devices." /></meta>
-        <meta name="keywords" content="IoT solutions, internet of things, smart devices, IoT analytics, device management, edge computing, IoT security, connected devices" /></meta>
-        <meta name="robots" content="index, follow, max-image-preview: large, max-snippet: -1, max-video-preview:-1" /></meta>
-        <meta name="author" content="Zion Tech Group" />        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="IoT Solutions - Zion Tech Group | Smart Device Management & Analytics" /  /></meta>
-        <meta property="og: description" content="Comprehensive IoT solutions including device management, data analytics, security, and cloud platforms. Transform your business with smart connected devices." /  /></meta>
-        <meta property="og:type" content="website" /  /></meta>
-        <meta property="og:url" content="https://ziontechgroup.com/iot-solutions" /  /></meta>
-        <meta property="og:image" content="https://ziontechgroup.com/iot-solutions-og-image.jpg" /  /></meta>
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" /></meta>
-        <meta name="twitter:title" content="IoT Solutions - Zion Tech Group | Smart Device Management & Analytics" /></meta>
-        <meta name="twitter: description" content="Comprehensive IoT solutions including device management, data analytics, security, and cloud platforms. Transform your business with smart connected devices." /></meta>
-        <meta name="twitter:image" content="https://ziontechgroup.com/iot-solutions-twitter-image.jpg" /></meta>
-        {/* Structured Data */}
-        <script type="application/ld+json"  />{JSON.stringify({
-            "@context": "https: //schema.org",
-            "@type": "Service",
-            "name": "IoT Solutions",
-            "description": "Comprehensive IoT solutions including device management, data analytics, security, and cloud platforms.",
-            "provider": {
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https: //ziontechgroup.com"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "199",
-              "priceCurrency": "USD",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "199",
-                "priceCurrency": "USD",
-                "unitText": "MONTH"
-              }
-            }
-          })}
-        </script>
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
+
+export default function IotSolutionsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>IotSolutions - Zion Tech Group</title>
+        <meta name="description" content="Professional iot solutions solutions and services." />
       </Helmet>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         {/* Hero Section */}
         <section className="w-5h-5ml-2" /></section>
@@ -351,9 +306,22 @@ export default function IoTSolutionsPage() {
               </div>
           </div>
         </section>
+=======
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">IotSolutions</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional iot solutions solutions coming soon.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
       </div>
     </>
 >>>>>>> origin/main
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
