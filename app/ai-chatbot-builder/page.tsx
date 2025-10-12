@@ -1,11 +1,7 @@
 import React from 'react';
-import { ArrowRight, MessageCircle, Users, Zap, Shield } from 'lucide-react';
+import { CheckCircle, ArrowRight, MessageCircle, Users, Zap, Shield, Brain, BarChart3 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { CheckCircle, ArrowRight, MessageCircle, Users, Zap, Shield, Brain, Globe, Clock, Star, Target, DollarSign } from 'lucide-react'
 
 export default function AIChatbotBuilderPage() {
 
@@ -51,7 +47,6 @@ export default function AIChatbotBuilderPage() {
     'Order tracking',
     'Technical support',
     'Sales consultation'
-    }
   ]
 
   const pricingPlans = [
@@ -123,15 +118,6 @@ export default function AIChatbotBuilderPage() {
     }
   ]
 
-  const benefits = [
-    'Reduce support costs by up to 60%',
-    'Increase customer satisfaction',
-    'Qualify leads 24/7',
-    'Scale support without scaling staff',
-    'Gather valuable customer insights',
-    'Integrate with existing tools'
-  ]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -166,7 +152,7 @@ export default function AIChatbotBuilderPage() {
                 Try Demo
               </Link>
             </div>
-          ))}
+          </div>
         </div>
 
         <div className="text-center">
@@ -210,7 +196,11 @@ export default function AIChatbotBuilderPage() {
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            ))}
+          </div>
+          
+          <div className="mt-16">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-6">Use Cases</h3>
                 <div className="space-y-6">
                   {useCases.map((useCase, index) => (
@@ -231,10 +221,8 @@ export default function AIChatbotBuilderPage() {
             </div>
           </div>
         </section>
-      )}
 
-      {/* Features Tab */}
-      {activeTab === 'features' && (
+      {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -263,10 +251,8 @@ export default function AIChatbotBuilderPage() {
             </div>
           </div>
         </section>
-      )}
 
-      {/* Pricing Tab */}
-      {activeTab === 'pricing' && (
+      {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -322,7 +308,6 @@ export default function AIChatbotBuilderPage() {
             </div>
           </div>
         </section>
-      )}
 
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

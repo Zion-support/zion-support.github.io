@@ -1,73 +1,54 @@
 'use client';
 
 import React from 'react';
-import { Users, Target, Award, Globe, Zap, Shield, Database, Brain, Clock, Star, TrendingUp } from 'lucide-react';
+import { Users, Award, Globe, Shield, Brain, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Users, 
-  Award, 
-  Target,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  Github,
-  Linkedin,
-  Twitter
-} from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const values = [
     {
       icon: <Brain className="w-8 h-8 text-blue-500" />,
       title: 'Innovation',
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that give our clients a competitive advantage.'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      title: 'Reliability',
-      description: 'Our solutions are built with enterprise-grade security and reliability to ensure your business operations never stop.'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-purple-500" />,
-      title: 'Collaboration',
-      description: 'We work closely with our clients as partners, understanding their unique needs and delivering tailored solutions.'
-    },
-    {
-      icon: <Database className="w-8 h-8 text-orange-500" />,
-      title: 'Excellence',
-      description: 'We strive for excellence in every project, delivering high-quality solutions that exceed expectations.'
-    }
-  ];
-
-  const values = [
-    {
-      icon: Brain,
-      title: 'Innovation',
       description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value.'
     },
     {
-      icon: Shield,
+      icon: <Shield className="w-8 h-8 text-green-500" />,
       title: 'Security',
       description: 'Enterprise-grade security is at the core of everything we do, ensuring your data and systems are always protected.'
     },
     {
-      icon: Users,
+      icon: <Users className="w-8 h-8 text-purple-500" />,
       title: 'Collaboration',
       description: 'We work closely with our clients as partners, understanding their unique challenges and delivering tailored solutions.'
     },
     {
-      icon: Globe,
+      icon: <Globe className="w-8 h-8 text-orange-500" />,
       title: 'Global Reach',
       description: 'With a worldwide presence, we deliver consistent, high-quality services to clients across all continents.'
+    }
+  ];
+
+  const stats = [
+    {
+      icon: <Users className="w-8 h-8 text-blue-500" />,
+      number: '500+',
+      label: 'Projects Completed'
+    },
+    {
+      icon: <Award className="w-8 h-8 text-green-500" />,
+      number: '100+',
+      label: 'Happy Clients'
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-purple-500" />,
+      number: '50+',
+      label: 'Countries Served'
+    },
+    {
+      icon: <Star className="w-8 h-8 text-orange-500" />,
+      number: '99%',
+      label: 'Success Rate'
     }
   ];
 
@@ -132,7 +113,8 @@ const AboutPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Values Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
@@ -153,7 +135,8 @@ const AboutPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Team Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
@@ -209,9 +192,9 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+    </div>
   );
 };
 

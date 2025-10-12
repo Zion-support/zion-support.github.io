@@ -1,58 +1,60 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, BarChart3, Zap, Globe, Cpu, Clock, TrendingUp } from 'lucide-react';
+import { CheckCircle, ArrowRight, BarChart3, Zap, Clock, TrendingUp } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 export default function FiveGDataAnalyticsPage() {
-  const features = [
-    {
-      title: "Feature 1",
-      description: "Description of feature 1"
-    },
-    {
-      title: "Feature 2",
-      description: "Description of feature 2"
-    }
-  ];
-
   const analyticsFeatures = [
     {
       title: "Real-time Analytics",
-      description: "Get instant insights from your data"
+      description: "Get instant insights from your data",
+      icon: <BarChart3 className="w-6 h-6 text-blue-500" />
     },
     {
       title: "Advanced Reporting",
-      description: "Comprehensive reports and dashboards"
+      description: "Comprehensive reports and dashboards",
+      icon: <TrendingUp className="w-6 h-6 text-green-500" />
+    },
+    {
+      title: "Predictive Insights",
+      description: "AI-powered predictions for network optimization",
+      icon: <Zap className="w-6 h-6 text-purple-500" />
+    },
+    {
+      title: "Automated Monitoring",
+      description: "24/7 automated monitoring and alerting",
+      icon: <Clock className="w-6 h-6 text-orange-500" />
     }
   ];
 
-  const benefits = [
-    "Improved data visibility",
-    "Better decision making",
-    "Cost optimization"
-  ];
-
-  return (
-
+  const analyticsServices = [
     {
       title: 'Real-time Insights',
       description: 'Get instant insights into network performance and user experience',
-      icon: <Zap className="w-6 h-6 text-blue-500" />
+      icon: <Zap className="w-6 h-6 text-blue-500" />,
+      features: ['Live monitoring', 'Performance metrics', 'User experience tracking'],
+      pricing: 'Starting at $999/month'
     },
     {
       title: 'Predictive Analytics',
       description: 'Anticipate issues and optimize performance with AI-powered predictions',
-      icon: <TrendingUp className="w-6 h-6 text-green-500" />
+      icon: <TrendingUp className="w-6 h-6 text-green-500" />,
+      features: ['AI predictions', 'Issue prevention', 'Performance optimization'],
+      pricing: 'Starting at $1,499/month'
     },
     {
       title: 'Custom Dashboards',
       description: 'Tailored dashboards for different stakeholders and use cases',
-      icon: <BarChart3 className="w-6 h-6 text-purple-500" />
+      icon: <BarChart3 className="w-6 h-6 text-purple-500" />,
+      features: ['Custom views', 'Role-based access', 'Real-time updates'],
+      pricing: 'Starting at $799/month'
     },
     {
       title: 'Automated Reporting',
       description: 'Automated reports and alerts for proactive network management',
-      icon: <Clock className="w-6 h-6 text-orange-500" />
+      icon: <Clock className="w-6 h-6 text-orange-500" />,
+      features: ['Scheduled reports', 'Alert system', 'Performance summaries'],
+      pricing: 'Starting at $599/month'
     }
   ];
 
@@ -106,9 +108,7 @@ export default function FiveGDataAnalyticsPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-20">
             {analyticsServices.map((service, index) => (
-              {features.map((feature, index) => (
-
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
@@ -146,9 +146,7 @@ export default function FiveGDataAnalyticsPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {analyticsFeatures.map((feature, index) => (
-              {features.map((feature, index) => (
-
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                 <div className="mb-4 flex justify-center">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 text-sm">{feature.description}</p>
@@ -190,5 +188,3 @@ export default function FiveGDataAnalyticsPage() {
 };
 
 export default FiveGDataAnalyticsPage;
-  );
-}

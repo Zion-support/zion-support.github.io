@@ -1,11 +1,11 @@
 import React from 'react';
-import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
+import { Calendar, User, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const BlogPage: React.FC = () => {
+export default function BlogPage() {
   const blogPosts = [
     {
       title: 'The Future of AI in Business: Trends to Watch in 2024',

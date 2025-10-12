@@ -1,110 +1,8 @@
-import React from 'react';
-import { CheckCircle, ArrowRight, BarChart3, FileText, TrendingUp, Clock, Shield, Zap } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-ursor/website-audit-and-update-with-deployment-a178
-
-const AIAutomatedReportingPage: React.FC = () => {
-  const features = [
-    {
-      icon: <BarChart3 className="w-8 h-8 text-blue-500" />,
-      title: 'Automated Report Generation',
-      description: 'Generate comprehensive reports automatically using AI-powered analytics and data processing.'
-    },
-    {
-      icon: <FileText className="w-8 h-8 text-green-500" />,
-      title: 'Custom Report Templates',
-      description: 'Create and customize report templates to match your business requirements and branding.'
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8 text-purple-500" />,
-      title: 'Real-time Analytics',
-      description: 'Get instant insights and analytics with real-time data processing and visualization.'
-    },
-    {
-      icon: <Clock className="w-8 h-8 text-orange-500" />,
-      title: 'Scheduled Reports',
-      description: 'Set up automated report scheduling to receive regular updates without manual intervention.'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'Data Security',
-      description: 'Enterprise-grade security ensures your data remains protected and compliant.'
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      title: 'Fast Processing',
-      description: 'Lightning-fast report generation and processing for immediate insights.'
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: <Shield className="w-6 h-6 text-green-500" />,
-      title: 'Data Security',
-      description: 'Enterprise-grade security with encrypted data transmission and storage.'
-    },
-    {
-      icon: <Zap className="w-6 h-6 text-blue-500" />,
-      title: 'Lightning Fast',
-      description: 'Generate complex reports in seconds, not hours or days.'
-    },
-    {
-      icon: <CheckCircle className="w-6 h-6 text-purple-500" />,
-      title: '100% Accurate',
-      description: 'Eliminate human errors with automated data processing and validation.'
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6 text-orange-500" />,
-      title: 'Customizable',
-      description: 'Tailor reports to your specific business needs and requirements.'
-    }
-  ];
-
-  const pricing = [
-    {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      features: [
-        'Up to 10 reports/month',
-        'Basic templates',
-        'Email delivery',
-        'Standard support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      features: [
-        'Unlimited reports',
-        'Custom templates',
-        'Multiple formats',
-        'Priority support',
-        'API access'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
-      features: [
-        'Everything in Professional',
-        'White-label solution',
-        'Custom integrations',
-        'Dedicated support',
-        'Advanced analytics'
-      ],
-      popular: false
-    }
-  ];
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { FileText, Brain, Target } from 'lucide-react'
+import { FileText, Brain, Target, ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export default function AIAutomatedReportingPage() {
   return (
@@ -150,13 +48,17 @@ export default function AIAutomatedReportingPage() {
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Let our AI-powered reporting solutions transform your data into actionable business insights.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
+          <Link 
+            to="/contact"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+          >
             Get Started Today
-          </button>
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default AIAutomatedReportingPage;

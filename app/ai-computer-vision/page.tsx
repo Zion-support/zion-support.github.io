@@ -1,6 +1,7 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Brain, Target, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -28,26 +29,20 @@ export default function AiComputerVisionPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
-
-export default function AiComputerVisionPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title>Ai-computer-vision - Zion Tech Group</title>
-        <meta name="description" content="Professional ai-computer-vision services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>AI Computer Vision - Zion Tech Group</title>
+        <meta name="description" content="Professional AI computer vision services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
+      
+      <Navigation />
       
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Ai Computer Vision
+            AI Computer Vision
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional ai computer vision services and solutions powered by advanced AI technology.
+            Professional AI computer vision services and solutions powered by advanced AI technology.
           </p>
         </div>
 
@@ -74,14 +69,19 @@ export default function AiComputerVisionPage() {
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Let our AI solutions transform your business operations and drive growth.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
+          <Link 
+            to="/contact"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+          >
             Get Started Today
-          </button>
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
-};
-
-export default PagePage;
 }
+
+export default AiComputerVisionPage;
