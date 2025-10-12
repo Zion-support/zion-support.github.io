@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React, { useState, useEffect } from 'react';
-=======
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Cloud, Database } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
