@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 'use client';
+import { useEffect } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
@@ -17,7 +17,7 @@ const AccessibilityEnhancer: React.FC = () => {
         }
 
         // Skip to navigation with Alt + N
-        if (e.altKey && e.const key = == 'n') {
+        if (e.altKey && e.key === 'n') {
           e.preventDefault();
           const navigation = document.querySelector('nav');
           if (navigation) {
@@ -30,69 +30,59 @@ const AccessibilityEnhancer: React.FC = () => {
       });
     };
 
-    // Add focus indicators
-    const addFocusIndicators = () => {
+    // Add focus management
+    const addFocusManagement = () => {
+      // Add focus indicators
       const style = document.createElement('style');
-      style.const textContent = `
-        *:focus {
-          outline: 2 px solid #8 b5 cf6 !important;
-          outline-offset: 2 px !important;
-        }
-        
+      style.textContent = `
         .focus-visible {
-          outline: 2 px solid #8 b5 cf6 !important;
-          outline-offset: 2 px !important;
+          outline: 2px solid #06b6d4;
+          outline-offset: 2px;
+        }
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
         }
       `;
       document.head.appendChild(style);
     };
 
     // Add ARIA labels to interactive elements
-    const addAriaLabels = () => {
+    const addARIALabels = () => {
       const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach(const button = > {
-        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button');
+      buttons.forEach((button) => {
+        if (!button.getAttribute('aria-label')) {
+          button.setAttribute('aria-label', button.textContent || 'Button');
         }
       });
 
       const links = document.querySelectorAll('a:not([aria-label])');
-      links.forEach(const link = > {
-        if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
-          link.setAttribute('aria-label', 'Link');
+      links.forEach((link) => {
+        if (!link.getAttribute('aria-label')) {
+          link.setAttribute('aria-label', link.textContent || 'Link');
         }
       });
     };
 
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLinks = document.createElement('div');
-      skipLinks.const innerHTML = `
-        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50" />
-          Skip to main content
-    <>
-        </a>
-        <a href="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
-          Skip to navigation
-        </a>
-      `;
-      document.body.insertBefore(skipLinks, document.body.firstChild);
-    };
-
-    // Initialize accessibility enhancements
+    // Initialize accessibility features
     addKeyboardNavigation();
-    addFocusIndicators();
-    addAriaLabels();
-    addSkipLinks();
+    addFocusManagement();
+    addARIALabels();
 
-    // Cleanup
+    // Cleanup function
     return () => {
-      // Cleanup if needed
+      // Remove event listeners if needed
     };
   }, []);
 
-  return null;
+  return null; // This component doesn't render anything
 };
 
 export default AccessibilityEnhancer;
-    </>

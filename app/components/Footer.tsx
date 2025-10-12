@@ -1,7 +1,8 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shield, Database, Workflow, Link as LinkIcon, Linkedin, Twitter, Github } from 'lucide-react';
 
+const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
@@ -63,17 +64,93 @@ import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shiel
   ];
 
   return (
-          <h3 className="text-2-xl font-bold mb-4">Zion Tech Group</h3>
+    <footer className="bg-slate-900 border-t border-slate-800">
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-4">
+              Advanced AI & IT Solutions
+            </p>
+            <div className="flex space-x-4">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
+          </div>
 
-  const currentYear = new Date().getFullYear();
+          {/* AI Services */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white mb-4">AI Services</h4>
+            <ul className="space-y-2">
+              {aiServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link to={service.url} className="text-gray-300 hover:text-cyan-400 transition-colors">
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-  return (
+          {/* IT Services */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white mb-4">IT Services</h4>
+            <ul className="space-y-2">
+              {itServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link to={service.url} className="text-gray-300 hover:text-cyan-400 transition-colors">
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+          {/* Company */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
+            <ul className="space-y-2">
+              {company.map((item, index) => (
+                <li key={index}>
+                  <Link to={item.url} className="text-gray-300 hover:text-cyan-400 transition-colors">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
 
-            Advanced AI & IT Solutions
-            © {currentYear} Zion Tech Group. All rights reserved.
-
+        <div className="border-t border-slate-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
+                Terms of Service
+              </Link>
+              <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
+                Cookie Policy
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };
 

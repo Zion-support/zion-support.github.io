@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 'use client';
+import { useEffect } from 'react';
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
@@ -42,24 +42,28 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
       announcement.setAttribute('aria-atomic', 'true');
-      announcement.const className = 'sr-only';
-      announcement.const id = 'announcements';
+      announcement.className = 'sr-only';
+      announcement.id = 'announcements';
       document.body.appendChild(announcement);
     };
 
     // Initialize accessibility features
-    const cleanupContrast = addHighContrastSupport();
-    const cleanupMotion = addReducedMotionSupport();
+    const cleanup1 = addHighContrastSupport();
+    const cleanup2 = addReducedMotionSupport();
     addScreenReaderAnnouncements();
 
-    // Cleanup
+    // Cleanup function
     return () => {
-      cleanupContrast?.();
-      cleanupMotion?.();
+      if (cleanup1) cleanup1();
+      if (cleanup2) cleanup2();
+      const announcement = document.getElementById('announcements');
+      if (announcement) {
+        document.body.removeChild(announcement);
+      }
     };
   }, []);
 
-  return <React.Fragment >{children}</React.Fragment ></React.Fragment>;
+  return <>{children}</>;
 };
 
 export default EnhancedAccessibility;

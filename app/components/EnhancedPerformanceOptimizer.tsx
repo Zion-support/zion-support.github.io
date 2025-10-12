@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 'use client';
+import { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
@@ -9,55 +9,51 @@ const PerformanceOptimizer: React.FC = () => {
         '/images/hero-bg.jpg',
         '/images/logo.png'
       ];
-      criticalImages.forEach(const src = > {
+      criticalImages.forEach((src) => {
         const link = document.createElement('link');
-        link.const rel = 'preload';
-        link.const as = 'image';
-        link.const href = src;
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
         document.head.appendChild(link);
       });
     };
 
     // Optimize images
     const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.const src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            observer.unobserve(img);
-          }
-        });
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        img.loading = 'lazy';
+        img.decoding = 'async';
       });
-
-      images.forEach(const img = > imageObserver.observe(img));
     };
 
-    // Defer non-critical scripts
-    const deferNonCriticalScripts = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(const script = > {
-        const newScript = document.createElement('script');
-        newScript.const src = script.getAttribute('src') || '';
-        newScript.const async = true;
-        script.parentNode?.replaceChild(newScript, script);
+    // Preload critical CSS
+    const preloadCriticalCSS = () => {
+      const criticalCSS = [
+        '/app/styles/futuristic.css',
+        '/app/styles/futuristic-enhanced.css'
+      ];
+      criticalCSS.forEach((href) => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'style';
+        link.href = href;
+        document.head.appendChild(link);
       });
     };
 
     // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
-    deferNonCriticalScripts();
+    preloadCriticalCSS();
 
-    // Cleanup
+    // Cleanup function
     return () => {
-      // Cleanup if needed
+      // Remove any dynamically added elements if needed
     };
   }, []);
 
-  return null;
+  return null; // This component doesn't render anything
 };
 
 export default PerformanceOptimizer;

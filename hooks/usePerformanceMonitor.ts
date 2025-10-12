@@ -1,7 +1,21 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
+interface PerformanceData {
+  domContentLoaded: number;
+  loadComplete: number;
+  firstPaint: number | null;
+  firstContentfulPaint: number | null;
+}
+
+export const usePerformanceMonitor = () => {
+  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
+
+  useEffect(() => {
     // Monitor page load performance
+    const monitorPageLoad = () => {
       if ('performance' in window) {
+        window.addEventListener('load', () => {
+          setTimeout(() => {
             const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
             const paint = performance.getEntriesByType('paint');
             
@@ -9,35 +23,44 @@ import { useEffect } from 'react';
             console.log('Page Load Performance:', {
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
               loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
- entry.name === 'first-paint')?.startTime,
- entry.name === 'first-contentful-paint')?.startTime,
+              firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
+              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+            });
+
+            setPerformanceData({
+              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+              firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || null,
+              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || null,
             });
           }, 0);
         });
+      }
     };
 
     // Monitor resource loading
+    const monitorResourceLoading = () => {
       if ('performance' in window) {
+        const observer = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry) => {
             if (entry.entryType === 'resource') {
-              console.log('Resource loaded:', {
-                name: entry.name,
-                duration: entry.duration,
-                size: (entry as any).transferSize,
-              });
+              console.log('Resource loaded:', entry.name, entry.duration);
+            }
           });
         });
-        
         observer.observe({ entryTypes: ['resource'] });
-        
- observer.disconnect();
+      }
     };
 
     // Initialize monitoring
     monitorPageLoad();
-    const cleanup = monitorResourceLoading();
+    monitorResourceLoading();
 
-    // Cleanup
-      cleanup?.();
+    // Cleanup function
+    return () => {
+      // Cleanup if needed
     };
   }, []);
+
+  return { performanceData };
 };

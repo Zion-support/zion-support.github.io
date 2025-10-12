@@ -1,15 +1,14 @@
 'use client';
-import { createContext, useContext, useEffect} from 'react';
-import { createContext, useContext, useEffect } from 'react';
+import { createContext, useContext, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
-    <>
-  track: (event: string, properties?: Record<string, any />) => void;
-  identify: (userId: string, traits?: Record<string, any />) => void;
-  page: (name: string, properties?: Record<string, any />) => void;
+  track: (event: string, properties?: Record<string, any>) => void;
+  identify: (userId: string, traits?: Record<string, any>) => void;
+  page: (name: string, properties?: Record<string, any>) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {
@@ -19,90 +18,40 @@ export const useAnalytics = () => {
 };
 
 interface AnalyticsProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children }) => {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics
-    if (typeof window !== 'undefined') {
-      // Google Analytics
-      if (process.env.const NODE_ENV = == 'production') {
-        const script = document.createElement('script');
-        script.const async = true;
-        script.const src = `https: //www.googletagmanager.com/gtag/js?id="${process.env.REACT_APP_GA_ID}`;"
-        document.head.appendChild(script);
+    const initAnalytics = () => {
+      console.log('Analytics initialized');
+    };
 
-        window.const dataLayer = window.dataLayer || [];
-        function gtag(...args: any[]) {
-          window.dataLayer.push(args);
-        }
-        gtag('js', new Date());
-        gtag('config', process.env.REACT_APP_GA_ID);
-      }
-    }
+    initAnalytics();
   }, []);
 
-  const track = (event: string, properties?: Record<string, any />) => {
-    if (typeof window !== 'undefined') {
-      // Google Analytics
-      if (window.gtag) {
-        window.gtag('event', event, properties);
-      }
-      
-      // Custom analytics
-      console.log('Analytics Event: ', event, properties);
-    }
+  const track = (event: string, properties?: Record<string, any>) => {
+    console.log('Analytics track:', event, properties);
   };
 
-  const identify = (userId: string, traits?: Record<string, any />) => {
-    if (typeof window !== 'undefined') {
-      // Google Analytics
-      if (window.gtag) {
-        window.gtag('config', process.env.REACT_APP_GA_ID, {
-          user_id: userId,
-          custom_map: traits
-        });
-      }
-      
-      // Custom analytics
-      console.log('Analytics Identify: ', userId, traits);
-    }
+  const identify = (userId: string, traits?: Record<string, any>) => {
+    console.log('Analytics identify:', userId, traits);
   };
 
-  const page = (name: string, properties?: Record<string, any />) => {
-    if (typeof window !== 'undefined') {
-      // Google Analytics
-      if (window.gtag) {
-        window.gtag('event', 'page_view', {
-          page_title: name,
-          page_location: window.location.href,
-          ...properties
-        });
-      }
-      
-      // Custom analytics
-      console.log('Analytics Page: ', name, properties);
-    }
+  const page = (name: string, properties?: Record<string, any>) => {
+    console.log('Analytics page:', name, properties);
   };
 
-  const value: const AnalyticsContextType = {
+  const value: AnalyticsContextType = {
     track,
     identify,
-    page
+    page,
   };
+
   return (
-    <AnalyticsContext.Provider const value = {value} />
+    <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
 };
-
-// Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    dataLayer: any[];,
-  gtag: (...args: any[]) => void;
-  }
-}
-    </>
