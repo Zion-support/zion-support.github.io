@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
-=======
-import { Menu, X, ChevronDown, Zap, Cloud, Globe, Code, Smartphone, Brain, Wifi } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +16,6 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -32,10 +27,7 @@ const Navigation: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen]);
 
-  const toggleMenu = useCallback(() => {
-=======
   const toggleMenu = () => {
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
     setIsOpen(!isOpen);
   };
 
@@ -288,18 +280,8 @@ const Navigation: React.FC = () => {
                       </h3>
                       <ul className="space-y-3">
                         <li>
-                          <Link to="/ai-content-generator" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
-                            AI Content Generator
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/ai-chatbot-builder" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
-                            AI Chatbot Builder
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/ai-analytics-dashboard" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
-                            AI Analytics Dashboard
+                          <Link to="/ai-voice-assistant" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
+                            AI Voice Assistant
                           </Link>
                         </li>
                         <li>
@@ -308,8 +290,18 @@ const Navigation: React.FC = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/ai-voice-assistant" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
-                            AI Voice Assistant
+                          <Link to="/ai-content-generator" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
+                            AI Content Generator
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/ai-analytics-dashboard" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
+                            AI Analytics Dashboard
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/ai-chatbot-builder" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
+                            AI Chatbot Builder
                           </Link>
                         </li>
                         <li>
@@ -343,8 +335,8 @@ const Navigation: React.FC = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link to="/data-analytics" className="text-gray-300 hover:text-purple-400 transition-colors text-sm">
-                            Data Analytics
+                          <Link to="/custom-software-development" className="text-gray-300 hover:text-purple-400 transition-colors text-sm">
+                            Custom Software Development
                           </Link>
                         </li>
                         <li>

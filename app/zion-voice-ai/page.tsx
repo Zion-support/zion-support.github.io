@@ -3,16 +3,16 @@ import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 
-export default function ZionSecurityShieldPage() {
+export default function ZionVoiceAIPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title>Zion Security Shield - Cybersecurity Monitoring | Zion Tech Group</title>
-        <meta name="description" content="Zion Security Shield - Comprehensive cybersecurity monitoring and threat detection. Protect your business with AI-powered security." />
+        <title>Zion Voice AI - Enterprise Voice Assistant | Zion Tech Group</title>
+        <meta name="description" content="Zion Voice AI - Enterprise-grade voice assistant with natural language processing. Transform your business with AI voice technology." />
       </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">Zion Security Shield</h1>
-        <p className="text-lg text-gray-300 mb-8">Comprehensive cybersecurity monitoring and threat detection coming soon.</p>
+        <h1 className="text-4xl font-bold text-white mb-6">Zion Voice AI</h1>
+        <p className="text-lg text-gray-300 mb-8">Enterprise-grade voice assistant with natural language processing coming soon.</p>
         <Link
           to="/contact"
           className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"

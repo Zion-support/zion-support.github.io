@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 'use client';
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -50,35 +47,35 @@ const HomePage: React.FC = () => {
 
   const aiServices = [
     {
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence with predictive insights',
-      price: '$299/month',
-      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration'],
-      icon: BarChart,
+      title: 'AI Voice Assistant',
+      description: 'Natural voice interactions with 99.5% accuracy in 50+ languages',
+      price: '$149/month',
+      features: ['Voice recognition', 'Natural synthesis', 'Multi-channel support', 'Custom training'],
+      icon: Mic,
       color: 'from-purple-500 to-pink-500'
     },
     {
-      title: 'AI Content Generator',
-      description: 'Automated content creation for blogs, social media, and marketing',
-      price: '$199/month',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice training', 'Content scheduling'],
-      icon: FileText,
+      title: 'AI Email Assistant',
+      description: 'Intelligent email management with smart responses and automation',
+      price: '$79/month',
+      features: ['Smart responses', 'Email categorization', 'Auto-scheduling', 'Analytics'],
+      icon: Mail,
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'AI Customer Support',
-      description: '24/7 intelligent customer service with natural language processing',
-      price: '$399/month',
-      features: ['Multi-channel support', 'Sentiment analysis', 'Escalation management', 'Performance analytics'],
-      icon: MessageCircle,
+      title: 'AI Content Generator',
+      description: 'Advanced content creation with GPT-4 and brand voice training',
+      price: '$99/month',
+      features: ['50+ languages', '500+ templates', 'SEO optimization', 'Plagiarism detection'],
+      icon: FileText,
       color: 'from-green-500 to-emerald-500'
     },
     {
-      title: 'AI Workflow Automation',
-      description: 'Streamline business processes with intelligent automation',
-      price: '$249/month',
-      features: ['Process mapping', 'Automated workflows', 'Integration APIs', 'Performance monitoring'],
-      icon: Workflow,
+      title: 'AI Analytics Dashboard',
+      description: 'Real-time business intelligence with predictive insights and AI',
+      price: '$299/month',
+      features: ['Real-time analytics', 'AI insights', 'Custom reports', 'Team collaboration'],
+      icon: BarChart,
       color: 'from-orange-500 to-red-500'
     }
   ];
@@ -86,34 +83,34 @@ const HomePage: React.FC = () => {
   const itServices = [
     {
       title: 'Cloud Migration',
-      description: 'Seamless migration to AWS, Azure, or Google Cloud',
+      description: 'Expert migration to AWS, Azure, Google Cloud with zero downtime',
       price: 'Starting at $5,000',
-      features: ['Zero-downtime migration', 'Security compliance', 'Cost optimization', '24/7 support'],
+      features: ['Multi-cloud strategy', 'Zero-downtime migration', 'Data migration', 'Performance optimization'],
       icon: Cloud,
       color: 'from-cyan-500 to-blue-500'
     },
     {
-      title: 'Cybersecurity Audit',
-      description: 'Comprehensive security assessment and implementation',
+      title: 'Cybersecurity Solutions',
+      description: 'Comprehensive security implementation with enterprise-grade protection',
       price: 'Starting at $3,000',
-      features: ['Vulnerability assessment', 'Penetration testing', 'Security policies', 'Staff training'],
+      features: ['Security audit', 'Threat detection', 'Compliance monitoring', 'Incident response'],
       icon: Shield,
       color: 'from-red-500 to-orange-500'
     },
     {
-      title: 'Custom Web Development',
-      description: 'Modern, responsive web applications built to scale',
-      price: 'Starting at $8,000',
-      features: ['Responsive design', 'SEO optimization', 'Performance tuning', 'Maintenance support'],
-      icon: Code,
+      title: 'DevOps & CI/CD',
+      description: 'Automated deployment pipelines and infrastructure management',
+      price: 'Starting at $4,000',
+      features: ['CI/CD pipelines', 'Infrastructure as code', 'Monitoring setup', 'Automated testing'],
+      icon: Settings,
       color: 'from-green-500 to-emerald-500'
     },
     {
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications',
-      price: 'Starting at $12,000',
-      features: ['iOS & Android', 'Cross-platform', 'App store optimization', 'Push notifications'],
-      icon: Smartphone,
+      title: 'Custom Software Development',
+      description: 'Tailored software solutions built with modern technologies',
+      price: 'Starting at $8,000',
+      features: ['Custom development', 'API integration', 'Database design', 'Maintenance support'],
+      icon: Code,
       color: 'from-purple-500 to-pink-500'
     }
   ];
@@ -121,34 +118,34 @@ const HomePage: React.FC = () => {
   const microSaasProducts = [
     {
       title: 'Zion Analytics Pro',
-      description: 'Advanced business intelligence platform with AI insights',
+      description: 'Advanced business intelligence with real-time analytics and AI insights',
       price: '$99/month',
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Team collaboration'],
+      features: ['Real-time dashboards', 'AI-powered insights', 'Custom reports', 'Team collaboration'],
       icon: BarChart,
       color: 'from-blue-500 to-purple-500'
     },
     {
-      title: 'Zion Security Shield',
-      description: 'Comprehensive cybersecurity monitoring and threat detection',
+      title: 'Zion Voice AI',
+      description: 'Enterprise-grade voice assistant with natural language processing',
       price: '$149/month',
-      features: ['Threat detection', 'Vulnerability scanning', 'Incident response', 'Compliance reporting'],
-      icon: Shield,
+      features: ['Voice recognition', 'Natural synthesis', 'Multi-channel', 'Custom training'],
+      icon: Mic,
       color: 'from-red-500 to-orange-500'
     },
     {
-      title: 'Zion Content Studio',
-      description: 'AI-powered content creation and management platform',
+      title: 'Zion Email Pro',
+      description: 'Intelligent email management with AI automation and analytics',
       price: '$79/month',
-      features: ['AI content generation', 'Multi-platform publishing', 'Brand consistency', 'Performance tracking'],
-      icon: FileText,
+      features: ['Smart responses', 'Email automation', 'Analytics', 'Team collaboration'],
+      icon: Mail,
       color: 'from-green-500 to-teal-500'
     },
     {
-      title: 'Zion CRM Intelligence',
-      description: 'Smart customer relationship management with AI insights',
-      price: '$129/month',
-      features: ['Lead scoring', 'Sales forecasting', 'Customer insights', 'Automation workflows'],
-      icon: Users,
+      title: 'Zion Content AI',
+      description: 'AI-powered content creation with brand voice training and SEO',
+      price: '$99/month',
+      features: ['AI content generation', 'Brand voice training', 'SEO optimization', 'Multi-language'],
+      icon: FileText,
       color: 'from-purple-500 to-pink-500'
     }
   ];
@@ -186,20 +183,15 @@ const HomePage: React.FC = () => {
                 Leading technology company providing cutting-edge artificial intelligence, cloud infrastructure, 
                 cybersecurity, and custom software development services to businesses worldwide.
               </p>
-<<<<<<< HEAD
               <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <Link
-=======
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Link 
                   to="/ai-services"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group"
                 >
                   Explore Our Solutions
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link 
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
+                <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
@@ -226,23 +218,8 @@ const HomePage: React.FC = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4">
                     <stat.icon className="h-8 w-8 text-white" />
                   </div>
-<<<<<<< HEAD
                   <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-400">{stat.label}</div>
-=======
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                    {feature.description}
-                  </p>
-                  <Link 
-                    to="/ai-services"
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-block"
-                  >
-                    Learn More →
-                  </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
                 </div>
               ))}
             </div>
@@ -276,7 +253,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* AI Services Section */}
         <section className="py-20 bg-gradient-to-br from-purple-900 to-slate-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -357,7 +333,12 @@ const HomePage: React.FC = () => {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
-=======
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -383,9 +364,8 @@ const HomePage: React.FC = () => {
                   >
                     Learn More About Us
                   </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </section>
