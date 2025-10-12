@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Settings, BarChart } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const PricingPage: React.FC = () => {

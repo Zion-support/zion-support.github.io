@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const SupportPage: React.FC = () => {

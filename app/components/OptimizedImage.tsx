@@ -40,7 +40,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const imgRef = useRef<HTMLImageElement>(null)
 
   // Generate optimized image URL based on format and quality
-  const getOptimizedSrc = (originalSrc: string) => {
+  const getOptimizedSrc = useCallback((originalSrc: string) => {
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
       return originalSrc
     }
@@ -51,7 +51,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     url.searchParams.set('quality', quality.toString())
     url.searchParams.set('format', format)
     return url.toString()
-  }
+  }, [quality, format])
 
   const handleLoad = useCallback(() => {
     setIsLoaded(true)
@@ -65,7 +65,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   useEffect(() => {
     setCurrentSrc(getOptimizedSrc(src))
-  }, [src, quality, format])
+  }, [src, getOptimizedSrc])
 
   useEffect(() => {
     const currentImg = imgRef.current
