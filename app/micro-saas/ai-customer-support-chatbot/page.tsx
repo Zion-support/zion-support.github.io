@@ -1,8 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import React from \'react\';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MessageSquare, Bot} from 'lucide-react';
+=======
+import { ArrowRight, MessageSquare, Bot } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 export default function AICustomerSupportChatbotPage() {
   const features = [

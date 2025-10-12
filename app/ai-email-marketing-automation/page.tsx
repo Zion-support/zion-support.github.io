@@ -1,9 +1,15 @@
 import React from \'react\';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 'use client';
 
 const Page: React.FC = () => {
+=======
+import { Helmet } from 'react-helmet-async';
+
+export default function AIEmailMarketingAutomationPage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
   return (
     <>
       <Helmet />
@@ -58,7 +64,11 @@ const Page: React.FC = () => {
       </div>
     </>
   );
+<<<<<<< HEAD
 };
 
 export default Page;
 ;
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79

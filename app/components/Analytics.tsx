@@ -6,6 +6,7 @@ interface AnalyticsProps {
   children: React.ReactNode;
 }
 
+export default function Analytics({ children }: AnalyticsProps) {
   useEffect(() => {
     // Initialize analytics tracking
     const initAnalytics = () => {

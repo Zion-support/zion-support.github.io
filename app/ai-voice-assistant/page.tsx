@@ -1,7 +1,13 @@
+'use client';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { CheckCircle, Mic, Brain, Zap, Shield, BarChart3, Star, Phone } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
-export default function AIVoiceAssistant() {
+export default function AIVoiceAssistantPage() {
   const features = [
     {
+<<<<<<< HEAD
       icon: <Brain className="w-6 h-6text-cyan-400" />,
       title: 'Natural Language Understanding',
       description: 'Advanced AI processes complex voice commands and maintains context across conversations'
@@ -20,105 +26,73 @@ export default function AIVoiceAssistant() {
       icon: <Target className="w-6 h-6text-green-400" />,
       title: 'Multi-platform Integration',
       description: 'Seamlessly integrate with mobile apps, websites, smart devices, and IoT systems'
+=======
+      icon: Mic,
+      title: 'Natural Speech Recognition',
+      description: 'Advanced AI understands natural language with 99% accuracy across multiple languages and accents.'
+    },
+    {
+      icon: Brain,
+      title: 'Intelligent Processing',
+      description: 'Context-aware AI that learns from interactions and provides personalized responses.'
+    },
+    {
+      icon: Zap,
+      title: 'Real-time Response',
+      description: 'Lightning-fast processing with sub-second response times for seamless conversations.'
+    },
+    {
+      icon: Shield,
+      title: 'Secure & Private',
+      description: 'Enterprise-grade security with end-to-end encryption and privacy protection.'
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
     }
-  ]
+  ];
 
-  const assistantFeatures = [
+  const useCases = [
     {
-      category: 'Voice Capabilities',
-      items: ['Speech Recognition', 'Natural Language Processing', 'Voice Synthesis', 'Emotion Detection', 'Multi-language Support', 'Noise Cancellation']
+      icon: Phone,
+      title: 'Customer Service',
+      description: 'Automate customer support with intelligent voice assistants that handle common inquiries.'
     },
     {
-      category: 'Task Management',
-      items: ['Calendar Management', 'Email Handling', 'Reminder Setting', 'Task Creation', 'Meeting Scheduling', 'Note Taking']
+      icon: Brain,
+      title: 'Smart Home',
+      description: 'Control smart devices and automate home tasks with voice commands.'
     },
     {
-      category: 'Integration',
-      items: ['Mobile Apps', 'Web Applications', 'Smart Home Devices', 'CRM Systems', 'ERP Integration', 'API Access']
+      icon: BarChart3,
+      title: 'Business Automation',
+      description: 'Streamline business processes with voice-activated workflows and data entry.'
     },
     {
-      category: 'Customization',
-      items: ['Custom Voice Training', 'Personality Settings', 'Command Customization', 'Brand Voice', 'Response Templates', 'Workflow Automation']
+      icon: Star,
+      title: 'Personal Assistant',
+      description: 'Create personalized AI assistants for scheduling, reminders, and daily tasks.'
     }
-  ]
-
-  const pricingPlans = [
-    {
-      name: 'Personal',
-      price: '$19',
-      period: '/month',
-      description: 'Perfect for individuals and small teams',
-      features: [
-        'Up to 1,000 interactions/month',
-        'Basic voice features',
-        'Standard voices',
-        'Email support',
-        'Mobile app access',
-        'Basic integrations'
-      ],
-      popular: false
-    },
-    {
-      name: 'Business',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Up to 10,000 interactions/month',
-        'Advanced voice features',
-        'Custom voice training',
-        'Priority support',
-        'Advanced integrations',
-        'Analytics dashboard',
-        'API access'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited interactions',
-        'Custom AI training',
-        'White-label solution',
-        'Dedicated support',
-        'Custom integrations',
-        'Advanced analytics',
-        'SLA guarantee'
-      ],
-      popular: false
-    }
-  ]
-
-  const testimonials = [
-    {
-      name: 'David Park',
-      company: 'Smart Home Solutions',
-      content: 'AI Voice Assistant transformed our customer experience. The natural conversation flow is incredible.',
-      rating: 5
-    },
-    {
-      name: 'Sarah Johnson',
-      company: 'Healthcare Provider',
-      content: 'Our patients love the voice assistant for appointment scheduling. It handles complex requests perfectly.',
-      rating: 5
-    },
-    {
-      name: 'Mike Chen',
-      company: 'E-commerce Platform',
-      content: 'Voice shopping has increased our sales by 40%. The voice recognition accuracy is outstanding.',
-      rating: 5
-    }
-  ]
+  ];
 
   return (
+<<<<<<< HEAD
     <Layout
       title="AI Voice Assistant - Intelligent Voice Solutions | Zion Tech Group"
       description="Transform user interaction with AI-powered voice assistants. Natural language processing, human-like voice synthesis, and seamless integration. Start your free trial today."
       keywords="AI voice assistant, voice AI, speech recognition, voice synthesis, conversational AI, voice automation" />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900" />
+=======
+    <>
+      <Helmet>
+        <title>AI Voice Assistant - Zion Tech Group</title>
+        <meta name="description" content="Professional AI voice assistant services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta name="keywords" content="AI voice assistant, speech recognition, IT services, Zion Tech Group" />
+        <meta property="og:title" content="AI Voice Assistant - Zion Tech Group" />
+        <meta property="og:description" content="Professional AI voice assistant services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-voice-assistant" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
         {/* Hero Section */}
         <section className="pt-32pb-20" />
           <div className="container mx-autopx-4" />
@@ -319,6 +293,10 @@ export default function AIVoiceAssistant() {
       </div>
     </>
   );
+<<<<<<< HEAD
 };
 
 export default AIVoiceAssistantPage;
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79

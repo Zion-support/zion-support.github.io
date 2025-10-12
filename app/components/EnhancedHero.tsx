@@ -2,7 +2,7 @@ import React from \'react\';
 import { ArrowRight } from 'lucide-react';
 'use client'
 
-const EnhancedHero: React.FC = () => {
+export default function EnhancedHero() {
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',

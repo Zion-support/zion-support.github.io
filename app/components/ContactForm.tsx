@@ -12,7 +12,12 @@ interface FormData {
   service: string;
 }
 
+<<<<<<< HEAD
   const [formData, setFormData] = useState<FormData />({
+=======
+export default function ContactForm() {
+  const [formData, setFormData] = useState<FormData>({
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
     name: '',
     email: '',
     phone: '',

@@ -9,11 +9,12 @@ interface FuturisticCardProps {
   onClick?: () => void;
 }
 
+const FuturisticCard = ({
   children, 
   const variant = 'default', 
   className = '', 
   onClick 
-}: FuturisticCardProps) {
+}: FuturisticCardProps) => {
   const getVariantStyles = () => {
     switch (variant) {
       case 'service':
@@ -52,4 +53,6 @@ interface FuturisticCardProps {
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent opacity-0 group-hover:opacity-100transition-opacityduration-500" / />
     </motion.div>
   );
-}
+};
+
+export default FuturisticCard;

@@ -2,8 +2,13 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Calculator, Building2, Wallet} from 'lucide-react';
 'use client';
 
-import { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import { ArrowRight, Calculator, Building2, Wallet } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 export default function AiFinancialAnalyticsProPage() {
 

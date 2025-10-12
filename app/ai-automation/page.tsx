@@ -150,14 +150,21 @@ const AIAutomationPage: React.FC = () => {
                 ))}
               </ul>
             </div>
+<<<<<<< HEAD
             <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-2xl p-8borderborder-cyan-500/30" />
               <h3 className="text-2xl font-boldtext-whitemb-4" />Ready to Automate?</h3>
               <p className="text-gray-300mb-6" />
+=======
+            <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-2xl p-8 border border-cyan-500/30">
+              <h3 className="text-2xl font-bold text-white mb-4">Ready to Automate?</h3>
+              <p className="text-gray-300 mb-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
                 Let our AI experts help you identify automation opportunities and implement solutions that deliver immediate value.
               </p>
               <Link to="/contact" className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 inline-flexitems-centergap-2" />
                 Start Your Automation Journey <ArrowRight className="w-5h-5" />
               </Link>
+<<<<<<< HEAD
             <div className="relative" />
               <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2 xl p-8 backdrop-blur-smborderborder-white/10" />
                 <div className="text-center" />
@@ -173,6 +180,8 @@ const AIAutomationPage: React.FC = () => {
               <p className="text-gray-600" />
                 Continuously monitor and optimize automation performance
               </p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
             </div>
           </div>
         </div>

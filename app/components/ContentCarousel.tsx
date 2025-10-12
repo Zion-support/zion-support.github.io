@@ -41,7 +41,12 @@ const defaultSlides: Slide[] = [
   }
 ];
 
+<<<<<<< HEAD
   const slides = defaultSlides, 
+=======
+export default function ContentCarousel({ 
+  slides = defaultSlides, 
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
   autoPlay = true, 
   interval = 5000 
 }: ContentCarouselProps) {

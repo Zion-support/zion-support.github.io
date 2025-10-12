@@ -1,12 +1,17 @@
 'use client';
 import React, { useEffect } from 'react';
+<<<<<<< HEAD
 import { getCLS, getFID, getFCP, getLCP, getTTFB };
 'use client';
+=======
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     const monitorCoreWebVitals = () => {
+<<<<<<< HEAD
       if ('web-vitals' in, window) {
           getCLS(console.log);
           getFID(console.log);
@@ -14,6 +19,14 @@ const PerformanceMonitor: React.FC = () => {
           getLCP(console.log);
           getTTFB(console.log);
         });
+=======
+      if ('web-vitals' in window) {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
       }
     };
 

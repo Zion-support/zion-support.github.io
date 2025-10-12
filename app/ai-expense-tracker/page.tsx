@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Receipt, ArrowRight, Bot, RotateCcw, RotateCw } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -27,13 +28,21 @@ const Page: React.FC = () => {
       description: "Bank-level security ensures your financial data is protected and private."
     }
   ];
+=======
+'use client';
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
+export default function AIExpenseTrackerPage() {
   return (
     <>
       <Helmet />
         <title />AI Expense Tracker - Zion Tech Group</title>
         <meta name="description" content="Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="AI expense tracking, financial management, Zion Tech Group" />
+        <meta name="keywords" content="AI solutions, expense tracking, IT services, Zion Tech Group" />
         <meta property="og:title" content="AI Expense Tracker - Zion Tech Group" />
         <meta property="og:description" content="Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta property="og:type" content="website" />
@@ -64,6 +73,7 @@ const Page: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20" />
           <div className="containermx-autopx-4" />
@@ -90,6 +100,8 @@ const Page: React.FC = () => {
           </div>
         </section>
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
         {/* CTA Section */}
         <section className="py-20" />
           <div className="containermx-autopx-4" />
@@ -114,6 +126,4 @@ const Page: React.FC = () => {
       </div>
     </>
   );
-};
-
-export default Page;
+}

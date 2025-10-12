@@ -1,8 +1,15 @@
 'use client';
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Users, Zap, Shield, Brain, BarChart, MessageCircle, Target, ShoppingCart, Globe, Clock } from 'lucide-react';
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, Globe, Shield, MessageCircle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 const AiChatbotBuilderPage: React.FC = () => {
   const features = [
@@ -37,6 +44,7 @@ const AiChatbotBuilderPage: React.FC = () => {
       color: 'from-red-500 to-pink-500'
     },
     {
+<<<<<<< HEAD
       title: 'Real-time Monitoring',
       description: 'Monitor conversations in real-time and intervene when human assistance is needed',
       icon: <MessageCircle className="w-8h-8text-teal-400" />,
@@ -71,6 +79,21 @@ const AiChatbotBuilderPage: React.FC = () => {
     }
   ];
 
+=======
+      title: 'Omnichannel Support',
+      description: 'Deploy across web, mobile, social media, and messaging platforms seamlessly',
+      icon: <MessageCircle className="w-8 h-8 text-orange-400" />,
+      color: 'from-orange-500 to-red-500'
+    },
+    {
+      title: 'AI-Powered Responses',
+      description: 'Natural language processing and machine learning for intelligent, contextual conversations',
+      icon: <Brain className="w-8 h-8 text-yellow-400" />,
+      color: 'from-yellow-500 to-orange-500'
+    }
+  ];
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
   const pricingPlans = [
     {
       name: 'Starter',
@@ -94,11 +117,18 @@ const AiChatbotBuilderPage: React.FC = () => {
       features: [
         'Up to 10,000 conversations/month',
         'Advanced AI with custom training',
+<<<<<<< HEAD
         'Multi-channel deployment',
         'CRM integrations',
         'Advanced analytics',
         'Priority support',
         'Custom branding'
+=======
+        'Priority support',
+        'Advanced integrations',
+        'Detailed analytics & reporting',
+        'Multi-language support'
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
       ],
       popular: true
     },
@@ -106,7 +136,11 @@ const AiChatbotBuilderPage: React.FC = () => {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
+<<<<<<< HEAD
       description: 'Full-scale solution for large organizations',
+=======
+      description: 'Tailored solutions for large organizations',
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
       features: [
         'Unlimited conversations',
         'Custom AI models',

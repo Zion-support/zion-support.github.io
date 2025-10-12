@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import React from \'react\';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
-const Page: React.FC = () => {
+export default function AutomationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20" />
       <Helmet />
@@ -19,6 +26,4 @@ const Page: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Page;
+}

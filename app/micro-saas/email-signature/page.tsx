@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { Mail, Palette, Users, Zap, CheckCircle, ArrowRight, BarChart3, Shield, Clock } from 'lucide-react'
+=======
+import React from 'react'
+import { Palette, ArrowRight } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 import { Link } from 'react-router-dom'
 import React from \'react\';
 import { Palette, ArrowRight} from 'lucide-react';

@@ -1,7 +1,12 @@
-import { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight, HardDrive, Laptop, Tablet, Router } from 'lucide-react';
+=======
+import { ArrowRight, Cloud, Shield, BarChart3, Zap, Database, Network, Search, Target, Settings, Server, CheckCircle, Sparkles, Play, Star, Clock, MessageCircle, Phone, Mail, MapPin } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 export default function CloudMigrationPage() {
 

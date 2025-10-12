@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import React from \'react\';
 'use client'
+=======
+'use client';
+import React from 'react';
+import { Brain, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 const FuturisticHeroPage: React.FC = () => {
   const features = [

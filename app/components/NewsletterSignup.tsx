@@ -118,10 +118,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
           </div>
         </div>
       </div>
-    </div>);
-  }
-
-  return content;
+    </div>
+  );
 };
 
 export default NewsletterSignup;

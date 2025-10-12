@@ -1,6 +1,10 @@
 import { createContext, useContext, useEffect} from 'react';
 'use client';
 
+<<<<<<< HEAD
+=======
+import { createContext, useContext, useEffect } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any />) => void;
@@ -20,6 +24,7 @@ interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
 
+export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   useEffect(() => {
     // Initialize analytics
     // Analytics initialization logic here

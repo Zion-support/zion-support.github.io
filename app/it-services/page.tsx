@@ -1,8 +1,11 @@
 import { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ShoppingCart } from 'lucide-react';
+<<<<<<< HEAD
 import { ArrowRight, ShoppingCart} from 'lucide-react';
 'use client';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 const ItServicesPage: React.FC = () => {
 
@@ -76,6 +79,7 @@ const ITServicesPage: React.FC = () => {
         'Mobile optimization',
         'Cross-browser compatibility'
       ],
+      icon: Code,
       color: 'from-green-500 to-emerald-500',
       category: 'Development'
     },
@@ -390,6 +394,7 @@ const ITServicesPage: React.FC = () => {
   const filteredServices = selectedCategory === 'All' 
     ? itServices 
     : itServices.filter(service => service.category === selectedCategory);
+<<<<<<< HEAD
       description: 'Modern web applications built with cutting-edge technologies',
       features: ['React/Next.js', 'Node.js backend', 'Database design', 'API development'],
       price: 'Starting at $3,000/project'
@@ -423,6 +428,8 @@ const ITServicesPage: React.FC = () => {
     { number: '99%', label: 'Client Satisfaction', icon: Star },
     { number: '24/7', label: 'Support Available', icon: Award },
   ];
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
   return (
     <>
@@ -532,8 +539,16 @@ const ITServicesPage: React.FC = () => {
               Let our expert team help you build, secure, and optimize your technology infrastructure 
               for maximum performance and security.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-rowgap-4justify-center" />
               <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
                 Get Started Today
                 <ArrowRight className="ml-2h-5w-5" />
               </Link>
@@ -698,5 +713,8 @@ const ITServicesPage: React.FC = () => {
 };
 
 export default ItServicesPage;
+<<<<<<< HEAD
 export default ITServicesPage;
 export default ITServicesPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79

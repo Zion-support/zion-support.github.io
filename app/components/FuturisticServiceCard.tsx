@@ -77,6 +77,17 @@ import { ArrowRight } from 'lucide-react';
             <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
               Discover the powerful features that make our futuristic service card solutions stand out.
             </p>
+<<<<<<< HEAD
           </div>;
         </div></div></section>)};export default FuturisticServiceCardPage
 }
+=======
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default FuturisticServiceCardPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79

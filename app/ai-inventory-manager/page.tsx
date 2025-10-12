@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { Package, TrendingUp, BarChart3, AlertTriangle, Zap, CheckCircle, ArrowRight, Star, Brain, Database, Shield, DollarSign } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import React from \'react\';
 import { ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react';
 import { Link } from 'react-router-dom';
+=======
+import React from 'react'
+import { ArrowRight, Brain, BarChart3, Shield, Zap, CheckCircle, Star } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 const AIInventoryManagerPage: React.FC = () => {
   const features = [

@@ -1,10 +1,16 @@
-ursor/
-      description: 'Advanced AI technology to automatically optimize your website for search engines',
-      description: 'Advanced AI technology to optimize your website for search engines and improve rankings',
-    },
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
+
+const EnhancedSEOOptimizerPage: React.FC = () => {
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered SEO Optimization',
+      description: 'Advanced AI technology to optimize your website for search engines and improve rankings',
+    },
+    {
       icon: Zap,
       title: 'Real-time Analysis',
       description: 'Lightning-fast SEO analysis and optimization with instant recommendations',
@@ -34,6 +40,7 @@ ursor/
     <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
       <Helmet />
         <title>Enhanced SEO Optimizer | Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Professional SEO optimization services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
         <meta name="keywords" content="SEO optimizer, AI solutions, IT services, Zion Tech Group, search engine optimization" / / />
         <meta name="description" content="Professional Enhanced SEO Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
@@ -54,6 +61,22 @@ ursor/
             <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
               Transform your business with our advanced SEO optimization solutions.
               Powered by cutting-edge AI technology and industry expertise.
+=======
+        <meta name="description" content="Professional Enhanced SEO Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="SEO optimizer, search engine optimization, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Enhanced SEO Optimizer
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
               Optimize your website for search engines with our advanced AI-powered SEO optimization solutions.
               Improve rankings and drive more organic traffic.
             </p>

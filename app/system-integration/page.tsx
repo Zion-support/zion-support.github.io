@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from \'react\';
 import { Helmet } from 'react-helmet-async';
@@ -108,6 +109,9 @@ const Page: React.FC = () => {
         </section>
       </div>
     </>
+=======
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
   );
 };
 

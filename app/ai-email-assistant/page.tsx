@@ -3,11 +3,14 @@ import React from \'react\';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings } from 'lucide-react';
+<<<<<<< HEAD
 import React from \'react\';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Star, Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings} from 'lucide-react';
 'use client';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 const AIEmailAssistantPage: React.FC = () => {
   const features = [
@@ -98,9 +101,15 @@ const AIEmailAssistantPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
               {features.map((feature, index) => (
+<<<<<<< HEAD
                 <div key={index} className="text-centergroup" />
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300" />
                     {feature.icon}
+=======
+                <div key={index} className="text-center group">
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-10 h-10 text-cyan-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
                   </div>
                   <h3 className="text-xl font-boldtext-whitemb-4"   />{feature.title}</h3>
                   <p className="text-gray-300leading-relaxed" />{feature.description}</p>
@@ -124,9 +133,15 @@ const AIEmailAssistantPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
               {useCases.map((useCase, index) => (
+<<<<<<< HEAD
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110transition-transformduration-300" />
                     {useCase.icon}
+=======
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <useCase.icon className="w-6 h-6 text-cyan-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-7b79
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3group-hover:text-cyan-400transition-colors"  />{useCase.title}
                   </h3>
