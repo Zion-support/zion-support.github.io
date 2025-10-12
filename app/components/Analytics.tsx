@@ -39,15 +39,15 @@ const Analytics: React.FC<AnalyticsProps> = ({
   }
 
   const initializePerformanceMonitoring = () => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            console.log('Navigation timing:', entry)
-          }
-        }
+    if (typeof window !== 'undefined') {
+      // Monitor Core Web Vitals
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS(console.log)
+        getFID(console.log)
+        getFCP(console.log)
+        getLCP(console.log)
+        getTTFB(console.log)
       })
-      observer.observe({ entryTypes: ['navigation'] })
     }
   }
 
@@ -63,47 +63,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
         // Send error to analytics service
       })
     }
-
-    // Load Google Analytics
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
-        page_title: document.title,
-        page_location: window.location.href
-      })
-    }
-  }
-
-  const initializePerformanceMonitoring = () => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
-      // Monitor Core Web Vitals
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log)
-        getFID(console.log)
-        getFCP(console.log)
-        getLCP(console.log)
-        getTTFB(console.log)
-      })
-    }
-  }
-
-  const initializeErrorTracking = () => {
-    // Initialize error tracking
-    if (typeof window !== 'undefined') {
-      window.addEventListener('error', (event) => {
-        console.error('JavaScript Error:', event.error)
-        // Send to error tracking service
-      })
-
-      window.addEventListener('unhandledrejection', (event) => {
-        console.error('Unhandled Promise Rejection:', event.reason)
-        // Send to error tracking service
-      })
-    }
   }
 
   const initializeUserBehaviorTracking = () => {
-    // Initialize user behavior tracking
     if (typeof window !== 'undefined') {
       // Track page views
       const trackPageView = () => {
@@ -118,13 +80,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       // Track clicks
       const trackClick = (event: Event) => {
         const target = event.target as HTMLElement
-        if (target && window.gtag) {
-          window.gtag('event', 'click', {
-            event_category: 'engagement',
-            event_label: target.tagName + (target.className ? '.' + target.className : ''),
-            value: 1
-          })
-        if (target.tagName === 'A' || target.tagName === 'BUTTON') {
+        if (target && (target.tagName === 'A' || target.tagName === 'BUTTON')) {
           if (window.gtag) {
             window.gtag('event', 'click', {
               event_category: 'engagement',
@@ -147,12 +103,6 @@ const Analytics: React.FC<AnalyticsProps> = ({
               value: scrollPercent
             })
           }
-          if (window.gtag) {
-            window.gtag('event', 'scroll', {
-              event_category: 'engagement',
-              event_label: `${scrollPercent}%`
-            })
-          }
         }
       }
 
@@ -160,10 +110,6 @@ const Analytics: React.FC<AnalyticsProps> = ({
       trackPageView()
       document.addEventListener('click', trackClick)
       window.addEventListener('scroll', trackScroll)
-      // Add event listeners
-      document.addEventListener('click', trackClick)
-      window.addEventListener('scroll', trackScroll)
-      trackPageView()
 
       // Cleanup
       return () => {

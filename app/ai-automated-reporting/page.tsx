@@ -1,12 +1,9 @@
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
-import {ArrowRight, CheckCircle, Shield, Brain, BarChart, Target, TrendingUp, FileText} from 'lucide-react'
+import {ArrowRight, CheckCircle, Shield, Brain, BarChart, Target, TrendingUp, FileText, BarChart3, Clock, Zap} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import React from 'react';
-import { CheckCircle, ArrowRight, BarChart3, FileText, TrendingUp, Clock, Shield, Zap } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const AIAutomatedReportingPage: React.FC = () => {

@@ -70,7 +70,17 @@ const FuturisticBackgroundPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Experience the future of technology with our cutting-edge futuristic background solutions. 
               Powered by advanced AI and innovative design.
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+const FuturisticBackgroundPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />

@@ -24,7 +24,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
       icon: Globe,
       title: 'Global SEO',
       description: 'Optimize your website for international markets and multiple languages'
-      description: 'Advanced AI technology to automatically optimize your website for search engines'
     },
     {
       icon: Zap,

@@ -19,7 +19,6 @@ const EnhancedSEOPage: React.FC = () => {
       icon: Shield,
       title: 'Technical SEO',
       description: 'Comprehensive technical SEO audits and optimization for better search visibility'
-      description: 'Lightning-fast SEO analysis and optimization with instant results'
     },
     {
       icon: Shield,
@@ -30,7 +29,6 @@ const EnhancedSEOPage: React.FC = () => {
       icon: Globe,
       title: 'Global SEO',
       description: 'Optimize your website for international markets and multiple languages'
-      description: 'Worldwide SEO optimization and support for international businesses'
     }
   ]
 
@@ -177,4 +175,4 @@ const EnhancedSEOPage: React.FC = () => {
   )
 }
 
-export default EnhancedSEOPage
+export default EnhancedSEO

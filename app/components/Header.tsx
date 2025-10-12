@@ -8,8 +8,17 @@ const Header: React.FC = () => {
       {/* Spacer to prevent content from going under fixed header */}
       <div className="h-16 lg:h-20" />
     </React.Fragment>
-  )};const Header: React.FC = () => {return (<></>
-      <Navigation />}
+  )
+}
+
+const Header: React.FC = () => {
+  return (
+    <>
+      <Navigation />
       {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" /></div>
-    </>)};export default Header
+      <div className="h-16 lg:h-20" />
+    </>
+  )
+}
+
+export default Header

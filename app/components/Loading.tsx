@@ -142,6 +142,9 @@ const LoadingPage: React.FC = () => {
           </div>
         </div>
       </section>
+    </div>
+  )
+}
 
 const LoadingPage: React.FC = () => {
   return (

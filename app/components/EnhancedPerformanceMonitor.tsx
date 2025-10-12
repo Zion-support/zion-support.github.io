@@ -24,7 +24,6 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
       icon: Globe,
       title: 'Global Coverage',
       description: 'Monitor performance across multiple locations and data centers worldwide'
-      description: 'Lightning-fast performance monitoring with instant alerts and insights'
     },
     {
       icon: Shield,
@@ -72,14 +71,6 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Monitor and optimize your system performance with our advanced AI-powered monitoring solutions. 
               Get real-time insights and proactive alerts.
-                Enhanced Performance
-              </span>
-              <br />
-              <span className="text-white">Monitoring</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced performance monitoring solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
@@ -184,4 +175,4 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
   )
 }
 
-export default EnhancedPerformanceMonitorPage
+export default EnhancedPerformanceMonitor
