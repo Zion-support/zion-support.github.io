@@ -20,150 +20,124 @@ const FuturisticBackgroundPage: React.FC = () => {
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption and compliance standards.',
+      benefits: ['Data encryption', 'Access controls', 'Compliance', 'Audit trails']
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results.',
+      benefits: ['Fast processing', 'Real-time updates', 'Optimized performance', 'Scalable infrastructure']
+    },
+    {
       icon: Target,
       title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+      description: 'Accurate targeting and personalization for maximum impact.',
+      benefits: ['Precise targeting', 'Personalization', 'Custom campaigns', 'ROI optimization']
     },
     {
       icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive intelligence', 'ROI optimization']
+      title: 'Growth Analytics',
+      description: 'Track and analyze growth metrics with advanced reporting tools.',
+      benefits: ['Growth tracking', 'Trend analysis', 'Performance metrics', 'Success indicators']
     }
-  ]
+  ];
 
-<<<<<<< HEAD
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
+  const stats = [
+    { number: '500+', label: 'Projects Completed', icon: <Star className="w-6 h-6" /> },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Clock className="w-6 h-6" /> },
+    { number: '24/7', label: 'Support Available', icon: <Shield className="w-6 h-6" /> },
+    { number: '50+', label: 'Expert Team', icon: <Brain className="w-6 h-6" /> }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Futuristic Background | Zion Tech Group</title>
-        <meta name="description" content="Professional Futuristic Background services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="futuristic background, AI solutions, IT services, Zion Tech Group, advanced technology" />
+        <title>Futuristic Background - Zion Tech Group</title>
+        <meta name="description" content="Experience the future of technology with Zion Tech Group's advanced AI and IT solutions." />
+        <meta name="keywords" content="futuristic technology, AI solutions, IT services, advanced analytics, Zion Tech Group" />
       </Helmet>
-      
+
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Futuristic Background
-              <br />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Solutions
-              </span>
+
+      {/* Hero Section */}
+      <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+              Welcome to the <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Future</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform your digital presence with cutting-edge futuristic background technology. 
-              Powered by advanced AI and modern design principles.
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-      </Helmet>
-      
-      <Navigation />
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
+              Experience cutting-edge technology solutions that transform businesses and drive innovation. 
+              Our futuristic approach combines AI, analytics, and enterprise-grade security.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                Explore Solutions
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                Watch Demo
               </button>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
+        </div>
+      </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Futuristic Background Solutions?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our futuristic background solutions deliver unmatched performance, security, and scalability.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                    <feature.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-purple-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+      {/* Features Section */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Futuristic Features</h2>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+              Advanced technology solutions for the modern enterprise
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+                <div className="mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-12 h-12 text-purple-400" />
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our futuristic background solutions and how they can benefit your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
-                  Contact Us
-                </button>
-                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                  Schedule Demo
-                </button>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      {/* Stats Section */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our futuristic background solutions for your business.
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Our Impact</h2>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+              Numbers that reflect our commitment to excellence
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-white/10 backdrop-blur-lg rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  {stat.icon}
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -171,34 +145,30 @@ const FuturisticBackgroundPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact us today to learn more about our futuristic background solutions and how they can transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-              Contact Us
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-              Learn More
-            </button>
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Ready for the Future?</h2>
+              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                Join the technological revolution and transform your business with our cutting-edge solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                  Learn More
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <Footer />
     </div>
-=======
-              </div>
-            ))}
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
-  )
-}
+  );
+};
 
-export default FuturisticBackgroundPage
+export default FuturisticBackgroundPage;

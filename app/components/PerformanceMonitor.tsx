@@ -1,101 +1,106 @@
-import React, { useEffect } from 'react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react'
 
-const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
-    // Monitor Core Web Vitals
-<<<<<<< HEAD
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Largest Contentful Paint (LCP)
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-            // Send to analytics
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'web_vitals', {
-                name: 'LCP',
-                value: Math.round(entry.startTime),
-                event_category: 'Web Vitals'
-              });
-            }
-          }
-        }
-      });
-      
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // Monitor First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          console.log('FID:', entry.processingStart - entry.startTime);
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'web_vitals', {
-              name: 'FID',
-              value: Math.round(entry.processingStart - entry.startTime),
-              event_category: 'Web Vitals'
-            });
-          }
-        }
-      });
-      
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Monitor Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
-          }
-        }
-        console.log('CLS:', clsValue);
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'web_vitals', {
-            name: 'CLS',
-            value: Math.round(clsValue * 1000),
-            event_category: 'Web Vitals'
-          });
-        }
-      });
-      
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      // Cleanup observers
-      return () => {
-        observer.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
+const PerformanceMonitorPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Monitoring',
+      description: 'Advanced AI technology to monitor and analyze your system performance'
+    },
+    {
+      icon: Zap,
+      title: 'Real-time Analytics',
+      description: 'Get instant insights into your system performance with comprehensive analytics'
+    },
+    {
+      icon: Shield,
+      title: 'Security Monitoring',
+      description: 'Monitor security threats and vulnerabilities with advanced detection systems'
+    },
+    {
+      icon: Globe,
+      title: 'Global Coverage',
+      description: 'Monitor performance across multiple locations and data centers worldwide'
     }
-=======
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (entry.entryType === 'largest-contentful-paint') {
-          console.log('LCP:', entry.startTime);
-        } else if (entry.entryType === 'first-input') {
-          console.log('FID:', (entry as any).processingStart - entry.startTime);
-        } else if (entry.entryType === 'layout-shift') {
-          console.log('CLS:', (entry as any).value);
-        }
-      }
-    });
+  ]
 
-    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+  const benefits = [
+    'Real-time performance monitoring',
+    'AI-powered anomaly detection',
+    'Automated performance optimization',
+    'Comprehensive reporting and analytics',
+    'Security threat monitoring',
+    'Scalability recommendations',
+    'Cost optimization insights',
+    '24/7 monitoring and alerting'
+  ]
 
-    // Monitor page load time
-    window.addEventListener('load', () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      console.log('Page Load Time:', navigation.loadEventEnd - navigation.loadEventStart);
-      console.log('DOM Content Loaded:', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart);
-    });
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Performance Monitor - Zion Tech Group</title>
+        <meta name="description" content="Advanced performance monitoring solutions by Zion Tech Group. Monitor and optimize your system performance." />
+        <meta name="keywords" content="performance monitoring, system monitoring, analytics, optimization, Zion Tech Group" />
+      </Helmet>
 
-    return () => {
-      observer.disconnect();
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-cbf2
-  }, []);
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Performance Monitor
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Monitor and optimize your system performance with our advanced monitoring solutions. 
+            Get real-time insights and automated optimizations for maximum efficiency.
+          </p>
+        </div>
 
-  return null;
-};
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
+            </div>
+          ))}
+        </div>
 
-export default PerformanceMonitor;
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">
+            Performance Monitoring Features
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Monitor Performance?
+          </h2>
+          <p className="text-xl text-purple-100 mb-8">
+            Contact our experts to discuss your performance monitoring needs and get a customized solution.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default PerformanceMonitorPage

@@ -1,10 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Star, Users, Shield, Cloud, BarChart3, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
 
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,21 +15,33 @@ const DynamicContentShowcase: React.FC = () => {
       color: 'from-yellow-400 to-orange-500'
     },
     {
-      icon: Cloud,
-      title: 'Cloud-Native Architecture',
-      description: 'Built for the cloud with scalability, reliability, and performance at its core.',
-      color: 'from-blue-400 to-cyan-500'
+      icon: BarChart3,
+      title: 'Advanced Analytics',
+      description: 'Get deep insights into your business performance with real-time analytics and predictive modeling.',
+      color: 'from-blue-400 to-purple-500'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with advanced encryption, compliance, and threat protection.',
-      color: 'from-green-400 to-emerald-500'
+      description: 'Bank-level security with end-to-end encryption and compliance with industry standards.',
+      color: 'from-green-400 to-teal-500'
     },
     {
-      icon: BarChart3,
-      title: 'Real-Time Analytics',
-      description: 'Make data-driven decisions with comprehensive analytics and business intelligence.',
+      icon: Cloud,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions that grow with your business and ensure maximum uptime.',
+      color: 'from-indigo-400 to-blue-500'
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Enhanced team productivity with collaborative tools and seamless communication features.',
+      color: 'from-pink-400 to-rose-500'
+    },
+    {
+      icon: Star,
+      title: 'Premium Support',
+      description: '24/7 expert support with dedicated account managers and priority response times.',
       color: 'from-purple-400 to-pink-500'
     }
   ];
@@ -40,59 +49,46 @@ const DynamicContentShowcase: React.FC = () => {
   const testimonials = [
     {
       name: 'Sarah Johnson',
-      role: 'CEO',
-      company: 'TechCorp Solutions',
-      content: 'Zion Tech Group transformed our entire IT infrastructure. The AI solutions they implemented have increased our efficiency by 300% and reduced costs significantly.',
-      rating: 5
+      role: 'CEO, TechCorp',
+      content: 'Zion Tech Group transformed our entire IT infrastructure. The AI solutions have increased our efficiency by 300%.',
+      avatar: 'SJ'
     },
     {
       name: 'Michael Chen',
-      role: 'CTO',
-      company: 'InnovateLabs',
-      content: 'Their cloud migration services were exceptional. We achieved 99.9% uptime and our applications now run 5x faster than before.',
-      rating: 5
+      role: 'CTO, InnovateLab',
+      content: 'The cloud migration was seamless. We now have 99.9% uptime and our costs have decreased by 40%.',
+      avatar: 'MC'
     },
     {
       name: 'Emily Rodriguez',
-      role: 'Operations Director',
-      company: 'Global Enterprises',
-      content: 'The security enhancements they implemented gave us peace of mind. Our data is now more secure than ever, and we passed all compliance audits.',
-      rating: 5
+      role: 'VP Operations, DataFlow',
+      content: 'Their analytics platform gave us insights we never had before. Our decision-making process is now data-driven.',
+      avatar: 'ER'
     }
   ];
 
-  const benefits = [
-    'Reduce operational costs by up to 40%',
-    'Increase productivity and efficiency',
-    'Enhance customer experience',
-    'Improve data security and compliance',
-    'Scale your business faster',
-    'Gain competitive advantage',
-    'Access to expert support',
-    'Future-proof your technology'
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '50+', label: 'Expert Team Members' }
   ];
-
-  const currentTestimonial = testimonials[currentIndex];
 
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-      }, 5000);
+        setCurrentIndex((prev) => (prev + 1) % features.length);
+      }, 3000);
       return () => clearInterval(interval);
     }
-    
-    return () => {
-      // No cleanup needed when not playing
-    };
-  }, [isPlaying, testimonials.length]);
+  }, [isPlaying, features.length]);
 
-  const nextTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  const nextFeature = () => {
+    setCurrentIndex((prev) => (prev + 1) % features.length);
   };
 
-  const prevTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+  const prevFeature = () => {
+    setCurrentIndex((prev) => (prev - 1 + features.length) % features.length);
   };
 
   const togglePlayPause = () => {
@@ -100,47 +96,109 @@ const DynamicContentShowcase: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Experience the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Future</span> of Technology
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Discover how our cutting-edge AI and IT solutions can transform your business and drive unprecedented growth.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-              <Zap className="w-5 h-5 mr-2" />
-              Get Started
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
-              <ArrowRight className="w-5 h-5 mr-2" />
-              Learn More
-            </button>
+      <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+              Dynamic Content Showcase
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
+              Experience the power of our cutting-edge technology solutions through interactive demonstrations and real-world applications.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                Start Demo
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                Learn More
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-16 px-4">
+      {/* Interactive Features Carousel */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Powerful Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive suite of AI and IT solutions provides everything you need to succeed in the digital age.
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Interactive Features</h2>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+              Explore our comprehensive suite of technology solutions
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="w-8 h-8 text-white" />
+          <div className="relative">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 overflow-hidden">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-xl font-semibold text-white">Feature Showcase</h3>
+                <div className="flex items-center space-x-2">
+                  <button
+                    onClick={togglePlayPause}
+                    className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                  >
+                    {isPlaying ? <Pause className="w-5 h-5 text-white" /> : <Play className="w-5 h-5 text-white" />}
+                  </button>
+                  <button
+                    onClick={prevFeature}
+                    className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                  >
+                    <ChevronLeft className="w-5 h-5 text-white" />
+                  </button>
+                  <button
+                    onClick={nextFeature}
+                    className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
+                  >
+                    <ChevronRight className="w-5 h-5 text-white" />
+                  </button>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">{feature.title}</h3>
-                <p className="text-gray-300 text-center">{feature.description}</p>
+              </div>
+
+              <div className="flex items-center space-x-8">
+                <div className="flex-shrink-0">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${features[currentIndex].color} rounded-full flex items-center justify-center`}>
+                    {React.createElement(features[currentIndex].icon, { className: "w-8 h-8 text-white" })}
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-2xl font-bold text-white mb-2">{features[currentIndex].title}</h4>
+                  <p className="text-gray-300 text-lg">{features[currentIndex].description}</p>
+                </div>
+              </div>
+
+              <div className="flex justify-center mt-6 space-x-2">
+                {features.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      index === currentIndex ? 'bg-white' : 'bg-white/30'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Our Impact</h2>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+              Numbers that speak for themselves
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300 text-sm sm:text-base">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -148,121 +206,51 @@ const DynamicContentShowcase: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">What Our Customers Say</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our satisfied customers have to say about their experience.
-            </p>
-          </div>
-
-          <div className="relative">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-              <div className="text-center">
-                <div className="flex justify-center mb-6">
-                  {[...Array(currentTestimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                  "{currentTestimonial.content}"
-                </blockquote>
-                
-                <div className="flex items-center justify-center gap-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-                    <Users className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-left">
-                    <div className="text-lg font-semibold text-white">{currentTestimonial.name}</div>
-                    <div className="text-gray-400">{currentTestimonial.role}</div>
-                    <div className="text-purple-400 text-sm">{currentTestimonial.company}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Navigation Controls */}
-            <div className="flex items-center justify-center gap-4 mt-8">
-              <button
-                onClick={prevTestimonial}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              
-              <button
-                onClick={togglePlayPause}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
-              >
-                {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
-              </button>
-              
-              <button
-                onClick={nextTestimonial}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </div>
-
-            {/* Dots Indicator */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 px-4">
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Comprehensive Benefits</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our solutions provide a complete package of benefits designed to accelerate your business growth.
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+              Real feedback from real clients
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                  <span className="text-gray-300">{benefit}</span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold">
+                    {testimonial.avatar}
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
+                    <p className="text-gray-300 text-sm">{testimonial.role}</p>
+                  </div>
                 </div>
-              ))}
-            </div>
+                <p className="text-gray-300 italic">"{testimonial.content}"</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Experience the Future?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses that have already transformed their operations with our cutting-edge solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
-                <Zap className="w-5 h-5" />
-                <span>Start Free Trial</span>
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                Schedule Demo
-              </button>
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Ready to Experience the Future?</h2>
+              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                Join thousands of businesses already using our technology to transform their operations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Start Your Journey
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                  Schedule Demo
+                </button>
+              </div>
             </div>
           </div>
         </div>

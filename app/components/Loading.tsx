@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react'
 
 const LoadingPage: React.FC = () => {
@@ -19,132 +18,59 @@ const LoadingPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards for your data'
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for your business needs'
     }
-  ]
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
-        <title>Loading | Zion Tech Group</title>
-        <meta name="description" content="Professional Loading services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="Loading, AI solutions, IT services, Zion Tech Group, loading" />
+        <title>Loading - Zion Tech Group</title>
+        <meta name="description" content="Loading page for Zion Tech Group - Advanced AI and IT Solutions" />
       </Helmet>
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Loading
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced loading solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
+
+      <div className="text-center">
+        {/* Loading Spinner */}
+        <div className="mb-8">
+          <div className="w-16 h-16 border-4 border-white/20 border-t-white rounded-full animate-spin mx-auto"></div>
+        </div>
+
+        {/* Loading Text */}
+        <h1 className="text-3xl font-bold text-white mb-4">
+          Loading Amazing Content
+        </h1>
+        <p className="text-lg text-gray-300 mb-8 max-w-md mx-auto">
+          Please wait while we prepare your personalized experience...
+        </p>
+
+        {/* Loading Progress */}
+        <div className="w-full max-w-md mx-auto mb-8">
+          <div className="bg-white/10 rounded-full h-2">
+            <div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full animate-pulse" style={{ width: '60%' }}></div>
+          </div>
+        </div>
+
+        {/* Features Preview */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
+              <feature.icon className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+              <h3 className="text-sm font-semibold text-white mb-1">{feature.title}</h3>
+              <p className="text-xs text-gray-300">{feature.description}</p>
             </div>
-          </div>
+          ))}
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Loading Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of cutting-edge technology designed to enhance your business operations.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-gradient-to-r from-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
+        {/* Loading Tips */}
+        <div className="mt-8 text-sm text-gray-400">
+          <p>💡 Pro tip: Our AI is analyzing your preferences to provide the best experience</p>
         </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our loading solutions for your business.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Transform your business with our loading solutions today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
-                Contact Us Now
-              </button>
-              <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
+      </div>
     </div>
   )
 }
