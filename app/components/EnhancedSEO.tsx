@@ -13,23 +13,17 @@ const EnhancedSEOPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Real-time Optimization',
-<<<<<<< HEAD
       description: 'Get instant SEO insights and recommendations for better search performance'
     },
     {
       icon: Shield,
       title: 'Technical SEO',
       description: 'Comprehensive technical SEO audits and optimization for better search visibility'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
     },
     {
       icon: Globe,
       title: 'Global SEO',
-<<<<<<< HEAD
       description: 'Optimize your website for international markets and multiple languages'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
     }
   ]
 

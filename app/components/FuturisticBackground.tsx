@@ -33,7 +33,6 @@ const FuturisticBackgroundPage: React.FC = () => {
     }
   ]
 
-<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',

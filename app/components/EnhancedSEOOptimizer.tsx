@@ -8,7 +8,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered SEO Optimization',
-<<<<<<< HEAD
       description: 'Advanced AI technology to optimize your website for search engines and improve rankings'
     },
     {
@@ -25,8 +24,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
       icon: Globe,
       title: 'Global SEO',
       description: 'Optimize your website for international markets and multiple languages'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
     }
   ]
 

@@ -1,15 +1,52 @@
-<<<<<<< HEAD
 import React from 'react';
-import { CheckCircle, ArrowRight, BarChart3, FileText, TrendingUp, Clock, Shield } from 'lucide-react';
+import { CheckCircle, ArrowRight, BarChart3, FileText, TrendingUp, Clock, Shield, Brain, Target } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
+
+const AIAutomatedReportingPage: React.FC = () => {
+  const features = [
+    {
+      icon: <FileText className="w-8 h-8 text-blue-500" />,
+      title: 'Automated Report Generation',
+      description: 'Generate comprehensive reports automatically with AI-powered data analysis.',
+      benefits: ['Auto-generation', 'Data analysis', 'Report templates', 'Custom formatting']
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-green-500" />,
+      title: 'Data Visualization',
+      description: 'Create stunning visualizations and charts from your data automatically.',
+      benefits: ['Interactive charts', 'Real-time data', 'Custom dashboards', 'Export options']
+    },
+    {
+      icon: <Brain className="w-8 h-8 text-purple-500" />,
+      title: 'AI-Powered Insights',
+      description: 'Get intelligent insights and recommendations from your data patterns.',
+      benefits: ['Pattern recognition', 'Predictive analytics', 'Smart recommendations', 'Trend analysis']
+    },
+    {
+      icon: <Target className="w-8 h-8 text-orange-500" />,
+      title: 'Customizable Templates',
+      description: 'Use pre-built templates or create custom report formats for your needs.',
+      benefits: ['Pre-built templates', 'Custom layouts', 'Brand consistency', 'Easy customization']
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8 text-pink-500" />,
+      title: 'Performance Metrics',
+      description: 'Track and analyze key performance indicators with automated reporting.',
+      benefits: ['KPI tracking', 'Performance monitoring', 'Trend analysis', 'Goal tracking']
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: 'Data Security',
+      description: 'Enterprise-grade security ensures your data remains protected and compliant.',
+      benefits: ['Data encryption', 'Access controls', 'Compliance', 'Audit trails']
+    }
+  ];
 
   const benefits = [
     {
+      icon: <FileText className="w-8 h-8 text-blue-500" />,
       title: 'Automated Reports',
-<<<<<<< HEAD
       description: 'Generate comprehensive reports automatically without manual intervention.',
       benefits: ['Scheduled reports', 'Multiple formats', 'Custom templates', 'Email delivery']
     },
@@ -24,45 +61,6 @@ import { Link } from 'react-router-dom';
       title: 'Time Savings',
       description: 'Reduce manual reporting time by up to 90% with intelligent automation.',
       benefits: ['Automated data collection', 'Smart formatting', 'Instant delivery', 'Zero manual work']
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: FileText,
-      title: 'Automated Report Generation',
-      description: 'Generate comprehensive reports automatically with AI-powered data analysis.',
-      benefits: ['Auto-generation', 'Data analysis', 'Report templates', 'Custom formatting']
-    },
-    {
-      icon: BarChart,
-      title: 'Data Visualization',
-      description: 'Create stunning visualizations and charts from your data automatically.',
-      benefits: ['Interactive charts', 'Real-time data', 'Custom dashboards', 'Export options']
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Get intelligent insights and recommendations from your data patterns.',
-      benefits: ['Pattern recognition', 'Predictive analytics', 'Smart recommendations', 'Trend analysis']
-    },
-    {
-      icon: Target,
-      title: 'Customizable Templates',
-      description: 'Use pre-built templates or create custom report formats for your needs.',
-      benefits: ['Pre-built templates', 'Custom layouts', 'Brand consistency', 'Easy customization']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Performance Metrics',
-      description: 'Track and analyze key performance indicators with automated reporting.',
-      benefits: ['KPI tracking', 'Performance monitoring', 'Trend analysis', 'Goal tracking']
-    },
-    {
-      icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security ensures your data remains protected and compliant.',
-      benefits: ['Data encryption', 'Access controls', 'Compliance', 'Audit trails']
     }
   ]
 
@@ -283,9 +281,3 @@ import { Link } from 'react-router-dom';
 };
 
 export default AIAutomatedReportingPage;
-=======
-      description: 'Generate reports automatically without manual intervention'
-    }
-  ]
-
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae

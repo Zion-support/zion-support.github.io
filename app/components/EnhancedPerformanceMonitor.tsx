@@ -13,7 +13,6 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Real-time Analytics',
-<<<<<<< HEAD
       description: 'Get instant insights into your system performance with comprehensive analytics'
     },
     {
@@ -25,8 +24,6 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
       icon: Globe,
       title: 'Global Coverage',
       description: 'Monitor performance across multiple locations and data centers worldwide'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
     }
   ]
 

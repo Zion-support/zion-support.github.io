@@ -52,10 +52,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
-                EnhancedAccessibilityEnhancer
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
+                Enhanced Accessibility Solutions
               </span>
               <br />
               <span className="text-white">Solutions</span>
