@@ -40,16 +40,16 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <main className="w-5h-5ml-2" />
+        <main className="w-5 h-5 ml-2" />
           {/* Hero Section */}
-          <section className="w-5h-5ml-2" />
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Icon className="w-5h-5ml-2" />
+                <Icon className="w-5 h-5 ml-2" />
               </div>
-              <h1 className="w-5h-5ml-2">{title}
+              <h1 className="w-5 h-5 ml-2">{title}
               </h1>
-              <p className="w-5h-5ml-2">{description}
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{description}
               </p>
               
               {pricing && (
@@ -62,53 +62,53 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
                   href="/contact" 
                   className="px-8py-4 b g-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" />
                   Get Started Today
-                  <ArrowRight className="w-5h-5ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
                 <a 
                   href="tel:+13024640950" 
                   className="px-8py-4 b order-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup" />
-                  <Phone className="w-5h-5ml-2" />
+                  <Phone className="w-5 h-5 ml-2" />
                   Call (302) 464-0950
                 </a>
               </div>
           </section>
 
           {/* Features Section */}
-          <section className="w-5h-5ml-2" />
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />Key Features
+          <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Key Features
               </h2>
-              <p className="w-5h-5ml-2">Comprehensive {title.toLowerCase()} solutions designed to drive your business forward
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Comprehensive {title.toLowerCase()} solutions designed to drive your business forward
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30transition-all duration-300" />
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <CheckCircle className="w-5h-5ml-2" />
-                    <h3 className="w-5h-5ml-2" />{feature}</h3>
+                    <CheckCircle className="w-5 h-5 ml-2" />
+                    <h3 className="w-5 h-5 ml-2" />{feature}</h3>
                   </div>
               ))}
             </div>
           </section>
 
           {/* Benefits Section */}
-          <section className="w-5h-5ml-2" />
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />Why Choose Our {title}?
+          <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Why Choose Our {title}?
               </h2>
-              <p className="w-5h-5ml-2">Experience the difference with our proven expertise and cutting-edge technology
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Experience the difference with our proven expertise and cutting-edge technology
               </p>
             </div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flexitems-start space-x-4" />
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <Star className="w-5h-5ml-2" />
+                    <Star className="w-5 h-5 ml-2" />
                   </div>
                   <div />
-                    <h3 className="w-5h-5ml-2" />{benefit}</h3>
-                    <p className="w-5h-5ml-2">Leverage our expertise to maximize your business potential with {title.toLowerCase()}
+                    <h3 className="w-5 h-5 ml-2" />{benefit}</h3>
+                    <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Leverage our expertise to maximize your business potential with {title.toLowerCase()}
                     </p>
                   </div>
               ))}
@@ -116,8 +116,8 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
           </section>
 
           {/* Stats Section */}
-          <section className="w-5h-5ml-2" />
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 <div />
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">500+</div>
@@ -135,11 +135,11 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
           </section>
 
           {/* CTA Section */}
-          <section className="w-5h-5ml-2" />
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />Ready to Get Started?
+          <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Ready to Get Started?
               </h2>
-              <p className="w-5h-5ml-2">Join hundreds of companies that trust Zion Tech Group for their {title.toLowerCase()} needs. 
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join hundreds of companies that trust Zion Tech Group for their {title.toLowerCase()} needs. 
                 Get a free consultation today.
               </p>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -147,12 +147,12 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
                   href="/contact" 
                   className="px-8py-4 b g-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" />
                   Get Free Consultation
-                  <ArrowRight className="w-5h-5ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
                 <a 
                   href="mailto:kleber@ziontechgroup.com" 
                   className="px-8py-4 b order-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup" />
-                  <Mail className="w-5h-5ml-2" />
+                  <Mail className="w-5 h-5 ml-2" />
                   Email Us
                 </a>
               </div>

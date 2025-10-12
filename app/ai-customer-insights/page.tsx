@@ -8,42 +8,42 @@ import { Link } from 'react-router-dom';
 const AICustomerInsightsPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-5h-5ml-2" />,
+      icon: <Brain className="w-5 h-5 ml-2" />,
       title: 'AI-Powered Analytics',
       description: 'Advanced machine learning algorithms analyze customer behavior patterns and predict future trends with 95% accuracy.',
       price: '$299/month',
       benefits: ['Real-time insights', 'Predictive analytics', 'Behavioral analysis', 'Trend forecasting']
     },
     {
-      icon: <BarChart3 className="w-5h-5ml-2" />,
+      icon: <BarChart3 className="w-5 h-5 ml-2" />,
       title: 'Customer Segmentation',
       description: 'Automatically segment customers based on behavior, preferences, and value with dynamic clustering algorithms.',
       price: '$199/month',
       benefits: ['Dynamic segmentation', 'Behavioral clustering', 'Value-based grouping', 'Custom criteria']
     },
     {
-      icon: <Users className="w-5h-5ml-2" />,
+      icon: <Users className="w-5 h-5 ml-2" />,
       title: 'Customer Journey Mapping',
       description: 'Visualize complete customer journeys across all touchpoints with interactive journey maps and conversion funnels.',
       price: '$249/month',
       benefits: ['Journey visualization', 'Touchpoint analysis', 'Conversion tracking', 'Optimization insights']
     },
     {
-      icon: <TrendingUp className="w-5h-5ml-2" />,
+      icon: <TrendingUp className="w-5 h-5 ml-2" />,
       title: 'Churn Prediction',
       description: 'Predict customer churn with 92% accuracy using advanced ML models and proactive retention strategies.',
       price: '$179/month',
       benefits: ['Churn prediction', 'Risk scoring', 'Retention strategies', 'Early warning alerts']
     },
     {
-      icon: <Target className="w-5h-5ml-2" />,
+      icon: <Target className="w-5 h-5 ml-2" />,
       title: 'Personalization Engine',
       description: 'Create hyper-personalized experiences with AI-driven content recommendations and dynamic pricing.',
       price: '$399/month',
       benefits: ['Content personalization', 'Dynamic pricing', 'Recommendation engine', 'A/B testing']
     },
     {
-      icon: <Zap className="w-5h-5ml-2" />,
+      icon: <Zap className="w-5 h-5 ml-2" />,
       title: 'Real-time Insights',
       description: 'Get instant customer insights with real-time data processing and live dashboard updates.',
       price: '$149/month',
@@ -56,25 +56,25 @@ const AICustomerInsightsPage: React.FC = () => {
       title: 'E-commerce Personalization',
       description: 'Increase conversion rates by 35% with personalized product recommendations and dynamic pricing.',
       metrics: ['35% conversion increase', '28% higher AOV', '42% repeat purchases'],
-      icon: <ShoppingCart className="w-5h-5ml-2" />
+      icon: <ShoppingCart className="w-5 h-5 ml-2" />
     },
     {
       title: 'SaaS Customer Success',
       description: 'Reduce churn by 50% with predictive analytics and proactive customer success management.',
       metrics: ['50% churn reduction', '60% faster onboarding', '45% feature adoption'],
-      icon: <Monitor className="w-5h-5ml-2" />
+      icon: <Monitor className="w-5 h-5 ml-2" />
     },
     {
       title: 'Financial Services',
       description: 'Improve risk assessment and fraud detection with advanced customer behavior analysis.',
       metrics: ['85% fraud detection', '30% risk reduction', '25% faster approvals'],
-      icon: <Shield className="w-5h-5ml-2" />
+      icon: <Shield className="w-5 h-5 ml-2" />
     },
     {
       title: 'Healthcare Analytics',
       description: 'Enhance patient engagement and treatment outcomes with personalized healthcare insights.',
       metrics: ['40% engagement increase', '25% better outcomes', '35% cost reduction'],
-      icon: <Heart className="w-5h-5ml-2" />
+      icon: <Heart className="w-5 h-5 ml-2" />
     }
   ]
 
@@ -168,77 +168,77 @@ const AICustomerInsightsPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Brain className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <Brain className="w-5 h-5 ml-2" />
             <span />AI-Powered Customer Intelligence</span>
           </div>
           
-          <h1 className="w-5h-5ml-2" />
+          <h1 className="w-5 h-5 ml-2" />
             AI Customer
             <br />
-            <span className="w-5h-5ml-2" />Insights
+            <span className="w-5 h-5 ml-2" />Insights
             </span>
           </h1>
           
-          <p className="w-5h-5ml-2" />
+          <p className="w-5 h-5 ml-2" />
             Transform customer data into actionable insights with advanced AI analytics, 
             churn prediction, and hyper-personalization. 
             <br />
-            <span className="w-5h-5ml-2" />Increase retention by 40% and boost revenue with intelligent customer insights.</span>
+            <span className="w-5 h-5 ml-2" />Increase retention by 40% and boost revenue with intelligent customer insights.</span>
           </p>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="groupbg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
               <span />Start Free Trial</span>
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link to="/demo" className="groupborder-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
               <span />Watch Demo</span>
-              <Play className="w-5h-5ml-2" />
+              <Play className="w-5 h-5 ml-2" />
             </Link>
           </div>
       </section>
 
       {/* Features Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Powerful <span className="w-5h-5ml-2" />AI Features</span>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5 ml-2" />
+              Powerful <span className="w-5 h-5 ml-2" />AI Features</span>
             </h2>
-            <p className="w-5h-5ml-2">Advanced AI-powered customer insights that help you understand, predict, and optimize customer behavior 
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced AI-powered customer insights that help you understand, predict, and optimize customer behavior 
               for maximum business growth and retention.
             </p>
           </div>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
                 </div>
-                <h3 className="w-5h-5ml-2" />{feature.title}
+                <h3 className="w-5 h-5 ml-2" />{feature.title}
                 </h3>
-                <p className="w-5h-5ml-2">{feature.description}
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{feature.description}
                 </p>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className="flex items-center space-x-2text-gray-400text-sm" />
-                      <CheckCircle className="w-5h-5ml-2" />
+                      <CheckCircle className="w-5 h-5 ml-2" />
                       <span />{benefit}</span>
                     </div>
                   ))}
                 </div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <span className="w-5h-5ml-2" />{feature.price}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <span className="w-5 h-5 ml-2" />{feature.price}
                   </span>
                   <Link to="/contact" className="group/linkflex items-center space-x-2 text-cyan-400hover:text-cyan-300 transition-colors" />
-                    <span className="w-5h-5ml-2" />Learn More</span>
-                    <ArrowRight className="w-5h-5ml-2" />
+                    <span className="w-5 h-5 ml-2" />Learn More</span>
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </div>
             ))}
@@ -246,37 +246,37 @@ const AICustomerInsightsPage: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <Target className="w-5h-5ml-2" />
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <Target className="w-5 h-5 ml-2" />
               <span />Real-World Applications</span>
             </div>
-            <h2 className="w-5h-5ml-2" />
-              Proven <span className="w-5h-5ml-2" />Use Cases</span>
+            <h2 className="w-5 h-5 ml-2" />
+              Proven <span className="w-5 h-5 ml-2" />Use Cases</span>
             </h2>
-            <p className="w-5h-5ml-2">See how leading companies use AI Customer Insights to drive growth, 
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">See how leading companies use AI Customer Insights to drive growth, 
               reduce churn, and create exceptional customer experiences.
             </p>
           </div>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300hover:scale-105" />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{useCase.icon}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{useCase.icon}
                   </div>
-                  <h3 className="w-5h-5ml-2" />{useCase.title}
+                  <h3 className="w-5 h-5 ml-2" />{useCase.title}
                   </h3>
                 </div>
-                <p className="w-5h-5ml-2">{useCase.description}
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{useCase.description}
                 </p>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   {useCase.metrics.map((metric, metricIndex) => (
                     <div key={metricIndex} className="flex items-center space-x-2text-cyan-400font-semibold" />
-                      <TrendingUp className="w-5h-5ml-2" />
+                      <TrendingUp className="w-5 h-5 ml-2" />
                       <span />{metric}</span>
                     </div>
                   ))}
@@ -286,19 +286,19 @@ const AICustomerInsightsPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Simple <span className="w-5h-5ml-2" />Pricing</span>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5 ml-2" />
+              Simple <span className="w-5 h-5 ml-2" />Pricing</span>
             </h2>
-            <p className="w-5h-5ml-2">Choose the perfect plan for your business needs. All plans include our core AI features 
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Choose the perfect plan for your business needs. All plans include our core AI features 
               with no hidden fees or setup costs.
             </p>
           </div>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {pricing.map((plan, index) => (
               <div key={index} className="{`relative" group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
                 plan.popular 
@@ -306,24 +306,24 @@ const AICustomerInsightsPage: React.FC = () => {
                   : 'border-white/20 hover: bg-white/20'
               }`} />
                 {plan.popular && (
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
                     </div>
                 )}
                 
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                  <p className="w-5h-5ml-2">{plan.description}</p>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5h-5ml-2" />{plan.price}</span>
-                    <span className="w-5h-5ml-2" />{plan.period}</span>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <h3 className="w-5 h-5 ml-2" />{plan.name}</h3>
+                  <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{plan.description}</p>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <span className="w-5 h-5 ml-2" />{plan.price}</span>
+                    <span className="w-5 h-5 ml-2" />{plan.period}</span>
                   </div>
                 
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   {plan.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-centerspace-x-3" />
-                      <CheckCircle className="w-5h-5ml-2" />
-                      <span className="w-5h-5ml-2" />{feature}</span>
+                      <CheckCircle className="w-5 h-5 ml-2" />
+                      <span className="w-5 h-5 ml-2" />{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -343,36 +343,36 @@ const AICustomerInsightsPage: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              What Our <span className="w-5h-5ml-2" />Customers Say</span>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5 ml-2" />
+              What Our <span className="w-5 h-5 ml-2" />Customers Say</span>
             </h2>
-            <p className="w-5h-5ml-2">Join thousands of businesses that trust AI Customer Insights to drive growth and customer success.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join thousands of businesses that trust AI Customer Insights to drive growth and customer success.
             </p>
           </div>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300hover:scale-105" />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
                   </div>
                   <div />
-                    <h4 className="w-5h-5ml-2" />{testimonial.name}</h4>
-                    <p className="w-5h-5ml-2">{testimonial.role}</p>
-                    <p className="w-5h-5ml-2">{testimonial.company}</p>
+                    <h4 className="w-5 h-5 ml-2" />{testimonial.name}</h4>
+                    <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{testimonial.role}</p>
+                    <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{testimonial.company}</p>
                   </div>
                 
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5h-5tex t-yellow-400fill-current"  />
                   ))}
                 </div>
                 
-                <p className="w-5h-5ml-2">"{testimonial.content}"
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"{testimonial.content}"
                 </p>
               </div>
             ))}
@@ -380,46 +380,44 @@ const AICustomerInsightsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <h2 className="w-5h-5ml-2" />
-                  Ready to Transform Your <span className="w-5h-5ml-2" />Customer Experience?</span>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <h2 className="w-5 h-5 ml-2" />
+                  Ready to Transform Your <span className="w-5 h-5 ml-2" />Customer Experience?</span>
                 </h2>
                 
-                <p className="w-5h-5ml-2">Start your free trial today and see how AI Customer Insights can help you 
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Start your free trial today and see how AI Customer Insights can help you 
                   understand, predict, and optimize customer behavior for maximum growth.
                 </p>
                 
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Link to="/contact" className="groupbg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="groupbg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
                     <span />Start Free Trial</span>
-                    <ArrowRight className="w-5h-5ml-2" />
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                   <Link to="/demo" className="groupborder-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
                     <span />Schedule Demo</span>
-                    <Calendar className="w-5h-5ml-2" />
+                    <Calendar className="w-5 h-5 ml-2" />
                   </Link>
                 </div>
                 
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <Phone className="w-5h-5ml-2" />
-                    <span className="w-5h-5ml-2" />+1 302 464 0950</span>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <Phone className="w-5 h-5 ml-2" />
+                    <span className="w-5 h-5 ml-2" />+1 302 464 0950</span>
                   </div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <Mail className="w-5h-5ml-2" />
-                    <span className="w-5h-5ml-2" />kleber@ziontechgroup.com</span>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <Mail className="w-5 h-5 ml-2" />
+                    <span className="w-5 h-5 ml-2" />kleber@ziontechgroup.com</span>
                   </div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <MapPin className="w-5h-5ml-2" />
-                    <span className="w-5h-5ml-2" />Middletown DE 19709</span>
-                  </div>
-              </div>
-          </div>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <MapPin className="w-5 h-5 ml-2" />
+                    <span className="w-5 h-5 ml-2" />Middletown DE 19709</span>
+                          </div>
       </section>
     </>
   );

@@ -6,32 +6,32 @@ import { ArrowRight, Bot} from 'lucide-react';
 export default function AIProjectManagerPage() {
   const features = [
     {
-      icon: <Bot className="w-5h-5ml-2" />,
+      icon: <Bot className="w-5 h-5 ml-2" />,
       title: 'AI Task Prioritization',
       description: 'Intelligent task ranking based on deadlines, dependencies, and team capacity'
     },
     {
-      icon: <BarChart3 className="w-5h-5ml-2" />,
+      icon: <BarChart3 className="w-5 h-5 ml-2" />,
       title: 'Predictive Analytics',
       description: 'AI-powered project forecasting and risk assessment with 95% accuracy'
     },
     {
-      icon: <Users className="w-5h-5ml-2" />,
+      icon: <Users className="w-5 h-5 ml-2" />,
       title: 'Smart Team Matching',
       description: 'AI algorithms match tasks to team members based on skills and availability'
     },
     {
-      icon: <Zap className="w-5h-5ml-2" />,
+      icon: <Zap className="w-5 h-5 ml-2" />,
       title: 'Automated Workflows',
       description: 'Set up intelligent workflows that adapt and optimize based on project patterns'
     },
     {
-      icon: <Target className="w-5h-5ml-2" />,
+      icon: <Target className="w-5 h-5 ml-2" />,
       title: 'Resource Optimization',
       description: 'AI-driven resource allocation and capacity planning for maximum efficiency'
     },
     {
-      icon: <Shield className="w-5h-5ml-2" />,
+      icon: <Shield className="w-5 h-5 ml-2" />,
       title: 'Risk Management',
       description: 'Proactive risk identification and mitigation strategies powered by machine learning'
     }
@@ -115,22 +115,22 @@ export default function AIProjectManagerPage() {
 
   const benefits = [
     {
-      icon: <TrendingUp className="w-5h-5ml-2" />,
+      icon: <TrendingUp className="w-5 h-5 ml-2" />,
       title: '40% Faster Delivery',
       description: 'AI optimization reduces project completion time significantly'
     },
     {
-      icon: <Target className="w-5h-5ml-2" />,
+      icon: <Target className="w-5 h-5 ml-2" />,
       title: '95% Accuracy',
       description: 'Predictive analytics with industry-leading accuracy rates'
     },
     {
-      icon: <Users className="w-5h-5ml-2" />,
+      icon: <Users className="w-5 h-5 ml-2" />,
       title: 'Team Productivity +60%',
       description: 'Smart task allocation maximizes team efficiency'
     },
     {
-      icon: <Shield className="w-5h-5ml-2" />,
+      icon: <Shield className="w-5 h-5 ml-2" />,
       title: 'Risk Reduction 80%',
       description: 'Proactive risk management prevents project failures'
     }
@@ -160,34 +160,34 @@ export default function AIProjectManagerPage() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Calendar className="w-5h-5ml-2" />
+            <Calendar className="w-5 h-5 ml-2" />
             <span />AI-Powered Project Management</span>
           </div>
           
-          <h1 className="w-5h-5ml-2" />
+          <h1 className="w-5 h-5 ml-2" />
             AI Project
             <br />
-            <span className="w-5h-5ml-2" />Manager
+            <span className="w-5 h-5 ml-2" />Manager
             </span>
           </h1>
           
-          <p className="w-5h-5ml-2">Transform your project management with AI-powered task prioritization, predictive analytics, 
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your project management with AI-powered task prioritization, predictive analytics, 
             and intelligent automation. Deliver projects 40% faster with 95% accuracy.
           </p>
           
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
               <span />Start Free Trial</span>
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link to="#pricing" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
               <span />View Pricing</span>
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
 
@@ -209,14 +209,14 @@ export default function AIProjectManagerPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Why Choose Our <span className="w-5h-5ml-2" />AI Project Manager?</span>
+            <h2 className="w-5 h-5 ml-2" />
+              Why Choose Our <span className="w-5 h-5 ml-2" />AI Project Manager?</span>
             </h2>
-            <p className="w-5h-5ml-2">Experience the future of project management with cutting-edge AI technology that works for your team.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Experience the future of project management with cutting-edge AI technology that works for your team.
             </p>
           </div>
           
@@ -225,9 +225,9 @@ export default function AIProjectManagerPage() {
               <div key={index} className="text-centergroup" />
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{benefit.icon}
                 </div>
-                <h3 className="w-5h-5ml-2" />{benefit.title}
+                <h3 className="w-5 h-5 ml-2" />{benefit.title}
                 </h3>
-                <p className="w-5h-5ml-2">{benefit.description}
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{benefit.description}
                 </p>
               </div>
             ))}
@@ -235,24 +235,24 @@ export default function AIProjectManagerPage() {
       </section>
 
       {/* Features Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Powerful Features for <span className="w-5h-5ml-2" />Smart Project Management</span>
+            <h2 className="w-5 h-5 ml-2" />
+              Powerful Features for <span className="w-5 h-5 ml-2" />Smart Project Management</span>
             </h2>
-            <p className="w-5h-5ml-2">Everything you need to manage projects efficiently with AI-powered intelligence and automation.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Everything you need to manage projects efficiently with AI-powered intelligence and automation.
             </p>
           </div>
           
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
                 </div>
-                <h3 className="w-5h-5ml-2" />{feature.title}
+                <h3 className="w-5 h-5 ml-2" />{feature.title}
                 </h3>
-                <p className="w-5h-5ml-2">{feature.description}
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{feature.description}
                 </p>
               </div>
             ))}
@@ -260,13 +260,13 @@ export default function AIProjectManagerPage() {
       </section>
 
       {/* Integrations Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Seamless <span className="w-5h-5ml-2" />Integrations</span>
+            <h2 className="w-5 h-5 ml-2" />
+              Seamless <span className="w-5 h-5 ml-2" />Integrations</span>
             </h2>
-            <p className="w-5h-5ml-2">Connect with your favorite tools and platforms for a unified project management experience.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Connect with your favorite tools and platforms for a unified project management experience.
             </p>
           </div>
           
@@ -274,7 +274,7 @@ export default function AIProjectManagerPage() {
             {integrations.map((integration, index) => (
               <div key={index} className="group text-center" />
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <span className="w-5h-5ml-2" />{integration.icon}</span>
+                  <span className="w-5 h-5 ml-2" />{integration.icon}</span>
                 </div>
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{integration.name}
                 </div>
@@ -286,10 +286,10 @@ export default function AIProjectManagerPage() {
       <section id="pricing" className="py-20px-4relative" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Simple, Transparent <span className="w-5h-5ml-2" />Pricing</span>
+            <h2 className="w-5 h-5 ml-2" />
+              Simple, Transparent <span className="w-5 h-5 ml-2" />Pricing</span>
             </h2>
-            <p className="w-5h-5ml-2">Choose the plan that fits your team size and needs. All plans include our core AI features.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Choose the plan that fits your team size and needs. All plans include our core AI features.
             </p>
           </div>
           
@@ -307,18 +307,18 @@ export default function AIProjectManagerPage() {
                 )}
                 
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                  <p className="w-5h-5ml-2">{plan.description}</p>
+                  <h3 className="w-5 h-5 ml-2" />{plan.name}</h3>
+                  <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{plan.description}</p>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5h-5ml-2" />{plan.price}</span>
-                    <span className="w-5h-5ml-2" />{plan.period}</span>
+                    <span className="w-5 h-5 ml-2" />{plan.price}</span>
+                    <span className="w-5 h-5 ml-2" />{plan.period}</span>
                   </div>
                 
-                <ul className="w-5h-5ml-2" />
+                <ul className="w-5 h-5 ml-2" />
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-centerspace-x-3" />
-                      <CheckCircle className="w-5h-5ml-2" />
-                      <span className="w-5h-5ml-2" />{feature}</span>
+                      <CheckCircle className="w-5 h-5 ml-2" />
+                      <span className="w-5 h-5 ml-2" />{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -338,13 +338,13 @@ export default function AIProjectManagerPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Trusted by <span className="w-5h-5ml-2" />10,000+</span> Teams
+            <h2 className="w-5 h-5 ml-2" />
+              Trusted by <span className="w-5 h-5 ml-2" />10,000+</span> Teams
             </h2>
-            <p className="w-5h-5ml-2">See what our customers are saying about their success with our AI project manager.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">See what our customers are saying about their success with our AI project manager.
             </p>
           </div>
           
@@ -363,43 +363,41 @@ export default function AIProjectManagerPage() {
                     <Star key={i} className="w-5h-5te x t-yellow-400fill-current"  />
                   ))}
                 </div>
-                <p className="w-5h-5ml-2">"{testimonial.content}"</p>
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"{testimonial.content}"</p>
               </div>
             ))}
           </div>
       </section>
 
       {/* CTA Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <h2 className="w-5h-5ml-2" />
-                  Ready to Transform Your <span className="w-5h-5ml-2" />Project Management?</span>
+                <h2 className="w-5 h-5 ml-2" />
+                  Ready to Transform Your <span className="w-5 h-5 ml-2" />Project Management?</span>
                 </h2>
                 
-                <p className="w-5h-5ml-2">Join thousands of teams already delivering projects 40% faster with our AI-powered project manager. 
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join thousands of teams already delivering projects 40% faster with our AI-powered project manager. 
                   Start your free trial today and experience the future of project management.
                 </p>
                 
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
                     <span />Start Free Trial</span>
-                    <ArrowRight className="w-5h-5ml-2" />
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                   <Link to="#pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
                     <span />View All Plans</span>
-                    <ArrowRight className="w-5h-5ml-2" />
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </div>
                 
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-                </div>
-            </div>
-        </div>
+                        </div>
       </section>
     </div>
   );

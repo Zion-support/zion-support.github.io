@@ -13,20 +13,20 @@ const AiDocumentProcessingPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5h-5ml-2" />
-              <span className="w-5h-5ml-2" />Ai Document Processing
+            <h1 className="w-5 h-5 ml-2" />
+              <span className="w-5 h-5 ml-2" />Ai Document Processing
               </span>
             </h1>
-            <p className="w-5h-5ml-2">Professional ai document processing services by Zion Tech Group.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Professional ai document processing services by Zion Tech Group.
             </p>
           </div>
 
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
-            <p className="w-5h-5ml-2">We're working on bringing you comprehensive ai document processing solutions. 
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We're working on bringing you comprehensive ai document processing solutions. 
               Contact us to learn more about our services.
             </p>
-            <button className="w-5h-5ml-2">Contact Us
+            <button className="w-5 h-5 ml-2">Contact Us
             </button>
           </div>
       </div>

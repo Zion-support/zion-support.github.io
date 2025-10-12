@@ -27,7 +27,7 @@ import { ArrowRight } from 'lucide-react';
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Zap className="w-5h-5ml-2" />
+            <Zap className="w-5 h-5 ml-2" />
           </div>
           <div />
             <h3 className="text-whitefont-semibold"  >Performance Enhancer</h3>
@@ -44,7 +44,7 @@ import { ArrowRight } from 'lucide-react';
             </>
           ) : (
             <>
-              <Zap className="w-5h-5ml-2" />
+              <Zap className="w-5 h-5 ml-2" />
               <span  >Optimize</span>
             </>
           )}
@@ -56,7 +56,7 @@ import { ArrowRight } from 'lucide-react';
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{metrics.loadTime.toFixed(0)}ms
           </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               {features.map((feature, index) => (
 
@@ -71,13 +71,13 @@ import { ArrowRight } from 'lucide-react';
           </div>
       </section>
       {/* Benefits Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
+            <h2 className="w-5 h-5 ml-2" />
               Key Benefits
   </
-            <p className="w-5h-5ml-2">Experience the power of our performanceenhancer solutions for your business.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Experience the power of our performanceenhancer solutions for your business.
             </p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -85,7 +85,7 @@ import { ArrowRight } from 'lucide-react';
               {features.map((feature, index) => (
 
                 <div key={index} className="flexitems-startspace-x-3" />
-                <CheckCircle className="w-5h-5ml-2" />
+                <CheckCircle className="w-5 h-5 ml-2" />
                 <p className="text-gray-300text-lg">{benefit}</p>
               </div>
             ))}
@@ -114,35 +114,34 @@ import { ArrowRight } from 'lucide-react';
         <meta name="keywords" content="PerformanceEnhancer, AI solutions, IT services, Zion Tech Group, performanceenhancer" />
       </Helmet>
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className="w-5 h-5 ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" />
-              <span className="w-5h-5ml-2" />PerformanceEnhancer
+            <h1 className="w-5 h-5 ml-2" />
+              <span className="w-5 h-5 ml-2" />PerformanceEnhancer
               </span>
               <br />
               <span className="text-white"  >Solutions</span>
             </h1>
-            <p className="w-5h-5ml-2">Transform your business with our advanced performanceenhancer solutions.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced performanceenhancer solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5h-5ml-2" />
+              <button className="w-5 h-5 ml-2" />
                 Get Started
-                <ArrowRight className="w-5h-5ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="w-5h-5ml-2">Learn More
+              <button className="w-5 h-5 ml-2">Learn More
               </button>
-            </div>
-        </div>
+                    </div>
       </section>
       {/* Features Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className="w-5 h-5 ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Why Choose Our PerformanceEnhancer?
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Why Choose Our PerformanceEnhancer?
             </h2>
-            <p className="w-5h-5ml-2">Our performanceenhancer solutions deliver unmatched performance, security, and scalability.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Our performanceenhancer solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -159,12 +158,12 @@ import { ArrowRight } from 'lucide-react';
           </div>
       </section>
       {/* Benefits Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className="w-5 h-5 ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Key Benefits
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Key Benefits
             </h2>
-            <p className="w-5h-5ml-2">Experience the power of our performanceenhancer solutions for your business.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Experience the power of our performanceenhancer solutions for your business.
             </p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -172,7 +171,7 @@ import { ArrowRight } from 'lucide-react';
               {features.map((feature, index) => (
 
                 <div key={index} className="flexitems-startspace-x-3" /></div>
-                <CheckCircle className="w-5h-5ml-2" />
+                <CheckCircle className="w-5 h-5 ml-2" />
                 <p className="text-gray-300text-lg">{benefit}</p>
               </div>))}
           </div>

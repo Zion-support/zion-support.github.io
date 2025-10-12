@@ -121,7 +121,7 @@ interface FuturisticButtonProps {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       {/* Content */}
-      <span className="w-5h-5ml-2" />
+      <span className="w-5 h-5 ml-2" />
         {loading ? (
           <>
             <motion.div

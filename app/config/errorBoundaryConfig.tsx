@@ -36,10 +36,10 @@ export interface ErrorBoundaryConfig {/**
             />
           </svg>
         </div>
-        <h2 className="w-5h-5ml-2" />
+        <h2 className="w-5 h-5 ml-2" />
           Oops! Something went wrong
 
-        <p className="w-5h-5ml-2" />
+        <p className="w-5 h-5 ml-2" />
 /**
  * Default error messages*/
 ;
@@ -59,9 +59,9 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
             />
           </svg>
         </div>
-        <h2 className="w-5h-5ml-2" />Oops! Something went wrong
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Oops! Something went wrong
         </h2>
-        <p className="w-5h-5ml-2">{error.message || 'An unexpected error occurred'}
+        <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{error.message || 'An unexpected error occurred'}
         </p>
         {process.env['NODE_ENV'] === 'development' && (}
           <pre className="mt-4p-4b g-g ray-100 roundedtext-xsoverflow-auto"  >{error.stack}</pre>)}
@@ -109,7 +109,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
           </svg>
         </div>
         <h2 className="mt-4text-2xl font-boldtext-centertext-gray-900"  >Connection Issue</h2>
-        <p className="w-5h-5ml-2">Unable to connect to the server. Please check your internet connection and try again.
+        <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Unable to connect to the server. Please check your internet connection and try again.
         </p>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
 
@@ -126,7 +126,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <h1 className="text-6 xlfont-boldtext-gray-900"  >404</h1>
         <h2 className="mt-4text-2xlfont-boldtext-gray-900"  >Page Not Found</h2>
-        <p className="w-5h-5ml-2">The page you're looking for doesn't exist or has been moved.
+        <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
 
@@ -157,7 +157,7 @@ function NotFoundFallback(): JSX.Element {return (<div className="min-h-screen b
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <h1 className="text-6 xlfont-boldtext-gray-900"  >404</h1>
         <h2 className="mt-4text-2xlfont-boldtext-gray-900"  >Page Not Found</h2>
-        <p className="w-5h-5ml-2">The page you're looking for doesn't exist or has been moved.
+        <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
 

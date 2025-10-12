@@ -3,86 +3,66 @@
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix remaining JSX issues
-function fixRemainingJSX(content) {
-  let fixed = content;
+// Comprehensive fixes for remaining JSX issues
+const fixes = [
+  // Fix malformed className attributes
+  { pattern: /className="borderborder-cyan-400/g, replacement: 'className="border border-cyan-400' },
+  { pattern: /className="bg-slate-800\/50backdrop-blur-sm/g, replacement: 'className="bg-slate-800/50 backdrop-blur-sm' },
+  { pattern: /className="hover:border-cyan-400\/50transition-all/g, replacement: 'className="hover:border-cyan-400/50 transition-all' },
+  { pattern: /className="text-xlfont-semiboldtext-whitemb-3"/g, replacement: 'className="text-xl font-semibold text-white mb-3"' },
+  { pattern: /className="hover:text-slate-900transition-all/g, replacement: 'className="hover:text-slate-900 transition-all' },
   
-  // Fix remaining className spacing issues
-  fixed = fixed.replace(/from-slate-900pt-20/g, 'from-slate-900 pt-20');
-  fixed = fixed.replace(/py-16text-center/g, 'py-16 text-center');
-  fixed = fixed.replace(/text-whitemb-/g, 'text-white mb-');
-  fixed = fixed.replace(/text-gray-300mb-/g, 'text-gray-300 mb-');
-  fixed = fixed.replace(/flexspace-/g, 'flex space-');
-  fixed = fixed.replace(/flexitems-/g, 'flex items-');
-  fixed = fixed.replace(/w-4 h-4ml-/g, 'w-4 h-4 ml-');
-  fixed = fixed.replace(/w-5 h-5ml-/g, 'w-5 h-5 ml-');
-  fixed = fixed.replace(/hover:text-cyan-400transition-colors/g, 'hover:text-cyan-400 transition-colors');
-  fixed = fixed.replace(/items-centertext-gray-300/g, 'items-center text-gray-300');
-  fixed = fixed.replace(/w-4 h-4mr-/g, 'w-4 h-4 mr-');
-  fixed = fixed.replace(/pt-8text-center/g, 'pt-8 text-center');
+  // Fix malformed JSX elements
+  { pattern: /<h2 className="w-5 h-5 ml-2" \/>\s*([^<]+)\s*<\/h2>/g, replacement: '<h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">$1</h2>' },
+  { pattern: /<div className="w-16 h-16 rounded-lg bg-gradient-to-r \${feature\.color} flex items-center justify-center mb-4" \/>\s*<div>\s*\{feature\.icon\}\s*<\/div>/g, 
+    replacement: '<div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>\n                  {feature.icon}\n                </div>' },
   
-  // Fix duplicate closing tags
-  fixed = fixed.replace(/<\/Link>\s*<\/Link>/g, '</Link>');
-  fixed = fixed.replace(/<\/div>\s*<\/div>/g, '</div>');
+  // Fix malformed Link elements
+  { pattern: /<Link to="\/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300" \/>\s*View Demo\s*<\/Link>/g, 
+    replacement: '<Link to="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">\n              View Demo\n            </Link>' },
   
-  // Fix malformed Link components - single line format
-  fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*\/>\s*([^<]+)\s*<([^>]+)\s*\/>/g, 
-    '<Link to="$1" className="$2">\n          $3\n          <$4 />\n        </Link>');
+  // Fix malformed div elements in features map
+  { pattern: /<div key=\{index\} className="bg-slate-800\/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400\/50 transition-all duration-300" \/>\s*<div className=\{\`w-16 h-16 rounded-lg bg-gradient-to-r \$\{feature\.color\} flex items-center justify-center mb-4\`\} \/>\s*<div>\s*\{feature\.icon\}\s*<\/div>\s*<\/div>\s*<h3 className="text-xl font-semibold text-white mb-3">\{feature\.title\}<\/h3>\s*<p className="text-gray-300">\{feature\.description\}<\/p>\s*<\/div>/g, 
+    replacement: '<div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">\n                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>\n                  {feature.icon}\n                </div>\n                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>\n                <p className="text-gray-300">{feature.description}</p>\n              </div>' },
   
-  // Fix malformed Link components - multi-line format
-  fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*>\s*([^<]+)\s*<([^>]+)\s*\/>\s*<\/Link>\s*<\/Link>/g,
-    '<Link to="$1" className="$2">\n          $3\n          <$4 />\n        </Link>');
+  // Fix missing closing tags
+  { pattern: /(\s+)<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*<h2 className="w-5 h-5 ml-2" \/>\s*([^<]+)\s*<\/h2>\s*<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">([^<]+)<\/p>\s*<\/div>/g, 
+    replacement: '$1<div className="text-center">\n$1  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">$2</h2>\n$1  <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">$3</p>\n$1</div>' },
   
-  // Fix Link components with extra spaces and malformed structure
-  fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*>\s*([^<]+)\s*<([^>]+)\s*\/>\s*<\/Link>\s*<\/Link>/g,
-    '<Link to="$1" className="$2">\n          $3\n          <$4 />\n        </Link>');
+  // Fix malformed grid layouts
+  { pattern: /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*\{features\.map\(\(feature, index\) => \(/g, 
+    replacement: '<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">\n            {features.map((feature, index) => (' },
   
-  // Fix specific patterns for 5G pages
-  fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="([^"]+)"\s*\/>\s*Contact Us\s*<ArrowRight[^>]*\/>/g,
-    '<Link to="/contact" className="$1">\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
-  
-  // Fix malformed p tags
-  fixed = fixed.replace(/<p className="([^"]*)" \/>\s*([^<]+)\s*<\/p>/g, '<p className="$1">\n              $2\n            </p>');
-  
-  // Fix self-closing divs that should be opening tags
-  fixed = fixed.replace(/<div \/>\s*<h4/g, '<div>\n            <h4');
-  fixed = fixed.replace(/<div \/>\s*<h3/g, '<div>\n            <h3');
-  
-  // Fix ul tags
-  fixed = fixed.replace(/<ul className="([^"]*)" \/>\s*<li/g, '<ul className="$1">\n              <li');
-  
-  return fixed;
+  // Fix missing closing tags for sections
+  { pattern: /(\s+)<\/div>\s*<\/div>\s*<\/section>/g, replacement: '$1        </div>\n      </section>' },
+];
 
-// Function to process a single file
-function processFile(filePath) {
+// Find all TSX files in the app directory
+const files = await glob('app/**/*.tsx');
+
+console.log(`Found ${files.length} TSX files to process...`);
+
+let fixedCount = 0;
+
+for (const file of files) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixRemainingJSX(content);
+    let content = fs.readFileSync(file, 'utf8');
+    let originalContent = content;
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed remaining JSX: ${filePath}`);
-      return true;
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-
-// Main function
-async function main() {
-  console.log('Starting to fix remaining JSX issues...');
-  
-  // Get all TypeScript/TSX files
-  const files = await glob('**/*.{ts,tsx}', {
-    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
-  });
-  
-  let fixedCount = 0;
-  
-    if (processFile(file)) {
+    // Apply fixes
+    fixes.forEach(fix => {
+      content = content.replace(fix.pattern, fix.replacement);
+    });
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(file, content, 'utf8');
       fixedCount++;
-  });
-  
-  console.log(`\nFixed remaining JSX issues in ${fixedCount} files out of ${files.length} total files.`);
+      console.log(`Fixed: ${file}`);
+    }
+  } catch (error) {
+    console.error(`Error processing ${file}:`, error.message);
+  }
+}
 
-main().catch(console.error);
+console.log(`\nFixed ${fixedCount} files.`);

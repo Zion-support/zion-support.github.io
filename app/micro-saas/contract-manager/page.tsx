@@ -8,32 +8,32 @@ import { Link } from 'react-router-dom';
 const ContractManagerPage: React.FC = () => {
   const features = [
     {
-      icon: <FileText className="w-5h-5ml-2" />,
+      icon: <FileText className="w-5 h-5 ml-2" />,
       title: 'Smart Contract Templates',
       description: 'Pre-built contract templates for common business agreements with AI-powered customization.'
     },
     {
-      icon: <Clock className="w-5h-5ml-2" />,
+      icon: <Clock className="w-5 h-5 ml-2" />,
       title: 'Automated Renewals',
       description: 'Never miss a contract renewal with intelligent tracking and automated notifications.'
     },
     {
-      icon: <Shield className="w-5h-5ml-2" />,
+      icon: <Shield className="w-5 h-5 ml-2" />,
       title: 'Compliance Monitoring',
       description: 'Ensure all contracts meet legal requirements with built-in compliance checks.'
     },
     {
-      icon: <Users className="w-5h-5ml-2" />,
+      icon: <Users className="w-5 h-5 ml-2" />,
       title: 'Team Collaboration',
       description: 'Collaborate on contract reviews with real-time editing and commenting features.'
     },
     {
-      icon: <BarChart3 className="w-5h-5ml-2" />,
+      icon: <BarChart3 className="w-5 h-5 ml-2" />,
       title: 'Analytics Dashboard',
       description: 'Track contract performance, renewal rates, and key metrics in real-time.'
     },
     {
-      icon: <Calendar className="w-5h-5ml-2" />,
+      icon: <Calendar className="w-5 h-5 ml-2" />,
       title: 'Deadline Management',
       description: 'Never miss important contract deadlines with smart calendar integration.'
     }
@@ -94,54 +94,54 @@ const ContractManagerPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <FileText className="w-5h-5ml-2" />
+              <FileText className="w-5 h-5 ml-2" />
               <span />AI Contract Management</span>
             </div>
             
-            <h1 className="w-5h-5ml-2" />
-              Smart <span className="w-5h-5ml-2" />Contract Manager</span>
+            <h1 className="w-5 h-5 ml-2" />
+              Smart <span className="w-5 h-5 ml-2" />Contract Manager</span>
             </h1>
             
-            <p className="w-5h-5ml-2">Automate contract management with AI-powered insights, smart templates, 
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Automate contract management with AI-powered insights, smart templates, 
               and intelligent compliance monitoring. Never miss a deadline again.
             </p>
             
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
                 <span />Start Free Trial</span>
-                <ArrowRight className="w-5h-5ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
                 <span />Watch Demo</span>
-                <ArrowRight className="w-5h-5ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
         </section>
 
         {/* Features Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />
-                Powerful <span className="w-5h-5ml-2" />Features</span>
+              <h2 className="w-5 h-5 ml-2" />
+                Powerful <span className="w-5 h-5 ml-2" />Features</span>
               </h2>
-              <p className="w-5h-5ml-2">Everything you need to manage contracts efficiently and stay compliant.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Everything you need to manage contracts efficiently and stay compliant.
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
                   </div>
-                  <h3 className="w-5h-5ml-2" />{feature.title}
+                  <h3 className="w-5 h-5 ml-2" />{feature.title}
                   </h3>
-                  <p className="w-5h-5ml-2">{feature.description}
+                  <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{feature.description}
                   </p>
                 </div>
               ))}
@@ -149,13 +149,13 @@ const ContractManagerPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />
-                Simple <span className="w-5h-5ml-2" />Pricing</span>
+              <h2 className="w-5 h-5 ml-2" />
+                Simple <span className="w-5 h-5 ml-2" />Pricing</span>
               </h2>
-              <p className="w-5h-5ml-2">Choose the plan that fits your business needs. All plans include a 14-day free trial.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Choose the plan that fits your business needs. All plans include a 14-day free trial.
               </p>
             </div>
             
@@ -173,18 +173,18 @@ const ContractManagerPage: React.FC = () => {
                   )}
                   
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                    <p className="w-5h-5ml-2">{plan.description}</p>
+                    <h3 className="w-5 h-5 ml-2" />{plan.name}</h3>
+                    <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{plan.description}</p>
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <span className="w-5h-5ml-2" />{plan.price}</span>
-                      <span className="w-5h-5ml-2" />{plan.period}</span>
+                      <span className="w-5 h-5 ml-2" />{plan.price}</span>
+                      <span className="w-5 h-5 ml-2" />{plan.period}</span>
                     </div>
                   
-                  <ul className="w-5h-5ml-2" />
+                  <ul className="w-5 h-5 ml-2" />
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-centerspace-x-3" />
-                        <CheckCircle className="w-5h-5ml-2" />
-                        <span className="w-5h-5ml-2" />{feature}</span>
+                        <CheckCircle className="w-5 h-5 ml-2" />
+                        <span className="w-5 h-5 ml-2" />{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -204,30 +204,29 @@ const ContractManagerPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />
-                Ready to Streamline Your <span className="w-5h-5ml-2" />Contract Management?</span>
+              <h2 className="w-5 h-5 ml-2" />
+                Ready to Streamline Your <span className="w-5 h-5 ml-2" />Contract Management?</span>
               </h2>
               
-              <p className="w-5h-5ml-2">Join thousands of businesses already using our AI-powered contract management solution. 
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join thousands of businesses already using our AI-powered contract management solution. 
                 Start your free trial today and experience the difference.
               </p>
               
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
                   <span />Start Free Trial</span>
-                  <ArrowRight className="w-5h-5ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
                   <span />View All Plans</span>
-                  <ArrowRight className="w-5h-5ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
-              </div>
-          </div>
-        </section>
+                      </div>
+      </section>
       </div>
     </>
   )

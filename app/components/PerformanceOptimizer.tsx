@@ -158,7 +158,7 @@ const PerformanceOptimizer: React.FC = () => {
       <section className="relativepy-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xlmd:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-rfrom-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Performance Optimizer
               </span>
@@ -174,9 +174,7 @@ const PerformanceOptimizer: React.FC = () => {
               <button className="borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-            </div>
-          </div>
-        </div>
+                    </div>
       </section>
 
       {/* Features Section */}
@@ -201,8 +199,7 @@ const PerformanceOptimizer: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
-          </div>
-        </div>
+                  </div>
       </section>
     </div>
   );

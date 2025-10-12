@@ -6,32 +6,32 @@ import { ArrowRight, Bot, Key} from 'lucide-react';
 export default function AICybersecuritySuiteProPage() {
   const features = [
     {
-      icon: <Bot className="w-5h-5ml-2" />,
+      icon: <Bot className="w-5 h-5 ml-2" />,
       title: 'AI Threat Detection',
       description: 'Advanced machine learning algorithms detect and prevent threats in real-time with 99.9% accuracy'
     },
     {
-      icon: <Shield className="w-5h-5ml-2" />,
+      icon: <Shield className="w-5 h-5 ml-2" />,
       title: 'Zero-Trust Architecture',
       description: 'Implement comprehensive zero-trust security model with continuous verification and monitoring'
     },
     {
-      icon: <Activity className="w-5h-5ml-2" />,
+      icon: <Activity className="w-5 h-5 ml-2" />,
       title: 'Real-time Monitoring',
       description: '24/7 network monitoring with instant alerts and automated response to security incidents'
     },
     {
-      icon: <Key className="w-5h-5ml-2" />,
+      icon: <Key className="w-5 h-5 ml-2" />,
       title: 'Advanced Encryption',
       description: 'Military-grade encryption with quantum-resistant algorithms for maximum data protection'
     },
     {
-      icon: <Network className="w-5h-5ml-2" />,
+      icon: <Network className="w-5 h-5 ml-2" />,
       title: 'Network Security',
       description: 'Comprehensive network protection with AI-powered intrusion detection and prevention'
     },
     {
-      icon: <Alert className="w-5h-5ml-2" />,
+      icon: <Alert className="w-5 h-5 ml-2" />,
       title: 'Incident Response',
       description: 'Automated incident response with AI-driven forensics and rapid threat containment'
     }
@@ -115,22 +115,22 @@ export default function AICybersecuritySuiteProPage() {
 
   const benefits = [
     {
-      icon: <Shield className="w-5h-5ml-2" />,
+      icon: <Shield className="w-5 h-5 ml-2" />,
       title: '99.9% Threat Detection',
       description: 'AI-powered detection prevents security breaches before they happen'
     },
     {
-      icon: <Clock className="w-5h-5ml-2" />,
+      icon: <Clock className="w-5 h-5 ml-2" />,
       title: 'Real-time Response',
       description: 'Instant threat containment and automated incident response'
     },
     {
-      icon: <Target className="w-5h-5ml-2" />,
+      icon: <Target className="w-5 h-5 ml-2" />,
       title: 'Zero False Positives',
       description: 'Advanced AI eliminates false alarms and focuses on real threats'
     },
     {
-      icon: <Lock className="w-5h-5ml-2" />,
+      icon: <Lock className="w-5 h-5 ml-2" />,
       title: 'Enterprise Security',
       description: 'Military-grade encryption and compliance with industry standards'
     }
@@ -180,7 +180,7 @@ export default function AICybersecuritySuiteProPage() {
   ]
 
   return (
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>AI Cybersecurity Suite Pro - Zion Tech Group | Advanced Security Solutions</title>
         <meta name="description" content="Revolutionary AI-powered cybersecurity suite with threat detection, zero-trust architecture, and real-time monitoring. 99.9% threat detection accuracy. Starting at $199/month." />
@@ -190,74 +190,74 @@ export default function AICybersecuritySuiteProPage() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Shield className="w-5h-5ml-2" />
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <Shield className="w-5 h-5 ml-2" />
             <span />AI-Powered Cybersecurity</span>
           </div>
           
-          <h1 className="w-5h-5ml-2" />
+          <h1 className="w-5 h-5 ml-2" />
             AI Cybersecurity
             <br />
-            <span className="w-5h-5ml-2" />Suite Pro
+            <span className="w-5 h-5 ml-2" />Suite Pro
             </span>
           </h1>
           
-          <p className="w-5h-5ml-2">Protect your organization with AI-powered cybersecurity that detects and prevents threats in real-time. 
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Protect your organization with AI-powered cybersecurity that detects and prevents threats in real-time. 
             Achieve 99.9% threat detection accuracy with zero-trust architecture and automated incident response.
           </p>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="groupbg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
               <span />Start Free Trial</span>
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link to="#pricing" className="groupborder-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
               <span />View Pricing</span>
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
 
           {/* Key Stats */}
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">99.9%</div>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Threat Detection</div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">24/7</div>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Real-time Monitoring</div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">0</div>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">False Positives</div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">10 K+</div>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Protected Organizations</div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">99.9%</div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Threat Detection</div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">24/7</div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Real-time Monitoring</div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">0</div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">False Positives</div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">10 K+</div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Protected Organizations</div>
           </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Why Choose Our <span className="w-5h-5ml-2" />AI Cybersecurity Suite?</span>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5 ml-2" />
+              Why Choose Our <span className="w-5 h-5 ml-2" />AI Cybersecurity Suite?</span>
             </h2>
-            <p className="w-5h-5ml-2">Experience the future of cybersecurity with cutting-edge AI technology that protects your organization.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Experience the future of cybersecurity with cutting-edge AI technology that protects your organization.
             </p>
           </div>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-centergroup" />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{benefit.icon}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{benefit.icon}
                 </div>
-                <h3 className="w-5h-5ml-2" />{benefit.title}
+                <h3 className="w-5 h-5 ml-2" />{benefit.title}
                 </h3>
-                <p className="w-5h-5ml-2">{benefit.description}
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{benefit.description}
                 </p>
               </div>
             ))}
@@ -265,48 +265,48 @@ export default function AICybersecuritySuiteProPage() {
       </section>
 
       {/* Security Features Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Comprehensive <span className="w-5h-5ml-2" />Security Features</span>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5 ml-2" />
+              Comprehensive <span className="w-5 h-5 ml-2" />Security Features</span>
             </h2>
-            <p className="w-5h-5ml-2">Complete cybersecurity protection across all attack vectors with AI-powered intelligence.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Complete cybersecurity protection across all attack vectors with AI-powered intelligence.
             </p>
           </div>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {securityFeatures.map((feature, index) => (
               <div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}</div>
-                  <h3 className="w-5h-5ml-2" />{feature.title}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}</div>
+                  <h3 className="w-5 h-5 ml-2" />{feature.title}
                   </h3>
                 </div>
-                <p className="w-5h-5ml-2">{feature.description}
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{feature.description}
                 </p>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.benefit}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.benefit}
                 </div>
             ))}
           </div>
       </section>
 
       {/* Compliance Standards Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Industry <span className="w-5h-5ml-2" />Compliance</span>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5 ml-2" />
+              Industry <span className="w-5 h-5 ml-2" />Compliance</span>
             </h2>
-            <p className="w-5h-5ml-2">Meet and maintain compliance with major industry standards and regulations.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Meet and maintain compliance with major industry standards and regulations.
             </p>
           </div>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {complianceStandards.map((standard, index) => (
               <div key={index} className="grouptext-center" />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <span className="w-5h-5ml-2" />{standard}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <span className="w-5 h-5 ml-2" />{standard}
                   </span>
                 </div>
             ))}
@@ -314,24 +314,24 @@ export default function AICybersecuritySuiteProPage() {
       </section>
 
       {/* Features Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Advanced Features for <span className="w-5h-5ml-2" />Enterprise Security</span>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5 ml-2" />
+              Advanced Features for <span className="w-5 h-5 ml-2" />Enterprise Security</span>
             </h2>
-            <p className="w-5h-5ml-2">Everything you need to protect your organization with AI-powered cybersecurity intelligence.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Everything you need to protect your organization with AI-powered cybersecurity intelligence.
             </p>
           </div>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
                 </div>
-                <h3 className="w-5h-5ml-2" />{feature.title}
+                <h3 className="w-5 h-5 ml-2" />{feature.title}
                 </h3>
-                <p className="w-5h-5ml-2">{feature.description}
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{feature.description}
                 </p>
               </div>
             ))}
@@ -340,16 +340,16 @@ export default function AICybersecuritySuiteProPage() {
 
       {/* Pricing Section */}
       <section id="pricing" className="py-20px-4relative" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Simple, Transparent <span className="w-5h-5ml-2" />Pricing</span>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5 ml-2" />
+              Simple, Transparent <span className="w-5 h-5 ml-2" />Pricing</span>
             </h2>
-            <p className="w-5h-5ml-2">Choose the plan that fits your organization size and security needs. All plans include our core AI features.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Choose the plan that fits your organization size and security needs. All plans include our core AI features.
             </p>
           </div>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {pricingPlans.map((plan, index) => (
               <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
                 plan.popular 
@@ -357,24 +357,24 @@ export default function AICybersecuritySuiteProPage() {
                   : 'border-white/20 hover: border-cyan-400/30'
               }`} />
                 {plan.popular && (
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
                     </div>
                 )}
                 
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                  <p className="w-5h-5ml-2">{plan.description}</p>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5h-5ml-2" />{plan.price}</span>
-                    <span className="w-5h-5ml-2" />{plan.period}</span>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <h3 className="w-5 h-5 ml-2" />{plan.name}</h3>
+                  <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{plan.description}</p>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <span className="w-5 h-5 ml-2" />{plan.price}</span>
+                    <span className="w-5 h-5 ml-2" />{plan.period}</span>
                   </div>
                 
-                <ul className="w-5h-5ml-2" />
+                <ul className="w-5 h-5 ml-2" />
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-centerspace-x-3" />
-                      <CheckCircle className="w-5h-5ml-2" />
-                      <span className="w-5h-5ml-2" />{feature}</span>
+                      <CheckCircle className="w-5 h-5 ml-2" />
+                      <span className="w-5 h-5 ml-2" />{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -394,68 +394,66 @@ export default function AICybersecuritySuiteProPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Trusted by <span className="w-5h-5ml-2" />10,000+</span> Organizations
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5 ml-2" />
+              Trusted by <span className="w-5 h-5 ml-2" />10,000+</span> Organizations
             </h2>
-            <p className="w-5h-5ml-2">See what our customers are saying about their success with our AI cybersecurity suite.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">See what our customers are saying about their success with our AI cybersecurity suite.
             </p>
           </div>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-all duration-300" />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
                   </div>
                   <div />
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
                 </div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5h-5tex t-yellow-400fill-current"  />
                   ))}
                 </div>
-                <p className="w-5h-5ml-2">"{testimonial.content}"</p>
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"{testimonial.content}"</p>
               </div>
             ))}
           </div>
       </section>
 
       {/* CTA Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <h2 className="w-5h-5ml-2" />
-                  Ready to Secure Your <span className="w-5h-5ml-2" />Organization?</span>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <h2 className="w-5 h-5 ml-2" />
+                  Ready to Secure Your <span className="w-5 h-5 ml-2" />Organization?</span>
                 </h2>
                 
-                <p className="w-5h-5ml-2">Join thousands of organizations already protected with our AI-powered cybersecurity suite. 
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join thousands of organizations already protected with our AI-powered cybersecurity suite. 
                   Start your free trial today and experience the future of enterprise security.
                 </p>
                 
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Link to="/contact" className="groupbg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="groupbg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
                     <span />Start Free Trial</span>
-                    <ArrowRight className="w-5h-5ml-2" />
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                   <Link to="#pricing" className="groupborder-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
                     <span />View All Plans</span>
-                    <ArrowRight className="w-5h-5ml-2" />
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </div>
                 
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-                </div>
-            </div>
-        </div>
+                        </div>
       </section>
     </div>
   );

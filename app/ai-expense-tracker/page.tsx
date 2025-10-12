@@ -11,17 +11,17 @@ import { ArrowRight, Shield, Brain, TrendingUp } from 'lucide-react';
 const Page: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-5h-5ml-2" />,
+      icon: <Brain className="w-5 h-5 ml-2" />,
       title: "AI-Powered Analysis",
       description: "Advanced AI algorithms analyze your spending patterns and provide intelligent insights."
     },
     {
-      icon: <TrendingUp className="w-5h-5ml-2" />,
+      icon: <TrendingUp className="w-5 h-5 ml-2" />,
       title: "Real-time Tracking",
       description: "Track your expenses in real-time with automatic categorization and smart notifications."
     },
     {
-      icon: <Shield className="w-5h-5ml-2" />,
+      icon: <Shield className="w-5 h-5 ml-2" />,
       title: "Secure & Private",
       description: "Bank-level security ensures your financial data is protected and private."
     }
@@ -71,25 +71,25 @@ export default function AIExpenseTracker() {
         <meta property="og:url" content="https://ziontechgroup.com/ai-expense-tracker" />
       </Helmet>
 
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5h-5ml-2" />
-              <span className="w-5h-5ml-2" />
+        <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="w-5 h-5 ml-2" />
+              <span className="w-5 h-5 ml-2" />
                 AI Expense Tracker
               </span>
             </h1>
-            <p className="w-5h-5ml-2">Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs.
             </p>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <Link
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
           to="/contact"
-          className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup"
+          className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup"
         >
           Get Started
                 
-          <ArrowRight className="w-5h-5ml-2" />
+          <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
               <Link to="/contact" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
                 Learn More
@@ -100,21 +100,21 @@ export default function AIExpenseTracker() {
                 AI Expense Tracker
               </span>
             </h1>
-            <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Revolutionize your expense management with AI-powered tracking. 
               Automate categorization, optimize budgets, and gain valuable insights into your spending.
             </p>
             <div className="flexflex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Get Started
                 <ArrowRight className="w-5h-5 ml-2" />
               </Link>
               <Link
                 to="/services"
-                className="borderborder-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
               >
                 View All Services
               </Link>
@@ -122,24 +122,23 @@ export default function AIExpenseTracker() {
         </section>
 
         {/* Features Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />
-                Why Choose Our AI Expense Tracker?
+        <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Why Choose Our AI Expense Tracker?
               </h2>
-              <p className="w-5h-5ml-2">Our advanced AI technology helps you manage your finances more efficiently
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Our advanced AI technology helps you manage your finances more efficiently
               </p>
-            </div>
+          </div>
             
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-all duration-300" />
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-all duration-300" />
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     {feature.icon}
                   </div>
-                  <h3 className="w-5h-5ml-2" />{feature.title}</h3>
-                  <p className="w-5h-5ml-2">{feature.description}</p>
+                  <h3 className="w-5 h-5 ml-2" />{feature.title}</h3>
+                  <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -165,21 +164,19 @@ export default function AIExpenseTracker() {
                   </p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+                    </div>
+      </section>
 
         {/* CTA Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />
-                Ready to Get Started?
+        <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Ready to Get Started?
               </h2>
-              <p className="w-5h-5ml-2">Contact us to learn more about our solutions and how we can help your business.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Contact us to learn more about our solutions and how we can help your business.
               </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
                   Contact Us
                 </Link>
                 <Link to="/services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
@@ -191,12 +188,12 @@ export default function AIExpenseTracker() {
             <h2 className="text-4xlfont-bold text-white mb-6">
               Ready to Transform Your Expense Management?
             </h2>
-            <p className="text-xltext-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of users already using our AI-powered expense tracking solutions to better manage their finances.
             </p>
             <Link
               to="/contact"
-              className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
             >
               Contact Us Today
               <ArrowRight className="w-5h-5 ml-2" />

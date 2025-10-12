@@ -8,37 +8,37 @@ import { Link } from 'react-router-dom';
 const AITimeTrackerPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-5h-5ml-2" />,
+      icon: <Brain className="w-5 h-5 ml-2" />,
       title: 'AI Activity Recognition',
       description: 'Automatically detect and categorize work activities using AI to eliminate manual time entry.',
       benefits: ['Auto-detection', 'Smart categorization', 'Context awareness', 'Learning algorithms']
     },
     {
-      icon: <Timer className="w-5h-5ml-2" />,
+      icon: <Timer className="w-5 h-5 ml-2" />,
       title: 'Smart Time Tracking',
       description: 'AI-powered time tracking that learns your work patterns and suggests optimal time allocation.',
       benefits: ['Pattern learning', 'Optimal suggestions', 'Focus time detection', 'Break reminders']
     },
     {
-      icon: <TrendingUp className="w-5h-5ml-2" />,
+      icon: <TrendingUp className="w-5 h-5 ml-2" />,
       title: 'Productivity Analytics',
       description: 'Comprehensive analytics with AI insights to improve productivity and work-life balance.',
       benefits: ['Productivity metrics', 'Efficiency analysis', 'Distraction tracking', 'Goal setting']
     },
     {
-      icon: <Zap className="w-5h-5ml-2" />,
+      icon: <Zap className="w-5 h-5 ml-2" />,
       title: 'Automated Reporting',
       description: 'Generate detailed time reports automatically with AI-powered insights and recommendations.',
       benefits: ['Auto reports', 'Client billing', 'Project insights', 'Team analytics']
     },
     {
-      icon: <BarChart3 className="w-5h-5ml-2" />,
+      icon: <BarChart3 className="w-5 h-5 ml-2" />,
       title: 'Project Management',
       description: 'AI-driven project time estimation and resource allocation for better project planning.',
       benefits: ['Time estimation', 'Resource planning', 'Deadline tracking', 'Budget monitoring']
     },
     {
-      icon: <Shield className="w-5h-5ml-2" />,
+      icon: <Shield className="w-5 h-5 ml-2" />,
       title: 'Privacy Protection',
       description: 'Advanced privacy controls with local processing to protect sensitive work data.',
       benefits: ['Local processing', 'Data encryption', 'Privacy controls', 'GDPR compliance']
@@ -117,10 +117,10 @@ const AITimeTrackerPage: React.FC = () => {
   ]
 
   const stats = [
-    { number: '40%', label: 'Productivity Increase', icon: <TrendingUp className="w-5h-5ml-2" /> },
-    { number: '20%', label: 'Faster Delivery', icon: <Timer className="w-5h-5ml-2" /> },
-    { number: '95%', label: 'Accuracy Rate', icon: <Target className="w-5h-5ml-2" /> },
-    { number: '50 K+', label: 'Hours Tracked', icon: <Clock className="w-5h-5ml-2" /> }
+    { number: '40%', label: 'Productivity Increase', icon: <TrendingUp className="w-5 h-5 ml-2" /> },
+    { number: '20%', label: 'Faster Delivery', icon: <Timer className="w-5 h-5 ml-2" /> },
+    { number: '95%', label: 'Accuracy Rate', icon: <Target className="w-5 h-5 ml-2" /> },
+    { number: '50 K+', label: 'Hours Tracked', icon: <Clock className="w-5 h-5 ml-2" /> }
   ]
 
   return (
@@ -134,79 +134,79 @@ const AITimeTrackerPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Clock className="w-5h-5ml-2" />
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <Clock className="w-5 h-5 ml-2" />
             <span />AI-Powered Time Management</span>
           </div>
           
-          <h1 className="w-5h-5ml-2" />
+          <h1 className="w-5 h-5 ml-2" />
             AI Time
             <br />
-            <span className="w-5h-5ml-2" />Tracker Pro
+            <span className="w-5 h-5 ml-2" />Tracker Pro
             </span>
           </h1>
           
-          <p className="w-5h-5ml-2">Transform your productivity with AI-powered time tracking, 
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your productivity with AI-powered time tracking, 
             activity recognition, and intelligent insights that increase efficiency by 40%.
           </p>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="groupbg-gradient-to-r from-indigo-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-indigo-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40transformhover:scale-105" />
               <span />Start Free Trial</span>
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link to="#demo" className="groupborder-2 border-indigo-400 text-indigo-400 px-10 py-4 rounded-xl font-semibold hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
               <span />Watch Demo</span>
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
       </section>
 
       {/* Stats Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {stats.map((stat, index) => (
               <div key={index} className="text-centerbg-white/5 backdrop-blur-sm rounded-2 xl p-6 borderborder-white/10" />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.icon}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.icon}
                 </div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}
                 </div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}
                 </div>
             ))}
           </div>
       </section>
 
       {/* Features Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Intelligent <span className="w-5h-5ml-2" />Features</span>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5 ml-2" />
+              Intelligent <span className="w-5 h-5 ml-2" />Features</span>
             </h2>
-            <p className="w-5h-5ml-2">Our AI-powered time tracking platform uses machine learning to automatically 
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Our AI-powered time tracking platform uses machine learning to automatically 
               track activities, analyze productivity patterns, and provide actionable insights.
             </p>
           </div>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300hover:scale-105" />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
                 </div>
-                <h3 className="w-5h-5ml-2" />{feature.title}
+                <h3 className="w-5 h-5 ml-2" />{feature.title}
                 </h3>
-                <p className="w-5h-5ml-2">{feature.description}
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{feature.description}
                 </p>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className="flex items-center space-x-2text-gray-400text-sm" />
-                      <CheckCircle className="w-5h-5ml-2" />
+                      <CheckCircle className="w-5 h-5 ml-2" />
                       <span />{benefit}</span>
                     </div>
                   ))}
@@ -216,18 +216,18 @@ const AITimeTrackerPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Simple <span className="w-5h-5ml-2" />Pricing</span>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5 ml-2" />
+              Simple <span className="w-5 h-5 ml-2" />Pricing</span>
             </h2>
-            <p className="w-5h-5ml-2">Choose the perfect plan for your time tracking needs. All plans include our core AI features 
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Choose the perfect plan for your time tracking needs. All plans include our core AI features 
               with flexible options for individuals and teams.
             </p>
           </div>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {pricingPlans.map((plan, index) => (
               <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
                 plan.popular 
@@ -235,24 +235,24 @@ const AITimeTrackerPage: React.FC = () => {
                   : 'border-white/20 hover: border-white/40'
               }`} />
                 {plan.popular && (
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
                     </div>
                 )}
                 
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                  <p className="w-5h-5ml-2">{plan.description}</p>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5h-5ml-2" />{plan.price}</span>
-                    <span className="w-5h-5ml-2" />{plan.period}</span>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <h3 className="w-5 h-5 ml-2" />{plan.name}</h3>
+                  <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{plan.description}</p>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <span className="w-5 h-5 ml-2" />{plan.price}</span>
+                    <span className="w-5 h-5 ml-2" />{plan.period}</span>
                   </div>
                 
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   {plan.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-centerspace-x-3" />
-                      <CheckCircle className="w-5h-5ml-2" />
-                      <span className="w-5h-5ml-2" />{feature}</span>
+                      <CheckCircle className="w-5 h-5 ml-2" />
+                      <span className="w-5 h-5 ml-2" />{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -272,57 +272,57 @@ const AITimeTrackerPage: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Trusted by <span className="w-5h-5ml-2" />Professionals</span>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5 ml-2" />
+              Trusted by <span className="w-5 h-5 ml-2" />Professionals</span>
             </h2>
-            <p className="w-5h-5ml-2">See how AI Time Tracker is transforming productivity for professionals and teams worldwide.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">See how AI Time Tracker is transforming productivity for professionals and teams worldwide.
             </p>
           </div>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10backdrop-blur-lg rounded-2 xl p-8 borderborder-white/20" />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
                   </div>
                   <div />
-                    <h4 className="w-5h-5ml-2" />{testimonial.name}</h4>
-                    <p className="w-5h-5ml-2">{testimonial.company}</p>
+                    <h4 className="w-5 h-5 ml-2" />{testimonial.name}</h4>
+                    <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{testimonial.company}</p>
                   </div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5h-5tex t-yellow-400fill-current"  />
                   ))}
                 </div>
-                <p className="w-5h-5ml-2">"{testimonial.content}"</p>
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"{testimonial.content}"</p>
               </div>
             ))}
           </div>
       </section>
 
       {/* CTA Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <h2 className="w-5h-5ml-2" />
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="w-5 h-5 ml-2" />
             Ready to Boost Your
             <br />
-            <span className="w-5h-5ml-2" />Productivity?
+            <span className="w-5 h-5 ml-2" />Productivity?
             </span>
           </h2>
-          <p className="w-5h-5ml-2">Join thousands of professionals already increasing productivity and improving work-life balance with AI Time Tracker. 
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join thousands of professionals already increasing productivity and improving work-life balance with AI Time Tracker. 
             Start your free trial today - no credit card required.
           </p>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="groupbg-white text-indigo-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
               <span />Start Free Trial</span>
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link to="/pricing" className="groupborder-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
               <span />View All Plans</span>
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
       </section>

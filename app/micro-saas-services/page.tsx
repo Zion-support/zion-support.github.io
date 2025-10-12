@@ -123,10 +123,8 @@ const MicroSaasServicesPage: React.FC = () => {
                 >
                   View AI Services
                 </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+                      </div>
+      </section>
 
         {/* Services Grid */}
         <section className="py-20">
@@ -178,9 +176,8 @@ const MicroSaasServicesPage: React.FC = () => {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+                    </div>
+      </section>
 
         {/* Features Section */}
         <section className="py-20bg-gradient-to-r from-slate-800/30 to-slate-900/30">
@@ -204,9 +201,8 @@ const MicroSaasServicesPage: React.FC = () => {
                   <p className="text-gray-300leading-relaxed">{feature.description}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+                    </div>
+      </section>
 
         {/* Pricing Section */}
         <section className="py-20">
@@ -307,10 +303,8 @@ const MicroSaasServicesPage: React.FC = () => {
                 >
                   Contact Sales
                 </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+                      </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20">
@@ -335,10 +329,8 @@ const MicroSaasServicesPage: React.FC = () => {
                 >
                   Learn More About Us
                 </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+                      </div>
+      </section>
       </div>
     </>
   );

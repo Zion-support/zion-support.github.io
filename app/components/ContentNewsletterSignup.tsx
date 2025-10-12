@@ -57,11 +57,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <CheckCircle className="w-5h-5ml-2" />
+              <CheckCircle className="w-5 h-5 ml-2" />
             </div>
-            <h2 className="w-5h-5ml-2" />Thank You for Subscribing!
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Thank You for Subscribing!
             </h2>
-            <p className="w-5h-5ml-2">You'll receive our latest insights and updates soon.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">You'll receive our latest insights and updates soon.
             </p>
             <button
               onClick="{()" =  />setIsSubscribed(false)}
@@ -78,10 +78,10 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />{title}
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">{title}
             </h2>
-            <p className="w-5h-5ml-2">{subtitle}
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{subtitle}
             </p>
           </div>
 
@@ -109,14 +109,14 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
                 ) : (
                   <>
                     <span  >{buttonText}</span>
-                    <ArrowRight className="w-5h-5ml-2" />
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </>
                 )}
               </button>
             </div>
           </form>
 
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
 
                 <div key={index} className="text-center" />

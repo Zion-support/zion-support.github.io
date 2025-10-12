@@ -148,8 +148,8 @@ const PerformanceDashboard: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <h3 className="w-5h-5ml-2" />
-          <Activity className="w-5h-5ml-2" />
+        <h3 className="w-5 h-5 ml-2" />
+          <Activity className="w-5 h-5 ml-2" />
           Performance
         </h3>
         <button
@@ -194,8 +194,8 @@ const PerformanceDashboard: React.FC = () => {
         {metrics.memory && (
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <HardDrive className="w-5h-5ml-2" />
-              <span className="w-5h-5ml-2" />Memory</span>
+              <HardDrive className="w-5 h-5 ml-2" />
+              <span className="w-5 h-5 ml-2" />Memory</span>
             </div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <div />Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
@@ -206,8 +206,8 @@ const PerformanceDashboard: React.FC = () => {
         {metrics.connection && (
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <Wifi className="w-5h-5ml-2" />
-              <span className="w-5h-5ml-2" />Connection</span>
+              <Wifi className="w-5 h-5 ml-2" />
+              <span className="w-5 h-5 ml-2" />Connection</span>
             </div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <div />Type: {metrics.connection.effectiveType}</div>

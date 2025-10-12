@@ -41,13 +41,13 @@ const EnhancedHero: React.FC = () => {
         {/* Left Content */}
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5h-5ml-2" />
+            <h1 className="w-5 h-5 ml-2" />
               Transform Your Business with{' '}
-              <span className="w-5h-5ml-2" />AI & IT Solutions
+              <span className="w-5 h-5 ml-2" />AI & IT Solutions
               </span>
             </h1>
             
-            <p className="w-5h-5ml-2">Harness the power of cutting-edge artificial intelligence and information technology 
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Harness the power of cutting-edge artificial intelligence and information technology 
               to drive innovation, efficiency, and growth in your organization.
             </p>
 
@@ -57,7 +57,7 @@ const EnhancedHero: React.FC = () => {
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center text-gray-300" />
-                    <CheckCircle className="w-5h-5ml-2" />
+                    <CheckCircle className="w-5 h-5 ml-2" />
                     <span className="text-sm"  >{benefit}</span>
                   </div>
                 ))}
@@ -65,11 +65,11 @@ const EnhancedHero: React.FC = () => {
 
             {/* CTA Buttons */}
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <button className="w-5h-5ml-2" />
+              <button className="w-5 h-5 ml-2" />
                 Get Started
-                <ArrowRight className="w-5h-5ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="w-5h-5ml-2">Learn More
+              <button className="w-5 h-5 ml-2">Learn More
               </button>
             </div>
 
@@ -92,21 +92,21 @@ const EnhancedHero: React.FC = () => {
             {/* Floating Cards */}
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Brain className="w-5h-5ml-2" />
+                <Brain className="w-5 h-5 ml-2" />
                 <h3 className="text-lgfont-bold text-whitemb-2"  >AI Solutions</h3>
                 <p className="text-sm text-gray-300">Machine Learning & Analytics</p>
               </div>
 
             <div className="absolute top-20 right-0 w-64 h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2 xl backdrop-blur-sm borderborder-purple-500/30animate-float" style="{{" animationDelay: '1 s' }} />
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Shield className="w-5h-5ml-2" />
+                <Shield className="w-5 h-5 ml-2" />
                 <h3 className="text-lgfont-bold text-whitemb-2"  >Security</h3>
                 <p className="text-sm text-gray-300">Cybersecurity & Compliance</p>
               </div>
 
             <div className="absolute top-40 left-1/2 transform -translate-x-1/2 w-64 h-40 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-2 xl backdrop-blur-sm borderborder-green-500/30animate-float" style="{{" animationDelay: '2 s' }} />
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Globe className="w-5h-5ml-2" />
+                <Globe className="w-5 h-5 ml-2" />
                 <h3 className="text-lgfont-bold text-whitemb-2"  >Cloud Services</h3>
                 <p className="text-sm text-gray-300">Infrastructure & Migration</p>
               </div>

@@ -6,32 +6,32 @@ import { ArrowRight, Share2} from 'lucide-react';
 export default function AISocialMediaSchedulerPage() {
   const features = [
     {
-      icon: <Calendar className="w-5h-5ml-2" />,
+      icon: <Calendar className="w-5 h-5 ml-2" />,
       title: 'Smart Scheduling',
       description: 'AI-powered optimal posting times based on audience engagement patterns'
     },
     {
-      icon: <BarChart3 className="w-5h-5ml-2" />,
+      icon: <BarChart3 className="w-5 h-5 ml-2" />,
       title: 'Analytics Dashboard',
       description: 'Comprehensive performance metrics and ROI tracking across all platforms'
     },
     {
-      icon: <Users className="w-5h-5ml-2" />,
+      icon: <Users className="w-5 h-5 ml-2" />,
       title: 'Audience Insights',
       description: 'AI-driven audience analysis and content personalization recommendations'
     },
     {
-      icon: <Zap className="w-5h-5ml-2" />,
+      icon: <Zap className="w-5 h-5 ml-2" />,
       title: 'Auto-Posting',
       description: 'Seamless cross-platform content distribution with smart formatting'
     },
     {
-      icon: <Target className="w-5h-5ml-2" />,
+      icon: <Target className="w-5 h-5 ml-2" />,
       title: 'Content Optimization',
       description: 'AI suggestions for hashtags, captions, and optimal posting times'
     },
     {
-      icon: <Shield className="w-5h-5ml-2" />,
+      icon: <Shield className="w-5 h-5 ml-2" />,
       title: 'Brand Safety',
       description: 'Automated content moderation and brand compliance checking'
     }
@@ -124,34 +124,34 @@ export default function AISocialMediaSchedulerPage() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Share2 className="w-5h-5ml-2" />
+            <Share2 className="w-5 h-5 ml-2" />
             <span />AI-Powered Social Media Management</span>
           </div>
           
-          <h1 className="w-5h-5ml-2" />
+          <h1 className="w-5 h-5 ml-2" />
             AI Social Media
             <br />
-            <span className="w-5h-5ml-2" />Scheduler
+            <span className="w-5 h-5 ml-2" />Scheduler
             </span>
           </h1>
           
-          <p className="w-5h-5ml-2">Transform your social media presence with AI-powered scheduling, content optimization, 
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your social media presence with AI-powered scheduling, content optimization, 
             and analytics. Increase engagement by up to 300% with intelligent automation.
           </p>
           
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
               <span />Start Free Trial</span>
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link to="#pricing" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
               <span />View Pricing</span>
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
 
@@ -173,25 +173,25 @@ export default function AISocialMediaSchedulerPage() {
       </section>
 
       {/* Features Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Powerful Features for <span className="w-5h-5ml-2" />Social Success</span>
+            <h2 className="w-5 h-5 ml-2" />
+              Powerful Features for <span className="w-5 h-5 ml-2" />Social Success</span>
             </h2>
-            <p className="w-5h-5ml-2">Everything you need to manage, optimize, and grow your social media presence with AI-powered intelligence.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Everything you need to manage, optimize, and grow your social media presence with AI-powered intelligence.
             </p>
           </div>
           
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
                 </div>
-                <h3 className="w-5h-5ml-2" />{feature.title}
+                <h3 className="w-5 h-5 ml-2" />{feature.title}
                 </h3>
-                <p className="w-5h-5ml-2">{feature.description}
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{feature.description}
                 </p>
               </div>
             ))}
@@ -202,10 +202,10 @@ export default function AISocialMediaSchedulerPage() {
       <section id="pricing" className="py-20px-4 b g-gradient-to-br from-slate-800/50 to-purple-900/50relative" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Simple, Transparent <span className="w-5h-5ml-2" />Pricing</span>
+            <h2 className="w-5 h-5 ml-2" />
+              Simple, Transparent <span className="w-5 h-5 ml-2" />Pricing</span>
             </h2>
-            <p className="w-5h-5ml-2">Choose the plan that fits your needs. All plans include our core AI features and 24/7 support.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Choose the plan that fits your needs. All plans include our core AI features and 24/7 support.
             </p>
           </div>
           
@@ -223,18 +223,18 @@ export default function AISocialMediaSchedulerPage() {
                 )}
                 
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                  <p className="w-5h-5ml-2">{plan.description}</p>
+                  <h3 className="w-5 h-5 ml-2" />{plan.name}</h3>
+                  <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{plan.description}</p>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5h-5ml-2" />{plan.price}</span>
-                    <span className="w-5h-5ml-2" />{plan.period}</span>
+                    <span className="w-5 h-5 ml-2" />{plan.price}</span>
+                    <span className="w-5 h-5 ml-2" />{plan.period}</span>
                   </div>
                 
-                <ul className="w-5h-5ml-2" />
+                <ul className="w-5 h-5 ml-2" />
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-centerspace-x-3" />
-                      <CheckCircle className="w-5h-5ml-2" />
-                      <span className="w-5h-5ml-2" />{feature}</span>
+                      <CheckCircle className="w-5 h-5 ml-2" />
+                      <span className="w-5 h-5 ml-2" />{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -254,13 +254,13 @@ export default function AISocialMediaSchedulerPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Trusted by <span className="w-5h-5ml-2" />50,000+</span> Users
+            <h2 className="w-5 h-5 ml-2" />
+              Trusted by <span className="w-5 h-5 ml-2" />50,000+</span> Users
             </h2>
-            <p className="w-5h-5ml-2">See what our customers are saying about their success with our AI social media scheduler.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">See what our customers are saying about their success with our AI social media scheduler.
             </p>
           </div>
           
@@ -279,43 +279,41 @@ export default function AISocialMediaSchedulerPage() {
                     <Star key={i} className="w-5h-5te x t-yellow-400fill-current"  />
                   ))}
                 </div>
-                <p className="w-5h-5ml-2">"{testimonial.content}"</p>
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"{testimonial.content}"</p>
               </div>
             ))}
           </div>
       </section>
 
       {/* CTA Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <h2 className="w-5h-5ml-2" />
-                  Ready to Transform Your <span className="w-5h-5ml-2" />Social Media?</span>
+                <h2 className="w-5 h-5 ml-2" />
+                  Ready to Transform Your <span className="w-5 h-5 ml-2" />Social Media?</span>
                 </h2>
                 
-                <p className="w-5h-5ml-2">Join thousands of businesses already using our AI-powered social media scheduler 
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join thousands of businesses already using our AI-powered social media scheduler 
                   to increase engagement, save time, and grow their online presence.
                 </p>
                 
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
                     <span />Start Free Trial</span>
-                    <ArrowRight className="w-5h-5ml-2" />
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                   <Link to="#pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
                     <span />View All Plans</span>
-                    <ArrowRight className="w-5h-5ml-2" />
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </div>
                 
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-                </div>
-            </div>
-        </div>
+                        </div>
       </section>
     </div>
   );

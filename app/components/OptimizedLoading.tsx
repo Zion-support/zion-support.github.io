@@ -30,7 +30,7 @@ const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`}  />
         {text && (
-          <p className="w-5h-5ml-2">{text}
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{text}
           </p>
         )}
       </div>

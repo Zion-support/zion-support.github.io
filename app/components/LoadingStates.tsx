@@ -74,7 +74,7 @@ export const HolographicLoader: React.FC = () => {
 export const NeuralLoader: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Brain className="w-5h-5ml-2" />
+      <Brain className="w-5 h-5 ml-2" />
       <Zap className="w-6 h-6tex t-pink-500animate-pulse" style="{{" animationDelay: '0.2 s' }}  />
       <Cpu className="w-6 h-6tex t-cyan-500animate-pulse" style="{{" animationDelay: '0.4 s' }}  />
     </div>
