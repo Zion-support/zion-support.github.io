@@ -2,132 +2,129 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Brain, Zap, Shield, CheckCircle, ArrowRight, Star, Users, Award, Calendar, DollarSign, BarChart3, Target, Globe, Settings } from 'lucide-react';
+import { TrendingUp, Target, BarChart3, Brain, Zap, Shield, Users, Award, CheckCircle, ArrowRight, Star, DollarSign, Calendar, PieChart, LineChart } from 'lucide-react';
 
-const AiChatbotBuilderPage: React.FC = () => {
+const ZionAiSalesPredictorPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Conversations',
-      description: 'Advanced natural language processing for human-like interactions',
+      title: 'AI-Powered Predictions',
+      description: 'Advanced machine learning algorithms analyze historical data to predict sales trends with 95% accuracy',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: MessageCircle,
-      title: 'Omnichannel Support',
-      description: 'Deploy across web, mobile, social media, and messaging platforms seamlessly',
-      color: 'from-blue-500 to-cyan-500'
+      icon: Target,
+      title: 'Lead Scoring',
+      description: 'Intelligent lead scoring system identifies high-value prospects and optimizes conversion rates',
+      color: 'from-cyan-500 to-blue-500'
     },
     {
-      icon: Zap,
-      title: 'Real-time Learning',
-      description: 'Continuously improves responses based on user interactions and feedback',
+      icon: BarChart3,
+      title: 'Revenue Forecasting',
+      description: 'Accurate revenue forecasting with confidence intervals and scenario planning capabilities',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with data encryption and compliance standards',
-      color: 'from-red-500 to-orange-500'
+      icon: TrendingUp,
+      title: 'Market Analysis',
+      description: 'Real-time market analysis and competitive intelligence to stay ahead of trends',
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$99',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic AI responses',
+        'Up to 1,000 leads analyzed',
+        'Basic sales predictions',
         'Email support',
-        'Standard integrations',
-        '1 chatbot',
-        'Basic analytics'
+        'Standard reporting',
+        '1 user account'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$299',
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI responses',
+        'Up to 10,000 leads analyzed',
+        'Advanced AI predictions',
         'Priority support',
-        'Custom integrations',
-        'Up to 5 chatbots',
-        'Advanced analytics',
-        'Multi-language support',
-        'API access'
+        'Custom dashboards',
+        'Up to 5 user accounts',
+        'API access',
+        'Advanced analytics'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$799',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
+        'Unlimited leads analyzed',
         'Custom AI models',
         '24/7 dedicated support',
         'White-label solution',
-        'Unlimited chatbots',
-        'Custom analytics',
+        'Unlimited user accounts',
+        'Custom integrations',
         'Advanced security',
-        'Dedicated account manager',
-        'Custom training'
+        'Dedicated account manager'
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: '95%', label: 'Customer Satisfaction', icon: Star },
-    { number: '60%', label: 'Response Time Reduction', icon: Zap },
-    { number: '40%', label: 'Cost Savings', icon: DollarSign },
-    { number: '200+', label: 'Happy Customers', icon: Users }
+    { number: '95%', label: 'Prediction Accuracy', icon: Target },
+    { number: '40%', label: 'Increase in Sales', icon: TrendingUp },
+    { number: '60%', label: 'Time Saved', icon: Zap },
+    { number: '500+', label: 'Happy Customers', icon: Users }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Chatbot Builder - Create Intelligent Conversational AI | Zion Tech Group</title>
-        <meta name="description" content="Build intelligent chatbots with our AI-powered platform. Create conversational AI that understands context, learns from interactions, and provides 24/7 customer support. Starting at $199/month." />
-        <meta name="keywords" content="AI chatbot builder, conversational AI, chatbot platform, customer support automation, AI assistant, natural language processing" />
-        <meta property="og:title" content="AI Chatbot Builder - Create Intelligent Conversational AI" />
-        <meta property="og:description" content="Build intelligent chatbots with our AI-powered platform. Create conversational AI that understands context and provides 24/7 support." />
+        <title>Zion AI Sales Predictor - Advanced Sales Forecasting & Lead Scoring | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered sales prediction platform. Increase sales by 40% with accurate forecasting, intelligent lead scoring, and revenue optimization. Starting at $99/month." />
+        <meta name="keywords" content="AI sales prediction, sales forecasting, lead scoring, revenue optimization, machine learning, sales analytics" />
+        <meta property="og:title" content="Zion AI Sales Predictor - Advanced Sales Forecasting & Lead Scoring" />
+        <meta property="og:description" content="Revolutionary AI-powered sales prediction platform. Increase sales by 40% with accurate forecasting and intelligent lead scoring." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-chatbot-builder" />
+        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-sales-predictor" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                <span className="holographic-text neon-glow">
-                  AI Chatbot Builder
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Zion AI Sales Predictor
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Create intelligent chatbots that understand context, learn from interactions, and provide 24/7 customer support with advanced AI technology
+                Revolutionize your sales with AI-powered predictions, intelligent lead scoring, and revenue forecasting that increases sales by 40%
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
-                  className="cyber-button-enhanced text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Free Trial
                 </Link>
                 <Link 
                   to="/demo" 
-                  className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 neon-glow"
+                  className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
                 >
                   Watch Demo
                 </Link>
@@ -161,16 +158,16 @@ const AiChatbotBuilderPage: React.FC = () => {
                 Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Build chatbots that truly understand your customers and provide meaningful interactions
+                Leverage cutting-edge artificial intelligence to transform your sales process and maximize revenue
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="glass-card floating p-6 hover:border-purple-400/40 transition-all duration-300">
-                  <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4 neon-glow`}>
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
+                  <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 holographic-text">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
@@ -186,12 +183,12 @@ const AiChatbotBuilderPage: React.FC = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your chatbot needs. All plans include our core AI conversation engine.
+                Choose the perfect plan for your business needs. All plans include our core AI prediction engine.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`relative glass-card floating p-8 ${plan.popular ? 'border-purple-400/60 ring-2 ring-purple-400/20' : 'border-slate-700/50'} hover:border-purple-400/40 transition-all duration-300`}>
+                <div key={index} className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-purple-400/60 ring-2 ring-purple-400/20' : 'border-slate-700/50'} hover:border-purple-400/40 transition-all duration-300`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -236,21 +233,21 @@ const AiChatbotBuilderPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 text-center border border-purple-500/30">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Build Your AI Chatbot?
+                Ready to Transform Your Sales?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join 200+ companies already using our AI Chatbot Builder to improve customer satisfaction by 95% and reduce response times by 60%.
+                Join 500+ companies already using Zion AI Sales Predictor to increase their sales by 40% and optimize their revenue forecasting.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
-                  className="cyber-button-enhanced text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Free Trial
                 </Link>
                 <Link 
                   to="/demo" 
-                  className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 neon-glow"
+                  className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
                 >
                   Schedule Demo
                 </Link>
@@ -263,4 +260,4 @@ const AiChatbotBuilderPage: React.FC = () => {
   );
 };
 
-export default AiChatbotBuilderPage;
+export default ZionAiSalesPredictorPage;

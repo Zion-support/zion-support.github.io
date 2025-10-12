@@ -2,132 +2,132 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Brain, Zap, Shield, CheckCircle, ArrowRight, Star, Users, Award, Calendar, DollarSign, BarChart3, Target, Globe, Settings } from 'lucide-react';
+import { MessageCircle, TrendingUp, Target, Brain, Zap, BarChart3, CheckCircle, ArrowRight, Star, Users, Award, Calendar, PieChart, LineChart } from 'lucide-react';
 
-const AiChatbotBuilderPage: React.FC = () => {
+const ZionAiCustomerSupportProPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Conversations',
-      description: 'Advanced natural language processing for human-like interactions',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: MessageCircle,
-      title: 'Omnichannel Support',
-      description: 'Deploy across web, mobile, social media, and messaging platforms seamlessly',
+      title: 'AI-Powered Responses',
+      description: 'Intelligent chatbot that provides instant, accurate responses to customer inquiries 24/7',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Zap,
-      title: 'Real-time Learning',
-      description: 'Continuously improves responses based on user interactions and feedback',
+      icon: MessageCircle,
+      title: 'Multi-Channel Support',
+      description: 'Handle support across email, chat, social media, and phone with unified AI assistance',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with data encryption and compliance standards',
-      color: 'from-red-500 to-orange-500'
+      icon: BarChart3,
+      title: 'Support Analytics',
+      description: 'Track response times, satisfaction scores, and resolution rates with detailed analytics',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: Target,
+      title: 'Ticket Routing',
+      description: 'Smart ticket routing ensures inquiries reach the right agent based on expertise and workload',
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$129',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic AI responses',
+        'Up to 1,000 tickets/month',
+        'Basic AI chatbot',
         'Email support',
-        'Standard integrations',
-        '1 chatbot',
-        'Basic analytics'
+        'Standard analytics',
+        '1 user account',
+        'Email integration'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$329',
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-        'Up to 10,000 conversations/month',
+        'Up to 10,000 tickets/month',
         'Advanced AI responses',
         'Priority support',
-        'Custom integrations',
-        'Up to 5 chatbots',
-        'Advanced analytics',
-        'Multi-language support',
-        'API access'
+        'Custom analytics',
+        'Up to 5 user accounts',
+        'Multi-channel support',
+        'Knowledge base',
+        'Custom workflows'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$799',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
+        'Unlimited tickets',
         'Custom AI models',
         '24/7 dedicated support',
         'White-label solution',
-        'Unlimited chatbots',
-        'Custom analytics',
+        'Unlimited user accounts',
+        'Custom integrations',
         'Advanced security',
         'Dedicated account manager',
-        'Custom training'
+        'Advanced automation'
       ],
       popular: false
     }
   ];
 
   const stats = [
+    { number: '80%', label: 'Response Time Reduction', icon: Zap },
     { number: '95%', label: 'Customer Satisfaction', icon: Star },
-    { number: '60%', label: 'Response Time Reduction', icon: Zap },
-    { number: '40%', label: 'Cost Savings', icon: DollarSign },
-    { number: '200+', label: 'Happy Customers', icon: Users }
+    { number: '60%', label: 'Cost Savings', icon: TrendingUp },
+    { number: '300+', label: 'Happy Customers', icon: Users }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Chatbot Builder - Create Intelligent Conversational AI | Zion Tech Group</title>
-        <meta name="description" content="Build intelligent chatbots with our AI-powered platform. Create conversational AI that understands context, learns from interactions, and provides 24/7 customer support. Starting at $199/month." />
-        <meta name="keywords" content="AI chatbot builder, conversational AI, chatbot platform, customer support automation, AI assistant, natural language processing" />
-        <meta property="og:title" content="AI Chatbot Builder - Create Intelligent Conversational AI" />
-        <meta property="og:description" content="Build intelligent chatbots with our AI-powered platform. Create conversational AI that understands context and provides 24/7 support." />
+        <title>Zion AI Customer Support Pro - Reduce Response Time by 80% | Zion Tech Group</title>
+        <meta name="description" content="AI-powered customer support platform. Reduce response time by 80% with intelligent chatbots, multi-channel support, and advanced analytics. Starting at $129/month." />
+        <meta name="keywords" content="customer support, AI chatbot, support automation, helpdesk, customer service, support analytics" />
+        <meta property="og:title" content="Zion AI Customer Support Pro - Reduce Response Time by 80%" />
+        <meta property="og:description" content="AI-powered customer support platform with intelligent chatbots and multi-channel support. Reduce response time by 80% and boost satisfaction." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-chatbot-builder" />
+        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-customer-support-pro" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-green-500/10"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                <span className="holographic-text neon-glow">
-                  AI Chatbot Builder
+                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
+                  Zion AI Customer Support Pro
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Create intelligent chatbots that understand context, learn from interactions, and provide 24/7 customer support with advanced AI technology
+                Transform your customer support with AI. Reduce response time by 80% and achieve 95% customer satisfaction with intelligent automation
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
-                  className="cyber-button-enhanced text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Free Trial
                 </Link>
                 <Link 
                   to="/demo" 
-                  className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 neon-glow"
+                  className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
                 >
                   Watch Demo
                 </Link>
@@ -142,7 +142,7 @@ const AiChatbotBuilderPage: React.FC = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-4">
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -158,19 +158,19 @@ const AiChatbotBuilderPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Powerful AI Features
+                Advanced Support Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Build chatbots that truly understand your customers and provide meaningful interactions
+                Leverage AI to provide exceptional customer support across all channels
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="glass-card floating p-6 hover:border-purple-400/40 transition-all duration-300">
-                  <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4 neon-glow`}>
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
+                  <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 holographic-text">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
@@ -183,18 +183,18 @@ const AiChatbotBuilderPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Simple, Transparent Pricing
+                Scalable Support Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your chatbot needs. All plans include our core AI conversation engine.
+                Choose the perfect plan for your support volume. All plans include our core AI support engine.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`relative glass-card floating p-8 ${plan.popular ? 'border-purple-400/60 ring-2 ring-purple-400/20' : 'border-slate-700/50'} hover:border-purple-400/40 transition-all duration-300`}>
+                <div key={index} className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-blue-400/60 ring-2 ring-blue-400/20' : 'border-slate-700/50'} hover:border-blue-400/40 transition-all duration-300`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -219,8 +219,8 @@ const AiChatbotBuilderPage: React.FC = () => {
                     to="/contact" 
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular 
-                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700' 
-                        : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'
+                        ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700' 
+                        : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'
                     }`}
                   >
                     Get Started
@@ -234,23 +234,23 @@ const AiChatbotBuilderPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 text-center border border-purple-500/30">
+            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 text-center border border-blue-500/30">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Build Your AI Chatbot?
+                Elevate Your Customer Support Today
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join 200+ companies already using our AI Chatbot Builder to improve customer satisfaction by 95% and reduce response times by 60%.
+                Join 300+ companies already using Zion AI Customer Support Pro to reduce response time by 80% and achieve 95% customer satisfaction.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
-                  className="cyber-button-enhanced text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Free Trial
                 </Link>
                 <Link 
                   to="/demo" 
-                  className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 neon-glow"
+                  className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
                 >
                   Schedule Demo
                 </Link>
@@ -263,4 +263,4 @@ const AiChatbotBuilderPage: React.FC = () => {
   );
 };
 
-export default AiChatbotBuilderPage;
+export default ZionAiCustomerSupportProPage;

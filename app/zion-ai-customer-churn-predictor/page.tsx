@@ -2,132 +2,132 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Brain, Zap, Shield, CheckCircle, ArrowRight, Star, Users, Award, Calendar, DollarSign, BarChart3, Target, Globe, Settings } from 'lucide-react';
+import { AlertTriangle, Users, TrendingDown, Shield, Brain, Zap, Target, BarChart3, CheckCircle, ArrowRight, Star, DollarSign, Calendar, PieChart, LineChart } from 'lucide-react';
 
-const AiChatbotBuilderPage: React.FC = () => {
+const ZionAiCustomerChurnPredictorPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Conversations',
-      description: 'Advanced natural language processing for human-like interactions',
-      color: 'from-purple-500 to-pink-500'
+      title: 'AI Churn Detection',
+      description: 'Advanced machine learning models identify customers at risk of churning with 92% accuracy',
+      color: 'from-red-500 to-orange-500'
     },
     {
-      icon: MessageCircle,
-      title: 'Omnichannel Support',
-      description: 'Deploy across web, mobile, social media, and messaging platforms seamlessly',
-      color: 'from-blue-500 to-cyan-500'
+      icon: AlertTriangle,
+      title: 'Early Warning System',
+      description: 'Get real-time alerts when customers show signs of potential churn behavior',
+      color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: Zap,
-      title: 'Real-time Learning',
-      description: 'Continuously improves responses based on user interactions and feedback',
+      icon: Target,
+      title: 'Retention Campaigns',
+      description: 'Automated personalized retention campaigns to win back at-risk customers',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with data encryption and compliance standards',
-      color: 'from-red-500 to-orange-500'
+      icon: BarChart3,
+      title: 'Churn Analytics',
+      description: 'Comprehensive analytics dashboard showing churn patterns and retention metrics',
+      color: 'from-blue-500 to-cyan-500'
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$149',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic AI responses',
-        'Email support',
-        'Standard integrations',
-        '1 chatbot',
-        'Basic analytics'
+        'Up to 5,000 customers',
+        'Basic churn prediction',
+        'Email alerts',
+        'Standard reporting',
+        '1 user account',
+        'Email support'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$399',
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI responses',
+        'Up to 25,000 customers',
+        'Advanced AI predictions',
+        'Real-time alerts',
+        'Custom dashboards',
+        'Up to 5 user accounts',
+        'API access',
         'Priority support',
-        'Custom integrations',
-        'Up to 5 chatbots',
-        'Advanced analytics',
-        'Multi-language support',
-        'API access'
+        'Retention campaigns'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$999',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
+        'Unlimited customers',
         'Custom AI models',
         '24/7 dedicated support',
         'White-label solution',
-        'Unlimited chatbots',
-        'Custom analytics',
+        'Unlimited user accounts',
+        'Custom integrations',
         'Advanced security',
         'Dedicated account manager',
-        'Custom training'
+        'Custom retention strategies'
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: '95%', label: 'Customer Satisfaction', icon: Star },
-    { number: '60%', label: 'Response Time Reduction', icon: Zap },
-    { number: '40%', label: 'Cost Savings', icon: DollarSign },
-    { number: '200+', label: 'Happy Customers', icon: Users }
+    { number: '92%', label: 'Prediction Accuracy', icon: Target },
+    { number: '35%', label: 'Churn Reduction', icon: TrendingDown },
+    { number: '50%', label: 'Retention Improvement', icon: Shield },
+    { number: '300+', label: 'Happy Customers', icon: Users }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Chatbot Builder - Create Intelligent Conversational AI | Zion Tech Group</title>
-        <meta name="description" content="Build intelligent chatbots with our AI-powered platform. Create conversational AI that understands context, learns from interactions, and provides 24/7 customer support. Starting at $199/month." />
-        <meta name="keywords" content="AI chatbot builder, conversational AI, chatbot platform, customer support automation, AI assistant, natural language processing" />
-        <meta property="og:title" content="AI Chatbot Builder - Create Intelligent Conversational AI" />
-        <meta property="og:description" content="Build intelligent chatbots with our AI-powered platform. Create conversational AI that understands context and provides 24/7 support." />
+        <title>Zion AI Customer Churn Predictor - Reduce Churn by 35% | Zion Tech Group</title>
+        <meta name="description" content="AI-powered customer churn prediction platform. Reduce churn by 35% with early warning alerts, retention campaigns, and advanced analytics. Starting at $149/month." />
+        <meta name="keywords" content="customer churn prediction, churn analytics, customer retention, AI churn detection, retention campaigns, customer lifetime value" />
+        <meta property="og:title" content="Zion AI Customer Churn Predictor - Reduce Churn by 35%" />
+        <meta property="og:description" content="AI-powered customer churn prediction platform with 92% accuracy. Reduce churn by 35% with early warning alerts and retention campaigns." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-chatbot-builder" />
+        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-customer-churn-predictor" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                <span className="holographic-text neon-glow">
-                  AI Chatbot Builder
+                <span className="bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
+                  Zion AI Customer Churn Predictor
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Create intelligent chatbots that understand context, learn from interactions, and provide 24/7 customer support with advanced AI technology
+                Stop customer churn before it happens. AI-powered prediction with 92% accuracy reduces churn by 35% and increases retention
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
-                  className="cyber-button-enhanced text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Free Trial
                 </Link>
                 <Link 
                   to="/demo" 
-                  className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 neon-glow"
+                  className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-white transition-all duration-300"
                 >
                   Watch Demo
                 </Link>
@@ -142,7 +142,7 @@ const AiChatbotBuilderPage: React.FC = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mb-4">
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -158,19 +158,19 @@ const AiChatbotBuilderPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Powerful AI Features
+                Advanced Churn Prevention
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Build chatbots that truly understand your customers and provide meaningful interactions
+                Leverage AI to identify at-risk customers and implement targeted retention strategies
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="glass-card floating p-6 hover:border-purple-400/40 transition-all duration-300">
-                  <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4 neon-glow`}>
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-red-500/20 hover:border-red-400/40 transition-all duration-300">
+                  <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 holographic-text">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
@@ -183,18 +183,18 @@ const AiChatbotBuilderPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Simple, Transparent Pricing
+                Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your chatbot needs. All plans include our core AI conversation engine.
+                Choose the perfect plan for your customer base. All plans include our core AI churn prediction engine.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`relative glass-card floating p-8 ${plan.popular ? 'border-purple-400/60 ring-2 ring-purple-400/20' : 'border-slate-700/50'} hover:border-purple-400/40 transition-all duration-300`}>
+                <div key={index} className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-red-400/60 ring-2 ring-red-400/20' : 'border-slate-700/50'} hover:border-red-400/40 transition-all duration-300`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -219,8 +219,8 @@ const AiChatbotBuilderPage: React.FC = () => {
                     to="/contact" 
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular 
-                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700' 
-                        : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'
+                        ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover:from-red-700 hover:to-orange-700' 
+                        : 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-white'
                     }`}
                   >
                     Get Started
@@ -234,23 +234,23 @@ const AiChatbotBuilderPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 text-center border border-purple-500/30">
+            <div className="bg-gradient-to-r from-red-600/20 to-orange-600/20 backdrop-blur-sm rounded-2xl p-12 text-center border border-red-500/30">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Build Your AI Chatbot?
+                Stop Customer Churn Today
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join 200+ companies already using our AI Chatbot Builder to improve customer satisfaction by 95% and reduce response times by 60%.
+                Join 300+ companies already using Zion AI Customer Churn Predictor to reduce churn by 35% and increase customer retention.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
-                  className="cyber-button-enhanced text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Free Trial
                 </Link>
                 <Link 
                   to="/demo" 
-                  className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 neon-glow"
+                  className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-white transition-all duration-300"
                 >
                   Schedule Demo
                 </Link>
@@ -263,4 +263,4 @@ const AiChatbotBuilderPage: React.FC = () => {
   );
 };
 
-export default AiChatbotBuilderPage;
+export default ZionAiCustomerChurnPredictorPage;
