@@ -4,7 +4,7 @@ import React from 'react';
 export default ${componentName};`;
 
 // Get all AI service pages from App.tsx;
-const aiServicePages = [
+const aiServicePages = [;
   'ai-analytics', 'ai-automation', 'ai-chatbot-builder', 'ai-cybersecurity', 
   'ai-crm', 'ai-data-analytics', 'ai-healthcare', 'ai-financial-services', 
   'ai-computer-vision', 'ai-voice-solutions', 'ai-ecommerce-solutions', 
@@ -19,7 +19,7 @@ const aiServicePages = [
   'ai-voice-assistant', 'ai-content-generation-pro'
 ];
 
-const itServicePages = [
+const itServicePages = [;
   'cloud-infrastructure', 'cybersecurity-solutions', 'web-development', 
   'mobile-development', 'api-development', 'database-management', 'devops-cicd', 
   'it-support', 'data-analytics-bi', 'custom-software', 'network-infrastructure', 
@@ -33,7 +33,7 @@ const itServicePages = [
   'workflow-automation', 'cloud-native-security'
 ];
 
-const microSaasPages = [
+const microSaasPages = [;
   'zion-analytics-pro', 'zion-chat-ai', 'zion-security-shield', 'zion-cloud-vault', 
   'zion-content-studio', 'zion-crm-intelligence', 'zion-data-sync', 'zion-lead-magnet', 
   'zion-project-master', 'zion-email-automation', 'zion-inventory-smart', 
@@ -48,21 +48,21 @@ const microSaasPages = [
   'zion-ai-document-ai'
 ];
 
-const emergingTechPages = [
+const emergingTechPages = [;
   '5g-implementation', 'ai-3d-generation', 'ai-holographic-workspace', 
   'ai-autonomous-systems', 'ai-blockchain-solutions', 'quantum-computing', 
   'ar-vr-solutions', 'iot-integration', 'machine-learning'
 ];
 
-const companyPages = [
+const companyPages = [;
   'team', 'partners', 'status'
 ];
 
-const resourcePages = [
+const resourcePages = [;
   'faq', 'docs', 'api-docs', 'community', 'compliance'
 ];
 
-const allPages = [
+const allPages = [;
   ...aiServicePages, 
   ...itServicePages, 
   ...microSaasPages, 
@@ -72,10 +72,9 @@ const allPages = [
 ];
 
  `'use client';
-  return (
-    
+  return()
         <title>${title} - Zion Tech Group</title>
-                ${title}
+                ${title})
               Professional ${title.toLowerCase()} services by Zion Tech Group.
 
             <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>

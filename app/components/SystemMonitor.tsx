@@ -3,23 +3,40 @@ export default SystemMonitorPage;
 'use client'
 
   ];
-              </span>
-              <br /></br>
-              <span const className = "text-white"  >Solutions</span>
-            </h1>
+              <>
+    </span>
+    <br />
+</><>
+    </br>
+    <span const className = "text-white"  >
+</>Solutions<>
+    </span>
+    </h1>
+</>
             <p className="w-5h-5ml-2">Transform your business with our advanced systemmonitor solutions.
               Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5h-5ml-2" /></button>
+            <>
+    </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</><>
+    </div>
+    <button className="w-5h-5ml-2" />
+</></button>
                 Get Started;
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-              </button>
-              <button className="w-5h-5ml-2" /></button>
+                <>
+    <ArrowRight className="w-5h-5ml-2" />
+    </ArrowRight>
+</>
+              <>
+    </button>
+    <button className="w-5h-5ml-2" />
+</></button>
                 Learn More;
-  </
+  <>
+    </
             </div>
     </div>
+</>
   )}
   </button>
 }
@@ -31,7 +48,7 @@ interface SystemMonitorProps {
 
 const SystemMonitor: React.FC<SystemMonitorProps /> = ({
   onAlert,
-  className = ''
+  className = '')
 }) => {
   const [metrics, setMetrics] = useState<SystemMetrics />({
     cpu: 0,
@@ -39,9 +56,9 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
     disk: 0,
     network: 0,
     battery: 100,
-    uptime: 0;
+    uptime: 0;)
   })
-  const [isMonitoring, setIsMonitoring] = useState(false)
+  const [isMonitoring, setIsMonitoring] = useState(false);
 
   const updateMetrics = useCallback(() => {
     // Simulate system metrics;
@@ -70,7 +87,7 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
 
   useEffect(() => {
     if (isMonitoring) {
-      const interval = setInterval(updateMetrics, 1000)
+      const interval = setInterval(updateMetrics, 1000);
       return () => clearInterval(interval)
     }
   }, [isMonitoring, updateMetrics])

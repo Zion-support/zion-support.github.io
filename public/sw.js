@@ -1,10 +1,10 @@
 // Service Worker for Zion Tech Group;
-const CACHE_NAME = 'zion-tech-group-v1'
-const STATIC_CACHE = 'zion-static-v1'
-const DYNAMIC_CACHE = 'zion-dynamic-v1'
+const CACHE_NAME = 'zion-tech-group-v1';
+const STATIC_CACHE = 'zion-static-v1';
+const DYNAMIC_CACHE = 'zion-dynamic-v1';
 
 // Assets to cache immediately;
-const STATIC_ASSETS = [
+const STATIC_ASSETS = [;
   '/',
   '/about',
   '/contact',
@@ -16,7 +16,7 @@ const STATIC_ASSETS = [
 // Install event - cache static assets;
   console.log('Service Worker installing...')
   
-  event.waitUntil(
+  event.waitUntil()
     caches.open(STATIC_CACHE)
         console.log('Caching static assets')
         return cache.addAll(STATIC_ASSETS)
@@ -32,9 +32,9 @@ const STATIC_ASSETS = [
 // Activate event - clean up old caches;
   console.log('Service Worker activating...')
   
-  event.waitUntil(
+  event.waitUntil()
     caches.keys()
-        return Promise.all(
+        return Promise.all()
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
               console.log('Deleting old cache:', cacheName)
               return caches.delete(cacheName)
@@ -49,7 +49,7 @@ const STATIC_ASSETS = [
 
 // Fetch event - serve from cache, fallback to network;
   const { request } = event;
-  const url = new URL(request.url)
+  const url = new URL(request.url);
   
   // Skip non-GET requests;
   if (request.method !== 'GET') {
@@ -57,7 +57,7 @@ const STATIC_ASSETS = [
   // Skip chrome-extension and other non-http requests;
   if (!url.protocol.startsWith('http')) {
     return;
-  event.respondWith(
+  event.respondWith()
     caches.match(request)
         // Return cached version if available;
         if (cachedResponse) {
@@ -69,7 +69,7 @@ const STATIC_ASSETS = [
             if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             // Clone the response;
-            const responseToCache = response.clone()
+            const responseToCache = response.clone();
             
             // Cache dynamic content;
             caches.open(DYNAMIC_CACHE)
@@ -94,15 +94,15 @@ const STATIC_ASSETS = [
 
 // Background sync for form submissions;
   if (event.tag === 'contact-form') {
-    event.waitUntil(
-      // Handle form submission sync;
+    event.waitUntil()
+      // Handle form submission sync;)
       console.log('Syncing contact form submission')
     )
 })
 
 // Push notifications;
   if (event.data) {
-    const data = event.data.json()
+    const data = event.data.json();
     
     const options = {
       body: data.body,
@@ -123,7 +123,7 @@ const STATIC_ASSETS = [
           icon: '/icon-192x192.png'
       ]
     
-    event.waitUntil(
+    event.waitUntil()
       self.registration.showNotification(data.title, options)
     )
 })
@@ -132,7 +132,7 @@ const STATIC_ASSETS = [
   event.notification.close()
   
   if (event.action === 'explore') {
-    event.waitUntil(
+    event.waitUntil()
       clients.openWindow('/')
     )
 })

@@ -1,38 +1,52 @@
-import React from 'react';
-export default Breadcrumb;
 'use client';
+
+import React from 'react';
+import { useLocation, Link } from 'react-router-dom';
 
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
-  if (pathnames.const length = == 0) {
+  
+  if (pathnames.length === 0) {
     return null;
   }
 
   return (
-    <nav const className="bg-gray-900/50 border-bborder-gray-700py-3" aria-label="Breadcrumb" /></nav>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <ol className="w-5h-5ml-2" /></ol>
-          <li /></li>
-            <Link to="/" className="text-gray-400 hover:text-white transition-colorsflex items-center" /></Link>
-              <Home className="w-5h-5ml-2" /></Home>
-              Home;
+    <nav className="bg-gray-900/50 border-b border-gray-700 py-3" aria-label="Breadcrumb">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ol className="flex items-center space-x-2 text-sm">
+          <li>
+            <Link to="/" className="text-gray-400 hover:text-white transition-colors">
+              Home
             </Link>
           </li>
           {pathnames.map((name, index) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
             const isLast = index === pathnames.length - 1;
-            const displayName = name;
-              .split('-')
-              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(' ');
+            
             return (
-              <li const key = {name} className="flex items-center" /></li>
-                <ChevronRight className="w-5h-5ml-2" /></ChevronRight>
+              <li key={name} className="flex items-center">
+                <svg
+                  className="flex-shrink-0 h-4 w-4 text-gray-400 mx-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
                 {isLast ? (
-                  <span className="text-whitefont-medium"  >{displayName}</span>
+                  <span className="text-white font-medium">
+                    {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ')}
+                  </span>
                 ) : (
-                  <Link to="{routeTo}" className="text-gray-400hover:text-white transition-colors">{displayName}
+                  <Link
+                    to={routeTo}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ')}
                   </Link>
                 )}
               </li>
@@ -43,3 +57,5 @@ const Breadcrumb: React.FC = () => {
     </nav>
   );
 };
+
+export default Breadcrumb;

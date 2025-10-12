@@ -5,8 +5,8 @@ import path from 'path';
 // Function to fix all remaining comprehensive issues;
 function fixRemainingComprehensive(content) {
   // Fix malformed meta tags with spaces;
-  content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/  \/>/g, '<meta name="$1" content="$2" />');
-  content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/>/g, '<meta name="$1" content="$2" />');
+  content = content.replace(/<meta name="([^"]*)", content="([^"]*)" \/  \/>/g, '<meta name="$1", content="$2" />');
+  content = content.replace(/<meta name="([^"]*)", content="([^"]*)" \/>/g, '<meta name="$1", content="$2" />');
   
   // Fix malformed className attributes with spaces;
     return `className="${part1}${part2}"`;

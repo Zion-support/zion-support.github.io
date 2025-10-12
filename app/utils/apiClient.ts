@@ -32,7 +32,10 @@ export { APIError };
   private baseURL: string;
   private defaultHeaders: Record<string, string>;
   private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
-    <></>
+    <>
+    <>
+    </>
+</>
   private defaultHeaders: Record<string, string />;
   private cache: Map<string, { data: unknown; timestamp: number; ttl: number } /> = new Map();
 

@@ -17,13 +17,13 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
   children,
   href,
   onClick,
-  const variant = 'primary',
+  const variant = 'primary',;
   size = 'md',
   className = '',
   icon,
-  disabled = false;
+  disabled = false;)
 }) => {
-  const baseClasses = 'relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled: hove,
+  const baseClasses = 'relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled: hove,;
   r:scale-100';
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
@@ -35,36 +35,48 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
     secondary: 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg hover:shadow-purple-500/25 hover:shadow-2 xl',
     accent: 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2 xl'
   };
-  const neonEffect = 'before: absolute,
+  const neonEffect = 'before: absolute,;
   before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover: befor,
   e:opacity-70 before:-z-10';
   const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
   const content = (
-    <></>
+    <>
+    <>
+    </>
+</>
       {icon && <span className="mr-2"  >{icon}</span>}
       {children}
-      {!icon && <ArrowRight className="w-5h-5ml-2" /&gt;}    </ArrowRight></ArrowRight>
-</></ArrowRight>
+      {!icon && <>
+    <ArrowRight className="w-5h-5ml-2" /&gt;}    </ArrowRight>
+    </ArrowRight>
+</>
+<>
+    </>
+    </ArrowRight>
+</>)
   );
   if (href) {
-    return (
-      <a;
-        const href = {href}
+    return()
+      <>
+    <a;
+        const href = {href};
         className="{buttonClasses}"
-        style="{{"
+        style="{{")
           boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',
-        }} /></a>
+        }} />
+    </a>
+</>
         {content}
       </a>
     );
   }
 
-  return (
+  return()
     <button;
-      const onClick = {onClick}
+      const onClick = {onClick};
       disabled="{disabled}"
       className="{buttonClasses}"
-      style="{{"
+      style="{{")
         boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',
       }}
       />{content}

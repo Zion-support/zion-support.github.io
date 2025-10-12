@@ -74,7 +74,7 @@ async function main() {
   
   // Get all TypeScript/TSX files;
   const files = await glob('**/*.{ts,tsx}', {
-    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
+    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**'])
   });
   
   let fixedCount = 0;

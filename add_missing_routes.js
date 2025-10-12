@@ -15,7 +15,7 @@ let appContent = fs.readFileSync('/workspace/App.tsx', 'utf8');
 // Generate route statements;
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
-  return `                  <Route path="/${page}" element={<${componentName} />} />`;
+  return `                  <Route path="/${page}", element={<${componentName} />} />`;
 }).join('\n');
 
 // Add imports after the last import;

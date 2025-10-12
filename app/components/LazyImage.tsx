@@ -11,18 +11,18 @@ interface LazyImageProps {
 const LazyImage: React.FC<LazyImageProps /> = ({
   src,
   alt,
-  const className = '',
+  const className = '',;
   placeholder,
   onLoad,
-  onError;
+  onError;)
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isInView, setIsInView] = useState(false)
-  const [hasError, setHasError] = useState(false)
-  const imgRef = useRef<HTMLImageElement />(null)
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const imgRef = useRef<HTMLImageElement />(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const observer = new IntersectionObserver()
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true)
@@ -49,22 +49,38 @@ const LazyImage: React.FC<LazyImageProps /> = ({
     onError?.()
   }
 
-  return (
-    <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} /></div>
+  return()
+    <>
+    <div ref="{imgRef}", className="{`relative" overflow-hidden ${className}`} />
+    </div>
+</>
       {!isInView && (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <Loader2 className="w-5h-5ml-2" /></Loader2>
-        </div>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <Loader2 className="w-5h-5ml-2" />
+    </Loader2>
+</>
+        </div>)
       )}
       
       {isInView && !isLoaded && !hasError && (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <Loader2 className="w-5h-5ml-2" /></Loader2>
-        </div>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <Loader2 className="w-5h-5ml-2" />
+    </Loader2>
+</>
+        </div>)
       )}
       
       {isInView && (
-        <img;
+        <>
+    <img;
           src="{src}"
           alt="{alt}"
           onLoad="{handleLoad}"
@@ -73,15 +89,27 @@ const LazyImage: React.FC<LazyImageProps /> = ({
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           loading="lazy"
-         /></img>
+         />
+    </img>
+</>)
       )}
       
       {hasError && (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="w-8 h-8mx-au tomb-2"  >📷</div>
-            <p className="text-sm">Image failed to load</p>
-          </div>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <div className="w-8 h-8mx-au tomb-2"  >📷<>
+    </div>
+    <p className="text-sm">
+</>Image failed to load<>
+    </p>
+    </div>
+</>)
       )}
     </div>
   )

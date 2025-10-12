@@ -21,7 +21,10 @@ import path from 'path';
       
         // This is a complex fix, let's use a simpler approach;
         // Just ensure proper closing for common patterns;
-        content = content.replace(new RegExp(`<${tag}([^>]*)>\\s*$`, 'gm'), `<${tag}$1></${tag}>`);
+        content = content.replace(new RegExp(`<${tag}([^>]*)>\\s*$`, 'gm'), `<>
+    <${tag}$1>
+    </${tag}>
+</>`);
         modified = true;
 
     // Fix missing closing tags for self-closing elements;
@@ -34,3 +37,4 @@ import path from 'path';
     
     // Fix missing semicolons in JSX;
     content = content.replace(/(\w+)\s*(\n\s*
+)

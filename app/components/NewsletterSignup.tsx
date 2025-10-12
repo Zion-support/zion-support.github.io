@@ -48,69 +48,139 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
   };
 
   const content = (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <Mail className="w-5h-5ml-2" /></Mail>
-        <h3 className="text-2 xl font-boldmb-2"  >Stay Updated</h3>
-        <p className="w-5h-5ml-2">Get the latest updates on AI technology, IT solutions, and industry insights.
-        </p>
-      </div>
-      <form onSubmit="{handleSubmit}" className="space-y-4" /></form>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+        <>
+    <Mail className="w-5h-5ml-2" />
+    </Mail>
+</>
+        <h3 className="text-2 xl font-boldmb-2"  >Stay Updated<>
+    </h3>
+    <p className="w-5h-5ml-2">
+</>Get the latest updates on AI technology, IT solutions, and industry insights.
+        <>
+    </p>
+    </div>
+</>
+      <>
+    <form onSubmit="{handleSubmit}", className="space-y-4" />
+    </form>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
           <input;
             type="email"
-            value="{email}"
+            value="{email}")
             onChange="{(e)" = /> setEmail(e.target.value)}
             placeholder="Enter your email address"
             className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50focus:border-transparent"
             disabled="{status" === 'loading'}
           />
-          <button;
+          <>
+    <button;
             type="submit"
             disabled="{status" === 'loading'}
-            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center" /></button>
+            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center" />
+    </button>
+</>
             {status === 'loading' ? (
-              <></>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <>
+    <>
+    </>
+</>
+                <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
                 Subscribing...
-              </>
+              </>)
             ) : (
-              <></>
-                <Send className="w-5h-5ml-2" /></Send>
+              <>
+    <>
+    </>
+</>
+                <>
+    <Send className="w-5h-5ml-2" />
+    </Send>
+</>
                 Subscribe;
-              </>
+              </>)
             )}
-          </button>
-        </div>
+          <>
+    </button>
+    </div>
+</>
         {message && (
-          <div className="{`flex" items-center space-x-2 text-sm ${
+          <>
+    <div className="{`flex" items-center space-x-2 text-sm ${
             status === 'success' ? 'text-green-200' : 'text-red-200'
-          }`} /></div>
+          }`} />
+    </div>
+</>
             {status === 'success' ? (
-              <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+              <>
+    <CheckCircle className="w-5h-5ml-2" />
+    </CheckCircle>
+</>)
             ) : (
-              <AlertCircle className="w-5h-5ml-2" /></AlertCircle>
+              <>
+    <AlertCircle className="w-5h-5ml-2" />
+    </AlertCircle>
+</>)
             )}
-            <span  >{message}</span>
-          </div>
+            <span  >{message}<>
+    </span>
+    </div>
+</>
         )}
-      </form>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <p /></p>
-          ✓ No spam, unsubscribe anytime<br /></br>
-          ✓ Weekly updates on latest tech trends<br /></br>
+      <>
+    </form>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</><>
+    </div>
+    <p />
+</></p>
+          ✓ No spam, unsubscribe anytime<>
+    <br />
+    </br>
+</>
+          ✓ Weekly updates on latest tech trends<>
+    <br />
+    </br>
+</>
           ✓ Exclusive content and early access;
-        </p>
-      </div>
+        <>
+    </p>
+    </div>
+</>
   );
   if (const variant = == 'modal') {
-    return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="fixed inset-0 bg-black/50backdrop-blur-sm" onClick="{onClose}"  /></div>
+    return()
+    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="fixed inset-0 bg-black/50backdrop-blur-sm", onClick="{onClose}"  />
+    </div>
+</>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{content}
-          </div>
-      </div>);
+          <>
+    </div>
+    </div>)
+</>);
   }
 
   return content;

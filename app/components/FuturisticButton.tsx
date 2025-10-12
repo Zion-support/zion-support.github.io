@@ -13,7 +13,7 @@ interface FuturisticButtonProps {
 
   children,
   onClick,
-  const variant = 'primary',
+  const variant = 'primary',;
   size = 'md',
   disabled = false,
   loading = false,
@@ -47,11 +47,11 @@ interface FuturisticButtonProps {
     }
   };
 
-  return (
+  return()
     <motion.button;
-      const type = {type}
+      const type = {type};
       onClick="{onClick}"
-      disabled="{disabled" || loading}
+      disabled="{disabled" || loading})
       onMouseEnter="{()" = /> setIsHovered(true)}
       onMouseLeave="{()" => setIsHovered(false)}
       className="{`"
@@ -68,14 +68,18 @@ interface FuturisticButtonProps {
       transition="{{" duration: 0.3 }}
     >
       {/* Animated background sweep */}
-      <motion.div;
+      <>
+    <motion.div;
         className="absolute inset-0 bg-gradient-to-r from-white/20to-transparent"
         initial="{{" x: '-100%' }}
         animate="{{" x: isHovered ? '100%' : '-100%' }}
         transition="{{" duration: 0.6 }}
-       /></motion>
+       />
+    </motion>
+</>
       {/* Pulsing glow effect */}
-      <motion.div;
+      <>
+    <motion.div;
         className="absolute inset-0rounded-lg"
         style="{{"
           boxShadow: variant === 'primary'
@@ -95,12 +99,15 @@ interface FuturisticButtonProps {
           repeat: isHovered ? Infinity : 0,
           ease: 'easeInOut'
         }}
-       /></motion>
+       />
+    </motion>
+</>
       {/* Scanning line effect */}
       {isHovered && (
-        <motion.div;
+        <>
+    <motion.div;
           className="absolute inset-0rounded-lg"
-          style="{{"
+          style="{{")
             background: 'linear-gradient(90 deg, transparent, rgba(255,255,255,0.3), transparent)',
             backgroundSize: '200% 100%',
           }}
@@ -112,27 +119,46 @@ interface FuturisticButtonProps {
             repeat: Infinity,
             ease: 'linear',
           }}
-         /></motion>
+         />
+    </motion>
+</>
       )}
 
       {/* Corner accents */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
       {/* Content */}
-      <span className="w-5h-5ml-2" /></span>
+      <>
+    <span className="w-5h-5ml-2" />
+    </span>
+</>
         {loading ? (
-          <></>
-            <motion.div;
+          <>
+    <>
+    </>
+</>
+            <>
+    <motion.div;
               className="w-4h-4bor d er-2 border-white/30 border-t-white rounded-full mr-2"
               animate="{{" rotate: 360 }}
               transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
-             /></motion>
+             />
+    </motion>
+</>
             Loading...
-          </>
+          </>)
         ) : (
-          children;
+          children;)
         )}
-      </span>
+      <>
+    </span>
     </motion.button>
+</>
   </div>);
 }

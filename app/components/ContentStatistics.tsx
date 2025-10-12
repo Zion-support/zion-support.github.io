@@ -17,7 +17,7 @@ interface ContentStatisticsProps {
 }
 
 const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
-  const stats = [
+  const stats = [;
     {
       id: 'users',
       value: 1200,
@@ -48,7 +48,7 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
     }
   ],
   animationDuration = 2000,
-  className = ''
+  className = '')
 }) => {
   const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
   useEffect(() => {
@@ -62,7 +62,7 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
         const currentValue = start + (end - start) * easeOutCubic;
         setAnimatedValues(const prev = > ({
           ...prev,
-          [key]: currentValue;
+          [key]: currentValue;)
         }));
         if (progress < 1) {
           requestAnimationFrame(animate);
@@ -72,32 +72,51 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
       requestAnimationFrame(animate);
     };
 
-    stats.forEach(const stat = > {
+    stats.forEach(const stat = > {)
       animateValue(0, stat.value, animationDuration, stat.id);
     });
   }, [stats, animationDuration]);
 
-  return (
-    <div const className = {`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} /></div>
+  return()
+    <>
+    <div const className = {`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} />
+    </div>
+</>)
       {stats.map((stat) => {
         const animatedValue = animatedValues[stat.id] || 0;
         const IconComponent = stat.icon;
-        return (
+        return()
+    <>
     <div;
-            const key = {stat.id}
-            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-all duration-300" /></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <IconComponent className="w-5h-5ml-2" /></IconComponent>
-              </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.prefix}
-              {stat.suffix === '%'
+            const key = {stat.id};
+            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-all duration-300" />
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+                <>
+    <IconComponent className="w-5h-5ml-2" />
+    </IconComponent>
+</>
+              <>
+    </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</>{stat.prefix}
+              {stat.suffix === '%')
                 ? animatedValue.toFixed(1)
                 : Math.floor(animatedValue).toLocaleString()
               }
               {stat.suffix}
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}
+            <>
+    </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</>{stat.label}
             </div>
         );
       })}

@@ -22,21 +22,28 @@ const EnhancedSkipLink: React.FC = () => {
     }
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+  return()
+    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
       <button;
         onClick="{handleSkipToMain}"
         className="skip-link"
         aria-label="Skip to main content"
         />Skip to main content;
-      </button>
-      <button;
+      <>
+    </button>
+    <button;
         onClick="{handleSkipToNavigation}"
         className="skip-link"
         aria-label="Skip to navigation"
-        />Skip to navigation;
-      </button>
-      <style jsx  />{`
+        />
+</>Skip to navigation;
+      <>
+    </button>
+    <style jsx  />
+</>{`
         .skip-links {;
           position: absolute;,
   top: -100 px;,
@@ -68,7 +75,9 @@ const EnhancedSkipLink: React.FC = () => {
   background: #00 ffff;,
   color: #000;
         }
-      `}</style>
+      `}<>
+    </style>
     </div>
+</>)
   );
 };

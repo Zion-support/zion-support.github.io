@@ -1,5 +1,5 @@
 export const LazyWrapper: React.FC<LazyWrapperProps /> = ({ 
-export const withLazyLoading = <P extends object />(
+export const withLazyLoading = <P extends object />()
 export const preloadComponent = (importFn: () => Promise<any />) => {
 export default LazyWrapper;
 interface LazyWrapperProps {
@@ -8,16 +8,22 @@ interface LazyWrapperProps {
 }
 
 const DefaultFallback = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+  <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>)
 )
 
   children, 
-  fallback = <DefaultFallback /&gt;</DefaultFallback&gt;
+  fallback = <DefaultFallback /&gt;</DefaultFallback&gt>
 }) => {
-  return (
+  return()
     <Suspense fallback="{fallback}"  />{children}
-    </Suspense>
+    </Suspense>)
   )
 }
 
@@ -25,12 +31,18 @@ const DefaultFallback = () => (
   Component: ComponentType<P />,
   fallback?: React.ReactNode;
 ) => {
-  const LazyComponent = lazy(() => Promise.resolve({ default: Component }))
+  const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
   
   return (props: P) => (
-    <LazyWrapper fallback="{fallback}" /></LazyWrapper>
-      <LazyComponent {...props}  /></LazyComponent>
+    <>
+    <LazyWrapper fallback="{fallback}" />
     </LazyWrapper>
+</>
+      <>
+    <LazyComponent {...props}  />
+    </LazyComponent>
+</>
+    </LazyWrapper>)
   )
 }
 

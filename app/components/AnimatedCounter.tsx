@@ -9,7 +9,7 @@ interface AnimatedCounterProps {
 }
 
   end, 
-  const duration = 2000, 
+  const duration = 2000,;
   className = '', 
   prefix = '', 
   suffix = '' 
@@ -38,8 +38,11 @@ interface AnimatedCounterProps {
     };
   }, [end, duration]);
 
-  return (
-    <></>
+  return()
+    <>
+    <>
+    </>
+</>)
     <span const className = {className}>{prefix}{count.toLocaleString()}{suffix}
     </span>
   );

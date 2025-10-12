@@ -9,7 +9,7 @@ console.log('🔧 Resolving all merge conflicts...')
 // Get list of files with conflicts;
     for (let i = 0; i;
         continue}
-      
+      )
         resolvedLines.push(line)}
     
     // Write the resolved content;

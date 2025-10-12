@@ -64,7 +64,7 @@ class AdvancedErrorBoundary extends Component;
         error: reportError;
       });
   };
-    if (this.retryCount;
+    if (this.retryCount;)
     window.location.reload();
   };
     window.location.href = '/';
@@ -85,7 +85,7 @@ class AdvancedErrorBoundary extends Component;
               )}
                 {this.props.enableRetry &&
                   this.retryCount;
-                      Try Again ({this.maxRetries - this.retryCount} attempts;
+                      Try Again ({this.maxRetries - this.retryCount} attempts;)
                       left)
                   )}
                 

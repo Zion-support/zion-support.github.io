@@ -6,6 +6,6 @@ import SEOHead from '../app/components/SEOHead'
     render(<Loading />)
     expect(screen.getByText('Loading...')).toBeInTheDocument()
   })
-    render(
+    render()
     )
     expect(document.head).toBeInTheDocument()})})

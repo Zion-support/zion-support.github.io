@@ -16,7 +16,10 @@ import React from 'react';
   private async runHook()</void>
     hook: () => void | Promise<void>,</void>
     hookName: string</void>): Promise<void />{try {* Run a hook*/
-  private async runHook(hook: () => void | Promise<void></void>
+  private async runHook(hook: () => void | Promise<>
+    <void>
+    </void>
+</>
   private async runHook()
     hookName: string}
   ): Promise<void>{}
@@ -35,52 +38,126 @@ import React from 'react';
  {timeout: number}
   ): Promise<void> {}
 
-    <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style  >}</style></<<<styl  >body</styl></styl> { font-family: Arial, sans-serif; margin: 20 px}
+    <<<<title>Test<>
+    </title>
+    </<<title>
+</>Results</title> | Zion Tech Group - AI & IT Solutions<style  >}<>
+    </style>
+    </<<<styl  >
+</>body<>
+    </styl>
+    </styl>
+</> { font-family: Arial, sans-serif; margin: 20 px}
         .summary { background: #f5 f5 f5; padding: 20 px; border-radius: 5 px; margin-bottom: 20 px}
         .test { margin: 10 px 0; padding: 10 px; border-left: 4 px solid #ccc}
         .passed { border-left-color: #4 CAF50}
 
         .failed { border-left-color: #f44336}</style>
-        .skipped { border-left-color: #ff9800}</style>
-    <h2 const id = "heading-test-results">Test Results</h2>
-    <div class="summary" /></div>
-        <h3 id="heading-summary" />Summary<p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests"  >${this.results</div&gt;
-    <div class="summary" /&gt;</div&gt;}
+        .skipped { border-left-color: #ff9800}<>
+    </style>
+    <h2 const id = "heading-test-results">
+</>Test Results<>
+    </h2>
+    <div class="summary" />
+</><>
+    </div>
+    <h3 id="heading-summary" />
+</>Summary<p>Total: ${this.results.length}<>
+    </p>
+    <p>
+</>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}<>
+    </p>
+    <p>
+</>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests"  >${this.results<>
+    </div&gt>
+    <div class="summary" /&gt;</div&gt;>
+</>
 
-        <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results</div&gt;
-          .map()</div&gt;}
-    result => `}</div>
-            <div class="test ${result.status}" /></div>
-                <h4 id="heading-${result.name}" />${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
+        <h3 id="heading-summary">Summary<>
+    </h3>
+    <p>
+</>Total: ${this.results.length}<>
+    </p>
+    <p>
+</>Passed: ${this.results.filter(r => r.status === 'passed').length}<>
+    </p>
+    <p>
+</>Failed: ${this.results.filter(r => r.status === 'failed').length}<>
+    </p>
+    <p>
+</>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<>
+    </p>
+    <p>
+</>Duration: ${Date.now() - this.startTime}ms<>
+    </p>
+    <div class="tests"  >
+</>${this.results</div&gt>
+          .map()</div&gt;>
+    result => `}<>
+    </div>
+    <div class="test ${result.status}" />
+</><>
+    </div>
+    <h4 id="heading-${result.name}" />
+</>${result.name}<p>Status: ${result.status}<>
+    </p>
+    <p>
+</>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
 
-        <h3 id="heading-summary">Summary</h3>
-        <p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
-        <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
-        <p>Duration: ${Date.now() - this.startTime}ms</p>
-    <div class="tests">${this.results;
-        <h3 id="heading-summary">Summary</h3>
-        <p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
-        <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
-        <p>Duration: ${Date.now() - this.startTime}ms</p>
-    <div class="tests"></div>
+        <h3 id="heading-summary">Summary<>
+    </h3>
+    <p>
+</>Total: ${this.results.length}<>
+    </p>
+    <p>
+</>Passed: ${this.results.filter(r => r.status === 'passed').length}<>
+    </p>
+    <p>
+</>Failed: ${this.results.filter(r => r.status === 'failed').length}<>
+    </p>
+    <p>
+</>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<>
+    </p>
+    <p>
+</>Duration: ${Date.now() - this.startTime}ms<>
+    </p>
+    <div class="tests">
+</>${this.results;
+        <h3 id="heading-summary">Summary<>
+    </h3>
+    <p>
+</>Total: ${this.results.length}<>
+    </p>
+    <p>
+</>Passed: ${this.results.filter(r => r.status === 'passed').length}<>
+    </p>
+    <p>
+</>Failed: ${this.results.filter(r => r.status === 'failed').length}<>
+    </p>
+    <p>
+</>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<>
+    </p>
+    <p>
+</>Duration: ${Date.now() - this.startTime}ms<>
+    </p>
+    <div class="tests">
+</></div>
         ${this.results}
  `}
         ${this.results}
           .map()
 
-            result => `}</div>
-            <div class="test ${result.status}" /></div>
-                <h4 id="heading-${result.name}">${result.name}</h4>
-                <p>Status: ${result.status}</p>)
+            result => `}<>
+    </div>
+    <div class="test ${result.status}" />
+</><>
+    </div>
+    <h4 id="heading-${result.name}">
+</>${result.name}<>
+    </h4>
+    <p>
+</>Status: ${result.status}</p>)
                 <p>Duration: ${result.duration}ms</p>)
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''})
             </div>)))
@@ -95,7 +172,7 @@ import React from 'react';
     testName: string;
   // Accessibility test;
     testName: string,): Promise<{ passed: boolean; violations: string[] }> {}
-    const { container } = this.customRender(component)
+    const { container } = this.customRender(component);
     // Basic accessibility checks;
     // Check for missing alt text on, images): Promise<{ passed: boolean; error?: string }> {}
     try {}
@@ -117,7 +194,7 @@ import React from 'react';
     // This would typically use a tool like Percy or Chromatic;
     // For now, we'll just return a placeholder}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    this.testResults.push({`}
+    this.testResults.push({`})
   async runVisualRegressionTest()
     testName: string;
   ): Promise<{ passed: boolean; diff?: unknown }> {}
@@ -140,18 +217,18 @@ import React from 'react';
   async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {}
     // This would typically use Istanbul or similar;
     // For now, we'll just return a placeholder;
-    const coverage: const CoverageMetrics = {}
+    const coverage: const CoverageMetrics = {};
       lines: 85}
 
     results: Array<{ name: string; type: string; passed: boolean; error?: string }>
-    const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = []
+    const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = [];
       let result;
         case 'component':
     for (const test of, tests) {}
       let result;
       switch (test.type) {}
         case 'component':
-          const result = await this.runComponentTest()
+          const result = await this.runComponentTest();
             test.name)
     test.assertions as any;
           result = await this.runComponentTest(test.component)
@@ -178,9 +255,12 @@ import React from 'react';
         default:}
           result = { passed: false, error: 'Unknown test type' }
   private generateJunitReport(): void {/* TODO: Fix JSX expression */}"
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r = /> r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
+    <testsuite name="Test Suite", tests="${this.results.length}", failures="${this.results.filter(r = /> r.status === 'failed').length}", skipped="${this.results.filter(r => r.status === 'skipped').length}", time="${(Date.now() - this.startTime) / 1000}">
         ${/* TODO: Fix JSX expression */}"
-            <testcase name="${result.name}" time="${result.duration / 1000}" /></testcase>"`
+            <>
+    <testcase name="${result.name}", time="${result.duration / 1000}" />
+    </testcase>
+</>"`
 ;
   ): Promise<{ passed: boolean; error?: string }> {}
     try {}
@@ -188,7 +268,7 @@ import React from 'react';
     testName: string,): Promise<{ passed: boolean; diff?: unknown }> {// This would typically use a tool like Percy or Chromatic}
     // For now, we'll just return a placeholder}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    this.testResults.push({`}
+    this.testResults.push({`})
   async runVisualRegressionTest()
     testName: string): Promise<{ passed: boolean; diff?: unknown }> {}
     // This would typically use a tool like Percy or Chromatic;
@@ -215,7 +295,7 @@ import React from 'react';
     results: Array<{ name: string; type: string; passed: boolean; error?: string }>}> {}
     for (const test of, tests) {let result;
       switch (test.type) {case 'component':
-          const result = await this.runComponentTest(}
+          const result = await this.runComponentTest(};)
     for (const test of, tests) {}
       let result;
       switch (test.type) {}
@@ -247,10 +327,13 @@ import React from 'react';
         default:}
           result = { passed: false, error: 'Unknown test type' }
   private generateJunitReport(): void {/* TODO: Fix JSX expression */}"
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r = /> r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
+    <testsuite name="Test Suite", tests="${this.results.length}", failures="${this.results.filter(r = /> r.status === 'failed').length}", skipped="${this.results.filter(r => r.status === 'skipped').length}", time="${(Date.now() - this.startTime) / 1000}">
         ${/* TODO: Fix JSX expression */}"
 
-            <testcase name="${result.name}" time="${result.duration / 1000}" /></testcase>"`
+            <>
+    <testcase name="${result.name}", time="${result.duration / 1000}" />
+    </testcase>
+</>"`
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
                 ${result.status === 'skipped' ? '<skipped/ />' : ''}
 
@@ -264,7 +347,10 @@ import React from 'react';
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
   // Integration test;
   s: (resul)
-  t: RenderResult) => Promise<void></void>): Promise;
+  t: RenderResult) => Promise<>
+    <void>
+    </void>
+</>): Promise;
  {/* TODO: Fix JSX expression */}`
 
   n: 0,})
@@ -278,7 +364,7 @@ import React from 'react';
  {/* TODO: Fix JSX expression */}
 
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    this.testResults.push({/* TODO: Fix JSX expression */}`
+    this.testResults.push({/* TODO: Fix JSX expression */}`)
   n: 0)})
     return {/* TODO: Fix JSX expression */}
   d: true }}
@@ -299,7 +385,7 @@ import React from 'react';
     for (let i = 0; i;
     for (let i = 0; i;
  {// Wait for element to appear}
-
+)
         observer.disconnect();`}
   // Simulate user interaction;
  {switch (action) {// Simulate user interaction}

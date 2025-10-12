@@ -15,7 +15,7 @@ interface SEOProps {
   noindex?: boolean;
   nofollow?: boolean;
 const EnhancedSEO: React.FC<SEOProps /> = ({
-  const title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  const title = 'Zion Tech Group - Advanced AI and IT Solutions',;
   description = 'Leading provider of AI-powered solutions, IT services, 5 G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
   keywords = 'AI solutions, artificial intelligence, IT services, 5 G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
   canonical,
@@ -64,10 +64,9 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       "priceCurrency": "USD"
 
   const finalStructuredData = structuredData || defaultStructuredData;
-  const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
+  const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`;
 
-  return (
-
+  return()
         <title>5G Data Analytics - Zion Tech Group</title>
       {/* Basic Meta Tags */}
     
@@ -82,7 +81,7 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       {/* Performance Hints */}
 
       {/* Structured Data */}
-    
+    )
       <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
 
   )

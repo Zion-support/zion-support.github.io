@@ -9,9 +9,9 @@ interface FuturisticGlowProps {
 }
 
   children, 
-  const intensity = 'medium', 
+  const intensity = 'medium',;
   color = 'cyan',
-  className = '' 
+  className = '' )
 }: FuturisticGlowProps) {
   const containerRef = useRef<HTMLDivElement />(null);
   useEffect(() => {
@@ -45,13 +45,13 @@ interface FuturisticGlowProps {
     container.style.setProperty('--glow-color-strong', `rgba(${rgb}, ${parseFloat(opacity) + 0.3})`);
   }, [intensity, color]);
 
-  return (
+  return()
     <div;
-      const ref = {containerRef}
+      const ref = {containerRef};
       className="{`"
         relative;
         before: absolute,
-  before:inset-0 before:rounded-inherit,
+  before:inset-0 before:rounded-inherit,)
   before: bg-gradient-to-r before: from-transparent before:via-[var(--glow-color)] before:to-transparent,
   before: opacity-0 before: transition-opacity before:duration-500,
   hover: befor,

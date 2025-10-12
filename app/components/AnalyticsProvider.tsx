@@ -33,7 +33,7 @@ interface AnalyticsProviderProps {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: pageName,
-        page_location: window.location.href,
+        page_location: window.location.href,)
       });
     }
   };
@@ -42,9 +42,12 @@ interface AnalyticsProviderProps {
     trackEvent,
     trackPageView,
   };
-  return (
-    <AnalyticsContext.Provider const value = {value} /></AnalyticsContext>
+  return()
+    <>
+    <AnalyticsContext.Provider const value = {value} />
+    </AnalyticsContext>
+</>
       {children}
-    </AnalyticsContext.Provider>
+    </AnalyticsContext.Provider>)
   );
 }

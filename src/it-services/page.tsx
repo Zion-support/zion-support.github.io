@@ -19,50 +19,71 @@ export default ITServicesPage;
         {/* Main Services Grid */}
           <h2 className="text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>
                   {React.createElement(service.icon, { className: "w-8 h-8" })}
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                <h3 className="text-xl font-bold text-white mb-3">{service.title}<>
+    </h3>
+    <p className="text-gray-300 mb-4 text-sm">
+</>{service.description}<>
+    </p>
+    <h4 className="text-sm font-semibold text-cyan-400 mb-2">
+</>Key Features:</h4>
                         {feature}
                     ))}
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
                         {benefit}
                     ))}
-                  <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologies:</h4>
+                  <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}<>
+    </div>
+    <h4 className="text-sm font-semibold text-cyan-400 mb-2">
+</>Technologies:</h4>
                         {tech}
                     ))}
                 <p className="text-gray-300 mb-4">{service.description}</p>
                       {feature}
                   ))}
                   <div className="text-lg font-bold text-cyan-400 mb-2">{service.price}</div>
-                    Learn More <ArrowRight></ArrowRight>
+                    Learn More <>
+    <ArrowRight>
+    </ArrowRight>
+</>
             ))}
 
         {/* Additional Services */}
           <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>
                   {React.createElement(service.icon, { className: "w-6 h-6 text-cyan-400 mr-3" })}
-                  <h3 className="text-lg font-bold text-white">{service.title}</h3>
-                <p className="text-gray-300 text-sm mb-3">{service.description}</p>
-                <div className="text-cyan-400 font-bold text-sm">{service.price}</div>
+                  <h3 className="text-lg font-bold text-white">{service.title}<>
+    </h3>
+    <p className="text-gray-300 text-sm mb-3">
+</>{service.description}<>
+    </p>
+    <div className="text-cyan-400 font-bold text-sm">
+</>{service.price}</div>
             ))}
 
         {/* Support Tiers */}
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>
-              <h3 className="text-xl font-bold text-white mb-4">Basic Support</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">$199/month</div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers<>
+    </h2>
+    <h3 className="text-xl font-bold text-white mb-4">
+</>Basic Support<>
+    </h3>
+    <div className="text-3xl font-bold text-cyan-400 mb-4">
+</>$199/month</div>
                   Business hours support;
                   Remote assistance;
                   Basic monitoring;
                 Get Started;
-              <h3 className="text-xl font-bold text-white mb-4">Professional Support</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">$499/month</div>
+              <h3 className="text-xl font-bold text-white mb-4">Professional Support<>
+    </h3>
+    <div className="text-3xl font-bold text-cyan-400 mb-4">
+</>$499/month</div>
                   24/7 support;
                   On-site visits;
                   Advanced monitoring;
                   Priority response;
                 Get Started;
-              <h3 className="text-xl font-bold text-white mb-4">Enterprise Support</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">Custom</div>
+              <h3 className="text-xl font-bold text-white mb-4">Enterprise Support<>
+    </h3>
+    <div className="text-3xl font-bold text-cyan-400 mb-4">
+</>Custom</div>
                   Dedicated team;
                   Custom SLAs;
                   Proactive monitoring;

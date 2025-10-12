@@ -42,8 +42,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
       announcement.setAttribute('aria-atomic', 'true');
-      announcement.const className = 'sr-only';
-      announcement.const id = 'announcements';
+      announcement.className = 'sr-only';
+      announcement.id = 'announcements';
       document.body.appendChild(announcement);
     };
 
@@ -59,5 +59,5 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     };
   }, []);
 
-  return <React.Fragment >{children}</React.Fragment ></React.Fragment>;
+  return <React.Fragment>{children}</React.Fragment>;
 };

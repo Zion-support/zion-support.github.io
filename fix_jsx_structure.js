@@ -26,20 +26,38 @@ function fixJSXStructure(content) {
   content = content.replace(/<\/div>/g, '</div>');
   
   // Fix the specific structure issue where we have:
-  // <div></div>
-  //   <Helmet></Helmet>
+  // <>
+    <div>
+    </div>
+</>
+  //   <>
+    <Helmet>
+    </Helmet>
+</>
   //     ...
   //   </Helmet>
-  //   <div></div>
+  //   <>
+    <div>
+    </div>
+</>
   //     ...
   //   </div>
   // </div>
   // This should be:
-  // <div></div>
-  //   <Helmet></Helmet>
+  // <>
+    <div>
+    </div>
+</>
+  //   <>
+    <Helmet>
+    </Helmet>
+</>
   //     ...
   //   </Helmet>
-  //   <div></div>
+  //   <>
+    <div>
+    </div>
+</>
   //     ...
   //   </div>
   // </div>

@@ -6,9 +6,9 @@ export default SecurityEnhancer;
       }
 
       // Add CSP meta tag;
-      const cspMeta = document.createElement('meta')
+      const cspMeta = document.createElement('meta');
       cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');
-      cspMeta.setAttribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: http,
+      cspMeta.setAttribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: http,)
   s:; font-src 'self' data:; connect-src 'self' https:;")
       document.head.appendChild(cspMeta)
 
@@ -27,13 +27,16 @@ export default SecurityEnhancer;
       }
     }
 
-    const cleanup = enhanceSecurity()
+    const cleanup = enhanceSecurity();
     return cleanup;
   }, [])
 
-  return (
+  return()
     <div className="{`sec u rity-enhanced" ${className}`}  >{children}
-    </div className="{`sec u rity-enhanced" ${className}`}  ></div>
+    <>
+    </div className="{`sec u rity-enhanced" ${className}`}  >
+    </div>
+</>)
   )
 }
 
@@ -50,7 +53,13 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps >= ({ children }) => {use
           e.preventDefault()}
       })}
     enhanceSecurity()}, [])
-  return </SecurityEnhancerProps ><React.Fragment >{children}</React.Fragment ></React.Fragment>}
+  return <>
+    </SecurityEnhancerProps >
+    <React.Fragment >
+</>{children}<>
+    </React.Fragment >
+    </React.Fragment>
+</>}
   </SecurityEnhancerProps>
       // Disable right-click context menu;
       document.addEventListener('contextmenu', (e) => {e.preventDefault()}

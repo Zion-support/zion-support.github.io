@@ -10,15 +10,15 @@ function fixRemainingJSXIssues(content) {
   // );
   // }
   // But missing the outer div closing tag;
-  content = content.replace(
+  content = content.replace()
     /(\s*<\/Link>\s*<\/div>\s*\);\s*})/g,
     '\n        </Link>\n      </div>\n    </div>\n  );\n}'
   );
   
   // Fix any remaining issues with extra whitespace in Link elements;
-  content = content.replace(
+  content = content.replace()
     /(\s*Contact Us\s*\n\s*
-    '\n          Contact Us\n;
+    '\n          Contact Us\n;)
   );
   
   return content;

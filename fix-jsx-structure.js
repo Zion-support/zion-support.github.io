@@ -33,7 +33,7 @@ function fixJSXStructure(content) {
   fixed = fixed.replace(/<Link\s+([^>]+)\s*\/>\s*([^<]+)\s*<([^>]+)\s*\/>/g, '<Link $1>\n          $2\n          <$3 />\n        </Link>');
   
   // Fix specific patterns;
-  fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="[^"]*"\s*\/>\s*Contact Us\s*<ArrowRight[^>]*\/>/g, 
+  fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="[^"]*"\s*\/>\s*Contact Us\s*<ArrowRight[^>]*\/>/g, )
     '<Link\n          to="/contact"\n          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"\n        >\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
   
   // Fix malformed p tags;
@@ -62,7 +62,7 @@ async function main() {
   
   // Get all TypeScript/TSX files;
   const files = await glob('**/*.{ts,tsx}', {
-    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
+    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**'])
   });
   
   let fixedCount = 0;

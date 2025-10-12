@@ -7,15 +7,15 @@ interface SEOOptimizerProps {
   ogImage?: string;
   structuredData?: object;
 const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
-  const title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  const title = 'Zion Tech Group - Advanced AI and IT Solutions',;
   description = 'Leading provider of AI-powered solutions, IT services, 5 G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
   keywords = 'AI solutions, artificial intelligence, IT services, 5 G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
   canonical,
   ogImage = 'https: //ziontechgroup.com/og-image.jpg',
   structuredData;
-    // Add structured data to page;
+    // Add structured data to page;)
     if (structuredData) {
-      const script = document.createElement('script')
+      const script = document.createElement('script');
       script.type = 'application/ld+json'
       script.text = JSON.stringify(structuredData)
       document.head.appendChild(script)
@@ -24,10 +24,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
   }, [structuredData])
 
   // Generate breadcrumb structured data;
-    const pathSegments = window.location.pathname.split('/').filter(Boolean)
+    const pathSegments = window.location.pathname.split('/').filter(Boolean);
  ({
       '@type': 'ListItem',
-      position: index + 2,
+      position: index + 2,)
       name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
       item: `https://ziontechgroup.com/${pathSegments.slice(0, index + 1).join('/')}`
     }))
@@ -68,12 +68,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
             text': 'We provide 24/7 support with an average response time of 48 hours for general inquiries and immediate response for critical issues.'
       ]
 
-  const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
-  const breadcrumbData = generateBreadcrumbStructuredData()
-  const faqData = generateFAQStructuredData()
+  const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`;
+  const breadcrumbData = generateBreadcrumbStructuredData();
+  const faqData = generateFAQStructuredData();
 
-  return (
-
+  return()
         <title>5G Data Analytics - Zion Tech Group</title>
       {/* Basic Meta Tags */}
     
@@ -88,11 +87,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       {/* Performance Hints */}
 
       {/* Structured Data */}
-    
+    )
       <script type="application/ld+json">{JSON.stringify(breadcrumbData)}
       <script type="application/ld+json">{JSON.stringify(faqData)}
       {structuredData && (
-    
+    )
         <script type="application/ld+json">{JSON.stringify(structuredData)}
 
       )}

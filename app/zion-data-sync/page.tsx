@@ -3,43 +3,81 @@ export default ZionDataSyncPage;
 'use client';
 
 const ZionDataSyncPage: React.FC = () => {
-  return (
-<<<<<<< HEAD
-
+  return()
         <>
-      <title>ZionDataSync - Zion Tech Group</title>
-
-      </>
+    <>
+    <title>
+</>ZionDataSync - Zion Tech Group<>
+    </title>
+    </>
+</>)
   );
 }
 
-=======
-    <></>
-      <Helmet></Helmet>
-        <title>Zion Data Sync - Zion Tech Group</title>
-        <meta name="description" content="Zion Data Sync services by Zion Tech Group. Professional AI and IT solutions." /></meta>
-        <meta name="keywords" content="zion-data-sync, AI solutions, IT services" /></meta>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
-              <span className="w-5h-5ml-2" />Zion Data Sync;
-              </span>
-            </h1>
-            <p className="w-5h-5ml-2">Professional zion data sync services by Zion Tech Group.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
-            <p className="w-5h-5ml-2">We're working on bringing you comprehensive zion data sync solutions. 
-              Contact us to learn more about our services.
-            </p>
-            <button className="w-5h-5ml-2">Contact Us;
-            </button>
-          </div>
-      </div>
+    <>
+    <>
     </>
+</>
+      <>
+    <Helmet>
+    </Helmet>
+</>
+        <title>Zion Data Sync - Zion Tech Group<>
+    </title>
+    <meta name="description", content="Zion Data Sync services by Zion Tech Group. Professional AI and IT solutions." />
+</><>
+    </meta>
+    <meta name="keywords", content="zion-data-sync, AI solutions, IT services" />
+</><>
+    </meta>
+    </Helmet>
+</>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <h1 className="w-5h-5ml-2" />
+    </h1>
+</>
+              <span className="w-5h-5ml-2" />Zion Data Sync;
+              <>
+    </span>
+    </h1>
+</>
+            <p className="w-5h-5ml-2">Professional zion data sync services by Zion Tech Group.
+            <>
+    </p>
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon<>
+    </h2>
+    <p className="w-5h-5ml-2">
+</>We're working on bringing you comprehensive zion data sync solutions. 
+              Contact us to learn more about our services.
+            <>
+    </p>
+    <button className="w-5h-5ml-2">
+</>Contact Us;
+            <>
+    </button>
+    </div>
+</>
+      <>
+    </div>
+    </>
+</>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

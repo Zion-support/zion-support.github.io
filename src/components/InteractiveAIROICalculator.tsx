@@ -25,10 +25,16 @@ export default InteractiveAIROICalculator;
                 
  setTimeframe(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                  <option value={6}>6 months</option>
-                  <option value={12}>12 months</option>
-                  <option value={18}>18 months</option>
-                  <option value={24}>24 months</option>
+                  <option value={6}>6 months<>
+    </option>
+    <option value={12}>
+</>12 months<>
+    </option>
+    <option value={18}>
+</>18 months<>
+    </option>
+    <option value={24}>
+</>24 months</option>
                 Your ROI Projection;
                   {roi.toFixed(0)}%
                   Expected return on investment over {timeframe} months;

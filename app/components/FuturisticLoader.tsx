@@ -8,9 +8,9 @@ interface FuturisticLoaderProps {
   text?: string;
 }
 
-  const size = 'md', 
+  const size = 'md',;
   color = 'cyan',
-  text = 'Loading...' 
+  text = 'Loading...' )
 }: FuturisticLoaderProps) {
   const getSizeClasses = () => {
     switch (size) {
@@ -29,12 +29,19 @@ interface FuturisticLoaderProps {
     }
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+  return()
+    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
         {/* Outer rotating ring */}
-        <motion.div;
-          className="{`"
+        <>
+    <motion.div;
+          className="{`")
             ${getSizeClasses()} 
             border-4 border-transparent;
             border-t-4 ${getColorClasses().split(' ')[1]}
@@ -42,9 +49,12 @@ interface FuturisticLoaderProps {
           `}
           animate="{{" rotate: 360 }}
           transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
-         /></motion>
+         />
+    </motion>
+</>
         {/* Inner pulsing ring */}
-        <motion.div;
+        <>
+    <motion.div;
           className="{`"
             absolute inset-2;
             border-2 border-transparent;
@@ -53,9 +63,12 @@ interface FuturisticLoaderProps {
           `}
           animate="{{" rotate: -360 }}
           transition="{{" duration: 1.5, repeat: Infinity, ease: 'linear' }}
-         /></motion>
+         />
+    </motion>
+</>
         {/* Center pulsing dot */}
-        <motion.div;
+        <>
+    <motion.div;
           className="{`"
             absolute top-1/2 left-1/2 w-2 h-2;
             ${getColorClasses().split(' ')[1]} 
@@ -71,9 +84,12 @@ interface FuturisticLoaderProps {
             repeat: Infinity, 
             ease: 'easeInOut' 
           }}
-         /></motion>
+         />
+    </motion>
+</>
         {/* Glow effect */}
-        <motion.div;
+        <>
+    <motion.div;
           className="{`"
             absolute inset-0;
             ${getColorClasses().split(' ')[1]} 
@@ -90,17 +106,22 @@ interface FuturisticLoaderProps {
             repeat: Infinity, 
             ease: 'easeInOut' 
           }}
-         /></motion>
+         />
+    </motion>
+</>
       </div>
       {text && (
-        <motion.p;
+        <>
+    <motion.p;)
           className="{`text-sm" ${getColorClasses().split(' ')[1]} font-medium`}
           animate="{{" opacity: [0.5, 1, 0.5] }}
           transition="{{" 
             duration: 1.5, 
             repeat: Infinity, 
             ease: 'easeInOut' 
-          }} /></motion>
+          }} />
+    </motion>
+</>
           {text}
         </motion.p>
       )}

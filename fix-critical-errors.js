@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url'
           inConflict = false;
           keepCurrent = false;
           continue}
-        
+        )
           result.push(line)}
       
       content = result.join('\n')
@@ -18,7 +18,7 @@ import { fileURLToPath } from 'url'
     content = content.replace(/}\s*;\s*export/g, '}\nexport')
     // Fix malformed JSX;
     content = content.replace(/<div[^>]*>\s*$/gm, '<div>')
-      for (let i = 0; i;
+      for (let i = 0; i;)
         } else if (line.startsWith(']*>\s*$/gm, '<div>')
     content = content.replace(/<\/div>\s*$/gm, '</div>')
     // Fix function declarations;
@@ -40,7 +40,7 @@ import { fileURLToPath } from 'url'
     return false}
 
 // Function to find all files that need fixing;
-const filesToFix = findFilesToFix(srcDir);`
+const filesToFix = findFilesToFix(srcDir);`;
 console.log(`Processing ${filesToFix.length} files`)
 
 console.log(`Fixed ${fixedCount} files`);"`

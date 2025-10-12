@@ -10,7 +10,7 @@ interface PerformanceMetrics {
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    networkLatency: 0,
+    networkLatency: 0,)
   });
 
   const [isOptimized, setIsOptimized] = useState(false);
@@ -64,7 +64,7 @@ interface PerformanceMetrics {
 
     // Check if performance is optimized;
     const checkOptimization = () => {
-      const isOptimized = 
+      const isOptimized =;
         metrics.loadTime < 1000 && // Load time under 1 second;
         metrics.renderTime < 16 && // Render time under 16ms (60fps)
         metrics.memoryUsage < 100 && // Memory usage under 100MB;
@@ -80,7 +80,7 @@ interface PerformanceMetrics {
 
   const optimizePerformance = () => {
     // Preload critical resources;
-    const criticalResources = [
+    const criticalResources = [;
       '/fonts/inter.woff2',
       '/images/hero-bg.jpg',
       '/images/logo.png',

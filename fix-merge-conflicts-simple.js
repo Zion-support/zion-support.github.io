@@ -9,7 +9,7 @@ import path from 'path';
     content = content.replace(/\n?/g, '');
     content = content.replace(/\n?/g, '');
     content = content.replace(/    
-    // Clean up any double newlines that might have been created;
+    // Clean up any double newlines that might have been created;)
     content = content.replace(/\n\n\n+/g, '\n\n');
     
     // Write the cleaned content back;

@@ -16,7 +16,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
 
     rating: 0,
     comment: '',
-    submitted: false,
+    submitted: false,)
   });
 
     // UX enhancement logic;

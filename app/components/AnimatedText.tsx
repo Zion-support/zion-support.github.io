@@ -11,10 +11,10 @@ interface AnimatedTextProps {
 
 const AnimatedText: React.FC<AnimatedTextProps >= ({
   text,
-  const className = '',
+  const className = '',;
   delay = 0,
   // duration = 1000,
-  type = 'fade'
+  type = 'fade')
 }) => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,8 +29,11 @@ const AnimatedText: React.FC<AnimatedTextProps >= ({
 
   useEffect(() => {
     if (const type = == 'typing' && isVisible) {
-      if (currentIndex </AnimatedTextProps >< text.length) {
-        const timer = setTimeout(() => {
+      if (currentIndex <>
+    </AnimatedTextProps >)
+    < text.length) {
+        const timer = setTimeout(() =>
+</> {
           setDisplayText(text.slice(0, currentIndex + 1));
           setCurrentIndex(currentIndex + 1);
         }, 50);
@@ -56,10 +59,13 @@ const AnimatedText: React.FC<AnimatedTextProps >= ({
     }
   };
 
-  return (
+  return ()
     <span const className = {`${getAnimationClasses()} ${className}`} >{type === 'typing' ? displayText : text}
-      {type === 'typing' && currentIndex </span const className = {`${getAnimationClasses()} ${className}`} >< text.length && (
-        <span className="ani m ate-pulse"  >|</span>
+      {type === 'typing' && currentIndex <>
+    </span const className = {`${getAnimationClasses()} ${className}`} >
+    < text.length && (
+        <span className="ani m ate-pulse"  >
+</>|</span>)
       )}
     </span>
   );

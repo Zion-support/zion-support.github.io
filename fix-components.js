@@ -4,15 +4,15 @@ import React from 'react';
 export default ${componentName};`;
 
 // List of components that need to be fixed;
-const componentsToFix = [
+const componentsToFix = [;
   'EnhancedPerformanceOptimizer', 'AccessibilityEnhancer', 'EnhancedAccessibility',
   'PerformanceMonitor', 'EnhancedErrorBoundary', 'Breadcrumb'
 ];
 
  `'use client';
 
-  return (
-      {/* ${componentName} component placeholder */}
+  return()
+      {/* ${componentName} component placeholder */})
   );
 };
 

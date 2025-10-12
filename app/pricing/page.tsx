@@ -1,5 +1,7 @@
-export default PricingPage;
 'use client';
+
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const PricingPage: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState('monthly');
@@ -51,7 +53,7 @@ const PricingPage: React.FC = () => {
       category: 'ai'
     }
   ];
-  const itServicesPricing = [
+  const itServicesPricing = [;
     {
       name: 'IT Basic',
       price: { monthly: 1499, yearly: 14999 },
@@ -99,7 +101,7 @@ const PricingPage: React.FC = () => {
       category: 'it'
     }
   ];
-  const microSaasPricing = [
+  const microSaasPricing = [;
     {
       name: 'Micro SAAS Starter',
       price: { monthly: 99, yearly: 999 },
@@ -147,7 +149,7 @@ const PricingPage: React.FC = () => {
       category: 'saas'
     }
   ];
-  const addOns = [
+  const addOns = [;
     {
       name: 'AI Content Generation',
       price: { monthly: 199, yearly: 1999 },
@@ -173,7 +175,7 @@ const PricingPage: React.FC = () => {
       features: ['API development', 'Custom connectors', 'Data migration', 'Ongoing maintenance']
     }
   ];
-  const faqs = [
+  const faqs = [;
     {
       question: 'What is included in the free trial?',
       answer: 'Our free trial includes access to all features of the Professional plan for 14 days. No credit card required.'
@@ -203,7 +205,7 @@ const PricingPage: React.FC = () => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
-      minimumFractionDigits: 0;
+      minimumFractionDigits: 0;)
     }).format(price);
   };
 
@@ -213,110 +215,223 @@ const PricingPage: React.FC = () => {
     return Math.round((savings / monthlyTotal) * 100);
   };
 
-  return (
-<<<<<<< HEAD
-
+  return()
         <>
-      <title>Pricing - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">Pricing</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional pricing services coming soon.</p>
-
-      </>
+    <>
+    <title>
+</>Pricing - Zion Tech Group<>
+    </title>
+    <h1 className="text-4xl font-bold text-white mb-6">
+</>Pricing<>
+    </h1>
+    <p className="text-lg text-gray-300 mb-8">
+</>Professional pricing services coming soon.<>
+    </p>
+    </>
+</>)
   );
 }
 
-=======
-    <></>
-      <Helmet></Helmet>
-        <title />Pricing - Zion Tech Group | Transparent AI & IT Solutions Pricing</title>
-        <meta const name = "description" content="Transparent pricing for AI services, IT solutions, and micro SAAS tools. Choose the plan that fits your business needs with 14-day free trials." /  /></meta>
-        <meta name="keywords" content="pricing, AI services pricing, IT services pricing, micro SAAS pricing, business solutions" /></meta>
-        <link rel="canonical" href="https://ziontechgroup.com/pricing"  /></link>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <>
+    <>
+    </>
+</>
+      <>
+    <Helmet>
+    </Helmet>
+</>
+        <title />Pricing - Zion Tech Group | Transparent AI & IT Solutions Pricing<>
+    </title>
+    <meta const name = "description", content="Transparent pricing for AI services, IT solutions, and micro SAAS tools. Choose the plan that fits your business needs with 14-day free trials." /  />
+</><>
+    </meta>
+    <meta name="keywords", content="pricing, AI services pricing, IT services pricing, micro SAAS pricing, business solutions" />
+</><>
+    </meta>
+    <link rel="canonical", href="https://ziontechgroup.com/pricing"  />
+</><>
+    </link>
+    </Helmet>
+</>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
         {/* Hero Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  /></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <DollarSign className="w-5h-5ml-2" /></DollarSign>
-              <span />Transparent Pricing</span>
-            </div>
-            <h1 className="w-5h-5ml-2" /></h1>
+        <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)]animate-pulse", style="{{" animationDelay: '1 s' }}  />
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <>
+    <DollarSign className="w-5h-5ml-2" />
+    </DollarSign>
+</>
+              <span />Transparent Pricing<>
+    </span>
+    </div>
+</>
+            <>
+    <h1 className="w-5h-5ml-2" />
+    </h1>
+</>
               Simple, Transparent{' '}
               <span className="w-5h-5ml-2" />Pricing;
-              </span>
-            </h1>
+              <>
+    </span>
+    </h1>
+</>
             <p className="w-5h-5ml-2">Choose the plan that fits your business needs. All plans include 14-day free trials and no setup fees.
             </p>
             {/* Billing Toggle */}
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
               <span className="{`text-lg" ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}  />Monthly;
-              </span>
-              <button;
-                onClick="{()" = /> setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+              <>
+    </span>
+    <button;
+                onClick="{()" = />
+</> setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
                 className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2focus:ring-cyan-500focus:ring-offset-2"
               >
-                <span;
+                <>
+    <span;
                   className="{`inline-block" h-4 w-4 transform rounded-full bg-white transition-transform ${
                     billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'
                   }`}
-                 /></span>
-              </button>
-              <span className="{`text-lg" ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}  />Yearly;
+                 />
+    </span>
+</>
+              <>
+    </button>
+    <span className="{`text-lg" ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}  />
+</>Yearly;
               </span>
               {billingCycle === 'yearly' && (
                 <span className="w-5h-5ml-2" />Save up to 20%
-                </span>
+                </span>)
               )}
-            </div>
-        </section>
+            <>
+    </div>
+    </section>
+</>
         {/* AI Services Pricing */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
+        <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <>
+    <h2 className="w-5h-5ml-2" />
+    </h2>
+</>
                 <span className="w-5h-5ml-2" />AI Services</span> Pricing;
-              </h2>
-              <p className="w-5h-5ml-2">Advanced artificial intelligence solutions for every business size;
-              </p>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <>
+    </h2>
+    <p className="w-5h-5ml-2">
+</>Advanced artificial intelligence solutions for every business size;
+              <>
+    </p>
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
               {aiServicesPricing.map((plan, index) => (
-                <div key={index} className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''}`} /></div>
+                <>
+    <div key={index} className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''}`} />
+    </div>
+</>
                   {plan.popular && (
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
                       <span className="w-5h-5ml-2" />Most Popular;
-                      </span>
-                    </div>
+                      <>
+    </span>
+    </div>
+</>)
                   )}
                   
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                      <Brain className="w-5h-5ml-2" /></Brain>
-                    </div>
-                    <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                    <p className="w-5h-5ml-2">{plan.description}</p>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+                    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+                      <>
+    <Brain className="w-5h-5ml-2" />
+    </Brain>
+</>
+                    <>
+    </div>
+    <h3 className="w-5h-5ml-2" />
+</>{plan.name}<>
+    </h3>
+    <p className="w-5h-5ml-2">
+</>{plan.description}<>
+    </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</></div>
                       {formatPrice(billingCycle === 'monthly' ? plan.price.monthly : plan.price.yearly)}
-                      <span className="w-5h-5ml-2" />/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
-                    </div>
-                    {billingCycle === 'yearly' && (
+                      <span className="w-5h-5ml-2" />/{billingCycle === 'monthly' ? 'month' : 'year'}<>
+    </span>
+    </div>
+</>
+                    {billingCycle === 'yearly' && ()
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Save {getSavings(plan.price.monthly, plan.price.yearly)}%
                       </div>
                     )}
-                  </div>
-                  <ul className="w-5h-5ml-2" /></ul>
+                  <>
+    </div>
+    <ul className="w-5h-5ml-2" />
+</></ul>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-centerspace-x-3 text-gray-300" /></li>
-                        <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                        <span />{feature}</span>
-                      </li>
+                      <>
+    <li key={featureIndex} className="flex items-centerspace-x-3 text-gray-300" />
+    </li>
+</>
+                        <>
+    <CheckCircle className="w-5h-5ml-2" />
+    </CheckCircle>
+</>
+                        <span />{feature}<>
+    </span>
+    </li>
+</>)
                     ))}
-                  </ul>
-                  <Link;</Link></Link>
+                  <>
+    </ul>
+    <Link;</Link>
+</></Link>
                     to="/contact"
                     className="{`block" w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
@@ -324,55 +439,115 @@ const PricingPage: React.FC = () => {
                         : 'border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
                     }`}
                     />Start Free Trial;
-                  </Link>
-                </div>
+                  <>
+    </Link>
+    </div>
+</>
               ))}
-            </div>
-        </section>
+            <>
+    </div>
+    </section>
+</>
         {/* IT Services Pricing */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
+        <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <>
+    <h2 className="w-5h-5ml-2" />
+    </h2>
+</>
                 <span className="w-5h-5ml-2" />IT Services</span> Pricing;
-              </h2>
-              <p className="w-5h-5ml-2">Comprehensive technology solutions for modern businesses;
-              </p>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <>
+    </h2>
+    <p className="w-5h-5ml-2">
+</>Comprehensive technology solutions for modern businesses;
+              <>
+    </p>
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
               {itServicesPricing.map((plan, index) => (
-                <div key={index} className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-emerald-400 scale-105' : ''}`} /></div>
+                <>
+    <div key={index} className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-emerald-400 scale-105' : ''}`} />
+    </div>
+</>
                   {plan.popular && (
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
                       <span className="w-5h-5ml-2" />Most Popular;
-                      </span>
-                    </div>
+                      <>
+    </span>
+    </div>
+</>)
                   )}
                   
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                      <Settings className="w-5h-5ml-2" /></Settings>
-                    </div>
-                    <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                    <p className="w-5h-5ml-2">{plan.description}</p>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+                    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+                      <>
+    <Settings className="w-5h-5ml-2" />
+    </Settings>
+</>
+                    <>
+    </div>
+    <h3 className="w-5h-5ml-2" />
+</>{plan.name}<>
+    </h3>
+    <p className="w-5h-5ml-2">
+</>{plan.description}<>
+    </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</></div>
                       {formatPrice(billingCycle === 'monthly' ? plan.price.monthly : plan.price.yearly)}
-                      <span className="w-5h-5ml-2" />/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
-                    </div>
-                    {billingCycle === 'yearly' && (
+                      <span className="w-5h-5ml-2" />/{billingCycle === 'monthly' ? 'month' : 'year'}<>
+    </span>
+    </div>
+</>
+                    {billingCycle === 'yearly' && ()
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Save {getSavings(plan.price.monthly, plan.price.yearly)}%
                       </div>
                     )}
-                  </div>
-                  <ul className="w-5h-5ml-2" /></ul>
+                  <>
+    </div>
+    <ul className="w-5h-5ml-2" />
+</></ul>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-centerspace-x-3 text-gray-300" /></li>
-                        <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                        <span />{feature}</span>
-                      </li>
+                      <>
+    <li key={featureIndex} className="flex items-centerspace-x-3 text-gray-300" />
+    </li>
+</>
+                        <>
+    <CheckCircle className="w-5h-5ml-2" />
+    </CheckCircle>
+</>
+                        <span />{feature}<>
+    </span>
+    </li>
+</>)
                     ))}
-                  </ul>
-                  <Link;</Link></Link>
+                  <>
+    </ul>
+    <Link;</Link>
+</></Link>
                     to="/contact"
                     className="{`block" w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
@@ -380,55 +555,115 @@ const PricingPage: React.FC = () => {
                         : 'border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-gray-900'
                     }`}
                     />Start Free Trial;
-                  </Link>
-                </div>
+                  <>
+    </Link>
+    </div>
+</>
               ))}
-            </div>
-        </section>
+            <>
+    </div>
+    </section>
+</>
         {/* Micro SAAS Pricing */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
+        <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <>
+    <h2 className="w-5h-5ml-2" />
+    </h2>
+</>
                 <span className="w-5h-5ml-2" />Micro SAAS</span> Pricing;
-              </h2>
-              <p className="w-5h-5ml-2">Ready-to-use business tools with AI-powered features;
-              </p>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <>
+    </h2>
+    <p className="w-5h-5ml-2">
+</>Ready-to-use business tools with AI-powered features;
+              <>
+    </p>
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
               {microSaasPricing.map((plan, index) => (
-                <div key={index} className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-purple-400 scale-105' : ''}`} /></div>
+                <>
+    <div key={index} className="{`bg-white/10" backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-purple-400 scale-105' : ''}`} />
+    </div>
+</>
                   {plan.popular && (
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
                       <span className="w-5h-5ml-2" />Most Popular;
-                      </span>
-                    </div>
+                      <>
+    </span>
+    </div>
+</>)
                   )}
                   
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                      <Zap className="w-5h-5ml-2" /></Zap>
-                    </div>
-                    <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                    <p className="w-5h-5ml-2">{plan.description}</p>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+                    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+                      <>
+    <Zap className="w-5h-5ml-2" />
+    </Zap>
+</>
+                    <>
+    </div>
+    <h3 className="w-5h-5ml-2" />
+</>{plan.name}<>
+    </h3>
+    <p className="w-5h-5ml-2">
+</>{plan.description}<>
+    </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</></div>
                       {formatPrice(billingCycle === 'monthly' ? plan.price.monthly : plan.price.yearly)}
-                      <span className="w-5h-5ml-2" />/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
-                    </div>
-                    {billingCycle === 'yearly' && (
+                      <span className="w-5h-5ml-2" />/{billingCycle === 'monthly' ? 'month' : 'year'}<>
+    </span>
+    </div>
+</>
+                    {billingCycle === 'yearly' && ()
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Save {getSavings(plan.price.monthly, plan.price.yearly)}%
                       </div>
                     )}
-                  </div>
-                  <ul className="w-5h-5ml-2" /></ul>
+                  <>
+    </div>
+    <ul className="w-5h-5ml-2" />
+</></ul>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-centerspace-x-3 text-gray-300" /></li>
-                        <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                        <span />{feature}</span>
-                      </li>
+                      <>
+    <li key={featureIndex} className="flex items-centerspace-x-3 text-gray-300" />
+    </li>
+</>
+                        <>
+    <CheckCircle className="w-5h-5ml-2" />
+    </CheckCircle>
+</>
+                        <span />{feature}<>
+    </span>
+    </li>
+</>)
                     ))}
-                  </ul>
-                  <Link;</Link></Link>
+                  <>
+    </ul>
+    <Link;</Link>
+</></Link>
                     to="/contact"
                     className="{`block" w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
@@ -436,83 +671,189 @@ const PricingPage: React.FC = () => {
                         : 'border border-purple-400 text-purple-400 hover: bg-purple-400 hover:text-gray-900'
                     }`}
                     />Start Free Trial;
-                  </Link>
-                </div>
+                  <>
+    </Link>
+    </div>
+</>
               ))}
-            </div>
-        </section>
+            <>
+    </div>
+    </section>
+</>
         {/* Add-ons Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
-                Additional <span className="w-5h-5ml-2" />Services</span>
-              </h2>
+        <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <>
+    <h2 className="w-5h-5ml-2" />
+    </h2>
+</>
+                Additional <span className="w-5h-5ml-2" />Services<>
+    </span>
+    </h2>
+</>
               <p className="w-5h-5ml-2">Enhance your plan with these powerful add-ons;
-              </p>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <>
+    </p>
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
               {addOns.map((addon, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-white/20 hover:bg-white/20transition-all duration-300" /></div>
-                  <h3 className="w-5h-5ml-2" />{addon.name}</h3>
-                  <p className="w-5h-5ml-2">{addon.description}</p>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <>
+    <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-white/20 hover:bg-white/20transition-all duration-300" />
+    </div>
+</>
+                  <h3 className="w-5h-5ml-2" />{addon.name}<>
+    </h3>
+    <p className="w-5h-5ml-2">
+</>{addon.description}<>
+    </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</></div>)
                     {formatPrice(billingCycle === 'monthly' ? addon.price.monthly : addon.price.yearly)}
-                    <span className="w-5h-5ml-2" />/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
-                  </div>
-                  <ul className="w-5h-5ml-2" /></ul>
+                    <span className="w-5h-5ml-2" />/{billingCycle === 'monthly' ? 'month' : 'year'}<>
+    </span>
+    </div>
+</>
+                  <>
+    <ul className="w-5h-5ml-2" />
+    </ul>
+</>
                     {addon.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2text-gray-300text-sm" /></li>
-                        <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                        <span />{feature}</span>
-                      </li>
+                      <>
+    <li key={featureIndex} className="flex items-center space-x-2text-gray-300text-sm" />
+    </li>
+</>
+                        <>
+    <CheckCircle className="w-5h-5ml-2" />
+    </CheckCircle>
+</>
+                        <span />{feature}<>
+    </span>
+    </li>
+</>)
                     ))}
-                  </ul>
-                  <Link to="/contact" className="block w-full text-center py-2 rounded-lg font-semibold border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900transition-all duration-300">Add to Plan;
-                  </Link>
-                </div>
+                  <>
+    </ul>
+    <Link to="/contact", className="block w-full text-center py-2 rounded-lg font-semibold border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900transition-all duration-300">
+</>Add to Plan;
+                  <>
+    </Link>
+    </div>
+</>
               ))}
-            </div>
-        </section>
+            <>
+    </div>
+    </section>
+</>
         {/* FAQ Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
-                Frequently Asked <span className="w-5h-5ml-2" />Questions</span>
-              </h2>
+        <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <>
+    <h2 className="w-5h-5ml-2" />
+    </h2>
+</>
+                Frequently Asked <span className="w-5h-5ml-2" />Questions<>
+    </span>
+    </h2>
+</>
               <p className="w-5h-5ml-2">Everything you need to know about our pricing and services;
-              </p>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <>
+    </p>
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6 borderborder-white/20" /></div>
-                  <h3 className="w-5h-5ml-2" />{faq.question}</h3>
-                  <p className="w-5h-5ml-2">{faq.answer}</p>
-                </div>
+                <>
+    <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2 xl p-6 borderborder-white/20" />
+    </div>
+</>
+                  <h3 className="w-5h-5ml-2" />{faq.question}<>
+    </h3>
+    <p className="w-5h-5ml-2">
+</>{faq.answer}<>
+    </p>
+    </div>
+</>)
               ))}
-            </div>
-        </section>
+            <>
+    </div>
+    </section>
+</>
         {/* CTA Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
                 <h2 className="w-5h-5ml-2" />Ready to Get Started?
-                </h2>
-                <p className="w-5h-5ml-2">Start your free trial today and experience the power of our AI and IT solutions.
-                </p>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Start Free Trial;
-                  </Link>
-                  <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Contact Sales;
-                  </Link>
-                </div>
-            </div>
-        </section>
-      </div>
+                <>
+    </h2>
+    <p className="w-5h-5ml-2">
+</>Start your free trial today and experience the power of our AI and IT solutions.
+                <>
+    </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</><>
+    </div>
+    <>
+</>
+                    <Link to="/contact", className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Start Free Trial;
+                    <Link to="/contact", className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Contact Sales;
+                  <>
+    </>
+    </Link>
+</>
+                <>
+    </div>
+    </div>
+</>
+        <>
+    </section>
+    </div>
+</>
     </>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
+
+export default PricingPage;

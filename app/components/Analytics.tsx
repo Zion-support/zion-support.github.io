@@ -11,7 +11,7 @@ interface AnalyticsProps {
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: document.title,
-          page_location: window.location.href,
+          page_location: window.location.href,)
         });
       }
     };
@@ -19,7 +19,10 @@ interface AnalyticsProps {
     initAnalytics();
   }, []);
 
-  return <React.Fragment >{children}</React.Fragment ></React.Fragment>;
+  return <React.Fragment >{children}<>
+    </React.Fragment >
+    </React.Fragment>
+</>;
 }
 
 // Extend Window interface for gtag;

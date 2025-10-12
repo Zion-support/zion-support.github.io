@@ -3,10 +3,11 @@ export default SEOHead;
 
 
 
-  return (
-
-        <title>5G Data Analytics - Zion Tech Group</title>
-      <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+  return()
+        <title>5G Data Analytics - Zion Tech Group<>
+    </title>
+    <title>
+</>Zion Tech Group - Advanced AI and IT Solutions</title>
       {/* Open Graph Meta Tags */}
     
       {/* Twitter Card Meta Tags */}
@@ -39,7 +40,7 @@ export default SEOHead;
             "https: //github.com/ziontechgroup",
             "https: //linkedin.com/company/ziontechgroup",
             "https://twitter.com/ziontechgroup"
-          ]
+          ])
         })}
 
   );

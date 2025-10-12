@@ -1,19 +1,18 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, PenTool, FileText, Image, Video, Mic, Globe, Zap, Brain, BarChart, Users } from 'lucide-react';
 
 const AiContentGenerationPage: React.FC = () => {
-<<<<<<< HEAD
-  return (
-
+  return()
         <>
-      <title>AiContentGeneration - Zion Tech Group</title>
-
-      </>
-=======
-  const features = [
+    <>
+    <title>
+</>AiContentGeneration - Zion Tech Group<>
+    </title>
+    </>
+</>
+  const features = [;
     {
       title: 'AI Text Generation',
       description: 'Generate high-quality articles, blogs, and marketing copy with advanced language models',
@@ -52,7 +51,7 @@ const AiContentGenerationPage: React.FC = () => {
     }
   ];
 
-  const contentTypes = [
+  const contentTypes = [;
     {
       title: 'Blog Posts & Articles',
       description: 'SEO-optimized content that ranks well and engages readers',
@@ -70,7 +69,7 @@ const AiContentGenerationPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
+  const pricingPlans = [;
     {
       name: 'Starter',
       price: '$49',
@@ -119,141 +118,218 @@ const AiContentGenerationPage: React.FC = () => {
     }
   ];
 
-  return (
+  return()
+    <>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>AI Content Generation - Zion Tech Group</title>
-        <meta name="description" content="Generate high-quality content at scale with AI. Create text, images, videos, and audio content for all your marketing needs." />
-        <meta name="keywords" content="AI content generation, automated content, content creation, AI writing, content marketing" />
-      </Helmet>
+    <Helmet>
+</>
+        <title>AI Content Generation - Zion Tech Group<>
+    </title>
+    <meta name="description", content="Generate high-quality content at scale with AI. Create text, images, videos, and audio content for all your marketing needs." />
+</>
+        <>
+    <meta name="keywords", content="AI content generation, automated content, content creation, AI writing, content marketing" />
+    </Helmet>
+</>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <>
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto text-center">
+</>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Content
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               {' '}Generation
-            </span>
-          </h1>
+            <>
+    </span>
+    </h1>
+</>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Create high-quality content at scale with our advanced AI. Generate text, images, videos, 
             and audio content that engages your audience and drives results.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Start Creating
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
+          <>
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+</>
+            <>
+    <>
+    <Link
+              <Link
+            </>
+</>
               to="/demo" 
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               View Demo
-            </Link>
-          </div>
-        </div>
-      </section>
+            <>
+    </Link>
+    </div>
+</>
+        <>
+    </div>
+    </section>
+</>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <>
+    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto">
+</>
+          <>
+    <div className="text-center mb-16">
+    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+</>
               Complete Content Creation Suite
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <>
+    </h2>
+    <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+</>
               Everything you need to create compelling content across all formats and platforms.
-            </p>
-          </div>
+            <>
+    </p>
+    </div>
+</>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">)
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>
+              <>
+    <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>
+</>
                   {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+                <>
+    </div>
+    <h3 className="text-xl font-semibold text-white mb-3">
+</>{feature.title}<>
+    </h3>
+    <p className="text-gray-300">
+</>{feature.description}<>
+    </p>
+    </div>
+</>)
             ))}
-          </div>
-        </div>
+          <>
+    </div>
+    </div>
+</>
       </section>
 
       {/* Content Types Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <>
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+    <div className="max-w-7xl mx-auto">
+</>
+          <>
+    <div className="text-center mb-16">
+    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+</>
               Content for Every Need
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <>
+    </h2>
+    <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+</>
               Generate content that resonates with your audience across all channels and formats.
-            </p>
-          </div>
+            <>
+    </p>
+    </div>
+</>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {contentTypes.map((contentType, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-3">{contentType.title}</h3>
-                <p className="text-gray-300 mb-4">{contentType.description}</p>
-                <ul className="space-y-2">
+              <>
+    <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+    <h3 className="text-xl font-semibold text-white mb-3">
+</>{contentType.title}<>
+    </h3>
+    <p className="text-gray-300 mb-4">
+</>{contentType.description}<>
+    </p>
+    <ul className="space-y-2">
+</>)
                   {contentType.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <>
+    <li key={benefitIndex} className="flex items-center text-gray-300">
+    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+</>
                       {benefit}
-                    </li>
+                    </li>)
                   ))}
-                </ul>
-              </div>
+                <>
+    </ul>
+    </div>
+</>
             ))}
-          </div>
-        </div>
+          <>
+    </div>
+    </div>
+</>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <>
+    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto">
+</>
+          <>
+    <div className="text-center mb-16">
+    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+</>
               Simple, Transparent Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <>
+    </h2>
+    <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+</>
               Choose the plan that fits your content creation needs. Scale up or down anytime.
-            </p>
-          </div>
+            <>
+    </p>
+    </div>
+</>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-cyan-400 ring-2 ring-cyan-400/20' : 'border-white/20'} relative`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <>
+    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+</>
                       Most Popular
-                    </span>
-                  </div>
+                    <>
+    </span>
+    </div>
+</>)
                 )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-300 ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300 mt-2">{plan.description}</p>
-                </div>
+                <>
+    <div className="text-center mb-6">
+    <h3 className="text-2xl font-bold text-white mb-2">
+</>{plan.name}<>
+    </h3>
+    <div className="flex items-baseline justify-center">
+</>
+                    <span className="text-4xl font-bold text-white">{plan.price}<>
+    </span>
+    <span className="text-gray-300 ml-1">
+</>{plan.period}<>
+    </span>
+    </div>
+</>
+                  <p className="text-gray-300 mt-2">{plan.description}<>
+    </p>
+    </div>
+</>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+                    <>
+    <li key={featureIndex} className="flex items-center text-gray-300">
+    <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+</>
                       {feature}
-                    </li>
+                    </li>)
                   ))}
-                </ul>
-                <Link
+                <>
+    </ul>
+    <Link
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
@@ -261,77 +337,126 @@ const AiContentGenerationPage: React.FC = () => {
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                   }`}
                 >
+</>
                   Get Started
-                </Link>
-              </div>
+                <>
+    </Link>
+    </div>
+</>
             ))}
-          </div>
-        </div>
+          <>
+    </div>
+    </div>
+</>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <>
+    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-4xl mx-auto text-center">
+</>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Scale Your Content?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <>
+    </h2>
+    <p className="text-xl text-gray-300 mb-8">
+</>
             Join thousands of businesses already using our AI to create engaging content at scale.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Start Your Free Trial
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
+          <>
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+</>
+            <>
+    <>
+    <Link
+              <Link
+            </>
+</>
               to="/demo" 
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               Schedule a Demo
-            </Link>
-          </div>
-        </div>
-      </section>
+            <>
+    </Link>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
+</>
+        <>
+    </div>
+    </section>
+</>
+    </div>
   );
 }
 
-=======
 export default AiContentGenerationPage;
 'use client';
 
 const AiContentGenerationPage: React.FC = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Ai Content Generation - Zion Tech Group</title>
-        <meta name="description" content="Ai Content Generation services by Zion Tech Group. Professional AI and IT solutions." /></meta>
-        <meta name="keywords" content="ai-content-generation, AI solutions, IT services" /></meta>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
-              <span className="w-5h-5ml-2" />Ai Content Generation;
-              </span>
-            </h1>
-            <p className="w-5h-5ml-2">Professional ai content generation services by Zion Tech Group.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
-            <p className="w-5h-5ml-2">We're working on bringing you comprehensive ai content generation solutions. 
-              Contact us to learn more about our services.
-            </p>
-            <button className="w-5h-5ml-2">Contact Us;
-            </button>
-          </div>
-      </div>
+  return()
+    <>
+    <>
     </>
+</>
+      <>
+    <Helmet>
+    </Helmet>
+</>
+        <title>Ai Content Generation - Zion Tech Group<>
+    </title>
+    <meta name="description", content="Ai Content Generation services by Zion Tech Group. Professional AI and IT solutions." />
+</><>
+    </meta>
+    <meta name="keywords", content="ai-content-generation, AI solutions, IT services" />
+</><>
+    </meta>
+    </Helmet>
+</>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <h1 className="w-5h-5ml-2" />
+    </h1>
+</>
+              <span className="w-5h-5ml-2" />Ai Content Generation;
+              <>
+    </span>
+    </h1>
+</>
+            <p className="w-5h-5ml-2">Professional ai content generation services by Zion Tech Group.
+            <>
+    </p>
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon<>
+    </h2>
+    <p className="w-5h-5ml-2">
+</>We're working on bringing you comprehensive ai content generation solutions. 
+              Contact us to learn more about our services.
+            <>
+    </p>
+    <button className="w-5h-5ml-2">
+</>Contact Us;
+            <>
+    </button>
+    </div>
+</>
+      <>
+    </div>
+    </>
+</>)
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

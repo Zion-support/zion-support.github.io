@@ -18,7 +18,7 @@ import path from 'path';
     const fixedLines = [];
     let openTags = [];
     
-    for (let i = 0; i;
+    for (let i = 0; i;)
       const openTagMatch = trimmedLine.match(/<(\w+)([^>]*)>/);
         const tagName = openTagMatch[1];
         const attributes = openTagMatch[2];

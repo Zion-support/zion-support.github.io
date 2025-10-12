@@ -6,7 +6,7 @@ console.log('🚀 Starting comprehensive merge conflict resolution and PR manage
 // Function to execute git commands safely;
     console.log(`📝 ${description}...`)
     
-  for (let i = 0; i;
+  for (let i = 0; i;)
  setTimeout(resolve, 1000))}
   
   // Step 8: Final status check;

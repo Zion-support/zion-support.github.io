@@ -6,7 +6,7 @@ import path from 'path';
 function fixJSXSyntax(content) {
   // Remove any remaining merge conflict artifacts;
   content = content.replace(/  
-  // Fix common broken JSX patterns;
+  // Fix common broken JSX patterns;)
   content = content.replace(/\}\s*\)\s*\)\s*\)\s*$/gm, '}');
   content = content.replace(/\}\s*\)\s*\)\s*$/gm, '}');
   content = content.replace(/\}\s*\)\s*$/gm, '}');
@@ -62,7 +62,7 @@ function fixFile(filePath) {
 console.log('Starting final JSX syntax fixes...');
 
 // Focus on the most problematic files first;
-const criticalFiles = [
+const criticalFiles = [;
   '/workspace/app/about/page.tsx',
   '/workspace/app/5g-implementation/page.tsx',
   '/workspace/app/accessibility/page.tsx',

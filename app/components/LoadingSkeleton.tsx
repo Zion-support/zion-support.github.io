@@ -10,15 +10,21 @@ interface LoadingSkeletonProps {
 const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
 const LoadingSkeleton: React.FC<LoadingSkeletonProps /> = ({ 
   lines = 3, 
-  className = '' 
+  className = '' )
 }) => {
-  return (
-    <div className={`animate-pulse ${className}`}></div>
+  return()
+    <>
+    <div className={`animate-pulse ${className}`}>
+    </div>
+</>)
       {Array.from({ length: lines }).map((_, index) => (
-        <div;
+        <>
+    <div;
           key={index}
           className="h-4bg-gray-300 rounded mb-2"
-        /></div>
+        />
+    </div>
+</>)
       ))}
     </div>
   );

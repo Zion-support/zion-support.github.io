@@ -4,7 +4,7 @@ import React from 'react';
 export default ${title}Page;`;
 
 // List of pages that need to be created based on App.tsx imports;
-const missingPages = [
+const missingPages = [;
   'pricing', 'blog', 'case-studies', 'careers', 'ai-services', 'it-services', 
   'micro-saas', 'consultation', 'support', 'privacy', 'terms', 'cookies', 
   'sitemap', 'ai-analytics', 'ai-automation', 'ai-chatbot-builder', 
@@ -35,10 +35,9 @@ const missingPages = [
 
 // Template for page components;
  `'use client';
-  return (
-    
+  return()
         <title>${title} - Zion Tech Group</title>
-                ${title}
+                ${title})
               Professional ${title.toLowerCase()} services by Zion Tech Group.
 
             <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>

@@ -4,7 +4,7 @@ import fs from 'fs';
 const existingPages = fs.readFileSync('/workspace/existing_pages.txt', 'utf8').split('\n').filter(Boolean);
 
 // Navigation links from Navigation.tsx;
-const navigationLinks = [
+const navigationLinks = [;
   '/ai-services',
   '/ai-content-generator',
   '/ai-chatbot-enterprise', 
@@ -50,7 +50,7 @@ const navigationLinks = [
 ];
 
 // Footer links from Footer.tsx;
-const footerLinks = [
+const footerLinks = [;
   '/ai-content-generator',
   '/ai-chatbot-enterprise',
   '/ai-analytics-dashboard',
@@ -94,7 +94,7 @@ const footerLinks = [
 ];
 
 // App.tsx routes;
-const appRoutes = [
+const appRoutes = [;
   '/',
   '/about',
   '/contact',

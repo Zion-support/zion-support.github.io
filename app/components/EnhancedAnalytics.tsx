@@ -2,7 +2,10 @@ export const useAnalytics = () => {
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children }) => {
 'use client';
 interface AnalyticsContextType {
-    <></>
+    <>
+    <>
+    </>
+</>
   track: (event: string, properties?: Record<string, any />) => void;
   identify: (userId: string, traits?: Record<string, any />) => void;
   page: (name: string, properties?: Record<string, any />) => void;
@@ -58,7 +61,7 @@ interface AnalyticsProviderProps {
       if (window.gtag) {
         window.gtag('config', process.env.REACT_APP_GA_ID, {
           user_id: userId,
-          custom_map: traits;
+          custom_map: traits;)
         });
       }
       
@@ -74,7 +77,7 @@ interface AnalyticsProviderProps {
         window.gtag('event', 'page_view', {
           page_title: name,
           page_location: window.location.href,
-          ...properties;
+          ...properties;)
         });
       }
       
@@ -88,10 +91,13 @@ interface AnalyticsProviderProps {
     identify,
     page;
   };
-  return (
-    <AnalyticsContext.Provider const value = {value} /></AnalyticsContext>
+  return()
+    <>
+    <AnalyticsContext.Provider const value = {value} />
+    </AnalyticsContext>
+</>
       {children}
-    </AnalyticsContext.Provider>
+    </AnalyticsContext.Provider>)
   );
 };
 

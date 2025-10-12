@@ -25,11 +25,11 @@ const PerformanceDashboard: React.FC = () => {
     fid: 0,
     cls: 0,
     ttfb: 0,
-    fcp: 0,
+    fcp: 0,)
   });
   useEffect(() => {
     // Only show in development or if user has enabled debug mode;
-    const shouldShow = process.env.NODE_ENV === 'development' || 
+    const shouldShow = process.env.NODE_ENV === 'development' ||;
                       localStorage.getItem('debug-performance') === 'true';
     if (!shouldShow) return;
 
@@ -51,7 +51,7 @@ const PerformanceDashboard: React.FC = () => {
         entries.forEach((entry: any) => {
           setMetrics(const prev = > ({ 
             ...prev, 
-            fid: entry.processingStart - entry.startTime;
+            fid: entry.processingStart - entry.startTime;)
           }));
         });
       });
@@ -85,7 +85,7 @@ const PerformanceDashboard: React.FC = () => {
         entries.forEach((entry: any) => {
           setMetrics(const prev = > ({ 
             ...prev, 
-            ttfb: entry.responseStart - entry.requestStart;
+            ttfb: entry.responseStart - entry.requestStart;)
           }));
         });
       });
@@ -95,7 +95,7 @@ const PerformanceDashboard: React.FC = () => {
       const updateMemory = () => {
         if ('memory' in, performance) {
           setMetrics(prev => ({ 
-            ...prev, 
+            ...prev, )
             memory: (performance as, any).memory;
           }));
         }
@@ -111,7 +111,7 @@ const PerformanceDashboard: React.FC = () => {
   effectiveType: connection.effectiveType,
             downlink: connection.downlink,
             rtt: connection.rtt,
-          }
+          })
         }));
       }
 
@@ -142,69 +142,161 @@ const PerformanceDashboard: React.FC = () => {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <h3 className="w-5h-5ml-2" /></h3>
-          <Activity className="w-5h-5ml-2" /></Activity>
+  return()
+    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+        <>
+    <h3 className="w-5h-5ml-2" />
+    </h3>
+</>
+          <>
+    <Activity className="w-5h-5ml-2" />
+    </Activity>
+</>
           Performance;
-        </h3>
-        <button;
-          onClick="{()" =  />setIsVisible(false)}
+        <>
+    </h3>
+    <button;)
+          onClick="{()" =  />
+</>setIsVisible(false)}
           className="text-gray-400hover: text-white"
         >
           ×
-        </button>
-      </div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <span />LCP:</span>
-          <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}  />{metrics.lcp.toFixed(0)}ms;
-          </span>
-        </div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <span />FID:</span>
-          <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}  />{metrics.fid.toFixed(0)}ms;
-          </span>
-        </div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <span />CLS:</span>
-          <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}  />{metrics.cls.toFixed(3)}
-          </span>
-        </div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <span />FCP:</span>
-          <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}  />{metrics.fcp.toFixed(0)}ms;
-          </span>
-        </div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <span />TTFB:</span>
-          <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}  />{metrics.ttfb.toFixed(0)}ms;
-          </span>
-        </div>
+        <>
+    </button>
+    </div>
+</>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <span />LCP:<>
+    </span>
+    <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}  />
+</>{metrics.lcp.toFixed(0)}ms;
+          <>
+    </span>
+    </div>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <span />FID:<>
+    </span>
+    <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}  />
+</>{metrics.fid.toFixed(0)}ms;
+          <>
+    </span>
+    </div>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <span />CLS:<>
+    </span>
+    <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}  />
+</>{metrics.cls.toFixed(3)}
+          <>
+    </span>
+    </div>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <span />FCP:<>
+    </span>
+    <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}  />
+</>{metrics.fcp.toFixed(0)}ms;
+          <>
+    </span>
+    </div>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <span />TTFB:<>
+    </span>
+    <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}  />
+</>{metrics.ttfb.toFixed(0)}ms;
+          <>
+    </span>
+    </div>
+</>
         {metrics.memory && (
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <HardDrive className="w-5h-5ml-2" /></HardDrive>
-              <span className="w-5h-5ml-2" />Memory</span>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div />Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
-              <div />Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
-          </div>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <>
+    <HardDrive className="w-5h-5ml-2" />
+    </HardDrive>
+</>
+              <span className="w-5h-5ml-2" />Memory<>
+    </span>
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>)
+              <div />Used: {formatBytes(metrics.memory.usedJSHeapSize)}<>
+    </div>
+    <div />
+</>Total: {formatBytes(metrics.memory.totalJSHeapSize)}<>
+    </div>
+    </div>
+</>
         )}
 
         {metrics.connection && (
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <Wifi className="w-5h-5ml-2" /></Wifi>
-              <span className="w-5h-5ml-2" />Connection</span>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div />Type: {metrics.connection.effectiveType}</div>
-              <div />Speed: {metrics.connection.downlink}Mbps</div>
-              <div />RTT: {metrics.connection.rtt}ms</div>
-          </div>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <>
+    <Wifi className="w-5h-5ml-2" />
+    </Wifi>
+</>
+              <span className="w-5h-5ml-2" />Connection<>
+    </span>
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <div />Type: {metrics.connection.effectiveType}<>
+    </div>
+    <div />
+</>Speed: {metrics.connection.downlink}Mbps<>
+    </div>
+    <div />
+</>RTT: {metrics.connection.rtt}ms<>
+    </div>
+    </div>
+</>)
         )}
       </div>
   );

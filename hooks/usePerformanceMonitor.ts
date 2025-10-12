@@ -6,7 +6,7 @@
             // Log performance metrics;
             console.log('Page Load Performance:', {
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,)
  entry.name === 'first-paint')?.startTime,
  entry.name === 'first-contentful-paint')?.startTime,
             });
@@ -19,7 +19,7 @@
             if (entry.entryType === 'resource') {
               console.log('Resource loaded:', {
                 name: entry.name,
-                duration: entry.duration,
+                duration: entry.duration,)
                 size: (entry, as, any).transferSize,
               });
           });

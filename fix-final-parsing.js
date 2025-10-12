@@ -22,15 +22,15 @@ function fixFinalParsing(content) {
   fixed = fixed.replace(/function Ai3 dGenerationPage/g, 'function Ai3dGenerationPage');
   
   // Fix malformed meta tags;
-  fixed = fixed.replace(/<meta name="description" content="([^"]*)" \/ \/>/g, '<meta name="description" content="$1" />');
-  fixed = fixed.replace(/<meta name="keywords" content="([^"]*)" \/ \/>/g, '<meta name="keywords" content="$1" />');
+  fixed = fixed.replace(/<meta name="description", content="([^"]*)" \/ \/>/g, '<meta name="description", content="$1" />');
+  fixed = fixed.replace(/<meta name="keywords", content="([^"]*)" \/ \/>/g, '<meta name="keywords", content="$1" />');
   
   // Fix malformed title tags;
   fixed = fixed.replace(/<title>Ai 3 d Generation/g, '<title>AI 3D Generation');
   
   // Fix malformed Helmet tags;
-  fixed = fixed.replace(/<Helmet>\s*<title>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/ \/>/g, 
-    '<Helmet>\n        <title>$1</title>\n        <meta name="description" content="$2" />');
+  fixed = fixed.replace(/<Helmet>\s*<title>([^<]*)<\/title>\s*<meta name="description", content="([^"]*)" \/ \/>/g, 
+    '<Helmet>\n        <title>$1</title>\n        <meta name="description", content="$2" />');
   
   return fixed;
 
@@ -55,7 +55,7 @@ async function main() {
   
   // Get all TypeScript/TSX files;
   const files = await glob('**/*.{ts,tsx}', {
-    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
+    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**'])
   });
   
   let fixedCount = 0;

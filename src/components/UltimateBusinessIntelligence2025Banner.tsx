@@ -12,7 +12,10 @@ export default UltimateBusinessIntelligence2025Banner;
   // Removed unused handleClose function;
   if (!isVisible) return null;
       {/* Animated Background Effects */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <>
+    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse">
+    </div>
+</>
         ></div>
         ></div>
         {/* Header */}
@@ -33,11 +36,19 @@ export default UltimateBusinessIntelligence2025Banner;
                   {tag}
               ))}
             {/* CTA Buttons */}
-                <span className="text-xl">📖</span>
-                <span>Read {currentContent.type}</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-                <span className="text-xl">📞</span>
-                <span>Call +1 302 464 0950</span>
+                <span className="text-xl">📖<>
+    </span>
+    <span>
+</>Read {currentContent.type}<>
+    </span>
+    <span className="group-hover:translate-x-1 transition-transform">
+</>→<>
+    </span>
+    <span className="text-xl">
+</>📞<>
+    </span>
+    <span>
+</>Call +1 302 464 0950</span>
           {/* Slide Indicators */}
  setCurrentSlide(index)}
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
@@ -47,8 +58,10 @@ export default UltimateBusinessIntelligence2025Banner;
             ))}
         {/* Stats Section */}
           {[
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}<>
+    </div>
+    <div className="text-gray-300">
+</>{stat.label}</div>
           ))}
   );
 };

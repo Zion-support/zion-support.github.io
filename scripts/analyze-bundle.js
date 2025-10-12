@@ -53,7 +53,7 @@ function analyzeBundle() {
     analysis.totalSize += size;
     analysis.files.push({
       path: relativePath,
-      size: size,
+      size: size,)
       sizeFormatted: formatBytes(size)
     });
   });
@@ -129,7 +129,7 @@ function generateRecommendations(analysis) {
   analysis.recommendations = recommendations;
 
 function generateHTMLReport(analysis) {
-  const html = `
+  const html = `;
     <title>Bundle Analysis Report - Zion Tech Group</title>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -193,18 +193,36 @@ function generateHTMLReport(analysis) {
         .recommendations li {
             margin-bottom: 8px;
             color: #e2e8f0;
-        <h1>📊 Bundle Analysis Report</h1>
-                <div class="stat-value">${analysis.totalFiles}</div>
-                <div class="stat-label">Total Files</div>
-                <div class="stat-value">${formatBytes(analysis.totalSize)}</div>
-                <div class="stat-label">Total Size</div>
-                <div class="stat-value">${analysis.files.length > 0 ? formatBytes(analysis.files[0].size) : '0'}</div>
-                <div class="stat-label">Largest File</div>
-                        <th>File Path</th>
-                        <th>Size</th>
+        <h1>📊 Bundle Analysis Report<>
+    </h1>
+    <div class="stat-value">
+</>${analysis.totalFiles}<>
+    </div>
+    <div class="stat-label">
+</>Total Files<>
+    </div>
+    <div class="stat-value">
+</>${formatBytes(analysis.totalSize)}<>
+    </div>
+    <div class="stat-label">
+</>Total Size<>
+    </div>
+    <div class="stat-value">
+</>${analysis.files.length > 0 ? formatBytes(analysis.files[0].size) : '0'}<>
+    </div>
+    <div class="stat-label">
+</>Largest File<>
+    </div>
+    <th>
+</>File Path<>
+    </th>
+    <th>
+</>Size</th>
  `
-                            <td>${file.path}</td>
-                            <td class="size">${file.sizeFormatted}</td>
+                            <td>${file.path}<>
+    </td>
+    <td class="size">
+</>${file.sizeFormatted}</td>
                     `).join('')}
 
             <h3>💡 Optimization Recommendations</h3>

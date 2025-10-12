@@ -57,8 +57,10 @@ export default PerformanceDashboard;
             {metrics.renderTime.toFixed(2)}ms;
           <span className="text-sm text-gray-600">Memory Usage:</span>
             {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
-          <span className="text-sm text-gray-600">FPS:</span>
-          <span className="text-sm font-mono">{metrics.fps}</span>
+          <span className="text-sm text-gray-600">FPS:<>
+    </span>
+    <span className="text-sm font-mono">
+</>{metrics.fps}</span>
             Last updated: {new Date().toLocaleTimeString()}
   );
 };

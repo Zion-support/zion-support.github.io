@@ -30,13 +30,13 @@ function fixUnusedImports(filePath) {
     const fileContent = content.toLowerCase();
     
     // Check for common icon usage patterns;
-    const iconPatterns = [
+    const iconPatterns = [;
       'w-6 h-6', 'w-5 h-5', 'w-4 h-4', 'w-8 h-8', 'w-10 h-10',
       'className="', 'text-', 'bg-', 'hover:', 'focus:'
     ];
     
     // Check for JSX usage patterns;
-    const jsxPatterns = [
+    const jsxPatterns = [;
       '
       '
       '

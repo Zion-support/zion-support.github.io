@@ -1,87 +1,129 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
 export default AiChatbotEnterprisePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 'use client';
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Shield, Brain, Users, Zap, BarChart, MessageCircle, Globe, Clock } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const AiChatbotEnterprisePage: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
+  return()
     <>
-      <Helmet>
-        <title>AI Chatbot Enterprise - Zion Tech Group</title>
-        <meta name="description" content="Enterprise AI chatbot solutions by Zion Tech Group. Professional AI and IT solutions for large organizations." />
-        <meta name="keywords" content="ai-chatbot-enterprise, AI solutions, IT services, enterprise chatbot" />
-      </Helmet>
+    <>
+    <Helmet>
+</>
+        <title>AI Chatbot Enterprise - Zion Tech Group<>
+    </title>
+    <meta name="description", content="Enterprise AI chatbot solutions by Zion Tech Group. Professional AI and IT solutions for large organizations." />
+</>
+        <>
+    <meta name="keywords", content="ai-chatbot-enterprise, AI solutions, IT services, enterprise chatbot" />
+    </Helmet>
+</>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 py-20">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="max-w-7xl mx-auto px-4 py-20">
+</>
+          <>
+    <div className="text-center">
+    <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+</>
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 AI Chatbot Enterprise
-=======
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Ai Chatbot Enterprise - Zion Tech Group</title>
-        <meta name="description" content="Ai Chatbot Enterprise services by Zion Tech Group. Professional AI and IT solutions." /></meta>
-        <meta name="keywords" content="ai-chatbot-enterprise, AI solutions, IT services" /></meta>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
+  return()
+    <>
+    <>
+    </>
+</>
+      <>
+    <Helmet>
+    </Helmet>
+</>
+        <title>Ai Chatbot Enterprise - Zion Tech Group<>
+    </title>
+    <meta name="description", content="Ai Chatbot Enterprise services by Zion Tech Group. Professional AI and IT solutions." />
+</><>
+    </meta>
+    <meta name="keywords", content="ai-chatbot-enterprise, AI solutions, IT services" />
+</><>
+    </meta>
+    </Helmet>
+</>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <h1 className="w-5h-5ml-2" />
+    </h1>
+</>
               <span className="w-5h-5ml-2" />Ai Chatbot Enterprise;
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
-              </span>
-            </h1>
+              <>
+    </span>
+    </h1>
+</>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional AI chatbot enterprise services by Zion Tech Group.
-            </p>
-          </div>
-<<<<<<< HEAD
+            <>
+    </p>
+    </div>
+</>
 
-          <div className="text-center mt-16">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          <>
+    <div className="text-center mt-16">
+    <h2 className="text-2xl font-bold text-white mb-4">
+</>Coming Soon<>
+    </h2>
+    <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+</>
               We're working on bringing you comprehensive AI chatbot enterprise solutions. 
               Contact us to learn more about our services.
-            </p>
-            <Link 
+            <>
+    </p>
+    <Link 
               to="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-block"
             >
+</>
               Contact Us
-            </Link>
-=======
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
-            <p className="w-5h-5ml-2">We're working on bringing you comprehensive ai chatbot enterprise solutions. 
+            <>
+    </Link>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</><>
+    </div>
+    <h2 className="text-2 xl font-bold text-white mb-4"  >
+</>Coming Soon<>
+    </h2>
+    <p className="w-5h-5ml-2">
+</>We're working on bringing you comprehensive ai chatbot enterprise solutions. 
               Contact us to learn more about our services.
-            </p>
-            <button className="w-5h-5ml-2">Contact Us;
-            </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
-          </div>
-        </div>
-      </div>
+            <>
+    </p>
+    <button className="w-5h-5ml-2">
+</>Contact Us;
+            <>
+    </button>
+    </div>
+</>
+        <>
+    </div>
+    </div>
+</>
     </>
-=======
-  const features = [
+  const features = [;
     {
       title: 'Enterprise-Grade Security',
       description: 'Advanced security protocols, data encryption, and compliance with industry standards',
@@ -120,8 +162,8 @@ const AiChatbotEnterprisePage: React.FC = () => {
     }
   ];
 
-  const enterpriseFeatures = [
-    'Custom AI model training and fine-tuning',
+  const enterpriseFeatures = [;
+    'Custom AI model training and fine-tuning',)
     'Advanced security and compliance (SOC 2, GDPR, HIPAA)',
     'White-label solutions and custom branding',
     'Dedicated infrastructure and private cloud deployment',
@@ -133,121 +175,187 @@ const AiChatbotEnterprisePage: React.FC = () => {
     'Advanced conversation routing and escalation'
   ];
 
-  return (
+  return()
+    <>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>AI Chatbot Enterprise - Zion Tech Group</title>
-        <meta name="description" content="Enterprise-grade AI chatbot solutions with advanced security, scalability, and customization for large organizations." />
-        <meta name="keywords" content="enterprise AI chatbot, business chatbot, corporate AI solutions, enterprise automation" />
-      </Helmet>
+    <Helmet>
+</>
+        <title>AI Chatbot Enterprise - Zion Tech Group<>
+    </title>
+    <meta name="description", content="Enterprise-grade AI chatbot solutions with advanced security, scalability, and customization for large organizations." />
+</>
+        <>
+    <meta name="keywords", content="enterprise AI chatbot, business chatbot, corporate AI solutions, enterprise automation" />
+    </Helmet>
+</>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <>
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto text-center">
+</>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Chatbot
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               {' '}Enterprise
-            </span>
-          </h1>
+            <>
+    </span>
+    </h1>
+</>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Enterprise-grade AI chatbot solutions designed for large organizations. 
             Advanced security, scalability, and customization to meet your complex business requirements.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Get Enterprise Quote
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
+          <>
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+</>
+            <>
+    <>
+    <Link
+              <Link
+            </>
+</>
               to="/demo" 
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               Schedule Demo
-            </Link>
-          </div>
-        </div>
-      </section>
+            <>
+    </Link>
+    </div>
+</>
+        <>
+    </div>
+    </section>
+</>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <>
+    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto">
+</>
+          <>
+    <div className="text-center mb-16">
+    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+</>
               Enterprise-Grade Capabilities
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <>
+    </h2>
+    <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+</>
               Built for scale, security, and performance to meet the demands of large organizations.
-            </p>
-          </div>
+            <>
+    </p>
+    </div>
+</>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">)
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>
+              <>
+    <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>
+</>
                   {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+                <>
+    </div>
+    <h3 className="text-xl font-semibold text-white mb-3">
+</>{feature.title}<>
+    </h3>
+    <p className="text-gray-300">
+</>{feature.description}<>
+    </p>
+    </div>
+</>)
             ))}
-          </div>
-        </div>
+          <>
+    </div>
+    </div>
+</>
       </section>
 
       {/* Enterprise Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <>
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+    <div className="max-w-7xl mx-auto">
+</>
+          <>
+    <div className="text-center mb-16">
+    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+</>
               Complete Enterprise Solution
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <>
+    </h2>
+    <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+</>
               Everything you need for enterprise-scale AI chatbot deployment and management.
-            </p>
-          </div>
+            <>
+    </p>
+    </div>
+</>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-6">Core Features</h3>
-              <ul className="space-y-4">
+          <>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+</>
+              <h3 className="text-2xl font-bold text-white mb-6">Core Features<>
+    </h3>
+    <ul className="space-y-4">
+</>
                 {enterpriseFeatures.slice(0, 5).map((feature, index) => (
-                  <li key={index} className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <>
+    <li key={index} className="flex items-center text-gray-300">
+    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+</>
                     {feature}
-                  </li>
+                  </li>)
                 ))}
-              </ul>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-6">Advanced Capabilities</h3>
-              <ul className="space-y-4">
+              <>
+    </ul>
+    </div>
+</>
+            <>
+    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+    <h3 className="text-2xl font-bold text-white mb-6">
+</>Advanced Capabilities<>
+    </h3>
+    <ul className="space-y-4">
+</>
                 {enterpriseFeatures.slice(5).map((feature, index) => (
-                  <li key={index} className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <>
+    <li key={index} className="flex items-center text-gray-300">
+    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+</>
                     {feature}
-                  </li>
+                  </li>)
                 ))}
-              </ul>
-            </div>
-          </div>
-        </div>
+              <>
+    </ul>
+    </div>
+</>
+          <>
+    </div>
+    </div>
+</>
       </section>
 
       {/* Security & Compliance Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <>
+    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto">
+</>
+          <>
+    <div className="text-center mb-16">
+    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+</>
               Security & Compliance
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <>
+    </h2>
+    <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+</>
               Enterprise-grade security and compliance to protect your data and meet regulatory requirements.
-            </p>
-          </div>
+            <>
+    </p>
+    </div>
+</>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -260,47 +368,57 @@ const AiChatbotEnterprisePage: React.FC = () => {
               'Regular Security Audits',
               'Data Residency Options'
             ].map((item, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 text-center">
-                <Shield className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
-                <p className="text-white font-medium">{item}</p>
-              </div>
+              <>
+    <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 text-center">
+    <Shield className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+</>
+                <p className="text-white font-medium">{item}<>
+    </p>
+    </div>
+</>)
             ))}
-          </div>
-        </div>
+          <>
+    </div>
+    </div>
+</>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <>
+    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-4xl mx-auto text-center">
+</>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready for Enterprise AI?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <>
+    </h2>
+    <p className="text-xl text-gray-300 mb-8">
+</>
             Let's discuss how our enterprise AI chatbot solution can transform your organization's customer engagement.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Contact Enterprise Sales
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
+          <>
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+</>
+            <>
+    <>
+    <Link
+              <Link
+            </>
+</>
               to="/demo" 
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               Schedule Enterprise Demo
-            </Link>
-          </div>
-        </div>
-      </section>
+            <>
+    </Link>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
+</>
+        <>
+    </div>
+    </section>
+</>
+    </div>
   );
 };
-<<<<<<< HEAD
 
 export default AiChatbotEnterprisePage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

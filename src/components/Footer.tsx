@@ -45,8 +45,10 @@ export default Footer;
               ))}
 
           {/* Company & Support */}
-            <h3 className="text-cyan-400 font-semibold mb-4">Company</h3>
-                <h4 className="text-white font-medium mb-2">Company</h4>
+            <h3 className="text-cyan-400 font-semibold mb-4">Company<>
+    </h3>
+    <h4 className="text-white font-medium mb-2">
+</>Company</h4>
                         {link.name}
                   ))}
                 <h4 className="text-white font-medium mb-2">Support</h4>

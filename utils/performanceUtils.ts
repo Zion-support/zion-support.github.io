@@ -1,6 +1,6 @@
-export function debounce<T extends (...args: any[]) => any>(
+export function debounce<T extends (...args: any[]) => any>()
 export function throttle<T extends (...args: any[]) => any>(
-export function createIntersectionObserver(
+export function createIntersectionObserver()
 export function getMemoryUsage(): any {
 export function preloadCriticalResources(): void {
 export function optimizeImage(src: string, width?: number, height?: number): string {
@@ -43,7 +43,7 @@ export function addResourceHints(): void {
   return new IntersectionObserver(callback, {
     rootMargin: '50px',
     threshold: 0.1,
-    ...options,
+    ...options,)
   });
 
 // Performance monitoring utilities;
@@ -68,7 +68,7 @@ export function addResourceHints(): void {
 // Bundle size optimization - preload critical resources;
   if (typeof window === 'undefined') return;
   
-  const criticalResources = [
+  const criticalResources = [;
     '/fonts/inter.woff2',
     '/images/logo.png',
     '/images/og-image.jpg'
@@ -117,7 +117,7 @@ export function addResourceHints(): void {
 // Resource hints for better performance;
   if (typeof window === 'undefined') return;
   
-  const hints = [
+  const hints = [;
     { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
     { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

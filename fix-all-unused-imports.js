@@ -37,7 +37,7 @@ import path from 'path';
         start: match.index,
         end: match.index + match[0].length,
         importedItems,
-        source;
+        source;)
       });
     
     // Check which imports are actually used;

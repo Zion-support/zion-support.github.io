@@ -10,7 +10,7 @@ console.log('🔄 Merging branches with automatic conflict resolution...')
     
     for (let i = 0; i;
         continue}
-      
+      )
         resolvedLines.push(line)}
     
     // Write the resolved content;

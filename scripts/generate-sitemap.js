@@ -5,15 +5,15 @@ const __dirname = path.dirname(__filename);
 
 // Get all page routes;
 function getAllRoutes() {
-  const routes = []
-  const appDir = path.join(__dirname, '../app')
+  const routes = [];
+  const appDir = path.join(__dirname, '../app');
   
   function scanDirectory(dir, basePath = '') {
-    const items = fs.readdirSync(dir)
+    const items = fs.readdirSync(dir);
     
     for (const item, of, items) {
-      const fullPath = path.join(dir, item)
-      const stat = fs.statSync(fullPath)
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
         // Skip node_modules and other non-page directories;
@@ -21,27 +21,35 @@ function getAllRoutes() {
           scanDirectory(fullPath, basePath + '/' + item)
       } else if (item === 'page.tsx') {
         // Found a page;
-        const route = basePath || '/'
+        const route = basePath || '/';
         routes.push(route)
   
   scanDirectory(appDir)
   return routes;
 // Generate sitemap;
 function generateSitemap() {
-  const routes = getAllRoutes()
-  const baseUrl = 'https://ziontechgroup.com'
+  const routes = getAllRoutes();
+  const baseUrl = 'https://ziontechgroup.com';
   
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  const sitemap = `<?xml version="1.0", encoding="UTF-8"?>;
  `
-    <loc>${baseUrl}${route}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>`).join('')}
+    <loc>${baseUrl}${route}<>
+    </loc>
+    <lastmod>
+</>${new Date().toISOString()}<>
+    </lastmod>
+    <changefreq>
+</>weekly<>
+    </changefreq>
+    <priority>
+</>0.8<>
+    </priority>
+    </url>
+</>`).join('')}
 </urlset>`
   
   // Write to public directory;
-  const publicDir = path.join(__dirname, '../public')
+  const publicDir = path.join(__dirname, '../public');
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true })
   

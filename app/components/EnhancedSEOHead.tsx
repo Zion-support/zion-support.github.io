@@ -17,7 +17,7 @@ interface SEOHeadProps {
   structuredData?: object;
 
 const SEOHead: React.FC<SEOHeadProps /> = ({
-  const title = 'Zion Tech Group - Advanced AI & IT Solutions',
+  const title = 'Zion Tech Group - Advanced AI & IT Solutions',;
   description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.',
   keywords = 'AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics, machine learning, artificial intelligence',
   canonical = 'https: //ziontechgroup.com',
@@ -63,8 +63,7 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
     ]
   };
   const finalStructuredData = structuredData || defaultStructuredData;
-  return (
-
+  return()
         <title>5G Data Analytics - Zion Tech Group</title>
       {/* Basic Meta Tags */}
     
@@ -83,7 +82,7 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
       {/* DNS Prefetch */}
     
       {/* Structured Data */}
-    
+    )
       <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
 
       {/* Additional SEO Scripts */}
@@ -95,14 +94,14 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
           "potentialAction": {
             "@type": "SearchAction",
             "target": "https: //ziontechgroup.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
+            "query-input": "required name=search_term_string")
         })}
       
       {/* Performance Hints */}
 
       {/* Security Headers */}
     
-      <meta httpEquiv="X-Frame-Options" content="DENY" / / />;
+      <meta httpEquiv="X-Frame-Options", content="DENY" / / />;
   );
 };
 

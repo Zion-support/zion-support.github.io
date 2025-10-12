@@ -33,7 +33,7 @@ export default RateLimiter;
       this.requests.set(identifier, { count: 1, resetTime });
       return { allowed: true, remaining: this.config.max - 1, resetTime };
     // Increment count;
-    if (record.count;
+    if (record.count;)
         this.requests.delete(key);
   /**
    * Get current stats;

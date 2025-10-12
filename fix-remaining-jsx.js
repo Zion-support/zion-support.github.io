@@ -24,19 +24,19 @@ function fixRemainingJSX(content) {
   
   // Fix malformed Link components - single line format;
   fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*\/>\s*([^<]+)\s*<([^>]+)\s*\/>/g, 
-    '<Link to="$1" className="$2">\n          $3\n          <$4 />\n        </Link>');
+    '<Link to="$1", className="$2">\n          $3\n          <$4 />\n        </Link>');
   
   // Fix malformed Link components - multi-line format;
   fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*>\s*([^<]+)\s*<([^>]+)\s*\/>\s*<\/Link>\s*<\/Link>/g,
-    '<Link to="$1" className="$2">\n          $3\n          <$4 />\n        </Link>');
+    '<Link to="$1", className="$2">\n          $3\n          <$4 />\n        </Link>');
   
   // Fix Link components with extra spaces and malformed structure;
   fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)"\s*>\s*([^<]+)\s*<([^>]+)\s*\/>\s*<\/Link>\s*<\/Link>/g,
-    '<Link to="$1" className="$2">\n          $3\n          <$4 />\n        </Link>');
+    '<Link to="$1", className="$2">\n          $3\n          <$4 />\n        </Link>');
   
   // Fix specific patterns for 5G pages;
   fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="([^"]+)"\s*\/>\s*Contact Us\s*<ArrowRight[^>]*\/>/g,
-    '<Link to="/contact" className="$1">\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
+    '<Link to="/contact", className="$1">\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
   
   // Fix malformed p tags;
   fixed = fixed.replace(/<p className="([^"]*)" \/>\s*([^<]+)\s*<\/p>/g, '<p className="$1">\n              $2\n            </p>');
@@ -71,7 +71,7 @@ async function main() {
   
   // Get all TypeScript/TSX files;
   const files = await glob('**/*.{ts,tsx}', {
-    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
+    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**'])
   });
   
   let fixedCount = 0;

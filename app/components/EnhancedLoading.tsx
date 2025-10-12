@@ -9,10 +9,10 @@ interface LoadingProps {
 }
 
 const EnhancedLoading: React.FC<LoadingProps /> = ({
-  const size = 'md',
+  const size = 'md',;
   text = 'Loading...',
   fullScreen = false,
-  color = 'cyan'
+  color = 'cyan')
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -29,19 +29,25 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
   }
 
   const spinner = (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`}  /></div>
+    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+      <>
+    <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`}  />
+    </div>
+</>
       {text && (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{text}
-        </div>
+        </div>)
       )}
     </div>
   )
 
   if (fullScreen) {
-    return (
+    return()
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{spinner}
-      </div>
+      </div>)
     )
   }
 

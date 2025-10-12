@@ -4,7 +4,7 @@ import { FileText, Clock, Shield, Users, CheckCircle, ArrowRight, BarChart3, Cal
 import { Link } from 'react-router-dom'
 export default ContractManagerPage;
 const ContractManagerPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
       icon: <FileText className="w-5h-5ml-2" />,
       title: 'Smart Contract Templates',
@@ -37,7 +37,7 @@ const ContractManagerPage: React.FC = () => {
     }
   ]
 
-  const pricingPlans = [
+  const pricingPlans = [;
     {
       name: 'Starter',
       price: '$29',
@@ -81,116 +81,259 @@ const ContractManagerPage: React.FC = () => {
     }
   ]
 
-  return (
-<<<<<<< HEAD
-
+  return()
         <>
-      <title>ContractManager - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">ContractManager</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional contractmanager services coming soon.</p>
-
-      </>
+    <>
+    <title>
+</>ContractManager - Zion Tech Group<>
+    </title>
+    <h1 className="text-4xl font-bold text-white mb-6">
+</>ContractManager<>
+    </h1>
+    <p className="text-lg text-gray-300 mb-8">
+</>Professional contractmanager services coming soon.<>
+    </p>
+    </>
+</>)
   );
 }
 
-=======
-    <></>
-      <Helmet></Helmet>
-        <title />AI Contract Manager - Smart Contract Management | Zion Tech Group</title>
-        <meta name="description" content="Streamline contract management with AI-powered automation, smart templates, and compliance monitoring. Perfect for businesses of all sizes." /></meta>
-        <meta name="keywords" content="contract management, AI contracts, legal automation, contract templates, compliance monitoring" /></meta>
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/contract-manager"  /></link>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <>
+    <>
+    </>
+</>
+      <>
+    <Helmet>
+    </Helmet>
+</>
+        <title />AI Contract Manager - Smart Contract Management | Zion Tech Group<>
+    </title>
+    <meta name="description", content="Streamline contract management with AI-powered automation, smart templates, and compliance monitoring. Perfect for businesses of all sizes." />
+</><>
+    </meta>
+    <meta name="keywords", content="contract management, AI contracts, legal automation, contract templates, compliance monitoring" />
+</><>
+    </meta>
+    <link rel="canonical", href="https://ziontechgroup.com/micro-saas/contract-manager"  />
+</><>
+    </link>
+    </Helmet>
+</>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
         {/* Hero Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <FileText className="w-5h-5ml-2" /></FileText>
-              <span />AI Contract Management</span>
-            </div>
-            <h1 className="w-5h-5ml-2" /></h1>
-              Smart <span className="w-5h-5ml-2" />Contract Manager</span>
-            </h1>
+        <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <>
+    <FileText className="w-5h-5ml-2" />
+    </FileText>
+</>
+              <span />AI Contract Management<>
+    </span>
+    </div>
+</>
+            <>
+    <h1 className="w-5h-5ml-2" />
+    </h1>
+</>
+              Smart <span className="w-5h-5ml-2" />Contract Manager<>
+    </span>
+    </h1>
+</>
             <p className="w-5h-5ml-2">Automate contract management with AI-powered insights, smart templates, 
               and intelligent compliance monitoring. Never miss a deadline again.
-            </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" /></Link>
-                <span />Start Free Trial</span>
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-              </Link>
-              <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" /></Link>
-                <span />Watch Demo</span>
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-              </Link>
-            </div>
-        </section>
+            <>
+    </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</><>
+    </div>
+    <>
+</>
+                <>
+    <Link to="/contact", className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
+    </Link>
+</>
+                <>
+    <Link to="/demo", className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+    </Link>
+</>
+              <>
+    </>
+    <span />
+</>Watch Demo<>
+    </span>
+    <ArrowRight className="w-5h-5ml-2" />
+</><>
+    </ArrowRight>
+    </Link>
+</>
+            <>
+    </div>
+    </section>
+</>
         {/* Features Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
-                Powerful <span className="w-5h-5ml-2" />Features</span>
-              </h2>
+        <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <>
+    <h2 className="w-5h-5ml-2" />
+    </h2>
+</>
+                Powerful <span className="w-5h-5ml-2" />Features<>
+    </span>
+    </h2>
+</>
               <p className="w-5h-5ml-2">Everything you need to manage contracts efficiently and stay compliant.
-              </p>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <>
+    </p>
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
               {features.map((feature, index) => (
-                <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" /></div>
+                <>
+    <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
+    </div>
+</>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
-                  </div>
-                  <h3 className="w-5h-5ml-2" />{feature.title}
-                  </h3>
-                  <p className="w-5h-5ml-2">{feature.description}
-                  </p>
-                </div>
+                  <>
+    </div>
+    <h3 className="w-5h-5ml-2" />
+</>{feature.title}
+                  <>
+    </h3>
+    <p className="w-5h-5ml-2">
+</>{feature.description}
+                  <>
+    </p>
+    </div>
+</>)
               ))}
-            </div>
-        </section>
+            <>
+    </div>
+    </section>
+</>
         {/* Pricing Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
-                Simple <span className="w-5h-5ml-2" />Pricing</span>
-              </h2>
+        <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <>
+    <h2 className="w-5h-5ml-2" />
+    </h2>
+</>
+                Simple <span className="w-5h-5ml-2" />Pricing<>
+    </span>
+    </h2>
+</>
               <p className="w-5h-5ml-2">Choose the plan that fits your business needs. All plans include a 14-day free trial.
-              </p>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <>
+    </p>
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
               {pricingPlans.map((plan, index) => (
-                <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
+                <>
+    <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
                   plan.popular;
                     ? 'border-cyan-400/50 shadow-2 xl shadow-cyan-500/20' 
                     : 'border-white/20 hover: border-cyan-400/30'
-                }`} /></div>
+                }`} />
+    </div>
+</>
                   {plan.popular && (
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular;
-                      </div>
+                      </div>)
                   )}
                   
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                    <p className="w-5h-5ml-2">{plan.description}</p>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                      <span className="w-5h-5ml-2" />{plan.price}</span>
-                      <span className="w-5h-5ml-2" />{plan.period}</span>
-                    </div>
-                  <ul className="w-5h-5ml-2" /></ul>
+                  <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+                    <h3 className="w-5h-5ml-2" />{plan.name}<>
+    </h3>
+    <p className="w-5h-5ml-2">
+</>{plan.description}<>
+    </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</><>
+    </div>
+    <span className="w-5h-5ml-2" />
+</>{plan.price}<>
+    </span>
+    <span className="w-5h-5ml-2" />
+</>{plan.period}<>
+    </span>
+    </div>
+</>
+                  <>
+    <ul className="w-5h-5ml-2" />
+    </ul>
+</>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-centerspace-x-3" /></li>
-                        <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                        <span className="w-5h-5ml-2" />{feature}</span>
-                      </li>
+                      <>
+    <li key={featureIndex} className="flex items-centerspace-x-3" />
+    </li>
+</>
+                        <>
+    <CheckCircle className="w-5h-5ml-2" />
+    </CheckCircle>
+</>
+                        <span className="w-5h-5ml-2" />{feature}<>
+    </span>
+    </li>
+</>)
                     ))}
-                  </ul>
-                  <Link;</Link></Link>
+                  <>
+    </ul>
+    <Link;</Link>
+</></Link>
                     to="/contact" 
                     className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                       plan.popular;
@@ -198,36 +341,75 @@ const ContractManagerPage: React.FC = () => {
                         : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
                     }`}
                     />Get Started;
-                  </Link>
-                </div>
+                  <>
+    </Link>
+    </div>
+</>
               ))}
-            </div>
-        </section>
+            <>
+    </div>
+    </section>
+</>
         {/* CTA Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
-                Ready to Streamline Your <span className="w-5h-5ml-2" />Contract Management?</span>
-              </h2>
+        <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <>
+    <h2 className="w-5h-5ml-2" />
+    </h2>
+</>
+                Ready to Streamline Your <span className="w-5h-5ml-2" />Contract Management?<>
+    </span>
+    </h2>
+</>
               <p className="w-5h-5ml-2">Join thousands of businesses already using our AI-powered contract management solution. 
                 Start your free trial today and experience the difference.
-              </p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" /></Link>
-                  <span />Start Free Trial</span>
-                  <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-                </Link>
-                <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" /></Link>
-                  <span />View All Plans</span>
-                  <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-                </Link>
-              </div>
-          </div>
-        </section>
-      </div>
+              <>
+    </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</><>
+    </div>
+    <>
+</>
+                  <>
+    <Link to="/contact", className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+    </Link>
+</>
+                  <>
+    <Link to="/pricing", className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+    </Link>
+</>
+                <>
+    </>
+    <span />
+</>View All Plans<>
+    </span>
+    <ArrowRight className="w-5h-5ml-2" />
+</><>
+    </ArrowRight>
+    </Link>
+</>
+              <>
+    </div>
+    </div>
+</>
+        <>
+    </section>
+    </div>
+</>
     </>
   )
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
