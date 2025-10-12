@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
 import Layout from '../layout'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Mic, FileText, Clock, Users, CheckCircle, Star, Zap, Shield, Globe } from 'lucide-react'
+
+import { ArrowRight, Mic } from 'lucide-react';
 
 const AIMeetingTranscriberPage: React.FC = () => {
   const features = [

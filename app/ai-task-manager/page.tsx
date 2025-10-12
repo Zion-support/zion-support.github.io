@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
 import Layout from '../layout'
-import { Link } from 'react-router-dom'
-import { ArrowRight, CheckSquare, Clock, Users, Brain, CheckCircle, Star, Zap, TrendingUp, Globe } from 'lucide-react'
+
+import { ArrowRight, CheckSquare, Brain } from 'lucide-react';
 
 const AITaskManagerPage: React.FC = () => {
   const features = [

@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, BarChart3, FileText, Clock, Zap } from 'lucide-react';
+
+
+import { ArrowRight } from 'lucide-react';
 
 export default function AIAutomatedReportingPage() {
   const features = [

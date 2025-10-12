@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, BarChart, Globe } from 'lucide-react';
+import { ArrowRight, Mail, Brain, BarChart } from 'lucide-react';
 
 const ServiceWorker: React.FC = () => {
   const features = [

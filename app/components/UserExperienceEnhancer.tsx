@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { Heart, Star, ThumbsUp, MessageCircle } from 'lucide-react'
+
 
 interface UserExperienceEnhancerProps {
   children: React.ReactNode
@@ -11,8 +11,8 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   children, 
   className = '' 
 }) => {
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
-  const [feedback, setFeedback] = useState<{
+
+
     rating: number
     comment: string
     submitted: boolean

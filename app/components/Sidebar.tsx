@@ -1,30 +1,7 @@
 'use client'
 import React, { memo, useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import {
-  X,
-  Menu,
-  Home,
-  Users,
-  Settings,
-  Brain,
-  Cloud,
-  Shield,
-  Code,
-  BarChart,
-  ChevronDown,
-  ChevronRight,
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  Zap,
-  Wifi,
-  Cpu,
-  Database,
-  Smartphone,
-  BarChart3
-} from 'lucide-react'
+import { useLocation } from 'react-router-dom';
+import { X, Menu, Home, Brain, Code, BarChart, ChevronDown, ChevronRight, Mail, Database } from 'lucide-react';
 
 const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)

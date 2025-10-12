@@ -1,36 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  PieChart, 
-  Target, 
-  CheckCircle, 
-  ArrowRight,
-  Star,
-  Users,
-  Globe,
-  Smartphone,
-  Brain,
-  Zap,
-  Database,
-  FileText,
-  Clock,
-  Search,
-  Filter,
-  Download,
-  Upload,
-  Settings,
-  Monitor,
-  Cpu,
-  Eye,
-  Shield,
-  Lock,
-  Network,
-  AlertTriangle
-} from 'lucide-react';
+
+import { ArrowRight, Brain, Database } from 'lucide-react';
 
 export default function AIBusinessIntelligenceProPage() {
   const features = [

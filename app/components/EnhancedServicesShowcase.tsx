@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { CheckCircle, ArrowRight, Brain, Cloud, Shield, BarChart, Zap, Globe } from 'lucide-react';
+import { ArrowRight, Brain, BarChart } from 'lucide-react';
 
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
@@ -56,7 +56,6 @@ const EnhancedServicesShowcase: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            {features.map((feature, index) => (
 
               <div key={index} className="cyber-card p-8 group hover:scale-105 transition-transform">
               <div className="flex items-center mb-6">

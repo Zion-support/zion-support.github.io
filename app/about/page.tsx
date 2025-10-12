@@ -1,19 +1,9 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Users, 
-  Award, 
-  Target,
-  ArrowRight
-} from 'lucide-react';
+
+
+import { Brain, ArrowRight } from 'lucide-react';
 
 export default function AboutPage() {
   const stats = [

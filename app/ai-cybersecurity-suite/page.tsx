@@ -1,35 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Shield, 
-  Eye, 
-  Lock, 
-  AlertTriangle, 
-  CheckCircle, 
-  ArrowRight,
-  Star,
-  Users,
-  Globe,
-  Smartphone,
-  BarChart3,
-  Zap,
-  Brain,
-  Cpu,
-  Database,
-  Network,
-  FileText,
-  Clock,
-  TrendingUp,
-  Target,
-  Search,
-  Filter,
-  Download,
-  Upload,
-  Settings,
-  Monitor
-} from 'lucide-react';
+
+import { ArrowRight, Brain, Database } from 'lucide-react';
 
 export default function AICybersecuritySuitePage() {
   const features = [

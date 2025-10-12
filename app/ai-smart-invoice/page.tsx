@@ -1,33 +1,9 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  FileText, 
-  DollarSign, 
-  Clock, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Star,
-  Users,
-  Globe,
-  Smartphone,
-  BarChart3,
-  CreditCard,
-  Mail,
-  Download,
-  Eye,
-  Edit3,
-  Trash2,
-  Plus,
-  Search,
-  Filter,
-  Calendar,
-  TrendingUp
-} from 'lucide-react';
+
+
+import { ArrowRight, Mail } from 'lucide-react';
 
 export default function AISmartInvoicePage() {
   const features = [

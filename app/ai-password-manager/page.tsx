@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
 import Layout from '../layout'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Lock, Key, Shield, Smartphone, CheckCircle, Star, Zap, Eye, Globe } from 'lucide-react'
+
+import { ArrowRight, Key } from 'lucide-react';
 
 const AIPasswordManagerPage: React.FC = () => {
   const features = [

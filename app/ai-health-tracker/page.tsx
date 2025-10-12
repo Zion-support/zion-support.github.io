@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
 import Layout from '../layout'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Heart, Activity, Smartphone, Shield, CheckCircle, Star, Zap, TrendingUp, Globe } from 'lucide-react'
+
+import { ArrowRight } from 'lucide-react';
 
 const AIHealthTrackerPage: React.FC = () => {
   const features = [

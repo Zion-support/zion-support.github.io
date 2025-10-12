@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Zap, Shield, Brain } from 'lucide-react';
+
+import { ArrowRight, Brain } from 'lucide-react';
 const SEOEnhancer: React.FC = () => {
   const features = [
     {

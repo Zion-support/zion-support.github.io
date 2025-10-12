@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, BarChart3, TrendingUp, Database, Target } from 'lucide-react';
+
+
+import { ArrowRight, Database } from 'lucide-react';
 
 export default function BusinessIntelligencePage() {
   const features = [

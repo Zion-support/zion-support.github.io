@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Shield, Brain, Globe } from 'lucide-react';
+import { ArrowRight, Mail, Brain } from 'lucide-react';
 
 const EnhancedHero: React.FC = () => {
   const benefits = [

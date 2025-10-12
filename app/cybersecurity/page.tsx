@@ -1,7 +1,7 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Shield, Lock, Eye, AlertTriangle, Star, Zap, Globe, Database, Cpu, Network } from 'lucide-react'
+
+
+import { ArrowRight, Database } from 'lucide-react';
 import ServicePageTemplate from '../service-template'
 
 export default function CybersecurityPage() {

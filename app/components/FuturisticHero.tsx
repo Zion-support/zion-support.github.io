@@ -1,9 +1,9 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+
+import { ArrowRight, Brain } from 'lucide-react';
+import { ArrowRight, Mail, Brain } from 'lucide-react';
+import { ArrowRight, Mail, Brain } from 'lucide-react';
 
 const FuturisticHeroPage: React.FC = () => {
   const features = [

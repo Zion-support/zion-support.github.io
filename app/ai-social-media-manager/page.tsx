@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
 import Layout from '../layout'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Share2, TrendingUp, Users, BarChart3, CheckCircle, Star, Zap, Globe, MessageSquare } from 'lucide-react'
+
+import { ArrowRight, MessageSquare } from 'lucide-react';
 
 const AISocialMediaManagerPage: React.FC = () => {
   const features = [

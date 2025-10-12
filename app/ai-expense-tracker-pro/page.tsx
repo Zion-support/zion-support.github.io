@@ -1,36 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Receipt, 
-  DollarSign, 
-  PieChart, 
-  Smartphone, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Star,
-  Users,
-  Globe,
-  BarChart3,
-  CreditCard,
-  Camera,
-  FileText,
-  TrendingUp,
-  Calendar,
-  Bell,
-  Download,
-  Upload,
-  Search,
-  Filter,
-  Plus,
-  Edit3,
-  Trash2,
-  Eye,
-  Lock
-} from 'lucide-react';
+
+import { Receipt, ArrowRight, Camera } from 'lucide-react';
 
 export default function AIExpenseTrackerProPage() {
   const features = [

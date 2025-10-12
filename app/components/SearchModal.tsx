@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, X, ArrowRight, Brain, Shield, Cloud, Zap, Cpu } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { X, ArrowRight, Brain } from 'lucide-react';
+
 
 interface SearchResult {
   title: string;

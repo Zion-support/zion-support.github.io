@@ -1,8 +1,28 @@
-ursor/analyze-improve-and-deploy-application-edcb
-'use client'
-import React from 'react'
+'use client';
 
-export default function LoadingSkeleton() {
-  return <div>Loading...</div>
+import React from 'react';
+
+interface LoadingSkeletonProps {
+  className?: string;
+  lines?: number;
 }
-'use client'
+
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
+  className = '', 
+  lines = 3 
+}) => {
+  return (
+    <div className={`animate-pulse ${className}`}>
+      {Array.from({ length: lines }).map((_, index) => (
+        <div
+          key={index}
+          className={`h-4 bg-gray-700 rounded mb-2 ${
+            index === lines - 1 ? 'w-3/4' : 'w-full'
+          }`}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default LoadingSkeleton;

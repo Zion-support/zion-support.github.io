@@ -1,26 +1,9 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Code, 
-  ArrowRight, 
-  CheckCircle, 
-  Star,
-  Users,
-  TrendingUp,
-  Mail,
-  MessageSquare,
-  FileText,
-  Cpu,
-  BarChart3,
-  Shield,
-  Zap,
-  Globe,
-  Phone,
-  MapPin
-} from 'lucide-react';
+
+
+import { Code, ArrowRight, Mail, MessageSquare } from 'lucide-react';
 
 export default function MicroSaasServicesPage() {
   const microSaasServices = [
@@ -417,9 +400,9 @@ export default function MicroSaasServicesPage() {
     </>
   );
 }
-import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Globe, Settings } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { ArrowRight, Brain } from 'lucide-react';
+
+
 
 const MicroSAASServicesPage: React.FC = () => {
   const microSAAS = [

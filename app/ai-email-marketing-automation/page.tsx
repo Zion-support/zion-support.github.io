@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
 import Layout from '../layout'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Mail, Target, BarChart3, Users, CheckCircle, Star, Zap, Globe, TrendingUp } from 'lucide-react'
+
+import { ArrowRight, Mail } from 'lucide-react';
 
 const AIEmailMarketingAutomationPage: React.FC = () => {
   const features = [

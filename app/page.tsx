@@ -1,22 +1,9 @@
 'use client';
 
 import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Globe, 
-  ArrowRight, 
-  CheckCircle, 
-  Star,
-  Users,
-  TrendingUp,
-  BarChart3,
-  MessageSquare
-} from 'lucide-react';
+
+
+import { Brain, ArrowRight, MessageSquare } from 'lucide-react';
 import FuturisticBackground from './components/FuturisticBackground';
 import FuturisticCard from './components/FuturisticCard';
 import FuturisticButton from './components/FuturisticButton';
