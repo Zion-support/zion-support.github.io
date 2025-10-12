@@ -1,10 +1,8 @@
-'use client';
-
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function HomePage() {
-<<<<<<< HEAD
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
