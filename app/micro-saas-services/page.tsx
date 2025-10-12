@@ -1,75 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { CheckCircle, ArrowRight, Smartphone, Database, Shield, Zap, Brain, Code, Star } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-
-export default function MicroSaasServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All')
-
-  const microSaasServices = [
-    {
-      icon: <Brain className="w-12 h-12 text-blue-500" />,
-      title: 'AI Task Manager',
-      description: 'Intelligent task management with AI-powered prioritization and automation.',
-      features: ['Smart prioritization', 'Automated scheduling', 'Progress tracking', 'Team collaboration'],
-      pricing: '$9/month',
-      popular: true,
-      link: '/ai-task-manager',
-      category: 'Productivity'
-    },
-    {
-      icon: <Database className="w-12 h-12 text-green-500" />,
-      title: 'AI Expense Tracker',
-      description: 'Automated expense tracking with receipt scanning and categorization.',
-      features: ['Receipt scanning', 'Auto categorization', 'Budget alerts', 'Tax preparation'],
-      pricing: '$7/month',
-      popular: false,
-      link: '/ai-expense-tracker',
-      category: 'Finance'
-    },
-    {
-      icon: <Shield className="w-12 h-12 text-purple-500" />,
-      title: 'AI Password Manager',
-      description: 'Secure password management with AI-powered security recommendations.',
-      features: ['Secure storage', 'Password generation', 'Security audit', 'Multi-device sync'],
-      pricing: '$12/month',
-      popular: true,
-      link: '/ai-password-manager',
-      category: 'Security'
-    },
-    {
-      icon: <Zap className="w-12 h-12 text-orange-500" />,
-      title: 'AI Invoice Generator',
-      description: 'Automated invoice creation with smart templates and payment tracking.',
-      features: ['Auto generation', 'Custom templates', 'Payment tracking', 'Tax calculations'],
-      pricing: '$15/month',
-      popular: false,
-      link: '/ai-invoice-generator',
-      category: 'Finance'
-    },
-    {
-      icon: <Smartphone className="w-12 h-12 text-red-500" />,
-      title: 'AI Health Tracker',
-      description: 'Personal health monitoring with AI insights and wellness recommendations.',
-      features: ['Health monitoring', 'AI insights', 'Goal tracking', 'Wellness tips'],
-      pricing: '$8/month',
-      popular: true,
-      link: '/ai-health-tracker',
-      category: 'Health'
-    },
-    {
-      icon: <Code className="w-12 h-12 text-yellow-500" />,
-      title: 'AI Smart Calendar',
-      description: 'Intelligent calendar management with smart scheduling and conflict resolution.',
-      features: ['Smart scheduling', 'Conflict resolution', 'Meeting optimization', 'Time blocking'],
-      pricing: '$10/month',
-      popular: false,
-      link: '/ai-smart-calendar',
-      category: 'Productivity'
-=======
 import React from 'react'
 import SEOHead from '../components/SEOHead'
 import { CheckCircle, ArrowRight, Zap, Shield, Globe, DollarSign, Users, Clock, Star, Sparkles, Rocket, Cpu, Smartphone, Brain, Code, Database, Video, Target, MessageSquare } from 'lucide-react'
@@ -220,7 +148,6 @@ export default function MicroSAASServicesPage() {
       users: '1,400+',
       rating: '4.9',
       gradient: 'from-emerald-500 to-green-500'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
     }
   ]
 
