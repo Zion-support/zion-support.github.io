@@ -1,82 +1,80 @@
 import React, { useState } from 'react';
-import { Mail, CheckCircle, AlertCircle } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
 
 const NewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [message, setMessage] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('loading');
-    setMessage('');
+    if (!email) return;
 
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Here you would typically send the email to your backend
-      console.log('Newsletter signup:', email);
-      
-      setStatus('success');
-      setMessage('Thank you for subscribing! Check your email for confirmation.');
+    setIsLoading(true);
+    
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubscribed(true);
+      setIsLoading(false);
       setEmail('');
-    } catch (error) {
-      setStatus('error');
-      setMessage('Something went wrong. Please try again.');
-    }
+    }, 1000);
   };
 
-  return (
-    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-center">
-      <div className="max-w-md mx-auto">
-        <Mail className="w-12 h-12 text-white mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>
-        <p className="text-white/90 mb-6">
-          Get the latest insights on AI, technology trends, and business solutions delivered to your inbox.
-        </p>
-        
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="flex flex-col sm:flex-row gap-3">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email address"
-              required
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
-            />
-            <button
-              type="submit"
-              disabled={status === 'loading'}
-              className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-            >
-              {status === 'loading' ? (
-                <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin" />
-              ) : (
-                'Subscribe'
-              )}
-            </button>
+  if (isSubscribed) {
+    return (
+      <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg p-6 text-center">
+        <div className="flex items-center justify-center mb-2">
+          <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-3">
+            <Mail className="w-4 h-4 text-white" />
           </div>
-          
-          {message && (
-            <div className={`flex items-center justify-center space-x-2 text-sm ${
-              status === 'success' ? 'text-green-200' : 'text-red-200'
-            }`}>
-              {status === 'success' ? (
-                <CheckCircle className="w-4 h-4" />
-              ) : (
-                <AlertCircle className="w-4 h-4" />
-              )}
-              <span>{message}</span>
-            </div>
-          )}
-        </form>
-        
-        <p className="text-white/70 text-xs mt-4">
-          We respect your privacy. Unsubscribe at any time.
+          <h3 className="text-xl font-bold text-white">Thank you for subscribing!</h3>
+        </div>
+        <p className="text-green-100">
+          You'll receive our latest updates and insights on AI and IT solutions.
         </p>
       </div>
+    );
+  }
+
+  return (
+    <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6">
+      <div className="text-center mb-6">
+        <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>
+        <p className="text-purple-100">
+          Get the latest insights on AI technology and IT solutions delivered to your inbox.
+        </p>
+      </div>
+      
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <div className="flex-1">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email address"
+            className="w-full px-4 py-3 rounded-lg border-0 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          disabled={isLoading}
+          className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {isLoading ? (
+            <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin" />
+          ) : (
+            <>
+              Subscribe
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </>
+          )}
+        </button>
+      </form>
+      
+      <p className="text-purple-100 text-sm text-center mt-4">
+        No spam, unsubscribe at any time.
+      </p>
     </div>
   );
 };
