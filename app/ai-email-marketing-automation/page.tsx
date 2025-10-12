@@ -2,17 +2,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Mail, Target, BarChart3, Send, TrendingUp } from 'lucide-react';
 
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
+export default function AIEmailMarketingAutomationPage() {
   return (
     <>
       <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
-        <meta property="og:title" content=" - Zion Tech Group" />
-        <meta property="og:description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <title>AI Email Marketing Automation - Zion Tech Group</title>
+        <meta name="description" content="Professional AI email marketing automation services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta name="keywords" content="AI email marketing, automation, campaigns, Zion Tech Group" />
+        <meta property="og:title" content="AI Email Marketing Automation - Zion Tech Group" />
+        <meta property="og:description" content="Professional AI email marketing automation services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-email-marketing-automation" />
       </Helmet>
@@ -23,11 +23,11 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud,
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                
+                AI Email Marketing Automation
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
+              Professional AI email marketing automation services by Zion Tech Group. Expert solutions tailored to your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link 
@@ -47,6 +47,82 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud,
           </div>
         </section>
 
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Why Choose Our AI Email Marketing Solutions?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Advanced AI-powered email marketing automation that increases engagement, improves deliverability, and maximizes ROI.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <Mail className="w-8 h-8 text-cyan-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">Smart Campaigns</h3>
+                </div>
+                <p className="text-gray-300">
+                  AI-powered email campaigns that automatically optimize content, timing, and targeting for maximum engagement.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <Target className="w-8 h-8 text-cyan-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">Advanced Segmentation</h3>
+                </div>
+                <p className="text-gray-300">
+                  Intelligent audience segmentation that ensures the right message reaches the right person at the right time.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <BarChart3 className="w-8 h-8 text-cyan-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">Performance Analytics</h3>
+                </div>
+                <p className="text-gray-300">
+                  Comprehensive analytics and insights to track performance and optimize your email marketing strategy.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <Send className="w-8 h-8 text-cyan-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">Automated Workflows</h3>
+                </div>
+                <p className="text-gray-300">
+                  Sophisticated automation workflows that nurture leads and customers throughout their entire journey.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <TrendingUp className="w-8 h-8 text-cyan-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">ROI Optimization</h3>
+                </div>
+                <p className="text-gray-300">
+                  AI-driven optimization that continuously improves your email marketing ROI and conversion rates.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <Shield className="w-8 h-8 text-cyan-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">Compliance & Security</h3>
+                </div>
+                <p className="text-gray-300">
+                  Built-in compliance with GDPR, CAN-SPAM, and other regulations to keep your campaigns legal and secure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -55,7 +131,7 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud,
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Contact us to learn more about our solutions and how we can help your business.
+                Contact us to learn more about our AI email marketing automation solutions and how we can help your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -75,5 +151,6 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud,
           </div>
         </section>
       </div>
+    </>
+  );
 }
->>>>>>> cursor/website-audit-and-update-with-deployment-6024

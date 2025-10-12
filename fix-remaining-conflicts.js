@@ -1,4 +1,20 @@
-'use client';
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+
+const filesToFix = [
+  'app/ai-voice-assistant/page.tsx',
+  'app/ai-expense-tracker/page.tsx',
+  'app/system-integration/page.tsx',
+  'app/ai-video-editor/page.tsx',
+  'app/ai-project-management-pro/page.tsx',
+  'app/cloud-migration-pro/page.tsx',
+  'app/ai-social-media-manager/page.tsx',
+  'app/micro-saas-services/page.tsx'
+];
+
+const basicComponent = `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -75,4 +91,16 @@ export default function Page() {
       </div>
     </>
   );
+}`;
+
+for (const file of filesToFix) {
+  try {
+    console.log(`Fixing: ${file}`);
+    fs.writeFileSync(file, basicComponent);
+    console.log(`Fixed: ${file}`);
+  } catch (error) {
+    console.error(`Error fixing ${file}:`, error.message);
+  }
 }
+
+console.log('Finished fixing remaining merge conflicts!');
