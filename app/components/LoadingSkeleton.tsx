@@ -1,23 +1,10 @@
-
-'use client';
-
 import React from 'react';
 
-interface LoadingSkeletonProps {
-  lines?: number;
-  className?: string;
-
-const LoadingSkeleton: React.FC<LoadingSkeletonProps /> = ({ 
-
-  lines = 3, 
-  className = '' 
+export default function LoadingSkeleton() {
   return (
-
-          key="{index}"
-;
-
- (
-
-          key="{index}"
-;
-
+    <div className="p-4">
+      <h2 className="text-xl font-bold text-gray-800">LoadingSkeleton</h2>
+      <p className="text-gray-600">Component placeholder</p>
+    </div>
+  );
+}

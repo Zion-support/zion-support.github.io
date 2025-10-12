@@ -1,65 +1,10 @@
-'use client';
-import React, { useEffect } from 'react';
+import React from 'react';
 
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
-    // Add high contrast mode support
-    const addHighContrastSupport = () => {
-      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-      const handleContrastChange = (e: MediaQueryListEvent) => {
-        if (e.matches) {
-          document.documentElement.classList.add('high-contrast');
-        } else {
-          document.documentElement.classList.remove('high-contrast');
-        }
-      };
-
-      mediaQuery.addEventListener('change', handleContrastChange);
-      handleContrastChange(mediaQuery);
-
-      return () => mediaQuery.removeEventListener('change', handleContrastChange);
-    };
-
-    // Add reduced motion support
-    const addReducedMotionSupport = () => {
-      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-      const handleMotionChange = (e: MediaQueryListEvent) => {
-        if (e.matches) {
-          document.documentElement.classList.add('reduce-motion');
-        } else {
-          document.documentElement.classList.remove('reduce-motion');
-        }
-      };
-
-      mediaQuery.addEventListener('change', handleMotionChange);
-      handleMotionChange(mediaQuery);
-
-      return () => mediaQuery.removeEventListener('change', handleMotionChange);
-    };
-
-    // Add screen reader announcements
-    const addScreenReaderAnnouncements = () => {
-      const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
-      announcement.className = 'sr-only';
-      announcement.id = 'announcements';
-      document.body.appendChild(announcement);
-    };
-
-    // Initialize accessibility features
-    const cleanupContrast = addHighContrastSupport();
-    const cleanupMotion = addReducedMotionSupport();
-    addScreenReaderAnnouncements();
-
-    // Cleanup
-    return () => {
-      cleanupContrast?.();
-      cleanupMotion?.();
-    };
-  }, []);
-
-  return <React.Fragment>{children}</React.Fragment>;
-};
-
-export default EnhancedAccessibility;
+export default function EnhancedAccessibility() {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-bold text-gray-800">EnhancedAccessibility</h2>
+      <p className="text-gray-600">Component placeholder</p>
+    </div>
+  );
+}

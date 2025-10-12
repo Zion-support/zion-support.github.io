@@ -30,6 +30,21 @@ export const LoadingPage: React.FC = () => {
   );
 };
 
+export const PageLoader: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
+      <div className="text-center">
+        <div className="relative">
+          <div className="w-16 h-16 border-4 border-pink-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="absolute inset-2 rounded-full border-4 border-cyan-500 border-t-transparent animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
+        </div>
+        <h3 className="text-2xl font-bold text-white mb-2">Loading Page</h3>
+        <p className="text-gray-300">Please wait...</p>
+      </div>
+    </div>
+  );
+};
+
 export const LoadingDots: React.FC = () => {
   return (
     <div className="flex space-x-1">

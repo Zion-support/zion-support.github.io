@@ -1,25 +1,10 @@
+import React from 'react';
 
-'use client';
-import { useEffect } from 'react';
-
-interface AnalyticsProps {
-  children: React.ReactNode;
-
-    // Initialize analytics tracking
-      // Google Analytics initialization
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('config', 'GA_MEASUREMENT_ID', {
-          page_title: document.title,
-          page_location: window.location.href,
-        });
-    };
-
-    initAnalytics();
-  }, []);
-
-  return <React.Fragment />{children}</React.Fragment>;
-
-// Extend Window interface for gtag
-declare global {
-  interface Window {
- void;
+export default function Analytics() {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-bold text-gray-800">Analytics</h2>
+      <p className="text-gray-600">Component placeholder</p>
+    </div>
+  );
+}

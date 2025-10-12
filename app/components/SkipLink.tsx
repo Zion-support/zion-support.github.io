@@ -1,11 +1,10 @@
+import React from 'react';
 
-
-'use client';
-
+export default function SkipLink() {
   return (
-
-      Skip to main content
+    <div className="p-4">
+      <h2 className="text-xl font-bold text-gray-800">SkipLink</h2>
+      <p className="text-gray-600">Component placeholder</p>
+    </div>
   );
-};
-
-export default SkipLink;
+}

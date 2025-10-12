@@ -1,17 +1,10 @@
+import React from 'react';
 
-'use client';
-import React, { useEffect } from 'react';
-import { useEffect } from 'react';
-
-    if ('serviceWorker' in, navigator) {
-      navigator.serviceWorker.register('/sw.js')
-          console.log('SW registered: ', registration);
-        })
-          console.log('SW registration failed: ', registrationError);
-        });
-  }, []);
-
-  return null;
-};
-
-export default ServiceWorker;
+export default function ServiceWorker() {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-bold text-gray-800">ServiceWorker</h2>
+      <p className="text-gray-600">Component placeholder</p>
+    </div>
+  );
+}

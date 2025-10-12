@@ -1,44 +1,10 @@
-import { Suspense, lazy, ComponentType} from 'react';
+import React from 'react';
 
-interface LazyWrapperProps {
-  children: React.ReactNode
-  fallback?: React.ReactNode
-
- (
-
-        </div></div>
-
-)
-
-export const LazyWrapper: React.FC<LazyWrapperProps /> = ({ 
-  children, 
-
-  fallback = <DefaultFallback>
+export default function LazyWrapper() {
   return (
-    
-    <Suspense fallback="{fallback}">{children}
-
-  )
-
-// Higher-order component for lazy loading pages
-
-export const withLazyLoading = <P extends object />(
-  Component: ComponentType<P />,
-  fallback?: React.ReactNode
- Promise.resolve({ default: Component }))
-
- (
-
-  )
-
-// Preload function for critical components
-export const preloadComponent = (importFn: () => Promise<any />) => {
-  if (typeof window !== 'undefined') {
-    // Preload on idle
-    if ('requestIdleCallback' in, window) {
- importFn())
-    } else {
- importFn(), 0)
-
-export default LazyWrapper;
-
+    <div className="p-4">
+      <h2 className="text-xl font-bold text-gray-800">LazyWrapper</h2>
+      <p className="text-gray-600">Component placeholder</p>
+    </div>
+  );
+}

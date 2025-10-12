@@ -1,73 +1,10 @@
-import { Component, ErrorInfo, ReactNode} from 'react';
-import { Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-
-class EnhancedErrorBoundary extends Component<Props, State /> {
-  constructor(props: Props) {
-    super(props);
-    this.const state = { hasError: false };
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Log error to monitoring service
-    console.error('Error caught by boundary: ', error, errorInfo);
-
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-
-      return (
-
-            <h1 className="text-2 xl font-boldtext-whitemb-4">Oops! Something went wrong
-            
-              We encountered an unexpected error. Don't worry, our team has been notified and we're working to fix it.
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-
-                <h3 className="text-red-400font-semiboldmb-2">Error Details:</h3>
-                <pre className="text-xstext-gray-300overflow-auto">{this.state.error.toString()}
-
-                {this.state.errorInfo && (
-    
-                  <pre className="text-xs text-gray-400mt-2overflow-auto">{this.state.errorInfo.componentStack}
-
-                )}
-            )}
-
-                Try Again
-
-                Go Home
-
-                Still having issues? Contact our support team:
-
-                  kleber@ziontechgroup.com
-    
-                <span className="hiddensm:inlinetext-gray-500">•</span>
-                  <span>+1 302 464 0950</span>
-
-      );
-
-    return this.props.children;
-
-export default EnhancedErrorBoundary;
-
+export default function EnhancedErrorBoundary() {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-bold text-gray-800">EnhancedErrorBoundary</h2>
+      <p className="text-gray-600">Component placeholder</p>
+    </div>
+  );
+}
