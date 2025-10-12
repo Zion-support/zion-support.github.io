@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
-'use client';
 
 const PricingPage: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState('monthly');
@@ -218,10 +218,10 @@ const PricingPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title />Pricing - Zion Tech Group | Transparent AI & IT Solutions Pricing</title>
-        <meta const name = "description" content="Transparent pricing for AI services, IT solutions, and micro SAAS tools. Choose the plan that fits your business needs with 14-day free trials." /  />
+        <title>Pricing - Zion Tech Group | Transparent AI & IT Solutions Pricing</title>
+        <meta name="description" content="Transparent pricing for AI services, IT solutions, and micro SAAS tools. Choose the plan that fits your business needs with 14-day free trials." />
         <meta name="keywords" content="pricing, AI services pricing, IT services pricing, micro SAAS pricing, business solutions" />
-        <link rel="canonical" href="https://ziontechgroup.com/pricing"  />
+        <link rel="canonical" href="https://ziontechgroup.com/pricing" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">

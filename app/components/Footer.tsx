@@ -1,7 +1,7 @@
 import React from 'react';
-
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shield, Database, Workflow, Link as LinkIcon, Linkedin, Twitter, Github } from 'lucide-react';
 
+const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
@@ -63,17 +63,21 @@ import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shiel
   ];
 
   return (
-          <h3 className="text-2-xl font-bold mb-4">Zion Tech Group</h3>
-
-  const currentYear = new Date().getFullYear();
-
-  return (
-
-          <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-
-            Advanced AI & IT Solutions
-            © {currentYear} Zion Tech Group. All rights reserved.
-
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-400 mb-4">
+              Advanced AI & IT Solutions
+            </p>
+            <p className="text-sm text-gray-500">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };
 

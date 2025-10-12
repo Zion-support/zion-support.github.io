@@ -38,7 +38,9 @@ const HomePage: React.FC = () => {
                 Learn More
               </Link>
             </div>
+          </div>
         </div>
+      </div>
     </>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, Cloud, Shield, Code, Database, Smartphone, Globe, Lock, Users, Zap, CheckCircle } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const mainServices = [
@@ -93,95 +94,94 @@ const ServicesPage: React.FC = () => {
     <>
       <Helmet>
         <title>Our Services - Zion Tech Group</title>
-        <meta const name = "description" content="Explore our comprehensive range of AI and IT services. From AI solutions to cloud computing, cybersecurity, and custom development - we have you covered." /  />
+        <meta name="description" content="Explore our comprehensive range of AI and IT services. From AI solutions to cloud computing, cybersecurity, and custom development - we have you covered." />
         <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, custom development, data analytics, mobile development" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h1 className="w-5h-5ml-2" />
-                Our <span className="bg-gradient-to-rfrom-cyan-400to-purple-400bg-clip-texttext-transparent"  >Services</span>
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Services</span>
               </h1>
-              <p className="w-5h-5ml-2">Comprehensive AI and IT solutions designed to transform your business and drive growth. 
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Comprehensive AI and IT solutions designed to transform your business and drive growth. 
                 We offer end-to-end services from strategy to implementation and support.
               </p>
             </div>
+          </div>
         </section>
 
         {/* Main Services Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="text-4 xl font-bold text-white mb-6"  >Core Services</h2>
-              <p className="w-5h-5ml-2">Our flagship services that have helped hundreds of businesses transform and grow
-              </p>
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Core Services</h2>
+              <p className="text-xl text-gray-300">Our flagship services that have helped hundreds of businesses transform and grow</p>
             </div>
 
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {mainServices.map((service, index) => (
                 <div 
-                  key="{index}"
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
-                  <div className="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`} />
-                    <service.icon className="w-8 h-8text-white"  />
+                  key={index}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <service.icon className="w-8 h-8 text-white" />
                   </div>
                   
-                  <h3 className="w-5h-5ml-2" />{service.title}
-                  </h3>
+                  <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
                   
-                  <p className="w-5h-5ml-2">{service.description}
-                  </p>
+                  <p className="text-gray-300 mb-6">{service.description}</p>
                   
-                  <ul className="w-5h-5ml-2" />
+                  <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5h-5ml-2" />
-                        <span className="text-sm"  >{feature}</span>
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 mr-2" />
+                        <span className="text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   
                   <Link
-          to="{service.href}"
-          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colorsfont-semiboldgroup-hover:translate-x-1"
-        >
-          Learn More
-                    
-          <ArrowRight className="w-5h-5ml-2" />
-        </Link>
+                    to={service.href}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold group-hover:translate-x-1"
+                  >
+                    Learn More
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
                 </div>
               ))}
             </div>
+          </div>
         </section>
 
         {/* Additional Services Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="text-4 xl font-bold text-white mb-6"  >Additional Services</h2>
-              <p className="w-5h-5ml-2">Specialized services to complement your core technology needs
-              </p>
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Additional Services</h2>
+              <p className="text-xl text-gray-300">Specialized services to complement your core technology needs</p>
             </div>
 
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {additionalServices.map((service, index) => (
                 <Link
-                  key="{index}"
-                  to="{service.href}"
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transformhover:scale-105 text-center" />
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <service.icon className="w-6 h-6text-cyan-400"  />
+                  key={index}
+                  to={service.href}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105 text-center"
+                >
+                  <div className="mb-4">
+                    <service.icon className="w-6 h-6 text-cyan-400" />
                   </div>
-                  <h3 className="w-5h-5ml-2" />{service.title}
-                  </h3>
-                  <p className="w-5h-5ml-2">{service.description}
-                  </p>
+                  <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
+                  <p className="text-gray-300">{service.description}</p>
                 </Link>
               ))}
             </div>
+          </div>
         </section>
 
         {/* Process Section */}
