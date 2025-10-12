@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function WebDevelopment() {
-=======
 export default WebDevelopmentPage;
-
 const WebDevelopmentPage: React.FC = () => {
   const services = [
     {
@@ -47,9 +32,9 @@ const WebDevelopmentPage: React.FC = () => {
       features: ['Payment Integration', 'Inventory Management', 'Order Processing', 'Admin Dashboard'],
       price: 'Starting at $8,000',
       color: 'from-orange-500 to-red-500'
-    }
+    };
   ];
-  const technologies = [
+const technologies = [
     {
       title: 'Frontend',
       items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion']
@@ -65,51 +50,41 @@ const WebDevelopmentPage: React.FC = () => {
     {
       title: 'Tools',
       items: ['Git', 'Docker', 'CI/CD', 'Testing', 'Monitoring']
-    }
+    };
   ];
->>>>>>> origin/main
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>WebDevelopment - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">WebDevelopment</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional webdevelopment services coming soon.</p>
-            
-              Contact Us
-
-      </>
+    <div>Content</div>
   );
-}
-
-=======
-<<<<<<< HEAD
 export default function WebDevelopmentPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>Web Development - Zion Tech Group</title>
-        <meta name="description" content="Professional web development by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional web development by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Web Development</h1>
           <p className="text-lg text-gray-300 mb-8">Professional web development coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
     <></>
       <Helmet></Helmet>
         <title>Web Development - Zion Tech Group</title>
@@ -127,7 +102,7 @@ export default function WebDevelopmentPage() {
               <p className="w-5h-5ml-2">Create powerful, modern web applications that engage users and drive business growth. 
                 From simple websites to complex web platforms, we deliver exceptional digital experiences.
               </p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project;
                 </Link>
                 <Link to="/it-services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All IT Services;
@@ -136,21 +111,20 @@ export default function WebDevelopmentPage() {
           </div>
         </section>
         {/* Services Section */}
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <h2 className="w-5h-5ml-2" /></h2>
                 Our <span className="bg-gradient-to-rfrom-cyan-400to-purple-400bg-clip-texttext-transparent"  >Web Solutions</span>
-              </h2>
+              </h2>;
               <p className="w-5h-5ml-2">Comprehensive web development services for all your digital needs;
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              {services.map((service, index) => (
-                <div;
-                  key="{index}"
+            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              {services.map((service, index) => (;
+                <div;  r:scale-105" /></div>
+                  key = "{index}"
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 grouphover: transformhove,
-  r:scale-105" /></div>
                   <div className="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`} /></div>
                     <service.icon className="w-8 h-8text-white"  /></service>
                   </div>
@@ -167,13 +141,13 @@ export default function WebDevelopmentPage() {
                     ))}
                   </ul>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <span className="text-2 xlfont-boldtext-cyan-400"  >{service.price}</span>
+                    <span className="text-2 xlfont-boldtext-cyan-400"  >{service.price}</span>;
                     <Link;</Link></Link>
-          to="/contact"
+          to = "/contact"
           className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1inline-flex items-center"
-        ></Link>
+        ></Link>;
           Learn More;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
+          <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
         </Link>
                   </div>
               ))}
@@ -185,11 +159,11 @@ export default function WebDevelopmentPage() {
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <h2 className="w-5h-5ml-2" /></h2>
                 Technologies <span className="bg-gradient-to-rfrom-cyan-400to-purple-400bg-clip-texttext-transparent"  >We Use</span>
-              </h2>
+              </h2>;
               <p className="w-5h-5ml-2">Modern, proven technologies for building exceptional web applications;
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {technologies.map((tech, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50rounded-xlp-6" /></div>
                   <h3 className="text-xl font-bold text-whitemb-4 text-center"  >{tech.title}</h3>
@@ -211,11 +185,11 @@ export default function WebDevelopmentPage() {
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <h2 className="w-5h-5ml-2" /></h2>
                 Why Choose <span className="bg-gradient-to-rfrom-cyan-400to-purple-400bg-clip-texttext-transparent"  >Zion Tech Group</span>?
-              </h2>
+              </h2>;
               <p className="w-5h-5ml-2">We deliver exceptional web solutions through expertise, innovation, and commitment to quality;
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <Zap className="w-5h-5ml-2" /></Zap>
@@ -250,7 +224,7 @@ export default function WebDevelopmentPage() {
               </h2>
               <p className="w-5h-5ml-2">Let's discuss your web project and create a solution that engages your users and drives business growth.
               </p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project;
                 </Link>
                 <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us;
@@ -262,5 +236,3 @@ export default function WebDevelopmentPage() {
     </>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

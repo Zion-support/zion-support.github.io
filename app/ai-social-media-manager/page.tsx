@@ -1,59 +1,40 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
 export default function AiSocialMediaManager() {
-=======
-export default Page;
-'use client';
-
-const Page: React.FC = () => {
->>>>>>> origin/main
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>AiSocialMediaManager - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AiSocialMediaManager</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional aisocialmediamanager services coming soon.</p>
-            
-              Contact Us
-
-      </>
+    <div>Content</div>
+  );
+    <div>Component content</div>
   );
 }
-
-=======
-<<<<<<< HEAD
-export default function Page() {
   return (
+    <div>Content</div>
+  );
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title> - Zion Tech Group</title>
-        <meta name="description" content="Professional  by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional  by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6"></h1>
           <p className="text-lg text-gray-300 mb-8">Professional  coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
     <></>
       <Helmet></Helmet>
         <title>- Zion Tech Group</title>
@@ -73,27 +54,27 @@ export default function Page() {
             </h1>
             <p className="w-5h-5ml-2">Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
             </p>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <Link;</Link></Link>
-          to="/contact"
+          to = "/contact"
           className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup"
-        ></Link>
+        ></Link>;
           Get Started;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
+          <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+        </Link>;
               <Link to="/contact" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More;
               </Link>
             </div>
         </section>
         {/* CTA Section */}
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <h2 className="w-5h-5ml-2" />Ready to Get Started?
               </h2>
               <p className="w-5h-5ml-2">Contact us to learn more about our solutions and how we can help your business.
               </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                 <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Contact Us;
                 </Link>
                 <Link to="/services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All Services;
@@ -105,7 +86,4 @@ export default function Page() {
     </>
   );
 };
-
 ;
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

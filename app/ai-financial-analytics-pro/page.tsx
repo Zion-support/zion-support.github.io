@@ -1,26 +1,17 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-
 import React from 'react';
-
 import { Link } from 'react-router-dom';
-=======
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 import { Brain, TrendingUp, Zap, CheckCircle, ArrowRight, Star, BarChart3, DollarSign, Shield, Target, PieChart, Activity, Globe, Monitor, Sparkles, Calculator, FileText, Database, Lock, Building2, CreditCard, Wallet } from 'lucide-react';
-
 export default function AiFinancialAnalyticsProPage() {
-<<<<<<< HEAD
-=======
-export default function AiFinancialAnalyticsProPage() {
+  return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
 'use client';
-
->>>>>>> origin/main
-
   const features = [
     {
       icon: <Brain className="w-5h-5ml-2" />,
@@ -57,9 +48,9 @@ export default function AiFinancialAnalyticsProPage() {
       title: 'Multi-Currency Support',
       description: 'Handle multiple currencies and global financial operations seamlessly',
       benefits: ['Real-time exchange rates', 'Currency conversion', 'Global compliance', 'Tax calculations']
-    }
+    };
   ];
-  const analyticsTypes = [
+const analyticsTypes = [
     {
       category: 'Revenue Analytics',
       icon: <DollarSign className="w-5h-5ml-2" />,
@@ -125,7 +116,7 @@ export default function AiFinancialAnalyticsProPage() {
         'Market predictions',
         'Trend analysis'
       ]
-    }
+    };
   ];
   const pricingPlans = [
     {
@@ -179,9 +170,9 @@ export default function AiFinancialAnalyticsProPage() {
       ],
       popular: false,
       cta: 'Contact Sales'
-    }
+    };
   ];
-  const testimonials = [
+const testimonials = [
     {
       name: 'Jennifer Walsh',
       company: 'FinTech Solutions',
@@ -208,9 +199,9 @@ export default function AiFinancialAnalyticsProPage() {
       rating: 5,
       avatar: 'LT',
       results: '20+ hours saved weekly'
-    }
+    };
   ];
-  const stats = [
+  const stats = [;
     { number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-5h-5ml-2" /&gt; },</Building2></Building2>
     { number: '1 M+', label: 'Transactions Analyzed', icon: <Database className="w-5h-5ml-2" /&gt; },</Database></Database>
     { number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
@@ -224,21 +215,18 @@ export default function AiFinancialAnalyticsProPage() {
     { name: 'Salesforce', icon: <TrendingUp className="w-5h-5ml-2" />, category: 'CRM' },
     { name: 'HubSpot', icon: <Target className="w-5h-5ml-2" />, category: 'CRM' },
     { name: 'Stripe', icon: <CreditCard className="w-5h-5ml-2" />, category: 'Payments' },
-    { name: 'PayPal', icon: <Wallet className="w-5h-5ml-2" />, category: 'Payments' }
+    { name: 'PayPal', icon: <Wallet className="w-5h-5ml-2" />, category: 'Payments' };
   ];
   return (
-<<<<<<< HEAD
-
+    <div>Content</div>
+  );
         <>
       <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform</title>
-
         {/* Open Graph Meta Tags */}
-    
         {/* Twitter Card Meta Tags */}
-    
         {/* Structured Data */}
-        <script type="application/ld+json"  />{JSON.stringify({
+        <script type = "application/ld+json"  />{JSON.stringify({
             "@context": "https: //schema.org",
             "@type": "SoftwareApplication",
             "name": "AI Financial Analytics Pro",
@@ -261,40 +249,10 @@ export default function AiFinancialAnalyticsProPage() {
               "name": "Zion Tech Group",
               "url": "https: //ziontechgroup.com"
           })}
-
               <p>✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime</p>
-
-<<<<<<< HEAD
-=======
-  return (
-    <>
-      <Helmet>
-        <title>Ai Financial Analytics Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional ai financial analytics pro by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Service</h1>
-          <p className="text-lg text-gray-300 mb-8">Transform your financial analysis with AI-powered insights, real-time analytics, 
-            and predictive modeling. Make smarter financial decisions with advanced intelligence.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-      </>
->>>>>>> origin/main
+      </>;
   );
-
-=======
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title>Service - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
@@ -302,28 +260,28 @@ export default function AiFinancialAnalyticsProPage() {
       <div className="max-w-7xlmx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">        {/* Hero Section */}
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <h1 className="w-5h-5ml-2" /></h1>
-            AI Financial Analytics{' '}
+            AI Financial Analytics{' '};
             <span className="w-5h-5ml-2" />Pro;
             </span>
           </h1>
-          <p className="w-5h-5ml-2">Transform your financial analysis with AI-powered insights, real-time analytics, 
+          <p className = "w-5h-5ml-2">Transform your financial analysis with AI-powered insights, real-time analytics, 
             and predictive modeling. Make smarter financial decisions with advanced intelligence.
           </p>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
             <Link;</Link></Link>
-          to="/contact"
+          to = "/contact"
           className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-        ></Link>
+        ></Link>;
           Start Free Trial;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
+          <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+        </Link>;
             <Link to="/ai-services" className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center">View All AI Services;
             </Link>
           </div>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">✓ 14-day free trial • ✓ No credit card required • ✓ Bank-grade security;
           </div>
         {/* Stats Section */}
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {stats.map((stat, index) => (
@@ -339,12 +297,12 @@ export default function AiFinancialAnalyticsProPage() {
         {/* Features Section */}
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Advanced AI Features</h2>
+            <h2 className="w-5h-5ml-2" />Advanced AI Features</h2>;
             <p className="w-5h-5ml-2">Our AI Financial Analytics Pro leverages cutting-edge machine learning;
               to provide unprecedented insights into your financial data.
             </p>
           </div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50rounded-2 xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300group" /></div>
                 <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -417,17 +375,15 @@ export default function AiFinancialAnalyticsProPage() {
           </div>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {pricingPlans.map((plan, index) => (
-              <div key={index} className="{`bg-slate-800/50" rounded-2 xl p-8 border transition-all duration-300 relative ${
+              <div key={index} className="{`bg-slate-800/50" rounded-2 xl p-8 border transition-all duration-300 relative ${              }`} /></div>
                 plan.popular ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' : 'border-slate-700 hover: border-cyan-500/30'
-              }`} /></div>
                 {plan.popular && (
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                     <span className="w-5h-5ml-2" />Most Popular;
                     </span>
                   </div>
                 )}
-                
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <span className="w-5h-5ml-2" />{plan.price}</span>
@@ -442,16 +398,16 @@ export default function AiFinancialAnalyticsProPage() {
                       {feature}
                     </li>
                   ))}
-                </ul>
+                </ul>;
                 <Link;</Link></Link>
-                  to="/contact"
-                  className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
+                  to = "/contact"
+                  className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                       : 'border-2 border-cyan-500 text-cyan-400 hover: bg-cyan-500 hover:text-white'
                   }`} /></Link>
                   {plan.cta}
-                  <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
+                  <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
                 </Link>
               </div>
             ))}
@@ -496,20 +452,19 @@ export default function AiFinancialAnalyticsProPage() {
               Join hundreds of finance professionals making smarter decisions with data.
             </p>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center" /></Link>
+              <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center" /></Link>;
                 Start Free Trial;
-                <Sparkles className="w-5h-5ml-2" /></Sparkles>
+                <Sparkles className = "w-5h-5ml-2" /></Sparkles>
               </Link>
-              <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center" /></Link>
+              <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center" /></Link>;
                 Learn More;
-                <PieChart className="w-5h-5ml-2" /></PieChart>
+                <PieChart className = "w-5h-5ml-2" /></PieChart>
               </Link>
             </div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <p />✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime</p>
             </div>
         </section>
-      </div>
+      </div>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

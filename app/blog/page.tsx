@@ -1,12 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function BlogPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Latest insights on AI and IT technology." />
+        <meta name = "description" content="Latest insights on AI and IT technology." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
@@ -14,6 +21,6 @@ export default function BlogPage() {
           <p className="text-lg text-gray-300 mb-8">Latest insights and updates.</p>
         </div>
       </div>
-    </>
+    </>;
   );
 }

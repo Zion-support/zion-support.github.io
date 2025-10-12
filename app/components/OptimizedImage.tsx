@@ -1,25 +1,15 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-import { ArrowRight, Mail } from 'lucide-react';
-
-=======
 export default OptimizedImagePage;
 ursor/analyze-improve-and-deploy-application-edcb;
 ursor/analyze-improve-and-deploy-application-edcb;
 'use client'
-
->>>>>>> origin/main
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div>Content</div>
+  );
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title />OptimizedImage | Zion Tech Group</title>
         <meta name="description" content="Professional OptimizedImage services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
@@ -29,28 +19,27 @@ ursor/analyze-improve-and-deploy-application-edcb;
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
+            <h1 className="w-5h-5ml-2" /></h1>;
               <span className="w-5h-5ml-2" />OptimizedImage;
               </span>
               <br /></br>
-              <span className="w-5h-5ml-2" />Solutions</span>
+              <span className = "w-5h-5ml-2" />Solutions</span>
             </h1>
             <p className="w-5h-5ml-2">Transform your business with our advanced optimizedimage solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5h-5ml-2" /></button>
+              <button className="w-5h-5ml-2" /></button>;
                 Get Started;
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
+                <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
               </button>
-              <button className="w-5h-5ml-2" /></button>
+              <button className="w-5h-5ml-2" /></button>;
                 Learn More;
-  </
-            </div>
+  </            </div>
         </div>
       </section>
       {/* Features Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="w-5h-5ml-2" />Why Choose Our OptimizedImage?
@@ -74,10 +63,9 @@ ursor/analyze-improve-and-deploy-application-edcb;
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" /></h2>
+            <h2 className="w-5h-5ml-2" /></h2>;
               Key Benefits;
-  </
-            <p className="w-5h-5ml-2">Experience the power of our optimizedimage solutions for your business.
+  </            <p className = "w-5h-5ml-2">Experience the power of our optimizedimage solutions for your business.
             </p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -99,14 +87,12 @@ ursor/analyze-improve-and-deploy-application-edcb;
             </p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <button className="w-5h-5ml-2" /></button>
-                <Phone className="w-5h-5ml-2" /></Phone>
+                <Phone className="w-5h-5ml-2" /></Phone>;
                 Call Now;
-  </
-              <button className="w-5h-5ml-2" /></button>
-                <Mail className="w-5h-5ml-2" /></Mail>
+  </              <button className = "w-5h-5ml-2" /></button>
+                <Mail className="w-5h-5ml-2" /></Mail>;
                 Email Us;
-  </
-            </div>
+  </            </div>
         </div>
       </section>
     </div>
@@ -129,7 +115,6 @@ interface OptimizedImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-
 const OptimizedImage: React.FC<OptimizedImageProps /> = ({
   src,
   alt,
@@ -139,17 +124,16 @@ const OptimizedImage: React.FC<OptimizedImageProps /> = ({
   priority = false,
   placeholder = 'empty',
   blurDataURL,
-  onLoad,
+  onLoad,;
   onError;
 }) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(priority)
   const [hasError, setHasError] = useState(false)
   const imgRef = useRef<HTMLImageElement />(null)
-
-  useEffect(() => {
+  useEffect(() => {;
     if (priority) return;
-    const observer = new IntersectionObserver(
+const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true)
@@ -158,46 +142,42 @@ const OptimizedImage: React.FC<OptimizedImageProps /> = ({
       },
       { threshold: 0.1 }
     )
-
     if (imgRef.current) {
       observer.observe(imgRef.current)
     }
-
     return () => observer.disconnect()
   }, [priority])
-
   const handleLoad = () => {
     setIsLoaded(true)
     onLoad?.()
-<<<<<<< HEAD
-
-  };
-
-=======
 export default function OptimizedImage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>;
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>Optimized Image - Zion Tech Group</title>
-        <meta name="description" content="Professional optimized image by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional optimized image by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Optimized Image</h1>
           <p className="text-lg text-gray-300 mb-8">Professional optimized image coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
   };
->>>>>>> origin/main

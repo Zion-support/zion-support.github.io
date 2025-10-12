@@ -1,25 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-export default function ZionAnalyticsPro() {
-=======
 export default ZionAnalyticsProPage;
 'use client';
-
 const ZionAnalyticsProPage: React.FC = () => {
-
-  useEffect(() => {
+  useEffect(() => {;
     setIsVisible(true);
   }, []);
-
   const features = [
     {
       title: 'Real-time Analytics Dashboard',
@@ -56,9 +44,9 @@ const ZionAnalyticsProPage: React.FC = () => {
       description: 'Access your analytics on-the-go with our native iOS and Android apps',
       icon: Smartphone,
       color: 'from-indigo-500 to-purple-500'
-    }
+    };
   ];
-  const pricingPlans = [
+const pricingPlans = [
     {
       name: 'Starter',
       price: '$99',
@@ -71,7 +59,7 @@ const ZionAnalyticsProPage: React.FC = () => {
         'Email support',
         '1 GB data storage',
         'Standard reports'
-      ],
+      ],;
       popular: false;
     },
     {
@@ -133,51 +121,41 @@ const ZionAnalyticsProPage: React.FC = () => {
       content: 'Easy to use, powerful features, and excellent support. Our team productivity has increased significantly.',
       rating: 5,
       avatar: 'ER'
-    }
+    };
   ];
->>>>>>> origin/main
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>ZionAnalyticsPro - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">ZionAnalyticsPro</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional zionanalyticspro services coming soon.</p>
-            
-              Contact Us
-
-      </>
+    <div>Content</div>
   );
-}
-
-=======
-<<<<<<< HEAD
 export default function ZionAnalyticsProPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>Zion Analytics Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional zion analytics pro by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional zion analytics pro by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Zion Analytics Pro</h1>
           <p className="text-lg text-gray-300 mb-8">Professional zion analytics pro coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
     <></>
       <Helmet></Helmet>
         <title />Zion Analytics Pro - AI-Powered Business Intelligence Platform</title>
@@ -192,32 +170,32 @@ export default function ZionAnalyticsProPage() {
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <div /></div>
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <Sparkles className="w-5h-5ml-2" /></Sparkles>
+                  <Sparkles className="w-5h-5ml-2" /></Sparkles>;
                   AI-Powered Analytics;
                 </div>
-                <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></h1>
+                <h1 className = "{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></h1>;
                   Zion Analytics;
                   <span className="w-5h-5ml-2" />Pro;
                   </span>
                 </h1>
-                <p className="{`text-xl" text-gray-300 mb-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></p>
+                <p className = "{`text-xl" text-gray-300 mb-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></p>
                   The most advanced AI-powered business intelligence platform. Get real-time insights, 
                   predictive analytics, and custom reports that drive your business forward.
                 </p>
-                <div className="{`flex" flex-col sm: flex-row gap-4 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>
+                <div className="{`flex" flex-col sm: flex-row gap-4 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>;
                   <Link;</Link></Link>
-          to="/contact"
+          to = "/contact"
           className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
-        ></Link>
+        ></Link>;
           Start Free Trial;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
+          <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
         </Link>
                   <button className="w-5h-5ml-2" /></button>
-                    <Play className="w-5h-5ml-2" /></Play>
+                    <Play className="w-5h-5ml-2" /></Play>;
                     Watch Demo;
                   </button>
                 </div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                       {[...Array(5)].map((_, i) => (
@@ -258,10 +236,10 @@ export default function ZionAnalyticsProPage() {
         {/* Features Section */}
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Powerful Features for Modern Businesses;
               </h2>
-              <p className="w-5h-5ml-2">Everything you need to transform your data into actionable insights and drive business growth.
+              <p className = "w-5h-5ml-2">Everything you need to transform your data into actionable insights and drive business growth.
               </p>
             </div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -280,26 +258,25 @@ export default function ZionAnalyticsProPage() {
         {/* Pricing Section */}
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Choose Your Plan;
               </h2>
-              <p className="w-5h-5ml-2">Flexible pricing options to fit businesses of all sizes. Start with a free trial, no credit card required.
+              <p className = "w-5h-5ml-2">Flexible pricing options to fit businesses of all sizes. Start with a free trial, no credit card required.
               </p>
             </div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              {pricingPlans.map((plan, index) => (
-                <div;
-                  key="{index}"
+              {pricingPlans.map((plan, index) => (;
+                <div;                  }`} /></div>
+                  key = "{index}"
                   className="{`relative" bg-gray-800 rounded-xl p-8 ${
                     plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
-                  }`} /></div>
                   {plan.popular && (
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                       <span className="w-5h-5ml-2" />Most Popular;
                       </span>
                     </div>
                   )}
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                     <p className="w-5h-5ml-2">{plan.description}</p>
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -313,16 +290,16 @@ export default function ZionAnalyticsProPage() {
                         <span />{feature}</span>
                       </li>
                     ))}
-                  </ul>
+                  </ul>;
                   <Link;</Link></Link>
-                    to="/contact"
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 ${
+                    to = "/contact"
+                    className={`w-full inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 ${;
                       plan.popular;
                         ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
                         : 'border border-gray-600 text-gray-300 hover: bg-gray-700 hover:text-white'
                     }`} /></Link>
                     Get Started;
-                    <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
+                    <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
                   </Link>
                 </div>
               ))}
@@ -331,10 +308,10 @@ export default function ZionAnalyticsProPage() {
         {/* Testimonials Section */}
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />What Our Customers Say;
               </h2>
-              <p className="w-5h-5ml-2">Join thousands of businesses already using Zion Analytics Pro to drive growth.
+              <p className = "w-5h-5ml-2">Join thousands of businesses already using Zion Analytics Pro to drive growth.
               </p>
             </div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -364,28 +341,25 @@ export default function ZionAnalyticsProPage() {
             </h2>
             <p className="w-5h-5ml-2">Start your free trial today and see how Zion Analytics Pro can revolutionize your business intelligence.
             </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <Link;</Link></Link>
-          to="/contact"
+          to = "/contact"
           className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
-        ></Link>
+        ></Link>;
           Start Free Trial;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
-              <a;
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300transformhover:scale-105" /></a>
+          <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+        </Link>;
+              <a;                className = "inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300transformhover:scale-105" /></a>
+                href="tel:+13024640950";
                 Call +1 302 464 0950;
               </a>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <p />Email: kleber@ziontechgroup.com</p>
               <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
         </section>
       </div>
-    </>
+    </>;
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

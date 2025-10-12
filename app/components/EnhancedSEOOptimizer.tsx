@@ -29,20 +29,14 @@ ursor/
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
+    'Proven track record of success';
   ];
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
+    <div>Content</div>
+  );
         <title>5G Data Analytics - Zion Tech Group</title>
-
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <Helmet></Helmet>
->>>>>>> origin/main
         <title>Enhanced SEO Optimizer | Zion Tech Group</title>
-        <meta name="description" content="Professional SEO optimization services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
+        <meta name = "description" content="Professional SEO optimization services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
         <meta name="keywords" content="SEO optimizer, AI solutions, IT services, Zion Tech Group, search engine optimization" /></meta>
         <meta name="description" content="Professional Enhanced SEO Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
         <meta name="keywords" content="SEO optimizer, search engine optimization, AI solutions, IT services, Zion Tech Group" /></meta>
@@ -51,12 +45,12 @@ ursor/
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
+            <h1 className="w-5h-5ml-2" /></h1>;
               <span className="w-5h-5ml-2" />Enhanced SEO;
                 Enhanced SEO Optimizer;
               </span>
               <br /></br>
-              <span className="text-white"  >Optimizer</span>
+              <span className = "text-white"  >Optimizer</span>
             </h1>
             <p className="w-5h-5ml-2">Transform your business with our advanced SEO optimization solutions.
               Powered by cutting-edge AI technology and industry expertise.
@@ -64,22 +58,22 @@ ursor/
               Improve rankings and drive more organic traffic.
             </p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5h-5ml-2" /></button>
+              <button className="w-5h-5ml-2" /></button>;
                 Get Started;
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-              </button>
+                <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+              </button>;
               <button className="w-5h-5ml-2">Learn More;
               </button>
             </div>
         </div>
       </section>
       {/* Features Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
             <h2 className="w-5h-5ml-2" />Our Features;
             </h2>
-            <p className="w-5h-5ml-2">Discover the powerful features that make our enhanced SEO optimizer solutions stand out.
+            <p className = "w-5h-5ml-2">Discover the powerful features that make our enhanced SEO optimizer solutions stand out.
             </p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -125,7 +119,7 @@ ursor/
             </h2>
             <p className="w-5h-5ml-2">Contact us today to learn more about our SEO optimization solutions and how they can benefit your business.
             </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <button className="w-5h-5ml-2">Contact Us;
               </button>
               <button className="w-5h-5ml-2">Schedule Demo;
@@ -136,16 +130,9 @@ ursor/
     </div>
   )
 }
-
-<<<<<<< HEAD
-export default EnhancedSEOOptimizerPage
-
-;
-
-=======
     <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      </div><Helmet>
+      <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div><Helmet >
         <title>Enhanced SEO Optimizer | Zion Tech Group
         </title>
         <meta name="description" content="Professional SEO optimization services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -192,7 +179,7 @@ export default EnhancedSEOOptimizerPage
             {features.map((feature, index) => (
               </div></div><div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300borderborder-white/20" />
                 </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  </div></div><feature.icon className="w-6h-6text-white"  />
+                  </div></div><feature .icon className="w-6h-6text-white"  />
                 </div>
                 <h3 className="w-5 h-5 ml-2" />{feature.title}
                 </h3>
@@ -243,10 +230,7 @@ export default EnhancedSEOOptimizerPage
   )
 }
 export default EnhancedSEOOptimizerPage
-    </>
+    </>;
 );
 ;
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 ;
->>>>>>> origin/main

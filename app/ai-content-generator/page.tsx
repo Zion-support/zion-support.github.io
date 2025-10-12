@@ -1,21 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-export default function AIContentGenerator() {
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 export default function AIContentGeneratorPage() {
-
+  return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
   const features = [
     {
       icon: <Brain className="w-5h-5ml-2" />,
@@ -54,7 +50,6 @@ export default function AIContentGeneratorPage() {
       benefits: ['Real-time checking', 'Originality reports', 'Citation suggestions', 'Copyright compliance']
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -116,7 +111,6 @@ export default function AIContentGeneratorPage() {
       cta: 'Contact Sales'
     }
   ]
-
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -143,7 +137,6 @@ export default function AIContentGeneratorPage() {
       avatar: 'ER'
     }
   ]
-
   const useCases = [
     {
       title: 'Blog Content',
@@ -170,26 +163,14 @@ export default function AIContentGeneratorPage() {
       examples: ['Google Ads', 'Facebook Ads', 'LinkedIn Ads', 'Display banners']
     }
   ]
-
->>>>>>> origin/main
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>AI Content Generator - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AI Content Generator</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional AI content generator services coming soon.</p>
-            
-              Contact Us
-
-<<<<<<< HEAD
+    <div>Content</div>
   );
-=======
-export default function AIContentGeneratorPage() {
   return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>A I Content Generator - Zion Tech Group</title>
         <meta name="description" content="Professional a i content generator by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -197,26 +178,22 @@ export default function AIContentGeneratorPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">A I Content Generator</h1>
           <p className="text-lg text-gray-300 mb-8">Professional a i content generator coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       </>
-=======
     <></>
       <Helmet></Helmet>
         <title />AI Content Generator - Advanced AI Writing Assistant | Zion Tech Group</title>
-        <meta name="description" content="Transform your content creation with our AI Content Generator. Generate high-quality, SEO-optimized content in 50+ languages. Starting at $29/month. Free trial available." /></meta>
+        <meta name = "description" content="Transform your content creation with our AI Content Generator. Generate high-quality, SEO-optimized content in 50+ languages. Starting at $29/month. Free trial available." /></meta>
         <meta name="keywords" content="AI content generator, content writing, SEO content, blog writing, social media content, email marketing, content automation, AI writing assistant" /></meta>
         <meta name="robots" content="index, follow" /></meta>
         <link rel="canonical" href="https://ziontechgroup.com/ai-content-generator"  /></link>
@@ -236,13 +213,13 @@ export default function AIContentGeneratorPage() {
               <Sparkles className="w-5h-5ml-2" /></Sparkles>
               <span />AI-Powered Content Creation</span>
             </div>
-            <h1 className="w-5h-5ml-2" /></h1>
+            <h1 className="w-5h-5ml-2" /></h1>;
               AI Content;
               <br /></br>
               <span className="w-5h-5ml-2" />Generator;
               </span>
             </h1>
-            <p className="w-5h-5ml-2" /></p>
+            <p className = "w-5h-5ml-2" /></p>
               Create high-quality, SEO-optimized content in seconds with our advanced AI writing assistant. 
               <br /></br>
               <span className="w-5h-5ml-2" />50+ languages • 500+ templates • 99.9% accuracy</span>
@@ -350,18 +327,16 @@ export default function AIContentGeneratorPage() {
             </div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {pricingPlans.map((plan, index) => (
-                <div key={index} className="{`group" relative bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
+                <div key={index} className="{`group" relative bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${                }`} /></div>;
                   plan.popular;
                     ? 'border-cyan-400/50 shadow-2 xl shadow-cyan-500/20' 
                     : 'border-white/20 hover: border-cyan-400/30'
-                }`} /></div>
                   {plan.popular && (
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular;
                       </div>
                   )}
-                  
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                     <p className="w-5h-5ml-2">{plan.description}</p>
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -376,18 +351,17 @@ export default function AIContentGeneratorPage() {
                       </div>
                     ))}
                   </div>
-                  <button className={`w-full py-4 rounded-xl font-semibold transition-all duration-300 ${
+                  <button className={`w-full py-4 rounded-xl font-semibold transition-all duration-300 ${                  }`}  />{plan.cta};
                     plan.popular;
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
-                  }`}  />{plan.cta}
                   </button>
                 </div>
               ))}
             </div>
         </section>
         {/* Testimonials Section */}
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -457,8 +431,6 @@ export default function AIContentGeneratorPage() {
                 </div>
             </div>
         </section>
-      </div>
+      </div>;
     </>  );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

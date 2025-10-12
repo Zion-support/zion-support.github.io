@@ -1,7 +1,6 @@
 export default usePerformanceMonitoring;
 // // PerformanceMetrics interface removed as it's not used in this hook;
   // const { trackPerformance } = useAnalytics();
-  
       console.log('Performance metric:', name, value);
       // trackPerformance(name, value);
     []
@@ -9,13 +8,12 @@ export default usePerformanceMonitoring;
  {};
       // LCP - Largest Contentful Paint;
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
+const lastEntry = entries[entries.length - 1];
         reportMetric('LCP', lastEntry.startTime);
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       // FID - First Input Delay;
         const entries = list.getEntries();
-            
               (entry.processingStart || entry.startTime) - entry.startTime;
             reportMetric('FID', fid);
         );
@@ -23,7 +21,6 @@ export default usePerformanceMonitoring;
       fidObserver.observe({ entryTypes: ['first-input'] });
       // CLS - Cumulative Layout Shift;
       let clsValue = 0;
-      
         const entries = list.getEntries();
               hadRecentInput?: boolean;
               value?: number;
@@ -40,7 +37,7 @@ export default usePerformanceMonitoring;
       fcpObserver.observe({ entryTypes: ['paint'] });
       // TTFB - Time to First Byte;
         const entries = list.getEntries();
-            const navEntry = entry as PerformanceNavigationTiming;
+const navEntry = entry as PerformanceNavigationTiming;
             const ttfb = navEntry.responseStart - navEntry.requestStart;
             reportMetric('TTFB', ttfb);
         });
@@ -48,7 +45,7 @@ export default usePerformanceMonitoring;
       navigationObserver.observe({ entryTypes: ['navigation'] });
       // Resource timing;
         const entries = list.getEntries();
-            const resourceEntry = entry as PerformanceResourceTiming;
+const resourceEntry = entry as PerformanceResourceTiming;
             const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
               // Only track slow resources;
               reportMetric('SLOW_RESOURCE', loadTime);
@@ -68,9 +65,7 @@ export default usePerformanceMonitoring;
   }, [reportMetric]);
   // Monitor page load performance;
       if (typeof window === 'undefined') return;
-      
       )[0] as PerformanceNavigationTiming;
-        
         };
           reportMetric(key.toUpperCase(), value);
         });

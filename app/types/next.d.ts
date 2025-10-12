@@ -13,18 +13,10 @@ export {};
       name: string;
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
   const content: string;
-
   const content: string;
-
   const content: string;
-
   const content: string;
-
   const content: string;
-
   const content: string;
-
   const content: string;
-
   const content: string;
-

@@ -1,14 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
-export default GenericServicePage;
-'use client';
->>>>>>> origin/main
-
-<<<<<<< HEAD
 interface GenericServicePageProps {
   title: string;,
   description: string;,
@@ -19,7 +12,6 @@ interface GenericServicePageProps {
   category: 'AI' | 'IT' | 'MicroSAAS' | 'Emerging';,
   color: string;
 }
-
 const GenericServicePage: React.FC<GenericServicePageProps /> = ({
   title,
   description,
@@ -34,10 +26,12 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
     AI: 'from-purple-500 to-pink-600',
     IT: 'from-blue-500 to-cyan-600',
     MicroSAAS: 'from-green-500 to-emerald-600',
-    Emerging: 'from-orange-500 to-red-600'
+    Emerging: 'from-orange-500 to-red-600';
   };
-  const categoryColor = categoryColors[category] || 'from-cyan-500 to-purple-600';
+const categoryColor = categoryColors[category] || 'from-cyan-500 to-purple-600';
   return (
+    <div>Content</div>
+  );
     <></>
       <Helmet></Helmet>
         <title />{title} | Zion Tech Group</title>
@@ -60,31 +54,28 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Starting at {pricing}
                 </div>
               )}
-              
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <a;
-                  href="/contact" 
-                  className="px-8py-4 b g-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" /></a>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
+                <a;                  className = "px-8py-4 b g-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" /></a>
+                  href="/contact" ;
                   Get Started Today;
-                  <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-                </a>
-                <a;
+                  <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+                </a>;
+                <a;                  className = "px-8py-4 b order-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup" /></a>
                   href="tel:+13024640950" 
-                  className="px-8py-4 b order-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup" /></a>
-                  <Phone className="w-5h-5ml-2" /></Phone>
+                  <Phone className="w-5h-5ml-2" /></Phone>;
                   Call (302) 464-0950;
                 </a>
               </div>
           </section>
           {/* Features Section */}
-          <section className="w-5h-5ml-2" /></section>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <section className = "w-5h-5ml-2" /></section>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Key Features;
               </h2>
               <p className="w-5h-5ml-2">Comprehensive {title.toLowerCase()} solutions designed to drive your business forward;
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30transition-all duration-300" /></div>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -98,11 +89,11 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
           <section className="w-5h-5ml-2" /></section>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <h2 className="w-5h-5ml-2" />Why Choose Our {title}?
-              </h2>
+              </h2>;
               <p className="w-5h-5ml-2">Experience the difference with our proven expertise and cutting-edge technology;
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className="flexitems-start space-x-4" /></div>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -142,17 +133,15 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
               <p className="w-5h-5ml-2">Join hundreds of companies that trust Zion Tech Group for their {title.toLowerCase()} needs. 
                 Get a free consultation today.
               </p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <a;
-                  href="/contact" 
-                  className="px-8py-4 b g-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" /></a>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
+                <a;                  className = "px-8py-4 b g-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" /></a>
+                  href="/contact" ;
                   Get Free Consultation;
-                  <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-                </a>
-                <a;
+                  <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+                </a>;
+                <a;                  className = "px-8py-4 b order-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup" /></a>
                   href="mailto:kleber@ziontechgroup.com" 
-                  className="px-8py-4 b order-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup" /></a>
-                  <Mail className="w-5h-5ml-2" /></Mail>
+                  <Mail className="w-5h-5ml-2" /></Mail>;
                   Email Us;
                 </a>
               </div>
@@ -162,34 +151,4 @@ const GenericServicePage: React.FC<GenericServicePageProps /> = ({
     </>
   );
 };
-<<<<<<< HEAD
-
 export default GenericServicePage;
-
-=======
-export default function GenericServicePage() {
-  return (
-    <>
-      <Helmet>
-        <title>Generic Service - Zion Tech Group</title>
-        <meta name="description" content="Professional generic service by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Generic Service</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional generic service coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

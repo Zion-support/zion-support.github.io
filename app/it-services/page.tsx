@@ -1,27 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-export default function ItServices() {
-=======
 export default ItServicesPage;
 export default ITServicesPage;
 export default ITServicesPage;
 'use client';
-
 const ItServicesPage: React.FC = () => {
-
-  useEffect(() => {
+  useEffect(() => {;
     setIsVisible(true);
   }, []);
-
   const itServices = [
     {
       title: 'Cloud Infrastructure',
@@ -54,7 +42,6 @@ const ItServicesPage: React.FC = () => {
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       category: 'Security'
-
 const ITServicesPage: React.FC = () => {
   const services = [
     {
@@ -394,12 +381,11 @@ const ITServicesPage: React.FC = () => {
       icon: Shield,
       color: 'from-indigo-500 to-purple-500',
       category: 'Security'
-    }
+    };
   ];
-  const categories = ['All', 'Infrastructure', 'Security', 'Development', 'DevOps', 'Support', 'Automation'];
+const categories = ['All', 'Infrastructure', 'Security', 'Development', 'DevOps', 'Support', 'Automation'];
   const [selectedCategory, setSelectedCategory] = useState('All');
-
-  const filteredServices = selectedCategory === 'All' 
+  const filteredServices = selectedCategory === 'All' ;
     ? itServices;
     : itServices.filter(service => service.category === selectedCategory);
       description: 'Modern web applications built with cutting-edge technologies',
@@ -428,29 +414,15 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $2,000/month'
     }
   ];
-
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
     { number: '50+', label: 'Happy Clients', icon: Users },
     { number: '99%', label: 'Client Satisfaction', icon: Star },
-    { number: '24/7', label: 'Support Available', icon: Award },
+    { number: '24/7', label: 'Support Available', icon: Award },;
   ];
-
->>>>>>> origin/main
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>ItServices - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">ItServices</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional itservices services coming soon.</p>
-            
-              Contact Us
-
-      </>
+    <div>Content</div>
   );
-=======
     <></>
       <Helmet></Helmet>
         <title />IT Services - Zion Tech Group | Comprehensive IT Solutions</title>
@@ -463,40 +435,38 @@ const ITServicesPage: React.FC = () => {
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></h1>
+              <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></h1>;
                 IT Services;
                 <span className="w-5h-5ml-2" />& Solutions;
                 </span>
               </h1>
-              <p className="{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></p>
+              <p className = "{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></p>
                 Comprehensive IT services to build, secure, and optimize your technology infrastructure. 
                 From cloud migration to cybersecurity, we have the expertise you need.
               </p>
-              <div className="{`flex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>
+              <div className="{`flex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>;
                 <Link;</Link></Link>
-          to="/contact"
+          to = "/contact"
           className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
-        ></Link>
+        ></Link>;
           Get Started Today;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
-                <a;
-                  href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300transformhover:scale-105" /></a>
+          <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+        </Link>;
+                <a;                  className = "inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300transformhover:scale-105" /></a>
+                  href="tel:+13024640950";
                   Call +1 302 464 0950;
                 </a>
               </div>
           </div>
         </section>
         {/* Category Filter */}
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              {categories.map((category) => (
-                <button;
+              {categories.map((category) => (;
+                <button;                  onClick = "{()" =  />setSelectedCategory(category)}
                   key="{category}"
-                  onClick="{()" =  />setSelectedCategory(category)}
-                  className="{`px-6" py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  className="{`px-6" py-3 rounded-lg font-semibold transition-all duration-300 ${;
                     selectedCategory === category;
                       ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg'
                       : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'
@@ -508,13 +478,12 @@ const ITServicesPage: React.FC = () => {
             </div>
         </section>
         {/* Services Grid */}
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              {filteredServices.map((service, index) => (
-                <div;
+              {filteredServices.map((service, index) => (;
+                <div;                  className = "group relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 borderborder-gray-700hover:border-cyan-500" /></div>
                   key="{index}"
-                  className="group relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 borderborder-gray-700hover:border-cyan-500" /></div>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <div className="{`inline- flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl mb-4`} /></div>
                       <service.icon className="h-8w-8text-white"  /></service>
@@ -530,14 +499,14 @@ const ITServicesPage: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                     <Link;</Link></Link>
-          to="/contact"
+          to = "/contact"
           className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300transformhover:scale-105"
-        ></Link>
+        ></Link>;
           Get Quote;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
+          <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+        </Link>;
                     <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-whitetransition-all duration-300">Learn More;
                     </Link>
                   </div>
@@ -545,28 +514,27 @@ const ITServicesPage: React.FC = () => {
             </div>
         </section>
         {/* CTA Section */}
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="w-5h-5ml-2" />Ready to Transform Your IT Infrastructure?
-            </h2>
+            </h2>;
             <p className="w-5h-5ml-2">Let our expert team help you build, secure, and optimize your technology infrastructure;
               for maximum performance and security.
             </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <Link;</Link></Link>
-          to="/contact"
+          to = "/contact"
           className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
-        ></Link>
+        ></Link>;
           Get Started Today;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
-              <a;
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300transformhover:scale-105" /></a>
+          <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+        </Link>;
+              <a;                className = "inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300transformhover:scale-105" /></a>
+                href="tel:+13024640950";
                 Call +1 302 464 0950;
               </a>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <p />Email: kleber@ziontechgroup.com</p>
               <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
@@ -579,16 +547,15 @@ const ITServicesPage: React.FC = () => {
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <h2 className="w-5h-5ml-2" /></h2>
                 Our <span className="w-5h-5ml-2" />IT Solutions</span>
-              </h2>
+              </h2>;
               <p className="w-5h-5ml-2">End-to-end IT services designed to modernize your infrastructure and accelerate your digital transformation;
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              {services.map((service, index) => (
-                <div;
-                  key="{index}"
+            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              {services.map((service, index) => (;
+                <div;  r:scale-105" /></div>
+                  key = "{index}"
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 grouphover: transformhove,
-  r:scale-105" /></div>
                   <div className="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`} /></div>
                     <service.icon className="w-8 h-8text-white"  /></service>
                   </div>
@@ -605,13 +572,13 @@ const ITServicesPage: React.FC = () => {
                     ))}
                   </ul>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <span className="w-5h-5ml-2" />{service.price}</span>
+                    <span className="w-5h-5ml-2" />{service.price}</span>;
                     <Link;</Link></Link>
-          to="{service.link}"
+          to = "{service.link}"
           className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1inline-flex items-center"
-        ></Link>
+        ></Link>;
           Learn More;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
+          <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
         </Link>
                   </div>
               ))}
@@ -623,11 +590,11 @@ const ITServicesPage: React.FC = () => {
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <h2 className="w-5h-5ml-2" /></h2>
                 Our <span className="w-5h-5ml-2" />Process</span>
-              </h2>
+              </h2>;
               <p className="w-5h-5ml-2">A proven methodology that ensures successful project delivery and maximum value for your investment;
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {process.map((step, index) => (
                 <div key={index} className="text-centergroup" /></div>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -645,11 +612,11 @@ const ITServicesPage: React.FC = () => {
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <h2 className="w-5h-5ml-2" /></h2>
                 Why Choose <span className="w-5h-5ml-2" />Zion Tech Group</span>?
-              </h2>
+              </h2>;
               <p className="w-5h-5ml-2">We deliver exceptional IT solutions through expertise, innovation, and unwavering commitment to your success;
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <Zap className="w-5h-5ml-2" /></Zap>
@@ -684,7 +651,7 @@ const ITServicesPage: React.FC = () => {
               </h2>
               <p className="w-5h-5ml-2">Let's discuss your IT needs and create a customized solution that drives your business forward.
               </p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project;
                 </Link>
                 <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us;
@@ -696,34 +663,34 @@ const ITServicesPage: React.FC = () => {
     </>
   );
 };
-
-<<<<<<< HEAD
-=======
 export default function ItServicesPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>It Services - Zion Tech Group</title>
-        <meta name="description" content="Professional it services by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional it services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">It Services</h1>
           <p className="text-lg text-gray-300 mb-8">Professional it services coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

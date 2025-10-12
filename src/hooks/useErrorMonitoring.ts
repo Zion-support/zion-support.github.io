@@ -3,7 +3,6 @@ export default useErrorMonitoring;
 // Global type definitions for browser events;
  void;
   // const { trackError } = useAnalytics();
-  
       console.error('Error reported:', error, context);
       // trackError(error, context);
     []
@@ -16,12 +15,10 @@ export default useErrorMonitoring;
     };
     // Unhandled promise rejection handler;
       const rejectionEvent = event as { reason: unknown };
-      
           : new Error(String(rejectionEvent.reason));
       reportError(error, 'unhandled_promise_rejection');
     };
     // React error boundary handler (if available)
-    
         (errorInfo as { componentStack?: string })?.componentStack || 'unknown';
       reportError(error, `react_error_boundary: ${componentStack}`);
     };

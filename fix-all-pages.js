@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import React from 'react';
 export default ${componentName};`;
-
 // Get all AI service pages from App.tsx;
 const aiServicePages = [
   'ai-analytics', 'ai-automation', 'ai-chatbot-builder', 'ai-cybersecurity', 
@@ -16,9 +15,8 @@ const aiServicePages = [
   'ai-supply-chain-ai', 'ai-healthcare-diagnostics', 'ai-financial-forecasting', 
   'ai-iot-analytics', 'ai-conversational-ai', 'ai-automated-testing', 
   'ai-knowledge-management', 'ai-customer-churn', 'ai-automated-reporting', 
-  'ai-voice-assistant', 'ai-content-generation-pro'
+  'ai-voice-assistant', 'ai-content-generation-pro';
 ];
-
 const itServicePages = [
   'cloud-infrastructure', 'cybersecurity-solutions', 'web-development', 
   'mobile-development', 'api-development', 'database-management', 'devops-cicd', 
@@ -30,9 +28,8 @@ const itServicePages = [
   'devops-advanced', 'machine-learning-ops', 'enterprise-integration', 
   'performance-optimization', 'disaster-recovery-advanced', 'compliance-automation', 
   'cloud-cost-optimization', 'security-automation', 'data-visualization', 
-  'workflow-automation', 'cloud-native-security'
+  'workflow-automation', 'cloud-native-security';
 ];
-
 const microSaasPages = [
   'zion-analytics-pro', 'zion-chat-ai', 'zion-security-shield', 'zion-cloud-vault', 
   'zion-content-studio', 'zion-crm-intelligence', 'zion-data-sync', 'zion-lead-magnet', 
@@ -45,64 +42,52 @@ const microSaasPages = [
   'zion-ai-accounting-assistant', 'zion-ai-recruitment-pro', 'zion-ai-content-moderation', 
   'zion-ai-predictive-maintenance', 'zion-ai-energy-manager', 'zion-ai-supply-chain-optimizer', 
   'zion-ai-fraud-detector', 'zion-ai-customer-service-pro', 'zion-ai-marketing-automation', 
-  'zion-ai-document-ai'
+  'zion-ai-document-ai';
 ];
-
 const emergingTechPages = [
   '5g-implementation', 'ai-3d-generation', 'ai-holographic-workspace', 
   'ai-autonomous-systems', 'ai-blockchain-solutions', 'quantum-computing', 
-  'ar-vr-solutions', 'iot-integration', 'machine-learning'
+  'ar-vr-solutions', 'iot-integration', 'machine-learning';
 ];
-
 const companyPages = [
-  'team', 'partners', 'status'
+  'team', 'partners', 'status';
 ];
-
 const resourcePages = [
-  'faq', 'docs', 'api-docs', 'community', 'compliance'
+  'faq', 'docs', 'api-docs', 'community', 'compliance';
 ];
-
 const allPages = [
   ...aiServicePages, 
   ...itServicePages, 
   ...microSaasPages, 
   ...emergingTechPages, 
-  ...companyPages, 
+  ...companyPages, ;
   ...resourcePages;
 ];
-
  `'use client';
   return (
-    
+    <div>Content</div>
+  );
         <title>${title} - Zion Tech Group</title>
                 ${title}
               Professional ${title.toLowerCase()} services by Zion Tech Group.
-
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <h2 className = "text-2xl font-bold text-white mb-4">Coming Soon</h2>
               We're working on bringing you comprehensive ${title.toLowerCase()} solutions. 
-              Contact us to learn more about our services.
+              Contact us to learn more about our services.;
               Contact Us;
   );
 };
-
-
 // Fix all pages;
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');
-
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
-  
   const pageDir = path.join('/workspace/app', pageName);
-  const pageFile = path.join(pageDir, 'page.tsx');
-  
+const pageFile = path.join(pageDir, 'page.tsx');
   // Create directory if it doesn't exist;
   if (!fs.existsSync(pageDir)) {
     fs.mkdirSync(pageDir, { recursive: true });
-  
   // Overwrite page file with correct template;
   fs.writeFileSync(pageFile, pageTemplate(pageName, title, componentName));
   console.log(`Fixed: ${pageFile}`);
 });
-
 console.log('All pages fixed!');

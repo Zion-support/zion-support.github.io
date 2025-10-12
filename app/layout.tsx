@@ -1,22 +1,15 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 import ErrorBoundary from './components/ErrorBoundary';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
 export default Layout;
-
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
 }
-
 const Layout: React.FC<LayoutProps /> = ({
   children,
   const title = "Zion Tech Group - Advanced AI and IT Solutions",
@@ -75,28 +68,25 @@ const Layout: React.FC<LayoutProps /> = ({
           "priceCurrency": "USD",
           "unitText": "PROJECT"
         }
-      }
+      };
     ];
   };
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function Layout() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
         <title>5G Data Analytics - Zion Tech Group</title>
-=======
-    <ErrorBoundary /></ErrorBoundary>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <Helmet></Helmet>
->>>>>>> origin/main
           <title>{title}</title>
-          <meta name="description" content="{description}" /></meta>
+          <meta name = "description" content="{description}" /></meta>
           <meta name="keywords" content="{keywords}" /></meta>
           {/* Open Graph Meta Tags */}
           <meta property="og: title" content="{title}" /  /></meta>
@@ -128,35 +118,26 @@ export default function Layout() {
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <ThemeToggle /></ThemeToggle>
         </div>
-    </ErrorBoundary>
+    </ErrorBoundary>;
   );
 };
-<<<<<<< HEAD
-
-export default Layout;
-
-=======
     <>
-      <Helmet>
+      <Helmet >
         <title>Layout - Zion Tech Group</title>
-        <meta name="description" content="Professional layout by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional layout by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Layout</h1>
           <p className="text-lg text-gray-300 mb-8">Professional layout coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

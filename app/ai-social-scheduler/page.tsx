@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
 import { Calendar, Share2, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Clock, Globe, Brain } from 'lucide-react'
@@ -47,7 +42,6 @@ const AISocialSchedulerPage: React.FC = () => {
       benefits: ['Campaign planning', 'A/B testing', 'Performance tracking', 'Budget optimization']
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -60,7 +54,7 @@ const AISocialSchedulerPage: React.FC = () => {
         'Basic AI content generation',
         'Standard analytics',
         'Email support'
-      ],
+      ],;
       popular: false;
     },
     {
@@ -94,7 +88,6 @@ const AISocialSchedulerPage: React.FC = () => {
       popular: false;
     }
   ]
-
   const testimonials = [
     {
       name: 'Maria Garcia',
@@ -118,65 +111,53 @@ const AISocialSchedulerPage: React.FC = () => {
       avatar: 'SK'
     }
   ]
-
-  const stats = [
+  const stats = [;
     { number: '150%', label: 'Engagement Increase', icon: <TrendingUp className="w-5h-5ml-2" /&gt; },</TrendingUp></TrendingUp>
     { number: '200%', label: 'Reach Improvement', icon: <Globe className="w-5h-5ml-2" /&gt; },</Globe></Globe>
     { number: '10 hrs', label: 'Time Saved/Week', icon: <Clock className="w-5h-5ml-2" /&gt; },</Clock></Clock>
     { number: '50 K+', label: 'Posts Scheduled', icon: <Calendar className="w-5h-5ml-2" /&gt; }</Calendar></Calendar>
   ]
-
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>AiSocialScheduler - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AiSocialScheduler</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional aisocialscheduler services coming soon.</p>
-            
-              Contact Us
-
-      </>
+    <div>Content</div>
   );
-}
-
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function AISocialSchedulerPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>A I Social Scheduler - Zion Tech Group</title>
-        <meta name="description" content="Professional a i social scheduler by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional a i social scheduler by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">A I Social Scheduler</h1>
           <p className="text-lg text-gray-300 mb-8">Professional a i social scheduler coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
     <></>
       <Helmet></Helmet>
         <title>AI Social Scheduler - Smart Social Media Management | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered social media management with content generation, smart scheduling, and performance analytics. Increase engagement by 150% and save 10+ hours per week." /></meta>
+        <meta name = "description" content="Revolutionary AI-powered social media management with content generation, smart scheduling, and performance analytics. Increase engagement by 150% and save 10+ hours per week." /></meta>
         <meta name="keywords" content="AI social media scheduler, social media automation, content generation, social media analytics, social media management, AI content creation" /></meta>
         <meta name="robots" content="index, follow" /></meta>
         <link rel="canonical" href="https://ziontechgroup.com/ai-social-scheduler"  /></link>
@@ -190,13 +171,13 @@ export default function AISocialSchedulerPage() {
             <Share2 className="w-5h-5ml-2" /></Share2>
             <span />AI-Powered Social Media Management</span>
           </div>
-          <h1 className="w-5h-5ml-2" /></h1>
+          <h1 className="w-5h-5ml-2" /></h1>;
             AI Social;
             <br /></br>
             <span className="w-5h-5ml-2" />Scheduler Pro;
             </span>
           </h1>
-          <p className="w-5h-5ml-2">Transform your social media presence with AI-powered content generation, 
+          <p className = "w-5h-5ml-2">Transform your social media presence with AI-powered content generation, 
             smart scheduling, and performance analytics that increase engagement by 150%.
           </p>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -262,25 +243,23 @@ export default function AISocialSchedulerPage() {
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="w-5h-5ml-2" /></h2>
               Affordable <span className="w-5h-5ml-2" />Pricing</span>
-            </h2>
+            </h2>;
             <p className="w-5h-5ml-2">Choose the perfect plan for your social media management needs. All plans include our core AI features;
               with flexible options for businesses of all sizes.
             </p>
           </div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {pricingPlans.map((plan, index) => (
-              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
+              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${              }`} /></div>;
                 plan.popular;
                   ? 'border-pink-400/50 shadow-2 xl shadow-pink-500/20' 
                   : 'border-white/20 hover: border-white/40'
-              }`} /></div>
                 {plan.popular && (
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular;
                     </div>
                 )}
-                
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                   <p className="w-5h-5ml-2">{plan.description}</p>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -294,10 +273,10 @@ export default function AISocialSchedulerPage() {
                       <span className="w-5h-5ml-2" />{feature}</span>
                     </div>
                   ))}
-                </div>
+                </div>;
                 <Link;</Link></Link>
-                  to="/contact" 
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  to = "/contact" 
+                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-pink-500 to-cyan-600 text-white hover:from-pink-600 hover:to-cyan-700 shadow-lg shadow-pink-500/25'
                       : 'border-2 border-pink-400 text-pink-400 hover: bg-pink-400 hover:text-gray-900'
@@ -309,7 +288,7 @@ export default function AISocialSchedulerPage() {
           </div>
       </section>
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="w-5h-5ml-2" /></h2>
@@ -341,10 +320,10 @@ export default function AISocialSchedulerPage() {
       {/* CTA Section */}
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <h2 className="w-5h-5ml-2" /></h2>
+          <h2 className="w-5h-5ml-2" /></h2>;
             Ready to Transform Your;
             <br /></br>
-            <span className="w-5h-5ml-2" />Social Media Strategy?
+            <span className = "w-5h-5ml-2" />Social Media Strategy?
             </span>
           </h2>
           <p className="w-5h-5ml-2">Join thousands of marketers already increasing engagement and saving time with AI Social Scheduler. 
@@ -363,6 +342,4 @@ export default function AISocialSchedulerPage() {
       </section>
     </>
   )
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
+};

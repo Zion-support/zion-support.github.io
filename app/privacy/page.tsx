@@ -1,12 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function PrivacyPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>Privacy Policy - Zion Tech Group</title>
-        <meta name="description" content="Our privacy policy and data protection practices." />
+        <meta name = "description" content="Our privacy policy and data protection practices." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
@@ -14,6 +21,6 @@ export default function PrivacyPage() {
           <p className="text-lg text-gray-300 mb-8">How we protect your data.</p>
         </div>
       </div>
-    </>
+    </>;
   );
 }

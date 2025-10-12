@@ -1,23 +1,16 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-
 import React from 'react';
-
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 import { ArrowRight, Calendar, BarChart3, Users, Zap, CheckCircle, Target, Share2, Star, Shield } from 'lucide-react';
-
-=======
->>>>>>> origin/main
 export default function AISocialMediaSchedulerPage() {
-<<<<<<< HEAD
+  return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
   const features = [
     {
       icon: <Calendar className="w-5h-5ml-2" />,
@@ -50,7 +43,6 @@ export default function AISocialMediaSchedulerPage() {
       description: 'Automated content moderation and brand compliance checking'
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -64,7 +56,7 @@ export default function AISocialMediaSchedulerPage() {
         'Email support',
         'Content calendar',
         'Hashtag suggestions'
-      ],
+      ],;
       popular: false;
     },
     {
@@ -102,7 +94,6 @@ export default function AISocialMediaSchedulerPage() {
       popular: false;
     }
   ]
-
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -126,50 +117,18 @@ export default function AISocialMediaSchedulerPage() {
       avatar: 'ER'
     }
   ]
-
   return (
-<<<<<<< HEAD
-
+    <div>Content</div>
+  );
         <>
       <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Social Media Scheduler - Zion Tech Group | Automated Social Media Management</title>
-
                     <span>Start Free Trial</span>
                     <span>View All Plans</span>
-
                   <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-
-<<<<<<< HEAD
-=======
-  return (
-    <>
-      <Helmet>
-        <title>A I Social Media Scheduler - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered social media scheduler with smart posting, analytics, and audience insights. Increase engagement by 300% with automated content optimization. Starting at $29/month." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">A I Social Media Scheduler</h1>
-          <p className="text-lg text-gray-300 mb-8">Transform your social media presence with AI-powered scheduling, content optimization, 
-            and analytics. Increase engagement by up to 300% with intelligent automation.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-      </>
->>>>>>> origin/main
+      </>;
   );
-
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title />AI Social Media Scheduler - Zion Tech Group | Automated Social Media Management</title>
         <meta name="description" content="Revolutionary AI-powered social media scheduler with smart posting, analytics, and audience insights. Increase engagement by 300% with automated content optimization. Starting at $29/month." /></meta>
@@ -186,13 +145,13 @@ export default function AISocialMediaSchedulerPage() {
             <Share2 className="w-5h-5ml-2" /></Share2>
             <span />AI-Powered Social Media Management</span>
           </div>
-          <h1 className="w-5h-5ml-2" /></h1>
+          <h1 className="w-5h-5ml-2" /></h1>;
             AI Social Media;
             <br /></br>
             <span className="w-5h-5ml-2" />Scheduler;
             </span>
           </h1>
-          <p className="w-5h-5ml-2">Transform your social media presence with AI-powered scheduling, content optimization, 
+          <p className = "w-5h-5ml-2">Transform your social media presence with AI-powered scheduling, content optimization, 
             and analytics. Increase engagement by up to 300% with intelligent automation.
           </p>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -257,18 +216,16 @@ export default function AISocialMediaSchedulerPage() {
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {pricingPlans.map((plan, index) => (
-              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
+              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${              }`} /></div>;
                 plan.popular;
                   ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
                   : 'border-white/20 hover: border-cyan-400/30'
-              }`} /></div>
                 {plan.popular && (
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular;
                     </div>
                 )}
-                
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                   <p className="w-5h-5ml-2">{plan.description}</p>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -282,10 +239,10 @@ export default function AISocialMediaSchedulerPage() {
                       <span className="w-5h-5ml-2" />{feature}</span>
                     </li>
                   ))}
-                </ul>
+                </ul>;
                 <Link;</Link></Link>
-                  to="/contact"
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  to = "/contact"
+                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
@@ -297,13 +254,13 @@ export default function AISocialMediaSchedulerPage() {
           </div>
       </section>
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" /></h2>
+            <h2 className="w-5h-5ml-2" /></h2>;
               Trusted by <span className="w-5h-5ml-2" />50,000+</span> Users;
             </h2>
-            <p className="w-5h-5ml-2">See what our customers are saying about their success with our AI social media scheduler.
+            <p className = "w-5h-5ml-2">See what our customers are saying about their success with our AI social media scheduler.
             </p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -335,11 +292,11 @@ export default function AISocialMediaSchedulerPage() {
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <h2 className="w-5h-5ml-2" /></h2>
                   Ready to Transform Your <span className="w-5h-5ml-2" />Social Media?</span>
-                </h2>
+                </h2>;
                 <p className="w-5h-5ml-2">Join thousands of businesses already using our AI-powered social media scheduler;
                   to increase engagement, save time, and grow their online presence.
                 </p>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" /></Link>
                     <span />Start Free Trial</span>
                     <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
@@ -355,7 +312,6 @@ export default function AISocialMediaSchedulerPage() {
             </div>
         </div>
       </section>
-    </div>
+    </div>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

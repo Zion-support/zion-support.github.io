@@ -27,7 +27,7 @@ export default RateLimiter;
    * @returns Whether the request is allowed;
    */
     const now = Date.now();
-    const record = this.requests.get(identifier);
+const record = this.requests.get(identifier);
     // No record or expired;
       const resetTime = now + this.config.windowMs;
       this.requests.set(identifier, { count: 1, resetTime });
@@ -50,9 +50,9 @@ export default RateLimiter;
  */
   // Try to get real IP from headers (for, proxied, requests)
   const headers = request.headers;
-  const forwardedFor = headers.get('x-forwarded-for');
+const forwardedFor = headers.get('x-forwarded-for');
   const realIp = headers.get('x-real-ip');
-  const cfConnectingIp = headers.get('cf-connecting-ip');
+const cfConnectingIp = headers.get('cf-connecting-ip');
   if (cfConnectingIp) return cfConnectingIp;
   if (realIp) return realIp;
   if (forwardedFor) return forwardedFor.split(',')[0].trim();

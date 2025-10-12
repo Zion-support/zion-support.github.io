@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
 import { Brain, BarChart3, Users, TrendingUp, Target, Zap, CheckCircle, ArrowRight, Star, Shield, Play, Heart, Calendar, Mail, Phone, MapPin } from 'lucide-react'
@@ -53,12 +48,11 @@ const AICustomerInsightsPage: React.FC = () => {
       benefits: ['Live dashboards', 'Real-time alerts', 'Instant notifications', 'Live data streams']
     }
   ]
-
   const useCases = [
     {
       title: 'E-commerce Personalization',
       description: 'Increase conversion rates by 35% with personalized product recommendations and dynamic pricing.',
-      metrics: ['35% conversion increase', '28% higher AOV', '42% repeat purchases'],
+      metrics: ['35% conversion increase', '28% higher AOV', '42% repeat purchases'],;
       icon: <ShoppingCart className="w-5h-5ml-2" /&gt;</ShoppingCart&gt;
     },
     {
@@ -80,7 +74,6 @@ const AICustomerInsightsPage: React.FC = () => {
       icon: <Heart className="w-5h-5ml-2" /&gt;</Heart&gt;
     }
   ]
-
   const pricing = [
     {
       name: 'Starter',
@@ -94,7 +87,7 @@ const AICustomerInsightsPage: React.FC = () => {
         'Standard integrations',
         'Monthly reports',
         'Basic segmentation'
-      ],
+      ],;
       popular: false;
     },
     {
@@ -132,7 +125,6 @@ const AICustomerInsightsPage: React.FC = () => {
       popular: false;
     }
   ]
-
   const testimonials = [
     {
       name: 'Sarah Chen',
@@ -159,58 +151,45 @@ const AICustomerInsightsPage: React.FC = () => {
       avatar: 'EJ'
     }
   ]
-
-  return (
-<<<<<<< HEAD
-
-        <>
-      <title>AiCustomerInsights - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AiCustomerInsights</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional aicustomerinsights services coming soon.</p>
-            
-              Contact Us
-
-      </>
-  );
-}
-
-=======
-<<<<<<< HEAD
+  return (;
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function AICustomerInsightsPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>A I Customer Insights - Zion Tech Group</title>
-        <meta name="description" content="Professional a i customer insights by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional a i customer insights by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">A I Customer Insights</h1>
           <p className="text-lg text-gray-300 mb-8">Professional a i customer insights coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
     <></>
       <Helmet></Helmet>
         <title>AI Customer Insights - Advanced Analytics & Personalization | Zion Tech Group</title>
-        <meta name="description" content="Transform customer data into actionable insights with AI-powered analytics, churn prediction, and personalization. Increase retention by 40% and boost revenue with intelligent customer insights." /></meta>
+        <meta name = "description" content="Transform customer data into actionable insights with AI-powered analytics, churn prediction, and personalization. Increase retention by 40% and boost revenue with intelligent customer insights." /></meta>
         <meta name="keywords" content="AI customer insights, customer analytics, churn prediction, personalization engine, customer segmentation, behavioral analysis, customer journey mapping, Zion Tech Group" /></meta>
         <meta name="robots" content="index, follow" /></meta>
         <link rel="canonical" href="https://ziontechgroup.com/ai-customer-insights"  /></link>
@@ -224,13 +203,13 @@ export default function AICustomerInsightsPage() {
             <Brain className="w-5h-5ml-2" /></Brain>
             <span />AI-Powered Customer Intelligence</span>
           </div>
-          <h1 className="w-5h-5ml-2" /></h1>
+          <h1 className="w-5h-5ml-2" /></h1>;
             AI Customer;
             <br /></br>
             <span className="w-5h-5ml-2" />Insights;
             </span>
           </h1>
-          <p className="w-5h-5ml-2" /></p>
+          <p className = "w-5h-5ml-2" /></p>
             Transform customer data into actionable insights with advanced AI analytics, 
             churn prediction, and hyper-personalization. 
             <br /></br>
@@ -254,12 +233,12 @@ export default function AICustomerInsightsPage() {
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="w-5h-5ml-2" /></h2>
               Powerful <span className="w-5h-5ml-2" />AI Features</span>
-            </h2>
+            </h2>;
             <p className="w-5h-5ml-2">Advanced AI-powered customer insights that help you understand, predict, and optimize customer behavior;
               for maximum business growth and retention.
             </p>
           </div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {features.map((feature, index) => (
               <div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" /></div>
                 <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
@@ -332,25 +311,23 @@ export default function AICustomerInsightsPage() {
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="w-5h-5ml-2" /></h2>
               Simple <span className="w-5h-5ml-2" />Pricing</span>
-            </h2>
+            </h2>;
             <p className="w-5h-5ml-2">Choose the perfect plan for your business needs. All plans include our core AI features;
               with no hidden fees or setup costs.
             </p>
           </div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {pricing.map((plan, index) => (
-              <div key={index} className="{`relative" group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
+              <div key={index} className="{`relative" group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${              }`} /></div>;
                 plan.popular;
                   ? 'border-cyan-400/50 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
                   : 'border-white/20 hover: bg-white/20'
-              }`} /></div>
                 {plan.popular && (
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular;
                     </div>
                 )}
-                
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                   <p className="w-5h-5ml-2">{plan.description}</p>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -364,10 +341,10 @@ export default function AICustomerInsightsPage() {
                       <span className="w-5h-5ml-2" />{feature}</span>
                     </div>
                   ))}
-                </div>
+                </div>;
                 <Link;</Link></Link>
-                  to="/contact"
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  to = "/contact"
+                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
@@ -379,7 +356,7 @@ export default function AICustomerInsightsPage() {
           </div>
       </section>
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -420,11 +397,11 @@ export default function AICustomerInsightsPage() {
               <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <h2 className="w-5h-5ml-2" /></h2>
                   Ready to Transform Your <span className="w-5h-5ml-2" />Customer Experience?</span>
-                </h2>
+                </h2>;
                 <p className="w-5h-5ml-2">Start your free trial today and see how AI Customer Insights can help you;
                   understand, predict, and optimize customer behavior for maximum growth.
                 </p>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <Link to="/contact" className="groupbg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" /></Link>
                     <span />Start Free Trial</span>
                     <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
@@ -450,8 +427,6 @@ export default function AICustomerInsightsPage() {
               </div>
           </div>
       </section>
-    </>
+    </>;
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

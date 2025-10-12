@@ -10,7 +10,7 @@ export default useEnhancedPerformance;
     trackAnalytics = true;
   } = _options;
   const mountTimeRef = useRef<number>(0);
-  const renderCountRef = useRef<number>(0);
+const renderCountRef = useRef<number>(0);
     mountTimeRef.current = performance.now();
     renderCountRef.current = 0;
     // Track component mount;
@@ -30,17 +30,14 @@ export default useEnhancedPerformance;
         renderCountRef.current;
       );
   });
-  
         });
     [component, trackErrors]
   );
-  
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
     [component, trackAnalytics]
   );
-  
       const startTime = performance.now();
-          const duration = performance.now() - startTime;
+const duration = performance.now() - startTime;
  1000 ? 'slow' : 'fast'
             );
           return duration;

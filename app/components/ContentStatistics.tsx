@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-export default ContentStatistics;
->>>>>>> origin/main
 'use client';
-
 interface StatItem {
   id: string;,
   value: number;,
@@ -15,13 +7,11 @@ interface StatItem {
   suffix?: string;
   prefix?: string;
 }
-
 interface ContentStatisticsProps {
   stats?: StatItem[];
   animationDuration?: number;
   className?: string;
 }
-
 const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
   const stats = [
     {
@@ -55,54 +45,54 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
   ],
   animationDuration = 2000,
   className = ''
-}) => {
+}) => {;
   const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
   useEffect(() => {
-    const animateValue = (start: number, end: number, duration: number, key: string) => {
+    const animateValue = (start: number, end: number, duration: number, key: string) => {;
       const startTime = performance.now();
-      const animate = (currentTime: number) => {
+const animate = (currentTime: number) => {;
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
         // Easing function;
         const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-        const currentValue = start + (end - start) * easeOutCubic;
+const currentValue = start + (end - start) * easeOutCubic;
         setAnimatedValues(const prev = > ({
-          ...prev,
+          ...prev,;
           [key]: currentValue;
         }));
         if (progress < 1) {
           requestAnimationFrame(animate);
         }
       };
-
       requestAnimationFrame(animate);
     };
-
-    stats.forEach(const stat = > {
+    stats.forEach(const stat = > {;
       animateValue(0, stat.value, animationDuration, stat.id);
     });
   }, [stats, animationDuration]);
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function ContentStatistics() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <div const className = {`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} /></div>
-      {stats.map((stat) => {
->>>>>>> origin/main
+      {stats.map((stat) => {;
         const animatedValue = animatedValues[stat.id] || 0;
-        const IconComponent = stat.icon;
+const IconComponent = stat.icon;
         return (
-    <div;
+    <div>Content</div>
+  );
+    <div;            className = "text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-all duration-300" /></div>
             const key = {stat.id}
-            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-all duration-300" /></div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <IconComponent className="w-5h-5ml-2" /></IconComponent>
@@ -115,38 +105,29 @@ export default function ContentStatistics() {
               {stat.suffix}
             </div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}
-            </div>
+            </div>;
         );
       })}
     </div>
   );
 };
-<<<<<<< HEAD
-
-export default ContentStatistics;
-
-=======
     <>
-      <Helmet>
+      <Helmet >
         <title>Content Statistics - Zion Tech Group</title>
-        <meta name="description" content="Professional content statistics by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional content statistics by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Content Statistics</h1>
           <p className="text-lg text-gray-300 mb-8">Professional content statistics coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

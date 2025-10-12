@@ -1,11 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 'use client'
-
 const FuturisticHeroPage: React.FC = () => {
   const features = [
     {
@@ -27,9 +21,9 @@ const FuturisticHeroPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
-    }
+    };
   ];
-  const benefits = [
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -37,10 +31,12 @@ const FuturisticHeroPage: React.FC = () => {
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
+    'Proven track record of success';
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div>Content</div>
+  );
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title>Futuristic Hero Solutions | Zion Tech Group</title>
         <meta name="description" content="Professional futuristic hero services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
@@ -50,27 +46,27 @@ const FuturisticHeroPage: React.FC = () => {
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
+            <h1 className="w-5h-5ml-2" /></h1>;
               <span className="w-5h-5ml-2" />Futuristic Hero;
               </span>
               <br /></br>
-              <span className="text-white"  >Solutions</span>
+              <span className = "text-white"  >Solutions</span>
             </h1>
             <p className="w-5h-5ml-2">Transform your business with our advanced futuristic hero solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5h-5ml-2" /></button>
+              <button className="w-5h-5ml-2" /></button>;
                 Get Started;
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-              </button>
+                <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+              </button>;
               <button className="w-5h-5ml-2">Learn More;
               </button>
             </div>
         </div>
       </section>
       {/* Features Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="w-5h-5ml-2" />Why Choose Our Futuristic Hero Solutions?
@@ -93,10 +89,10 @@ const FuturisticHeroPage: React.FC = () => {
       {/* Benefits Section */}
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
             <h2 className="w-5h-5ml-2" />Key Benefits;
             </h2>
-            <p className="w-5h-5ml-2">Experience the power of our futuristic hero solutions for your business.
+            <p className = "w-5h-5ml-2">Experience the power of our futuristic hero solutions for your business.
             </p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -116,7 +112,7 @@ const FuturisticHeroPage: React.FC = () => {
             </h2>
             <p className="w-5h-5ml-2">Contact us today to learn more about our futuristic hero solutions and how they can benefit your business.
             </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <button className="w-5h-5ml-2">Contact Us;
               </button>
               <button className="w-5h-5ml-2">Schedule Demo;
@@ -126,38 +122,37 @@ const FuturisticHeroPage: React.FC = () => {
       </section>
     </div>
   )
-<<<<<<< HEAD
-};
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function FuturisticHeroPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>Futuristic Hero - Zion Tech Group</title>
-        <meta name="description" content="Professional futuristic hero by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional futuristic hero by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Futuristic Hero</h1>
           <p className="text-lg text-gray-300 mb-8">Professional futuristic hero coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 };
->>>>>>> origin/main

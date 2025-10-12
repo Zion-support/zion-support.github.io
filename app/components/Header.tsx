@@ -1,12 +1,10 @@
 import React from 'react';
 import Navigation from './Navigation';
   return (
-<<<<<<< HEAD
-
-=======
+    <div>Content</div>
+  );
     <>
       <header />
       <Navigation />
     </>
 );
->>>>>>> cursor/fix-errors-and-merge-to-main-b918

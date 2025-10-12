@@ -1,21 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-
-=======
 export default SystemMonitorPage;
 'use client'
-
->>>>>>> origin/main
   ];
               </span>
               <br /></br>
@@ -25,24 +13,21 @@ export default SystemMonitorPage;
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5h-5ml-2" /></button>
+              <button className="w-5h-5ml-2" /></button>;
                 Get Started;
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
+                <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
               </button>
-              <button className="w-5h-5ml-2" /></button>
+              <button className="w-5h-5ml-2" /></button>;
                 Learn More;
-  </
-            </div>
+  </            </div>
     </div>
   )}
   </button>
 }
-
 interface SystemMonitorProps {
   onAlert?: (alert: string) => void;
   className?: string;
 }
-
 const SystemMonitor: React.FC<SystemMonitorProps /> = ({
   onAlert,
   className = ''
@@ -52,24 +37,21 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
     memory: 0,
     disk: 0,
     network: 0,
-    battery: 100,
+    battery: 100,;
     uptime: 0;
   })
   const [isMonitoring, setIsMonitoring] = useState(false)
-
-  const updateMetrics = useCallback(() => {
+  const updateMetrics = useCallback(() => {;
     // Simulate system metrics;
-    const newMetrics = {
+const newMetrics = {
       cpu: Math.random() * 100,
       memory: Math.random() * 100,
       disk: Math.random() * 100,
       network: Math.random() * 100,
-      battery: Math.random() * 100,
+      battery: Math.random() * 100,;
       uptime: Date.now() - performance.timing.navigationStart;
     }
-
     setMetrics(newMetrics)
-
     // Check for alerts;
     if (newMetrics.cpu > 90) {
       onAlert?.('High CPU usage detected')
@@ -81,48 +63,45 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
       onAlert?.('High disk usage detected')
     }
   }, [onAlert])
-
   useEffect(() => {
     if (isMonitoring) {
       const interval = setInterval(updateMetrics, 1000)
       return () => clearInterval(interval)
     }
   }, [isMonitoring, updateMetrics])
-
   const toggleMonitoring = () => {
     setIsMonitoring(!isMonitoring)
     if (!isMonitoring) {
       updateMetrics()
-<<<<<<< HEAD
-
-  };
-
-=======
 export default function SystemMonitor() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>;
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>System Monitor - Zion Tech Group</title>
-        <meta name="description" content="Professional system monitor by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional system monitor by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">System Monitor</h1>
           <p className="text-lg text-gray-300 mb-8">Professional system monitor coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
     }
   };
->>>>>>> origin/main

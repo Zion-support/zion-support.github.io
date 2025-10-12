@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
 import { Mail, Palette, Users, Zap, CheckCircle, ArrowRight, BarChart3, Shield, Clock } from 'lucide-react'
@@ -41,7 +36,6 @@ const EmailSignaturePage: React.FC = () => {
       description: 'Automatically update signatures when team members change roles or information.'
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -53,7 +47,7 @@ const EmailSignaturePage: React.FC = () => {
         'Basic templates',
         'Email support',
         'Standard analytics'
-      ],
+      ],;
       popular: false;
     },
     {
@@ -85,56 +79,47 @@ const EmailSignaturePage: React.FC = () => {
       popular: false;
     }
   ]
-
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>EmailSignature - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">EmailSignature</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional emailsignature services coming soon.</p>
-
-      </>
+    <div>Content</div>
   );
-}
-
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function EmailSignaturePage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>Email Signature - Zion Tech Group</title>
-        <meta name="description" content="Professional email signature by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional email signature by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Email Signature</h1>
           <p className="text-lg text-gray-300 mb-8">Professional email signature coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
     <></>
       <Helmet></Helmet>
         <title />AI Email Signature Manager - Professional Email Signatures | Zion Tech Group</title>
-        <meta name="description" content="Create and manage professional email signatures for your team. Beautiful templates, team management, and analytics included." /></meta>
+        <meta name = "description" content="Create and manage professional email signatures for your team. Beautiful templates, team management, and analytics included." /></meta>
         <meta name="keywords" content="email signature, email marketing, team management, professional signatures, email branding" /></meta>
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/email-signature"  /></link>
       </Helmet>
@@ -200,18 +185,16 @@ export default function EmailSignaturePage() {
             </div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {pricingPlans.map((plan, index) => (
-                <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
+                <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${                }`} /></div>;
                   plan.popular;
                     ? 'border-cyan-400/50 shadow-2 xl shadow-cyan-500/20' 
                     : 'border-white/20 hover: border-cyan-400/30'
-                }`} /></div>
                   {plan.popular && (
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular;
                       </div>
                   )}
-                  
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                     <p className="w-5h-5ml-2">{plan.description}</p>
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -225,10 +208,10 @@ export default function EmailSignaturePage() {
                         <span className="w-5h-5ml-2" />{feature}</span>
                       </li>
                     ))}
-                  </ul>
+                  </ul>;
                   <Link;</Link></Link>
-                    to="/contact" 
-                    className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                    to = "/contact" 
+                    className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${;
                       plan.popular;
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
@@ -240,7 +223,7 @@ export default function EmailSignaturePage() {
             </div>
         </section>
         {/* CTA Section */}
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -265,6 +248,4 @@ export default function EmailSignaturePage() {
       </div>
     </>
   )
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
+};

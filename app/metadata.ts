@@ -35,7 +35,6 @@
       'max-snippet': number;
     };
   };
-
   keywords: [
     'technology consulting'
     images: [

@@ -1,16 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { ArrowRight, Brain, Zap, Shield, Globe, CheckCircle } from 'lucide-react';
-
 import { Brain } from 'lucide-react';
-
-=======
-export default SEOEnhancer;
-'use client';
-const SEOEnhancer: React.FC = () => {
->>>>>>> origin/main
   const features = [
     {
       icon: Brain,
@@ -31,10 +22,9 @@ const SEOEnhancer: React.FC = () => {
       icon: Globe,
       title: 'Global Optimization',
       description: 'Worldwide SEO optimization and support for international businesses',
-    },
+    },;
   ];
-
-  const benefits = [
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -42,21 +32,22 @@ const SEOEnhancer: React.FC = () => {
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success',
+    'Proven track record of success',;
   ];
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function SEOEnhancer() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
->>>>>>> origin/main
         <title>SEO Enhancer | Zion Tech Group</title>
         <meta name="description" content="Professional SEO Enhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
         <meta name="keywords" content="SEO Enhancer, AI solutions, IT services, Zion Tech Group, search engine optimization" /></meta>
@@ -66,22 +57,22 @@ export default function SEOEnhancer() {
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1 className="text-4xlmd:text-6xl font-bold text-white mb-6"></h1>
-              <span className="bg-gradient-to-rfrom-purple-400 to-blue-400 bg-clip-text text-transparent"></span>
+              <span className="bg-gradient-to-rfrom-purple-400 to-blue-400 bg-clip-text text-transparent"></span>;
                 SEO;
               </span>
               <br /></br>
-              <span className="text-white">Enhancer</span>
+              <span className = "text-white">Enhancer</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Transform your website's search engine visibility with our advanced SEO enhancement solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flexflex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></button>
+              <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></button>;
                 Get Started;
-                <ArrowRight className="ml-2h-5w-5" /></ArrowRight>
+                <ArrowRight className = "ml-2h-5w-5" /></ArrowRight>
               </button>
-              <button className="borderborder-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button>
+              <button className="borderborder-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button>;
                 Learn More;
               </button>
             </div>
@@ -89,13 +80,13 @@ export default function SEOEnhancer() {
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20px-4 sm:px-6 lg:px-8"></section>
+      <section className = "py-20px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-centermb-16"></div>
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4"></h2>
+            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4"></h2>;
               Our Features;
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+            <p className = "text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Discover the powerful features that make our SEO enhancer solutions stand out.
             </p>
           </div>
@@ -150,12 +141,8 @@ export default function SEOEnhancer() {
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Contact us today to learn more about our SEO enhancement solutions and how they can benefit your business.
-<<<<<<< HEAD
-                Contact Us
-                Schedule Demo
-=======
     <>
-      <Helmet>
+      <Helmet >
         <title>S E O Enhancer - Zion Tech Group</title>
         <meta name="description" content="Professional s e o enhancer by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -163,26 +150,23 @@ export default function SEOEnhancer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">S E O Enhancer</h1>
           <p className="text-lg text-gray-300 mb-8">Professional s e o enhancer coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
+    </>;
   );
 }
-=======
             </p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300"></button>
+            <div className = "flexflex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300"></button>;
                 Contact Us;
               </button>
-              <button className="borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button>
+              <button className = "borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button>;
                 Schedule Demo;
               </button>
             </div>
@@ -192,4 +176,3 @@ export default function SEOEnhancer() {
     </div>
   );
 };
->>>>>>> origin/main

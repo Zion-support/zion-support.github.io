@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 'use client';
-=======
->>>>>>> origin/main
 import React, { useEffect, useState } from 'react';
 export default PerformanceOptimizer;
 export default PerformanceOptimizer;
@@ -15,31 +10,27 @@ interface PerformanceMetrics {
   fcp: number | null;
   ttfb: number | null;
 }
-
 const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
     cls: null,
     fcp: null,
-    ttfb: null,
+    ttfb: null,;
     ttfb: null;
   });
-
   useEffect(() => {
     // Preload critical resources;
     const preloadCriticalResources = () => {
       const criticalResources = [
         '/fonts/inter.woff2',
         '/images/hero-bg.jpg',
-        '/images/logo.png',
+        '/images/logo.png',;
       ];
-
       criticalResources.forEach((resource) => {
         '/images/logo.png'
       ];
-
-      criticalResources.forEach(resource => {
+      criticalResources.forEach(resource = > {;
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
@@ -50,13 +41,12 @@ const PerformanceOptimizer: React.FC = () => {
         document.head.appendChild(link);
       });
     };
-
     // Optimize images;
-    const optimizeImages = () => {
+    const optimizeImages = () => {;
       const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
+const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting) {;
             const img = entry.target as HTMLImageElement;
             img.src = img.dataset.src || '';
             img.classList.remove('lazy');
@@ -64,29 +54,25 @@ const PerformanceOptimizer: React.FC = () => {
           }
         });
       });
-
       images.forEach((img) => imageObserver.observe(img));
     };
-
     // Lazy load components;
     const lazyLoadComponents = () => {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting) {;
             const element = entry.target as HTMLElement;
             element.classList.add('loaded');
             observer.unobserve(element);
           }
         });
       });
-
       const lazyElements = document.querySelectorAll('[data-lazy]');
       lazyElements.forEach((el) => observer.observe(el));
     };
-
     // Monitor Core Web Vitals;
-    const monitorWebVitals = () => {
-      import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+    const monitorWebVitals = () => {;
+      import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {;
         onCLS((metric) => setMetrics((prev) => ({ ...prev, cls: metric.value })));
         onFID((metric) => setMetrics((prev) => ({ ...prev, fid: metric.value })));
         onFCP((metric) => setMetrics((prev) => ({ ...prev, fcp: metric.value })));
@@ -96,27 +82,23 @@ const PerformanceOptimizer: React.FC = () => {
         // Silently fail if web-vitals is not available;
       });
     };
-
     // Optimize scroll performance;
-    const optimizeScroll = () => {
+    const optimizeScroll = () => {;
       let ticking = false;
-
-      const updateScrollPosition = () => {
+const updateScrollPosition = () => {
         if (!ticking) {
-          requestAnimationFrame(() => {
+          requestAnimationFrame(() => {;
             // Update scroll position;
             ticking = false;
           });
           ticking = true;
         }
       };
-
       window.addEventListener('scroll', updateScrollPosition, { passive: true });
-
       return () => window.removeEventListener('scroll', updateScrollPosition);
       const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
+      images.forEach(img = > {
+        if (!img.loading) {;
           img.loading = 'lazy';
         }
         if (!img.decoding) {
@@ -124,21 +106,18 @@ const PerformanceOptimizer: React.FC = () => {
         }
       });
     };
-
     // Initialize optimizations;
     preloadCriticalResources();
     optimizeImages();
     lazyLoadComponents();
     monitorWebVitals();
     const cleanupScroll = optimizeScroll();
-
     // Cleanup;
     return () => {
       cleanupScroll();
     };
   }, []);
   }, []);
-
   const features = [
     {
       title: "Image Optimization",
@@ -155,40 +134,40 @@ const PerformanceOptimizer: React.FC = () => {
     {
       title: "Caching Strategy",
       description: "Intelligent caching for improved performance"
-    }
+    };
   ];
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function PerformanceOptimizer() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> origin/main
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
       {/* Hero Section */}
-      <section className="relativepy-20 px-4 sm:px-6 lg:px-8"></section>
+      <section className = "relativepy-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1 className="text-4xlmd:text-6xl font-bold text-white mb-6"></h1>
-              <span className="bg-gradient-to-rfrom-purple-400 to-blue-400 bg-clip-text text-transparent"></span>
+              <span className="bg-gradient-to-rfrom-purple-400 to-blue-400 bg-clip-text text-transparent"></span>;
                 Performance Optimizer;
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+            <p className = "text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Optimize your application's performance with our advanced optimization tools and techniques.
             </p>
             <div className="flexflex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></button>
+              <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></button>;
                 Get Started;
-                <ArrowRight className="ml-2h-5w-5" /></ArrowRight>
+                <ArrowRight className = "ml-2h-5w-5" /></ArrowRight>
               </button>
-              <button className="borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button>
+              <button className="borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button>;
                 Learn More;
               </button>
             </div>
@@ -196,13 +175,13 @@ export default function PerformanceOptimizer() {
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20px-4 sm:px-6 lg:px-8"></section>
+      <section className = "py-20px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-centermb-16"></div>
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4"></h2>
+            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4"></h2>;
               Our Features;
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+            <p className = "text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Discover the powerful features that make our performance optimizer solutions stand out.
             </p>
           </div>
@@ -219,49 +198,37 @@ export default function PerformanceOptimizer() {
           </div>
         </div>
       </section>
-    </div>
+    </div>;
   );
 };
-
       cleanupScroll()
     }
   }, [])
-
   // Log performance metrics in development;
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && Object.values(metrics).some((val) => val !== null)) {
+    if (process.env.NODE_ENV = == 'development' && Object.values(metrics).some((val) => val !== null)) {;
       console.log('Performance Metrics:', metrics);
     }
   }, [metrics]);
-
-<<<<<<< HEAD
-  return null
-
-export default PerformanceOptimizer;
-=======
     <>
-      <Helmet>
+      <Helmet >
         <title>Performance Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional performance optimizer by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional performance optimizer by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Performance Optimizer</h1>
           <p className="text-lg text-gray-300 mb-8">Professional performance optimizer coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
   return null;
 };
->>>>>>> origin/main

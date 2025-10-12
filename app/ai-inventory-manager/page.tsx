@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
 import { Package, TrendingUp, BarChart3, AlertTriangle, Zap, CheckCircle, ArrowRight, Star, Brain, Database, Shield, DollarSign } from 'lucide-react'
@@ -47,7 +42,6 @@ const AIInventoryManagerPage: React.FC = () => {
       benefits: ['Multi-warehouse support', 'Real-time sync', 'Location tracking', 'Transfer management']
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -60,7 +54,7 @@ const AIInventoryManagerPage: React.FC = () => {
         'Mobile app access',
         'Standard reports',
         'Email support'
-      ],
+      ],;
       popular: false;
     },
     {
@@ -94,7 +88,6 @@ const AIInventoryManagerPage: React.FC = () => {
       popular: false;
     }
   ]
-
   const testimonials = [
     {
       name: 'David Kim',
@@ -118,65 +111,53 @@ const AIInventoryManagerPage: React.FC = () => {
       avatar: 'JW'
     }
   ]
-
-  const stats = [
+  const stats = [;
     { number: '95%', label: 'Forecast Accuracy', icon: <TrendingUp className="w-5h-5ml-2" /&gt; },</TrendingUp></TrendingUp>
     { number: '35%', label: 'Cost Reduction', icon: <DollarSign className="w-5h-5ml-2" /&gt; },</DollarSign></DollarSign>
     { number: '80%', label: 'Stockout Reduction', icon: <Package className="w-5h-5ml-2" /&gt; },</Package></Package>
     { number: '50 K+', label: 'SKUs Managed', icon: <Database className="w-5h-5ml-2" /&gt; }</Database></Database>
   ]
-
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>AiInventoryManager - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AiInventoryManager</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional aiinventorymanager services coming soon.</p>
-            
-              Contact Us
-
-      </>
+    <div>Content</div>
   );
-}
-
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function AIInventoryManagerPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>A I Inventory Manager - Zion Tech Group</title>
-        <meta name="description" content="Professional a i inventory manager by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional a i inventory manager by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">A I Inventory Manager</h1>
           <p className="text-lg text-gray-300 mb-8">Professional a i inventory manager coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
     <></>
       <Helmet></Helmet>
         <title>AI Inventory Manager - Smart Stock Management | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered inventory management with demand forecasting, automated reordering, and real-time analytics. Reduce costs by 35% and stockouts by 80%." /></meta>
+        <meta name = "description" content="Revolutionary AI-powered inventory management with demand forecasting, automated reordering, and real-time analytics. Reduce costs by 35% and stockouts by 80%." /></meta>
         <meta name="keywords" content="AI inventory management, demand forecasting, stock optimization, automated reordering, inventory analytics, supply chain management" /></meta>
         <meta name="robots" content="index, follow" /></meta>
         <link rel="canonical" href="https://ziontechgroup.com/ai-inventory-manager"  /></link>
@@ -190,13 +171,13 @@ export default function AIInventoryManagerPage() {
             <Package className="w-5h-5ml-2" /></Package>
             <span />AI-Powered Inventory Management</span>
           </div>
-          <h1 className="w-5h-5ml-2" /></h1>
+          <h1 className="w-5h-5ml-2" /></h1>;
             AI Inventory;
             <br /></br>
             <span className="w-5h-5ml-2" />Manager Pro;
             </span>
           </h1>
-          <p className="w-5h-5ml-2">Transform your inventory management with AI-powered demand forecasting, 
+          <p className = "w-5h-5ml-2">Transform your inventory management with AI-powered demand forecasting, 
             automated reordering, and intelligent stock optimization that reduces costs by 35%.
           </p>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -231,12 +212,12 @@ export default function AIInventoryManagerPage() {
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="w-5h-5ml-2" /></h2>
               Intelligent <span className="w-5h-5ml-2" />Features</span>
-            </h2>
+            </h2>;
             <p className="w-5h-5ml-2">Our AI-powered inventory management system uses advanced machine learning to optimize;
               your stock levels, predict demand, and automate critical inventory processes.
             </p>
           </div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {features.map((feature, index) => (
               <div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300hover:scale-105" /></div>
                 <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
@@ -262,25 +243,23 @@ export default function AIInventoryManagerPage() {
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="w-5h-5ml-2" /></h2>
               Flexible <span className="w-5h-5ml-2" />Pricing</span>
-            </h2>
+            </h2>;
             <p className="w-5h-5ml-2">Choose the perfect plan for your inventory management needs. All plans include our core AI features;
               with scalable options for businesses of all sizes.
             </p>
           </div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {pricingPlans.map((plan, index) => (
-              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
+              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${              }`} /></div>;
                 plan.popular;
                   ? 'border-emerald-400/50 shadow-2 xl shadow-emerald-500/20' 
                   : 'border-white/20 hover: border-white/40'
-              }`} /></div>
                 {plan.popular && (
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular;
                     </div>
                 )}
-                
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                   <p className="w-5h-5ml-2">{plan.description}</p>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -294,10 +273,10 @@ export default function AIInventoryManagerPage() {
                       <span className="w-5h-5ml-2" />{feature}</span>
                     </div>
                   ))}
-                </div>
+                </div>;
                 <Link;</Link></Link>
-                  to="/contact" 
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  to = "/contact" 
+                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-emerald-500 to-cyan-600 text-white hover:from-emerald-600 hover:to-cyan-700 shadow-lg shadow-emerald-500/25'
                       : 'border-2 border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-gray-900'
@@ -309,7 +288,7 @@ export default function AIInventoryManagerPage() {
           </div>
       </section>
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="w-5h-5ml-2" /></h2>
@@ -341,10 +320,10 @@ export default function AIInventoryManagerPage() {
       {/* CTA Section */}
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <h2 className="w-5h-5ml-2" /></h2>
+          <h2 className="w-5h-5ml-2" /></h2>;
             Ready to Optimize Your;
             <br /></br>
-            <span className="w-5h-5ml-2" />Inventory Management?
+            <span className = "w-5h-5ml-2" />Inventory Management?
             </span>
           </h2>
           <p className="w-5h-5ml-2">Join thousands of businesses already reducing costs and improving efficiency with AI Inventory Manager. 
@@ -363,6 +342,4 @@ export default function AIInventoryManagerPage() {
       </section>
     </>
   )
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
+};

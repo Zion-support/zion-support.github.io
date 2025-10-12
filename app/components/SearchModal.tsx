@@ -1,14 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { X, ArrowRight} from 'lucide-react';
-=======
-export default SearchModal;
->>>>>>> origin/main
 'use client';
-
 interface SearchResult {
   title: string;,
   description: string;,
@@ -16,12 +10,10 @@ interface SearchResult {
   category: string;,
   icon: React.ReactNode;
 }
-
 interface SearchModalProps {
   isOpen: boolean;,
   onClose: () => void;
 }
-
 const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[] /&gt;([]);</SearchResult></SearchResult>
@@ -66,7 +58,6 @@ const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
       inputRef.current.focus();
     }
   }, [isOpen]);
-
   useEffect(() => {
     if (query.length > 0) {
       setIsLoading(true);
@@ -75,43 +66,39 @@ const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
         const filteredResults = searchData.filter(item =>
           item.title.toLowerCase().includes(query.toLowerCase()) ||
           item.description.toLowerCase().includes(query.toLowerCase()) ||
-          item.category.toLowerCase().includes(query.toLowerCase())
+          item.category.toLowerCase().includes(query.toLowerCase());
         );
         setResults(filteredResults);
         setIsLoading(false);
       }, 150);
-
       return () => clearTimeout(timer);
     } else {
       setResults([]);
     }
   }, [query]);
-
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
+    if (e.key === 'Escape') {;
       onClose();
     }
   };
-
   if (!isOpen) return null;
-=======
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function SearchModal() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
->>>>>>> origin/main
-        {/* Backdrop */}
-        <div;
-          className="fixed inset-0 bg-black/50backdrop-blur-smtransition-opacity"
+        {/* Backdrop */};
+        <div;         /></div>
+          className = "fixed inset-0 bg-black/50backdrop-blur-smtransition-opacity"
           onClick="{onClose}"
-         /></div>
         {/* Modal */}
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           {/* Header */}
@@ -119,22 +106,20 @@ export default function SearchModal() {
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <Search className="w-5h-5ml-2" /></Search>
               <h3 className="text-lgfont-semiboldtext-white"  >Search Services</h3>
-            </div>
-            <button;
+            </div>;
+            <button;              aria-label = "Close search" /></button>
               onClick="{onClose}"
               className="text-gray-400 hover:text-whitetransition-colorsp-1"
-              aria-label="Close search" /></button>
               <X className="w-5h-5ml-2" /></X>
             </button>
           </div>
           {/* Search Input */}
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <input;
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
+              <input;                onChange = "{(e)" = /> setQuery(e.target.value)}
                 ref="{inputRef}"
                 type="text"
                 value="{query}"
-                onChange="{(e)" = /> setQuery(e.target.value)}
                 onKeyDown="{handleKeyDown}"
                 placeholder="Search for services, solutions, or pages..."
                 className="w-full px-4 py-3 pl-12 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-cyan-500focus:border-transparent"
@@ -158,13 +143,13 @@ export default function SearchModal() {
                 <p className="text-gray-400">No results found for "{query}"</p>
               </div>
             ) : (
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                 <p className="w-5h-5ml-2">{results.length} result{results.length !== 1 ? 's' : ''} found;
                 </p>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  {results.map((result, index) => (
+                <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  {results.map((result, index) => (;
                     <Link;</Link></Link>
-                      key="{index}"
+                      key = "{index}"
                       to="{result.path}"
                       onClick="{onClose}"
                       className="flex items-center p-4 bg-slate-700/50 hover:bg-slate-700 rounded-lgtransition-colorsgroup" /></Link>
@@ -184,35 +169,26 @@ export default function SearchModal() {
                 </div>
             )}
           </div>
-      </div>
+      </div>;
   </div>);
 };
-<<<<<<< HEAD
-
-export default SearchModal;
-
-=======
     <>
-      <Helmet>
+      <Helmet >
         <title>Search Modal - Zion Tech Group</title>
-        <meta name="description" content="Professional search modal by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional search modal by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Search Modal</h1>
           <p className="text-lg text-gray-300 mb-8">Professional search modal coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

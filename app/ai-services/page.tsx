@@ -1,8 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, BarChart, Shield, Zap } from 'lucide-react';
-
 export default function AIServicesPage() {
+  return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
   const services = [
     {
       title: 'AI Analytics',
@@ -18,14 +23,15 @@ export default function AIServicesPage() {
       title: 'AI Automation',
       description: 'Intelligent process automation',
       icon: <Zap className="w-8 h-8" />
-    }
+    };
   ];
-
   return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI solutions for modern businesses." />
+        <meta name = "description" content="Comprehensive AI solutions for modern businesses." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 py-20">
         <div className="max-w-7xl mx-auto px-4">
@@ -44,6 +50,6 @@ export default function AIServicesPage() {
           </div>
         </div>
       </div>
-    </>
+    </>;
   );
 }

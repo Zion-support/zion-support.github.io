@@ -1,25 +1,17 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-
 import { Shield, ArrowRight, CheckCircle, Brain, Star, Lock, Eye } from 'lucide-react';
-
 import Layout from '../layout'
-
 import React from 'react';
-
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
-=======
->>>>>>> origin/main
 export default function CybersecurityConsulting() {
-<<<<<<< HEAD
+  return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
   const features = [
     {
       icon: <Shield className="w-5h-5ml-2" />,
@@ -42,7 +34,6 @@ export default function CybersecurityConsulting() {
       description: 'Comprehensive security awareness training for your team to prevent human error attacks'
     }
   ]
-
   const consultingFeatures = [
     {
       category: 'Security Assessment',
@@ -61,7 +52,6 @@ export default function CybersecurityConsulting() {
       items: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'PCI-DSS Compliance', 'ISO 27001', 'NIST Framework']
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Assessment',
@@ -75,7 +65,7 @@ export default function CybersecurityConsulting() {
         'Compliance review',
         'Detailed report',
         'Recommendations'
-      ],
+      ],;
       popular: false;
     },
     {
@@ -109,12 +99,11 @@ export default function CybersecurityConsulting() {
       popular: false;
     }
   ]
-
   const testimonials = [
     {
       name: 'Jennifer Lee',
       company: 'Healthcare Provider',
-      content: 'Cybersecurity Consulting helped us achieve HIPAA compliance and significantly improve our security posture.',
+      content: 'Cybersecurity Consulting helped us achieve HIPAA compliance and significantly improve our security posture.',;
       rating: 5;
     },
     {
@@ -130,10 +119,11 @@ export default function CybersecurityConsulting() {
       rating: 5;
     }
   ]
-
   return (
+    <div>Content</div>
+  );
     <Layout;</Layout></Layout>
-      title="Cybersecurity Consulting - Expert Security Solutions | Zion Tech Group"
+      title = "Cybersecurity Consulting - Expert Security Solutions | Zion Tech Group"
       description="Protect your business with expert cybersecurity consulting. Security assessments, compliance management, threat intelligence, and 24/7 monitoring. Get your free security audit today."
       keywords="cybersecurity consulting, security assessment, compliance management, threat intelligence, security training, penetration testing" /></Layout>
       <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -142,37 +132,37 @@ export default function CybersecurityConsulting() {
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Shield className="w-5h-5ml-2" /></Shield>
+                <Shield className="w-5h-5ml-2" /></Shield>;
                 Expert Cybersecurity Consulting;
               </div>
               <h1 className="w-5h-5ml-2">Cybersecurity Consulting;
               </h1>
-              <p className="w-5h-5ml-2">Protect your business with expert cybersecurity consulting. Security assessments, compliance management, 
+              <p className = "w-5h-5ml-2">Protect your business with expert cybersecurity consulting. Security assessments, compliance management, 
                 threat intelligence, and 24/7 monitoring to keep your data secure.
               </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                 <Link;</Link></Link>
-          to="/contact"
+          to = "/contact"
           className="bg-gradient-to-rfrom-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-        ></Link>
+        ></Link>;
           Get Free Security Audit;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
+          <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+        </Link>;
                 <Link to="#demo" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">View Case Studies;
                 </Link>
               </div>
           </div>
         </section>
         {/* Features Section */}
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Comprehensive Security Solutions;
               </h2>
               <p className="w-5h-5ml-2">Expert cybersecurity services that protect your business from evolving threats;
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {features.map((feature, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-red-500/20 hover:border-red-400/40transition-all duration-300" /></div>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -187,13 +177,13 @@ export default function CybersecurityConsulting() {
         {/* Consulting Features */}
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Complete Security Consulting;
               </h2>
               <p className="w-5h-5ml-2">End-to-end cybersecurity services to protect your organization;
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {consultingFeatures.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700" /></div>
                   <h3 className="w-5h-5ml-2" />{feature.category}</h3>
@@ -212,26 +202,25 @@ export default function CybersecurityConsulting() {
         {/* Pricing Section */}
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Flexible Consulting Packages;
               </h2>
               <p className="w-5h-5ml-2">Choose the security consulting package that fits your needs;
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
+                <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${                }`} /></div>;
                   plan.popular;
                     ? 'border-red-400/40 scale-105 shadow-2 xl shadow-red-500/20' 
                     : 'border-red-500/20 hover: border-red-400/40'
-                }`} /></div>
                   {plan.popular && (
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                      <Star className="w-5h-5ml-2" /></Star>
+                    <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                      <Star className="w-5h-5ml-2" /></Star>;
                       Most Popular;
                     </div>
                   )}
-                  <h3 className="w-5h-5ml-2" />{plan.name}</h3>
+                  <h3 className = "w-5h-5ml-2" />{plan.name}</h3>
                   <p className="w-5h-5ml-2">{plan.description}</p>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <span className="w-5h-5ml-2" />{plan.price}</span>
@@ -244,10 +233,10 @@ export default function CybersecurityConsulting() {
                         {feature}
                       </li>
                     ))}
-                  </ul>
+                  </ul>;
                   <Link;</Link></Link>
-                    to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    to = "/contact"
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
                       plan.popular;
                         ? 'bg-gradient-to-r from-red-500 to-purple-600 text-white hover:from-red-600 hover:to-purple-700'
                         : 'border-2 border-red-400 text-red-400 hover: bg-red-400/10'
@@ -259,15 +248,15 @@ export default function CybersecurityConsulting() {
             </div>
         </section>
         {/* Testimonials */}
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Trusted by Industry Leaders;
               </h2>
               <p className="w-5h-5ml-2">See how our Cybersecurity Consulting protects organizations worldwide;
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700" /></div>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -286,12 +275,12 @@ export default function CybersecurityConsulting() {
         {/* CTA Section */}
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Secure Your Business Today;
               </h2>
               <p className="w-5h-5ml-2">Don't wait for a security breach. Get expert cybersecurity consulting to protect your organization;
               </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                 <Link to="/contact" className="bg-gradient-to-rfrom-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700transition-all duration-300">Get Your Free Security Audit;
                 </Link>
                 <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More;
@@ -302,33 +291,5 @@ export default function CybersecurityConsulting() {
       </div>
     </Layout>
   )
-<<<<<<< HEAD
 };
-
-=======
-  return (
-    <>
-      <Helmet>
-        <title>Cybersecurity Consulting - Zion Tech Group</title>
-        <meta name="description" content="Professional cybersecurity consulting by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Cybersecurity Consulting</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional cybersecurity consulting coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 };
->>>>>>> origin/main

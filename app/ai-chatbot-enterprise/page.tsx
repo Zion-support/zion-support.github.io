@@ -1,91 +1,50 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
 export default AiChatbotEnterprisePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 'use client';
-=======
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Shield, Brain, Users, Zap, BarChart, MessageCircle, Globe, Clock } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-
 const AiChatbotEnterprisePage: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>AI Chatbot Enterprise - Zion Tech Group</title>
         <meta name="description" content="Enterprise AI chatbot solutions by Zion Tech Group. Professional AI and IT solutions for large organizations." />
         <meta name="keywords" content="ai-chatbot-enterprise, AI solutions, IT services, enterprise chatbot" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 py-20">
           <div className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 AI Chatbot Enterprise
-=======
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Ai Chatbot Enterprise - Zion Tech Group</title>
-        <meta name="description" content="Ai Chatbot Enterprise services by Zion Tech Group. Professional AI and IT solutions." /></meta>
-        <meta name="keywords" content="ai-chatbot-enterprise, AI solutions, IT services" /></meta>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
-              <span className="w-5h-5ml-2" />Ai Chatbot Enterprise;
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional AI chatbot enterprise services by Zion Tech Group.
             </p>
           </div>
-<<<<<<< HEAD
-
           <div className="text-center mt-16">
             <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               We're working on bringing you comprehensive AI chatbot enterprise solutions. 
               Contact us to learn more about our services.
             </p>
-            <Link 
+            <Link >
               to="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-block"
-            >
               Contact Us
             </Link>
-=======
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
-            <p className="w-5h-5ml-2">We're working on bringing you comprehensive ai chatbot enterprise solutions. 
-              Contact us to learn more about our services.
-            </p>
-            <button className="w-5h-5ml-2">Contact Us;
-            </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
           </div>
         </div>
       </div>
     </>
-=======
   const features = [
     {
       title: 'Enterprise-Grade Security',
@@ -122,10 +81,9 @@ const AiChatbotEnterprisePage: React.FC = () => {
       description: 'Dedicated account management and round-the-clock technical support',
       icon: <Users className="w-6 h-6" />,
       color: 'from-teal-500 to-cyan-500'
-    }
+    };
   ];
-
-  const enterpriseFeatures = [
+const enterpriseFeatures = [
     'Custom AI model training and fine-tuning',
     'Advanced security and compliance (SOC 2, GDPR, HIPAA)',
     'White-label solutions and custom branding',
@@ -135,17 +93,17 @@ const AiChatbotEnterprisePage: React.FC = () => {
     'Dedicated account management and support',
     'SLA guarantees and performance monitoring',
     'Multi-tenant architecture support',
-    'Advanced conversation routing and escalation'
+    'Advanced conversation routing and escalation';
   ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
+    <div>Content</div>
+  );
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <Helmet >
         <title>AI Chatbot Enterprise - Zion Tech Group</title>
         <meta name="description" content="Enterprise-grade AI chatbot solutions with advanced security, scalability, and customization for large organizations." />
         <meta name="keywords" content="enterprise AI chatbot, business chatbot, corporate AI solutions, enterprise automation" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -160,23 +118,20 @@ const AiChatbotEnterprisePage: React.FC = () => {
             Advanced security, scalability, and customization to meet your complex business requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link >
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
               Get Enterprise Quote
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
+            <Link >
               to="/demo" 
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
               Schedule Demo
             </Link>
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -188,7 +143,6 @@ const AiChatbotEnterprisePage: React.FC = () => {
               Built for scale, security, and performance to meet the demands of large organizations.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -202,7 +156,6 @@ const AiChatbotEnterprisePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Enterprise Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -214,7 +167,6 @@ const AiChatbotEnterprisePage: React.FC = () => {
               Everything you need for enterprise-scale AI chatbot deployment and management.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-6">Core Features</h3>
@@ -241,7 +193,6 @@ const AiChatbotEnterprisePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Security & Compliance Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -253,7 +204,6 @@ const AiChatbotEnterprisePage: React.FC = () => {
               Enterprise-grade security and compliance to protect your data and meet regulatory requirements.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               'SOC 2 Type II Certified',
@@ -273,7 +223,6 @@ const AiChatbotEnterprisePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -284,60 +233,54 @@ const AiChatbotEnterprisePage: React.FC = () => {
             Let's discuss how our enterprise AI chatbot solution can transform your organization's customer engagement.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link >
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
               Contact Enterprise Sales
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
+            <Link >
               to="/demo" 
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
               Schedule Enterprise Demo
             </Link>
           </div>
         </div>
       </section>
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
+    </div>;
   );
 };
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function AiChatbotEnterprisePage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>Ai Chatbot Enterprise - Zion Tech Group</title>
-        <meta name="description" content="Professional ai chatbot enterprise by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional ai chatbot enterprise by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Ai Chatbot Enterprise</h1>
           <p className="text-lg text-gray-300 mb-8">Professional ai chatbot enterprise coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 export default AiChatbotEnterprisePage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

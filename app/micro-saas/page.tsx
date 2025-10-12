@@ -1,23 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-export default function MicroSaas() {
-=======
 export default MicroSaasPage;
 const MicroSaasPage: React.FC = () => {
-
-  useEffect(() => {
+  useEffect(() => {;
     setIsVisible(true);
   }, []);
-
   const microSaasProducts = [
     {
       id: 'zion-analytics-pro',
@@ -39,7 +28,7 @@ const MicroSaasPage: React.FC = () => {
       color: 'from-blue-500 to-purple-500',
       category: 'Analytics',
       rating: 4.9,
-      reviews: 127,
+      reviews: 127,;
       popular: true;
     },
     {
@@ -758,53 +747,42 @@ const MicroSaasPage: React.FC = () => {
   ];
   const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'CRM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance', 'Video Production', 'Translation', 'Development', 'Productivity', 'Research', 'HR', 'IoT', 'Sustainability', 'Supply Chain', 'Legal', 'Document Management'];
   const [selectedCategory, setSelectedCategory] = useState('All');
-
-  const filteredProducts = selectedCategory === 'All' 
+  const filteredProducts = selectedCategory === 'All' ;
     ? microSaasProducts;
     : microSaasProducts.filter(product => product.category === selectedCategory);
->>>>>>> origin/main
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>MicroSaas - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">MicroSaas</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional microsaas services coming soon.</p>
-            
-              Contact Us
-
-      </>
+    <div>Content</div>
   );
-}
-
-=======
-<<<<<<< HEAD
 export default function MicroSaasPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>Micro Saas - Zion Tech Group</title>
-        <meta name="description" content="Professional micro saas by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional micro saas by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Micro Saas</h1>
           <p className="text-lg text-gray-300 mb-8">Professional micro saas coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
     <></>
       <Helmet></Helmet>
         <title />Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
@@ -817,40 +795,38 @@ export default function MicroSaasPage() {
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></h1>
+              <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></h1>;
                 Micro SAAS;
                 <span className="w-5h-5ml-2" />Business Solutions;
                 </span>
               </h1>
-              <p className="{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></p>
+              <p className = "{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></p>
                 Powerful, ready-to-use software solutions designed to solve specific business challenges. 
                 No complex setup, no lengthy implementations - just instant value.
               </p>
-              <div className="{`flex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>
+              <div className="{`flex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>;
                 <Link;</Link></Link>
-          to="/contact"
+          to = "/contact"
           className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
-        ></Link>
+        ></Link>;
           Start Free Trial;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
-                <a;
-                  href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" /></a>
+          <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+        </Link>;
+                <a;                  className = "inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" /></a>
+                  href="tel:+13024640950";
                   Call +1 302 464 0950;
                 </a>
               </div>
           </div>
         </section>
         {/* Category Filter */}
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              {categories.map((category) => (
-                <button;
+              {categories.map((category) => (;
+                <button;                  onClick = "{()" =  />setSelectedCategory(category)}
                   key="{category}"
-                  onClick="{()" =  />setSelectedCategory(category)}
-                  className="{`px-6" py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  className="{`px-6" py-3 rounded-lg font-semibold transition-all duration-300 ${;
                     selectedCategory === category;
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
                       : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'
@@ -862,23 +838,21 @@ export default function MicroSaasPage() {
             </div>
         </section>
         {/* Products Grid */}
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              {filteredProducts.map((product, index) => (
-                <div;
-                  key="{product.id}"
+              {filteredProducts.map((product, index) => (;
+                <div;                  }`} /></div>
+                  key = "{product.id}"
                   className="{`group" relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-purple-500 ${
                     product.popular ? 'ring-2 ring-purple-500' : ''
-                  }`} /></div>
                   {product.popular && (
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                       <span className="w-5h-5ml-2" />Most Popular;
                       </span>
                     </div>
                   )}
-                  
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <div className="{`inline- flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl mb-4`} /></div>
                       <product.icon className="h-8w-8text-white"  /></product>
                     </div>
@@ -886,13 +860,12 @@ export default function MicroSaasPage() {
                     <p className="w-5h-5ml-2">{product.description}</p>
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                        {[...Array(5)].map((_, i) => (
+                        {[...Array(5)].map((_, i) => (;
                           <Star;</Star></Star>
-                            key="{i}"
+                            key = "{i}"
                             className="{`h-4" w-4 ${
-                              i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'
+                              i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'                           /></Star>
                             }`}
-                           /></Star>
                         ))}
                       </div>
                       <span className="w-5h-5ml-2" />({product.reviews} reviews)</span>
@@ -912,19 +885,19 @@ export default function MicroSaasPage() {
                         <span />{feature}</span>
                       </div>
                     ))}
-                    {product.features.length > 4 && (
+                    {product.features.length > 4 && (;
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">+{product.features.length - 4} more features;
                       </div>
                     )}
                   </div>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                     <Link;</Link></Link>
-          to="{`/${product.id}`}"
+          to = "{`/${product.id}`}"
           className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105"
-        ></Link>
+        ></Link>;
           View Details;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
+          <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+        </Link>;
                     <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-all duration-300">Start Free Trial;
                     </Link>
                   </div>
@@ -932,35 +905,32 @@ export default function MicroSaasPage() {
             </div>
         </section>
         {/* CTA Section */}
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="w-5h-5ml-2" />Ready to Transform Your Business?
             </h2>
             <p className="w-5h-5ml-2">Join thousands of businesses already using our micro SAAS solutions to streamline operations, 
               increase productivity, and drive growth.
             </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <Link;</Link></Link>
-          to="/contact"
+          to = "/contact"
           className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
-        ></Link>
+        ></Link>;
           Get Started Today;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
-              <a;
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" /></a>
+          <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+        </Link>;
+              <a;                className = "inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" /></a>
+                href="tel:+13024640950";
                 Call +1 302 464 0950;
               </a>
             </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <p />Email: kleber@ziontechgroup.com</p>
               <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
         </section>
       </div>
-    </>
+    </>;
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

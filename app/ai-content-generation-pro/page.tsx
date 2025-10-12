@@ -1,22 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, PenTool, FileText, Image, Video, Mic, Globe, Zap, Brain, BarChart, Users, Shield, Star } from 'lucide-react';
-
 const AiContentGenerationProPage: React.FC = () => {
-<<<<<<< HEAD
-  return (
-
-        <>
-      <title>AiContentGenerationPro - Zion Tech Group</title>
-
-      </>
-=======
   const features = [
     {
       title: 'Advanced AI Models',
@@ -53,10 +39,9 @@ const AiContentGenerationProPage: React.FC = () => {
       description: 'Bank-level security with data encryption and compliance standards',
       icon: <Shield className="w-6 h-6" />,
       color: 'from-indigo-500 to-purple-500'
-    }
+    };
   ];
-
-  const advancedFeatures = [
+const advancedFeatures = [
     'Custom AI model training',
     'API access and webhooks',
     'White-label solutions',
@@ -66,9 +51,8 @@ const AiContentGenerationProPage: React.FC = () => {
     'Team collaboration tools',
     'Advanced analytics dashboard',
     'Custom integrations',
-    'Priority support'
+    'Priority support';
   ];
-
   const pricingPlans = [
     {
       name: 'Professional',
@@ -117,17 +101,17 @@ const AiContentGenerationProPage: React.FC = () => {
         'SLA guarantee'
       ],
       popular: false
-    }
+    };
   ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
+    <div>Content</div>
+  );
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <Helmet >
         <title>AI Content Generation Pro - Zion Tech Group</title>
         <meta name="description" content="Professional AI content generation platform with advanced features, brand voice training, and enterprise-grade security." />
         <meta name="keywords" content="AI content generation pro, professional content creation, brand voice training, enterprise content AI" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -142,23 +126,20 @@ const AiContentGenerationProPage: React.FC = () => {
             and scale content with enterprise-grade features and security.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link >
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
               Start Pro Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
+            <Link >
               to="/demo" 
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
               View Demo
             </Link>
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -170,7 +151,6 @@ const AiContentGenerationProPage: React.FC = () => {
               Advanced capabilities designed for content professionals and enterprise teams.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -184,7 +164,6 @@ const AiContentGenerationProPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Advanced Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -196,7 +175,6 @@ const AiContentGenerationProPage: React.FC = () => {
               Everything you need to create professional content at scale with enterprise-grade features.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-6">Core Features</h3>
@@ -223,7 +201,6 @@ const AiContentGenerationProPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -235,7 +212,6 @@ const AiContentGenerationProPage: React.FC = () => {
               Choose the plan that fits your professional content creation needs.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-cyan-400 ring-2 ring-cyan-400/20' : 'border-white/20'} relative`}>
@@ -262,14 +238,12 @@ const AiContentGenerationProPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  to="/contact"
+                <Link to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                  }`}
-                >
+                  }`}>
                   Get Started
                 </Link>
               </div>
@@ -277,7 +251,6 @@ const AiContentGenerationProPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -288,90 +261,53 @@ const AiContentGenerationProPage: React.FC = () => {
             Join the professionals who trust our AI platform for their most important content needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link >
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
               Start Your Pro Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
+            <Link >
               to="/demo" 
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
               Schedule a Demo
             </Link>
           </div>
         </div>
       </section>
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
+    </div>;
   );
 }
-
-=======
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function AiContentGenerationProPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>Ai Content Generation Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional ai content generation pro by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional ai content generation pro by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Ai Content Generation Pro</h1>
           <p className="text-lg text-gray-300 mb-8">Professional ai content generation pro coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-export default AiContentGenerationProPage;
-'use client';
-
-const AiContentGenerationProPage: React.FC = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Ai Content Generation Pro - Zion Tech Group</title>
-        <meta name="description" content="Ai Content Generation Pro services by Zion Tech Group. Professional AI and IT solutions." /></meta>
-        <meta name="keywords" content="ai-content-generation-pro, AI solutions, IT services" /></meta>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
-              <span className="w-5h-5ml-2" />Ai Content Generation Pro;
-              </span>
-            </h1>
-            <p className="w-5h-5ml-2">Professional ai content generation pro services by Zion Tech Group.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
-            <p className="w-5h-5ml-2">We're working on bringing you comprehensive ai content generation pro solutions. 
-              Contact us to learn more about our services.
-            </p>
-            <button className="w-5h-5ml-2">Contact Us;
-            </button>
-          </div>
-      </div>
-    </>
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

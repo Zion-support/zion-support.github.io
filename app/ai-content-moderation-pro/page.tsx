@@ -1,22 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function AIContentModerationPro() {
-<<<<<<< HEAD
-=======
+  return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
 import React from 'react'
 import { Link } from 'react-router-dom'
-export default function AIContentModerationPro() {
   const features = [
     {
       icon: <Brain className="w-5h-5ml-2" />,
@@ -39,7 +33,6 @@ export default function AIContentModerationPro() {
       description: 'Meets international content standards and regulatory requirements'
     }
   ]
-
   const capabilities = [
     {
       category: 'Content Types',
@@ -58,7 +51,6 @@ export default function AIContentModerationPro() {
       items: ['Social Media', 'E-commerce', 'Forums', 'Gaming', 'Streaming', 'Custom APIs']
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -71,7 +63,7 @@ export default function AIContentModerationPro() {
         'Text & image analysis',
         'Email support',
         'Standard response time'
-      ],
+      ],;
       popular: false;
     },
     {
@@ -105,12 +97,11 @@ export default function AIContentModerationPro() {
       popular: false;
     }
   ]
-
   const testimonials = [
     {
       name: 'David Kim',
       company: 'SocialFlow Platform',
-      content: 'AI Content Moderation Pro reduced our moderation workload by 85% while improving accuracy significantly.',
+      content: 'AI Content Moderation Pro reduced our moderation workload by 85% while improving accuracy significantly.',;
       rating: 5;
     },
     {
@@ -126,49 +117,34 @@ export default function AIContentModerationPro() {
       rating: 5;
     }
   ]
->>>>>>> origin/main
-
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>AI Content Moderation Pro - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AI Content Moderation Pro</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional AI content moderation pro services coming soon.</p>
-
-      </>
+    <div>Content</div>
   );
-}
-
-=======
-<<<<<<< HEAD
   return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>A I Content Moderation Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional a i content moderation pro by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional a i content moderation pro by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">A I Content Moderation Pro</h1>
           <p className="text-lg text-gray-300 mb-8">Professional a i content moderation pro coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
     <Layout;</Layout></Layout>
-      title="AI Content Moderation Pro - Advanced Content Safety Platform | Zion Tech Group"
+      title = "AI Content Moderation Pro - Advanced Content Safety Platform | Zion Tech Group"
       description="Protect your platform with AI-powered content moderation. Real-time detection, multi-format support, and 99.7% accuracy. Start your free trial today."
       keywords="AI content moderation, content safety, platform protection, automated moderation, content filtering" /></Layout>
       <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -177,37 +153,37 @@ export default function AIContentModerationPro() {
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Shield className="w-5h-5ml-2" /></Shield>
+                <Shield className="w-5h-5ml-2" /></Shield>;
                 Advanced Content Safety;
               </div>
               <h1 className="w-5h-5ml-2">AI Content Moderation Pro;
               </h1>
-              <p className="w-5h-5ml-2">Protect your platform with industry-leading AI content moderation. Real-time detection, 
+              <p className = "w-5h-5ml-2">Protect your platform with industry-leading AI content moderation. Real-time detection, 
                 multi-format support, and 99.7% accuracy to keep your community safe and compliant.
               </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                 <Link;</Link></Link>
-          to="/contact"
+          to = "/contact"
           className="bg-gradient-to-rfrom-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-        ></Link>
+        ></Link>;
           Start Free Trial;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
+          <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+        </Link>;
                 <Link to="#demo" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Watch Demo;
                 </Link>
               </div>
           </div>
         </section>
         {/* Features Section */}
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Advanced Content Safety Features;
               </h2>
               <p className="w-5h-5ml-2">Comprehensive AI-powered protection for all your content needs;
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {features.map((feature, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-red-500/20 hover:border-red-400/40transition-all duration-300" /></div>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -222,13 +198,13 @@ export default function AIContentModerationPro() {
         {/* Capabilities Section */}
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Comprehensive Moderation Capabilities;
               </h2>
               <p className="w-5h-5ml-2">Handle any content type, language, or platform with our advanced AI;
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {capabilities.map((capability, index) => (
                 <div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700" /></div>
                   <h3 className="w-5h-5ml-2" />{capability.category}</h3>
@@ -247,26 +223,25 @@ export default function AIContentModerationPro() {
         {/* Pricing Section */}
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Flexible Pricing Plans;
               </h2>
               <p className="w-5h-5ml-2">Choose the plan that scales with your platform;
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
+                <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${                }`} /></div>;
                   plan.popular;
                     ? 'border-red-400/40 scale-105 shadow-2 xl shadow-red-500/20' 
                     : 'border-red-500/20 hover: border-red-400/40'
-                }`} /></div>
                   {plan.popular && (
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                      <Star className="w-5h-5ml-2" /></Star>
+                    <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                      <Star className="w-5h-5ml-2" /></Star>;
                       Most Popular;
                     </div>
                   )}
-                  <h3 className="w-5h-5ml-2" />{plan.name}</h3>
+                  <h3 className = "w-5h-5ml-2" />{plan.name}</h3>
                   <p className="w-5h-5ml-2">{plan.description}</p>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <span className="w-5h-5ml-2" />{plan.price}</span>
@@ -279,10 +254,10 @@ export default function AIContentModerationPro() {
                         {feature}
                       </li>
                     ))}
-                  </ul>
+                  </ul>;
                   <Link;</Link></Link>
-                    to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    to = "/contact"
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
                       plan.popular;
                         ? 'bg-gradient-to-r from-red-500 to-purple-600 text-white hover:from-red-600 hover:to-purple-700'
                         : 'border-2 border-red-400 text-red-400 hover: bg-red-400/10'
@@ -294,15 +269,15 @@ export default function AIContentModerationPro() {
             </div>
         </section>
         {/* Testimonials */}
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Trusted by Leading Platforms;
               </h2>
               <p className="w-5h-5ml-2">See how our AI content moderation protects platforms worldwide;
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700" /></div>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -321,12 +296,12 @@ export default function AIContentModerationPro() {
         {/* CTA Section */}
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Protect Your Platform Today;
               </h2>
               <p className="w-5h-5ml-2">Join thousands of platforms using AI Content Moderation Pro to keep their communities safe;
               </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                 <Link to="/contact" className="bg-gradient-to-rfrom-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700transition-all duration-300">Start Your Free Trial;
                 </Link>
                 <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More;
@@ -338,5 +313,3 @@ export default function AIContentModerationPro() {
     </Layout>
   )
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

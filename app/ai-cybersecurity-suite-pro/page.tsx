@@ -1,19 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-export default function AICybersecuritySuitePro() {
-=======
 import React from 'react'
 import { Link } from 'react-router-dom'
 export default function AICybersecuritySuiteProPage() {
+  return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
   const features = [
     {
       icon: <Bot className="w-5h-5ml-2" />,
@@ -46,7 +43,6 @@ export default function AICybersecuritySuiteProPage() {
       description: 'Automated incident response with AI-driven forensics and rapid threat containment'
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Essential',
@@ -60,7 +56,7 @@ export default function AICybersecuritySuiteProPage() {
         'Email support',
         'Basic reporting',
         'Standard encryption'
-      ],
+      ],;
       popular: false;
     },
     {
@@ -98,7 +94,6 @@ export default function AICybersecuritySuiteProPage() {
       popular: false;
     }
   ]
-
   const testimonials = [
     {
       name: 'David Kim',
@@ -122,7 +117,6 @@ export default function AICybersecuritySuiteProPage() {
       avatar: 'JW'
     }
   ]
-
   const benefits = [
     {
       icon: <Shield className="w-5h-5ml-2" />,
@@ -145,7 +139,6 @@ export default function AICybersecuritySuiteProPage() {
       description: 'Military-grade encryption and compliance with industry standards'
     }
   ]
-
   const securityFeatures = [
     { 
       title: 'Threat Intelligence', 
@@ -184,13 +177,12 @@ export default function AICybersecuritySuiteProPage() {
       benefit: 'Maintain compliance effortlessly'
     }
   ]
-
   const complianceStandards = [
     'SOC 2 Type II', 'ISO 27001', 'HIPAA', 'GDPR', 'PCI DSS', 'NIST', 'CIS Controls', 'COBIT'
   ]
-
->>>>>>> origin/main
   return (
+    <div>Content</div>
+  );
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title>AI Cybersecurity Suite Pro - Zion Tech Group | Advanced Security Solutions</title>
@@ -199,23 +191,11 @@ export default function AICybersecuritySuiteProPage() {
         <meta name="robots" content="index, follow" /></meta>
         <link rel="canonical" href="https://ziontechgroup.com/ai-cybersecurity-suite-pro"  /></link>
       </Helmet>
-<<<<<<< HEAD
-
-        <>
-      <title>AI Cybersecurity Suite Pro - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AI Cybersecurity Suite Pro</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional AI cybersecurity suite pro services coming soon.</p>
-            
-              Contact Us
-
-<<<<<<< HEAD
-  );
-=======
-export default function AICybersecuritySuiteProPage() {
   return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>A I Cybersecurity Suite Pro - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered cybersecurity suite with threat detection, zero-trust architecture, and real-time monitoring. 99.9% threat detection accuracy. Starting at $199/month." />
       </Helmet>
@@ -224,24 +204,20 @@ export default function AICybersecuritySuiteProPage() {
           <h1 className="text-4xl font-bold text-white mb-6">A I Cybersecurity Suite Pro</h1>
           <p className="text-lg text-gray-300 mb-8">Protect your organization with AI-powered cybersecurity that detects and prevents threats in real-time. 
             Achieve 99.9% threat detection accuracy with zero-trust architecture and automated incident response.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       </>
-=======
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -249,13 +225,13 @@ export default function AICybersecuritySuiteProPage() {
             <Shield className="w-5h-5ml-2" /></Shield>
             <span />AI-Powered Cybersecurity</span>
           </div>
-          <h1 className="w-5h-5ml-2" /></h1>
+          <h1 className="w-5h-5ml-2" /></h1>;
             AI Cybersecurity;
             <br /></br>
             <span className="w-5h-5ml-2" />Suite Pro;
             </span>
           </h1>
-          <p className="w-5h-5ml-2">Protect your organization with AI-powered cybersecurity that detects and prevents threats in real-time. 
+          <p className = "w-5h-5ml-2">Protect your organization with AI-powered cybersecurity that detects and prevents threats in real-time. 
             Achieve 99.9% threat detection accuracy with zero-trust architecture and automated incident response.
           </p>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -388,18 +364,16 @@ export default function AICybersecuritySuiteProPage() {
           </div>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {pricingPlans.map((plan, index) => (
-              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
+              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${              }`} /></div>;
                 plan.popular;
                   ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
                   : 'border-white/20 hover: border-cyan-400/30'
-              }`} /></div>
                 {plan.popular && (
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular;
                     </div>
                 )}
-                
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                   <p className="w-5h-5ml-2">{plan.description}</p>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -413,10 +387,10 @@ export default function AICybersecuritySuiteProPage() {
                       <span className="w-5h-5ml-2" />{feature}</span>
                     </li>
                   ))}
-                </ul>
+                </ul>;
                 <Link;</Link></Link>
-                  to="/contact"
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  to = "/contact"
+                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
@@ -428,13 +402,13 @@ export default function AICybersecuritySuiteProPage() {
           </div>
       </section>
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" /></h2>
+            <h2 className="w-5h-5ml-2" /></h2>;
               Trusted by <span className="w-5h-5ml-2" />10,000+</span> Organizations;
             </h2>
-            <p className="w-5h-5ml-2">See what our customers are saying about their success with our AI cybersecurity suite.
+            <p className = "w-5h-5ml-2">See what our customers are saying about their success with our AI cybersecurity suite.
             </p>
           </div>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -485,8 +459,6 @@ export default function AICybersecuritySuiteProPage() {
                 </div>
             </div>
         </div>
-      </section>
+      </section>;
     </div>  );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

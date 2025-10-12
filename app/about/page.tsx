@@ -1,27 +1,22 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
 export default function AboutPage() {
   return (
     <>
       <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group, a leading technology company dedicated to transforming businesses through innovative AI and IT solutions." />
+        <title>About - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group and our mission to provide cutting-edge AI and IT solutions." />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">About Zion Tech Group</h1>
-          <p className="text-lg text-gray-300 mb-8">We are a leading technology company dedicated to transforming businesses through innovative AI and IT solutions.</p>
-          <div className="space-x-4">
-            <Link to="/contact" className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
-              Work With Us
-              <ArrowRight className="inline-block ml-2 h-4 w-4" />
-            </Link>
-            <Link to="/services" className="inline-block px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors">
-              Our Services
-            </Link>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">About Zion Tech Group</h1>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              We are a leading provider of AI solutions, cybersecurity, and IT services, 
+              dedicated to transforming businesses with cutting-edge technology.
+            </p>
           </div>
         </div>
       </div>

@@ -1,23 +1,16 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-
 import React from 'react';
-
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 import { ArrowRight, MessageSquare, BarChart3, Users, Zap, CheckCircle, Clock, Target, TrendingUp, Smartphone, Shield, Bot, Star, Smartphone as Mobile } from 'lucide-react';
-
-=======
->>>>>>> origin/main
 export default function AICustomerSupportChatbotPage() {
-<<<<<<< HEAD
+  return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
   const features = [
     {
       icon: <Bot className="w-5h-5ml-2" />,
@@ -50,7 +43,6 @@ export default function AICustomerSupportChatbotPage() {
       description: 'Enterprise-grade security with GDPR, HIPAA, and SOC 2 compliance'
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -64,7 +56,7 @@ export default function AICustomerSupportChatbotPage() {
         'Email support',
         'Basic analytics',
         'Standard templates'
-      ],
+      ],;
       popular: false;
     },
     {
@@ -102,7 +94,6 @@ export default function AICustomerSupportChatbotPage() {
       popular: false;
     }
   ]
-
   const testimonials = [
     {
       name: 'Amanda Foster',
@@ -126,7 +117,6 @@ export default function AICustomerSupportChatbotPage() {
       avatar: 'SK'
     }
   ]
-
   const benefits = [
     {
       icon: <Clock className="w-5h-5ml-2" />,
@@ -149,7 +139,6 @@ export default function AICustomerSupportChatbotPage() {
       description: 'Advanced NLP ensures accurate understanding and responses'
     }
   ]
-
   const integrations = [
     { name: 'Slack', icon: '💬' },
     { name: 'Microsoft Teams', icon: '👥' },
@@ -162,7 +151,6 @@ export default function AICustomerSupportChatbotPage() {
     { name: 'WordPress', icon: '📝' },
     { name: 'Webflow', icon: '🌐' }
   ]
-
   const useCases = [
     { 
       title: 'FAQ Automation', 
@@ -201,50 +189,18 @@ export default function AICustomerSupportChatbotPage() {
       benefit: 'Improve complaint resolution by 60%'
     }
   ]
-
   return (
-<<<<<<< HEAD
-
+    <div>Content</div>
+  );
         <>
       <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Customer Support Chatbot - Zion Tech Group | Intelligent Customer Service</title>
-
                     <span>Start Free Trial</span>
                     <span>View All Plans</span>
-
                   <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-
-<<<<<<< HEAD
-=======
-  return (
-    <>
-      <Helmet>
-        <title>A I Customer Support Chatbot - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered customer support chatbot with natural language processing, multi-channel support, and real-time analytics. Reduce support costs by 60%. Starting at $49/month." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">A I Customer Support Chatbot</h1>
-          <p className="text-lg text-gray-300 mb-8">Transform your customer support with AI-powered chatbots that provide instant, intelligent responses. 
-            Reduce support costs by 60% while improving customer satisfaction by 40%.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-      </>
->>>>>>> origin/main
+      </>;
   );
-
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title />AI Customer Support Chatbot - Zion Tech Group | Intelligent Customer Service</title>
         <meta name="description" content="Revolutionary AI-powered customer support chatbot with natural language processing, multi-channel support, and real-time analytics. Reduce support costs by 60%. Starting at $49/month." /></meta>
@@ -261,13 +217,13 @@ export default function AICustomerSupportChatbotPage() {
             <MessageSquare className="w-5h-5ml-2" /></MessageSquare>
             <span />AI-Powered Customer Support</span>
           </div>
-          <h1 className="w-5h-5ml-2" /></h1>
+          <h1 className="w-5h-5ml-2" /></h1>;
             AI Customer Support;
             <br /></br>
             <span className="w-5h-5ml-2" />Chatbot;
             </span>
           </h1>
-          <p className="w-5h-5ml-2">Transform your customer support with AI-powered chatbots that provide instant, intelligent responses. 
+          <p className = "w-5h-5ml-2">Transform your customer support with AI-powered chatbots that provide instant, intelligent responses. 
             Reduce support costs by 60% while improving customer satisfaction by 40%.
           </p>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -401,18 +357,16 @@ export default function AICustomerSupportChatbotPage() {
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {pricingPlans.map((plan, index) => (
-              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
+              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${              }`} /></div>;
                 plan.popular;
                   ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
                   : 'border-white/20 hover: border-cyan-400/30'
-              }`} /></div>
                 {plan.popular && (
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular;
                     </div>
                 )}
-                
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                   <p className="w-5h-5ml-2">{plan.description}</p>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -426,10 +380,10 @@ export default function AICustomerSupportChatbotPage() {
                       <span className="w-5h-5ml-2" />{feature}</span>
                     </li>
                   ))}
-                </ul>
+                </ul>;
                 <Link;</Link></Link>
-                  to="/contact"
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  to = "/contact"
+                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
@@ -441,13 +395,13 @@ export default function AICustomerSupportChatbotPage() {
           </div>
       </section>
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" /></h2>
+            <h2 className="w-5h-5ml-2" /></h2>;
               Trusted by <span className="w-5h-5ml-2" />30,000+</span> Businesses;
             </h2>
-            <p className="w-5h-5ml-2">See what our customers are saying about their success with our AI customer support chatbot.
+            <p className = "w-5h-5ml-2">See what our customers are saying about their success with our AI customer support chatbot.
             </p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -499,7 +453,6 @@ export default function AICustomerSupportChatbotPage() {
             </div>
         </div>
       </section>
-    </div>
+    </div>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

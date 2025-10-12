@@ -1,23 +1,16 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-
 import React from 'react';
-
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 import { ArrowRight, DollarSign, BarChart3, Receipt, CheckCircle, Clock, Target, TrendingUp, Shield, Zap, Bot, CheckSquare } from 'lucide-react';
-
-=======
->>>>>>> origin/main
 export default function AIExpenseTrackerPage() {
-<<<<<<< HEAD
+  return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
   const features = [
     {
       icon: <Receipt className="w-5h-5ml-2" />,
@@ -50,7 +43,6 @@ export default function AIExpenseTrackerPage() {
       description: 'Set up rules for automatic expense approval, reimbursement, and reporting'
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Personal',
@@ -64,7 +56,7 @@ export default function AIExpenseTrackerPage() {
         'Mobile app access',
         'Cloud backup',
         'Email support'
-      ],
+      ],;
       popular: false;
     },
     {
@@ -102,7 +94,6 @@ export default function AIExpenseTrackerPage() {
       popular: false;
     }
   ]
-
   const testimonials = [
     {
       name: 'David Kim',
@@ -126,7 +117,6 @@ export default function AIExpenseTrackerPage() {
       avatar: 'JW'
     }
   ]
-
   const benefits = [
     {
       icon: <Clock className="w-5h-5ml-2" />,
@@ -149,50 +139,18 @@ export default function AIExpenseTrackerPage() {
       description: 'Instant updates across all devices and team members'
     }
   ]
-
   return (
-<<<<<<< HEAD
-
+    <div>Content</div>
+  );
         <>
       <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Expense Tracker - Zion Tech Group | Smart Financial Management</title>
-
                     <span>Start Free Trial</span>
                     <span>View All Plans</span>
-
                   <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-
-<<<<<<< HEAD
-=======
-  return (
-    <>
-      <Helmet>
-        <title>A I Expense Tracker - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered expense tracker with smart receipt scanning, automated categorization, and real-time analytics. Save 5+ hours weekly. Starting at $9/month." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">A I Expense Tracker</h1>
-          <p className="text-lg text-gray-300 mb-8">Transform your financial management with AI-powered expense tracking, smart receipt scanning, 
-            and automated categorization. Save time and gain insights like never before.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-      </>
->>>>>>> origin/main
+      </>;
   );
-
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title />AI Expense Tracker - Zion Tech Group | Smart Financial Management</title>
         <meta name="description" content="Revolutionary AI-powered expense tracker with smart receipt scanning, automated categorization, and real-time analytics. Save 5+ hours weekly. Starting at $9/month." /></meta>
@@ -209,13 +167,13 @@ export default function AIExpenseTrackerPage() {
             <DollarSign className="w-5h-5ml-2" /></DollarSign>
             <span />AI-Powered Financial Management</span>
           </div>
-          <h1 className="w-5h-5ml-2" /></h1>
+          <h1 className="w-5h-5ml-2" /></h1>;
             AI Expense;
             <br /></br>
             <span className="w-5h-5ml-2" />Tracker;
             </span>
           </h1>
-          <p className="w-5h-5ml-2">Transform your financial management with AI-powered expense tracking, smart receipt scanning, 
+          <p className = "w-5h-5ml-2">Transform your financial management with AI-powered expense tracking, smart receipt scanning, 
             and automated categorization. Save time and gain insights like never before.
           </p>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -303,18 +261,16 @@ export default function AIExpenseTrackerPage() {
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {pricingPlans.map((plan, index) => (
-              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
+              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${              }`} /></div>;
                 plan.popular;
                   ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
                   : 'border-white/20 hover: border-cyan-400/30'
-              }`} /></div>
                 {plan.popular && (
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular;
                     </div>
                 )}
-                
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                   <p className="w-5h-5ml-2">{plan.description}</p>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -328,10 +284,10 @@ export default function AIExpenseTrackerPage() {
                       <span className="w-5h-5ml-2" />{feature}</span>
                     </li>
                   ))}
-                </ul>
+                </ul>;
                 <Link;</Link></Link>
-                  to="/contact"
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  to = "/contact"
+                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
@@ -343,13 +299,13 @@ export default function AIExpenseTrackerPage() {
           </div>
       </section>
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" /></h2>
+            <h2 className="w-5h-5ml-2" /></h2>;
               Trusted by <span className="w-5h-5ml-2" />25,000+</span> Users;
             </h2>
-            <p className="w-5h-5ml-2">See what our customers are saying about their success with our AI expense tracker.
+            <p className = "w-5h-5ml-2">See what our customers are saying about their success with our AI expense tracker.
             </p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -401,7 +357,6 @@ export default function AIExpenseTrackerPage() {
             </div>
         </div>
       </section>
-    </div>
+    </div>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

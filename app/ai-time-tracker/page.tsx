@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
 import { Clock, Timer, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Target, Brain, Shield } from 'lucide-react'
@@ -47,7 +42,6 @@ const AITimeTrackerPage: React.FC = () => {
       benefits: ['Local processing', 'Data encryption', 'Privacy controls', 'GDPR compliance']
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Individual',
@@ -60,7 +54,7 @@ const AITimeTrackerPage: React.FC = () => {
         'Mobile app access',
         'Standard reports',
         'Email support'
-      ],
+      ],;
       popular: false;
     },
     {
@@ -94,7 +88,6 @@ const AITimeTrackerPage: React.FC = () => {
       popular: false;
     }
   ]
-
   const testimonials = [
     {
       name: 'Alex Johnson',
@@ -118,65 +111,53 @@ const AITimeTrackerPage: React.FC = () => {
       avatar: 'DK'
     }
   ]
-
-  const stats = [
+  const stats = [;
     { number: '40%', label: 'Productivity Increase', icon: <TrendingUp className="w-5h-5ml-2" /&gt; },</TrendingUp></TrendingUp>
     { number: '20%', label: 'Faster Delivery', icon: <Timer className="w-5h-5ml-2" /&gt; },</Timer></Timer>
     { number: '95%', label: 'Accuracy Rate', icon: <Target className="w-5h-5ml-2" /&gt; },</Target></Target>
     { number: '50 K+', label: 'Hours Tracked', icon: <Clock className="w-5h-5ml-2" /&gt; }</Clock></Clock>
   ]
-
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>AiTimeTracker - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AiTimeTracker</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional aitimetracker services coming soon.</p>
-            
-              Contact Us
-
-      </>
+    <div>Content</div>
   );
-}
-
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function AITimeTrackerPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>A I Time Tracker - Zion Tech Group</title>
-        <meta name="description" content="Professional a i time tracker by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional a i time tracker by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">A I Time Tracker</h1>
           <p className="text-lg text-gray-300 mb-8">Professional a i time tracker coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
     <></>
       <Helmet></Helmet>
         <title>AI Time Tracker - Smart Productivity Management | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered time tracking with activity recognition, productivity analytics, and automated reporting. Increase productivity by 40% and deliver projects 20% faster." /></meta>
+        <meta name = "description" content="Revolutionary AI-powered time tracking with activity recognition, productivity analytics, and automated reporting. Increase productivity by 40% and deliver projects 20% faster." /></meta>
         <meta name="keywords" content="AI time tracking, productivity management, activity recognition, time analytics, project management, work optimization" /></meta>
         <meta name="robots" content="index, follow" /></meta>
         <link rel="canonical" href="https://ziontechgroup.com/ai-time-tracker"  /></link>
@@ -190,13 +171,13 @@ export default function AITimeTrackerPage() {
             <Clock className="w-5h-5ml-2" /></Clock>
             <span />AI-Powered Time Management</span>
           </div>
-          <h1 className="w-5h-5ml-2" /></h1>
+          <h1 className="w-5h-5ml-2" /></h1>;
             AI Time;
             <br /></br>
             <span className="w-5h-5ml-2" />Tracker Pro;
             </span>
           </h1>
-          <p className="w-5h-5ml-2">Transform your productivity with AI-powered time tracking, 
+          <p className = "w-5h-5ml-2">Transform your productivity with AI-powered time tracking, 
             activity recognition, and intelligent insights that increase efficiency by 40%.
           </p>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -231,12 +212,12 @@ export default function AITimeTrackerPage() {
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="w-5h-5ml-2" /></h2>
               Intelligent <span className="w-5h-5ml-2" />Features</span>
-            </h2>
+            </h2>;
             <p className="w-5h-5ml-2">Our AI-powered time tracking platform uses machine learning to automatically;
               track activities, analyze productivity patterns, and provide actionable insights.
             </p>
           </div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {features.map((feature, index) => (
               <div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300hover:scale-105" /></div>
                 <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
@@ -262,25 +243,23 @@ export default function AITimeTrackerPage() {
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="w-5h-5ml-2" /></h2>
               Simple <span className="w-5h-5ml-2" />Pricing</span>
-            </h2>
+            </h2>;
             <p className="w-5h-5ml-2">Choose the perfect plan for your time tracking needs. All plans include our core AI features;
               with flexible options for individuals and teams.
             </p>
           </div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {pricingPlans.map((plan, index) => (
-              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
+              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${              }`} /></div>;
                 plan.popular;
                   ? 'border-indigo-400/50 shadow-2 xl shadow-indigo-500/20' 
                   : 'border-white/20 hover: border-white/40'
-              }`} /></div>
                 {plan.popular && (
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular;
                     </div>
                 )}
-                
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                   <p className="w-5h-5ml-2">{plan.description}</p>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -294,10 +273,10 @@ export default function AITimeTrackerPage() {
                       <span className="w-5h-5ml-2" />{feature}</span>
                     </div>
                   ))}
-                </div>
+                </div>;
                 <Link;</Link></Link>
-                  to="/contact" 
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  to = "/contact" 
+                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-indigo-500 to-cyan-600 text-white hover:from-indigo-600 hover:to-cyan-700 shadow-lg shadow-indigo-500/25'
                       : 'border-2 border-indigo-400 text-indigo-400 hover: bg-indigo-400 hover:text-gray-900'
@@ -309,7 +288,7 @@ export default function AITimeTrackerPage() {
           </div>
       </section>
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="w-5h-5ml-2" /></h2>
@@ -341,10 +320,10 @@ export default function AITimeTrackerPage() {
       {/* CTA Section */}
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <h2 className="w-5h-5ml-2" /></h2>
+          <h2 className="w-5h-5ml-2" /></h2>;
             Ready to Boost Your;
             <br /></br>
-            <span className="w-5h-5ml-2" />Productivity?
+            <span className = "w-5h-5ml-2" />Productivity?
             </span>
           </h2>
           <p className="w-5h-5ml-2">Join thousands of professionals already increasing productivity and improving work-life balance with AI Time Tracker. 
@@ -363,6 +342,4 @@ export default function AITimeTrackerPage() {
       </section>
     </>
   )
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
+};

@@ -1,23 +1,17 @@
 import React from 'react';
-<<<<<<< HEAD
-
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Globe, Target } from 'lucide-react';
-
-=======
->>>>>>> origin/main
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 export default function AISupplyChainOptimizerPage() {
+  return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
 'use client';
-
-<<<<<<< HEAD
-export default function AISupplyChainOptimizerPage() {
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
   const features = [
     {
       title: 'Predictive Demand Forecasting',
@@ -42,9 +36,9 @@ export default function AISupplyChainOptimizerPage() {
       description: 'Comprehensive risk assessment and compliance monitoring to ensure supply chain resilience.',
       icon: <Shield className="w-5h-5ml-2" />,
       benefits: ['Risk assessment', 'Compliance monitoring', 'Disruption alerts', 'Mitigation strategies']
-    }
+    };
   ];
-  const pricingPlans = [
+const pricingPlans = [
     {
       name: 'Starter',
       price: '$199',
@@ -56,7 +50,7 @@ export default function AISupplyChainOptimizerPage() {
         'Route optimization',
         'Email support',
         'Standard integrations'
-      ],
+      ],;
       popular: false;
     },
     {
@@ -95,7 +89,7 @@ export default function AISupplyChainOptimizerPage() {
       name: 'Robert Chen',
       role: 'Supply Chain Director',
       company: 'Global Logistics Inc.',
-      content: 'AI Supply Chain Optimizer reduced our logistics costs by 35% and improved delivery times by 40%. The predictive analytics are game-changing.',
+      content: 'AI Supply Chain Optimizer reduced our logistics costs by 35% and improved delivery times by 40%. The predictive analytics are game-changing.',;
       rating: 5;
     },
     {
@@ -113,54 +107,41 @@ export default function AISupplyChainOptimizerPage() {
       rating: 5;
     }
   ];
-  const stats = [
+  const stats = [;
     { number: '35%', label: 'Cost Reduction', icon: <TrendingUp className="w-5h-5ml-2" /&gt; },</TrendingUp></TrendingUp>
     { number: '92%', label: 'Forecast Accuracy', icon: <Target className="w-5h-5ml-2" /&gt; },</Target></Target>
     { number: '500+', label: 'Companies Using', icon: <Globe className="w-5h-5ml-2" /&gt; },</Globe></Globe>
     { number: '40%', label: 'Delivery Improvement', icon: <Clock className="w-5h-5ml-2" /&gt; }</Clock></Clock>
   ];
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-
-                <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
-
-<<<<<<< HEAD
-=======
+    <div>Content</div>
+  );
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
-export default function AISupplyChainOptimizerPage() {
   return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>A I Supply Chain Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional a i supply chain optimizer services by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional a i supply chain optimizer services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">AI Supply Chain Optimizer</h1>
           <p className="text-lg text-gray-300 mb-8">Revolutionize your supply chain with AI-powered demand forecasting, route optimization, 
                 and intelligent inventory management. Reduce costs by 35% and improve efficiency by 40%.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-      </>
->>>>>>> origin/main
+      </>;
   );
-
-=======
     <></>
       <Helmet>        <title>AI Supply Chain Optimizer - Smart Logistics & Inventory Management | Zion Tech Group</title>
         <meta const name = "description" content="Optimize your supply chain with AI-powered demand forecasting, route optimization, and inventory management. Reduce costs by 35% and improve delivery times by 40%." /  /></meta>
@@ -171,31 +152,31 @@ export default function AISupplyChainOptimizerPage() {
         {/* Hero Section */}
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h1 className="w-5h-5ml-2">AI Supply Chain Optimizer;
               </h1>
-              <p className="w-5h-5ml-2">Revolutionize your supply chain with AI-powered demand forecasting, route optimization, 
+              <p className = "w-5h-5ml-2">Revolutionize your supply chain with AI-powered demand forecasting, route optimization, 
                 and intelligent inventory management. Reduce costs by 35% and improve efficiency by 40%.
               </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                 <FuturisticButton;</FuturisticButton></FuturisticButton>
-                  variant="primary"
+                  variant = "primary"
                   size="lg"
                   onClick="{()" = /> window.open('/contact', '_blank')}
-                >
+                >;
                   Start Free Trial;
-                  <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-                </FuturisticButton>
+                  <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+                </FuturisticButton>;
                 <FuturisticButton;</FuturisticButton></FuturisticButton>
-                  variant="ghost"
+                  variant = "ghost"
                   size="lg"
                   onClick="{()" =  />window.open('#demo', '_blank')}
-                >
+                >;
                   Watch Demo;
                 </FuturisticButton>
               </div>
             {/* Stats */}
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {stats.map((stat, index) => (
                 <div key={index} className="text-center" /></div>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.icon}
@@ -208,13 +189,13 @@ export default function AISupplyChainOptimizerPage() {
         {/* Features Section */}
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Advanced AI Features;
               </h2>
               <p className="w-5h-5ml-2">Cutting-edge artificial intelligence meets supply chain expertise to optimize your operations;
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {features.map((feature, index) => (
                 <FuturisticCard key="{index}" variant="service" className="h-full" /></FuturisticCard>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -237,26 +218,25 @@ export default function AISupplyChainOptimizerPage() {
         {/* Pricing Section */}
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Choose Your Plan;
               </h2>
               <p className="w-5h-5ml-2">Scalable pricing options to match your supply chain needs;
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              {pricingPlans.map((plan, index) => (
+            <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              {pricingPlans.map((plan, index) => (;
                 <FuturisticCard;</FuturisticCard></FuturisticCard>
-                  key="{index}" 
+                  key = "{index}" 
                   variant="{plan.popular" ? "feature" : "service"} 
                   className="{`h-full" ${plan.popular ? 'ring-2 ring-purple-500' : ''}`} /></FuturisticCard>
                   {plan.popular && (
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                       <span className="w-5h-5ml-2" />Most Popular;
                       </span>
                     </div>
                   )}
-                  
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                       <span className="w-5h-5ml-2" />{plan.price}</span>
@@ -271,12 +251,12 @@ export default function AISupplyChainOptimizerPage() {
                         {feature}
                       </li>
                     ))}
-                  </ul>
+                  </ul>;
                   <FuturisticButton;</FuturisticButton></FuturisticButton>
-                    variant="{plan.popular" ? "primary" : "ghost"}
+                    variant = "{plan.popular" ? "primary" : "ghost"}
                     className="w-full"
                     onClick="{()" =  />window.open('/contact', '_blank')}
-                  >
+                  >;
                     Get Started;
                   </FuturisticButton>
                 </FuturisticCard>
@@ -284,15 +264,15 @@ export default function AISupplyChainOptimizerPage() {
             </div>
         </section>
         {/* Testimonials Section */}
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />What Our Clients Say;
               </h2>
               <p className="w-5h-5ml-2">Join hundreds of companies optimizing their supply chains;
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {testimonials.map((testimonial, index) => (
                 <FuturisticCard key="{index}" variant="testimonial" className="h-full" /></FuturisticCard>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -319,30 +299,29 @@ export default function AISupplyChainOptimizerPage() {
               </h2>
               <p className="w-5h-5ml-2">Start your free 14-day trial today. No credit card required. Join 500+ companies optimizing their supply chains.
               </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                 <FuturisticButton;</FuturisticButton></FuturisticButton>
-                  variant="primary"
+                  variant = "primary"
                   size="lg"
                   onClick="{()" =  />window.open('/contact', '_blank')}
-                >
+                >;
                   Start Free Trial;
                 </FuturisticButton>
                 <FuturisticButton;</FuturisticButton></FuturisticButton>
-                  variant="secondary"
+                  variant = "secondary"
                   size="lg"
                   onClick="{()" =  />window.open('/contact', '_blank')}
-                >
+                >;
                   Schedule Demo;
                 </FuturisticButton>
               </div>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <p />✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
               </div>
             </FuturisticCard>
           </div>
         </section>
           </FuturisticBackground>
-</>
+</>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

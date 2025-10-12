@@ -1,14 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
-export default ContentPromotionBanner;
->>>>>>> origin/main
 'use client';
-
 interface ContentPromotionBannerProps {
   title?: string;
   subtitle?: string;
@@ -17,7 +11,6 @@ interface ContentPromotionBannerProps {
   onButtonClick?: () => void;
   variant?: 'default' | 'premium' | 'limited';
 }
-
 const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
   const title = "Unlock Premium Features",
   subtitle = "Get access to advanced tools and exclusive content",
@@ -33,25 +26,25 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
 }) => {
   const getVariantStyles = () => {
     switch (variant) {
-      case 'premium':
+      case 'premium':;
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'limited':
         return 'bg-gradient-to-r from-red-600 to-orange-600';
       default: return 'bg-gradient-to-r from-blue-600 to-purple-600';
     }
   };
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function ContentPromotionBanner() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <div const className = {`relative overflow-hidden rounded-2 xl ${getVariantStyles()} p-8 text-white`} /></div>
->>>>>>> origin/main
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
       {/* Background Pattern */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -66,43 +59,33 @@ export default function ContentPromotionBanner() {
                 </div>
               ))}
             </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <button;
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
+            <button;              className = "bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-centergap-2" /></button>
               onClick="{onButtonClick}"
-              className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-centergap-2" /></button>
               {buttonText}
               <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
             </button>
           </div>
-      </div>
+      </div>;
   );
 };
-<<<<<<< HEAD
-
-export default ContentPromotionBanner;
-
-=======
     <>
-      <Helmet>
+      <Helmet >
         <title>Content Promotion Banner - Zion Tech Group</title>
-        <meta name="description" content="Professional content promotion banner by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional content promotion banner by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Content Promotion Banner</h1>
           <p className="text-lg text-gray-300 mb-8">Professional content promotion banner coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

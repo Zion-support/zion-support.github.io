@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { MessageSquare } from 'lucide-react';
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> origin/main
-
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 interface FormData {
   name: string;,
   email: string;,
@@ -16,15 +8,7 @@ interface FormData {
   company: string;,
   message: string;,
   service: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/main
-
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
   const [formData, setFormData] = useState<FormData />({
     name: '',
     email: '',
@@ -35,19 +19,13 @@ interface FormData {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement />) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement />) => {;
     const { name, value } = e.target;
     setFormData(const prev = > ({
-      ...prev,
+      ...prev,;
       [name]: value;
     }));
   };
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-  const handleSubmit = async (e: React.FormEvent) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
@@ -55,19 +33,15 @@ interface FormData {
     setIsSubmitting(false);
     setIsSubmitted(true);
     // Reset form after 3 seconds
-=======
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     setIsSubmitting(true);
-
     // Simulate form submission;
     await new Promise(const resolve = > setTimeout(resolve, 1000));
     setIsSubmitting(false);
     setIsSubmitted(true);
-
     // Reset form after 3 seconds;
     setTimeout(() => {
->>>>>>> origin/main
       setIsSubmitted(false);
       setFormData({
         name: '',
@@ -81,23 +55,17 @@ interface FormData {
   };
   if (isSubmitted) {
     return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <h3 className="text-2 xl font-boldtext-whitemb-2">Message Sent!</h3>
-
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-        <h3 className="text-2 xl font-bold text-whitemb-2"  >Message Sent!</h3>
->>>>>>> origin/main
+    <div>Content</div>
+  );
+        <h3 className = "text-2 xl font-boldtext-whitemb-2">Message Sent!</h3>
         <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>
-      </div>
+      </div>;
     );
   }
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div>Content</div>
+  );
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <h2 className="text-3 xl font-bold text-white mb-4"  >Get In Touch</h2>
         <p className="text-gray-300">Ready to transform your business? Let's discuss your project.</p>
@@ -106,38 +74,38 @@ interface FormData {
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div /></div>
             <label htmlFor="name" className="block text-sm font-mediumtext-gray-300mb-2"  />Full Name *
-            </label>
+            </label>;
             <input;
-              type="text"
+              type = "text"
               id="name"
               name="name"
               value="{formData.name}"
-              onChange="{handleChange}"
+              onChange="{handleChange}";
               required;
-              className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"
+              className = "w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"
               placeholder="Your full name"
              /></input>
           </div>
           <div /></div>
             <label htmlFor="email" className="block text-sm font-mediumtext-gray-300mb-2"  />Email Address *
-            </label>
+            </label>;
             <input;
-              type="email"
+              type = "email"
               id="email"
               name="email"
               value="{formData.email}"
-              onChange="{handleChange}"
+              onChange="{handleChange}";
               required;
-              className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"
+              className = "w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"
               placeholder="your@email.com"
              /></input>
           </div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div /></div>
+          <div /></div>;
             <label htmlFor="phone" className="block text-sm font-mediumtext-gray-300mb-2"  />Phone Number;
             </label>
             <input;
-              type="tel"
+              type = "tel"
               id="phone"
               name="phone"
               value="{formData.phone}"
@@ -146,11 +114,11 @@ interface FormData {
               placeholder="+1 (555) 123-4567"
              /></input>
           </div>
-          <div /></div>
+          <div /></div>;
             <label htmlFor="company" className="block text-sm font-mediumtext-gray-300mb-2"  />Company;
             </label>
             <input;
-              type="text"
+              type = "text"
               id="company"
               name="company"
               value="{formData.company}"
@@ -159,11 +127,11 @@ interface FormData {
               placeholder="Your company name"
              /></input>
           </div>
-        <div /></div>
+        <div /></div>;
           <label htmlFor="service" className="block text-sm font-mediumtext-gray-300mb-2"  />Service Interest;
           </label>
           <select;
-            id="service"
+            id = "service"
             name="service"
             value="{formData.service}"
             onChange="{handleChange}"
@@ -178,22 +146,21 @@ interface FormData {
         </div>
         <div /></div>
           <label htmlFor="message" className="block text-sm font-mediumtext-gray-300mb-2"  />Message *
-          </label>
+          </label>;
           <textarea;
-            id="message"
+            id = "message"
             name="message"
             value="{formData.message}"
-            onChange="{handleChange}"
+            onChange="{handleChange}";
             required;
-            rows="{5}"
+            rows = "{5}"
             className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500focus:border-transparentresize-none"
             placeholder="Tell us about your project..."
            /></textarea>
-        </div>
-        <button;
+        </div>;
+        <button;          className = "w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-centerdisabled:opacity-50disabled:cursor-not-allowed" /></button>
           type="submit"
           disabled="{isSubmitting}"
-          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-centerdisabled:opacity-50disabled:cursor-not-allowed" /></button>
           {isSubmitting ? (
             <></>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -201,28 +168,23 @@ interface FormData {
             </>
           ) : (
             <></>
-              <Send className="w-5h-5ml-2" /></Send>
+              <Send className="w-5h-5ml-2" /></Send>;
               Send Message;
             </>
           )}
-<<<<<<< HEAD
-
-            <span className="text-gray-300">kleber@ziontechgroup.com</span>
-            <span className="text-gray-300">+1 (302) 464-0950</span>
-            <span className="text-gray-300">24/7 Support</span>
-
-=======
     <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         </div></div><CheckCircle className="w-5 h-5 ml-2" />
         <h3 className="text-2 xl font-boldtext-whitemb-2"  >Message Sent!</h3>
         <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>
       </div>
-    </>
+    </>;
   );
   }
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div>Content</div>
+  );
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         </div></div><h2 className="text-3 xl font-boldtext-white mb-4"  >Get In Touch</h2>
         <p className="text-gray-300">Ready to transform your business? Let's discuss your project.</p>
@@ -232,8 +194,7 @@ interface FormData {
           </div></div><div />
             </div></div><label htmlFor="name" className="block text-sm font-mediumtext-gray-300mb-2"  />Full Name *
             </label>
-            <input
-              type="text"
+            <input type="text"
               id="name"
               name="name"
               value="{formData.name}"
@@ -246,8 +207,7 @@ interface FormData {
           <div />
             </div></div><label htmlFor="email" className="block text-sm font-mediumtext-gray-300mb-2"  />Email Address *
             </label>
-            <input
-              type="email"
+            <input type="email"
               id="email"
               name="email"
               value="{formData.email}"
@@ -261,8 +221,7 @@ interface FormData {
           </div></div><div />
             </div></div><label htmlFor="phone" className="block text-sm font-mediumtext-gray-300mb-2"  />Phone Number
             </label>
-            <input
-              type="tel"
+            <input type="tel"
               id="phone"
               name="phone"
               value="{formData.phone}"
@@ -274,8 +233,7 @@ interface FormData {
           <div />
             </div></div><label htmlFor="company" className="block text-sm font-mediumtext-gray-300mb-2"  />Company
             </label>
-            <input
-              type="text"
+            <input type="text"
               id="company"
               name="company"
               value="{formData.company}"
@@ -287,8 +245,7 @@ interface FormData {
         <div />
           </div></div><label htmlFor="service" className="block text-sm font-mediumtext-gray-300mb-2"  />Service Interest
           </label>
-          <select
-            id="service"
+          <select id="service"
             name="service"
             value="{formData.service}"
             onChange="{handleChange}"
@@ -304,8 +261,7 @@ interface FormData {
         <div />
           </div></div><label htmlFor="message" className="block text-sm font-mediumtext-gray-300mb-2"  />Message *
           </label>
-          <textarea
-            id="message"
+          <textarea id="message"
             name="message"
             value="{formData.message}"
             onChange="{handleChange}"
@@ -315,10 +271,9 @@ interface FormData {
             placeholder="Tell us about your project..."
            />
         </div>
-        <button
+        <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-centerdisabled:opacity-50disabled:cursor-not-allowed" />
           type="submit"
           disabled="{isSubmitting}"
-          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-centerdisabled:opacity-50disabled:cursor-not-allowed" />
           {isSubmitting ? (
             <>
               </><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
@@ -347,8 +302,6 @@ interface FormData {
             <span className="text-gray-300"  >24/7 Support</span>
           </div>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
         </button>
       </form>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -365,7 +318,6 @@ interface FormData {
             <MessageSquare className="w-5h-5ml-2" /></MessageSquare>
             <span className="text-gray-300"  >24/7 Support</span>
           </div>
-      </div>
->>>>>>> origin/main
+      </div>;
   );
 }

@@ -1,21 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Bot, Code, Search, GitBranch, Database, Shield, CheckCircle, Zap, Brain, BarChart, Users } from 'lucide-react';
-
 const AICodeAssistantProPage: React.FC = () => {
-=======
 import React from 'react'
 import { Link } from 'react-router-dom'
 export default function AICodeAssistantProPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
+  return (
+    <div>Content</div>
+  );
+    <div>Component content</div>;
+  );
+}
   const features = [
     {
       icon: <Bot className="w-6 h-6" />,
@@ -52,10 +48,9 @@ export default function AICodeAssistantProPage() {
       title: 'Security & Compliance',
       description: 'Built-in security scanning and compliance checking for enterprise-grade code quality',
       color: 'from-red-500 to-pink-500'
-    }
+    };
   ];
-
-  const useCases = [
+const useCases = [
     {
       title: 'Rapid Prototyping',
       description: 'Quickly build and test new features with AI-generated code',
@@ -70,9 +65,8 @@ export default function AICodeAssistantProPage() {
       title: 'Legacy Code Modernization',
       description: 'Update and modernize existing codebases with AI assistance',
       benefits: ['Refactor complex code', 'Update deprecated patterns', 'Maintain functionality']
-    }
+    };
   ];
-
   const pricingPlans = [
     {
       name: 'Developer',
@@ -85,7 +79,7 @@ export default function AICodeAssistantProPage() {
         '5 programming languages',
         'Email support',
         'Basic analytics'
-      ],
+      ],;
       popular: false;
     },
     {
@@ -121,63 +115,36 @@ export default function AICodeAssistantProPage() {
       popular: false;
     }
   ];
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function AICodeAssistantPro() {
-=======
->>>>>>> origin/main
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>AI Code Assistant Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional AI-powered code generation and assistance tool. Boost productivity with intelligent code completion, debugging, and analysis." />
-        <meta name="keywords" content="AI code assistant, code generation, programming AI, developer tools, code completion" />
-      </Helmet>
-
-<<<<<<< HEAD
-        <>
-      <title>AI Code Assistant Pro - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AI Code Assistant Pro</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional AI code assistant pro services coming soon.</p>
-            
-              Contact Us
-
-<<<<<<< HEAD
+    <div>Content</div>
   );
-=======
-export default function AICodeAssistantProPage() {
   return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>A I Code Assistant Pro - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered code assistant with intelligent generation, debugging, and analysis. Increase development speed by 300%. Starting at $29/month." />
+        <meta name = "description" content="Revolutionary AI-powered code assistant with intelligent generation, debugging, and analysis. Increase development speed by 300%. Starting at $29/month." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">A I Code Assistant Pro</h1>
           <p className="text-lg text-gray-300 mb-8">Transform your development workflow with AI-powered code generation, intelligent debugging, and analysis. 
             Increase development speed by 300% while reducing bugs by 80%.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       </>
-=======
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className = "relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Code Assistant
@@ -190,23 +157,20 @@ export default function AICodeAssistantProPage() {
             and automated debugging. Built for professional developers and teams.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link >
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
+            <Link >
               to="/demo" 
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
               View Demo
             </Link>
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -218,7 +182,6 @@ export default function AICodeAssistantProPage() {
               Everything you need to accelerate your development workflow and write better code faster.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -232,7 +195,6 @@ export default function AICodeAssistantProPage() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -244,7 +206,6 @@ export default function AICodeAssistantProPage() {
               Whether you're a solo developer or part of a large team, our AI assistant adapts to your needs.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -263,7 +224,6 @@ export default function AICodeAssistantProPage() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -275,7 +235,6 @@ export default function AICodeAssistantProPage() {
               Choose the plan that fits your development needs. No hidden fees, no surprises.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-cyan-400 ring-2 ring-cyan-400/20' : 'border-white/20'} relative`}>
@@ -302,16 +261,13 @@ export default function AICodeAssistantProPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  to="/contact"
+                <Link to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                  }`}
-                >
+                  }`}>
                   Get Started
-=======
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title>AI Code Assistant Pro - Zion Tech Group | Intelligent Code Generation</title>
@@ -329,13 +285,13 @@ export default function AICodeAssistantProPage() {
             <Code className="w-5h-5ml-2" /></Code>
             <span />AI-Powered Code Generation</span>
           </div>
-          <h1 className="w-5h-5ml-2" /></h1>
+          <h1 className="w-5h-5ml-2" /></h1>;
             AI Code Assistant;
             <br /></br>
             <span className="w-5h-5ml-2" />Pro;
             </span>
           </h1>
-          <p className="w-5h-5ml-2">Transform your development workflow with AI-powered code generation, intelligent debugging, and analysis. 
+          <p className = "w-5h-5ml-2">Transform your development workflow with AI-powered code generation, intelligent debugging, and analysis. 
             Increase development speed by 300% while reducing bugs by 80%.
           </p>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -464,18 +420,16 @@ export default function AICodeAssistantProPage() {
           </div>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {pricingPlans.map((plan, index) => (
-              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
+              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${              }`} /></div>;
                 plan.popular;
                   ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
                   : 'border-white/20 hover: border-cyan-400/30'
-              }`} /></div>
                 {plan.popular && (
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular;
                     </div>
                 )}
-                
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                   <p className="w-5h-5ml-2">{plan.description}</p>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -489,66 +443,28 @@ export default function AICodeAssistantProPage() {
                       <span className="w-5h-5ml-2" />{feature}</span>
                     </li>
                   ))}
-                </ul>
+                </ul>;
                 <Link;</Link></Link>
-                  to="/contact"
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  to = "/contact"
+                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
                   }`}
                   />Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
                 </Link>
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Supercharge Your Development?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of developers already using our AI assistant to write better code faster.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Start Your Free Trial
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              to="/demo" 
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              Schedule a Demo
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default AICodeAssistantProPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
-=======
       </section>
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" /></h2>
+            <h2 className="w-5h-5ml-2" /></h2>;
               Trusted by <span className="w-5h-5ml-2" />25,000+</span> Developers;
             </h2>
-            <p className="w-5h-5ml-2">See what our customers are saying about their success with our AI code assistant.
+            <p className = "w-5h-5ml-2">See what our customers are saying about their success with our AI code assistant.
             </p>
           </div>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -599,8 +515,6 @@ export default AICodeAssistantProPage;
                 </div>
             </div>
         </div>
-      </section>
+      </section>;
     </div>  );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

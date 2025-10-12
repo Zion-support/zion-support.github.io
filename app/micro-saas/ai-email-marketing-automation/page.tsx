@@ -1,23 +1,16 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-
 import React from 'react';
-
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 import { ArrowRight, Mail, BarChart3, Users, Zap, CheckCircle, Clock, Target, TrendingUp, Smartphone, Shield, Bot, Star, Smartphone as Mobile, Eye } from 'lucide-react';
-
-=======
->>>>>>> origin/main
 export default function AIEmailMarketingAutomationPage() {
-<<<<<<< HEAD
+  return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
   const features = [
     {
       icon: <Bot className="w-5h-5ml-2" />,
@@ -50,7 +43,6 @@ export default function AIEmailMarketingAutomationPage() {
       description: 'AI-powered tools ensure maximum inbox placement and compliance with email regulations'
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -64,7 +56,7 @@ export default function AIEmailMarketingAutomationPage() {
         'Mobile app access',
         'Email support',
         'Basic analytics'
-      ],
+      ],;
       popular: false;
     },
     {
@@ -102,7 +94,6 @@ export default function AIEmailMarketingAutomationPage() {
       popular: false;
     }
   ]
-
   const testimonials = [
     {
       name: 'Rachel Green',
@@ -126,7 +117,6 @@ export default function AIEmailMarketingAutomationPage() {
       avatar: 'LC'
     }
   ]
-
   const benefits = [
     {
       icon: <TrendingUp className="w-5h-5ml-2" />,
@@ -149,7 +139,6 @@ export default function AIEmailMarketingAutomationPage() {
       description: 'AI-powered optimization ensures maximum inbox placement'
     }
   ]
-
   const emailTypes = [
     { name: 'Welcome Series', icon: '👋', description: 'Onboard new subscribers with personalized sequences' },
     { name: 'Product Recommendations', icon: '🛍️', description: 'AI-powered product suggestions based on behavior' },
@@ -158,50 +147,18 @@ export default function AIEmailMarketingAutomationPage() {
     { name: 'Birthday & Anniversaries', icon: '🎉', description: 'Celebrate special moments with personalized messages' },
     { name: 'Educational Content', icon: '📚', description: 'Nurture leads with valuable, AI-generated content' }
   ]
-
   return (
-<<<<<<< HEAD
-
+    <div>Content</div>
+  );
         <>
       <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Email Marketing Automation - Zion Tech Group | Smart Email Campaigns</title>
-
                     <span>Start Free Trial</span>
                     <span>View All Plans</span>
-
                   <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-
-<<<<<<< HEAD
-=======
-  return (
-    <>
-      <Helmet>
-        <title>A I Email Marketing Automation - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered email marketing automation with smart segmentation, content generation, and predictive analytics. Increase open rates by 150%. Starting at $29/month." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">A I Email Marketing Automation</h1>
-          <p className="text-lg text-gray-300 mb-8">Transform your email marketing with AI-powered automation, smart segmentation, and personalized content. 
-            Increase open rates by 150% and revenue by 40% with intelligent campaigns.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-      </>
->>>>>>> origin/main
+      </>;
   );
-
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title />AI Email Marketing Automation - Zion Tech Group | Smart Email Campaigns</title>
         <meta name="description" content="Revolutionary AI-powered email marketing automation with smart segmentation, content generation, and predictive analytics. Increase open rates by 150%. Starting at $29/month." /></meta>
@@ -218,13 +175,13 @@ export default function AIEmailMarketingAutomationPage() {
             <Mail className="w-5h-5ml-2" /></Mail>
             <span />AI-Powered Email Marketing</span>
           </div>
-          <h1 className="w-5h-5ml-2" /></h1>
+          <h1 className="w-5h-5ml-2" /></h1>;
             AI Email Marketing;
             <br /></br>
             <span className="w-5h-5ml-2" />Automation;
             </span>
           </h1>
-          <p className="w-5h-5ml-2">Transform your email marketing with AI-powered automation, smart segmentation, and personalized content. 
+          <p className = "w-5h-5ml-2">Transform your email marketing with AI-powered automation, smart segmentation, and personalized content. 
             Increase open rates by 150% and revenue by 40% with intelligent campaigns.
           </p>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -336,18 +293,16 @@ export default function AIEmailMarketingAutomationPage() {
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {pricingPlans.map((plan, index) => (
-              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
+              <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${              }`} /></div>;
                 plan.popular;
                   ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
                   : 'border-white/20 hover: border-cyan-400/30'
-              }`} /></div>
                 {plan.popular && (
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular;
                     </div>
                 )}
-                
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   <h3 className="w-5h-5ml-2" />{plan.name}</h3>
                   <p className="w-5h-5ml-2">{plan.description}</p>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -361,10 +316,10 @@ export default function AIEmailMarketingAutomationPage() {
                       <span className="w-5h-5ml-2" />{feature}</span>
                     </li>
                   ))}
-                </ul>
+                </ul>;
                 <Link;</Link></Link>
-                  to="/contact"
-                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  to = "/contact"
+                  className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${;
                     plan.popular;
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
@@ -376,13 +331,13 @@ export default function AIEmailMarketingAutomationPage() {
           </div>
       </section>
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" /></h2>
+            <h2 className="w-5h-5ml-2" /></h2>;
               Trusted by <span className="w-5h-5ml-2" />50,000+</span> Marketers;
             </h2>
-            <p className="w-5h-5ml-2">See what our customers are saying about their success with our AI email marketing automation.
+            <p className = "w-5h-5ml-2">See what our customers are saying about their success with our AI email marketing automation.
             </p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -434,7 +389,6 @@ export default function AIEmailMarketingAutomationPage() {
             </div>
         </div>
       </section>
-    </div>
+    </div>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

@@ -1,12 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function PricingPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Transparent pricing for our AI and IT services." />
+        <meta name = "description" content="Transparent pricing for our AI and IT services." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
@@ -14,6 +21,6 @@ export default function PricingPage() {
           <p className="text-lg text-gray-300 mb-8">Contact us for custom pricing based on your needs.</p>
         </div>
       </div>
-    </>
+    </>;
   );
 }

@@ -1,110 +1,64 @@
 #!/usr/bin/env python3
 """
-Script to fix 5G pages with broken JSX structure.
+Script to fix 5G pages with parsing errors.
 """
 
 import os
-import re
-from pathlib import Path
+import glob
 
-<<<<<<< HEAD
-def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a file"""
-    with open(file_path, 'r') as f:
-        content = f.read()
-    
-    # Remove merge conflict markers and keep the second version (after =======)
-    content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n(.*?)\n>>>>>>> .*?\n', r'\1', content, flags=re.DOTALL)
-    
-    # Clean up any remaining merge conflict markers
-    content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n', '', content, flags=re.DOTALL)
-    content = re.sub(r'>>>>>>> .*?\n', '', content)
-    
-    with open(file_path, 'w') as f:
-        f.write(content)
-    
-    print(f"Fixed merge conflicts in {file_path}")
-
-def main():
-    # Find all 5G pages
-    pattern = "app/5g-*/page.tsx"
-    files = glob.glob(pattern)
-    
-    for file_path in files:
-        if os.path.exists(file_path):
-            fix_merge_conflicts(file_path)
-    
-    print(f"Processed {len(files)} files")
-=======
-def fix_5g_page(file_path):
-    """Fix a single 5G page file."""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Extract the page name from the file path
-        page_name = file_path.stem.replace('-', ' ').title().replace(' ', '')
-        
-        # Create a proper React component structure
-        fixed_content = f'''import React from 'react';
+def fix_5g_page(file_path, title, description):
+    """Fix a 5G page with proper structure."""
+    content = f'''import React from 'react';
 import {{ Helmet }} from 'react-helmet-async';
 import {{ Link }} from 'react-router-dom';
 import {{ ArrowRight }} from 'lucide-react';
 
-export default function {page_name}() {{
+export default function {title.replace(' ', '').replace('-', '')}Page() {{
   return (
     <>
       <Helmet>
-        <title>{page_name} - Zion Tech Group</title>
-        <meta name="description" content="Professional {page_name.lower()} services by Zion Tech Group" />
+        <title>{title} - Zion Tech Group</title>
+        <meta name="description" content="{description}" />
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-6">{page_name}</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional {page_name.lower()} services coming soon.</p>
-            
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Contact Us
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">{title}</h1>
+          <p className="text-lg text-gray-300 mb-8">{description}</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </div>
       </div>
     </>
   );
-}}'''
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(fixed_content)
-        
-        return True
-        
-    except Exception as e:
-        print(f"Error processing {file_path}: {e}")
-        return False
+}}
+'''
+    
+    with open(file_path, 'w', encoding='utf-8') as f:
+        f.write(content)
 
 def main():
-    """Main function to fix all 5G pages."""
-    workspace = Path('/workspace')
+    """Fix all 5G pages."""
+    pages = [
+        ('/workspace/app/5g-implementation/page.tsx', '5G Implementation', 'Comprehensive 5G network implementation services for businesses and organizations.'),
+        ('/workspace/app/5g-iot-solutions/page.tsx', '5G IoT Solutions', 'Advanced 5G-powered IoT solutions for connected devices and smart systems.'),
+        ('/workspace/app/5g-mobile-applications/page.tsx', '5G Mobile Applications', 'High-performance mobile applications optimized for 5G networks.'),
+        ('/workspace/app/5g-network-infrastructure/page.tsx', '5G Network Infrastructure', 'Robust 5G network infrastructure design and deployment services.'),
+        ('/workspace/app/5g-private-networks/page.tsx', '5G Private Networks', 'Secure private 5G network solutions for enterprise environments.'),
+        ('/workspace/app/5g-smart-city-solutions/page.tsx', '5G Smart City Solutions', 'Innovative 5G solutions for smart city development and management.'),
+        ('/workspace/app/5g-solutions/page.tsx', '5G Solutions', 'Comprehensive 5G technology solutions for modern businesses.'),
+    ]
     
-    # Find all 5G pages
-    five_g_pages = list(workspace.glob('app/5g-*/page.tsx'))
-    
-    print(f"Found {len(five_g_pages)} 5G pages to fix")
-    
-    fixed_count = 0
-    for page_path in five_g_pages:
-        if fix_5g_page(page_path):
-            fixed_count += 1
-            print(f"Fixed: {page_path}")
-    
-    print(f"Successfully fixed {fixed_count} 5G pages")
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+    for file_path, title, description in pages:
+        try:
+            fix_5g_page(file_path, title, description)
+            print(f"Fixed {file_path}")
+        except Exception as e:
+            print(f"Error fixing {file_path}: {e}")
 
 if __name__ == "__main__":
     main()

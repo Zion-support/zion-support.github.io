@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 export default PageBackupPage;
@@ -36,6 +31,8 @@ const PageBackupPage: React.FC = () => {
   }
     ]
 return (
+    <div>Content</div>
+  );
     <></>
       <Helmet  > </Helmet><title>Page Backup - Zion Tech Group</title>
         <meta /></meta>
@@ -49,14 +46,14 @@ return (
         </section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  /></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
             <h1 />Page Backup;
             </h1>
             <p></p>
               Advanced page backup solutions powered by AI technology.
             </p>
-            <div className="flexflex-col sm: flex-rowgap-4 justify-center" /  /></div>
-              <button /></button>
+            <div className = "flexflex-col sm: flex-rowgap-4 justify-center" /  /></div>
+              <button /></button>;
                 Get Started;
               </button>
               <button /></button>
@@ -64,38 +61,38 @@ return (
               </button>
             </div>
         </section>
-        <section className="w-5h-5ml-2" /></section>
+        <section className = "w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  /></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
             <h1 className="w-5h-5ml-2" />Page Backup;
-            <p className="w-5h-5ml-2" /></p>
+            <p className = "w-5h-5ml-2" /></p>
               Advanced page backup solutions powered by AI technology.
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <button className="w-5h-5ml-2" />Get Started;
               <button className="w-5h-5ml-2" />Learn More;
         {/* Features Section */}
-        <section className="py-20px-4"  > </section><div className="</div><divclassName="text-center mb-16"  > </div><h2 className="text-4xl font-bold text-white mb-4"  >Section Title</h2>
+        <section className = "py-20px-4"  > </section><div className="</div><divclassName="text-center mb-16"  > </div><h2 className="text-4xl font-bold text-white mb-4"  >Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </section>
           <div className="max-w-7xlmx-auto" /  /></div>
             <div className="text-centermb-16" /  /></div>
-              <h2 /></h2>
+              <h2 /></h2>;
                 Key Features;
               </h2>
               <p></p>
                 Powerful AI technology that drives results;
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5backdrop-blur-sm rounded-2 xl p-8 hover:bg-white/10 transition-all duration-300group" /></div>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <feature /></feature>
                   <h3 className="text-xlfont-bold text-white mb-4"  >{feature.title}</h3>
                   <p className="text-gray-300mb-4">{feature.description}</p>
-                  {
+                  {;
     feature.benefits && (;
                     <ul />{feature.benefits.map((benefit, idx) => (
   }
@@ -107,14 +104,13 @@ return (
                   )}
                 </div>
               ))}
-
             </div>
         </section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <h2 className="w-5h-5ml-2" />Key Features;
               <p className="text-xltext-gray-300 max-w-3xl mx-auto">Powerful AI technology that drives results;
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className = "min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5backdrop-blur-sm rounded-2 xl p-8 hover:bg-white/10 transition-all duration-300group" /></div>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -144,7 +140,7 @@ return (
                 Contact our experts to discuss your requirements and get started today.
               </p>
               <div className="flexflex-col sm: flex-rowgap-4 justify-center" /  /></div>
-                <button /></button>
+                <button /></button>;
                   Contact Us;
                 </button>
                 <button /></button>
@@ -158,36 +154,36 @@ return (
 </>
   ),
 };
-<<<<<<< HEAD
-export default PageBackupPage;
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function PageBackupPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>Backup - Zion Tech Group</title>
-        <meta name="description" content="Professional backup by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name = "description" content="Professional backup by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Backup</h1>
           <p className="text-lg text-gray-300 mb-8">Professional backup coming soon.</p>
-          <Link
+          <Link >
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

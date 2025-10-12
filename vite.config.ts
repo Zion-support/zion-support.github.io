@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
-
 export default defineConfig({
   // https://vitejs.dev/config/
   plugins: [
@@ -31,7 +30,6 @@ export default defineConfig({
     minify: 'esbuild',
     target: 'es2020',
     cssCodeSplit: true,
-    
     rollupOptions: {
       output: {
         chunkFileNames: 'assets/[name]-[hash].js',
