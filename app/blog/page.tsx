@@ -22,16 +22,5 @@ export default function BlogPage() {
         </Link>
       </div>
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-  );
-};
-
-<<<<<<< HEAD
-export default BlogPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
-export default BlogPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-a621

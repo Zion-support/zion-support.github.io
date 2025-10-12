@@ -3,7 +3,7 @@
 import React, { Suspense } from 'react';
 
 
-import { Brain, ArrowRight, MessageSquare } from 'lucide-react';
+import { Brain, ArrowRight, MessageSquare, Users, Star, Globe, TrendingUp, Shield, CheckCircle, BarChart3, FileText, Mic, Mail, Box, FlaskConical, Cloud, Settings, Smartphone, CheckSquare, Receipt, Key, FileSpreadsheet, Heart } from 'lucide-react';
 import FuturisticBackground from './components/FuturisticBackground';
 import FuturisticCard from './components/FuturisticCard';
 import FuturisticButton from './components/FuturisticButton';
@@ -24,52 +24,193 @@ export default function HomePage() {
 
   const services = [
     {
-      title: 'AI Content Generation',
-      description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
+      title: 'AI Content Generation Pro',
+      description: 'Transform your content strategy with our advanced AI-powered content generation tools. Generate high-quality, SEO-optimized content in 50+ languages.',
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       link: '/ai-content-generator',
-      features: ['Automated content creation', 'SEO optimization', 'Multi-language support'],
-      price: 'Starting at $99/month'
+      features: ['Automated content creation', 'SEO optimization', 'Multi-language support', 'Plagiarism detection'],
+      price: 'Starting at $99/month',
+      category: 'AI Services'
     },
     {
       title: 'AI CRM Assistant',
-      description: 'Boost sales by 45% with AI-powered lead scoring, email automation, and predictive analytics.',
+      description: 'Boost sales by 45% with AI-powered lead scoring, email automation, and predictive analytics. Complete customer relationship management solution.',
       icon: <Users className="w-8 h-8 text-purple-400" />,
       link: '/ai-crm-assistant',
-      features: ['AI lead scoring', 'Email automation', 'Predictive analytics'],
-      price: 'Starting at $49/month'
+      features: ['AI lead scoring', 'Email automation', 'Predictive analytics', 'Sales forecasting'],
+      price: 'Starting at $49/month',
+      category: 'AI Services'
     },
     {
       title: 'AI Social Media Manager',
-      description: 'Increase engagement by 200% with AI-powered social media automation and content generation.',
+      description: 'Increase engagement by 200% with AI-powered social media automation and content generation across all platforms.',
       icon: <MessageSquare className="w-8 h-8 text-pink-400" />,
       link: '/ai-social-media-manager',
-      features: ['AI content generation', 'Smart scheduling', 'Analytics insights'],
-      price: 'Starting at $29/month'
+      features: ['AI content generation', 'Smart scheduling', 'Analytics insights', 'Brand monitoring'],
+      price: 'Starting at $29/month',
+      category: 'AI Services'
     },
     {
       title: 'AI Cybersecurity Suite',
-      description: 'Protect your business with 99.9% threat detection accuracy using advanced AI security.',
+      description: 'Protect your business with 99.9% threat detection accuracy using advanced AI security and zero-trust architecture.',
       icon: <Shield className="w-8 h-8 text-red-400" />,
       link: '/ai-cybersecurity-suite',
-      features: ['AI threat detection', 'Zero trust security', 'Automated response'],
-      price: 'Starting at $199/month'
+      features: ['AI threat detection', 'Zero trust security', 'Automated response', 'Compliance monitoring'],
+      price: 'Starting at $199/month',
+      category: 'AI Services'
     },
     {
       title: 'AI Smart City Solutions',
-      description: 'Transform urban infrastructure with AI-powered smart city technologies and IoT integration.',
+      description: 'Transform urban infrastructure with AI-powered smart city technologies and IoT integration for sustainable development.',
       icon: <Globe className="w-8 h-8 text-green-400" />,
       link: '/ai-smart-city-solutions',
-      features: ['Traffic optimization', 'Energy management', 'IoT integration'],
-      price: 'Starting at $50,000/project'
+      features: ['Traffic optimization', 'Energy management', 'IoT integration', 'Environmental monitoring'],
+      price: 'Starting at $50,000/project',
+      category: 'IT Services'
     },
     {
       title: '5G Implementation',
-      description: 'Leverage the power of 5G technology for ultra-fast connectivity and IoT solutions.',
+      description: 'Leverage the power of 5G technology for ultra-fast connectivity and IoT solutions with edge computing capabilities.',
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
       link: '/5g-implementation',
-      features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing'],
-      price: 'Starting at $5,000/project'
+      features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing', 'Private networks'],
+      price: 'Starting at $5,000/project',
+      category: 'IT Services'
+    },
+    {
+      title: 'AI Business Intelligence Pro',
+      description: 'Transform data into actionable insights with our advanced AI-powered business intelligence platform and predictive analytics.',
+      icon: <BarChart3 className="w-8 h-8 text-blue-400" />,
+      link: '/ai-business-intelligence-pro',
+      features: ['Predictive analytics', 'Real-time dashboards', 'Data visualization', 'Custom reports'],
+      price: 'Starting at $299/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'AI Document Processing',
+      description: 'Automate document workflows with AI-powered OCR, data extraction, and intelligent document classification.',
+      icon: <FileText className="w-8 h-8 text-indigo-400" />,
+      link: '/ai-document-processing',
+      features: ['OCR technology', 'Data extraction', 'Document classification', 'Workflow automation'],
+      price: 'Starting at $149/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'AI Voice Assistant',
+      description: 'Build intelligent voice interfaces with our AI-powered voice assistant platform supporting multiple languages.',
+      icon: <Mic className="w-8 h-8 text-orange-400" />,
+      link: '/ai-voice-assistant',
+      features: ['Natural language processing', 'Multi-language support', 'Voice synthesis', 'Custom commands'],
+      price: 'Starting at $199/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'AI Email Marketing Automation',
+      description: 'Maximize email campaign performance with AI-powered personalization, send-time optimization, and content generation.',
+      icon: <Mail className="w-8 h-8 text-teal-400" />,
+      link: '/ai-email-marketing-automation',
+      features: ['AI personalization', 'Send-time optimization', 'Content generation', 'A/B testing'],
+      price: 'Starting at $79/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'AI 3D Generation',
+      description: 'Create stunning 3D models and animations with our AI-powered 3D generation platform for gaming, AR/VR, and design.',
+      icon: <Box className="w-8 h-8 text-violet-400" />,
+      link: '/ai-3d-generation',
+      features: ['3D model generation', 'Animation creation', 'AR/VR support', 'Game asset creation'],
+      price: 'Starting at $399/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'AI Drug Discovery Pro',
+      description: 'Accelerate pharmaceutical research with AI-powered drug discovery, molecular analysis, and clinical trial optimization.',
+      icon: <FlaskConical className="w-8 h-8 text-emerald-400" />,
+      link: '/ai-drug-discovery-pro',
+      features: ['Molecular analysis', 'Drug design', 'Clinical trial optimization', 'Safety prediction'],
+      price: 'Starting at $2,999/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'Cloud Migration Services',
+      description: 'Seamlessly migrate your infrastructure to the cloud with our expert cloud migration services and optimization.',
+      icon: <Cloud className="w-8 h-8 text-sky-400" />,
+      link: '/cloud-migration',
+      features: ['AWS/Azure/GCP migration', 'Cost optimization', 'Security compliance', 'Performance tuning'],
+      price: 'Starting at $2,500/project',
+      category: 'IT Services'
+    },
+    {
+      title: 'DevOps Solutions',
+      description: 'Streamline your development workflow with our comprehensive DevOps solutions including CI/CD, monitoring, and automation.',
+      icon: <Settings className="w-8 h-8 text-amber-400" />,
+      link: '/devops',
+      features: ['CI/CD pipelines', 'Infrastructure as code', 'Monitoring & logging', 'Security automation'],
+      price: 'Starting at $1,500/month',
+      category: 'IT Services'
+    },
+    {
+      title: 'Mobile App Development',
+      description: 'Create powerful mobile applications for iOS and Android with our expert mobile development team and modern frameworks.',
+      icon: <Smartphone className="w-8 h-8 text-rose-400" />,
+      link: '/mobile-development',
+      features: ['iOS & Android apps', 'Cross-platform development', 'UI/UX design', 'App store optimization'],
+      price: 'Starting at $5,000/project',
+      category: 'IT Services'
+    },
+    {
+      title: 'AI Task Manager',
+      description: 'Boost productivity with our AI-powered task management system that learns from your work patterns and optimizes schedules.',
+      icon: <CheckSquare className="w-8 h-8 text-lime-400" />,
+      link: '/ai-task-manager',
+      features: ['Smart scheduling', 'Priority optimization', 'Team collaboration', 'Progress tracking'],
+      price: 'Starting at $19/month',
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Expense Tracker Pro',
+      description: 'Simplify expense management with AI-powered receipt scanning, categorization, and automated reporting for businesses.',
+      icon: <Receipt className="w-8 h-8 text-cyan-400" />,
+      link: '/ai-expense-tracker-pro',
+      features: ['Receipt scanning', 'Auto-categorization', 'Tax preparation', 'Expense analytics'],
+      price: 'Starting at $39/month',
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Password Manager',
+      description: 'Secure your digital life with our AI-powered password manager featuring advanced encryption and breach monitoring.',
+      icon: <Key className="w-8 h-8 text-red-400" />,
+      link: '/ai-password-manager',
+      features: ['Advanced encryption', 'Breach monitoring', 'Password generation', 'Multi-device sync'],
+      price: 'Starting at $9/month',
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Invoice Generator',
+      description: 'Create professional invoices instantly with our AI-powered invoice generator that adapts to your business needs.',
+      icon: <FileSpreadsheet className="w-8 h-8 text-green-400" />,
+      link: '/ai-invoice-generator',
+      features: ['Auto-generation', 'Custom templates', 'Payment tracking', 'Tax calculations'],
+      price: 'Starting at $29/month',
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Health Tracker',
+      description: 'Monitor your health and wellness with our AI-powered health tracking platform that provides personalized insights.',
+      icon: <Heart className="w-8 h-8 text-pink-400" />,
+      link: '/ai-health-tracker',
+      features: ['Health monitoring', 'AI insights', 'Goal tracking', 'Medical integration'],
+      price: 'Starting at $15/month',
+      category: 'Micro SAAS'
+    },
+    {
+      title: 'AI Meeting Transcriber',
+      description: 'Transform your meetings with AI-powered transcription, note-taking, and action item extraction for better productivity.',
+      icon: <Mic className="w-8 h-8 text-purple-400" />,
+      link: '/ai-meeting-transcriber',
+      features: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Multi-language support'],
+      price: 'Starting at $49/month',
+      category: 'Micro SAAS'
     }
   ];
 
@@ -244,59 +385,80 @@ export default function HomePage() {
         <section className="py-12 sm:py-16 lg:py-20 px-4" role="region" aria-labelledby="services-title">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 id="services-title" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Our Core Services</h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-                Comprehensive technology solutions designed to accelerate your digital transformation
+              <h2 id="services-title" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Our Comprehensive Services</h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+                Cutting-edge AI, IT, and Micro SAAS solutions designed to accelerate your digital transformation and drive business growth
               </p>
             </div>
             
-            <Suspense fallback={
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
-                {[...Array(6)].map((_, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 animate-pulse">
-                    <div className="h-8 w-8 bg-gray-600 rounded mb-4"></div>
-                    <div className="h-6 bg-gray-600 rounded mb-4"></div>
-                    <div className="h-4 bg-gray-600 rounded mb-6"></div>
-                    <div className="space-y-2 mb-6">
-                      <div className="h-4 bg-gray-600 rounded"></div>
-                      <div className="h-4 bg-gray-600 rounded"></div>
-                      <div className="h-4 bg-gray-600 rounded"></div>
-                    </div>
-                    <div className="h-4 bg-gray-600 rounded"></div>
+            {/* Service Categories */}
+            {['AI Services', 'IT Services', 'Micro SAAS'].map((category) => (
+              <div key={category} className="mb-16">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2 flex items-center justify-center">
+                    {category === 'AI Services' && <Brain className="w-6 h-6 text-cyan-400 mr-2" />}
+                    {category === 'IT Services' && <Shield className="w-6 h-6 text-green-400 mr-2" />}
+                    {category === 'Micro SAAS' && <Box className="w-6 h-6 text-purple-400 mr-2" />}
+                    {category}
+                  </h3>
+                  <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-600 mx-auto rounded-full"></div>
+                </div>
+                
+                <Suspense fallback={
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    {[...Array(6)].map((_, index) => (
+                      <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 animate-pulse">
+                        <div className="h-8 w-8 bg-gray-600 rounded mb-4"></div>
+                        <div className="h-6 bg-gray-600 rounded mb-4"></div>
+                        <div className="h-4 bg-gray-600 rounded mb-6"></div>
+                        <div className="space-y-2 mb-6">
+                          <div className="h-4 bg-gray-600 rounded"></div>
+                          <div className="h-4 bg-gray-600 rounded"></div>
+                          <div className="h-4 bg-gray-600 rounded"></div>
+                        </div>
+                        <div className="h-4 bg-gray-600 rounded"></div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            }>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
-                {services.map((service, index) => (
-                  <FuturisticCard
-                    key={index}
-                    variant="service"
-                    className="h-full"
-                    onClick={() => window.open(service.link, '_blank')}
-                  >
-                    <div className="mb-4" aria-hidden="true">{service.icon}</div>
-                    <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    <div className="text-cyan-400 font-semibold mb-4 text-sm">
-                      {service.price}
-                    </div>
-                    <ul className="space-y-2 mb-6" role="list">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" aria-hidden="true" />
-                          {feature}
-                        </li>
+                }>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    {services
+                      .filter(service => service.category === category)
+                      .map((service, index) => (
+                        <FuturisticCard
+                          key={index}
+                          variant="service"
+                          className="h-full group hover:scale-105 transition-all duration-300"
+                          onClick={() => window.open(service.link, '_blank')}
+                        >
+                          <div className="mb-4 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
+                            {service.icon}
+                          </div>
+                          <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                            {service.title}
+                          </h3>
+                          <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                          <div className="text-cyan-400 font-semibold mb-4 text-sm bg-cyan-400/10 px-3 py-1 rounded-full inline-block">
+                            {service.price}
+                          </div>
+                          <ul className="space-y-2 mb-6" role="list">
+                            {service.features.map((feature, featureIndex) => (
+                              <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                                <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" aria-hidden="true" />
+                                {feature}
+                              </li>
+                            ))}
+                          </ul>
+                          <div className="mt-6 flex items-center text-blue-400 group-hover:text-cyan-400 transition-colors">
+                            Learn More
+                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                          </div>
+                        </FuturisticCard>
                       ))}
-                    </ul>
-                    <div className="mt-6 flex items-center text-blue-400">
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
-                    </div>
-                  </FuturisticCard>
-                ))}
+                  </div>
+                </Suspense>
               </div>
-            </Suspense>
+            ))}
           </div>
         </section>
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import React, { useState } from 'react';
@@ -37,83 +36,82 @@ import {
 
 export default function AISocialMediaManagerPage() {
   const [selectedPlan, setSelectedPlan] = useState('pro');
-=======
-import React from 'react'
-
-import Layout from '../layout'
-
-import { ArrowRight, MessageSquare } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-b5ac
 
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       title: 'AI Content Generation',
-      description: 'Generate engaging social media posts using advanced AI algorithms',
-      benefits: ['Platform-specific content', 'Trending hashtags', 'Engaging captions']
+      description: 'Generate engaging social media content using advanced AI algorithms that understand your brand voice.',
+      benefits: ['Automated post creation', 'Brand voice consistency', 'Trend analysis', 'Content optimization']
     },
     {
-      icon: <Clock className="w-8 h-8 text-green-400" />,
+      icon: <Calendar className="w-8 h-8 text-purple-400" />,
       title: 'Smart Scheduling',
-      description: 'Post at optimal times when your audience is most active',
-      benefits: ['Optimal timing', 'Timezone management', 'Content calendar']
+      description: 'Optimize your posting schedule based on audience engagement patterns and peak activity times.',
+      benefits: ['Optimal timing', 'Cross-platform posting', 'Content calendar', 'Automated scheduling']
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
-      title: 'Analytics & Insights',
-      description: 'Track performance and get actionable insights for better engagement',
-      benefits: ['Engagement metrics', 'Audience insights', 'ROI tracking']
+      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
+      title: 'Advanced Analytics',
+      description: 'Get detailed insights into your social media performance with AI-powered analytics and reporting.',
+      benefits: ['Engagement metrics', 'ROI tracking', 'Audience insights', 'Performance predictions']
     },
     {
       icon: <Target className="w-8 h-8 text-orange-400" />,
       title: 'Audience Targeting',
-      description: 'Reach the right audience with AI-powered targeting and segmentation',
-      benefits: ['Demographic targeting', 'Interest-based segments', 'Behavioral analysis']
+      description: 'Reach the right audience with AI-powered targeting and personalized content recommendations.',
+      benefits: ['Demographic analysis', 'Interest targeting', 'Behavioral insights', 'Custom audiences']
     },
     {
-      icon: <Activity className="w-8 h-8 text-red-400" />,
-      title: 'Real-time Monitoring',
-      description: 'Monitor mentions, comments, and engagement across all platforms',
-      benefits: ['Brand monitoring', 'Sentiment analysis', 'Crisis management']
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: 'Brand Safety',
+      description: 'Ensure your content aligns with your brand values and avoid potential PR issues with AI monitoring.',
+      benefits: ['Content moderation', 'Brand compliance', 'Crisis detection', 'Reputation management']
     },
     {
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      title: 'Automation Tools',
-      description: 'Automate repetitive tasks and focus on strategy and creativity',
-      benefits: ['Auto-responses', 'Content recycling', 'Cross-platform posting']
+      title: 'Automation Suite',
+      description: 'Automate repetitive tasks and focus on strategy with our comprehensive automation tools.',
+      benefits: ['Auto-responses', 'Lead generation', 'Customer service', 'Workflow automation']
     }
   ];
 
   const platforms = [
     {
       name: 'Facebook',
-      icon: <Share2 className="w-6 h-6 text-blue-500" />,
-      description: 'Manage Facebook pages and groups with AI optimization'
+      icon: <MessageSquare className="w-6 h-6 text-blue-500" />,
+      description: 'Manage Facebook pages, groups, and advertising campaigns',
+      features: ['Page management', 'Ad creation', 'Audience insights', 'Engagement tracking']
     },
     {
       name: 'Instagram',
       icon: <Image className="w-6 h-6 text-pink-500" />,
-      description: 'Create stunning visual content and stories automatically'
+      description: 'Create stunning visual content and manage Instagram presence',
+      features: ['Story creation', 'Reel optimization', 'Hashtag research', 'Visual analytics']
     },
     {
       name: 'Twitter',
       icon: <Hash className="w-6 h-6 text-blue-400" />,
-      description: 'Engage with trending topics and optimize tweet performance'
+      description: 'Engage with real-time conversations and trending topics',
+      features: ['Tweet scheduling', 'Trend monitoring', 'Thread creation', 'Engagement tracking']
     },
     {
       name: 'LinkedIn',
       icon: <Users className="w-6 h-6 text-blue-600" />,
-      description: 'Professional content for B2B engagement and networking'
+      description: 'Build professional networks and B2B relationships',
+      features: ['Article publishing', 'Company updates', 'Lead generation', 'Professional networking']
     },
     {
       name: 'TikTok',
       icon: <Video className="w-6 h-6 text-black" />,
-      description: 'Create viral short-form videos with AI assistance'
+      description: 'Create viral short-form video content',
+      features: ['Video editing', 'Trend analysis', 'Hashtag optimization', 'Viral tracking']
     },
     {
       name: 'YouTube',
       icon: <Video className="w-6 h-6 text-red-500" />,
-      description: 'Optimize video content and manage channel growth'
+      description: 'Manage YouTube channels and video content',
+      features: ['Video optimization', 'SEO for videos', 'Thumbnail creation', 'Analytics dashboard']
     }
   ];
 
@@ -122,14 +120,14 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
       name: 'Starter',
       price: '$29',
       period: '/month',
-      description: 'Perfect for small businesses and influencers',
+      description: 'Perfect for small businesses and individuals',
       features: [
         '3 social media accounts',
         'Basic AI content generation',
-        'Scheduling for 1 month',
+        'Standard scheduling',
         'Basic analytics',
         'Email support',
-        'Mobile app'
+        '5 posts per day'
       ],
       popular: false
     },
@@ -141,11 +139,12 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
       features: [
         '10 social media accounts',
         'Advanced AI features',
-        'Unlimited scheduling',
+        'Smart scheduling',
         'Advanced analytics',
         'Priority support',
+        'Unlimited posts',
         'Team collaboration',
-        'API access'
+        'Custom branding'
       ],
       popular: true
     },
@@ -153,15 +152,16 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
       name: 'Enterprise',
       price: '$199',
       period: '/month',
-      description: 'For large organizations and agencies',
+      description: 'For large organizations with complex needs',
       features: [
         'Unlimited accounts',
         'All AI features',
-        'Custom AI training',
-        'White-label solution',
+        'Custom automation',
+        'White-label options',
         'Dedicated support',
-        'Advanced security',
-        'Custom reporting'
+        'API access',
+        'Custom integrations',
+        'Advanced reporting'
       ],
       popular: false
     }
@@ -169,40 +169,40 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
 
   const testimonials = [
     {
-      name: 'Jessica Park',
-      company: 'Digital Marketing Agency',
-      content: 'The AI Social Media Manager has increased our client engagement by 200%. The content quality is incredible and our team saves 15+ hours per week.',
+      name: 'Sarah Johnson',
+      company: 'Digital Marketing Pro',
+      content: 'The AI Social Media Manager has transformed our social media strategy. We\'ve seen a 200% increase in engagement and 150% more leads.',
       rating: 5,
-      avatar: 'JP'
+      avatar: 'SJ'
     },
     {
-      name: 'Marcus Thompson',
-      company: 'E-commerce Brand',
-      content: 'Our social media presence has grown by 300% since using this tool. The AI-generated content performs better than our manually created posts.',
+      name: 'Michael Chen',
+      company: 'E-commerce Solutions',
+      content: 'The automation features save us 10+ hours per week. The AI content generation is incredibly accurate and on-brand.',
       rating: 5,
-      avatar: 'MT'
+      avatar: 'MC'
     },
     {
-      name: 'Sarah Kim',
-      company: 'Personal Brand',
-      content: 'As an influencer, this tool has been a game-changer. The optimal posting times and content suggestions have doubled my follower growth.',
+      name: 'Emily Rodriguez',
+      company: 'Creative Agency',
+      content: 'The analytics insights are game-changing. We can now make data-driven decisions and optimize our campaigns in real-time.',
       rating: 5,
-      avatar: 'SK'
+      avatar: 'ER'
     }
   ];
 
   const stats = [
     { number: '200%', label: 'Increase in Engagement', icon: <Heart className="w-6 h-6" /> },
-    { number: '300%', label: 'Growth in Followers', icon: <Users className="w-6 h-6" /> },
-    { number: '15hrs', label: 'Time Saved Per Week', icon: <Clock className="w-6 h-6" /> },
-    { number: '95%', label: 'Content Performance', icon: <TrendingUp className="w-6 h-6" /> }
+    { number: '50+', label: 'Social Platforms Supported', icon: <Globe className="w-6 h-6" /> },
+    { number: '99.8%', label: 'Customer Satisfaction', icon: <Star className="w-6 h-6" /> },
+    { number: '24/7', label: 'AI Processing', icon: <Clock className="w-6 h-6" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>AI Social Media Manager - Zion Tech Group | Automated Social Media Management</title>
-        <meta name="description" content="Transform your social media presence with our AI-powered Social Media Manager. Automate content creation, scheduling, and analytics. Increase engagement by 200% with intelligent automation." />
+        <meta name="description" content="Transform your social media strategy with our AI-powered social media manager. Automate content creation, scheduling, and analytics across all platforms. Increase engagement by 200%." />
         <meta name="keywords" content="AI social media manager, social media automation, content generation, social media analytics, Zion Tech Group" />
       </Helmet>
 
@@ -216,8 +216,8 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your social media presence with our AI-powered Social Media Manager. 
-            Automate content creation, scheduling, and analytics to increase engagement by 200%.
+            Transform your social media strategy with our AI-powered management platform. 
+            Automate content creation, scheduling, and analytics across all platforms.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -256,10 +256,10 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Powerful Social Media Features</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Powerful AI Features</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Our AI Social Media Manager comes packed with advanced features to automate and optimize 
-              your social media presence across all platforms.
+              Our AI Social Media Manager comes packed with advanced features to automate 
+              and optimize your social media presence across all platforms.
             </p>
           </div>
           
@@ -295,14 +295,21 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {platforms.map((platform, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group text-center">
-                <div className="flex items-center justify-center mb-4">
+              <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
+                <div className="flex items-center mb-4">
                   {platform.icon}
+                  <h3 className="text-lg font-semibold text-white ml-3">{platform.name}</h3>
                 </div>
-                <h3 className="text-sm font-semibold text-white mb-2">{platform.name}</h3>
-                <p className="text-xs text-gray-400">{platform.description}</p>
+                <p className="text-gray-300 mb-4">{platform.description}</p>
+                <div className="space-y-1">
+                  {platform.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="text-sm text-gray-400">
+                      • {feature}
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
@@ -370,7 +377,7 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">What Our Customers Say</h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Join thousands of satisfied customers who have transformed their social media presence.
+                Join thousands of satisfied customers who have transformed their social media strategy.
               </p>
             </div>
             
@@ -402,11 +409,11 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 border border-cyan-500/30">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Social Media?
+              Ready to Transform Your Social Media Strategy?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Start using our AI Social Media Manager today and see how intelligent automation 
-              can increase your engagement by 200%.
+              Start automating your social media management with our AI platform. 
+              Join thousands of businesses already using our technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -414,14 +421,13 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center"
               >
                 Start Free Trial
-                <Share2 className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/about"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center"
               >
                 Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </div>

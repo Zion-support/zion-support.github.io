@@ -20,7 +20,6 @@ export default function Footer() {
   ];
 
   const itServices = [
-<<<<<<< HEAD
     { name: 'Web Development', path: '/web-development' },
     { name: 'Mobile Development', path: '/mobile-development' },
     { name: 'DevOps', path: '/devops' },
@@ -54,27 +53,6 @@ export default function Footer() {
     { name: '5G Mobile Applications', path: '/5g-mobile-applications' },
     { name: '5G Data Analytics', path: '/5g-data-analytics' },
     { name: 'AI Smart City Solutions', path: '/ai-smart-city-solutions' }
-=======
-    { name: 'Cloud Migration', path: '/cloud-migration' },
-    { name: 'DevOps Solutions', path: '/devops' },
-    { name: 'Cybersecurity', path: '/cybersecurity' },
-    { name: 'Mobile Development', path: '/mobile-development' },
-    { name: 'Database Services', path: '/database-services' },
-    { name: 'IT Consulting', path: '/it-consulting' },
-    { name: 'Network Infrastructure', path: '/network-infrastructure' },
-    { name: 'Data Center', path: '/data-center' }
-  ];
-
-  const microSaasServices = [
-    { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard' },
-    { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler' },
-    { name: 'Chat Analytics', path: '/micro-saas/chat-analytics' },
-    { name: 'Content Generator', path: '/micro-saas/content-generator' },
-    { name: 'Document Processor', path: '/micro-saas/document-processor' },
-    { name: 'Email Marketing', path: '/micro-saas/email-marketing' },
-    { name: 'Expense Tracker', path: '/micro-saas/expense-tracker' },
-    { name: 'Inventory Management', path: '/micro-saas/inventory-management' }
->>>>>>> cursor/website-audit-and-update-with-deployment-a621
   ];
 
   const companyLinks = [
@@ -199,7 +177,6 @@ export default function Footer() {
             </ul>
           </div>
 
-<<<<<<< HEAD
           {/* 5G Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 flex items-center">
@@ -215,33 +192,16 @@ export default function Footer() {
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
-=======
-          {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Resources</h3>
-            <ul className="space-y-2">
-              {resourceLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to={link.path} 
-                    className="text-gray-400 hover:text-white transition-colors flex items-center"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2" />
-                    {link.name}
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
         </div>
 
         {/* Newsletter Signup */}
         <div className="border-t border-white/10 mt-12 pt-8">
           <NewsletterSignup variant="inline" />
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
         </div>
 
         {/* Company & Support Links */}
