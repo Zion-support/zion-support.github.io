@@ -1,15 +1,8 @@
-'use client';
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
 import { AlertTriangle, RefreshCw } from 'lucide-react';
-=======
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
 }
 
 interface State {
@@ -29,117 +22,25 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-<<<<<<< HEAD
-    
-    // Log error to monitoring service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false
-      });
-    }
   }
 
   render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-          <div className="text-center">
-            <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center mx-auto"
-            >
-              <RefreshCw className="w-4 h-4 mr-2" />
-              Try Again
-            </button>
-=======
-    this.setState({ error, errorInfo });
-  }
-
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
-  handleReload = () => {
-    window.location.reload();
-  };
-
-  handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-          <div className="max-w-md w-full text-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <AlertTriangle className="w-8 h-8 text-red-400" />
-              </div>
-              
-              <h1 className="text-2xl font-bold text-white mb-4">
-                Oops! Something went wrong
-              </h1>
-              
-              <p className="text-gray-300 mb-6">
-                We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
-              </p>
-
-              {process.env.NODE_ENV === 'development' && this.state.error && (
-                <details className="mb-6 text-left">
-                  <summary className="text-sm text-gray-400 cursor-pointer hover:text-gray-300 mb-2">
-                    Error Details (Development)
-                  </summary>
-                  <div className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 text-xs text-red-300 font-mono overflow-auto">
-                    <div className="mb-2">
-                      <strong>Error:</strong> {this.state.error.message}
-                    </div>
-                    {this.state.errorInfo && (
-                      <div>
-                        <strong>Stack Trace:</strong>
-                        <pre className="mt-1 whitespace-pre-wrap">
-                          {this.state.errorInfo.componentStack}
-                        </pre>
-                      </div>
-                    )}
-                  </div>
-                </details>
-              )}
-
-              <div className="space-y-3">
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-                >
-                  <RefreshCw className="w-5 h-5 mr-2" />
-                  Try Again
-                </button>
-                
-                <button
-                  onClick={this.handleReload}
-                  className="w-full border border-gray-300 text-white py-3 px-6 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-                >
-                  Reload Page
-                </button>
-                
-                <button
-                  onClick={this.handleGoHome}
-                  className="w-full border border-gray-300 text-white py-3 px-6 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center"
-                >
-                  <Home className="w-5 h-5 mr-2" />
-                  Go to Homepage
-                </button>
-              </div>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+            <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center mx-auto"
+            >
+              <RefreshCw className="w-4 h-4 mr-2" />
+              Refresh Page
+            </button>
           </div>
         </div>
       );
