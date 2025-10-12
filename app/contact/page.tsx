@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, Mail, Phone, MapPin, Send } from 'lucide-react'
+import { CheckCircle, Mail, Phone, MapPin, Send } from 'lucide-react';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 

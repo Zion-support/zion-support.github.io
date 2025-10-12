@@ -1,10 +1,11 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Users, Briefcase, MapPin, Clock, Star } from 'lucide-react';
+import { ArrowRight, Users, Briefcase, Clock, Star } from 'lucide-react';;
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const CareersPage: React.FC = () => {
-  const openPositions = [
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _openPositions = [
     {
       title: 'Senior AI Engineer',
       department: 'AI Research',
@@ -39,7 +40,8 @@ const CareersPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _benefits = [
     {
       icon: <Star className="w-8 h-8 text-yellow-500" />,
       title: 'Competitive Compensation',

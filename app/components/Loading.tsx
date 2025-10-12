@@ -1,8 +1,7 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const LoadingPage: React.FC = () => {
   const features = [
@@ -143,8 +142,6 @@ const LoadingPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
     </div>
   )
 }

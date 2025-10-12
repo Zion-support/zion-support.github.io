@@ -174,3 +174,4 @@ export default GlobalErrorBoundaryPage
         </div>
       </section>
     </div>)};export default GlobalErrorBoundaryPage
+}

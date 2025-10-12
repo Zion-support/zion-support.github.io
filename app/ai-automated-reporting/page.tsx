@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, ArrowRight, BarChart3, FileText, TrendingUp, Clock, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
-
   const benefits = [
     {
       title: 'Automated Reports',
-<<<<<<< HEAD
       description: 'Generate comprehensive reports automatically without manual intervention.',
       benefits: ['Scheduled reports', 'Multiple formats', 'Custom templates', 'Email delivery']
     },
@@ -26,7 +21,6 @@ import { Link } from 'react-router-dom';
       benefits: ['Automated data collection', 'Smart formatting', 'Instant delivery', 'Zero manual work']
     }
   ];
-
   const benefits = [
     {
       icon: FileText,
@@ -65,7 +59,6 @@ import { Link } from 'react-router-dom';
       benefits: ['Data encryption', 'Access controls', 'Compliance', 'Audit trails']
     }
   ]
-
   const pricing = [
     {
       name: 'Starter',
@@ -109,7 +102,6 @@ import { Link } from 'react-router-dom';
       popular: false
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -117,7 +109,6 @@ import { Link } from 'react-router-dom';
         <meta name="description" content="Transform your data into actionable insights with our AI-powered automated reporting solutions. Generate reports instantly and make data-driven decisions." />
         <meta name="keywords" content="AI reporting, automated reports, business intelligence, data analytics, AI insights" />
       </Helmet>
-      
       {/* Hero Section */}
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto">
@@ -146,7 +137,6 @@ import { Link } from 'react-router-dom';
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -156,7 +146,6 @@ import { Link } from 'react-router-dom';
               Everything you need to automate your reporting and gain valuable insights
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
@@ -176,7 +165,6 @@ import { Link } from 'react-router-dom';
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -186,7 +174,6 @@ import { Link } from 'react-router-dom';
               Experience the benefits of intelligent automated reporting
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -198,7 +185,6 @@ import { Link } from 'react-router-dom';
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -208,7 +194,6 @@ import { Link } from 'react-router-dom';
               Choose the plan that fits your business needs
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {pricing.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
@@ -250,7 +235,6 @@ import { Link } from 'react-router-dom';
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -283,9 +267,3 @@ import { Link } from 'react-router-dom';
 };
 
 export default AIAutomatedReportingPage;
-=======
-      description: 'Generate reports automatically without manual intervention'
-    }
-  ]
-
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
