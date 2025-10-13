@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
+import EnhancedSEOHead from "./components/EnhancedSEOHead";
 
 const HomePage = () => {
   const features = [
@@ -95,6 +96,34 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <EnhancedSEOHead
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. Transform your business with cutting-edge technology and innovative solutions."
+        keywords={[
+          "AI solutions",
+          "artificial intelligence",
+          "IT services",
+          "cloud computing",
+          "cybersecurity",
+          "5G technology",
+          "enterprise software",
+          "digital transformation",
+          "machine learning",
+          "data analytics"
+        ]}
+        canonicalUrl="/"
+        ogImage="/og-image.jpg"
+        structuredData={{
+          "@type": "WebSite",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ziontechgroup.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
+      />
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."

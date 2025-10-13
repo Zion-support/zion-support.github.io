@@ -12,18 +12,9 @@ import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-<<<<<<< HEAD
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
-import SEOOptimizer from "./app/components/SEOOptimizer";
-import EnhancedSEO from "./app/components/EnhancedSEO";
-import EnhancedSEOOptimizer from "./app/components/EnhancedSEOOptimizer";
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-102c
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import EnhancedAccessibilityManager from "./app/components/EnhancedAccessibilityManager";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -66,68 +57,55 @@ function App() {
     <GlobalErrorBoundary>
       <EnhancedErrorBoundary>
         <HelmetProvider>
-          <AccessibilityEnhancer>
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <FuturisticBackground>
-                  <Navigation onSidebarToggle={toggleSidebar} />
-                  <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-                  <Breadcrumb />
-                  <main id="main-content" role="main">
-                    <Suspense fallback={<LoadingPage />}>
-                      <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/about" element={<AboutPage />} />
-                        <Route path="/contact" element={<ContactPage />} />
-                        <Route path="/services" element={<ServicesPage />} />
-                        <Route path="/pricing" element={<PricingPage />} />
-                        <Route path="/blog" element={<BlogPage />} />
-                        <Route path="/ai-services" element={<AIServicesPage />} />
-                        <Route path="/tutorials" element={<TutorialsPage />} />
-                        <Route path="/demo" element={<DemoPage />} />
-                        <Route path="/support" element={<SupportPage />} />
-                        <Route path="/privacy" element={<PrivacyPage />} />
-                        <Route path="/terms" element={<TermsPage />} />
-                        <Route path="/cookies" element={<CookiesPage />} />
-                        <Route path="/sitemap" element={<SitemapPage />} />
-                        
-                        {/* Additional routes */}
-                        <Route path="/case-studies" element={<CaseStudiesPage />} />
-                        <Route path="/consultation" element={<ConsultationPage />} />
-                        <Route path="/it-services" element={<ITServicesPage />} />
-                        <Route path="/cloud-services" element={<CloudServicesPage />} />
-                        <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                        <Route path="/custom-development" element={<CustomDevelopmentPage />} />
-                        <Route path="/web-development" element={<WebDevelopmentPage />} />
-                        <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
-                        <Route path="/database-management" element={<DatabaseManagementPage />} />
-                        <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
-                        <Route path="/data-analytics" element={<DataAnalyticsPage />} />
-                        <Route path="/careers" element={<CareersPage />} />
-                      </Routes>
-                    </Suspense>
-                  </main>
-                  <Footer />
-                </FuturisticBackground>
-<<<<<<< HEAD
-                <EnhancedAccessibility>
-                  <div></div>
-                </EnhancedAccessibility>
-                <AnalyticsProvider>
-                  <div>
-                    <PerformanceMonitor />
-                    <WebVitalsTracker />
-                    <PerformanceEnhancer />
-                    <SEOOptimizer />
-                    <EnhancedSEO title="Zion Tech Group" description="Advanced AI and IT Solutions" />
-                    <EnhancedSEOOptimizer />
-                  </div>
-                </AnalyticsProvider>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-102c
-              </div>
-            </Router>
-          </AccessibilityEnhancer>
+          <EnhancedAccessibilityManager>
+            <AccessibilityEnhancer>
+              <Router>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                  <FuturisticBackground>
+                    <Navigation onSidebarToggle={toggleSidebar} />
+                    <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+                    <Breadcrumb />
+                    <main id="main-content" role="main">
+                      <Suspense fallback={<LoadingPage />}>
+                        <Routes>
+                          <Route path="/" element={<HomePage />} />
+                          <Route path="/about" element={<AboutPage />} />
+                          <Route path="/contact" element={<ContactPage />} />
+                          <Route path="/services" element={<ServicesPage />} />
+                          <Route path="/pricing" element={<PricingPage />} />
+                          <Route path="/blog" element={<BlogPage />} />
+                          <Route path="/ai-services" element={<AIServicesPage />} />
+                          <Route path="/tutorials" element={<TutorialsPage />} />
+                          <Route path="/demo" element={<DemoPage />} />
+                          <Route path="/support" element={<SupportPage />} />
+                          <Route path="/privacy" element={<PrivacyPage />} />
+                          <Route path="/terms" element={<TermsPage />} />
+                          <Route path="/cookies" element={<CookiesPage />} />
+                          <Route path="/sitemap" element={<SitemapPage />} />
+                          
+                          {/* Additional routes */}
+                          <Route path="/case-studies" element={<CaseStudiesPage />} />
+                          <Route path="/consultation" element={<ConsultationPage />} />
+                          <Route path="/it-services" element={<ITServicesPage />} />
+                          <Route path="/cloud-services" element={<CloudServicesPage />} />
+                          <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                          <Route path="/custom-development" element={<CustomDevelopmentPage />} />
+                          <Route path="/web-development" element={<WebDevelopmentPage />} />
+                          <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                          <Route path="/database-management" element={<DatabaseManagementPage />} />
+                          <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                          <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                          <Route path="/careers" element={<CareersPage />} />
+                        </Routes>
+                      </Suspense>
+                    </main>
+                    <Footer />
+                  </FuturisticBackground>
+                  <PerformanceOptimizer />
+                </div>
+              </Router>
+            </AccessibilityEnhancer>
+          </EnhancedAccessibilityManager>
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </GlobalErrorBoundary>

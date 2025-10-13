@@ -83,15 +83,18 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
+          // Core React libraries - split further
+          if (id.includes('react-dom')) {
+            return 'react-dom'
+          }
+          if (id.includes('react') && !id.includes('react-dom')) {
+            return 'react'
           }
           // Router
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries - split by size
           if (id.includes('framer-motion')) {
             return 'animations'
           }
@@ -117,6 +120,14 @@ export default defineConfig({
           // Error handling
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
+          }
+          // Split large component files
+          if (id.includes('/components/') && id.includes('.tsx')) {
+            const componentName = id.split('/components/')[1]?.split('.')[0];
+            if (componentName && componentName.length > 20) {
+              return `component-${componentName.substring(0, 20)}`
+            }
+            return 'components'
           }
           // AI service pages - split into smaller chunks
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
