@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Video, FileText, Eye, Package2, Mic, MessageSquare, CreditCard, GitBranch, Share2, FileCheck, Gauge, TrendingDown, Truck, Calculator, Shield as Moderation, Languages, Database as DataClean, Headphones } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -90,6 +90,22 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Video Generator",
+      description: "Create professional videos from text prompts with AI-powered voice synthesis and custom branding",
+      price: "From $29/month",
+      icon: <Video className="w-6 h-6" />,
+      link: "/zion-ai-video-generator",
+      featured: true
+    },
+    {
+      name: "Zion AI Invoice Generator",
+      description: "Generate professional invoices automatically with AI data extraction and payment integration",
+      price: "From $19/month",
+      icon: <FileText className="w-6 h-6" />,
+      link: "/zion-ai-invoice-generator",
+      featured: true
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
@@ -114,35 +130,43 @@ const HomePage = () => {
       featured: true
     },
     {
-      name: "Zion AI CRM Pro",
-      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
-      price: "From $199/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-crm-pro",
+      name: "Zion AI Customer Insights",
+      description: "AI-powered customer analytics with sentiment tracking and behavioral insights",
+      price: "From $79/month",
+      icon: <Eye className="w-6 h-6" />,
+      link: "/zion-ai-customer-insights",
       featured: true
     },
     {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
+      name: "Zion AI Email Analyzer",
+      description: "Intelligent email analysis with spam detection, sentiment analysis, and response suggestions",
+      price: "From $49/month",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/zion-ai-email-analyzer",
+      featured: true
+    },
+    {
+      name: "Zion Smart Inventory Optimizer",
+      description: "AI-powered inventory management with demand forecasting and automated reordering",
       price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
+      icon: <Package2 className="w-6 h-6" />,
+      link: "/zion-smart-inventory-optimizer",
       featured: true
     },
     {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
+      name: "Zion AI Voice Assistant Pro",
+      description: "Advanced voice assistant with natural language processing and multi-language support",
+      price: "From $89/month",
+      icon: <Mic className="w-6 h-6" />,
+      link: "/zion-ai-voice-assistant-pro",
       featured: true
     }
   ];
 
   const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "25,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "80+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
@@ -294,10 +318,11 @@ const HomePage = () => {
               Featured Micro SAAS Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready-to-use software solutions that can transform your business operations immediately.
+              Discover our comprehensive suite of 80+ AI-powered micro SAAS solutions designed to 
+              automate, optimize, and transform every aspect of your business operations.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
