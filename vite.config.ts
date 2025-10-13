@@ -49,6 +49,7 @@ export default defineConfig({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     chunkSizeWarningLimit: 500,
     assetsInlineLimit: 2048,
 =======
@@ -59,6 +60,10 @@ export default defineConfig({
     chunkSizeWarningLimit: 150, // Optimized threshold for better chunking
     assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0544
+=======
+    chunkSizeWarningLimit: 150, // Optimized warning threshold for better performance
+    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
     // Enable compression
 =======
     chunkSizeWarningLimit: 150,
@@ -204,6 +209,7 @@ export default defineConfig({
             }
             return 'zion-other'
           }
+<<<<<<< HEAD
           // 5G service pages - group together
 =======
           // Group AI service pages by category for better caching
@@ -246,18 +252,42 @@ export default defineConfig({
           // Group 5G service pages
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
           // 5G service pages - group together
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
+<<<<<<< HEAD
           // Micro SAAS pages
           if (id.includes('/micro-') && id.includes('/page.tsx')) {
+=======
+          // IT service pages - group together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') &&
+              (id.includes('devops') || id.includes('cloud') || id.includes('network') || 
+               id.includes('software') || id.includes('web') || id.includes('it-'))) {
+            return 'it-services'
+          }
+          // Micro SAAS pages - group together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              (id.includes('micro-saas') || id.includes('project-management') || 
+               id.includes('customer-relationship') || id.includes('inventory') ||
+               id.includes('financial') || id.includes('employee') || id.includes('social') ||
+               id.includes('email') || id.includes('website') || id.includes('task') ||
+               id.includes('smart-') || id.includes('ai-powered'))) {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
             return 'micro-saas'
           }
           // Main pages - keep core pages together
           if (id.includes('/app/') && id.includes('/page.tsx') && 
+<<<<<<< HEAD
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') && !id.includes('/micro-')) {
+=======
+              (id.includes('about') || id.includes('contact') || id.includes('services') || 
+               id.includes('blog') || id.includes('privacy') || id.includes('terms'))) {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
             return 'main-pages'
           }
 <<<<<<< HEAD

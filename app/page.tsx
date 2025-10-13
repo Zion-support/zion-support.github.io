@@ -25,7 +25,7 @@ import EnhancedSEO from "./components/EnhancedSEO";
 import StructuredData from "./components/StructuredData";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
-import FuturisticButton from "./components/FuturisticButton";
+// import FuturisticButton from "./components/FuturisticButton";
 import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
@@ -464,6 +464,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <PerformanceOptimizer />
       <SEOOptimizer />
@@ -515,6 +516,16 @@ const HomePage: React.FC = () => {
                   View Our Work
                 </a>
               </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      <EnhancedSEO
+        title="Zion Tech Group - Advanced AI & IT Solutions | Transform Your Business"
+        description="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation. Expert technology consulting for modern businesses. Get started today!"
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, micro SAAS, 5G technology, IT services, machine learning"
+        canonical="https://ziontechgroup.com"
+      />
+      <FuturisticBackground />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
 
               {/* Contact Info */}
               <div className="flex flex-col sm:flex-row gap-6 justify-center text-sm">
@@ -902,6 +913,7 @@ const HomePage: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+<<<<<<< HEAD
             <FuturisticButton
               href="/contact"
               variant="primary"
@@ -926,6 +938,22 @@ const HomePage: React.FC = () => {
             >
               Watch Demo
             </FuturisticButton>
+=======
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            >
+              Start Your AI Journey
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/ai-services"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            >
+              Explore AI Solutions
+              <Brain className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+            </Link>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
           </div>
           
           {/* Stats */}

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 =======
 <<<<<<< HEAD
@@ -79,11 +80,19 @@ interface AccessibilityEnhancerProps {
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
     // Accessibility enhancements
+=======
+import React, { useEffect } from 'react';
+
+const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  useEffect(() => {
+    // Add accessibility enhancements
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
     const enhanceAccessibility = () => {
       // Add skip links
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
+<<<<<<< HEAD
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
       document.body.insertBefore(skipLink, document.body.firstChild);
 
@@ -185,6 +194,41 @@ export default function AccessibilityEnhancer() {
     // Screen reader enhancements
     const enhanceScreenReader = () => {
       if (!enableScreenReader) return;
+=======
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+
+      // Add focus indicators
+      const style = document.createElement('style');
+      style.textContent = `
+        *:focus {
+          outline: 2px solid #06b6d4;
+          outline-offset: 2px;
+        }
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+        .focus\\:not-sr-only:focus {
+          position: static;
+          width: auto;
+          height: auto;
+          padding: 0.5rem 1rem;
+          margin: 0;
+          overflow: visible;
+          clip: auto;
+          white-space: normal;
+        }
+      `;
+      document.head.appendChild(style);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
 
       // Add ARIA landmarks
       const main = document.querySelector('main');
@@ -192,6 +236,7 @@ export default function AccessibilityEnhancer() {
         main.setAttribute('role', 'main');
       }
 
+<<<<<<< HEAD
       // Add live regions for dynamic content
       const liveRegion = document.createElement('div');
       liveRegion.setAttribute('aria-live', 'polite');
@@ -920,12 +965,41 @@ export default AccessibilityEnhancer;
 
     // Initialize accessibility features
     const cleanup = initAccessibility()
+=======
+      // Add keyboard navigation support
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === 'Tab') {
+          document.body.classList.add('keyboard-navigation');
+        }
+      };
+
+      const handleMouseDown = () => {
+        document.body.classList.remove('keyboard-navigation');
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
+      document.addEventListener('mousedown', handleMouseDown);
+
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+        document.removeEventListener('mousedown', handleMouseDown);
+      };
+    };
+
+    const cleanup = enhanceAccessibility();
+    return cleanup;
+  }, []);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
 
       // Cleanup on unmount
       return cleanup;
     }, []);
 
+<<<<<<< HEAD
   return <>{children}</>
 }
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
+=======
+export default AccessibilityEnhancer;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab

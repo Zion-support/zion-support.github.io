@@ -13,15 +13,28 @@ interface EnhancedSEOProps {
   description: string;
   keywords?: string;
   canonical?: string;
+<<<<<<< HEAD
   structuredData?: any;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
+=======
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: object;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
   description,
+<<<<<<< HEAD
   keywords = '',
   canonical = '',
   structuredData,
@@ -31,13 +44,54 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonical = canonical || `https://ziontechgroup.com${typeof window !== 'undefined' ? window.location.pathname : ''}`;
+=======
+  keywords,
+  canonical,
+  ogTitle = title,
+  ogDescription = description,
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  twitterTitle = title,
+  twitterDescription = description,
+  twitterImage = ogImage,
+  structuredData
+}) => {
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.svg",
+    "description": "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup"
+    ]
+  };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
+<<<<<<< HEAD
       <link rel="canonical" href={fullCanonical} />
       
       {/* Open Graph Tags */}
@@ -46,18 +100,37 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={fullCanonical} />
       <meta property="og:image" content={ogImage} />
+=======
+      {canonical && <link rel="canonical" href={canonical} />}
+      
+      {/* Open Graph Tags */}
+      <meta property="og:title" content={ogTitle} />
+      <meta property="og:description" content={ogDescription} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonical || window.location.href} />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
       <meta property="og:site_name" content="Zion Tech Group" />
       
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content={twitterCard} />
+<<<<<<< HEAD
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+=======
+      <meta name="twitter:title" content={twitterTitle} />
+      <meta name="twitter:description" content={twitterDescription} />
+      <meta name="twitter:image" content={twitterImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
       
       {/* Additional SEO Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
       
       {/* Structured Data */}
       {structuredData && (
@@ -65,11 +138,28 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
           {JSON.stringify(structuredData)}
         </script>
       )}
+=======
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="distribution" content="global" />
+      <meta name="rating" content="general" />
+      
+      {/* Favicon */}
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData || defaultStructuredData)}
+      </script>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
     </Helmet>
   );
 };
 
 export default EnhancedSEO;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-console-errors-and-fix-issues-845e
 =======
 const EnhancedSEOPage: React.FC = () => {
@@ -167,3 +257,5 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 
 export default EnhancedSEOPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab

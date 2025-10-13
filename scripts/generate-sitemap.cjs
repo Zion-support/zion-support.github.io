@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Generate sitemap
 const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -51,6 +52,8 @@ const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 
 // Write sitemap to dist folder
 const distDir = path.join(__dirname, '..', 'dist');
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
 // Define all the routes
 const routes = [
   // Main pages
