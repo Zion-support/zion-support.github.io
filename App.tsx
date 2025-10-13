@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
@@ -10,7 +10,6 @@ import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-<<<<<<< HEAD
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
@@ -21,22 +20,8 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import LoadingPageEnhanced from "./app/components/EnhancedLoading";
-=======
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
-import ImprovedErrorBoundary from "./app/components/ImprovedErrorBoundary";
-import ImprovedLoading from "./app/components/ImprovedLoading";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
-import Breadcrumb from "./app/components/Breadcrumb";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import CoreWebVitals from "./app/components/CoreWebVitals";
-import FuturisticBackground from "./app/components/FuturisticBackground";
 import EnhancedSEO from "./app/components/EnhancedSEO";
-import { performanceOptimizer } from "./utils/performanceUtils";
-import { accessibilityManager } from "./utils/accessibilityUtils";
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -46,7 +31,6 @@ const BlogPage = React.lazy(() => import("./app/blog/page"));
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 
-<<<<<<< HEAD
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
@@ -96,52 +80,6 @@ const AIPoweredEmailAnalyzerPage = React.lazy(() => import("./app/ai-powered-ema
 const SmartInventoryOptimizerPage = React.lazy(() => import("./app/smart-inventory-optimizer/page"));
 const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
 const SmartExpenseCategorizerPage = React.lazy(() => import("./app/smart-expense-categorizer/page"));
-
-=======
-// AI Service Pages
-const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
-const AiAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
-const AiBusinessIntelligencePage = React.lazy(() => import("./app/ai-business-intelligence/page"));
-const AiContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
-const AiCustomerServicePage = React.lazy(() => import("./app/ai-customer-service/page"));
-const AiDataAnalyticsPage = React.lazy(() => import("./app/ai-data-analytics/page"));
-const AiEmailAutomationPage = React.lazy(() => import("./app/ai-email-automation/page"));
-const AiFraudDetectionPage = React.lazy(() => import("./app/ai-fraud-detection/page"));
-const AiHealthcarePage = React.lazy(() => import("./app/ai-healthcare/page"));
-const AiMarketingPage = React.lazy(() => import("./app/ai-marketing/page"));
-const AiPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-analytics/page"));
-const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-management/page"));
-const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
-const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
-const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
-
-// IT Service Pages
-const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
-const CybersecuritySolutionsPage = React.lazy(() => import("./app/cybersecurity-solutions/page"));
-const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
-const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
-const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
-const CustomSoftwarePage = React.lazy(() => import("./app/custom-software/page"));
-const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrastructure/page"));
-
-// Micro SAAS Pages
-const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
-const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
-const ZionCloudVaultPage = React.lazy(() => import("./app/zion-cloud-vault/page"));
-const ZionContentStudioPage = React.lazy(() => import("./app/zion-content-studio/page"));
-
-// 5G Solutions Pages
-const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
-const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
-const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
-const FiveGMobileApplicationsPage = React.lazy(() => import("./app/5g-mobile-applications/page"));
-const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
-const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
-const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
-const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
-
-// Main App Component
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
 function App() {
   useEffect(() => {
     // Initialize performance monitoring
