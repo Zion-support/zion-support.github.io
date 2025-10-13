@@ -1,5 +1,5 @@
 import React from 'react';
-import { createContext, useContext, useEffect, ReactNode } from 'react;
+import { createContext, useContext, useEffect, ReactNode } from 'react';
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void;
@@ -14,19 +14,19 @@ interface AnalyticsProviderProps {
 
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const track = (event: string, properties?: Record<string, any>) => {
-    // Analytics tracking implementation;
+    // Analytics tracking implementation
     console.log('Analytics Event:', event, properties);
-    // In a real implementation, you would send this to your analytics service;
-    if (typeof window !== 'undefined' && (window as any).gtag) {';
+    // In a real implementation, you would send this to your analytics service
+    if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', event, properties);
     }
-  }
+  };
   const identify = (userId: string, traits?: Record<string, any>) => {
     console.log('Analytics Identify:', userId, traits);
-    if (typeof window !== 'undefined' && (window as any).gtag) {';
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {';
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         user_id: userId,
-        custom_map: traits;
+        custom_map: traits
       });
     }
   }
