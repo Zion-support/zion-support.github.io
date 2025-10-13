@@ -4,7 +4,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const navigationItems = [
     { name: 'Home', href: '/' },
@@ -16,12 +16,25 @@ const Header: React.FC = () => {
         { name: 'AI Services', href: '/ai-services' },
         { name: 'IT Services', href: '/it-services' },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-        { name: 'Digital Transformation', href: '/digital-transformation' }
+        { name: 'Digital Transformation', href: '/digital-transformation' },
+        { name: 'Cybersecurity', href: '/cybersecurity' },
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
+        { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
-    { name: 'Solutions', href: '/solutions' },
+    { 
+      name: 'Solutions', 
+      href: '/solutions',
+      submenu: [
+        { name: 'AI Solutions', href: '/ai-solutions' },
+        { name: 'IT Solutions', href: '/it-solutions' },
+        { name: 'Cloud Solutions', href: '/cloud-solutions' },
+        { name: 'Security Solutions', href: '/security' }
+      ]
+    },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Support', href: '/support' },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -44,16 +57,18 @@ const Header: React.FC = () => {
                   <Link
                     to={item.href}
                     className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                    onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
+                    onMouseEnter={() => item.submenu && setActiveDropdown(item.name)}
+                    onMouseLeave={() => setActiveDropdown(null)}
                   >
                     {item.name}
                     {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}
                   </Link>
                   
                   {/* Dropdown Menu */}
-                  {item.submenu && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                  {item.submenu && activeDropdown === item.name && (
+                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50"
+                         onMouseEnter={() => setActiveDropdown(item.name)}
+                         onMouseLeave={() => setActiveDropdown(null)}>
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
@@ -103,6 +118,7 @@ const Header: React.FC = () => {
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
+                    {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}
                   </Link>
                   {item.submenu && (
                     <div className="ml-4 space-y-1">
