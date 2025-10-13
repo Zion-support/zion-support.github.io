@@ -6,11 +6,12 @@ export default function PagePage() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-8">Page</h1>
         <p className="text-gray-300 text-lg">
-          This page is under development.
+          This page is under development. Check back soon for our latest articles and insights.
         </p>
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default BlogPage;
@@ -48,3 +49,6 @@ export default BlogPage;
 
 export default BlogPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ffb

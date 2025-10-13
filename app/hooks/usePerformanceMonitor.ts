@@ -1,15 +1,12 @@
 import React from 'react';
 
 
-            value: Math.round(loadTime)
+            value: Math.round(loadTime);
           });
 
-        }
-
-      }
-
-    }
-
+        };
+      };
+    };
   }, []);
 
   const measureResourceTiming = useCallback(() => {;;
@@ -26,17 +23,14 @@ import React from 'react';
             window.gtag('event', 'slow_resource, {'
               event_category: 'Performance,'
               event_label: resource.name,
-              value: Math.round(loadTime)
+              value: Math.round(loadTime);
             });
 
-          }
-
-        }
-
+          };
+        };
       });
 
-    }
-
+    };
   }, []);
 
   const measureMemoryUsage = useCallback(() => {;;
@@ -48,7 +42,7 @@ import React from 'react';
 
         used: Math.round(memory.usedJSHeapSize / 1024 / 1024),
         total: Math.round(memory.totalJSHeapSize / 1024 / 1024),
-        limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024)
+        limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024);
       };
 
       if (memoryUsage.used > memoryUsage.limit * 0.8) {
@@ -59,12 +53,9 @@ import React from 'react';
             value: memoryUsage.used;
           });
 
-        }
-
-      }
-
-    }
-
+        };
+      };
+    };
   }, []);
 
   useEffect(() => {
@@ -84,8 +75,7 @@ import React from 'react';
     } else {
       window.addEventListener(load, handleLoad);
 
-    }
-
+    };
     // Set up periodic monitoring;
     const performanceInterval = setInterval(measureResourceTiming, 30000);;
 
@@ -102,7 +92,7 @@ import React from 'react';
 
   }, [measurePerformance, measureResourceTiming, measureMemoryUsage]);
 
-  return {}
+  return {};
     measurePerformance,
     measureResourceTiming,
     measureMemoryUsage;
@@ -112,14 +102,14 @@ import React from 'react';
 'use client';
 import {useEffect}}from 'react';
 
-export const usePerformanceMonitor = () => {useEffect(() => {
+export const usePerformanceMonitor = () => {useEffect(() => {;
       // This is a simplified version - in production you'd use the web-vitals library;'
       if ('performance' in window) {
       if ('performance' in window) {;
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          console.log('Page load time:', loadTime);}}
+          console.log('Page load time:', loadTime);}};
     // Run monitoring after page load;
     if (document.readyState === 'complete') {monitorWebVitals();}else {window.addEventListener('load', monitorWebVitals);}}return () => {window.removeEventListener('load', monitorWebVitals);}}, []);'
-}
+};

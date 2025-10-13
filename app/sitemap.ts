@@ -2,7 +2,7 @@ import React from 'react';
 
 import { MetadataRoute } from 'next';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default function sitemap(): MetadataRoute.Sitemap {;
   const baseUrl = 'https://ziontechgroup.com';
   
   const routes = [
@@ -32,6 +32,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly',
     priority: route === '' ? 1 : 0.8,
   }));
-}
+};
 import {MetadataRoute}}from 'next';
-export default function sitemap(): MetadataRoute.Sitemap {return [;}
+export default function sitemap(): MetadataRoute.Sitemap {return [;};`

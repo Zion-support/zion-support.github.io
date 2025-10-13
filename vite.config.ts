@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
+
 export default defineConfig({
   plugins: [
     react({
@@ -202,4 +203,8 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ffb

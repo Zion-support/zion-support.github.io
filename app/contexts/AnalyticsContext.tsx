@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+import React, { createContext } from 'react';
+
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
+}
+
+export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
 
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
@@ -15,5 +26,9 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
       {children}
     </AnalyticsContext.Provider>
   );
+<<<<<<< HEAD
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ffb

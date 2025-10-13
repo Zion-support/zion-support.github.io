@@ -152,4 +152,8 @@ export default function HomePage() {
       </footer>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ffb

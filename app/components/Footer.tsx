@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
 
 export default function Footer() {
   return (
@@ -18,7 +21,6 @@ export default function Footer() {
               <li>AI Automation</li>
               <li>Data Analytics</li>
               <li>Custom Solutions</li>
-              <li>Consulting</li>
             </ul>
           </div>
           <div>
@@ -26,19 +28,31 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-300">
               <li>About Us</li>
               <li>Contact</li>
+              <li>Blog</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Legal</h4>
+            <ul className="space-y-2 text-gray-300">
               <li>Privacy Policy</li>
               <li>Terms of Service</li>
             </ul>
           </div>
         </div>
+<<<<<<< HEAD
         <div className="border-t border-gray-700 mt-12 pt-8 text-center">
           <p className="text-gray-400">
             © 2024 Zion AI Solutions. All rights reserved.
           </p>
+=======
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+          <p>&copy; 2024 Zion AI Solutions. All rights reserved.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
         </div>
       </div>
     </footer>
   );
+<<<<<<< HEAD
             </ul>
                 Cookie Policy;
               </a>
@@ -213,3 +227,6 @@ export default function Footer() {
   )
   );
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ffb

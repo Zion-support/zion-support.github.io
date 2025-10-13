@@ -1,4 +1,4 @@
-'use client'.
+'use client';
 import React from 'react'.
 import Navigation from './Navigation'.
 
@@ -17,8 +17,30 @@ const Header: React.FC = () => {
 <<<<<<< HEAD
 =======
     </React.Fragment>
+<<<<<<< HEAD
   );
 };
 
 export default Header;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9cbf
+=======
+    <>
+      <Navigation />";
+      {/* Spacer to prevent content from going under fixed header */};""
+      <div className="h-16 lg: h-20" />,
+    </>;
+  );
+};
+
+export default Header.
+    <>
+  </>
+      <Navigation />";
+      {/* Spacer to prevent content from going under fixed header */};""
+      <div className="h-16 lg: h-20" />,
+    </>;
+  );
+};
+"
+export default Header;""
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ffb

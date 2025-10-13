@@ -1,4 +1,4 @@
 // AnalyticsTracker utility
-export const AnalyticsTracker = () => {
-  // Implementation
+export const AnalyticsTracker = () => {;
+  // Implementation;
 };
