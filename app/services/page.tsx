@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones, CheckCircle, Star, Award, Rocket, Sparkles } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -183,129 +183,159 @@ export default function Services() {
       category: "Energy Management"
     },
     {
-      title: "Blockchain Development Services",
-      description: "Complete blockchain solutions including smart contracts, DeFi applications, NFT marketplaces, and enterprise blockchain integration.",
-      icon: <Shield className="w-8 h-8" />,
-      path: "/blockchain-development",
-      color: "from-indigo-500 to-purple-500",
-      price: "Starting at $5,000/month",
-      originalPrice: "$10,000/month",
-      features: ["Smart Contract Development", "DeFi Applications", "NFT Marketplaces", "Enterprise Integration", "Security Audits", "Token Economics"],
-      category: "Blockchain",
-      popular: true
-    },
-    {
-      title: "IoT Solutions & Integration",
-      description: "Comprehensive IoT platform with device management, data analytics, edge computing, and real-time monitoring for smart cities and industries.",
-      icon: <Wifi className="w-8 h-8" />,
-      path: "/iot-solutions",
-      color: "from-cyan-500 to-blue-500",
-      price: "Starting at $3,500/month",
-      originalPrice: "$7,000/month",
-      features: ["Device Management", "Edge Computing", "Real-time Analytics", "Smart City Solutions", "Industrial IoT", "Data Visualization"],
-      category: "IoT Solutions"
-    },
-    {
-      title: "AR/VR Development Services",
-      description: "Immersive AR/VR applications for training, marketing, entertainment, and enterprise solutions with cutting-edge technology.",
-      icon: <Monitor className="w-8 h-8" />,
-      path: "/ar-vr-development",
-      color: "from-pink-500 to-rose-500",
-      price: "Starting at $4,000/month",
-      originalPrice: "$8,000/month",
-      features: ["AR Applications", "VR Experiences", "Mixed Reality", "Training Simulations", "Marketing Solutions", "Enterprise Integration"],
-      category: "AR/VR Development"
-    },
-    {
-      title: "DevOps & CI/CD Solutions",
-      description: "Complete DevOps transformation with automated deployment, infrastructure as code, monitoring, and continuous integration pipelines.",
-      icon: <Settings className="w-8 h-8" />,
-      path: "/devops-solutions",
-      color: "from-teal-500 to-cyan-500",
-      price: "Starting at $2,500/month",
-      originalPrice: "$5,000/month",
-      features: ["CI/CD Pipelines", "Infrastructure as Code", "Container Orchestration", "Monitoring & Logging", "Security Automation", "Performance Optimization"],
-      category: "DevOps",
-      popular: true
-    },
-    {
-      title: "Database Design & Optimization",
-      description: "Advanced database solutions with performance optimization, data migration, backup strategies, and cloud database management.",
+      title: "Enterprise Database Management Pro",
+      description: "Comprehensive database solutions with optimization, backup, recovery, and performance monitoring for enterprise applications and data warehouses.",
       icon: <Database className="w-8 h-8" />,
-      path: "/database-solutions",
-      color: "from-emerald-500 to-green-500",
-      price: "Starting at $1,800/month",
-      originalPrice: "$3,600/month",
-      features: ["Database Design", "Performance Tuning", "Data Migration", "Backup & Recovery", "Cloud Databases", "Security Hardening"],
-      category: "Database Services"
-    },
-    {
-      title: "API Development & Management",
-      description: "Comprehensive API solutions including RESTful APIs, GraphQL, microservices architecture, and API gateway management.",
-      icon: <Code className="w-8 h-8" />,
-      path: "/api-development",
-      color: "from-violet-500 to-purple-500",
-      price: "Starting at $2,200/month",
-      originalPrice: "$4,400/month",
-      features: ["RESTful APIs", "GraphQL APIs", "Microservices", "API Gateway", "Documentation", "Rate Limiting"],
-      category: "API Development"
-    },
-    {
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications for iOS and Android with modern UI/UX design and backend integration.",
-      icon: <Smartphone className="w-8 h-8" />,
-      path: "/mobile-development",
+      path: "/database-management",
       color: "from-blue-500 to-indigo-500",
-      price: "Starting at $3,000/month",
-      originalPrice: "$6,000/month",
-      features: ["Native iOS/Android", "Cross-platform", "UI/UX Design", "Backend Integration", "App Store Optimization", "Performance Tuning"],
-      category: "Mobile Development",
+      price: "Starting at $299/month",
+      originalPrice: "$599/month",
+      features: ["Database Optimization", "Backup & Recovery", "Performance Monitoring", "Security Hardening", "Scalability Planning", "Migration Services"],
+      category: "Database Services",
       popular: true
     },
     {
-      title: "E-commerce Platform Development",
-      description: "Complete e-commerce solutions with payment integration, inventory management, order processing, and customer analytics.",
-      icon: <ShoppingCart className="w-8 h-8" />,
-      path: "/ecommerce-development",
-      color: "from-orange-500 to-red-500",
-      price: "Starting at $4,500/month",
-      originalPrice: "$9,000/month",
-      features: ["Online Store", "Payment Gateway", "Inventory Management", "Order Processing", "Customer Analytics", "SEO Optimization"],
-      category: "E-commerce Development"
+      title: "IT Infrastructure Monitoring Suite",
+      description: "24/7 infrastructure monitoring with real-time alerts, performance analytics, and automated incident response for servers, networks, and applications.",
+      icon: <Monitor className="w-8 h-8" />,
+      path: "/infrastructure-monitoring",
+      color: "from-green-500 to-teal-500",
+      price: "Starting at $179/month",
+      originalPrice: "$359/month",
+      features: ["Real-time Monitoring", "Automated Alerts", "Performance Analytics", "Incident Response", "Capacity Planning", "Health Dashboards"],
+      category: "Infrastructure"
     },
     {
-      title: "Cybersecurity Consulting",
-      description: "Comprehensive cybersecurity services including vulnerability assessments, penetration testing, security audits, and compliance consulting.",
-      icon: <Shield className="w-8 h-8" />,
-      path: "/cybersecurity-consulting",
+      title: "Advanced Network Security Solutions",
+      description: "Comprehensive network security with firewall management, intrusion detection, VPN solutions, and threat intelligence for enterprise networks.",
+      icon: <Lock className="w-8 h-8" />,
+      path: "/network-security",
       color: "from-red-500 to-pink-500",
-      price: "Starting at $3,500/month",
-      originalPrice: "$7,000/month",
-      features: ["Vulnerability Assessment", "Penetration Testing", "Security Audits", "Compliance Consulting", "Incident Response", "Security Training"],
-      category: "Cybersecurity",
-      popular: true
+      price: "Starting at $249/month",
+      originalPrice: "$499/month",
+      features: ["Firewall Management", "Intrusion Detection", "VPN Solutions", "Threat Intelligence", "Network Segmentation", "Compliance Auditing"],
+      category: "Network Security"
     },
     {
-      title: "Cloud Migration Services",
-      description: "Seamless cloud migration with AWS, Azure, and Google Cloud Platform including data migration, application modernization, and cost optimization.",
-      icon: <Cloud className="w-8 h-8" />,
+      title: "Cloud Migration & Modernization",
+      description: "Complete cloud migration services with application modernization, data migration, and cloud-native architecture design for digital transformation.",
+      icon: <Server className="w-8 h-8" />,
       path: "/cloud-migration",
-      color: "from-sky-500 to-blue-500",
-      price: "Starting at $5,500/month",
-      originalPrice: "$11,000/month",
-      features: ["AWS Migration", "Azure Migration", "GCP Migration", "Data Migration", "Application Modernization", "Cost Optimization"],
+      color: "from-purple-500 to-violet-500",
+      price: "Starting at $399/month",
+      originalPrice: "$799/month",
+      features: ["Application Migration", "Data Migration", "Cloud Architecture", "Performance Optimization", "Cost Optimization", "Security Implementation"],
       category: "Cloud Migration"
     },
     {
-      title: "Legacy System Modernization",
-      description: "Transform legacy systems with modern architecture, microservices, cloud-native solutions, and improved performance and scalability.",
+      title: "DevOps & CI/CD Pipeline Solutions",
+      description: "Complete DevOps implementation with continuous integration, deployment automation, container orchestration, and infrastructure as code.",
       icon: <Settings className="w-8 h-8" />,
-      path: "/legacy-modernization",
-      color: "from-gray-500 to-slate-500",
-      price: "Starting at $6,000/month",
-      originalPrice: "$12,000/month",
-      features: ["System Analysis", "Architecture Redesign", "Microservices", "Cloud Migration", "Performance Optimization", "Data Migration"],
-      category: "System Modernization"
+      path: "/devops-solutions",
+      color: "from-orange-500 to-amber-500",
+      price: "Starting at $229/month",
+      originalPrice: "$459/month",
+      features: ["CI/CD Pipelines", "Container Orchestration", "Infrastructure as Code", "Automated Testing", "Deployment Automation", "Monitoring & Logging"],
+      category: "DevOps"
+    },
+    {
+      title: "Enterprise Backup & Disaster Recovery",
+      description: "Comprehensive backup solutions with automated scheduling, disaster recovery planning, and business continuity services for enterprise data protection.",
+      icon: <HardDrive className="w-8 h-8" />,
+      path: "/backup-disaster-recovery",
+      color: "from-slate-500 to-gray-500",
+      price: "Starting at $159/month",
+      originalPrice: "$319/month",
+      features: ["Automated Backups", "Disaster Recovery", "Data Encryption", "Offsite Storage", "Recovery Testing", "Compliance Reporting"],
+      category: "Data Protection"
+    },
+    {
+      title: "Mobile App Development Services",
+      description: "Native and cross-platform mobile app development with iOS, Android, and React Native solutions for enterprise and consumer applications.",
+      icon: <Phone className="w-8 h-8" />,
+      path: "/mobile-development",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $199/month",
+      originalPrice: "$399/month",
+      features: ["Native iOS/Android", "Cross-platform Apps", "UI/UX Design", "API Integration", "App Store Optimization", "Maintenance & Support"],
+      category: "Mobile Development"
+    },
+    {
+      title: "Web Application Development",
+      description: "Custom web application development with modern frameworks, responsive design, and scalable architecture for business applications and e-commerce.",
+      icon: <Laptop className="w-8 h-8" />,
+      path: "/web-development",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $179/month",
+      originalPrice: "$359/month",
+      features: ["Custom Web Apps", "Responsive Design", "E-commerce Solutions", "API Development", "Performance Optimization", "SEO Implementation"],
+      category: "Web Development"
+    },
+    {
+      title: "IT Support & Help Desk Services",
+      description: "24/7 IT support with remote assistance, help desk management, and technical support for end users and IT infrastructure maintenance.",
+      icon: <Headphones className="w-8 h-8" />,
+      path: "/it-support",
+      color: "from-emerald-500 to-green-500",
+      price: "Starting at $129/month",
+      originalPrice: "$259/month",
+      features: ["24/7 Support", "Remote Assistance", "Help Desk Management", "User Training", "Issue Resolution", "Preventive Maintenance"],
+      category: "IT Support"
+    },
+    {
+      title: "Network Infrastructure Design",
+      description: "Complete network infrastructure design and implementation with LAN, WAN, wireless solutions, and network optimization for enterprise environments.",
+      icon: <Network className="w-8 h-8" />,
+      path: "/network-infrastructure",
+      color: "from-teal-500 to-cyan-500",
+      price: "Starting at $279/month",
+      originalPrice: "$559/month",
+      features: ["Network Design", "LAN/WAN Setup", "Wireless Solutions", "Network Optimization", "Security Implementation", "Performance Tuning"],
+      category: "Network Infrastructure"
+    },
+    {
+      title: "IT Consulting & Strategy",
+      description: "Strategic IT consulting with technology roadmaps, digital transformation planning, and technology assessment for business growth and efficiency.",
+      icon: <Cpu className="w-8 h-8" />,
+      path: "/it-consulting",
+      color: "from-violet-500 to-purple-500",
+      price: "Starting at $199/month",
+      originalPrice: "$399/month",
+      features: ["Technology Roadmaps", "Digital Transformation", "IT Assessment", "Strategic Planning", "Technology Selection", "Implementation Guidance"],
+      category: "IT Consulting"
+    },
+    {
+      title: "Cybersecurity Audit & Compliance",
+      description: "Comprehensive cybersecurity audits with compliance assessment, vulnerability testing, and security recommendations for regulatory requirements.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/cybersecurity-audit",
+      color: "from-red-500 to-orange-500",
+      price: "Starting at $349/month",
+      originalPrice: "$699/month",
+      features: ["Security Audits", "Compliance Assessment", "Vulnerability Testing", "Penetration Testing", "Risk Assessment", "Remediation Planning"],
+      category: "Cybersecurity"
+    },
+    {
+      title: "Data Center Services & Colocation",
+      description: "Secure data center services with colocation, managed hosting, and infrastructure services for enterprise applications and data storage.",
+      icon: <Server className="w-8 h-8" />,
+      path: "/data-center-services",
+      color: "from-slate-600 to-gray-600",
+      price: "Starting at $299/month",
+      originalPrice: "$599/month",
+      features: ["Colocation Services", "Managed Hosting", "Power & Cooling", "Physical Security", "Network Connectivity", "24/7 Monitoring"],
+      category: "Data Center"
+    },
+    {
+      title: "IT Asset Management Solutions",
+      description: "Complete IT asset management with inventory tracking, lifecycle management, and cost optimization for hardware and software assets.",
+      icon: <Settings className="w-8 h-8" />,
+      path: "/asset-management",
+      color: "from-amber-500 to-yellow-500",
+      price: "Starting at $149/month",
+      originalPrice: "$299/month",
+      features: ["Asset Inventory", "Lifecycle Management", "Cost Tracking", "License Management", "Depreciation Tracking", "Compliance Reporting"],
+      category: "Asset Management"
     }
   ];
 

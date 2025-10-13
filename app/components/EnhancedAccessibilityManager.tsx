@@ -288,7 +288,6 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
     };
   }, [enableFocusManagement]);
 
-
   // Initialize accessibility features
   useEffect(() => {
     // Load saved preferences

@@ -1,87 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
 
-<<<<<<< HEAD
-interface PerformanceMetrics {
-  loadTime: number | null
-  firstContentfulPaint: number | null
-  largestContentfulPaint: number | null
-  firstInputDelay: number | null
-  cumulativeLayoutShift: number | null
-  timeToFirstByte: number | null
-  memoryUsage: number | null
-  domContentLoaded: number | null
-  totalBlockingTime: number | null
-}
-
-const AdvancedPerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: null,
-    firstContentfulPaint: null,
-    largestContentfulPaint: null,
-    firstInputDelay: null,
-    cumulativeLayoutShift: null,
-    timeToFirstByte: null,
-    memoryUsage: null,
-    domContentLoaded: null,
-    totalBlockingTime: null
-  })
-
-  const [isVisible, setIsVisible] = useState(false)
-  const [isRecording, setIsRecording] = useState(false)
-
-  useEffect(() => {
-    // Only run in development
-    if (process.env.NODE_ENV !== 'development') return
-
-<<<<<<< HEAD
-    const measurePerformance = () => {
-      // Measure Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry) => {
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }))
-            }
-          } else if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime }))
-          } else if (entry.entryType === 'first-input') {
-            setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }))
-          } else if (entry.entryType === 'layout-shift') {
-            setMetrics(prev => ({ ...prev, cls: (entry as any).value }))
-          }
-        })
-      })
-
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] })
-
-      // Measure TTFB
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      if (navigationEntry) {
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }))
-        console.warn('Failed to load web-vitals:', error);
-      }
-
-      // Measure memory usage
-      if ('memory' in performance) {
-        const memory = (performance as any).memory
-        setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize / 1024 / 1024 }))
-      }
-
-      // Measure load time
-      window.addEventListener('load', () => {
-        const loadTime = performance.now()
-        setMetrics(prev => ({ ...prev, loadTime }))
-      }
-=======
-
-
-      window.addEventListener('load', () => {
-        const loadTime = performance.now()
-        setMetrics(prev => ({ ...prev, loadTime }))
-      })
->>>>>>> cursor/analyze-improve-and-deploy-application-29f3
     }
 
     // Report metrics to analytics
@@ -93,45 +12,10 @@ const AdvancedPerformanceMonitor = () => {
     measureMemory()
     measureLoadTime()
 
-<<<<<<< HEAD
-    // Set up performance observer for additional metrics
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'measure') {
-            console.log('Custom Performance Measure:', entry.name, entry.duration)
-          }
-        }
-      })
-=======
-<<<<<<< HEAD
-  return (
-    <div className="fixed bottom-4 right-4 bg-black text-white p-4 rounded-lg shadow-lg text-xs font-mono max-w-xs">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1">
-        {metrics.fcp && <div>FCP: {metrics.fcp.toFixed(2)}ms</div>}
-        {metrics.lcp && <div>LCP: {metrics.lcp.toFixed(2)}ms</div>}
-        {metrics.fid && <div>FID: {metrics.fid.toFixed(2)}ms</div>}
-        {metrics.cls && <div>CLS: {metrics.cls.toFixed(4)}</div>}
-        {metrics.ttfb && <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>}
-        {metrics.memoryUsage && <div>Memory: {metrics.memoryUsage.toFixed(2)}MB</div>}
-        {metrics.loadTime && <div>Load: {metrics.loadTime.toFixed(2)}ms</div>}
-      </div>
-      <button
-        onClick={() => setIsVisible(false)}
-        className="mt-2 px-2 py-1 bg-red-600 text-white rounded text-xs"
-      >
-        Close
-      </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-29f3
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
->>>>>>> origin/main
     </div>
   )
 }
 
-<<<<<<< HEAD
     try {
         onCLS((metric: any) => {
           setMetrics(prev => ({ ...prev, cls: metric.value }))
@@ -282,11 +166,3 @@ const AdvancedPerformanceMonitor = () => {
 
 export default AdvancedPerformanceMonitor
 
-=======
-export default AdvancedPerformanceMonitor
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-29f3
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
->>>>>>> origin/main
