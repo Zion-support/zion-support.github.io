@@ -1,17 +1,18 @@
 import React from 'react';
-import { cn } from '../lib/utils';
 
 interface ResponsiveContainerProps {
   children: React.ReactNode;
   className?: string;
   maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | 'full';
+  padding?: 'none' | 'sm' | 'md' | 'lg' | 'xl';
 }
 
-const ResponsiveContainer = ({ 
-  children, 
-  className,
-  maxWidth = '7xl'
-}: ResponsiveContainerProps) => {
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
+  children,
+  className = '',
+  maxWidth = '7xl',
+  padding = 'lg'
+}) => {
   const maxWidthClasses = {
     sm: 'max-w-sm',
     md: 'max-w-md',
@@ -26,12 +27,16 @@ const ResponsiveContainer = ({
     full: 'max-w-full'
   };
 
+  const paddingClasses = {
+    none: '',
+    sm: 'px-4 sm:px-6',
+    md: 'px-4 sm:px-6 lg:px-8',
+    lg: 'px-4 sm:px-6 lg:px-8 xl:px-12',
+    xl: 'px-4 sm:px-6 lg:px-8 xl:px-16'
+  };
+
   return (
-    <div className={cn(
-      'mx-auto px-4 sm:px-6 lg:px-8',
-      maxWidthClasses[maxWidth],
-      className
-    )}>
+    <div className={`mx-auto ${maxWidthClasses[maxWidth]} ${paddingClasses[padding]} ${className}`}>
       {children}
     </div>
   );
