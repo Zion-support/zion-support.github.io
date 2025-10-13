@@ -28,7 +28,9 @@ import {
   Receipt,
   TrendingUp,
   Cpu,
-  Network
+  Network,
+  FileText,
+  Clock
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -164,9 +166,32 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
       ]
     },
     {
-      name: 'Blog',
-      path: '/blog',
-      icon: <Code className="w-4 h-4" />
+      name: 'Resources',
+      path: '/resources',
+      icon: <Code className="w-4 h-4" />,
+      hasDropdown: true,
+      dropdownItems: [
+        {
+          name: 'Learning',
+          icon: <Brain className="w-4 h-4" />,
+          items: [
+            { name: 'Blog', path: '/blog', icon: <Code className="w-4 h-4" /> },
+            { name: 'Tutorials', path: '/tutorials', icon: <Code className="w-4 h-4" /> },
+            { name: 'Case Studies', path: '/case-studies', icon: <BarChart3 className="w-4 h-4" /> },
+            { name: 'Demo', path: '/demo', icon: <Globe className="w-4 h-4" /> }
+          ]
+        },
+        {
+          name: 'Company',
+          icon: <Users className="w-4 h-4" />,
+          items: [
+            { name: 'Careers', path: '/careers', icon: <Users className="w-4 h-4" /> },
+            { name: 'Pricing', path: '/pricing', icon: <BarChart3 className="w-4 h-4" /> },
+            { name: 'Support', path: '/support', icon: <Shield className="w-4 h-4" /> },
+            { name: 'Consultation', path: '/consultation', icon: <Phone className="w-4 h-4" /> }
+          ]
+        }
+      ]
     },
     {
       name: 'Contact',

@@ -18,7 +18,8 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Package
 } from 'lucide-react'
 
 interface SidebarProps {
@@ -79,6 +80,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Home', path: '/', icon: <Home className="w-4 h-4" /> },
     { name: 'About', path: '/about', icon: <Users className="w-4 h-4" /> },
     { name: 'Services', path: '/services', icon: <Settings className="w-4 h-4" /> },
+    { name: 'Micro SAAS', path: '/micro-saas-services', icon: <Package className="w-4 h-4" /> },
+    { name: 'Resources', path: '/resources', icon: <Brain className="w-4 h-4" /> },
     { name: 'Pricing', path: '/pricing', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Case Studies', path: '/case-studies', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Blog', path: '/blog', icon: <Brain className="w-4 h-4" /> },
@@ -226,7 +229,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium text-left"
             >
               <div className="flex items-center space-x-3">
-                <Zap className="w-4 h-4" />
+                <Package className="w-4 h-4" />
                 <span>Micro SAAS</span>
               </div>
               {expandedSections.has('micro-saas') ? (
@@ -258,6 +261,125 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     </div>
                   </Link>
                 ))}
+              </div>
+            )}
+          </div>
+
+          {/* Resources Section */}
+          <div className="mb-6">
+            <button
+              onClick={() => toggleSection('resources')}
+              className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-blue-500/10 hover:text-blue-400 transition-all duration-300 font-medium text-left"
+            >
+              <div className="flex items-center space-x-3">
+                <Brain className="w-4 h-4" />
+                <span>Resources</span>
+              </div>
+              {expandedSections.has('resources') ? (
+                <ChevronDown className="w-4 h-4" />
+              ) : (
+                <ChevronRight className="w-4 h-4" />
+              )}
+            </button>
+            
+            {expandedSections.has('resources') && (
+              <div className="ml-6 mt-2 space-y-1">
+                <Link
+                  to="/blog"
+                  className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive('/blog')
+                      ? 'bg-blue-500/10 text-blue-400'
+                      : 'text-gray-400 hover:text-blue-400 hover:bg-blue-500/5'
+                  }`}
+                  onClick={onClose}
+                >
+                  <Code className="w-4 h-4" />
+                  <span className="text-sm">Blog</span>
+                </Link>
+                <Link
+                  to="/tutorials"
+                  className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive('/tutorials')
+                      ? 'bg-blue-500/10 text-blue-400'
+                      : 'text-gray-400 hover:text-blue-400 hover:bg-blue-500/5'
+                  }`}
+                  onClick={onClose}
+                >
+                  <Code className="w-4 h-4" />
+                  <span className="text-sm">Tutorials</span>
+                </Link>
+                <Link
+                  to="/case-studies"
+                  className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive('/case-studies')
+                      ? 'bg-blue-500/10 text-blue-400'
+                      : 'text-gray-400 hover:text-blue-400 hover:bg-blue-500/5'
+                  }`}
+                  onClick={onClose}
+                >
+                  <BarChart3 className="w-4 h-4" />
+                  <span className="text-sm">Case Studies</span>
+                </Link>
+                <Link
+                  to="/demo"
+                  className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive('/demo')
+                      ? 'bg-blue-500/10 text-blue-400'
+                      : 'text-gray-400 hover:text-blue-400 hover:bg-blue-500/5'
+                  }`}
+                  onClick={onClose}
+                >
+                  <Globe className="w-4 h-4" />
+                  <span className="text-sm">Demo</span>
+                </Link>
+                <Link
+                  to="/pricing"
+                  className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive('/pricing')
+                      ? 'bg-blue-500/10 text-blue-400'
+                      : 'text-gray-400 hover:text-blue-400 hover:bg-blue-500/5'
+                  }`}
+                  onClick={onClose}
+                >
+                  <BarChart3 className="w-4 h-4" />
+                  <span className="text-sm">Pricing</span>
+                </Link>
+                <Link
+                  to="/careers"
+                  className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive('/careers')
+                      ? 'bg-blue-500/10 text-blue-400'
+                      : 'text-gray-400 hover:text-blue-400 hover:bg-blue-500/5'
+                  }`}
+                  onClick={onClose}
+                >
+                  <Users className="w-4 h-4" />
+                  <span className="text-sm">Careers</span>
+                </Link>
+                <Link
+                  to="/support"
+                  className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive('/support')
+                      ? 'bg-blue-500/10 text-blue-400'
+                      : 'text-gray-400 hover:text-blue-400 hover:bg-blue-500/5'
+                  }`}
+                  onClick={onClose}
+                >
+                  <Shield className="w-4 h-4" />
+                  <span className="text-sm">Support</span>
+                </Link>
+                <Link
+                  to="/consultation"
+                  className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive('/consultation')
+                      ? 'bg-blue-500/10 text-blue-400'
+                      : 'text-gray-400 hover:text-blue-400 hover:bg-blue-500/5'
+                  }`}
+                  onClick={onClose}
+                >
+                  <Phone className="w-4 h-4" />
+                  <span className="text-sm">Consultation</span>
+                </Link>
               </div>
             )}
           </div>

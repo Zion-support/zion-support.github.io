@@ -47,7 +47,7 @@ const Footer = React.memo(() => {
   const services = useMemo(() => [
     { name: "AI Services", path: "/ai-services", icon: <Brain className="w-4 h-4" /> },
     { name: "IT Services", path: "/it-services", icon: <Shield className="w-4 h-4" /> },
-    { name: "Micro SAAS", path: "/micro-saas", icon: <Zap className="w-4 h-4" /> },
+    { name: "Micro SAAS", path: "/micro-saas-services", icon: <Zap className="w-4 h-4" /> },
     { name: "5G Solutions", path: "/5g-solutions", icon: <Globe className="w-4 h-4" /> },
     { name: "Cloud Services", path: "/cloud-services", icon: <Cloud className="w-4 h-4" /> },
     { name: "Cybersecurity", path: "/cybersecurity", icon: <Shield className="w-4 h-4" /> },
@@ -216,10 +216,10 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/ai-customer-service"
+                  to="/ai-customer-support"
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
-                  AI Customer Service
+                  AI Customer Support
                 </Link>
               </li>
               <li>

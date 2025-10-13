@@ -203,6 +203,18 @@ function App() {
                               <Route path="/5g-private-networks" element={React.createElement(React.lazy(() => import("./app/5g-private-networks/page")))} />
                               <Route path="/5g-smart-city-solutions" element={React.createElement(React.lazy(() => import("./app/5g-smart-city-solutions/page")))} />
 
+                              {/* Additional Main Routes */}
+                              <Route path="/ai-services" element={React.createElement(React.lazy(() => import("./app/ai-services/page")))} />
+                              <Route path="/consultation" element={React.createElement(React.lazy(() => import("./app/consultation/page")))} />
+                              <Route path="/tutorials" element={React.createElement(React.lazy(() => import("./app/tutorials/page")))} />
+                              <Route path="/demo" element={React.createElement(React.lazy(() => import("./app/demo/page")))} />
+                              <Route path="/sitemap" element={React.createElement(React.lazy(() => import("./app/sitemap/page")))} />
+                              <Route path="/cookies" element={React.createElement(React.lazy(() => import("./app/cookies/page")))} />
+                              <Route path="/pricing" element={React.createElement(React.lazy(() => import("./app/pricing/page")))} />
+                              <Route path="/case-studies" element={React.createElement(React.lazy(() => import("./app/case-studies/page")))} />
+                              <Route path="/careers" element={React.createElement(React.lazy(() => import("./app/careers/page")))} />
+                              <Route path="/support" element={React.createElement(React.lazy(() => import("./app/support/page")))} />
+
                               {/* Catch all route */}
                               <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
                                 <div className="text-center">
