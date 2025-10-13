@@ -1,4 +1,4 @@
-import { ArrowRight, Home, Search, AlertTriangle, Brain, Bot, FileText, Shield, Wifi, Cloud, BarChart3, Code, Target, Users, TrendingUp, Globe, Zap, Database, Monitor, Lock, Server, Settings, HardDrive, Phone, Laptop, Headphones, Network, Cpu } from 'lucide-react';
+import { Brain, Bot, FileText, Shield, Wifi, Cloud, BarChart3, Code, Target, Users, TrendingUp, Globe, Zap, Database, Monitor, Lock, Server, Settings, HardDrive, Phone, Laptop, Headphones, Network, Cpu } from 'lucide-react';
 
 export default function Services() {
   const services = [
@@ -337,4 +337,64 @@ export default function Services() {
     }
   ];
 
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive AI and IT solutions designed to transform your business and drive innovation
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${service.color} mb-6`}>
+                {service.icon}
+              </div>
+              
+              <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
+              <p className="text-gray-300 mb-6 text-sm leading-relaxed">{service.description}</p>
+              
+              <div className="mb-6">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-2xl font-bold text-white">{service.price}</span>
+                  {service.originalPrice && (
+                    <span className="text-lg text-gray-400 line-through">{service.originalPrice}</span>
+                  )}
+                </div>
+                <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">
+                  {service.category}
+                </span>
+                {service.popular && (
+                  <span className="inline-block px-3 py-1 bg-green-500/20 text-green-300 text-xs rounded-full ml-2">
+                    Popular
+                  </span>
+                )}
+              </div>
+
+              <ul className="space-y-2 mb-6">
+                {service.features.slice(0, 3).map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
