@@ -20,48 +20,55 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   className = '',
   priority = false,
   onLoad,
-<<<<<<< HEAD
   onError,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+<<<<<<< HEAD
 =======
   onError;
 }: OptimizedImageProps) {
   const [isLoading, setIsLoading] = useState(true);
 >>>>>>> cursor/fix-errors-and-merge-to-main-91ea
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   const handleLoad = () => {
-<<<<<<< HEAD
     setIsLoaded(true);
+<<<<<<< HEAD
 =======
   
     setIsLoading(false);
 >>>>>>> cursor/fix-errors-and-merge-to-main-91ea
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
     onLoad?.();
   };
 
   const handleError = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
     setIsLoading(false);
 >>>>>>> cursor/fix-errors-and-merge-to-main-91ea
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
     setHasError(true);
     onError?.();
   };
 
   if (hasError) {
     return (
-<<<<<<< HEAD
       <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height }}
       >
+<<<<<<< HEAD
         <span className="text-gray-500">Failed to load image
 =======
     <div className={`optimized-image-error ${className}`}>
@@ -69,6 +76,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           Failed to load image;
         </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-91ea
+=======
+        <span className="text-gray-500">Failed to load image</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
       </div>
   );
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
@@ -104,7 +114,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
 <<<<<<< HEAD
 export default OptimizedImage;
+<<<<<<< HEAD
 =======
 export default OptimizedImage;
 >>>>>>> origin/main
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc

@@ -2,6 +2,7 @@ import React from 'react';
 
 export const PageLoader: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
       <div className="text-center">
@@ -16,11 +17,17 @@ export default function LoadingStates() {
   return (
     <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
       <div className="text-center">
+=======
+  return (
+    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+      <div className="text-center">
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
         <p className="text-lg">Loading...</p>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 import React from 'react';
@@ -368,3 +375,17 @@ export const SkeletonLoader: React.FC<{
 export default PageLoader;
 >>>>>>> cursor/fix-errors-and-merge-to-main-91ea
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+};
+
+export default function LoadingStates() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+        <p className="text-lg">Loading...</p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc

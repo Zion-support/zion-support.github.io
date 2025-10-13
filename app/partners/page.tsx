@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 export default function PagePage() {
@@ -185,49 +186,49 @@ const PartnersPage: React.FC = () => {
       description: 'Advanced processor technologies for AI workloads',
       category: 'Hardware',
       tier: 'Silver'
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, BarChart, Target, TrendingUp, Bot } from 'lucide-react';
+
+const PagePage: React.FC = () => {
+  const features = [
+    {
+      icon: Bot,
+      title: 'AI-Powered Page',
+      description: 'Leverage advanced AI technology for intelligent page solutions.',
+      benefits: ['Smart automation', 'Real-time insights', 'Predictive analytics', 'Performance optimization']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Track and analyze performance with comprehensive analytics.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'ROI tracking']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
     }
   ];
 
   const benefits = [
-    'Access to cutting-edge technology platforms',
-    'Joint go-to-market strategies',
-    'Technical training and certification programs',
-    'Priority support and escalation',
-    'Co-marketing opportunities',
-    'Early access to new features and products',
-    'Dedicated partner success managers',
-    'Revenue sharing opportunities',
-    'Technical integration support',
-    'Joint customer success programs'
+    'Increase efficiency by up to 300%',
+    'Reduce manual work by 80%',
+    'Improve accuracy with AI automation',
+    'Scale your operations seamlessly',
+    'Save time with intelligent automation',
+    'Boost productivity and results'
   ];
-
-  const partnerTiers = [
-    {
-      name: 'Platinum',
-      color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/20',
-      borderColor: 'border-cyan-500',
-      description: 'Strategic partnerships with maximum benefits'
-    },
-    {
-      name: 'Gold',
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/20',
-      borderColor: 'border-yellow-500',
-      description: 'Premium partnerships with extensive benefits'
-    },
-    {
-      name: 'Silver',
-      color: 'text-gray-400',
-      bgColor: 'bg-gray-500/20',
-      borderColor: 'border-gray-500',
-      description: 'Standard partnerships with core benefits'
-    }
-  ];
-
-  const getTierInfo = (tier: string) => {
-    return partnerTiers.find(t => t.name === tier) || partnerTiers[2];
-  };
 
   return (
     <div>
@@ -237,8 +238,8 @@ const PartnersPage: React.FC = () => {
   ).
   )
     <>
-  </>
       <Helmet>
+<<<<<<< HEAD
         <title>Partners | Zion Tech Group</title>
         <meta name="description" content="Discover our strategic partnerships with leading technology companies. Learn about our partner ecosystem and collaboration opportunities." />"
         <meta name="keywords" content="partners, partnerships, technology partners, strategic alliances, Microsoft, AWS, Google Cloud" />
@@ -250,11 +251,27 @@ const PartnersPage: React.FC = () => {
           <div className="max-w-7xl mx-auto text-center">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
               Our Partners.
+=======
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced page solutions powered by artificial intelligence. Transform your business with our cutting-edge technology." />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Page
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We collaborate with industry leaders to deliver the most advanced AI and IT solutions. 
-              Our strategic partnerships enable us to provide cutting-edge technology and comprehensive support.
+              Advanced page solutions powered by artificial intelligence. Transform your business with our cutting-edge technology.
             </p>
+<<<<<<< HEAD
           </div>
         </section>
 
@@ -914,6 +931,46 @@ export default PartnersPage.
                     <li key={featureIndex} className="flex items-center text-gray-300">"
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                       {feature}
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover the advanced capabilities of our page platform.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
                     </li>
                   ))}
                 </ul>
@@ -923,6 +980,7 @@ export default PartnersPage.
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Success Stories Section */}
       <section className="py-20 px-4">"
         <div className="max-w-7xl mx-auto">"
@@ -967,11 +1025,35 @@ export default PartnersPage.
               </p>
               <div className="text-cyan-400 font-semibold">- InnovateTech</div>
             </div>
+=======
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Page?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the benefits of our advanced page technology.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <div className="flex-shrink-0">
+                  <CheckCircle className="h-6 w-6 text-green-400 mt-1" />
+                </div>
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">"
         <div className="max-w-4xl mx-auto text-center">"
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-12">"
@@ -1002,3 +1084,29 @@ export default PartnersPage.
 
 export default PartnersPage.
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of businesses already using our page solutions to boost their performance.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 flex items-center justify-center">
+              Get Started Today
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition duration-300">
+              Schedule Demo
+            </button>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc

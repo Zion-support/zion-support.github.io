@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useContext } from 'react';
+=======
+import React, { createContext, useContext, useEffect } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
@@ -34,6 +38,7 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
@@ -45,3 +50,5 @@ export const useAnalytics = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc

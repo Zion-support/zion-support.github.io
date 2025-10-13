@@ -1,36 +1,44 @@
+<<<<<<< HEAD
 import globals from 'globals';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
 import js from '@eslint/js';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+
 export default [
-  // Global ignores
   {
     ignores: [
-      "dist/**", 
-      "node_modules/**", 
-      "*.config.js", 
-      "*.config.cjs",
-      "add-missing-routes*.jsx",
-      "backup-problematic/**",
-      "backup-unused-components/**",
-      "backup/**",
-      "cleanup-*.js",
-      "cleanup-*.cjs",
-      "comprehensive-*.js",
-      "fix-*.js",
-      "fix-*.cjs",
-      "*.cjs",
-      "scripts/**",
-      "src/**",
-      "create-*.js",
-      "identify-*.js",
-      "merge-*.js",
-      "remove-*.js",
-      "simple-*.js",
-      "website-*.js",
-      "public/sw.js",
+      'app-broken/**',
+      'app-disabled/**',
+      'dist/**',
+      'build/**',
+      'node_modules/**',
+      '*.config.js',
+      '*.config.ts',
+      'scripts/**',
+      'public/**',
+      'add-missing-routes*.jsx',
+      'backup-problematic/**',
+      'backup-unused-components/**',
+      'backup/**',
+      'cleanup-*.js',
+      'cleanup-*.cjs',
+      'comprehensive-*.js',
+      'fix-*.js',
+      'fix-*.cjs',
+      '*.cjs',
+      'src/**',
+      'create-*.js',
+      'identify-*.js',
+      'merge-*.js',
+      'remove-*.js',
+      'simple-*.js',
+      'website-*.js',
+      'public/sw.js',
       'admin-api-disabled/**',
       'ai-customer-support-disabled/**',
       'ai-data-visualization-disabled/**',
@@ -52,8 +60,8 @@ export default [
       'analyze-*.js',
       'check-*.js',
       'clean-*.js',
-      'fix-*.js',
       'jest.setup.js'
+<<<<<<< HEAD
     ],
   },
   {
@@ -80,6 +88,15 @@ export default [
     languageOptions: {
       globals: { ...globals.browser, ...globals.node },
       parser: tsParser,
+=======
+    ]
+  },
+  js.configs.recommended,
+  {
+    files: ['**/*.{ts,tsx,js,jsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -101,11 +118,17 @@ export default [
       }
     },
     plugins: {
+<<<<<<< HEAD
       '@typescript-eslint': tseslint,
+=======
+      '@typescript-eslint': typescript,
+      'react': react,
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
     rules: {
+<<<<<<< HEAD
       ...tseslint.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
@@ -119,6 +142,22 @@ export default [
       '@typescript-eslint/no-non-null-assertion': 'off',
       'no-console': 'off',
       'no-unused-vars': 'off'
+=======
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      'no-console': 'off'
+    },
+    settings: {
+      react: {
+        version: 'detect'
+      }
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
     }
   }
 ];

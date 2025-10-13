@@ -21,6 +21,7 @@ const TermsPage = React.lazy(() => import("./app/terms/page"));
 const PricingPage = React.lazy(() => import("./app/pricing/page"));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 function App() {
   return (
@@ -79,6 +80,8 @@ import HomePage from './app/page';
 // import ContactPage from './app/contact/page';
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -111,6 +114,9 @@ function App() {
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <HelmetProvider>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
         <AnalyticsProvider>
           <Router>
             <div className="min-h-screen bg-gray-900">
@@ -150,6 +156,7 @@ function App() {
             </div>
           </Router>
         </AnalyticsProvider>
+<<<<<<< HEAD
 =======
         <Router>
           <div className="App">
@@ -164,6 +171,8 @@ function App() {
           </div>
         </Router>
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
       </HelmetProvider>
     </ErrorBoundary>
   );

@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 import React from 'react';
 
+<<<<<<< HEAD
 export default function PagePage() {
+=======
+export default function TutorialsPage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -9,6 +13,7 @@ export default function PagePage() {
         <p className="text-gray-300 text-lg">
           This page is under development.
         </p>
+<<<<<<< HEAD
       </div>
     </div>
   );
@@ -55,6 +60,8 @@ export default function Tutorials() {
 
         </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-91ea
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
       </div>
     </div>
   ).

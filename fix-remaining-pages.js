@@ -2,141 +2,13 @@
 
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Function to fix a malformed page
-function fixPage(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Check if this looks like a malformed page
-    if (!content.includes('export default') || content.includes(');') || content.includes('};')) {
-      console.log(`Fixing malformed page: ${filePath}`);
-      
-      // Extract the component name from the file path
-      const fileName = path.basename(filePath, '.tsx');
-      const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1) + 'Page';
-      
-      // Create a simple, working page component
-      const fixedContent = `import React from 'react';
-
-export default function ${componentName}() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">${componentName.replace('Page', '')}</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );
-}`;
-      
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to find all page files
-function findPageFiles(dir) {
-  const files = [];
-  
-  function scanDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-          scanDirectory(fullPath);
-        }
-      } else if (stat.isFile()) {
-        const ext = path.extname(item);
-        if (ext === '.tsx' && item === 'page.tsx') {
-          files.push(fullPath);
-        }
-      }
-    }
-  }
-  
-  scanDirectory(dir);
-  return files;
-}
-
-// Main execution
-const workspaceDir = process.cwd();
-const files = findPageFiles(workspaceDir);
-
-console.log(`Found ${files.length} page files to check...`);
-
-let fixedCount = 0;
-for (const file of files) {
-  if (fixPage(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed ${fixedCount} malformed pages.`);
-=======
-
-// Get all page files with errors
-const pageFiles = [
-  'app/ai-video-editor/page.tsx',
-  'app/ai-voice-assistant/page.tsx',
-  'app/ai-voice-assistant-pro/page.tsx',
-  'app/ai-website-builder/page.tsx',
-  'app/analytics-tools/page.tsx',
-  'app/ar-vr-development/page.tsx',
-  'app/asset-management/page.tsx',
-  'app/blog/page.tsx',
-  'app/case-studies/page.tsx',
-  'app/cloud-infrastructure/page.tsx',
-  'app/cloud-migration-pro/page.tsx',
-  'app/consultation/page.tsx',
-  'app/cookies/page.tsx',
-  'app/custom-software/page.tsx',
-  'app/cybersecurity-audit/page.tsx',
-  'app/cybersecurity-solutions/page.tsx',
-  'app/database-management/page.tsx',
-  'app/data-center-services/page.tsx',
-  'app/demo/page.tsx',
-  'app/ecommerce-analytics-pro/page.tsx',
-  'app/faq/page.tsx',
-  'app/legal-document-manager/page.tsx',
-  'app/marketing-tools/page.tsx',
-  'app/medical-records-manager/page.tsx',
-  'app/micro-saas/page.tsx',
-  'app/micro-saas-services/ai-chatbot-builder/page.tsx',
-  'app/micro-saas-services/page.tsx',
-  'app/network-infrastructure/page.tsx',
-  'app/news/page.tsx',
-  'app/online-learning-platform/page.tsx',
-  'app/pricing/page.tsx',
-  'app/privacy/page.tsx',
-  'app/property-management-ai/page.tsx',
-  'app/supply-chain-optimizer/page.tsx',
-  'app/support/page.tsx',
-  'app/zion-ai-email-analyzer/page.tsx',
-  'app/zion-ai-inventory-manager/page.tsx',
-  'app/zion-ai-performance-optimizer/page.tsx',
-  'app/zion-ai-social-media-manager/page.tsx',
-  'app/zion-ai-survey-builder/page.tsx',
-  'app/zion-ai-voice-assistant-pro/page.tsx',
-  'app/zion-smart-expense-categorizer/page.tsx',
-  'app/zion-smart-inventory-optimizer/page.tsx'
+// List of remaining page files that need fixing
+const remainingPages = [
+  '/workspace/app/ai-sentiment-analysis-pro/page.tsx',
+  '/workspace/app/ai-social-media-manager/page.tsx',
+  '/workspace/app/it-services/page.tsx',
+  '/workspace/app/partners/page.tsx'
 ];
 
 function createBasicPage(filePath, pageName, title, description) {
@@ -299,9 +171,13 @@ const ${pageName}: React.FC = () => {
   );
 };
 
+export default ${pageName};`;
+
+  return content;
+}
+
 function fixFile(filePath) {
   try {
-    const fullPath = `/workspace/` + filePath;
     const fileName = path.basename(filePath, '.tsx');
     const pageName = fileName.split('-').map(word => 
       word.charAt(0).toUpperCase() + word.slice(1)
@@ -311,11 +187,11 @@ function fixFile(filePath) {
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join(' ');
     
-    const description = 'Advanced ' + title.toLowerCase() + ' solutions powered by artificial intelligence. Transform your business with our cutting-edge technology.';
+    const description = `Advanced ${title.toLowerCase()} solutions powered by artificial intelligence. Transform your business with our cutting-edge technology.`;
     
-    const content = createBasicPage(fullPath, pageName, title, description);
+    const content = createBasicPage(filePath, pageName, title, description);
     
-    fs.writeFileSync(fullPath, content);
+    fs.writeFileSync(filePath, content);
     console.log(`Fixed ${filePath}`);
     
   } catch (error) {
@@ -323,8 +199,7 @@ function fixFile(filePath) {
   }
 }
 
-// Fix all page files
-pageFiles.forEach(fixFile);
+// Fix all remaining page files
+remainingPages.forEach(fixFile);
 
-console.log('All page files fixing completed!');
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
+console.log('Remaining page fixing completed!');

@@ -15,6 +15,7 @@ export default function PagePage() {
 }
 =======
 }
+<<<<<<< HEAD:temp-broken/services/page.tsx
 =======
 'use client';
 import React, { Helmet } from 'react-helmet-async';
@@ -149,3 +150,5 @@ const ServicesPage: React.FC = () => {
 export default ServicesPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-91ea
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706:temp-broken/services/page.tsx
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc:app/services/page.tsx

@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 import React from 'react';
 
+<<<<<<< HEAD
 export default function PagePage() {
+=======
+export default function TermsPage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -13,6 +17,7 @@ export default function PagePage() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import React, { Helmet } from 'react-helmet-async'.
 export default function Terms() {
@@ -116,3 +121,5 @@ const TermsPage: React.FC = () => {
           </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-91ea
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc

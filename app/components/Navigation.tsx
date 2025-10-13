@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -49,6 +48,7 @@ export default function Navigation() {
             <Link to="/contact" className="block py-2 text-gray-300 hover:text-white">
               Contact
             </Link>
+<<<<<<< HEAD
 =======
 import React, { Link } from 'react-router-dom';
 import React, { useState, useCallback, useMemo } from 'react';
@@ -1534,11 +1534,14 @@ export default function Navigation() {
               </Link>
             </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
           </div>
         )}
       </div>
     </nav>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -1899,3 +1902,6 @@ export default function Navigation() {
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
