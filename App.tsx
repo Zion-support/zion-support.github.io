@@ -85,6 +85,11 @@ const ZionAILegalAssistantProPage = React.lazy(() => import("./app/zion-ai-legal
 const ZionAIRealEstateProPage = React.lazy(() => import("./app/zion-ai-real-estate-pro/page"));
 const ZionAIEducationProPage = React.lazy(() => import("./app/zion-ai-education-pro/page"));
 const ZionAIFinanceProPage = React.lazy(() => import("./app/zion-ai-finance-pro/page"));
+
+// New Advanced AI Services
+const AIBlockchainAnalyticsProPage = React.lazy(() => import("./app/ai-blockchain-analytics-pro/page"));
+const AIAutonomousSystemsProPage = React.lazy(() => import("./app/ai-autonomous-systems-pro/page"));
+const AIClimateSolutionsProPage = React.lazy(() => import("./app/ai-climate-solutions-pro/page"));
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -192,6 +197,11 @@ function App() {
                                     <Route path="/zion-ai-real-estate-pro" element={<ZionAIRealEstateProPage />} />
                                     <Route path="/zion-ai-education-pro" element={<ZionAIEducationProPage />} />
                                     <Route path="/zion-ai-finance-pro" element={<ZionAIFinanceProPage />} />
+
+                                    {/* New Advanced AI Services */}
+                                    <Route path="/ai-blockchain-analytics-pro" element={<AIBlockchainAnalyticsProPage />} />
+                                    <Route path="/ai-autonomous-systems-pro" element={<AIAutonomousSystemsProPage />} />
+                                    <Route path="/ai-climate-solutions-pro" element={<AIClimateSolutionsProPage />} />
 
                                     {/* Catch all route */}
                                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
