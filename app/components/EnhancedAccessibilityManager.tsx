@@ -177,6 +177,12 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
       }
     `;
     document.head.appendChild(style);
+
+    // Set up trap focus for modals
+    const modals = document.querySelectorAll('[role="dialog"], [role="modal"]');
+    modals.forEach(modal => {
+      trapFocus(modal as HTMLElement);
+    });
   }, [enableFocusManagement]);
 
   // Font size controls

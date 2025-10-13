@@ -53,51 +53,34 @@ const PerformanceMonitor = () => {
       })
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
 
-      // Measure First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry: any) => {
-          setMetrics(prev => ({ ...prev, firstInputDelay: entry.processingStart - entry.startTime }))
-        })
-      })
-      fidObserver.observe({ entryTypes: ['first-input'] })
-
       // Measure Cumulative Layout Shift (CLS)
       let clsValue = 0
       const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value
-            setMetrics(prev => ({ ...prev, cumulativeLayoutShift: clsValue }))
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value
           }
-        })
+        }
+        setMetrics(prev => ({ ...prev, cumulativeLayoutShift: clsValue }))
       })
       clsObserver.observe({ entryTypes: ['layout-shift'] })
 
       // Measure Time to First Byte (TTFB)
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigationEntry) {
-        setMetrics(prev => ({ 
-          ...prev, 
-          timeToFirstByte: navigationEntry.responseStart - navigationEntry.requestStart 
-        }))
+        const ttfb = navigationEntry.responseStart - navigationEntry.requestStart
+        setMetrics(prev => ({ ...prev, timeToFirstByte: ttfb }))
       }
 
       // Measure memory usage
       if ('memory' in performance) {
         const memory = (performance as any).memory
-        setMetrics(prev => ({ 
-          ...prev, 
-          memoryUsage: memory.usedJSHeapSize / 1024 / 1024 
-        }))
+        setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize / 1024 / 1024 }))
       }
 
-      // Cleanup observers
       return () => {
         fcpObserver.disconnect()
         lcpObserver.disconnect()
-        fidObserver.disconnect()
         clsObserver.disconnect()
       }
     }
@@ -106,132 +89,96 @@ const PerformanceMonitor = () => {
     return cleanup
   }, [])
 
-  const getMetricColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-600'
-    if (value <= thresholds.poor) return 'text-yellow-600'
-    return 'text-red-600'
+  if (process.env.NODE_ENV !== 'development') {
+    return null
   }
 
-
-  if (process.env.NODE_ENV !== 'development') return null
-
   return (
-    <div className="fixed bottom-4 left-4 z-50">
+    <div className="fixed bottom-4 right-4 z-50">
       <button
         onClick={() => setIsVisible(!isVisible)}
-        className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
+        className="bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-green-700 transition-colors"
       >
         Performance
       </button>
       
       {isVisible && (
-        <div className="absolute bottom-12 left-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-80">
-          <h3 className="text-lg font-semibold mb-4 text-gray-800">Performance Metrics</h3>
+        <div className="absolute bottom-12 right-0 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Performance Metrics</h3>
           
-          <div className="space-y-3 text-sm">
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">Load Time:</span>
-<<<<<<< HEAD
-
-              <span className={`font-mono ${getMetricColor(metrics.loadTime || 0, { good: 1000, poor: 3000 })}`}>
-                {metrics.loadTime?.toFixed(0) || 'N/A'}ms
-
-
-=======
-              <span className={`font-mono ${metrics.loadTime ? getMetricColor(metrics.loadTime, { good: 1000, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
-              </span>
-            </div>
+          <div className="space-y-3">
+            {metrics.loadTime !== null && (
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-600 dark:text-gray-300">Load Time:</span>
+                <span className="text-sm font-mono text-gray-900 dark:text-white">
+                  {metrics.loadTime.toFixed(2)}ms
+                </span>
+              </div>
+            )}
             
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">FCP:</span>
-<<<<<<< HEAD
-
-              <span className={`font-mono ${getMetricColor(metrics.firstContentfulPaint || 0, { good: 1800, poor: 3000 })}`}>
-                {metrics.firstContentfulPaint?.toFixed(0) || 'N/A'}ms
-
-
-=======
-              <span className={`font-mono ${metrics.firstContentfulPaint ? getMetricColor(metrics.firstContentfulPaint, { good: 1800, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.firstContentfulPaint ? `${metrics.firstContentfulPaint.toFixed(0)}ms` : 'N/A'}
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
-              </span>
-            </div>
+            {metrics.firstContentfulPaint !== null && (
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-600 dark:text-gray-300">FCP:</span>
+                <span className="text-sm font-mono text-gray-900 dark:text-white">
+                  {metrics.firstContentfulPaint.toFixed(2)}ms
+                </span>
+              </div>
+            )}
             
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">LCP:</span>
-<<<<<<< HEAD
-
-              <span className={`font-mono ${getMetricColor(metrics.largestContentfulPaint || 0, { good: 2500, poor: 4000 })}`}>
-                {metrics.largestContentfulPaint?.toFixed(0) || 'N/A'}ms
-
-
-=======
-              <span className={`font-mono ${metrics.largestContentfulPaint ? getMetricColor(metrics.largestContentfulPaint, { good: 2500, poor: 4000 }) : 'text-gray-400'}`}>
-                {metrics.largestContentfulPaint ? `${metrics.largestContentfulPaint.toFixed(0)}ms` : 'N/A'}
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
-              </span>
-            </div>
+            {metrics.largestContentfulPaint !== null && (
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-600 dark:text-gray-300">LCP:</span>
+                <span className="text-sm font-mono text-gray-900 dark:text-white">
+                  {metrics.largestContentfulPaint.toFixed(2)}ms
+                </span>
+              </div>
+            )}
             
-            <div className="flex justify-between items-center">
-<<<<<<< HEAD
-              <span className="text-gray-600">INP:</span>
-
-              <span className={`font-mono ${getMetricColor(metrics.interactionToNextPaint || 0, { good: 200, poor: 500 })}`}>
-                {metrics.interactionToNextPaint?.toFixed(0) || 'N/A'}ms
-
-
-=======
-              <span className="text-gray-600">FID:</span>
-              <span className={`font-mono ${metrics.firstInputDelay ? getMetricColor(metrics.firstInputDelay, { good: 100, poor: 300 }) : 'text-gray-400'}`}>
-                {metrics.firstInputDelay ? `${metrics.firstInputDelay.toFixed(0)}ms` : 'N/A'}
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
-              </span>
-            </div>
+            {metrics.cumulativeLayoutShift !== null && (
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-600 dark:text-gray-300">CLS:</span>
+                <span className="text-sm font-mono text-gray-900 dark:text-white">
+                  {metrics.cumulativeLayoutShift.toFixed(4)}
+                </span>
+              </div>
+            )}
             
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">CLS:</span>
-<<<<<<< HEAD
-
-              <span className={`font-mono ${getMetricColor(metrics.cumulativeLayoutShift || 0, { good: 0.1, poor: 0.25 })}`}>
-                {metrics.cumulativeLayoutShift?.toFixed(3) || 'N/A'}
-
-
-=======
-              <span className={`font-mono ${metrics.cumulativeLayoutShift ? getMetricColor(metrics.cumulativeLayoutShift, { good: 0.1, poor: 0.25 }) : 'text-gray-400'}`}>
-                {metrics.cumulativeLayoutShift ? metrics.cumulativeLayoutShift.toFixed(3) : 'N/A'}
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
-              </span>
-            </div>
+            {metrics.timeToFirstByte !== null && (
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-600 dark:text-gray-300">TTFB:</span>
+                <span className="text-sm font-mono text-gray-900 dark:text-white">
+                  {metrics.timeToFirstByte.toFixed(2)}ms
+                </span>
+              </div>
+            )}
             
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">TTFB:</span>
-<<<<<<< HEAD
-
-              <span className={`font-mono ${getMetricColor(metrics.timeToFirstByte || 0, { good: 800, poor: 1800 })}`}>
-                {metrics.timeToFirstByte?.toFixed(0) || 'N/A'}ms
-
-
-=======
-              <span className={`font-mono ${metrics.timeToFirstByte ? getMetricColor(metrics.timeToFirstByte, { good: 800, poor: 1800 }) : 'text-gray-400'}`}>
-                {metrics.timeToFirstByte ? `${metrics.timeToFirstByte.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">Memory:</span>
-              <span className="font-mono text-blue-600">
-                {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}MB` : 'N/A'}
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
-              </span>
-            </div>
+            {metrics.memoryUsage !== null && (
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-600 dark:text-gray-300">Memory:</span>
+                <span className="text-sm font-mono text-gray-900 dark:text-white">
+                  {metrics.memoryUsage.toFixed(2)}MB
+                </span>
+              </div>
+            )}
           </div>
           
-          <div className="mt-4 pt-4 border-t border-gray-200">
-            <div className="text-xs text-gray-500">
-              <p>Green: Good | Yellow: Needs Improvement | Red: Poor</p>
-            </div>
+          <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+            <button
+              onClick={() => {
+                setMetrics({
+                  loadTime: null,
+                  firstContentfulPaint: null,
+                  largestContentfulPaint: null,
+                  firstInputDelay: null,
+                  cumulativeLayoutShift: null,
+                  timeToFirstByte: null,
+                  memoryUsage: null
+                })
+              }}
+              className="w-full text-sm text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300"
+            >
+              Reset Metrics
+            </button>
           </div>
         </div>
       )}
