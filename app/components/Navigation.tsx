@@ -62,8 +62,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     }
   ];
 
-<<<<<<< HEAD
-=======
   const serviceDropdownItems = [
     {
       category: 'AI Solutions',
@@ -101,7 +99,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -137,23 +134,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                   )}
                 </Link>
                 
-<<<<<<< HEAD
-                {/* Dropdown Menu */}
-                {item.hasDropdown && item.dropdownItems && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="py-2">
-                      {item.dropdownItems.map((dropdownItem, index) => (
-                        <Link
-                          key={index}
-                          to={dropdownItem.path}
-                          className={`block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors ${
-                            isActive(dropdownItem.path) ? 'text-cyan-400 bg-cyan-500/10' : ''
-                          }`}
-                        >
-                          {dropdownItem.name}
-                        </Link>
-                      ))}
-=======
                 {/* Services Dropdown */}
                 {item.hasDropdown && (
                   <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
@@ -192,7 +172,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                           View All Services →
                         </Link>
                       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
                     </div>
                   </div>
                 )}
@@ -204,11 +183,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-<<<<<<< HEAD
-              className="text-gray-300 hover:text-cyan-400 transition-colors"
-=======
               className="text-gray-300 hover:text-cyan-400 transition-colors p-2"
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -220,19 +195,11 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800/95 backdrop-blur-sm border-t border-cyan-500/20">
-<<<<<<< HEAD
-              {navigationItems.map((item) => (
-                <div key={item.name}>
-                  <Link
-                    to={item.path}
-                    className={`flex items-center justify-between px-3 py-2 rounded-md text-base font-medium transition-colors ${
-=======
               {navigationItems.map((item, index) => (
                 <div key={index}>
                   <Link
                     to={item.path}
                     className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-base font-medium transition-colors ${
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
                       isActive(item.path)
                         ? 'text-cyan-400 bg-cyan-500/10'
                         : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
@@ -249,33 +216,13 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                           e.preventDefault();
                           toggleServices();
                         }}
-<<<<<<< HEAD
-                        className="text-gray-400 hover:text-cyan-400"
-=======
                         className="ml-auto"
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
                       >
                         {isServicesOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                       </button>
                     )}
                   </Link>
                   
-<<<<<<< HEAD
-                  {/* Mobile Dropdown */}
-                  {item.hasDropdown && item.dropdownItems && isServicesOpen && (
-                    <div className="pl-6 space-y-1">
-                      {item.dropdownItems.map((dropdownItem, index) => (
-                        <Link
-                          key={index}
-                          to={dropdownItem.path}
-                          className={`block px-3 py-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors ${
-                            isActive(dropdownItem.path) ? 'text-cyan-400' : ''
-                          }`}
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {dropdownItem.name}
-                        </Link>
-=======
                   {/* Mobile Services Dropdown */}
                   {item.hasDropdown && isServicesOpen && (
                     <div className="ml-4 mt-2 space-y-2">
@@ -297,7 +244,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                             ))}
                           </div>
                         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
                       ))}
                     </div>
                   )}
