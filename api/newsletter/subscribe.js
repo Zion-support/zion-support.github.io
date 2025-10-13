@@ -1,33 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
-// Simple email validation function
-const isValidEmail = (email) => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-};
-async function handler(req, res) {
-
 export default async function handler(req, res) {
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
-
-export default async function handler(req, res) {
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
 // Simple email validation function (currently unused but kept for future use)
 // const isValidEmail = (email) => {
 //   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -35,9 +7,6 @@ export default async function handler(req, res) {
 // };
 
 export default async function handler(req, res) {
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -69,30 +38,6 @@ export default async function handler(req, res) {
       email: req.body.email,
       timestamp: new Date().toISOString()
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ success: true, message: 'Successfully subscribed to newsletter' }));
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -108,43 +53,8 @@ export default async function handler(req, res) {
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
     }));
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-}
-
-export default handler;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
 }
 
 export default handler;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71

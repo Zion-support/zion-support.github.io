@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -69,13 +58,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     { name: 'theme-color', content: '#0066cc' },
     { name: 'msapplication-TileColor', content: '#0066cc' },
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
-<<<<<<< HEAD
-    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-  ];
-
-=======
-    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }];
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
   return (
     <Helmet>
       <title>{title}</title>
@@ -127,16 +109,3 @@ export const defaultStructuredData = {
     "addressCountry": "US"
   }
 };
-<<<<<<< HEAD
-export default SEOEnhancer;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
-
-export default SEOEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71

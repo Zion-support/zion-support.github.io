@@ -33,46 +33,11 @@ async function handler(req, res) {
       currency,
       status: 'requires_payment_method',
       created: Math.floor(Date.now() / 1000)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      status: 'requires_payment_method'
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
     };
     
     res.statusCode = 200;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    res.json({ paymentIntent });
-<<<<<<< HEAD
-  } catch (error) {
-=======
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ paymentIntent }));
-  } catch (error) {
-    console.error('Payment intent creation error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
-    res.json({ paymentIntent });
-  } catch (_error) {
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
-  } catch (_error) {
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }
 }
-
-<<<<<<< HEAD
-export default withErrorLogging(handler);
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
