@@ -1,11 +1,8 @@
-#!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+const fs = require('fs');
+const path = require('path');
 
 // List of files with JSX errors
-const problematicFiles = [
+const filesToFix = [
   'app/ai-chatbot-builder/page.tsx',
   'app/ai-mobile-app-builder/page.tsx',
   'app/ai-mobile-builder/page.tsx',
@@ -17,87 +14,60 @@ const problematicFiles = [
   'app/pricing/page.tsx',
   'app/quantum-data-encryption-vault/page.tsx',
   'app/zion-ai-analytics-pro/page.tsx',
-  'app/zion-ai-crm-pro/page.tsx',
-  'app/zion-ai-customer-churn-predictor-pro/page.tsx',
-  'app/zion-ai-email-marketing-pro/page.tsx',
-  'app/zion-ai-inventory-manager/page.tsx',
-  'app/zion-ai-inventory-optimizer-pro/page.tsx',
-  'app/zion-ai-survey-builder/page.tsx',
-  'app/components/ImageOptimizer.tsx'
+  'app/zion-ai-crm-pro/page.tsx'
 ];
 
 function fixFile(filePath) {
-  console.log(`Fixing ${filePath}...`);
-  
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Fix duplicate function declarations - keep the second one
-  const duplicateFunctionRegex = /export default function \w+\([^)]*\)\s*\{[^}]*\}\s*export default function/gs;
-  content = content.replace(duplicateFunctionRegex, (match) => {
-    const parts = match.split('export default function');
-    return 'export default function' + parts[parts.length - 1];
-  });
-  
-  // Fix incomplete function declarations at the beginning
-  const incompleteFunctionRegex = /^export default function \w+\([^)]*\)\s*\{[^}]*\}\s*export default function/gs;
-  content = content.replace(incompleteFunctionRegex, (match) => {
-    const parts = match.split('export default function');
-    return 'export default function' + parts[parts.length - 1];
-  });
-  
-  // Fix missing closing tags - add proper closing structure
-  if (content.includes('export default function') && !content.includes('}')) {
-    // Find the last opening div and add proper closing
-    const lastDivIndex = content.lastIndexOf('<div');
-    if (lastDivIndex !== -1) {
-      const beforeLastDiv = content.substring(0, lastDivIndex);
-      const afterLastDiv = content.substring(lastDivIndex);
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove the first function declaration and keep only the second one
+    const lines = content.split('\n');
+    let newLines = [];
+    let foundFirstFunction = false;
+    let braceCount = 0;
+    let inFirstFunction = false;
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
       
-      // Count opening and closing divs
-      const openDivs = (beforeLastDiv.match(/<div/g) || []).length;
-      const closeDivs = (beforeLastDiv.match(/<\/div>/g) || []).length;
-      const missingDivs = openDivs - closeDivs;
-      
-      // Add missing closing divs
-      let closingDivs = '';
-      for (let i = 0; i < missingDivs; i++) {
-        closingDivs += '\n    </div>';
+      if (line.includes('export default function PageTsxPage()') && !foundFirstFunction) {
+        foundFirstFunction = true;
+        inFirstFunction = true;
+        continue;
       }
       
-      content = beforeLastDiv + afterLastDiv + closingDivs + '\n  );\n}';
+      if (inFirstFunction) {
+        // Count braces to know when the first function ends
+        for (const char of line) {
+          if (char === '{') braceCount++;
+          if (char === '}') braceCount--;
+        }
+        
+        if (braceCount === 0 && line.includes('}')) {
+          inFirstFunction = false;
+          continue;
+        }
+        continue;
+      }
+      
+      newLines.push(line);
     }
-  }
-  
-  // Fix specific ImageOptimizer issues
-  if (filePath.includes('ImageOptimizer')) {
-    // Remove duplicate function declarations
-    content = content.replace(/export default function ImageOptimizer[^}]*\}\s*export default function ImageOptimizer/gs, 'export default function ImageOptimizer');
     
-    // Fix parameter syntax
-    content = content.replace(/quality\?\s*:\s*number;\s*lazy\s*=\s*true,\s*placeholder\s*lazy\s*=\s*true/gs, 'quality?: number;\n  lazy = true,\n  placeholder?: string');
+    // Join the lines and clean up
+    let newContent = newLines.join('\n');
+    
+    // Remove any remaining incomplete JSX or syntax issues
+    newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n'); // Remove multiple empty lines
+    newContent = newContent.replace(/\n\s*$/g, '\n'); // Remove trailing whitespace
+    
+    fs.writeFileSync(filePath, newContent);
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
-  
-  // Fix missing commas in function parameters
-  content = content.replace(/(\w+)\s*=\s*true\s*\n\s*placeholder/gs, '$1 = true,\n  placeholder');
-  
-  // Fix missing closing braces
-  if (content.includes('export default function') && !content.trim().endsWith('}')) {
-    content = content.trim() + '\n}';
-  }
-  
-  // Write the fixed content back
-  fs.writeFileSync(filePath, content);
-  console.log(`Fixed ${filePath}`);
 }
 
-// Fix all problematic files
-problematicFiles.forEach(filePath => {
-  const fullPath = path.join(process.cwd(), filePath);
-  if (fs.existsSync(fullPath)) {
-    fixFile(fullPath);
-  } else {
-    console.log(`File not found: ${fullPath}`);
-  }
-});
-
-console.log('JSX fixes completed!');
+// Fix all files
+filesToFix.forEach(fixFile);
+console.log('All files fixed!');
