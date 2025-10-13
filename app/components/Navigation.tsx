@@ -1,10 +1,15 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
+import { 
+  Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, 
+  Smartphone, Brain, Server, Lock, Wifi, BarChart3, Cpu, 
+  Briefcase, Users, BookOpen, MessageSquare, Phone, DollarSign
+} from 'lucide-react'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false)
   
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
@@ -14,14 +19,29 @@ const Navigation = React.memo(() => {
     setIsServicesOpen(!isServicesOpen)
   }, [isServicesOpen])
 
+  const toggleCompany = useCallback(() => {
+    setIsCompanyOpen(!isCompanyOpen)
+  }, [isCompanyOpen])
+
   const services = useMemo(() => [
-    { name: 'AI & Machine Learning', path: '/ai-services', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Cloud Solutions', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
-    { name: '5G Implementation', path: '/5g-implementation', icon: <Globe className="w-4 h-4" /> },
-    { name: 'Data Analytics', path: '/data-analytics', icon: <Database className="w-4 h-4" /> },
-    { name: 'Custom Development', path: '/custom-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Mobile Solutions', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> }
+    { name: 'AI & Machine Learning', path: '/ai-services', icon: <Brain className="w-4 h-4" /> },
+    { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
+    { name: '5G Solutions', path: '/5g-solutions', icon: <Wifi className="w-4 h-4" /> },
+    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
+    { name: 'Mobile Development', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> },
+    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'Custom Software', path: '/custom-software', icon: <Cpu className="w-4 h-4" /> },
+    { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },
+    { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Server className="w-4 h-4" /> }
+  ], [])
+
+  const companyLinks = useMemo(() => [
+    { name: 'About Us', path: '/about', icon: <Users className="w-4 h-4" /> },
+    { name: 'Case Studies', path: '/case-studies', icon: <Briefcase className="w-4 h-4" /> },
+    { name: 'Careers', path: '/careers', icon: <Users className="w-4 h-4" /> },
+    { name: 'Blog', path: '/blog', icon: <BookOpen className="w-4 h-4" /> },
+    { name: 'Tutorials', path: '/tutorials', icon: <BookOpen className="w-4 h-4" /> }
   ], [])
 
   return (
@@ -36,9 +56,6 @@ const Navigation = React.memo(() => {
             <Link to="/" className="hover:text-blue-400 transition-colors">
               Home
             </Link>
-            <Link to="/about" className="hover:text-blue-400 transition-colors">
-              About
-            </Link>
             
             {/* Services Dropdown */}
             <div className="relative">
@@ -51,7 +68,7 @@ const Navigation = React.memo(() => {
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg py-2 z-50 grid grid-cols-2 gap-1">
                   {services.map((service) => (
                     <Link
                       key={service.name}
@@ -60,18 +77,42 @@ const Navigation = React.memo(() => {
                       onClick={() => setIsServicesOpen(false)}
                     >
                       {service.icon}
-                      <span>{service.name}</span>
+                      <span className="text-sm">{service.name}</span>
                     </Link>
                   ))}
                 </div>
               )}
             </div>
 
-            <Link to="/case-studies" className="hover:text-blue-400 transition-colors">
-              Case Studies
-            </Link>
-            <Link to="/blog" className="hover:text-blue-400 transition-colors">
-              Blog
+            {/* Company Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleCompany}
+                className="flex items-center space-x-1 hover:text-blue-400 transition-colors"
+              >
+                <span>Company</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${isCompanyOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isCompanyOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50">
+                  {companyLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.path}
+                      className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                      onClick={() => setIsCompanyOpen(false)}
+                    >
+                      {link.icon}
+                      <span>{link.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link to="/pricing" className="hover:text-blue-400 transition-colors">
+              Pricing
             </Link>
             <Link to="/contact" className="hover:text-blue-400 transition-colors">
               Contact
@@ -106,13 +147,6 @@ const Navigation = React.memo(() => {
               >
                 Home
               </Link>
-              <Link
-                to="/about"
-                className="hover:text-blue-400 transition-colors"
-                onClick={toggleMenu}
-              >
-                About
-              </Link>
               
               {/* Mobile Services */}
               <div>
@@ -137,7 +171,37 @@ const Navigation = React.memo(() => {
                         }}
                       >
                         {service.icon}
-                        <span>{service.name}</span>
+                        <span className="text-sm">{service.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile Company */}
+              <div>
+                <button
+                  onClick={toggleCompany}
+                  className="flex items-center space-x-1 hover:text-blue-400 transition-colors"
+                >
+                  <span>Company</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${isCompanyOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isCompanyOpen && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    {companyLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.path}
+                        className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors"
+                        onClick={() => {
+                          setIsCompanyOpen(false)
+                          toggleMenu()
+                        }}
+                      >
+                        {link.icon}
+                        <span>{link.name}</span>
                       </Link>
                     ))}
                   </div>
@@ -145,18 +209,11 @@ const Navigation = React.memo(() => {
               </div>
 
               <Link
-                to="/case-studies"
+                to="/pricing"
                 className="hover:text-blue-400 transition-colors"
                 onClick={toggleMenu}
               >
-                Case Studies
-              </Link>
-              <Link
-                to="/blog"
-                className="hover:text-blue-400 transition-colors"
-                onClick={toggleMenu}
-              >
-                Blog
+                Pricing
               </Link>
               <Link
                 to="/contact"
