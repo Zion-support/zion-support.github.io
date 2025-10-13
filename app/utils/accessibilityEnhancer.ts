@@ -19,8 +19,14 @@ class AccessibilityEnhancer {
 
   init(): void {
     if (this.config.enabled) {
-      console.log('Accessibility enhancer initialized');
+      // Initialize accessibility features silently
+      this.applyAccessibilitySettings();
     }
+  }
+
+  private applyAccessibilitySettings(): void {
+    // Apply accessibility settings without console logging
+    document.documentElement.setAttribute('data-accessibility-enabled', 'true');
   }
 
   setHighContrast(enabled: boolean): void {
