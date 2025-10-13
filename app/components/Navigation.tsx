@@ -28,7 +28,8 @@ import {
   Receipt,
   TrendingUp,
   Cpu,
-  Network
+  Network,
+  Sparkles
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -144,6 +145,18 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             { name: 'Customer Sentiment Tracker', path: '/ai-customer-sentiment-tracker', icon: <Heart className="w-4 h-4" /> },
             { name: 'Smart Expense Categorizer', path: '/smart-expense-categorizer', icon: <Receipt className="w-4 h-4" /> },
             { name: 'Smart Inventory Optimizer', path: '/smart-inventory-optimizer', icon: <Package className="w-4 h-4" /> }
+          ]
+        },
+        {
+          name: 'Zion Pro Solutions',
+          icon: <Sparkles className="w-4 h-4" />,
+          items: [
+            { name: 'Zion AI Analytics Pro', path: '/zion-ai-analytics-pro', icon: <BarChart3 className="w-4 h-4" /> },
+            { name: 'Zion Security Shield Pro', path: '/zion-security-shield-pro', icon: <Shield className="w-4 h-4" /> },
+            { name: 'Zion Cloud Vault Pro', path: '/zion-cloud-vault-pro', icon: <Cloud className="w-4 h-4" /> },
+            { name: 'Zion AI CRM Pro', path: '/zion-ai-crm-pro', icon: <Users className="w-4 h-4" /> },
+            { name: 'Zion AI Marketing Pro', path: '/zion-ai-marketing-automation-pro', icon: <Target className="w-4 h-4" /> },
+            { name: 'Zion AI Project Manager Pro', path: '/zion-ai-project-manager-pro', icon: <Calendar className="w-4 h-4" /> }
           ]
         },
         {

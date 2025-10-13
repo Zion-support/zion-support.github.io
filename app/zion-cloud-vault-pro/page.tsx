@@ -2,15 +2,13 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
   ArrowRight, 
-  BarChart3, 
-  Brain, 
+  Cloud, 
+  Shield, 
   CheckCircle, 
   Star, 
   Users, 
   Award, 
   Zap, 
-  Shield, 
-  Cloud, 
   Smartphone, 
   Globe, 
   Mail, 
@@ -36,118 +34,109 @@ import {
   Receipt,
   Package,
   Clock,
-  Eye,
-  Search,
-  Filter,
-  Download,
   Upload,
-  RefreshCw,
-  Activity,
-  PieChart,
-  LineChart,
-  TrendingDown,
-  AlertTriangle,
-  CheckCircle2,
-  XCircle,
-  Info,
-  Lightbulb,
-  Target as TargetIcon,
-  Zap as LightningIcon
+  Download,
+  Folder,
+  Archive,
+  Search,
+  Share2,
+  Eye,
+  Key
 } from "lucide-react";
 
-export default function AiAnalytics() {
+export default function ZionCloudVaultPro() {
   const features = [
     {
-      title: "Real-time Data Processing",
-      description: "Process and analyze data in real-time with our advanced AI algorithms that provide instant insights and actionable intelligence.",
-      icon: <Zap className="w-8 h-8" />,
-      benefits: ["Instant data processing", "Real-time dashboards", "Live monitoring", "Immediate alerts"]
+      title: "End-to-End Encryption",
+      description: "Military-grade encryption protects your data at rest and in transit, ensuring only you can access your files.",
+      icon: <Shield className="w-8 h-8" />,
+      benefits: ["AES-256 encryption", "Zero-knowledge architecture", "Client-side encryption", "Secure key management"]
     },
     {
-      title: "Predictive Analytics",
-      description: "Leverage machine learning models to predict future trends, behaviors, and outcomes with high accuracy.",
-      icon: <Brain className="w-8 h-8" />,
-      benefits: ["Trend forecasting", "Behavior prediction", "Risk assessment", "Opportunity identification"]
-    },
-    {
-      title: "Advanced Data Visualization",
-      description: "Transform complex data into intuitive, interactive visualizations that make insights accessible to everyone.",
-      icon: <BarChart3 className="w-8 h-8" />,
-      benefits: ["Interactive charts", "Custom dashboards", "Mobile-responsive", "Export capabilities"]
-    },
-    {
-      title: "Automated Insights Generation",
-      description: "AI automatically generates insights and recommendations based on your data patterns and business context.",
-      icon: <Lightbulb className="w-8 h-8" />,
-      benefits: ["Smart recommendations", "Pattern recognition", "Anomaly detection", "Automated reporting"]
-    },
-    {
-      title: "Multi-source Data Integration",
-      description: "Connect and analyze data from multiple sources including databases, APIs, files, and cloud services.",
+      title: "Unlimited Storage Capacity",
+      description: "Store unlimited files and data without worrying about storage limits or additional costs.",
       icon: <Database className="w-8 h-8" />,
-      benefits: ["100+ integrations", "Data transformation", "Real-time sync", "Unified data model"]
+      benefits: ["Unlimited storage", "No file size limits", "Automatic scaling", "Cost-effective pricing"]
     },
     {
-      title: "Custom AI Models",
-      description: "Build and deploy custom machine learning models tailored to your specific business needs and data patterns.",
-      icon: <Settings className="w-8 h-8" />,
-      benefits: ["Custom model training", "Model deployment", "Performance monitoring", "Continuous learning"]
+      title: "Cross-Platform Sync",
+      description: "Access your files from any device with seamless synchronization across desktop, mobile, and web platforms.",
+      icon: <Smartphone className="w-8 h-8" />,
+      benefits: ["Real-time sync", "Multi-device access", "Offline capabilities", "Conflict resolution"]
+    },
+    {
+      title: "Automated Backup Scheduling",
+      description: "Set up automated backups for your critical data with customizable schedules and retention policies.",
+      icon: <Clock className="w-8 h-8" />,
+      benefits: ["Custom schedules", "Retention policies", "Incremental backups", "Backup verification"]
+    },
+    {
+      title: "Version Control & Recovery",
+      description: "Track file versions and recover previous versions with our advanced version control system.",
+      icon: <Archive className="w-8 h-8" />,
+      benefits: ["Version history", "Point-in-time recovery", "Change tracking", "Rollback capabilities"]
+    },
+    {
+      title: "Team Collaboration Tools",
+      description: "Share files securely with team members and collaborate in real-time with advanced permission controls.",
+      icon: <Users className="w-8 h-8" />,
+      benefits: ["Secure sharing", "Permission controls", "Real-time collaboration", "Activity tracking"]
     }
   ];
 
-  const analyticsStats = [
-    { number: "40%", label: "Faster Decision Making", icon: <Zap className="w-6 h-6" /> },
-    { number: "85%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
-    { number: "60%", label: "Cost Reduction", icon: <TrendingDown className="w-6 h-6" /> },
-    { number: "24/7", label: "Automated Monitoring", icon: <Monitor className="w-6 h-6" /> }
+  const storageStats = [
+    { number: "99.99%", label: "Uptime Guarantee", icon: <Award className="w-6 h-6" /> },
+    { number: "256-bit", label: "AES Encryption", icon: <Lock className="w-6 h-6" /> },
+    { number: "Unlimited", label: "Storage Capacity", icon: <Database className="w-6 h-6" /> },
+    { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$299",
+      name: "Personal",
+      price: "$99",
       period: "month",
-      description: "Perfect for small businesses getting started with AI analytics",
+      description: "Perfect for individuals and small teams",
       features: [
-        "Up to 5 data sources",
-        "Basic dashboards",
-        "Standard reports",
+        "Unlimited storage",
+        "End-to-end encryption",
+        "Cross-platform sync",
+        "Basic sharing",
         "Email support",
-        "1 user account",
-        "Basic AI models"
+        "Up to 5 users"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$599",
+      name: "Business",
+      price: "$199",
       period: "month",
-      description: "Ideal for growing businesses with advanced analytics needs",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 25 data sources",
-        "Advanced dashboards",
-        "Custom reports",
+        "Unlimited storage",
+        "Advanced encryption",
+        "Team collaboration",
+        "Advanced sharing",
         "Priority support",
-        "Up to 10 user accounts",
-        "Advanced AI models",
-        "API access",
-        "Mobile app"
+        "Up to 25 users",
+        "Admin controls",
+        "Audit logs"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$999",
+      price: "$399",
       period: "month",
       description: "Complete solution for large organizations",
       features: [
-        "Unlimited data sources",
-        "Custom dashboards",
-        "Advanced AI features",
+        "Unlimited storage",
+        "Military-grade encryption",
+        "Advanced collaboration",
+        "Custom integrations",
         "24/7 dedicated support",
-        "Unlimited user accounts",
-        "Custom AI models",
-        "White-label options",
+        "Unlimited users",
+        "SSO integration",
         "On-premise deployment"
       ],
       popular: false
@@ -156,49 +145,49 @@ export default function AiAnalytics() {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion AI Analytics has revolutionized our decision-making process. The predictive insights helped us identify market opportunities before our competitors.",
+      name: "Jennifer Lee",
+      company: "Creative Agency",
+      role: "Creative Director",
+      content: "Zion Cloud Vault Pro has revolutionized how we manage our creative assets. The unlimited storage and seamless sync across all our devices is incredible.",
       rating: 5,
-      avatar: "SJ"
+      avatar: "JL"
     },
     {
-      name: "Michael Chen",
-      company: "E-commerce Solutions",
+      name: "Mark Wilson",
+      company: "Legal Firm",
+      role: "Managing Partner",
+      content: "The security features give us complete confidence in storing sensitive client documents. The encryption and access controls are top-notch.",
+      rating: 5,
+      avatar: "MW"
+    },
+    {
+      name: "Sarah Davis",
+      company: "Tech Startup",
       role: "CTO",
-      content: "The real-time analytics and automated insights have improved our operational efficiency by 40%. We can now make data-driven decisions instantly.",
+      content: "The team collaboration features have improved our productivity significantly. Being able to share and collaborate on files securely is a game-changer.",
       rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Digital Marketing Agency",
-      role: "Operations Director",
-      content: "The AI-powered recommendations have been game-changing. Our campaign performance improved by 60% thanks to the intelligent insights.",
-      rating: 5,
-      avatar: "ER"
+      avatar: "SD"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Analytics - Advanced Business Intelligence Platform | Zion Tech Group</title>
+        <title>Zion Cloud Vault Pro - Secure Cloud Storage Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your business with AI Analytics - advanced business intelligence platform with real-time processing, predictive analytics, and automated insights. Starting at $299/month."
+          content="Secure your data with Zion Cloud Vault Pro - unlimited cloud storage with end-to-end encryption, cross-platform sync, and team collaboration. Starting at $99/month."
         />
         <meta
           name="keywords"
-          content="AI analytics, business intelligence, predictive analytics, data visualization, machine learning, real-time analytics, automated insights, data processing"
+          content="cloud storage, secure storage, end-to-end encryption, file sync, team collaboration, unlimited storage, data backup, file sharing"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-analytics" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-cloud-vault-pro" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-teal-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.3),transparent_50%)]"></div>
         
         {/* Hero Section */}
@@ -207,19 +196,19 @@ export default function AiAnalytics() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-                  <Brain className="w-4 h-4 text-blue-400 mr-2" />
-                  <span className="text-blue-400 text-sm font-medium">#1 AI Analytics Platform 2024</span>
+                  <Cloud className="w-4 h-4 text-blue-400 mr-2" />
+                  <span className="text-blue-400 text-sm font-medium">#1 Secure Cloud Storage 2024</span>
                 </div>
                 
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
-                    AI Analytics
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400">
+                    Zion Cloud Vault Pro
                   </span>
                 </h1>
                 
                 <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-                  Transform your business with advanced AI-powered analytics. Get real-time insights, 
-                  predictive analytics, and automated intelligence that drives growth and efficiency.
+                  Secure your data with unlimited cloud storage featuring end-to-end encryption, 
+                  cross-platform sync, and advanced team collaboration tools.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -241,7 +230,7 @@ export default function AiAnalytics() {
                 
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-6">
-                  {analyticsStats.map((stat, index) => (
+                  {storageStats.map((stat, index) => (
                     <div key={index} className="text-center group">
                       <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         {stat.icon}
@@ -257,28 +246,28 @@ export default function AiAnalytics() {
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                   <div className="text-center mb-6">
                     <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-cyan-600 flex items-center justify-center">
-                      <BarChart3 className="w-10 h-10 text-white" />
+                      <Cloud className="w-10 h-10 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Starting at $299/month</h3>
-                    <p className="text-gray-300">Advanced AI analytics for your business</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">Starting at $99/month</h3>
+                    <p className="text-gray-300">Unlimited secure cloud storage</p>
                   </div>
                   
                   <div className="space-y-4">
                     <div className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
-                      <span>Real-time processing</span>
+                      <span>Unlimited storage</span>
                     </div>
                     <div className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
-                      <span>Predictive analytics</span>
+                      <span>End-to-end encryption</span>
                     </div>
                     <div className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
-                      <span>Automated insights</span>
+                      <span>Cross-platform sync</span>
                     </div>
                     <div className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
-                      <span>100+ integrations</span>
+                      <span>Team collaboration</span>
                     </div>
                   </div>
                   
@@ -303,11 +292,11 @@ export default function AiAnalytics() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                  Powerful Analytics Features
+                  Secure Storage Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to transform your data into actionable business intelligence
+                Everything you need to store, sync, and collaborate on your files securely
               </p>
             </div>
             
@@ -346,11 +335,11 @@ export default function AiAnalytics() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                  Simple, Transparent Pricing
+                  Simple Storage Plans
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the analytics plan that fits your business needs and budget
+                Choose the storage plan that fits your needs and budget
               </p>
             </div>
             
@@ -413,11 +402,11 @@ export default function AiAnalytics() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                  Trusted by Industry Leaders
+                  Trusted by Thousands
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our clients say about AI Analytics
+                See what our users say about Zion Cloud Vault Pro
               </p>
             </div>
             
@@ -453,10 +442,11 @@ export default function AiAnalytics() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Analytics?
+                Ready to Secure Your Data?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses already using AI Analytics to drive growth and make data-driven decisions.
+                Join thousands of users already protecting their data with Zion Cloud Vault Pro. 
+                Start your free trial today.
               </p>
               
               {/* Contact Details */}
