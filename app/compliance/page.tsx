@@ -149,6 +149,9 @@ const CompliancePage: React.FC = () => {
       <Footer />
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default CompliancePage;
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf

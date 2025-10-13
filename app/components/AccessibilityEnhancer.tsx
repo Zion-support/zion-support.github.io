@@ -237,6 +237,7 @@ export default function AccessibilityEnhancer() {
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       // Add live regions for dynamic content
       const liveRegion = document.createElement('div');
       liveRegion.setAttribute('aria-live', 'polite');
@@ -367,6 +368,8 @@ export default function AccessibilityEnhancer() {
   }, []);
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
 >>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
     const root = document.documentElement;
@@ -407,6 +410,7 @@ export default function AccessibilityEnhancer() {
     applySettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   };
+<<<<<<< HEAD
 =======
 =======
     enhanceAccessibility();
@@ -421,6 +425,22 @@ export default function AccessibilityEnhancer() {
     setIsVisible(prev => !prev);
   };
 
+=======
+
+  const resetSettings = () => {
+    const defaultSettings: AccessibilitySettings = {
+      highContrast: false,
+      largeText: false,
+      reducedMotion: false,
+      screenReader: false,
+      focusVisible: true
+    };
+    setSettings(defaultSettings);
+    applyAccessibilitySettings(defaultSettings);
+  };
+
+  // Removed unused functions - functionality is handled by updateSetting directly
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
   return (
     <>
       {/* Toggle Button */}

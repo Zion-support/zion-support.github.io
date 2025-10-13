@@ -128,6 +128,7 @@ const CommunityPage: React.FC = () => {,
       </section>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default PagePage;
@@ -194,3 +195,5 @@ export default PagePage;
                   <a href="tel: +13024640950" className="text-cyan-400 hover:text-cyan-300">,
                     +1 (302) 464-0950;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf

@@ -2,6 +2,7 @@
 
 # Find all files with merge conflicts
 <<<<<<< HEAD
+<<<<<<< HEAD
 files_with_conflicts=$(find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "/!d; /^/d; /^
 =======
 files_with_conflicts=$(find app/ -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD")
@@ -18,6 +19,25 @@ for file in $files_with_conflicts; do
     
 <<<<<<< HEAD
     echo "Fixed: $file"
+=======
+files_with_conflicts=$(grep -r "<<<<<<< HEAD" app/components/ | cut -d: -f1 | sort -u)
+
+echo "Found files with merge conflicts:"
+echo "$files_with_conflicts"
+
+# Process each file
+for file in $files_with_conflicts; do
+    echo "Processing $file..."
+    
+    # Create a backup
+    cp "$file" "$file.backup"
+    
+    # Remove merge conflict markers and keep the latest version (after =======)
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i '/>>>>>>> cursor/d' "$file"
+    
+    echo "Fixed $file"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
 done
 
 echo "Merge conflicts fixed!"

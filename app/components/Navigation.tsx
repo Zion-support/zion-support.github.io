@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 =======
@@ -78,6 +79,11 @@ import FuturisticButton from './FuturisticButton';
   SidebarIcon
 } from "lucide-react";
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
+=======
+import React, { useState, useCallback, useMemo } from 'react'
+import { Link } from 'react-router-dom'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Globe, Cpu, Link as LinkIcon, Sidebar as SidebarIcon } from 'lucide-react'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
 
 <<<<<<< HEAD
 interface NavigationProps {
@@ -326,6 +332,7 @@ export default function Navigation() {
     setIsScrolled(window.scrollY > 50);
   };
 
+<<<<<<< HEAD
   useEffect(() => {
 <<<<<<< HEAD
 =======
@@ -338,6 +345,31 @@ export default function Navigation() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
+=======
+  const aiServices = useMemo(() => [
+    { name: 'AI Quantum Computing', path: '/ai-quantum-computing', icon: <Cpu className="w-4 h-4" />, featured: true },
+    { name: 'AI Blockchain Solutions', path: '/ai-blockchain-solutions', icon: <LinkIcon className="w-4 h-4" />, featured: true },
+    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
+    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
+    { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
+    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Marketing Automation', path: '/ai-marketing', icon: <Zap className="w-4 h-4" /> },
+    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+  ], [])
+  const itServices = useMemo(() => [
+    { name: 'AI-Powered DevOps', path: '/ai-powered-devops', icon: <Cpu className="w-4 h-4" />, featured: true },
+    { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
+    { name: 'Mobile Development', path: '/mobile-development', icon: <Code className="w-4 h-4" /> },
+    { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },
+    { name: 'Custom Software', path: '/custom-software', icon: <Code className="w-4 h-4" /> },
+    { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+  ], [])
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
     window.addEventListener('resize', handleResize);
