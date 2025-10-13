@@ -185,15 +185,10 @@ const HomePage = () => {
             canonical="https://ziontechgroup.com"
           />
 
-<<<<<<< HEAD
       {/* Main Content */}
       <main id="main-content" role="main" aria-label="Main content">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-=======
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden" aria-labelledby="hero-heading">
->>>>>>> cursor/analyze-improve-and-deploy-application-9610
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden" aria-labelledby="hero-heading">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -222,8 +217,8 @@ const HomePage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Sparkles className="w-5 h-5" />}
-              aria-label="Get started with Zion Tech Group services"
+              icon={<Sparkles className="w-5 h-5" aria-hidden="true" />}
+              aria-label="Get started with Zion Tech Group services - Contact us for consultation"
             >
               Get Started Today
             </FuturisticButton>
@@ -231,8 +226,8 @@ const HomePage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Monitor className="w-5 h-5" />}
-              aria-label="Watch our product demonstration"
+              icon={<Monitor className="w-5 h-5" aria-hidden="true" />}
+              aria-label="Watch our product demonstration - See our solutions in action"
             >
               Watch Demo
             </FuturisticButton>
@@ -245,7 +240,7 @@ const HomePage = () => {
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
                   {stat.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2" aria-label={stat.number}>{stat.number}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}

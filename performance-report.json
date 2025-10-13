@@ -1,19 +1,10 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-10-13T09:02:12.194Z",
+  "timestamp": "2025-10-13T09:35:27.147Z",
   "buildStats": {
-    "totalFiles": 17,
-    "totalSize": 531352,
-    "jsFiles": 14,
-    "jsSize": 522390,
-=======
-  "timestamp": "2025-10-13T09:06:20.681Z",
-  "buildStats": {
-    "totalFiles": 18,
-    "totalSize": 541866,
-    "jsFiles": 14,
-    "jsSize": 520157,
->>>>>>> cursor/analyze-improve-and-deploy-application-9610
+    "totalFiles": 21,
+    "totalSize": 552080,
+    "jsFiles": 17,
+    "jsSize": 528854,
     "cssFiles": 1,
     "cssSize": 1811,
     "imageFiles": 0,
