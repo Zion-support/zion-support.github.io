@@ -3,11 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-<<<<<<< HEAD
 import Navigation from './app/components/Navigation';
-=======
-import Header from './app/components/Header';
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
 import Footer from './app/components/Footer';
 
 // Page Components
@@ -22,10 +18,11 @@ import SupportPage from './app/pages/SupportPage';
 import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
-import SolutionsPage from './app/pages/SolutionsPage';
+import SolutionsPage from './app/solutions/page';
 import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
 import AISolutionsPage from './app/ai-solutions/page';
 import ITSolutionsPage from './app/it-solutions/page';
+import BlockchainSolutionsPage from './app/blockchain-solutions/page';
 
 // Service Pages
 import AIServicesPage from './app/pages/AIServicesPage';
@@ -66,13 +63,8 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-<<<<<<< HEAD
         <div className="min-h-screen bg-slate-900">
           <Navigation />
-=======
-        <div className="min-h-screen bg-gray-900">
-          <Header />
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
           <main className="relative z-10" id="main-content" role="main">
             <Routes>
               {/* Main Pages */}
@@ -80,23 +72,29 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/services" element={<ServicesPage />} />
-              <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
-              <Route path="/ai-solutions" element={<AISolutionsPage />} />
-              <Route path="/it-solutions" element={<ITSolutionsPage />} />
+              <Route path="/solutions" element={<SolutionsPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/tutorials" element={<TutorialsPage />} />
               <Route path="/demo" element={<DemoPage />} />
               <Route path="/support" element={<SupportPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/terms" element={<TermsPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-              <Route path="/solutions" element={<SolutionsPage />} />
               
               {/* Service Pages */}
+              <Route path="/ai-solutions" element={<AISolutionsPage />} />
               <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/it-solutions" element={<ITSolutionsPage />} />
               <Route path="/it-services" element={<ITServicesPage />} />
               <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
               <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+              <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
+              <Route path="/blockchain-solutions" element={<BlockchainSolutionsPage />} />
+              <Route path="/cybersecurity" element={<AISolutionsPage />} />
+              <Route path="/5g-solutions" element={<AISolutionsPage />} />
+              <Route path="/iot-edge-computing" element={<AISolutionsPage />} />
+              
+              {/* Company Pages */}
               <Route path="/case-studies" element={<CaseStudiesPage />} />
               <Route path="/careers" element={<CareersPage />} />
               
