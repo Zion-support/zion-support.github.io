@@ -1,391 +1,242 @@
-import { Users, ArrowRight, CheckCircle, Star, Globe, Shield, Zap, Brain, BarChart3, Target, Mail } from 'lucide-react';
+import { Brain, Mail, Zap, Shield, CheckCircle, ArrowRight, Star, Globe, Target, BarChart3 } from "lucide-react";
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import FuturisticCardEnhanced from "../components/FuturisticCardEnhanced";
+import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
 
 const AIPoweredEmailAnalyzerPage = () => {
-  const stats = [
-    { label: "Projects Completed", value: "500+" },
-    { label: "Happy Clients", value: "200+" },
-    { label: "Years Experience", value: "5+" },
-    { label: "Team Members", value: "50+" }
+  const testimonials = [
+    {
+      name: "Jennifer Martinez",
+      company: "Email Marketing Pro",
+      role: "Marketing Director",
+      content: "Zion's AI Email Analyzer has transformed our email campaigns. We can now predict engagement and optimize content in real-time.",
+      rating: 5,
+      avatar: "JM"
+    },
+    {
+      name: "Robert Wilson",
+      company: "Digital Agency",
+      role: "Email Specialist",
+      content: "The sentiment analysis is incredibly accurate. We can now understand our audience's emotions and tailor our messaging accordingly.",
+      rating: 5,
+      avatar: "RW"
+    },
+    {
+      name: "Lisa Chen",
+      company: "E-commerce Solutions",
+      role: "Campaign Manager",
+      content: "The predictive analytics help us avoid sending emails that might be flagged as spam. Our deliverability rates have improved significantly.",
+      rating: 5,
+      avatar: "LC"
+    }
   ];
 
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-//       title: "AI-Powered Sentiment Analysis",
-//       description: "Advanced machine learning algorithms analyze email tone, sentiment, and emotional context to help you craft perfect responses."
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Sentiment Analysis",
+      description: "Analyze email content sentiment and emotional tone to optimize messaging for better engagement."
     },
     {
-      icon: <Target className="w-8 h-8 text-purple-400" />,
-//       title: "Smart Response Suggestions",
-//       description: "Get intelligent, context-aware response suggestions that match your communication style and business objectives."
+      icon: <Shield className="w-8 h-8" />,
+      title: "Spam Detection",
+      description: "Automatically detect potential spam triggers and optimize content for better deliverability."
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      title: "Email Performance Analytics",
-//       description: "Track open rates, response times, and engagement metrics with detailed analytics and actionable insights."
+      icon: <Zap className="w-8 h-8" />,
+      title: "Real-time Optimization",
+      description: "Get instant suggestions to improve email performance and engagement rates."
     },
     {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-//       title: "Security & Compliance",
-      description: "Enterprise-grade security with GDPR compliance, data encryption, and secure cloud storage for all email data."
+      icon: <Globe className="w-8 h-8" />,
+      title: "Multi-language Support",
+      description: "Analyze emails in multiple languages with advanced natural language processing."
     },
     {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-//       title: "Real-time Processing",
-      description: "Instant analysis and suggestions as you type, with lightning-fast processing powered by advanced AI models."
+      icon: <Star className="w-8 h-8" />,
+      title: "Performance Predictions",
+      description: "Predict email performance metrics before sending to optimize campaign success."
     },
     {
-      icon: <Users className="w-8 h-8 text-blue-400" />,
-//       title: "Team Collaboration",
-//       description: "Share insights across teams, set up approval workflows, and maintain consistent communication standards."
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive analytics dashboard with insights and recommendations for improvement."
     }
   ];
 
-  const pricingPlans = [
-    {
-//       name: "Starter",
-//       price: "$29",
-//       period: "/month",
-      description: "Perfect for small teams and individuals",
-//       features: [
-//         "Up to 1,000 emails/month",
-//         "Basic sentiment analysis",
-//         "Response suggestions",
-//         "Email templates",
-//         "Basic analytics",
-//         "Email support"
-//       ],
-//       popular: false
-    },
-    {
-//       name: "Professional",
-//       price: "$79",
-//       period: "/month",
-      description: "Ideal for growing businesses",
-//       features: [
-//         "Up to 10,000 emails/month",
-//         "Advanced AI analysis",
-//         "Custom response templates",
-//         "Team collaboration",
-//         "Advanced analytics",
-//         "Priority support",
-//         "API access"
-//       ],
-//       popular: true
-    },
-    {
-//       name: "Enterprise",
-//       price: "$199",
-//       period: "/month",
-//       description: "For large organizations",
-//       features: [
-//         "Unlimited emails",
-//         "Custom AI models",
-//         "White-label solution",
-//         "Advanced security",
-//         "Custom integrations",
-//         "Dedicated support",
-//         "On-premise deployment"
-//       ],
-//       popular: false
-    }
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
-
-export default function AiPoweredEmailAnalyzerPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
-        <title>Ai Powered Email Analyzer - Zion Tech Group</title>
-        <meta name="description" content="Ai Powered Email Analyzer solutions by Zion Tech Group" />
+        <title>AI-Powered Email Analyzer - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered email analysis and optimization platform for better engagement and deliverability." />
+        <meta name="keywords" content="AI email analyzer, email optimization, sentiment analysis, spam detection, email marketing" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-powered-email-analyzer" />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Powered Email Analyzer</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai powered email analyzer solutions designed to meet your business needs.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-//       <Helmet>
-//         <title>AI-Powered Email Analyzer | Zion Tech Group</title>
-        <meta name="description" content="Revolutionize your email communication with our AI-powered email analyzer. Get sentiment analysis, smart suggestions, and performance insights." />
-        <meta name="keywords" content="AI email analyzer, email sentiment analysis, email automation, business communication, email analytics" />
-//       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-//           <motion.div
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
-//           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6">
-              <Mail className="w-5 h-5 text-cyan-400 mr-2" />
-              <span className="text-cyan-300 font-medium">AI-Powered Email Intelligence</span>
-</div>
+          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
+              <Mail className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Email Intelligence</span>
+            </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Transform Your
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Email Communication</span>
-</h1>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+                AI Email Analyzer
+              </span>
+            </h1>
             
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-//               Leverage advanced AI to analyze, optimize, and enhance your email communications with intelligent insights, 
-//               sentiment analysis, and smart response suggestions.
-</p>
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Transform your email marketing with AI-powered analysis and optimization. 
+              Improve engagement, deliverability, and ROI with intelligent insights.
+            </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-//               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-//               >
-//                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-//               </motion.button>
-//               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-//               >
-//                 View Demo
-//               </motion.button>
-</div>
-//           </motion.div>
-</div>
-//       </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-//               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-//               >
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.number}
-</div>
-                <div className="text-gray-400 font-medium">
-                  {stat.label}
-</div>
-//               </motion.div>
-            ))}
-</div>
-</div>
-//       </section>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+                <Zap className="w-5 h-5 ml-2" />
+              </Link>
+              <Link 
+                to="/demo" 
+                className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300"
+              >
+                View Demo
+                <Target className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-//           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-//           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-//               Powerful AI Features
-</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful Email Analysis Features
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-//               Our advanced AI technology provides comprehensive email analysis and optimization tools 
-//               to enhance your communication effectiveness.
-</p>
-//           </motion.div>
+              Everything you need to optimize your email campaigns with AI intelligence
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-//               <motion.div
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300"
-//               >
-                <div className="mb-6">
-                  {feature.icon}
-</div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {feature.title}
-</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {feature.description}
-</p>
-//               </motion.div>
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <FuturisticCardEnhanced
+                  className="p-8 hover:scale-105 transition-transform duration-300"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </FuturisticCardEnhanced>
+              </motion.div>
             ))}
-</div>
-</div>
-//       </section>
+          </div>
+        </div>
+      </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 px-4">
+      {/* Testimonials Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/30">
         <div className="max-w-7xl mx-auto">
-//           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-//           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-//               Simple, Transparent Pricing
-</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              What Email Marketers Say
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business needs. All plans include our core AI features 
-//               with no hidden fees or long-term contracts.
-</p>
-//           </motion.div>
+              Join thousands of email marketers who have transformed their campaigns
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-//               <motion.div
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
-//                   plan.popular 
-//                     ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
-//                     : 'border-white/10'
-                }`}
-//               >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-//                       Most Popular
-</div>
-</div>
-                )}
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
-</div>
-</div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-//                     </li>
-                  ))}
-//                 </ul>
-
-//                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-//                     plan.popular
-//                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:shadow-lg hover:shadow-cyan-500/25'
-//                       : 'border border-gray-600 text-white hover:bg-white/10'
-                  }`}
-//                 >
-//                   Get Started
-//                 </motion.button>
-//               </motion.div>
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <FuturisticCardEnhanced
+                  className="p-8 text-center"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span className="text-white font-bold text-xl">{testimonial.avatar}</span>
+                  </div>
+                  <div className="flex justify-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                  <div>
+                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                    <p className="text-cyan-400">{testimonial.role} at {testimonial.company}</p>
+                  </div>
+                </FuturisticCardEnhanced>
+              </motion.div>
             ))}
-</div>
-</div>
-//       </section>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-//           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-12 text-center"
-//           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Email Communication?
-</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-//               Join thousands of businesses already using our AI-powered email analyzer 
-//               to improve their communication effectiveness and drive better results.
-</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-//               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-//               >
-//                 Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-//               </motion.button>
-//               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-//               >
-//                 Contact Sales
-//               </motion.button>
-</div>
-//           </motion.div>
-</div>
-//       </section>
-
-      {/* Contact Information */}
-      <section className="py-16 px-4 bg-black/20">
-        <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-          <p className="text-gray-300 mb-6">
-            Contact us today to learn more about our AI-Powered Email Analyzer and how it can transform your business communication.
-</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-gray-300">
-            <div className="flex items-center">
-              <Mail className="w-5 h-5 mr-2 text-cyan-400" />
-<span>kleber@ziontechgroup.com</span>
-</div>
-            <div className="flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-cyan-400" />
-<span>https://ziontechgroup.com</span>
-</div>
-</div>
-</div>
-//       </section>
-</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-purple-900/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Email Marketing?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            Join thousands of email marketers using Zion AI Email Analyzer to optimize their campaigns. 
+            Start your free trial today.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <FuturisticButtonEnhanced
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={ArrowRight}
+              iconPosition="right"
+            >
+              Start Free Trial
+            </FuturisticButtonEnhanced>
+            <FuturisticButtonEnhanced
+              href="/demo"
+              variant="outline"
+              size="lg"
+              icon={Mail}
+              iconPosition="right"
+            >
+              Schedule Demo
+            </FuturisticButtonEnhanced>
+          </div>
+        </div>
+      </section>
+    </div>
   );
-}
+};
+
+export default AIPoweredEmailAnalyzerPage;

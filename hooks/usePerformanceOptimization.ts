@@ -1,26 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
 
-export function usePerformanceMonitor() {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
-    // Implementation here
-    setState('initialized');
-  }, []);
-  
-  return state;
+interface PerformanceOptimizationOptions {
+  enableLazyLoading?: boolean;
+  enablePreloading?: boolean;
+  enableImageOptimization?: boolean;
+  enableCodeSplitting?: boolean;
+  enableCaching?: boolean;
 }
 
-<<<<<<< HEAD
-export default usePerformanceMonitor;
-=======
 export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
   const {
     enableLazyLoading = true,
     enablePreloading = true,
     enableImageOptimization = true,
 
-    enableCodeSplitting = true,
+    // enableCodeSplitting = true,
     enableCaching = true,
   } = options;
 
@@ -52,8 +46,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         });
       },
       {
-//         rootMargin: '50px 0px',
-//         threshold: 0.01,
+        rootMargin: '50px 0px',
+        threshold: 0.01,
       }
     );
 
@@ -67,9 +61,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     if (!enablePreloading || typeof window === 'undefined') return;
 
     const criticalResources = [
-//       '/fonts/inter.woff2',
-//       '/images/hero-bg.jpg',
-//       '/images/logo.svg',
+      '/fonts/inter.woff2',
+      '/images/hero-bg.jpg',
+      '/images/logo.svg',
     ];
 
     criticalResources.forEach((resource) => {
@@ -120,9 +114,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
-          .then((registration) => {
+          .then(() => {
             })
-          .catch((registrationError) => {
+          .catch(() => {
             });
       });
     }
@@ -137,7 +131,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.duration > 50) {
-            }
+            // Long task detected
+          }
         }
       });
       
@@ -156,7 +151,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         const totalMB = Math.round(memory.totalJSHeapSize / 1048576);
         
         if (usedMB / totalMB > 0.8) {
-          }
+          // High memory usage detected
+        }
       };
       
       setInterval(checkMemory, 30000); // Check every 30 seconds
@@ -203,20 +199,19 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       }
     };
   }, [
-//     setupLazyLoading,
-//     preloadCriticalResources,
-//     optimizeImages,
-//     registerServiceWorker,
+    setupLazyLoading,
+    preloadCriticalResources,
+    optimizeImages,
+    registerServiceWorker,
     setupPerformanceMonitoring,
-//     addResourceHints,
+    addResourceHints,
   ]);
 
   return {
-//     setupLazyLoading,
-//     preloadCriticalResources,
-//     optimizeImages,
-//     registerServiceWorker,
+    setupLazyLoading,
+    preloadCriticalResources,
+    optimizeImages,
+    registerServiceWorker,
     setupPerformanceMonitoring,
   };
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

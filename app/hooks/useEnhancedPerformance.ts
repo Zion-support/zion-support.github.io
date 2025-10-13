@@ -1,25 +1,15 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
-=======
 
 export const useEnhancedPerformance = () => {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
-export function useEnhancedPerformance() {
-  const [state, setState] = useState<string | null>(null);
-  
   useEffect(() => {
-    // Implementation here
-    setState('initialized');
+    setLoading(true);
+    // Initialize hook logic here
+    setLoading(false);
   }, []);
-<<<<<<< HEAD
-  
-  return state;
-}
-=======
 
   const processData = (input: any) => {
     try {
@@ -35,12 +25,11 @@ export function useEnhancedPerformance() {
   };
 
   return {
-//     data,
-//     loading,
-//     error,
-//     processData,
+    data,
+    loading,
+    error,
+    processData,
   };
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default useEnhancedPerformance;

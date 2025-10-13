@@ -1,23 +1,12 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail, Hand } from 'lucide-react';
+import React, { Component, ReactNode, ErrorInfo } from 'react';
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
-
-interface ImprovederrorboundaryProps {
-  className?: string;
-  children?: React.ReactNode;
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
-<<<<<<< HEAD
-export default function Improvederrorboundary({ className = '', children, ...props }: ImprovederrorboundaryProps) {
-  return (
-    <div className={`improvederrorboundary-component ${className}`} {...props}>
-      {children}
-    </div>
-=======
 interface State {
   hasError: boolean;
   error?: Error;
@@ -68,63 +57,63 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             <div className="mb-8">
               <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <AlertTriangle className="w-10 h-10 text-red-400" />
-</div>
+              </div>
               <h1 className="text-3xl font-bold text-white mb-4">
-//                 Oops! Something went wrong
-</h1>
+                Oops! Something went wrong
+              </h1>
               <p className="text-gray-300 mb-6">
                 We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-</p>
-</div>
+              </p>
+            </div>
 
             <div className="space-y-4">
-//               <button
+              <button
                 onClick={this.handleRetry}
                 className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
-//               >
+              >
                 <RefreshCw className="w-5 h-5" />
-//                 Try Again
-</button>
+                Try Again
+              </button>
               
-//               <Link
+              <Link
                 to="/"
                 className="w-full bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
-//               >
+              >
                 <Home className="w-5 h-5" />
-//                 Go Home
-</Link>
-</div>
+                Go Home
+              </Link>
+            </div>
 
             {/* Development Error Details */}
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-8 text-left">
                 <summary className="text-red-400 cursor-pointer hover:text-red-300">
                   Error Details (Development Only)
-//                 </summary>
+                </summary>
                 <div className="mt-4 p-4 bg-red-900/20 border border-red-500/30 rounded-lg">
                   <pre className="text-red-300 text-sm overflow-auto">
                     {this.state.error.toString()}
                     {this.state.errorInfo?.componentStack}
-//                   </pre>
-</div>
-//               </details>
+                  </pre>
+                </div>
+              </details>
             )}
 
             {/* Contact Support */}
             <div className="mt-8 pt-6 border-t border-white/10">
               <p className="text-gray-400 text-sm mb-4">
-//                 Still having issues? Contact our support team
-</p>
-//               <Link
+                Still having issues? Contact our support team
+              </p>
+              <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-//               >
+              >
                 <Mail className="w-4 h-4" />
-//                 Get Support
-</Link>
-</div>
-</div>
-</div>
+                Get Support
+              </Link>
+            </div>
+          </div>
+        </div>
       );
     }
 
@@ -134,13 +123,28 @@ class ImprovedErrorBoundary extends Component<Props, State> {
 
 // Higher-order component for easier usage
 export const withErrorBoundary = <P extends object>(
-//   Component: React.ComponentType<P>,
-//   errorBoundaryProps?: Omit<Props, 'children'>
+  Component: React.ComponentType<P>,
+  errorBoundaryProps?: Omit<Props, 'children'>
 ) => {
   const WrappedComponent = (props: P) => (
     <ImprovedErrorBoundary {...errorBoundaryProps}>
       <Component {...props} />
-//     </ImprovedErrorBoundary>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+    </ImprovedErrorBoundary>
   );
-}
+  
+  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
+  
+  return WrappedComponent;
+};
+
+// Hook for functional components to handle errors
+export const _useErrorHandler = () => {
+  return (error: Error, errorInfo?: ErrorInfo) => {
+    console.error('Error caught by hook:', error, errorInfo);
+    
+    // In production, you might want to send this to an error reporting service
+    // Example: errorReportingService.captureException(error, { extra: errorInfo });
+  };
+};
+
+export default ImprovedErrorBoundary;

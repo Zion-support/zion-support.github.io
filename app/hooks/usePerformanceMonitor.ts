@@ -1,40 +1,25 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-=======
-import { Star } from 'lucide-react';
-
+import { useEffect, useRef } from 'react';
 
 interface PerformanceMetrics {
-//   loadTime: number
-//   firstContentfulPaint: number
-//   largestContentfulPaint: number
-//   firstInputDelay: number
+  loadTime: number
+  firstContentfulPaint: number
+  largestContentfulPaint: number
+  firstInputDelay: number
   cumulativeLayoutShift: number
-//   timeToInteractive: number
+  timeToInteractive: number
 }
 
 export const usePerformanceMonitor = () => {
   const metricsRef = useRef<PerformanceMetrics>({
-//     loadTime: 0,
-//     firstContentfulPaint: 0,
-//     largestContentfulPaint: 0,
-//     firstInputDelay: 0,
+    loadTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    firstInputDelay: 0,
     cumulativeLayoutShift: 0,
-//     timeToInteractive: 0
+    timeToInteractive: 0
   })
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
-export function usePerformanceMonitor() {
-  const [state, setState] = useState<string | null>(null);
-  
   useEffect(() => {
-<<<<<<< HEAD
-    // Implementation here
-    setState('initialized');
-  }, []);
-  
-  return state;
-=======
     const measurePerformance = () => {
       if (typeof window === 'undefined' || !window.performance) return
 
@@ -64,7 +49,7 @@ export function usePerformanceMonitor() {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
           entries.forEach((entry: any) => {
-            metricsRef.current.firstInputDelay = entry.processingStart - entry.startTime
+            metricsRef.current.firstInputDelay = entry.startTime - entry.startTime
           })
         })
         fidObserver.observe({ entryTypes: ['first-input'] })
@@ -104,12 +89,12 @@ export function usePerformanceMonitor() {
         // Send to analytics service
         if (typeof window !== 'undefined' && (window as any).gtag) {
           (window as any).gtag('event', 'performance_metrics', {
-//             load_time: metricsRef.current.loadTime,
-//             first_contentful_paint: metricsRef.current.firstContentfulPaint,
-//             largest_contentful_paint: metricsRef.current.largestContentfulPaint,
-//             first_input_delay: metricsRef.current.firstInputDelay,
+            load_time: metricsRef.current.loadTime,
+            first_contentful_paint: metricsRef.current.firstContentfulPaint,
+            largest_contentful_paint: metricsRef.current.largestContentfulPaint,
+            first_input_delay: metricsRef.current.firstInputDelay,
             cumulative_layout_shift: metricsRef.current.cumulativeLayoutShift,
-//             time_to_interactive: metricsRef.current.timeToInteractive
+            time_to_interactive: metricsRef.current.timeToInteractive
           })
         }
       }
@@ -134,7 +119,6 @@ export function usePerformanceMonitor() {
   }, [])
 
   return metricsRef.current
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 }
 
-export default usePerformanceMonitor;
+export default usePerformanceMonitor

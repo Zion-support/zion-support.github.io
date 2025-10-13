@@ -1,23 +1,15 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React, { useEffect, useState } from 'react';
-import { Star } from 'lucide-react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
-interface EnhancedperformancemonitorProps {
-  className?: string;
-  children?: React.ReactNode;
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  timeToFirstByte: number;
+  totalBlockingTime: number;
 }
 
-<<<<<<< HEAD
-export default function Enhancedperformancemonitor({ className = '', children, ...props }: EnhancedperformancemonitorProps) {
-  return (
-    <div className={`enhancedperformancemonitor-component ${className}`} {...props}>
-      {children}
-    </div>
-=======
 interface PerformanceMonitorProps {
   showInProduction?: boolean;
 }
@@ -75,13 +67,13 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         }, 0);
 
         const finalMetrics: PerformanceMetrics = {
-//           loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-//           firstContentfulPaint: fcp ? fcp.startTime : vitals.firstContentfulPaint || 0,
-//           largestContentfulPaint: vitals.largestContentfulPaint || 0,
-//           firstInputDelay: vitals.firstInputDelay || 0,
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+          firstContentfulPaint: fcp ? fcp.startTime : vitals.firstContentfulPaint || 0,
+          largestContentfulPaint: vitals.largestContentfulPaint || 0,
+          firstInputDelay: vitals.firstInputDelay || 0,
           cumulativeLayoutShift: vitals.cumulativeLayoutShift || 0,
-//           timeToFirstByte: vitals.timeToFirstByte || 0,
-//           totalBlockingTime: totalBlockingTime
+          timeToFirstByte: vitals.timeToFirstByte || 0,
+          totalBlockingTime: totalBlockingTime
         };
 
         setMetrics(finalMetrics);
@@ -91,18 +83,18 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'web_vitals', {
             event_category: 'Performance',
-//             event_label: 'Core Web Vitals',
+            event_label: 'Core Web Vitals',
             value: Math.round(finalMetrics.largestContentfulPaint),
             custom_map: {
-//               'metric_1': finalMetrics.firstContentfulPaint,
-//               'metric_2': finalMetrics.largestContentfulPaint,
-//               'metric_3': finalMetrics.firstInputDelay,
+              'metric_1': finalMetrics.firstContentfulPaint,
+              'metric_2': finalMetrics.largestContentfulPaint,
+              'metric_3': finalMetrics.firstInputDelay,
               'metric_4': finalMetrics.cumulativeLayoutShift,
-//               'metric_5': finalMetrics.timeToFirstByte
+              'metric_5': finalMetrics.timeToFirstByte
             }
           });
         }
-      } catch (error) {
+      } catch {
         setIsLoading(false);
       }
     };
@@ -138,25 +130,25 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
-//       <button
+      <button
         onClick={() => setIsVisible(!isVisible)}
         className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2"
-//       >
+      >
         <div className={`w-2 h-2 rounded-full ${isLoading ? 'bg-yellow-400 animate-pulse' : 'bg-green-400'}`}></div>
         <span>Performance</span>
-</button>
+      </button>
       
       {isVisible && (
         <div className="absolute bottom-14 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-xl shadow-2xl p-6 w-80 max-h-96 overflow-y-auto">
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-bold text-gray-900 text-lg">Core Web Vitals</h3>
-//             <button
+            <button
               onClick={() => setIsVisible(false)}
               className="text-gray-400 hover:text-gray-600 transition-colors"
-//             >
-//               ✕
-</button>
-</div>
+            >
+              ✕
+            </button>
+          </div>
           
           <div className="space-y-4 text-sm">
             {/* LCP */}
@@ -165,12 +157,12 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <span className="text-gray-600 font-medium">LCP (Largest Contentful Paint)</span>
                 <span className={`font-mono font-bold ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}>
                   {metrics.largestContentfulPaint.toFixed(0)}ms
-</span>
-</div>
+                </span>
+              </div>
               <div className="text-xs text-gray-500">
                 {getScoreText(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}
-</div>
-</div>
+              </div>
+            </div>
 
             {/* FID */}
             <div className="space-y-1">
@@ -178,12 +170,12 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <span className="text-gray-600 font-medium">FID (First Input Delay)</span>
                 <span className={`font-mono font-bold ${getScoreColor(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}`}>
                   {metrics.firstInputDelay.toFixed(0)}ms
-</span>
-</div>
+                </span>
+              </div>
               <div className="text-xs text-gray-500">
                 {getScoreText(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}
-</div>
-</div>
+              </div>
+            </div>
 
             {/* CLS */}
             <div className="space-y-1">
@@ -191,12 +183,12 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <span className="text-gray-600 font-medium">CLS (Cumulative Layout Shift)</span>
                 <span className={`font-mono font-bold ${getScoreColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}`}>
                   {metrics.cumulativeLayoutShift.toFixed(3)}
-</span>
-</div>
+                </span>
+              </div>
               <div className="text-xs text-gray-500">
                 {getScoreText(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}
-</div>
-</div>
+              </div>
+            </div>
 
             {/* FCP */}
             <div className="space-y-1">
@@ -204,12 +196,12 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <span className="text-gray-600 font-medium">FCP (First Contentful Paint)</span>
                 <span className={`font-mono font-bold ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}>
                   {metrics.firstContentfulPaint.toFixed(0)}ms
-</span>
-</div>
+                </span>
+              </div>
               <div className="text-xs text-gray-500">
                 {getScoreText(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}
-</div>
-</div>
+              </div>
+            </div>
 
             {/* TTFB */}
             <div className="space-y-1">
@@ -217,28 +209,29 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <span className="text-gray-600 font-medium">TTFB (Time to First Byte)</span>
                 <span className={`font-mono font-bold ${getScoreColor(metrics.timeToFirstByte, { good: 800, needsImprovement: 1800 })}`}>
                   {metrics.timeToFirstByte.toFixed(0)}ms
-</span>
-</div>
+                </span>
+              </div>
               <div className="text-xs text-gray-500">
                 {getScoreText(metrics.timeToFirstByte, { good: 800, needsImprovement: 1800 })}
-</div>
-</div>
+              </div>
+            </div>
 
             {/* Additional Metrics */}
             <div className="border-t pt-3 space-y-2">
               <div className="flex justify-between">
                 <span className="text-gray-600">Load Time:</span>
                 <span className="font-mono">{metrics.loadTime.toFixed(0)}ms</span>
-</div>
+              </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Total Blocking Time:</span>
                 <span className="font-mono">{metrics.totalBlockingTime.toFixed(0)}ms</span>
-</div>
-</div>
-</div>
-</div>
+              </div>
+            </div>
+          </div>
+        </div>
       )}
-</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+    </div>
   );
-}
+};
+
+export default EnhancedPerformanceMonitor;

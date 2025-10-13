@@ -1,14 +1,15 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface AppProps {
-  className?: string;
-  children?: React.ReactNode;
-=======
-import { Helmet } from 'react-helmet-async';
-import { Home } from 'lucide-react';
 "use client";
 
+import { Suspense, lazy } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import ErrorBoundary from "./components/ErrorBoundary";
+import PerformanceMonitor from "./components/PerformanceMonitor";
+import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
+import LoadingSpinner from "./components/LoadingSpinner";
+import CriticalResourcePreloader from "./components/CriticalResourcePreloader";
+import CacheManager from "./components/CacheManager";
+import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor";
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import("./page"));
@@ -46,16 +47,18 @@ const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 // Main App Component
 function App() {
   return (
-//     <HelmetProvider>
-//       <BrowserRouter>
-//         <ErrorBoundary>
-          <PerformanceMonitor />
-//           <AccessibilityEnhancer>
-//             <CriticalResourcePreloader />
-//             <CacheManager />
+    <HelmetProvider>
+      <BrowserRouter>
+        <ErrorBoundary>
+          <PerformanceMonitor showDetails={false}>
+            <div>Performance monitoring active</div>
+          </PerformanceMonitor>
+          <AccessibilityEnhancer>
+            <CriticalResourcePreloader />
+            <CacheManager />
             <AdvancedPerformanceMonitor />
             <Suspense fallback={<LoadingSpinner />}>
-//             <Routes>
+            <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
@@ -70,53 +73,46 @@ function App() {
               <Route path="/cookies" element={<CookiesPage />} />
 
               {/* 5G Solutions Routes */}
-//               <Route
+              <Route
                 path="/5g-data-analytics"
                 element={<FiveGDataAnalyticsPage />}
-//               />
-//               <Route
+              />
+              <Route
                 path="/5g-edge-computing"
                 element={<FiveGEdgeComputingPage />}
-//               />
-//               <Route
+              />
+              <Route
                 path="/5g-implementation"
                 element={<FiveGImplementationPage />}
-//               />
-//               <Route
+              />
+              <Route
                 path="/5g-iot-solutions"
                 element={<FiveGIoTSolutionsPage />}
-//               />
-//               <Route
+              />
+              <Route
                 path="/5g-mobile-applications"
                 element={<FiveGMobileApplicationsPage />}
-//               />
-//               <Route
+              />
+              <Route
                 path="/5g-network-infrastructure"
                 element={<FiveGNetworkInfrastructurePage />}
-//               />
-//               <Route
+              />
+              <Route
                 path="/5g-private-networks"
                 element={<FiveGPrivateNetworksPage />}
-//               />
-//               <Route
+              />
+              <Route
                 path="/5g-smart-city-solutions"
                 element={<FiveGSmartCitySolutionsPage />}
-//               />
+              />
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-//             </Routes>
-//             </Suspense>
-//           </AccessibilityEnhancer>
-//         </ErrorBoundary>
-//       </BrowserRouter>
-//     </HelmetProvider>
+            </Routes>
+            </Suspense>
+          </AccessibilityEnhancer>
+        </ErrorBoundary>
+      </BrowserRouter>
+    </HelmetProvider>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 }
 
-export default function App({ className = '', children, ...props }: AppProps) {
-  return (
-    <div className={`app-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
+export default App;

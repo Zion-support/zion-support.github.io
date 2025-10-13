@@ -1,17 +1,15 @@
-// Logger utility
-
-export function logger(message: string, level: 'info' | 'warn' | 'error' = 'info') {
-  console[level](message);
+interface LogLevel {
+  ERROR: 'error';
+  WARN: 'warn';
+  INFO: 'info';
+  DEBUG: 'debug';
 }
 
-<<<<<<< HEAD
-export default logger;
-=======
 const LOG_LEVELS: LogLevel = {
-//   ERROR: 'error',
-//   WARN: 'warn',
-//   INFO: 'info',
-//   DEBUG: 'debug',
+  ERROR: 'error',
+  WARN: 'warn',
+  INFO: 'info',
+  DEBUG: 'debug',
 };
 
 type LogLevelType = LogLevel[keyof LogLevel];
@@ -25,17 +23,17 @@ class Logger {
       return;
     }
 
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+    // const timestamp = new Date().toISOString();
+    // const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
 
     switch (level) {
-//       case 'error':
+      case 'error':
         break;
-//       case 'warn':
+      case 'warn':
         break;
-//       case 'info':
+      case 'info':
         break;
-//       case 'debug':
+      case 'debug':
         break;
     }
 
@@ -51,12 +49,12 @@ class Logger {
     try {
       const logs = JSON.parse(localStorage.getItem('app-logs') || '[]');
       logs.push({
-//         level,
-//         message,
-//         args,
+        level,
+        message,
+        args,
         timestamp: new Date().toISOString(),
-//         url: window.location.href,
-//         userAgent: navigator.userAgent,
+        url: window.location.href,
+        userAgent: navigator.userAgent,
       });
       
       // Keep only the last 100 logs
@@ -65,8 +63,9 @@ class Logger {
       }
       
       localStorage.setItem('app-logs', JSON.stringify(logs));
-    } catch (error) {
-      }
+    } catch {
+      // Error saving logs
+    }
   }
 
   error(message: string, ...args: any[]): void {
@@ -102,4 +101,3 @@ class Logger {
 
 const logger = new Logger();
 export default logger;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

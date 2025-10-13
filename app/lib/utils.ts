@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-// Utils utility functions
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+import { clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
-export function utils() {
-  // Implementation here
-  return null;
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
 }
-
-export default utils;
