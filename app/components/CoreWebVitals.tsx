@@ -1,15 +1,3 @@
-import React, { useEffect, useCallback } from 'react';
-
-interface WebVitalsData {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string;
-}
-
-const CoreWebVitals: React.FC = () => {
-<<<<<<< HEAD
   const reportWebVitals = useCallback((data: WebVitalsData) => {
     // Send to Google Analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -36,33 +24,3 @@ const CoreWebVitals: React.FC = () => {
     if (process.env.NODE_ENV === 'development') {
       console.log('Web Vital:', data.name, data.value);
     }
-=======
-  useEffect(() => {
-    // Core Web Vitals monitoring
-    console.log('Core Web Vitals monitoring initialized');
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-  }, []);
-
-  useEffect(() => {
-    const measureWebVitals = async () => {
-      try {
-        const { onCLS, onFID, onFCP, onLCP, onTTFB, onINP } = await import('web-vitals');
-
-        onCLS(reportWebVitals);
-        onFID(reportWebVitals);
-        onFCP(reportWebVitals);
-        onLCP(reportWebVitals);
-        onTTFB(reportWebVitals);
-        onINP(reportWebVitals);
-      } catch (error) {
-        console.warn('Failed to load web-vitals:', error);
-      }
-    };
-
-    measureWebVitals();
-  }, [reportWebVitals]);
-
-  return null; // This component doesn't render anything
-};
-
-export default CoreWebVitals;

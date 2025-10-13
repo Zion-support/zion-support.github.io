@@ -1,17 +1,3 @@
-import { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-
-interface WebVitalsData {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string;
-}
-
-const WebVitalsTracker: React.FC = () => {
-  useEffect(() => {
-<<<<<<< HEAD
     const sendToAnalytics = (metric: WebVitalsData) => {
       // Send to Google Analytics or other analytics service
       if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -77,19 +63,3 @@ const WebVitalsTracker: React.FC = () => {
         });
       }
     }
-=======
-    // Track Core Web Vitals
-    const trackWebVitals = () => {
-      // This is a placeholder for web vitals tracking
-      // In a real implementation, you would use libraries like web-vitals
-      console.log('Web Vitals tracking initialized');
-    };
-
-    trackWebVitals();
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-  }, []);
-
-  return null;
-};
-
-export default WebVitalsTracker;
