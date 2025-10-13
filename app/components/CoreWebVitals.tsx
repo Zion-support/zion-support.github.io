@@ -9,7 +9,6 @@ interface WebVitalsData {
 }
 
 const CoreWebVitals: React.FC = () => {
-<<<<<<< HEAD
   const reportWebVitals = useCallback((data: WebVitalsData) => {
     // Send to Google Analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -18,51 +17,47 @@ const CoreWebVitals: React.FC = () => {
         metric_value: Math.round(data.value),
         metric_delta: Math.round(data.delta),
         metric_id: data.id,
-        metric_navigation_type: data.navigationType
+        metric_navigation_type: data.navigationType,
       });
     }
 
-    // Send to custom analytics
-    if (typeof window !== 'undefined' && (window as any).analytics) {
-      (window as any).analytics.track('Web Vitals', {
-        metric: data.name,
-        value: data.value,
-        delta: data.delta,
-        id: data.id
-      });
-    }
-
-    // Log in development
+    // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vital:', data.name, data.value);
+      console.log('Web Vital:', data);
     }
-=======
-  useEffect(() => {
-    // Core Web Vitals monitoring
-    console.log('Core Web Vitals monitoring initialized');
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
   }, []);
 
   useEffect(() => {
-    const measureWebVitals = async () => {
+    // Track Cumulative Layout Shift (CLS)
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       try {
-        const { onCLS, onFID, onFCP, onLCP, onTTFB, onINP } = await import('web-vitals');
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
+              const clsValue = (entry as any).value;
+              reportWebVitals({
+                name: 'CLS',
+                value: clsValue,
+                delta: clsValue,
+                id: 'cls-' + Date.now(),
+                navigationType: 'navigate',
+              });
+            }
+          }
+        });
 
-        onCLS(reportWebVitals);
-        onFID(reportWebVitals);
-        onFCP(reportWebVitals);
-        onLCP(reportWebVitals);
-        onTTFB(reportWebVitals);
-        onINP(reportWebVitals);
+        observer.observe({ entryTypes: ['layout-shift'] });
+
+        return () => {
+          observer.disconnect();
+        };
       } catch (error) {
-        console.warn('Failed to load web-vitals:', error);
+        console.warn('PerformanceObserver not supported:', error);
       }
-    };
-
-    measureWebVitals();
+    }
   }, [reportWebVitals]);
 
-  return null; // This component doesn't render anything
+  return null;
 };
 
 export default CoreWebVitals;
