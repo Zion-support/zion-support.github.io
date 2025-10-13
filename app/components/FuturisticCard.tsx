@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -70,9 +71,25 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
     hologram: "bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-cyan-400/30 hover:from-cyan-500/20 hover:to-purple-500/20"
   };
 
+=======
+
+import React from 'react';
+
+interface FuturisticcardProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Futuristiccard({ className = '', children, ...props }: FuturisticcardProps) {
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {children}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     </div>
   );
 };
@@ -80,6 +97,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
 export default FuturisticCard;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
   return (;
@@ -89,3 +107,6 @@ export default FuturisticCard;
 </div>;
 );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

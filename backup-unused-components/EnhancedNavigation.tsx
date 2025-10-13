@@ -27,6 +27,7 @@ import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3,
 
 const EnhancedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+<<<<<<< HEAD
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const navigationItems = [
@@ -35,6 +36,14 @@ const EnhancedNavigation = () => {
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
+=======
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);</string>
+  const navigationItems = [,
+    label: 'AI Services',
+        href: '/ai-services',
+        icon: <Brain className="w-4 h-4" />,</Brain>,
+    dropdown: [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
         { label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' },
         { label: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
@@ -61,12 +70,21 @@ const EnhancedNavigation = () => {
         { label: 'AI NLP Text Analysis', href: '/ai-nlp-text-analysis' },
         { label: 'View All AI Services', href: '/ai-services' }
       ]
+<<<<<<< HEAD
     },
     {
       label: 'IT Services',
       href: '/services',
       icon: <Shield className="w-4 h-4" />,
       dropdown: [
+=======
+,
+    ,
+    label: 'IT Services',
+        href: '/services',
+        icon: <Shield className="w-4 h-4" />,</Shield>,
+    dropdown: [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         { label: 'AI-Powered Business Intelligence Pro', href: '/ai-business-intelligence' },
         { label: 'AI Customer Support Automation Suite', href: '/ai-customer-support' },
         { label: 'AI Content Generation Studio', href: '/ai-content-generation' },
@@ -99,12 +117,21 @@ const EnhancedNavigation = () => {
         { label: 'IT Asset Management Solutions', href: '/asset-management' },
         { label: 'View All IT Services', href: '/services' }
       ]
+<<<<<<< HEAD
     },
     {
       label: 'Micro SAAS',
       href: '/micro-saas',
       icon: <Zap className="w-4 h-4" />,
       dropdown: [
+=======
+,
+    ,
+    label: 'Micro SAAS',
+        href: '/micro-saas',
+        icon: <Zap className="w-4 h-4" />,</Zap>,
+    dropdown: [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
         { label: 'Zion Security Shield', href: '/zion-security-shield' },
         { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
@@ -130,12 +157,21 @@ const EnhancedNavigation = () => {
         { label: 'Zion AI Testing Automation', href: '/zion-ai-testing-automation' },
         { label: 'View All Micro SAAS', href: '/micro-saas' }
       ]
+<<<<<<< HEAD
     },
     {
       label: '5G Solutions',
       href: '/5g-solutions',
       icon: <Globe className="w-4 h-4" />,
       dropdown: [
+=======
+,
+    ,
+    label: '5G Solutions',
+        href: '/5g-solutions',
+        icon: <Globe className="w-4 h-4" />,</Globe>,
+    dropdown: [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         { label: '5G Data Analytics', href: '/5g-data-analytics' },
         { label: '5G Edge Computing', href: '/5g-edge-computing' },
         { label: '5G Implementation', href: '/5g-implementation' },
@@ -145,12 +181,21 @@ const EnhancedNavigation = () => {
         { label: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
         { label: 'View All 5G Solutions', href: '/5g-solutions' }
       ]
+<<<<<<< HEAD
     },
     {
       label: 'Company',
       href: '/about',
       icon: <BarChart3 className="w-4 h-4" />,
       dropdown: [
+=======
+,
+    ,
+    label: 'Company',
+        href: '/about',
+        icon: <BarChart3 className="w-4 h-4" />,</BarChart3>,
+    dropdown: [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         { label: 'About Us', href: '/about' },
         { label: 'Our Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
@@ -186,6 +231,7 @@ const EnhancedNavigation = () => {
 <<<<<<< HEAD
           <nav className="hidden lg:flex space-x-8"></nav>
             
+<<<<<<< HEAD
               <div;
 =======
           <nav className="hidden lg:flex space-x-8">
@@ -200,6 +246,17 @@ const EnhancedNavigation = () => {
                 <Link;
                   to={item.href}
                   className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+=======
+              <div>
+  key={item.label}>
+  className="relative group">
+  onMouseEnter="{()" => setActiveDropdown(item.label)}
+                onMouseLeave="{()" => setActiveDropdown(null)}
+              >
+                <Link>
+  to={item.href}>
+  className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                 >
                   {item.icon}
                   <span>{item.label}</span>
@@ -210,6 +267,7 @@ const EnhancedNavigation = () => {
                   <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50"></div>
                     <div className="py-2"></div>
                       
+<<<<<<< HEAD
                         <Link;
 =======
                 {/* Dropdown Menu */}
@@ -222,6 +280,12 @@ const EnhancedNavigation = () => {
                           key={dropdownItem.href}
                           to={dropdownItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors duration-200"
+=======
+                        <Link>
+  key={dropdownItem.href}>
+  to={dropdownItem.href}>
+  className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors duration-200"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                         >
                           {dropdownItem.label}
                         </Link>
@@ -243,6 +307,7 @@ const EnhancedNavigation = () => {
           <div className="hidden md:flex items-center space-x-4"></div>
             <div className="hidden lg:flex space-x-4"></div>
               
+<<<<<<< HEAD
                 <Link;
 =======
           <div className="hidden md:flex items-center space-x-4">
@@ -253,6 +318,12 @@ const EnhancedNavigation = () => {
                   key={link.href}
                   to={link.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
+=======
+                <Link>
+  key={link.href}>
+  to={link.href}>
+  className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                 >
                   {link.label}
                 </Link>
@@ -262,10 +333,16 @@ const EnhancedNavigation = () => {
 =======
               ))}
             </div>
+<<<<<<< HEAD
             <Link
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
               to="/contact"
               className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105 flex"
+=======
+            <Link>
+  to="/contact">
+  className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105 flex"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
             >
               Contact Us;
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -279,9 +356,14 @@ const EnhancedNavigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
+<<<<<<< HEAD
           <button
             onClick={() => setIsOpen(!isOpen)}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+          <button>
+  onClick="{()" => setIsOpen(!isOpen)}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
             className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -294,6 +376,7 @@ const EnhancedNavigation = () => {
             <div className="space-y-4"></div>
               
                 <div key="{item.label}"></div>
+<<<<<<< HEAD
                   <Link;
 =======
         </div>
@@ -309,6 +392,12 @@ const EnhancedNavigation = () => {
                     to={item.href}
                     className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                     onClick={() => setIsOpen(false)}
+=======
+                  <Link>
+  to={item.href}>
+  className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2">
+  onClick="{()" => setIsOpen(false)}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                   >
                     {item.icon}
                     <span className="font-medium">{item.label}</span>
@@ -316,6 +405,7 @@ const EnhancedNavigation = () => {
 <<<<<<< HEAD
                   <div className="ml-6 space-y-2"></div>
                     
+<<<<<<< HEAD
                       <Link;
 =======
                   <div className="ml-6 space-y-2">
@@ -326,11 +416,19 @@ const EnhancedNavigation = () => {
                         to={dropdownItem.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1"
                         onClick={() => setIsOpen(false)}
+=======
+                      <Link>
+  key={dropdownItem.href}>
+  to={dropdownItem.href}>
+  className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1">
+  onClick="{()" => setIsOpen(false)}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                       >
                         {dropdownItem.label}
                       </Link>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                       <Link;
 =======
                     ))}
@@ -340,6 +438,12 @@ const EnhancedNavigation = () => {
                         to={item.href}
                         className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
                         onClick={() => setIsOpen(false)}
+=======
+                      <Link>
+  to={item.href}>
+  className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium">
+  onClick="{()" => setIsOpen(false)}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                       >
                         View All →
                       </Link>
@@ -349,6 +453,7 @@ const EnhancedNavigation = () => {
               <div className="pt-4 border-t border-white/10"></div>
                 <div className="space-y-2"></div>
                   
+<<<<<<< HEAD
                     <Link;
 =======
                     )}
@@ -365,6 +470,13 @@ const EnhancedNavigation = () => {
                       to={link.href}
                       className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                       onClick={() => setIsOpen(false)}
+=======
+                    <Link>
+  key={link.href}>
+  to={link.href}>
+  className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2">
+  onClick="{()" => setIsOpen(false)}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                     >
                       {link.label}
                     </Link>

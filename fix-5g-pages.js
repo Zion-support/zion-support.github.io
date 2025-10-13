@@ -52,9 +52,15 @@ export default function {FUNCTION_NAME}() {;
           <h1 className="text-4xl font-bold text-white mb-6">{TITLE}</h1>
           <p className="text-lg text-gray-300 mb-8">{DESCRIPTION}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Link;
             to="/contact" 
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+=======
+          <Link >
+  to="/contact" >
+  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           >
             Contact Us;
             <ArrowRight className="ml-2 h-5 w-5" />
@@ -78,51 +84,57 @@ export default function {FUNCTION_NAME}() {;
 }`;
 
 const pageData = {
+<<<<<<< HEAD
   "5g-edge-computing": {
 <<<<<<< HEAD
     functionName: "FiveGEdgeComputingPage";
     title: "5G Edge Computing";
+=======
+  "5g-edge-computing": {,
+    functionName: "FiveGEdgeComputingPage";,
+    title: "5G Edge Computing";,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     description: "Professional 5G edge computing services coming soon.";
   };
-  "5g-mobile-applications": {
-    functionName: "FiveGMobileApplicationsPage";
-    title: "5G Mobile Applications";
+  "5g-mobile-applications": {,
+    functionName: "FiveGMobileApplicationsPage";,
+    title: "5G Mobile Applications";,
     description: "Advanced 5G mobile application development coming soon.";
   };
-  "5g-network-infrastructure": {
-    functionName: "FiveGNetworkInfrastructurePage";
-    title: "5G Network Infrastructure";
+  "5g-network-infrastructure": {,
+    functionName: "FiveGNetworkInfrastructurePage";,
+    title: "5G Network Infrastructure";,
     description:
       "Comprehensive 5G network infrastructure solutions coming soon.";
   };
-  "5g-private-networks": {
-    functionName: "FiveGPrivateNetworksPage";
-    title: "5G Private Networks";
+  "5g-private-networks": {,
+    functionName: "FiveGPrivateNetworksPage";,
+    title: "5G Private Networks";,
     description: "Secure 5G private network solutions coming soon.";
   };
-  "5g-smart-city-solutions": {
-    functionName: "FiveGSmartCitySolutionsPage";
-    title: "5G Smart City Solutions";
+  "5g-smart-city-solutions": {,
+    functionName: "FiveGSmartCitySolutionsPage";,
+    title: "5G Smart City Solutions";,
     description: "Innovative 5G smart city solutions coming soon.";
   };
-  "5g-data-analytics": {
-    functionName: "FiveGDataAnalyticsPage";
-    title: "5G Data Analytics";
+  "5g-data-analytics": {,
+    functionName: "FiveGDataAnalyticsPage";,
+    title: "5G Data Analytics";,
     description: "Advanced 5G data analytics solutions coming soon.";
   };
-  "5g-implementation": {
-    functionName: "FiveGImplementationPage";
-    title: "5G Implementation";
+  "5g-implementation": {,
+    functionName: "FiveGImplementationPage";,
+    title: "5G Implementation";,
     description: "Complete 5G network implementation services coming soon.";
   };
-  "5g-iot-solutions": {
-    functionName: "FiveGIoTSolutionsPage";
-    title: "5G IoT Solutions";
+  "5g-iot-solutions": {,
+    functionName: "FiveGIoTSolutionsPage";,
+    title: "5G IoT Solutions";,
     description: "Revolutionary 5G IoT solutions coming soon.";
   };
-  "5g-solutions": {
-    functionName: "FiveGSolutionsPage";
-    title: "5G Solutions";
+  "5g-solutions": {,
+    functionName: "FiveGSolutionsPage";,
+    title: "5G Solutions";,
     description: "Comprehensive 5G technology solutions coming soon.";
   };
 =======

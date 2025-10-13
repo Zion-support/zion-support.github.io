@@ -1,9 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
+=======
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
@@ -83,6 +88,7 @@ export default function ConsultationPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
@@ -399,3 +405,6 @@ const ConsultationPage = () => {
 
 export default ConsultationPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

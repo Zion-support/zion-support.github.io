@@ -1,9 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface ErrorFallbackProps {
   className?: string;
   children?: React.ReactNode;
+=======
+
+
+import React, { useEffect } from "react";
+import { Link } from 'react-router-dom';
+import { Home } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { Mail } from 'lucide-react';
+
+interface ErrorfallbackProps {
+  className?: string;
+  children?: React.ReactNode;
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 }
 
 <<<<<<< HEAD
@@ -15,6 +30,7 @@ export default function ErrorFallback({ className = '', children }: ErrorFallbac
   );
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,3 +56,6 @@ import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

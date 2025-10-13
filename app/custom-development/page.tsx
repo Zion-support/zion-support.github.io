@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,6 +87,7 @@ export default function CustomdevelopmentPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
@@ -497,3 +502,6 @@ const CustomDevelopmentPage = () => {
 
 export default CustomDevelopmentPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

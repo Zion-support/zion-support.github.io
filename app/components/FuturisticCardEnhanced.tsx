@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticCardEnhancedProps {
@@ -54,8 +55,16 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
     </div>
   );
 };
+=======
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 export default FuturisticCardEnhanced;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

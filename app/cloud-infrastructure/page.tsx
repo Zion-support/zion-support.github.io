@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -7,6 +11,7 @@ import { Helmet } from 'react-helmet-async';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
+<<<<<<< HEAD
 export default function cloudInfrastructure() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -27,6 +32,23 @@ export default function cloudInfrastructure() {
 =======
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Cloud Infrastructure
+=======
+  const capabilities = [
+    "Multi-cloud deployment and management",
+    "Automated scaling and load balancing",
+    "High availability and disaster recovery",
+    "Security and compliance monitoring"
+  ];
+
+  const testimonials = [
+    {,
+    name: "Sarah Johnson",
+        role: "CTO",
+        company: "TechCorp",
+        content: "Zion's cloud infrastructure transformed our business operations."
+    }
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
@@ -81,6 +103,10 @@ export default function CloudinfrastructurePage() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

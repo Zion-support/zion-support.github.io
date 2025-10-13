@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +107,15 @@ const AIAutomationPlatformPage = () => {
   ];
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+import React from 'react';
+
+import { Helmet } from 'react-helmet-async';
+
+export default function AiAutomationPlatformPage() {
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
@@ -114,6 +124,7 @@ const AIAutomationPlatformPage = () => {
         <meta name="keywords" content="AI analytics, data analysis, business intelligence, machine learning" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-analytics" />
       </Helmet>
+<<<<<<< HEAD
 <<<<<<< HEAD
       
       <div className="container mx-auto px-4 py-20">
@@ -290,6 +301,12 @@ export default function AiautomationplatformPage() {
             Ready to Transform Your Analytics?
           </h2>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Ai Automation Platform</h1>
+        <div className="prose prose-invert max-w-none">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of companies using our AI analytics platform to make better decisions
           </p>
@@ -317,6 +334,7 @@ export default function AiautomationplatformPage() {
               </p>
             </div>
           </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 =======
           <Link 
@@ -327,14 +345,21 @@ export default function AiautomationplatformPage() {
             <Zap className="w-5 h-5 ml-2" />
           </Link>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       </section>
     </div>
   );
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 };
 
 export default AIAutomationPlatformPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

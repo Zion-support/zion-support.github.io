@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // usePerformanceMonitor hook
 import { useEffect, useRef } from 'react';
 
@@ -191,3 +192,36 @@ export default usePerformanceMonitor
     setState('initialized');
   }, []);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+
+import { useState, useEffect } from 'react';
+
+interface PerformanceMetrics {,
+    loadTime: number;,
+    firstContentfulPaint: number;,
+    largestContentfulPaint: number;,
+    firstInputDelay: number;,
+    cumulativeLayoutShift: number;,
+    timeToInteractive: number;
+}
+
+export function usePerformanceMonitor() {
+  const [state, setState] = useState<string | null>(null);
+  const metricsRef = useRef<PerformanceMetrics>({,
+    loadTime: 0,
+      firstContentfulPaint: 0,
+      largestContentfulPaint: 0,
+      firstInputDelay: 0,
+      cumulativeLayoutShift: 0,
+      timeToInteractive: 0
+  });
+
+  useEffect(() => {
+    setState('initialized');
+  }, []);
+
+  return { state };
+};
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // monitoring utility functions
 
 export interface monitoringConfig {
@@ -50,3 +51,14 @@ export const Monitoring = {
 
 export default Monitoring;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+// monitoring utility
+export const monitoring = {
+  // Utility implementation,
+    init: () => {
+    console.log('monitoring initialized');
+  }
+};
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

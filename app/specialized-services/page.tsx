@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -27,6 +28,20 @@ export default function specializedServices() {
 =======
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Specialized Services
+=======
+
+import React from 'react';
+
+export default function Page() {
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
@@ -78,6 +93,7 @@ export default function SpecializedservicesPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
         </div>
       </div>
+<<<<<<< HEAD
     </div>
   );
 }
@@ -87,3 +103,10 @@ import { Helmet } from 'react-helmet-async';
 
 import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+    </div>
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

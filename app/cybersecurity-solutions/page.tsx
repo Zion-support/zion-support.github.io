@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 export default function cybersecuritySolutions() {
@@ -27,6 +32,21 @@ export default function cybersecuritySolutions() {
 =======
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Cybersecurity Solutions
+=======
+export default function CybersecuritySolutionsPage() {
+  const capabilities = [
+    {,
+    title: "AI-Powered Security",
+        description: "Advanced threat detection and prevention using artificial intelligence",
+        icon: <Shield className="w-8 h-8" />
+    },
+    {,
+    title: "Real-time Monitoring",
+        description: "24/7 security monitoring and incident response",
+        icon: <CheckCircle className="w-8 h-8" />
+    }
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
@@ -490,6 +510,11 @@ const CybersecuritySolutionsPage = () => {
     </PerformanceOptimizer>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
+<<<<<<< HEAD
 };
 
 export default CybersecuritySolutionsPage;
+=======
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

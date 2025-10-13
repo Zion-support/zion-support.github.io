@@ -48,9 +48,15 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = (
         return "bg-gradient-to-r from-cyan-500 to-purple-600";
 //       case "secondary":
         return "bg-gradient-to-r from-blue-500 to-indigo-600";
+<<<<<<< HEAD
 //       case "success":
         return "bg-gradient-to-r from-green-500 to-emerald-600";
 //       default:
+=======
+      case "success":
+        return "bg-gradient-to-r from-green-500 to-emerald-600";,
+    default:
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         return "bg-gradient-to-r from-cyan-500 to-purple-600";
 
 <<<<<<< HEAD
@@ -62,8 +68,8 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = (
       case "secondary":
         return <Star className="w-6 h-6" />;</Star>
       case "success":
-        return <Star className="w-6 h-6" />;</Star>
-      default:
+        return <Star className="w-6 h-6" />;</Star>,
+    default:
         return <Zap className="w-6 h-6" />;</Zap>
 =======
   const getIcon = () => {
@@ -83,9 +89,14 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = (
 ;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       className="{`relative" overflow-hidden rounded-lg p-8 text-white ${getVariantStyles()} ${className}`}
+=======
+    <div>
+  className="{`relative" overflow-hidden rounded-lg p-8 text-white ${getVariantStyles()} ${className}`}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     >
       <div className="relative z-10"></div>
 =======
@@ -102,6 +113,7 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = (
         </p>
         <div className="text-center"></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Link;
 =======
           <Link
@@ -114,6 +126,12 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = (
             to={ctaLink}
             className="inline-flex items-center bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
 //           >
+=======
+          <Link>
+  to={ctaLink}>
+  className="inline-flex items-center bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+          >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
             {ctaText}
             <ArrowRight className="w-5 h-5 ml-2" />
 <<<<<<< HEAD

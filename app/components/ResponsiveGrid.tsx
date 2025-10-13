@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -82,9 +83,25 @@ const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
     cols.lg ? `lg:grid-cols-${cols.lg}` : ''
   } ${cols.xl ? `xl:grid-cols-${cols.xl}` : ''}`;
 
+=======
+
+import React from 'react';
+
+interface ResponsivegridProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Responsivegrid({ className = '', children, ...props }: ResponsivegridProps) {
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className={`grid ${gridCols} ${gapClasses[gap]} ${className}`}>
       {children}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     </div>
   );
 };
@@ -92,6 +109,7 @@ const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
 export default ResponsiveGrid;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
   return (;
@@ -101,3 +119,6 @@ export default ResponsiveGrid;
 </div>;
 );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

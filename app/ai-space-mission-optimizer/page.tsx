@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -65,6 +66,18 @@ import {
   Zap, 
   Target, 
   CheckCircle, 
+=======
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import {
+  Rocket,
+  Satellite,
+  Orbit,
+  Zap,
+  Target,
+  CheckCircle,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   Globe,
   Activity,
   Navigation,
@@ -77,39 +90,39 @@ import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const AISpaceMissionOptimizerPage = () => {
   const features = [
-    {
-      title: "Mission Planning AI",
-      description: "AI-powered mission planning with optimal trajectory calculations and resource allocation",
-      icon: <Rocket className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+    {,
+    title: "Mission Planning AI",
+        description: "AI-powered mission planning with optimal trajectory calculations and resource allocation",
+        icon: <Rocket className="w-8 h-8" />,
+        color: "from-blue-500 to-cyan-500"
     },
-    {
-      title: "Real-Time Optimization",
-      description: "Continuous mission optimization based on real-time data and changing conditions",
-      icon: <Activity className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+    {,
+    title: "Real-Time Optimization",
+        description: "Continuous mission optimization based on real-time data and changing conditions",
+        icon: <Activity className="w-8 h-8" />,
+        color: "from-purple-500 to-pink-500"
     },
-    {
-      title: "Satellite Management",
-      description: "Comprehensive satellite constellation management and coordination",
-      icon: <Satellite className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+    {,
+    title: "Satellite Management",
+        description: "Comprehensive satellite constellation management and coordination",
+        icon: <Satellite className="w-8 h-8" />,
+        color: "from-green-500 to-emerald-500"
     },
-    {
-      title: "Risk Assessment",
-      description: "Advanced risk analysis for space missions with collision avoidance",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+    {,
+    title: "Risk Assessment",
+        description: "Advanced risk analysis for space missions with collision avoidance",
+        icon: <Target className="w-8 h-8" />,
+        color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
-    {
-      name: "Mission Starter",
-      price: "$499",
-      period: "/month",
-      description: "Perfect for small satellite missions and research projects",
-      features: [
+    {,
+    name: "Mission Starter",
+        price: "$499",
+        period: "/month",
+        description: "Perfect for small satellite missions and research projects",
+        features: [
         "Basic mission planning",
         "5 satellite tracking",
         "Standard trajectory optimization",
@@ -117,14 +130,14 @@ const AISpaceMissionOptimizerPage = () => {
         "Email support",
         "Mission reports"
       ],
-      popular: false
+        popular: false
     },
-    {
-      name: "Mission Professional",
-      price: "$1,999",
-      period: "/month",
-      description: "Ideal for commercial satellite operators and space agencies",
-      features: [
+    {,
+    name: "Mission Professional",
+        price: "$1,999",
+        period: "/month",
+        description: "Ideal for commercial satellite operators and space agencies",
+        features: [
         "Advanced mission planning",
         "50 satellite tracking",
         "Real-time optimization",
@@ -134,14 +147,14 @@ const AISpaceMissionOptimizerPage = () => {
         "Custom algorithms",
         "Advanced analytics"
       ],
-      popular: true
+        popular: true
     },
-    {
-      name: "Mission Enterprise",
-      price: "$9,999",
-      period: "/month",
-      description: "For large space organizations and government agencies",
-      features: [
+    {,
+    name: "Mission Enterprise",
+        price: "$9,999",
+        period: "/month",
+        description: "For large space organizations and government agencies",
+        features: [
         "Unlimited mission planning",
         "Unlimited satellite tracking",
         "AI-powered optimization",
@@ -153,34 +166,34 @@ const AISpaceMissionOptimizerPage = () => {
         "SLA guarantee",
         "Dedicated mission control"
       ],
-      popular: false
+        popular: false
     }
   ];
 
   const capabilities = [
-    {
-      title: "Trajectory Optimization",
-      description: "Calculate optimal flight paths with 99.9% fuel efficiency",
-      accuracy: "99.9%",
-      icon: <Navigation className="w-6 h-6" />
+    {,
+    title: "Trajectory Optimization",
+        description: "Calculate optimal flight paths with 99.9% fuel efficiency",
+        accuracy: "99.9%",
+        icon: <Navigation className="w-6 h-6" />
     },
-    {
-      title: "Collision Avoidance",
-      description: "Real-time collision detection and avoidance maneuvers",
-      accuracy: "99.8%",
-      icon: <Target className="w-6 h-6" />
+    {,
+    title: "Collision Avoidance",
+        description: "Real-time collision detection and avoidance maneuvers",
+        accuracy: "99.8%",
+        icon: <Target className="w-6 h-6" />
     },
-    {
-      title: "Resource Management",
-      description: "Optimize fuel, power, and payload allocation",
-      accuracy: "97.5%",
-      icon: <Gauge className="w-6 h-6" />
+    {,
+    title: "Resource Management",
+        description: "Optimize fuel, power, and payload allocation",
+        accuracy: "97.5%",
+        icon: <Gauge className="w-6 h-6" />
     },
-    {
-      title: "Mission Success Rate",
-      description: "Increase mission success rates with AI optimization",
-      accuracy: "94.2%",
-      icon: <Award className="w-6 h-6" />
+    {,
+    title: "Mission Success Rate",
+        description: "Increase mission success rates with AI optimization",
+        accuracy: "94.2%",
+        icon: <Award className="w-6 h-6" />
     }
   ];
 
@@ -192,6 +205,7 @@ const AISpaceMissionOptimizerPage = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <EnhancedSEO
         title="AI Space Mission Optimizer - Advanced Space AI | Zion Tech Group"
@@ -217,12 +231,22 @@ const AISpaceMissionOptimizerPage = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
               AI Space Mission Optimizer
             </span>
+=======
+
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Revolutionary AI-powered space mission optimization for satellite management, 
             trajectory planning, and mission control with unprecedented accuracy.
           </p>
+<<<<<<< HEAD
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
@@ -436,6 +460,11 @@ const AISpaceMissionOptimizerPage = () => {
           </button>
         </div>
       </section>
+=======
+
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     </div>
   );
 <<<<<<< HEAD
@@ -443,5 +472,10 @@ const AISpaceMissionOptimizerPage = () => {
 =======
 };
 
+<<<<<<< HEAD
 export default AISpaceMissionOptimizerPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

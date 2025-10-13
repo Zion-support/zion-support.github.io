@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -102,6 +103,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     const timer = setTimeout(optimizePerformance, 100);
     return () => clearTimeout(timer);
   }, []);
+=======
+
+import React from 'react';
+
+interface PerformanceoptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Performanceoptimizer({ className = '', children, ...props }: PerformanceoptimizerProps) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   return (
     <div className="performance-optimizer">

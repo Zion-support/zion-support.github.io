@@ -19,7 +19,15 @@ import { motion } from 'framer-motion';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
+<<<<<<< HEAD
 interface OptimizedImageProps {
+=======
+interface OptimizedImageProps {,
+    src: string;,
+    alt: string;
+  width?: number;
+  height?: number;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   className?: string;
   children?: React.ReactNode;
 }
@@ -102,6 +110,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   if (hasError) {
     return (
+<<<<<<< HEAD
       <div 
         className={`bg-gray-200 flex items-center justify-center ${className}`}
 <<<<<<< HEAD
@@ -110,6 +119,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 =======
 style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 'auto' }}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+      <div >
+  className={`bg-gray-200 flex items-center justify-center ${className}`}>
+  style={{ width, height }}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
@@ -128,16 +142,16 @@ style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 
       {isInView && (
         <motion.img
           src={src}
-          alt={alt}
+  alt={alt}
           width={width}
-          height={height}
+  height={height}
           loading={priority ? 'eager' : 'lazy'}
-          onLoad={handleLoad}
-          onError={handleError}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isLoaded ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
-          className="w-full h-full object-cover"
+  onLoad={handleLoad}
+          onError={handleError}>
+  initial={{ opacity: 0 }}>
+  animate={{ opacity: isLoaded ? 1 : 0 }}>
+  transition={{ duration: 0.3 }}>
+  className="w-full h-full object-cover"
         />
       )}
 <<<<<<< HEAD

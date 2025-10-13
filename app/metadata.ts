@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // metadata
 export const metadata = () => {
   // Utility function implementation
@@ -50,3 +51,11 @@ export const defaultMetadata = {
 export default siteMetadata;
 >>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+export const metadata = {,
+    title: 'Zion - AI-Powered Technology Solutions',
+    description: 'Leading provider of AI-powered technology solutions',
+};
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // performanceMetrics utility functions
 
 export interface performanceMetricsConfig {
@@ -13,6 +14,14 @@ export class performanceMetrics {
       enabled: true,
       ...config
     };
+=======
+
+// performanceMetrics utility
+export const performanceMetrics = {
+  // Utility implementation,
+    init: () => {
+    console.log('performanceMetrics initialized');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   }
 
   init(): void {
@@ -30,4 +39,8 @@ export const performanceMetrics = () => {
   // Utility function implementation
   return null;
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

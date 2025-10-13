@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // utils utility functions
 
 export interface utilsConfig {
@@ -87,3 +88,15 @@ import { twMerge } from 'tailwind-merge';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+
+import { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,9 +34,16 @@ export default function CaseStudiesPage() {
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
+<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Case Studies
+=======
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
@@ -81,6 +92,7 @@ export default function CasestudiesPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 =======
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
@@ -432,3 +444,9 @@ export default function CaseStudies() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }
+=======
+
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

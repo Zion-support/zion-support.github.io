@@ -26,6 +26,7 @@ interface LogLevel {
   DEBUG: 'debug';
 }
 
+<<<<<<< HEAD
 const LOG_LEVELS: LogLevel = {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   ERROR: 'error',
@@ -33,6 +34,14 @@ const LOG_LEVELS: LogLevel = {
   INFO: 'info',
   DEBUG: 'debug',
 } as const;
+=======
+const LOG_LEVELS: LogLevel = {,
+    ERROR: 'error',
+    WARN: 'warn',
+    INFO: 'info',
+    DEBUG: 'debug',
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 type LogLevelType = typeof LOG_LEVELS[keyof typeof LOG_LEVELS];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
@@ -79,9 +88,9 @@ export default loggerInstance;
         level,
         message,
         args,
-        timestamp: new Date().toISOString(),
-        url: window.location.href,
-        userAgent: navigator.userAgent,
+          timestamp: new Date().toISOString(),
+          url: window.location.href,
+          userAgent: navigator.userAgent,
       });
 
       // Keep only the last 100 logs
@@ -128,6 +137,7 @@ export default loggerInstance;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const loggerInstance = new Logger();
 export default loggerInstance;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
@@ -136,18 +146,23 @@ export default loggerInstance;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 const logger = new Logger();
 <<<<<<< HEAD
+=======
+const logger = new Logger();
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 export const logger = {
-  // Logger implementation
-  info: (message: string) => {
+  // Logger implementation,
+    info: (message: string) => {
     console.log(`[INFO] ${message}`);
   },
-  error: (message: string) => {
+    error: (message: string) => {
     console.error(`[ERROR] ${message}`);
   },
-  warn: (message: string) => {
+    warn: (message: string) => {
     console.warn(`[WARN] ${message}`);
   }
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -168,3 +183,6 @@ export default logger;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // useEnhancedPerformance
 export const useEnhancedPerformance = () => {
@@ -50,3 +51,18 @@ export default useEnhancedPerformance;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+import { useState, useEffect } from 'react';
+
+export function useEnhancedPerformance() {
+  const [state, setState] = useState<string | null>(null);
+
+  useEffect(() => {
+    setState('initialized');
+  }, []);
+
+  return { state };
+};
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

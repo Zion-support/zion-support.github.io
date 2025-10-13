@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface LazyImageProps {
@@ -142,10 +143,19 @@ const LazyImage: React.FC<LazyImageProps> = ({
     </div>
   );
 };
+=======
+
+
+import React, { useState, useRef, useEffect } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 export default LazyImage;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

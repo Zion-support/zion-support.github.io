@@ -16,6 +16,7 @@ export default function GlobalErrorBoundary({ className = '', children }: Global
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface Props;
   children: ReactNode;
 
@@ -30,6 +31,13 @@ interface Props {
 interface State {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   hasError: boolean;
+=======
+interface Props ,
+    children: ReactNode;
+
+interface State ,
+    hasError: boolean;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   error?: Error;
 }
 
@@ -54,7 +62,12 @@ class GlobalErrorBoundary extends Component<Props, State> {
 
     // Log error to external service in production;
     if (process.env.NODE_ENV === 'production') 
+<<<<<<< HEAD
       // Here you would typically send the error to a logging service;
+=======
+      // Here you would typically send the error to a logging service
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   render() 
     if (this.state.hasError) 
 =======
@@ -95,6 +108,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
               We're experiencing technical difficulties. Please try again later.
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <button;
               onClick="{()" => window.location.reload()}
 =======
@@ -102,6 +116,10 @@ class GlobalErrorBoundary extends Component<Props, State> {
             <button
               onClick={() => window.location.reload()}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+            <button>
+  onClick="{()" => window.location.reload()}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >
               Try Again;
@@ -114,6 +132,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
     return this.props.children;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export default GlobalErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 =======
@@ -122,3 +141,6 @@ export default GlobalErrorBoundary;
 
 export default GlobalErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+export default GlobalErrorBoundary;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

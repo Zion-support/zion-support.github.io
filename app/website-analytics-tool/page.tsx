@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -17,6 +18,23 @@ export default function websiteAnalyticsTool() {
       </Helmet>
       
       <div className="container mx-auto px-4 py-20">
+=======
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+export default function Websiteanalyticstool() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <Helmet>
+        <title>Websiteanalyticstool - Zion Tech Group</title>
+        <meta name="description" content="Professional Websiteanalyticstool services for businesses" />
+      </Helmet>
+
+      <div className="flex items-center justify-center min-h-screen">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Website Analytics Tool</h1>
           <p className="text-xl text-gray-300 mb-8">
@@ -83,8 +101,12 @@ export default function WebsiteanalyticstoolPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -96,12 +100,12 @@ const ZionAIProjectManagerProPage = () => {
   const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
 
   const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$19",
-      period: "per user/month",
-      description: "Perfect for small teams",
-      features: [
+    {,
+    name: "Starter",
+        price: "$19",
+        period: "per user/month",
+        description: "Perfect for small teams",
+        features: [
         "Up to 10 projects",
         "Basic AI task management",
         "5 team members",
@@ -110,15 +114,15 @@ const ZionAIProjectManagerProPage = () => {
         "Basic analytics",
         "Mobile app access"
       ],
-      popular: false,
-      color: "from-gray-500 to-gray-600"
+        popular: false,
+        color: "from-gray-500 to-gray-600"
     },
-    {
-      name: "Professional",
-      price: "$49",
-      period: "per user/month",
-      description: "Most popular for growing teams",
-      features: [
+    {,
+    name: "Professional",
+        price: "$49",
+        period: "per user/month",
+        description: "Most popular for growing teams",
+        features: [
         "Unlimited projects",
         "Advanced AI features",
         "Unlimited team members",
@@ -130,15 +134,15 @@ const ZionAIProjectManagerProPage = () => {
         "Time tracking",
         "Resource management"
       ],
-      popular: true,
-      color: "from-cyan-500 to-purple-600"
+        popular: true,
+        color: "from-cyan-500 to-purple-600"
     },
-    {
-      name: "Enterprise",
-      price: "$99",
-      period: "per user/month",
-      description: "For large organizations",
-      features: [
+    {,
+    name: "Enterprise",
+        price: "$99",
+        period: "per user/month",
+        description: "For large organizations",
+        features: [
         "Everything in Professional",
         "Custom AI models",
         "Dedicated support",
@@ -149,86 +153,86 @@ const ZionAIProjectManagerProPage = () => {
         "On-premise deployment",
         "SLA guarantees"
       ],
-      popular: false,
-      color: "from-purple-500 to-pink-500"
+        popular: false,
+        color: "from-purple-500 to-pink-500"
     }
   ];
 
   const useCases = [
-    {
-      title: "Software Development",
-      description: "Manage agile sprints, code reviews, and deployment pipelines with AI-powered sprint planning and bug tracking",
-      icon: <GitBranch className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
+    {,
+    title: "Software Development",
+        description: "Manage agile sprints, code reviews, and deployment pipelines with AI-powered sprint planning and bug tracking",
+        icon: <GitBranch className="w-6 h-6" />,
+        color: "from-blue-500 to-cyan-500"
     },
-    {
-      title: "Marketing Campaigns",
-      description: "Plan and execute multi-channel marketing campaigns with AI-optimized content scheduling and performance tracking",
-      icon: <Target className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
+    {,
+    title: "Marketing Campaigns",
+        description: "Plan and execute multi-channel marketing campaigns with AI-optimized content scheduling and performance tracking",
+        icon: <Target className="w-6 h-6" />,
+        color: "from-green-500 to-emerald-500"
     },
-    {
-      title: "Event Planning",
-      description: "Coordinate complex events with AI-powered vendor management, timeline optimization, and resource allocation",
-      icon: <Calendar className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
+    {,
+    title: "Event Planning",
+        description: "Coordinate complex events with AI-powered vendor management, timeline optimization, and resource allocation",
+        icon: <Calendar className="w-6 h-6" />,
+        color: "from-purple-500 to-pink-500"
     },
-    {
-      title: "Construction Projects",
-      description: "Manage construction timelines, resource allocation, and compliance tracking with industry-specific AI models",
-      icon: <Workflow className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
+    {,
+    title: "Construction Projects",
+        description: "Manage construction timelines, resource allocation, and compliance tracking with industry-specific AI models",
+        icon: <Workflow className="w-6 h-6" />,
+        color: "from-orange-500 to-red-500"
     },
-    {
-      title: "Research & Development",
-      description: "Track R&D milestones, manage experiments, and optimize research workflows with AI-powered insights",
-      icon: <Lightbulb className="w-6 h-6" />,
-      color: "from-yellow-500 to-orange-500"
+    {,
+    title: "Research & Development",
+        description: "Track R&D milestones, manage experiments, and optimize research workflows with AI-powered insights",
+        icon: <Lightbulb className="w-6 h-6" />,
+        color: "from-yellow-500 to-orange-500"
     },
-    {
-      title: "Client Services",
-      description: "Deliver exceptional client projects with AI-optimized resource planning and automated progress reporting",
-      icon: <Users className="w-6 h-6" />,
-      color: "from-cyan-500 to-blue-500"
+    {,
+    title: "Client Services",
+        description: "Deliver exceptional client projects with AI-optimized resource planning and automated progress reporting",
+        icon: <Users className="w-6 h-6" />,
+        color: "from-cyan-500 to-blue-500"
     }
   ];
 
   const aiCapabilities = [
-    {
-      title: "Intelligent Task Prioritization",
-      description: "AI analyzes task dependencies, deadlines, and team capacity to automatically prioritize tasks for optimal project flow",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+    {,
+    title: "Intelligent Task Prioritization",
+        description: "AI analyzes task dependencies, deadlines, and team capacity to automatically prioritize tasks for optimal project flow",
+        icon: <Target className="w-8 h-8" />,
+        color: "from-blue-500 to-cyan-500"
     },
-    {
-      title: "Predictive Timeline Management",
-      description: "Machine learning algorithms predict project completion dates and identify potential delays before they occur",
-      icon: <Timer className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+    {,
+    title: "Predictive Timeline Management",
+        description: "Machine learning algorithms predict project completion dates and identify potential delays before they occur",
+        icon: <Timer className="w-8 h-8" />,
+        color: "from-green-500 to-emerald-500"
     },
-    {
-      title: "Smart Resource Optimization",
-      description: "AI automatically assigns tasks to the most suitable team members based on skills, availability, and workload",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+    {,
+    title: "Smart Resource Optimization",
+        description: "AI automatically assigns tasks to the most suitable team members based on skills, availability, and workload",
+        icon: <Users className="w-8 h-8" />,
+        color: "from-purple-500 to-pink-500"
     },
-    {
-      title: "Automated Risk Assessment",
-      description: "Continuous monitoring and analysis of project risks with AI-powered early warning systems and mitigation strategies",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
+    {,
+    title: "Automated Risk Assessment",
+        description: "Continuous monitoring and analysis of project risks with AI-powered early warning systems and mitigation strategies",
+        icon: <Shield className="w-8 h-8" />,
+        color: "from-red-500 to-pink-500"
     },
-    {
-      title: "Intelligent Reporting",
-      description: "Generate comprehensive project reports, stakeholder updates, and performance analytics automatically",
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+    {,
+    title: "Intelligent Reporting",
+        description: "Generate comprehensive project reports, stakeholder updates, and performance analytics automatically",
+        icon: <BarChart3 className="w-8 h-8" />,
+        color: "from-orange-500 to-red-500"
     },
-    {
-      title: "Workflow Automation",
-      description: "Automate repetitive tasks, approvals, and notifications to streamline project management processes",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500"
+    {,
+    title: "Workflow Automation",
+        description: "Automate repetitive tasks, approvals, and notifications to streamline project management processes",
+        icon: <Zap className="w-8 h-8" />,
+        color: "from-cyan-500 to-blue-500"
     }
   ];
 
@@ -545,7 +549,12 @@ const ZionAIProjectManagerProPage = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ZionAIProjectManagerProPage;
   );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 }
+=======
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

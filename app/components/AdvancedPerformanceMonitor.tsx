@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 
 interface AdvancedPerformanceMonitorProps {
@@ -13,6 +17,7 @@ export default function AdvancedPerformanceMonitor({ className = '', children }:
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 export default function AdvancedPerformanceMonitor({ className = '', children, ...props }: AdvancedPerformanceMonitorProps) {
     return (
@@ -22,3 +27,6 @@ export default function AdvancedPerformanceMonitor({ className = '', children, .
       );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

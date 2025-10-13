@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -151,6 +152,11 @@ const CriticalResourcePreloader = () => {
 
     // Initialize hover preloading after a delay
     setTimeout(preloadOnHover, 2000)
+=======
+
+
+'use client'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   }, [])
 
@@ -161,6 +167,9 @@ const CriticalResourcePreloader = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 <<<<<<< HEAD
 export default function CriticalResourcePreloader({ className = '', children }: CriticalResourcePreloaderProps) {
@@ -170,6 +179,7 @@ export default function CriticalResourcePreloader({ className = '', children }: 
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
@@ -192,3 +202,6 @@ export default CriticalResourcePreloader
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

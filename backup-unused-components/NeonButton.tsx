@@ -42,17 +42,21 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   const baseClasses =
     "relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100";
 <<<<<<< HEAD
+<<<<<<< HEAD
   const sizeClasses = 
+=======
+  const sizeClasses = ,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     sm: "px-4 py-2 text-sm",
-    md: "px-6 py-3 text-base",
-    lg: "px-8 py-4 text-lg",
+      md: "px-6 py-3 text-base",
+      lg: "px-8 py-4 text-lg",
 ;
-  const variantClasses = 
+  const variantClasses = ,
     primary:
       "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-blue-500/25 hover:shadow-2xl",
-    secondary:
+      secondary:
       "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg hover:shadow-purple-500/25 hover:shadow-2xl",
-    accent:
+      accent:
       "bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2xl",
 ;
 =======

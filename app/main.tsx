@@ -3,10 +3,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
 interface mainProps {
+=======
+
+
+import React from "react";
+import "./index.css";
+
+interface MainProps {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   className?: string;
   children?: React.ReactNode;
 }
@@ -18,6 +27,7 @@ export default function main({ className = '', children }: mainProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -91,3 +101,6 @@ import App from "./App";
 =======
 );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

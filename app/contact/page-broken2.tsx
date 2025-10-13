@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 <<<<<<< HEAD
 interface pagebroken2Props {
@@ -14,6 +18,7 @@ export default function pagebroken2({ className = '', children }: pagebroken2Pro
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 export default function Component() {
   return (
@@ -28,3 +33,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

@@ -64,10 +64,15 @@ function fixImportSyntax(filePath) {
   }
 }
 
+<<<<<<< HEAD
 // Function to recursively find all TypeScript files;
 function findFiles(dir, fileList = []) {
+=======
+// Function to recursively find all TypeScript files>
+  function findFiles(dir, fileList = []) {>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   const files = fs.readdirSync(dir);
-  
+  >
   files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);

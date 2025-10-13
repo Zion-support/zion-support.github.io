@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // logger utility functions
 
 export interface loggerConfig {
@@ -13,6 +14,14 @@ export class logger {
       enabled: true,
       ...config
     };
+=======
+
+// logger utility
+export const logger = {
+  // Utility implementation,
+    init: () => {
+    console.log('logger initialized');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   }
 
   init(): void {
@@ -30,4 +39,8 @@ export const logger = () => {
   // Utility function implementation
   return null;
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

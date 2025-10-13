@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 
@@ -51,8 +52,16 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     </Helmet>
   );
 };
+=======
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 export default EnhancedSEO;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

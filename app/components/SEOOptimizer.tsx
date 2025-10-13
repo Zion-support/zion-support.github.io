@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 
@@ -169,6 +170,22 @@ export default function SEOOptimizer({ className = '', children, ...props }: SEO
     return (
         <div className="component" {...props}>
           {children}
+=======
+
+import React from 'react';
+
+export default function SEOOptimizer() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            SEOOptimizer
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This component is under development. Please check back later.
+          </p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       );
 }
@@ -179,4 +196,8 @@ export default function SEOOptimizer({ className = '', children, ...props }: SEO
 export default SEOOptimizer;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -15,6 +16,10 @@ export default function Page() {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 =======
+=======
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -22,7 +27,11 @@ import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 export default function Page() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -138,12 +147,17 @@ export default function InventoryManagement() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     </div>
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
@@ -159,3 +173,6 @@ import { Link } from 'react-router-dom';
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

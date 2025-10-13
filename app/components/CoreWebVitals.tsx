@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 
 interface CoreWebVitalsProps {
@@ -13,6 +17,7 @@ export default function CoreWebVitals({ className = '', children }: CoreWebVital
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 export default function CoreWebVitals({ className = '', children, ...props }: CoreWebVitalsProps) {
     return (
@@ -22,3 +27,6 @@ export default function CoreWebVitals({ className = '', children, ...props }: Co
       );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

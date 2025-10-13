@@ -72,16 +72,28 @@ export default function Page() {;
 </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group"
+=======
+              <Link >
+  to="/contact">
+  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
                 Get Started;
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
+<<<<<<< HEAD
               <Link;
                 to="/contact"
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+=======
+              <Link >
+  to="/contact">
+  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
                 Learn More;
               </Link>
@@ -118,15 +130,27 @@ export default function Page() {;
 </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link;
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+=======
+                <Link>
+  to="/contact">
+  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                 >
                   Contact Us;
                 </Link>
+<<<<<<< HEAD
                 <Link;
                   to="/services"
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+=======
+                <Link>
+  to="/services">
+  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                 >
                   View All Services;
                 </Link>

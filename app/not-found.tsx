@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,11 @@ import React from 'react';
 =======
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 <<<<<<< HEAD
 interface notfoundProps {
@@ -53,7 +59,12 @@ export default function NotFound() {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
             404 - Page Not Found
+=======
+            NotFound
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             The page you are looking for could not be found.
@@ -90,6 +101,7 @@ export default function NotFound() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
@@ -148,3 +160,10 @@ const NotFoundPage = () => {;
 }
 );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+    </div>
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

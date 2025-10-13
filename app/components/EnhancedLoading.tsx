@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedLoadingProps {
@@ -90,8 +91,16 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
     </div>
   );
 };
+=======
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 export default EnhancedLoading;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

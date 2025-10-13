@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -49,11 +50,20 @@ import { useState, useEffect } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 interface Props {
   children: ReactNode;
+=======
+
+
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+
+interface Props {,
+    children: ReactNode;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   fallback?: ReactNode;
 }
 
-interface State {
-  hasError: boolean;
+interface State {,
+    hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
@@ -65,7 +75,14 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
+<<<<<<< HEAD
     return { hasError: true, error };
+=======
+    return {,
+    hasError: true,
+      error
+    };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -111,6 +128,7 @@ class ErrorBoundary extends Component<Props, State> {
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
+<<<<<<< HEAD
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
@@ -132,14 +150,26 @@ class ErrorBoundary extends Component<Props, State> {
               <button
                 onClick={this.handleRetry}
                 className="flex items-center justify-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors"
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button>
+  onClick={this.handleRetry}>
+  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
+<<<<<<< HEAD
               
               <button
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors"
+=======
+              <button>
+  onClick={this.handleGoHome}>
+  className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home

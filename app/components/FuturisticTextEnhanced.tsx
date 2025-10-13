@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -195,9 +196,25 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
     );
   }
 
+=======
+
+import React from 'react';
+
+interface FuturistictextenhancedProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Futuristictextenhanced({ className = '', children, ...props }: FuturistictextenhancedProps) {
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className={textClasses}>
       {children}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     </div>
   );
 };
@@ -205,6 +222,7 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
 export default FuturisticTextEnhanced;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
   return (;
@@ -214,3 +232,6 @@ export default FuturisticTextEnhanced;
 </div>;
 );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

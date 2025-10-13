@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,6 +87,7 @@ export default function MicrosaasPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import { ArrowRight, Brain, Shield, Zap, BarChart3, Users, Sparkles, CheckCircle, Star, TrendingUp } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -395,3 +400,6 @@ export default function Page() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

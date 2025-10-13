@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 interface Props {
@@ -36,12 +37,17 @@ export const withErrorBoundary = <P extends object>(
 export const useErrorHandler = () => {
   return (error: Error, errorInfo?: ErrorInfo) => {
     // In production, you might want to send this to an error reporting service
+=======
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { Home } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Hand } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
@@ -79,10 +85,16 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 interface Props {
   children: ReactNode;
+=======
+
+interface Props {,
+    children: ReactNode;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
+<<<<<<< HEAD
 interface State {
   hasError: boolean;
   error?: Error;
@@ -230,3 +242,14 @@ export default ImprovedErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+export default function Improvederrorboundary({ className = '', children, ...props }: ImprovederrorboundaryProps) {
+  return (
+    <div className={`improvederrorboundary-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

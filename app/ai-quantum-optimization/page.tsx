@@ -1,14 +1,24 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
 export default function aiQuantumOptimization() {
+=======
+export default function Page() {
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -80,6 +90,7 @@ export default function AiquantumoptimizationPage() {
           </button>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
   );
 }
@@ -89,3 +100,10 @@ import { Helmet } from 'react-helmet-async';
 
 import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+    </div>
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

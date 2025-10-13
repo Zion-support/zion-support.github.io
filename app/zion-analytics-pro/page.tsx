@@ -1,9 +1,82 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
+=======
+
+
+const testimonials = [
+  {,
+    name: "Sarah Johnson",
+      role: "CEO",
+      content: "Zion Tech Group has transformed our business with their AI solutions.",
+      avatar: "/api/placeholder/60/60",
+      rating: 5,
+      company: "TechCorp"
+  },
+  {,
+    name: "Michael Chen",
+      role: "CTO", ,
+    content: "The performance improvements are remarkable. Highly recommended!",
+      avatar: "/api/placeholder/60/60",
+      rating: 5,
+      company: "InnovateLabs"
+  },
+  {,
+    name: "Emily Rodriguez",
+      role: "Product Manager",
+      content: "Outstanding support and cutting-edge technology solutions.",
+      avatar: "/api/placeholder/60/60",
+      rating: 5,
+      company: "FutureTech"
+  }
+
+export default function ZionAnalyticsPro() {
+  const features = [
+    "Real-time dashboard analytics",
+    "Predictive business insights",
+    "Automated report generation",
+    "Custom data visualization",
+    "Multi-platform integration",
+    "Advanced filtering & segmentation",
+    "Export to PDF/Excel/CSV",
+    "White-label options",
+    "AI-powered recommendations",
+    "Mobile app access",
+    "API integration",
+    "Custom metrics & KPIs"
+
+  const pricing = [
+    {,
+    name: "Starter",
+        price: "$29",
+        period: "month",
+        description: "Perfect for small businesses",
+        features: ["Up to 5 data sources", "Basic dashboards", "Email support", "1 user"],
+        popular: false
+    },
+    {,
+    name: "Professional",
+        price: "$79",
+        period: "month",
+        description: "Ideal for growing companies",
+        features: ["Up to 20 data sources", "Advanced analytics", "Priority support", "5 users", "Custom reports"],
+        popular: true
+    },
+    {,
+    name: "Enterprise",
+        price: "$199",
+        period: "month",
+        description: "For large organizations",
+        features: ["Unlimited data sources", "AI insights", "24/7 support", "Unlimited users", "White-label options"],
+        popular: false
+    }
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
@@ -83,8 +156,12 @@ export default function ZionanalyticsproPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import { ArrowRight, CheckCircle, Star, BarChart3, DollarSign } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

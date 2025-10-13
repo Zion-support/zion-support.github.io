@@ -40,12 +40,17 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = (
   if (isSubscribed) 
     return (
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div;
 =======
 <<<<<<< HEAD
       <div
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
         className="{`bg-green-100" border border-green-400 text-green-700 px-6 py-4 rounded-lg text-center ${className}`}
+=======
+      <div>
+  className="{`bg-green-100" border border-green-400 text-green-700 px-6 py-4 rounded-lg text-center ${className}`}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       >
 =======
 //       <div
@@ -62,6 +67,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = (
     );
 
   return (
+<<<<<<< HEAD
     <div;
 =======
 </h3>
@@ -74,6 +80,10 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = (
     <div
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       className="{`bg-white/10" backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}
+=======
+    <div>
+  className="{`bg-white/10" backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     >
       <div className="text-center mb-6"></div>
         <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -84,6 +94,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = (
   </div>
       <form onSubmit="{handleSubmit}" className="space-y-4"></form>
         <div></div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <input;
 =======
@@ -108,6 +119,12 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = (
             type="email"
             value={email}
             onChange="{(e)" => setEmail(e.target.value)}
+=======
+          <input>
+  type="email">
+  value={email}>
+  onChange="{(e)" => setEmail(e.target.value)}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
             placeholder="Enter your email address"
 <<<<<<< HEAD
             required;
@@ -122,6 +139,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = (
         <button;
 =======
         </div>
+<<<<<<< HEAD
         <button
 =======
 //           />
@@ -134,6 +152,13 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = (
           disabled={isLoading}
           className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
 //         >
+=======
+        <button>
+  type="submit">
+  disabled={isLoading}>
+  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           {isLoading ? "Subscribing..." : "Subscribe Now"}
 </button>
       </form>

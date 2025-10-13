@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // Performance optimization hook
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
@@ -242,3 +243,10 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+export default function usePerformanceOptimization() {
+  return {};
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

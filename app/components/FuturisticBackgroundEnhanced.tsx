@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticBackgroundEnhancedProps {
@@ -45,8 +46,16 @@ const FuturisticBackgroundEnhanced: React.FC<FuturisticBackgroundEnhancedProps> 
     </div>
   );
 };
+=======
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 export default FuturisticBackgroundEnhanced;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

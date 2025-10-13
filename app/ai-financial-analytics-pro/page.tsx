@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -231,6 +232,10 @@ export default function AIFinancialAnalyticsProPage() {
       "url": "https://ziontechgroup.com"
     }
   };
+=======
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   return (
     <PerformanceOptimizer>
@@ -447,4 +452,9 @@ export default function AIFinancialAnalyticsProPage() {
     </PerformanceOptimizer>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

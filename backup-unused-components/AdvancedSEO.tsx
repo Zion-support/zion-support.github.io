@@ -17,9 +17,15 @@ export default function AdvancedSEO({ className = '', children }: AdvancedSEOPro
 import StructuredData from "../components/StructuredData";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 interface AdvancedSEOProps;
   title: string;
   description: string;
+=======
+interface AdvancedSEOProps ,
+    title: string;,
+    description: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   keywords?: string;
   canonical?: string;
   ogTitle?: string;

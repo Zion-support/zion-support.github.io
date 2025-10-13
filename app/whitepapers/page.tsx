@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -264,6 +265,16 @@ export default function WhitepapersPage() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         </section>
+=======
+
+import React from 'react';
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Need Custom Research?
@@ -272,6 +283,7 @@ export default function WhitepapersPage() {
             Our research team can create custom whitepapers and analysis reports 
             tailored to your specific industry and business needs.
           </p>
+<<<<<<< HEAD
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -301,3 +313,12 @@ export default WhitepapersPage;
   );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 }
+=======
+
+        </div>
+      </div>
+    </div>
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

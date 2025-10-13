@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 interface LoadingProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
   className?: string;
 <<<<<<< HEAD
   children?: React.ReactNode;
@@ -62,12 +63,22 @@ const Loading: React.FC<LoadingProps> = ({ message = 'Loading...' }) => {
     </div>
   );
 };
+=======
+
+  className?: string;
+  children?: React.ReactNode;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 export default Loading;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 interface LoadingProps {;
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

@@ -12,12 +12,22 @@ const Breadcrumb: React.FC = () =>
     return null;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 
+<<<<<<< HEAD
 interface BreadcrumbProps {
   className?: string;
   children?: React.ReactNode;
 }
 
 export default function Breadcrumb({ className = '', children }: BreadcrumbProps) {
+=======
+  const breadcrumbItems = [
+    { name: 'Home', path: '/' },
+    ...pathSegments.map()segment, index) => (,
+    name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
+        path: '/' + pathSegments.slice(0, index + 1).join('/')
+()
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
 <<<<<<< HEAD
     <div className={`${className}`}>
@@ -34,6 +44,7 @@ export default function Breadcrumb({ className = '', children }: BreadcrumbProps
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link;
 =======
               
@@ -47,6 +58,12 @@ export default function Breadcrumb({ className = '', children }: BreadcrumbProps
                   to={item.path}
                   className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors"
 //                 >
+=======
+                <Link>
+  to={item.path}>
+  className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors"
+                >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                   <Home className="w-4 h-4 mr-1" />
                   {item.name}
 </Link>
@@ -56,6 +73,7 @@ export default function Breadcrumb({ className = '', children }: BreadcrumbProps
 </span>
               ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link;
 =======
 //                 <Link
@@ -63,6 +81,12 @@ export default function Breadcrumb({ className = '', children }: BreadcrumbProps
                   to={item.path}
                   className="text-gray-300 hover:text-cyan-400 transition-colors"
 //                 >
+=======
+                <Link>
+  to={item.path}>
+  className="text-gray-300 hover:text-cyan-400 transition-colors"
+                >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                   {item.name}
 <<<<<<< HEAD
                 </Link>

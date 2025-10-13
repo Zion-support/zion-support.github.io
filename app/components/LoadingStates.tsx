@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 
 <<<<<<< HEAD
@@ -8,7 +12,12 @@ interface LoadingStatesProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function LoadingStates({ className = '', children }: LoadingStatesProps) {
+=======
+export default function Loadingstates({ className = '', children, ...props }: LoadingstatesProps) {
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className={`${className}`}>
 =======
@@ -19,6 +28,7 @@ export default function LoadingStates({ className = '', children, ...props }: Lo
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 export default function LoadingStates({ className = '', children, ...props }: LoadingStatesProps) {
@@ -43,3 +53,8 @@ export const LoadingPage: React.FC = () => {
 
 export default LoadingPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

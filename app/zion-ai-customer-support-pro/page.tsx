@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -9,6 +10,14 @@ import { Helmet } from 'react-helmet-async';
 
 <<<<<<< HEAD
 export default function zionAiCustomerSupportPro() {
+=======
+
+
+import React from 'react';
+
+export default function Page() {
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

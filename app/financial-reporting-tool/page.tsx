@@ -1,7 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+=======
+
+
+import React from 'react';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import { Helmet } from 'react-helmet-async';
 =======
 
@@ -83,8 +90,12 @@ export default function FinancialreportingtoolPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

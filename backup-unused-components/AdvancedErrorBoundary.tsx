@@ -16,6 +16,7 @@ export default function AdvancedErrorBoundary({ className = '', children }: Adva
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+<<<<<<< HEAD
 interface Props;
   children: ReactNode;
   fallback?: ReactNode;
@@ -23,6 +24,15 @@ interface Props;
 
 interface State;
   hasError: boolean;
+=======
+interface Props ,
+    children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+
+interface State ,
+    hasError: boolean;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   error?: Error;
   errorInfo?: ErrorInfo;
   errorId?: string;
@@ -38,6 +48,7 @@ class AdvancedErrorBoundary extends Component<Props, State>
 =======
 <<<<<<< HEAD
   static getDerivedStateFromError(error: Error): State 
+<<<<<<< HEAD
     return 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       hasError: true, 
@@ -49,6 +60,12 @@ class AdvancedErrorBoundary extends Component<Props, State>
 //       error,
 >>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+=======
+    return ,
+    hasError: true, 
+      error,
+        errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 ;
 
 <<<<<<< HEAD
@@ -83,6 +100,7 @@ class AdvancedErrorBoundary extends Component<Props, State>
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => 
     // You can integrate with services like Sentry, LogRocket, etc.
 <<<<<<< HEAD
+<<<<<<< HEAD
     const errorData = 
       message: error.message,
       stack: error.stack,
@@ -91,6 +109,16 @@ class AdvancedErrorBoundary extends Component<Props, State>
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
+=======
+    const errorData = ,
+    message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        errorId: this.state.errorId,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 ;
 <<<<<<< HEAD
     // Log the error data for debugging;
@@ -127,11 +155,19 @@ class AdvancedErrorBoundary extends Component<Props, State>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 ;
   handleReset = () => 
+<<<<<<< HEAD
     this.setState(
       hasError: false, 
       error: undefined, 
       errorInfo: undefined,
       errorId: undefined;
+=======
+    this.setState(,
+    hasError: false, ,
+    error: undefined, ,
+    errorInfo: undefined,
+        errorId: undefined 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 );
 ;
   handleReportError = () => 
@@ -212,8 +248,11 @@ class AdvancedErrorBoundary extends Component<Props, State>
             )}
 >>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
+<<<<<<< HEAD
             
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               <details className="mb-6 text-left"></details>
                 <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2"></summary>
                   Error Details (Development)
@@ -232,6 +271,7 @@ class AdvancedErrorBoundary extends Component<Props, State>
               </details>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center"></div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <button;
 =======
@@ -261,6 +301,12 @@ class AdvancedErrorBoundary extends Component<Props, State>
                 onClick={this.handleReset}
                 className="flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
 //               >
+=======
+              <button>
+  onClick={this.handleReset}>
+  className="flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+              >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                 <RefreshCw className="h-4 w-4 mr-2" />
 <<<<<<< HEAD
                 Try Again;
@@ -269,6 +315,7 @@ class AdvancedErrorBoundary extends Component<Props, State>
                 Try Again
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
               </button>
+<<<<<<< HEAD
               <button;
                 onClick="{()" => window.location.href = '/'}
 =======
@@ -278,6 +325,10 @@ class AdvancedErrorBoundary extends Component<Props, State>
 //               <button
                 onClick={() => window.location.href = '/'}
 >>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+=======
+              <button>
+  onClick="{()" => window.location.href = '/'}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                 className="flex items-center justify-center px-6 py-3 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
 //               >
                 <Home className="h-4 w-4 mr-2" />
@@ -289,6 +340,7 @@ class AdvancedErrorBoundary extends Component<Props, State>
 <<<<<<< HEAD
                 Go Home
               </button>
+<<<<<<< HEAD
               <button
 =======
 //                 Go Home
@@ -300,6 +352,12 @@ class AdvancedErrorBoundary extends Component<Props, State>
                 onClick={this.handleReportError}
                 className="flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
 //               >
+=======
+              <button>
+  onClick={this.handleReportError}>
+  className="flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+              >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                 <Mail className="h-4 w-4 mr-2" />
 <<<<<<< HEAD
                 Report Issue;
@@ -321,9 +379,15 @@ class AdvancedErrorBoundary extends Component<Props, State>
 >>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
                 If this problem persists, please contact our support team at{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <a;
                   href="mailto:support@ziontechgroup.com" 
                   className="text-blue-600 hover:text-blue-800"
+=======
+                <a >
+  href="mailto:support@ziontechgroup.com" >
+  className="text-blue-600 hover:text-blue-800"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                 >
                   support@ziontechgroup.com;
                 </a>
@@ -347,5 +411,9 @@ class AdvancedErrorBoundary extends Component<Props, State>
 
     return this.props.children;
 
+<<<<<<< HEAD
 export default AdvancedErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+export default AdvancedErrorBoundary;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

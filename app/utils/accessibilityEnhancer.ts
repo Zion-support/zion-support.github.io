@@ -16,8 +16,13 @@ export class accessibilityEnhancer {
 =======
 // accessibilityEnhancer utility;
 export const accessibilityEnhancer = {
+<<<<<<< HEAD
   // Utility implementation;
   init: () => {
+=======
+  // Utility implementation,
+    init: () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     console.log('accessibilityEnhancer initialized');
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   }

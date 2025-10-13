@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -69,6 +70,23 @@ import {
   CheckCircle, 
   Cpu,
   Globe,
+=======
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import {
+  Brain,
+  TrendingUp,
+  Shield,
+  Zap,
+  BarChart3,
+  DollarSign,
+  Target,
+  CheckCircle,
+  Cpu,
+  Globe,
+  Clock,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   Activity,
   PieChart
 } from 'lucide-react';
@@ -79,39 +97,39 @@ import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const AIQuantumFinancialOraclePage = () => {
   const features = [
-    {
-      title: "Quantum-Powered Predictions",
-      description: "Leverage quantum computing algorithms for ultra-accurate financial market predictions",
-      icon: <Cpu className="w-8 h-8" />,
-      color: "from-purple-500 to-indigo-500"
+    {,
+    title: "Quantum-Powered Predictions",
+        description: "Leverage quantum computing algorithms for ultra-accurate financial market predictions",
+        icon: <Cpu className="w-8 h-8" />,
+        color: "from-purple-500 to-indigo-500"
     },
-    {
-      title: "Real-Time Market Analysis",
-      description: "Process millions of data points in real-time for instant market insights",
-      icon: <Activity className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500"
+    {,
+    title: "Real-Time Market Analysis",
+        description: "Process millions of data points in real-time for instant market insights",
+        icon: <Activity className="w-8 h-8" />,
+        color: "from-cyan-500 to-blue-500"
     },
-    {
-      title: "Risk Assessment",
-      description: "Advanced risk modeling with 99.7% accuracy using quantum algorithms",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+    {,
+    title: "Risk Assessment",
+        description: "Advanced risk modeling with 99.7% accuracy using quantum algorithms",
+        icon: <Shield className="w-8 h-8" />,
+        color: "from-green-500 to-emerald-500"
     },
-    {
-      title: "Portfolio Optimization",
-      description: "AI-driven portfolio optimization with quantum-enhanced decision making",
-      icon: <PieChart className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+    {,
+    title: "Portfolio Optimization",
+        description: "AI-driven portfolio optimization with quantum-enhanced decision making",
+        icon: <PieChart className="w-8 h-8" />,
+        color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
-    {
-      name: "Quantum Starter",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for individual investors and small portfolios",
-      features: [
+    {,
+    name: "Quantum Starter",
+        price: "$199",
+        period: "/month",
+        description: "Perfect for individual investors and small portfolios",
+        features: [
         "Basic quantum predictions",
         "5 portfolio optimizations/month",
         "Real-time market data",
@@ -119,14 +137,14 @@ const AIQuantumFinancialOraclePage = () => {
         "Email support",
         "Basic reporting"
       ],
-      popular: false
+        popular: false
     },
-    {
-      name: "Quantum Professional",
-      price: "$599",
-      period: "/month",
-      description: "Ideal for financial advisors and medium portfolios",
-      features: [
+    {,
+    name: "Quantum Professional",
+        price: "$599",
+        period: "/month",
+        description: "Ideal for financial advisors and medium portfolios",
+        features: [
         "Advanced quantum algorithms",
         "Unlimited portfolio optimizations",
         "Real-time market analysis",
@@ -136,14 +154,14 @@ const AIQuantumFinancialOraclePage = () => {
         "Custom strategies",
         "Advanced reporting"
       ],
-      popular: true
+        popular: true
     },
-    {
-      name: "Quantum Enterprise",
-      price: "$1,999",
-      period: "/month",
-      description: "For hedge funds and large financial institutions",
-      features: [
+    {,
+    name: "Quantum Enterprise",
+        price: "$1,999",
+        period: "/month",
+        description: "For hedge funds and large financial institutions",
+        features: [
         "Full quantum computing access",
         "Unlimited everything",
         "Real-time global markets",
@@ -155,34 +173,34 @@ const AIQuantumFinancialOraclePage = () => {
         "SLA guarantee",
         "Dedicated account manager"
       ],
-      popular: false
+        popular: false
     }
   ];
 
   const capabilities = [
-    {
-      title: "Market Prediction",
-      description: "Predict market movements with 87% accuracy using quantum algorithms",
-      accuracy: "87%",
-      icon: <TrendingUp className="w-6 h-6" />
+    {,
+    title: "Market Prediction",
+        description: "Predict market movements with 87% accuracy using quantum algorithms",
+        accuracy: "87%",
+        icon: <TrendingUp className="w-6 h-6" />
     },
-    {
-      title: "Risk Analysis",
-      description: "Comprehensive risk assessment with quantum-enhanced modeling",
-      accuracy: "99.7%",
-      icon: <Shield className="w-6 h-6" />
+    {,
+    title: "Risk Analysis",
+        description: "Comprehensive risk assessment with quantum-enhanced modeling",
+        accuracy: "99.7%",
+        icon: <Shield className="w-6 h-6" />
     },
-    {
-      title: "Portfolio Optimization",
-      description: "AI-driven portfolio optimization for maximum returns",
-      accuracy: "94%",
-      icon: <Target className="w-6 h-6" />
+    {,
+    title: "Portfolio Optimization",
+        description: "AI-driven portfolio optimization for maximum returns",
+        accuracy: "94%",
+        icon: <Target className="w-6 h-6" />
     },
-    {
-      title: "Real-Time Processing",
-      description: "Process millions of data points in milliseconds",
-      accuracy: "99.9%",
-      icon: <Clock className="w-6 h-6" />
+    {,
+    title: "Real-Time Processing",
+        description: "Process millions of data points in milliseconds",
+        accuracy: "99.9%",
+        icon: <Clock className="w-6 h-6" />
     }
   ];
 
@@ -194,6 +212,7 @@ const AIQuantumFinancialOraclePage = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="AI Quantum Financial Oracle - Advanced Financial AI | Zion Tech Group"
@@ -219,12 +238,22 @@ const AIQuantumFinancialOraclePage = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400">
               AI Quantum Financial Oracle
             </span>
+=======
+
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Revolutionary AI-powered financial oracle using quantum computing for ultra-accurate 
             market predictions, risk analysis, and portfolio optimization.
           </p>
+<<<<<<< HEAD
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
@@ -438,6 +467,11 @@ const AIQuantumFinancialOraclePage = () => {
           </button>
         </div>
       </section>
+=======
+
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     </div>
   );
 <<<<<<< HEAD
@@ -445,5 +479,10 @@ const AIQuantumFinancialOraclePage = () => {
 =======
 };
 
+<<<<<<< HEAD
 export default AIQuantumFinancialOraclePage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

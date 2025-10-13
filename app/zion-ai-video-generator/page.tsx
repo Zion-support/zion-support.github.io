@@ -1,11 +1,180 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
+=======
+const ZionAIVideoGeneratorPage = () => {
+  // const [selectedPlan, setSelectedPlan] = useState('pro');
+  // const [selectedPlan, setSelectedPlan] = useState('pro');
+
+  const features = [
+    {,
+    title: 'AI Video Creation',
+        description: 'Generate professional videos from text prompts using advanced AI models',
+        icon: <Brain className="w-6 h-6" />,
+        included: true
+    },
+    {,
+    title: 'Voice Synthesis',
+        description: 'Convert text to natural-sounding speech in 50+ languages',
+        icon: <Mic className="w-6 h-6" />,
+        included: true
+    },
+    {,
+    title: 'Auto Editing',
+        description: 'Intelligent video editing with automatic cuts, transitions, and effects',
+        icon: <Edit className="w-6 h-6" />,
+        included: true
+    },
+    {,
+    title: 'Template Library',
+        description: 'Access to 1000+ professional video templates and styles',
+        icon: <Layout className="w-6 h-6" />,
+        included: true
+    },
+    {,
+    title: 'HD Export',
+        description: 'Export videos in 4K resolution with professional quality',
+        icon: <Video className="w-6 h-6" />,
+        included: true
+    },
+    {,
+    title: 'Brand Integration',
+        description: 'Add your logo, colors, and branding elements automatically',
+        icon: <Palette className="w-6 h-6" />,
+        included: true
+    },
+    {,
+    title: 'Multi-language Support',
+        description: 'Create videos in multiple languages with accurate translations',
+        icon: <Globe className="w-6 h-6" />,
+        included: true
+    },
+    {,
+    title: 'Cloud Storage',
+        description: 'Unlimited cloud storage for your video projects and assets',
+        icon: <Cloud className="w-6 h-6" />,
+        included: true
+    },
+    {,
+    title: 'Collaboration Tools',
+        description: 'Real-time collaboration with team members and clients',
+        icon: <Users className="w-6 h-6" />,
+        included: true
+    },
+    {,
+    title: 'Analytics Dashboard',
+        description: 'Track video performance and engagement metrics',
+        icon: <BarChart3 className="w-6 h-6" />,
+        included: true
+    },
+    {,
+    title: 'API Integration',
+        description: 'Integrate with your existing tools and workflows',
+        icon: <Settings className="w-6 h-6" />,
+        included: true
+    },
+    {,
+    title: 'Priority Support',
+        description: '24/7 priority support with dedicated account manager',
+        icon: <Headphones className="w-6 h-6" />,
+        included: true
+    }
+  ];
+
+  const pricingPlans = [
+    {,
+    name: 'Starter',
+        price: '$99',
+        originalPrice: '$199',
+        period: '/month',
+        description: 'Perfect for individuals and small businesses',
+        features: [
+        '10 videos per month',
+        'HD quality export',
+        'Basic templates',
+        'Email support',
+        '5GB storage'
+      ],
+        popular: false,
+        color: 'from-gray-500 to-gray-600'
+    },
+    {,
+    name: 'Pro',
+        price: '$199',
+        originalPrice: '$399',
+        period: '/month',
+        description: 'Ideal for growing businesses and content creators',
+        features: [
+        '50 videos per month',
+        '4K quality export',
+        'Premium templates',
+        'Priority support',
+        '50GB storage',
+        'Brand integration',
+        'Voice synthesis'
+      ],
+        popular: true,
+        color: 'from-purple-500 to-pink-500'
+    },
+    {,
+    name: 'Enterprise',
+        price: '$399',
+        originalPrice: '$799',
+        period: '/month',
+        description: 'For large organizations and agencies',
+        features: [
+        'Unlimited videos',
+        '4K quality export',
+        'All templates',
+        '24/7 support',
+        'Unlimited storage',
+        'Advanced branding',
+        'API access',
+        'Team collaboration',
+        'Analytics dashboard'
+      ],
+        popular: false,
+        color: 'from-cyan-500 to-blue-500'
+    }
+  ];
+
+  const useCases = [
+    {,
+    title: 'Marketing Videos',
+        description: 'Create compelling product demos, promotional videos, and social media content',
+        icon: <Target className="w-8 h-8" />,
+        examples: ['Product demos', 'Social media ads', 'Promotional videos', 'Brand stories']
+    },
+    {,
+    title: 'Training Content',
+        description: 'Develop educational videos, tutorials, and onboarding materials',
+        icon: <Users className="w-8 h-8" />,
+        examples: ['Employee training', 'Customer tutorials', 'Onboarding videos', 'Educational content']
+    },
+    {,
+    title: 'Social Media',
+        description: 'Generate engaging content for Instagram, TikTok, YouTube, and other platforms',
+        icon: <Share className="w-8 h-8" />,
+        examples: ['Instagram stories', 'TikTok videos', 'YouTube shorts', 'LinkedIn content']
+    },
+    {,
+    title: 'E-commerce',
+        description: 'Create product showcase videos and sales presentations',
+        icon: <ShoppingCart className="w-8 h-8" />,
+        examples: ['Product showcases', 'Sales presentations', 'Customer testimonials', 'How-to guides']
+    }
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 <<<<<<< HEAD
 export default function zionAiVideoGenerator() {
@@ -82,6 +251,7 @@ export default function ZionaivideogeneratorPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 import { Link } from 'react-router-dom';
@@ -90,3 +260,8 @@ import { Helmet } from 'react-helmet-async';
 
 const ZionAIVideoGeneratorPage = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

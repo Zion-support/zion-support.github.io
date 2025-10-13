@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 <<<<<<< HEAD
 interface AnalyticsProviderProps {
@@ -5,6 +10,7 @@ interface AnalyticsProviderProps {
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function AnalyticsProvider({ className = '', children }: AnalyticsProviderProps) {
@@ -55,6 +61,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     trackEvent,
     trackPageView,
   };
+=======
+export default function Analyticsprovider({ className = '', children, ...props }: AnalyticsproviderProps) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   return (
     <AnalyticsContext.Provider value={value}>
@@ -62,6 +71,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       {children}
     </AnalyticsContext.Provider>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -80,3 +90,8 @@ export default AnalyticsProvider;
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

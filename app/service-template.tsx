@@ -1,10 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 interface servicetemplateProps {
+=======
+
+
+interface ServiceTemplateProps {
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   className?: string;
   children?: React.ReactNode;
 }
@@ -59,6 +66,7 @@ export default function ServiceTemplate() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 
 export default function Component() {
@@ -79,3 +87,6 @@ import { ArrowRight } from 'lucide-react';
 interface ServiceTemplateProps {;
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

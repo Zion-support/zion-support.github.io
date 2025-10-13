@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -88,3 +89,99 @@ import { ArrowRight, CheckCircle, Star, Mic, Video, Calendar } from 'lucide-reac
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+
+export default function ZionAIMeetingTranscriber() {
+  const features = [
+    "Real-time meeting transcription with 99.5% accuracy",
+    "Multi-language support (100+ languages)",
+    "Speaker identification and diarization",
+    "Automatic action item extraction",
+    "Meeting summary generation",
+    "Integration with Zoom, Teams, Google Meet",
+    "Custom vocabulary and industry terms",
+    "Timestamp and chapter markers",
+    "Searchable transcript database",
+    "Export to multiple formats (PDF, Word, SRT)",
+    "AI-powered insights and analytics",
+    "Secure cloud storage and backup"
+
+  const benefits = [
+    "Save 2+ hours per meeting on note-taking",
+    "Never miss important details again",
+    "Improve meeting productivity by 60%",
+    "Create searchable knowledge base",
+    "Generate actionable follow-ups automatically",
+    "Ensure compliance with meeting records"
+
+  const pricing = [
+    {,
+    name: "Starter",
+        price: "$19",
+        period: "month",
+        description: "Perfect for small teams",
+        features: ["Up to 10 hours/month", "Basic transcription", "Email support", "1 user", "Standard accuracy"],
+        popular: false
+    },
+    {,
+    name: "Professional",
+        price: "$49",
+        period: "month",
+        description: "Ideal for growing businesses",
+        features: ["Up to 50 hours/month", "Advanced AI features", "Priority support", "5 users", "Speaker identification", "Action items"],
+        popular: true
+    },
+    {,
+    name: "Enterprise",
+        price: "$99",
+        period: "month",
+        description: "For large organizations",
+        features: ["Unlimited hours", "Custom integrations", "Dedicated support", "Unlimited users", "Advanced analytics", "White-labeling"],
+        popular: false
+    }
+
+  const testimonials = [
+    {,
+    name: "Sarah Chen",
+        company: "TechStart Inc.",
+        role: "CEO",
+        content: "Zion AI Meeting Transcriber has revolutionized our team meetings. We never miss important details and our productivity has increased dramatically.",
+        rating: 5
+    },
+    {,
+    name: "Michael Rodriguez",
+        company: "Consulting Firm",
+        role: "Partner",
+        content: "The speaker identification feature is incredible. It's like having a professional secretary in every meeting.",
+        rating: 5
+    },
+    {,
+    name: "Emily Johnson",
+        company: "Marketing Agency",
+        role: "Director",
+        content: "The automatic action item extraction saves us hours of follow-up work. Highly recommended!",
+        rating: 5
+    }
+
+import React from 'react';
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

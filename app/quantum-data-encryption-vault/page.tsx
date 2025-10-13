@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -61,34 +62,40 @@ export default function QuantumdataencryptionvaultPage() {
 import { Link } from 'react-router-dom';
 import { Shield, ArrowRight, CheckCircle, Star, Lock, Award, Globe, Eye, Key } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 const QuantumDataEncryptionVault = () => {
   const features = [
-    {
-      title: "Quantum Encryption",
-      description: "Unbreakable quantum encryption using quantum key distribution and post-quantum cryptography algorithms.",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+    {,
+    title: "Quantum Encryption",
+        description: "Unbreakable quantum encryption using quantum key distribution and post-quantum cryptography algorithms.",
+        icon: <Shield className="w-8 h-8" />,
+        color: "from-blue-500 to-cyan-500"
     },
-    {
-      title: "Zero-Knowledge Architecture",
-      description: "Complete data sovereignty with zero-knowledge architecture that ensures even we cannot access your data.",
-      icon: <Lock className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+    {,
+    title: "Zero-Knowledge Architecture",
+        description: "Complete data sovereignty with zero-knowledge architecture that ensures even we cannot access your data.",
+        icon: <Lock className="w-8 h-8" />,
+        color: "from-purple-500 to-pink-500"
     },
-    {
-      title: "Data Sovereignty",
-      description: "Full control over your data location and access with quantum-secured data sovereignty guarantees.",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+    {,
+    title: "Data Sovereignty",
+        description: "Full control over your data location and access with quantum-secured data sovereignty guarantees.",
+        icon: <Globe className="w-8 h-8" />,
+        color: "from-green-500 to-emerald-500"
     },
-    {
-      title: "Compliance Ready",
-      description: "Built-in compliance with GDPR, HIPAA, SOX, and other major regulatory frameworks worldwide.",
-      icon: <Award className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+    {,
+    title: "Compliance Ready",
+        description: "Built-in compliance with GDPR, HIPAA, SOX, and other major regulatory frameworks worldwide.",
+        icon: <Award className="w-8 h-8" />,
+        color: "from-orange-500 to-red-500"
     }
+<<<<<<< HEAD
   ];
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   const capabilities = [
     "Quantum key distribution (QKD) encryption",
@@ -103,15 +110,18 @@ const QuantumDataEncryptionVault = () => {
     "Confidential computing environments",
     "Quantum-secured data backup",
     "Real-time threat detection and response"
+<<<<<<< HEAD
   ];
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   const pricingPlans = [
-    {
-      name: "Quantum Vault Basic",
-      price: "$599",
-      period: "/month",
-      description: "Essential quantum encryption for small to medium businesses",
-      features: [
+    {,
+    name: "Quantum Vault Basic",
+        price: "$599",
+        period: "/month",
+        description: "Essential quantum encryption for small to medium businesses",
+        features: [
         "Quantum encryption for up to 1TB",
         "Zero-knowledge architecture",
         "Basic compliance features",
@@ -119,14 +129,14 @@ const QuantumDataEncryptionVault = () => {
         "99.9% uptime SLA",
         "Standard security monitoring"
       ],
-      popular: false
+        popular: false
     },
-    {
-      name: "Quantum Vault Professional",
-      price: "$1,199",
-      period: "/month",
-      description: "Advanced quantum security for growing enterprises",
-      features: [
+    {,
+    name: "Quantum Vault Professional",
+        price: "$1,199",
+        period: "/month",
+        description: "Advanced quantum security for growing enterprises",
+        features: [
         "All Basic features",
         "Up to 10TB quantum encryption",
         "Advanced compliance tools",
@@ -136,14 +146,14 @@ const QuantumDataEncryptionVault = () => {
         "API access",
         "Custom encryption policies"
       ],
-      popular: true
+        popular: true
     },
-    {
-      name: "Quantum Vault Enterprise",
-      price: "$2,399",
-      period: "/month",
-      description: "Complete quantum security solution for large organizations",
-      features: [
+    {,
+    name: "Quantum Vault Enterprise",
+        price: "$2,399",
+        period: "/month",
+        description: "Complete quantum security solution for large organizations",
+        features: [
         "All Professional features",
         "Unlimited quantum encryption",
         "Custom compliance frameworks",
@@ -153,42 +163,49 @@ const QuantumDataEncryptionVault = () => {
         "White-label solutions",
         "SLA guarantee"
       ],
-      popular: false
+        popular: false
     }
+<<<<<<< HEAD
   ];
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   const testimonials = [
-    {
-      name: "Dr. Michael Zhang",
-      company: "Quantum Security Labs",
-      role: "Chief Security Officer",
-      content: "The quantum encryption capabilities are truly next-generation. We've never seen this level of security and data sovereignty in a single solution.",
-      rating: 5,
-      avatar: "MZ"
+    {,
+    name: "Dr. Michael Zhang",
+        company: "Quantum Security Labs",
+        role: "Chief Security Officer",
+        content: "The quantum encryption capabilities are truly next-generation. We've never seen this level of security and data sovereignty in a single solution.",
+        rating: 5,
+        avatar: "MZ"
     },
-    {
-      name: "Sarah Johnson",
-      company: "Global Financial Services",
-      role: "Compliance Director",
-      content: "The compliance features are outstanding. We can now meet all regulatory requirements while maintaining the highest level of data security.",
-      rating: 5,
-      avatar: "SJ"
+    {,
+    name: "Sarah Johnson",
+        company: "Global Financial Services",
+        role: "Compliance Director",
+        content: "The compliance features are outstanding. We can now meet all regulatory requirements while maintaining the highest level of data security.",
+        rating: 5,
+        avatar: "SJ"
     },
-    {
-      name: "Robert Chen",
-      company: "Healthcare Data Systems",
-      role: "CTO",
-      content: "The zero-knowledge architecture gives us complete confidence in our data security. Even the service provider cannot access our sensitive healthcare data.",
-      rating: 5,
-      avatar: "RC"
+    {,
+    name: "Robert Chen",
+        company: "Healthcare Data Systems",
+        role: "CTO",
+        content: "The zero-knowledge architecture gives us complete confidence in our data security. Even the service provider cannot access our sensitive healthcare data.",
+        rating: 5,
+        avatar: "RC"
     }
+<<<<<<< HEAD
   ];
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   const stats = [
     { number: "256-bit", label: "Quantum Key Length", icon: <Key className="w-6 h-6" /> },
     { number: "99.999%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "Zero", label: "Data Breaches", icon: <Lock className="w-6 h-6" /> },
     { number: "50+", label: "Compliance Standards", icon: <Award className="w-6 h-6" /> }
+<<<<<<< HEAD
   ];
 
   return (
@@ -449,6 +466,16 @@ const QuantumDataEncryptionVault = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+=======
+
+import React from 'react';
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Secure Your Data?
@@ -457,6 +484,7 @@ const QuantumDataEncryptionVault = () => {
             Protect your most sensitive data with quantum-grade encryption and zero-knowledge architecture. 
             Start your quantum security journey today.
           </p>
+<<<<<<< HEAD
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -476,6 +504,11 @@ const QuantumDataEncryptionVault = () => {
           </div>
         </div>
       </section>
+=======
+
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     </div>
   );
 <<<<<<< HEAD
@@ -483,5 +516,10 @@ const QuantumDataEncryptionVault = () => {
 =======
 };
 
+<<<<<<< HEAD
 export default QuantumDataEncryptionVault;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

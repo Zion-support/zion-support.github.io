@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // apiCache utility functions
 
 export interface apiCacheConfig {
@@ -13,6 +14,14 @@ export class apiCache {
       enabled: true,
       ...config
     };
+=======
+
+// apiCache utility
+export const apiCache = {
+  // Utility implementation,
+    init: () => {
+    console.log('apiCache initialized');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   }
 
   init(): void {
@@ -30,4 +39,8 @@ export const apiCache = () => {
   // Utility function implementation
   return null;
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

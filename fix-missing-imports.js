@@ -122,14 +122,19 @@ function fixMissingImports(filePath) {
     
     // Find the last import statement;
     let lastImportIndex = -1;
-    for (let i = 0; i < lines.length; i++) {
-      if (lines[i].trim().startsWith('import ')) {
-        lastImportIndex = i;
+    for (let i = 0; i < lines.length; i++) {>
+  if (lines[i].trim().startsWith('import ')) {>
+  lastImportIndex = i;
       }
     }
     
+<<<<<<< HEAD
     // Add missing imports;
     const newImports = Array.from(missingImports).map(importName => commonImports[importName]);
+=======
+    // Add missing imports>
+  const newImports = Array.from(missingImports).map(importName => commonImports[importName]);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     
     if (lastImportIndex >= 0) {
       // Insert after the last import;

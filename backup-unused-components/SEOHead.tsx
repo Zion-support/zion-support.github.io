@@ -50,6 +50,7 @@ const SEOHead: React.FC<SEOHeadProps> = (
 //     '@context': 'https://schema.org',
 >>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
     '@type': 'Organization',
+<<<<<<< HEAD
 //     name: 'Zion Tech Group',
 //     url: 'https://ziontechgroup.com',
 //     logo: 'https://ziontechgroup.com/logo.png',
@@ -58,8 +59,17 @@ const SEOHead: React.FC<SEOHeadProps> = (
       '@type': 'PostalAddress',
 <<<<<<< HEAD
       addressCountry: 'US'
+=======
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
+      logo: 'https://ziontechgroup.com/logo.png',
+      description: 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
+      address: 
+      '@type': 'PostalAddress',
+        addressCountry: 'US'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 ,
-    sameAs: [
+      sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
       'https://github.com/ziontechgroup'

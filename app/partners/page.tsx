@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -7,6 +11,7 @@ import { Helmet } from 'react-helmet-async';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function partners() {
 =======
@@ -80,6 +85,10 @@ export default function Partners() {
   ];
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+export default function Page() {
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <>
       <Helmet>
@@ -207,6 +216,15 @@ export default function PartnersPage() {
           </button>
         </div>
       </div>
+<<<<<<< HEAD
     </>
   );
 }
+=======
+
+    </div>
+  );
+
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

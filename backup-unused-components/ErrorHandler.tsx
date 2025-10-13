@@ -18,6 +18,7 @@ export default function ErrorHandler({ className = '', children }: ErrorHandlerP
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
+<<<<<<< HEAD
 interface Props;
   children: ReactNode;
   fallback?: ReactNode;
@@ -39,6 +40,16 @@ interface State
   errorInfo: ErrorInfo | null
 =======
 // 'use client'
+=======
+interface Props ,
+    children: ReactNode
+  fallback?: ReactNode
+
+interface State ,
+    hasError: boolean,
+    error: Error | null,
+    errorInfo: ErrorInfo | null
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 interface Props {
 //   children: ReactNode
@@ -57,6 +68,7 @@ class ErrorHandler extends Component<Props, State>
   constructor(props: Props) 
     super(props)
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.state = 
       hasError: false,
       error: null,
@@ -66,6 +78,19 @@ class ErrorHandler extends Component<Props, State>
       hasError: true,
       error,
       errorInfo: null;
+=======
+    this.state = ,
+    hasError: false,
+        error: null,
+        errorInfo: null
+
+  static getDerivedStateFromError(error: Error): State 
+    return ,
+    hasError: true,
+      error,
+        errorInfo: null
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   componentDidCatch(error: Error, errorInfo: ErrorInfo) 
     this.setState(
       error,
@@ -116,6 +141,7 @@ class ErrorHandler extends Component<Props, State>
     try 
       // Replace with your actual error reporting service
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       const errorData = 
         message: error.message,
@@ -128,10 +154,18 @@ class ErrorHandler extends Component<Props, State>
 //         componentStack: errorInfo.componentStack,
 >>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
         timestamp: new Date().toISOString()
+=======
+      const errorData = ,
+    message: error.message,
+          stack: error.stack,
+          componentStack: errorInfo.componentStack,
+          timestamp: new Date().toISOString()
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 ;
       // Send to your error reporting service here;
  catch (reportingError) 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -142,6 +176,13 @@ class ErrorHandler extends Component<Props, State>
       hasError: false,
       error: null,
       errorInfo: null;
+=======
+  handleRetry = () => 
+    this.setState(,
+    hasError: false,
+        error: null,
+        errorInfo: null
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 )
 =======
   handleRetry = () => {
@@ -189,7 +230,12 @@ class ErrorHandler extends Component<Props, State>
                     <div></div>
                       <strong>Stack:</strong>
                       <pre className="whitespace-pre-wrap">{this.state.error.stack}</pre>
+<<<<<<< HEAD
   </div>
+=======
+                    </div>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                     <div></div>
                       <strong>Component Stack:</strong>
                       <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
@@ -197,6 +243,7 @@ class ErrorHandler extends Component<Props, State>
               </details>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center"></div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <button;
 =======
@@ -244,6 +291,12 @@ class ErrorHandler extends Component<Props, State>
                 onClick={this.handleRetry}
                 className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
 //               >
+=======
+              <button>
+  onClick={this.handleRetry}>
+  className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                 <RefreshCw className="w-4 h-4 mr-2" />
 <<<<<<< HEAD
                 Try Again;
@@ -253,6 +306,7 @@ class ErrorHandler extends Component<Props, State>
 <<<<<<< HEAD
                 Try Again
               </button>
+<<<<<<< HEAD
               <button
 =======
 //                 Try Again
@@ -264,6 +318,12 @@ class ErrorHandler extends Component<Props, State>
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
 //               >
+=======
+              <button>
+  onClick={this.handleGoHome}>
+  className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+              >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                 <Home className="w-4 h-4 mr-2" />
 <<<<<<< HEAD
                 Go Home;
@@ -286,6 +346,12 @@ class ErrorHandler extends Component<Props, State>
     }
 >>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
+<<<<<<< HEAD
     return this.props.children;
 export default ErrorHandler;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+    return this.props.children
+
+export default ErrorHandler
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

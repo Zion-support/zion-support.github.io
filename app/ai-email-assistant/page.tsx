@@ -1,9 +1,143 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
+=======
+
+
+const testimonials = [
+  {,
+    name: "Sarah Johnson",
+      role: "CEO",
+      content: "Zion Tech Group has transformed our business with their AI solutions.",
+      avatar: "/api/placeholder/60/60",
+      rating: 5,
+      company: "TechCorp"
+  },
+  {,
+    name: "Michael Chen",
+      role: "CTO", ,
+    content: "The performance improvements are remarkable. Highly recommended!",
+      avatar: "/api/placeholder/60/60",
+      rating: 5,
+      company: "InnovateLabs"
+  },
+  {,
+    name: "Emily Rodriguez",
+      role: "Product Manager",
+      content: "Outstanding support and cutting-edge technology solutions.",
+      avatar: "/api/placeholder/60/60",
+      rating: 5,
+      company: "FutureTech"
+  }
+
+export default function AIEmailAssistant() {
+  const features = [
+    {,
+    icon: <Mail className="w-6 h-6 text-cyan-400" />,
+        title: "Smart Classification",
+        description:
+        "Automatically categorize and prioritize emails based on content and sender.",
+    },
+    {,
+    icon: <MessageSquare className="w-6 h-6 text-purple-400" />,
+        title: "Auto-Responses",
+        description:
+        "Generate intelligent responses using AI to handle common inquiries.",
+    },
+    {,
+    icon: <Brain className="w-6 h-6 text-yellow-400" />,
+        title: "Sentiment Analysis",
+        description:
+        "Analyze email tone and sentiment to provide better customer service.",
+    },
+    {,
+    icon: <Settings className="w-6 h-6 text-green-400" />,
+        title: "Workflow Automation",
+        description:
+        "Create automated workflows to streamline your email management.",
+    },
+
+  const useCases = [
+    {,
+    title: "Customer Support",
+        description:
+        "Handle customer inquiries efficiently with AI-powered responses and routing.",
+        icon: <Users className="w-8 h-8 text-blue-400" />,
+    },
+    {,
+    title: "Sales Outreach",
+        description:
+        "Generate personalized sales emails and follow-up sequences automatically.",
+        icon: <Zap className="w-8 h-8 text-yellow-400" />,
+    },
+    {,
+    title: "Email Marketing",
+        description:
+        "Create compelling marketing campaigns with AI-generated content and optimization.",
+        icon: <BarChart3 className="w-8 h-8 text-green-400" />,
+    },
+    {,
+    title: "Internal Communications",
+        description:
+        "Streamline internal email processes and improve team collaboration.",
+        icon: <Shield className="w-8 h-8 text-purple-400" />,
+    },
+
+  const pricingPlans = [
+    {,
+    name: "Starter",
+        price: "$29",
+        period: "/month",
+        description: "Perfect for small teams",
+        features: [
+        "Up to 1,000 emails/month",
+        "Basic AI features",
+        "Email classification",
+        "Auto-responses",
+        "Email support",
+        "Basic analytics",
+      ],
+        popular: false,
+    },
+    {,
+    name: "Professional",
+        price: "$79",
+        period: "/month",
+        description: "Ideal for growing businesses",
+        features: [
+        "Up to 10,000 emails/month",
+        "Advanced AI features",
+        "Sentiment analysis",
+        "Workflow automation",
+        "Priority support",
+        "Advanced analytics",
+        "API access",
+      ],
+        popular: true,
+    },
+    {,
+    name: "Enterprise",
+        price: "$199",
+        period: "/month",
+        description: "For large organizations",
+        features: [
+        "Unlimited emails",
+        "Custom AI training",
+        "White-label solution",
+        "Dedicated support",
+        "Custom integrations",
+        "Advanced security",
+        "SLA guarantee",
+      ],
+        popular: false,
+    },
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
@@ -83,8 +217,12 @@ export default function AiemailassistantPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 "use client";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

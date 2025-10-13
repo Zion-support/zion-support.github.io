@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -8,12 +12,17 @@ import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function aiServices() {
 =======
 import { Helmet } from 'react-helmet-async';
 
 export default function AIServices() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+export default function Page() {
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
@@ -92,5 +101,12 @@ export default function AiservicesPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

@@ -5,8 +5,13 @@ import React from 'react';
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+<<<<<<< HEAD
 interface LazyWrapperProps;
   children: React.ReactNode;
+=======
+interface LazyWrapperProps ,
+    children: React.ReactNode;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   className?: string;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 
@@ -25,9 +30,15 @@ export default function LazyWrapper({ className = '', children }: LazyWrapperPro
     <>
       <div className="{`lazy-wrapper" ${className}`}></div>
         {children}
+<<<<<<< HEAD
         <Link;
           to="/contact"
           className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+=======
+        <Link>
+  to="/contact">
+  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         >
           Contact Us;
           <ArrowRight className="w-5 h-5 ml-2" />

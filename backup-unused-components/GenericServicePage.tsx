@@ -4,6 +4,7 @@ import React from 'react';
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Phone, Mail, CheckCircle, Star } from "lucide-react";
+<<<<<<< HEAD
 interface GenericServicePageProps;
   title: string;
   description: string;
@@ -13,6 +14,16 @@ interface GenericServicePageProps;
   pricing?: string;
   category: "AI" | "IT" | "MicroSAAS" | "Emerging";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+interface GenericServicePageProps ,
+    title: string;,
+    description: string;,
+    icon: React.ComponentType<any>;</any>,
+    features: string[];,
+    benefits: string[];
+  pricing?: string;,
+    category: "AI" | "IT" | "MicroSAAS" | "Emerging";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 <<<<<<< HEAD
 interface GenericServicePageProps {
@@ -32,17 +43,17 @@ export default function GenericServicePage({ className = '', children }: Generic
 const GenericServicePage: React.FC<GenericServicePageProps> = (
   title,
   description,
-  icon: Icon,
+    icon: Icon,
   features,
   benefits,
   pricing,
   category,
 ) => 
-  const categoryColors = 
+  const categoryColors = ,
     AI: "from-purple-500 to-pink-600",
-    IT: "from-blue-500 to-cyan-600",
-    MicroSAAS: "from-green-500 to-emerald-600",
-    Emerging: "from-orange-500 to-red-600",
+      IT: "from-blue-500 to-cyan-600",
+      MicroSAAS: "from-green-500 to-emerald-600",
+      Emerging: "from-orange-500 to-red-600",
 ;
 =======
 const GenericServicePage: React.FC<GenericServicePageProps> = ({
@@ -71,9 +82,15 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
       <Helmet></Helmet>
         <title>{title} | Zion Tech Group</title>
         <meta name="description" content="{description}" />
+<<<<<<< HEAD
         <meta;
           name="keywords"
           content="{`${title.toLowerCase()}," AI solutions, IT services, ${category.toLowerCase()}`}
+=======
+        <meta>
+  name="keywords">
+  content="{`${title.toLowerCase()}," AI solutions, IT services, ${category.toLowerCase()}`}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -81,8 +98,13 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
           {/* Hero Section */}
           <section className="text-center py-16"></section>
             <div className="flex justify-center mb-8"></div>
+<<<<<<< HEAD
               <div;
                 className="{`p-4" rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`}
+=======
+              <div>
+  className="{`p-4" rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
 =======
 //     <>
@@ -122,13 +144,20 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
   </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a;
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105"
                 href="/contact"
+=======
+              <a>
+  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105">
+  href="/contact"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
                 Get Started Today;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
+<<<<<<< HEAD
               <a;
 =======
               <a
@@ -153,6 +182,12 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
                 href="tel:+13024640950"
 //               >
+=======
+              <a>
+  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group">
+  href="tel:+13024640950"
+              >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                 <Phone className="w-5 h-5 mr-2" />
 <<<<<<< HEAD
                 Call (302) 464-0950;
@@ -176,9 +211,15 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
   </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               
+<<<<<<< HEAD
                 <div;
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
+=======
+                <div>
+  key={index}>
+  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                 >
                   <div className="flex items-center mb-4"></div>
 =======
@@ -293,13 +334,20 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a;
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105"
                 href="/contact"
+=======
+              <a>
+  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105">
+  href="/contact"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
                 Get Free Consultation;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
+<<<<<<< HEAD
               <a;
 =======
               <a
@@ -385,6 +433,12 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
                 href="mailto:kleber@ziontechgroup.com"
 //               >
+=======
+              <a>
+  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group">
+  href="mailto:kleber@ziontechgroup.com"
+              >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                 <Mail className="w-5 h-5 mr-2" />
 <<<<<<< HEAD
                 Email Us;

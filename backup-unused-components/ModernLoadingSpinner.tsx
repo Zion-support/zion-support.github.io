@@ -27,16 +27,16 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = (
   fullScreen = false,
 <<<<<<< HEAD
 ) => 
-  const sizeClasses = 
+  const sizeClasses = ,
     sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12',
-    xl: 'w-16 h-16',
+      md: 'w-8 h-8',
+      lg: 'w-12 h-12',
+      xl: 'w-16 h-16',
 ;
-  const colorClasses = 
+  const colorClasses = ,
     primary: 'text-cyan-500',
-    secondary: 'text-purple-500',
-    white: 'text-white',
+      secondary: 'text-purple-500',
+      white: 'text-white',
 ;
 =======
 }) => {
@@ -59,6 +59,7 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = (
       <div className="relative"></div>
         {/* Outer ring */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div;
 =======
 <<<<<<< HEAD
@@ -74,6 +75,19 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = (
           className="{`absolute" top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-b-current`}
           style={}
             animation: 'spin 1.5s linear infinite reverse',
+=======
+        <div>
+  className="{`${sizeClasses[size]}" ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-t-current`}>
+  style={}>,
+    animation: 'spin 1s linear infinite',
+          {}
+        />
+        {/* Inner ring */}
+        <div>
+  className="{`absolute" top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} ${colorClasses[color]} animate-spin rounded-full border-2 border-transparent border-b-current`}>
+  style={}>,
+    animation: 'spin 1.5s linear infinite reverse',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           {}
         />
 <<<<<<< HEAD

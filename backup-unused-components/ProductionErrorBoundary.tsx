@@ -17,6 +17,7 @@ export default function ProductionErrorBoundary({ className = '', children }: Pr
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface Props;
 =======
 import logger from '../../utils/logger';
@@ -24,15 +25,24 @@ import logger from '../../utils/logger';
 interface Props {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   children: ReactNode;
+=======
+interface Props ,
+    children: ReactNode;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   fallback?: ReactNode;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface State;
 =======
 interface State {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   hasError: boolean;
+=======
+interface State ,
+    hasError: boolean;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   error?: Error;
   errorInfo?: ErrorInfo;
   errorId?: string;
@@ -51,6 +61,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
 =======
   static getDerivedStateFromError(error: Error): State {
     // Update state so the next render will show the fallback UI
+<<<<<<< HEAD
     return { 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       hasError: true, 
@@ -58,6 +69,13 @@ class ProductionErrorBoundary extends Component<Props, State> {
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
+=======
+    return ,
+    hasError: true, 
+      error,
+        errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 <<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: ErrorInfo) 
@@ -65,7 +83,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
     this.setState(
       error,
       errorInfo,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+        errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
 );
     // Log to console in development;
     if (process.env.NODE_ENV === 'development') 
@@ -92,6 +110,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   private logErrorToService = async (error: Error, errorInfo: ErrorInfo) => 
     try;
       const errorData = 
@@ -110,6 +129,20 @@ class ProductionErrorBoundary extends Component<Props, State> {
         userId: 'anonymous', // You would get this from your auth context;
         sessionId: this.getSessionId(),
 <<<<<<< HEAD
+=======
+  private logErrorToService = async (error: Error, errorInfo: ErrorInfo) => 
+    try 
+      const errorData = ,
+    message: error.message,
+          stack: error.stack,
+          componentStack: errorInfo.componentStack,
+          errorId: this.state.errorId,
+          timestamp: new Date().toISOString(),
+          userAgent: navigator.userAgent,
+          url: window.location.href,
+          userId: 'anonymous', // You would get this from your auth context,
+    sessionId: this.getSessionId(),
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 ;
       // Send to your error reporting service;
 =======
@@ -118,6 +151,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
       // Send to your error reporting service
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       // Example: Sentry, LogRocket, Bugsnag, etc.
+<<<<<<< HEAD
       await fetch('/api/errors', {
         method: 'POST',
         headers: {
@@ -125,6 +159,14 @@ class ProductionErrorBoundary extends Component<Props, State> {
         },
         body: JSON.stringify(errorData),
 <<<<<<< HEAD
+=======
+      await fetch('/api/errors', ,
+    method: 'POST',
+          headers: 
+          'Content-Type': 'application/json',
+,
+          body: JSON.stringify(errorData),
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 );
  catch (reportingError) 
       // Fallback: log to console if reporting fails;
@@ -160,6 +202,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
 
   private handleGoHome = () => {
     window.location.href = '/';
+<<<<<<< HEAD
   };
 
   private handleReportError = () => {
@@ -170,6 +213,16 @@ class ProductionErrorBoundary extends Component<Props, State> {
       url: window.location.href,
       timestamp: new Date().toISOString(),
 <<<<<<< HEAD
+=======
+;
+  private handleReportError = () => 
+    const errorDetails = ,
+    errorId: this.state.errorId,
+        message: this.state.error?.message,
+        stack: this.state.error?.stack,
+        url: window.location.href,
+        timestamp: new Date().toISOString(),
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 ;
     // Create mailto link with error details;
 =======
@@ -246,6 +299,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
 
 <<<<<<< HEAD
             <div className="space-y-3"></div>
+<<<<<<< HEAD
               <button;
 =======
             <div className="space-y-3">
@@ -253,10 +307,16 @@ class ProductionErrorBoundary extends Component<Props, State> {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
                 onClick={this.handleRetry}
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+=======
+              <button>
+  onClick={this.handleRetry}>
+  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
                 <RefreshCw className="w-5 h-5" />
                 <span>Try Again</span>
               </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <button;
 =======
@@ -265,10 +325,16 @@ class ProductionErrorBoundary extends Component<Props, State> {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
                 onClick={this.handleReload}
                 className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
+=======
+              <button>
+  onClick={this.handleReload}>
+  className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
                 <RefreshCw className="w-5 h-5" />
                 <span>Reload Page</span>
               </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <button;
 =======
@@ -277,10 +343,16 @@ class ProductionErrorBoundary extends Component<Props, State> {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
                 onClick={this.handleGoHome}
                 className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
+=======
+              <button>
+  onClick={this.handleGoHome}>
+  className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
                 <Home className="w-5 h-5" />
                 <span>Go Home</span>
               </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <button;
 =======
@@ -289,6 +361,11 @@ class ProductionErrorBoundary extends Component<Props, State> {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
                 onClick={this.handleReportError}
                 className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
+=======
+              <button>
+  onClick={this.handleReportError}>
+  className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
                 <Mail className="w-5 h-5" />
                 <span>Report Error</span>
@@ -317,6 +394,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
     return this.props.children;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export default ProductionErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 =======
@@ -325,3 +403,6 @@ export default ProductionErrorBoundary;
 
 export default ProductionErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+export default ProductionErrorBoundary;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

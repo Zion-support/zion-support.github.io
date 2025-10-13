@@ -9,6 +9,7 @@ interface IconsProps {
 export const Icon = (
   name,
   className = "",
+<<<<<<< HEAD
   ...props;
 : 
 =======
@@ -20,6 +21,11 @@ export const Icon = ({
 >>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   name: string;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+  ...props
+: ,
+    name: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   className?: string;
   children?: React.ReactNode;
 }

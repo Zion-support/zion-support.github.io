@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -65,6 +66,18 @@ import {
   Users, 
   Zap, 
   CheckCircle, 
+=======
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import {
+  Mic,
+  Play,
+  Settings,
+  Users,
+  Zap,
+  CheckCircle,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   Brain,
   Volume2,
   FileAudio,
@@ -77,53 +90,53 @@ import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const AIVoiceCloningStudioPage = () => {
   const features = [
-    {
-      title: "Real-time Voice Cloning",
-      description: "Clone any voice with just 3 seconds of audio sample using advanced neural networks",
-      icon: <Mic className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+    {,
+    title: "Real-time Voice Cloning",
+        description: "Clone any voice with just 3 seconds of audio sample using advanced neural networks",
+        icon: <Mic className="w-8 h-8" />,
+        color: "from-purple-500 to-pink-500"
     },
-    {
-      title: "Multi-Language Support",
-      description: "Support for 50+ languages with native accent preservation",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+    {,
+    title: "Multi-Language Support",
+        description: "Support for 50+ languages with native accent preservation",
+        icon: <Globe className="w-8 h-8" />,
+        color: "from-blue-500 to-cyan-500"
     },
-    {
-      title: "Emotion Control",
-      description: "Add emotions like happiness, sadness, excitement to cloned voices",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+    {,
+    title: "Emotion Control",
+        description: "Add emotions like happiness, sadness, excitement to cloned voices",
+        icon: <Brain className="w-8 h-8" />,
+        color: "from-green-500 to-emerald-500"
     },
-    {
-      title: "High-Quality Output",
-      description: "Studio-quality audio output up to 48kHz sample rate",
-      icon: <Volume2 className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+    {,
+    title: "High-Quality Output",
+        description: "Studio-quality audio output up to 48kHz sample rate",
+        icon: <Volume2 className="w-8 h-8" />,
+        color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for individuals and small projects",
-      features: [
+    {,
+    name: "Starter",
+        price: "$29",
+        period: "/month",
+        description: "Perfect for individuals and small projects",
+        features: [
         "100 voice clones per month",
         "5 minutes audio generation",
         "Basic voice emotions",
         "Standard quality (24kHz)",
         "Email support"
       ],
-      popular: false
+        popular: false
     },
-    {
-      name: "Professional",
-      price: "$99",
-      period: "/month",
-      description: "Ideal for content creators and businesses",
-      features: [
+    {,
+    name: "Professional",
+        price: "$99",
+        period: "/month",
+        description: "Ideal for content creators and businesses",
+        features: [
         "500 voice clones per month",
         "30 minutes audio generation",
         "Advanced voice emotions",
@@ -132,14 +145,14 @@ const AIVoiceCloningStudioPage = () => {
         "API access",
         "Custom voice training"
       ],
-      popular: true
+        popular: true
     },
-    {
-      name: "Enterprise",
-      price: "$299",
-      period: "/month",
-      description: "For large organizations and agencies",
-      features: [
+    {,
+    name: "Enterprise",
+        price: "$299",
+        period: "/month",
+        description: "For large organizations and agencies",
+        features: [
         "Unlimited voice clones",
         "Unlimited audio generation",
         "All voice emotions",
@@ -150,34 +163,35 @@ const AIVoiceCloningStudioPage = () => {
         "White-label solution",
         "SLA guarantee"
       ],
-      popular: false
+        popular: false
     }
   ];
 
   const useCases = [
-    {
-      title: "Content Creation",
-      description: "Create voiceovers for videos, podcasts, and audiobooks",
-      icon: <FileAudio className="w-6 h-6" />
+    {,
+    title: "Content Creation",
+        description: "Create voiceovers for videos, podcasts, and audiobooks",
+        icon: <FileAudio className="w-6 h-6" />
     },
-    {
-      title: "Accessibility",
-      description: "Generate speech for visually impaired users",
-      icon: <Users className="w-6 h-6" />
+    {,
+    title: "Accessibility",
+        description: "Generate speech for visually impaired users",
+        icon: <Users className="w-6 h-6" />
     },
-    {
-      title: "Gaming",
-      description: "Create unique character voices for games",
-      icon: <Zap className="w-6 h-6" />
+    {,
+    title: "Gaming",
+        description: "Create unique character voices for games",
+        icon: <Zap className="w-6 h-6" />
     },
-    {
-      title: "Education",
-      description: "Generate multilingual educational content",
-      icon: <Brain className="w-6 h-6" />
+    {,
+    title: "Education",
+        description: "Generate multilingual educational content",
+        icon: <Brain className="w-6 h-6" />
     }
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="AI Voice Cloning Studio - Professional Voice Synthesis | Zion Tech Group"
@@ -203,12 +217,22 @@ const AIVoiceCloningStudioPage = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">
               AI Voice Cloning Studio
             </span>
+=======
+
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Create realistic voice clones with just 3 seconds of audio. Professional voice synthesis 
             with multi-language support, emotion control, and studio-quality output.
           </p>
+<<<<<<< HEAD
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
@@ -406,6 +430,11 @@ const AIVoiceCloningStudioPage = () => {
           </button>
         </div>
       </section>
+=======
+
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     </div>
   );
 <<<<<<< HEAD
@@ -413,5 +442,10 @@ const AIVoiceCloningStudioPage = () => {
 =======
 };
 
+<<<<<<< HEAD
 export default AIVoiceCloningStudioPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

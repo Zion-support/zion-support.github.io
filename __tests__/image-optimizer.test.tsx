@@ -15,6 +15,7 @@ const ImageOptimizer = ({ className = '', children }: { className?: string; chil
 };
 =======
 // Mock IntersectionObserver
+<<<<<<< HEAD
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
 =======
 // Mock IntersectionObserver;
@@ -23,6 +24,12 @@ global.IntersectionObserver = jest.fn().mockImplementation((callback) => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn(),
+=======
+global.IntersectionObserver = jest.fn().mockImplementation((callback) => ({,
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+    disconnect: jest.fn(),
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 }));
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
 

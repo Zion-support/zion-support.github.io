@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -23,6 +24,16 @@ export default function Page5gSmartCitySolutions() {
 =======
 export default function FiveGSmartCitySolutionsPage() {
   return (
+=======
+
+
+import React from 'react';
+
+import { Helmet } from 'react-helmet-async';
+export default function SmartCitySolutions5GPage() {
+  return (
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>5g Smart City Solutions - Zion Tech Group</title>
@@ -30,13 +41,21 @@ export default function FiveGSmartCitySolutionsPage() {
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
+<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             5g Smart City Solutions
+=======
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
+<<<<<<< HEAD
 =======
 
 export default function FiveGSmartcitysolutionsPage() {
@@ -78,13 +97,21 @@ export default function FiveGSmartcitysolutionsPage() {
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
+=======
+          </p>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

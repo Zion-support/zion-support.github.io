@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { useEffect } from 'react';
@@ -32,13 +33,21 @@ export default function Analytics({ className = '', children, ...props }: Analyt
 import React, { useEffect } from 'react';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+
+import React, { useEffect } from 'react';
+import { Star } from 'lucide-react';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 declare global {
-  interface Window {
+  interface Window {,
     gtag: (...args: any[]) => void;
   }
 }
 
 interface AnalyticsProps {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   children: React.ReactNode;
@@ -291,3 +300,18 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId, children }) => {
 
 export default Analytics;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Analytics({ className = '', children, ...props }: AnalyticsProps) {
+  return (
+    <div className={`analytics-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

@@ -5,6 +5,7 @@ import React from 'react';
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
 
 =======
@@ -21,12 +22,16 @@ interface AccessibilityEnhancerProps {
 
 <<<<<<< HEAD
 export default function AccessibilityEnhancer({ className = '', children }: AccessibilityEnhancerProps) {
+=======
+export default function Accessibilityenhancer() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className={`${className}`}>
       {children}
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 export default function AccessibilityEnhancer({ className = '', children, ...props }: AccessibilityEnhancerProps) {
     return (
@@ -165,3 +170,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
 export default AccessibilityEnhancer;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

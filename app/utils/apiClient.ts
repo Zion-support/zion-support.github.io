@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // apiClient utility functions
 
 export interface apiClientConfig {
@@ -13,6 +14,14 @@ export class apiClient {
       enabled: true,
       ...config
     };
+=======
+
+// apiClient utility
+export const apiClient = {
+  // Utility implementation,
+    init: () => {
+    console.log('apiClient initialized');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   }
 
   init(): void {
@@ -30,4 +39,8 @@ export const apiClient = () => {
   // Utility function implementation
   return null;
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

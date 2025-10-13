@@ -8,6 +8,7 @@ interface ContactFormProps {
 =======
 import React, { useState } from "react";
 import { MessageSquare } from "lucide-react";
+<<<<<<< HEAD
 interface FormData;
   name: string;
   email: string;
@@ -15,16 +16,25 @@ interface FormData;
   company: string;
   message: string;
   service: string;
+=======
+interface FormData ,
+    name: string;,
+    email: string;,
+    phone: string;,
+    company: string;,
+    message: string;,
+    service: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 <<<<<<< HEAD
 const ContactForm: React.FC = () => 
-  const [formData, setFormData] = useState<FormData>(
+  const [formData, setFormData] = useState<FormData>(,
     name: "",
-    email: "",
-    phone: "",
-    company: "",
-    message: "",
-    service: "",
+      email: "",
+      phone: "",
+      company: "",
+      message: "",
+      service: "",
 );
 =======
 const ContactForm: React.FC = () => {
@@ -39,8 +49,12 @@ const ContactForm: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+<<<<<<< HEAD
   const handleChange = (
 <<<<<<< HEAD
+=======
+  const handleChange = (,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
     >,
@@ -73,6 +87,7 @@ const ContactForm: React.FC = () => {
       await new Promise()resolve) => setTimeout(resolve, 1000();
       setIsSubmitted(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
       setFormData(
         name: "",
         email: "",
@@ -80,6 +95,15 @@ const ContactForm: React.FC = () => {
         company: "",
         message: "",
         service: "",
+=======
+      setFormData(,
+    name: "",
+          email: "",
+          phone: "",
+          company: "",
+          message: "",
+          service: "",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 );
  catch (error) 
 <<<<<<< HEAD
@@ -137,9 +161,15 @@ export default function ContactForm({ className = '', children }: ContactFormPro
     <form onSubmit="{handleSubmit}" className="space-y-6"></form>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
         <div></div>
+<<<<<<< HEAD
           <label;
             htmlFor="name"
             className="block text-sm font-medium text-gray-700 mb-2"
+=======
+          <label>
+  htmlFor="name">
+  className="block text-sm font-medium text-gray-700 mb-2"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           >
             Full Name *
           </label>
@@ -163,6 +193,7 @@ export default function ContactForm({ className = '', children }: ContactFormPro
 //           <input
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
             type="text"
+<<<<<<< HEAD
             id="name"
             name="name"
             value={formData.name}
@@ -174,13 +205,27 @@ export default function ContactForm({ className = '', children }: ContactFormPro
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
 <<<<<<< HEAD
+=======
+  id="name"
+            name="name">
+  value={formData.name}>
+  onChange={handleChange}>
+  required>
+  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           />
   </div>
         <div></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <label;
             htmlFor="email"
             className="block text-sm font-medium text-gray-700 mb-2"
+=======
+          <label>
+  htmlFor="email">
+  className="block text-sm font-medium text-gray-700 mb-2"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           >
             Email Address *
           </label>
@@ -202,6 +247,7 @@ export default function ContactForm({ className = '', children }: ContactFormPro
 //           <input
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
             type="email"
+<<<<<<< HEAD
             id="email"
             name="email"
             value={formData.email}
@@ -213,15 +259,29 @@ export default function ContactForm({ className = '', children }: ContactFormPro
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
 <<<<<<< HEAD
+=======
+  id="email"
+            name="email">
+  value={formData.email}>
+  onChange={handleChange}>
+  required>
+  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           />
   </div>
   </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
         <div></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <label;
             htmlFor="phone"
             className="block text-sm font-medium text-gray-700 mb-2"
+=======
+          <label>
+  htmlFor="phone">
+  className="block text-sm font-medium text-gray-700 mb-2"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           >
             Phone Number;
           </label>
@@ -245,19 +305,33 @@ export default function ContactForm({ className = '', children }: ContactFormPro
 //           <input
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
             type="tel"
+<<<<<<< HEAD
             id="phone"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
 <<<<<<< HEAD
+=======
+  id="phone">
+  name="phone">
+  value={formData.phone}>
+  onChange={handleChange}>
+  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           />
   </div>
         <div></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <label;
             htmlFor="company"
             className="block text-sm font-medium text-gray-700 mb-2"
+=======
+          <label>
+  htmlFor="company">
+  className="block text-sm font-medium text-gray-700 mb-2"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           >
             Company;
           </label>
@@ -279,23 +353,38 @@ export default function ContactForm({ className = '', children }: ContactFormPro
 //           <input
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
             type="text"
+<<<<<<< HEAD
             id="company"
             name="company"
             value={formData.company}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
 <<<<<<< HEAD
+=======
+  id="company">
+  name="company">
+  value={formData.company}>
+  onChange={handleChange}>
+  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           />
   </div>
   </div>
       <div></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <label;
           htmlFor="service"
           className="block text-sm font-medium text-gray-700 mb-2"
+=======
+        <label>
+  htmlFor="service">
+  className="block text-sm font-medium text-gray-700 mb-2"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         >
           Service Interest;
         </label>
+<<<<<<< HEAD
         <select;
 =======
         <label
@@ -320,6 +409,15 @@ export default function ContactForm({ className = '', children }: ContactFormPro
           onChange={handleChange}
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
 //         >
+=======
+        <select
+          id="service">
+  name="service">
+  value={formData.service}>
+  onChange={handleChange}>
+  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+        >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           <option value="">Select a service</option>
           <option value="ai-solutions">AI Solutions</option>
           <option value="it-services">IT Services</option>
@@ -331,9 +429,15 @@ export default function ContactForm({ className = '', children }: ContactFormPro
   </div>
       <div></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <label;
           htmlFor="message"
           className="block text-sm font-medium text-gray-700 mb-2"
+=======
+        <label>
+  htmlFor="message">
+  className="block text-sm font-medium text-gray-700 mb-2"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         >
           Message *
         </label>
@@ -355,8 +459,9 @@ export default function ContactForm({ className = '', children }: ContactFormPro
 //         <textarea
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
           id="message"
-          name="message"
+  name="message"
           value={formData.message}
+<<<<<<< HEAD
           onChange={handleChange}
 <<<<<<< HEAD
           required;
@@ -367,12 +472,20 @@ export default function ContactForm({ className = '', children }: ContactFormPro
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           placeholder="Tell us about your project or requirements..."
 <<<<<<< HEAD
+=======
+  onChange={handleChange}>
+  required>
+  rows={5}>
+  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
+  placeholder="Tell us about your project or requirements..."
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         />
 <<<<<<< HEAD
   </div>
       <button;
 =======
       </div>
+<<<<<<< HEAD
       <button
 =======
 //         />
@@ -385,6 +498,13 @@ export default function ContactForm({ className = '', children }: ContactFormPro
         disabled={isSubmitting}
         className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
 //       >
+=======
+      <button>
+  type="submit">
+  disabled={isSubmitting}>
+  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         {isSubmitting ? "Sending..." : "Send Message"}
 </button>
     </form>

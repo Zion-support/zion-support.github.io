@@ -1,5 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 
 <<<<<<< HEAD
@@ -17,6 +22,10 @@ interface EnhancedAccessibilityProps {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   className?: string;
   children?: React.ReactNode;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 }
 
 <<<<<<< HEAD
@@ -137,9 +146,16 @@ export default function EnhancedAccessibility({ children, className = '' }: Enha
   }, []);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return <div className={className}>{children}</div>;
 =======
   return (
+=======
+  return (
+
+    <div className={`enhancedaccessibility-component ${className}`} {...props}>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       {children}
     </div>
   );

@@ -47,16 +47,16 @@ const SEOHead: React.FC<SEOHeadProps> = (
   const defaultStructuredData = 
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Zion Tech Group",
-    url: "https://ziontechgroup.com",
-    logo: "https://ziontechgroup.com/logo.png",
-    description: description,
-    address: 
+      name: "Zion Tech Group",
+      url: "https://ziontechgroup.com",
+      logo: "https://ziontechgroup.com/logo.png",
+      description: description,
+      address: 
       "@type": "PostalAddress",
-      addressCountry: "US",
-      addressRegion: "Delaware",
+        addressCountry: "US",
+        addressRegion: "Delaware",
 ,
-    sameAs: [
+      sameAs: [
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
     ],
@@ -100,9 +100,15 @@ const SEOHead: React.FC<SEOHeadProps> = (
       <meta property="og:description" content="{description}" />
       <meta property="og:image" content="{ogImage}" />
       <meta property="og:type" content="{ogType}" />
+<<<<<<< HEAD
       <meta;
         property="og:url"
         content="{canonical" || "https://ziontechgroup.com"}
+=======
+      <meta>
+  property="og:url">
+  content="{canonical" || "https://ziontechgroup.com"}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       />
 =======
       <meta property="og:title" content={title} />
@@ -134,6 +140,7 @@ const SEOHead: React.FC<SEOHeadProps> = (
 >>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       <link rel="preconnect" href="https://fonts.googleapis.com" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <link;
 =======
 //       <link
@@ -142,16 +149,22 @@ const SEOHead: React.FC<SEOHeadProps> = (
         href="https://fonts.gstatic.com"
         crossOrigin="anonymous"
 <<<<<<< HEAD
+=======
+      <link>
+  rel="preconnect">
+  href="https://fonts.gstatic.com">
+  crossOrigin="anonymous"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       />
       <script type="application/ld+json"></script>
         
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "Zion Tech Group",
-          url: "https://ziontechgroup.com",
-          potentialAction: 
+            name: "Zion Tech Group",
+            url: "https://ziontechgroup.com",
+            potentialAction: 
             "@type": "SearchAction",
-            target: "https://ziontechgroup.com/search?q={search_term_string}",
+              target: "https://ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string",
 ,
 

@@ -1,7 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
+=======
+
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
@@ -32,6 +38,7 @@ export default function Improvedsidebar({ className = '', children, ...props }: 
       {children}
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -70,3 +77,8 @@ export default function ImprovedSidebar() {;
 ;
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 import React from 'react';
@@ -41,18 +42,11 @@ import { useState, useEffect } from 'react';
 interface EnhancedAnalyticsProps {
   children: React.ReactNode;
 }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
-  useEffect(() => {
-    // Initialize analytics tracking
-    const initializeAnalytics = () => {
-      // Google Analytics 4 tracking
-      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
-        // Google Analytics initialization would go here
-        console.log('Analytics initialized');
-      }
-    };
 
+<<<<<<< HEAD
     // Track page views
     const trackPageView = () => {
       if (typeof window !== 'undefined') {
@@ -72,3 +66,20 @@ export default EnhancedAnalytics;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+import React from 'react';
+
+interface EnhancedanalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Enhancedanalytics({ className = '', children, ...props }: EnhancedanalyticsProps) {
+  return (
+    <div className={`enhancedanalytics-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

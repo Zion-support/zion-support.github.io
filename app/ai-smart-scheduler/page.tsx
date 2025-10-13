@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -22,6 +23,111 @@ export default function aiSmartScheduler() {
           <p className="text-xl text-gray-300 mb-8">
 =======
 export default function AiSmartSchedulerPage() {
+=======
+
+
+const testimonials = [
+  {,
+    name: "Sarah Johnson",
+      role: "CEO",
+      content: "Zion Tech Group has transformed our business with their AI solutions.",
+      avatar: "/api/placeholder/60/60",
+      rating: 5,
+      company: "TechCorp"
+  },
+  {,
+    name: "Michael Chen",
+      role: "CTO", ,
+    content: "The performance improvements are remarkable. Highly recommended!",
+      avatar: "/api/placeholder/60/60",
+      rating: 5,
+      company: "InnovateLabs"
+  },
+  {,
+    name: "Emily Rodriguez",
+      role: "Product Manager",
+      content: "Outstanding support and cutting-edge technology solutions.",
+      avatar: "/api/placeholder/60/60",
+      rating: 5,
+      company: "FutureTech"
+  }
+export default function AISmartScheduler() {
+
+  const features = [
+    {,
+    icon: <Brain className="w-6 h-6 text-cyan-400" />,
+        title: "AI-Powered Scheduling",
+        description:
+        "Intelligent scheduling that learns from your patterns and preferences",
+    },
+    {,
+    icon: <Users className="w-6 h-6 text-purple-400" />,
+        title: "Team Coordination",
+        description:
+        "Seamlessly coordinate meetings across multiple time zones and schedules",
+    },
+    {,
+    icon: <Zap className="w-6 h-6 text-yellow-400" />,
+        title: "Auto-Optimization",
+        description:
+        "Automatically finds the best meeting times for maximum productivity",
+    },
+    {,
+    icon: <Globe className="w-6 h-6 text-green-400" />,
+        title: "Global Integration",
+        description: "Works with all major calendar platforms and time zones",
+    },
+
+  const pricingPlans = [
+    {,
+    name: "Starter",
+        price: "$29",
+        period: "/month",
+        description: "Perfect for individuals and small teams",
+        features: [
+        "Up to 5 team members",
+        "Basic AI scheduling",
+        "Calendar integration",
+        "Email notifications",
+        "Mobile app access",
+      ],
+        popular: false,
+    },
+    {,
+    name: "Professional",
+        price: "$79",
+        period: "/month",
+        description: "Ideal for growing businesses",
+        features: [
+        "Up to 25 team members",
+        "Advanced AI optimization",
+        "Custom meeting templates",
+        "Analytics dashboard",
+        "Priority support",
+        "API access",
+      ],
+        popular: true,
+    },
+    {,
+    name: "Enterprise",
+        price: "$199",
+        period: "/month",
+        description: "For large organizations",
+        features: [
+        "Unlimited team members",
+        "Custom AI training",
+        "White-label options",
+        "Advanced analytics",
+        "Dedicated support",
+        "Custom integrations",
+      ],
+        popular: false,
+    },
+
+import React from 'react';
+
+export default function Page() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
@@ -37,6 +143,7 @@ export default function AiSmartSchedulerPage() {
           <p className="text-xl text-gray-600 mb-8">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
+<<<<<<< HEAD
 =======
 
 export default function AismartschedulerPage() {
@@ -48,6 +155,9 @@ export default function AismartschedulerPage() {
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </p>
         </div>
         
@@ -73,18 +183,26 @@ export default function AismartschedulerPage() {
             </p>
           </div>
         </div>
+<<<<<<< HEAD
         
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
         </div>
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import { Link } from 'react-router-dom';
 import { Brain, Users, Zap, Globe, Clock, CheckCircle } from 'lucide-react';
 import Layout from "../layout";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

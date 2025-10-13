@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -23,6 +24,16 @@ export default function devops() {
 =======
 export default function DevopsPage() {
   return (
+=======
+
+
+import React from 'react';
+
+import { Helmet } from 'react-helmet-async';
+const DevOpsPage = () => {
+  return (
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Devops - Zion Tech Group</title>
@@ -30,13 +41,21 @@ export default function DevopsPage() {
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
+<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Devops
+=======
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
+<<<<<<< HEAD
 =======
 
 export default function DevopsPage() {
@@ -48,6 +67,9 @@ export default function DevopsPage() {
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </p>
         </div>
         
@@ -80,6 +102,7 @@ export default function DevopsPage() {
           </button>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
   );
 }
@@ -88,3 +111,10 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+    </div>
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

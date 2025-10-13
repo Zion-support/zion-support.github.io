@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import FuturisticText from "../components/FuturisticText";
 
@@ -54,3 +55,21 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
 export default FuturisticText;
 >>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+import React from 'react';
+
+interface FuturistictextProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Futuristictext({ className = '', children, ...props }: FuturistictextProps) {
+  return (
+    <div className={`futuristictext-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

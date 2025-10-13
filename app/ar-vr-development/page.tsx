@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -30,9 +34,16 @@ export default function ArVrDevelopmentPage() {
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
+<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Ar Vr Development
+=======
+
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
@@ -49,6 +60,7 @@ export default function ArvrdevelopmentPage() {
             Advanced AI and IT solutions for your business needs.
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
+<<<<<<< HEAD
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -78,11 +90,15 @@ export default function ArvrdevelopmentPage() {
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -451,3 +467,6 @@ const ARVRDevelopmentPage = () => {
 
 export default ARVRDevelopmentPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

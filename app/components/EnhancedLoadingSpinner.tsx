@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 
@@ -66,6 +67,10 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       </div>
     );
   }
+=======
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   return spinner;
 };
@@ -73,4 +78,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 export default LoadingSpinner;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

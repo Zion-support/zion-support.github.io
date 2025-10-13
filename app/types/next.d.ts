@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare module 'next' {
   export interface NextPageProps {
     params: { [key: string]: string | string[] | undefined };
@@ -43,3 +44,17 @@ declare module "*.webp" {
   export default content;
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+// Next.js type definitions
+
+declare module 'next' {
+  interface NextConfig {
+    experimental?: {
+      appDir?: boolean;
+    };
+  }
+}
+
+export {};
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

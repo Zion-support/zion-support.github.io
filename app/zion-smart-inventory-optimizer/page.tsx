@@ -1,10 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
@@ -32,6 +37,10 @@ const ZionSmartInventoryOptimizer = () => {
           <p className="text-xl text-gray-300 mb-8">
 =======
 export default function ZionSmartInventoryOptimizerPage() {
+=======
+export default function Page() {
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
@@ -90,6 +99,7 @@ export default function ZionsmartinventoryoptimizerPage() {
           </button>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
   );
 }
@@ -103,3 +113,10 @@ export default function ZionsmartinventoryoptimizerPage() {
 }
 export default ZionSmartInventoryOptimizer;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+    </div>
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

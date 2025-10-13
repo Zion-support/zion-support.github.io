@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -30,9 +34,16 @@ export default function CloudServicesPage() {
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
+<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Cloud Services
+=======
+
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
@@ -50,6 +61,7 @@ export default function CloudservicesPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
+<<<<<<< HEAD
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
@@ -79,10 +91,14 @@ export default function CloudservicesPage() {
             Get Started
           </button>
         </div>
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -451,3 +467,6 @@ const CloudServicesPage = () => {
 
 export default CloudServicesPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

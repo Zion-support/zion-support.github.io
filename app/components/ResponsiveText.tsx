@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -77,10 +78,23 @@ const ResponsiveText: React.FC<ResponsiveTextProps> = ({
     size.lg ? `lg:text-${size.lg}` : ''
   } ${size.xl ? `xl:text-${size.xl}` : ''}`;
 
+=======
+
+import React from 'react';
+
+interface ResponsivetextProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Responsivetext({ className = '', children, ...props }: ResponsivetextProps) {
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <span className={`${sizeClasses} ${weightClasses[weight]} ${colorClasses[color]} ${className}`}>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       {children}
+<<<<<<< HEAD
     </span>
   );
 <<<<<<< HEAD
@@ -113,3 +127,10 @@ export default ResponsiveText;
 </div>;
 );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+    </div>
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

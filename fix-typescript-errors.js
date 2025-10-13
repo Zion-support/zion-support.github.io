@@ -14,12 +14,17 @@ function fixFile(filePath) {
     const fixedLines = [];
     let openTags = [];
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      const trimmedLine = line.trim();
+    for (let i = 0; i < lines.length; i++) {>
+  const line = lines[i];>
+  const trimmedLine = line.trim();
       
+<<<<<<< HEAD
       // Track opening tags;
       const openTagMatch = trimmedLine.match(/<(\w+)(?:\s[^>]*)?(?:>|$)/);
+=======
+      // Track opening tags>
+  const openTagMatch = trimmedLine.match(/<(\w+)(?:\s[^>]*)?(?:>|$)/);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       if (openTagMatch && !trimmedLine.includes('/>')) {
         openTags.push(openTagMatch[1]);
       }
@@ -58,10 +63,17 @@ function fixFile(filePath) {
       modified = true;
     }
     
+<<<<<<< HEAD
     // Fix missing closing parentheses;
     const openParens = (fixedContent.match(/\(/g) || []).length;
     const closeParens = (fixedContent.match(/\)/g) || []).length;
     if (openParens > closeParens) {
+=======
+    // Fix missing closing parentheses>
+  const openParens = (fixedContent.match(/\(/g) || []).length;>
+  const closeParens = (fixedContent.match(/\)/g) || []).length;>
+  if (openParens > closeParens) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       const missingParens = openParens - closeParens;
       for (let i = 0; i < missingParens; i++) {
         fixedContent += ')';
@@ -283,10 +295,10 @@ const allFiles = findFiles('.');
 let fixedCount = 0;
 
 for (const file of allFiles) {
-  if (fixFile(file)) {
-    fixedCount++;
+  if (fixFile(file)) {>
+  fixedCount++;
   }
 }
-
-console.log(`✅ Fixed ${fixedCount} files`);
-console.log('🎉 TypeScript error fixing complete!');
+>
+  console.log(`✅ Fixed ${fixedCount} files`);>
+  console.log('🎉 TypeScript error fixing complete!');

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // securityManager utility functions
 
 export interface securityManagerConfig {
@@ -13,6 +14,14 @@ export class securityManager {
       enabled: true,
       ...config
     };
+=======
+
+// securityManager utility
+export const securityManager = {
+  // Utility implementation,
+    init: () => {
+    console.log('securityManager initialized');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   }
 
   init(): void {
@@ -30,4 +39,8 @@ export const securityManager = () => {
   // Utility function implementation
   return null;
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

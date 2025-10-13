@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +23,12 @@ export default function dataCenterServices() {
           <p className="text-xl text-gray-300 mb-8">
 =======
 export default function DataCenterServicesPage() {
+=======
+
+import React from 'react';
+
+export default function Page() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
@@ -30,9 +37,16 @@ export default function DataCenterServicesPage() {
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
+<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Data Center Services
+=======
+
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
@@ -49,6 +63,7 @@ export default function DatacenterservicesPage() {
             Advanced AI and IT solutions for your business needs.
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
+<<<<<<< HEAD
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -78,11 +93,15 @@ export default function DatacenterservicesPage() {
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
@@ -497,3 +516,6 @@ const DataCenterServicesPage = () => {
 
 export default DataCenterServicesPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

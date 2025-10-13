@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // analyticsTracker utility functions
 
 export interface analyticsTrackerConfig {
@@ -13,6 +14,14 @@ export class analyticsTracker {
       enabled: true,
       ...config
     };
+=======
+
+// analyticsTracker utility
+export const analyticsTracker = {
+  // Utility implementation,
+    init: () => {
+    console.log('analyticsTracker initialized');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   }
 
   init(): void {
@@ -30,4 +39,8 @@ export const analyticsTracker = () => {
   // Utility function implementation
   return null;
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

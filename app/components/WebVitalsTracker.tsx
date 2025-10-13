@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 
@@ -10,6 +11,11 @@ import React from 'react';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 interface WebVitalsTrackerProps {
+=======
+import React, { useEffect } from 'react';
+
+interface WebvitalstrackerProps {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   className?: string;
   children?: React.ReactNode;
 }
@@ -22,6 +28,7 @@ export default function WebVitalsTracker({ className = '', children }: WebVitals
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 export default function WebVitalsTracker({ className = '', children, ...props }: WebVitalsTrackerProps) {
     return (
@@ -31,3 +38,6 @@ export default function WebVitalsTracker({ className = '', children, ...props }:
       );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

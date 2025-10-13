@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // accessibilityUtils utility functions
 
 export interface accessibilityUtilsConfig {
@@ -13,6 +14,14 @@ export class accessibilityUtils {
       enabled: true,
       ...config
     };
+=======
+
+// accessibilityUtils utility
+export const accessibilityUtils = {
+  // Utility implementation,
+    init: () => {
+    console.log('accessibilityUtils initialized');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   }
 
   init(): void {
@@ -30,4 +39,8 @@ export const accessibilityUtils = () => {
   // Utility function implementation
   return null;
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

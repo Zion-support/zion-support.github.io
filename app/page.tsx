@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -27,9 +28,17 @@ export default function app() {
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 export default function HomePage() {
   return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
@@ -37,11 +46,16 @@ export default function HomePage() {
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Welcome to Zion Tech Group
           </h1>
           <p className="text-xl text-gray-600 mb-8">
+<<<<<<< HEAD
             Advanced AI and IT solutions for modern businesses.
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 =======
@@ -117,10 +131,16 @@ export default function Page() {
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
+=======
+            This page is under development. Please check back later.
+          </p>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -426,3 +446,8 @@ export default HomePage;
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
