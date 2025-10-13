@@ -55,10 +55,8 @@ const ContactForm: React.FC = () => {
       console.error('Failed to submit contact form:', error);
 <<<<<<< HEAD
 =======
-
-
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
+>>>>>>> cursor/website-audit-and-update-with-deployment-3531
     } finally {
       setIsSubmitting(false);
     }

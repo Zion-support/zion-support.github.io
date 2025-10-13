@@ -53,6 +53,7 @@ const HomePage = () => {
       }
     ]
   };
+  
   const features = [
     {
       title: "AI-Powered Solutions",
@@ -68,7 +69,7 @@ const HomePage = () => {
       icon: <Shield className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500",
       stats: "99.9% uptime SLA",
-      link: "/services"
+      link: "/it-services"
     },
     {
       title: "Micro SAAS",
@@ -409,9 +410,9 @@ const HomePage = () => {
             </Link>
           </div>
         </div>
-        </section>
-      </div>
-    );
-  };
+      </section>
+    </div>
+  );
+};
 
 export default HomePage;

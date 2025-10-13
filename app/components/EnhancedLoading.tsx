@@ -1,61 +1,70 @@
-import React from "react";
-import { Loader2 } from "lucide-react";
+import React from 'react';
 
-interface LoadingProps {
-  size?: "sm" | "md" | "lg";
-  text?: string;
-  fullScreen?: boolean;
-  color?: string;
-  className?: string;
+interface EnhancedLoadingProps {
+  message?: string;
+  showProgress?: boolean;
+  progress?: number;
 }
 
-const EnhancedLoading: React.FC<LoadingProps> = ({
-  size = "md",
-  text = "Loading...",
-  fullScreen = false,
-  color = "cyan",
-  className = "",
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
+  message = "Loading...",
+  showProgress = false,
+  progress = 0
 }) => {
-  const sizeClasses = {
-    sm: "w-4 h-4",
-    md: "w-8 h-8",
-    lg: "w-12 h-12",
-  };
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="text-center">
+        {/* Animated Logo/Icon */}
+        <div className="mb-8">
+          <div className="w-20 h-20 mx-auto relative">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 animate-spin"></div>
+            <div className="absolute inset-2 rounded-full bg-slate-900 flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-pulse"></div>
+            </div>
+          </div>
+        </div>
 
-  const colorClasses = {
-    cyan: "text-cyan-500",
-    purple: "text-purple-500",
-    green: "text-green-500",
-    blue: "text-blue-500",
-    white: "text-white",
-  };
+        {/* Loading Message */}
+        <h2 className="text-2xl font-bold text-white mb-4 animate-pulse">
+          {message}
+        </h2>
 
-  const spinner = (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <Loader2
-        className={`${sizeClasses[size]} ${colorClasses[color as keyof typeof colorClasses]} animate-spin`}
-      />
-      {text && (
-        <p
-          className={`mt-2 text-sm ${colorClasses[color as keyof typeof colorClasses]}`}
-        >
-          {text}
+        {/* Progress Bar */}
+        {showProgress && (
+          <div className="w-64 mx-auto mb-4">
+            <div className="bg-slate-700 rounded-full h-2 overflow-hidden">
+              <div 
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out"
+                style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
+              ></div>
+            </div>
+            <p className="text-sm text-gray-400 mt-2">
+              {Math.round(progress)}% Complete
+            </p>
+          </div>
+        )}
+
+        {/* Loading Animation */}
+        <div className="flex justify-center space-x-2">
+          {[...Array(3)].map((_, i) => (
+            <div
+              key={i}
+              className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-bounce"
+              style={{
+                animationDelay: `${i * 0.1}s`,
+                animationDuration: '1s'
+              }}
+            ></div>
+          ))}
+        </div>
+
+        {/* Additional Info */}
+        <p className="text-gray-400 text-sm mt-6 max-w-md mx-auto">
+          Preparing your experience with cutting-edge technology...
         </p>
-      )}
+      </div>
     </div>
   );
-
-  if (fullScreen) {
-    return (
-      <div className="fixed inset-0 bg-gray-900/80 backdrop-blur-sm flex items-center justify-center z-50">
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20">
-          {spinner}
-        </div>
-      </div>
-    );
-  }
-
-  return spinner;
 };
 
 export default EnhancedLoading;

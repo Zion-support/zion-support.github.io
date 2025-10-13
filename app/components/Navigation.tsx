@@ -16,8 +16,7 @@ import {
   Brain, 
   Zap, 
   Globe, 
-  Star,
-  Menu
+  Star
 } from 'lucide-react'
 import FuturisticButton from './FuturisticButton'
 

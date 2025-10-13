@@ -44,46 +44,6 @@ const FiveGSmartCitySolutionsPage = lazy(
 );
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 
-// AI Services Pages
-const AIServicesPage = lazy(() => import("./ai-services/page"));
-const AIAnalyticsPage = lazy(() => import("./ai-analytics/page"));
-const AIAutomationPage = lazy(() => import("./ai-automation/page"));
-const AIContentGenerationPage = lazy(() => import("./ai-content-generation/page"));
-const AICustomerSupportPage = lazy(() => import("./ai-customer-support/page"));
-const AICybersecurityPage = lazy(() => import("./ai-cybersecurity/page"));
-const AIMarketingAutomationPage = lazy(() => import("./ai-marketing-automation/page"));
-
-// IT Services Pages
-const ITServicesPage = lazy(() => import("./it-services/page"));
-const CloudServicesPage = lazy(() => import("./cloud-services/page"));
-const CybersecurityPage = lazy(() => import("./cybersecurity/page"));
-const CustomDevelopmentPage = lazy(() => import("./custom-development/page"));
-const WebDevelopmentPage = lazy(() => import("./web-development/page"));
-const MobileDevelopmentPage = lazy(() => import("./mobile-development/page"));
-const DatabaseManagementPage = lazy(() => import("./database-management/page"));
-const NetworkInfrastructurePage = lazy(() => import("./network-infrastructure/page"));
-const DataAnalyticsPage = lazy(() => import("./data-analytics/page"));
-const CloudInfrastructurePage = lazy(() => import("./cloud-infrastructure/page"));
-const CybersecuritySolutionsPage = lazy(() => import("./cybersecurity-solutions/page"));
-const CustomSoftwarePage = lazy(() => import("./custom-software/page"));
-
-// Micro SAAS Pages
-const ZionAnalyticsProPage = lazy(() => import("./zion-analytics-pro/page"));
-const ZionSecurityShieldPage = lazy(() => import("./zion-security-shield/page"));
-const ZionCloudVaultPage = lazy(() => import("./zion-cloud-vault/page"));
-const ZionContentStudioPage = lazy(() => import("./zion-content-studio/page"));
-const ZionDataSyncPage = lazy(() => import("./zion-data-sync/page"));
-const ZionLeadMagnetPage = lazy(() => import("./zion-lead-magnet/page"));
-const ZionProjectMasterPage = lazy(() => import("./zion-project-master/page"));
-const ZionEmailAutomationPage = lazy(() => import("./zion-email-automation/page"));
-
-// Support Pages
-const SupportPage = lazy(() => import("./support/page"));
-const TutorialsPage = lazy(() => import("./tutorials/page"));
-const DemoPage = lazy(() => import("./demo/page"));
-const SitemapPage = lazy(() => import("./sitemap/page"));
-const ConsultationPage = lazy(() => import("./consultation/page"));
-
 // Main App Component
 function App() {
   return (
@@ -144,46 +104,6 @@ function App() {
                 element={<FiveGSmartCitySolutionsPage />}
               />
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-
-              {/* AI Services Routes */}
-              <Route path="/ai-services" element={<AIServicesPage />} />
-              <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
-              <Route path="/ai-automation" element={<AIAutomationPage />} />
-              <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
-              <Route path="/ai-customer-support" element={<AICustomerSupportPage />} />
-              <Route path="/ai-cybersecurity" element={<AICybersecurityPage />} />
-              <Route path="/ai-marketing-automation" element={<AIMarketingAutomationPage />} />
-
-              {/* IT Services Routes */}
-              <Route path="/it-services" element={<ITServicesPage />} />
-              <Route path="/cloud-services" element={<CloudServicesPage />} />
-              <Route path="/cybersecurity" element={<CybersecurityPage />} />
-              <Route path="/custom-development" element={<CustomDevelopmentPage />} />
-              <Route path="/web-development" element={<WebDevelopmentPage />} />
-              <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
-              <Route path="/database-management" element={<DatabaseManagementPage />} />
-              <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
-              <Route path="/data-analytics" element={<DataAnalyticsPage />} />
-              <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-              <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
-              <Route path="/custom-software" element={<CustomSoftwarePage />} />
-
-              {/* Micro SAAS Routes */}
-              <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
-              <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
-              <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
-              <Route path="/zion-content-studio" element={<ZionContentStudioPage />} />
-              <Route path="/zion-data-sync" element={<ZionDataSyncPage />} />
-              <Route path="/zion-lead-magnet" element={<ZionLeadMagnetPage />} />
-              <Route path="/zion-project-master" element={<ZionProjectMasterPage />} />
-              <Route path="/zion-email-automation" element={<ZionEmailAutomationPage />} />
-
-              {/* Support Routes */}
-              <Route path="/support" element={<SupportPage />} />
-              <Route path="/tutorials" element={<TutorialsPage />} />
-              <Route path="/demo" element={<DemoPage />} />
-              <Route path="/sitemap" element={<SitemapPage />} />
-              <Route path="/consultation" element={<ConsultationPage />} />
             </Routes>
             </Suspense>
           </AccessibilityEnhancer>

@@ -63,10 +63,10 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     };
 
 <<<<<<< HEAD
-    // Log the error data for debugging
 =======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
+>>>>>>> cursor/website-audit-and-update-with-deployment-3531
+    // Log the error data for debugging
     console.error('Error data:', errorData);
     // Example: Send to your error reporting service
     // You could send this to your backend:
