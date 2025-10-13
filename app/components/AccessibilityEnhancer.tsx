@@ -549,6 +549,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableHighContrast = false,
   enableFocusManagement = true
 }) => {
+<<<<<<< HEAD
   const [isHighContrast, setIsHighContrast] = useState(enableHighContrast);
 
   useEffect(() => {
@@ -797,3 +798,13 @@ export default AccessibilityEnhancer
 
 export default AccessibilityEnhancer;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
+=======
+  return (
+    <div className="accessibility-enhanced">
+      {children}
+    </div>
+  );
+};
+
+export default AccessibilityEnhancer;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e

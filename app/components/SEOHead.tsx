@@ -4,7 +4,6 @@
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
   title: string;
@@ -28,6 +27,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullCanonical = canonical || `https://ziontechgroup.com${typeof window !== 'undefined' ? window.location.pathname : ''}`;
 
   return (
+<<<<<<< HEAD
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -69,6 +69,8 @@ return(<Helmet />)
       </script>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
     </Helmet>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
   );
 };
 

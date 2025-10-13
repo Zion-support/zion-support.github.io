@@ -1,7 +1,10 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
 
 const SEOEnhancerPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses',}];
@@ -13,6 +16,7 @@ const SEOEnhancerPage: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         </section>
 
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
@@ -56,6 +60,12 @@ const SEOEnhancerPage: React.FC = () => {
         </div>
       </section>
     </div>
+=======
+  return (
+    <>
+      {children}
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
   );
 };
 

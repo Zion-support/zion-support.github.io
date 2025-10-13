@@ -319,6 +319,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                 </p>
               </div>
 
+<<<<<<< HEAD
               {process.env['NODE_ENV'] === 'development' && this.state.error && (
                 <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">
                   <h3 className="text-sm font-semibold text-red-400 mb-2">Error Details:</h3>
@@ -332,6 +333,24 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                   )}
                 </div>
               )}
+=======
+            <div className="flex flex-col sm:flex-row gap-3">
+              <button
+                onClick={this.handleRetry}
+                className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors"
+              >
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Try Again
+              </button>
+              <button
+                onClick={() => window.location.href = '/'}
+                className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center"
+              >
+                <Home className="w-4 h-4 mr-2" />
+                Go Home
+              </button>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
 
               <div className="space-y-3">
                 <button

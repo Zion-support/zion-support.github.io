@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 'use client';
 import React, {useEffect, useState, useCallback}from 'react';
 import {Helmet}}from 'react-helmet-async';
+=======
+import React, { useEffect, useCallback, useRef } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
 
 interface SEOOptimizerProps {title?: string;}
   description?: string;
@@ -92,6 +96,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         <meta name="twitter: description" content={description,}/>
         <meta name="twitter: image" content={ogImage,}/>
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         </section>
@@ -216,6 +221,9 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
       {/* Structured Data */} <script type="application/ld+json">
         {JSON.stringify(generateStructuredData())} </script>
     {children} </>
+=======
+  return (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
   );
 };
 

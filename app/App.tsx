@@ -1,11 +1,19 @@
 <<<<<<< HEAD
 =======
 'use client';
+<<<<<<< HEAD
 import React, {Suspense, lazy}from 'react';
 import {BrowserRouter, Routes, Route}}from 'react-router-dom';
 import {HelmetProvider}}from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
+=======
+
+import React, { Suspense, lazy, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Components
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 
@@ -231,6 +239,7 @@ const App: React.FC = () => {,
 // Main App Component
 function App() {
   return (
+<<<<<<< HEAD
     <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
@@ -352,6 +361,8 @@ function App() {
         </ErrorBoundary>
       </BrowserRouter>
     </HelmetProvider>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
   );
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-031e

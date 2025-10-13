@@ -132,6 +132,7 @@ export default function SEOOptimizer({
   };
 
   return (
+<<<<<<< HEAD
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -219,6 +220,11 @@ export default function SEOOptimizer({
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
+=======
+    <>
+      {children}
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
   );
 <<<<<<< HEAD
 }

@@ -8,6 +8,7 @@ interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';}
   text?: string;
 }
 
+<<<<<<< HEAD
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   color = 'primary', 
@@ -68,6 +69,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{text}</p>
       )}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
+=======
+const LoadingSpinner: React.FC = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
     </div>
   );
 };

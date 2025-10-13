@@ -14,6 +14,10 @@ const benefits = [
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Helmet />
 
+<<<<<<< HEAD
+=======
+const MarketingToolsPage: React.FC = () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
@@ -102,5 +106,9 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
   );
 };
 
+<<<<<<< HEAD
 export default PagePage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+export default MarketingToolsPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e

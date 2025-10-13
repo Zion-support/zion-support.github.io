@@ -91,6 +91,7 @@
     "predeploy": "pnpm run deploy:check",
     "audit:all-comprehensive": "pnpm run type-check && pnpm run lint && pnpm run test && pnpm run build",
     "check:performance": "pnpm run build && du -sh dist",
+<<<<<<< HEAD
     "build:optimized": "NODE_OPTIONS=\"--max-old-space-size=4096\" vite build",
     "build:fast": "NODE_OPTIONS=\"--max-old-space-size=2048\" vite build --mode production --minify esbuild",
 <<<<<<< HEAD
@@ -109,6 +110,10 @@
     "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\"",
     "analyze:full": "npm run build && npm run analyze:bundle",
     "debug:performance": "localStorage.setItem('debug-performance', 'true') && npm run dev"
+=======
+    "build:optimized": "npm run build && npm run optimize",
+    "build:fast": "NODE_OPTIONS=\"--max-old-space-size=2048\" vite build --mode production --minify esbuild"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",

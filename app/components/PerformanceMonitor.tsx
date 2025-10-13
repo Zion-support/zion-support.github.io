@@ -2,7 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+=======
+import React from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -11,6 +15,7 @@ interface PerformanceMetrics {
   fps: number;
 }
 
+<<<<<<< HEAD
 export default function PerformanceMonitor() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -223,3 +228,17 @@ export default PerformanceMonitor
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
+=======
+const PerformanceMonitor: React.FC = () => {
+  return (
+    <div className="p-4 bg-gray-800 rounded-lg">
+      <h3 className="text-lg font-semibold text-white mb-4">Performance Monitor</h3>
+      <div className="text-gray-300">
+        <p>Performance monitoring is active.</p>
+      </div>
+    </div>
+  );
+};
+
+export default PerformanceMonitor;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
