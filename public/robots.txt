@@ -2,24 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/
-
-# Allow important pages
-Allow: /
-Allow: /about
-Allow: /contact
-Allow: /services
-Allow: /ai-services
-Allow: /micro-saas
-Allow: /5g-solutions
-Allow: /blog
-<<<<<<< HEAD
-Allow: /pricing
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
