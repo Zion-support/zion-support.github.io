@@ -7,15 +7,16 @@ import "./app/styles/futuristic-enhanced.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import HomePage from "./app/page";
-import { LoadingPage } from "./app/components/LoadingStates";
-import ErrorBoundary from "./app/components/ErrorBoundary";
+import { LoadingPage } from "./app/components/EnhancedLoadingStates";
+import ErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import EnhancedSEO from "./app/components/EnhancedSEO";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
+import PerformanceMonitor from "./app/components/EnhancedPerformanceMonitor";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
@@ -454,6 +455,7 @@ function App() {
                 </FuturisticBackground>
                 <AnalyticsProvider>
                   <div>
+                    <EnhancedAnalytics />
                     <PerformanceMonitor />
                     <PerformanceEnhancer />
                     <SEOOptimizer />
