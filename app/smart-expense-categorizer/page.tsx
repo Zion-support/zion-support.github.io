@@ -1,9 +1,7 @@
 import React from 'react';
-import { Users, ArrowRight, CheckCircle, Globe, Shield, Zap, Brain, BarChart3, Target, Receipt } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
-// import { Star } from 'lucide-react'; // Unused import
 import { Shield } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Zap } from 'lucide-react';
@@ -14,36 +12,6 @@ import { BarChart3 } from 'lucide-react';
 import { Receipt } from 'lucide-react';
 
 const SmartExpenseCategorizerPage = () => {
-  const benefits = [
-    {
-      title: "Expert Team",
-      description: "Our team of AI and technology experts delivers exceptional results.",
-      icon: <Users className="w-8 h-8" />
-    },
-    {
-      title: "Proven Results",
-      description: "We have a track record of successful projects and satisfied clients.",
-      icon: <CheckCircle className="w-8 h-8" />
-    },
-    {
-      title: "24/7 Support",
-      description: "Round-the-clock support to ensure your success.",
-      icon: <Clock className="w-8 h-8" />
-    },
-    {
-      title: "Innovation",
-      description: "Cutting-edge solutions that keep you ahead of the competition.",
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
-
-  const stats = [
-    { label: "Projects Completed", value: "500+" },
-    { label: "Happy Clients", value: "200+" },
-    { label: "Years Experience", value: "5+" },
-    { label: "Team Members", value: "50+" }
-  ];
-
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
@@ -181,7 +149,7 @@ const SmartExpenseCategorizerPage = () => {
       </section>
 
       {/* Stats Section */}
-      </section><section className="py-16 px-4">
+      <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -205,7 +173,7 @@ const SmartExpenseCategorizerPage = () => {
       </section>
 
       {/* Benefits Section */}
-      </section><section className="py-20 px-4">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -247,7 +215,7 @@ const SmartExpenseCategorizerPage = () => {
       </section>
 
       {/* Features Section */}
-      </section><section className="py-20 px-4">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -289,7 +257,7 @@ const SmartExpenseCategorizerPage = () => {
       </section>
 
       {/* Pricing Section */}
-      </section><section className="py-20 px-4">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -363,7 +331,7 @@ const SmartExpenseCategorizerPage = () => {
       </section>
 
       {/* CTA Section */}
-      </section><section className="py-20 px-4">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -400,7 +368,7 @@ const SmartExpenseCategorizerPage = () => {
       </section>
 
       {/* Contact Information */}
-      </section><section className="py-16 px-4 bg-black/20">
+      <section className="py-16 px-4 bg-black/20">
         <div className="max-w-7xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
           <p className="text-gray-300 mb-6">
@@ -422,4 +390,4 @@ const SmartExpenseCategorizerPage = () => {
   );
 };
 
-export default SmartExpenseCategorizerPage;</section>
+export default SmartExpenseCategorizerPage;

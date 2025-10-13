@@ -1,10 +1,19 @@
-
-import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Sparkles, Mail, Smartphone, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+
 
 export default function AIHealthcareDiagnostics() {
-
   const features = [
     {
       title: "Medical Imaging Analysis",
@@ -80,7 +89,7 @@ export default function AIHealthcareDiagnostics() {
   ];
 
   return (
-    <div>
+    <>
       <Helmet>
         <title>AI Healthcare Diagnostics - Zion Tech Group | Medical AI Solutions</title>
         <meta
@@ -141,7 +150,7 @@ export default function AIHealthcareDiagnostics() {
         </section>
 
         {/* Features Section */}
-        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -187,7 +196,7 @@ export default function AIHealthcareDiagnostics() {
         </section>
 
         {/* Use Cases Section */}
-        </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -220,7 +229,7 @@ export default function AIHealthcareDiagnostics() {
         </section>
 
         {/* Pricing Section */}
-        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -284,7 +293,7 @@ export default function AIHealthcareDiagnostics() {
         </section>
 
         {/* CTA Section */}
-        </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-rose-900/30 to-pink-900/30">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-rose-900/30 to-pink-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Healthcare?
@@ -338,6 +347,6 @@ export default function AIHealthcareDiagnostics() {
           </div>
         </section>
       </div>
-</div>
+    </>
   );
-}</section>
+}

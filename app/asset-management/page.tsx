@@ -2,39 +2,14 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-// import { Star } from 'lucide-react'; // Unused import
 import { Shield } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Package } from 'lucide-react';
-import { Package, BarChart3, ArrowRight, Sparkles, CheckCircle, Target, Shield } from 'lucide-react';
 
 const AssetManagementPage = () => {
-  const benefits = [
-    {
-      title: "Expert Team",
-      description: "Our team of AI and technology experts delivers exceptional results.",
-      icon: <Users className="w-8 h-8" />
-    },
-    {
-      title: "Proven Results",
-      description: "We have a track record of successful projects and satisfied clients.",
-      icon: <CheckCircle className="w-8 h-8" />
-    },
-    {
-      title: "24/7 Support",
-      description: "Round-the-clock support to ensure your success.",
-      icon: <Clock className="w-8 h-8" />
-    },
-    {
-      title: "Innovation",
-      description: "Cutting-edge solutions that keep you ahead of the competition.",
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
-
   const features = [
     {
       title: "IT Asset Tracking",
@@ -115,7 +90,7 @@ const AssetManagementPage = () => {
       </section>
 
       {/* Features Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -151,7 +126,7 @@ const AssetManagementPage = () => {
       </section>
 
       {/* Benefits Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -174,7 +149,7 @@ const AssetManagementPage = () => {
       </section>
 
       {/* CTA Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Optimize Your Assets?
@@ -206,4 +181,4 @@ const AssetManagementPage = () => {
   );
 };
 
-export default AssetManagementPage;</section>
+export default AssetManagementPage;

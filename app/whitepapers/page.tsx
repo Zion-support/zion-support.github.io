@@ -4,15 +4,13 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Download } from 'lucide-react';
 import { Shield } from 'lucide-react';
-// import { Brain } from 'lucide-react'; // Unused import
+import { Brain } from 'lucide-react';
 import { Settings } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { Filter } from 'lucide-react';
-// import { Mic } from 'lucide-react'; // Unused import
 import { Cloud } from 'lucide-react';
-import { Download, ArrowRight, Sparkles, Target, Globe, Settings, Shield, BookOpen, Filter } from 'lucide-react';
 
 const WhitepapersPage = () => {
   const whitepapers = [
@@ -119,7 +117,7 @@ const WhitepapersPage = () => {
       </section>
 
       {/* Filter Section */}
-      </section><section className="py-8 px-4 sm:px-6 lg:px-8">
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap gap-4 justify-center">
             {categories.map((category, index) => (
@@ -139,7 +137,7 @@ const WhitepapersPage = () => {
       </section>
 
       {/* Whitepapers Grid */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -185,7 +183,7 @@ const WhitepapersPage = () => {
       </section>
 
       {/* CTA Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Need Custom Research?
@@ -217,4 +215,4 @@ const WhitepapersPage = () => {
   );
 };
 
-export default WhitepapersPage;</section>
+export default WhitepapersPage;

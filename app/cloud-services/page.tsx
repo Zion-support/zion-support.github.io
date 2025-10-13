@@ -1,14 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-// import { Star } from 'lucide-react'; // Unused import
 import { Shield } from 'lucide-react';
 import { Database } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-import { Cloud, Shield, Zap, Globe, ArrowRight, CheckCircle, BarChart3, Database } from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {
   const services = [
@@ -44,29 +42,6 @@ const CloudServicesPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
-    {
-      title: "Scalability",
-      description: "Scale your infrastructure up or down based on demand with cloud elasticity.",
-      icon: <BarChart3 className="w-8 h-8" />
-    },
-    {
-      title: "Security",
-      description: "Enterprise-grade security with encryption, access controls, and compliance.",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      title: "Cost Efficiency",
-      description: "Pay only for what you use with flexible pricing models and cost optimization.",
-      icon: <Zap className="w-8 h-8" />
-    },
-    {
-      title: "Reliability",
-      description: "High availability and disaster recovery solutions for business continuity.",
-      icon: <CheckCircle className="w-8 h-8" />
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -98,7 +73,7 @@ const CloudServicesPage: React.FC = () => {
       </section>
 
       {/* Services Section */}
-      </section><section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -128,7 +103,7 @@ const CloudServicesPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      </section><section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -158,7 +133,7 @@ const CloudServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      </section><section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Move to the Cloud?
@@ -186,4 +161,4 @@ const CloudServicesPage: React.FC = () => {
   );
 };
 
-export default CloudServicesPage;</section>
+export default CloudServicesPage;

@@ -2,7 +2,7 @@
 import React from 'react';
 =======
 import React, { useState, useEffect, useCallback } from 'react';
-import { Eye, EyeOff, Volume2, VolumeX, Type, MousePointer, Keyboard } from 'lucide-react';
+import { Eye, Volume2, VolumeX, Type, MousePointer, Keyboard } from 'lucide-react';
 
 interface AccessibilitySettings {
   highContrast: boolean;

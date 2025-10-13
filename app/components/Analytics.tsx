@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-// import { Star } from 'lucide-react'; // Unused import
-import { useLocation } from 'react-router-dom';
 
 declare global {
   interface Window {

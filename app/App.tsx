@@ -1,9 +1,8 @@
-
 "use client";
 
-import { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import React, { lazy, Suspense } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import ErrorBoundary from "./components/ErrorBoundary";
 import PerformanceMonitor from "./components/PerformanceMonitor";
 import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
@@ -11,9 +10,9 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import CriticalResourcePreloader from "./components/CriticalResourcePreloader";
 import CacheManager from "./components/CacheManager";
 import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor";
+import { Helmet } from 'react-helmet-async';
 
 // Lazy load pages for better performance
-
 const HomePage = lazy(() => import("./page"));
 const AboutPage = lazy(() => import("./about/page"));
 const ContactPage = lazy(() => import("./contact/page"));
@@ -52,13 +51,11 @@ function App() {
     <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
-          <PerformanceMonitor showDetails={false}>
-            <div>Performance monitoring active</div>
-          </PerformanceMonitor>
-          <AccessibilityEnhancer>
-            <CriticalResourcePreloader />
-            <CacheManager />
-            <AdvancedPerformanceMonitor />
+          <PerformanceMonitor>
+            <AccessibilityEnhancer>
+              <CriticalResourcePreloader />
+              <CacheManager />
+              <AdvancedPerformanceMonitor />
             <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -110,7 +107,8 @@ function App() {
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
             </Routes>
             </Suspense>
-          </AccessibilityEnhancer>
+            </AccessibilityEnhancer>
+          </PerformanceMonitor>
         </ErrorBoundary>
       </BrowserRouter>
     </HelmetProvider>

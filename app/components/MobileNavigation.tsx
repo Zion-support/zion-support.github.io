@@ -1,7 +1,7 @@
-
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-import { Menu, X, ArrowRight } from 'lucide-react';
 const MobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,7 +14,7 @@ const MobileNavigation: React.FC = () => {
   };
 
   return (
-    <div>
+    <>
       {/* Mobile menu button */}
       <button
         onClick={toggleMenu}
@@ -124,8 +124,7 @@ const MobileNavigation: React.FC = () => {
           </div>
         </div>
       )}
-</div>
-</div>
+    </>
   );
 };
 

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Home, ArrowLeft, Search, AlertTriangle } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
-// import { AlertTriangle } from 'lucide-react'; // Unused import
-// import { Mic } from 'lucide-react'; // Unused import
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
+import { Home } from 'lucide-react';
+import { Search } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 
 const NotFoundPage = () => {
   return (

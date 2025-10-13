@@ -12,39 +12,10 @@ import { Database } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Lock } from 'lucide-react';
-// import { Monitor } from 'lucide-react'; // Unused import
 import { Activity } from 'lucide-react';
 import { FileText } from 'lucide-react';
 
 const CybersecuritySolutions = () => {
-  const testimonials = [
-    {
-      name: "John Smith",
-      role: "CEO, TechCorp",
-      content: "Zion Tech Group transformed our business with their AI solutions.",
-      avatar: "/images/testimonials/john-smith.jpg"
-    },
-    {
-      name: "Sarah Johnson",
-      role: "CTO, InnovateLabs",
-      content: "The team's expertise in AI and automation is unmatched.",
-      avatar: "/images/testimonials/sarah-johnson.jpg"
-    },
-    {
-      name: "Mike Chen",
-      role: "Founder, StartupXYZ",
-      content: "We saw immediate results after implementing their solutions.",
-      avatar: "/images/testimonials/mike-chen.jpg"
-    }
-  ];
-
-  const stats = [
-    { label: "Projects Completed", value: "500+" },
-    { label: "Happy Clients", value: "200+" },
-    { label: "Years Experience", value: "5+" },
-    { label: "Team Members", value: "50+" }
-  ];
-
   const services = [
     {
       title: "Security Assessment",
@@ -227,7 +198,7 @@ const CybersecuritySolutions = () => {
       </section>
 
       {/* Capabilities Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -265,7 +236,7 @@ const CybersecuritySolutions = () => {
       </section>
 
       {/* Services Section */}
-      </section><section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-red-800/50">
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-red-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -309,7 +280,7 @@ const CybersecuritySolutions = () => {
       </section>
 
       {/* Pricing Section */}
-      </section><section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -369,7 +340,7 @@ const CybersecuritySolutions = () => {
       </section>
 
       {/* Testimonials Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-red-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-red-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -410,7 +381,7 @@ const CybersecuritySolutions = () => {
       </section>
 
       {/* CTA Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-900/30 to-orange-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-900/30 to-orange-900/30">
         <ResponsiveContainer>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -449,4 +420,4 @@ const CybersecuritySolutions = () => {
   );
 };
 
-export default CybersecuritySolutions;</section>
+export default CybersecuritySolutions;

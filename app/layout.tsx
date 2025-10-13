@@ -3,11 +3,12 @@ import AnalyticsProvider from "./components/AnalyticsProvider";
 import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
 // import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import
 import ErrorFallback from "./components/ErrorFallback";
+
+import MobileNavigation from "./components/MobileNavigation";
 import ImprovedNavigation from "./components/ImprovedNavigation";
 import ImprovedFooter from "./components/ImprovedFooter";
 import ImprovedSidebar from "./components/ImprovedSidebar";
-// import { Helmet } from 'react-helmet-async'; // Unused import
-// import { Monitor } from 'lucide-react'; // Unused import
+import { Helmet } from 'react-helmet-async';
 
 interface LayoutProps {
   children: React.ReactNode;

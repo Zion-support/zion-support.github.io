@@ -1,21 +1,42 @@
-
-import {
-
+import React from 'react';
+import { 
   Rocket, 
   Satellite, 
   Orbit, 
   Zap, 
   Target, 
   CheckCircle, 
+  ArrowRight,
+  Cpu,
   Globe,
+  Clock,
+  Users,
+  Award,
+  Star,
   Activity,
+  PieChart,
   Navigation,
+  MapPin,
   Gauge
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+import { ArrowRight } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { PieChart } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Rocket } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Activity } from 'lucide-react';
 
 const AISpaceMissionOptimizerPage = () => {
   const features = [
@@ -201,7 +222,7 @@ const AISpaceMissionOptimizerPage = () => {
       </section>
 
       {/* Features Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -235,7 +256,7 @@ const AISpaceMissionOptimizerPage = () => {
       </section>
 
       {/* Capabilities Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -270,7 +291,7 @@ const AISpaceMissionOptimizerPage = () => {
       </section>
 
       {/* Pricing Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -328,7 +349,7 @@ const AISpaceMissionOptimizerPage = () => {
       </section>
 
       {/* CTA Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Optimize Your Space Missions?
@@ -361,4 +382,4 @@ const AISpaceMissionOptimizerPage = () => {
   );
 };
 
-export default AISpaceMissionOptimizerPage;</section>
+export default AISpaceMissionOptimizerPage;

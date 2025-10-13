@@ -1,9 +1,12 @@
-
-import { ArrowRight, CheckCircle, Star, Mic, Video, Calendar } from 'lucide-react';
+import React from "react";
+import SEOOptimizer from "../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-
-import SEOOptimizer from "../components/SEOOptimizer";
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Mic } from 'lucide-react';
 
 export default function ZionAIMeetingTranscriber() {
   const features = [
@@ -135,7 +138,7 @@ export default function ZionAIMeetingTranscriber() {
       </section>
 
       {/* Features Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -165,7 +168,7 @@ export default function ZionAIMeetingTranscriber() {
       </section>
 
       {/* Benefits Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -195,7 +198,7 @@ export default function ZionAIMeetingTranscriber() {
       </section>
 
       {/* Pricing Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -260,7 +263,7 @@ export default function ZionAIMeetingTranscriber() {
       </section>
 
       {/* Testimonials Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -294,7 +297,7 @@ export default function ZionAIMeetingTranscriber() {
       </section>
 
       {/* CTA Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Meetings?
@@ -325,4 +328,3 @@ export default function ZionAIMeetingTranscriber() {
     </div>
   );
 }
-</section>

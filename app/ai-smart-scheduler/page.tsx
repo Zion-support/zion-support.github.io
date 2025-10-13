@@ -1,37 +1,14 @@
-
-import { Link } from 'react-router-dom';
-import { Brain, Users, Zap, Globe, Clock, CheckCircle } from 'lucide-react';
 import Layout from "../layout";
-
+import { Link } from 'react-router-dom';
+import { Clock } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 
 export default function AISmartScheduler() {
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechFlow Solutions",
-      role: "Operations Manager",
-      content: "AI Smart Scheduler has revolutionized our team coordination. It automatically finds the best meeting times and eliminates scheduling conflicts.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "Global Consulting",
-      role: "Project Director",
-      content: "The AI understands our team's preferences and automatically schedules meetings that work for everyone. It's like having a personal assistant.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Remote Teams Inc",
-      role: "Team Lead",
-      content: "Managing a distributed team across time zones is now effortless. The AI handles all the complexity and finds optimal meeting times.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
@@ -138,7 +115,7 @@ export default function AISmartScheduler() {
       </section>
 
       {/* Features Section */}
-      </section><section className="py-20 bg-gray-900">
+      <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -165,7 +142,7 @@ export default function AISmartScheduler() {
       </section>
 
       {/* Pricing Section */}
-      </section><section className="py-20 bg-gray-800">
+      <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -205,7 +182,7 @@ export default function AISmartScheduler() {
                       className="flex items-center text-gray-300"
                     >
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      {feature.title}
+                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -226,7 +203,7 @@ export default function AISmartScheduler() {
       </section>
 
       {/* Testimonials */}
-      </section><section className="py-20 bg-gray-900">
+      <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -258,7 +235,7 @@ export default function AISmartScheduler() {
       </section>
 
       {/* CTA Section */}
-      </section><section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Scheduling?
@@ -286,4 +263,3 @@ export default function AISmartScheduler() {
     </Layout>
   );
 }
-</section>

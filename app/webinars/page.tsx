@@ -3,13 +3,11 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Shield } from 'lucide-react';
-// import { Brain } from 'lucide-react'; // Unused import
+import { Brain } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Play } from 'lucide-react';
-// import { Mic } from 'lucide-react'; // Unused import
 import { Cloud } from 'lucide-react';
-import { ArrowRight, Sparkles, Globe, Shield, Play } from 'lucide-react';
 
 const WebinarsPage = () => {
   const upcomingWebinars = [
@@ -119,7 +117,7 @@ const WebinarsPage = () => {
       </section>
 
       {/* Upcoming Webinars Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -166,7 +164,7 @@ const WebinarsPage = () => {
       </section>
 
       {/* Past Webinars Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -208,7 +206,7 @@ const WebinarsPage = () => {
       </section>
 
       {/* CTA Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Stay Updated with Our Webinars
@@ -240,4 +238,4 @@ const WebinarsPage = () => {
   );
 };
 
-export default WebinarsPage;</section>
+export default WebinarsPage;
