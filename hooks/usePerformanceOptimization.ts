@@ -13,8 +13,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableLazyLoading = true,
     enablePreloading = true,
     enableImageOptimization = true,
-
-
+    // enableCodeSplitting = true,
     enableCaching = true,
   } = options;
 

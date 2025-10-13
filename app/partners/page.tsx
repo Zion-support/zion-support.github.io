@@ -24,8 +24,11 @@ export default function PartnersZionTechGroup() {
           </Link>
         </div>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6877
       </div>
     </>
   );
