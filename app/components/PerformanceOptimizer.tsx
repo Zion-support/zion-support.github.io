@@ -16,10 +16,19 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+        
+        // Set proper 'as' attribute based on file type
         if (resource.endsWith('.woff2')) {
+          link.as = 'font';
           link.crossOrigin = 'anonymous';
+        } else if (resource.endsWith('.jpg') || resource.endsWith('.jpeg') || resource.endsWith('.png') || resource.endsWith('.webp')) {
+          link.as = 'image';
+        } else if (resource.endsWith('.svg')) {
+          link.as = 'image';
+        } else {
+          link.as = 'fetch';
         }
+        
         document.head.appendChild(link);
       });
       // Optimize images
