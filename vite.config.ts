@@ -1,13 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
-
 export default defineConfig({
-
   plugins: [
     react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
       // Enable JSX runtime
       jsxRuntime: "automatic",
     }),
@@ -76,11 +72,6 @@ export default defineConfig({
     },
     // Enhanced build optimizations
     rollupOptions: {
-      treeshake: {
-        moduleSideEffects: false,
-        propertyReadSideEffects: false,
-        tryCatchDeoptimization: false,
-      },
       output: {
         manualChunks: (id) => {
           // Core React libraries - keep together for better caching
@@ -181,8 +172,6 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Enable tree shaking
-    treeshake: true,
   },
   server: {
     port: 3000,
@@ -192,7 +181,6 @@ export default defineConfig({
     hmr: {
       overlay: true,
     },
-
   },
   preview: {
     port: 4173,
@@ -215,4 +203,3 @@ export default defineConfig({
     devSourcemap: true,
   },
 });
-

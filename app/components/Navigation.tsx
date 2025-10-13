@@ -1,129 +1,59 @@
-'use client';
-import React, { useState, useCallback } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, Home, Shield, Zap, Brain, Globe } from 'lucide-react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-interface NavigationProps {
-  onSidebarToggle?: () => void;
-}
-
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-  const location = useLocation();
+export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navigationItems = [
-    {
-      name: 'Home',
-      path: '/',
-      icon: <Home className="w-4 h-4" />
-    },
-    {
-      name: 'About',
-      path: '/about',
-      icon: <Shield className="w-4 h-4" />
-    },
-    {
-      name: 'Services',
-      path: '/services',
-      icon: <Zap className="w-4 h-4" />
-    },
-    {
-      name: 'AI Services',
-      path: '/ai-services',
-      icon: <Brain className="w-4 h-4" />
-    },
-    {
-      name: 'Contact',
-      path: '/contact',
-      icon: <Globe className="w-4 h-4" />
-    }
-  ];
-
-  const toggleMenu = useCallback(() => {
-    setIsOpen(prev => !prev);
-  }, []);
-
-  const isActive = (path: string) => {
-    return location.pathname === path;
-  };
-
   return (
-    <nav className="bg-slate-900/90 backdrop-blur-sm border-b border-purple-500/20 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-white hover:text-cyan-400 transition-colors">
-              Zion Tech Group
+    <nav className="bg-gray-800 shadow-lg">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          <Link to="/" className="text-2xl font-bold text-white">
+            Zion AI
+          </Link>
+          
+          <div className="hidden md:flex space-x-8">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+              Home
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+              About
+            </Link>
+            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+              Services
+            </Link>
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+              Contact
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  isActive(item.path)
-                    ? 'text-cyan-400 bg-cyan-400/10'
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'
-                }`}
-              >
-                {item.icon}
-                <span>{item.name}</span>
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-4">
-            {onSidebarToggle && (
-              <button
-                onClick={onSidebarToggle}
-                className="text-gray-300 hover:text-white p-2 rounded-md hover:bg-white/10 transition-colors"
-                aria-label="Toggle sidebar"
-              >
-                <Menu className="h-6 w-6" />
-              </button>
-            )}
-            <button
-              onClick={toggleMenu}
-              className="text-gray-300 hover:text-white p-2 rounded-md hover:bg-white/10 transition-colors"
-              aria-label="Toggle menu"
-            >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
+          <button
+            className="md:hidden text-white"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 backdrop-blur-sm rounded-lg mt-2">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                    isActive(item.path)
-                      ? 'text-cyan-400 bg-cyan-400/10'
-                      : 'text-gray-300 hover:text-white hover:bg-white/10'
-                  }`}
-                >
-                  {item.icon}
-                  <span>{item.name}</span>
-                </Link>
-              ))}
-            </div>
+          <div className="md:hidden py-4">
+            <Link to="/" className="block py-2 text-gray-300 hover:text-white">
+              Home
+            </Link>
+            <Link to="/about" className="block py-2 text-gray-300 hover:text-white">
+              About
+            </Link>
+            <Link to="/services" className="block py-2 text-gray-300 hover:text-white">
+              Services
+            </Link>
+            <Link to="/contact" className="block py-2 text-gray-300 hover:text-white">
+              Contact
+            </Link>
           </div>
         )}
       </div>
     </nav>
   );
-};
-
-export default Navigation;
+}
