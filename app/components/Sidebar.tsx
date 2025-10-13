@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { 
+  XMarkIcon,
   HomeIcon,
   InformationCircleIcon,
   BriefcaseIcon,
@@ -17,16 +18,18 @@ import {
   CloudIcon,
   CpuChipIcon,
   SignalIcon,
-  UserGroupIcon,
-  XMarkIcon
-} from '@heroicons/react/24/outline'
+  UserGroupIcon
+} from '@heroicons/react/24/outline';
+
 interface SidebarProps {
-  isOpen: boolean
-  onClose: () => void}
+  isOpen: boolean;
+  onClose: () => void;
+}
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const location = useLocation()
-  const [expandedSections, setExpandedSections] = useState<string[]>([])
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  const location = useLocation();
+
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
@@ -34,6 +37,17 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       name: 'Services', 
       href: '/services', 
       icon: BriefcaseIcon,
+      submenu: [
+        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
+        { name: 'IT Services', href: '/it-services', icon: CogIcon },
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon }
+      ]
+    },
+    { 
+      name: 'Solutions', 
+      href: '/solutions', 
+      icon: CogIcon,
       submenu: [
         { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
         { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
@@ -43,190 +57,140 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
       ]
     },
-    { 
-      name: 'Solutions', 
-      href: '/solutions', 
-      icon: CogIcon,
-      submenu: [
-        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
-        { name: 'IT Services', href: '/it-services', icon: BriefcaseIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }
-      ]
-    },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
     { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
+    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
-  ]
+  ];
+
   const additionalLinks = [
+    { name: 'Privacy Policy', href: '/privacy', icon: ShieldCheckIcon },
+    { name: 'Terms of Service', href: '/terms', icon: DocumentTextIcon },
     { name: 'Our Team', href: '/team', icon: UserGroupIcon },
     { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
     { name: 'Careers', href: '/careers', icon: BriefcaseIcon }
-  ]
+  ];
+
   const isActive = (path: string) => {
-<<<<<<< HEAD
     return location.pathname === path;
-  }
-=======
-    return location.pathname === path}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+  };
+
   const toggleSection = (sectionName: string) => {
     setExpandedSections(prev => 
       prev.includes(sectionName) 
         ? prev.filter(name => name !== sectionName)
         : [...prev, sectionName]
-<<<<<<< HEAD
     );
-  }
+  };
+
   const isExpanded = (sectionName: string) => {
     return expandedSections.includes(sectionName);
-  }
-=======
-    )}
-  const isExpanded = (sectionName: string) => {
-    return expandedSections.includes(sectionName)}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+  };
+
+  if (!isOpen) return null;
+
   return (
     <>
       {/* Overlay */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
-          onClick={onClose}
-        />
-      )}
-
+      <div 
+        className="fixed inset-0 bg-black bg-opacity-50 z-40"
+        onClick={onClose}
+      />
+      
       {/* Sidebar */}
-      <div className={`fixed inset-y-0 left-0 z-50 w-80 bg-slate-900 border-r border-slate-700 transform transition-transform duration-300 ease-in-out ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'
-      } lg:translate-x-0 lg:static lg:inset-0`}>
-        <div className="flex flex-col h-full">
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-slate-700">
-            <Link to="/" className="flex items-center space-x-2" onClick={onClose}>
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="text-white font-bold text-xl">Zion Tech Group</span>
-            </Link>
-            <button
-              onClick={onClose}
-              className="lg:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-slate-700"
-            >
-              <XMarkIcon className="w-5 h-5" />
-            </button>
-          </div>
-
-          {/* Navigation */}
-          <nav className="flex-1 overflow-y-auto py-4">
-            <div className="px-4 space-y-2">
-              {navigation.map((item) => (
-                <div key={item.name}>
-                  {item.submenu ? (
-                    <div>
-                      <button
-                        onClick={() => toggleSection(item.name)}
-                        className={`flex items-center w-full px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                          isActive(item.href) || (item.submenu && item.submenu.some(sub => isActive(sub.href)))
-                            ? 'text-white bg-slate-800'
-                            : 'text-gray-300 hover:text-white hover:bg-slate-700'
-                        }`}
-                      >
-                        <item.icon className="w-5 h-5 mr-3" />
-                        {item.name}
-                        <ChevronDownIcon className={`w-4 h-4 ml-auto transition-transform ${
-                          isExpanded(item.name) ? 'rotate-180' : ''
-                        }`} />
-                      </button>
-                      
-                      {/* Submenu */}
-                      <div className={`pl-6 mt-1 space-y-1 ${isExpanded(item.name) ? 'block' : 'hidden'}`}>
-                        {item.submenu.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            to={subItem.href}
-                            className={`flex items-center px-3 py-2 rounded-md text-sm transition-colors ${
-                              isActive(subItem.href)
-                                ? 'text-white bg-slate-800'
-                                : 'text-gray-400 hover:text-white hover:bg-slate-700'
-                            }`}
-                            onClick={onClose}
-                          >
-                            <subItem.icon className="w-4 h-4 mr-3" />
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                        isActive(item.href)
-                          ? 'text-white bg-slate-800'
-                          : 'text-gray-300 hover:text-white hover:bg-slate-700'
-                      }`}
-                      onClick={onClose}
-                    >
+      <div className="fixed inset-y-0 left-0 w-64 bg-white shadow-lg z-50 overflow-y-auto">
+        <div className="flex items-center justify-between p-4 border-b">
+          <h2 className="text-lg font-semibold text-gray-900">Navigation</h2>
+          <button
+            onClick={onClose}
+            className="p-2 hover:bg-gray-100 rounded-md"
+          >
+            <XMarkIcon className="w-5 h-5" />
+          </button>
+        </div>
+        
+        <nav className="mt-4">
+          {navigation.map((item) => (
+            <div key={item.name}>
+              {item.submenu ? (
+                <div>
+                  <button
+                    onClick={() => toggleSection(item.name)}
+                    className="w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors"
+                  >
+                    <div className="flex items-center">
                       <item.icon className="w-5 h-5 mr-3" />
                       {item.name}
-                    </Link>
+                    </div>
+                    <ChevronDownIcon 
+                      className={`w-4 h-4 transition-transform ${
+                        isExpanded(item.name) ? 'rotate-180' : ''
+                      }`} 
+                    />
+                  </button>
+                  {isExpanded(item.name) && (
+                    <div className="pl-4 space-y-1">
+                      {item.submenu.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.href}
+                          className={`block px-4 py-2 text-sm transition-colors ${
+                            isActive(subItem.href)
+                              ? 'text-blue-600 bg-blue-50'
+                              : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                          }`}
+                          onClick={onClose}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
                   )}
                 </div>
-              ))}
+              ) : (
+                <Link
+                  to={item.href}
+                  className={`flex items-center px-4 py-3 transition-colors ${
+                    isActive(item.href)
+                      ? 'text-blue-600 bg-blue-50'
+                      : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
+                  }`}
+                  onClick={onClose}
+                >
+                  <item.icon className="w-5 h-5 mr-3" />
+                  {item.name}
+                </Link>
+              )}
             </div>
-
-            {/* Additional Links */}
-            <div className="px-4 mt-8">
-              <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
-                Additional Resources
-              </h3>
-              <div className="space-y-1">
-                {additionalLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    to={link.href}
-                    className={`flex items-center px-3 py-2 rounded-md text-sm transition-colors ${
-                      isActive(link.href)
-                        ? 'text-white bg-slate-800'
-                        : 'text-gray-300 hover:text-white hover:bg-slate-700'
-                    }`}
-                    onClick={onClose}
-                  >
-                    <link.icon className="w-4 h-4 mr-3" />
-                    {link.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </nav>
-
-          {/* Footer */}
-          <div className="p-4 border-t border-slate-700">
-            <div className="text-center">
-              <p className="text-xs text-gray-400 mb-2">
-                Need help? Contact our support team
-              </p>
+          ))}
+          
+          {/* Additional Links */}
+          <div className="border-t border-gray-200 mt-4 pt-4">
+            <h3 className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wider">
+              Additional
+            </h3>
+            {additionalLinks.map((link) => (
               <Link
-                to="/contact"
-                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-md hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+                key={link.name}
+                to={link.href}
+                className={`flex items-center px-4 py-2 text-sm transition-colors ${
+                  isActive(link.href)
+                    ? 'text-blue-600 bg-blue-50'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                }`}
                 onClick={onClose}
               >
-                Get Support
+                <link.icon className="w-4 h-4 mr-3" />
+                {link.name}
               </Link>
-            </div>
+            ))}
           </div>
-        </div>
+        </nav>
       </div>
     </>
-<<<<<<< HEAD
   );
-}
+};
+
 export default Sidebar;
-=======
-  )}
-export default Sidebar
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
