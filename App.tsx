@@ -17,12 +17,11 @@ import DemoPage from './app/pages/DemoPage';
 import SupportPage from './app/pages/SupportPage';
 import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
-import PricingPage from './app/pages/PricingPage';
+import PricingPage from './app/pages/EnhancedPricingPage';
 import SolutionsPage from './app/pages/SolutionsPage';
+import ComprehensiveServicesPage from './app/pages/ComprehensiveServicesPage';
 
 // Error fallback component
-<<<<<<< HEAD
-=======
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
@@ -48,7 +47,6 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
     </div>
   </div>
 );
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
 
 function App() {
   return (
@@ -62,7 +60,8 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
-              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services" element={<ComprehensiveServicesPage />} />
+              <Route path="/services-basic" element={<ServicesPage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/tutorials" element={<TutorialsPage />} />
               <Route path="/demo" element={<DemoPage />} />
