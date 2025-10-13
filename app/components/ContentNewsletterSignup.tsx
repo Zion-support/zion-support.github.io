@@ -22,12 +22,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       setIsSubscribed(true);
       setEmail("");
     } catch (error) {
-<<<<<<< HEAD
       console.error('Failed to subscribe to newsletter:', error);
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c974
-
     } finally {
       setIsLoading(false);
     }
