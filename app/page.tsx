@@ -1,43 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-
-export default function HomePage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-5xl font-bold mb-8 text-center">
-          Welcome to Zion AI Solutions
-        </h1>
-        <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-          Advanced AI-powered solutions for modern businesses. We provide cutting-edge 
-          artificial intelligence services to help your organization thrive in the digital age.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4">AI Automation</h3>
-            <p className="text-gray-300">
-              Streamline your business processes with intelligent automation solutions.
-            </p>
-          </div>
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4">Data Analytics</h3>
-            <p className="text-gray-300">
-              Unlock insights from your data with advanced analytics and machine learning.
-            </p>
-          </div>
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4">Custom Solutions</h3>
-            <p className="text-gray-300">
-              Tailored AI solutions designed specifically for your business needs.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield } from 'lucide-react';
 
@@ -87,37 +49,26 @@ const HomePage: React.FC = () => {
             that drive innovation and growth for modern businesses.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
+            <button className="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
               Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </button>
-            <button className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-colors">
+            <button className="px-8 py-4 border border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
               Learn More
             </button>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.value}</div>
-                <div className="text-gray-600">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-            Why Choose Zion Tech Group?
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We deliver exceptional value through innovative technology solutions and expert guidance.
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center p-6 bg-white rounded-lg shadow-lg">
@@ -134,6 +85,20 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {stats.map((stat, index) => (
+              <div key={index}>
+                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.value}</div>
+                <div className="text-gray-600">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -141,11 +106,16 @@ const HomePage: React.FC = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join hundreds of businesses already using our solutions to drive growth and innovation.
+            Join hundreds of companies that trust Zion Tech Group for their AI and IT needs.
           </p>
-          <button className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
-            Start Your Journey Today
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Start Your Project
+            </button>
+            <button className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Schedule Consultation
+            </button>
+          </div>
         </div>
       </section>
     </div>
@@ -153,4 +123,3 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea

@@ -1,4 +1,4 @@
-const { withSentry } = require('./withSentry.cjs');
+import { withErrorLogging } from './withErrorLogging.cjs';
 
 async function handler(req, res) {
   try {
@@ -59,6 +59,5 @@ async function handler(req, res) {
   }
 }
 
-module.exports = withSentry(handler);
-module.exports = handler;
+export default withErrorLogging(handler);
 

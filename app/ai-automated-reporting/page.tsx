@@ -1,3 +1,9 @@
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Brain, BarChart3, FileText, TrendingUp, Zap, Clock, Shield, Users, ArrowRight, BarChart } from 'lucide-react';
+
+const AIAutomatedReportingPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -314,3 +320,7 @@
         </section>
       </div>
     </>
+  );
+};
+
+export default AIAutomatedReportingPage;

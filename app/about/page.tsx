@@ -1,17 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-
-export default function AboutPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">About</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-=======
 import { Helmet } from 'react-helmet-async';
 import { Users, Target, Award, Globe } from 'lucide-react';
 
@@ -77,7 +65,7 @@ const AboutPage: React.FC = () => {
             <div className="bg-blue-50 p-8 rounded-lg">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Our Vision</h3>
               <p className="text-gray-600">
-                To be the world's most trusted partner for AI and IT transformation, 
+                To be the world&apos;s most trusted partner for AI and IT transformation, 
                 helping businesses unlock their full potential through technology.
               </p>
             </div>
@@ -140,7 +128,6 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
     </div>
   );
 };
