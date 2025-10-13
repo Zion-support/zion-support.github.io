@@ -18,13 +18,6 @@ const App: React.FC = () => {
           <Navigation />
           <main>
             <Routes>
-<<<<<<< HEAD
-              <Route path="/ element={<HomePage />} />
-=======
-              <Route path="/" element={<HomePage />} />
-            </Routes>
-          </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
           <Footer />
   );
 };
