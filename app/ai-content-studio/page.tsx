@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, Smartphone, Mail } from "lucide-react";
+import {PenTool,Image, FileText, CheckArrowRight} from "lucide-react";
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -18,7 +17,7 @@ const AIContentStudioZionTechGroup = () => {
     "description": "AI-powered content creation platform with automated writing, design, and video generation",
     "url": "https://ziontechgroup.com/ai-content-studio",
     "applicationCategory": "ContentCreationApplication",
-    "operatingSystem": "Web, Windows, macOS, Linux",
+    "operatingSystem": "Web,ows, macOS, Linux",
     "offers": {
       "@type": "Offer",
       "price": "149",
@@ -45,9 +44,9 @@ const AIContentStudioZionTechGroup = () => {
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Video Generation",
+      title: "Generation",
       description: "Create professional videos from text prompts with AI-powered video generation technology",
-      icon: <Video className="w-8 h-8" />,
+      icon: <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -164,7 +163,7 @@ const AIContentStudioZionTechGroup = () => {
               
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
-                  <Sparkles className="w-4 h-4 text-purple-400 mr-2" />
+                  <className="w-4 h-4 text-purple-400 mr-2" />
                   <span className="text-purple-400 text-sm font-medium">AI-Powered Content Creation</span>
                 </div>
                 
@@ -190,13 +189,12 @@ const AIContentStudioZionTechGroup = () => {
                     href="#pricing"
                     variant="primary"
                     size="lg"
-                    icon={Sparkles}
+                    icon={}
                     iconPosition="left"
                     glowColor="purple"
                     neon={true}
                     animated={true}
-                  >
-                    Start Free Trial
+                  >t Free Trial
                   </FuturisticButtonEnhanced>
                   <FuturisticButtonEnhanced
                     href="#demo"
@@ -291,7 +289,7 @@ const AIContentStudioZionTechGroup = () => {
                       <ul className="space-y-3 mb-8">
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-gray-300">
-                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                            <CheckclassName="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {feature}
                           </li>
                         ))}
@@ -307,7 +305,7 @@ const AIContentStudioZionTechGroup = () => {
                         animated={true}
                         className="w-full"
                       >
-                        Get Started
+                        Getted
                       </FuturisticButtonEnhanced>
                     </FuturisticCardEnhanced>
                   ))}
@@ -334,7 +332,7 @@ const AIContentStudioZionTechGroup = () => {
                     >
                       <div className="flex items-center mb-4">
                         {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                          <key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                         ))}
                       </div>
                       <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
@@ -356,7 +354,7 @@ const AIContentStudioZionTechGroup = () => {
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                   Join thousands of content creators using Zion AI Content Studio Pro to produce 
-                  professional content at scale. Start your free trial today.
+                  professional content at scale.t your free trial today.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -369,14 +367,13 @@ const AIContentStudioZionTechGroup = () => {
                     glowColor="purple"
                     neon={true}
                     animated={true}
-                  >
-                    Start Free Trial
+                  >t Free Trial
                   </FuturisticButtonEnhanced>
                   <FuturisticButtonEnhanced
                     href="/demo"
                     variant="outline"
                     size="lg"
-                    icon={Sparkles}
+                    icon={}
                     iconPosition="right"
                     glowColor="pink"
                     neon={true}

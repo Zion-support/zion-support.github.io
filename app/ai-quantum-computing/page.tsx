@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Cpu, Brain, Zap, Atom, Sparkles, Users, Award, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award as AwardIcon, Rocket, Wifi, Battery, Camera, Headphones, Mic, Video, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowRight, CheckAtom,Monitor, MessageasIcon,2,Off,Phone,1,2,asIcon,rise,set,watch} from "lucide-react";
 import SEOOptimizer from "../../components/SEOOptimizer";
 
 export default function AiQuantumComputing() {
@@ -96,7 +95,7 @@ export default function AiQuantumComputing() {
       avatar: "SC"
     },
     {
-      name: "Michael Rodriguez",
+      name: "hael Rodriguez",
       company: "Pharmaceutical Corp",
       role: "Head of R&D",
       content: "The quantum simulation capabilities are extraordinary. We've discovered new drug compounds and optimized molecular structures in weeks instead of years.",
@@ -123,19 +122,19 @@ export default function AiQuantumComputing() {
     {
       title: "Financial Optimization",
       description: "Optimize complex portfolios and risk management strategies",
-      icon: <TrendingUp className="w-8 h-8" />,
+      icon: <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg" />,
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "Cryptography",
       description: "Develop unbreakable quantum encryption and secure communications",
-      icon: <Lock className="w-8 h-8" />,
+      icon: <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg" />,
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Machine Learning",
       description: "Train quantum neural networks for advanced pattern recognition",
-      icon: <Brain className="w-8 h-8" />,
+      icon: <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg" />,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -184,27 +183,25 @@ export default function AiQuantumComputing() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Link
-                to="/contact"
+              <to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
                 Explore Quantum Solutions
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
+              </>
+              <to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Quantum Demo
                 <Monitor className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
-              </Link>
+              </>
             </div>
             
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Cpu className="w-8 h-8 text-cyan-400" />
+                  <className="w-8 h-8 text-cyan-400" />
                 </div>
                 <div className="text-2xl md:text-3xl font-bold text-white mb-2">1000x</div>
                 <div className="text-gray-300 text-sm">Faster Processing</div>
@@ -218,14 +215,14 @@ export default function AiQuantumComputing() {
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-8 h-8 text-cyan-400" />
+                  <className="w-8 h-8 text-cyan-400" />
                 </div>
                 <div className="text-2xl md:text-3xl font-bold text-white mb-2">500+</div>
                 <div className="text-gray-300 text-sm">Quantum Researchers</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Award className="w-8 h-8 text-cyan-400" />
+                  <className="w-8 h-8 text-cyan-400" />
                 </div>
                 <div className="text-2xl md:text-3xl font-bold text-white mb-2">99.9%</div>
                 <div className="text-gray-300 text-sm">Accuracy Rate</div>
@@ -254,7 +251,7 @@ export default function AiQuantumComputing() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
                   <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
+                    <CheckclassName="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
                     <span className="text-white font-medium">{feature}</span>
                   </div>
                 </div>
@@ -339,23 +336,22 @@ export default function AiQuantumComputing() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <CheckclassName="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
                   
-                  <Link
-                    to="/contact"
+                  <to="/contact"
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
-                    Get Started
+                    Getted
                     <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
+                  </>
                 </div>
               ))}
             </div>
@@ -382,7 +378,7 @@ export default function AiQuantumComputing() {
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
@@ -416,7 +412,7 @@ export default function AiQuantumComputing() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <MessageSquare className="w-6 h-6 text-white" />
+                  <MessageclassName="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
                 <p className="text-cyan-400">kleber@ziontechgroup.com</p>
@@ -430,7 +426,7 @@ export default function AiQuantumComputing() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Globe className="w-6 h-6 text-white" />
+                  <className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -438,20 +434,18 @@ export default function AiQuantumComputing() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
                 Contact Quantum Experts
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
+              </>
+              <to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Quantum Demo
                 <Monitor className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
-              </Link>
+              </>
             </div>
           </div>
         </section>

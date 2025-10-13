@@ -1,45 +1,31 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  DollarSign, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Zap,
-  Brain,
-  PieChart,
-  Activity,
-  Shield
-} from 'lucide-react';
+import {ArrowRight,Check} from 'lucide-react';
 
 const AIFinancialAnalysisPage = () => {
   const features = [
     {
       title: "Predictive Financial Modeling",
       description: "AI-powered financial forecasting with 95% accuracy for better investment decisions",
-      icon: <TrendingUp className="w-8 h-8" />,
+      icon: <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Risk Assessment & Management",
       description: "Advanced risk analysis and automated portfolio optimization using machine learning",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg" />,
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "Real-time Market Analysis",
       description: "Continuous monitoring of market trends and instant financial insights",
-      icon: <Activity className="w-8 h-8" />,
+      icon: <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg" />,
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Automated Reporting",
       description: "Generate comprehensive financial reports and insights automatically",
-      icon: <PieChart className="w-8 h-8" />,
+      icon: <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg" />,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -71,7 +57,7 @@ const AIFinancialAnalysisPage = () => {
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+            <className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">Intelligent Financial Analysis</span>
           </div>
           
@@ -87,20 +73,18 @@ const AIFinancialAnalysisPage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link
-              to="/contact"
+            <to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-              Get Started Today
+              Getted Today
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/demo"
+            </>
+            <to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Watch Demo
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-            </Link>
+              <className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+            </>
           </div>
         </div>
       </section>
@@ -156,7 +140,7 @@ const AIFinancialAnalysisPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                <CheckclassName="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300 font-medium">{benefit}</span>
               </div>
             ))}
@@ -171,25 +155,21 @@ const AIFinancialAnalysisPage = () => {
             Ready to Optimize Your Finances?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of investors using our AI financial analysis platform to make smarter decisions. 
-            Start your financial transformation today.
+            Join thousands of investors using our AI financial analysis platform to make smarter decisions.t your financial transformation today.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
+            <to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-            >
-              Start Analysis Today
+            >t Analysis Today
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/demo"
+            </>
+            <to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Schedule Demo
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-            </Link>
+              <className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+            </>
           </div>
         </div>
       </section>

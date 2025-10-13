@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, Smartphone, Mail } from "lucide-react";
+import {CheckArrowRight} from "lucide-react";
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -10,15 +9,15 @@ import ResponsiveContainer from "../components/ResponsiveContainer";
 import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
-const AICodeAssistantProZionTechGroup = () => {
+const AIAssistantProZionTechGroup = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Zion AI Code Assistant Pro",
+    "name": "Zion AIAssistant Pro",
     "description": "AI-powered code generation, debugging, and optimization with support for 50+ programming languages",
     "url": "https://ziontechgroup.com/ai-code-assistant-pro",
     "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Web, Windows, macOS, Linux",
+    "operatingSystem": "Web,ows, macOS, Linux",
     "offers": {
       "@type": "Offer",
       "price": "199",
@@ -39,34 +38,34 @@ const AICodeAssistantProZionTechGroup = () => {
 
   const features = [
     {
-      title: "AI Code Generation",
+      title: "AIGeneration",
       description: "Generate high-quality code in 50+ programming languages using advanced AI models",
-      icon: <Code className="w-8 h-8" />,
+      icon: <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Intelligent Debugging",
       description: "Automatically detect and fix bugs with AI-powered analysis and suggestions",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Code Optimization",
+      title: "Optimization",
       description: "Optimize performance and efficiency with AI-driven code analysis and recommendations",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg" />,
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Multi-Language Support",
       description: "Support for Python, JavaScript, Java, C++, Go, Rust, and 45+ other languages",
-      icon: <Globe className="w-8 h-8" />,
+      icon: <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
+      name: "ter",
       price: "$99",
       period: "month",
       description: "Perfect for individual developers",
@@ -75,7 +74,7 @@ const AICodeAssistantProZionTechGroup = () => {
         "10 programming languages",
         "Basic debugging assistance",
         "Email support",
-        "Code optimization suggestions"
+        "optimization suggestions"
       ],
       popular: false
     },
@@ -118,12 +117,12 @@ const AICodeAssistantProZionTechGroup = () => {
       name: "Sarah Chen",
       company: "TechCorp Solutions",
       role: "Senior Developer",
-      content: "Zion AI Code Assistant Pro has revolutionized our development process. We've increased productivity by 60% and reduced bugs by 40%.",
+      content: "Zion AIAssistant Pro has revolutionized our development process. We've increased productivity by 60% and reduced bugs by 40%.",
       rating: 5
     },
     {
-      name: "Michael Rodriguez",
-      company: "StartupXYZ",
+      name: "hael Rodriguez",
+      company: "tupXYZ",
       role: "CTO",
       content: "The AI code generation is incredibly accurate and the debugging features have saved us countless hours. Highly recommended!",
       rating: 5
@@ -142,7 +141,7 @@ const AICodeAssistantProZionTechGroup = () => {
       <EnhancedAccessibility>
         <FuturisticBackgroundEnhanced>
           <EnhancedSEO
-            title="Zion AI Code Assistant Pro - AI-Powered Code Generation & Debugging | Zion Tech Group"
+            title="Zion AIAssistant Pro - AI-PoweredGeneration & Debugging | Zion Tech Group"
             description="Advanced AI-powered code generation, debugging, and optimization tool supporting 50+ programming languages. Boost developer productivity with intelligent coding assistance."
             keywords="AI code assistant, code generation, debugging, programming, software development, AI coding, developer tools, code optimization"
             canonical="https://ziontechgroup.com/ai-code-assistant-pro"
@@ -151,7 +150,7 @@ const AICodeAssistantProZionTechGroup = () => {
           
           <StructuredData type="SoftwareApplication" data={structuredData} />
 
-          <main id="main-content" role="main" aria-label="Zion AI Code Assistant Pro">
+          <main id="main-content" role="main" aria-label="Zion AIAssistant Pro">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
               <div className="absolute inset-0 overflow-hidden">
@@ -161,7 +160,7 @@ const AICodeAssistantProZionTechGroup = () => {
               
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-                  <Brain className="w-4 h-4 text-blue-400 mr-2" />
+                  <className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">AI-Powered Development Tool</span>
                 </div>
                 
@@ -174,7 +173,7 @@ const AICodeAssistantProZionTechGroup = () => {
                   neon={true}
                   className="mb-6 leading-tight"
                 >
-                  Zion AI Code Assistant Pro
+                  Zion AIAssistant Pro
                 </FuturisticTextEnhanced>
                 
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
@@ -187,13 +186,12 @@ const AICodeAssistantProZionTechGroup = () => {
                     href="#pricing"
                     variant="primary"
                     size="lg"
-                    icon={Code}
+                    icon={}
                     iconPosition="left"
                     glowColor="blue"
                     neon={true}
                     animated={true}
-                  >
-                    Start Free Trial
+                  >t Free Trial
                   </FuturisticButtonEnhanced>
                   <FuturisticButtonEnhanced
                     href="#demo"
@@ -289,7 +287,7 @@ const AICodeAssistantProZionTechGroup = () => {
                       <ul className="space-y-3 mb-8">
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-gray-300">
-                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                            <CheckclassName="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {feature}
                           </li>
                         ))}
@@ -305,7 +303,7 @@ const AICodeAssistantProZionTechGroup = () => {
                         animated={true}
                         className="w-full"
                       >
-                        Get Started
+                        Getted
                       </FuturisticButtonEnhanced>
                     </FuturisticCardEnhanced>
                   ))}
@@ -321,7 +319,7 @@ const AICodeAssistantProZionTechGroup = () => {
                     Trusted by Developers Worldwide
                   </h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    See what developers are saying about Zion AI Code Assistant Pro
+                    See what developers are saying about Zion AIAssistant Pro
                   </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -332,7 +330,7 @@ const AICodeAssistantProZionTechGroup = () => {
                     >
                       <div className="flex items-center mb-4">
                         {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                          <key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                         ))}
                       </div>
                       <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
@@ -353,8 +351,7 @@ const AICodeAssistantProZionTechGroup = () => {
                   Ready to Transform Your Development?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of developers using Zion AI Code Assistant Pro to write better code faster. 
-                  Start your free trial today.
+                  Join thousands of developers using Zion AIAssistant Pro to write better code faster.t your free trial today.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -367,14 +364,13 @@ const AICodeAssistantProZionTechGroup = () => {
                     glowColor="blue"
                     neon={true}
                     animated={true}
-                  >
-                    Start Free Trial
+                  >t Free Trial
                   </FuturisticButtonEnhanced>
                   <FuturisticButtonEnhanced
                     href="/demo"
                     variant="outline"
                     size="lg"
-                    icon={Code}
+                    icon={}
                     iconPosition="right"
                     glowColor="cyan"
                     neon={true}
@@ -392,4 +388,4 @@ const AICodeAssistantProZionTechGroup = () => {
   );
 };
 
-export default AICodeAssistantProZionTechGroup;
+export default AIAssistantProZionTechGroup;
