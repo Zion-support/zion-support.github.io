@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }

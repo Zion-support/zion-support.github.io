@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React, { Component, ReactNode, ErrorInfo } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 interface Props {
   children: ReactNode;

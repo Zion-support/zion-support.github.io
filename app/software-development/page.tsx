@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Code, Clock, Award, ArrowRight, CheckCircle, BarChart3, Users, Settings, Zap, Globe, Smartphone, Monitor } from 'lucide-react';
@@ -225,6 +226,21 @@ const SoftwareDevelopmentPage: React.FC = () => {
           </div>
         </div>
       </section>
+=======
+import { Helmet } from 'react-helmet-async';
+
+export default function SoftwareDevelopmentPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <Helmet>
+        <title>Software Development - Coming Soon | Zion Tech Group</title>
+        <meta name="description" content="Custom software development services coming soon." />
+      </Helmet>
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">Software Development</h1>
+        <p className="text-xl text-gray-300">Coming Soon</p>
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
     </div>
   );
 };

@@ -3,7 +3,89 @@ import { ArrowRight, FileText, Download, Settings, Sparkles, CheckCircle, Star, 
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIInvoiceGeneratorPage = () => {
+<<<<<<< HEAD
   // const [selectedPlan, setSelectedPlan] = useState('pro');
+=======
+<<<<<<< HEAD
+  // const [selectedPlan, setSelectedPlan] = useState('pro');
+=======
+>>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
+
+  const features = [
+    {
+      title: 'Auto Invoice Creation',
+      description: 'Generate professional invoices automatically from data sources and templates',
+      icon: <FileText className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'Data Extraction',
+      description: 'Extract invoice data from emails, PDFs, and other documents using AI',
+      icon: <Brain className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'Smart Categorization',
+      description: 'Automatically categorize expenses and income with intelligent classification',
+      icon: <Target className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'Accounting Integration',
+      description: 'Seamlessly integrate with QuickBooks, Xero, and other accounting software',
+      icon: <Database className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'Multi-currency Support',
+      description: 'Handle invoices in multiple currencies with automatic conversion rates',
+      icon: <Globe className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'PDF Export',
+      description: 'Export invoices as professional PDFs with customizable branding',
+      icon: <Download className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'Payment Tracking',
+      description: 'Track payment status and send automated reminders to clients',
+      icon: <CreditCard className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'Tax Calculations',
+      description: 'Automatically calculate taxes based on location and business rules',
+      icon: <Calculator className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'Custom Templates',
+      description: 'Create and customize invoice templates with your branding',
+      icon: <Layout className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'Analytics Dashboard',
+      description: 'Track invoice performance, payment trends, and financial insights',
+      icon: <BarChart3 className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'API Integration',
+      description: 'Integrate with your existing business systems and workflows',
+      icon: <Settings className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'Priority Support',
+      description: '24/7 priority support with dedicated account manager',
+      icon: <Headphones className="w-6 h-6" />,
+      included: true
+    }
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
   const pricingPlans = [
     {

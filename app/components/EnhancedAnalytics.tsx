@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 interface EnhancedAnalyticsProps {
   children: React.ReactNode;
 }

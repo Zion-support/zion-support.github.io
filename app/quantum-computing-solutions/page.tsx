@@ -1,20 +1,17 @@
+<<<<<<< HEAD
 import React from 'react';
 import { 
+=======
+import {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
   Cpu, 
   Zap, 
   Shield, 
   Brain, 
   Target, 
   CheckCircle, 
-  ArrowRight,
   Globe,
-  Clock,
-  Users,
-  Award,
-  Star,
   Activity,
-  PieChart,
-  Database,
   Lock,
   Gauge
 } from 'lucide-react';

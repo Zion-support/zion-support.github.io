@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface CacheManagerProps {
@@ -9,3 +10,5 @@ const CacheManager: React.FC<CacheManagerProps> = ({ children }) => {
 };
 
 export default CacheManager;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087

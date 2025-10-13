@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 const benefits = [
     "Advanced AI algorithms for accurate predictions",
@@ -34,6 +35,13 @@ export default function Page() {
     "Benefit 1",
     "Benefit 2"
   ];
+=======
+import { ArrowRight, Target, Mail, Share2, BarChart3, Users, Zap, Mail as Email, Smartphone, Globe } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
+export default function AIMarketingAutomation() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
   const features = [
     {
       title: "Email Marketing Automation",

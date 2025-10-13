@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone } from 'lucide-react';
 import { Link } from "react-router-dom";
@@ -15,6 +16,12 @@ import {
   Globe,
   Star
 } from 'lucide-react';
+=======
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import SEOOptimizer from "../../components/SEOOptimizer";
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
 export default function AIPoweredDevOpsPage() {
   const testimonials = [

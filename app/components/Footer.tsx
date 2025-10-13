@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 const services = [
     {
       title: "Cloud Migration",
@@ -27,6 +28,12 @@ const microSaasServices = [
     { name: "DevOps", href: "/devops" }
   ];
   Brain, 
+=======
+import {
+  Linkedin, 
+  Twitter, 
+  Github, 
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
   Mail, 
   Phone, 
   MapPin,

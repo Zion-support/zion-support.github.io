@@ -1,4 +1,4 @@
-import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star } from "lucide-react";
+import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star } from 'lucide-react';
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -10,6 +10,8 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const AIContentStudioZionTechGroup = () => {
+<<<<<<< HEAD
+=======
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -62,6 +64,7 @@ const AIContentStudioZionTechGroup = () => {
       "url": "https://ziontechgroup.com"
     }
   };
+>>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
 
   const features = [
     {

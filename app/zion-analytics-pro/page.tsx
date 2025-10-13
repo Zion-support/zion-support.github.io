@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import React from "react";
 import { ArrowRight, CheckCircle, BarChart3, DollarSign } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+=======
+import { ArrowRight, CheckCircle, Star, BarChart3, DollarSign } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function ZionAnalyticsPro() {

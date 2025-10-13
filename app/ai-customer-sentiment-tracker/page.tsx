@@ -1,5 +1,10 @@
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { 
+=======
+import { motion } from 'framer-motion';
+import {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
   Heart, 
   Zap, 
   BarChart3, 

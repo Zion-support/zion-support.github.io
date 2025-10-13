@@ -1,58 +1,58 @@
-import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Link } from 'react-router-dom';
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from 'lucide-react';
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
-import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
-import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
-import ResponsiveGrid from "./components/ResponsiveGrid";
-import ResponsiveText from "./components/ResponsiveText";
 
 const HomePage = () => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.svg",
-    "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
-    ],
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "AI Solutions",
-        "description": "Artificial intelligence and machine learning services"
-      },
-      {
-        "@type": "Offer", 
-        "name": "Cybersecurity",
-        "description": "Advanced cybersecurity solutions and protection"
-      },
-      {
-        "@type": "Offer",
-        "name": "Cloud Infrastructure", 
-        "description": "Cloud computing and infrastructure services"
-      }
-    ]
-  };
+<<<<<<< HEAD
+  
+=======
+  // const structuredData = {
+  //   "@context": "https://schema.org",
+  //   "@type": "Organization",
+  //   "name": "Zion Tech Group",
+  //   "url": "https://ziontechgroup.com",
+  //   "logo": "https://ziontechgroup.com/logo.svg",
+  //   "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
+  //   "address": {
+  //     "@type": "PostalAddress",
+  //     "streetAddress": "364 E Main St STE 1008",
+  //     "addressLocality": "Middletown",
+  //     "addressRegion": "DE",
+  //     "postalCode": "19709",
+  //     "addressCountry": "US"
+  //   },
+  //   "contactPoint": {
+  //     "@type": "ContactPoint",
+  //     "telephone": "+1-302-464-0950",
+  //     "contactType": "customer service",
+  //     "email": "kleber@ziontechgroup.com"
+  //   },
+  //   "sameAs": [
+  //     "https://twitter.com/ziontechgroup",
+  //     "https://linkedin.com/company/ziontechgroup"
+  //   ],
+  //   "offers": [
+  //     {
+  //       "@type": "Offer",
+  //       "name": "AI Solutions",
+  //       "description": "Artificial intelligence and machine learning services"
+  //     },
+  //     {
+  //       "@type": "Offer", 
+  //       "name": "Cybersecurity",
+  //       "description": "Advanced cybersecurity solutions and protection"
+  //     },
+  //     {
+  //       "@type": "Offer",
+  //       "name": "Cloud Infrastructure", 
+  //       "description": "Cloud computing and infrastructure services"
+  //     }
+  //   ]
+  // };
+>>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
   const features = [
     {
       title: "AI-Powered Solutions",
