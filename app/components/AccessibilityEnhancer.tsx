@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3f37
 import React, { useEffect, useState } from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-16fc
 
@@ -112,14 +115,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     };
 
     focusableElements.forEach(element => {
-      element.addEventListener('focus', handleFocus);
-      element.addEventListener('blur', handleBlur);
+      element.addEventListener('focus', handleFocus as EventListener);
+      element.addEventListener('blur', handleBlur as EventListener);
     });
 
     return () => {
       focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
+        element.removeEventListener('focus', handleFocus as EventListener);
+        element.removeEventListener('blur', handleBlur as EventListener);
       });
     };
   }, []);
@@ -171,9 +174,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-0bb0
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-16fc
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3f37
 };
 
 export default AccessibilityEnhancer;

@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-16fc
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3f37
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -34,7 +37,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       document.head.appendChild(script);
 
       return () => {
-        document.head.removeChild(script);
+        if (document.head.contains(script)) {
+          document.head.removeChild(script);
+        }
       };
     }
     return undefined;
@@ -127,6 +132,9 @@ export const defaultStructuredData = {
 
 export default SEOEnhancer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-0bb0
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-16fc
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3f37
