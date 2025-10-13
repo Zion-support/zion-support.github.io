@@ -2,6 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
+// Components
+import Header from './app/components/Header';
+import Footer from './app/components/Footer';
+import FuturisticBackground from './app/components/FuturisticBackground';
+
 // Page Components
 import HomePage from './app/pages/HomePage';
 import AboutPage from './app/pages/AboutPage';
@@ -15,6 +20,7 @@ import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
 import SolutionsPage from './app/pages/SolutionsPage';
+import AICodeAssistantPro from './app/pages/AICodeAssistantPro';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -48,6 +54,8 @@ function App() {
     <HelmetProvider>
       <Router>
         <div className="min-h-screen bg-gray-900">
+          <FuturisticBackground />
+          <Header />
           <main className="relative z-10" id="main-content" role="main">
             <Routes>
               {/* Main Pages */}
@@ -64,6 +72,9 @@ function App() {
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/solutions" element={<SolutionsPage />} />
               
+              {/* Micro SAAS Service Pages */}
+              <Route path="/ai-code-assistant-pro" element={<AICodeAssistantPro />} />
+              
               {/* Catch all route */}
               <Route path="*" element={
                 <div className="min-h-screen flex items-center justify-center">
@@ -78,6 +89,7 @@ function App() {
               } />
             </Routes>
           </main>
+          <Footer />
         </div>
       </Router>
     </HelmetProvider>

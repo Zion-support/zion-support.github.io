@@ -4,8 +4,8 @@
 
 /* Custom CSS Variables */
 :root {
-  --primary-color: #8b5cf6;
-  --secondary-color: #06b6d4;
+  --primary-color: #06b6d4;
+  --secondary-color: #8b5cf6;
   --accent-color: #f59e0b;
   --background-color: #0f172a;
   --surface-color: #1e293b;
@@ -15,6 +15,10 @@
   --success-color: #10b981;
   --warning-color: #f59e0b;
   --error-color: #ef4444;
+  --neon-cyan: #00ffff;
+  --neon-blue: #0080ff;
+  --neon-purple: #8000ff;
+  --neon-pink: #ff0080;
 }
 
 /* Base Styles */
@@ -29,11 +33,12 @@ html {
 body {
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #1e293b 75%, #0f172a 100%);
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 #root {
@@ -131,6 +136,157 @@ body {
   background: #7c3aed;
 }
 
+/* Futuristic Effects */
+.neon-glow {
+  box-shadow: 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-cyan), 0 0 60px var(--neon-cyan);
+}
+
+.neon-text {
+  text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan), 0 0 30px var(--neon-cyan);
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-blue), var(--neon-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from { box-shadow: 0 0 20px var(--neon-cyan); }
+  to { box-shadow: 0 0 40px var(--neon-cyan), 0 0 60px var(--neon-cyan); }
+}
+
+.cyber-border {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-blue)) border-box;
+  border-radius: 10px;
+}
+
+.cyber-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  padding: 2px;
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-blue));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+.holographic {
+  background: linear-gradient(45deg, 
+    rgba(0, 255, 255, 0.1), 
+    rgba(0, 128, 255, 0.1), 
+    rgba(128, 0, 255, 0.1), 
+    rgba(255, 0, 128, 0.1)
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.matrix-rain {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-rain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+  animation: matrixMove 3s linear infinite;
+}
+
+@keyframes matrixMove {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.cyber-button {
+  position: relative;
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-blue));
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cyber-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.cyber-button:hover::before {
+  left: 100%;
+}
+
+.cyber-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+  .neon-glow {
+    box-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+  }
+  
+  .floating-animation {
+    animation: float 4s ease-in-out infinite;
+  }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+  .holographic {
+    background: linear-gradient(45deg, 
+      rgba(0, 255, 255, 0.15), 
+      rgba(0, 128, 255, 0.15), 
+      rgba(128, 0, 255, 0.15), 
+      rgba(255, 0, 128, 0.15)
+    );
+  }
+}
+
 /* Print Styles */
 @media print {
   body {
@@ -140,5 +296,12 @@ body {
   
   .no-print {
     display: none;
+  }
+  
+  .neon-glow,
+  .pulse-glow,
+  .floating-animation {
+    animation: none;
+    box-shadow: none;
   }
 }
