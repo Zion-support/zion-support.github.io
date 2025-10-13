@@ -18,7 +18,6 @@ const PerformanceMonitor: React.FC = () => {
   });
 
   useEffect(() => {
-<<<<<<< HEAD
     // Only run in browser
     if (typeof window === 'undefined') return;
 
@@ -157,77 +156,3 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
-<<<<<<< HEAD
-=======
-export default PerformanceMonitor;
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
-=======
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-}
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-
-  useEffect(() => {
-    // Monitor Core Web Vitals
-=======
-    // Monitor performance metrics
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (entry.entryType === 'largest-contentful-paint') {
-          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-        } else if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-        } else if (entry.entryType === 'layout-shift') {
-          if (!(entry as any).hadRecentInput) {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
-          }
-        } else if (entry.entryType === 'paint') {
-          if (entry.name === 'first-contentful-paint') {
-            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-          }
-        }
-      }
-    });
-
-    // Observe different entry types
-    try {
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-    } catch (e) {
-      // Fallback for browsers that don't support all entry types
-      observer.observe({ entryTypes: ['paint'] });
-    }
-
-    // Monitor TTFB
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  // Log metrics in development
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Performance Metrics:', metrics);
-    }
-  }, [metrics]);
-
-  return null;
-};
-
-export default PerformanceMonitor;
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
