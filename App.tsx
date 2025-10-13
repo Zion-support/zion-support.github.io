@@ -1,34 +1,22 @@
-<<<<<<< HEAD
 import React, { Suspense, useEffect, useState, useCallback } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/accessibility-enhanced.css";
-=======
-import React, { useState, useEffect, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
->>>>>>> cursor/fix-errors-and-merge-to-main-004e
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
-<<<<<<< HEAD
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-004e
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-<<<<<<< HEAD
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-004e
 import Breadcrumb from "./app/components/Breadcrumb";
 
 // Lazy load pages for better performance
@@ -37,10 +25,7 @@ const ContactPage = React.lazy(() => import("./app/contact/page"));
 const ServicesPage = React.lazy(() => import("./app/services/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
 const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
-<<<<<<< HEAD
 const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-004e
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
@@ -74,7 +59,6 @@ const DatabaseManagementPage = React.lazy(() => import("./app/database-managemen
 const CustomSoftwarePage = React.lazy(() => import("./app/custom-software/page"));
 const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrastructure/page"));
 
-<<<<<<< HEAD
 // Micro SAAS Pages
 const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
 const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
@@ -111,7 +95,7 @@ const ZionAIDocumentAnalyzerPage = React.lazy(() => import("./app/zion-ai-docume
 const ZionCustomerSatisfactionMonitorPage = React.lazy(() => import("./app/zion-customer-satisfaction-monitor/page"));
 const ZionAIWorkflowAutomatorPage = React.lazy(() => import("./app/zion-ai-workflow-automator/page"));
 
-// 5G Solutions Pages (already declared above)
+// 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
 const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
 const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
@@ -120,17 +104,6 @@ const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network
 const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
 const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
 const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
-=======
-// 5G Services Pages
-const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
-const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
-const FiveGIoTSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
-const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
-const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
-const FiveGMobileApplicationsPage = React.lazy(() => import("./app/5g-mobile-applications/page"));
-const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
-const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
->>>>>>> cursor/fix-errors-and-merge-to-main-004e
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -144,21 +117,19 @@ function App() {
   }, []);
 
   useEffect(() => {
-<<<<<<< HEAD
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
       // Add any global initialization logic here
       console.log('Zion Tech Group App initialized');
-=======
-    // Performance optimization
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js');
->>>>>>> cursor/fix-errors-and-merge-to-main-004e
+      
+      // Performance optimization
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+      }
     }
   }, []);
 
   return (
-<<<<<<< HEAD
     <GlobalErrorBoundary>
       <EnhancedErrorBoundary>
         <HelmetProvider>
@@ -289,89 +260,6 @@ function App() {
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </GlobalErrorBoundary>
-=======
-    <HelmetProvider>
-      <ErrorBoundary>
-        <AnalyticsProvider>
-          <PerformanceMonitor>
-            <WebVitalsTracker />
-            <AccessibilityEnhancer />
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                {/* Skip to main content link */}
-                <a href="#main-content" className="skip-link">
-                  Skip to main content
-                </a>
-                
-                <FuturisticBackground>
-                  <Navigation onSidebarToggle={toggleSidebar} />
-                  <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                  <Breadcrumb />
-                  
-                  <main id="main-content" role="main" className="relative z-10">
-                    <Suspense fallback={<LoadingPage message="Loading Zion Tech Group..." />}>
-                      <Routes>
-                        {/* Main Pages */}
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/about" element={<AboutPage />} />
-                        <Route path="/contact" element={<ContactPage />} />
-                        <Route path="/services" element={<ServicesPage />} />
-                        <Route path="/blog" element={<BlogPage />} />
-                        <Route path="/privacy" element={<PrivacyPage />} />
-                        <Route path="/terms" element={<TermsPage />} />
-                        <Route path="/ai-services" element={<AIServicesPage />} />
-                        <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                        <Route path="/tutorials" element={<TutorialsPage />} />
-                        <Route path="/demo" element={<DemoPage />} />
-                        <Route path="/consultation" element={<ConsultationPage />} />
-                        <Route path="/support" element={<SupportPage />} />
-
-                        {/* AI Services Routes */}
-                        <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
-                        <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
-                        <Route path="/ai-customer-support" element={<AICustomerSupportPage />} />
-                        <Route path="/ai-cybersecurity" element={<AICybersecurityPage />} />
-                        <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
-                        <Route path="/ai-document-processing" element={<AIDocumentProcessingPage />} />
-                        <Route path="/ai-marketing-automation" element={<AIMarketingAutomationPage />} />
-                        <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
-                        <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
-                        <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
-
-                        {/* IT Services Routes */}
-                        <Route path="/cloud-migration" element={<CloudMigrationPage />} />
-                        <Route path="/devops" element={<DevOpsServicesPage />} />
-                        <Route path="/it-consulting" element={<ITConsultingPage />} />
-                        <Route path="/network-security" element={<NetworkSecurityPage />} />
-                        <Route path="/custom-software" element={<SoftwareDevelopmentPage />} />
-                        <Route path="/system-integration" element={<SystemIntegrationPage />} />
-                        <Route path="/web-development" element={<WebDevelopmentPage />} />
-
-                        {/* 5G Services Routes */}
-                        <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
-                        <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
-                        <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
-                        <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
-                        <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
-                        <Route path="/5g-mobile-applications" element={<FiveGMobileApplicationsPage />} />
-                        <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
-                        <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-
-                        {/* 404 Route */}
-                        <Route path="*" element={<NotFoundPage />} />
-                      </Routes>
-                    </Suspense>
-                  </main>
-                  
-                  <Footer />
-                </FuturisticBackground>
-              </div>
-            </Router>
-          </PerformanceMonitor>
-        </AnalyticsProvider>
-      </ErrorBoundary>
-    </HelmetProvider>
->>>>>>> cursor/fix-errors-and-merge-to-main-004e
   );
 }
 
