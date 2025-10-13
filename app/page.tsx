@@ -95,7 +95,8 @@ const HomePage = () => {
       price: "From $199/month",
       icon: <Brain className="w-6 h-6" />,
       link: "/zion-ai-neural-interface",
-      featured: true
+      featured: true,
+      accuracy: "98.5% Neural Accuracy"
     },
     {
       name: "AI Voice Cloning Studio",
@@ -103,7 +104,8 @@ const HomePage = () => {
       price: "From $29/month",
       icon: <Mic className="w-6 h-6" />,
       link: "/ai-voice-cloning-studio",
-      featured: true
+      featured: true,
+      accuracy: "95% Voice Accuracy"
     },
     {
       name: "AI Quantum Financial Oracle",
@@ -111,7 +113,8 @@ const HomePage = () => {
       price: "From $199/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/ai-quantum-financial-oracle",
-      featured: true
+      featured: true,
+      accuracy: "99.7% Prediction Accuracy"
     },
     {
       name: "AI Space Mission Optimizer",
@@ -119,7 +122,8 @@ const HomePage = () => {
       price: "From $499/month",
       icon: <Globe className="w-6 h-6" />,
       link: "/ai-space-mission-optimizer",
-      featured: true
+      featured: true,
+      accuracy: "99.9% Trajectory Accuracy"
     },
     {
       name: "Zion Analytics Pro",
@@ -127,7 +131,8 @@ const HomePage = () => {
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/zion-analytics-pro",
-      featured: false
+      featured: false,
+      accuracy: "500+ Integrations"
     },
     {
       name: "Zion Security Shield",
@@ -135,7 +140,35 @@ const HomePage = () => {
       price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield",
-      featured: false
+      featured: false,
+      accuracy: "99.9% Threat Detection"
+    },
+    {
+      name: "AI Content Generation Pro",
+      description: "Advanced AI content creation with 98% human-like quality and multi-language support",
+      price: "From $99/month",
+      icon: <Sparkles className="w-6 h-6" />,
+      link: "/ai-content-generation-pro",
+      featured: false,
+      accuracy: "98% Human Quality"
+    },
+    {
+      name: "AI Cybersecurity Suite Pro",
+      description: "Comprehensive cybersecurity solution with real-time threat detection and automated response",
+      price: "From $399/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/ai-cybersecurity-suite-pro",
+      featured: false,
+      accuracy: "99.8% Detection Rate"
+    },
+    {
+      name: "AI Customer Support Chatbot",
+      description: "Intelligent customer service automation with 97% resolution rate and 24/7 availability",
+      price: "From $149/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/ai-customer-support-chatbot",
+      featured: false,
+      accuracy: "97% Resolution Rate"
     }
   ];
 
@@ -181,10 +214,17 @@ const HomePage = () => {
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Animated Background Elements */}
+        {/* Enhanced Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+          
+          {/* Floating particles */}
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
+          <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-1000"></div>
+          <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-pink-400 rounded-full animate-ping delay-2000"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-ping delay-3000"></div>
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
@@ -286,14 +326,27 @@ const HomePage = () => {
       </section>
 
       {/* Micro SAAS Highlights */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Featured Micro SAAS Solutions
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
+              <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">60+ Revolutionary Solutions</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+                Featured Micro SAAS Solutions
+              </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready-to-use software solutions that can transform your business operations immediately.
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Revolutionary AI-powered software solutions that can transform your business operations immediately. 
+              From neural interfaces to quantum financial predictions, experience the future of technology.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -301,42 +354,58 @@ const HomePage = () => {
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden"
               >
+                {/* Animated border effect */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+                
                 {saas.featured && (
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                  <div className="absolute top-4 right-4 z-10">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
                       Featured
                     </span>
                   </div>
                 )}
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                    {saas.icon}
+                
+                <div className="relative z-10">
+                  <div className="flex items-center mb-4">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      {saas.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                        {saas.name}
+                      </h3>
+                      <p className="text-cyan-400 font-medium">{saas.price}</p>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                      {saas.name}
-                    </h3>
-                    <p className="text-cyan-400 font-medium">{saas.price}</p>
+                  
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                    {saas.description}
+                  </p>
+                  
+                  {/* Accuracy badge */}
+                  <div className="mb-4">
+                    <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-400 border border-green-500/30">
+                      {saas.accuracy}
+                    </span>
                   </div>
-                </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {saas.description}
-                </p>
-                <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  
+                  <div className="flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
               </Link>
             ))}
           </div>
-          <div className="text-center mt-12">
+          
+          <div className="text-center mt-16">
             <Link
               to="/micro-saas"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group"
+              className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-              View All Micro SAAS Solutions
+              View All 60+ Micro SAAS Solutions
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
