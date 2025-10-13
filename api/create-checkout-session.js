@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
@@ -15,10 +14,6 @@ const withErrorLogging = (handler) => {
 const handler = async (req, res) => {
   if (req.method !== 'POST') {
     res.statusCode = 405;
-=======
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
->>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;

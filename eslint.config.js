@@ -71,31 +71,14 @@ export default [
         }
       },
       globals: {
-<<<<<<< HEAD
+        window: 'readonly',
+        document: 'readonly',
         console: 'readonly',
         process: 'readonly',
         Buffer: 'readonly',
         __dirname: 'readonly',
         __filename: 'readonly',
         global: 'readonly',
-        window: 'readonly',
-        document: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-        require: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        fs: 'readonly'
-=======
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
         setTimeout: 'readonly',
         setInterval: 'readonly',
         clearTimeout: 'readonly',
@@ -109,8 +92,11 @@ export default [
         MediaQueryListEvent: 'readonly',
         PerformanceObserver: 'readonly',
         PerformanceNavigationTiming: 'readonly',
-        performance: 'readonly'
->>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
+        performance: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        fs: 'readonly'
       }
     },
     plugins: {
