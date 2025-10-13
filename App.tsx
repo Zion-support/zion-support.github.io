@@ -135,6 +135,11 @@ const MachineLearningPage = React.lazy(() => import("./app/machine-learning/page
 const QuantumComputingPage = React.lazy(() => import("./app/quantum-computing/page"));
 const RoboticsPage = React.lazy(() => import("./app/robotics/page"));
 
+// Additional missing routes
+const CloudServicesPage = React.lazy(() => import("./app/cloud-services/page"));
+const CybersecurityPage = React.lazy(() => import("./app/cybersecurity/page"));
+const CustomDevelopmentPage = React.lazy(() => import("./app/custom-development/page"));
+
 // Micro SAAS Pages
 const ZionAnalyticsProPage = React.lazy(
   () => import("./app/zion-analytics-pro/page"),
@@ -362,6 +367,11 @@ function App() {
                   <Route path="/machine-learning" element={<MachineLearningPage />} />
                   <Route path="/quantum-computing" element={<QuantumComputingPage />} />
                   <Route path="/robotics" element={<RoboticsPage />} />
+
+                  {/* Additional missing routes */}
+                  <Route path="/cloud-services" element={<CloudServicesPage />} />
+                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                  <Route path="/custom-development" element={<CustomDevelopmentPage />} />
 
                   {/* Micro SAAS Routes */}
                   <Route

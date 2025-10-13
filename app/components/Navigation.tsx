@@ -49,6 +49,15 @@ const Navigation = React.memo(() => {
     { name: 'Contact', path: '/contact' }
   ], [])
 
+  const itServices = useMemo(() => [
+    { name: 'Cloud Services', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
+    { name: 'Custom Development', path: '/custom-development', icon: <Code className="w-4 h-4" /> },
+    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: '5G Solutions', path: '/5g-solutions', icon: <Zap className="w-4 h-4" /> }
+  ], [])
+
   return (
     <nav 
       className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md"
@@ -77,22 +86,23 @@ const Navigation = React.memo(() => {
               </Link>
             ))}
             
-            {/* AI Services Dropdown */}
+
+            {/* IT Services Dropdown */}
             <div className="relative">
               <button
                 onClick={toggleServices}
                 className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
               >
-                <span>AI Services</span>
+                <span>IT Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
               {isServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
-                    <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">AI Services</h3>
+                    <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">IT Services</h3>
                   </div>
-                  {aiServices.map((service) => (
+                  {itServices.map((service) => (
                     <Link
                       key={service.name}
                       to={service.path}
@@ -186,19 +196,19 @@ const Navigation = React.memo(() => {
                 </Link>
               ))}
               
-              {/* Mobile AI Services */}
+              {/* Mobile IT Services */}
               <div>
                 <button
                   onClick={toggleServices}
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium"
                 >
-                  <span>AI Services</span>
+                  <span>IT Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 
                 {isServicesOpen && (
                   <div className="ml-4 mt-2 space-y-1">
-                    {aiServices.map((service) => (
+                    {itServices.map((service) => (
                       <Link
                         key={service.name}
                         to={service.path}
