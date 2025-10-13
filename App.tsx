@@ -73,7 +73,7 @@ const ZionContentStudioPage = React.lazy(() => import("./app/zion-content-studio
 const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
 const ZionAIInvoiceGeneratorPage = React.lazy(() => import("./app/zion-ai-invoice-generator/page"));
 const ZionAICustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
-const ZionAIVoiceAssistantProPage = React.lazy(() => import("./app/zion-ai-voice-assistant-pro/page"));
+// const ZionAIVoiceAssistantProPage = React.lazy(() => import("./app/zion-ai-voice-assistant-pro/page"));
 const ZionAICodeReviewerPage = React.lazy(() => import("./app/zion-ai-code-reviewer/page"));
 const ZionAIContractAnalyzerPage = React.lazy(() => import("./app/zion-ai-contract-analyzer/page"));
 const ZionAISupplyChainOptimizerPage = React.lazy(() => import("./app/zion-ai-supply-chain-optimizer/page"));
@@ -191,7 +191,7 @@ function App() {
                                   <Route path="/zion-ai-video-generator" element={<ZionAIVideoGeneratorPage />} />
                                   <Route path="/zion-ai-invoice-generator" element={<ZionAIInvoiceGeneratorPage />} />
                                   <Route path="/zion-ai-customer-insights" element={<ZionAICustomerInsightsPage />} />
-                                  <Route path="/zion-ai-voice-assistant-pro" element={<ZionAIVoiceAssistantProPage />} />
+                                  // <Route path="/zion-ai-voice-assistant-pro" element={<ZionAIVoiceAssistantProPage />} />
                                   <Route path="/zion-ai-code-reviewer" element={<ZionAICodeReviewerPage />} />
                                   <Route path="/zion-ai-contract-analyzer" element={<ZionAIContractAnalyzerPage />} />
                                   <Route path="/zion-ai-supply-chain-optimizer" element={<ZionAISupplyChainOptimizerPage />} />

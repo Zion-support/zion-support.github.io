@@ -1,344 +1,245 @@
-<<<<<<< HEAD
-import { ArrowRight } from "lucide-react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-
-export default function WebDevelopmentZionTechGroup() {
-  return (
-    <>
-      <Helmet>
-        <title>WebDevelopment - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">WebDevelopment</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional webdevelopment services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Code, Globe, Smartphone, Monitor, ArrowRight, CheckCircle, Star, Users, Award, Zap } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import ResponsiveGrid from '../components/ResponsiveGrid';
+import { 
+  Code, 
+  Globe, 
+  Smartphone, 
+  Monitor, 
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Zap,
+  Shield,
+  Layers
+} from "lucide-react";
 
 const WebDevelopmentPage: React.FC = () => {
-  const services = [
+  const webServices = [
     {
-      id: "responsive-web-design",
-      name: "Responsive Web Design",
-      description: "Mobile-first, responsive websites that look perfect on all devices",
-      features: [
-        "Mobile-first approach",
-        "Cross-browser compatibility",
-        "Fast loading times",
-        "SEO optimized",
-        "Modern UI/UX design"
-      ],
-      icon: <Smartphone className="w-8 h-8" />,
-      href: "/contact"
+      name: "Custom Web Applications",
+      description: "Build powerful, scalable web applications tailored to your business needs",
+      icon: Code,
+      features: ["React/Next.js", "Node.js backend", "Database integration", "API development"],
+      price: "From $5,000"
     },
     {
-      id: "e-commerce-solutions",
       name: "E-commerce Solutions",
-      description: "Complete online store development with payment integration and inventory management",
-      features: [
-        "Payment gateway integration",
-        "Inventory management",
-        "Order tracking system",
-        "Customer accounts",
-        "Analytics dashboard"
-      ],
-      icon: <Globe className="w-8 h-8" />,
-      href: "/contact"
+      description: "Create stunning online stores with advanced shopping cart and payment integration",
+      icon: Globe,
+      features: ["Payment processing", "Inventory management", "Order tracking", "Mobile responsive"],
+      price: "From $8,000"
     },
     {
-      id: "web-applications",
-      name: "Web Applications",
-      description: "Custom web applications built with modern frameworks and technologies",
-      features: [
-        "React/Vue.js development",
-        "Node.js backend",
-        "Database integration",
-        "API development",
-        "Cloud deployment"
-      ],
-      icon: <Code className="w-8 h-8" />,
-      href: "/contact"
+      name: "Progressive Web Apps",
+      description: "Build fast, reliable web apps that work offline and feel native",
+      icon: Smartphone,
+      features: ["Offline functionality", "Push notifications", "App-like experience", "Cross-platform"],
+      price: "From $6,000"
     },
     {
-      id: "cms-development",
       name: "CMS Development",
-      description: "Content management systems for easy website maintenance and updates",
-      features: [
-        "WordPress customization",
-        "Headless CMS solutions",
-        "Content editing interface",
-        "Multi-user management",
-        "Plugin development"
-      ],
-      icon: <Monitor className="w-8 h-8" />,
-      href: "/contact"
+      description: "Custom content management systems for easy website updates and maintenance",
+      icon: Layers,
+      features: ["Admin dashboard", "Content editing", "User management", "SEO optimization"],
+      price: "From $4,000"
     }
   ];
 
   const technologies = [
-    { name: "React", description: "Modern JavaScript library for building user interfaces" },
-    { name: "Vue.js", description: "Progressive JavaScript framework for building web applications" },
-    { name: "Node.js", description: "JavaScript runtime for server-side development" },
-    { name: "TypeScript", description: "Typed superset of JavaScript for better development experience" },
-    { name: "Next.js", description: "React framework for production-ready applications" },
-    { name: "Express.js", description: "Fast, unopinionated web framework for Node.js" },
-    { name: "MongoDB", description: "NoSQL database for modern applications" },
-    { name: "PostgreSQL", description: "Powerful, open source object-relational database" }
+    { name: "React", description: "Modern UI library for building interactive interfaces" },
+    { name: "Next.js", description: "Full-stack React framework for production-ready apps" },
+    { name: "Node.js", description: "Server-side JavaScript for scalable backend development" },
+    { name: "TypeScript", description: "Type-safe JavaScript for better code quality" },
+    { name: "MongoDB", description: "NoSQL database for flexible data storage" },
+    { name: "PostgreSQL", description: "Reliable relational database for complex applications" }
   ];
 
-  const stats = [
-    { label: "Projects Completed", value: "500+", icon: <Code className="w-6 h-6" /> },
-    { label: "Client Satisfaction", value: "98%", icon: <Star className="w-6 h-6" /> },
-    { label: "Average Load Time", value: "<2s", icon: <Zap className="w-6 h-6" /> },
-    { label: "Mobile Responsive", value: "100%", icon: <Smartphone className="w-6 h-6" /> }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechStart Inc",
-      role: "CEO",
-      content: "Zion Tech Group delivered an exceptional e-commerce platform that increased our online sales by 250%.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "Digital Agency",
-      role: "Creative Director",
-      content: "Their web application development expertise helped us create a custom solution that perfectly fits our needs.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "E-commerce Store",
-      role: "Owner",
-      content: "The responsive design and fast loading times have significantly improved our user experience and conversions.",
-      rating: 5,
-      avatar: "ER"
-    }
+  const benefits = [
+    "Responsive design for all devices",
+    "SEO optimized for better search rankings",
+    "Fast loading times and performance",
+    "Secure and scalable architecture",
+    "Modern UI/UX design",
+    "Ongoing maintenance and support"
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
-        title="Web Development Services - Zion Tech Group | Custom Websites & Applications"
-        description="Professional web development services including responsive design, e-commerce solutions, web applications, and CMS development. Transform your digital presence with our expert team."
-        keywords="web development, responsive design, e-commerce, web applications, CMS, React, Vue.js, Node.js, custom websites"
-      />
+    <>
+      <Helmet>
+        <title>Web Development | Zion Tech Group - Custom Web Solutions</title>
+        <meta 
+          name="description" 
+          content="Professional web development services including custom web applications, e-commerce solutions, and progressive web apps built with modern technologies." 
+        />
+        <meta 
+          name="keywords" 
+          content="web development, custom web apps, e-commerce, progressive web apps, React, Next.js, web design" 
+        />
+      </Helmet>
 
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="flex justify-center mb-8">
+              <div className="p-4 bg-cyan-500/10 rounded-2xl">
+                <Code className="w-16 h-16 text-cyan-400" />
+              </div>
+            </div>
+            
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Web Development
+              Web Development
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                Solutions
               </span>
             </h1>
+            
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your digital presence with custom web solutions that drive results. 
-              From responsive websites to complex web applications, we build it all.
+              Build powerful, scalable web applications with our expert development team. 
+              From custom web apps to e-commerce solutions, we create digital experiences that drive results.
             </p>
-            <FuturisticButton
-              href="#services"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-            >
-              Explore Our Services
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </FuturisticButton>
-          </div>
-        </ResponsiveContainer>
-      </section>
 
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <ResponsiveGrid className="grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <FuturisticCard key={index} className="text-center p-6">
-                <div className="text-blue-400 mb-4 flex justify-center">
-                  {stat.icon}
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-300">
-                  {stat.label}
-                </div>
-              </FuturisticCard>
-            ))}
-          </ResponsiveGrid>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Web Development Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive web development solutions tailored to your business needs
-            </p>
-          </div>
-
-          <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service) => (
-              <FuturisticCard key={service.id} className="p-6 hover:scale-105 transition-transform">
-                <div className="text-blue-400 mb-4">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {service.name}
-                </h3>
-                <p className="text-gray-300 mb-4">
-                  {service.description}
-                </p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <FuturisticButton
-                  href={service.href}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                >
-                  Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </FuturisticButton>
-              </FuturisticCard>
-            ))}
-          </ResponsiveGrid>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Technologies We Use
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We work with the latest technologies and frameworks to deliver cutting-edge solutions
-            </p>
-          </div>
-
-          <ResponsiveGrid className="grid-cols-2 md:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (
-              <FuturisticCard key={index} className="p-6 text-center hover:scale-105 transition-transform">
-                <h3 className="text-lg font-semibold text-white mb-2">
-                  {tech.name}
-                </h3>
-                <p className="text-sm text-gray-300">
-                  {tech.description}
-                </p>
-              </FuturisticCard>
-            ))}
-          </ResponsiveGrid>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Don't just take our word for it. See what our satisfied clients have to say about our web development services.
-            </p>
-          </div>
-
-          <ResponsiveGrid className="grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <FuturisticCard key={index} className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                    <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center mb-3">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                
-                <p className="text-gray-300 italic">
-                  "{testimonial.content}"
-                </p>
-              </FuturisticCard>
-            ))}
-          </ResponsiveGrid>
-        </ResponsiveContainer>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <FuturisticCard className="text-center p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Build Your Next Web Project?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss your web development needs and create something amazing together.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <FuturisticButton
-                href="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors duration-200"
               >
                 Start Your Project
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </FuturisticButton>
-              <FuturisticButton
-                href="/demo"
-                variant="outline"
-                className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white"
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-semibold rounded-lg transition-colors duration-200"
               >
-                View Our Portfolio
-              </FuturisticButton>
+                View Portfolio
+              </Link>
             </div>
-          </FuturisticCard>
-        </ResponsiveContainer>
-      </section>
-    </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Our Web Development Services
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Comprehensive web development solutions tailored to your business requirements
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {webServices.map((service, index) => (
+                <div
+                  key={service.name}
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="p-3 bg-cyan-500/10 rounded-lg group-hover:bg-cyan-500/20 transition-colors duration-200">
+                      <service.icon className="w-8 h-8 text-cyan-400" />
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="text-lg font-semibold text-white">{service.name}</h3>
+                      <p className="text-cyan-400 font-medium">{service.price}</p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Technologies Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Technologies We Use
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Modern, proven technologies for building robust and scalable web applications
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {technologies.map((tech, index) => (
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-cyan-500/20">
+                  <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
+                  <p className="text-gray-300">{tech.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Web Development?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver high-quality web solutions that drive business growth
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start">
+                  <Star className="w-6 h-6 text-yellow-400 mr-3 flex-shrink-0 mt-1" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Build Your Web Solution?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss your project and create a custom web solution that meets your business goals
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors duration-200"
+              >
+                Get Free Quote
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-semibold rounded-lg transition-colors duration-200"
+              >
+                View Our Work
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 
 export default WebDevelopmentPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
