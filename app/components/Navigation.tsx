@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Home, Shield, Zap, Brain, Globe, Network, Mic } from 'lucide-react';
+import { Menu, X, Home, Shield, Zap, Brain, Globe } from 'lucide-react';
 
 interface NavigationProps {
   onSidebarToggle?: () => void;

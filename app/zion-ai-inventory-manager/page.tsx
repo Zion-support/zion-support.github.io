@@ -1,8 +1,23 @@
-<div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Inventory Management?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses already using Zion AI Inventory Manager to optimize their supply chain. 
-            Start your free trial today and see the difference AI can make.
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function ZionAiInventoryManager() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Zion Ai Inventory Manager - Zion Tech Group</title>
+        <meta name="description" content="Advanced zion ai inventory manager solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Zion Ai Inventory Manager
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced zion ai inventory manager solutions by Zion Tech Group.
           </p>
+        </div>
+      </div>
+    </div>
+  );
+}

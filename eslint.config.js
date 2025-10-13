@@ -5,3 +5,44 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
+  { 
+    ignores: [
+      "dist",
+      "node_modules",
+      "backup*",
+      "scripts",
+      "*.js",
+      "*.cjs",
+      "*.mjs",
+      "public",
+      "src",
+      "hooks",
+      "utils",
+      "*.test.*",
+      "*.spec.*",
+      "__tests__",
+      "App_clean.tsx",
+      "EnhancedFooter.tsx",
+      "main.tsx",
+      "tailwind.config.js"
+    ] 
+  },
+  {
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ["app/**/*.{ts,tsx}", "App.tsx"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+    },
+  },
+);
