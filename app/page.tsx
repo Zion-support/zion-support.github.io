@@ -167,6 +167,26 @@ const HomePage = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive technology services designed to accelerate your digital transformation and drive business growth.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <FuturisticButton
+                  variant="primary"
+                  size="lg"
+                  className="px-8 py-4"
+                  onClick={() => window.location.href = '/contact'}
+                >
+                  Start Your Project
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </FuturisticButton>
+                <FuturisticButton
+                  variant="outline"
+                  size="lg"
+                  className="px-8 py-4"
+                  onClick={() => window.location.href = '/consultation'}
+                >
+                  <Mail className="w-5 h-5" />
+                  Schedule Consultation
+                </FuturisticButton>
+              </div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

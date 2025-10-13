@@ -2,11 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { Menu, X, Brain, Shield, Zap, Globe, ChevronDown, ChevronUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-interface NavigationProps {
-  onSidebarToggle?: () => void;
-}
-
-export default function Navigation({ onSidebarToggle }: NavigationProps) {
+export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();

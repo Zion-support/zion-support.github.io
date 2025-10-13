@@ -19,6 +19,15 @@ const CloudServicesPage: React.FC = () => {
     "Automated backups"
   ];
 
+  const benefits = [
+    "Reduce infrastructure costs by up to 50%",
+    "Improve scalability and flexibility",
+    "Enhanced security and compliance",
+    "24/7 monitoring and support",
+    "Faster time to market",
+    "Disaster recovery and backup"
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
