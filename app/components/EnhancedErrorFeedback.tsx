@@ -1,4 +1,3 @@
-import React, { useState, useCallback, useEffect } from 'react';
 import { AlertTriangle, X, RefreshCw, Send } from 'lucide-react';
 
 interface ErrorFeedbackProps {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Loader2, Zap, Brain, Shield, Globe } from 'lucide-react';
 
 interface LoadingSpinnerProps {

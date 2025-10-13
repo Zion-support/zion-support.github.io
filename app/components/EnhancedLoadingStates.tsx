@@ -1,4 +1,3 @@
-import React from 'react';
 import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react';
 
 interface LoadingPageProps {

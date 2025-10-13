@@ -1,4 +1,3 @@
-import React, { useEffect, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;

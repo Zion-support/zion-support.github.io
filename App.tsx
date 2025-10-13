@@ -31,8 +31,6 @@ const BlogPage = React.lazy(() => import("./app/blog/page"));
 const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
 const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
-const AIHealthcareDiagnosticsPage = React.lazy(() => import("./app/ai-healthcare-diagnostics/page"));
-const AISupplyChainOptimizerPage = React.lazy(() => import("./app/ai-supply-chain-optimizer/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
@@ -42,7 +40,6 @@ const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 
 // Additional service pages
-const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const ItServicesPage = React.lazy(() => import("./app/it-services/page"));
 const CloudServicesPage = React.lazy(() => import("./app/cloud-services/page"));
 const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
@@ -52,7 +49,6 @@ const CustomDevelopmentPage = React.lazy(() => import("./app/custom-software/pag
 const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
 const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
 const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
-const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
 const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
 const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
@@ -80,7 +76,6 @@ const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-auto
 // Additional AI Services
 const AiQuantumComputingPage = React.lazy(() => import("./app/ai-quantum-computing/page"));
 const AiBlockchainSolutionsPage = React.lazy(() => import("./app/ai-blockchain-solutions/page"));
-const AiPoweredDevOpsPage = React.lazy(() => import("./app/ai-powered-devops/page"));
 
 // Micro SAAS pages
 const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
@@ -122,13 +117,8 @@ function App() {
   }, []);
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <GlobalErrorBoundary>
       <EnhancedErrorBoundary>
-=======
-    <EnhancedErrorBoundary>
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
         <HelmetProvider>
           <AccessibilityEnhancer>
             <Router>
@@ -146,8 +136,6 @@ function App() {
                         <Route path="/services" element={<ServicesPage />} />
                         <Route path="/micro-saas" element={<MicroSaasPage />} />
                         <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                        <Route path="/ai-healthcare-diagnostics" element={<AIHealthcareDiagnosticsPage />} />
-                        <Route path="/ai-supply-chain-optimizer" element={<AISupplyChainOptimizerPage />} />
                         <Route path="/pricing" element={<PricingPage />} />
                         <Route path="/blog" element={<BlogPage />} />
                         <Route path="/ai-services" element={<AIServicesPage />} />
@@ -158,8 +146,8 @@ function App() {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
-<<<<<<< HEAD
-=======
+                        
+                        {/* Additional pages */}
                         <Route path="/case-studies" element={<CaseStudiesPage />} />
                         <Route path="/data-analytics" element={<DataAnalyticsPage />} />
                         <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
@@ -167,7 +155,6 @@ function App() {
                         <Route path="/careers" element={<CareersPage />} />
                         
                         {/* Service Pages */}
-                        <Route path="/micro-saas" element={<MicroSaasPage />} />
                         <Route path="/it-services" element={<ItServicesPage />} />
                         <Route path="/cloud-services" element={<CloudServicesPage />} />
                         <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
@@ -179,7 +166,6 @@ function App() {
                         <Route path="/database-management" element={<DatabaseManagementPage />} />
                         
                         {/* 5G Solutions */}
-                        <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
                         <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                         <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
                         <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
@@ -190,93 +176,45 @@ function App() {
                         {/* AI Services */}
                         <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
                         <Route path="/ai-automation" element={<AiAutomationPage />} />
+                        <Route path="/ai-business-intelligence" element={<AiBusinessIntelligencePage />} />
                         <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
-                        <Route path="/ai-customer-support" element={<AiCustomerServicePage />} />
-                        <Route path="/ai-marketing-automation" element={<AiMarketingAutomationPage />} />
-                        <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                        <Route path="/ai-customer-service" element={<AiCustomerServicePage />} />
+                        <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
+                        <Route path="/ai-email-automation" element={<AiEmailAutomationPage />} />
+                        <Route path="/ai-fraud-detection" element={<AiFraudDetectionPage />} />
+                        <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
+                        <Route path="/ai-marketing" element={<AiMarketingPage />} />
+                        <Route path="/ai-predictive-analytics" element={<AiPredictiveAnalyticsPage />} />
+                        <Route path="/ai-project-management" element={<AiProjectManagementPage />} />
+                        <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
+                        <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
+                        <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
                         
-                        {/* New AI Services */}
+                        {/* Additional AI Services */}
                         <Route path="/ai-quantum-computing" element={<AiQuantumComputingPage />} />
                         <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
-                        <Route path="/ai-powered-devops" element={<AiPoweredDevOpsPage />} />
                         
                         {/* Micro SAAS */}
                         <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
                         <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
                         <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
                         <Route path="/zion-content-studio" element={<ZionContentStudioPage />} />
-                        
-                        {/* New Micro SAAS Services */}
-                        <Route path="/zion-ai-video-generator" element={<ZionAiVideoGeneratorPage />} />
-                        <Route path="/zion-ai-customer-insights" element={<ZionAiCustomerInsightsPage />} />
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
                       </Routes>
                     </Suspense>
                   </main>
                   <Footer />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-                </FuturisticBackground>
-                <PerformanceMonitor />
-                <WebVitalsTracker />
-                <AccessibilityManager />
-                <EnhancedSEO 
-                  title="Zion Tech Group - Advanced AI and IT Solutions"
-                  description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
-                  keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
-                />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-                  <AdvancedPerformanceOptimizer 
-                    enableImageOptimization={true}
-                    enablePreloading={true}
-                    enableCaching={true}
-                    enableCompression={true}
-                  />
-                  <AdvancedPerformanceEnhancer 
-                    enableImageOptimization={true}
-                    enablePreloading={true}
-                    enableCaching={true}
-                    enableCompression={true}
-                  />
-                  <EnhancedAccessibilityManager
-                    enableKeyboardNavigation={true}
-                    enableScreenReader={true}
-                    enableHighContrast={true}
-                    enableFocusManagement={true}
-                    enableVoiceNavigation={true}
-                    enableReducedMotion={true}
-                  />
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
                   <EnhancedAccessibility>
                     <div></div>
                   </EnhancedAccessibility>
                 </FuturisticBackground>
-<<<<<<< HEAD
-=======
-                <AnalyticsProvider>
-                  <div>
-                    <PerformanceMonitor />
-                    <WebVitalsTracker />
-                    <EnhancedSEOOptimizer />
-                  </div>
-                </AnalyticsProvider>
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
->>>>>>> origin/main
-=======
-                </FuturisticBackground>
                 <PerformanceMonitor />
+                <WebVitalsTracker />
+                <CoreWebVitals />
                 <EnhancedSEO 
                   title="Zion Tech Group - Advanced AI and IT Solutions"
                   description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
                   keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
                 />
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
               </div>
               <AnalyticsProvider>
                 <div>
@@ -284,118 +222,11 @@ function App() {
                   <WebVitalsTracker />
                 </div>
               </AnalyticsProvider>
-=======
-              </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
             </Router>
           </AccessibilityEnhancer>
         </HelmetProvider>
       </EnhancedErrorBoundary>
-<<<<<<< HEAD
     </GlobalErrorBoundary>
-=======
-    <ErrorBoundary>
-      <GlobalErrorBoundary>
-        <EnhancedErrorBoundary>
-          <HelmetProvider>
-            <AccessibilityEnhancer>
-              <PerformanceOptimizer>
-                <SEOEnhancer>
-                  <Router>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                      <FuturisticBackground>
-                        <Navigation onSidebarToggle={toggleSidebar} />
-                        <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                        <Breadcrumb />
-                        <main id="main-content" role="main">
-                          <Suspense fallback={<LoadingPage message="Loading Zion Tech Group..." />}>
-                            <Routes>
-                              <Route path="/" element={<HomePage />} />
-                              <Route path="/about" element={<AboutPage />} />
-                              <Route path="/contact" element={<ContactPage />} />
-                              <Route path="/services" element={<ServicesPage />} />
-                              <Route path="/pricing" element={<PricingPage />} />
-                              <Route path="/blog" element={<BlogPage />} />
-                              <Route path="/ai-services" element={<AIServicesPage />} />
-                              <Route path="/tutorials" element={<TutorialsPage />} />
-                              <Route path="/demo" element={<DemoPage />} />
-                              <Route path="/support" element={<SupportPage />} />
-                              <Route path="/privacy" element={<PrivacyPage />} />
-                              <Route path="/terms" element={<TermsPage />} />
-                              <Route path="/cookies" element={<CookiesPage />} />
-                              <Route path="/sitemap" element={<SitemapPage />} />
-                              
-                              {/* AI Services Routes */}
-                              <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
-                              <Route path="/ai-automation" element={<AiAutomationPage />} />
-                              <Route path="/ai-business-intelligence" element={<AiBusinessIntelligencePage />} />
-                              <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
-                              <Route path="/ai-customer-service" element={<AiCustomerServicePage />} />
-                              <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
-                              <Route path="/ai-email-automation" element={<AiEmailAutomationPage />} />
-                              <Route path="/ai-fraud-detection" element={<AiFraudDetectionPage />} />
-                              <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
-                              <Route path="/ai-marketing" element={<AiMarketingPage />} />
-                              <Route path="/ai-predictive-analytics" element={<AiPredictiveAnalyticsPage />} />
-                              <Route path="/ai-project-management" element={<AiProjectManagementPage />} />
-                              <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
-                              <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
-                              <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
-                              
-                              {/* Micro SAAS Routes */}
-                              <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
-                              <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
-                              <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
-                              <Route path="/zion-content-studio" element={<ZionContentStudioPage />} />
-                              <Route path="/zion-data-sync" element={<ZionDataSyncPage />} />
-                              <Route path="/zion-lead-magnet" element={<ZionLeadMagnetPage />} />
-                              <Route path="/zion-project-master" element={<ZionProjectMasterPage />} />
-                              <Route path="/zion-email-automation" element={<ZionEmailAutomationPage />} />
-                              <Route path="/zion-social-scheduler" element={<ZionSocialSchedulerPage />} />
-                              <Route path="/zion-workflow-automation" element={<ZionWorkflowAutomationPage />} />
-                              <Route path="/zion-invoice-genius" element={<ZionInvoiceGeniusPage />} />
-                              <Route path="/zion-inventory-smart" element={<ZionInventorySmartPage />} />
-                              <Route path="/zion-compliance-manager" element={<ZionComplianceManagerPage />} />
-                              <Route path="/zion-performance-monitor" element={<ZionPerformanceMonitorPage />} />
-                              
-                              {/* 5G Solutions Routes */}
-                              <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                              <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
-                              <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
-                              <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-                              <Route path="/5g-mobile-applications" element={<FiveGMobileApplicationsPage />} />
-                              <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
-                              <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
-                              <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
-                              <Route path="/5g-iot-solutions" element={<FiveG5gIotSolutionsPage />} />
-                            </Routes>
-                          </Suspense>
-                        </main>
-                        <Footer />
-                        <EnhancedAccessibility>
-                          <div></div>
-                        </EnhancedAccessibility>
-                      </FuturisticBackground>
-                    </div>
-                    <AnalyticsProvider>
-                      <PerformanceMonitor />
-                      <WebVitalsTracker />
-                      <PerformanceEnhancer />
-                      <SEOOptimizer />
-                      <EnhancedSEO />
-                      <EnhancedSEOOptimizer />
-                    </AnalyticsProvider>
-                  </Router>
-                </SEOEnhancer>
-              </PerformanceOptimizer>
-            </AccessibilityEnhancer>
-          </HelmetProvider>
-        </EnhancedErrorBoundary>
-      </GlobalErrorBoundary>
-    </ErrorBoundary>
->>>>>>> cursor/analyze-improve-and-deploy-application-381c
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
   );
 }
 

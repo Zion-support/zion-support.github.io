@@ -1,4 +1,3 @@
-import React, { useEffect, useState, useCallback } from 'react';
 
 interface AccessibilityManagerProps {
   enableKeyboardNavigation?: boolean;

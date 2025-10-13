@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { MessageSquare } from "lucide-react";
 
 interface FormData {
@@ -53,10 +52,6 @@ const ContactForm: React.FC = () => {
 
     } catch (error) {
       console.error('Failed to submit contact form:', error);
-<<<<<<< HEAD
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
     } finally {
       setIsSubmitting(false);
     }

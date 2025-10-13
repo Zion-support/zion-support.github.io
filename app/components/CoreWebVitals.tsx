@@ -1,4 +1,3 @@
-import React, { useEffect, useCallback } from 'react';
 
 interface WebVitalsData {
   name: string;

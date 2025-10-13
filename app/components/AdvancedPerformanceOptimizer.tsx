@@ -1,4 +1,3 @@
-import React, { useEffect, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 
 interface PerformanceOptimizerProps {

@@ -1,4 +1,3 @@
-import React from "react";
 import { TrendingUp, Users, Award, Zap } from "lucide-react";
 
 interface StatItem {
