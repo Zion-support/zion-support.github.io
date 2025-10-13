@@ -1,36 +1,26 @@
-// performanceUtils utility functions
+// PerformanceUtils utility functions
 
-export interface performanceUtilsConfig {
-  enabled: boolean;
-}
+export class PerformanceUtils {
+  private config: any;
 
-export class performanceUtils {
-  private config: performanceUtilsConfig;
-
-  constructor(config: Partial<performanceUtilsConfig> = {}) {
+  constructor(config: any = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// performanceUtils utility
-export const performanceUtils = {
-  // Utility implementation,
-    init: () => {
-    console.log('performanceUtils initialized');
   }
 
   init(): void {
     if (this.config.enabled) {
-      console.log('performanceUtils initialized');
+      console.log('PerformanceUtils initialized');
     }
+  }
+
+  // Add your utility methods here
+  public process(data: any): any {
+    return data;
   }
 }
 
-export const performanceutils = new performanceUtils();
-export default performanceutils;
-// performanceUtils
-export const performanceUtils = () => {
-  // Utility function implementation
-  return null;
-};
+export const performanceutilsInstance = new PerformanceUtils();
+export default performanceutilsInstance;

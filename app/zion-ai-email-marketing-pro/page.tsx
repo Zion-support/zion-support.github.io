@@ -21,7 +21,8 @@ import {
   MessageCircle,
   ThumbsUp,
   Eye,
-  MousePointer
+  MousePointer,
+  Shield
 } from 'lucide-react';
 
 const ZionAIEmailMarketingProPage: React.FC = () => {
