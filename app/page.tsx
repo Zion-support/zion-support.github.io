@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Cpu } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -139,6 +139,30 @@ const HomePage = () => {
       price: "From $99/month",
       icon: <Calendar className="w-6 h-6" />,
       link: "/zion-ai-project-manager-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Quantum Optimizer",
+      description: "Revolutionary quantum computing optimization platform that solves complex business problems 1000x faster",
+      price: "From $299/month",
+      icon: <Cpu className="w-6 h-6" />,
+      link: "/zion-ai-quantum-optimizer",
+      featured: true
+    },
+    {
+      name: "Zion AI Blockchain Analytics Pro",
+      description: "Advanced blockchain analytics platform with AI-powered risk assessment and real-time monitoring",
+      price: "From $199/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/zion-ai-blockchain-analytics-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Cybersecurity Suite Pro",
+      description: "Comprehensive AI-powered cybersecurity platform with advanced threat detection and zero-trust architecture",
+      price: "From $299/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/zion-ai-cybersecurity-suite-pro",
       featured: true
     }
   ];

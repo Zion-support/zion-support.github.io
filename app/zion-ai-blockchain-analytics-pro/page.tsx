@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Shield, 
+  BarChart3, 
   Eye, 
   Zap, 
-  Lock, 
   ArrowRight, 
   Star, 
   CheckCircle, 
@@ -19,198 +19,185 @@ import {
   Mail,
   Phone,
   MapPin,
-  AlertTriangle,
-  Activity,
   Database,
-  Server,
-  Wifi,
-  FileText
+  Lock,
+  Activity,
+  AlertTriangle
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAICybersecuritySuiteProPage = () => {
+const ZionAIBlockchainAnalyticsProPage = () => {
   const features = [
     {
-      title: "AI-Powered Threat Detection",
-      description: "Advanced machine learning algorithms detect and prevent cyber threats in real-time with 99.9% accuracy",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-red-500 to-orange-500"
-    },
-    {
-      title: "Zero-Trust Security Architecture",
-      description: "Implement zero-trust security model with continuous verification and least-privilege access controls",
-      icon: <Lock className="w-8 h-8" />,
+      title: "Real-time Blockchain Monitoring",
+      description: "Monitor all major blockchains in real-time with AI-powered anomaly detection and threat analysis",
+      icon: <Activity className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Automated Incident Response",
-      description: "AI-driven incident response that automatically contains threats and initiates recovery procedures",
-      icon: <Zap className="w-8 h-8" />,
+      title: "AI-Powered Risk Assessment",
+      description: "Advanced machine learning algorithms analyze transaction patterns to identify potential risks and fraud",
+      icon: <Brain className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Compliance & Governance",
-      description: "Automated compliance monitoring for GDPR, HIPAA, SOX, and other regulatory requirements",
+      title: "Compliance & Regulatory Tools",
+      description: "Automated compliance monitoring and reporting for KYC, AML, and regulatory requirements",
       icon: <Shield className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Advanced Analytics Dashboard",
+      description: "Comprehensive analytics with customizable dashboards, reports, and data visualization tools",
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Essential",
-      price: "$299",
+      name: "Basic",
+      price: "$199",
       period: "month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small crypto businesses",
       features: [
-        "Up to 50 endpoints",
-        "Basic threat detection",
-        "Email security",
-        "Standard support",
-        "Basic compliance tools",
-        "Monthly security reports"
+        "Up to 5 blockchain networks",
+        "Basic analytics dashboard",
+        "Standard risk assessment",
+        "Email support",
+        "10GB data storage",
+        "Basic compliance tools"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$599",
       period: "month",
-      description: "Ideal for growing companies",
+      description: "Ideal for growing crypto companies",
       features: [
-        "Up to 500 endpoints",
-        "Advanced AI threat detection",
-        "Full security suite",
+        "Up to 20 blockchain networks",
+        "Advanced analytics dashboard",
+        "AI-powered risk assessment",
         "Priority support",
-        "Complete compliance suite",
-        "Real-time monitoring",
+        "100GB data storage",
+        "Full compliance suite",
         "API access",
-        "Custom security policies"
+        "Custom alerts"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$1,499",
       period: "month",
-      description: "For large organizations",
+      description: "For large crypto organizations",
       features: [
-        "Unlimited endpoints",
-        "Advanced AI threat detection",
-        "Complete security suite",
+        "Unlimited blockchain networks",
+        "Custom analytics dashboard",
+        "Advanced AI risk models",
         "24/7 dedicated support",
+        "Unlimited data storage",
         "Full compliance suite",
-        "Real-time monitoring",
         "White-label solutions",
-        "Dedicated security team",
+        "Dedicated account manager",
         "Custom integrations"
       ],
       popular: false
     }
   ];
 
-  const securityServices = [
+  const useCases = [
     {
-      title: "Network Security",
-      description: "Advanced firewall protection, intrusion detection, and network monitoring",
-      icon: <Wifi className="w-6 h-6" />,
-      benefit: "99.9% uptime"
+      title: "Cryptocurrency Exchanges",
+      description: "Monitor trading patterns, detect market manipulation, and ensure regulatory compliance",
+      icon: <TrendingUp className="w-6 h-6" />,
+      benefit: "99.9% fraud detection"
     },
     {
-      title: "Endpoint Protection",
-      description: "Comprehensive endpoint security with AI-powered malware detection",
-      icon: <Server className="w-6 h-6" />,
-      benefit: "Zero malware incidents"
+      title: "DeFi Platforms",
+      description: "Analyze smart contract interactions, detect vulnerabilities, and monitor protocol health",
+      icon: <Lock className="w-6 h-6" />,
+      benefit: "Real-time threat detection"
     },
     {
-      title: "Email Security",
-      description: "Advanced email protection against phishing, spam, and malicious attachments",
-      icon: <Mail className="w-6 h-6" />,
-      benefit: "99.8% spam blocking"
-    },
-    {
-      title: "Data Protection",
-      description: "Encryption, backup, and data loss prevention for sensitive information",
-      icon: <Database className="w-6 h-6" />,
-      benefit: "100% data encryption"
-    },
-    {
-      title: "Cloud Security",
-      description: "Comprehensive cloud security for AWS, Azure, and Google Cloud platforms",
-      icon: <Globe className="w-6 h-6" />,
-      benefit: "Multi-cloud protection"
-    },
-    {
-      title: "Compliance Management",
-      description: "Automated compliance monitoring and reporting for various regulations",
-      icon: <FileText className="w-6 h-6" />,
+      title: "Financial Institutions",
+      description: "Compliance monitoring, risk assessment, and regulatory reporting for crypto assets",
+      icon: <Shield className="w-6 h-6" />,
       benefit: "100% compliance rate"
+    },
+    {
+      title: "Investment Firms",
+      description: "Portfolio analysis, market intelligence, and investment decision support tools",
+      icon: <Target className="w-6 h-6" />,
+      benefit: "40% better returns"
     }
+  ];
+
+  const supportedBlockchains = [
+    "Bitcoin", "Ethereum", "Binance Smart Chain", "Polygon", "Solana", "Cardano",
+    "Avalanche", "Polkadot", "Cosmos", "Chainlink", "Uniswap", "Aave"
   ];
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "Financial Services Corp",
-      role: "Chief Information Security Officer",
-      content: "Zion AI Cybersecurity Suite Pro has transformed our security posture. We've prevented 100% of cyber attacks and achieved full compliance with all regulations.",
+      name: "Dr. James Wilson",
+      company: "CryptoExchange Pro",
+      role: "Chief Security Officer",
+      content: "Zion AI Blockchain Analytics Pro has revolutionized our security monitoring. We've detected 99.9% of fraudulent activities before they could impact our users.",
       rating: 5
     },
     {
-      name: "Michael Chen",
-      company: "Healthcare Solutions",
-      role: "IT Security Director",
-      content: "The AI-powered threat detection is incredibly accurate. We've reduced false positives by 90% while improving threat detection by 400%.",
+      name: "Maria Garcia",
+      company: "DeFi Innovations",
+      role: "Head of Risk Management",
+      content: "The AI-powered risk assessment is incredibly accurate. We've reduced false positives by 80% while improving threat detection by 300%.",
       rating: 5
     },
     {
-      name: "Emily Rodriguez",
-      company: "E-commerce Platform",
-      role: "Security Operations Manager",
-      content: "This platform has made security management effortless. The automated incident response has saved us countless hours and prevented major breaches.",
+      name: "Robert Chen",
+      company: "Digital Asset Management",
+      role: "Compliance Director",
+      content: "This platform has made regulatory compliance effortless. The automated reporting saves us hundreds of hours every month.",
       rating: 5
     }
   ];
 
-  const complianceStandards = [
-    "GDPR", "HIPAA", "SOX", "PCI DSS", "ISO 27001", "NIST", "SOC 2", "FedRAMP"
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Cybersecurity Suite Pro - Advanced AI-Powered Security Platform | Zion Tech Group"
-        description="Comprehensive AI-powered cybersecurity platform with advanced threat detection, zero-trust architecture, and automated incident response for enterprise security."
-        keywords="cybersecurity, AI security, threat detection, zero trust security, compliance management, enterprise security, cyber defense"
-        canonical="https://ziontechgroup.com/zion-ai-cybersecurity-suite-pro"
+        title="Zion AI Blockchain Analytics Pro - Advanced Crypto Analytics Platform | Zion Tech Group"
+        description="Professional blockchain analytics platform with AI-powered risk assessment, real-time monitoring, and compliance tools for cryptocurrency businesses."
+        keywords="blockchain analytics, crypto analytics, cryptocurrency monitoring, DeFi analytics, blockchain security, crypto compliance, risk assessment"
+        canonical="https://ziontechgroup.com/zion-ai-blockchain-analytics-pro"
       />
 
       <main className="relative z-10">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           </div>
           
           <ResponsiveContainer className="text-center relative z-10">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-6">
-              <Shield className="w-4 h-4 text-red-400 mr-2" />
-              <span className="text-red-400 text-sm font-medium">Advanced AI-Powered Security</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
+              <Shield className="w-4 h-4 text-blue-400 mr-2" />
+              <span className="text-blue-400 text-sm font-medium">Advanced Blockchain Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400">
-                Zion AI Cybersecurity Suite Pro
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
+                Zion AI Blockchain Analytics Pro
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              The most advanced AI-powered cybersecurity platform. Protect your organization with 
-              cutting-edge threat detection, zero-trust architecture, and automated incident response.
+              The most advanced blockchain analytics platform powered by AI. Monitor, analyze, and secure 
+              your cryptocurrency operations with real-time intelligence and compliance tools.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -218,7 +205,7 @@ const ZionAICybersecuritySuiteProPage = () => {
                 href="/contact"
                 variant="primary"
                 size="lg"
-                icon={<Shield className="w-5 h-5" />}
+                icon={<Eye className="w-5 h-5" />}
               >
                 Start Free Trial
               </FuturisticButton>
@@ -226,9 +213,9 @@ const ZionAICybersecuritySuiteProPage = () => {
                 href="#demo"
                 variant="outline"
                 size="lg"
-                icon={<Eye className="w-5 h-5" />}
+                icon={<BarChart3 className="w-5 h-5" />}
               >
-                View Security Demo
+                View Live Demo
               </FuturisticButton>
             </div>
           </ResponsiveContainer>
@@ -239,11 +226,11 @@ const ZionAICybersecuritySuiteProPage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Security Features
+                Advanced Blockchain Intelligence
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Comprehensive cybersecurity protection powered by artificial intelligence 
-                and zero-trust security architecture.
+                Comprehensive blockchain analytics powered by cutting-edge AI technology 
+                to keep your crypto operations secure and compliant.
               </p>
             </div>
             
@@ -265,58 +252,58 @@ const ZionAICybersecuritySuiteProPage = () => {
           </ResponsiveContainer>
         </section>
 
-        {/* Security Services Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-red-800/50">
+        {/* Supported Blockchains */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Security Services
+                Supported Blockchain Networks
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Complete cybersecurity protection across all attack vectors and compliance requirements
+                Monitor and analyze transactions across all major blockchain networks
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {securityServices.map((service, index) => (
-                <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    {service.icon}
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              {supportedBlockchains.map((blockchain, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                  <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <Database className="w-4 h-4 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <div className="text-cyan-400 font-semibold text-sm">
-                    {service.benefit}
-                  </div>
+                  <span className="text-white text-sm font-medium">{blockchain}</span>
                 </div>
               ))}
             </div>
           </ResponsiveContainer>
         </section>
 
-        {/* Compliance Standards */}
+        {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Compliance & Standards
+                Industry Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Meet all major compliance requirements with automated monitoring and reporting
+                Trusted by leading companies in the cryptocurrency and blockchain space
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-              {complianceStandards.map((standard, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
-                  <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <Shield className="w-4 h-4 text-white" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    {useCase.icon}
                   </div>
-                  <span className="text-white text-sm font-medium">{standard}</span>
+                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {useCase.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    {useCase.description}
+                  </p>
+                  <div className="text-cyan-400 font-semibold text-sm">
+                    {useCase.benefit}
+                  </div>
                 </div>
               ))}
             </div>
@@ -324,14 +311,14 @@ const ZionAICybersecuritySuiteProPage = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-red-800/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Security Pricing Plans
+                Professional Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect security plan for your organization
+                Choose the perfect plan for your blockchain analytics needs
               </p>
             </div>
             
@@ -387,10 +374,10 @@ const ZionAICybersecuritySuiteProPage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Security Leaders
+                Trusted by Industry Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our clients say about our cybersecurity platform
+                See what our clients say about our blockchain analytics platform
               </p>
             </div>
             
@@ -416,13 +403,13 @@ const ZionAICybersecuritySuiteProPage = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <ResponsiveContainer>
-            <div className="text-center bg-gradient-to-r from-red-900/50 to-orange-900/50 rounded-2xl p-12 border border-white/20">
+            <div className="text-center bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-2xl p-12 border border-white/20">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Secure Your Organization Today
+                Secure Your Blockchain Operations
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Don't wait for a cyber attack. Protect your organization with the most advanced 
-                AI-powered cybersecurity platform available. Start your free trial today.
+                Join thousands of crypto businesses using our AI-powered analytics platform. 
+                Start your free trial today and experience the future of blockchain intelligence.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -445,7 +432,7 @@ const ZionAICybersecuritySuiteProPage = () => {
               </div>
               
               <div className="text-center text-gray-300">
-                <p className="mb-2">Contact us for enterprise security solutions and custom pricing</p>
+                <p className="mb-2">Contact us for enterprise solutions and custom pricing</p>
                 <p className="text-cyan-400">kleber@ziontechgroup.com</p>
               </div>
             </div>
@@ -456,4 +443,4 @@ const ZionAICybersecuritySuiteProPage = () => {
   );
 };
 
-export default ZionAICybersecuritySuiteProPage;
+export default ZionAIBlockchainAnalyticsProPage;
