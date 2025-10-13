@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect } from 'react';
 
-=======
-import { createContext } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
   trackPageView: (pageName: string) => void;
 }
-<<<<<<< HEAD
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
@@ -37,6 +32,3 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     </AnalyticsContext.Provider>
   );
 };
-=======
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea

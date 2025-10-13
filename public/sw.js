@@ -1,127 +1,19 @@
-<<<<<<< HEAD
-export default function Component() {
-return (;
-<div>;
-<h1>Component<//;
-<p>This component is under construction.<//;
-<//;
-);
-}
-self.addEventListener('install', (event) => {'
-  console.log('Service Worker installing...');'
-  event.waitUntil(
-  // TODO: Add parameters
-)
-  );
-});
-// Fetch event
-self.addEventListener('fetch', (event) => {'
-  event.respondWith(
-  // TODO: Add parameters
-)
-    caches.match(event.request)
-      .then((response) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        // Return cached version or fetch from network
-        return response || fetch(event.request)
-      })
-  )
-})
-// Activate event
-self.addEventListener('activate', (event) => {'
-  event.waitUntil(
-  // TODO: Add parameters
-)
-    caches.keys().then((cacheNames) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      return Promise.all(
-  // TODO: Add parameters
-)
-        cacheNames.map((cacheName) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          if (cacheName !== CACHE_NAME) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-            console.log('Deleting old cache:', cacheName)'
-            return caches.delete(cacheName)
-          }
-        })
-      )
-    })
-  );
-});
-// Background sync for offline form submissions
-self.addEventListener('sync', (event) => {'
-  if (event.tag === 'contact-form') {'
-    event.waitUntil(syncContactForm());
-  }
-});
-async function syncContactForm() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // Handle offline form submissions
-  console.log('Syncing contact form data');'
-=======
+// Service Worker for Zion Tech Group Website
 const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'static-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
 
-const STATIC_ASSETS = [
-// Files to cache for offline functionality
 const STATIC_FILES = [
   '/',
   '/about',
   '/services',
-  '/manifest.json',
-  '/favicon.svg'
-  '/robots.txt'
   '/contact',
-  '/ai-services',
-  '/it-services',
-  '/micro-saas',
   '/manifest.json',
   '/favicon.ico'
 ];
 
 // Install event - cache static files
 self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(STATIC_CACHE)
-      .then((cache) => {
-        return cache.addAll(STATIC_ASSETS);
-      })
-      .then(() => {
-        return self.skipWaiting();
-      })
-      .catch((error) => {
-        console.error('Service worker install failed:', error);
-      })
-  );
-});
-
-// Activate event - clean up old caches
-self.addEventListener('install', (event) => {
-  console.log('Service Worker installing...');
-  event.waitUntil(
-    caches.open(STATIC_CACHE)
-      .then((cache) => {
-        console.log('Caching static assets');
-        return cache.addAll(STATIC_ASSETS);
-      })
-      .then(() => self.skipWaiting())
   console.log('Service Worker: Installing...');
   
   event.waitUntil(
@@ -140,14 +32,8 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Activate event
+// Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker activating...');
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
   console.log('Service Worker: Activating...');
   
   event.waitUntil(
@@ -224,7 +110,6 @@ self.addEventListener('fetch', (event) => {
 self.addEventListener('sync', (event) => {
   if (event.tag === 'contact-form') {
     event.waitUntil(
-      // Handle form submission sync
       handleFormSync()
     );
   }
@@ -236,7 +121,6 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
 });
-
 
 async function handleFormSync() {
   try {
@@ -274,5 +158,4 @@ async function getPendingForms() {
 
 async function removePendingForm(id) {
   // Implementation would go here
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
 }
