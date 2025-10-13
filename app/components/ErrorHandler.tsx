@@ -61,20 +61,11 @@ class ErrorHandler extends Component<Props, State> {
       };
       console.log('Error logged:', errorData);
       // Send to your error reporting service here
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-      console.log('Error data prepared for reporting:', errorData);
-    } catch (reportingError) {
-      console.error('Failed to prepare error data for reporting:', reportingError);
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
 =======
       console.log('Error data prepared for reporting:', errorData);
     } catch (reportingError) {
       console.error('Failed to prepare error data for reporting:', reportingError);
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
     }
   }
 

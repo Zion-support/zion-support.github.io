@@ -21,6 +21,11 @@ const PerformanceMonitor: React.FC = () => {
     return 'text-red-600';
   }, []);
 
+  const formatMetric = useCallback((value: number | undefined, suffix = 'ms') => {
+    if (value === undefined || value === null) return 'N/A';
+    return `${value.toFixed(0)}${suffix}`;
+  }, []);
+
   const updateMetrics = useCallback(() => {
     const newMetrics: PerformanceMetrics = {};
 
@@ -36,145 +41,84 @@ const PerformanceMonitor: React.FC = () => {
       // For now, we'll use placeholder values
     }
 
-      {isVisible && (
-        <div className="absolute bottom-12 left-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-80">
-          <h3 className="text-lg font-semibold mb-4 text-gray-800">Performance Metrics</h3>
-          
-          <div className="space-y-3 text-sm">
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">Load Time:</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <span className={`font-mono ${metrics.loadTime ? getMetricColor(metrics.loadTime, { good: 1000, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
-=======
-              <span className={`font-mono ${metrics.loadTime ? getMetricColor(metrics.loadTime, { good: 1000, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">FCP:</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <span className={`font-mono ${metrics.firstContentfulPaint ? getMetricColor(metrics.firstContentfulPaint, { good: 1800, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.firstContentfulPaint ? `${metrics.firstContentfulPaint.toFixed(0)}ms` : 'N/A'}
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
-=======
-              <span className={`font-mono ${metrics.firstContentfulPaint ? getMetricColor(metrics.firstContentfulPaint, { good: 1800, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.firstContentfulPaint ? `${metrics.firstContentfulPaint.toFixed(0)}ms` : 'N/A'}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">LCP:</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <span className={`font-mono ${metrics.largestContentfulPaint ? getMetricColor(metrics.largestContentfulPaint, { good: 2500, poor: 4000 }) : 'text-gray-400'}`}>
-                {metrics.largestContentfulPaint ? `${metrics.largestContentfulPaint.toFixed(0)}ms` : 'N/A'}
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
-=======
-              <span className={`font-mono ${metrics.largestContentfulPaint ? getMetricColor(metrics.largestContentfulPaint, { good: 2500, poor: 4000 }) : 'text-gray-400'}`}>
-                {metrics.largestContentfulPaint ? `${metrics.largestContentfulPaint.toFixed(0)}ms` : 'N/A'}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <span className="text-gray-600">FID:</span>
-              <span className={`font-mono ${metrics.firstInputDelay ? getMetricColor(metrics.firstInputDelay, { good: 100, poor: 300 }) : 'text-gray-400'}`}>
-                {metrics.firstInputDelay ? `${metrics.firstInputDelay.toFixed(0)}ms` : 'N/A'}
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
-=======
-              <span className="text-gray-600">INP:</span>
-              <span className={`font-mono ${metrics.interactionToNextPaint ? getMetricColor(metrics.interactionToNextPaint, { good: 200, poor: 500 }) : 'text-gray-400'}`}>
-                {metrics.interactionToNextPaint ? `${metrics.interactionToNextPaint.toFixed(0)}ms` : 'N/A'}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">CLS:</span>
-<<<<<<< HEAD
-=======
-              <span className={`font-mono ${metrics.cumulativeLayoutShift !== undefined ? getMetricColor(metrics.cumulativeLayoutShift, { good: 0.1, poor: 0.25 }) : 'text-gray-400'}`}>
-                {metrics.cumulativeLayoutShift !== undefined ? metrics.cumulativeLayoutShift.toFixed(3) : 'N/A'}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">TTFB:</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <span className={`font-mono ${metrics.timeToFirstByte ? getMetricColor(metrics.timeToFirstByte, { good: 800, poor: 1800 }) : 'text-gray-400'}`}>
-                {metrics.timeToFirstByte ? `${metrics.timeToFirstByte.toFixed(0)}ms` : 'N/A'}
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
-=======
-              <span className={`font-mono ${metrics.timeToFirstByte ? getMetricColor(metrics.timeToFirstByte, { good: 800, poor: 1800 }) : 'text-gray-400'}`}>
-                {metrics.timeToFirstByte ? `${metrics.timeToFirstByte.toFixed(0)}ms` : 'N/A'}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
-              </span>
-            </div>
-            </div>
-          </div>
+    setMetrics(newMetrics);
+  }, []);
+
+  useEffect(() => {
+    updateMetrics();
+    
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        e.preventDefault();
+        setIsVisible(prev => !prev);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [updateMetrics]);
+
+  if (!isVisible) return null;
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800/95 backdrop-blur-xl border border-cyan-500/20 rounded-lg shadow-2xl p-4 min-w-80 z-50">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-lg font-semibold text-cyan-400">Performance Metrics</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-white transition-colors"
+        >
+          ×
+        </button>
+      </div>
+      
       <div className="space-y-2">
         <div className="flex justify-between">
           <span className="text-gray-300">Load Time:</span>
-          <span className={getMetricColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>
+          <span className={getMetricColor(metrics.loadTime || 0, { good: 2000, poor: 4000 })}>
             {formatMetric(metrics.loadTime)}
           </span>
         </div>
         
         <div className="flex justify-between">
           <span className="text-gray-300">FCP:</span>
-          <span className={getMetricColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}>
+          <span className={getMetricColor(metrics.firstContentfulPaint || 0, { good: 1800, poor: 3000 })}>
             {formatMetric(metrics.firstContentfulPaint)}
           </span>
         </div>
         
         <div className="flex justify-between">
           <span className="text-gray-300">LCP:</span>
-          <span className={getMetricColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}>
+          <span className={getMetricColor(metrics.largestContentfulPaint || 0, { good: 2500, poor: 4000 })}>
             {formatMetric(metrics.largestContentfulPaint)}
           </span>
         </div>
         
         <div className="flex justify-between">
-          <span className="text-gray-300">FID:</span>
-          <span className={getMetricColor(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}>
-            {formatMetric(metrics.firstInputDelay)}
+          <span className="text-gray-300">INP:</span>
+          <span className={getMetricColor(metrics.interactionToNextPaint || 0, { good: 200, poor: 500 })}>
+            {formatMetric(metrics.interactionToNextPaint)}
           </span>
         </div>
         
         <div className="flex justify-between">
           <span className="text-gray-300">CLS:</span>
-          <span className={getMetricColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}>
+          <span className={getMetricColor(metrics.cumulativeLayoutShift || 0, { good: 0.1, poor: 0.25 })}>
             {formatMetric(metrics.cumulativeLayoutShift, '')}
           </span>
         </div>
         
         <div className="flex justify-between">
           <span className="text-gray-300">TTFB:</span>
-          <span className={getMetricColor(metrics.timeToFirstByte, { good: 200, needsImprovement: 600 })}>
+          <span className={getMetricColor(metrics.timeToFirstByte || 0, { good: 800, poor: 1800 })}>
             {formatMetric(metrics.timeToFirstByte)}
           </span>
         </div>
         
-        {metrics.memoryUsage !== null && (
+        {metrics.memoryUsage !== undefined && (
           <div className="flex justify-between">
             <span className="text-gray-300">Memory:</span>
-            <span className={getMetricColor(metrics.memoryUsage, { good: 50, needsImprovement: 100 })}>
+            <span className={getMetricColor(metrics.memoryUsage, { good: 50, poor: 100 })}>
               {formatMetric(metrics.memoryUsage, 'MB')}
             </span>
           </div>

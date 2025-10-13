@@ -19,29 +19,16 @@ const CacheManager = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-<<<<<<< HEAD
-=======
     // Service Worker registration for caching
     const registerServiceWorker = async () => {
       if ('serviceWorker' in navigator) {
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');
-<<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
           console.log('Service Worker registered:', registration);
 
         } catch (error) {
           console.error('Service Worker registration failed:', error);
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
         }
       }
     }
@@ -63,24 +50,12 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
           console.log('Static assets cached successfully');
 
         } catch (error) {
           console.error('Failed to cache static assets:', error);
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
         }
       }
 
@@ -95,12 +70,9 @@ const CacheManager = () => {
           }
           
           return response
-<<<<<<< HEAD
-=======
 
         } catch (error) {
           console.error('Cache API error:', error);
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
           return fetch(request);
         }
       }
