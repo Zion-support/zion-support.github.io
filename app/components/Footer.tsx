@@ -52,8 +52,12 @@ const Footer: React.FC = () => {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
     { name: '5G Solutions', href: '/5g-solutions' },
+    { name: 'AI Analytics', href: '/ai-analytics' },
+    { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
+    { name: 'IoT Edge Computing', href: '/iot-edge-computing' },
+    { name: 'AI Content Generation', href: '/ai-content-generation' },
   ];
 
   const company = [
