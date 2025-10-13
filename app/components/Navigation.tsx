@@ -6,14 +6,9 @@ import {
   Brain, 
   Shield, 
   Zap, 
-<<<<<<< HEAD
-  Globe,
-  ChevronDown,
-=======
   Globe, 
   ChevronDown,
   ChevronUp
->>>>>>> cursor/analyze-improve-and-deploy-application-9610
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -191,8 +186,8 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-300 hover:text-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md p-2"
-              aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+              className="text-gray-300 hover:text-cyan-400 focus:outline-none focus:text-cyan-400 focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md p-1"
+              aria-label={isOpen ? "Close menu" : "Open menu"}
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
             >
@@ -205,7 +200,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden" id="mobile-menu" role="menu">
+          <div className="md:hidden" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm rounded-lg mt-2">
               {navigationItems.map((item) => (
                 <Link
