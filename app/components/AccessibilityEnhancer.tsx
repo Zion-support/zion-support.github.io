@@ -142,10 +142,10 @@ const AccessibilityEnhancer: React.FC = () => {
         })
       }
 
-<<<<<<< HEAD
       // Apply focus trap to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
+      const modals = document.querySelectorAll('[role="dialog"], [role="menu"], [role="alertdialog"]');
       const cleanupFunctions = Array.from(modals).map(modal => trapFocus(modal as HTMLElement));
+<<<<<<< HEAD
 =======
       // Initialize all enhancements
       enhanceFocusManagement()
@@ -166,6 +166,10 @@ const AccessibilityEnhancer: React.FC = () => {
       // Cleanup function
       return () => {
 <<<<<<< HEAD
+=======
+
+      return () => {
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
         cleanupFunctions.forEach(cleanup => cleanup());
       };
     };
@@ -188,6 +192,20 @@ const AccessibilityEnhancer: React.FC = () => {
         document.head.appendChild(style);
       };
 
+<<<<<<< HEAD
+=======
+      addHighContrastStyles();
+      
+      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+      const handleContrastChange = (e: MediaQueryListEvent) => {
+        if (e.matches) {
+          document.documentElement.classList.add('high-contrast');
+        } else {
+          document.documentElement.classList.remove('high-contrast');
+        }
+      };
+      
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
       mediaQuery.addEventListener('change', handleContrastChange);
       handleContrastChange(mediaQuery as any);
 
@@ -224,7 +242,11 @@ const AccessibilityEnhancer: React.FC = () => {
     };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Screen reader announcements
+=======
+    // Screen reader optimizations
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
     const enhanceScreenReader = () => {
       if (!enableScreenReader) return;
 
@@ -343,8 +365,11 @@ const AccessibilityEnhancer: React.FC = () => {
     setSettings(defaultSettings);
     applyAccessibilitySettings(defaultSettings);
   };
+<<<<<<< HEAD
 
   // Removed unused functions - functionality is handled by updateSetting directly
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
   return (
     <>
       {children}

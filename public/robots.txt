@@ -2,6 +2,10 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml
+<<<<<<< HEAD
+=======
+Sitemap: https://ziontechgroup.com/sitemap.xml.gz
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
 
 # Disallow admin and private areas
 Disallow: /admin/
@@ -12,6 +16,9 @@ Disallow: /static/
 
 # Allow important pages
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
 Allow: /
 Allow: /about
 Allow: /contact
@@ -20,6 +27,7 @@ Allow: /ai-services
 Allow: /micro-saas
 Allow: /5g-solutions
 Allow: /blog
+<<<<<<< HEAD
 <<<<<<< HEAD
 Allow: /pricing
 =======
@@ -88,3 +96,6 @@ Disallow: /
 =======
 Disallow: /
 >>>>>>> cursor/analyze-improve-and-deploy-application-0571
+=======
+Allow: /pricing
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d

@@ -12,11 +12,18 @@ import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
+=======
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import AdvancedPerformanceMonitor from "./app/components/AdvancedPerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
+<<<<<<< HEAD
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
@@ -54,6 +61,11 @@ import EnhancedSEO from "./app/components/EnhancedSEO";
 =======
 import LoadingState from "./app/components/EnhancedLoading";
 >>>>>>> cursor/analyze-improve-and-deploy-application-0571
+=======
+import CoreWebVitals from "./app/components/CoreWebVitals";
+import FuturisticBackground from "./app/components/FuturisticBackground";
+import EnhancedSEO from "./app/components/EnhancedSEO";
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -72,6 +84,7 @@ const SupportPage = React.lazy(() => import("./app/support/page"));
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // AI Services Pages
@@ -128,6 +141,8 @@ const SmartExpenseCategorizerPage = React.lazy(() => import("./app/smart-expense
 =======
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AiAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
@@ -171,10 +186,14 @@ const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network
 const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
 const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
 <<<<<<< HEAD
+<<<<<<< HEAD
 const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
 =======
 const FiveG5gIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
+=======
+const FiveG5gIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
 
 // Main App Component
 >>>>>>> cursor/analyze-improve-and-deploy-application-2b18
@@ -452,10 +471,14 @@ function App() {
                         <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
                         <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
 =======
                         <Route path="/5g-iot-solutions" element={<FiveG5gIotSolutionsPage />} />
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
+=======
+                        <Route path="/5g-iot-solutions" element={<FiveG5gIotSolutionsPage />} />
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
                       </Routes>
                     </Suspense>
                   </main>
@@ -464,6 +487,7 @@ function App() {
                 <PerformanceMonitor />
                 <WebVitalsTracker />
                 <CoreWebVitals />
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <PerformanceOptimizer 
                   enableImageOptimization={true}
@@ -474,6 +498,8 @@ function App() {
                 />
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
                 <EnhancedSEO 
                   title="Zion Tech Group - Advanced AI and IT Solutions"
                   description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
@@ -492,10 +518,13 @@ function App() {
       </EnhancedErrorBoundary>
     </GlobalErrorBoundary>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </ImprovedErrorBoundary>
 >>>>>>> cursor/analyze-improve-and-deploy-application-2b18
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
   );
 }
 

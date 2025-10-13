@@ -5,9 +5,12 @@ import { Link, useLocation } from 'react-router-dom';
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-2b18
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
 import { 
   Brain, 
   Shield, 
@@ -44,7 +47,10 @@ import {
   SidebarIcon
 } from 'lucide-react'
 import FuturisticButton from './FuturisticButton'
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
@@ -74,6 +80,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     setIsItServicesOpen(!isItServicesOpen);
   }, [isItServicesOpen]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const toggle5GServices = useCallback(() => {
     setIs5GServicesOpen(!is5GServicesOpen);
@@ -192,6 +199,28 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   SidebarIcon
 } from 'lucide-react'
 import FuturisticButton from './FuturisticButton'
+=======
+  const aiServices = useMemo(() => [
+    { name: 'AI Analytics', path: '/ai-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Automation', path: '/ai-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'AI Content Generation', path: '/ai-content-generation', icon: <Brain className="w-4 h-4" /> },
+    { name: 'AI Customer Support', path: '/ai-customer-support', icon: <Users className="w-4 h-4" /> },
+    { name: 'AI Marketing Automation', path: '/ai-marketing-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'AI Cybersecurity', path: '/ai-cybersecurity', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI Business Intelligence', path: '/ai-business-intelligence', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+  ], [])
+  const itServices = useMemo(() => [
+    { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
+    { name: 'Mobile Development', path: '/mobile-development', icon: <Code className="w-4 h-4" /> },
+    { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },
+    { name: 'Custom Software', path: '/custom-software', icon: <Code className="w-4 h-4" /> },
+    { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+  ], [])
+>>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
 
 interface NavigationProps {
   onSidebarToggle: () => void
