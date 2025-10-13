@@ -1,3 +1,5 @@
+import React from 'react';
+
 
   const getMetricColor = useCallback((value: number, thresholds: { good: number; poor: number }) => {
     if (value <= thresholds.good) return 'text-green-600';
@@ -43,7 +45,7 @@
   const updateMetrics = useCallback(() => {
     const newMetrics: PerformanceMetrics = {};
 
-    // Load time
+    // Load time;
     if (performance.timing) {
       const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
       if (loadTime > 0) newMetrics.loadTime = loadTime;
@@ -53,7 +55,7 @@
     if (enableMemoryMonitoring && 'memory' in performance) {
       const memory = (performance as any).memory;
       if (memory) {
-        newMetrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+        newMetrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB;
       }
     }
 
@@ -62,7 +64,7 @@
       const connection = (navigator as any).connection;
       if (connection) {
         console.log('Network type:', connection.effectiveType);
-        console.log('Downlink speed:', connection.downlink, 'Mbps');
+        console.log('Downlink speed:', connection.downlink, 'Mbps');'
       }
     }
 
@@ -79,7 +81,7 @@
     });
   }, [enableMemoryMonitoring, enableNetworkMonitoring, calculatePerformanceScore, onMetricsUpdate]);
 
-  // Web Vitals monitoring
+  // Web Vitals monitoring;
   useEffect(() => {
     if (!enableWebVitals) return;
 
@@ -89,17 +91,17 @@
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>EnhancedPerformanceMonitor | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedPerformanceMonitor services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="description" content="Professional EnhancedPerformanceMonitor services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
         <meta name="keywords" content="EnhancedPerformanceMonitor, AI solutions, IT services, Zion Tech Group, enhancedperformancemonitor" />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
+        <div className="max-w-7xl mx-auto">"
+          <div className="text-center">"
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                EnhancedPerformanceMonitor
+                EnhancedPerformanceMonitor;
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -108,17 +110,17 @@
               Transform your business with our advanced enhancedperformancemonitor solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
+                Learn More;
               </button>
             </div>
           </div>
-          <button
+          <button;
             onClick={() => setIsVisible(false)}
             className="text-gray-400 hover:text-white transition-colors"
           >
@@ -129,20 +131,22 @@
 
     'Proven track record of success'
   ]
-return(</div>)
-      {/* Features Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+const Component = () => {
+  
+  return (</div>)
+      {/* Features Section */} <section className="py-20 px-4">"
+          <div className="max-w-7xl mx-auto">"
+            <div className="text-center mb-16">"
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
           ))
           </div>
         </div>
       </section>
-      {/* Benefits Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-        <div className="max-w-7xl mx-auto"></div>
+      {/* Benefits Section */} <section className="py-20 px-4">"
+          <div className="max-w-7xl mx-auto">"
+            <div className="text-center mb-16">"
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
+        <div className="max-w-7xl mx-auto"></div>"
           <div className="text-center mb-16"></div>
             <h2>Key Benefits;</h2>
             </h2>
@@ -156,16 +160,16 @@ return(</div>)
           </div>
         </div>
       </section>
-      {/* CTA Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+      {/* CTA Section */} <section className="py-20 px-4">"
+          <div className="max-w-7xl mx-auto">"
+            <div className="text-center mb-16">"
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-        <div className="max-w-4xl mx-auto text-center"></div>
+        <div className="max-w-4xl mx-auto text-center">"
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">"
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
+        <div className="max-w-4xl mx-auto text-center"></div>"
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
             <h2>Ready to Get Started?</h2>
             </h2>
@@ -185,4 +189,6 @@ return(</div>)
   );
 };
 
+
+export default Component;
 export default EnhancedPerformanceMonitorPage;

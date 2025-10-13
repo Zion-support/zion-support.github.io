@@ -1,3 +1,5 @@
+import React from 'react';
+
 'use client';
 /**;
  * Advanced Performance Monitoring Utility;
@@ -26,7 +28,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */,}}s: {,}}
   /**
             if (entry.name === 'first-contentful-paint') {}private initializeObservers(): void {}}try {}}// Observe paint metrics;
       if ('PerformanceObserver' in window) {}// First Contentful Paint;
-        this.observeEntry('paint', (entries) => {}entries.forEach((entry) => {}if (entry.name === 'first-contentful-paint') {}this.recordMetric('FCP', entry.startTime);
+        this.observeEntry('paint', (entries) => {}entries.forEach((entry) => {}if (entry.name === 'first-contentful-paint') {}this.recordMetric('FCP', entry.startTime);'
             }
 // Largest Contentful Paint;
         this.observeEntry('largest-contentful-paint', entries => {)
@@ -243,15 +245,15 @@ observer.observe({entryTypes: ['layout-shift'] ,)})
     this.metrics.customMetrics[name] = value;,;
     this.logMetric(name, value)}}
   private logMetric(name: string, value: number): void {,}
-    ,}if (process.env['NODE_ENV'] === 'development') {}ms`);
+    ,}if (process.env['NODE_ENV'] === 'development') {}ms`);'
     this.logMetric(name, value);
   }
   private logMetric(name: string, value: number): void {,
-    if (process.env['NODE_ENV'] === 'development') {}ms`);
-    if (process.env['NODE_ENV'] === 'development') {}ms`);
+    if (process.env['NODE_ENV'] === 'development') {}ms`);'
+    if (process.env['NODE_ENV'] === 'development') {}ms`);'
     }
     // Send to analytics if available;
-    if (typeof window !== 'undefined' && (window as any).gtag) {(window as any).gtag('event', 'performance_metric', {);
+    if (typeof window !== 'undefined' && (window as any).gtag) {(window as any).gtag('event', 'performance_metric', {);'
         metric_name: name),
     // Track slow resources;}if (duration > 1000) {}this.addCustomMetric(`slowResource_${entry.name)}`, duration);
     }
@@ -262,10 +264,10 @@ observer.observe({entryTypes: ['layout-shift'] ,)})
   addCustomMetric(name: string, value: number): void {,}}this.metrics.customMetrics[name] = value;
     this.logMetric(name, value);
   }
-  private logMetric(name: string, value: number): void {,}}if (process.env['NODE_ENV'] === 'development') {}}ms`);
+  private logMetric(name: string, value: number): void {,}}if (process.env['NODE_ENV'] === 'development') {}}ms`);'
     }
     // Send to analytics if available;
-    if (typeof window !== 'undefined' && (window as any).gtag) {}(window as any).gtag('event', 'performance_metric', {)}metric_name: name,
+    if (typeof window !== 'undefined' && (window as any).gtag) {}(window as any).gtag('event', 'performance_metric', {)}metric_name: name,'
       this.addCustomMetric(`slowResource_${entry.name}`, duration);
     }
     // Track large resources
@@ -278,12 +280,12 @@ observer.observe({entryTypes: ['layout-shift'] ,)})
     this.logMetric(name, value);
   }
   private logMetric(name: string, value: number): void {}
-    if (process.env['NODE_ENV'] === 'development') {}
+    if (process.env['NODE_ENV'] === 'development') {}'
       }ms`);
     }
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {}
-      (window as any).gtag('event', 'performance_metric', {</div>
+      (window as any).gtag('event', 'performance_metric', {</div>'
   getMetrics(): PerformanceMetrics {}}return {...this.metrics}}}
   getScore(): number {}}const scores = []
     return { ...this.metrics };

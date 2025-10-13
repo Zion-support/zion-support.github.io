@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, {   useEffect   } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 export default function PerformanceMonitoring() {
@@ -44,7 +44,7 @@ export default function PerformanceMonitoring() {
           if (entry.entryType === 'resource') {
             const resource = entry as PerformanceResourceTiming;
             if (resource.duration > 1000) {
-              console.warn('Slow resource:', resource.name, resource.duration + 'ms');
+              console.warn('Slow resource:', resource.name, resource.duration + 'ms');'
             }
           }
         }
@@ -54,12 +54,13 @@ export default function PerformanceMonitoring() {
 
     // Monitor bundle size
     const checkBundleSize = () => {
+  
       const scripts = document.querySelectorAll('script[src]');
       let totalSize = 0;
       scripts.forEach(script => {
         const src = script['src'];
         if (src.includes('assets/')) {
-          // This is a rough estimate - in reality you'd need to fetch the actual size
+          // This is a rough estimate - in reality you'd need to fetch the actual size'
           console.log('Script loaded:', src);
         }
       });

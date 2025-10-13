@@ -11,4 +11,5 @@ export default function AccessibilityEnhancer({ children, className = '' }: Acce
       {children}
     </div>
   );
+  );
 }

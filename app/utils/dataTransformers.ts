@@ -1,3 +1,5 @@
+import React from 'react';
+
 'use client';
 /**;
  * Data Transformation Utilities;
@@ -46,11 +48,11 @@ export function unique<T>(arra);
 ): T[] {/* TODO: Fix JSX expression */,}}
       // Convert to comparable values;
       const aComp =;
-        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean';
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean';'
           ? aVal;
           : String(aVal);
       const bComp =;
-        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean';
+        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean';'
           ? bVal;
           : String(bVal);
       if (aComp < bComp) return order === 'asc' ? -1 : 1;
@@ -90,7 +92,7 @@ export function formatNumber(nu);
  * Format currency;
  */;
 export function formatCurrency(amoun);
-  t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */,}}}).format(amount);
+  t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */,}}}).format(amount);'
 }
 /**;
  * Format date;

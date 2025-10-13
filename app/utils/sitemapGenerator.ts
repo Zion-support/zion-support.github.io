@@ -1,3 +1,5 @@
+import React from 'react';
+
 
 }
 export const generateRobotsTxt = useCallback((...args) => {}return `User-agent: *;,

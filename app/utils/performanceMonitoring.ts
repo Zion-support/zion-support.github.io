@@ -1,8 +1,10 @@
+import React from 'react';
+
 
 };
 function getRating(nam,;)
   e: string, valu);
-  e: number): 'good' | 'needs-improvement' | 'poor' {/* TODO: Fix JSX expression */,}r: number ,}> = {/* TODO: Fix JSX expression */,}r: 3000 ,},;
+  e: number): 'good' | 'needs-improvement' | 'poor' {/* TODO: Fix JSX expression */,}r: number ,}> = {/* TODO: Fix JSX expression */,}r: 3000 ,},;'
     'LCP': {/* TODO: Fix JSX expression */,}r: 4000 ,},;
     'FID': {/* TODO: Fix JSX expression */,}r: 300 ,},;
     'CLS': {/* TODO: Fix JSX expression */,}r: 0.25 ,},;

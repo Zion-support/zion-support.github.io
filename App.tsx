@@ -6,9 +6,9 @@ import { Suspense } from 'react';
 
 // Import pages
 import HomePage from './app/page';
-import AboutPage from './app/about/page';
-import ServicesPage from './app/services/page';
-import ContactPage from './app/contact/page';
+// import AboutPage from './app/about/page';
+// import ServicesPage from './app/services/page';
+// import ContactPage from './app/contact/page';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -53,9 +53,9 @@ function App() {
             <Suspense fallback={<Loading />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/services" element={<ServicesPage />} />
-                <Route path="/contact" element={<ContactPage />} />
+        {/* <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/contact" element={<ContactPage />} /> */}
               </Routes>
             </Suspense>
           </div>

@@ -1,8 +1,7 @@
 'use client';
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Award, TrendingUp } from 'lucide-react';
-
+import React, { Helmet } from 'react-helmet-async';
+import React, { ArrowRight, CheckCircle, Star, Users, Award, TrendingUp } from 'lucide-react';
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
   enableImageOptimization?: boolean;
@@ -16,10 +15,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true
+  enableCodeSplitting = true;
 }) => {
   useEffect(() => {
-    // Preload critical resources
+    // Preload critical resources;
     if (enablePreloading) {
       const preloadLink = document.createElement('link');
       preloadLink.rel = 'preload';
@@ -35,6 +34,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     <div className="performance-optimizer">
       {children}
     </div>
+  );
   );
 };
 

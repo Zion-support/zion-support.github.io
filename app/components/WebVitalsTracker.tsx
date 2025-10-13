@@ -11,4 +11,5 @@ export default function WebVitalsTracker({ className = '', children }: WebVitals
       {children}
     </div>
   );
+  );
 }

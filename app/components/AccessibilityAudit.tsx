@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
-
+import React, {   useEffect   } from 'react';
 export default function AccessibilityAudit() {
   useEffect(() => {
     // Run accessibility checks
     const runAccessibilityChecks = () => {
+  
       const issues = [];
 
       // Check for missing alt text
@@ -42,7 +42,7 @@ export default function AccessibilityAudit() {
       const focusableElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]');
       focusableElements.forEach((element, index) => {
         const styles = window.getComputedStyle(element);
-        if (styles.outline === 'none' && !element.classList.contains('focus-visible')) {
+        if (styles.outline === 'none' && !element.classList.contains('focus-visible')) {'
           issues.push(`Focusable element ${index + 1} missing focus indicator`);
         }
       });

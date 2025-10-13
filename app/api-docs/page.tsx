@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Link from 'next/link';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
-
+import React, { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const copyToClipboard = (code: string, id: string) => {
@@ -24,7 +23,7 @@ const ApiDocsPage: React.FC = () => {
           example: `curl -X POST https://api.ziontechgroup.com/ai/analyze \\
   -H "Content-Type: application/json" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
-  -d '{"text": "Your text to analyze"}'`
+  -d '{"text": "Your text to analyze"}'`"
         },
         {
           method: 'GET',
@@ -32,8 +31,8 @@ const ApiDocsPage: React.FC = () => {
           description: 'Check AI service status',
           example: `curl -X GET https://api.ziontechgroup.com/ai/status \\
   -H "Authorization: Bearer YOUR_API_KEY"`
-        }
-      ]
+        }]
+      ],
     },
     {
       title: 'Data Analytics',
@@ -45,33 +44,33 @@ const ApiDocsPage: React.FC = () => {
           description: 'Get dashboard data',
           example: `curl -X GET https://api.ziontechgroup.com/analytics/dashboard \\
   -H "Authorization: Bearer YOUR_API_KEY"`
-        }
-      ]
+        }]
+      ],
     }
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+      <main className="container mx-auto px-4 py-16 pt-24">"
+        <section className="text-center mb-16">"
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            API Documentation
+            API Documentation;
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive API documentation for integrating with Zion Tech Group's AI and IT services
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
+            Comprehensive API documentation for integrating with Zion Tech Group's AI and IT services;'
           </p>
         </section>
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8">API Endpoints</h2>
+        <section className="mb-16">"
+          <h2 className="text-3xl font-bold text-white mb-8">API Endpoints</h2>"
           <div className="space-y-8">
             {apiEndpoints.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="cyber-card hologram-card p-6">
-                <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
-                <p className="text-gray-300 mb-6">{category.description}</p>
+              <div key={categoryIndex} className="cyber-card hologram-card p-6">"
+                <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>"
+                <p className="text-gray-300 mb-6">{category.description}</p>"
                 <div className="space-y-4">
                   {category.endpoints.map((endpoint, endpointIndex) => (
-                    <div key={endpointIndex} className="bg-gray-800 rounded-lg p-4">
-                      <div className="flex items-center mb-2">
+                    <div key={endpointIndex} className="bg-gray-800 rounded-lg p-4">"
+                      <div className="flex items-center mb-2">"
                         <span className={`px-3 py-1 rounded text-sm font-bold mr-4 ${
                           endpoint.method === 'GET' ? 'bg-green-600 text-white' : 'bg-blue-600 text-white'
                         }`}>
@@ -79,7 +78,7 @@ const ApiDocsPage: React.FC = () => {
                         </span>
                         <code className="text-cyan-400 font-mono">{endpoint.path}</code>
                       </div>
-                      <p className="text-gray-300 mb-3">{endpoint.description}</p>
+                      <p className="text-gray-300 mb-3">{endpoint.description}</p>"
                       <div className="bg-gray-900 rounded p-4 relative">
                         <button
                           onClick={() => copyToClipboard(endpoint.example, `${categoryIndex}-${endpointIndex}`)}
@@ -98,49 +97,50 @@ const ApiDocsPage: React.FC = () => {
             ))}
           </div>
         </section>
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="cyber-card hologram-card p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Authentication</h3>
+        <section className="mb-16">"
+          <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
+            <div className="cyber-card hologram-card p-6">"
+              <h3 className="text-xl font-bold text-white mb-4">Authentication</h3>"
               <p className="text-gray-300 mb-4">
                 All API requests require authentication using your API key. Include it in the Authorization header:
               </p>
               <code className="bg-gray-800 text-cyan-400 p-2 rounded block">
-                Authorization: Bearer YOUR_API_KEY
+                Authorization: Bearer YOUR_API_KEY;
               </code>
             </div>
-            <div className="cyber-card hologram-card p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Rate Limits</h3>
+            <div className="cyber-card hologram-card p-6">"
+              <h3 className="text-xl font-bold text-white mb-4">Rate Limits</h3>"
               <p className="text-gray-300 mb-4">
                 API requests are limited to 1000 requests per hour per API key. Contact us for higher limits.
               </p>
             </div>
           </div>
         </section>
-        <section className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Need Help?</h2>
+        <section className="text-center">"
+          <h2 className="text-3xl font-bold text-white mb-8">Need Help?</h2>"
           <p className="text-gray-300 mb-8">
-            Contact our developer support team for assistance with API integration
+            Contact our developer support team for assistance with API integration;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:dev@ziontechgroup.com"
               className="cyber-button"
             >
-              Email Support
+              Email Support;
             </a>
             <a
               href="/contact"
               className="cyber-button"
             >
-              Contact Us
+              Contact Us;
             </a>
           </div>
         </section>
       </main>
       <Footer />
     </div>
+  );
   );
 };
 export default ApiDocsPage;

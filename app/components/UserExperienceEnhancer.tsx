@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 'use client';
-import React, {useEffect, useState}from 'react';
+import React, { useEffect, useState } from 'react';
 interface UserExperienceEnhancerProps {children: React.ReactNode;,}}}
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({children ,}) => {}const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
 useEffect(() => {// UX enhancement logic;
@@ -12,7 +12,7 @@ useEffect(() => {// UX enhancement logic;
 
       const interactiveElements = document.querySelectorAll('button, a, input');
       interactiveElements.forEach((element, index) => {) => {
-  return($3;)
+  return ($3;)
   )}element.addEventListener('click', () => {}setLoadingStates(prev => ({...prev, [index]: true)}));
           setTimeout(() => {}setLoadingStates(prev => ({...prev, [index]: false)}));
           }, 1000);

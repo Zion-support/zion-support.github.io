@@ -12,7 +12,7 @@
         "Priority support",
         "Custom integrations",
         "Performance optimization",
-        "Security assessment",
+        "Security assessment",]
       ],
       popular: true,
     },
@@ -28,7 +28,7 @@
         "White-label options",
         "API access",
         "Custom reporting",
-        "24/7 monitoring",
+        "24/7 monitoring",]
       ],
       popular: false
     }

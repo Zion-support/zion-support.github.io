@@ -10,6 +10,7 @@ interface AnalyticsContextType {
 const AnalyticsContext = createContext<AnalyticsContextType | null>(null);
 
 export const useAnalytics = () => {
+  
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
@@ -34,11 +35,12 @@ interface AnalyticsProviderProps {
 
 };
 
-// Performance monitoring hook
+// Performance monitoring hook;
 export const usePerformanceMonitor = () => {
+  
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
+    if (typeof window !== 'undefined' && 'performance' in window) {'
+      // Monitor Core Web Vitals;
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
@@ -54,7 +56,7 @@ export const usePerformanceMonitor = () => {
       });
 
       observer.observe({ 
-        entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] 
+        entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'],'
       });
 
       return () => observer.disconnect();
@@ -62,7 +64,7 @@ export const usePerformanceMonitor = () => {
   }, []);
 };
 
-// Declare global gtag function
+// Declare global gtag function;
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;

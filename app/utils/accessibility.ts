@@ -1,5 +1,7 @@
+import React from 'react';
+
 /**
- * Accessibility utilities for improving website accessibility
+ * Accessibility utilities for improving website accessibility;
  */
 
 export interface AccessibilityConfig {
@@ -41,8 +43,8 @@ export class AccessibilityManager {
     if (!this.config.announcePageChanges) return;
 
     this.announcementElement = document.createElement('div');
-    this.announcementElement.setAttribute('aria-live', 'polite');
-    this.announcementElement.setAttribute('aria-atomic', 'true');
+    this.announcementElement.setAttribute('aria-live', 'polite');'
+    this.announcementElement.setAttribute('aria-atomic', 'true');'
     this.announcementElement.className = 'sr-only';
     this.announcementElement.style.cssText = `
       position: absolute;
@@ -75,13 +77,13 @@ export class AccessibilityManager {
   private setupScreenReaderSupport(): void {
     if (!this.config.enableScreenReaderSupport) return;
 
-    // Add skip links
+    // Add skip links;
     this.addSkipLinks();
     
-    // Ensure proper heading hierarchy
+    // Ensure proper heading hierarchy;
     this.validateHeadingHierarchy();
     
-    // Add ARIA labels where needed
+    // Add ARIA labels where needed;
     this.addAriaLabels();
   }
 
@@ -107,8 +109,8 @@ export class AccessibilityManager {
     const skipLinks = document.createElement('div');
     skipLinks.className = 'skip-links';
     skipLinks.innerHTML = `
-      <a href="#main-content" class="skip-link">Skip to main content</a>
-      <a href="#navigation" class="skip-link">Skip to navigation</a>
+      <a href="#main-content" class="skip-link">Skip to main content</a>"
+      <a href="#navigation" class="skip-link">Skip to navigation</a>"
     `;
     skipLinks.style.cssText = `
       position: absolute;
@@ -137,7 +139,7 @@ export class AccessibilityManager {
     const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
     buttons.forEach((button) => {
       if (!button.textContent?.trim()) {
-        button.setAttribute('aria-label', 'Button');
+        button.setAttribute('aria-label', 'Button');'
       }
     });
 
@@ -146,7 +148,7 @@ export class AccessibilityManager {
     inputs.forEach((input) => {
       const label = document.querySelector(`label[for="${input.id}"]`);
       if (!label) {
-        input.setAttribute('aria-label', input.getAttribute('placeholder') || 'Input field');
+        input.setAttribute('aria-label', input.getAttribute('placeholder') || 'Input field');'
       }
     });
   }
@@ -179,10 +181,10 @@ export class AccessibilityManager {
   }
 }
 
-// Create global instance
+// Create global instance;
 export const accessibilityManager = new AccessibilityManager();
 
-// Utility functions
+// Utility functions;
 export const announcePageChange = (pageName: string): void => {
   accessibilityManager.announce(`Navigated to ${pageName}`);
 };
@@ -206,7 +208,7 @@ export const toggleAriaExpanded = (selector: string): void => {
   const element = document.querySelector(selector);
   if (element) {
     const current = element.getAttribute('aria-expanded');
-    element.setAttribute('aria-expanded', current === 'true' ? 'false' : 'true');
+    element.setAttribute('aria-expanded', current === 'true' ? 'false' : 'true');'
   }
 };
 
@@ -220,7 +222,7 @@ private applyConfig(): void {if (typeof document === 'undefined') return;}
 const root = document.documentElement;
 // Apply high contrast;
     if (this.config.enableHighContrast) {
-      root.classList.add('high-contrast')}} else {root.classList.remove('high-contrast')}}}
+      root.classList.add('high-contrast')}} else {root.classList.remove('high-contrast')}}}'
 // Apply font size;
     root.setAttribute('data-font-size', this.config.fontSize);
 // Apply color scheme;
@@ -244,7 +246,7 @@ const handleTabKey = (;
 if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();) => {
-  return($3;)
+  return ($3;)
   )}e.preventDefault();}
         }
       } else {if (document.activeElement === lastElement) {}
@@ -254,9 +256,13 @@ if (e.shiftKey) {
     }
 container.addEventListener('keydown', handleTabKey);
     firstElement?.focus();
-return () => {container.removeEventListener('keydown', handleTabKey)}}
+const Component = () => {
+  
+  return () => {container.removeEventListener('keydown', handleTabKey)}}
   }
 }
+
+export default Component;
 export const accessibilityManager = new AccessibilityManager();
 // Utility functions;
 export const isAccessible = (element: HTMLElement): boolean => {,
@@ -268,4 +274,4 @@ export const addAriaDescribedBy = (element: HTMLElement, descriptionId: string):
 export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0): void => {,
     element.setAttribute('tabindex', tabIndex.toString())}}
 export const removeElementFocus = (element: HTMLElement): void => {,
-    element.setAttribute('tabindex', '-1')}}
+    element.setAttribute('tabindex', '-1')}}'

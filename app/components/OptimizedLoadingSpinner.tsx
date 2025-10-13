@@ -1,10 +1,10 @@
 'use client';
-import React, {Suspense, lazy}from 'react';
-interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';}
-  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
+import React, { Suspense, lazy } from 'react';
+interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';}'
+  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';'
   text?: string;
   className?: string;
-  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
+  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';'
   fullScreen?: boolean;
 }
 
@@ -23,7 +23,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
 const renderSpinner = useMemo(() => {switch (variant) {
             <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2].map(i => ())
-                <div
+                <div;
                 />
               ))}))
           );
@@ -31,24 +31,28 @@ const renderSpinner = useMemo(() => {switch (variant) {
         case 'pulse':
           );
 case 'spinner':;
-        default: return(,)
+        default: return (,)
             <div,
 
               className={`${baseClasses}rounded-full border-2 border-t-transparent animate-spin`}
               role='status';
               aria-label='Loading';
             /></div>
+  );
           );
       }
     }, [size, variant, color, sizeClasses, colorClasses]);
 const containerClasses = useMemo(() => {return `${baseClasses}${fullScreenClasses}${className}`;
     }, [fullScreen, className]);
-return(</div>)
+return (</div>)
       <div className={containerClasses}></div>
+  );
         <div className='text-center'></div>
 
           {renderSpinner}{
-          return ())
+          const Component = () => {
+  
+            return ())
             <div className='space-y-2' role='status' aria-label='Loading'>))
               <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
@@ -64,10 +68,12 @@ return(</div>)
           );
 
         case 'bars':
-          return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'>
+          const Component = () => {
+  
+            return (
+    <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2, 3].map(i => ())
-                <div
+                <div;
               ))}))
           );
 
@@ -80,7 +86,9 @@ return(</div>)
     const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;
     }, [fullScreen, className]);
 
-    return ())
+    const Component = () => {
+  
+      return ())
       <div className={containerClasses}>))
         <div className='text-center'>
           {renderSpinner}

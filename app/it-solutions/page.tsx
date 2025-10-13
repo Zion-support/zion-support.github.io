@@ -1,7 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Server, Shield, Cloud, Database } from 'lucide-react';
-
+import React, { Helmet } from 'react-helmet-async';
+import React, { CheckCircle, TrendingUp, Phone, Mail, MapPin, Server, Shield, Cloud, Database } from 'lucide-react';
 const ITSolutionsPage: React.FC = () => {
   const itServices = [
     {
@@ -17,18 +15,18 @@ const ITSolutionsPage: React.FC = () => {
         '24/7 Monitoring',
         'Backup & Recovery',
         'Disaster Recovery',
-        'Compliance Management'
+        'Compliance Management']
       ],
       benefits: [
         'Reduce cloud costs by 30%',
         'Improve performance by 40%',
         'Ensure 99.9% uptime',
         'Enhance security posture',
-        'Simplify management'
+        'Simplify management']
       ],
       marketPrice: '$2,500-5,000/month',
       category: 'Cloud Services',
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker', 'Terraform'],
+      technologies: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker', 'Terraform'],'
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -44,18 +42,18 @@ const ITSolutionsPage: React.FC = () => {
         'Security Training',
         'Compliance Management',
         'Incident Response',
-        'Security Monitoring'
+        'Security Monitoring']
       ],
       benefits: [
         'Prevent 99.9% of cyber attacks',
         'Reduce security risks by 80%',
         'Ensure compliance',
         'Protect sensitive data',
-        'Minimize downtime'
+        'Minimize downtime']
       ],
       marketPrice: '$1,800-4,000/month',
       category: 'Cybersecurity',
-      technologies: ['SIEM', 'Firewalls', 'Antivirus', 'Penetration Testing', 'Compliance Tools'],
+      technologies: ['SIEM', 'Firewalls', 'Antivirus', 'Penetration Testing', 'Compliance Tools'],'
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -71,18 +69,18 @@ const ITSolutionsPage: React.FC = () => {
         'Security Implementation',
         'Monitoring & Maintenance',
         'Troubleshooting',
-        'Documentation'
+        'Documentation']
       ],
       benefits: [
         'Improve network performance',
         'Enhance security',
         'Reduce downtime',
         'Optimize bandwidth usage',
-        'Ensure scalability'
+        'Ensure scalability']
       ],
       marketPrice: '$2,000-4,500/month',
       category: 'Networking',
-      technologies: ['Cisco', 'Juniper', 'Fortinet', 'Network Monitoring', 'SD-WAN'],
+      technologies: ['Cisco', 'Juniper', 'Fortinet', 'Network Monitoring', 'SD-WAN'],'
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -98,18 +96,18 @@ const ITSolutionsPage: React.FC = () => {
         'Security Hardening',
         'Monitoring & Alerting',
         'Capacity Planning',
-        'Troubleshooting'
+        'Troubleshooting']
       ],
       benefits: [
         'Improve database performance by 50%',
         'Ensure data integrity',
         'Reduce downtime',
         'Optimize storage usage',
-        'Enhance security'
+        'Enhance security']
       ],
       marketPrice: '$1,500-3,500/month',
       category: 'Database Services',
-      technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Oracle', 'SQL Server', 'Redis'],
+      technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Oracle', 'SQL Server', 'Redis'],'
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -125,18 +123,18 @@ const ITSolutionsPage: React.FC = () => {
         'User Training',
         'Software Installation',
         'Hardware Support',
-        'Performance Monitoring'
+        'Performance Monitoring']
       ],
       benefits: [
         'Reduce IT support costs by 40%',
         'Improve user satisfaction',
         'Faster issue resolution',
         'Proactive maintenance',
-        'Comprehensive coverage'
+        'Comprehensive coverage']
       ],
       marketPrice: '$1,200-2,500/month',
       category: 'Support Services',
-      technologies: ['Help Desk Software', 'Remote Access', 'Monitoring Tools', 'Ticketing Systems'],
+      technologies: ['Help Desk Software', 'Remote Access', 'Monitoring Tools', 'Ticketing Systems'],'
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -152,18 +150,18 @@ const ITSolutionsPage: React.FC = () => {
         'Monitoring & Logging',
         'Container Orchestration',
         'Security Integration',
-        'Performance Optimization'
+        'Performance Optimization']
       ],
       benefits: [
         'Deploy 10x faster',
         'Reduce deployment errors by 90%',
         'Improve code quality',
         'Enable rapid scaling',
-        'Enhance collaboration'
+        'Enhance collaboration']
       ],
       marketPrice: '$2,500-5,500/month',
       category: 'DevOps',
-      technologies: ['Jenkins', 'GitLab CI', 'Docker', 'Kubernetes', 'Terraform', 'Ansible'],
+      technologies: ['Jenkins', 'GitLab CI', 'Docker', 'Kubernetes', 'Terraform', 'Ansible'],'
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -179,18 +177,18 @@ const ITSolutionsPage: React.FC = () => {
         'Recovery Testing',
         'Compliance Management',
         'Monitoring & Alerting',
-        'Documentation'
+        'Documentation']
       ],
       benefits: [
         'Protect critical data',
         'Minimize downtime',
         'Ensure compliance',
         'Reduce recovery time',
-        'Peace of mind'
+        'Peace of mind']
       ],
       marketPrice: '$800-2,000/month',
       category: 'Backup & Recovery',
-      technologies: ['Veeam', 'Commvault', 'AWS Backup', 'Azure Backup', 'Encryption'],
+      technologies: ['Veeam', 'Commvault', 'AWS Backup', 'Azure Backup', 'Encryption'],'
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -206,18 +204,18 @@ const ITSolutionsPage: React.FC = () => {
         'Budget Planning',
         'Risk Assessment',
         'Compliance Review',
-        'Implementation Planning'
+        'Implementation Planning']
       ],
       benefits: [
         'Align IT with business goals',
         'Optimize technology investments',
         'Reduce IT risks',
         'Improve efficiency',
-        'Enable innovation'
+        'Enable innovation']
       ],
       marketPrice: '$2,000-4,500/month',
       category: 'IT Consulting',
-      technologies: ['Strategic Planning', 'Technology Assessment', 'Digital Transformation', 'Risk Management'],
+      technologies: ['Strategic Planning', 'Technology Assessment', 'Digital Transformation', 'Risk Management'],'
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -233,18 +231,18 @@ const ITSolutionsPage: React.FC = () => {
         'Location Tracking',
         'Compliance Monitoring',
         'User Management',
-        'Reporting & Analytics'
+        'Reporting & Analytics']
       ],
       benefits: [
         'Secure mobile devices',
         'Control app access',
         'Ensure compliance',
         'Reduce security risks',
-        'Simplify management'
+        'Simplify management']
       ],
       marketPrice: '$600-1,500/month',
       category: 'Mobile Management',
-      technologies: ['MDM Solutions', 'Mobile Security', 'App Management', 'Compliance Tools'],
+      technologies: ['MDM Solutions', 'Mobile Security', 'App Management', 'Compliance Tools'],'
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -260,18 +258,18 @@ const ITSolutionsPage: React.FC = () => {
         'Database Design',
         'UI/UX Design',
         'Testing & Quality Assurance',
-        'Maintenance & Support'
+        'Maintenance & Support']
       ],
       benefits: [
         'Custom solutions for your needs',
         'Modern, scalable applications',
         'Expert development team',
         'Ongoing support',
-        'Competitive advantage'
+        'Competitive advantage']
       ],
       marketPrice: '$3,500-8,000/month',
       category: 'Software Development',
-      technologies: ['React', 'Node.js', 'Python', 'Java', 'Mobile Development', 'Cloud Platforms'],
+      technologies: ['React', 'Node.js', 'Python', 'Java', 'Mobile Development', 'Cloud Platforms'],'
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
@@ -280,53 +278,53 @@ const ITSolutionsPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Solutions & Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT solutions including cloud management, cybersecurity, networking, and software development. Starting at $299/month." />
+        <meta name="description" content="Comprehensive IT solutions including cloud management, cybersecurity, networking, and software development. Starting at $299/month." />"
         <meta name="keywords" content="it solutions, cloud management, cybersecurity, networking, database management, devops, software development" />
       </Helmet>
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="pt-24 pb-16 px-4">"
+        <div className="max-w-7xl mx-auto text-center">"
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            IT Solutions & Services
+            IT Solutions & Services;
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Comprehensive IT solutions designed to optimize your infrastructure, enhance security, and drive business growth.
           </p>
           
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">10+</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-cyan-400 mb-2">10+</div>"
               <div className="text-gray-300">IT Services</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$299</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-green-400 mb-2">$299</div>"
               <div className="text-gray-300">Starting Price</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>"
               <div className="text-gray-300">Uptime</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>"
               <div className="text-gray-300">Support</div>
             </div>
           </div>
           
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5" />
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">"
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">"
+              <div className="flex items-center space-x-2">"
+                <Phone className="w-5 h-5" />"
                 <span className="text-white font-medium">+1 302 464 0950</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
+              <div className="flex items-center space-x-2">"
+                <Mail className="w-5 h-5" />"
                 <span className="text-white font-medium">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
+              <div className="flex items-center space-x-2">"
+                <MapPin className="w-5 h-5" />"
                 <span className="text-white font-medium">Middletown, DE</span>
               </div>
             </div>
@@ -335,23 +333,23 @@ const ITSolutionsPage: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-4">"
+        <div className="max-w-7xl mx-auto">"
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your IT Solution
+            Choose Your IT Solution;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">"
+                <div className="text-center mb-6">"
+                  <div className="text-5xl mb-4">{service.icon}</div>"
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>"
                   <p className="text-gray-600 text-sm">{service.description}</p>
                 </div>
                 
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-green-600">{service.price}</span>
+                <div className="mb-6">"
+                  <div className="flex items-center justify-between mb-4">"
+                    <span className="text-2xl font-bold text-green-600">{service.price}</span>"
                     <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                   </div>
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
@@ -359,28 +357,28 @@ const ITSolutionsPage: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                <div className="mb-6">"
+                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>"
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
-                        +{service.features.length - 4} more features
+                        +{service.features.length - 4} more features;
                       </li>
                     )}
                   </ul>
                 </div>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                <div className="mb-6">"
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>"
                   <ul className="space-y-1">
                     {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
+                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">"
                         <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
@@ -388,8 +386,8 @@ const ITSolutionsPage: React.FC = () => {
                   </ul>
                 </div>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
+                <div className="mb-6">"
+                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>"
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => (
                       <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
@@ -404,7 +402,7 @@ const ITSolutionsPage: React.FC = () => {
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
-                    Get Started Now
+                    Get Started Now;
                   </a>
                   <p className="text-xs text-gray-500 mt-2">
                     {service.contactInfo}
@@ -417,8 +415,8 @@ const ITSolutionsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">"
+        <div className="max-w-4xl mx-auto text-center">"
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Optimize Your IT Infrastructure?
           </h2>
@@ -430,18 +428,19 @@ const ITSolutionsPage: React.FC = () => {
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
-              Call (302) 464-0950
+              Call (302) 464-0950;
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us
+              Email Us;
             </a>
           </div>
         </div>
       </section>
     </div>
+  );
   );
 };
 

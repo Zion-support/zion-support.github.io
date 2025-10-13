@@ -1,8 +1,6 @@
 'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
+import React, { Helmet } from 'react-helmet-async';
+import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const AdvancedPerformanceOptimizerPage: React.FC = () => {
   const features = [
     {
@@ -39,7 +37,7 @@ const AdvancedPerformanceOptimizerPage: React.FC = () => {
   ];
 
 'use client';
-import React, {useEffect, useState, useCallback}from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 interface PerformanceOptimizerProps {children: React.ReactNode,}
   enableOptimizations?: boolean;}const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
   children,
@@ -50,19 +48,19 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
     cssOptimized: 0,
     totalSavings: 0;,})
   const optimizeImages = useCallback(() => {if (typeof window === 'undefined') return;
-        img.setAttribute('loading', 'lazy');
+        img.setAttribute('loading', 'lazy');'
         optimizedCount++}// Add decoding attribute for better performance;
-      if (!img.hasAttribute('decoding')) {img.setAttribute('decoding', 'async');
+      if (!img.hasAttribute('decoding')) {img.setAttribute('decoding', 'async');'
         optimizedCount++}})
     return optimizedCount;
   }, []);
   const optimizeScripts = useCallback(() => {if (typeof window === 'undefined') return;
-        script.setAttribute('defer', '');
+        script.setAttribute('defer', '');'
         optimizedCount++}})
     return optimizedCount;
   }, []);
   const optimizeCSS = useCallback(() => {if (typeof window === 'undefined') return;
-        link.setAttribute('media', 'print');
+        link.setAttribute('media', 'print');'
         link.setAttribute('onload', "this.media='all'");
         optimizedCount++}})
     return optimizedCount;
@@ -75,25 +73,29 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
     if (typeof window === 'undefined') return;
     const observer = new PerformanceObserver((list) => {;
       const entries = list.getEntries();
-    observer.observe({entryTypes: ['navigation', 'paint', 'largest-contentful-paint'])})
-    return () => observer.disconnect();
+    observer.observe({entryTypes: ['navigation', 'paint', 'largest-contentful-paint'])})'
+    const Component = () => {
+  
+      return () => observer.disconnect();
   }, []);
-  return(<div className="performance-optimized" data-optimized={isOptimized)}>{children</div>}{process.env['NODE_ENV'] === 'development' && (
+  const Component = () => {
+  
+    return (<div className="performance-optimized" data-optimized={isOptimized)}>{children</div>}{process.env['NODE_ENV'] === 'development' && ("'
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AdvancedPerformanceOptimizer | Zion Tech Group</title>
-        <meta name="description" content="Professional AdvancedPerformanceOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="description" content="Professional AdvancedPerformanceOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
         <meta name="keywords" content="AdvancedPerformanceOptimizer, AI solutions, IT services, Zion Tech Group, advancedperformanceoptimizer" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="max-w-7xl mx-auto">"
+          <div className="text-center">"
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AdvancedPerformanceOptimizer
+                AdvancedPerformanceOptimizer;
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -102,24 +104,25 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
               Transform your business with our advanced advancedperformanceoptimizer solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
+                Learn More;
               </button>
             </div>
           </div>
         </div>
       </section>
+  );
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto">"
+          <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AdvancedPerformanceOptimizer?
             </h2>
@@ -130,11 +133,11 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">"
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">"
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -145,10 +148,10 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto">"
+          <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+              Key Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our advancedperformanceoptimizer solutions for your business.
@@ -157,8 +160,8 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+              <div key={index} className="flex items-start space-x-3">"
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />"
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
@@ -169,22 +172,22 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+        <div className="max-w-4xl mx-auto text-center">"
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your advancedperformanceoptimizer needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">"
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now
+                Call Now;
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">"
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us
+                Email Us;
               </button>
             </div>
           </div>

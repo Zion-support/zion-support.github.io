@@ -1,8 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Mail, Target, BarChart, Users, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Brain, Send, Eye } from 'lucide-react';
-
+import React, { Mail, Target, BarChart, Users, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Brain, Send, Eye } from 'lucide-react';
 const AIEmailMarketingPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -56,9 +55,9 @@ const AIEmailMarketingPage: React.FC = () => {
         'Basic AI features',
         'Email templates',
         'Basic analytics',
-        'Email support'
+        'Email support']
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -71,9 +70,9 @@ const AIEmailMarketingPage: React.FC = () => {
         'A/B testing',
         'Advanced analytics',
         'Priority support',
-        'API access'
+        'API access']
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -86,9 +85,9 @@ const AIEmailMarketingPage: React.FC = () => {
         'Dedicated support',
         'Advanced reporting',
         'Custom integrations',
-        'Team collaboration'
+        'Team collaboration']
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -107,10 +106,10 @@ const AIEmailMarketingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-cyan-900 py-20">
-        <div className="container mx-auto px-4 text-center">
+      <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-cyan-900 py-20">"
+        <div className="container mx-auto px-4 text-center">"
           <h1 className="text-4xl md:text-6xl font-bold mb-6 neon-text">
-            AI Email Marketing
+            AI Email Marketing;
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your email marketing with AI-powered automation, personalization, 
@@ -122,39 +121,39 @@ const AIEmailMarketingPage: React.FC = () => {
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center"
             >
               <Zap className="w-5 h-5 mr-2" />
-              Get Started
+              Get Started;
             </Link>
             <Link
               href="/demo"
               className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all flex items-center justify-center"
             >
               <Mail className="w-5 h-5 mr-2" />
-              View Demo
+              View Demo;
             </Link>
           </div>
         </div>
       </div>
 
       {/* Features Section */}
-      <div className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">AI-Powered Email Marketing</h2>
+      <div className="py-20">"
+        <div className="container mx-auto px-4">"
+          <div className="text-center mb-12">"
+            <h2 className="text-3xl font-bold mb-4">AI-Powered Email Marketing</h2>"
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Everything you need to create, send, and optimize email campaigns that convert
+              Everything you need to create, send, and optimize email campaigns that convert;
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {features.map((feature, index) => (
-              <div
+              <div;
                 key={index}
                 className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-all duration-300"
               >
                 <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${getColorClasses(feature.color)} flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>"
                 <p className="text-gray-400">{feature.description}</p>
               </div>
             ))}
@@ -163,43 +162,43 @@ const AIEmailMarketingPage: React.FC = () => {
       </div>
 
       {/* How It Works */}
-      <div className="bg-gray-800 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">How AI Email Marketing Works</h2>
+      <div className="bg-gray-800 py-20">"
+        <div className="container mx-auto px-4">"
+          <div className="text-center mb-12">"
+            <h2 className="text-3xl font-bold mb-4">How AI Email Marketing Works</h2>"
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Three simple steps to transform your email marketing
+              Three simple steps to transform your email marketing;
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">"
+            <div className="text-center">"
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <span className="text-2xl font-bold">1</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">AI Analyzes Your Audience</h3>
+              <h3 className="text-xl font-semibold mb-2">AI Analyzes Your Audience</h3>"
               <p className="text-gray-400">
-                Our AI studies your subscribers to understand their preferences and behavior patterns
+                Our AI studies your subscribers to understand their preferences and behavior patterns;
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center">"
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <span className="text-2xl font-bold">2</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">AI Creates Personalized Content</h3>
+              <h3 className="text-xl font-semibold mb-2">AI Creates Personalized Content</h3>"
               <p className="text-gray-400">
-                Generate personalized email content that resonates with each segment of your audience
+                Generate personalized email content that resonates with each segment of your audience;
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center">"
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <span className="text-2xl font-bold">3</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">AI Optimizes & Sends</h3>
+              <h3 className="text-xl font-semibold mb-2">AI Optimizes & Sends</h3>"
               <p className="text-gray-400">
-                Automatically optimize send times, subject lines, and content for maximum engagement
+                Automatically optimize send times, subject lines, and content for maximum engagement;
               </p>
             </div>
           </div>
@@ -207,44 +206,44 @@ const AIEmailMarketingPage: React.FC = () => {
       </div>
 
       {/* Pricing Section */}
-      <div className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Simple, Transparent Pricing</h2>
+      <div className="py-20">"
+        <div className="container mx-auto px-4">"
+          <div className="text-center mb-12">"
+            <h2 className="text-3xl font-bold mb-4">Simple, Transparent Pricing</h2>"
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Choose the plan that fits your email marketing needs
+              Choose the plan that fits your email marketing needs;
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
-              <div
+              <div;
                 key={index}
                 className={`bg-gray-800 rounded-lg p-8 ${
-                  plan.popular ? 'ring-2 ring-cyan-500 scale-105' : ''
+                  plan.popular ? 'ring-2 ring-cyan-500 scale-105' : '
                 } hover:scale-105 transition-all duration-300`}
               >
                 {plan.popular && (
-                  <div className="text-center mb-4">
+                  <div className="text-center mb-4">"
                     <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
                 
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold">${plan.price}</span>
+                <div className="text-center mb-6">"
+                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>"
+                  <p className="text-gray-400 mb-4">{plan.description}</p>"
+                  <div className="mb-4">"
+                    <span className="text-4xl font-bold">${plan.price}</span>"
                     <span className="text-gray-400 ml-2">/month</span>
                   </div>
                 </div>
 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center">"
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />"
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -258,7 +257,7 @@ const AIEmailMarketingPage: React.FC = () => {
                       : 'bg-gray-700 text-white hover:bg-gray-600'
                   }`}
                 >
-                  Get Started
+                  Get Started;
                 </Link>
               </div>
             ))}
@@ -267,23 +266,23 @@ const AIEmailMarketingPage: React.FC = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="bg-gray-800 py-20">
-        <div className="container mx-auto px-4">
+      <div className="bg-gray-800 py-20">"
+        <div className="container mx-auto px-4">"
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto text-center">
             <div>
-              <div className="text-4xl font-bold text-cyan-400 mb-2">3x</div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">3x</div>"
               <div className="text-gray-400">Higher Open Rates</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-cyan-400 mb-2">5x</div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">5x</div>"
               <div className="text-gray-400">Better Click Rates</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>"
               <div className="text-gray-400">Time Saved</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-cyan-400 mb-2">95%</div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">95%</div>"
               <div className="text-gray-400">Customer Satisfaction</div>
             </div>
           </div>
@@ -291,9 +290,9 @@ const AIEmailMarketingPage: React.FC = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-cyan-900 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Email Marketing?</h2>
+      <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-cyan-900 py-20">"
+        <div className="container mx-auto px-4 text-center">"
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Email Marketing?</h2>"
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses already using AI to create better email campaigns.
           </p>
@@ -303,19 +302,21 @@ const AIEmailMarketingPage: React.FC = () => {
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center"
             >
               <Brain className="w-5 h-5 mr-2" />
-              Start Your Campaign
+              Start Your Campaign;
             </Link>
             <Link
               href="/demo"
               className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all flex items-center justify-center"
             >
               <Mail className="w-5 h-5 mr-2" />
-              Try Free Demo
+              Try Free Demo;
             </Link>
           </div>
         </div>
       </div>
     </div>
+  );
+  );
   );
 };
 

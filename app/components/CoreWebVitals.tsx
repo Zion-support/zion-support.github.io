@@ -11,8 +11,9 @@ export default function CoreWebVitals({ className = '', children }: CoreWebVital
       {children}
     </div>
   );
+  );
 }
 
     // Log in development
-    if (process.env['NODE_ENV'] === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {'
       }

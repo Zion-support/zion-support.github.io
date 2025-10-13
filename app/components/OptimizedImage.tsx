@@ -19,17 +19,19 @@ export default function OptimizedImage({
   height,
   priority = false,
   onLoad,
-  onError
+  onError;
 }: OptimizedImageProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
   const handleLoad = () => {
+  
     setIsLoading(false);
     onLoad?.();
   };
 
   const handleError = () => {
+  
     setIsLoading(false);
     setHasError(true);
     onError?.();
@@ -37,11 +39,12 @@ export default function OptimizedImage({
 
   if (hasError) {
     return (
-      <div className={`optimized-image-error ${className}`}>
+    <div className={`optimized-image-error ${className}`}>
         <div className="flex items-center justify-center w-full h-full bg-gray-100 text-gray-500">
-          Failed to load image
+          Failed to load image;
         </div>
       </div>
+  );
     );
   }
 
@@ -50,13 +53,13 @@ export default function OptimizedImage({
       {isLoading && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
       )}
-      <img
+      <img;
         src={src}
         alt={alt}
         className="optimized-image"
         width={width}
         height={height}
-        loading={priority ? "eager" : "lazy"}
+        loading={priority ? "eager" : "lazy"}"
         onLoad={handleLoad}
         onError={handleError}
         style={{ opacity: isLoading ? 0 : 1 }}
@@ -65,11 +68,11 @@ export default function OptimizedImage({
   );
         width={width}
         height={height}
-        loading={priority ? 'eager' : 'lazy'}
+        loading={priority ? 'eager' : 'lazy'}'
         decoding="async"
         onLoad={handleLoad}
         onError={handleError}
-        className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+        className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}'
         style={{
           width: '100%',
           height: '100%',
@@ -77,7 +80,8 @@ export default function OptimizedImage({
         }}
       />
     </div>
+  );
   )
 }
 
-export default OptimizedImage
+export default OptimizedImage;

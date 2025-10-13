@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Star, Users, TrendingUp, Award, Sparkles } from 'lucide-react';
-
+import React, { Star, Users, TrendingUp, Award, Sparkles } from 'lucide-react';
 interface FeaturedContent {
   id: number;
   title: string;
@@ -26,7 +25,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '25K+',
       badge: 'NEW',
       gradient: 'from-pink-500 to-red-500',
-      icon: <Sparkles className="w-6 h-6" />,
+      icon: <Sparkles className="w-6 h-6" />,"
       link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
     },
     {
@@ -38,7 +37,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '19K+',
       badge: 'FEATURED',
       gradient: 'from-teal-500 to-cyan-500',
-      icon: <TrendingUp className="w-6 h-6" />,
+      icon: <TrendingUp className="w-6 h-6" />,"
       link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint'
     },
     {
@@ -50,7 +49,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '58K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
-      icon: <Star className="w-6 h-6" />,
+      icon: <Star className="w-6 h-6" />,"
       link: '/blog/ai-2027-operational-trust-blueprint'
     },
     {
@@ -62,7 +61,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '41K+',
       badge: 'TRENDING',
       gradient: 'from-cyan-500 to-blue-500',
-      icon: <TrendingUp className="w-6 h-6" />,
+      icon: <TrendingUp className="w-6 h-6" />,"
       link: '/blog/edge-2026-private-feature-flags'
     },
     {
@@ -74,48 +73,48 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '47K+',
       badge: 'FEATURED',
       gradient: 'from-green-500 to-emerald-500',
-      icon: <Award className="w-6 h-6" />,
+      icon: <Award className="w-6 h-6" />,"
       link: '/blog/genai-quality-tiers-v2-2026'
     }
   ];
 
   const achievements = [
-    { value: '500K+', label: 'Monthly Readers', icon: <Users className="w-8 h-8" /> },
-    { value: '98%', label: 'Customer Satisfaction', icon: <Star className="w-8 h-8" /> },
-    { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8" /> },
-    { value: '50+', label: 'Industry Awards', icon: <TrendingUp className="w-8 h-8" /> }
+    { value: '500K+', label: 'Monthly Readers', icon: <Users className="w-8 h-8" /> },"'
+    { value: '98%', label: 'Customer Satisfaction', icon: <Star className="w-8 h-8" /> },"'
+    { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8" /> },"'
+    { value: '50+', label: 'Industry Awards', icon: <TrendingUp className="w-8 h-8" /> }'
   ];
 
   return (
     <div className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
       {/* Animated background effects */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
+      <div className="absolute inset-0 overflow-hidden opacity-20">"
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
         <div 
-          className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" 
+          className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" "
           style={{ animationDelay: '2s' }} 
         />
         <div 
-          className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" 
+          className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" "
           style={{ animationDelay: '4s' }} 
         />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-20">"
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-fade-in">
-            Revolutionary New Content Hub
+            Revolutionary New Content Hub;
           </h2>
           
           {/* Achievements Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
             {achievements.map((achievement, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center">"
                 <div className="text-indigo-400 mb-2 flex justify-center">
                   {achievement.icon}
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
+                <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>"
                 <div className="text-gray-300 text-sm">{achievement.label}</div>
               </div>
             ))}
@@ -124,20 +123,20 @@ const NewContentAdvertisingBanner: React.FC = () => {
           {/* Featured Content Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {featuredContent.map((content, index) => (
-              <div
+              <div;
                 key={content.id}
                 className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-indigo-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 {/* Card glow effect */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`} />
-                <div className="relative p-8">
-                  <div className="flex items-center gap-2 mb-4">
+                <div className="relative p-8">"
+                  <div className="flex items-center gap-2 mb-4">"
                     <span className={`px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${content.gradient} text-white`}>
                       {content.badge}
                     </span>
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <div className="flex items-center gap-1">"
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />"
                       <span className="text-sm text-gray-300">{content.rating}</span>
                     </div>
                   </div>
@@ -146,18 +145,18 @@ const NewContentAdvertisingBanner: React.FC = () => {
                     {content.title}
                   </h3>
                   
-                  <div className="flex items-center gap-2 text-gray-400 mb-6">
-                    <span className="text-sm">{content.category}</span>
-                    <span className="text-sm">•</span>
+                  <div className="flex items-center gap-2 text-gray-400 mb-6">"
+                    <span className="text-sm">{content.category}</span>"
+                    <span className="text-sm">•</span>"
                     <span className="text-sm">{content.readTime} read</span>
                   </div>
                   
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-gray-400">
-                      <Users className="w-4 h-4" />
+                  <div className="flex items-center justify-between">"
+                    <div className="flex items-center gap-2 text-gray-400">"
+                      <Users className="w-4 h-4" />"
                       <span className="text-sm">{content.readers} readers</span>
                     </div>
-                    <Link 
+                    <Link ;
                       href={content.link}
                       className="group-hover:translate-x-1 transition-transform duration-300"
                     >
@@ -170,12 +169,12 @@ const NewContentAdvertisingBanner: React.FC = () => {
           </div>
 
           {/* Call to Action Section */}
-          <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-3xl p-8 md:p-12 border border-indigo-500/20 mb-16">
-            <div className="text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">
-                <Star className="w-5 h-5 text-yellow-400 fill-current" />
+          <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-3xl p-8 md:p-12 border border-indigo-500/20 mb-16">"
+            <div className="text-center">"
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">"
+                <Star className="w-5 h-5 text-yellow-400 fill-current" />"
                 <span className="text-yellow-400 font-bold text-sm tracking-wider uppercase">
-                  LIMITED TIME OFFER
+                  LIMITED TIME OFFER;
                 </span>
               </div>
               

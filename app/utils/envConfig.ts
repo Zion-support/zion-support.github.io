@@ -1,9 +1,11 @@
+import React from 'react';
+
 'use client';
 /**;
  * Environment Configuration Manager;
  * Provides type-safe access to environment variables with validation;
  */;
-export interface EnvConfig {}}nodeEnv: 'development' | 'production' | 'test',
+export interface EnvConfig {}}nodeEnv: 'development' | 'production' | 'test','
 class EnvironmentConfig {private config: EnvConfig,}
   private isInitialized = false;
   constructor() {,;
@@ -16,7 +18,7 @@ class EnvironmentConfig {private config: EnvConfig,}
     return {}}nodeEnv,;
       apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api';,
       apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY;,
-      enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
+      enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production','
   /**;
    * Get the entire configuration object;
    */;
@@ -60,7 +62,7 @@ class EnvironmentConfig {private config: EnvConfig,}
   /**;
    * Get API headers with authentication;
    */;
-  public getApiHeaders(): Record<string, string> {}const headers: Record<string, string> = {}'Content-Type': 'application/json'}
+  public getApiHeaders(): Record<string, string> {}const headers: Record<string, string> = {}'Content-Type': 'application/json'}'
     }
     if (this.config.apiKey) {}headers['Authorization'] = `Bearer ${this.config.apiKey}`;
   public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */,}}

@@ -1,3 +1,5 @@
+import React from 'react';
+
 'use client';
 /**;
  * Enhanced Analytics Utility;
@@ -89,7 +91,7 @@ class EnhancedAnalytics {}}private queue: AnalyticsEvent[] = [],}
   }
   public trackEvent(event: AnalyticsEvent): void {,}}const enrichedEvent: AnalyticsEvent = {,}...event,;
       metadata: {,}...event.metadata,;
-        url: typeof window !== 'undefined' ? window.location.href : ''}
+        url: typeof window !== 'undefined' ? window.location.href : ''}'
     // Add to queue;
     this.queue.push(enrichedEvent);
     // Send to gtag if available;
@@ -291,7 +293,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */,}}userProperties: UserPr
       return;}
     }
     // In a real implementation, send to analytics backend;
-    if (process.env['NODE_ENV'] === 'development') {}}
+    if (process.env['NODE_ENV'] === 'development') {}}'
     // Clear queue;
     this.queue = []
   }
@@ -300,7 +302,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */,}}userProperties: UserPr
     // Merge offline queue into main queue;
     this.queue.push(...this.offlineQueue);
     // In a real implementation, send to analytics backend;
-    if (process.env['NODE_ENV'] === 'development') {}
+    if (process.env['NODE_ENV'] === 'development') {}'
       }
     // Clear queue;
     // Flush;
@@ -344,7 +346,7 @@ export default analytics;
   }
   private flush(): void {/* TODO: Fix JSX expression */,}}}
     // In a real implementation, send to analytics backend;
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */,}}
+    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */,}}'
     // Clear queue;
     this.queue = []
   }
@@ -358,7 +360,7 @@ export default analytics;
   private flush(): void {/* TODO: Fix JSX expression */}
     }
     // In a real implementation, send to analytics backend;
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}'
       }
     // Clear queue;
     this.queue = [];

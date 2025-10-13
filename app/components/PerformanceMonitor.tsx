@@ -12,7 +12,7 @@ export default function PerformanceMonitor() {
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    fps: 0
+    fps: 0;
   lcp: number | null;
   fid: number | null;
   cls: number | null;
@@ -30,7 +30,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showInProductio
     fid: null,
     cls: null,
     fcp: null,
-    ttfb: null
+    ttfb: null;
   });
 
   const [isVisible, setIsVisible] = useState(false);
@@ -38,9 +38,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showInProductio
 export default function PerformanceMonitor() {
   useEffect(() => {
     // Only run in development
-    if (process.env['NODE_ENV'] !== 'development') return;
+    if (process.env['NODE_ENV'] !== 'development') return;'
 
     const measurePerformance = () => {
+  
       // Measure load time
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
@@ -50,11 +51,11 @@ export default function PerformanceMonitor() {
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       const renderTime = fcp ? fcp.startTime : 0;
 
-      // Measure memory usage
+      // Measure memory usage;
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
       const memoryUsage = memory ? memory.usedJSHeapSize / memory.totalJSHeapSize : 0;
 
-      // Measure FPS
+      // Measure FPS;
       let fps = 0;
       if (typeof window.requestAnimationFrame === 'function') {
         let lastTime = performance.now();
@@ -78,15 +79,15 @@ export default function PerformanceMonitor() {
         loadTime: Math.round(loadTime),
         renderTime: Math.round(renderTime),
         memoryUsage: Math.round(memoryUsage * 100),
-        fps
+        fps;
       });
       }
     };
 
-    // Initial measurement
+    // Initial measurement;
     measurePerformance();
 
-    // Show/hide with Ctrl+Shift+P
+    // Show/hide with Ctrl+Shift+P;
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
         e.preventDefault();
@@ -102,7 +103,7 @@ export default function PerformanceMonitor() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg font-mono text-sm z-50">
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg font-mono text-sm z-50">"
       <div className="mb-2 font-bold">Performance Monitor</div>
       <div>Load Time: {metrics.loadTime}ms</div>
       <div>Render Time: {metrics.renderTime}ms</div>
@@ -112,20 +113,22 @@ export default function PerformanceMonitor() {
       </div>
       
       <div className="mt-3 pt-3 border-t border-white/20 text-xs text-gray-400">
-        Press Ctrl+Shift+P to toggle
+        Press Ctrl+Shift+P to toggle;
       </div>
     </div>
+  );
+  );
   );
 }
   return null;
 };
 
 export default PerformanceMonitor;
-  return null
+  return null;
 }
 
-export default PerformanceMonitor
-    // Monitor Core Web Vitals
+export default PerformanceMonitor;
+    // Monitor Core Web Vitals;
     onCLS(console.log);
     onINP(console.log);
     onFCP(console.log);
@@ -140,7 +143,7 @@ export default PerformanceMonitor
             console.log('Navigation timing:', {
               domContentLoaded: entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart,
               loadComplete: entry.loadEventEnd - entry.loadEventStart,
-              totalTime: entry.loadEventEnd - entry.navigationStart
+              totalTime: entry.loadEventEnd - entry.navigationStart;
             });
           }
         }
@@ -152,49 +155,57 @@ export default PerformanceMonitor
   return null;
 }
 const PerformanceMonitor: React.FC = () => {
-  return (
-    <div className="p-4 bg-gray-800 rounded-lg">
-      <h3 className="text-lg font-semibold text-white mb-4">Performance Monitor</h3>
+  const Component = () => {
+  
+    return (
+    <div className="p-4 bg-gray-800 rounded-lg">"
+      <h3 className="text-lg font-semibold text-white mb-4">Performance Monitor</h3>"
       <div className="text-gray-300">
         <p>Performance monitoring is active.</p>
       </div>
     </div>
   );
+  );
+  );
 };
 
 export default PerformanceMonitor;
-    // Cleanup
-    return () => {
+    // Cleanup;
+    const Component = () => {
+  
+      return () => {
       clearInterval(memoryInterval);
       window.removeEventListener('load', measurePageLoad);
     };
   }, []);
 
     try {
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] })
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] })'
     } catch (error) {
       console.warn('Performance Observer not supported:', error)
     }
 
     // Monitor TTFB
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
       setMetrics(prev => ({ 
         ...prev, 
-        ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+        ttfb: navigationEntry.responseStart - navigationEntry.requestStart ;
       }))
     }
 
     // Log performance metrics for debugging
-    if (process.env['NODE_ENV'] === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {'
       console.log('Performance Metrics:', metrics)
     }
     observer.observe({ entryTypes: ['resource'] });
 
-    return () => observer.disconnect();
+    const Component = () => {
+  
+      return () => observer.disconnect();
   }, [analytics]);
 
-  // Track navigation timing
+  // Track navigation timing;
   useEffect(() => {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     
@@ -207,7 +218,7 @@ export default PerformanceMonitor;
         dns: navigation.domainLookupEnd - navigation.domainLookupStart,
         tcp: navigation.connectEnd - navigation.connectStart,
         request: navigation.responseStart - navigation.requestStart,
-        response: navigation.responseEnd - navigation.responseStart
+        response: navigation.responseEnd - navigation.responseStart;
       });
     }
   }, [analytics]);
@@ -219,12 +230,12 @@ export default PerformanceMonitor;
       analytics.trackEvent('memory_usage', {
         usedJSHeapSize: memory.usedJSHeapSize,
         totalJSHeapSize: memory.totalJSHeapSize,
-        jsHeapSizeLimit: memory.jsHeapSizeLimit
+        jsHeapSizeLimit: memory.jsHeapSizeLimit;
       });
     }
   }, [analytics]);
 
-  // Track connection information
+  // Track connection information;
   useEffect(() => {
     if ('connection' in navigator) {
       const connection = (navigator as any).connection;
@@ -232,82 +243,90 @@ export default PerformanceMonitor;
         effectiveType: connection.effectiveType,
         downlink: connection.downlink,
         rtt: connection.rtt,
-        saveData: connection.saveData
+        saveData: connection.saveData;
       });
     }
   }, [analytics]);
 
-  // Track viewport changes
+  // Track viewport changes;
   useEffect(() => {
     const trackViewport = () => {
+  
       analytics.trackEvent('viewport_change', {
         width: window.innerWidth,
         height: window.innerHeight,
-        devicePixelRatio: window.devicePixelRatio
+        devicePixelRatio: window.devicePixelRatio;
       });
     };
 
     window.addEventListener('resize', trackViewport);
     trackViewport(); // Initial measurement
-
-    return () => window.removeEventListener('resize', trackViewport);
+;
+    const Component = () => {
+  
+      return () => window.removeEventListener('resize', trackViewport);
   }, [analytics]);
 
-  // Track scroll performance
+  // Track scroll performance;
   useEffect(() => {
     let scrollTimeout: NodeJS.Timeout;
     
     const trackScroll = () => {
+  
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
         analytics.trackEvent('scroll_performance', {
           scrollY: window.scrollY,
           scrollX: window.scrollX,
           documentHeight: document.documentElement.scrollHeight,
-          viewportHeight: window.innerHeight
+          viewportHeight: window.innerHeight;
         });
       }, 100);
     };
 
     window.addEventListener('scroll', trackScroll, { passive: true });
-    return () => {
+    const Component = () => {
+  
+      return () => {
       observer.disconnect();
     };
   }, []);
 
-  // Don't render anything in production
-  if (process.env['NODE_ENV'] === 'production') {
-    return null
+  // Don't render anything in production'
+  if (process.env['NODE_ENV'] === 'production') {'
+    return null;
   }
 
-  // Development mode - show metrics
-  return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
+  // Development mode - show metrics;
+  const Component = () => {
+  
+    return (
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">"
+      <h3 className="font-bold mb-2">Performance Metrics</h3>"
       <div className="space-y-1">
         {metrics.lcp && (
-          <div className={`${metrics.lcp > 2500 ? 'text-red-400' : metrics.lcp > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>
-            LCP: {Math.round(metrics.lcp)}ms
+          <div className={`${metrics.lcp > 2500 ? 'text-red-400' : metrics.lcp > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>'
+            LCP: {Math.round(metrics.lcp)}ms;
           </div>
         )}
         {metrics.fid && (
-          <div className={`${metrics.fid > 300 ? 'text-red-400' : metrics.fid > 100 ? 'text-yellow-400' : 'text-green-400'}`}>
-            FID: {Math.round(metrics.fid)}ms
+          <div className={`${metrics.fid > 300 ? 'text-red-400' : metrics.fid > 100 ? 'text-yellow-400' : 'text-green-400'}`}>'
+            FID: {Math.round(metrics.fid)}ms;
           </div>
         )}
         {metrics.cls && (
-          <div className={`${metrics.cls > 0.25 ? 'text-red-400' : metrics.cls > 0.1 ? 'text-yellow-400' : 'text-green-400'}`}>
+          <div className={`${metrics.cls > 0.25 ? 'text-red-400' : metrics.cls > 0.1 ? 'text-yellow-400' : 'text-green-400'}`}>'
             CLS: {metrics.cls.toFixed(3)}
           </div>
         )}
         {metrics.fcp && (
-          <div className={`${metrics.fcp > 3000 ? 'text-red-400' : metrics.fcp > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>
-            FCP: {Math.round(metrics.fcp)}ms
+          <div className={`${metrics.fcp > 3000 ? 'text-red-400' : metrics.fcp > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>'
+            FCP: {Math.round(metrics.fcp)}ms;
           </div>
         )}
         {metrics.ttfb && (
-          <div className={`${metrics.ttfb > 800 ? 'text-red-400' : metrics.ttfb > 600 ? 'text-yellow-400' : 'text-green-400'}`}>
-            TTFB: {Math.round(metrics.ttfb)}ms
+          <div className={`${metrics.ttfb > 800 ? 'text-red-400' : metrics.ttfb > 600 ? 'text-yellow-400' : 'text-green-400'}`}>'
+            TTFB: {Math.round(metrics.ttfb)}ms;
           </div>
         )}
   const [isVisible, setIsVisible] = useState(false);
@@ -315,11 +334,13 @@ export default PerformanceMonitor;
       </div>
       
       <div className="mt-3 pt-3 border-t border-cyan-500/20 text-xs text-cyan-400">
-        Press Ctrl+Shift+P to toggle
+        Press Ctrl+Shift+P to toggle;
       </div>
     </div>
   );
-  // Track errors
+  );
+  );
+  // Track errors;
   useEffect(() => {
     const trackError = (event: ErrorEvent) => {
       analytics.trackEvent('javascript_error', {
@@ -340,13 +361,15 @@ export default PerformanceMonitor;
     window.addEventListener('error', trackError);
     window.addEventListener('unhandledrejection', trackUnhandledRejection);
 
-    return () => {
+    const Component = () => {
+  
+      return () => {
       window.removeEventListener('error', trackError);
       window.removeEventListener('unhandledrejection', trackUnhandledRejection);
     };
   }, [analytics]);
 
-  // Return null as this is a monitoring component
+  // Return null as this is a monitoring component;
   return null;
 };
 

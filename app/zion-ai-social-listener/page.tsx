@@ -1,44 +1,44 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, Sparkles, Monitor, Mic, Mail, Smartphone, Globe } from 'lucide-react';
+import React, { Link } from 'react-router-dom';
+import React, { ArrowRight, Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, Sparkles, Monitor, Mic, Mail, Smartphone, Globe } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionaisociallistenerPage = () => {
+  
   const features = [
     {
       title: "AI-Powered Intelligence",
       description: "Advanced artificial intelligence algorithms that learn and adapt to your business needs",
-      icon: <Brain className="w-8 h-8" />,
+      icon: <Brain className="w-8 h-8" />,"
       color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Real-time Processing",
       description: "Process data and make decisions in real-time with lightning-fast performance",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Zap className="w-8 h-8" />,"
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Advanced Analytics",
       description: "Comprehensive analytics and reporting to track performance and optimize results",
-      icon: <BarChart3 className="w-8 h-8" />,
+      icon: <BarChart3 className="w-8 h-8" />,"
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "Enterprise Security",
       description: "Bank-level security with role-based access control and audit trails",
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className="w-8 h-8" />,"
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const benefits = [
-    "Increase efficiency by up to 80%",
-    "Reduce operational costs significantly",
-    "Improve accuracy and reliability",
-    "Scale with your business growth",
-    "Integrate with existing systems",
+    "Increase efficiency by up to 80%","
+    "Reduce operational costs significantly","
+    "Improve accuracy and reliability","
+    "Scale with your business growth","
+    "Integrate with existing systems","
     "24/7 monitoring and support"
   ];
 
@@ -50,23 +50,22 @@ const ZionaisociallistenerPage = () => {
         keywords="zion, ai, social, listener, AI solution, business automation, enterprise software"
         canonical="https://ziontechgroup.com/zion-ai-social-listener"
       />
-
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">"
+        <div className="absolute inset-0 overflow-hidden">"
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>"
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
-        <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+        <ResponsiveContainer className="text-center relative z-10">"
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">"
+            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />"
             <span className="text-cyan-400 text-sm font-medium">AI-Powered Solution</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion Ai Social Listener
+              Zion Ai Social Listener;
             </span>
           </h1>
           
@@ -81,7 +80,7 @@ const ZionaisociallistenerPage = () => {
               size="lg"
               icon={<Sparkles className="w-5 h-5" />}
             >
-              Get Started
+              Get Started;
             </FuturisticButton>
             <FuturisticButton
               href="/demo"
@@ -89,7 +88,7 @@ const ZionaisociallistenerPage = () => {
               size="lg"
               icon={<Monitor className="w-5 h-5" />}
             >
-              Watch Demo
+              Watch Demo;
             </FuturisticButton>
           </div>
         </ResponsiveContainer>
@@ -98,9 +97,9 @@ const ZionaisociallistenerPage = () => {
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
-          <div className="text-center mb-16">
+          <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful Features
+              Powerful Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Everything you need to transform your business with AI-powered solutions.
@@ -108,7 +107,7 @@ const ZionaisociallistenerPage = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <div
+              <div;
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
@@ -130,9 +129,9 @@ const ZionaisociallistenerPage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">"
+        <div className="max-w-7xl mx-auto">"
+          <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Solution?
             </h2>
@@ -142,11 +141,11 @@ const ZionaisociallistenerPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div
+              <div;
                 key={index}
                 className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300"
               >
-                <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />"
                 <span className="text-gray-300 text-lg">{benefit}</span>
               </div>
             ))}
@@ -155,8 +154,8 @@ const ZionaisociallistenerPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">"
+        <div className="max-w-4xl mx-auto text-center">"
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Get Started?
           </h2>
@@ -171,7 +170,7 @@ const ZionaisociallistenerPage = () => {
               size="lg"
               icon={<Sparkles className="w-5 h-5" />}
             >
-              Contact Us
+              Contact Us;
             </FuturisticButton>
             <FuturisticButton
               href="/demo"
@@ -179,13 +178,16 @@ const ZionaisociallistenerPage = () => {
               size="lg"
               icon={<Monitor className="w-5 h-5" />}
             >
-              Schedule Demo
+              Schedule Demo;
             </FuturisticButton>
           </div>
         </div>
       </section>
     </div>
   );
+  );
 };
 
+
+export default ZionaisociallistenerPage;
 export default ZionaisociallistenerPage;

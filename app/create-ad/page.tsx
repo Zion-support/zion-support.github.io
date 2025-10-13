@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 
 const CreateAdPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Create New Ad Campaign</h1>
+    <div className="min-h-screen bg-gray-50">"
+      <div className="container mx-auto px-4 py-8">"
+        <div className="mb-8">"
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Create New Ad Campaign</h1>"
           <p className="text-xl text-gray-600">
             Build and launch your advertising campaigns with our powerful ad management tools.
           </p>
@@ -26,6 +26,7 @@ const CreateAdPage: React.FC = () => {
         <AdManagementSystem />
       </div>
     </div>
+  );
   );
 };
 

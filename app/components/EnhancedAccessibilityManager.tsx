@@ -7,8 +7,8 @@ interface AccessibilitySettings {
   enableFocusManagement: boolean;
   enableVoiceNavigation: boolean;
   enableReducedMotion: boolean;
-  fontSize: 'small' | 'medium' | 'large';
-  colorScheme: 'light' | 'dark' | 'auto';
+  fontSize: 'small' | 'medium' | 'large';'
+  colorScheme: 'light' | 'dark' | 'auto';'
 }
 
 interface AccessibilityContextType {
@@ -33,6 +33,7 @@ const defaultSettings: AccessibilitySettings = {
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
 export const useAccessibility = () => {
+  
   const context = useContext(AccessibilityContext);
   if (!context) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
@@ -57,7 +58,7 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
   enableHighContrast = false,
   enableFocusManagement = true,
   enableVoiceNavigation = false,
-  enableReducedMotion = false
+  enableReducedMotion = false;
 }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     ...defaultSettings,
@@ -66,7 +67,7 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
     enableHighContrast,
     enableFocusManagement,
     enableVoiceNavigation,
-    enableReducedMotion
+    enableReducedMotion;
   });
 
   const updateSettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
@@ -81,8 +82,8 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
     if (!settings.enableScreenReader) return;
     
     const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
+    announcement.setAttribute('aria-live', 'polite');'
+    announcement.setAttribute('aria-atomic', 'true');'
     announcement.className = 'sr-only';
     announcement.textContent = message;
     
@@ -99,22 +100,22 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
     const element = document.getElementById(elementId);
     if (element) {
       element.focus();
-      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });'
     }
   }, [settings.enableFocusManagement]);
 
-  // Apply accessibility settings to the document
+  // Apply accessibility settings to the document;
   useEffect(() => {
     const root = document.documentElement;
     
-    // Apply high contrast mode
+    // Apply high contrast mode;
     if (settings.enableHighContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
     
-    // Apply reduced motion
+    // Apply reduced motion;
     if (settings.enableReducedMotion) {
       root.classList.add('reduced-motion');
     } else {
@@ -127,7 +128,7 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
     // Apply color scheme
     root.setAttribute('data-color-scheme', settings.colorScheme);
     
-    // Apply keyboard navigation
+    // Apply keyboard navigation;
     if (settings.enableKeyboardNavigation) {
       root.classList.add('keyboard-navigation');
     } else {
@@ -135,7 +136,7 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
     }
   }, [settings]);
 
-  // Keyboard navigation support
+  // Keyboard navigation support;
   useEffect(() => {
     if (!settings.enableKeyboardNavigation) return;
 
@@ -167,7 +168,7 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [settings.enableKeyboardNavigation, setFocus, announceToScreenReader]);
 
-  // Focus management
+  // Focus management;
   useEffect(() => {
     if (!settings.enableFocusManagement) return;
 
@@ -179,7 +180,7 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
         
         // Announce focus changes for screen readers
         if (settings.enableScreenReader && target.getAttribute('aria-label')) {
-          announceToScreenReader(target.getAttribute('aria-label') || '');
+          announceToScreenReader(target.getAttribute('aria-label') || '');'
         }
       }
     };
@@ -194,13 +195,15 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
     
-    return () => {
+    const Component = () => {
+  
+      return () => {
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
     };
   }, [settings.enableFocusManagement, settings.enableScreenReader, announceToScreenReader]);
 
-  // Voice navigation support
+  // Voice navigation support;
   useEffect(() => {
     if (!settings.enableVoiceNavigation) return;
 
@@ -233,7 +236,9 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
 
     window.addEventListener('voiceCommand' as any, handleVoiceCommand as EventListener);
     
-    return () => {
+    const Component = () => {
+  
+      return () => {
       window.removeEventListener('voiceCommand' as any, handleVoiceCommand as EventListener);
     };
   }, [settings.enableVoiceNavigation]);
@@ -243,10 +248,18 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
     updateSettings,
     resetSettings,
     announceToScreenReader,
-    setFocus
+    setFocus;
   };
 
-  return (
+  const Component = () => {
+  
+    return (
+    <div>
+  )
+    </div>
+  );
+  );
+  )
     <AccessibilityContext.Provider value={contextValue}>
       {children}
     </AccessibilityContext.Provider>

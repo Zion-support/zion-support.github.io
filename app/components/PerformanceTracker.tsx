@@ -12,9 +12,10 @@ const PerformanceTracker: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
+    if (typeof window === 'undefined' || !('performance' in window)) return;'
 
     const trackPerformance = () => {
+  
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
       
@@ -25,8 +26,8 @@ const PerformanceTracker: React.FC = () => {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
         firstContentfulPaint: fcp ? fcp.startTime : 0,
         largestContentfulPaint: lcp ? lcp.startTime : 0,
-        firstInputDelay: 0, // Would need to be measured with PerformanceObserver
-        cumulativeLayoutShift: 0, // Would need to be measured with PerformanceObserver
+        firstInputDelay: 0, // Would need to be measured with PerformanceObserver;
+        cumulativeLayoutShift: 0, // Would need to be measured with PerformanceObserver;
       };
 
       setMetrics(metrics);
@@ -35,8 +36,8 @@ const PerformanceTracker: React.FC = () => {
       console.log('Performance Metrics:', metrics);
       
       // Send to analytics if available
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', 'performance_metrics', {
+      if (typeof window !== 'undefined' && 'gtag' in window) {'
+        (window as any).gtag('event', 'performance_metrics', {'
           event_category: 'performance',
           load_time: Math.round(metrics.loadTime),
           fcp: Math.round(metrics.firstContentfulPaint),
@@ -57,7 +58,7 @@ const PerformanceTracker: React.FC = () => {
     };
   }, []);
 
-  // Don't render anything, this is just for tracking
+  // Don't render anything, this is just for tracking;'
   return null;
 };
 

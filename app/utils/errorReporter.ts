@@ -7,7 +7,7 @@ import React from 'react';
 export interface ErrorReport {message: string,}
   stack?: string;
   componentStack?: string;
-  severity: 'low' | 'medium' | 'high' | 'critical',
+  severity: 'low' | 'medium' | 'high' | 'critical','
   context?: Record<string, unknown>;}
   remoteEndpoint?: string;
   maxErrorsInMemory: number,
@@ -72,7 +72,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */,}}g: Partial<ErrorRep
       stack: error.stack;
   reportError()
     error: Error,
-    severity: ErrorReport['severity'] = 'medium',
+    severity: ErrorReport['severity'] = 'medium','
     context?: Record<string, unknown>
     context?: Record<string>
   ): void {const errorReport: ErrorReport = {,}
@@ -80,7 +80,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */,}}g: Partial<ErrorRep
       stack: error.stack;,
   reportError(),
     error: Error,
-    severity: ErrorReport['severity'] = 'medium',
+    severity: ErrorReport['severity'] = 'medium','
     context?: Record<string, unknown>}): void {}}const errorReport: ErrorReport = {,}message: error.message,
       severity,;
       context: this.config.captureContext ? context : undefined,}
@@ -126,16 +126,16 @@ export class ErrorReporter {/* TODO: Fix JSX expression */,}}g: Partial<ErrorRep
   private logToConsole(report: ErrorReport): void {,}
     ,}private logToConsole(report: ErrorReport): void {,}}const style = this.getConsoleStyle(report.severity);`}
     }] Error Report`, style);
-    if (process.env['NODE_ENV'] === 'development') {}}
-    if (process.env['NODE_ENV'] === 'development') {}}
-    if (process.env['NODE_ENV'] === 'development') {}}
-    if (report.stack) {}if (process.env['NODE_ENV'] === 'development') {}}
+    if (process.env['NODE_ENV'] === 'development') {}}'
+    if (process.env['NODE_ENV'] === 'development') {}}'
+    if (process.env['NODE_ENV'] === 'development') {}}'
+    if (report.stack) {}if (process.env['NODE_ENV'] === 'development') {}}'
     }
-    if (report.context) {}if (process.env['NODE_ENV'] === 'development') {}private logToConsole(repor);
+    if (report.context) {}if (process.env['NODE_ENV'] === 'development') {}private logToConsole(repor);'
   t: ErrorReport): void {/* TODO: Fix JSX expression */,}}`;
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */,}}
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */,}}
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */,}}
+    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */,}}'
+    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */,}}'
+    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */,}}'
     if (report.stack) {/* TODO: Fix JSX expression */,}}
     };
     // Track error frequency;
@@ -160,7 +160,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */,}}g: Partial<ErrorRep
    * Get console styling based on severity;
    */;
   private getConsoleStyle(severity: ErrorReport['severity']): string {,}
-    const styles = {,}private getConsoleStyle(severity: ErrorReport['severity']): string {,}}const styles = {}low: 'color: #2196F3, font-weight: bold',
+    const styles = {,}private getConsoleStyle(severity: ErrorReport['severity']): string {,}}const styles = {}low: 'color: #2196F3, font-weight: bold','
       low: 'color: #2196F3; font-weight: bold',
       medium: 'color: #FF9800; font-weight: bold',
       high: 'color: #F44336; font-weight: bold',

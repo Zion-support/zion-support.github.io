@@ -1,8 +1,8 @@
 import React from 'react';
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'white';
+  size?: 'sm' | 'md' | 'lg' | 'xl';'
+  color?: 'primary' | 'secondary' | 'white';'
   text?: string;
   fullScreen?: boolean;
 }
@@ -11,7 +11,7 @@ const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   color = 'primary',
   text,
-  fullScreen = false
+  fullScreen = false;
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -27,7 +27,7 @@ const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   const spinner = (
-    <div className="flex flex-col items-center justify-center space-y-4">
+    <div className="flex flex-col items-center justify-center space-y-4">"
       <div className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}>
         <svg
           className="w-full h-full"
@@ -59,9 +59,10 @@ const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
   if (fullScreen) {
     return (
-      <div className="fixed inset-0 bg-gray-900/80 backdrop-blur-sm flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-gray-900/80 backdrop-blur-sm flex items-center justify-center z-50">
         {spinner}
       </div>
+  );
     );
   }
 

@@ -1,9 +1,11 @@
+import React from 'react';
+
 
 
 import { apiCache } from './apiCache';
 
 interface RequestConfig {
-  method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
+  method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';'
   headers?: Record<string, string>;
   body?: any;
   cache?: boolean;
@@ -23,13 +25,13 @@ class APIClient {
 class APIClient {}}private baseURL: string,
   private defaultHeaders: Record<string>,
 constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {)}) {}this.baseURL = baseURL;
-    this.defaultHeaders = {}'Content-Type': 'application/json',;
+    this.defaultHeaders = {}'Content-Type': 'application/json',;'
   private defaultHeaders: Record<string, string>;
 
   constructor(baseURL: string = '/api') {
     this.baseURL = baseURL;
     this.defaultHeaders = {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json','
     };
   }
 
@@ -61,7 +63,7 @@ constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {)}) 
 const url = `${this.baseURL}${endpoint}`;
     const cacheKey = apiCache.generateKey(url, body);
 // Check cache for GET requests;
-    if (method === 'GET' && cache) {// Check cache for GET requests;}if (method === 'GET' && cache) {}const cachedData = apiCache.get(cacheKey);
+    if (method === 'GET' && cache) {// Check cache for GET requests;}if (method === 'GET' && cache) {}const cachedData = apiCache.get(cacheKey);'
       if (cachedData) {}return cachedData;
       }
     }
@@ -156,34 +158,34 @@ class ApiClient {/* TODO: Fix JSX expression */,}}}
   async get<T = unknown>(ur,
   l: string,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
+  g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})'
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
     });
   async post<T = unknown>(ur,
   l: string,
     data?: unknown,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
+  g: Omit<RequestConfig, 'url' | 'method'> = {})'
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
     });
   async put<T = unknown>(ur,
   l: string,
     data?: unknown,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
+  g: Omit<RequestConfig, 'url' | 'method'> = {})'
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
     });
   async delete<T = unknown>(ur,
   l: string,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
+  g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})'
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
     });
   async patch<T = unknown>(ur,
   l: string,
     data?: unknown,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
+  g: Omit<RequestConfig, 'url' | 'method'> = {})'
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
     });
   private async request<T>(confi)
@@ -260,7 +262,7 @@ class ApiClient {/* TODO: Fix JSX expression */,}}}
         return {/* TODO: Fix JSX expression */,}}}
       } catch (error) {/* TODO: Fix JSX expression */,}`;
             logCritical(`API request failed after ${retries)}attempts`, error as Error, {/* TODO: Fix JSX expression */,})
-        // Don't retry on certain errors;
+        // Don't retry on certain errors;'
         if (error instanceof ApiError && error.status < 500) {/* TODO: Fix JSX expression */}
         }
         // Wait before retrying;
@@ -289,23 +291,23 @@ class ApiClient {/* TODO: Fix JSX expression */,}}}
     }
   }
 
-  async get<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async get<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {'
     return this.request<T>(endpoint, { ...config, method: 'GET' });
   }
 
-  async post<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async post<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {'
     return this.request<T>(endpoint, { ...config, method: 'POST', body });
   }
 
-  async put<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async put<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {'
     return this.request<T>(endpoint, { ...config, method: 'PUT', body });
   }
 
-  async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {'
     return this.request<T>(endpoint, { ...config, method: 'DELETE' });
   }
 
-  async patch<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async patch<T>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {'
     return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
   }
 }

@@ -1,22 +1,22 @@
-import { useEffect } from 'react';
-
+import React, {   useEffect   } from 'react';
 export default function MobileOptimizer() {
   useEffect(() => {
     // Add viewport meta tag if not present
     let viewport = document.querySelector('meta[name="viewport"]');
     if (!viewport) {
       viewport = document.createElement('meta');
-      viewport.setAttribute('name', 'viewport');
-      viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes');
+      viewport.setAttribute('name', 'viewport');'
+      viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes');'
       document.head.appendChild(viewport);
     }
 
     // Add touch-friendly classes
     const addTouchClasses = () => {
+  
       const buttons = document.querySelectorAll('button, a[role="button"]');
       buttons.forEach(button => {
         if (!button.classList.contains('touch-friendly')) {
-          button.classList.add('touch-friendly', 'min-h-[44px]', 'min-w-[44px]');
+          button.classList.add('touch-friendly', 'min-h-[44px]', 'min-w-[44px]');'
         }
       });
     };
@@ -30,6 +30,7 @@ export default function MobileOptimizer() {
 
     // Handle orientation changes
     const handleOrientationChange = () => {
+  
       setTimeout(() => {
         window.scrollTo(0, 0);
       }, 100);

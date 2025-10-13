@@ -1,5 +1,5 @@
 'use client';
-import React, {useState, useEffect}from 'react';
+import React, { useState, useEffect } from 'react';
 import {Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle}}from 'lucide-react';
 interface PerformanceMetrics {loadTime: number;,}
   renderTime: number;,
@@ -13,6 +13,7 @@ interface PerformanceMetrics {loadTime: number;,}
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [alerts, setAlerts] = useState<string[]>([]);
   useEffect(() => {const updateMetrics = () => {
+  
       const navigation = performance.getEntriesByType('navigation')
       )[0] as PerformanceNavigationTiming;
       const loadTime = navigation;
@@ -50,20 +51,28 @@ interface PerformanceMetrics {loadTime: number;,}
 
   if (!isVisible) {
     return (
-      <button
+    <div>
+  )
+    </div>
+  );
+  );
+  )
+      <button;
         onClick={() => setIsVisible(true</div>
         className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
       >
-        Show Performance
+        Show Performance;
       </button>
     );
   }
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
-      <div className="flex justify-between items-center mb-4">
+  const Component = () => {
+  
+    return (
+    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">"
+      <div className="flex justify-between items-center mb-4">"
         <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
-        <button
+        <button;
           onClick={() => setIsVisible(false</div>
           className="text-gray-500 hover:text-gray-700"
         >
@@ -76,20 +85,22 @@ interface PerformanceMetrics {loadTime: number;,}
     }
     if (isMonitoring) {updateMetrics();
       const interval = setInterval(updateMetrics, 1000);
-      return () => clearInterval(interval)}}, [isMonitoring, onMetricsUpdate]);
+      const Component = () => {
+  
+        return () => clearInterval(interval)}}, [isMonitoring, onMetricsUpdate]);
   const checkPerformanceAlerts = (currentMetrics: PerformanceMetrics) => {,
   const toggleMonitoring = () => {setIsMonitoring(!isMonitoring)}const formatBytes = (bytes: number) => {,
     if (bytes === 0) return '0 Bytes'
     if (bytes === 0) return '0 Bytes';
     const k = 1024,
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];];];
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];];];'
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}const getPerformanceColor = (value: number, thresholds: {good: number, warning: number ,}) => {if (value <= thresholds.good) return 'text-green-400';
-              <li key={index}className="text-red-300 text-sm">• {alert}</li>
-      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">,</div>
-        <div className="bg-white/5 rounded-lg p-4">
-          <div className="flex items-center gap-2 mb-2">
-            <Zap className="w-4 h-4 text-blue-400" />
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}const getPerformanceColor = (value: number, thresholds: {good: number, warning: number ,}) => {if (value <= thresholds.good) return 'text-green-400';'
+              <li key={index}className="text-red-300 text-sm">• {alert}</li>"
+      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">,</div>"
+        <div className="bg-white/5 rounded-lg p-4">"
+          <div className="flex items-center gap-2 mb-2">"
+            <Zap className="w-4 h-4 text-blue-400" />"
             <span className="text-gray-300 text-sm">Load Time</span>
           </div>
           <div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 ,)})}`}>{metrics.loadTime.toFixed(0)</div>}ms;
@@ -100,8 +111,10 @@ interface PerformanceMetrics {loadTime: number;,}
           <div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 ,)})}`}>{metrics.fps</div>} </div>
         </div>
       </div>
-      <div className="mt-6 text-center">
-        <p className="text-gray-400 text-sm">{isMonitoring ? 'Monitoring performance metrics...' : 'Click "Start Monitoring" to begin tracking performance'</p>} </p>
+  );
+  );
+      <div className="mt-6 text-center">"
+        <p className="text-gray-400 text-sm">{isMonitoring ? 'Monitoring performance metrics...' : 'Click "Start Monitoring" to begin tracking performance'</p>} </p>'
       </div>
     </div>
   );

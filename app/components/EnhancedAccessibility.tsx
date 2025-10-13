@@ -14,7 +14,7 @@ import React, { useEffect, useState } from 'react';
 interface AccessibilitySettings {
   highContrast: boolean;
   reducedMotion: boolean;
-  fontSize: 'small' | 'medium' | 'large';
+  fontSize: 'small' | 'medium' | 'large';'
   screenReader: boolean;
   keyboardNavigation: boolean;
 }
@@ -28,17 +28,17 @@ interface EnhancedAccessibilityProps {
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   children,
       {children}
-      {process.env['NODE_ENV'] === 'development' && (
-        <div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
-          <div className="flex items-center justify-between mb-2">
-            <h3 className="text-sm font-semibold">Accessibility Monitor</h3>
+      {process.env['NODE_ENV'] === 'development' && ('
+        <div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">"
+          <div className="flex items-center justify-between mb-2">"
+            <h3 className="text-sm font-semibold">Accessibility Monitor</h3>"
             <div className={`w-3 h-3 rounded-full ${
               accessibilityScore >= 90 ? 'bg-green-500' : 
               accessibilityScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
             }`} />
           </div>
           
-          <div className="space-y-1 text-xs">
+          <div className="space-y-1 text-xs">"
             <div className="flex justify-between">
               <span>Accessibility Score:</span>
               <span className="font-mono">{accessibilityScore}/100</span>
@@ -61,12 +61,12 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
             
             <div className="flex justify-between">
               <span>Keyboard Nav:</span>
-              <span className="font-mono">{metrics.keyboardNavigation ? '✓' : '✗'}</span>
+              <span className="font-mono">{metrics.keyboardNavigation ? '✓' : '✗'}</span>'
             </div>
             
             <div className="flex justify-between">
               <span>Screen Reader:</span>
-              <span className="font-mono">{metrics.screenReaderCompatible ? '✓' : '✗'}</span>
+              <span className="font-mono">{metrics.screenReaderCompatible ? '✓' : '✗'}</span>'
             </div>
           </div>
         </div>
@@ -75,35 +75,35 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = false,
-  enableFocusManagement = true
+  enableFocusManagement = true;
 }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: enableHighContrast,
     reducedMotion: false,
     fontSize: 'medium',
     screenReader: enableScreenReaderSupport,
-    keyboardNavigation: enableKeyboardNavigation
+    keyboardNavigation: enableKeyboardNavigation;
   });
 
   useEffect(() => {
-    // Apply accessibility settings
+    // Apply accessibility settings;
     const root = document.documentElement;
     
-    // High contrast
+    // High contrast;
     if (settings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
-    // Reduced motion
+    // Reduced motion;
     if (settings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
 
-    // Font size
+    // Font size;
     const fontSizeMap = {
       small: '14px',
       medium: '16px',
@@ -111,16 +111,16 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     };
     root.style.fontSize = fontSizeMap[settings.fontSize];
 
-    // Screen reader support
+    // Screen reader support;
     if (settings.screenReader) {
-      root.setAttribute('aria-live', 'polite');
+      root.setAttribute('aria-live', 'polite');'
     } else {
       root.removeAttribute('aria-live');
     }
   }, [settings]);
 
   useEffect(() => {
-    // Keyboard navigation
+    // Keyboard navigation;
     if (settings.keyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
@@ -150,15 +150,17 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     setSettings(prev => ({ ...prev, [key]: value }));
   };
 
-  return (
+  const Component = () => {
+  
+    return (
     <div className="enhanced-accessibility">
       {/* Accessibility Controls */}
-      <div className="accessibility-panel fixed top-4 right-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg border border-slate-700 min-w-64">
+      <div className="accessibility-panel fixed top-4 right-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg border border-slate-700 min-w-64">"
         <h3 className="text-white text-sm font-semibold mb-4">Accessibility Settings</h3>
         
         <div className="space-y-4">
           {/* High Contrast */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between">"
             <label className="text-sm text-gray-300">High Contrast</label>
             <button
               onClick={() => updateSetting('highContrast', !settings.highContrast)}
@@ -174,7 +176,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
           </div>
 
           {/* Reduced Motion */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between">"
             <label className="text-sm text-gray-300">Reduce Motion</label>
             <button
               onClick={() => updateSetting('reducedMotion', !settings.reducedMotion)}
@@ -191,10 +193,10 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
           {/* Font Size */}
           <div>
-            <label className="text-sm text-gray-300 mb-2 block">Font Size</label>
-            <div className="flex space-x-2">
-              {(['small', 'medium', 'large'] as const).map((size) => (
-                <button
+            <label className="text-sm text-gray-300 mb-2 block">Font Size</label>"
+            <div className="flex space-x-2">"
+              {(['small', 'medium', 'large'] as const).map((size) => ('
+                <button;
                   key={size}
                   onClick={() => updateSetting('fontSize', size)}
                   className={`px-3 py-1 text-xs rounded ${
@@ -210,7 +212,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
           </div>
 
           {/* Screen Reader */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between">"
             <label className="text-sm text-gray-300">Screen Reader</label>
             <button
               onClick={() => updateSetting('screenReader', !settings.screenReader)}
@@ -226,7 +228,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
           </div>
 
           {/* Keyboard Navigation */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between">"
             <label className="text-sm text-gray-300">Keyboard Nav</label>
             <button
               onClick={() => updateSetting('keyboardNavigation', !settings.keyboardNavigation)}

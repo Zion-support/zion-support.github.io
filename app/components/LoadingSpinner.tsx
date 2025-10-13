@@ -1,3 +1,5 @@
+import React from 'react';
+
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
@@ -8,7 +10,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 };
 
 export default LoadingSpinner;
-  className = ''
+  className = '
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -23,7 +25,8 @@ export default LoadingSpinner;
         <p className="mt-2 text-sm text-gray-600">{text}</p>
       )}
     </div>
+  );
   )
 }
 
-export default LoadingSpinner
+export default LoadingSpinner;

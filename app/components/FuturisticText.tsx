@@ -11,4 +11,5 @@ export default function FuturisticText({ className = '', children, ...props }: F
       {children}
     </div>
   );
+  );
 }

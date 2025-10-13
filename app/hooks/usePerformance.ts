@@ -1,21 +1,22 @@
-import { useEffect, useState } from 'react'
-
+import React, { useEffect, useState } from 'react';
 interface PerformanceMetrics {
-  lcp?: number
-  fid?: number
-  cls?: number
-  fcp?: number
-  ttfb?: number
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
 }
 
 export const usePerformance = () => {
+  
   const [metrics, setMetrics] = useState<PerformanceMetrics>({})
 
   useEffect(() => {
     if (typeof window === 'undefined') return
-
-    // Measure Core Web Vitals
+;
+    // Measure Core Web Vitals;
     const measureWebVitals = () => {
+  
       // Largest Contentful Paint (LCP)
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
@@ -34,12 +35,12 @@ export const usePerformance = () => {
       fidObserver.observe({ entryTypes: ['first-input'] })
 
       // Cumulative Layout Shift (CLS)
-      let clsValue = 0
+      let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
-            clsValue += entry.value
+            clsValue += entry.value;
             setMetrics(prev => ({ ...prev, cls: clsValue }))
           }
         })
@@ -58,12 +59,12 @@ export const usePerformance = () => {
       fcpObserver.observe({ entryTypes: ['paint'] })
 
       // Time to First Byte (TTFB)
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
         setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }))
       }
 
-      // Cleanup observers after 10 seconds
+      // Cleanup observers after 10 seconds;
       setTimeout(() => {
         lcpObserver.disconnect()
         fidObserver.disconnect()
@@ -84,5 +85,7 @@ export const usePerformance = () => {
     }
   }, [])
 
-  return metrics
+  return metrics;
 }
+
+export default Component;

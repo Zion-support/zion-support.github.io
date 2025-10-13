@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
-
+import React, {   useEffect   } from 'react';
 export default function SEOAudit() {
   useEffect(() => {
     const runSEOAudit = () => {
+  
       const issues = [];
       const recommendations = [];
 
@@ -21,7 +21,7 @@ export default function SEOAudit() {
       if (!metaDescription || !metaDescription.getAttribute('content')) {
         issues.push('Missing meta description');
       } else {
-        const desc = metaDescription.getAttribute('content') || '';
+        const desc = metaDescription.getAttribute('content') || '';'
         if (desc.length < 120) {
           recommendations.push('Meta description should be at least 120 characters');
         } else if (desc.length > 160) {
@@ -59,7 +59,7 @@ export default function SEOAudit() {
       const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="ziontechgroup.com"])');
       if (externalLinks.length > 0) {
         externalLinks.forEach(link => {
-          if (!link.getAttribute('rel')?.includes('nofollow')) {
+          if (!link.getAttribute('rel')?.includes('nofollow')) {'
             recommendations.push('Consider adding rel="nofollow" to external links');
           }
         });

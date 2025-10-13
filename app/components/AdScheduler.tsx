@@ -1,22 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Calendar,
-  Clock,
-  Play,
-  Pause,
-  Edit,
-  Trash2,
-  Plus,
-  Save,
-  X,
-  AlertCircle,
-  CheckCircle,
-  Target,
-  BarChart3,
-  Settings
-} from 'lucide-react';
-
+import React, { Calendar, Clock, Play, Pause, Edit, Trash2, Plus, Save, X, AlertCircle, CheckCircle, Target, BarChart3, Settings } from 'lucide-react';
 interface ScheduledAd {
   id: string;
   title: string;
@@ -28,8 +12,8 @@ interface ScheduledAd {
   endTime: string;
   daysOfWeek: number[];
   timezone: string;
-  status: 'scheduled' | 'running' | 'paused' | 'completed' | 'cancelled';
-  priority: 'low' | 'medium' | 'high';
+  status: 'scheduled' | 'running' | 'paused' | 'completed' | 'cancelled';'
+  priority: 'low' | 'medium' | 'high';'
   budget: number;
   targetAudience: string;
   createdAt: string;
@@ -45,10 +29,10 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
   const [isCreating, setIsCreating] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [selectedSchedule, setSelectedSchedule] = useState<ScheduledAd | null>(null);
-  const [viewMode, setViewMode] = useState<'list' | 'calendar'>('list');
-  const [filter, setFilter] = useState<'all' | 'scheduled' | 'running' | 'paused' | 'completed'>('all');
+  const [viewMode, setViewMode] = useState<'list' | 'calendar'>('list');'
+  const [filter, setFilter] = useState<'all' | 'scheduled' | 'running' | 'paused' | 'completed'>('all');'
 
-  // Form state
+  // Form state;
   const [formData, setFormData] = useState({
     title: '',
     description: '',
@@ -59,12 +43,12 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
     endTime: '17:00',
     daysOfWeek: [] as number[],
     timezone: 'UTC',
-    priority: 'medium' as 'low' | 'medium' | 'high',
+    priority: 'medium' as 'low' | 'medium' | 'high','
     budget: 0,
-    targetAudience: ''
+    targetAudience: '
   });
 
-  // Mock data
+  // Mock data;
   useEffect(() => {
     const mockSchedules: ScheduledAd[] = [
       {
@@ -114,30 +98,31 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'running': return 'bg-green-500';
-      case 'scheduled': return 'bg-blue-500';
-      case 'paused': return 'bg-yellow-500';
-      case 'completed': return 'bg-gray-500';
-      case 'cancelled': return 'bg-red-500';
+      case 'running': return 'bg-green-500';'
+      case 'scheduled': return 'bg-blue-500';'
+      case 'paused': return 'bg-yellow-500';'
+      case 'completed': return 'bg-gray-500';'
+      case 'cancelled': return 'bg-red-500';'
       default: return 'bg-gray-500';
     }
   };
 
   const getPriorityColor = (priority: string) => {
     switch (priority) {
-      case 'high': return 'text-red-600 bg-red-50';
-      case 'medium': return 'text-yellow-600 bg-yellow-50';
-      case 'low': return 'text-green-600 bg-green-50';
+      case 'high': return 'text-red-600 bg-red-50';'
+      case 'medium': return 'text-yellow-600 bg-yellow-50';'
+      case 'low': return 'text-green-600 bg-green-50';'
       default: return 'text-gray-600 bg-gray-50';
     }
   };
 
   const getDaysOfWeekNames = (days: number[]) => {
-    const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];'
     return days.map(day => dayNames[day]).join(', ');
   };
 
   const handleCreate = () => {
+  
     setIsCreating(true);
     setFormData({
       title: '',
@@ -151,7 +136,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
       timezone: 'UTC',
       priority: 'medium',
       budget: 0,
-      targetAudience: ''
+      targetAudience: '
     });
   };
 
@@ -169,12 +154,13 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
       timezone: schedule.timezone,
       priority: schedule.priority,
       budget: schedule.budget,
-      targetAudience: schedule.targetAudience
+      targetAudience: schedule.targetAudience;
     });
     setIsEditing(true);
   };
 
   const handleSave = () => {
+  
     if (isCreating) {
       const newSchedule: ScheduledAd = {
         id: Date.now().toString(),
@@ -186,9 +172,9 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
       setScheduledAds([...scheduledAds, newSchedule]);
     } else if (isEditing && selectedSchedule) {
       const updatedSchedules = scheduledAds.map(schedule =>
-        schedule.id === selectedSchedule.id
+        schedule.id === selectedSchedule.id;
           ? { ...schedule, ...formData, updatedAt: new Date().toISOString() }
-          : schedule
+          : schedule;
       );
       setScheduledAds(updatedSchedules);
     }
@@ -199,6 +185,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
   };
 
   const handleCancel = () => {
+  
     setIsCreating(false);
     setIsEditing(false);
     setSelectedSchedule(null);
@@ -206,9 +193,9 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
 
   const handleStatusChange = (id: string, newStatus: string) => {
     const updatedSchedules = scheduledAds.map(schedule =>
-      schedule.id === id
+      schedule.id === id;
         ? { ...schedule, status: newStatus as any, updatedAt: new Date().toISOString() }
-        : schedule
+        : schedule;
     );
     setScheduledAds(updatedSchedules);
   };
@@ -229,13 +216,13 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
   return (
     <div className={`ad-scheduler ${className}`}>
       {/* Header */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">"
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">Ad Scheduler</h1>
+            <h1 className="text-3xl font-bold text-gray-900">Ad Scheduler</h1>"
             <p className="text-gray-600 mt-1">Schedule and manage your ad campaigns</p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3">"
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setViewMode('list')}
@@ -246,7 +233,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                 }`}
               >
                 <BarChart3 className="w-4 h-4 inline mr-1" />
-                List
+                List;
               </button>
               <button
                 onClick={() => setViewMode('calendar')}
@@ -257,30 +244,30 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                 }`}
               >
                 <Calendar className="w-4 h-4 inline mr-1" />
-                Calendar
+                Calendar;
               </button>
             </div>
-            <button
+            <button;
               onClick={handleCreate}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition-colors"
             >
               <Plus className="w-5 h-5" />
-              Schedule Ad
+              Schedule Ad;
             </button>
           </div>
         </div>
 
         {/* Filters */}
         <div className="flex items-center gap-4">
-          <select
+          <select;
             value={filter}
             onChange={(e) => setFilter(e.target.value as any)}
             className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
-            <option value="all">All Schedules</option>
-            <option value="scheduled">Scheduled</option>
-            <option value="running">Running</option>
-            <option value="paused">Paused</option>
+            <option value="all">All Schedules</option>"
+            <option value="scheduled">Scheduled</option>"
+            <option value="running">Running</option>"
+            <option value="paused">Paused</option>"
             <option value="completed">Completed</option>
           </select>
         </div>
@@ -290,22 +277,22 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
       <div className="space-y-4">
         <AnimatePresence>
           {filteredSchedules.map((schedule) => (
-            <motion.div
+            <motion.div;
               key={schedule.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               className="bg-white rounded-lg shadow-sm border border-gray-200 p-6"
             >
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-3">
-                    <h3 className="text-lg font-semibold text-gray-900">{schedule.title}</h3>
+              <div className="flex items-start justify-between">"
+                <div className="flex-1">"
+                  <div className="flex items-center gap-3 mb-3">"
+                    <h3 className="text-lg font-semibold text-gray-900">{schedule.title}</h3>"
                     <span className={`px-2 py-1 rounded-full text-xs font-medium text-white ${getStatusColor(schedule.status)}`}>
                       {schedule.status}
                     </span>
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(schedule.priority)}`}>
-                      {schedule.priority} priority
+                      {schedule.priority} priority;
                     </span>
                   </div>
                   
@@ -313,37 +300,37 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                   
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                     <div>
-                      <span className="text-gray-500">Schedule:</span>
+                      <span className="text-gray-500">Schedule:</span>"
                       <p className="font-medium">
                         {new Date(schedule.startDate).toLocaleDateString()} - {new Date(schedule.endDate).toLocaleDateString()}
                       </p>
                     </div>
                     <div>
-                      <span className="text-gray-500">Time:</span>
+                      <span className="text-gray-500">Time:</span>"
                       <p className="font-medium">
                         {schedule.startTime} - {schedule.endTime} ({schedule.timezone})
                       </p>
                     </div>
                     <div>
-                      <span className="text-gray-500">Days:</span>
+                      <span className="text-gray-500">Days:</span>"
                       <p className="font-medium">{getDaysOfWeekNames(schedule.daysOfWeek)}</p>
                     </div>
                     <div>
-                      <span className="text-gray-500">Budget:</span>
+                      <span className="text-gray-500">Budget:</span>"
                       <p className="font-medium">${schedule.budget.toLocaleString()}</p>
                     </div>
                     <div>
-                      <span className="text-gray-500">Target:</span>
+                      <span className="text-gray-500">Target:</span>"
                       <p className="font-medium">{schedule.targetAudience}</p>
                     </div>
                     <div>
-                      <span className="text-gray-500">Ad ID:</span>
+                      <span className="text-gray-500">Ad ID:</span>"
                       <p className="font-medium">{schedule.adId}</p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="flex items-center gap-2 ml-4">
+                <div className="flex items-center gap-2 ml-4">"
                   {schedule.status === 'running' ? (
                     <button
                       onClick={() => handleStatusChange(schedule.id, 'paused')}
@@ -362,7 +349,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                     </button>
                   ) : null}
                   
-                  <button
+                  <button;
                     onClick={() => handleEdit(schedule)}
                     className="p-2 text-blue-600 hover:bg-blue-100 rounded-lg transition-colors"
                     title="Edit"
@@ -370,7 +357,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                     <Edit className="w-5 h-5" />
                   </button>
                   
-                  <button
+                  <button;
                     onClick={() => handleDelete(schedule.id)}
                     className="p-2 text-red-600 hover:bg-red-100 rounded-lg transition-colors"
                     title="Delete"
@@ -386,21 +373,21 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
 
       {/* Empty State */}
       {filteredSchedules.length === 0 && (
-        <div className="text-center py-12">
-          <Calendar className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-          <h3 className="text-lg font-medium text-gray-900 mb-2">No scheduled ads</h3>
-          <p className="text-gray-500 mb-6">
+        <div className="text-center py-12">"
+          <Calendar className="w-16 h-16 text-gray-300 mx-auto mb-4" />"
+          <h3 className="text-lg font-medium text-gray-900 mb-2">No scheduled ads</h3>"
+          <p className="text-gray-500 mb-6">"
             {filter === 'all' 
               ? 'Get started by scheduling your first ad campaign'
               : 'No ads match the current filter'
             }
           </p>
           {filter === 'all' && (
-            <button
+            <button;
               onClick={handleCreate}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
-              Schedule Your First Ad
+              Schedule Your First Ad;
             </button>
           )}
         </div>
@@ -409,24 +396,24 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
       {/* Create/Edit Modal */}
       <AnimatePresence>
         {(isCreating || isEditing) && (
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
           >
-            <motion.div
+            <motion.div;
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
             >
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-xl font-semibold text-gray-900">
-                    {isCreating ? 'Schedule New Ad' : 'Edit Schedule'}
+              <div className="p-6">"
+                <div className="flex items-center justify-between mb-6">"
+                  <h2 className="text-xl font-semibold text-gray-900">"
+                    {isCreating ? 'Schedule New Ad' : 'Edit Schedule'}'
                   </h2>
-                  <button
+                  <button;
                     onClick={handleCancel}
                     className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
                   >
@@ -434,7 +421,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                   </button>
                 </div>
 
-                <form onSubmit={(e) => { e.preventDefault(); handleSave(); }} className="space-y-6">
+                <form onSubmit={(e) => { e.preventDefault(); handleSave(); }} className="space-y-6">"
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Title</label>
@@ -443,7 +430,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                         value={formData.title}
                         onChange={(e) => setFormData(prev => ({ ...prev, title: e.target.value }))}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        required
+                        required;
                       />
                     </div>
                     <div>
@@ -453,14 +440,14 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                         value={formData.adId}
                         onChange={(e) => setFormData(prev => ({ ...prev, adId: e.target.value }))}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        required
+                        required;
                       />
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Description</label>
-                    <textarea
+                    <textarea;
                       value={formData.description}
                       onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -476,7 +463,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                         value={formData.startDate}
                         onChange={(e) => setFormData(prev => ({ ...prev, startDate: e.target.value }))}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        required
+                        required;
                       />
                     </div>
                     <div>
@@ -486,7 +473,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                         value={formData.endDate}
                         onChange={(e) => setFormData(prev => ({ ...prev, endDate: e.target.value }))}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        required
+                        required;
                       />
                     </div>
                   </div>
@@ -499,7 +486,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                         value={formData.startTime}
                         onChange={(e) => setFormData(prev => ({ ...prev, startTime: e.target.value }))}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        required
+                        required;
                       />
                     </div>
                     <div>
@@ -509,16 +496,16 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                         value={formData.endTime}
                         onChange={(e) => setFormData(prev => ({ ...prev, endTime: e.target.value }))}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        required
+                        required;
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Days of Week</label>
-                    <div className="flex gap-2">
-                      {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day, index) => (
-                        <button
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Days of Week</label>"
+                    <div className="flex gap-2">"
+                      {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day, index) => ('
+                        <button;
                           key={day}
                           type="button"
                           onClick={() => toggleDayOfWeek(index)}
@@ -537,13 +524,13 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Priority</label>
-                      <select
+                      <select;
                         value={formData.priority}
                         onChange={(e) => setFormData(prev => ({ ...prev, priority: e.target.value as any }))}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       >
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>"
+                        <option value="medium">Medium</option>"
                         <option value="high">High</option>
                       </select>
                     </div>
@@ -559,14 +546,14 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Timezone</label>
-                      <select
+                      <select;
                         value={formData.timezone}
                         onChange={(e) => setFormData(prev => ({ ...prev, timezone: e.target.value }))}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       >
-                        <option value="UTC">UTC</option>
-                        <option value="EST">EST</option>
-                        <option value="PST">PST</option>
+                        <option value="UTC">UTC</option>"
+                        <option value="EST">EST</option>"
+                        <option value="PST">PST</option>"
                         <option value="CET">CET</option>
                       </select>
                     </div>
@@ -588,14 +575,14 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                       onClick={handleCancel}
                       className="px-4 py-2 text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
                     >
-                      Cancel
+                      Cancel;
                     </button>
                     <button
                       type="submit"
                       className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors flex items-center gap-2"
                     >
-                      <Save className="w-4 h-4" />
-                      {isCreating ? 'Schedule Ad' : 'Save Changes'}
+                      <Save className="w-4 h-4" />"
+                      {isCreating ? 'Schedule Ad' : 'Save Changes'}'
                     </button>
                   </div>
                 </form>
@@ -605,6 +592,8 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
         )}
       </AnimatePresence>
     </div>
+  );
+  );
   );
 };
 
