@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { accessibilityEnhancer } from './accessibilityEnhancerClass';
 
-export interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-  className?: string;
+interface AccessibilityEnhancerProps {
+  children?: React.ReactNode;
 }
 
-export default function AccessibilityEnhancer({ children, className = '' }: AccessibilityEnhancerProps) {
-  return (
-    <div className={`accessibility-enhancer ${className}`}>
-      {children}
-    </div>
-  );
+function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
+  useEffect(() => {
+    accessibilityEnhancer.init();
+  }, []);
+
+  return <>{children}</>;
 }
+
+export default AccessibilityEnhancer;

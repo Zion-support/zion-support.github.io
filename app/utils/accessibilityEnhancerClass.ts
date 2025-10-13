@@ -5,7 +5,7 @@ interface AccessibilityConfig {
   screenReader: boolean;
 }
 
-class AccessibilityEnhancer {
+class AccessibilityEnhancerClass {
   private config: AccessibilityConfig;
 
   constructor() {
@@ -36,5 +36,4 @@ class AccessibilityEnhancer {
   }
 }
 
-export const accessibilityEnhancer = new AccessibilityEnhancer();
-export default accessibilityEnhancer;
+export const accessibilityEnhancer = new AccessibilityEnhancerClass();
