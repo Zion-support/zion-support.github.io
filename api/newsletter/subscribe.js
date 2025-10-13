@@ -5,15 +5,7 @@ const isValidEmail = (email) => {
   return emailRegex.test(email);
 };
 async function handler(req, res) {
-<<<<<<< HEAD
-=======
-export default function handler(req, res) {
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
 
-export default async function handler(req, res) {
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -46,14 +38,6 @@ export default async function handler(req, res) {
       timestamp: new Date().toISOString()
     });
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ success: true, message: 'Successfully subscribed to newsletter' }));
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -69,16 +53,4 @@ export default async function handler(req, res) {
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
     }));
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-export default handler;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-}
 
-export default handler;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
