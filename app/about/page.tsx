@@ -1,16 +1,7 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import React from 'react;
-
-import { Helmet } from 'react-helmet-async;
-
-import {
-  Download,
-  ExternalLink,
-  ChevronRight,
-  Phone,
-  Mail,
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Shield, Users } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Users, Target, Award, Zap, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function AboutPage() {
   // Team members data (for future use)
