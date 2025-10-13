@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Receipt, 
+  Mail, 
   Zap, 
   Star, 
   CheckCircle, 
@@ -10,115 +10,125 @@ import {
   Users, 
   Award,
   Sparkles,
-  FileText,
-  Calculator,
-  CreditCard,
-  Send,
-  Download,
-  Eye,
   BarChart3,
-  Shield,
+  Brain,
+  Target,
+  TrendingUp,
+  Eye,
+  MessageSquare,
+  Heart,
+  AlertTriangle,
   Globe,
   Smartphone,
   Monitor,
   Laptop,
   DollarSign,
-  TrendingUp,
   Calendar,
-  Mail
+  Phone,
+  MapPin,
+  Database,
+  Shield,
+  PieChart,
+  Activity,
+  Send,
+  Inbox,
+  Filter,
+  Search,
+  FileText,
+  Download
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIInvoiceGeneratorPage = () => {
+const ZionAIEmailAnalyzerPage = () => {
   const features = [
     {
-      title: "AI-Powered Invoice Creation",
-      description: "Generate professional invoices automatically from project data and client information",
-      icon: <FileText className="w-6 h-6" />,
+      title: "AI-Powered Email Analysis",
+      description: "Analyze email content, tone, and sentiment using advanced natural language processing",
+      icon: <Brain className="w-6 h-6" />,
       price: "Included"
     },
     {
-      title: "Smart Payment Tracking",
-      description: "Automatically track payment status and send reminders to clients",
-      icon: <CreditCard className="w-6 h-6" />,
-      price: "Included"
-    },
-    {
-      title: "Multi-Currency Support",
-      description: "Create invoices in 150+ currencies with real-time exchange rates",
-      icon: <DollarSign className="w-6 h-6" />,
-      price: "Included"
-    },
-    {
-      title: "Automated Recurring Billing",
-      description: "Set up recurring invoices for subscription services and retainers",
-      icon: <Calendar className="w-6 h-6" />,
-      price: "Included"
-    },
-    {
-      title: "Client Portal Access",
-      description: "Provide clients with secure portal to view and pay invoices online",
+      title: "Spam Detection & Filtering",
+      description: "Automatically detect and filter spam, phishing, and malicious emails with 99.9% accuracy",
       icon: <Shield className="w-6 h-6" />,
       price: "Included"
     },
     {
-      title: "Financial Analytics",
-      description: "Track revenue, outstanding payments, and financial performance with detailed reports",
+      title: "Email Performance Analytics",
+      description: "Track open rates, click-through rates, and engagement metrics across all campaigns",
       icon: <BarChart3 className="w-6 h-6" />,
+      price: "Included"
+    },
+    {
+      title: "Smart Categorization",
+      description: "Automatically categorize emails by type, priority, and sender with machine learning",
+      icon: <Filter className="w-6 h-6" />,
+      price: "Included"
+    },
+    {
+      title: "Response Time Optimization",
+      description: "Get AI recommendations for optimal response times and email scheduling",
+      icon: <Clock className="w-6 h-6" />,
+      price: "Included"
+    },
+    {
+      title: "Compliance Monitoring",
+      description: "Ensure email compliance with GDPR, CAN-SPAM, and other regulations automatically",
+      icon: <CheckCircle className="w-6 h-6" />,
       price: "Included"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Freelancer",
-      price: "$19",
+      name: "Personal",
+      price: "$29",
       period: "/month",
-      description: "Perfect for freelancers and solo entrepreneurs",
+      description: "Perfect for individuals and freelancers",
       features: [
-        "50 invoices per month",
-        "Basic templates",
-        "Payment tracking",
+        "Up to 10,000 emails/month",
+        "Basic analytics",
+        "Spam filtering",
         "Email support",
-        "PDF export",
-        "Client portal"
+        "Mobile app",
+        "Basic templates"
       ],
       popular: false
     },
     {
-      name: "Small Business",
-      price: "$49",
+      name: "Business",
+      price: "$79",
       period: "/month",
-      description: "Ideal for small businesses and agencies",
+      description: "Ideal for small to medium businesses",
       features: [
-        "200 invoices per month",
-        "Premium templates",
-        "Recurring billing",
-        "Multi-currency",
-        "Priority support",
-        "Custom branding",
+        "Up to 100,000 emails/month",
         "Advanced analytics",
-        "API access"
+        "AI categorization",
+        "Priority support",
+        "Team collaboration",
+        "Custom templates",
+        "API access",
+        "Compliance monitoring"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$99",
+      price: "$199",
       period: "/month",
-      description: "For large organizations with complex billing needs",
+      description: "For large organizations with high email volume",
       features: [
-        "Unlimited invoices",
-        "Custom templates",
+        "Unlimited emails",
+        "Custom AI models",
         "White-label options",
-        "Advanced reporting",
         "24/7 phone support",
+        "Advanced security",
         "Custom integrations",
-        "Multi-user access",
-        "Advanced security"
+        "Dedicated support",
+        "On-premise deployment"
       ],
       popular: false
     }
@@ -126,104 +136,131 @@ const ZionAIInvoiceGeneratorPage = () => {
 
   const testimonials = [
     {
-      name: "David Kim",
-      company: "Creative Agency Pro",
+      name: "Amanda Foster",
+      company: "Marketing Agency Pro",
+      role: "Email Marketing Manager",
+      content: "Zion AI Email Analyzer has transformed our email campaigns. We've increased open rates by 45% and reduced spam complaints by 90%.",
+      rating: 5,
+      avatar: "AF"
+    },
+    {
+      name: "James Wilson",
+      company: "Tech Startup Inc",
       role: "Founder",
-      content: "Zion AI Invoice Generator has streamlined our entire billing process. We've reduced invoice creation time by 90% and improved our cash flow significantly.",
+      content: "The AI categorization saves us hours every day. Our team can focus on important emails while the AI handles the rest.",
       rating: 5,
-      avatar: "DK"
+      avatar: "JW"
     },
     {
-      name: "Lisa Martinez",
-      company: "Freelance Designer",
-      role: "Owner",
-      content: "As a freelancer, I needed something simple but powerful. This tool handles everything from creation to payment tracking, and clients love the professional look.",
+      name: "Maria Rodriguez",
+      company: "E-commerce Solutions",
+      role: "Customer Success Manager",
+      content: "The compliance monitoring feature is a lifesaver. We never have to worry about email regulations anymore.",
       rating: 5,
-      avatar: "LM"
+      avatar: "MR"
+    }
+  ];
+
+  const analytics = [
+    {
+      title: "Open Rate Analysis",
+      description: "Track and optimize email open rates with detailed insights",
+      icon: <Eye className="w-8 h-8" />,
+      improvement: "45% increase"
     },
     {
-      name: "Robert Chen",
-      company: "Tech Consulting",
-      role: "Managing Partner",
-      content: "The recurring billing feature is a game-changer for our retainer clients. The analytics help us understand our revenue patterns better than ever.",
-      rating: 5,
-      avatar: "RC"
+      title: "Click-Through Optimization",
+      description: "Improve click-through rates with AI-powered recommendations",
+      icon: <Target className="w-8 h-8" />,
+      improvement: "60% increase"
+    },
+    {
+      title: "Spam Score Reduction",
+      description: "Reduce spam scores and improve deliverability",
+      icon: <Shield className="w-8 h-8" />,
+      improvement: "90% reduction"
+    },
+    {
+      title: "Response Time Optimization",
+      description: "Optimize response times for better customer satisfaction",
+      icon: <Clock className="w-8 h-8" />,
+      improvement: "50% faster"
     }
   ];
 
   const integrations = [
     {
-      name: "QuickBooks",
-      description: "Sync invoices and payments with QuickBooks automatically",
-      icon: <Calculator className="w-6 h-6" />,
+      name: "Gmail",
+      description: "Seamlessly integrate with Gmail and Google Workspace",
+      icon: <Mail className="w-6 h-6" />,
       status: "Available"
     },
     {
-      name: "Stripe",
-      description: "Accept payments directly through Stripe integration",
-      icon: <CreditCard className="w-6 h-6" />,
+      name: "Outlook",
+      description: "Connect with Microsoft Outlook and Office 365",
+      icon: <Inbox className="w-6 h-6" />,
       status: "Available"
     },
     {
-      name: "PayPal",
-      description: "Enable PayPal payments for your clients",
-      icon: <DollarSign className="w-6 h-6" />,
+      name: "Salesforce",
+      description: "Sync email data with your CRM system",
+      icon: <Database className="w-6 h-6" />,
       status: "Available"
     },
     {
-      name: "Zapier",
-      description: "Connect with 2000+ apps through Zapier automation",
-      icon: <Zap className="w-6 h-6" />,
+      name: "HubSpot",
+      description: "Integrate with HubSpot marketing automation",
+      icon: <Target className="w-6 h-6" />,
       status: "Available"
     },
     {
       name: "Slack",
-      description: "Get notifications and updates in your Slack workspace",
-      icon: <Send className="w-6 h-6" />,
+      description: "Get email insights and alerts in Slack",
+      icon: <MessageSquare className="w-6 h-6" />,
       status: "Available"
     },
     {
-      name: "Google Workspace",
-      description: "Integrate with Gmail, Google Drive, and Google Calendar",
-      icon: <Mail className="w-6 h-6" />,
+      name: "Zapier",
+      description: "Connect with 2000+ apps through Zapier",
+      icon: <Zap className="w-6 h-6" />,
       status: "Available"
     }
   ];
 
-  const benefits = [
+  const useCases = [
     {
-      title: "Save Time",
-      description: "Create professional invoices in seconds instead of hours",
-      icon: <Clock className="w-8 h-8" />,
-      stat: "90% time saved"
+      title: "Email Marketing",
+      description: "Optimize email campaigns for better engagement and conversion",
+      icon: <Send className="w-6 h-6" />,
+      results: "45% higher open rates"
     },
     {
-      title: "Get Paid Faster",
-      description: "Automated reminders and online payments improve cash flow",
-      icon: <TrendingUp className="w-8 h-8" />,
-      stat: "40% faster payments"
+      title: "Customer Support",
+      description: "Improve response times and customer satisfaction",
+      icon: <MessageSquare className="w-6 h-6" />,
+      results: "50% faster responses"
     },
     {
-      title: "Professional Image",
-      description: "Branded, professional invoices that impress your clients",
-      icon: <Award className="w-8 h-8" />,
-      stat: "100% branded"
+      title: "Sales Optimization",
+      description: "Track and improve sales email performance",
+      icon: <TrendingUp className="w-6 h-6" />,
+      results: "35% more conversions"
     },
     {
-      title: "Reduce Errors",
-      description: "AI-powered validation prevents common billing mistakes",
-      icon: <Shield className="w-8 h-8" />,
-      stat: "99% accuracy"
+      title: "Compliance Management",
+      description: "Ensure email compliance and reduce legal risks",
+      icon: <Shield className="w-6 h-6" />,
+      results: "100% compliance rate"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Invoice Generator - Automated Invoicing & Payment Tracking | Zion Tech Group"
-        description="Create professional invoices automatically with AI. Track payments, manage recurring billing, and get paid faster. Starting at $19/month. Free trial available."
-        keywords="AI invoice generator, automated invoicing, payment tracking, recurring billing, invoice templates, financial management, small business tools"
-        canonical="https://ziontechgroup.com/zion-ai-invoice-generator"
+        title="Zion AI Email Analyzer - Advanced Email Analytics & Optimization | Zion Tech Group"
+        description="Analyze and optimize your emails with AI-powered insights. Track performance, detect spam, and improve deliverability. Starting at $29/month. Free trial available."
+        keywords="email analyzer, email analytics, email optimization, spam detection, email marketing, deliverability, email compliance, AI email tools"
+        canonical="https://ziontechgroup.com/zion-ai-email-analyzer"
       />
 
       {/* Hero Section */}
@@ -231,18 +268,18 @@ const ZionAIInvoiceGeneratorPage = () => {
         <ResponsiveContainer className="text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Invoicing</span>
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Email Intelligence</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion AI Invoice Generator
+              Zion AI Email Analyzer
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Create professional invoices automatically, track payments, and get paid faster with our AI-powered invoicing platform. 
-            Perfect for freelancers, agencies, and businesses of all sizes.
+            Transform your email strategy with AI-powered analytics and optimization. 
+            Track performance, detect spam, improve deliverability, and boost engagement rates.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -250,7 +287,7 @@ const ZionAIInvoiceGeneratorPage = () => {
               href="#pricing"
               variant="primary"
               size="lg"
-              icon={<Receipt className="w-5 h-5" />}
+              icon={<Mail className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -267,46 +304,46 @@ const ZionAIInvoiceGeneratorPage = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">50,000+</div>
-              <div className="text-gray-300">Invoices Created</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">1M+</div>
+              <div className="text-gray-300">Emails Analyzed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">90%</div>
-              <div className="text-gray-300">Time Saved</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">45%</div>
+              <div className="text-gray-300">Higher Open Rates</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
-              <div className="text-gray-300">Faster Payments</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Spam Detection</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">150+</div>
-              <div className="text-gray-300">Currencies</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">50%</div>
+              <div className="text-gray-300">Faster Responses</div>
             </div>
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* Benefits Section */}
+      {/* Analytics Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Why Choose Our AI Invoice Generator?
+              Powerful Email Analytics
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your billing process with intelligent automation
+              Get detailed insights and optimize your email performance
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {analytics.map((analytic, index) => (
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  {benefit.icon}
+                  {analytic.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 mb-4">{benefit.description}</p>
-                <div className="text-cyan-400 font-semibold">{benefit.stat}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{analytic.title}</h3>
+                <p className="text-gray-300 mb-4">{analytic.description}</p>
+                <div className="text-green-400 font-semibold">{analytic.improvement}</div>
               </div>
             ))}
           </div>
@@ -318,10 +355,10 @@ const ZionAIInvoiceGeneratorPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Powerful Features
+              Comprehensive Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to manage your invoicing and payments
+              Everything you need to analyze and optimize your email communications
             </p>
           </div>
           
@@ -344,15 +381,42 @@ const ZionAIInvoiceGeneratorPage = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Integrations Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <ResponsiveContainer>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Perfect for Every Use Case
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From marketing to support, optimize every aspect of your email communications
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="text-center group">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  {useCase.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300 mb-4">{useCase.description}</p>
+                <div className="text-green-400 font-semibold">{useCase.results}</div>
+              </div>
+            ))}
+          </div>
+        </ResponsiveContainer>
+      </section>
+
+      {/* Integrations Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Connect with your favorite tools and streamline your workflow
+              Connect with your favorite email platforms and tools
             </p>
           </div>
           
@@ -383,7 +447,7 @@ const ZionAIInvoiceGeneratorPage = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs
+              Choose the plan that fits your email volume and needs
             </p>
           </div>
           
@@ -442,10 +506,10 @@ const ZionAIInvoiceGeneratorPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Trusted by Businesses Worldwide
+              Trusted by Email Professionals
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about Zion AI Invoice Generator
+              See what our customers say about Zion AI Email Analyzer
             </p>
           </div>
           
@@ -477,10 +541,10 @@ const ZionAIInvoiceGeneratorPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <ResponsiveContainer className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Streamline Your Invoicing?
+            Ready to Optimize Your Emails?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses already using AI to create professional invoices and get paid faster.
+            Join thousands of professionals already using AI to improve their email performance and engagement.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -488,7 +552,7 @@ const ZionAIInvoiceGeneratorPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Receipt className="w-5 h-5" />}
+              icon={<Mail className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -511,4 +575,4 @@ const ZionAIInvoiceGeneratorPage = () => {
   );
 };
 
-export default ZionAIInvoiceGeneratorPage;
+export default ZionAIEmailAnalyzerPage;
