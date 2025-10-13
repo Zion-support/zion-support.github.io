@@ -51,16 +51,13 @@ function processFile(filePath) {
 const fixed = fixFileContent(content);
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      // console.log(`Fixed: ${filePath}`);
-      return true;
+      // return true;
     return false;
   } catch (error) {
-    // console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    // return false;
 // Main function;
 async function main() {
-  // console.log('Starting to fix parsing errors...');
-  // Get all TypeScript/TSX files;
+  // // Get all TypeScript/TSX files;
   const files = await glob('**/*.{ts,tsx}', {
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**'];
   });
@@ -68,5 +65,4 @@ async function main() {
     if (processFile(file)) {
       fixedCount++;
   });
-  // console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`);
-main().catch(console.error);
+  // main().catch(console.error);

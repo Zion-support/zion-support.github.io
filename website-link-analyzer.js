@@ -145,7 +145,7 @@ class WebsiteLinkAnalyzer {
     }
 
     this.visitedUrls.add(url);
-    console.log(`Analyzing: ${url} (depth: ${this.currentDepth})`);
+    `);
 
     const page = await this.fetchPage(url);
     if (!page) {
@@ -164,8 +164,6 @@ class WebsiteLinkAnalyzer {
     });
 
     const links = this.extractLinks(page.dom, url);
-    console.log(`Found ${links.length} links on ${url}`);
-
     for (const link of links) {
       this.results.totalLinks++;
 
@@ -240,18 +238,9 @@ class WebsiteLinkAnalyzer {
     );
 
     // Generate summary
-    console.log('\n=== WEBSITE ANALYSIS SUMMARY ===');
-    console.log(`Base URL: ${this.baseUrl}`);
-    console.log(`Total Links Found: ${this.results.totalLinks}`);
-    console.log(`Working Links: ${this.results.workingLinks}`);
-    console.log(`Broken Links: ${this.results.brokenLinks}`);
-    console.log(`External Links: ${this.results.externalLinks}`);
-    console.log(`Pages Visited: ${this.visitedUrls.size}`);
-    
     if (this.brokenLinks.length > 0) {
-      console.log('\n=== BROKEN LINKS ===');
       this.brokenLinks.forEach(link => {
-        console.log(`❌ ${link.url} - ${link.reason} (from: ${link.sourcePage})`);
+        `);
       });
     }
 
@@ -303,19 +292,12 @@ class WebsiteLinkAnalyzer {
   }
 
   async run() {
-    console.log(`Starting analysis of ${this.baseUrl}...`);
-    console.log(`Max depth: ${this.maxDepth}`);
-    
     try {
       await this.analyzePage(this.baseUrl);
       const report = await this.generateReport();
       
-      console.log('\n=== ANALYSIS COMPLETE ===');
-      console.log('Detailed report saved to: website-analysis-report.json');
-      
       return report;
     } catch (error) {
-      console.error('Analysis failed:', error);
       throw error;
     }
   }

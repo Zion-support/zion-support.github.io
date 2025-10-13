@@ -28,16 +28,12 @@ class Logger {
 
     switch (level) {
       case 'error':
-        console.error(logMessage, ...args);
         break;
       case 'warn':
-        console.warn(logMessage, ...args);
         break;
       case 'info':
-        console.info(logMessage, ...args);
         break;
       case 'debug':
-        console.debug(logMessage, ...args);
         break;
     }
 
@@ -68,8 +64,7 @@ class Logger {
       
       localStorage.setItem('app-logs', JSON.stringify(logs));
     } catch (error) {
-      console.error('Failed to store log:', error);
-    }
+      }
   }
 
   error(message: string, ...args: any[]): void {

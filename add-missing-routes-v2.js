@@ -52,9 +52,6 @@ analysis.missingRoutesList.forEach(route => {
   }
 });
 
-console.log(`Filtered out ${analysis.missingRoutesList.length - uniqueRoutes.length} duplicate component names`);
-console.log(`Adding ${uniqueRoutes.length} unique routes`);
-
 // Categorize unique routes
 const aiServices = uniqueRoutes.filter(route => route.startsWith('ai-'));
 const microSaas = uniqueRoutes.filter(route => route.startsWith('micro-saas') || route.startsWith('zion-'));
@@ -156,10 +153,3 @@ if (routesEndMatch) {
 // Write the updated App.tsx file
 fs.writeFileSync(appTsxPath, appContent);
 
-console.log('Successfully added all missing routes to App.tsx');
-console.log(`Added ${uniqueRoutes.length} unique routes`);
-console.log(`- AI Services: ${aiServices.length}`);
-console.log(`- Micro SAAS: ${microSaas.length}`);
-console.log(`- IT Services: ${itServices.length}`);
-console.log(`- 5G Services: ${fiveGServices.length}`);
-console.log(`- Other Pages: ${otherPages.length}`);

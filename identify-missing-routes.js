@@ -35,12 +35,7 @@ const existingRoutes = routeMatches.map(match => match.replace('path="', '').rep
 // Find missing routes
 const missingRoutes = pages.filter(page => !existingRoutes.includes(`/${page}`));
 
-console.log('Total pages found:', pages.length);
-console.log('Existing routes:', existingRoutes.length);
-console.log('Missing routes:', missingRoutes.length);
-
-console.log('\nMissing routes:');
-missingRoutes.forEach(route => console.log(`  /${route}`));
+missingRoutes.forEach(route => );
 
 // Categorize missing routes
 const aiServices = missingRoutes.filter(route => route.startsWith('ai-'));
@@ -80,13 +75,6 @@ const otherPages = missingRoutes.filter(route =>
   !fiveGServices.includes(route)
 );
 
-console.log('\nCategorized missing routes:');
-console.log('\nAI Services:', aiServices.length);
-console.log('Micro SAAS:', microSaas.length);
-console.log('IT Services:', itServices.length);
-console.log('5G Services:', fiveGServices.length);
-console.log('Other Pages:', otherPages.length);
-
 // Generate route additions
 const generateRouteAddition = (routes, category) => {
   if (routes.length === 0) return '';
@@ -118,19 +106,17 @@ const generateRouteElements = (routes) => {
   return result;
 };
 
-console.log('\nGenerated lazy imports:');
-console.log(generateRouteAddition(aiServices, 'AI Service'));
-console.log(generateRouteAddition(microSaas, 'Micro SAAS'));
-console.log(generateRouteAddition(itServices, 'IT Service'));
-console.log(generateRouteAddition(fiveGServices, '5G Service'));
-console.log(generateRouteAddition(otherPages, 'Other'));
+);
+);
+);
+);
+);
 
-console.log('\nGenerated route elements:');
-console.log(generateRouteElements(aiServices));
-console.log(generateRouteElements(microSaas));
-console.log(generateRouteElements(itServices));
-console.log(generateRouteElements(fiveGServices));
-console.log(generateRouteElements(otherPages));
+);
+);
+);
+);
+);
 
 // Save the analysis to a file
 const analysis = {
@@ -148,4 +134,3 @@ const analysis = {
 };
 
 fs.writeFileSync('/workspace/missing-routes-analysis.json', JSON.stringify(analysis, null, 2));
-console.log('\nAnalysis saved to missing-routes-analysis.json');

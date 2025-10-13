@@ -3,8 +3,6 @@ import path from "path";
 import { glob } from "glob";
 
 async function fixRemainingErrors() {
-  console.log("🔧 Fixing remaining TypeScript and JSX errors...");
-
   // Find all problematic files
   const files = await glob("app/**/*.{ts,tsx}", {
     ignore: ["node_modules/**", "dist/**", ".next/**"],
@@ -88,15 +86,12 @@ async function fixRemainingErrors() {
 
       if (content !== originalContent) {
         fs.writeFileSync(file, content, "utf8");
-        console.log(`✅ Fixed: ${file}`);
         fixedFiles++;
       }
     } catch (error) {
-      console.error(`❌ Error processing ${file}:`, error.message);
-    }
+      }
   }
 
-  console.log(`\n🎉 Fixed remaining errors in ${fixedFiles} files`);
-}
+  }
 
 fixRemainingErrors().catch(console.error);
