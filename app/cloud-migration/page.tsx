@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function CloudMigration() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Cloud Migration - Zion Tech Group</title>
         <meta
@@ -29,6 +29,6 @@ export default function CloudMigration() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

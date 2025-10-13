@@ -1,5 +1,4 @@
-import React from "react";
-import { ArrowRight, CheckCircle, Star, BarChart3, DollarSign, Star as StarIcon } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, BarChart3, DollarSign } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -48,7 +47,7 @@ export default function ZionAnalyticsPro() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Analytics Pro - AI-Powered Business Intelligence | Zion Tech Group</title>
         <meta
@@ -302,6 +301,6 @@ export default function ZionAnalyticsPro() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

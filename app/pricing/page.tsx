@@ -172,7 +172,7 @@ export default function Pricing() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Pricing - Zion Tech Group | AI & IT Solutions</title>
         <meta
@@ -500,6 +500,6 @@ export default function Pricing() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

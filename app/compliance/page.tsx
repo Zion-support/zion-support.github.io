@@ -1,7 +1,6 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock } from 'lucide-react';
+import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award } from 'lucide-react';
 
 export default function Compliance() {
   const complianceFrameworks = [
@@ -67,7 +66,7 @@ export default function Compliance() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Compliance Services - Zion Tech Group | Regulatory Compliance & Security</title>
         <meta
@@ -210,7 +209,7 @@ export default function Compliance() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }
 

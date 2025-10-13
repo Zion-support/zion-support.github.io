@@ -1,9 +1,4 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Mail, Shield, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe } from 'lucide-react';
-=======
 import { 
   Mail, 
   Shield, 
@@ -16,7 +11,6 @@ import {
   Target,
   Globe
 } from 'lucide-react';
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
 
 const AIPoweredEmailAnalyzerPage = () => {
   const features = [

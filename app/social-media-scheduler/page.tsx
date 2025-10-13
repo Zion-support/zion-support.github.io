@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Socialmediascheduler() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Social Media Scheduler - Zion Tech Group</title>
         <meta
@@ -29,6 +29,6 @@ export default function Socialmediascheduler() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

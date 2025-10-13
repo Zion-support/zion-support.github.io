@@ -103,7 +103,7 @@ export default function ZionSecurityShield() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Security Shield - Advanced Cybersecurity Platform | Zion Tech Group</title>
         <meta
@@ -344,6 +344,6 @@ export default function ZionSecurityShield() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

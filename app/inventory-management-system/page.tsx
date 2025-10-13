@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Inventorymanagementsystem() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Inventory Management System - Zion Tech Group</title>
         <meta
@@ -29,6 +29,6 @@ export default function Inventorymanagementsystem() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

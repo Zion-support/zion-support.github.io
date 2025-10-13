@@ -1,4 +1,4 @@
-import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail, Smartphone as Phone } from "lucide-react";
+import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -61,7 +61,7 @@ export default function CustomDevelopment() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Custom Development Services - Zion Tech Group | Software Development Solutions</title>
         <meta
@@ -237,6 +237,6 @@ export default function CustomDevelopment() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

@@ -1,9 +1,6 @@
-import React from "react";
 import { Helmet } from "react-helmet-async";
 
 export default function ZionAIVoiceAssistantPro() {
-<<<<<<< HEAD
-=======
   const features = [
     "Natural language processing (NLP)",
     "Multi-language support (50+ languages)",
@@ -103,7 +100,6 @@ export default function ZionAIVoiceAssistantPro() {
     }
   ];
 
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>

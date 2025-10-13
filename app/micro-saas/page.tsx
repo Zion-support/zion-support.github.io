@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import { Helmet } from "react-helmet-async";
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
@@ -18,136 +13,117 @@ import {
   TrendingUp
 } from 'lucide-react';
 
-export default function MicroSaas() {
-  const microSaasServices = [
-    {
-      icon: <Brain className="w-8 h-8" />,
-      title: "AI Video Generator",
-      path: "/zion-ai-video-generator",
-      description: "Create professional videos with AI-powered automation",
-      features: ["Auto-generated content", "Multiple templates", "HD quality output"]
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "AI Invoice Generator",
-      path: "/zion-ai-invoice-generator",
-      description: "Generate professional invoices automatically",
-      features: ["Smart templates", "Auto-calculation", "PDF export"]
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "AI Customer Insights",
-      path: "/zion-ai-customer-insights",
-      description: "Analyze customer behavior with AI-powered insights",
-      features: ["Behavioral analysis", "Predictive modeling", "Real-time insights"]
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "AI Email Analyzer",
-      path: "/zion-ai-email-analyzer",
-      description: "Smart email analysis and optimization",
-      features: ["Sentiment analysis", "Spam detection", "Performance metrics"]
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Smart Inventory Optimizer",
-      path: "/zion-smart-inventory-optimizer",
-      description: "Optimize inventory management with AI",
-      features: ["Demand forecasting", "Auto-reordering", "Cost optimization"]
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "AI Customer Sentiment Tracker",
-      path: "/zion-ai-customer-sentiment-tracker",
-      description: "Track customer sentiment across all channels",
-      features: ["Multi-channel monitoring", "Real-time alerts", "Trend analysis"]
-    }
-  ];
+const microSaasServices = [
+  {
+    icon: <Brain className="w-8 h-8" />,
+    title: "AI Video Generator",
+    path: "/zion-ai-video-generator",
+    description: "Create professional videos with AI-powered automation",
+    features: ["Auto-generated content", "Multiple templates", "HD quality output"]
+  },
+  {
+    icon: <BarChart3 className="w-8 h-8" />,
+    title: "AI Invoice Generator",
+    path: "/zion-ai-invoice-generator",
+    description: "Generate professional invoices automatically",
+    features: ["Smart templates", "Auto-calculation", "PDF export"]
+  },
+  {
+    icon: <Users className="w-8 h-8" />,
+    title: "AI Customer Insights",
+    path: "/zion-ai-customer-insights",
+    description: "Analyze customer behavior with AI-powered insights",
+    features: ["Behavioral analysis", "Predictive modeling", "Real-time insights"]
+  },
+  {
+    icon: <Shield className="w-8 h-8" />,
+    title: "AI Email Analyzer",
+    path: "/zion-ai-email-analyzer",
+    description: "Smart email analysis and optimization",
+    features: ["Sentiment analysis", "Spam detection", "Performance metrics"]
+  },
+  {
+    icon: <Zap className="w-8 h-8" />,
+    title: "AI Marketing Automation",
+    path: "/zion-ai-marketing-automation-pro",
+    description: "Automate your marketing campaigns with AI",
+    features: ["Email automation", "Social media management", "Analytics"]
+  },
+  {
+    icon: <Sparkles className="w-8 h-8" />,
+    title: "AI Business Intelligence",
+    path: "/zion-ai-business-intelligence-pro",
+    description: "Transform data into actionable business insights",
+    features: ["Data visualization", "Predictive analytics", "Custom dashboards"]
+  }
+];
 
-  const features = [
-    {
-      icon: <Sparkles className="w-6 h-6" />,
-      title: "AI-Powered",
-      description: "Leverage cutting-edge AI technology for maximum efficiency"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security with 99.9% uptime guarantee"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Lightning Fast",
-      description: "Optimized for speed and performance"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "User-Friendly",
-      description: "Intuitive interface designed for all skill levels"
-    }
-  ];
+const pricingPlans = [
+  {
+    name: "Starter",
+    price: "$29",
+    period: "month",
+    features: [
+      "Basic AI features",
+      "Email support",
+      "5GB storage",
+      "Standard templates"
+    ],
+    popular: false
+  },
+  {
+    name: "Professional",
+    price: "$79",
+    period: "month",
+    features: [
+      "Advanced AI features",
+      "Priority support",
+      "50GB storage",
+      "Custom templates",
+      "API access"
+    ],
+    popular: true
+  },
+  {
+    name: "Enterprise",
+    price: "$199",
+    period: "month",
+    features: [
+      "All AI features",
+      "24/7 support",
+      "Unlimited storage",
+      "White-label options",
+      "Custom integrations"
+    ],
+    popular: false
+  }
+];
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 5 AI tools",
-        "Basic analytics",
-        "Email support",
-        "5GB storage"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$79",
-      period: "/month",
-      description: "Ideal for growing companies",
-      features: [
-        "Unlimited AI tools",
-        "Advanced analytics",
-        "Priority support",
-        "50GB storage",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$199",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Everything in Professional",
-        "Custom integrations",
-        "Dedicated support",
-        "Unlimited storage",
-        "White-label options"
-      ],
-      popular: false
-    }
-  ];
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
+const features = [
+  {
+    icon: <Zap className="w-8 h-8" />,
+    title: "Lightning Fast",
+    description: "Deploy and scale your micro SAAS solutions in minutes, not months."
+  },
+  {
+    icon: <Shield className="w-8 h-8" />,
+    title: "Secure & Reliable",
+    description: "Enterprise-grade security with 99.9% uptime guarantee."
+  },
+  {
+    icon: <BarChart3 className="w-8 h-8" />,
+    title: "Analytics & Insights",
+    description: "Comprehensive analytics to track performance and optimize results."
+  },
+  {
+    icon: <Users className="w-8 h-8" />,
+    title: "Easy Integration",
+    description: "Seamlessly integrate with your existing tools and workflows."
+  }
+];
 
 export default function MicroSaas() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>Micro SAAS - Zion Tech Group</title>
-        <meta name="description" content="Micro SAAS page coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Micro SAAS</h1>
-        <p className="text-xl text-gray-300">Coming Soon</p>
-      </div>
-    </div>
-  );
-}
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Micro SAAS Solutions | Zion Tech Group</title>
@@ -282,7 +258,6 @@ export default function MicroSaas() {
                 )}
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-300 ml-1">{plan.period}</span>
@@ -342,4 +317,3 @@ export default function MicroSaas() {
     </div>
   );
 }
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0

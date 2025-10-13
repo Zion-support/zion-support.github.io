@@ -1,21 +1,14 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   BarChart3, 
   Cloud, 
-<<<<<<< HEAD
   Users, 
   ArrowRight,
   Sparkles,
   CheckCircle,
   TrendingUp,
   Settings,
-=======
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
   Workflow,
   Target
 } from 'lucide-react';

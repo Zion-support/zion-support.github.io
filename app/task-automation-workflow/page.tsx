@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Taskautomationworkflow() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Task Automation Workflow - Zion Tech Group</title>
         <meta
@@ -29,6 +29,6 @@ export default function Taskautomationworkflow() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

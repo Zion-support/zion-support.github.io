@@ -88,7 +88,7 @@ export default function AICustomerSupportChatbot() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Customer Support Chatbot - Zion Tech Group</title>
         <meta
@@ -282,6 +282,6 @@ export default function AICustomerSupportChatbot() {
           </div>
         </div>
       </div>
-    </>
+</div>
   );
 }

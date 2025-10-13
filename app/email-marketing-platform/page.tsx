@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Emailmarketingplatform() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Email Marketing Platform - Zion Tech Group</title>
         <meta
@@ -29,6 +29,6 @@ export default function Emailmarketingplatform() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

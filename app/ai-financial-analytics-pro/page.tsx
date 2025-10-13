@@ -152,7 +152,7 @@ export default function AiFinancialAnalyticsProPage() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Financial Analytics Pro - Zion Tech Group</title>
         <meta
@@ -364,6 +364,6 @@ export default function AiFinancialAnalyticsProPage() {
           </div>
         </div>
       </div>
-    </>
+</div>
   );
 }

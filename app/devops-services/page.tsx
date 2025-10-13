@@ -1,43 +1,10 @@
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { Helmet } from 'react-helmet-async';
+import { Code, Server, Cloud, Zap, Shield, BarChart3, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function DevOpsServices() {
   return (
-    <>
-      <Helmet>
-        <title>DevOps Services - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Professional DevOps services from Zion Tech Group"
-        />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">DevOps Services</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional DevOps services coming soon.
-          </p>
-
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Code, Server, Cloud, Zap, Shield, BarChart3, Users, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
-const DevOpsServicesPage = () => {
-  return (
-    <>
+    <div>
       <Helmet>
         <title>DevOps Services - Zion Tech Group | CI/CD, Automation & Cloud Infrastructure</title>
         <meta name="description" content="Professional DevOps services including CI/CD pipeline setup, infrastructure automation, cloud migration, and continuous monitoring solutions for modern businesses." />
@@ -171,8 +138,7 @@ const DevOpsServicesPage = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
       </div>
-    </>
+</div>
   );
 }

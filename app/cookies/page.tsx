@@ -1,9 +1,8 @@
-import React from "react";
 import { Helmet } from "react-helmet-async";
 
 export default function Cookies() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Cookie Policy - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Cookie policy for Zion Tech Group." />
@@ -14,6 +13,6 @@ export default function Cookies() {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </>
+</div>
   );
 }
