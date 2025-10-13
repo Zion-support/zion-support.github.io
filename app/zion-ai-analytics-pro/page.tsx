@@ -1,7 +1,6 @@
 import React from 'react';
 import { Settings, Users, Sparkles, ArrowRight, CheckCircle, Star, Zap, Brain, BarChart3, Database, Target, Mic, FileText, Mail, Play, MapPin, Phone } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -174,8 +173,6 @@ const ZionAIAnalyticsProPage = () => {
     { name: 'MongoDB', logo: 'MG', category: 'Database' },
     { name: 'AWS', logo: 'AW', category: 'Cloud' }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function ZionAiAnalyticsProPage() {
   return (
@@ -218,4 +215,6 @@ export default function ZionAiAnalyticsProPage() {
       </div>
     </div>
   );
+}
+
 }

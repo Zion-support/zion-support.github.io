@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -159,9 +158,6 @@ const CybersecuritySolutions = () => {
       stats: "50+ frameworks"
     }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function CybersecuritySolutionsPage() {
   return (
@@ -204,4 +200,6 @@ export default function CybersecuritySolutionsPage() {
       </div>
     </div>
   );
+}
+
 }

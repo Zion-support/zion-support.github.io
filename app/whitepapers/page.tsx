@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 const WhitepapersPage = () => {
@@ -54,8 +53,6 @@ const WhitepapersPage = () => {
       icon: <BookOpen className="w-6 h-6" />
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function WhitepapersPage() {
   return (
@@ -98,4 +95,6 @@ export default function WhitepapersPage() {
       </div>
     </div>
   );
+}
+
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { TrendingUp, Users, Sparkles, ArrowRight, CheckCircle, Star, Zap, BarChart3, Target, Mic, Mail, Play, MapPin, Phone } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -170,8 +169,6 @@ const ZionAICRMProPage = () => {
     { name: 'Zapier', logo: 'ZP', category: 'Automation' },
     { name: 'Salesforce', logo: 'SF', category: 'CRM' }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function ZionAiCrmProPage() {
   return (
@@ -214,4 +211,6 @@ export default function ZionAiCrmProPage() {
       </div>
     </div>
   );
+}
+
 }

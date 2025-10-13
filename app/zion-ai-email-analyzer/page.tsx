@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 
 const ZionAiEmailAnalyzer = () => {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function ZionAiEmailAnalyzerPage() {
   return (
@@ -49,4 +44,6 @@ export default function ZionAiEmailAnalyzerPage() {
       </div>
     </div>
   );
+}
+
 }

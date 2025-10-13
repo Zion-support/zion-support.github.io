@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 export default function Compliance() {
@@ -65,8 +64,6 @@ export default function Compliance() {
       features: ["Regular Assessments", "Policy Updates", "Training Programs", "Incident Response"]
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function CompliancePage() {
   return (
@@ -109,4 +106,6 @@ export default function CompliancePage() {
       </div>
     </div>
   );
+}
+
 }

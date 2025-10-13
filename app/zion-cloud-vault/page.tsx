@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function ZionCloudVault() {
   const features = [
@@ -98,10 +97,6 @@ export default function ZionCloudVault() {
       popular: false
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function ZionCloudVaultPage() {
   return (
@@ -144,4 +139,6 @@ export default function ZionCloudVaultPage() {
       </div>
     </div>
   );
+}
+
 }

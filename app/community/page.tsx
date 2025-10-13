@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 export default function Community() {
@@ -57,8 +56,6 @@ export default function Community() {
       participants: "100+ contributors"
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function CommunityPage() {
   return (
@@ -101,4 +98,6 @@ export default function CommunityPage() {
       </div>
     </div>
   );
+}
+
 }

@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Home } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 interface BreadcrumbProps {
   className?: string;

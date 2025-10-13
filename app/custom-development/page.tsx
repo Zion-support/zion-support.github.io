@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -59,10 +58,6 @@ export default function CustomDevelopment() {
       features: ["RESTful APIs", "GraphQL", "API Documentation", "Rate Limiting"]
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function CustomDevelopmentPage() {
   return (
@@ -105,4 +100,6 @@ export default function CustomDevelopmentPage() {
       </div>
     </div>
   );
+}
+
 }

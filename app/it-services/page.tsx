@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import SEOOptimizer from "../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
@@ -396,10 +395,6 @@ export default function ITServices() {
       icon: <Monitor className="w-8 h-8" />
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function ItServicesPage() {
   return (
@@ -442,4 +437,6 @@ export default function ItServicesPage() {
       </div>
     </div>
   );
+}
+
 }

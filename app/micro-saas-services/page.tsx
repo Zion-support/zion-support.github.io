@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function MicroSaasServices() {
   const microSaasServices = [
@@ -327,10 +326,6 @@ export default function MicroSaasServices() {
       ]
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function MicroSaasServicesPage() {
   return (
@@ -373,4 +368,6 @@ export default function MicroSaasServicesPage() {
       </div>
     </div>
   );
+}
+
 }

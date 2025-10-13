@@ -10,7 +10,6 @@ interface PerformanceMetrics {
   domContentLoaded: number | null;
 }
 
-<<<<<<< HEAD
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -210,12 +209,6 @@ const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
-=======
-interface PerformancemonitorProps {
-  className?: string;
-  children?: React.ReactNode;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function Performancemonitor({ className = '', children, ...props }: PerformancemonitorProps) {
   return (

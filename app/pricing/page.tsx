@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function Pricing() {
   const aiServicesPricing = [
@@ -168,10 +167,6 @@ export default function Pricing() {
       answer: "We'll notify you before you reach your limits and offer options to upgrade or purchase additional capacity."
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function PricingPage() {
   return (
@@ -214,4 +209,6 @@ export default function PricingPage() {
       </div>
     </div>
   );
+}
+
 }

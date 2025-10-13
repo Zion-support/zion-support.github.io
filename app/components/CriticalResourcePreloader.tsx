@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 'use client'
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 interface CriticalresourcepreloaderProps {
   className?: string;

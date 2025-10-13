@@ -185,3 +185,8 @@ const ContactForm: React.FC = () =>
 ;
 export default ContactForm;
 </FormData>
+</textarea>
+</input>
+</input>
+</input>
+</input>

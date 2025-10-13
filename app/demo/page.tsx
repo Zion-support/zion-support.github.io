@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle, Star, Hand, Play, Pause, Calendar, Network } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -125,12 +124,6 @@ export default function DemoPage() {
     setIsPlaying(false);
   };
 
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function DemoPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import SEOOptimizer from "../../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
@@ -120,10 +119,6 @@ export default function AiPoweredDevops() {
       color: "from-orange-500 to-red-500"
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiPoweredDevopsPage() {
   return (
@@ -166,4 +161,6 @@ export default function AiPoweredDevopsPage() {
       </div>
     </div>
   );
+}
+
 }

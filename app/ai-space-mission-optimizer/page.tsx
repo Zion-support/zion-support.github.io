@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { 
   Rocket, 
   Satellite, 
@@ -155,9 +154,6 @@ const AISpaceMissionOptimizerPage = () => {
     { number: "10,000+", label: "Satellites Tracked", icon: <Satellite className="w-6 h-6" /> },
     { number: "24/7", label: "Mission Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiSpaceMissionOptimizerPage() {
   return (
@@ -200,4 +196,6 @@ export default function AiSpaceMissionOptimizerPage() {
       </div>
     </div>
   );
+}
+
 }

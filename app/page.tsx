@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
@@ -137,10 +136,6 @@ const HomePage = () => {
       rating: 5
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AppPage() {
   return (
@@ -183,4 +178,6 @@ export default function AppPage() {
       </div>
     </div>
   );
+}
+
 }

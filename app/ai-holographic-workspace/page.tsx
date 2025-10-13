@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -139,9 +138,6 @@ const AIHolographicWorkspace = () => {
     { number: "50+", label: "Concurrent Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiHolographicWorkspacePage() {
   return (
@@ -184,4 +180,6 @@ export default function AiHolographicWorkspacePage() {
       </div>
     </div>
   );
+}
+
 }

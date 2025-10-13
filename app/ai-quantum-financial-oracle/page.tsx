@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { 
   Brain, 
   TrendingUp, 
@@ -157,9 +156,6 @@ const AIQuantumFinancialOraclePage = () => {
     { number: "10M+", label: "Data Points Analyzed", icon: <BarChart3 className="w-6 h-6" /> },
     { number: "24/7", label: "Market Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiQuantumFinancialOraclePage() {
   return (
@@ -202,4 +198,6 @@ export default function AiQuantumFinancialOraclePage() {
       </div>
     </div>
   );
+}
+
 }

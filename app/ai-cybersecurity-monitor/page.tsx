@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -8,12 +7,6 @@ import { Monitor } from 'lucide-react';
 
 
 export default function AICybersecurityMonitorZionTechGroup() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiCybersecurityMonitorPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
@@ -50,9 +49,6 @@ const AISentimentAnalysisPro = () => {
     "Trend analysis",
     "Actionable insights"
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiSentimentAnalysisProPage() {
   return (
@@ -95,4 +91,6 @@ export default function AiSentimentAnalysisProPage() {
       </div>
     </div>
   );
+}
+
 }

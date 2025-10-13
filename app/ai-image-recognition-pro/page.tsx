@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
@@ -46,9 +45,6 @@ const AIImageRecognitionPro = () => {
     "Scalable infrastructure",
     "Easy integration"
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiImageRecognitionProPage() {
   return (
@@ -91,4 +87,6 @@ export default function AiImageRecognitionProPage() {
       </div>
     </div>
   );
+}
+
 }

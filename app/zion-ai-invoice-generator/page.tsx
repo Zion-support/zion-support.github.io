@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -25,7 +21,6 @@ import { Smartphone } from 'lucide-react';
 import { FileText } from 'lucide-react';
 import { Hand } from 'lucide-react';
 
-<<<<<<< HEAD
 const ZionAIInvoiceGeneratorPage = () => {
   const testimonials = [
     {
@@ -216,9 +211,6 @@ const ZionAIInvoiceGeneratorPage = () => {
     }
   ];
 
-=======
-export default function ZionAiInvoiceGeneratorPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

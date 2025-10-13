@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -162,9 +161,6 @@ const ZionHRAssistantPro = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function ZionHrAssistantProPage() {
   return (
@@ -207,4 +203,6 @@ export default function ZionHrAssistantProPage() {
       </div>
     </div>
   );
+}
+
 }

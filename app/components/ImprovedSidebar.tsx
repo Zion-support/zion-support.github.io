@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -29,9 +28,6 @@ import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight, ChevronDown, ChevronRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Settings, Search, Star, TrendingUp, Users, Clock, CheckCircle, HelpCircle, Phone, Mail, MapPin, X, Home, BookOpen, FileText, MessageSquare, Calendar, DollarSign, Play, Mic, Code, Network } from 'lucide-react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 interface ImprovedsidebarProps {
   className?: string;

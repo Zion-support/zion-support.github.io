@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -7,9 +6,6 @@ import { Home } from 'lucide-react';
 import { Search } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
 import { Mic } from 'lucide-react';
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function NotFoundPage() {
   return (

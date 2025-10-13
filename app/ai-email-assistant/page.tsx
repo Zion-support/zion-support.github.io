@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Users } from 'lucide-react';
@@ -118,10 +117,6 @@ export default function AIEmailAssistant() {
       popular: false,
     },
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiEmailAssistantPage() {
   return (
@@ -164,4 +159,6 @@ export default function AiEmailAssistantPage() {
       </div>
     </div>
   );
+}
+
 }

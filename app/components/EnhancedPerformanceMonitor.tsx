@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Star } from 'lucide-react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 interface EnhancedperformancemonitorProps {
   className?: string;

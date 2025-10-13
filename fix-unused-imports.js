@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -87,15 +86,3 @@ componentFiles.forEach(file => {
 });
 
 console.log('Finished fixing unused imports.');
-=======
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f

@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 
 
 export default function GDataAnalyticsZionTechGroupPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiSmartCalendarPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

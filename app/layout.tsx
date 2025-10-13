@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import AnalyticsProvider from "./components/AnalyticsProvider";
 import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
@@ -9,9 +8,6 @@ import ImprovedFooter from "./components/ImprovedFooter";
 import ImprovedSidebar from "./components/ImprovedSidebar";
 import { Helmet } from 'react-helmet-async';
 import { Monitor } from 'lucide-react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 interface LayoutProps {
   className?: string;

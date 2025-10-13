@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { 
   Cpu, 
   Zap, 
@@ -156,9 +155,6 @@ const QuantumComputingSolutionsPage = () => {
     { number: "50+", label: "Quantum Algorithms", icon: <Brain className="w-6 h-6" /> },
     { number: "24/7", label: "Quantum Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function QuantumComputingSolutionsPage() {
   return (
@@ -201,4 +197,6 @@ export default function QuantumComputingSolutionsPage() {
       </div>
     </div>
   );
+}
+
 }

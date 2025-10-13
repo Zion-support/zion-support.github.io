@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 const CloudServicesPage: React.FC = () => {
@@ -59,11 +58,6 @@ const CloudServicesPage: React.FC = () => {
     }
   ];
 
-=======
-import { Helmet } from 'react-helmet-async';
-
-export default function CloudServicesPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

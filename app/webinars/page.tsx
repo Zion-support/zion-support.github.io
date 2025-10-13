@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 const WebinarsPage = () => {
@@ -57,8 +56,6 @@ const WebinarsPage = () => {
       icon: <Play className="w-6 h-6" />
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function WebinarsPage() {
   return (
@@ -101,4 +98,6 @@ export default function WebinarsPage() {
       </div>
     </div>
   );
+}
+
 }

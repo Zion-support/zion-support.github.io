@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 
 const AICustomerSentimentTrackerPage = () => {
   const benefits = [
@@ -115,8 +114,6 @@ const AICustomerSentimentTrackerPage = () => {
       popular: false
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiCustomerSentimentTrackerPage() {
   return (
@@ -159,4 +156,6 @@ export default function AiCustomerSentimentTrackerPage() {
       </div>
     </div>
   );
+}
+
 }

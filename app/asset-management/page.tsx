@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 const AssetManagementPage = () => {
@@ -53,8 +52,6 @@ const AssetManagementPage = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AssetManagementPage() {
   return (
@@ -97,4 +94,6 @@ export default function AssetManagementPage() {
       </div>
     </div>
   );
+}
+
 }

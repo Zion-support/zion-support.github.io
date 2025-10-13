@@ -1,7 +1,6 @@
 import React from 'react';
 import { TrendingUp, Sparkles, ArrowRight, CheckCircle, Star, Shield, PieChart, Activity } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -62,8 +61,6 @@ const AIFinancialAnalysisPage = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiFinancialAnalysisPage() {
   return (
@@ -106,4 +103,6 @@ export default function AiFinancialAnalysisPage() {
       </div>
     </div>
   );
+}
+
 }

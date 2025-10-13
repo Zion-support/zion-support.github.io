@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -113,12 +112,8 @@ export default function AiAnalytics() {
       popular: false
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
-export default function AiAnalyticsPage() {
+export default function AiAnalytics() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -159,4 +154,6 @@ export default function AiAnalyticsPage() {
       </div>
     </div>
   );
+}
+
 }

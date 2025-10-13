@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -217,9 +216,6 @@ const ZionAIProjectManagerProPage = () => {
       color: "from-cyan-500 to-blue-500"
     }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function ZionAiProjectManagerProPage() {
   return (
@@ -262,4 +258,6 @@ export default function ZionAiProjectManagerProPage() {
       </div>
     </div>
   );
+}
+
 }

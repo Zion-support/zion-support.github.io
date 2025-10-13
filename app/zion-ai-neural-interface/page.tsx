@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -137,9 +136,6 @@ const ZionAINeuralInterface = () => {
     { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function ZionAiNeuralInterfacePage() {
   return (
@@ -182,4 +178,6 @@ export default function ZionAiNeuralInterfacePage() {
       </div>
     </div>
   );
+}
+
 }

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiCustomerSupportChatbotPage() {
   return (

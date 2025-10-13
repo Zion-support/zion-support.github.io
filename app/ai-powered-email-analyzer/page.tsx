@@ -1,7 +1,6 @@
 import React from 'react';
 import { Users, ArrowRight, CheckCircle, Star, Globe, Shield, Zap, Brain, BarChart3, Target, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -104,8 +103,6 @@ const AIPoweredEmailAnalyzerPage = () => {
       popular: false
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiPoweredEmailAnalyzerPage() {
   return (
@@ -148,4 +145,6 @@ export default function AiPoweredEmailAnalyzerPage() {
       </div>
     </div>
   );
+}
+
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 
 export default function Partners() {
   const partners = [
@@ -68,8 +67,6 @@ export default function Partners() {
       benefits: ["Standard support", "Partner portal access", "Co-marketing opportunities", "Technical documentation"]
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function PartnersPage() {
   return (
@@ -112,4 +109,6 @@ export default function PartnersPage() {
       </div>
     </div>
   );
+}
+
 }

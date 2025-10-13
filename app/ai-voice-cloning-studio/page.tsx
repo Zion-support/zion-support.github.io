@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { 
   Mic, 
   Play, 
@@ -141,9 +140,6 @@ const AIVoiceCloningStudioPage = () => {
       icon: <Brain className="w-6 h-6" />
     }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiVoiceCloningStudioPage() {
   return (
@@ -186,4 +182,6 @@ export default function AiVoiceCloningStudioPage() {
       </div>
     </div>
   );
+}
+
 }

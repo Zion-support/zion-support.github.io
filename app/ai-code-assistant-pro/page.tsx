@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -140,10 +139,6 @@ const AICodeAssistantProZionTechGroup = () => {
       popular: false
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiCodeAssistantProPage() {
   return (
@@ -186,4 +181,6 @@ export default function AiCodeAssistantProPage() {
       </div>
     </div>
   );
+}
+
 }

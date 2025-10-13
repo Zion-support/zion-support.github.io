@@ -5,7 +5,6 @@ interface AccessibilityenhancerProps {
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
@@ -129,12 +128,3 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 };
 
 export default AccessibilityEnhancer;
-=======
-export default function Accessibilityenhancer({ className = '', children, ...props }: AccessibilityenhancerProps) {
-  return (
-    <div className={`accessibilityenhancer-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f

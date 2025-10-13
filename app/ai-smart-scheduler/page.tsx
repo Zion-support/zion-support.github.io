@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Layout from "../layout";
 import { Link } from 'react-router-dom';
 import { Clock } from 'lucide-react';
@@ -83,10 +82,6 @@ export default function AISmartScheduler() {
       popular: false,
     },
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiSmartSchedulerPage() {
   return (
@@ -129,4 +124,6 @@ export default function AiSmartSchedulerPage() {
       </div>
     </div>
   );
+}
+
 }

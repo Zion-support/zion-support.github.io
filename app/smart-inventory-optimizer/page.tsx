@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 
 const SmartInventoryOptimizerPage = () => {
   const benefits = [
@@ -115,8 +114,6 @@ const SmartInventoryOptimizerPage = () => {
       popular: false
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function SmartInventoryOptimizerPage() {
   return (
@@ -159,4 +156,6 @@ export default function SmartInventoryOptimizerPage() {
       </div>
     </div>
   );
+}
+
 }

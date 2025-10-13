@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -140,9 +139,6 @@ const QuantumDataEncryptionVault = () => {
     { number: "Zero", label: "Data Breaches", icon: <Lock className="w-6 h-6" /> },
     { number: "50+", label: "Compliance Standards", icon: <Award className="w-6 h-6" /> }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function QuantumDataEncryptionVaultPage() {
   return (
@@ -185,4 +181,6 @@ export default function QuantumDataEncryptionVaultPage() {
       </div>
     </div>
   );
+}
+
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 const AIAutomationPlatformPage = () => {
@@ -77,10 +76,6 @@ const AIAutomationPlatformPage = () => {
     }
   ];
 
-=======
-
-export default function AiAutomationPlatformPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -118,8 +113,7 @@ export default function AiAutomationPlatformPage() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </section>
+      </div>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -249,9 +243,6 @@ export default function AiAutomationPlatformPage() {
           </div>
         </div>
       </section>
-=======
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
     </div>
   );
 }

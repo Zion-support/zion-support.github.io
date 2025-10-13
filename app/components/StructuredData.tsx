@@ -1,11 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Search, Code } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Search } from 'lucide-react';
 import { Code } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 interface StructureddataProps {
   className?: string;

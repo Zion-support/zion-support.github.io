@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 interface StructuredData {
   '@context': string;
   '@type': string;
@@ -130,17 +129,5 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
     </Helmet>
-=======
-interface EnhancedseoProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Enhancedseo({ className = '', children, ...props }: EnhancedseoProps) {
-  return (
-    <div className={`enhancedseo-component ${className}`} {...props}>
-      {children}
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
   );
 }

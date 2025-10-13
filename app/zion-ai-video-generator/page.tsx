@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -24,7 +20,6 @@ import { Smartphone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
-<<<<<<< HEAD
 const ZionAIVideoGeneratorPage = () => {
   const testimonials = [
     {
@@ -215,9 +210,6 @@ const ZionAIVideoGeneratorPage = () => {
     }
   ];
 
-=======
-export default function ZionAiVideoGeneratorPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

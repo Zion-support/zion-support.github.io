@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -160,9 +159,6 @@ const CloudInfrastructure = () => {
       stats: "Sub-second response"
     }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function CloudInfrastructurePage() {
   return (
@@ -205,4 +201,6 @@ export default function CloudInfrastructurePage() {
       </div>
     </div>
   );
+}
+
 }

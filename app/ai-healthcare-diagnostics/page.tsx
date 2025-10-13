@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function AIHealthcareDiagnostics() {
   const features = [
@@ -74,10 +73,6 @@ export default function AIHealthcareDiagnostics() {
       popular: false
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiHealthcareDiagnosticsPage() {
   return (
@@ -120,4 +115,6 @@ export default function AiHealthcareDiagnosticsPage() {
       </div>
     </div>
   );
+}
+
 }

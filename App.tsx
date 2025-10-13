@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function Component() {
   return (
-<<<<<<< HEAD
     <GlobalErrorBoundary>
       <EnhancedErrorBoundary>
         <HelmetProvider>
@@ -135,11 +134,5 @@ export default function Component() {
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </GlobalErrorBoundary>
-=======
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
   );
 }

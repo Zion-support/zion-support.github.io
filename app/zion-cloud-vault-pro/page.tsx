@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -118,10 +117,6 @@ export default function ZionCloudVaultPro() {
       popular: false
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function ZionCloudVaultProPage() {
   return (
@@ -164,4 +159,6 @@ export default function ZionCloudVaultProPage() {
       </div>
     </div>
   );
+}
+
 }

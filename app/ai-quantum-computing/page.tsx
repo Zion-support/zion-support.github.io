@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import SEOOptimizer from "../../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
@@ -118,10 +117,6 @@ export default function AiQuantumComputing() {
       color: "from-orange-500 to-red-500"
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiQuantumComputingPage() {
   return (
@@ -164,4 +159,6 @@ export default function AiQuantumComputingPage() {
       </div>
     </div>
   );
+}
+
 }

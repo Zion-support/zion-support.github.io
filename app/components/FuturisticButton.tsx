@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 interface FuturisticbuttonProps {
   className?: string;

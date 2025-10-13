@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -175,9 +174,6 @@ const ZionAiBusinessIntelligencePro = () => {
       features: ["Native mobile apps", "Offline access", "Push notifications", "Touch-optimized"]
     }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function ZionAiBusinessIntelligenceProPage() {
   return (
@@ -220,4 +216,6 @@ export default function ZionAiBusinessIntelligenceProPage() {
       </div>
     </div>
   );
+}
+
 }

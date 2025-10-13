@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 interface LazyimageProps {
   className?: string;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Settings, Sparkles, ArrowRight, CheckCircle, Star, Globe, Shield, Server } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -64,8 +63,6 @@ const DataCenterServicesPage = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function DataCenterServicesPage() {
   return (
@@ -108,4 +105,6 @@ export default function DataCenterServicesPage() {
       </div>
     </div>
   );
+}
+
 }

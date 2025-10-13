@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import SEOOptimizer from "../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
@@ -84,10 +83,6 @@ export default function ZionAISalesPredictor() {
       rating: 5
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function ZionAiSalesPredictorPage() {
   return (
@@ -130,4 +125,6 @@ export default function ZionAiSalesPredictorPage() {
       </div>
     </div>
   );
+}
+
 }

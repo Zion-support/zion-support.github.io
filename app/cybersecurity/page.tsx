@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function Cybersecurity() {
   const services = [
@@ -57,10 +56,6 @@ export default function Cybersecurity() {
       features: ["Vulnerability Scanning", "Patch Management", "Policy Enforcement", "Compliance Automation"]
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function CybersecurityPage() {
   return (
@@ -103,4 +98,6 @@ export default function CybersecurityPage() {
       </div>
     </div>
   );
+}
+
 }

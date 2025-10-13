@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 const ZionSmartInventoryOptimizerPage = () => {
-=======
-export default function ZionSmartInventoryOptimizerPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -46,10 +42,6 @@ export default function ZionSmartInventoryOptimizerPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
 export default ZionSmartInventoryOptimizerPage;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f

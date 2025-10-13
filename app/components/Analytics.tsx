@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Star } from 'lucide-react';
 
@@ -8,9 +7,6 @@ declare global {
     dataLayer: any[];
   }
 }
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 interface AnalyticsProps {
   className?: string;

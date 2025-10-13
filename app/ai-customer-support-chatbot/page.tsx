@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Clock } from 'lucide-react';
@@ -93,10 +92,6 @@ export default function AICustomerSupportChatbot() {
         "Track customer satisfaction, response times, and identify improvement opportunities",
     },
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function AiCustomerSupportChatbotPage() {
   return (
@@ -139,4 +134,6 @@ export default function AiCustomerSupportChatbotPage() {
       </div>
     </div>
   );
+}
+
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function Services() {
   const services = [
@@ -336,10 +335,6 @@ export default function Services() {
       category: "Asset Management"
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function ServicesPage() {
   return (
@@ -382,4 +377,6 @@ export default function ServicesPage() {
       </div>
     </div>
   );
+}
+
 }

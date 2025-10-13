@@ -1,7 +1,6 @@
 import React from 'react';
 import { Users, ArrowRight, CheckCircle, Star, Globe, Shield, Zap, Brain, BarChart3, Target, Receipt } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -127,8 +126,6 @@ const SmartExpenseCategorizerPage = () => {
       popular: false
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
 export default function SmartExpenseCategorizerPage() {
   return (
@@ -171,4 +168,6 @@ export default function SmartExpenseCategorizerPage() {
       </div>
     </div>
   );
+}
+
 }
