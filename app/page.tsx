@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import SEOHead from './components/SEOHead';
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -18,13 +15,45 @@ import {
 } from '@heroicons/react/24/outline';
 
 export default function HomePage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Zion Tech Group - Advanced AI and IT Solutions",
+    "description": "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.",
+    "url": "https://ziontechgroup.com",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/logo192.png",
+      "description": "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.",
+      "foundingDate": "2020",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-0123",
+        "contactType": "customer service",
+        "email": "info@ziontechgroup.com"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup",
+        "https://github.com/ziontechgroup"
+      ]
+    }
+  };
+
   return (
     <>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." />
-        <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions" />
-      </Helmet>
+      <SEOHead 
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions, Zion Tech Group"
+        structuredData={structuredData}
+      />
       
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">

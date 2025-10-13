@@ -1,14 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Circle, Star, Right, Brain, Zap, Shield, Cloud, Smartphone, Database, Globe } from 'lucide-react';
-=======
+
 import { Circle, Star, Right, Zap, Shield, Code } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
-=======
-import { Circle, Star, Right } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
