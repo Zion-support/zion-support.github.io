@@ -1,8 +1,24 @@
+<<<<<<< HEAD
 import { ArrowRight, BarChart3, Brain, Shield, Zap, Globe, Star, Users, Award, CheckCircle, TrendingUp, Clock, Database, PieChart, Activity, Target } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { BarChart, TrendingUp, Target, CheckCircle, ArrowRight, Star, Users, Clock, Shield } from 'lucide-react';
+
+const AIDataAnalyticsProPage = () => {
+  const features = [
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive data analysis with machine learning insights.',
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-fe66
 
 const AIDataAnalyticsPro = () => {
   const features = [
@@ -96,4 +112,13 @@ const AIDataAnalyticsPro = () => {
             </div>
           </div>
         </ResponsiveContainer>
+<<<<<<< HEAD
 export default AIDataAnalyticsPro;
+=======
+      </section>
+    </div>
+  );
+};
+
+export default AIDataAnalyticsProPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fe66

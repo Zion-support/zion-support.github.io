@@ -142,6 +142,7 @@ const App: React.FC = () => {
               <Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
+<<<<<<< HEAD
 
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
@@ -260,6 +261,23 @@ const App: React.FC = () => {
                 <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
                 <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
                 <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+=======
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/ai-automation" element={<AIAutomationPage />} />
+                <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
+                <Route path="/ai-email-assistant" element={<AIEmailAssistantPage />} />
+                <Route path="/ai-email-marketing-automation" element={<AIEmailMarketingAutomationPage />} />
+                <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
+                <Route path="/ai-financial-analysis" element={<AIFinancialAnalysisPage />} />
+                <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
+                <Route path="/ai-automated-reporting" element={<AIAutomatedReportingPage />} />
+                <Route path="/ai-data-analytics-pro" element={<AIDataAnalyticsProPage />} />
+                <Route path="/ad-management" element={<AdManagementPage />} />
+                <Route path="/edge-computing" element={<EdgeComputingPage />} />
+                <Route path="*" element={<NotFoundPage />} />
+>>>>>>> cursor/fix-errors-and-merge-to-main-fe66
               </Routes>
             </Suspense>
           </div>
@@ -268,5 +286,16 @@ const App: React.FC = () => {
     </ErrorBoundary>
   );
 };
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+                {/* Micro SaaS */}
+                <Route path="/micro-saas" element={<MicroSaasPage />} />
+>>>>>>> cursor/fix-errors-and-merge-to-main-fe66
 
 export default App;
