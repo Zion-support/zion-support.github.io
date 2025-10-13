@@ -381,7 +381,11 @@ function App() {
 >>>>>>> cursor/website-audit-and-update-with-deployment-4c61
         </HelmetProvider>
       </EnhancedErrorBoundary>
+<<<<<<< HEAD
     </GlobalErrorBoundary>
+=======
+    </ErrorHandler>
+>>>>>>> cursor/analyze-improve-and-deploy-application-67a4
   );
 }
 
