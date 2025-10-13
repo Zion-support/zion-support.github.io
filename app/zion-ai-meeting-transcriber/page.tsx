@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, Star, Mic, Video, Calendar, Star as StarIcon } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Mic, Video, Calendar } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SEOOptimizer from "../components/SEOOptimizer";

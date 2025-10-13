@@ -4,10 +4,25 @@ import {
   BarChart3, 
   Cloud, 
   Workflow,
-  Target
+  Target,
+  TrendingUp,
+  Settings,
+  Users,
+  Sparkles,
+  ArrowRight,
+  CheckCircle
 } from 'lucide-react';
 
 const AIAutomationPlatformPage = () => {
+  const benefits = [
+    "Reduce manual work by up to 80%",
+    "Increase process efficiency by 300%",
+    "Eliminate human errors completely",
+    "Scale operations without additional staff",
+    "Real-time process monitoring",
+    "Seamless integration with existing systems"
+  ];
+
   const features = [
     {
       title: "Intelligent Workflow Automation",

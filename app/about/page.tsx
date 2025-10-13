@@ -1,8 +1,14 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
 
 export default function AboutPage() {
+  const stats = [
+    { number: "500+", label: "Projects Completed" },
+    { number: "50+", label: "Happy Clients" },
+    { number: "99.9%", label: "Uptime" },
+    { number: "24/7", label: "Support" }
+  ];
 
   const values = [
     {
