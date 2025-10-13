@@ -1,26 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Cloud, 
-  Server, 
-  Database, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Globe,
-  Users,
-  BarChart3,
-  Settings,
-  Clock,
-  Award,
-  Star,
-  Activity,
-  Lock,
-  Cpu,
-  HardDrive,
-  Network
-} from 'lucide-react';
+import { Cloud, Server, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Clock, Award, Star, Activity, Lock, Network } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
