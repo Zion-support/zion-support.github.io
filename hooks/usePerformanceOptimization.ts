@@ -13,10 +13,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableLazyLoading = true,
     enablePreloading = true,
     enableImageOptimization = true,
-<<<<<<< HEAD
+
     // enableCodeSplitting = true,
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-462b
+
     enableCaching = true,
   } = options;
 
