@@ -1,112 +1,95 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Get all TypeScript/JavaScript files
-<<<<<<< HEAD
-function getAllFiles(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      getAllFiles(filePath, fileList);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      fileList.push(filePath);
-    }
-  });
-  
-  return fileList;
-=======
-function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let results = [];
-  const list = fs.readdirSync(dir);
-  
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat && stat.isDirectory()) {
-      // Skip node_modules and other directories
-      if (!['node_modules', '.git', 'dist', 'build'].includes(file)) {
-        results = results.concat(getAllFiles(filePath, extensions));
-      }
-    } else {
-      if (extensions.some(ext => file.endsWith(ext))) {
-        results.push(filePath);
-      }
-    }
-  });
-  
-  return results;
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
-}
+// List of files with unused imports that need to be fixed
+const filesToFix = [
+  'app/consultation/page.tsx',
+  'app/devops-services/page.tsx',
+  'app/software-development/page.tsx',
+  'app/zion-ai-customer-insights/page.tsx',
+  'app/zion-ai-cybersecurity-suite-pro/page.tsx',
+  'app/zion-ai-invoice-generator/page.tsx',
+  'app/zion-ai-video-generator/page.tsx',
+  'app/zion-analytics-pro/page.tsx'
+];
 
-// Fix unused imports in a file
-function fixUnusedImports(filePath) {
+// Icons that are commonly unused
+const commonlyUnusedIcons = [
+  'Zap', 'Clock', 'Award', 'Target', 'TrendingUp', 'Cpu', 'Database', 'Globe', 'Mic',
+  'Layers', 'Box', 'Link', 'Brain', 'Shield', 'Star', 'Users', 'ArrowRight', 'Pause',
+  'Download', 'Upload', 'Server', 'CheckCircle', 'Lock', 'Settings', 'Cloud', 'Calendar',
+  'Rocket', 'Code', 'WebIcon', 'FileText', 'DollarSign', 'Smartphone', 'Headphones',
+  'MessageSquare', 'Share2', 'Search', 'Filter', 'Edit', 'Trash2', 'Plus', 'Minus',
+  'Play', 'Stop', 'Volume2', 'VolumeX', 'Wifi', 'WifiOff', 'Signal', 'Bluetooth',
+  'Battery', 'BatteryLow', 'Power', 'RefreshCw', 'RotateCcw', 'RotateCw', 'Maximize',
+  'Minimize', 'Square', 'Circle', 'Triangle', 'Hexagon', 'Octagon', 'Diamond',
+  'StarIcon', 'Moon', 'Sun', 'Sunrise', 'Sunset', 'CloudRain', 'CloudSnow',
+  'CloudLightning', 'Wind', 'Droplets', 'Thermometer', 'Gauge', 'Timer', 'Stopwatch',
+  'Hourglass', 'BarChart3', 'Hand', 'AlertTriangle', 'Truck'
+];
+
+function removeUnusedImports(filePath) {
   try {
-<<<<<<< HEAD
-    console.log(`Fixing unused imports in: ${filePath}`);
+    let content = fs.readFileSync(filePath, 'utf8');
     
-    // Use ESLint to fix unused imports
-    execSync(`npx eslint "${filePath}" --fix --ext .ts,.tsx`, { 
-      stdio: 'pipe',
-      cwd: '/workspace'
-    });
+    // Find the import statement for lucide-react
+    const importMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
     
-    console.log(`✅ Fixed: ${filePath}`);
-  } catch (error) {
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
-=======
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Skip if file has merge conflicts
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`Skipping ${filePath} - has merge conflicts`);
+    if (!importMatch) {
+      console.log(`No lucide-react import found in ${filePath}`);
       return;
     }
     
-    // Run ESLint with --fix to remove unused imports
-    try {
-      execSync(`npx eslint "${filePath}" --fix --ext .ts,.tsx,.js,.jsx`, { 
-        stdio: 'pipe',
-        cwd: process.cwd()
-      });
-      console.log(`Fixed unused imports in ${filePath}`);
-    } catch (error) {
-      // ESLint might fail for some files, that's okay
-      console.log(`Could not auto-fix ${filePath}: ${error.message}`);
+    const importContent = importMatch[1];
+    const importedIcons = importContent.split(',').map(icon => icon.trim());
+    
+    // Check which icons are actually used in the file
+    const usedIcons = [];
+    for (const icon of importedIcons) {
+      // Check if the icon is used in JSX (as a component)
+      const iconRegex = new RegExp(`<${icon}\\b`, 'g');
+      if (iconRegex.test(content)) {
+        usedIcons.push(icon);
+      }
     }
+    
+    // If no icons are used, remove the entire import
+    if (usedIcons.length === 0) {
+      content = content.replace(importMatch[0], '');
+    } else {
+      // Replace with only used icons
+      const newImport = `import { ${usedIcons.join(', ')} } from 'lucide-react';`;
+      content = content.replace(importMatch[0], newImport);
+    }
+    
+    // Also remove unused Link imports from react-router-dom
+    const linkImportMatch = content.match(/import\s*{\s*Link\s*}\s*from\s*['"]react-router-dom['"];?/);
+    if (linkImportMatch && !content.includes('<Link')) {
+      content = content.replace(linkImportMatch[0], '');
+    }
+    
+    // Remove unused variables
+    content = content.replace(/const\s+selectedPlan\s*=\s*useState\([^)]+\);\s*const\s+setSelectedPlan\s*=\s*useState\([^)]+\);/g, '');
+    content = content.replace(/const\s+partners\s*=\s*[^;]+;/g, '');
+    content = content.replace(/const\s+tiers\s*=\s*[^;]+;/g, '');
+    content = content.replace(/const\s+\[selectedPlan,\s*setSelectedPlan\]\s*=\s*useState\([^)]+\);/g, '');
+    content = content.replace(/const\s+\[selectedPlan,\s*setSelectedPlan\]\s*=\s*useState\([^)]+\);\s*/g, '');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed unused imports in ${filePath}`);
   } catch (error) {
-    console.log(`Error processing ${filePath}: ${error.message}`);
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Main execution
-<<<<<<< HEAD
-console.log('🔧 Starting to fix unused imports...');
-
-const files = getAllFiles('/workspace/app');
-let fixedCount = 0;
-
-files.forEach(file => {
-  try {
-    fixUnusedImports(file);
-    fixedCount++;
-  } catch (error) {
-    console.log(`Error processing ${file}: ${error.message}`);
+// Process all files
+filesToFix.forEach(filePath => {
+  const fullPath = path.join(__dirname, filePath);
+  if (fs.existsSync(fullPath)) {
+    removeUnusedImports(fullPath);
+  } else {
+    console.log(`File not found: ${fullPath}`);
   }
 });
 
-console.log(`\n🎉 Fixed unused imports in ${fixedCount} files!`);
-=======
-console.log('Fixing unused imports...');
-
-const files = getAllFiles('./app');
-files.forEach(fixUnusedImports);
-
-console.log('Done fixing unused imports!');
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
+console.log('Unused imports cleanup completed!');
