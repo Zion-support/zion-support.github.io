@@ -16,11 +16,7 @@ const PerformanceMonitor: React.FC = () => {
 
   const updateMetric = useCallback((metric: any) => {
     setMetrics(prev => {
-<<<<<<< HEAD
-      const baseMetrics = prev || {
-=======
       const current = prev || {
->>>>>>> cursor/fix-errors-and-merge-to-main-c2d1
         loadTime: 0,
         firstContentfulPaint: 0,
         largestContentfulPaint: 0,
@@ -30,11 +26,7 @@ const PerformanceMonitor: React.FC = () => {
       };
       
       return {
-<<<<<<< HEAD
-        ...baseMetrics,
-=======
         ...current,
->>>>>>> cursor/fix-errors-and-merge-to-main-c2d1
         [metric.name === 'CLS' ? 'cumulativeLayoutShift' : 
          metric.name === 'INP' ? 'interactionToNextPaint' :
          metric.name === 'FCP' ? 'firstContentfulPaint' :
@@ -59,11 +51,7 @@ const PerformanceMonitor: React.FC = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       
       setMetrics(prev => {
-<<<<<<< HEAD
-        const baseMetrics = prev || {
-=======
         const current = prev || {
->>>>>>> cursor/fix-errors-and-merge-to-main-c2d1
           loadTime: 0,
           firstContentfulPaint: 0,
           largestContentfulPaint: 0,
@@ -73,11 +61,7 @@ const PerformanceMonitor: React.FC = () => {
         };
         
         return {
-<<<<<<< HEAD
-          ...baseMetrics,
-=======
           ...current,
->>>>>>> cursor/fix-errors-and-merge-to-main-c2d1
           loadTime: navigation.loadEventEnd - navigation.loadEventStart
         };
       });

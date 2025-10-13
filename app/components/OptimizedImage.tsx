@@ -24,18 +24,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height,
   className = '',
   priority = false,
-<<<<<<< HEAD
-  placeholder = 'empty', // eslint-disable-line @typescript-eslint/no-unused-vars
-  blurDataURL, // eslint-disable-line @typescript-eslint/no-unused-vars
-  quality = 75, // eslint-disable-line @typescript-eslint/no-unused-vars
-=======
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   placeholder: _placeholder = 'empty',
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   blurDataURL: _blurDataURL,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   quality: _quality = 75,
->>>>>>> cursor/fix-errors-and-merge-to-main-c2d1
   sizes = '100vw',
   loading = 'lazy',
   onLoad,

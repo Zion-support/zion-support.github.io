@@ -62,11 +62,7 @@ class ErrorHandler extends Component<Props, State> {
       console.error('Production error:', errorData);
       // Send to your error reporting service here
     } catch (reportingError) {
-<<<<<<< HEAD
-      console.warn('Failed to report error:', reportingError);
-=======
       console.error('Error reporting failed:', reportingError);
->>>>>>> cursor/fix-errors-and-merge-to-main-c2d1
     }
   }
 

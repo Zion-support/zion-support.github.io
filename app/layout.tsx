@@ -3,10 +3,6 @@ import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { AnalyticsProvider } from "./components/AnalyticsProvider";
 import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
-<<<<<<< HEAD
-// import LoadingSpinner from "./components/LoadingSpinner";
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c2d1
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./components/ErrorFallback";
 import { Helmet } from "react-helmet-async";
