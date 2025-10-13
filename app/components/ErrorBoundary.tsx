@@ -28,15 +28,112 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo,
     });
 
+    // Enhanced error logging
+    const errorDetails = {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      userId: this.getUserId(),
+      sessionId: this.getSessionId(),
+    };
+
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      console.error('ErrorBoundary caught an error:', errorDetails);
     }
 
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      // You can integrate with services like Sentry, LogRocket, etc.
-      console.error('Production error:', error, errorInfo);
+      // Send to error reporting service
+      this.reportError(errorDetails);
+      console.error('Production error:', errorDetails);
+    }
+
+    // Store error in localStorage for debugging
+    this.storeErrorForDebugging(errorDetails);
+  }
+
+  private getUserId = (): string | null => {
+    // Try to get user ID from various sources
+    return localStorage.getItem('userId') || 
+           sessionStorage.getItem('userId') || 
+           null;
+  }
+
+  private getSessionId = (): string => {
+    let sessionId = sessionStorage.getItem('sessionId');
+    if (!sessionId) {
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      sessionStorage.setItem('sessionId', sessionId);
+    }
+    return sessionId;
+  }
+
+  private reportError = (errorDetails: any) => {
+    // In a real application, you would send this to your error reporting service
+    // For now, we'll just log it
+    try {
+      // Example: Send to external service
+      // fetch('/api/errors', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(errorDetails)
+      // });
+      
+      // For now, just store in localStorage
+      const errors = JSON.parse(localStorage.getItem('errorLog') || '[]');
+      errors.push(errorDetails);
+      localStorage.setItem('errorLog', JSON.stringify(errors.slice(-10))); // Keep last 10 errors
+    } catch (reportingError) {
+      console.error('Failed to report error:', reportingError);
+    }
+  }
+
+  private storeErrorForDebugging = (errorDetails: any) => {
+    try {
+      const debugInfo = {
+        ...errorDetails,
+        localStorage: this.getLocalStorageInfo(),
+        performance: this.getPerformanceInfo(),
+      };
+      
+      localStorage.setItem('lastError', JSON.stringify(debugInfo));
+    } catch (storageError) {
+      console.error('Failed to store error for debugging:', storageError);
+    }
+  }
+
+  private getLocalStorageInfo = () => {
+    try {
+      const info: Record<string, any> = {};
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key) {
+          info[key] = localStorage.getItem(key);
+        }
+      }
+      return info;
+    } catch {
+      return {};
+    }
+  }
+
+  private getPerformanceInfo = () => {
+    try {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      return {
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        memory: (performance as any).memory ? {
+          usedJSHeapSize: (performance as any).memory.usedJSHeapSize,
+          totalJSHeapSize: (performance as any).memory.totalJSHeapSize,
+        } : null,
+      };
+    } catch {
+      return {};
     }
   }
 
