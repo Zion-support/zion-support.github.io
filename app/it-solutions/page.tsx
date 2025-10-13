@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-'use client';
-<<<<<<< HEAD
-
-=======
-'use client';
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
 import React from 'react';
-=======
-'
-import React from 'react';'
-import { Helmet , Link  } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -35,12 +21,10 @@ import {
   DocumentTextIcon,
   LightBulbIcon,
   WifiIcon,
-  CircleStackIcon;'}
+  CircleStackIcon
 } from '@heroicons/react/24/outline';
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 
-<<<<<<< HEAD
-export default function ITSolutionsPage()   {
+export default function ITSolutionsPage() {
   const itServices = [
     {
       title: "IT Infrastructure Management",
@@ -58,7 +42,7 @@ export default function ITSolutionsPage()   {
       price: "Starting at $2,500/month",
       benefits: ["99.9% uptime", "24/7 monitoring", "Proactive maintenance"],
       useCases: ["Enterprise infrastructure", "Data center management", "Server optimization"],
-      href: "/it-infrastructure"}
+      href: "/it-infrastructure"
     },
     {
       title: "Cloud Migration & Management",
@@ -76,7 +60,7 @@ export default function ITSolutionsPage()   {
       price: "Starting at $3,000/month",
       benefits: ["50% cost reduction", "Scalable infrastructure", "Enhanced security"],
       useCases: ["AWS migration", "Azure deployment", "Google Cloud setup"],
-      href: "/cloud-migration"}
+      href: "/cloud-migration"
     },
     {
       title: "Cybersecurity Solutions",
@@ -94,7 +78,7 @@ export default function ITSolutionsPage()   {
       price: "Starting at $2,200/month",
       benefits: ["Zero breach guarantee", "24/7 monitoring", "SOC 2 compliance"],
       useCases: ["Security audits", "Compliance", "Threat protection"],
-      href: "/cybersecurity-solutions"}
+      href: "/cybersecurity-solutions"
     },
     {
       title: "Database Management",
@@ -112,7 +96,7 @@ export default function ITSolutionsPage()   {
       price: "Starting at $1,800/month",
       benefits: ["Optimized performance", "Zero data loss", "Automated backups"],
       useCases: ["MySQL optimization", "PostgreSQL management", "MongoDB administration"],
-      href: "/database-management"}
+      href: "/database-management"
     },
     {
       title: "Network Security & Monitoring",
@@ -130,7 +114,7 @@ export default function ITSolutionsPage()   {
       price: "Starting at $1,500/month",
       benefits: ["Real-time monitoring", "Threat prevention", "Network optimization"],
       useCases: ["Network security", "VPN management", "Traffic monitoring"],
-      href: "/network-security"}
+      href: "/network-security"
     },
     {
       title: "IT Support & Helpdesk",
@@ -148,7 +132,7 @@ export default function ITSolutionsPage()   {
       price: "Starting at $1,200/month",
       benefits: ["24/7 availability", "Quick response", "Expert technicians"],
       useCases: ["Technical support", "Helpdesk services", "User assistance"],
-      href: "/it-support"}
+      href: "/it-support"
     },
     {
       title: "Software Development",
@@ -166,7 +150,7 @@ export default function ITSolutionsPage()   {
       price: "Starting at $4,000/month",
       benefits: ["Custom solutions", "Modern technology", "Ongoing support"],
       useCases: ["Web development", "Mobile apps", "API development"],
-      href: "/software-development"}
+      href: "/software-development"
     },
     {
       title: "IT Consulting & Strategy",
@@ -184,7 +168,7 @@ export default function ITSolutionsPage()   {
       price: "Starting at $2,000/month",
       benefits: ["Strategic guidance", "Cost optimization", "Technology alignment"],
       useCases: ["IT strategy", "Digital transformation", "Technology planning"],
-      href: "/it-consulting"}
+      href: "/it-consulting"
     },
     {
       title: "Data Backup & Recovery",
@@ -202,7 +186,7 @@ export default function ITSolutionsPage()   {
       price: "Starting at $800/month",
       benefits: ["Zero data loss", "Quick recovery", "Automated backups"],
       useCases: ["Data protection", "Disaster recovery", "Compliance"],
-      href: "/data-backup-recovery"}
+      href: "/data-backup-recovery"
     },
     {
       title: "IT Asset Management",
@@ -220,7 +204,7 @@ export default function ITSolutionsPage()   {
       price: "Starting at $1,000/month",
       benefits: ["Cost optimization", "Asset tracking", "License compliance"],
       useCases: ["Asset tracking", "Cost management", "License compliance"],
-      href: "/it-asset-management"}
+      href: "/it-asset-management"
     },
     {
       title: "Remote Work Solutions",
@@ -238,7 +222,7 @@ export default function ITSolutionsPage()   {
       price: "Starting at $1,500/month",
       benefits: ["Secure remote access", "Productivity tools", "Seamless collaboration"],
       useCases: ["Remote work setup", "VPN management", "Collaboration tools"],
-      href: "/remote-work-solutions"}
+      href: "/remote-work-solutions"
     },
     {
       title: "IT Compliance & Governance",
@@ -256,52 +240,38 @@ export default function ITSolutionsPage()   {
       price: "Starting at $2,800/month",
       benefits: ["Full compliance", "Risk mitigation", "Audit readiness"],
       useCases: ["SOX compliance", "GDPR compliance", "HIPAA compliance"],
-      href: "/it-compliance"}
+      href: "/it-compliance"
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 
-const ITSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
-        <meta name="description" content="IT solutions from Zion Tech Group" />
+        <meta name="description" content="Comprehensive IT solutions including infrastructure management, cloud migration, cybersecurity, database management, and more. Expert IT services for modern businesses." />
+        <meta name="keywords" content="IT solutions, infrastructure management, cloud migration, cybersecurity, database management, IT support, software development" />
+        <meta property="og:title" content="IT Solutions - Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive IT solutions including infrastructure management, cloud migration, cybersecurity, and more." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/it-solutions" />
       </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white p-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">IT Solutions</h1>
-          <p className="text-lg text-gray-300">
-            Discover our IT solutions and services.
-          </p>
+      
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              IT Solutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Comprehensive IT services to optimize your technology infrastructure and drive business growth
+            </p>
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+              From infrastructure management to cybersecurity, our expert IT team provides 
+              end-to-end technology solutions that keep your business running smoothly and securely.
+            </p>
+          </div>
         </div>
-<<<<<<< HEAD
-      </div>
-    </>
-  );
-};
-
-export default ITSolutionsPage;
-=======
-export default function ITSolutionsPage() {
-  return (
-    <div className="min-h-screen bg-slate-900 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-          IT Solutions
-        </h1>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          Discover our comprehensive IT solutions designed to accelerate your business growth.
-        </p>
-      </div>
-    </div>
-  );
-}
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
-=======
       </section>
 
       {/* IT Services Grid */}
@@ -311,7 +281,7 @@ export default function ITSolutionsPage() {
             {itServices.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div }
+                <div 
                   key={service.title}
                   className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105"
                 >
@@ -333,7 +303,7 @@ export default function ITSolutionsPage() {
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Benefits:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {service.benefits.map((benefit, benefitIndex) => (}
+                      {service.benefits.map((benefit, benefitIndex) => (
                         <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">
                           {benefit}
                         </span>
@@ -345,7 +315,7 @@ export default function ITSolutionsPage() {
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect for:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {service.useCases.map((useCase, useCaseIndex) => (}
+                      {service.useCases.map((useCase, useCaseIndex) => (
                         <span key={useCaseIndex} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded-full">
                           {useCase}
                         </span>
@@ -354,7 +324,7 @@ export default function ITSolutionsPage() {
                   </div>
                   
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (}
+                    {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span className="text-sm">{feature}</span>
@@ -364,7 +334,7 @@ export default function ITSolutionsPage() {
                   
                   <div className="flex gap-2">
                     <Link 
-                      to={service.href}'
+                      to={service.href}
                       className={`flex-1 inline-flex items-center justify-center gap-2 text-${service.color.split(' ')[1].split('-')[1]}-400 hover:text-${service.color.split(' ')[1].split('-')[1]}-300 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg`}
                     >
                       Learn More <ArrowRightIcon className="w-4 h-4" />
@@ -589,5 +559,4 @@ export default function ITSolutionsPage() {
       </section>
     </>
   );
-}'
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
+}
