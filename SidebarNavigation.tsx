@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import { X, Home, User, Settings, HelpCircle } from 'lucide-react';
-import React from 'react';
-import { Link } from 'react-router-dom';
-=======
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, User, Settings, HelpCircle, X } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-100c
 
 interface SidebarNavigationProps {
   isOpen: boolean;
@@ -76,7 +69,6 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
               </Link>
             );
           })}
->>>>>>> cursor/fix-errors-and-merge-to-main-100c
         </nav>
       </div>
     </div>

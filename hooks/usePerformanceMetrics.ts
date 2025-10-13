@@ -6,8 +6,6 @@ interface PerformanceMetrics {
   fid?: number;
   cls?: number;
   ttfb?: number;
-<<<<<<< HEAD
-=======
   fmp?: number;
   tti?: number;
   tbt?: number;
@@ -19,7 +17,6 @@ interface PerformanceEntryExtended extends PerformanceEntry {
   value?: number;
   responseStart?: number;
   requestStart?: number;
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
 }
 
 export function usePerformanceMetrics() {
@@ -55,18 +52,10 @@ export function usePerformanceMetrics() {
     new PerformanceObserver(list => {
       const entries = list.getEntries() as PerformanceEntryExtended[];
       entries.forEach(entry => {
-<<<<<<< HEAD
-        const inputEntry = entry as any;
-        if (inputEntry.processingStart && inputEntry.startTime) {
-          setMetrics(prev => ({ 
-            ...prev, 
-            fid: inputEntry.processingStart - inputEntry.startTime 
-=======
         if (entry.processingStart !== undefined && entry.startTime !== undefined) {
           setMetrics(prev => ({ 
             ...prev, 
             fid: entry.processingStart! - entry.startTime 
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
           }));
         }
       });
@@ -77,14 +66,8 @@ export function usePerformanceMetrics() {
     new PerformanceObserver(list => {
       const entries = list.getEntries() as PerformanceEntryExtended[];
       entries.forEach(entry => {
-<<<<<<< HEAD
-        const layoutEntry = entry as any;
-        if (!layoutEntry.hadRecentInput) {
-          clsValue += layoutEntry.value;
-=======
         if (!entry.hadRecentInput) {
           clsValue += entry.value || 0;
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
         }
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -94,18 +77,10 @@ export function usePerformanceMetrics() {
     new PerformanceObserver(list => {
       const entries = list.getEntries() as PerformanceEntryExtended[];
       entries.forEach(entry => {
-<<<<<<< HEAD
-        const navEntry = entry as any;
-        if (navEntry.responseStart && navEntry.requestStart) {
-          setMetrics(prev => ({ 
-            ...prev, 
-            ttfb: navEntry.responseStart - navEntry.requestStart 
-=======
         if (entry.responseStart !== undefined && entry.requestStart !== undefined) {
           setMetrics(prev => ({ 
             ...prev, 
             ttfb: entry.responseStart! - entry.requestStart! 
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
           }));
         }
       });
