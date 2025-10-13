@@ -1,10 +1,11 @@
 import React from 'react';
 
-export default function Component() {
+interface EnhancedLoadingStatesProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function EnhancedLoadingStates({ className = '', children }: EnhancedLoadingStatesProps) {
   return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
   );
 }

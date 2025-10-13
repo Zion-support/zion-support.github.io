@@ -5,30 +5,15 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
-    ignores: [
-      "dist",
-      ".next",
-      "backup-problematic/**",
-      "backup-unused-components/**",
-      "corrupted-src-backup/**",
-      "backup-unused-components/**",
-      "src/**",
-      "*.js",
-      "scripts/**",
-      "public/sw.js",
-      "identify_missing_pages.js",
-      "merge-with-conflict-resolution.js",
-      "resolve-all-conflicts.js",
-      "fix-unused-imports.cjs",
-    ],
-  },
-  {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
     },
     plugins: {
       "react-hooks": reactHooks,
@@ -36,9 +21,39 @@ export default tseslint.config(
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": "off",
-      "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-explicit-any": "off",
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
     },
   },
+  {
+    ignores: [
+      "dist", 
+      "node_modules", 
+      "*.config.js",
+      "backup/**",
+      "backup-problematic/**",
+      "backup-problematic-files/**",
+      "backup-unused-components/**",
+      "corrupted-src-backup/**",
+      "*.cjs",
+      "*.js",
+      "*.py",
+      "*.sh",
+      "*.md",
+      "*.txt",
+      "*.json",
+      "*.html",
+      "*.original",
+      "*.backup*",
+      "__tests__/**",
+      "api/**",
+      "analysis/**",
+      "ci-cd-reports/**",
+      "content/**",
+      "contracts/**",
+      "scripts/**"
+    ],
+  }
 );

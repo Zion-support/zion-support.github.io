@@ -1,10 +1,12 @@
-import React from "react";
-interface SkipLinkProps 
-  children?: React.ReactNode;
+interface SkipLinkProps {
   className?: string;
+  children?: React.ReactNode;
+}
 
-const SkipLink: React.FC<SkipLinkProps> = ({ children, className = "" }) => 
-  return <div className="{className}">{children}</div>;
-;
-export default SkipLink;
-</SkipLinkProps>
+export default function SkipLink({ className = '', children }: SkipLinkProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

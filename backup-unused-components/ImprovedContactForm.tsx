@@ -1,10 +1,9 @@
-import React from 'react';
+interface ImprovedContactFormProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-export default function Component() {
+export default function ImprovedContactForm({ className = '', children }: ImprovedContactFormProps) {
   return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
   );
 }

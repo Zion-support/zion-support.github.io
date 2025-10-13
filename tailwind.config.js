@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+<<<<<<< HEAD
+};
+=======
 export default {
   content: [
     "./index.html",
@@ -30,3 +33,4 @@ export default {
   },
   plugins: [],
 };
+>>>>>>> main

@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
+interface AnimatedTextProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+export default function AnimatedText({ className = '', children }: AnimatedTextProps) {
+  return (
+  );

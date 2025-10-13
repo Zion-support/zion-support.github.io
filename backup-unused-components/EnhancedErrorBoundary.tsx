@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
+interface EnhancedErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+export default function EnhancedErrorBoundary({ className = '', children }: EnhancedErrorBoundaryProps) {
+  return (
+  );

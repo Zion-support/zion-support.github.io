@@ -1,18 +1,54 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-export default function Accessibilityenhancer() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Accessibilityenhancer
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
 }
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  useEffect(() => {
+    // Add accessibility enhancements
+    const addSkipLinks = () => {
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    };
+
+    const enhanceFocusManagement = () => {
+      // Add focus management for better keyboard navigation
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab') {
+          const focusable = document.querySelectorAll(focusableElements);
+          const firstFocusable = focusable[0] as HTMLElement;
+          const lastFocusable = focusable[focusable.length - 1] as HTMLElement;
+
+          if (e.shiftKey) {
+            if (document.activeElement === firstFocusable) {
+              lastFocusable?.focus();
+              e.preventDefault();
+            }
+          } else {
+            if (document.activeElement === lastFocusable) {
+              firstFocusable?.focus();
+              e.preventDefault();
+            }
+          }
+        }
+      });
+    };
+
+    addSkipLinks();
+    enhanceFocusManagement();
+
+    return () => {
+      // Cleanup if needed
+    };
+  }, []);
+
+  return <>{children}</>;
+};
+
+export default AccessibilityEnhancer;

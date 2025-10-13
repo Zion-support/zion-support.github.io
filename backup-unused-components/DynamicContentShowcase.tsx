@@ -1,10 +1,9 @@
-import React from 'react';
+interface DynamicContentShowcaseProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-export default function Component() {
+export default function DynamicContentShowcase({ className = '', children }: DynamicContentShowcaseProps) {
   return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
   );
 }
