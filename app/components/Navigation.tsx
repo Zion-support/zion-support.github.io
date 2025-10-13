@@ -32,17 +32,13 @@ import {
   FileText,
   Clock
 } from 'lucide-react';
-<<<<<<< HEAD
 import FuturisticButton from './FuturisticButton';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
 interface NavigationProps {
   onSidebarToggle: () => void;
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-<<<<<<< HEAD
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
@@ -58,30 +54,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const closeDropdowns = useCallback(() => {
     setActiveDropdown(null);
   }, []);
-=======
-  const [isAiServicesOpen, setIsAiServicesOpen] = useState(false);
-  const [isItServicesOpen, setIsItServicesOpen] = useState(false);
-  const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);
-  const [is5GServicesOpen, setIs5GServicesOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
-
-  const toggleAiServices = useCallback(() => {
-    setIsAiServicesOpen(!isAiServicesOpen);
-  }, [isAiServicesOpen]);
-
-  const toggleMicroSaas = useCallback(() => {
-    setIsMicroSaasOpen(!isMicroSaasOpen);
-  }, [isMicroSaasOpen]);
-
-  const toggleItServices = useCallback(() => {
-    setIsItServicesOpen(!isItServicesOpen);
-  }, [isItServicesOpen]);
-
-  const toggle5GServices = useCallback(() => {
-    setIs5GServicesOpen(!is5GServicesOpen);
-  }, [is5GServicesOpen]);
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
   const isActive = useCallback((path: string) => {
     return location.pathname === path;
@@ -89,30 +61,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 
   const navigationItems = useMemo(() => [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      name: 'Home',
-      path: '/',
-      icon: <Globe className="w-4 h-4" />
-    },
-    {
-      name: 'About',
-      path: '/about',
-      icon: <Users className="w-4 h-4" />
-    },
-    {
-      name: 'Services',
-      path: '/services',
-      icon: <Code className="w-4 h-4" />
-    },
-    {
-      name: 'Contact',
-      path: '/contact',
-<<<<<<< HEAD
-      icon: <Phone className="w-4 h-4" />
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
       label: 'Home',
       href: '/',
       icon: <Star className="w-4 h-4" />
@@ -161,7 +109,27 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
         { label: 'Zion Security Shield', href: '/zion-security-shield' },
         { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
-        { label: 'Zion Content Studio', href: '/zion-content-studio' }
+        { label: 'Zion Content Studio', href: '/zion-content-studio' },
+        { label: 'Zion AI Video Generator', href: '/zion-ai-video-generator' },
+        { label: 'Zion AI Invoice Generator', href: '/zion-ai-invoice-generator' },
+        { label: 'Zion AI Customer Insights', href: '/zion-ai-customer-insights' },
+        { label: 'Zion AI Email Analyzer', href: '/zion-ai-email-analyzer' },
+        { label: 'Zion Smart Inventory Optimizer', href: '/zion-smart-inventory-optimizer' },
+        { label: 'Zion AI Customer Sentiment Tracker', href: '/zion-ai-customer-sentiment-tracker' },
+        { label: 'Zion Smart Expense Categorizer', href: '/zion-smart-expense-categorizer' },
+        { label: 'Zion AI Voice Assistant Pro', href: '/zion-ai-voice-assistant-pro' },
+        { label: 'Zion AI Code Reviewer', href: '/zion-ai-code-reviewer' },
+        { label: 'Zion AI Social Media Manager', href: '/zion-ai-social-media-manager' },
+        { label: 'Zion AI Contract Analyzer', href: '/zion-ai-contract-analyzer' },
+        { label: 'Zion AI Performance Optimizer', href: '/zion-ai-performance-optimizer' },
+        { label: 'Zion AI Customer Churn Predictor', href: '/zion-ai-customer-churn-predictor' },
+        { label: 'Zion AI Supply Chain Optimizer', href: '/zion-ai-supply-chain-optimizer' },
+        { label: 'Zion AI Financial Forecaster', href: '/zion-ai-financial-forecaster' },
+        { label: 'Zion AI Content Moderator', href: '/zion-ai-content-moderator' },
+        { label: 'Zion AI Translator Pro', href: '/zion-ai-translator-pro' },
+        { label: 'Zion AI Data Cleaner', href: '/zion-ai-data-cleaner' },
+        { label: 'Zion AI Task Scheduler', href: '/zion-ai-task-scheduler' },
+        { label: 'Zion AI Customer Support Pro', href: '/zion-ai-customer-support-pro' }
       ]
     },
     {
@@ -188,13 +156,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       label: 'Contact',
       href: '/contact',
       icon: <Mail className="w-4 h-4" />
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
-=======
-      icon: <Mail className="w-4 h-4" />
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
     }
   ], []);
 
