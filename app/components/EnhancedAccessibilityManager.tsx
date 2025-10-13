@@ -52,7 +52,65 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
     });
   }, []);
 
-  // Voice navigation
+  // Voice navigation functions
+  const startVoiceNavigation = useCallback(() => {
+    if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+      return;
+    }
+
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+    
+    recognition.continuous = true;
+    recognition.interimResults = false;
+    recognition.lang = 'en-US';
+
+    recognition.onstart = () => {
+      // Voice navigation started
+    };
+
+    recognition.onresult = (event: any) => {
+      const command = event.results[event.results.length - 1][0].transcript.toLowerCase().trim();
+      
+      // Navigation commands
+      if (command.includes('go to') || command.includes('navigate to')) {
+        const target = command.replace(/go to|navigate to/g, '').trim();
+        const element = document.querySelector(`[aria-label*="${target}"], [title*="${target}"]`) as HTMLElement;
+        if (element) {
+          element.focus();
+          element.click();
+        }
+      } else if (command.includes('click') || command.includes('press')) {
+        const target = command.replace(/click|press/g, '').trim();
+        const element = document.querySelector(`[aria-label*="${target}"], [title*="${target}"]`) as HTMLElement;
+        if (element) {
+          element.click();
+        }
+      } else if (command.includes('scroll')) {
+        if (command.includes('up')) {
+          window.scrollBy(0, -100);
+        } else if (command.includes('down')) {
+          window.scrollBy(0, 100);
+        }
+      }
+    };
+
+    recognition.onerror = (event: any) => {
+      // Speech recognition error handled silently
+    };
+
+    recognition.start();
+    (window as any).voiceRecognition = recognition;
+  }, []);
+
+  const stopVoiceNavigation = useCallback(() => {
+    if ((window as any).voiceRecognition) {
+      (window as any).voiceRecognition.stop();
+      (window as any).voiceRecognition = null;
+    }
+  }, []);
+
+  // Voice navigation toggle
   const toggleVoiceNavigation = useCallback(() => {
     if (!enableVoiceNavigation) return;
     
@@ -171,7 +229,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
 
   // Focus management
   const setupFocusManagement = useCallback(() => {
-    if (!enableFocusManagement) return;
+    if (!enableFocusManagement) return () => {};
 
     // Focus trap for modals
     const trapFocus = (element: HTMLElement) => {
@@ -224,58 +282,12 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
 
     // Store focus trap function globally for use in modals
     (window as any).trapFocus = trapFocus;
+
+    return () => {
+      // Cleanup function if needed
+    };
   }, [enableFocusManagement]);
 
-  // Voice navigation
-  const startVoiceNavigation = useCallback(() => {
-    if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
-      console.warn('Speech recognition not supported');
-      return;
-    }
-
-    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    const recognition = new SpeechRecognition();
-    
-    recognition.continuous = true;
-    recognition.interimResults = false;
-    recognition.lang = 'en-US';
-
-    recognition.onresult = (event: any) => {
-      const command = event.results[event.results.length - 1][0].transcript.toLowerCase().trim();
-      
-      // Voice commands
-      if (command.includes('go to home') || command.includes('home page')) {
-        window.location.href = '/';
-      } else if (command.includes('go to about') || command.includes('about page')) {
-        window.location.href = '/about';
-      } else if (command.includes('go to services') || command.includes('services page')) {
-        window.location.href = '/services';
-      } else if (command.includes('go to contact') || command.includes('contact page')) {
-        window.location.href = '/contact';
-      } else if (command.includes('scroll down')) {
-        window.scrollBy(0, 200);
-      } else if (command.includes('scroll up')) {
-        window.scrollBy(0, -200);
-      } else if (command.includes('stop voice navigation')) {
-        setIsVoiceNavigationActive(false);
-        recognition.stop();
-      }
-    };
-
-    recognition.onerror = (event: any) => {
-      console.error('Speech recognition error:', event.error);
-    };
-
-    recognition.start();
-    (window as any).voiceRecognition = recognition;
-  }, []);
-
-  const stopVoiceNavigation = useCallback(() => {
-    if ((window as any).voiceRecognition) {
-      (window as any).voiceRecognition.stop();
-      (window as any).voiceRecognition = null;
-    }
-  }, []);
 
   // Initialize accessibility features
   useEffect(() => {
@@ -313,7 +325,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
     return () => {
       stopVoiceNavigation();
     };
-  }, [stopVoiceNavigation]);
+  }, []);
 
   // Accessibility controls component
   const AccessibilityControls = () => (
