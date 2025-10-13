@@ -1,60 +1,70 @@
-import React, { useEffect, useCallback } from 'react';
-
-interface WebVitalsData {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string;
-}
+import React, { useEffect } from 'react';
 
 const CoreWebVitals: React.FC = () => {
-  const reportWebVitals = useCallback((data: WebVitalsData) => {
-    // Send to Google Analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'web_vitals', {
-        metric_name: data.name,
-        metric_value: Math.round(data.value),
-        metric_delta: Math.round(data.delta),
-        metric_id: data.id,
-        metric_navigation_type: data.navigationType
-      });
-    }
-
-    // Send to custom analytics
-    if (typeof window !== 'undefined' && (window as any).analytics) {
-      (window as any).analytics.track('Web Vitals', {
-        metric: data.name,
-        value: data.value,
-        delta: data.delta,
-        id: data.id
-      });
-    }
-
-    // Log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vital:', data.name, data.value);
-    }
-  }, []);
-
   useEffect(() => {
-    const measureWebVitals = async () => {
-      try {
-        const { onCLS, onFID, onFCP, onLCP, onTTFB, onINP } = await import('web-vitals');
+    if (typeof window === 'undefined') return;
 
-        onCLS(reportWebVitals);
-        onFID(reportWebVitals);
-        onFCP(reportWebVitals);
-        onLCP(reportWebVitals);
-        onTTFB(reportWebVitals);
-        onINP(reportWebVitals);
+    const trackCoreWebVitals = async () => {
+      try {
+        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
+        
+        // Track and log Core Web Vitals
+        getCLS((metric) => {
+          console.log('Core Web Vital - CLS:', metric);
+          // CLS should be < 0.1 for good user experience
+          if (metric.value > 0.1) {
+            console.warn('CLS is above recommended threshold:', metric.value);
+          }
+        });
+
+        getFID((metric) => {
+          console.log('Core Web Vital - FID:', metric);
+          // FID should be < 100ms for good user experience
+          if (metric.value > 100) {
+            console.warn('FID is above recommended threshold:', metric.value);
+          }
+        });
+
+        getFCP((metric) => {
+          console.log('Core Web Vital - FCP:', metric);
+          // FCP should be < 1.8s for good user experience
+          if (metric.value > 1800) {
+            console.warn('FCP is above recommended threshold:', metric.value);
+          }
+        });
+
+        getLCP((metric) => {
+          console.log('Core Web Vital - LCP:', metric);
+          // LCP should be < 2.5s for good user experience
+          if (metric.value > 2500) {
+            console.warn('LCP is above recommended threshold:', metric.value);
+          }
+        });
+
+        getTTFB((metric) => {
+          console.log('Core Web Vital - TTFB:', metric);
+          // TTFB should be < 600ms for good user experience
+          if (metric.value > 600) {
+            console.warn('TTFB is above recommended threshold:', metric.value);
+          }
+        });
+
       } catch (error) {
         console.warn('Failed to load web-vitals:', error);
       }
     };
 
-    measureWebVitals();
-  }, [reportWebVitals]);
+    // Track when page is loaded
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', trackCoreWebVitals);
+    } else {
+      trackCoreWebVitals();
+    }
+
+    return () => {
+      document.removeEventListener('DOMContentLoaded', trackCoreWebVitals);
+    };
+  }, []);
 
   return null; // This component doesn't render anything
 };

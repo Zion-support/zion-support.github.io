@@ -1,84 +1,94 @@
-import { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import React, { useEffect } from 'react';
 
-interface WebVitalsData {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string;
+interface WebVitalsTrackerProps {
+  enabled?: boolean;
 }
 
-const WebVitalsTracker: React.FC = () => {
+const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ enabled = true }) => {
   useEffect(() => {
-    const sendToAnalytics = (metric: WebVitalsData) => {
-      // Send to Google Analytics or other analytics service
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-          non_interaction: true,
+    if (!enabled || typeof window === 'undefined') return;
+
+    const trackWebVitals = async () => {
+      try {
+        // Dynamic import to avoid bundling in production if not needed
+        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
+        
+        // Track Core Web Vitals
+        getCLS((metric) => {
+          console.log('CLS:', metric);
+          // Send to analytics service
+          if (process.env.NODE_ENV === 'production') {
+            // gtag('event', 'web_vitals', {
+            //   metric_name: 'CLS',
+            //   metric_value: metric.value,
+            //   metric_delta: metric.delta
+            // });
+          }
         });
-      }
 
-      // Send to custom analytics endpoint
-      if (process.env.NODE_ENV === 'production') {
-        fetch('/api/analytics/web-vitals', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(metric),
-        }).catch(console.error);
-      }
+        getFID((metric) => {
+          console.log('FID:', metric);
+          if (process.env.NODE_ENV === 'production') {
+            // gtag('event', 'web_vitals', {
+            //   metric_name: 'FID',
+            //   metric_value: metric.value,
+            //   metric_delta: metric.delta
+            // });
+          }
+        });
 
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Web Vital:', metric);
+        getFCP((metric) => {
+          console.log('FCP:', metric);
+          if (process.env.NODE_ENV === 'production') {
+            // gtag('event', 'web_vitals', {
+            //   metric_name: 'FCP',
+            //   metric_value: metric.value,
+            //   metric_delta: metric.delta
+            // });
+          }
+        });
+
+        getLCP((metric) => {
+          console.log('LCP:', metric);
+          if (process.env.NODE_ENV === 'production') {
+            // gtag('event', 'web_vitals', {
+            //   metric_name: 'LCP',
+            //   metric_value: metric.value,
+            //   metric_delta: metric.delta
+            // });
+          }
+        });
+
+        getTTFB((metric) => {
+          console.log('TTFB:', metric);
+          if (process.env.NODE_ENV === 'production') {
+            // gtag('event', 'web_vitals', {
+            //   metric_name: 'TTFB',
+            //   metric_value: metric.value,
+            //   metric_delta: metric.delta
+            // });
+          }
+        });
+
+      } catch (error) {
+        console.warn('Web Vitals tracking failed:', error);
       }
     };
 
-    // Track Core Web Vitals
-    onCLS(sendToAnalytics);
-    onINP(sendToAnalytics); // INP replaces FID in newer versions
-    onFCP(sendToAnalytics);
-    onLCP(sendToAnalytics);
-    onTTFB(sendToAnalytics);
-
-    // Track additional performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Track page load time
-      window.addEventListener('load', () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          sendToAnalytics({
-            name: 'LOAD_TIME',
-            value: loadTime,
-            delta: loadTime,
-            id: 'load-time',
-            navigationType: navigation.type,
-          });
-        }
-      });
-
-      // Track memory usage (if available)
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        sendToAnalytics({
-          name: 'MEMORY_USAGE',
-          value: memoryUsage,
-          delta: memoryUsage,
-          id: 'memory-usage',
-          navigationType: 'reload',
-        });
-      }
+    // Track when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', trackWebVitals);
+    } else {
+      trackWebVitals();
     }
-  }, []);
 
-  return null;
+    // Cleanup
+    return () => {
+      document.removeEventListener('DOMContentLoaded', trackWebVitals);
+    };
+  }, [enabled]);
+
+  return null; // This component doesn't render anything
 };
 
 export default WebVitalsTracker;

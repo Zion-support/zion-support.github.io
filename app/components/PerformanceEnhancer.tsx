@@ -1,140 +1,109 @@
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  loadTime: number;
-}
+import React, { useEffect } from 'react';
 
 const PerformanceEnhancer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
-    // Only run in browser environment
     if (typeof window === 'undefined') return;
 
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
-      
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
-      
-      const metrics: PerformanceMetrics = {
-        fcp: fcp ? fcp.startTime : 0,
-        lcp: lcp ? lcp.startTime : 0,
-        fid: 0, // Would need PerformanceObserver
-        cls: 0, // Would need PerformanceObserver
-        ttfb: navigation.responseStart - navigation.requestStart,
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+    const enhancePerformance = () => {
+      // Lazy load images
+      const lazyLoadImages = () => {
+        const images = document.querySelectorAll('img[data-src]');
+        const imageObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const img = entry.target as HTMLImageElement;
+              img.src = img.dataset.src || '';
+              img.classList.remove('lazy');
+              imageObserver.unobserve(img);
+            }
+          });
+        });
+
+        images.forEach((img) => imageObserver.observe(img));
       };
 
-      setMetrics(metrics);
+      // Preload critical resources
+      const preloadCriticalResources = () => {
+        const criticalResources = [
+          { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+          { href: '/css/critical.css', as: 'style' }
+        ];
 
-      // Log performance metrics
-      };
-
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-    // Cleanup
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, []);
-
-  // Preload critical resources
-  useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Preload critical CSS
-      const criticalCSS = document.createElement('link');
-      criticalCSS.rel = 'preload';
-      criticalCSS.href = '/critical.css';
-      criticalCSS.as = 'style';
-      document.head.appendChild(criticalCSS);
-
-      // Preload critical fonts
-      const fontPreload = document.createElement('link');
-      fontPreload.rel = 'preload';
-      fontPreload.href = '/fonts/inter-var.woff2';
-      fontPreload.as = 'font';
-      fontPreload.type = 'font/woff2';
-      fontPreload.crossOrigin = 'anonymous';
-      document.head.appendChild(fontPreload);
-    };
-
-    preloadCriticalResources();
-  }, []);
-
-  // Optimize images
-  useEffect(() => {
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
+        criticalResources.forEach((resource) => {
+          if (!document.querySelector(`link[href="${resource.href}"]`)) {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.href = resource.href;
+            link.as = resource.as;
+            if (resource.type) link.type = resource.type;
+            if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
+            document.head.appendChild(link);
           }
         });
-      });
+      };
 
-      images.forEach((img) => imageObserver.observe(img));
+      // Optimize scroll performance
+      const optimizeScrollPerformance = () => {
+        let ticking = false;
+        
+        const updateScrollPosition = () => {
+          // Throttled scroll handling
+          ticking = false;
+        };
+
+        const requestTick = () => {
+          if (!ticking) {
+            requestAnimationFrame(updateScrollPosition);
+            ticking = true;
+          }
+        };
+
+        window.addEventListener('scroll', requestTick, { passive: true });
+      };
+
+      // Add service worker for caching
+      const registerServiceWorker = () => {
+        if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('Service Worker registered:', registration);
+            })
+            .catch((error) => {
+              console.log('Service Worker registration failed:', error);
+            });
+        }
+      };
+
+      // Optimize animations
+      const optimizeAnimations = () => {
+        // Use will-change for animated elements
+        const animatedElements = document.querySelectorAll('[data-animate]');
+        animatedElements.forEach((element) => {
+          (element as HTMLElement).style.willChange = 'transform, opacity';
+        });
+      };
+
+      // Run optimizations
+      lazyLoadImages();
+      preloadCriticalResources();
+      optimizeScrollPerformance();
+      registerServiceWorker();
+      optimizeAnimations();
     };
 
-    optimizeImages();
+    // Run when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', enhancePerformance);
+    } else {
+      enhancePerformance();
+    }
+
+    return () => {
+      document.removeEventListener('DOMContentLoaded', enhancePerformance);
+    };
   }, []);
 
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development' || !metrics) {
-    return null;
-  }
-
-  return (
-    <div className="fixed bottom-4 right-4 z-50">
-      <button
-        onClick={() => setIsVisible(!isVisible)}
-        className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
-        aria-label="Toggle performance metrics"
-      >
-        Performance
-      </button>
-      
-      {isVisible && (
-        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">
-          <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>
-          <div className="space-y-2 text-sm">
-            <div className="flex justify-between">
-              <span className="text-gray-600">FCP:</span>
-              <span className="font-mono">{metrics.fcp.toFixed(2)}ms</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">LCP:</span>
-              <span className="font-mono">{metrics.lcp.toFixed(2)}ms</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">TTFB:</span>
-              <span className="font-mono">{metrics.ttfb.toFixed(2)}ms</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Load Time:</span>
-              <span className="font-mono">{metrics.loadTime.toFixed(2)}ms</span>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
+  return null; // This component doesn't render anything
 };
 
 export default PerformanceEnhancer;
