@@ -2,24 +2,24 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FileText, Download, ArrowRight } from 'lucide-react';
 
-const PressPage = () => {
+const WhitepapersPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Press - Zion Tech Group | Press Releases & Media Kit</title>
-        <meta name="description" content="Access our press releases, media kit, and company information for journalists and media professionals." />
-        <meta name="keywords" content="press, press releases, media kit, company information, journalists" />
+        <title>White Papers - Zion Tech Group | AI Research & Insights</title>
+        <meta name="description" content="Download our white papers and research reports on AI technology, industry trends, and best practices." />
+        <meta name="keywords" content="white papers, research, AI insights, industry reports, downloadable content" />
       </Helmet>
 
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Press Center
+              White Papers
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
-            Access our press releases, media kit, and company information for journalists and media professionals.
+            Download our white papers and research reports on AI technology, industry trends, and best practices.
           </p>
         </div>
       </section>
@@ -28,16 +28,16 @@ const PressPage = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-12 border border-white/20">
             <FileText className="w-16 h-16 mx-auto mb-6 text-cyan-400" />
-            <h2 className="text-2xl font-bold text-white mb-4">Press Materials Coming Soon</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">White Papers Coming Soon</h2>
             <p className="text-gray-300 mb-8">
-              We're preparing press releases and media materials for journalists and media professionals.
+              We're preparing comprehensive white papers on AI technology and industry insights.
             </p>
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center group"
             >
               <Download className="w-5 h-5 mr-2" />
-              Contact Media Team
+              Get Notified
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
@@ -47,4 +47,4 @@ const PressPage = () => {
   );
 };
 
-export default PressPage;
+export default WhitepapersPage;

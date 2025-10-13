@@ -28,8 +28,7 @@ import {
   Receipt,
   TrendingUp,
   Cpu,
-  Network,
-  Sparkles
+  Network
 } from 'lucide-react';
 
 interface NavigationProps {

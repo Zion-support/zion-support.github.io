@@ -26,6 +26,25 @@ const ServicesPage = React.lazy(() => import("./app/services/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
+const TeamPage = React.lazy(() => import("./app/team/page"));
+const CareersPage = React.lazy(() => import("./app/careers/page"));
+const PricingPage = React.lazy(() => import("./app/pricing/page"));
+const DemoPage = React.lazy(() => import("./app/demo/page"));
+const SupportPage = React.lazy(() => import("./app/support/page"));
+const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
+const DocsPage = React.lazy(() => import("./app/docs/page"));
+const ApiPage = React.lazy(() => import("./app/api/page"));
+const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
+const WebinarsPage = React.lazy(() => import("./app/webinars/page"));
+const WhitepapersPage = React.lazy(() => import("./app/whitepapers/page"));
+const CookiesPage = React.lazy(() => import("./app/cookies/page"));
+const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
+const AccessibilityPage = React.lazy(() => import("./app/accessibility/page"));
+const SecurityPage = React.lazy(() => import("./app/security/page"));
+const NewsPage = React.lazy(() => import("./app/news/page"));
+const PressPage = React.lazy(() => import("./app/press/page"));
+const PartnersPage = React.lazy(() => import("./app/partners/page"));
+const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
 
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -124,6 +143,25 @@ function App() {
                                     <Route path="/blog" element={<BlogPage />} />
                                     <Route path="/privacy" element={<PrivacyPage />} />
                                     <Route path="/terms" element={<TermsPage />} />
+                                    <Route path="/team" element={<TeamPage />} />
+                                    <Route path="/careers" element={<CareersPage />} />
+                                    <Route path="/pricing" element={<PricingPage />} />
+                                    <Route path="/demo" element={<DemoPage />} />
+                                    <Route path="/support" element={<SupportPage />} />
+                                    <Route path="/consultation" element={<ConsultationPage />} />
+                                    <Route path="/docs" element={<DocsPage />} />
+                                    <Route path="/api" element={<ApiPage />} />
+                                    <Route path="/tutorials" element={<TutorialsPage />} />
+                                    <Route path="/webinars" element={<WebinarsPage />} />
+                                    <Route path="/whitepapers" element={<WhitepapersPage />} />
+                                    <Route path="/cookies" element={<CookiesPage />} />
+                                    <Route path="/sitemap" element={<SitemapPage />} />
+                                    <Route path="/accessibility" element={<AccessibilityPage />} />
+                                    <Route path="/security" element={<SecurityPage />} />
+                                    <Route path="/news" element={<NewsPage />} />
+                                    <Route path="/press" element={<PressPage />} />
+                                    <Route path="/partners" element={<PartnersPage />} />
+                                    <Route path="/case-studies" element={<CaseStudiesPage />} />
 
                                     {/* AI Services */}
                                     <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
