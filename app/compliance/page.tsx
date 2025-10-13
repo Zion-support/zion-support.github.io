@@ -219,7 +219,3 @@ export default function Compliance() {
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
