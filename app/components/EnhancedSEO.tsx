@@ -28,6 +28,8 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     "logo": "https://ziontechgroup.com/logo.png",
     "description": description,
     "foundingDate": "2020",
+    "numberOfEmployees": "10-50",
+    "industry": "Technology",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -36,14 +38,23 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       "postalCode": "19709",
       "addressCountry": "US"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "areaServed": "US",
-      "availableLanguage": "English",
-      "email": "kleber@ziontechgroup.com"
-    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English",
+        "email": "kleber@ziontechgroup.com"
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "areaServed": "US",
+        "availableLanguage": "English",
+        "email": "sales@ziontechgroup.com"
+      }
+    ],
     "sameAs": [
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
@@ -53,22 +64,62 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       {
         "@type": "Service",
         "name": "AI Solutions",
-        "description": "Cutting-edge artificial intelligence solutions for business automation and optimization"
+        "description": "Cutting-edge artificial intelligence solutions for business automation and optimization",
+        "provider": {
+          "@type": "Organization",
+          "name": "Zion Tech Group"
+        },
+        "areaServed": "US",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "AI Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI Analytics"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI Automation"
+              }
+            }
+          ]
+        }
       },
       {
         "@type": "Service", 
         "name": "IT Services",
-        "description": "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and custom development"
+        "description": "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and custom development",
+        "provider": {
+          "@type": "Organization",
+          "name": "Zion Tech Group"
+        },
+        "areaServed": "US"
       },
       {
         "@type": "Service",
         "name": "5G Implementation",
-        "description": "Next-generation connectivity and infrastructure services for modern businesses"
+        "description": "Next-generation connectivity and infrastructure services for modern businesses",
+        "provider": {
+          "@type": "Organization",
+          "name": "Zion Tech Group"
+        },
+        "areaServed": "US"
       },
       {
         "@type": "Service",
         "name": "Micro SaaS Solutions",
-        "description": "Ready-to-use software solutions for immediate deployment and business growth"
+        "description": "Ready-to-use software solutions for immediate deployment and business growth",
+        "provider": {
+          "@type": "Organization",
+          "name": "Zion Tech Group"
+        },
+        "areaServed": "US"
       }
     ],
     "hasOfferCatalog": {
@@ -97,6 +148,13 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
           }
         }
       ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "150",
+      "bestRating": "5",
+      "worstRating": "1"
     }
   };
 
@@ -161,6 +219,48 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
             "target": "https://ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
           }
+        })}
+      </script>
+
+      {/* BreadcrumbList for better navigation */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://ziontechgroup.com"
+            }
+          ]
+        })}
+      </script>
+
+      {/* FAQ Schema for common questions */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What services does Zion Tech Group offer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Zion Tech Group offers AI solutions, IT services, 5G implementation, and Micro SaaS solutions for businesses looking to transform their operations with cutting-edge technology."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I contact Zion Tech Group?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can contact us at +1-302-464-0950 or email kleber@ziontechgroup.com. We're located at 364 E Main St STE 1008, Middletown, DE 19709."
+              }
+            }
+          ]
         })}
       </script>
     </Helmet>

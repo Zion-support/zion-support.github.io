@@ -1,5 +1,6 @@
 import React from "react";
 import { Loader2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const LoadingSpinner: React.FC<{ size?: "sm" | "md" | "lg" }> = ({
   size = "md",
@@ -12,27 +13,54 @@ export const LoadingSpinner: React.FC<{ size?: "sm" | "md" | "lg" }> = ({
 
   return (
     <div className="flex items-center justify-center">
-      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`} />
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+      >
+        <Loader2 className={`${sizeClasses[size]} text-cyan-500`} />
+      </motion.div>
     </div>
   );
 };
 
 export const LoadingPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-      <div className="text-center">
-        <div className="relative">
-          <div className="w-16 h-16 border-4 border-pink-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <div
-            className="absolute inset-2 rounded-full border-4 border-cyan-500 border-t-transparent animate-spin"
-            style={{ animationDirection: "reverse", animationDuration: "1.5s" }}
-          ></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <motion.div 
+        className="text-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="relative mb-8">
+          <motion.div
+            className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full mx-auto"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+          />
+          <motion.div
+            className="absolute inset-2 rounded-full border-4 border-purple-400 border-t-transparent"
+            animate={{ rotate: -360 }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+          />
         </div>
-        <h3 className="text-2xl font-bold text-white mb-2">
+        <motion.h3 
+          className="text-2xl font-bold text-white mb-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
           Loading Zion Tech Group
-        </h3>
-        <p className="text-gray-300">Initializing advanced AI systems...</p>
-      </div>
+        </motion.h3>
+        <motion.p 
+          className="text-gray-300"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+        >
+          Initializing advanced AI systems...
+        </motion.p>
+      </motion.div>
     </div>
   );
 };
