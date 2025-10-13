@@ -1,46 +1,46 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Video, Play, Zap, Sparkles, ArrowRight, CheckCircle, Star, Globe, Shield, Camera } from 'lucide-react';
+import { Palette, Wand2, Layers, Sparkles, ArrowRight, CheckCircle, Star, Zap, Globe, Shield } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const AIVideoGenerationPage = () => {
+const AIGenerativeDesignPage = () => {
   const features = [
     {
-      title: "AI-Powered Video Creation",
-      description: "Generate professional videos from text prompts using advanced AI video generation technology",
-      icon: <Video className="w-8 h-8" />,
+      title: "AI-Powered Design Generation",
+      description: "Create stunning visual designs automatically using advanced AI algorithms that understand your brand and requirements",
+      icon: <Wand2 className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Multiple Video Formats",
-      description: "Create videos in various formats - short clips, long-form content, social media posts, and presentations",
-      icon: <Play className="w-8 h-8" />,
+      title: "Brand-Consistent Outputs",
+      description: "Ensure all generated designs maintain your brand identity with intelligent style consistency algorithms",
+      icon: <Layers className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Custom Branding",
-      description: "Integrate your brand elements, logos, colors, and style into every generated video",
-      icon: <Camera className="w-8 h-8" />,
+      title: "Multi-Format Export",
+      description: "Export designs in any format needed - PNG, SVG, PDF, or vector formats for maximum compatibility",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Real-Time Rendering",
-      description: "Generate high-quality videos in real-time with our optimized AI processing pipeline",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Real-Time Collaboration",
+      description: "Work with your team in real-time with live editing, comments, and version control features",
+      icon: <Sparkles className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Creator",
-      price: "$39",
+      name: "Starter",
+      price: "$29",
       period: "/month",
-      description: "Perfect for content creators and small businesses",
+      description: "Perfect for small businesses and freelancers",
       features: [
-        "10 minutes of video per month",
-        "HD quality (1080p)",
-        "Basic templates",
+        "100 AI-generated designs per month",
+        "Basic brand templates",
+        "Standard export formats",
         "Email support",
         "5GB storage"
       ],
@@ -48,78 +48,69 @@ const AIVideoGenerationPage = () => {
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$79",
       period: "/month",
-      description: "Ideal for agencies and growing businesses",
+      description: "Ideal for growing businesses and agencies",
       features: [
-        "60 minutes of video per month",
-        "4K quality (2160p)",
-        "Premium templates",
+        "500 AI-generated designs per month",
+        "Advanced brand customization",
+        "All export formats",
         "Priority support",
         "50GB storage",
-        "Custom branding",
+        "Team collaboration (up to 5 users)",
         "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$199",
       period: "/month",
-      description: "For large organizations with high-volume needs",
+      description: "For large organizations with complex needs",
       features: [
-        "Unlimited video generation",
-        "8K quality (4320p)",
-        "Custom templates",
+        "Unlimited AI-generated designs",
+        "Custom brand training",
+        "White-label solution",
         "24/7 dedicated support",
         "Unlimited storage",
-        "White-label solution",
+        "Unlimited team members",
         "Advanced analytics",
-        "SLA guarantee"
+        "Custom integrations"
       ],
       popular: false
     }
   ];
 
-  const videoTypes = [
+  const useCases = [
     {
-      title: "Social Media Videos",
-      description: "Create engaging short-form content for TikTok, Instagram, and YouTube Shorts",
-      icon: <Play className="w-6 h-6" />
+      title: "Marketing Materials",
+      description: "Generate social media posts, banners, flyers, and promotional materials instantly",
+      icon: <Palette className="w-6 h-6" />
     },
     {
-      title: "Marketing Videos",
-      description: "Generate promotional videos, product demos, and explainer content",
-      icon: <Camera className="w-6 h-6" />
-    },
-    {
-      title: "Educational Content",
-      description: "Create training videos, tutorials, and educational presentations",
+      title: "Web Design",
+      description: "Create website layouts, UI components, and responsive designs for any device",
       icon: <Globe className="w-6 h-6" />
     },
     {
-      title: "Presentation Videos",
-      description: "Transform presentations into dynamic video content with animations",
+      title: "Product Mockups",
+      description: "Generate realistic product mockups and packaging designs for e-commerce",
+      icon: <Layers className="w-6 h-6" />
+    },
+    {
+      title: "Presentation Design",
+      description: "Create professional presentations, infographics, and data visualizations",
       icon: <Sparkles className="w-6 h-6" />
     }
-  ];
-
-  const industries = [
-    { name: "E-commerce", description: "Product showcases and promotional videos" },
-    { name: "Education", description: "Training materials and course content" },
-    { name: "Marketing", description: "Campaign videos and brand content" },
-    { name: "Entertainment", description: "Short films and creative content" },
-    { name: "Corporate", description: "Internal communications and presentations" },
-    { name: "Real Estate", description: "Property showcases and virtual tours" }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
-        title="AI Video Generation Service | Zion Tech Group - Automated Video Creation Platform"
-        description="Create professional videos from text prompts with our AI video generation platform. Generate marketing videos, social media content, and presentations in minutes."
-        keywords="AI video generation, video creation, automated video, video AI, content creation, video marketing, Zion Tech Group"
-        canonical="https://ziontechgroup.com/ai-video-generation"
+        title="AI Generative Design Service | Zion Tech Group - Automated Design Solutions"
+        description="Transform your creative workflow with AI-powered design generation. Create stunning visuals, maintain brand consistency, and accelerate your design process with our advanced AI design platform."
+        keywords="AI design, generative design, automated design, brand design, visual design, design AI, creative AI, design automation, Zion Tech Group"
+        canonical="https://ziontechgroup.com/ai-generative-design"
       />
 
       {/* Hero Section */}
@@ -131,20 +122,20 @@ const AIVideoGenerationPage = () => {
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
-            <Video className="w-4 h-4 text-purple-400 mr-2" />
-            <span className="text-purple-400 text-sm font-medium">Next-Gen Video Creation</span>
+            <Sparkles className="w-4 h-4 text-purple-400 mr-2" />
+            <span className="text-purple-400 text-sm font-medium">Revolutionary AI Design Platform</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Video
+            AI Generative
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 animate-pulse">
-              {" "}Generation
+              {" "}Design
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Create professional videos from text prompts with our AI video generation platform. 
-            Generate marketing videos, social media content, and presentations in minutes.
+            Transform your creative workflow with AI-powered design generation. Create stunning visuals, 
+            maintain brand consistency, and accelerate your design process with our advanced AI platform.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -152,15 +143,15 @@ const AIVideoGenerationPage = () => {
               to="/contact"
               className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-purple-500/25 hover:scale-105"
             >
-              Start Creating Videos
+              Start Creating Now
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/demo"
               className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
-              Watch Demo
-              <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              View Demo
+              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
         </div>
@@ -171,11 +162,11 @@ const AIVideoGenerationPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful Video Generation Features
+              Powerful AI Design Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our AI video generation platform combines cutting-edge technology with intuitive design 
-              to create professional-quality videos from simple text prompts.
+              Our AI design platform combines cutting-edge technology with intuitive user experience 
+              to deliver professional-quality designs in seconds.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -201,60 +192,31 @@ const AIVideoGenerationPage = () => {
         </div>
       </section>
 
-      {/* Video Types Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Create Any Type of Video
+              Perfect for Every Design Need
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From social media clips to professional presentations, our AI handles all your video needs.
+              From marketing materials to web design, our AI handles all your creative requirements.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {videoTypes.map((type, index) => (
+            {useCases.map((useCase, index) => (
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                  {type.icon}
+                  {useCase.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white group-hover:text-purple-400 transition-colors mb-2">
-                  {type.title}
+                  {useCase.title}
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  {type.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industries Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect for Every Industry
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI video generation serves businesses across all industries and use cases.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {industries.map((industry, index) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-              >
-                <h3 className="text-lg font-semibold text-white group-hover:text-purple-400 transition-colors mb-2">
-                  {industry.name}
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {industry.description}
+                  {useCase.description}
                 </p>
               </div>
             ))}
@@ -263,14 +225,14 @@ const AIVideoGenerationPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Flexible Pricing Plans
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your video creation needs. All plans include our core AI video features.
+              Choose the plan that fits your design needs. All plans include our core AI design features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -326,11 +288,11 @@ const AIVideoGenerationPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Create Amazing Videos?
+            Ready to Revolutionize Your Design Process?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of content creators and businesses already using our AI video generation 
-            to produce professional video content faster and more efficiently.
+            Join thousands of designers and businesses already using our AI design platform 
+            to create stunning visuals faster than ever before.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -346,7 +308,7 @@ const AIVideoGenerationPage = () => {
               className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Schedule Demo
-              <Video className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
         </div>
@@ -355,4 +317,4 @@ const AIVideoGenerationPage = () => {
   );
 };
 
-export default AIVideoGenerationPage;
+export default AIGenerativeDesignPage;

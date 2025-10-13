@@ -25,7 +25,12 @@ const Navigation = React.memo(() => {
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> }
+    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Generative Design', path: '/ai-generative-design', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'AI Voice Synthesis', path: '/ai-voice-synthesis', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'AI Video Generation', path: '/ai-video-generation', icon: <Code className="w-4 h-4" />, featured: true },
+    { name: 'AI 3D Modeling', path: '/ai-3d-modeling', icon: <Database className="w-4 h-4" />, featured: true },
+    { name: 'AI Code Review', path: '/ai-code-review', icon: <Shield className="w-4 h-4" />, featured: true }
   ], [])
 
   const microSaasServices = useMemo(() => [
@@ -47,6 +52,17 @@ const Navigation = React.memo(() => {
     { name: 'Case Studies', path: '/case-studies' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' }
+  ], [])
+
+  const itServices = useMemo(() => [
+    { name: 'Cloud Migration', path: '/cloud-migration', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'AI-Powered DevOps', path: '/ai-powered-devops', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Enterprise Architecture', path: '/enterprise-architecture', icon: <Database className="w-4 h-4" />, featured: true },
+    { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
+    { name: 'Mobile Development', path: '/mobile-development', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
   ], [])
 
   return (
@@ -96,13 +112,65 @@ const Navigation = React.memo(() => {
                     <Link
                       key={service.name}
                       to={service.path}
-                      className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 group"
+                      className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 group ${
+                        service.featured ? 'bg-gradient-to-r from-cyan-500/5 to-purple-500/5 border-l-2 border-cyan-400' : ''
+                      }`}
                       onClick={() => setIsServicesOpen(false)}
                     >
                       <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-300">
                         {service.icon}
                       </div>
-                      <span className="font-medium">{service.name}</span>
+                      <div className="flex-1">
+                        <span className="font-medium">{service.name}</span>
+                        {service.featured && (
+                          <div className="flex items-center mt-1">
+                            <Star className="w-3 h-3 text-yellow-400 fill-current mr-1" />
+                            <span className="text-xs text-yellow-400">Featured</span>
+                          </div>
+                        )}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* IT Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
+              >
+                <span>IT Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20">
+                  <div className="px-4 py-2 border-b border-gray-700 mb-2">
+                    <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">IT Services</h3>
+                  </div>
+                  {itServices.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.path}
+                      className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 group ${
+                        service.featured ? 'bg-gradient-to-r from-cyan-500/5 to-purple-500/5 border-l-2 border-cyan-400' : ''
+                      }`}
+                      onClick={() => setIsServicesOpen(false)}
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-300">
+                        {service.icon}
+                      </div>
+                      <div className="flex-1">
+                        <span className="font-medium">{service.name}</span>
+                        {service.featured && (
+                          <div className="flex items-center mt-1">
+                            <Star className="w-3 h-3 text-yellow-400 fill-current mr-1" />
+                            <span className="text-xs text-yellow-400">Featured</span>
+                          </div>
+                        )}
+                      </div>
                     </Link>
                   ))}
                 </div>
@@ -210,6 +278,38 @@ const Navigation = React.memo(() => {
                       >
                         {service.icon}
                         <span>{service.name}</span>
+                        {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile IT Services */}
+              <div>
+                <button
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium"
+                >
+                  <span>IT Services</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isServicesOpen && (
+                  <div className="ml-4 mt-2 space-y-1">
+                    {itServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors rounded-lg hover:bg-cyan-500/10"
+                        onClick={() => {
+                          setIsServicesOpen(false)
+                          toggleMenu()
+                        }}
+                      >
+                        {service.icon}
+                        <span>{service.name}</span>
+                        {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />}
                       </Link>
                     ))}
                   </div>

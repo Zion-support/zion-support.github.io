@@ -1,142 +1,142 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cloud, ArrowRight, CheckCircle, Star, Zap, Shield, Globe, Database, Server, Lock } from 'lucide-react';
+import { PenTool, ArrowRight, CheckCircle, Star, Zap, Globe, Shield, Users, BarChart3, Sparkles } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const CloudMigrationPage = () => {
+const ZionAIWriterPage = () => {
   const features = [
     {
-      title: "Zero-Downtime Migration",
-      description: "Migrate your applications to the cloud without any service interruption or data loss",
-      icon: <Cloud className="w-8 h-8" />,
+      title: "AI-Powered Content Generation",
+      description: "Generate high-quality articles, blogs, and marketing copy using advanced AI",
+      icon: <PenTool className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Cloud Strategy",
-      description: "Design and implement hybrid and multi-cloud architectures for optimal performance",
+      title: "Multiple Content Types",
+      description: "Create blogs, social media posts, emails, product descriptions, and more",
       icon: <Globe className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Security & Compliance",
-      description: "Ensure your cloud migration meets all security standards and compliance requirements",
-      icon: <Shield className="w-8 h-8" />,
+      title: "SEO Optimization",
+      description: "Automatically optimize content for search engines with built-in SEO tools",
+      icon: <Zap className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Cost Optimization",
-      description: "Reduce cloud costs by up to 40% with intelligent resource management and optimization",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Brand Voice Consistency",
+      description: "Maintain consistent brand voice across all content with custom style guides",
+      icon: <Shield className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Assessment",
-      price: "$2,500",
-      period: "one-time",
-      description: "Comprehensive cloud readiness assessment",
+      name: "Starter",
+      price: "$19",
+      period: "/month",
+      description: "Perfect for individual content creators",
       features: [
-        "Current infrastructure analysis",
-        "Cloud readiness evaluation",
-        "Migration strategy planning",
-        "Cost estimation",
-        "Risk assessment",
-        "Timeline planning"
+        "10,000 words per month",
+        "Basic AI models",
+        "5 content templates",
+        "Email support",
+        "Basic SEO tools",
+        "Standard export formats"
       ],
       popular: false
     },
     {
-      name: "Standard Migration",
-      price: "$15,000",
-      period: "project",
-      description: "Complete migration for small to medium businesses",
+      name: "Professional",
+      price: "$49",
+      period: "/month",
+      description: "Ideal for small businesses and agencies",
       features: [
-        "Up to 20 applications",
-        "Data migration",
-        "Security configuration",
-        "Performance optimization",
-        "30 days support",
-        "Training included"
+        "50,000 words per month",
+        "Advanced AI models",
+        "Unlimited templates",
+        "Priority support",
+        "Advanced SEO tools",
+        "All export formats",
+        "Team collaboration (up to 5 users)",
+        "Brand voice training"
       ],
       popular: true
     },
     {
-      name: "Enterprise Migration",
-      price: "$50,000+",
-      period: "project",
-      description: "Large-scale enterprise cloud transformation",
+      name: "Enterprise",
+      price: "$149",
+      period: "/month",
+      description: "For large organizations with high-volume needs",
       features: [
-        "Unlimited applications",
-        "Custom architecture design",
-        "Advanced security setup",
-        "24/7 monitoring",
-        "90 days support",
-        "Dedicated team",
+        "Unlimited words",
+        "Premium AI models",
+        "Custom templates",
+        "24/7 dedicated support",
+        "White-label solution",
+        "Unlimited team members",
+        "API access",
+        "Custom integrations",
         "SLA guarantee"
       ],
       popular: false
     }
   ];
 
-  const migrationSteps = [
+  const contentTypes = [
     {
-      step: "1",
-      title: "Assessment & Planning",
-      description: "Analyze current infrastructure and create detailed migration roadmap",
-      icon: <Database className="w-6 h-6" />
+      title: "Blog Posts",
+      description: "Engaging articles and blog posts for any industry",
+      icon: <PenTool className="w-6 h-6" />
     },
     {
-      step: "2",
-      title: "Design & Architecture",
-      description: "Design cloud architecture optimized for your specific needs",
-      icon: <Server className="w-6 h-6" />
+      title: "Social Media",
+      description: "Captivating posts for all social media platforms",
+      icon: <Globe className="w-6 h-6" />
     },
     {
-      step: "3",
-      title: "Migration Execution",
-      description: "Execute migration with zero downtime and minimal risk",
-      icon: <Cloud className="w-6 h-6" />
-    },
-    {
-      step: "4",
-      title: "Optimization & Support",
-      description: "Optimize performance and provide ongoing support",
+      title: "Email Marketing",
+      description: "Professional email campaigns and newsletters",
       icon: <Zap className="w-6 h-6" />
+    },
+    {
+      title: "Product Descriptions",
+      description: "Compelling product descriptions for e-commerce",
+      icon: <BarChart3 className="w-6 h-6" />
     }
   ];
 
   const benefits = [
     {
-      title: "40% Cost Reduction",
-      description: "Average cost savings through cloud optimization",
+      title: "10x Faster Writing",
+      description: "Create content 10 times faster than traditional methods",
       icon: <Zap className="w-6 h-6" />
     },
     {
-      title: "99.9% Uptime",
-      description: "Improved reliability and availability",
-      icon: <Shield className="w-6 h-6" />
-    },
-    {
-      title: "3x Faster Deployment",
-      description: "Accelerated application deployment cycles",
+      title: "95% Time Savings",
+      description: "Save 95% of your time on content creation",
       icon: <Globe className="w-6 h-6" />
     },
     {
-      title: "Enhanced Security",
-      description: "Advanced security features and compliance",
-      icon: <Lock className="w-6 h-6" />
+      title: "SEO Optimized",
+      description: "All content automatically optimized for search engines",
+      icon: <Shield className="w-6 h-6" />
+    },
+    {
+      title: "Brand Consistent",
+      description: "Maintain consistent brand voice across all content",
+      icon: <Users className="w-6 h-6" />
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEOOptimizer
-        title="Cloud Migration Services | Zion Tech Group - Seamless Cloud Transformation"
-        description="Expert cloud migration services for seamless transition to AWS, Azure, and Google Cloud. Zero-downtime migration, cost optimization, and 24/7 support."
-        keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud transformation, cloud consulting, Zion Tech Group"
-        canonical="https://ziontechgroup.com/cloud-migration"
+        title="Zion AI Writer | Zion Tech Group - AI-Powered Content Generation Platform"
+        description="Create high-quality content 10x faster with Zion AI Writer. Generate blogs, social media posts, emails, and more with advanced AI technology."
+        keywords="AI writer, content generation, blog writing, social media content, email marketing, content creation, Zion Tech Group"
+        canonical="https://ziontechgroup.com/zion-ai-writer"
       />
 
       {/* Hero Section */}
@@ -148,20 +148,20 @@ const CloudMigrationPage = () => {
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-            <Cloud className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-400 text-sm font-medium">Expert Cloud Migration</span>
+            <PenTool className="w-4 h-4 text-blue-400 mr-2" />
+            <span className="text-blue-400 text-sm font-medium">AI-Powered Writing Platform</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Cloud
+            Zion AI
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 animate-pulse">
-              {" "}Migration
+              {" "}Writer
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Expert cloud migration services for seamless transition to AWS, Azure, and Google Cloud. 
-            Zero-downtime migration, cost optimization, and 24/7 support.
+            Create high-quality content 10x faster with Zion AI Writer. Generate blogs, social media posts, 
+            emails, and more with advanced AI technology.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -169,15 +169,15 @@ const CloudMigrationPage = () => {
               to="/contact"
               className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-blue-500/25 hover:scale-105"
             >
-              Start Migration
+              Start Writing Now
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/demo"
               className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
-              Free Assessment
-              <Cloud className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              Try Free Demo
+              <PenTool className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
         </div>
@@ -188,11 +188,11 @@ const CloudMigrationPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Comprehensive Migration Services
+              Powerful AI Writing Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our cloud migration experts ensure a smooth, secure, and cost-effective transition 
-              to your preferred cloud platform.
+              Our AI writing platform combines cutting-edge technology with intuitive design 
+              to deliver professional-quality content in seconds.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -218,34 +218,31 @@ const CloudMigrationPage = () => {
         </div>
       </section>
 
-      {/* Migration Process Section */}
+      {/* Content Types Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Migration Process
+              Create Any Type of Content
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A proven 4-step process that ensures successful cloud migration with minimal risk.
+              From blog posts to social media content, our AI handles all your writing needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {migrationSteps.map((step, index) => (
+            {contentTypes.map((type, index) => (
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                    {step.icon}
-                  </div>
-                  <div className="text-3xl font-bold text-blue-400">{step.step}</div>
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+                  {type.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors mb-2">
-                  {step.title}
+                  {type.title}
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  {step.description}
+                  {type.description}
                 </p>
               </div>
             ))}
@@ -258,10 +255,10 @@ const CloudMigrationPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Migration Services?
+              Why Choose Zion AI Writer?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of professional cloud migration with measurable results.
+              Experience the benefits of AI-powered content creation with measurable results.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -290,10 +287,10 @@ const CloudMigrationPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the migration package that fits your needs. All packages include our core migration services.
+              Choose the plan that fits your content creation needs. All plans include our core AI writing features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -318,7 +315,7 @@ const CloudMigrationPage = () => {
                   <p className="text-gray-300 mb-4">{plan.description}</p>
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-300 ml-1">/{plan.period}</span>
+                    <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
                 </div>
                 <ul className="space-y-4 mb-8">
@@ -349,11 +346,11 @@ const CloudMigrationPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Migrate to the Cloud?
+            Ready to Transform Your Content Creation?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses already benefiting from our cloud migration services. 
-            Start your cloud transformation journey today.
+            Join thousands of content creators and businesses already using Zion AI Writer 
+            to produce high-quality content faster and more efficiently.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -361,15 +358,15 @@ const CloudMigrationPage = () => {
               to="/contact"
               className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-blue-500/25 hover:scale-105"
             >
-              Start Your Migration
+              Start Your Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/demo"
               className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
-              Schedule Assessment
-              <Cloud className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              Schedule Demo
+              <PenTool className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
         </div>
@@ -378,4 +375,4 @@ const CloudMigrationPage = () => {
   );
 };
 
-export default CloudMigrationPage;
+export default ZionAIWriterPage;

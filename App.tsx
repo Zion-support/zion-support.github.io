@@ -56,6 +56,13 @@ const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendat
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
+// New AI Services
+const AiGenerativeDesignPage = React.lazy(() => import("./app/ai-generative-design/page"));
+const AiVoiceSynthesisPage = React.lazy(() => import("./app/ai-voice-synthesis/page"));
+const AiVideoGenerationPage = React.lazy(() => import("./app/ai-video-generation/page"));
+const Ai3DModelingPage = React.lazy(() => import("./app/ai-3d-modeling/page"));
+const AiCodeReviewPage = React.lazy(() => import("./app/ai-code-review/page"));
+
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
   () => import("./app/cloud-infrastructure/page"),
@@ -132,6 +139,11 @@ const DevopsSolutionsPage = React.lazy(() => import("./app/devops-solutions/page
 const MachineLearningPage = React.lazy(() => import("./app/machine-learning/page"));
 const QuantumComputingPage = React.lazy(() => import("./app/quantum-computing/page"));
 const RoboticsPage = React.lazy(() => import("./app/robotics/page"));
+
+// New IT Services
+const CloudMigrationPage = React.lazy(() => import("./app/cloud-migration/page"));
+const AIPoweredDevOpsPage = React.lazy(() => import("./app/ai-powered-devops/page"));
+const EnterpriseArchitecturePage = React.lazy(() => import("./app/enterprise-architecture/page"));
 
 // Micro SAAS Pages
 const ZionAnalyticsProPage = React.lazy(
@@ -251,6 +263,13 @@ function App() {
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
 
+                  {/* New AI Service Routes */}
+                  <Route path="/ai-generative-design" element={<AiGenerativeDesignPage />} />
+                  <Route path="/ai-voice-synthesis" element={<AiVoiceSynthesisPage />} />
+                  <Route path="/ai-video-generation" element={<AiVideoGenerationPage />} />
+                  <Route path="/ai-3d-modeling" element={<Ai3DModelingPage />} />
+                  <Route path="/ai-code-review" element={<AiCodeReviewPage />} />
+
                   {/* IT Service Routes */}
                   <Route
                     path="/cloud-infrastructure"
@@ -351,6 +370,11 @@ function App() {
                   <Route path="/machine-learning" element={<MachineLearningPage />} />
                   <Route path="/quantum-computing" element={<QuantumComputingPage />} />
                   <Route path="/robotics" element={<RoboticsPage />} />
+
+                  {/* New IT Service Routes */}
+                  <Route path="/cloud-migration" element={<CloudMigrationPage />} />
+                  <Route path="/ai-powered-devops" element={<AIPoweredDevOpsPage />} />
+                  <Route path="/enterprise-architecture" element={<EnterpriseArchitecturePage />} />
 
                   {/* Micro SAAS Routes */}
                   <Route

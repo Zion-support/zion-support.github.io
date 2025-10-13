@@ -1,142 +1,116 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cloud, ArrowRight, CheckCircle, Star, Zap, Shield, Globe, Database, Server, Lock } from 'lucide-react';
+import { Box, Cube, Zap, Sparkles, ArrowRight, CheckCircle, Star, Globe, Shield, Layers } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const CloudMigrationPage = () => {
+const AI3DModelingPage = () => {
   const features = [
     {
-      title: "Zero-Downtime Migration",
-      description: "Migrate your applications to the cloud without any service interruption or data loss",
-      icon: <Cloud className="w-8 h-8" />,
+      title: "AI-Powered 3D Generation",
+      description: "Create detailed 3D models from text descriptions using advanced AI algorithms",
+      icon: <Cube className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Cloud Strategy",
-      description: "Design and implement hybrid and multi-cloud architectures for optimal performance",
-      icon: <Globe className="w-8 h-8" />,
+      title: "Multiple Export Formats",
+      description: "Export models in OBJ, STL, FBX, and other industry-standard formats",
+      icon: <Box className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Security & Compliance",
-      description: "Ensure your cloud migration meets all security standards and compliance requirements",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Real-Time Rendering",
+      description: "Preview and render your 3D models with photorealistic quality in real-time",
+      icon: <Zap className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Cost Optimization",
-      description: "Reduce cloud costs by up to 40% with intelligent resource management and optimization",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Custom Textures & Materials",
+      description: "Apply realistic textures and materials to your 3D models automatically",
+      icon: <Layers className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Assessment",
-      price: "$2,500",
-      period: "one-time",
-      description: "Comprehensive cloud readiness assessment",
+      name: "Hobbyist",
+      price: "$29",
+      period: "/month",
+      description: "Perfect for hobbyists and students",
       features: [
-        "Current infrastructure analysis",
-        "Cloud readiness evaluation",
-        "Migration strategy planning",
-        "Cost estimation",
-        "Risk assessment",
-        "Timeline planning"
+        "10 3D models per month",
+        "Standard quality",
+        "Basic materials",
+        "Email support",
+        "5GB storage"
       ],
       popular: false
     },
     {
-      name: "Standard Migration",
-      price: "$15,000",
-      period: "project",
-      description: "Complete migration for small to medium businesses",
+      name: "Professional",
+      price: "$79",
+      period: "/month",
+      description: "Ideal for professionals and small studios",
       features: [
-        "Up to 20 applications",
-        "Data migration",
-        "Security configuration",
-        "Performance optimization",
-        "30 days support",
-        "Training included"
+        "50 3D models per month",
+        "High quality",
+        "Premium materials",
+        "Priority support",
+        "50GB storage",
+        "Custom textures",
+        "API access"
       ],
       popular: true
     },
     {
-      name: "Enterprise Migration",
-      price: "$50,000+",
-      period: "project",
-      description: "Large-scale enterprise cloud transformation",
+      name: "Studio",
+      price: "$199",
+      period: "/month",
+      description: "For large studios and enterprises",
       features: [
-        "Unlimited applications",
-        "Custom architecture design",
-        "Advanced security setup",
-        "24/7 monitoring",
-        "90 days support",
-        "Dedicated team",
+        "Unlimited 3D models",
+        "Ultra-high quality",
+        "Custom materials",
+        "24/7 dedicated support",
+        "Unlimited storage",
+        "White-label solution",
+        "Advanced analytics",
         "SLA guarantee"
       ],
       popular: false
     }
   ];
 
-  const migrationSteps = [
+  const useCases = [
     {
-      step: "1",
-      title: "Assessment & Planning",
-      description: "Analyze current infrastructure and create detailed migration roadmap",
-      icon: <Database className="w-6 h-6" />
+      title: "Game Development",
+      description: "Create 3D assets, characters, and environments for games",
+      icon: <Cube className="w-6 h-6" />
     },
     {
-      step: "2",
-      title: "Design & Architecture",
-      description: "Design cloud architecture optimized for your specific needs",
-      icon: <Server className="w-6 h-6" />
+      title: "Architecture",
+      description: "Generate 3D models for architectural visualization and planning",
+      icon: <Box className="w-6 h-6" />
     },
     {
-      step: "3",
-      title: "Migration Execution",
-      description: "Execute migration with zero downtime and minimal risk",
-      icon: <Cloud className="w-6 h-6" />
+      title: "Product Design",
+      description: "Create 3D prototypes and product mockups for manufacturing",
+      icon: <Layers className="w-6 h-6" />
     },
     {
-      step: "4",
-      title: "Optimization & Support",
-      description: "Optimize performance and provide ongoing support",
-      icon: <Zap className="w-6 h-6" />
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "40% Cost Reduction",
-      description: "Average cost savings through cloud optimization",
-      icon: <Zap className="w-6 h-6" />
-    },
-    {
-      title: "99.9% Uptime",
-      description: "Improved reliability and availability",
-      icon: <Shield className="w-6 h-6" />
-    },
-    {
-      title: "3x Faster Deployment",
-      description: "Accelerated application deployment cycles",
+      title: "VR/AR Content",
+      description: "Generate 3D content for virtual and augmented reality applications",
       icon: <Globe className="w-6 h-6" />
-    },
-    {
-      title: "Enhanced Security",
-      description: "Advanced security features and compliance",
-      icon: <Lock className="w-6 h-6" />
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEOOptimizer
-        title="Cloud Migration Services | Zion Tech Group - Seamless Cloud Transformation"
-        description="Expert cloud migration services for seamless transition to AWS, Azure, and Google Cloud. Zero-downtime migration, cost optimization, and 24/7 support."
-        keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud transformation, cloud consulting, Zion Tech Group"
-        canonical="https://ziontechgroup.com/cloud-migration"
+        title="AI 3D Modeling Service | Zion Tech Group - Automated 3D Model Generation"
+        description="Create detailed 3D models from text descriptions with our AI 3D modeling platform. Perfect for game development, architecture, and product design."
+        keywords="AI 3D modeling, 3D generation, 3D models, automated modeling, game development, architecture, Zion Tech Group"
+        canonical="https://ziontechgroup.com/ai-3d-modeling"
       />
 
       {/* Hero Section */}
@@ -148,20 +122,20 @@ const CloudMigrationPage = () => {
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-            <Cloud className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-400 text-sm font-medium">Expert Cloud Migration</span>
+            <Cube className="w-4 h-4 text-blue-400 mr-2" />
+            <span className="text-blue-400 text-sm font-medium">Revolutionary 3D AI Technology</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Cloud
+            AI 3D
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 animate-pulse">
-              {" "}Migration
+              {" "}Modeling
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Expert cloud migration services for seamless transition to AWS, Azure, and Google Cloud. 
-            Zero-downtime migration, cost optimization, and 24/7 support.
+            Create detailed 3D models from text descriptions with our AI 3D modeling platform. 
+            Perfect for game development, architecture, and product design.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -169,15 +143,15 @@ const CloudMigrationPage = () => {
               to="/contact"
               className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-blue-500/25 hover:scale-105"
             >
-              Start Migration
+              Start Creating 3D Models
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/demo"
               className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
-              Free Assessment
-              <Cloud className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              View Demo
+              <Cube className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
         </div>
@@ -188,11 +162,11 @@ const CloudMigrationPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Comprehensive Migration Services
+              Advanced 3D Modeling Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our cloud migration experts ensure a smooth, secure, and cost-effective transition 
-              to your preferred cloud platform.
+              Our AI 3D modeling platform combines cutting-edge technology with professional tools 
+              to create detailed, high-quality 3D models from simple text descriptions.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -218,66 +192,31 @@ const CloudMigrationPage = () => {
         </div>
       </section>
 
-      {/* Migration Process Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Migration Process
+              Perfect for Every 3D Need
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A proven 4-step process that ensures successful cloud migration with minimal risk.
+              From game development to architectural visualization, our AI handles all your 3D modeling requirements.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {migrationSteps.map((step, index) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                    {step.icon}
-                  </div>
-                  <div className="text-3xl font-bold text-blue-400">{step.step}</div>
-                </div>
-                <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Migration Services?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of professional cloud migration with measurable results.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {useCases.map((useCase, index) => (
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                  {benefit.icon}
+                  {useCase.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors mb-2">
-                  {benefit.title}
+                  {useCase.title}
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  {benefit.description}
+                  {useCase.description}
                 </p>
               </div>
             ))}
@@ -286,14 +225,14 @@ const CloudMigrationPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the migration package that fits your needs. All packages include our core migration services.
+              Choose the plan that fits your 3D modeling needs. All plans include our core AI 3D features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -318,7 +257,7 @@ const CloudMigrationPage = () => {
                   <p className="text-gray-300 mb-4">{plan.description}</p>
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-300 ml-1">/{plan.period}</span>
+                    <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
                 </div>
                 <ul className="space-y-4 mb-8">
@@ -349,11 +288,11 @@ const CloudMigrationPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Migrate to the Cloud?
+            Ready to Create Amazing 3D Models?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses already benefiting from our cloud migration services. 
-            Start your cloud transformation journey today.
+            Join thousands of developers, designers, and creators already using our AI 3D modeling 
+            to produce professional 3D content faster and more efficiently.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -361,15 +300,15 @@ const CloudMigrationPage = () => {
               to="/contact"
               className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-blue-500/25 hover:scale-105"
             >
-              Start Your Migration
+              Start Your Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/demo"
               className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
-              Schedule Assessment
-              <Cloud className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              Schedule Demo
+              <Cube className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
         </div>
@@ -378,4 +317,4 @@ const CloudMigrationPage = () => {
   );
 };
 
-export default CloudMigrationPage;
+export default AI3DModelingPage;
