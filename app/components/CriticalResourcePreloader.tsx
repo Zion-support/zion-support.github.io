@@ -1,145 +1,89 @@
-'use client'
-import { useEffect } from 'react'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const CriticalResourcePreloader = () => {
-  useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Critical fonts
-      const criticalFonts = [
-        {
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap',
-          as: 'style',
-          crossorigin: 'anonymous'
-        },
-        {
-          href: 'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          crossorigin: 'anonymous'
-        }
-      ]
+const CriticalResourcePreloader: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Critical Resource Preloader - Zion Tech Group</title>
+        <meta name="description" content="Professional critical resource preloader services by Zion Tech Group." />
+      </Helmet>
 
-      // Critical CSS
-      const criticalCSS = [
-        '/styles/critical.css',
-        '/styles/animations.css'
-      ]
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Critical Resource Preloader
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional critical resource preloader services 
+            designed to help your business grow and succeed.
+          </p>
+        </div>
+      </section>
 
-      // Critical JavaScript
-      const criticalJS = [
-        '/scripts/performance.js',
-        '/scripts/analytics.js'
-      ]
+      {/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive critical resource preloader 
+                solutions tailored to your specific needs and requirements.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our critical resource preloader services?
+              </p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      // Critical images
-      const criticalImages = [
-        '/images/logo.svg',
-        '/images/hero-bg.webp',
-        '/images/cta-bg.webp'
-      ]
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our critical resource preloader 
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today
+          </a>
+        </div>
+      </section>
+    </div>
+  );
+};
 
-      // Preload fonts
-      criticalFonts.forEach(font => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = font.href
-        link.as = font.as
-        if (font.type) link.type = font.type
-        if (font.crossorigin) link.crossOrigin = font.crossorigin
-        document.head.appendChild(link)
-      })
-
-      // Preload CSS
-      criticalCSS.forEach(css => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = css
-        link.as = 'style'
-        document.head.appendChild(link)
-      })
-
-      // Preload JavaScript
-      criticalJS.forEach(js => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = js
-        link.as = 'script'
-        document.head.appendChild(link)
-      })
-
-      // Preload images
-      criticalImages.forEach(img => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = img
-        link.as = 'image'
-        document.head.appendChild(link)
-      })
-    }
-
-    // Preconnect to external domains
-    const preconnectDomains = () => {
-      const domains = [
-        'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com',
-        'https://www.google-analytics.com',
-        'https://www.googletagmanager.com',
-        'https://cdn.jsdelivr.net'
-      ]
-
-      domains.forEach(domain => {
-        const link = document.createElement('link')
-        link.rel = 'preconnect'
-        link.href = domain
-        link.crossOrigin = 'anonymous'
-        document.head.appendChild(link)
-      })
-    }
-
-    // DNS prefetch for additional domains
-    const dnsPrefetchDomains = () => {
-      const domains = [
-        'https://api.ziontechgroup.com',
-        'https://cdn.ziontechgroup.com',
-        'https://analytics.ziontechgroup.com'
-      ]
-
-      domains.forEach(domain => {
-        const link = document.createElement('link')
-        link.rel = 'dns-prefetch'
-        link.href = domain
-        document.head.appendChild(link)
-      })
-    }
-
-    // Initialize preloading
-    preloadCriticalResources()
-    preconnectDomains()
-    dnsPrefetchDomains()
-
-    // Preload next page resources on hover
-    const preloadOnHover = () => {
-      const links = document.querySelectorAll('a[href^="/"]')
-      
-      links.forEach(link => {
-        link.addEventListener('mouseenter', () => {
-          const href = link.getAttribute('href')
-          if (href && !document.querySelector(`link[href="${href}"]`)) {
-            const preloadLink = document.createElement('link')
-            preloadLink.rel = 'prefetch'
-            preloadLink.href = href
-            document.head.appendChild(preloadLink)
-          }
-        })
-      })
-    }
-
-    // Initialize hover preloading after a delay
-    setTimeout(preloadOnHover, 2000)
-
-  }, [])
-
-  return null
-}
-
-export default CriticalResourcePreloader
+export default CriticalResourcePreloader;

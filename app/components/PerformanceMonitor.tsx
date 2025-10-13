@@ -1,170 +1,253 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+=======
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
+import React, { useEffect, useState } from 'react';
 
+// Type definitions for browser APIs
+declare global {
+  interface PerformanceObserver {
+    observe(options: { entryTypes: string[] }): void;
+    disconnect(): void;
+  }
+  const PerformanceObserver: {
+    new (callback: (list: { getEntries(): PerformanceEntry[] }) => void): PerformanceObserver;
+  };
+}
+
+// Extend the global PerformanceEntry interface
+declare global {
+  interface PerformanceEntry {
+
+    // This extends the built-in PerformanceEntry;
+
+} catch (error) {
+  console.error('Error:', error);
+  res.status(500).json({ error: 'Internal server error' });
+}
+}
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
+
+// Type definitions for browser APIs
+declare global {
+  interface PerformanceNavigationTiming extends PerformanceEntry {
+
+    requestStart: number;
+    responseStart: number;
+  
+} catch (error) {
+  console.error('Error:', error);
+  res.status(500).json({ error: 'Internal server error' });
+}
+}
+import React, { useEffect, useState } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
+  interface PerformanceEntry {
+
+    name: string;
+    entryType: string;
+    startTime: number;
+    duration: number;
+<<<<<<< HEAD
+  }
+
+  interface PerformanceNavigationTiming extends PerformanceEntry {
+    requestStart: number;
+    responseStart: number;
+  }
+<<<<<<< HEAD
+}
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
+  
+} catch (error) {
+  console.error('Error:', error);
+  res.status(500).json({ error: 'Internal server error' });
+}
+}
+  
+  interface PerformanceEntry {
+
+    name: string;
+    entryType: string;
+    startTime: number;
+    duration: number;
+  
+} catch (error) {
+  console.error('Error:', error);
+  res.status(500).json({ error: 'Internal server error' });
+}
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
 interface PerformanceMetrics {
-  loadTime?: number;
-  firstContentfulPaint?: number;
-  largestContentfulPaint?: number;
-  interactionToNextPaint?: number;
-  cumulativeLayoutShift?: number;
-  timeToFirstByte?: number;
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+<<<<<<< HEAD
+    ttfb: null
+  });
 
-  const updateMetric = useCallback((metric: any) => {
-    setMetrics(prev => {
-      const baseMetrics = prev || {
-        loadTime: 0,
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
-        interactionToNextPaint: 0,
-        cumulativeLayoutShift: 0,
-        timeToFirstByte: 0
-      };
+<<<<<<< HEAD
+=======
+    ttfb: null,;
+});
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Monitor Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'paint') {
+            if (entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            }
+          } else if (entry.entryType === 'largest-contentful-paint') {
+            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+          } else if (entry.entryType === 'first-input') {
+            const inputEntry = entry as any;
+<<<<<<< HEAD
+          } else if (entry.entryType === 'layout-shift') {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart }));
+          }
+        }
+      });
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
+
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input'] });
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
+            if (inputEntry.processingStart && inputEntry.startTime) {
+              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
+            }
+          } else if (entry.entryType === 'layout-shift') {
+=======
+            if (inputEntry.processingStart && inputEntry.startTime) {
+              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
+            }
+
+            if (inputEntry.processingStart && inputEntry.startTime) {
+              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
+            }
+;
+} else if (entry.entryType === 'layout-shift') {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
+          }
+        }
+      });
+
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+<<<<<<< HEAD
       
-      return {
-        ...baseMetrics,
-        [metric.name === 'CLS' ? 'cumulativeLayoutShift' : 
-         metric.name === 'INP' ? 'interactionToNextPaint' :
-         metric.name === 'FCP' ? 'firstContentfulPaint' :
-         metric.name === 'LCP' ? 'largestContentfulPaint' :
-         metric.name === 'TTFB' ? 'timeToFirstByte' : 'loadTime']: metric.value
-      };
-    });
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
+      // Monitor TTFB
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+      }
+<<<<<<< HEAD
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
+      return () => observer.disconnect();
+    }
+    return undefined;
   }, []);
 
-  useEffect(() => {
-    // Only run in browser environment
-    if (typeof window === 'undefined') return;
-
-    // Measure Core Web Vitals
-    onCLS(updateMetric);
-    onINP(updateMetric);
-    onFCP(updateMetric);
-    onLCP(updateMetric);
-    onTTFB(updateMetric);
-
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      
-      setMetrics(prev => {
-        const baseMetrics = prev || {
-          loadTime: 0,
-          firstContentfulPaint: 0,
-          largestContentfulPaint: 0,
-          interactionToNextPaint: 0,
-          cumulativeLayoutShift: 0,
-          timeToFirstByte: 0
-        };
-        
-        return {
-          ...baseMetrics,
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart
-        };
-      });
-    };
-
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-    // Cleanup
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, [updateMetric]);
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
   // Only show in development
-  if (process.env.NODE_ENV !== 'development' || !metrics) {
+  if (typeof process !== 'undefined' && process.env && process.env.NODE_ENV !== 'development') {
     return null;
   }
+<<<<<<< HEAD
 
-  const getMetricColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-600';
-    if (value <= thresholds.poor) return 'text-yellow-600';
-    return 'text-red-600';
-  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
+  return (
+    <div className="performance-monitor">
+      <h3>Performance Metrics</h3>
+      <div className="metrics-grid">
+        {metrics.fcp && <div>FCP: {metrics.fcp.toFixed(2)}ms</div>}
+        {metrics.lcp && <div>LCP: {metrics.lcp.toFixed(2)}ms</div>}
+        {metrics.fid && <div>FID: {metrics.fid.toFixed(2)}ms</div>}
+        {metrics.cls && <div>CLS: {metrics.cls.toFixed(4)}</div>}
+        {metrics.ttfb && <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>}
+      </div>
+    </div>;
+);
+};
+
+<<<<<<< HEAD
+export default PerformanceMonitor;
+<<<<<<< HEAD
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+export default PerformanceMonitor;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
+=======
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
-      <button
-        onClick={() => setIsVisible(!isVisible)}
-        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg"
-        aria-label="Toggle performance metrics"
-      >
-        Performance
-      </button>
-      
-      {isVisible && (
-        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto">
-          <h3 className="font-semibold text-gray-900 mb-3 flex items-center">
-            <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-            Performance Metrics
-          </h3>
-          <div className="space-y-3 text-sm">
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">Load Time:</span>
-              <span className={`font-mono ${getMetricColor(metrics.loadTime || 0, { good: 1000, poor: 3000 })}`}>
-                {metrics.loadTime?.toFixed(0) || 'N/A'}ms
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">FCP:</span>
-              <span className={`font-mono ${getMetricColor(metrics.firstContentfulPaint || 0, { good: 1800, poor: 3000 })}`}>
-                {metrics.firstContentfulPaint?.toFixed(0) || 'N/A'}ms
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">LCP:</span>
-              <span className={`font-mono ${getMetricColor(metrics.largestContentfulPaint || 0, { good: 2500, poor: 4000 })}`}>
-                {metrics.largestContentfulPaint?.toFixed(0) || 'N/A'}ms
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">INP:</span>
-              <span className={`font-mono ${getMetricColor(metrics.interactionToNextPaint || 0, { good: 200, poor: 500 })}`}>
-                {metrics.interactionToNextPaint?.toFixed(0) || 'N/A'}ms
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">CLS:</span>
-              <span className={`font-mono ${getMetricColor(metrics.cumulativeLayoutShift || 0, { good: 0.1, poor: 0.25 })}`}>
-                {metrics.cumulativeLayoutShift?.toFixed(3) || 'N/A'}
-              </span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">TTFB:</span>
-              <span className={`font-mono ${getMetricColor(metrics.timeToFirstByte || 0, { good: 800, poor: 1800 })}`}>
-                {metrics.timeToFirstByte?.toFixed(0) || 'N/A'}ms
-              </span>
-            </div>
-          </div>
-          <div className="mt-4 pt-3 border-t border-gray-200">
-            <div className="text-xs text-gray-500">
-              <div className="flex items-center mb-1">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                Good
-              </div>
-              <div className="flex items-center mb-1">
-                <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
-                Needs Improvement
-              </div>
-              <div className="flex items-center">
-                <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
-                Poor
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
+      <h3 className="font-bold mb-2">Performance Metrics</h3>
+      <div className="space-y-1">
+        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
+        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
+        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
+        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
+        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
+      </div>
     </div>
   );
 };
 
 export default PerformanceMonitor;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c

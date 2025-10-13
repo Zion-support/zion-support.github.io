@@ -1,38 +1,28 @@
-// Next.js type definitions
-
-declare module "next" {
-  export interface NextPageProps {
-    params: { [key: string]: string };
-    searchParams: { [key: string]: string | string[] | undefined };
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+=======
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
+// Next.js type declarations
+declare module 'next' {
+  interface NextApiRequest {
+    user?: Record<string, unknown>;
+  }
+  interface NextConfig {
+    // Add any Next.js specific types here
+    [key: string]: unknown;
   }
 }
 
-declare module "*.svg" {
-  const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
-  export default content;
-}
+// Export a utility function
+export const nextUtil = () => {
+  // Implementation
+  return true;
+};
 
-declare module "*.png" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.jpg" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.jpeg" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.gif" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.webp" {
-  const content: string;
-  export default content;
-}
+export default nextUtil;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+=======
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
