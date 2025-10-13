@@ -3,7 +3,7 @@ import React from "react";
 <<<<<<< HEAD
 import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Sparkles } from "lucide-react";
 =======
-import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow, Home, Truck, Scale } from "lucide-react";
 >>>>>>> main
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -12,7 +12,286 @@ import SEOOptimizer from "../components/SEOOptimizer";
 export default function MicroSaas() {
   const microSaasServices = [
     {
-      id: "zion-analytics-pro",
+      id: "zion-ai-crypto-analyzer",
+      name: "Zion AI Crypto Analyzer",
+      description: "Advanced cryptocurrency analysis platform with AI-powered market predictions, portfolio optimization, and risk assessment",
+      price: "From $79/month",
+      originalPrice: "$129/month",
+      discount: "39% OFF",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500",
+      features: [
+        "AI market prediction algorithms",
+        "Portfolio optimization suggestions",
+        "Real-time risk assessment",
+        "Multi-exchange integration",
+        "DeFi yield farming analysis",
+        "NFT market insights",
+        "Tax reporting automation",
+        "Mobile trading alerts"
+      ],
+      benefits: [
+        "Increase portfolio returns by 35%",
+        "Reduce trading risks by 60%",
+        "Automate investment decisions",
+        "Stay ahead of market trends"
+      ],
+      category: "Crypto",
+      rating: 4.8,
+      reviews: 2156,
+      link: "/zion-ai-crypto-analyzer",
+      featured: true
+    },
+    {
+      id: "zion-ai-health-monitor",
+      name: "Zion AI Health Monitor",
+      description: "Personal health tracking with AI insights, symptom analysis, medication reminders, and wellness recommendations",
+      price: "From $39/month",
+      originalPrice: "$65/month",
+      discount: "40% OFF",
+      icon: <Heart className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "AI symptom analysis",
+        "Medication tracking & reminders",
+        "Vital signs monitoring",
+        "Wellness recommendations",
+        "Doctor appointment scheduling",
+        "Health report generation",
+        "Emergency contact alerts",
+        "Integration with wearables"
+      ],
+      benefits: [
+        "Improve health outcomes by 40%",
+        "Reduce medical costs by 25%",
+        "Prevent health emergencies",
+        "Maintain optimal wellness"
+      ],
+      category: "Health",
+      rating: 4.9,
+      reviews: 3421,
+      link: "/zion-ai-health-monitor",
+      featured: true
+    },
+    {
+      id: "zion-ai-real-estate-pro",
+      name: "Zion AI Real Estate Pro",
+      description: "Intelligent property analysis with market predictions, investment opportunities, and automated property management",
+      price: "From $89/month",
+      originalPrice: "$149/month",
+      discount: "40% OFF",
+      icon: <Home className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "AI property valuation",
+        "Market trend analysis",
+        "Investment ROI calculations",
+        "Tenant screening automation",
+        "Rent optimization",
+        "Property maintenance scheduling",
+        "Legal compliance tracking",
+        "Multi-property management"
+      ],
+      benefits: [
+        "Increase property values by 20%",
+        "Maximize rental income by 30%",
+        "Reduce vacancy rates by 50%",
+        "Streamline property management"
+      ],
+      category: "Real Estate",
+      rating: 4.7,
+      reviews: 1876,
+      link: "/zion-ai-real-estate-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-supply-chain-optimizer",
+      name: "Zion AI Supply Chain Optimizer",
+      description: "Advanced supply chain management with demand forecasting, logistics optimization, and risk mitigation",
+      price: "From $149/month",
+      originalPrice: "$249/month",
+      discount: "40% OFF",
+      icon: <Truck className="w-8 h-8" />,
+      color: "from-blue-500 to-indigo-500",
+      features: [
+        "AI demand forecasting",
+        "Route optimization algorithms",
+        "Inventory level optimization",
+        "Supplier risk assessment",
+        "Cost reduction analysis",
+        "Sustainability tracking",
+        "Real-time logistics monitoring",
+        "Compliance management"
+      ],
+      benefits: [
+        "Reduce supply chain costs by 25%",
+        "Improve delivery times by 40%",
+        "Minimize stockouts by 70%",
+        "Enhance supplier relationships"
+      ],
+      category: "Supply Chain",
+      rating: 4.8,
+      reviews: 1234,
+      link: "/zion-ai-supply-chain-optimizer",
+      featured: true
+    },
+    {
+      id: "zion-ai-legal-assistant",
+      name: "Zion AI Legal Assistant",
+      description: "Intelligent legal document analysis, contract review, compliance monitoring, and case research automation",
+      price: "From $199/month",
+      originalPrice: "$329/month",
+      discount: "39% OFF",
+      icon: <Scale className="w-8 h-8" />,
+      color: "from-purple-500 to-violet-500",
+      features: [
+        "AI contract analysis",
+        "Legal document generation",
+        "Compliance monitoring",
+        "Case law research",
+        "Risk assessment reports",
+        "Deadline tracking",
+        "Client communication automation",
+        "Billing time tracking"
+      ],
+      benefits: [
+        "Reduce legal research time by 80%",
+        "Improve contract accuracy by 95%",
+        "Minimize compliance risks",
+        "Increase billable hours by 30%"
+      ],
+      category: "Legal",
+      rating: 4.9,
+      reviews: 987,
+      link: "/zion-ai-legal-assistant",
+      featured: true
+    },
+    {
+      id: "zion-ai-education-platform",
+      name: "Zion AI Education Platform",
+      description: "Personalized learning management system with AI tutoring, progress tracking, and adaptive curriculum",
+      price: "From $59/month",
+      originalPrice: "$99/month",
+      discount: "40% OFF",
+      icon: <BookOpen className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      features: [
+        "AI-powered tutoring",
+        "Adaptive learning paths",
+        "Progress analytics",
+        "Skill assessment tools",
+        "Interactive content creation",
+        "Student engagement tracking",
+        "Parent/teacher dashboards",
+        "Multi-language support"
+      ],
+      benefits: [
+        "Improve learning outcomes by 45%",
+        "Reduce teaching workload by 60%",
+        "Personalize education experience",
+        "Track student progress effectively"
+      ],
+      category: "Education",
+      rating: 4.8,
+      reviews: 2567,
+      link: "/zion-ai-education-platform",
+      featured: true
+    },
+    {
+      id: "zion-ai-energy-manager",
+      name: "Zion AI Energy Manager",
+      description: "Smart energy management system with consumption optimization, renewable energy integration, and cost analysis",
+      price: "From $69/month",
+      originalPrice: "$115/month",
+      discount: "40% OFF",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500",
+      features: [
+        "Energy consumption optimization",
+        "Renewable energy integration",
+        "Cost analysis & forecasting",
+        "Smart grid connectivity",
+        "Carbon footprint tracking",
+        "Peak demand management",
+        "Equipment efficiency monitoring",
+        "Utility bill automation"
+      ],
+      benefits: [
+        "Reduce energy costs by 35%",
+        "Lower carbon footprint by 50%",
+        "Optimize energy consumption",
+        "Integrate renewable sources"
+      ],
+      category: "Energy",
+      rating: 4.7,
+      reviews: 1456,
+      link: "/zion-ai-energy-manager",
+      featured: true
+    },
+    {
+      id: "zion-ai-fintech-suite",
+      name: "Zion AI Fintech Suite",
+      description: "Comprehensive financial technology platform with AI lending, fraud detection, and automated financial services",
+      price: "From $179/month",
+      originalPrice: "$299/month",
+      discount: "40% OFF",
+      icon: <CreditCard className="w-8 h-8" />,
+      color: "from-green-500 to-teal-500",
+      features: [
+        "AI credit scoring",
+        "Fraud detection algorithms",
+        "Automated loan processing",
+        "Risk assessment models",
+        "Regulatory compliance",
+        "Payment processing",
+        "Financial reporting",
+        "API integration"
+      ],
+      benefits: [
+        "Reduce loan processing time by 90%",
+        "Decrease fraud losses by 85%",
+        "Improve credit decisions",
+        "Streamline financial operations"
+      ],
+      category: "Fintech",
+      rating: 4.9,
+      reviews: 1892,
+      link: "/zion-ai-fintech-suite",
+      featured: true
+    },
+    {
+      id: "zion-ai-logistics-pro",
+      name: "Zion AI Logistics Pro",
+      description: "Advanced logistics management with route optimization, fleet tracking, and delivery prediction",
+      price: "From $119/month",
+      originalPrice: "$199/month",
+      discount: "40% OFF",
+      icon: <Package className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      features: [
+        "AI route optimization",
+        "Real-time fleet tracking",
+        "Delivery time prediction",
+        "Load optimization",
+        "Driver performance analytics",
+        "Fuel efficiency monitoring",
+        "Maintenance scheduling",
+        "Customer notifications"
+      ],
+      benefits: [
+        "Reduce delivery costs by 30%",
+        "Improve delivery accuracy by 95%",
+        "Optimize fleet utilization",
+        "Enhance customer satisfaction"
+      ],
+      category: "Logistics",
+      rating: 4.8,
+      reviews: 1678,
+      link: "/zion-ai-logistics-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-analytics-pro",
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time analytics, predictive insights, and automated reporting",
       price: "From $29/month",
@@ -1472,6 +1751,15 @@ export default function MicroSaas() {
 
   const categories = [
     { name: "All", count: microSaasServices.length, active: true },
+    { name: "Crypto", count: microSaasServices.filter(s => s.category === "Crypto").length, active: false },
+    { name: "Health", count: microSaasServices.filter(s => s.category === "Health").length, active: false },
+    { name: "Real Estate", count: microSaasServices.filter(s => s.category === "Real Estate").length, active: false },
+    { name: "Supply Chain", count: microSaasServices.filter(s => s.category === "Supply Chain").length, active: false },
+    { name: "Legal", count: microSaasServices.filter(s => s.category === "Legal").length, active: false },
+    { name: "Education", count: microSaasServices.filter(s => s.category === "Education").length, active: false },
+    { name: "Energy", count: microSaasServices.filter(s => s.category === "Energy").length, active: false },
+    { name: "Fintech", count: microSaasServices.filter(s => s.category === "Fintech").length, active: false },
+    { name: "Logistics", count: microSaasServices.filter(s => s.category === "Logistics").length, active: false },
     { name: "Analytics", count: microSaasServices.filter(s => s.category === "Analytics").length, active: false },
     { name: "Security", count: microSaasServices.filter(s => s.category === "Security").length, active: false },
     { name: "Storage", count: microSaasServices.filter(s => s.category === "Storage").length, active: false },
