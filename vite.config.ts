@@ -34,6 +34,7 @@ export default defineConfig(({ mode }) => ({
     },
     // Performance optimizations
 <<<<<<< HEAD
+<<<<<<< HEAD
     chunkSizeWarningLimit: 150, // Balanced threshold for better performance
     assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
@@ -41,6 +42,10 @@ export default defineConfig(({ mode }) => ({
     chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
     assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
+=======
+    chunkSizeWarningLimit: 150, // Optimized threshold for better chunking
+    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1579
     // Enable compression
     reportCompressedSize: true,
     // Additional optimizations
@@ -229,6 +234,7 @@ export default defineConfig(({ mode }) => ({
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
               return 'zion-analytics'
             }
+<<<<<<< HEAD
 =======
             if (serviceName?.includes('financial') || serviceName?.includes('fintech')) {
               return 'ai-financial'
@@ -274,6 +280,17 @@ export default defineConfig(({ mode }) => ({
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
           }
           // Group 5G service pages
+=======
+            if (serviceName?.includes('ai-')) {
+              return 'zion-ai'
+            }
+            if (serviceName?.includes('security') || serviceName?.includes('shield')) {
+              return 'zion-security'
+            }
+            return 'zion-other'
+          }
+          // 5G service pages - group together
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1579
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
