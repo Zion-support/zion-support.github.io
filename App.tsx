@@ -87,7 +87,7 @@ function App() {
                     <WebVitalsTracker />
                     <PerformanceEnhancer />
                     <SEOOptimizer />
-                    <EnhancedSEO />
+                    <EnhancedSEO title="Zion Tech Group" description="Advanced AI and IT Solutions" />
                     <EnhancedSEOOptimizer />
                   </div>
                 </AnalyticsProvider>

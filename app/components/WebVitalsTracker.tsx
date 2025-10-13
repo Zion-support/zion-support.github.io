@@ -13,31 +13,31 @@ const WebVitalsTracker: React.FC = () => {
     // Import web-vitals dynamically to avoid blocking the main thread
     const loadWebVitals = async () => {
       try {
-        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
+        const { onCLS, onFID, onFCP, onLCP, onTTFB } = await import('web-vitals');
         
         // Track Core Web Vitals
-        getCLS((metric: WebVitalsData) => {
+        onCLS((metric: WebVitalsData) => {
           console.log('CLS:', metric);
           // Send to analytics service
           sendToAnalytics('CLS', metric.value);
         });
 
-        getFID((metric: WebVitalsData) => {
+        onFID((metric: WebVitalsData) => {
           console.log('FID:', metric);
           sendToAnalytics('FID', metric.value);
         });
 
-        getFCP((metric: WebVitalsData) => {
+        onFCP((metric: WebVitalsData) => {
           console.log('FCP:', metric);
           sendToAnalytics('FCP', metric.value);
         });
 
-        getLCP((metric: WebVitalsData) => {
+        onLCP((metric: WebVitalsData) => {
           console.log('LCP:', metric);
           sendToAnalytics('LCP', metric.value);
         });
 
-        getTTFB((metric: WebVitalsData) => {
+        onTTFB((metric: WebVitalsData) => {
           console.log('TTFB:', metric);
           sendToAnalytics('TTFB', metric.value);
         });
