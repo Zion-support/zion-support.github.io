@@ -1,4 +1,6 @@
 
+import { Brain, TrendingUp, BarChart3, Zap } from 'lucide-react';
+
 export default function AIEcommerceOptimizerPro() {
   const features = [
     {
@@ -123,21 +125,19 @@ export default function AIEcommerceOptimizerPro() {
       popular: false,
     },
   ];
-import { Helmet } from 'react-helmet-async';
 
-export default function AiEcommerceOptimizerProPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
-        <title>Ai Ecommerce Optimizer Pro - Zion Tech Group</title>
-        <meta name="description" content="Ai Ecommerce Optimizer Pro solutions by Zion Tech Group" />
+        <title>AI Ecommerce Optimizer Pro - Zion Tech Group</title>
+        <meta name="description" content="AI Ecommerce Optimizer Pro solutions by Zion Tech Group" />
       </Helmet>
       
       <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Ecommerce Optimizer Pro</h1>
+        <h1 className="text-4xl font-bold mb-8">AI Ecommerce Optimizer Pro</h1>
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai ecommerce optimizer pro solutions designed to meet your business needs.
+            Discover our comprehensive AI ecommerce optimizer pro solutions designed to meet your business needs.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
