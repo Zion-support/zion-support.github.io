@@ -1,34 +1,14 @@
-<<<<<<< HEAD
-import React, { Suspense } from 'react';
-=======
 import React, { Suspense, lazy } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-<<<<<<< HEAD
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
-<<<<<<< HEAD
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
-import Header from './app/components/Header';
-import Footer from './app/components/Footer';
-import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-=======
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import LoadingSpinner from './app/components/LoadingSpinner';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 
 // Lazy load page components for better performance
 const HomePage = lazy(() => import('./app/page'));
@@ -84,34 +64,14 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
 
 function App() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <HelmetProvider>
-<<<<<<< HEAD
-      <Router>
-        <div className="min-h-screen bg-slate-900">
-          <Navigation />
-          <main className="relative z-10" id="main-content" role="main">
-=======
       <ErrorBoundary>
         <Router>
           <div className="min-h-screen bg-slate-900">
             <Navigation />
             <main className="relative z-10" id="main-content" role="main">
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-            <Routes>
-=======
-    <HelmetProvider>
-      <EnhancedErrorBoundary>
-        <AccessibilityEnhancer>
-          <Router>
-            <div className="min-h-screen bg-slate-900">
-              <Header />
-              <main className="relative z-10" id="main-content" role="main">
-                <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
-                  <Routes>
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
