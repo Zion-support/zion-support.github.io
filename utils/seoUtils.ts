@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface SEOUtilsConfig {
   enabled: boolean;
   analytics: boolean;
@@ -12,6 +13,22 @@ export class SEOUtils {
       enabled: true,
       analytics: true,
       sitemap: true,
+=======
+interface SeoConfig {
+  enabled: boolean;
+  metaTags: boolean;
+  structuredData: boolean;
+}
+
+export class SeoUtils {
+  private config: SeoConfig;
+
+  constructor(config: Partial<SeoConfig> = {}) {
+    this.config = {
+      enabled: true,
+      metaTags: true,
+      structuredData: true,
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
       ...config
     };
   }
@@ -22,6 +39,7 @@ export class SEOUtils {
     }
   }
 
+<<<<<<< HEAD
 /**
  * SEO utility functions
  */;
@@ -91,3 +109,29 @@ export const updatePageTitle = (titl)
 export const seoUtils = new SEOUtils();
 export default seoUtils;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+  generateMetaTags(title: string, description: string): Record<string, string> {
+    if (this.config.metaTags) {
+      return {
+        title,
+        description,
+        'og:title': title,
+        'og:description': description,
+        'twitter:title': title,
+        'twitter:description': description,
+      };
+    }
+    return {};
+  }
+
+  generateStructuredData(data: any): string {
+    if (this.config.structuredData) {
+      return JSON.stringify(data);
+    }
+    return '';
+  }
+}
+
+export const seoUtils = new SeoUtils();
+export default seoUtils;
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0

@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 interface PerformanceUtilsConfig {
+=======
+interface PerformanceConfig {
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
   enabled: boolean;
   monitoring: boolean;
   optimization: boolean;
 }
 
 export class PerformanceUtils {
+<<<<<<< HEAD
   private config: PerformanceUtilsConfig;
 
   constructor(config: Partial<PerformanceUtilsConfig> = {}) {
+=======
+  private config: PerformanceConfig;
+
+  constructor(config: Partial<PerformanceConfig> = {}) {
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
     this.config = {
       enabled: true,
       monitoring: true,
@@ -40,6 +50,7 @@ export class PerformanceUtils {
   }
 }
 
+<<<<<<< HEAD
 /**
  * Performance utility functions
  */;
@@ -161,3 +172,7 @@ export default performanceOptimizer;
 export const performanceUtils = new PerformanceUtils();
 export default performanceUtils;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+export const performanceUtils = new PerformanceUtils();
+export default performanceUtils;
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0

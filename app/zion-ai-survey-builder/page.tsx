@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -10,11 +11,23 @@ export default function PagePage() {
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function ZionAiSurveyBuilder() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Zion AI Survey Builder - Zion Tech Group</title>
+        <meta name="description" content="AI-powered survey builder solutions by Zion Tech Group" />
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
+<<<<<<< HEAD
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
@@ -297,3 +310,37 @@ export default function ZionAiSurveyBuilderPage() {
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+            Zion AI Survey Builder
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Create intelligent surveys with AI-powered question generation and analysis.
+          </p>
+        </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Questions</h3>
+              <p className="text-gray-600">
+                AI-generated questions tailored to your survey objectives.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Response Analysis</h3>
+              <p className="text-gray-600">
+                Advanced AI analysis of survey responses and sentiment.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Custom Templates</h3>
+              <p className="text-gray-600">
+                Pre-built templates for various survey types and industries.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0

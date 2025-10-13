@@ -1,7 +1,11 @@
 interface AccessibilityUtilsConfig {
   enabled: boolean;
   highContrast: boolean;
+<<<<<<< HEAD
   fontSize: 'small' | 'medium' | 'large';
+=======
+  fontSize: number;
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
   screenReader: boolean;
 }
 
@@ -12,7 +16,11 @@ export class AccessibilityUtils {
     this.config = {
       enabled: true,
       highContrast: false,
+<<<<<<< HEAD
       fontSize: 'medium',
+=======
+      fontSize: 16,
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
       screenReader: false,
       ...config
     };
@@ -21,6 +29,7 @@ export class AccessibilityUtils {
   init(): void {
     if (this.config.enabled) {
       console.log('Accessibility utils initialized');
+<<<<<<< HEAD
       this.applyAccessibilitySettings();
     }
   }
@@ -477,3 +486,23 @@ export const initAccessibility = (): void => {/* TODO: Fix JSX expression */}
 export const accessibilityUtils = new AccessibilityUtils();
 export default accessibilityUtils;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+    }
+  }
+
+  setHighContrast(enabled: boolean): void {
+    this.config.highContrast = enabled;
+  }
+
+  setFontSize(size: number): void {
+    this.config.fontSize = size;
+  }
+
+  setScreenReader(enabled: boolean): void {
+    this.config.screenReader = enabled;
+  }
+}
+
+export const accessibilityUtils = new AccessibilityUtils();
+export default accessibilityUtils;
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0

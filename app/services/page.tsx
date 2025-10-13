@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -22,6 +23,9 @@ const ServicesPage = () => {
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Bot, FileText, Shield, Wifi, Cloud, BarChart3, Code, Target, Users, TrendingUp, Globe, Zap, Database, Monitor, Lock, Server, Settings, HardDrive, Phone, Laptop, Headphones, Network, Cpu } from 'lucide-react';
+=======
+import { ArrowRight, Home, Search, AlertTriangle, Brain, Bot, FileText, Shield, Wifi, Cloud, BarChart3, Code, Target, Users, TrendingUp, Globe, Zap, Database, Monitor, Lock, Server, Settings, HardDrive, Phone, Laptop, Headphones, Network, Cpu } from 'lucide-react';
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
 
 export default function Services() {
   const services = [

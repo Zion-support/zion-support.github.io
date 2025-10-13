@@ -1,7 +1,11 @@
 interface AccessibilityConfig {
   enabled: boolean;
   highContrast: boolean;
+<<<<<<< HEAD
   fontSize: 'small' | 'medium' | 'large';
+=======
+  fontSize: number;
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
   screenReader: boolean;
 }
 
@@ -12,7 +16,11 @@ class AccessibilityEnhancer {
     this.config = {
       enabled: true,
       highContrast: false,
+<<<<<<< HEAD
       fontSize: 'medium',
+=======
+      fontSize: 16,
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
       screenReader: false
     };
   }
@@ -20,6 +28,7 @@ class AccessibilityEnhancer {
   init(): void {
     if (this.config.enabled) {
       console.log('Accessibility enhancer initialized');
+<<<<<<< HEAD
       this.applyAccessibilitySettings();
     }
   }
@@ -42,10 +51,26 @@ class AccessibilityEnhancer {
 
   getConfig(): AccessibilityConfig {
     return { ...this.config };
+=======
+    }
+  }
+
+  setHighContrast(enabled: boolean): void {
+    this.config.highContrast = enabled;
+  }
+
+  setFontSize(size: number): void {
+    this.config.fontSize = size;
+  }
+
+  setScreenReader(enabled: boolean): void {
+    this.config.screenReader = enabled;
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
   }
 }
 
 export const accessibilityEnhancer = new AccessibilityEnhancer();
+<<<<<<< HEAD
 export class AccessibilityEnhancer {private focusableElements: HTMLElement[] = [],}
   private skipLinks: HTMLElement[] = [],
   private landmarks: HTMLElement[] = [],
@@ -1217,3 +1242,6 @@ export const focusLastElement = () => {
 =======
 export default accessibilityEnhancer;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+export default accessibilityEnhancer;
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0

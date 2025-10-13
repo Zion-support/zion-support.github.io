@@ -1,13 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function AiMobileBuilderPage() {
+=======
+export default function AiMobileBuilder() {
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Mobile Builder - Zion Tech Group</title>
         <meta name="description" content="Advanced AI mobile builder solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -38,6 +43,38 @@ export default function AiMobileBuilderPage() {
               AI-powered optimization for better app performance and user experience.
             </p>
           </div>
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            AI Mobile Builder
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Build intelligent mobile applications with our AI-powered development platform.
+          </p>
+        </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Rapid Development</h3>
+              <p className="text-gray-600">
+                Accelerate mobile app development with AI-powered tools and templates.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Features</h3>
+              <p className="text-gray-600">
+                Integrate advanced AI features like voice recognition and machine learning.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Cross-Platform</h3>
+              <p className="text-gray-600">
+                Build once and deploy across iOS, Android, and web platforms.
+              </p>
+            </div>
+          </div>
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
         </div>
       </div>
     </div>

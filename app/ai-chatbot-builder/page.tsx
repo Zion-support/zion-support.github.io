@@ -368,13 +368,20 @@ export default AiChatbotBuilderPage;
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function AiChatbotBuilderPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+export default function AiChatbotBuilder() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
       <Helmet>
         <title>AI Chatbot Builder - Zion Tech Group</title>
         <meta name="description" content="Advanced AI chatbot builder solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -405,9 +412,45 @@ export default function AiChatbotBuilderPage() {
               Track performance and optimize your chatbot with detailed analytics.
             </p>
           </div>
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            AI Chatbot Builder
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Create intelligent chatbots for your business with our advanced AI platform.
+          </p>
+        </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Easy Setup</h3>
+              <p className="text-gray-600">
+                Build and deploy chatbots quickly with our intuitive interface.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Natural Language</h3>
+              <p className="text-gray-600">
+                Advanced NLP capabilities for natural conversations.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Multi-Platform</h3>
+              <p className="text-gray-600">
+                Deploy across websites, mobile apps, and messaging platforms.
+              </p>
+            </div>
+          </div>
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+}
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
