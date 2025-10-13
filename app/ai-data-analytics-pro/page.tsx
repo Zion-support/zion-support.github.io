@@ -1,109 +1,106 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  MessageSquare, 
-  Users, 
+  BarChart3, 
+  TrendingUp, 
+  Database, 
   Brain, 
   Shield, 
   Zap, 
   ArrowRight, 
   CheckCircle, 
   Star,
+  Users,
   Award,
   Clock,
   Globe,
   Settings,
   Target,
-  BarChart3,
-  Bot,
-  Headphones,
-  Phone,
-  Mail,
-  Calendar,
-  FileText,
-  Search,
-  Filter,
-  Tag,
-  Layers,
+  PieChart,
+  LineChart,
   Activity,
-  Database,
-  Cpu
+  DatabaseIcon,
+  Cpu,
+  Cloud,
+  Smartphone,
+  Monitor,
+  Server
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-const AIChatbotEnterprisePage = () => {
+const AIDataAnalyticsProPage = () => {
   const features = [
     {
-      title: "Advanced NLP Processing",
-      description: "Understand complex queries with 98% accuracy using state-of-the-art NLP",
-      icon: <Brain className="w-8 h-8" />,
+      title: "Real-time Data Processing",
+      description: "Process massive datasets in real-time with our advanced AI algorithms",
+      icon: <Cpu className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-channel Deployment",
-      description: "Deploy across web, mobile, social media, and messaging platforms",
-      icon: <Globe className="w-8 h-8" />,
+      title: "Predictive Analytics",
+      description: "Forecast trends and patterns with machine learning models",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Custom AI Training",
-      description: "Train chatbots on your specific domain knowledge and terminology",
-      icon: <Settings className="w-8 h-8" />,
+      title: "Interactive Dashboards",
+      description: "Create stunning visualizations with drag-and-drop interface",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Human Handoff",
-      description: "Seamlessly transfer complex queries to human agents when needed",
-      icon: <Users className="w-8 h-8" />,
+      title: "Automated Insights",
+      description: "Get AI-powered insights and recommendations automatically",
+      icon: <Brain className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const capabilities = [
-    "Advanced NLP Processing",
-    "Multi-channel Deployment",
-    "Custom AI Training",
-    "Human Handoff",
-    "Intent Recognition",
-    "Context Management",
-    "Sentiment Analysis",
-    "Multi-language Support",
-    "API Integration",
-    "Analytics Dashboard",
-    "A/B Testing",
-    "Custom Workflows"
+    "Advanced Machine Learning Models",
+    "Real-time Data Streaming",
+    "Interactive Data Visualization",
+    "Automated Report Generation",
+    "Predictive Analytics Engine",
+    "Data Quality Assessment",
+    "Custom Dashboard Creation",
+    "API Integration Support",
+    "Cloud & On-premise Deployment",
+    "Multi-source Data Connectors",
+    "Advanced Statistical Analysis",
+    "Custom Algorithm Development"
   ];
 
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$299",
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic NLP processing",
-        "Standard channels",
+        "Up to 10GB data processing",
+        "5 dashboard templates",
+        "Basic ML models",
         "Email support",
-        "Basic analytics"
+        "Standard integrations"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$599",
       period: "/month",
       description: "Ideal for growing companies",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced NLP processing",
-        "All channels",
+        "Up to 100GB data processing",
+        "Unlimited dashboards",
+        "Advanced ML models",
         "Priority support",
         "Custom integrations",
-        "Advanced analytics"
+        "Real-time processing"
       ],
       popular: true
     },
@@ -113,12 +110,12 @@ const AIChatbotEnterprisePage = () => {
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited conversations",
-        "Custom AI models",
+        "Unlimited data processing",
+        "Custom dashboard development",
+        "Advanced AI models",
         "24/7 dedicated support",
-        "White-label solution",
-        "On-premise deployment",
-        "Custom development"
+        "White-label solutions",
+        "On-premise deployment"
       ],
       popular: false
     }
@@ -126,24 +123,24 @@ const AIChatbotEnterprisePage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "Customer Service",
-      role: "VP of Operations",
-      content: "AI Chatbot Enterprise has reduced our response time by 80% and customer satisfaction by 35%. The human handoff feature is seamless.",
+      name: "Sarah Johnson",
+      company: "TechStart Inc.",
+      role: "Data Scientist",
+      content: "Zion AI Data Analytics Pro transformed our data analysis capabilities. The predictive models are incredibly accurate and the dashboards are beautiful.",
       rating: 5
     },
     {
-      name: "David Kim",
-      company: "E-commerce Platform",
-      role: "Customer Experience Director",
-      content: "The multi-channel deployment is perfect for our business. We can now provide consistent support across all our touchpoints.",
+      name: "Michael Chen",
+      company: "E-commerce Solutions",
+      role: "CTO",
+      content: "The real-time processing capabilities are outstanding. We can now make data-driven decisions instantly.",
       rating: 5
     },
     {
-      name: "Lisa Thompson",
+      name: "Emily Rodriguez",
       company: "Financial Services",
-      role: "Customer Support Manager",
-      content: "The custom AI training feature allows us to handle complex financial queries accurately. Our customers love the instant responses.",
+      role: "Analytics Director",
+      content: "The automated insights feature saves us hours every week. Highly recommended for any data team.",
       rating: 5
     }
   ];
@@ -151,10 +148,10 @@ const AIChatbotEnterprisePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="AI Chatbot Enterprise - Advanced Conversational AI Platform | Zion Tech Group"
-        description="Transform customer service with AI-powered chatbots. Advanced NLP, multi-channel deployment, and custom training for enterprise-grade conversational AI."
-        keywords="AI chatbot, conversational AI, customer service automation, NLP chatbot, enterprise chatbot, chatbot platform"
-        canonical="https://ziontechgroup.com/ai-chatbot-enterprise"
+        title="AI Data Analytics Pro - Advanced Analytics Platform | Zion Tech Group"
+        description="Transform your data into actionable insights with our AI-powered analytics platform. Real-time processing, predictive analytics, and interactive dashboards."
+        keywords="AI data analytics, predictive analytics, business intelligence, data visualization, machine learning, real-time processing"
+        canonical="https://ziontechgroup.com/ai-data-analytics-pro"
       />
 
       <main className="relative z-10">
@@ -162,19 +159,19 @@ const AIChatbotEnterprisePage = () => {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <ResponsiveContainer className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <MessageSquare className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI Conversational Intelligence</span>
+              <Brain className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Analytics</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                AI Chatbot Enterprise
+                AI Data Analytics Pro
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform customer service with AI-powered chatbots. Advanced NLP, 
-              multi-channel deployment, and custom training for enterprise-grade conversational AI.
+              Transform your data into actionable insights with our advanced AI-powered analytics platform. 
+              Real-time processing, predictive analytics, and stunning visualizations.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -190,9 +187,9 @@ const AIChatbotEnterprisePage = () => {
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<MessageSquare className="w-5 h-5" />}
+                icon={<Monitor className="w-5 h-5" />}
               >
-                Try Chatbot Demo
+                Watch Demo
               </FuturisticButton>
             </div>
           </ResponsiveContainer>
@@ -203,10 +200,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Chatbot Features
+                Powerful Analytics Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need for intelligent customer conversations
+                Everything you need to turn your data into business intelligence
               </p>
             </div>
             
@@ -236,10 +233,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Chatbot Tools
+                Advanced Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Complete conversational AI platform for modern businesses
+                Comprehensive analytics tools for modern businesses
               </p>
             </div>
             
@@ -265,7 +262,7 @@ const AIChatbotEnterprisePage = () => {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing for chatbot solutions of all sizes
+                Flexible pricing options for businesses of all sizes
               </p>
             </div>
             
@@ -324,10 +321,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                What Customer Service Teams Say
+                What Our Customers Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of businesses using AI Chatbot Enterprise
+                Join thousands of businesses using AI Data Analytics Pro
               </p>
             </div>
             
@@ -358,10 +355,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Transform Customer Service?
+                Ready to Transform Your Data?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Start your free trial today and discover the power of AI chatbots.
+                Start your free trial today and see how AI Data Analytics Pro can revolutionize your business intelligence.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -377,9 +374,9 @@ const AIChatbotEnterprisePage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<MessageSquare className="w-5 h-5" />}
+                  icon={<Monitor className="w-5 h-5" />}
                 >
-                  Try Chatbot Demo
+                  Schedule Demo
                 </FuturisticButton>
               </div>
             </div>
@@ -390,4 +387,4 @@ const AIChatbotEnterprisePage = () => {
   );
 };
 
-export default AIChatbotEnterprisePage;
+export default AIDataAnalyticsProPage;

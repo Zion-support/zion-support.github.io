@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  MessageSquare, 
   Users, 
+  Search, 
   Brain, 
   Shield, 
   Zap, 
@@ -14,67 +14,64 @@ import {
   Globe,
   Settings,
   Target,
-  BarChart3,
-  Bot,
-  Headphones,
-  Phone,
-  Mail,
-  Calendar,
   FileText,
-  Search,
-  Filter,
-  Tag,
-  Layers,
-  Activity,
-  Database,
-  Cpu
+  UserCheck,
+  TrendingUp,
+  BarChart3,
+  Calendar,
+  Mail,
+  Phone,
+  MapPin,
+  Briefcase,
+  GraduationCap,
+  Heart
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-const AIChatbotEnterprisePage = () => {
+const AIHRRecruitmentProPage = () => {
   const features = [
     {
-      title: "Advanced NLP Processing",
-      description: "Understand complex queries with 98% accuracy using state-of-the-art NLP",
+      title: "AI-Powered Candidate Matching",
+      description: "Match candidates to roles using advanced machine learning algorithms",
       icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-channel Deployment",
-      description: "Deploy across web, mobile, social media, and messaging platforms",
-      icon: <Globe className="w-8 h-8" />,
+      title: "Automated Resume Screening",
+      description: "Screen thousands of resumes in minutes with AI analysis",
+      icon: <FileText className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Custom AI Training",
-      description: "Train chatbots on your specific domain knowledge and terminology",
-      icon: <Settings className="w-8 h-8" />,
+      title: "Interview Scheduling",
+      description: "Intelligent scheduling that considers all stakeholders' availability",
+      icon: <Calendar className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Human Handoff",
-      description: "Seamlessly transfer complex queries to human agents when needed",
+      title: "Talent Pipeline Management",
+      description: "Build and maintain a robust pipeline of qualified candidates",
       icon: <Users className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const capabilities = [
-    "Advanced NLP Processing",
-    "Multi-channel Deployment",
-    "Custom AI Training",
-    "Human Handoff",
-    "Intent Recognition",
-    "Context Management",
-    "Sentiment Analysis",
-    "Multi-language Support",
-    "API Integration",
-    "Analytics Dashboard",
-    "A/B Testing",
-    "Custom Workflows"
+    "AI Candidate Matching",
+    "Automated Resume Screening",
+    "Interview Scheduling & Coordination",
+    "Talent Pipeline Management",
+    "Skills Assessment Tools",
+    "Background Check Integration",
+    "Diversity & Inclusion Analytics",
+    "Recruitment Analytics Dashboard",
+    "Custom Job Posting Templates",
+    "Applicant Tracking System",
+    "Video Interview Platform",
+    "Reference Check Automation"
   ];
 
   const pricingTiers = [
@@ -82,11 +79,11 @@ const AIChatbotEnterprisePage = () => {
       name: "Starter",
       price: "$199",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small teams",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic NLP processing",
-        "Standard channels",
+        "Up to 50 job postings",
+        "Basic AI matching",
+        "Standard templates",
         "Email support",
         "Basic analytics"
       ],
@@ -94,31 +91,31 @@ const AIChatbotEnterprisePage = () => {
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$399",
       period: "/month",
       description: "Ideal for growing companies",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced NLP processing",
-        "All channels",
+        "Unlimited job postings",
+        "Advanced AI matching",
+        "Custom templates",
         "Priority support",
-        "Custom integrations",
-        "Advanced analytics"
+        "Advanced analytics",
+        "Video interviews"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$799",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited conversations",
+        "White-label solution",
         "Custom AI models",
         "24/7 dedicated support",
-        "White-label solution",
-        "On-premise deployment",
-        "Custom development"
+        "Advanced integrations",
+        "Custom reporting",
+        "On-premise deployment"
       ],
       popular: false
     }
@@ -127,23 +124,23 @@ const AIChatbotEnterprisePage = () => {
   const testimonials = [
     {
       name: "Jennifer Martinez",
-      company: "Customer Service",
-      role: "VP of Operations",
-      content: "AI Chatbot Enterprise has reduced our response time by 80% and customer satisfaction by 35%. The human handoff feature is seamless.",
+      company: "TechCorp Solutions",
+      role: "HR Director",
+      content: "AI HR Recruitment Pro has revolutionized our hiring process. We've reduced time-to-hire by 60% and improved candidate quality significantly.",
       rating: 5
     },
     {
       name: "David Kim",
-      company: "E-commerce Platform",
-      role: "Customer Experience Director",
-      content: "The multi-channel deployment is perfect for our business. We can now provide consistent support across all our touchpoints.",
+      company: "StartupXYZ",
+      role: "Founder",
+      content: "The AI matching is incredibly accurate. We're finding better candidates faster than ever before.",
       rating: 5
     },
     {
       name: "Lisa Thompson",
-      company: "Financial Services",
-      role: "Customer Support Manager",
-      content: "The custom AI training feature allows us to handle complex financial queries accurately. Our customers love the instant responses.",
+      company: "Global Enterprises",
+      role: "Talent Acquisition Manager",
+      content: "The analytics dashboard gives us insights we never had before. Highly recommended for any HR team.",
       rating: 5
     }
   ];
@@ -151,10 +148,10 @@ const AIChatbotEnterprisePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="AI Chatbot Enterprise - Advanced Conversational AI Platform | Zion Tech Group"
-        description="Transform customer service with AI-powered chatbots. Advanced NLP, multi-channel deployment, and custom training for enterprise-grade conversational AI."
-        keywords="AI chatbot, conversational AI, customer service automation, NLP chatbot, enterprise chatbot, chatbot platform"
-        canonical="https://ziontechgroup.com/ai-chatbot-enterprise"
+        title="AI HR & Recruitment Pro - Smart Hiring Platform | Zion Tech Group"
+        description="Transform your hiring process with AI-powered recruitment tools. Automated screening, intelligent matching, and advanced analytics for better talent acquisition."
+        keywords="AI recruitment, HR automation, talent acquisition, candidate matching, resume screening, hiring platform"
+        canonical="https://ziontechgroup.com/ai-hr-recruitment-pro"
       />
 
       <main className="relative z-10">
@@ -162,19 +159,19 @@ const AIChatbotEnterprisePage = () => {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <ResponsiveContainer className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <MessageSquare className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI Conversational Intelligence</span>
+              <Users className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered HR</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                AI Chatbot Enterprise
+                AI HR & Recruitment Pro
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform customer service with AI-powered chatbots. Advanced NLP, 
-              multi-channel deployment, and custom training for enterprise-grade conversational AI.
+              Transform your hiring process with AI-powered recruitment tools. 
+              Find the right talent faster with intelligent matching and automated screening.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -190,9 +187,9 @@ const AIChatbotEnterprisePage = () => {
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<MessageSquare className="w-5 h-5" />}
+                icon={<Users className="w-5 h-5" />}
               >
-                Try Chatbot Demo
+                Watch Demo
               </FuturisticButton>
             </div>
           </ResponsiveContainer>
@@ -203,10 +200,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Chatbot Features
+                Smart Recruitment Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need for intelligent customer conversations
+                Everything you need to find and hire the best talent
               </p>
             </div>
             
@@ -236,10 +233,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Chatbot Tools
+                Comprehensive HR Tools
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Complete conversational AI platform for modern businesses
+                Complete recruitment and HR management solution
               </p>
             </div>
             
@@ -265,7 +262,7 @@ const AIChatbotEnterprisePage = () => {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing for chatbot solutions of all sizes
+                Flexible pricing for teams of all sizes
               </p>
             </div>
             
@@ -324,10 +321,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                What Customer Service Teams Say
+                What HR Professionals Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of businesses using AI Chatbot Enterprise
+                Join thousands of HR teams using AI HR & Recruitment Pro
               </p>
             </div>
             
@@ -358,10 +355,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Transform Customer Service?
+                Ready to Transform Your Hiring?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Start your free trial today and discover the power of AI chatbots.
+                Start your free trial today and discover how AI can revolutionize your recruitment process.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -377,9 +374,9 @@ const AIChatbotEnterprisePage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<MessageSquare className="w-5 h-5" />}
+                  icon={<Users className="w-5 h-5" />}
                 >
-                  Try Chatbot Demo
+                  Schedule Demo
                 </FuturisticButton>
               </div>
             </div>
@@ -390,4 +387,4 @@ const AIChatbotEnterprisePage = () => {
   );
 };
 
-export default AIChatbotEnterprisePage;
+export default AIHRRecruitmentProPage;

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  MessageSquare, 
-  Users, 
+  Mic, 
   Brain, 
   Shield, 
   Zap, 
@@ -15,108 +14,109 @@ import {
   Settings,
   Target,
   BarChart3,
-  Bot,
+  Volume2,
   Headphones,
-  Phone,
-  Mail,
+  Smartphone,
+  Monitor,
+  Users,
+  MessageSquare,
   Calendar,
   FileText,
   Search,
-  Filter,
-  Tag,
-  Layers,
-  Activity,
-  Database,
-  Cpu
+  Play,
+  Pause,
+  SkipForward,
+  Repeat,
+  Shuffle
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-const AIChatbotEnterprisePage = () => {
+const AIVoiceAssistantProPage = () => {
   const features = [
     {
-      title: "Advanced NLP Processing",
-      description: "Understand complex queries with 98% accuracy using state-of-the-art NLP",
-      icon: <Brain className="w-8 h-8" />,
+      title: "Natural Language Processing",
+      description: "Understand and respond to natural human speech with advanced NLP",
+      icon: <MessageSquare className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-channel Deployment",
-      description: "Deploy across web, mobile, social media, and messaging platforms",
-      icon: <Globe className="w-8 h-8" />,
+      title: "Multi-Platform Integration",
+      description: "Works seamlessly across all your devices and platforms",
+      icon: <Smartphone className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Custom AI Training",
-      description: "Train chatbots on your specific domain knowledge and terminology",
-      icon: <Settings className="w-8 h-8" />,
+      title: "Custom Voice Training",
+      description: "Train the assistant to recognize your unique voice and preferences",
+      icon: <Mic className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Human Handoff",
-      description: "Seamlessly transfer complex queries to human agents when needed",
-      icon: <Users className="w-8 h-8" />,
+      title: "Task Automation",
+      description: "Automate complex workflows with voice commands",
+      icon: <Zap className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const capabilities = [
-    "Advanced NLP Processing",
-    "Multi-channel Deployment",
-    "Custom AI Training",
-    "Human Handoff",
-    "Intent Recognition",
-    "Context Management",
-    "Sentiment Analysis",
+    "Natural Language Understanding",
     "Multi-language Support",
-    "API Integration",
-    "Analytics Dashboard",
-    "A/B Testing",
-    "Custom Workflows"
+    "Custom Voice Training",
+    "Task Automation",
+    "Calendar Management",
+    "Email & Messaging",
+    "Smart Home Control",
+    "Business Intelligence Queries",
+    "Document Processing",
+    "Meeting Scheduling",
+    "Reminder & Alerts",
+    "API Integration"
   ];
 
   const pricingTiers = [
     {
-      name: "Starter",
-      price: "$199",
+      name: "Personal",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for individuals",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic NLP processing",
-        "Standard channels",
-        "Email support",
-        "Basic analytics"
+        "Basic voice commands",
+        "Calendar integration",
+        "Email management",
+        "Standard support",
+        "Mobile app"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$79",
       period: "/month",
-      description: "Ideal for growing companies",
+      description: "Ideal for professionals",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced NLP processing",
-        "All channels",
+        "Advanced NLP",
+        "Custom voice training",
+        "Task automation",
         "Priority support",
-        "Custom integrations",
-        "Advanced analytics"
+        "Multi-device sync",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$199",
       period: "/month",
-      description: "For large organizations",
+      description: "For organizations",
       features: [
-        "Unlimited conversations",
         "Custom AI models",
-        "24/7 dedicated support",
         "White-label solution",
+        "24/7 dedicated support",
+        "Advanced integrations",
         "On-premise deployment",
         "Custom development"
       ],
@@ -126,24 +126,24 @@ const AIChatbotEnterprisePage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "Customer Service",
-      role: "VP of Operations",
-      content: "AI Chatbot Enterprise has reduced our response time by 80% and customer satisfaction by 35%. The human handoff feature is seamless.",
+      name: "Jennifer Lee",
+      company: "Tech Startup",
+      role: "CEO",
+      content: "AI Voice Assistant Pro has transformed how I manage my daily tasks. The natural language understanding is incredible and saves me hours every day.",
       rating: 5
     },
     {
-      name: "David Kim",
-      company: "E-commerce Platform",
-      role: "Customer Experience Director",
-      content: "The multi-channel deployment is perfect for our business. We can now provide consistent support across all our touchpoints.",
+      name: "Mark Thompson",
+      company: "Consulting Firm",
+      role: "Managing Partner",
+      content: "The voice training feature is amazing. It understands my accent perfectly and responds accurately to complex commands.",
       rating: 5
     },
     {
-      name: "Lisa Thompson",
-      company: "Financial Services",
-      role: "Customer Support Manager",
-      content: "The custom AI training feature allows us to handle complex financial queries accurately. Our customers love the instant responses.",
+      name: "Sarah Johnson",
+      company: "Marketing Agency",
+      role: "Director",
+      content: "The task automation capabilities are game-changing. I can now manage my entire schedule and communications hands-free.",
       rating: 5
     }
   ];
@@ -151,10 +151,10 @@ const AIChatbotEnterprisePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="AI Chatbot Enterprise - Advanced Conversational AI Platform | Zion Tech Group"
-        description="Transform customer service with AI-powered chatbots. Advanced NLP, multi-channel deployment, and custom training for enterprise-grade conversational AI."
-        keywords="AI chatbot, conversational AI, customer service automation, NLP chatbot, enterprise chatbot, chatbot platform"
-        canonical="https://ziontechgroup.com/ai-chatbot-enterprise"
+        title="AI Voice Assistant Pro - Intelligent Voice AI Platform | Zion Tech Group"
+        description="Transform your productivity with AI-powered voice assistant. Natural language processing, task automation, and multi-platform integration for seamless voice control."
+        keywords="AI voice assistant, voice AI, natural language processing, voice automation, smart assistant, voice control"
+        canonical="https://ziontechgroup.com/ai-voice-assistant-pro"
       />
 
       <main className="relative z-10">
@@ -162,19 +162,19 @@ const AIChatbotEnterprisePage = () => {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <ResponsiveContainer className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <MessageSquare className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI Conversational Intelligence</span>
+              <Mic className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI Voice Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                AI Chatbot Enterprise
+                AI Voice Assistant Pro
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform customer service with AI-powered chatbots. Advanced NLP, 
-              multi-channel deployment, and custom training for enterprise-grade conversational AI.
+              Transform your productivity with AI-powered voice assistant. Natural language processing, 
+              task automation, and multi-platform integration for seamless voice control.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -190,9 +190,9 @@ const AIChatbotEnterprisePage = () => {
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<MessageSquare className="w-5 h-5" />}
+                icon={<Mic className="w-5 h-5" />}
               >
-                Try Chatbot Demo
+                Try Voice Demo
               </FuturisticButton>
             </div>
           </ResponsiveContainer>
@@ -203,10 +203,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Chatbot Features
+                Advanced Voice Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need for intelligent customer conversations
+                Everything you need for intelligent voice interaction
               </p>
             </div>
             
@@ -236,10 +236,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Chatbot Tools
+                Comprehensive Voice Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Complete conversational AI platform for modern businesses
+                Complete voice AI platform for modern productivity
               </p>
             </div>
             
@@ -265,7 +265,7 @@ const AIChatbotEnterprisePage = () => {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing for chatbot solutions of all sizes
+                Flexible pricing for users of all types
               </p>
             </div>
             
@@ -324,10 +324,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                What Customer Service Teams Say
+                What Users Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of businesses using AI Chatbot Enterprise
+                Join thousands of users using AI Voice Assistant Pro
               </p>
             </div>
             
@@ -358,10 +358,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Transform Customer Service?
+                Ready to Transform Your Productivity?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Start your free trial today and discover the power of AI chatbots.
+                Start your free trial today and discover the power of AI voice assistance.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -377,9 +377,9 @@ const AIChatbotEnterprisePage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<MessageSquare className="w-5 h-5" />}
+                  icon={<Mic className="w-5 h-5" />}
                 >
-                  Try Chatbot Demo
+                  Try Voice Demo
                 </FuturisticButton>
               </div>
             </div>
@@ -390,4 +390,4 @@ const AIChatbotEnterprisePage = () => {
   );
 };
 
-export default AIChatbotEnterprisePage;
+export default AIVoiceAssistantProPage;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  MessageSquare, 
-  Users, 
+  Camera, 
+  Eye, 
   Brain, 
   Shield, 
   Zap, 
@@ -15,66 +15,65 @@ import {
   Settings,
   Target,
   BarChart3,
-  Bot,
-  Headphones,
-  Phone,
-  Mail,
-  Calendar,
-  FileText,
+  Image,
+  Scan,
   Search,
   Filter,
+  Crop,
+  RotateCcw,
+  Download,
+  Upload,
+  Share2,
   Tag,
   Layers,
-  Activity,
-  Database,
-  Cpu
+  Palette
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-const AIChatbotEnterprisePage = () => {
+const AIImageRecognitionProPage = () => {
   const features = [
     {
-      title: "Advanced NLP Processing",
-      description: "Understand complex queries with 98% accuracy using state-of-the-art NLP",
-      icon: <Brain className="w-8 h-8" />,
+      title: "Advanced Object Detection",
+      description: "Identify and classify objects with 99.9% accuracy using deep learning",
+      icon: <Eye className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-channel Deployment",
-      description: "Deploy across web, mobile, social media, and messaging platforms",
-      icon: <Globe className="w-8 h-8" />,
+      title: "Facial Recognition",
+      description: "Recognize faces and emotions with state-of-the-art AI technology",
+      icon: <Camera className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Custom AI Training",
-      description: "Train chatbots on your specific domain knowledge and terminology",
-      icon: <Settings className="w-8 h-8" />,
+      title: "Text Extraction",
+      description: "Extract text from images with OCR and natural language processing",
+      icon: <Scan className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Human Handoff",
-      description: "Seamlessly transfer complex queries to human agents when needed",
-      icon: <Users className="w-8 h-8" />,
+      title: "Scene Analysis",
+      description: "Understand complex scenes and provide detailed descriptions",
+      icon: <Layers className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const capabilities = [
-    "Advanced NLP Processing",
-    "Multi-channel Deployment",
-    "Custom AI Training",
-    "Human Handoff",
-    "Intent Recognition",
-    "Context Management",
-    "Sentiment Analysis",
-    "Multi-language Support",
-    "API Integration",
-    "Analytics Dashboard",
-    "A/B Testing",
-    "Custom Workflows"
+    "Object Detection & Classification",
+    "Facial Recognition & Analysis",
+    "OCR Text Extraction",
+    "Scene Understanding",
+    "Image Quality Assessment",
+    "Content Moderation",
+    "Brand Recognition",
+    "Medical Image Analysis",
+    "Security & Surveillance",
+    "Retail Analytics",
+    "Automotive Vision",
+    "Custom Model Training"
   ];
 
   const pricingTiers = [
@@ -82,13 +81,13 @@ const AIChatbotEnterprisePage = () => {
       name: "Starter",
       price: "$199",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small projects",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic NLP processing",
-        "Standard channels",
+        "1,000 API calls/month",
+        "Basic object detection",
+        "Standard accuracy",
         "Email support",
-        "Basic analytics"
+        "Basic integrations"
       ],
       popular: false
     },
@@ -96,14 +95,14 @@ const AIChatbotEnterprisePage = () => {
       name: "Professional",
       price: "$499",
       period: "/month",
-      description: "Ideal for growing companies",
+      description: "Ideal for businesses",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced NLP processing",
-        "All channels",
+        "10,000 API calls/month",
+        "Advanced recognition",
+        "High accuracy models",
         "Priority support",
         "Custom integrations",
-        "Advanced analytics"
+        "Batch processing"
       ],
       popular: true
     },
@@ -113,7 +112,7 @@ const AIChatbotEnterprisePage = () => {
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited conversations",
+        "Unlimited API calls",
         "Custom AI models",
         "24/7 dedicated support",
         "White-label solution",
@@ -126,24 +125,24 @@ const AIChatbotEnterprisePage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "Customer Service",
-      role: "VP of Operations",
-      content: "AI Chatbot Enterprise has reduced our response time by 80% and customer satisfaction by 35%. The human handoff feature is seamless.",
+      name: "Dr. Sarah Williams",
+      company: "Medical Imaging Center",
+      role: "Radiologist",
+      content: "AI Image Recognition Pro has revolutionized our diagnostic capabilities. The medical image analysis is incredibly accurate and helps us detect issues earlier.",
       rating: 5
     },
     {
-      name: "David Kim",
-      company: "E-commerce Platform",
-      role: "Customer Experience Director",
-      content: "The multi-channel deployment is perfect for our business. We can now provide consistent support across all our touchpoints.",
+      name: "James Chen",
+      company: "Retail Analytics",
+      role: "CTO",
+      content: "The object detection and brand recognition features have transformed our retail analytics. We can now track products and customer behavior in real-time.",
       rating: 5
     },
     {
-      name: "Lisa Thompson",
-      company: "Financial Services",
-      role: "Customer Support Manager",
-      content: "The custom AI training feature allows us to handle complex financial queries accurately. Our customers love the instant responses.",
+      name: "Maria Rodriguez",
+      company: "Security Solutions",
+      role: "Security Director",
+      content: "The facial recognition and surveillance capabilities are outstanding. Our security team can now identify threats and respond faster than ever.",
       rating: 5
     }
   ];
@@ -151,10 +150,10 @@ const AIChatbotEnterprisePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="AI Chatbot Enterprise - Advanced Conversational AI Platform | Zion Tech Group"
-        description="Transform customer service with AI-powered chatbots. Advanced NLP, multi-channel deployment, and custom training for enterprise-grade conversational AI."
-        keywords="AI chatbot, conversational AI, customer service automation, NLP chatbot, enterprise chatbot, chatbot platform"
-        canonical="https://ziontechgroup.com/ai-chatbot-enterprise"
+        title="AI Image Recognition Pro - Advanced Computer Vision Platform | Zion Tech Group"
+        description="Transform your visual data with AI-powered image recognition. Object detection, facial recognition, OCR, and scene analysis with state-of-the-art accuracy."
+        keywords="AI image recognition, computer vision, object detection, facial recognition, OCR, image analysis, visual AI"
+        canonical="https://ziontechgroup.com/ai-image-recognition-pro"
       />
 
       <main className="relative z-10">
@@ -162,19 +161,19 @@ const AIChatbotEnterprisePage = () => {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <ResponsiveContainer className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <MessageSquare className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI Conversational Intelligence</span>
+              <Camera className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI Computer Vision</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                AI Chatbot Enterprise
+                AI Image Recognition Pro
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform customer service with AI-powered chatbots. Advanced NLP, 
-              multi-channel deployment, and custom training for enterprise-grade conversational AI.
+              Transform your visual data with AI-powered image recognition. Object detection, facial recognition, 
+              OCR, and scene analysis with state-of-the-art accuracy.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -190,9 +189,9 @@ const AIChatbotEnterprisePage = () => {
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<MessageSquare className="w-5 h-5" />}
+                icon={<Camera className="w-5 h-5" />}
               >
-                Try Chatbot Demo
+                Try Image Demo
               </FuturisticButton>
             </div>
           </ResponsiveContainer>
@@ -203,10 +202,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Chatbot Features
+                Advanced Vision Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need for intelligent customer conversations
+                Everything you need for intelligent image analysis
               </p>
             </div>
             
@@ -236,10 +235,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Chatbot Tools
+                Comprehensive Vision Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Complete conversational AI platform for modern businesses
+                Complete computer vision platform for modern applications
               </p>
             </div>
             
@@ -265,7 +264,7 @@ const AIChatbotEnterprisePage = () => {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing for chatbot solutions of all sizes
+                Flexible pricing for vision applications of all sizes
               </p>
             </div>
             
@@ -324,10 +323,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                What Customer Service Teams Say
+                What Vision Professionals Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of businesses using AI Chatbot Enterprise
+                Join thousands of developers using AI Image Recognition Pro
               </p>
             </div>
             
@@ -358,10 +357,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Transform Customer Service?
+                Ready to Transform Your Visual Data?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Start your free trial today and discover the power of AI chatbots.
+                Start your free trial today and discover the power of AI image recognition.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -377,9 +376,9 @@ const AIChatbotEnterprisePage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<MessageSquare className="w-5 h-5" />}
+                  icon={<Camera className="w-5 h-5" />}
                 >
-                  Try Chatbot Demo
+                  Try Image Demo
                 </FuturisticButton>
               </div>
             </div>
@@ -390,4 +389,4 @@ const AIChatbotEnterprisePage = () => {
   );
 };
 
-export default AIChatbotEnterprisePage;
+export default AIImageRecognitionProPage;

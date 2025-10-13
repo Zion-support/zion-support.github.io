@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  MessageSquare, 
-  Users, 
-  Brain, 
   Shield, 
+  AlertTriangle, 
+  Brain, 
   Zap, 
   ArrowRight, 
   CheckCircle, 
@@ -15,105 +14,105 @@ import {
   Settings,
   Target,
   BarChart3,
-  Bot,
-  Headphones,
-  Phone,
-  Mail,
-  Calendar,
-  FileText,
-  Search,
-  Filter,
-  Tag,
-  Layers,
+  Eye,
+  Lock,
+  CreditCard,
+  Banknote,
+  TrendingDown,
   Activity,
   Database,
-  Cpu
+  Cpu,
+  AlertCircle,
+  CheckCircle2,
+  FileText,
+  Users,
+  Calendar
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-const AIChatbotEnterprisePage = () => {
+const AIFraudDetectionProPage = () => {
   const features = [
     {
-      title: "Advanced NLP Processing",
-      description: "Understand complex queries with 98% accuracy using state-of-the-art NLP",
-      icon: <Brain className="w-8 h-8" />,
+      title: "Real-time Fraud Detection",
+      description: "Detect fraudulent transactions in real-time with 99.9% accuracy",
+      icon: <Shield className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-channel Deployment",
-      description: "Deploy across web, mobile, social media, and messaging platforms",
-      icon: <Globe className="w-8 h-8" />,
+      title: "Machine Learning Models",
+      description: "Advanced ML models that learn and adapt to new fraud patterns",
+      icon: <Brain className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Custom AI Training",
-      description: "Train chatbots on your specific domain knowledge and terminology",
-      icon: <Settings className="w-8 h-8" />,
+      title: "Multi-channel Monitoring",
+      description: "Monitor fraud across all channels and touchpoints",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Human Handoff",
-      description: "Seamlessly transfer complex queries to human agents when needed",
-      icon: <Users className="w-8 h-8" />,
+      title: "Risk Scoring",
+      description: "Generate risk scores for every transaction and user",
+      icon: <Target className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const capabilities = [
-    "Advanced NLP Processing",
-    "Multi-channel Deployment",
-    "Custom AI Training",
-    "Human Handoff",
-    "Intent Recognition",
-    "Context Management",
-    "Sentiment Analysis",
-    "Multi-language Support",
-    "API Integration",
-    "Analytics Dashboard",
-    "A/B Testing",
-    "Custom Workflows"
+    "Real-time Fraud Detection",
+    "Machine Learning Models",
+    "Multi-channel Monitoring",
+    "Risk Scoring",
+    "Behavioral Analysis",
+    "Device Fingerprinting",
+    "IP Geolocation",
+    "Transaction Monitoring",
+    "Account Takeover Detection",
+    "Payment Fraud Prevention",
+    "Identity Verification",
+    "Custom Rule Engine"
   ];
 
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$299",
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic NLP processing",
-        "Standard channels",
+        "Up to 10,000 transactions/month",
+        "Basic fraud detection",
+        "Standard accuracy",
         "Email support",
-        "Basic analytics"
+        "Basic reporting"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$799",
       period: "/month",
       description: "Ideal for growing companies",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced NLP processing",
-        "All channels",
+        "Up to 100,000 transactions/month",
+        "Advanced ML models",
+        "Real-time monitoring",
         "Priority support",
         "Custom integrations",
-        "Advanced analytics"
+        "Risk scoring"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$1,999",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited conversations",
+        "Unlimited transactions",
         "Custom AI models",
         "24/7 dedicated support",
         "White-label solution",
@@ -126,24 +125,24 @@ const AIChatbotEnterprisePage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "Customer Service",
-      role: "VP of Operations",
-      content: "AI Chatbot Enterprise has reduced our response time by 80% and customer satisfaction by 35%. The human handoff feature is seamless.",
-      rating: 5
-    },
-    {
-      name: "David Kim",
-      company: "E-commerce Platform",
-      role: "Customer Experience Director",
-      content: "The multi-channel deployment is perfect for our business. We can now provide consistent support across all our touchpoints.",
-      rating: 5
-    },
-    {
-      name: "Lisa Thompson",
+      name: "Robert Johnson",
       company: "Financial Services",
-      role: "Customer Support Manager",
-      content: "The custom AI training feature allows us to handle complex financial queries accurately. Our customers love the instant responses.",
+      role: "Security Director",
+      content: "AI Fraud Detection Pro has reduced our fraud losses by 85% and false positives by 60%. The real-time detection is incredibly accurate.",
+      rating: 5
+    },
+    {
+      name: "Maria Garcia",
+      company: "E-commerce Platform",
+      role: "Risk Manager",
+      content: "The machine learning models adapt quickly to new fraud patterns. We've seen a significant improvement in our fraud prevention capabilities.",
+      rating: 5
+    },
+    {
+      name: "James Wilson",
+      company: "Payment Processor",
+      role: "CTO",
+      content: "The multi-channel monitoring and risk scoring features are outstanding. We can now prevent fraud across all our payment channels effectively.",
       rating: 5
     }
   ];
@@ -151,10 +150,10 @@ const AIChatbotEnterprisePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="AI Chatbot Enterprise - Advanced Conversational AI Platform | Zion Tech Group"
-        description="Transform customer service with AI-powered chatbots. Advanced NLP, multi-channel deployment, and custom training for enterprise-grade conversational AI."
-        keywords="AI chatbot, conversational AI, customer service automation, NLP chatbot, enterprise chatbot, chatbot platform"
-        canonical="https://ziontechgroup.com/ai-chatbot-enterprise"
+        title="AI Fraud Detection Pro - Advanced Security Platform | Zion Tech Group"
+        description="Protect your business with AI-powered fraud detection. Real-time monitoring, machine learning models, and risk scoring for comprehensive fraud prevention."
+        keywords="AI fraud detection, fraud prevention, risk scoring, machine learning security, payment fraud, identity verification"
+        canonical="https://ziontechgroup.com/ai-fraud-detection-pro"
       />
 
       <main className="relative z-10">
@@ -162,19 +161,19 @@ const AIChatbotEnterprisePage = () => {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <ResponsiveContainer className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <MessageSquare className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI Conversational Intelligence</span>
+              <Shield className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI Security Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                AI Chatbot Enterprise
+                AI Fraud Detection Pro
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform customer service with AI-powered chatbots. Advanced NLP, 
-              multi-channel deployment, and custom training for enterprise-grade conversational AI.
+              Protect your business with AI-powered fraud detection. Real-time monitoring, 
+              machine learning models, and risk scoring for comprehensive fraud prevention.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -190,9 +189,9 @@ const AIChatbotEnterprisePage = () => {
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<MessageSquare className="w-5 h-5" />}
+                icon={<Shield className="w-5 h-5" />}
               >
-                Try Chatbot Demo
+                Watch Security Demo
               </FuturisticButton>
             </div>
           </ResponsiveContainer>
@@ -203,10 +202,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Chatbot Features
+                Advanced Security Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need for intelligent customer conversations
+                Everything you need for comprehensive fraud prevention
               </p>
             </div>
             
@@ -236,10 +235,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Chatbot Tools
+                Comprehensive Security Tools
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Complete conversational AI platform for modern businesses
+                Complete fraud detection platform for modern businesses
               </p>
             </div>
             
@@ -265,7 +264,7 @@ const AIChatbotEnterprisePage = () => {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing for chatbot solutions of all sizes
+                Flexible pricing for fraud detection of all scales
               </p>
             </div>
             
@@ -324,10 +323,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                What Customer Service Teams Say
+                What Security Professionals Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of businesses using AI Chatbot Enterprise
+                Join thousands of businesses using AI Fraud Detection Pro
               </p>
             </div>
             
@@ -358,10 +357,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Transform Customer Service?
+                Ready to Protect Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Start your free trial today and discover the power of AI chatbots.
+                Start your free trial today and discover the power of AI fraud detection.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -377,9 +376,9 @@ const AIChatbotEnterprisePage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<MessageSquare className="w-5 h-5" />}
+                  icon={<Shield className="w-5 h-5" />}
                 >
-                  Try Chatbot Demo
+                  Watch Security Demo
                 </FuturisticButton>
               </div>
             </div>
@@ -390,4 +389,4 @@ const AIChatbotEnterprisePage = () => {
   );
 };
 
-export default AIChatbotEnterprisePage;
+export default AIFraudDetectionProPage;

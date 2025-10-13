@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  MessageSquare, 
-  Users, 
+  Heart, 
+  TrendingUp, 
   Brain, 
   Shield, 
   Zap, 
@@ -15,16 +15,15 @@ import {
   Settings,
   Target,
   BarChart3,
-  Bot,
-  Headphones,
-  Phone,
-  Mail,
-  Calendar,
-  FileText,
-  Search,
-  Filter,
-  Tag,
-  Layers,
+  MessageSquare,
+  Users,
+  ThumbsUp,
+  ThumbsDown,
+  Smile,
+  Frown,
+  Meh,
+  AlertCircle,
+  TrendingDown,
   Activity,
   Database,
   Cpu
@@ -34,86 +33,86 @@ import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-const AIChatbotEnterprisePage = () => {
+const AISentimentAnalysisProPage = () => {
   const features = [
     {
-      title: "Advanced NLP Processing",
-      description: "Understand complex queries with 98% accuracy using state-of-the-art NLP",
-      icon: <Brain className="w-8 h-8" />,
+      title: "Real-time Sentiment Analysis",
+      description: "Analyze sentiment across multiple channels in real-time with 95% accuracy",
+      icon: <Heart className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-channel Deployment",
-      description: "Deploy across web, mobile, social media, and messaging platforms",
+      title: "Multi-language Support",
+      description: "Understand sentiment in 50+ languages with advanced NLP",
       icon: <Globe className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Custom AI Training",
-      description: "Train chatbots on your specific domain knowledge and terminology",
-      icon: <Settings className="w-8 h-8" />,
+      title: "Emotion Detection",
+      description: "Detect specific emotions like joy, anger, fear, and surprise",
+      icon: <Smile className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Human Handoff",
-      description: "Seamlessly transfer complex queries to human agents when needed",
-      icon: <Users className="w-8 h-8" />,
+      title: "Trend Analysis",
+      description: "Track sentiment trends over time with advanced analytics",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const capabilities = [
-    "Advanced NLP Processing",
-    "Multi-channel Deployment",
-    "Custom AI Training",
-    "Human Handoff",
-    "Intent Recognition",
-    "Context Management",
-    "Sentiment Analysis",
+    "Real-time Sentiment Analysis",
     "Multi-language Support",
+    "Emotion Detection",
+    "Trend Analysis",
+    "Social Media Monitoring",
+    "Customer Feedback Analysis",
+    "Brand Reputation Tracking",
+    "Competitor Analysis",
+    "Crisis Detection",
+    "Custom Model Training",
     "API Integration",
-    "Analytics Dashboard",
-    "A/B Testing",
-    "Custom Workflows"
+    "Advanced Reporting"
   ];
 
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$99",
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic NLP processing",
-        "Standard channels",
+        "10,000 text analyses/month",
+        "Basic sentiment analysis",
+        "Standard languages",
         "Email support",
-        "Basic analytics"
+        "Basic reporting"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$299",
       period: "/month",
       description: "Ideal for growing companies",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced NLP processing",
-        "All channels",
+        "100,000 text analyses/month",
+        "Advanced sentiment analysis",
+        "50+ languages",
         "Priority support",
         "Custom integrations",
-        "Advanced analytics"
+        "Real-time monitoring"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$799",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited conversations",
+        "Unlimited text analyses",
         "Custom AI models",
         "24/7 dedicated support",
         "White-label solution",
@@ -126,24 +125,24 @@ const AIChatbotEnterprisePage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "Customer Service",
-      role: "VP of Operations",
-      content: "AI Chatbot Enterprise has reduced our response time by 80% and customer satisfaction by 35%. The human handoff feature is seamless.",
+      name: "Sarah Martinez",
+      company: "Marketing Agency",
+      role: "Social Media Manager",
+      content: "AI Sentiment Analysis Pro has transformed our social media strategy. We can now understand customer sentiment in real-time and respond appropriately.",
       rating: 5
     },
     {
       name: "David Kim",
       company: "E-commerce Platform",
       role: "Customer Experience Director",
-      content: "The multi-channel deployment is perfect for our business. We can now provide consistent support across all our touchpoints.",
+      content: "The emotion detection feature is incredible. We can now identify frustrated customers before they churn and take proactive action.",
       rating: 5
     },
     {
       name: "Lisa Thompson",
-      company: "Financial Services",
-      role: "Customer Support Manager",
-      content: "The custom AI training feature allows us to handle complex financial queries accurately. Our customers love the instant responses.",
+      company: "Brand Management",
+      role: "Brand Manager",
+      content: "The trend analysis helps us stay ahead of brand reputation issues. The multi-language support is perfect for our global campaigns.",
       rating: 5
     }
   ];
@@ -151,10 +150,10 @@ const AIChatbotEnterprisePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="AI Chatbot Enterprise - Advanced Conversational AI Platform | Zion Tech Group"
-        description="Transform customer service with AI-powered chatbots. Advanced NLP, multi-channel deployment, and custom training for enterprise-grade conversational AI."
-        keywords="AI chatbot, conversational AI, customer service automation, NLP chatbot, enterprise chatbot, chatbot platform"
-        canonical="https://ziontechgroup.com/ai-chatbot-enterprise"
+        title="AI Sentiment Analysis Pro - Advanced Emotion Intelligence | Zion Tech Group"
+        description="Transform your customer insights with AI-powered sentiment analysis. Real-time emotion detection, multi-language support, and trend analysis for better decision making."
+        keywords="AI sentiment analysis, emotion detection, customer sentiment, social media monitoring, brand reputation, sentiment tracking"
+        canonical="https://ziontechgroup.com/ai-sentiment-analysis-pro"
       />
 
       <main className="relative z-10">
@@ -162,19 +161,19 @@ const AIChatbotEnterprisePage = () => {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <ResponsiveContainer className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <MessageSquare className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI Conversational Intelligence</span>
+              <Heart className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI Emotion Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                AI Chatbot Enterprise
+                AI Sentiment Analysis Pro
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform customer service with AI-powered chatbots. Advanced NLP, 
-              multi-channel deployment, and custom training for enterprise-grade conversational AI.
+              Transform your customer insights with AI-powered sentiment analysis. Real-time emotion detection, 
+              multi-language support, and trend analysis for better decision making.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -190,9 +189,9 @@ const AIChatbotEnterprisePage = () => {
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<MessageSquare className="w-5 h-5" />}
+                icon={<Heart className="w-5 h-5" />}
               >
-                Try Chatbot Demo
+                Try Sentiment Demo
               </FuturisticButton>
             </div>
           </ResponsiveContainer>
@@ -203,10 +202,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Chatbot Features
+                Advanced Sentiment Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need for intelligent customer conversations
+                Everything you need for intelligent emotion analysis
               </p>
             </div>
             
@@ -236,10 +235,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Chatbot Tools
+                Comprehensive Sentiment Tools
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Complete conversational AI platform for modern businesses
+                Complete sentiment analysis platform for modern businesses
               </p>
             </div>
             
@@ -265,7 +264,7 @@ const AIChatbotEnterprisePage = () => {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing for chatbot solutions of all sizes
+                Flexible pricing for sentiment analysis of all scales
               </p>
             </div>
             
@@ -324,10 +323,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                What Customer Service Teams Say
+                What Marketing Professionals Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of businesses using AI Chatbot Enterprise
+                Join thousands of businesses using AI Sentiment Analysis Pro
               </p>
             </div>
             
@@ -358,10 +357,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Transform Customer Service?
+                Ready to Understand Your Customers?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Start your free trial today and discover the power of AI chatbots.
+                Start your free trial today and discover the power of AI sentiment analysis.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -377,9 +376,9 @@ const AIChatbotEnterprisePage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<MessageSquare className="w-5 h-5" />}
+                  icon={<Heart className="w-5 h-5" />}
                 >
-                  Try Chatbot Demo
+                  Try Sentiment Demo
                 </FuturisticButton>
               </div>
             </div>
@@ -390,4 +389,4 @@ const AIChatbotEnterprisePage = () => {
   );
 };
 
-export default AIChatbotEnterprisePage;
+export default AISentimentAnalysisProPage;

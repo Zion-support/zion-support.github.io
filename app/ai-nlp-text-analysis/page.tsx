@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  MessageSquare, 
-  Users, 
+  FileText, 
   Brain, 
   Shield, 
   Zap, 
@@ -15,78 +14,79 @@ import {
   Settings,
   Target,
   BarChart3,
-  Bot,
-  Headphones,
-  Phone,
-  Mail,
-  Calendar,
-  FileText,
+  MessageSquare,
   Search,
   Filter,
   Tag,
   Layers,
   Activity,
   Database,
-  Cpu
+  Cpu,
+  AlertCircle,
+  CheckCircle2,
+  Users,
+  Calendar,
+  PieChart,
+  LineChart
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-const AIChatbotEnterprisePage = () => {
+const AINLPTextAnalysisPage = () => {
   const features = [
     {
-      title: "Advanced NLP Processing",
-      description: "Understand complex queries with 98% accuracy using state-of-the-art NLP",
-      icon: <Brain className="w-8 h-8" />,
+      title: "Advanced Text Processing",
+      description: "Analyze text with 99% accuracy using state-of-the-art NLP algorithms",
+      icon: <FileText className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-channel Deployment",
-      description: "Deploy across web, mobile, social media, and messaging platforms",
-      icon: <Globe className="w-8 h-8" />,
+      title: "Sentiment Analysis",
+      description: "Understand emotions and opinions in text with advanced sentiment detection",
+      icon: <Heart className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Custom AI Training",
-      description: "Train chatbots on your specific domain knowledge and terminology",
-      icon: <Settings className="w-8 h-8" />,
+      title: "Entity Recognition",
+      description: "Extract names, organizations, and locations from text automatically",
+      icon: <Target className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Human Handoff",
-      description: "Seamlessly transfer complex queries to human agents when needed",
-      icon: <Users className="w-8 h-8" />,
+      title: "Language Detection",
+      description: "Identify and process text in 100+ languages with high accuracy",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const capabilities = [
-    "Advanced NLP Processing",
-    "Multi-channel Deployment",
-    "Custom AI Training",
-    "Human Handoff",
-    "Intent Recognition",
-    "Context Management",
+    "Advanced Text Processing",
     "Sentiment Analysis",
-    "Multi-language Support",
-    "API Integration",
-    "Analytics Dashboard",
-    "A/B Testing",
-    "Custom Workflows"
+    "Entity Recognition",
+    "Language Detection",
+    "Topic Modeling",
+    "Text Classification",
+    "Keyword Extraction",
+    "Text Summarization",
+    "Named Entity Recognition",
+    "Part-of-Speech Tagging",
+    "Custom Model Training",
+    "API Integration"
   ];
 
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$99",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small projects",
       features: [
-        "Up to 1,000 conversations/month",
+        "Up to 50,000 text analyses/month",
         "Basic NLP processing",
-        "Standard channels",
+        "Standard accuracy",
         "Email support",
         "Basic analytics"
       ],
@@ -94,13 +94,13 @@ const AIChatbotEnterprisePage = () => {
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$299",
       period: "/month",
-      description: "Ideal for growing companies",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced NLP processing",
-        "All channels",
+        "Up to 500,000 text analyses/month",
+        "Advanced NLP models",
+        "Real-time processing",
         "Priority support",
         "Custom integrations",
         "Advanced analytics"
@@ -109,11 +109,11 @@ const AIChatbotEnterprisePage = () => {
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$799",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited conversations",
+        "Unlimited text analyses",
         "Custom AI models",
         "24/7 dedicated support",
         "White-label solution",
@@ -126,24 +126,24 @@ const AIChatbotEnterprisePage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "Customer Service",
-      role: "VP of Operations",
-      content: "AI Chatbot Enterprise has reduced our response time by 80% and customer satisfaction by 35%. The human handoff feature is seamless.",
+      name: "Dr. Sarah Johnson",
+      company: "Research Institute",
+      role: "Data Scientist",
+      content: "AI NLP Text Analysis has revolutionized our research capabilities. The sentiment analysis and entity recognition are incredibly accurate and insightful.",
       rating: 5
     },
     {
-      name: "David Kim",
-      company: "E-commerce Platform",
-      role: "Customer Experience Director",
-      content: "The multi-channel deployment is perfect for our business. We can now provide consistent support across all our touchpoints.",
+      name: "Michael Chen",
+      company: "Content Platform",
+      role: "Content Manager",
+      content: "The text classification and topic modeling features are outstanding. We can now automatically categorize and analyze our content at scale.",
       rating: 5
     },
     {
       name: "Lisa Thompson",
-      company: "Financial Services",
-      role: "Customer Support Manager",
-      content: "The custom AI training feature allows us to handle complex financial queries accurately. Our customers love the instant responses.",
+      company: "Customer Service",
+      role: "Analytics Director",
+      content: "The real-time processing capabilities are perfect for our customer feedback analysis. We can now understand customer sentiment instantly.",
       rating: 5
     }
   ];
@@ -151,10 +151,10 @@ const AIChatbotEnterprisePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="AI Chatbot Enterprise - Advanced Conversational AI Platform | Zion Tech Group"
-        description="Transform customer service with AI-powered chatbots. Advanced NLP, multi-channel deployment, and custom training for enterprise-grade conversational AI."
-        keywords="AI chatbot, conversational AI, customer service automation, NLP chatbot, enterprise chatbot, chatbot platform"
-        canonical="https://ziontechgroup.com/ai-chatbot-enterprise"
+        title="AI NLP Text Analysis - Advanced Text Processing Platform | Zion Tech Group"
+        description="Transform your text data with AI-powered NLP analysis. Sentiment analysis, entity recognition, language detection, and advanced text processing for better insights."
+        keywords="AI NLP, text analysis, sentiment analysis, entity recognition, language detection, text processing, natural language processing"
+        canonical="https://ziontechgroup.com/ai-nlp-text-analysis"
       />
 
       <main className="relative z-10">
@@ -162,19 +162,19 @@ const AIChatbotEnterprisePage = () => {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <ResponsiveContainer className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <MessageSquare className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI Conversational Intelligence</span>
+              <FileText className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI Text Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                AI Chatbot Enterprise
+                AI NLP Text Analysis
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform customer service with AI-powered chatbots. Advanced NLP, 
-              multi-channel deployment, and custom training for enterprise-grade conversational AI.
+              Transform your text data with AI-powered NLP analysis. Sentiment analysis, entity recognition, 
+              language detection, and advanced text processing for better insights.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -190,9 +190,9 @@ const AIChatbotEnterprisePage = () => {
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<MessageSquare className="w-5 h-5" />}
+                icon={<FileText className="w-5 h-5" />}
               >
-                Try Chatbot Demo
+                Try Text Analysis Demo
               </FuturisticButton>
             </div>
           </ResponsiveContainer>
@@ -203,10 +203,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Chatbot Features
+                Advanced NLP Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need for intelligent customer conversations
+                Everything you need for intelligent text analysis
               </p>
             </div>
             
@@ -236,10 +236,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Chatbot Tools
+                Comprehensive NLP Tools
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Complete conversational AI platform for modern businesses
+                Complete text analysis platform for modern businesses
               </p>
             </div>
             
@@ -265,7 +265,7 @@ const AIChatbotEnterprisePage = () => {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing for chatbot solutions of all sizes
+                Flexible pricing for text analysis needs of all sizes
               </p>
             </div>
             
@@ -324,10 +324,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                What Customer Service Teams Say
+                What Text Analysts Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of businesses using AI Chatbot Enterprise
+                Join thousands of businesses using AI NLP Text Analysis
               </p>
             </div>
             
@@ -358,10 +358,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Transform Customer Service?
+                Ready to Analyze Your Text?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Start your free trial today and discover the power of AI chatbots.
+                Start your free trial today and discover the power of AI NLP text analysis.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -377,9 +377,9 @@ const AIChatbotEnterprisePage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<MessageSquare className="w-5 h-5" />}
+                  icon={<FileText className="w-5 h-5" />}
                 >
-                  Try Chatbot Demo
+                  Try Text Analysis Demo
                 </FuturisticButton>
               </div>
             </div>
@@ -390,4 +390,4 @@ const AIChatbotEnterprisePage = () => {
   );
 };
 
-export default AIChatbotEnterprisePage;
+export default AINLPTextAnalysisPage;

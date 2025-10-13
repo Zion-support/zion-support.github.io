@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  MessageSquare, 
-  Users, 
+  TrendingUp, 
+  Clock, 
   Brain, 
   Shield, 
   Zap, 
@@ -10,71 +10,68 @@ import {
   CheckCircle, 
   Star,
   Award,
-  Clock,
   Globe,
   Settings,
   Target,
   BarChart3,
-  Bot,
-  Headphones,
-  Phone,
-  Mail,
-  Calendar,
-  FileText,
-  Search,
-  Filter,
-  Tag,
-  Layers,
+  LineChart,
   Activity,
   Database,
-  Cpu
+  Cpu,
+  AlertCircle,
+  CheckCircle2,
+  FileText,
+  Users,
+  Calendar,
+  PieChart,
+  BarChart
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-const AIChatbotEnterprisePage = () => {
+const AITimeSeriesForecastingPage = () => {
   const features = [
     {
-      title: "Advanced NLP Processing",
-      description: "Understand complex queries with 98% accuracy using state-of-the-art NLP",
-      icon: <Brain className="w-8 h-8" />,
+      title: "Advanced Forecasting Models",
+      description: "Predict future trends with 95% accuracy using state-of-the-art ML algorithms",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-channel Deployment",
-      description: "Deploy across web, mobile, social media, and messaging platforms",
-      icon: <Globe className="w-8 h-8" />,
+      title: "Real-time Predictions",
+      description: "Generate forecasts in real-time as new data becomes available",
+      icon: <Zap className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Custom AI Training",
-      description: "Train chatbots on your specific domain knowledge and terminology",
-      icon: <Settings className="w-8 h-8" />,
+      title: "Multiple Model Support",
+      description: "Support for ARIMA, LSTM, Prophet, and custom neural networks",
+      icon: <Brain className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Human Handoff",
-      description: "Seamlessly transfer complex queries to human agents when needed",
-      icon: <Users className="w-8 h-8" />,
+      title: "Anomaly Detection",
+      description: "Identify unusual patterns and outliers in time series data",
+      icon: <AlertCircle className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const capabilities = [
-    "Advanced NLP Processing",
-    "Multi-channel Deployment",
-    "Custom AI Training",
-    "Human Handoff",
-    "Intent Recognition",
-    "Context Management",
-    "Sentiment Analysis",
-    "Multi-language Support",
+    "Advanced Forecasting Models",
+    "Real-time Predictions",
+    "Multiple Model Support",
+    "Anomaly Detection",
+    "Seasonal Decomposition",
+    "Trend Analysis",
+    "Confidence Intervals",
+    "Model Comparison",
+    "Custom Model Training",
     "API Integration",
-    "Analytics Dashboard",
-    "A/B Testing",
-    "Custom Workflows"
+    "Data Visualization",
+    "Performance Metrics"
   ];
 
   const pricingTiers = [
@@ -82,25 +79,25 @@ const AIChatbotEnterprisePage = () => {
       name: "Starter",
       price: "$199",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small datasets",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic NLP processing",
-        "Standard channels",
+        "Up to 10 time series",
+        "Basic forecasting models",
+        "Standard accuracy",
         "Email support",
-        "Basic analytics"
+        "Basic visualization"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$599",
       period: "/month",
-      description: "Ideal for growing companies",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced NLP processing",
-        "All channels",
+        "Up to 100 time series",
+        "Advanced ML models",
+        "Real-time predictions",
         "Priority support",
         "Custom integrations",
         "Advanced analytics"
@@ -109,11 +106,11 @@ const AIChatbotEnterprisePage = () => {
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$1,599",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited conversations",
+        "Unlimited time series",
         "Custom AI models",
         "24/7 dedicated support",
         "White-label solution",
@@ -126,24 +123,24 @@ const AIChatbotEnterprisePage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "Customer Service",
-      role: "VP of Operations",
-      content: "AI Chatbot Enterprise has reduced our response time by 80% and customer satisfaction by 35%. The human handoff feature is seamless.",
+      name: "Dr. Sarah Williams",
+      company: "Financial Services",
+      role: "Quantitative Analyst",
+      content: "AI Time Series Forecasting has revolutionized our trading strategies. The predictions are incredibly accurate and help us make better investment decisions.",
       rating: 5
     },
     {
-      name: "David Kim",
-      company: "E-commerce Platform",
-      role: "Customer Experience Director",
-      content: "The multi-channel deployment is perfect for our business. We can now provide consistent support across all our touchpoints.",
+      name: "Michael Chen",
+      company: "Supply Chain",
+      role: "Operations Director",
+      content: "The real-time predictions have transformed our inventory management. We can now forecast demand accurately and optimize our supply chain.",
       rating: 5
     },
     {
       name: "Lisa Thompson",
-      company: "Financial Services",
-      role: "Customer Support Manager",
-      content: "The custom AI training feature allows us to handle complex financial queries accurately. Our customers love the instant responses.",
+      company: "Energy Company",
+      role: "Analytics Manager",
+      content: "The anomaly detection feature is outstanding. We can now identify unusual patterns in our energy consumption and take proactive action.",
       rating: 5
     }
   ];
@@ -151,10 +148,10 @@ const AIChatbotEnterprisePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="AI Chatbot Enterprise - Advanced Conversational AI Platform | Zion Tech Group"
-        description="Transform customer service with AI-powered chatbots. Advanced NLP, multi-channel deployment, and custom training for enterprise-grade conversational AI."
-        keywords="AI chatbot, conversational AI, customer service automation, NLP chatbot, enterprise chatbot, chatbot platform"
-        canonical="https://ziontechgroup.com/ai-chatbot-enterprise"
+        title="AI Time Series Forecasting - Advanced Prediction Platform | Zion Tech Group"
+        description="Predict future trends with AI-powered time series forecasting. Advanced ML models, real-time predictions, and anomaly detection for better decision making."
+        keywords="AI time series forecasting, predictive analytics, trend analysis, anomaly detection, machine learning, forecasting models"
+        canonical="https://ziontechgroup.com/ai-time-series-forecasting"
       />
 
       <main className="relative z-10">
@@ -162,19 +159,19 @@ const AIChatbotEnterprisePage = () => {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <ResponsiveContainer className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <MessageSquare className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI Conversational Intelligence</span>
+              <TrendingUp className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI Prediction Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                AI Chatbot Enterprise
+                AI Time Series Forecasting
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform customer service with AI-powered chatbots. Advanced NLP, 
-              multi-channel deployment, and custom training for enterprise-grade conversational AI.
+              Predict future trends with AI-powered time series forecasting. Advanced ML models, 
+              real-time predictions, and anomaly detection for better decision making.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -190,9 +187,9 @@ const AIChatbotEnterprisePage = () => {
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<MessageSquare className="w-5 h-5" />}
+                icon={<TrendingUp className="w-5 h-5" />}
               >
-                Try Chatbot Demo
+                Try Forecasting Demo
               </FuturisticButton>
             </div>
           </ResponsiveContainer>
@@ -203,10 +200,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Chatbot Features
+                Advanced Forecasting Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need for intelligent customer conversations
+                Everything you need for intelligent time series analysis
               </p>
             </div>
             
@@ -236,10 +233,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Chatbot Tools
+                Comprehensive Forecasting Tools
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Complete conversational AI platform for modern businesses
+                Complete time series analysis platform for modern businesses
               </p>
             </div>
             
@@ -265,7 +262,7 @@ const AIChatbotEnterprisePage = () => {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing for chatbot solutions of all sizes
+                Flexible pricing for forecasting needs of all sizes
               </p>
             </div>
             
@@ -324,10 +321,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                What Customer Service Teams Say
+                What Analysts Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of businesses using AI Chatbot Enterprise
+                Join thousands of businesses using AI Time Series Forecasting
               </p>
             </div>
             
@@ -358,10 +355,10 @@ const AIChatbotEnterprisePage = () => {
           <ResponsiveContainer>
             <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Transform Customer Service?
+                Ready to Predict the Future?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Start your free trial today and discover the power of AI chatbots.
+                Start your free trial today and discover the power of AI time series forecasting.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -377,9 +374,9 @@ const AIChatbotEnterprisePage = () => {
                   href="/demo"
                   variant="outline"
                   size="lg"
-                  icon={<MessageSquare className="w-5 h-5" />}
+                  icon={<TrendingUp className="w-5 h-5" />}
                 >
-                  Try Chatbot Demo
+                  Try Forecasting Demo
                 </FuturisticButton>
               </div>
             </div>
@@ -390,4 +387,4 @@ const AIChatbotEnterprisePage = () => {
   );
 };
 
-export default AIChatbotEnterprisePage;
+export default AITimeSeriesForecastingPage;
