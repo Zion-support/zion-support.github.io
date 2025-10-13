@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import SEO from './components/SEO';import { 
+import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
   CloudIcon, 
@@ -12,35 +12,32 @@ import SEO from './components/SEO';import {
   StarIcon
 } from '@heroicons/react/24/outline';
 
-export default function HomePage()  {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Zion Tech Group - Advanced AI and IT Solutions",
-    "description": "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.",
-    "url": "https://ziontechgroup.com",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com",
-      "logo": "https://ziontechgroup.com/logo192.png",
-      "description": "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.",
-      "foundingDate": "2020",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "US"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-555-0123",
-        "contactType": "customer service",
-        "email": "info@ziontechgroup.com"
-      },
-      "sameAs": [
-        "https://linkedin.com/company/ziontechgroup",
-        "https://twitter.com/ziontechgroup",
-        "https://github.com/ziontechgroup"
-      ]    }
+const HomePage: React.FC = () => {
+  const services = [
+    {
+      icon: CpuChipIcon,
+      title: 'AI Solutions',
+      description: 'Advanced artificial intelligence and machine learning solutions to transform your business.',
+      href: '/ai-solutions'
+    },
+    {
+      icon: ShieldCheckIcon,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
+      href: '/cybersecurity'
+    },
+    {
+      icon: CloudIcon,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions and infrastructure management for modern businesses.',
+      href: '/cloud-solutions'
+    },
+    {
+      icon: RocketLaunchIcon,
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation strategies to modernize your operations.',
+      href: '/digital-transformation'
+    }
   ];
 
   const features = [
@@ -61,14 +58,22 @@ export default function HomePage()  {
 
   return (
     <>
-      <SEO 
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
-        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
-        url="/"      />
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI & IT Solutions</title>
+        <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, technology consulting, Zion Tech Group" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
+        <meta property="og:description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
+        <meta name="twitter:description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services." />
+      </Helmet>
       
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden particles">
+      <div className="min-h-screen bg-slate-900 text-white">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
@@ -245,18 +250,6 @@ export default function HomePage()  {
                 <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
                 <div className="text-gray-300">Success Rate</div>
               </div>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, technology consulting, Zion Tech Group" />
-        <meta property="og:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services." />
-      </Helmet>
       
       <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
