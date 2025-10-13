@@ -2,8 +2,17 @@ import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, FileText } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import StructuredData from "./components/StructuredData";
+<<<<<<< HEAD
 import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
 import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
+=======
+import FuturisticBackground from "./components/FuturisticBackground";
+import FuturisticCard from "./components/FuturisticCard";
+import FuturisticButton from "./components/FuturisticButton";
+import FuturisticText from "./components/FuturisticText";
+// import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
+// import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
+>>>>>>> cursor/fix-errors-and-merge-to-main-b963
 import FuturisticButtonEnhanced from "./components/FuturisticButtonEnhanced";
 import FuturisticTextEnhanced from "./components/FuturisticTextEnhanced";
 import ResponsiveContainer from "./components/ResponsiveContainer";
@@ -234,7 +243,7 @@ const HomePage = () => {
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
-        <FuturisticBackgroundEnhanced>
+        <FuturisticBackground>
           <EnhancedSEO
             title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
             description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
@@ -347,7 +356,7 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <FuturisticCardEnhanced
+              <FuturisticCard
                 key={index}
                 glowColor={index % 2 === 0 ? 'cyan' : 'purple'}
                 hoverEffect={true}
@@ -378,7 +387,7 @@ const HomePage = () => {
                     </span>
                   </div>
                 </Link>
-              </FuturisticCardEnhanced>
+              </FuturisticCard>
             ))}
           </div>
         </ResponsiveContainer>
@@ -397,7 +406,7 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {microSaasHighlights.map((saas, index) => (
-              <FuturisticCardEnhanced
+              <FuturisticCard
                 key={index}
                 glowColor={index % 3 === 0 ? 'cyan' : index % 3 === 1 ? 'purple' : 'pink'}
                 hoverEffect={true}
@@ -435,7 +444,7 @@ const HomePage = () => {
                     <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>
-              </FuturisticCardEnhanced>
+              </FuturisticCard>
             ))}
           </div>
           <div className="text-center mt-12">
@@ -546,11 +555,19 @@ const HomePage = () => {
             </FuturisticButtonEnhanced>
           </div>
         </div>
+<<<<<<< HEAD
         </section>
         </main>
         </FuturisticBackgroundEnhanced>
         </EnhancedAccessibility>
       </PerformanceOptimizer>
+=======
+      </section>
+      </main>
+      </FuturisticBackground>
+      </EnhancedAccessibility>
+    </PerformanceOptimizer>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b963
   );
 };
 
