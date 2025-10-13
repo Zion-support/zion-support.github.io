@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       navigator.serviceWorker
@@ -212,3 +213,6 @@ const ServiceWorker: React.FC = () => {
 
 export default ServiceWorker;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ed4
+=======
+export default ServiceWorker;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c

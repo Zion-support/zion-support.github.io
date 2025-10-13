@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
 const FuturisticHeroPage: React.FC = () => {,
@@ -152,3 +153,9 @@ const FuturisticHeroPage: React.FC = () => {
   )
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+
+import { ArrowRight, Brain } from 'lucide-react';
+import { ArrowRight, Mail, Brain } from 'lucide-react';
+import { ArrowRight, Mail, Brain } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -57,8 +58,13 @@ import { CheckCircle, Star, Zap, ArrowRight, Brain, Code, BarChart, Users, Globe
   ];
 
   const categories = [...new Set(microSaasTools.map(tool => tool.category))];
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -280,3 +286,28 @@ import { CheckCircle, Star, Zap, ArrowRight, Brain, Code, BarChart, Users, Globe
           </div>
         </div>
       </section>
+=======
+    <>
+      <Helmet>
+        <title>Micro SaaS Solutions - Zion Tech Group</title>
+        <meta name="description" content="Micro SaaS Solutions services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Micro SaaS Solutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Coming soon - Advanced Micro SaaS Solutions solutions by Zion Tech Group
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default MicroSaasPage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c

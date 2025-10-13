@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 
 import Link from 'next/link';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
@@ -63,6 +68,7 @@ import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
   ];
   return (
     <>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Header */}
         <header className="bg-white shadow-sm border-b">
@@ -191,6 +197,11 @@ import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
         <title>Case Studies | Zion Tech Group</title>
         <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions." />
         <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation" />
+=======
+      <Helmet>
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Case Studies services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -320,11 +331,12 @@ import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
       </div>
     </>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Case Studies
             </h1>
+<<<<<<< HEAD
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Explore our successful projects and client transformations across various industries.
             </p>
@@ -357,3 +369,16 @@ import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
             </Link>
 };
 export default CaseStudiesPage;
+=======
+            <p className="text-xl text-gray-300 mb-8">
+              Coming soon - Advanced Case Studies solutions by Zion Tech Group
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default CaseStudiesPage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c

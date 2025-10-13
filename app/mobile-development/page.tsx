@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -25,3 +26,8 @@ const MobileDevelopmentPage: React.FC = () => {
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - MobileDevelopment Solutions</p>
 
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c

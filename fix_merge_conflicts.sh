@@ -3,19 +3,38 @@
 # Find all files with merge conflicts
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 files_with_conflicts=$(find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "/!d; /^/d; /^
 =======
 files_with_conflicts=$(find app/ -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD")
 
 echo "Found $(echo "$files_with_conflicts" | wc -l) files with merge conflicts"
+=======
+files_with_conflicts=$(find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+
+echo "Found files with merge conflicts:"
+echo "$files_with_conflicts"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 
 # Process each file
 for file in $files_with_conflicts; do
     echo "Processing: $file"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
     
     # Remove any remaining conflict markers
     sed -i '/^/d; /^
+=======
+    
+    # Create a backup
+    cp "$file" "$file.backup"
+    
+    # Remove merge conflict markers and keep the HEAD version
+    sed -i '/^<<<<<<< HEAD/,/^=======/!d' "$file"
+    sed -i '/^<<<<<<< HEAD/d' "$file"
+    sed -i '/^=======/d' "$file"
+    sed -i '/^>>>>>>> /d' "$file"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
     
 <<<<<<< HEAD
     echo "Fixed: $file"
@@ -40,6 +59,7 @@ for file in $files_with_conflicts; do
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
 done
 
+<<<<<<< HEAD
 echo "Merge conflicts fixed!"
 =======
     # Use git to resolve conflicts by choosing HEAD version
@@ -56,3 +76,6 @@ done
 
 echo "Merge conflicts resolved!"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+echo "Merge conflicts fixed!"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c

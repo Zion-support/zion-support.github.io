@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { CheckCircle, Star, Heart, Brain, Shield, Zap, Target, Users } from 'lucide-react';
@@ -69,8 +70,13 @@ const AIHealthcarePage: React.FC = () => {
   ];
 
   const categories = [...new Set(aiHealthcareServices.map(service => service.category))];
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -222,3 +228,28 @@ const AIHealthcarePage: React.FC = () => {
 };
 
 export default AIHealthcarePage;
+=======
+    <>
+      <Helmet>
+        <title>AI Healthcare - Zion Tech Group</title>
+        <meta name="description" content="AI Healthcare services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Healthcare
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Coming soon - Advanced AI Healthcare solutions by Zion Tech Group
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default AiHealthcarePage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -127,3 +128,6 @@ const ServiceWorkerRegistration: React.FC = () => {
 
 export default ServiceWorkerRegistration;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+import React, { useEffect, useState } from 'react'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c

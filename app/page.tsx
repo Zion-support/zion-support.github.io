@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import Navigation from './components/Navigation';
@@ -8,6 +9,9 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import React, { useState, useEffect, Suspense, memo } from 'react;
 =======
+=======
+'use client';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';

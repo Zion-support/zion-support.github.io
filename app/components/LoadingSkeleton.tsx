@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const LoadingSkeletonPage: React.FC = () => {
   const features = [
     {
@@ -22,6 +23,9 @@ const LoadingSkeletonPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
+=======
+'use client';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 
   const benefits = [
     'Advanced AI technology integration',
@@ -58,6 +62,7 @@ interface SkeletonProps {
   rounded?: boolean;
 }
 
+<<<<<<< HEAD
 const Skeleton: React.FC<SkeletonProps> = ({ 
   className = '', 
   width, 
@@ -172,3 +177,18 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
 
 export default Skeleton;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
+  className = '',
+  lines = 3
+          className={`h-4 bg-gray-700 rounded mb-2 ${
+            index === lines - 1 ? 'w-3/4' : 'w-full'
+          }`}
+        />
+      ))}
+    </div>
+  </div>);
+};
+
+export default LoadingSkeleton;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c

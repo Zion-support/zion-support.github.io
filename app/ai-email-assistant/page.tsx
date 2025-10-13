@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -26,3 +27,6 @@ export default function AiemailassistantPage() {
   );
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+import { ArrowRight } from 'lucide-react'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client;
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Server, Shield, Cloud, Database, Network, Code, Monitor, Settings } from 'lucide-react';
@@ -738,11 +739,16 @@ const ITServicesPage: React.FC = () => {
     { number: '24/7', label: 'Support Available', icon: Clock },
     { number: '50+', label: 'Expert Engineers', icon: Users }
   ];
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 
   return (
     <>
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, web development, mobile apps, and DevOps solutions." />
         <meta name="keywords" content="IT services, cloud computing, cybersecurity, web development, mobile development, DevOps" />
       </Helmet>
@@ -967,3 +973,25 @@ export default ItServicesPage;
 =======
 export default ITServicesPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+        <meta name="description" content="IT Services services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              IT Services
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Coming soon - Advanced IT Services solutions by Zion Tech Group
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default ItServicesPage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c

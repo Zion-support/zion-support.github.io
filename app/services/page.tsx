@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';
 
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
@@ -89,6 +94,7 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
@@ -233,3 +239,28 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
     </div>
+=======
+    <>
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Services services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Services
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Coming soon - Advanced Services solutions by Zion Tech Group
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default ServicesPage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c

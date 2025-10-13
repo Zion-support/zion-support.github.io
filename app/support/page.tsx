@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -24,6 +25,10 @@ import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-r
 
 import Navigation from ../components
 import Footer from ../components
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 
 const SupportPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(');
@@ -135,6 +140,7 @@ const PagePage: React.FC = () => {}
   );
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
@@ -228,3 +234,28 @@ const PagePage: React.FC = () => {}
     </div>
 
 export default SupportPage;
+=======
+    <>
+      <Helmet>
+        <title>Support - Zion Tech Group</title>
+        <meta name="description" content="Support services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Support
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Coming soon - Advanced Support solutions by Zion Tech Group
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default SupportPage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c

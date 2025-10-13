@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+=======
+import React from 'react'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 
 const PWAInstallerPage: React.FC = () => {
   const features = [
@@ -87,6 +91,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
             ))}
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Benefits Section */}
@@ -143,3 +148,6 @@ export default PWAInstallerPage;
 =======
 'use client'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
