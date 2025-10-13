@@ -63,8 +63,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       "https://linkedin.com/company/ziontechgroup"
     ]
   };
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
 
   const mergedStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
 

@@ -432,541 +432,203 @@ export default function ITServices() {
     }
   ];
 
-export default function ItServices() {
-  const itServices = [
-    {
-      title: "Cloud Infrastructure Management",
-      description: "Comprehensive cloud solutions with automated scaling, backup, disaster recovery, and multi-cloud support for enterprise-grade reliability.",
-      icon: <Cloud className="w-8 h-8" />,
-      path: "/cloud-infrastructure",
-      color: "from-blue-500 to-cyan-500",
-      price: "Starting at $249/month",
-      features: ["Auto-scaling", "Disaster Recovery", "Cost Optimization", "Security Hardening", "Multi-cloud Support", "24/7 Monitoring"],
-      category: "Cloud Services",
-      popularity: "Most Popular"
-    },
-    {
-      title: "Cybersecurity Solutions",
-      description: "Enterprise-grade security services including threat detection, vulnerability assessment, compliance management, and incident response.",
-      icon: <Shield className="w-8 h-8" />,
-      path: "/cybersecurity-solutions",
-      color: "from-red-500 to-orange-500",
-      price: "Starting at $399/month",
-      features: ["Threat Detection", "Vulnerability Scanning", "Compliance Management", "Incident Response", "Security Training", "Penetration Testing"],
-      category: "Security",
-      popularity: "Enterprise"
-    },
-    {
-      title: "Web Development Services",
-      description: "Custom web applications, e-commerce solutions, and responsive websites built with modern technologies and best practices.",
-      icon: <Code className="w-8 h-8" />,
-      path: "/web-development",
-      color: "from-green-500 to-emerald-500",
-      price: "Starting at $2,999/project",
-      features: ["Custom Development", "E-commerce Solutions", "Responsive Design", "SEO Optimization", "Performance Optimization", "Maintenance"],
-      category: "Development",
-      popularity: "Popular"
-    },
-    {
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications for iOS and Android with modern UI/UX design and seamless performance.",
-      icon: <Smartphone className="w-8 h-8" />,
-      path: "/mobile-development",
-      color: "from-purple-500 to-pink-500",
-      price: "Starting at $4,999/project",
-      features: ["Native Development", "Cross-platform", "UI/UX Design", "App Store Optimization", "Push Notifications", "Analytics Integration"],
-      category: "Development",
-      popularity: "Trending"
-    },
-    {
-      title: "Database Management",
-      description: "Comprehensive database services including design, optimization, migration, backup, and performance tuning for all major database systems.",
-      icon: <Database className="w-8 h-8" />,
-      path: "/database-management",
-      color: "from-indigo-500 to-purple-500",
-      price: "Starting at $199/month",
-      features: ["Database Design", "Performance Tuning", "Migration Services", "Backup & Recovery", "Security Hardening", "Monitoring"],
-      category: "Data Services",
-      popularity: "Recommended"
-    },
-    {
-      title: "Custom Software Development",
-      description: "Tailored software solutions designed to meet specific business requirements with scalable architecture and modern development practices.",
-      icon: <Settings className="w-8 h-8" />,
-      path: "/custom-software",
-      color: "from-teal-500 to-cyan-500",
-      price: "Starting at $5,999/project",
-      features: ["Custom Solutions", "Scalable Architecture", "API Development", "Integration Services", "Quality Assurance", "Documentation"],
-      category: "Development",
-      popularity: "Best Value"
-    },
-    {
-      title: "Network Infrastructure",
-      description: "Complete network design, implementation, and management including LAN, WAN, wireless networks, and network security solutions.",
-      icon: <Wifi className="w-8 h-8" />,
-      path: "/network-infrastructure",
-      color: "from-orange-500 to-red-500",
-      price: "Starting at $299/month",
-      features: ["Network Design", "Implementation", "Security Configuration", "Performance Monitoring", "Troubleshooting", "Upgrades"],
-      category: "Infrastructure",
-      popularity: "Hot"
-    },
-    {
-      title: "Data Analytics & BI",
-      description: "Advanced data analytics services with business intelligence dashboards, reporting, and data visualization for informed decision making.",
-      icon: <BarChart3 className="w-8 h-8" />,
-      path: "/data-analytics",
-      color: "from-yellow-500 to-orange-500",
-      price: "Starting at $179/month",
-      features: ["Data Visualization", "Business Intelligence", "Custom Reports", "Data Integration", "Predictive Analytics", "Real-time Dashboards"],
-      category: "Analytics",
-      popularity: "New"
-    },
-    {
-      title: "IT Consulting & Strategy",
-      description: "Strategic IT consulting services to help businesses align technology with business goals and optimize their IT infrastructure.",
-      icon: <Brain className="w-8 h-8" />,
-      path: "/it-consulting",
-      color: "from-violet-500 to-purple-500",
-      price: "Starting at $150/hour",
-      features: ["IT Strategy", "Technology Assessment", "Digital Transformation", "Process Optimization", "Vendor Management", "ROI Analysis"],
-      category: "Consulting",
-      popularity: "Expert"
-    },
-    {
-      title: "DevOps & CI/CD",
-      description: "DevOps implementation with continuous integration, continuous deployment, and automated testing for faster, more reliable software delivery.",
-      icon: <Zap className="w-8 h-8" />,
-      path: "/devops-services",
-      color: "from-emerald-500 to-green-500",
-      price: "Starting at $229/month",
-      features: ["CI/CD Pipeline", "Automated Testing", "Infrastructure as Code", "Monitoring & Logging", "Deployment Automation", "Performance Optimization"],
-      category: "DevOps",
-      popularity: "Trending"
-    },
-    {
-      title: "IT Support & Maintenance",
-      description: "Comprehensive IT support services including help desk, system maintenance, updates, and troubleshooting for uninterrupted operations.",
-      icon: <Users className="w-8 h-8" />,
-      path: "/it-support",
-      color: "from-cyan-500 to-blue-500",
-      price: "Starting at $99/month",
-      features: ["24/7 Help Desk", "System Maintenance", "Software Updates", "Hardware Support", "Remote Assistance", "Preventive Maintenance"],
-      category: "Support",
-      popularity: "Essential"
-    },
-    {
-      title: "Cloud Migration Services",
-      description: "Seamless migration to cloud platforms with minimal downtime, data integrity, and optimized performance for your applications.",
-      icon: <Server className="w-8 h-8" />,
-      path: "/cloud-migration",
-      color: "from-pink-500 to-rose-500",
-      price: "Starting at $1,999/project",
-      features: ["Migration Planning", "Data Transfer", "Application Modernization", "Testing & Validation", "Go-live Support", "Post-migration Optimization"],
-      category: "Cloud Services",
-      popularity: "Popular"
-    }
-  ];
-
-  const categories = ["All", "Cloud Services", "Security", "Development", "Data Services", "Infrastructure", "Analytics", "Consulting", "DevOps", "Support"];
-
-  const stats = [
-    { number: "500+", label: "Projects Completed", icon: <Code className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Clock className="w-6 h-6" /> },
-    { number: "50+", label: "IT Services", icon: <Settings className="w-6 h-6" /> }
-  ];
-
-  const testimonials = [
-    {
-      name: "David Thompson",
-      company: "Enterprise Solutions Inc.",
-      role: "CTO",
-      content: "Zion's IT services transformed our entire infrastructure. The cloud migration was seamless and our systems are now 40% more efficient.",
-      rating: 5,
-      avatar: "DT"
-    },
-    {
-      name: "Lisa Wang",
-      company: "TechStart Ventures",
-      role: "CEO",
-      content: "Outstanding cybersecurity solutions and support. Our security posture improved dramatically with their comprehensive approach.",
-      rating: 5,
-      avatar: "LW"
-    },
-    {
-      name: "Robert Martinez",
-      company: "Digital Agency",
-      role: "Operations Director",
-      content: "The custom software development exceeded our expectations. Professional, reliable, and delivered on time and within budget.",
-      rating: 5,
-      avatar: "RM"
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Basic IT Support",
-      price: "$99",
-      period: "/month",
-      description: "Essential IT support for small businesses",
-      features: [
-        "24/7 Help Desk",
-        "Remote Support",
-        "Basic Maintenance",
-        "Email Support",
-        "System Monitoring",
-        "Monthly Reports"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional IT Services",
-      price: "$299",
-      period: "/month",
-      description: "Comprehensive IT services for growing businesses",
-      features: [
-        "All Basic Features",
-        "Proactive Monitoring",
-        "Security Management",
-        "Cloud Services",
-        "Priority Support",
-        "Quarterly Reviews",
-        "Backup & Recovery",
-        "Software Updates"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise IT Solutions",
-      price: "$599",
-      period: "/month",
-      description: "Full-service IT solutions for large organizations",
-      features: [
-        "All Professional Features",
-        "Dedicated Account Manager",
-        "Custom Solutions",
-        "Advanced Security",
-        "Disaster Recovery",
-        "Compliance Management",
-        "Strategic Consulting",
-        "Unlimited Support"
-      ],
-      popular: false
-    }
-  ];
-
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>IT Services - Zion Tech Group | Comprehensive Technology Solutions</title>
-        <meta
-          name="description"
-          content="Professional IT services including cloud infrastructure, cybersecurity, network engineering, DevOps, and managed services. Transform your technology with expert solutions."
-        />
-        <meta
-          name="keywords"
-          content="IT services, cloud migration, cybersecurity, network engineering, DevOps, managed services, IT consulting, infrastructure, database management"
-        />
+        <title>IT Services - Zion Tech Group | Professional IT Solutions & Support</title>
+        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, custom development, and 24/7 support. Transform your business with our expert IT solutions." />
+        <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, custom development, IT support, managed services, digital transformation" />
+        <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Helmet>
+      
       <SEOOptimizer
-        title="IT Services - Zion Tech Group | Comprehensive Technology Solutions"
-        description="Professional IT services including cloud infrastructure, cybersecurity, network engineering, DevOps, and managed services. Transform your technology with expert solutions."
+        title="IT Services - Zion Tech Group | Professional IT Solutions & Support"
+        description="Comprehensive IT services including cloud infrastructure, cybersecurity, custom development, and 24/7 support. Transform your business with our expert IT solutions."
+        keywords="IT services, cloud infrastructure, cybersecurity, custom development, IT support, managed services, digital transformation"
+        canonical="https://ziontechgroup.com/it-services"
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
+            <Server className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">Professional IT Services</span>
+          </div>
           
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  IT Services
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Comprehensive technology solutions to transform your business. From cloud infrastructure 
-                to cybersecurity, we provide expert IT services that drive growth and innovation.
-              </p>
-              
-              <div className="flex flex-wrap justify-center gap-4 mb-12">
-                <div className="flex items-center text-green-400">
-                  <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">15+ years experience</span>
-                </div>
-                <div className="flex items-center text-green-400">
-                  <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">500+ projects completed</span>
-                </div>
-                <div className="flex items-center text-green-400">
-                  <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">99.9% uptime SLA</span>
-                </div>
-                <div className="flex items-center text-green-400">
-                  <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">24/7 support</span>
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  Get Free Consultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <Link
-                  to="/case-studies"
-                  className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
-                >
-                  <Award className="mr-2 h-5 w-5" />
-                  View Case Studies
-                </Link>
-              </div>
-            </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+              IT Services
+            </span>
+            <br />
+            <span className="text-white">That Drive Results</span>
+          </h1>
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive IT solutions designed to optimize your business operations, enhance security, and accelerate growth with cutting-edge technology.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 font-semibold"
+            >
+              Get Started Today
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 border border-cyan-500/50 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 font-semibold"
+            >
+              Schedule Demo
+            </Link>
           </div>
         </div>
+      </section>
 
-        {/* Stats Section */}
-        <div className="py-16 bg-black/20 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-4">
-                    <div className="text-cyan-400">{stat.icon}</div>
+      {/* Services Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our IT Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From cloud infrastructure to cybersecurity, we provide end-to-end IT solutions tailored to your business needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {itServices.map((service, index) => (
+              <div
+                key={service.id}
+                className="group relative bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                {service.featured && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="px-4 py-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold rounded-full">
+                      Most Popular
+                    </span>
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+                )}
+                
+                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${service.color} mb-6`}>
+                  {service.icon}
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Process Section */}
-        <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Our Process
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                A proven methodology that ensures successful project delivery and maximum value
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
-                    <div className="text-white">{step.icon}</div>
-                  </div>
-                  <div className="text-2xl font-bold text-cyan-400 mb-2">{step.step}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-gray-300">{step.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Categories Filter */}
-        <div className="py-8 bg-black/10 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap justify-center gap-2">
-              {categories.map((category, index) => (
-                <button
-                  key={index}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    category.active
-                      ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg"
-                      : "bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white"
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Featured Services */}
-        <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Featured Services
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Our most popular IT services trusted by leading organizations worldwide
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.filter(service => service.featured).map((service, index) => (
-                <div
-                  key={service.id}
-                  className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${service.color}`}>
-                      <div className="text-white">{service.icon}</div>
-                    </div>
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span className="ml-1 text-sm font-medium">{service.rating}</span>
-                      <span className="ml-1 text-xs text-gray-400">({service.reviews})</span>
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                  <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-
-                  <div className="flex items-center mb-4">
+                
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                  {service.name}
+                </h3>
+                
+                <p className="text-gray-300 mb-6 line-clamp-3">
+                  {service.description}
+                </p>
+                
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold text-white">{service.price}</span>
-                  </div>
-
-                  <div className="space-y-2 mb-6">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                    {service.features.length > 4 && (
-                      <div className="text-sm text-gray-400">
-                        +{service.features.length - 4} more features
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="space-y-3">
-                    <Link
-                      to={service.link}
-                      className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105"
-                    >
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 border border-white/20 text-white font-medium rounded-lg hover:bg-white/10 transition-all duration-300"
-                    >
-                      Get Quote
-                    </Link>
+                    <div className="flex items-center">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <span className="text-gray-300 ml-1">{service.rating}</span>
+                      <span className="text-gray-500 ml-1">({service.reviews})</span>
+                    </div>
                   </div>
                 </div>
-              ))}
+                
+                <div className="space-y-2 mb-6">
+                  {service.features.slice(0, 4).map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <span className="text-sm">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <Link
+                  to={service.link}
+                  className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-600 text-white rounded-lg hover:from-slate-600 hover:to-slate-500 transition-all duration-300 font-semibold group-hover:from-cyan-500 group-hover:to-purple-500"
+                >
+                  Learn More
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Process
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We follow a proven methodology to deliver exceptional IT solutions that drive real business value.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, index) => (
+              <div key={index} className="text-center group">
+                <div className="relative mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-white font-bold text-xl">{step.step}</span>
+                  </div>
+                  <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-full h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-30 hidden lg:block"></div>
+                </div>
+                
+                <div className="inline-flex p-3 rounded-xl bg-slate-700/50 mb-4 group-hover:bg-slate-600/50 transition-colors">
+                  {step.icon}
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {step.title}
+                </h3>
+                
+                <p className="text-gray-300">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-slate-800/50 to-purple-800/50 rounded-2xl p-12 border border-slate-700">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your IT Infrastructure?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let our expert team help you build a robust, secure, and scalable IT environment that grows with your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 font-semibold"
+              >
+                Get Free Consultation
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center px-8 py-4 border border-cyan-500/50 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 font-semibold"
+              >
+                View Pricing
+              </Link>
             </div>
           </div>
         </div>
-
-        {/* All Services Grid */}
-        <div className="py-16 bg-black/10 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  All IT Services
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive technology solutions for every business need
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {itServices.map((service, index) => (
-                <div
-                  key={service.id}
-                  className="group relative bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <div className={`p-2 rounded-lg bg-gradient-to-r ${service.color}`}>
-                      <div className="text-white">{service.icon}</div>
-                    </div>
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-3 h-3 fill-current" />
-                      <span className="ml-1 text-xs font-medium">{service.rating}</span>
-                    </div>
-                  </div>
-
-                  <h3 className="text-lg font-bold text-white mb-2">{service.name}</h3>
-                  <p className="text-gray-300 mb-3 text-sm line-clamp-2">{service.description}</p>
-
-                  <div className="flex items-center mb-3">
-                    <span className="text-lg font-bold text-white">{service.price}</span>
-                  </div>
-
-                  <div className="space-y-1 mb-4">
-                    {service.features.slice(0, 3).map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-xs text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        <span className="truncate">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <Link
-                    to={service.link}
-                    className="w-full inline-flex items-center justify-center px-3 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300"
-                  >
-                    View Details
-                    <ArrowRight className="ml-1 h-3 w-3" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Testimonials */}
-        <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Client Success Stories
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                See how we've helped organizations transform their technology infrastructure
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-                      {testimonial.avatar}
-                    </div>
-                    <div className="ml-4">
-                      <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  
-                  <p className="text-gray-300 italic">"{testimonial.content}"</p>
-      </div>
-    </>
+      </section>
+    </div>
   );
 }

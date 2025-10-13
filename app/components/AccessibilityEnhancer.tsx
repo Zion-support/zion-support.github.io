@@ -104,21 +104,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         };
       };
 
-<<<<<<< HEAD
-      // Apply focus trap to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
+      // Apply focus trapping to modals and dropdowns
+      const modals = document.querySelectorAll('[role="dialog"], [role="menu"], [role="alertdialog"]');
       const cleanupFunctions = Array.from(modals).map(modal => trapFocus(modal as HTMLElement));
 
       return () => {
         cleanupFunctions.forEach(cleanup => cleanup());
-=======
-      // Apply focus trapping to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"], [role="alertdialog"]');
-      modals.forEach(modal => trapFocus(modal as HTMLElement));
-
-      return () => {
-        // Cleanup handled by individual trapFocus returns
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
       };
     };
 
@@ -140,12 +131,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         document.head.appendChild(style);
       };
 
-<<<<<<< HEAD
       mediaQuery.addEventListener('change', handleContrastChange);
       handleContrastChange(mediaQuery as any);
-=======
       addHighContrastStyles();
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
 
       return () => {
         const existingStyle = document.getElementById('accessibility-high-contrast');
@@ -155,7 +143,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
     };
 
-<<<<<<< HEAD
     // Reduced motion detection
     const handleReducedMotion = () => {
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -176,10 +163,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
     };
 
-    // Screen reader announcements
-=======
     // Screen reader optimizations
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
     const enhanceScreenReader = () => {
       if (!enableScreenReader) return;
 
@@ -244,13 +228,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       if (cleanupMotion) cleanupMotion();
     };
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
 
@@ -296,14 +274,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     setSettings(defaultSettings);
     applyAccessibilitySettings(defaultSettings);
   };
-
-<<<<<<< HEAD
-  // Removed unused functions - functionality is handled by updateSetting directly
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
   return (
     <>
       {children}
