@@ -8,8 +8,7 @@ import {
   ArrowRight, 
   CheckCircle, 
   Star, 
-  Clock, 
-
+  Clock,
   Sparkles,
   Cpu,
   Send,
@@ -18,17 +17,6 @@ import {
   Shield,
   Zap,
   TrendingUp
-
-
-  Zap, 
-  Sparkles,
-  TrendingUp,
-  Cpu,
-  Send,
-  MousePointer,
-  Shield,
-  Heart
-
 
 } from 'lucide-react';
 
