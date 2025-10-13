@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import StructuredData from "./components/StructuredData";
-import FuturisticBackground from "./components/FuturisticBackground";
-import FuturisticCard from "./components/FuturisticCard";
+import AdvancedFuturisticBackground from "./components/AdvancedFuturisticBackground";
+import EnhancedFuturisticCard from "./components/EnhancedFuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
 import FuturisticText from "./components/FuturisticText";
+import FuturisticNeonGlow from "./components/FuturisticNeonGlow";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
@@ -178,7 +179,7 @@ const HomePage = () => {
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        <AdvancedFuturisticBackground variant="particles" intensity="medium" color="multi">
           <EnhancedSEO
             title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
             description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
@@ -456,7 +457,7 @@ const HomePage = () => {
         </div>
       </section>
       </main>
-      </div>
+        </AdvancedFuturisticBackground>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );

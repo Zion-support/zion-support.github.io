@@ -152,7 +152,11 @@ const ImprovedFooter = () => {
     { label: 'API Reference', href: '/api' },
     { label: 'Tutorials', href: '/tutorials' },
     { label: 'Webinars', href: '/webinars' },
-    { label: 'White Papers', href: '/whitepapers' }
+    { label: 'White Papers', href: '/whitepapers' },
+    { label: 'Case Studies', href: '/case-studies' },
+    { label: 'ROI Calculator', href: '/roi-calculator' },
+    { label: 'Implementation Guide', href: '/implementation-guide' },
+    { label: 'Best Practices', href: '/best-practices' }
   ];
 
   const legalLinks = [

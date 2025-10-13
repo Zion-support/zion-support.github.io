@@ -25,7 +25,10 @@ import {
   Users,
   Award,
   Clock,
-  CheckCircle
+  CheckCircle,
+  DollarSign,
+  Play,
+  FileText
 } from 'lucide-react';
 
 const ImprovedNavigation = () => {
@@ -567,7 +570,9 @@ const ImprovedNavigation = () => {
     { label: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
     { label: 'Demo', href: '/demo', icon: <Play className="w-4 h-4" /> },
     { label: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
-    { label: 'Consultation', href: '/consultation', icon: <Users className="w-4 h-4" /> }
+    { label: 'Consultation', href: '/consultation', icon: <Users className="w-4 h-4" /> },
+    { label: 'Blog', href: '/blog', icon: <FileText className="w-4 h-4" /> },
+    { label: 'Case Studies', href: '/case-studies', icon: <BarChart3 className="w-4 h-4" /> }
   ];
 
   const contactInfo = {
