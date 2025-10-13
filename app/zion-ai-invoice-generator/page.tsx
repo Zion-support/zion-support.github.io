@@ -1,119 +1,208 @@
-import React from "react";
-import { ArrowRight, CheckCircle, Star, FileText, Calculator, CreditCard, Clock, DollarSign, Globe, Smartphone, Lock, Settings, Target, Users, Award, Shield, Mail, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard as CreditCardIcon, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator as CalculatorIcon, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import SEOOptimizer from "../components/SEOOptimizer";
+import { 
+  FileText, 
+  Download, 
+  Upload, 
+  Settings, 
+  Zap, 
+  CheckCircle, 
+  Star, 
+  Users, 
+  Clock, 
+  BarChart3,
+  Receipt,
+  Calculator,
+  CreditCard,
+  Mail,
+  Send,
+  Globe,
+  Smartphone,
+  Monitor,
+  ArrowRight,
+  Sparkles,
+  Award,
+  Shield,
+  Cloud,
+  Brain,
+  Target,
+  TrendingUp,
+  DollarSign,
+  Calendar,
+  FileCheck
+} from "lucide-react";
 
 export default function ZionAIInvoiceGenerator() {
   const features = [
-    "AI-powered invoice generation from contracts",
-    "Automated payment tracking and reminders",
-    "Multi-currency support (100+ currencies)",
-    "Custom branding and templates",
-    "Tax calculation and compliance",
-    "Recurring invoice automation",
-    "Client portal for invoice viewing",
-    "Payment gateway integration",
-    "Expense tracking and categorization",
-    "Financial reporting and analytics",
-    "Mobile app for on-the-go invoicing",
-    "API integration with accounting software"
-  ];
-
-  const benefits = [
-    "Reduce invoicing time by 90%",
-    "Improve payment collection by 40%",
-    "Eliminate manual data entry errors",
-    "Ensure tax compliance automatically",
-    "Professional invoice presentation",
-    "Streamline financial workflows"
-  ];
-
-  const pricing = [
     {
-      name: "Starter",
+      title: "AI-Powered Invoice Creation",
+      description: "Generate professional invoices automatically from project data, time tracking, or simple text descriptions using advanced AI.",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Smart Expense Tracking",
+      description: "Automatically categorize and track expenses with AI-powered receipt scanning and intelligent categorization.",
+      icon: <Receipt className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Multi-Currency Support",
+      description: "Create invoices in 150+ currencies with real-time exchange rates and automatic currency conversion.",
+      icon: <DollarSign className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Automated Payment Reminders",
+      description: "Set up intelligent payment reminders that adapt to client behavior and payment patterns for better collection rates.",
+      icon: <Mail className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      title: "Client Portal Integration",
+      description: "Provide clients with a secure portal to view invoices, make payments, and track project progress in real-time.",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      title: "Advanced Analytics",
+      description: "Get insights into your business performance with detailed reports on revenue, payment trends, and client behavior.",
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Solo",
       price: "$19",
-      period: "month",
-      description: "Perfect for freelancers",
-      features: ["Up to 50 invoices/month", "Basic templates", "Payment tracking", "Email support", "1 user"],
+      period: "/month",
+      description: "Perfect for freelancers and solo entrepreneurs",
+      features: [
+        "50 invoices per month",
+        "Basic templates",
+        "5 clients",
+        "Email support",
+        "PDF export",
+        "Basic analytics",
+        "Mobile app access"
+      ],
       popular: false
     },
     {
       name: "Professional",
       price: "$49",
-      period: "month",
-      description: "Ideal for small businesses",
-      features: ["Up to 500 invoices/month", "Premium templates", "Recurring invoices", "Priority support", "5 users", "Custom branding"],
+      period: "/month",
+      description: "Ideal for small businesses and agencies",
+      features: [
+        "200 invoices per month",
+        "Premium templates",
+        "25 clients",
+        "Priority support",
+        "Custom branding",
+        "Advanced analytics",
+        "Payment integrations",
+        "Recurring invoices",
+        "API access"
+      ],
       popular: true
     },
     {
       name: "Enterprise",
       price: "$99",
-      period: "month",
-      description: "For large organizations",
-      features: ["Unlimited invoices", "Custom templates", "Advanced analytics", "24/7 support", "Unlimited users", "API access", "White-label options"],
+      period: "/month",
+      description: "For growing businesses and teams",
+      features: [
+        "Unlimited invoices",
+        "All templates + custom",
+        "Unlimited clients",
+        "24/7 phone support",
+        "White-label options",
+        "Advanced reporting",
+        "Team collaboration",
+        "Custom integrations",
+        "Dedicated account manager"
+      ],
       popular: false
     }
   ];
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "David Kim",
       company: "Freelance Designer",
       role: "Owner",
-      content: "Zion AI Invoice Generator saved me hours every week. The automated reminders increased my payment collection rate by 50%.",
+      content: "Zion AI Invoice Generator has saved me hours every week. The AI automatically creates professional invoices from my project notes.",
       rating: 5,
-      avatar: "SJ"
+      avatar: "DK"
     },
     {
-      name: "Michael Chen",
-      company: "Consulting Firm",
-      role: "CFO",
-      content: "The AI-powered invoice generation is incredibly accurate. We've eliminated all manual errors and improved our cash flow significantly.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Digital Agency",
+      name: "Lisa Martinez",
+      company: "Consulting Agency",
       role: "Operations Manager",
-      content: "This tool transformed our billing process. The professional templates and automated tracking have made our clients happier.",
+      content: "Our payment collection rate improved by 35% since using the automated reminder system. It's been a game-changer for our cash flow.",
       rating: 5,
-      avatar: "ER"
+      avatar: "LM"
+    },
+    {
+      name: "James Wilson",
+      company: "Digital Agency",
+      role: "CEO",
+      content: "The analytics dashboard gives us incredible insights into our business. We can now make data-driven decisions about pricing and client management.",
+      rating: 5,
+      avatar: "JW"
+    }
+  ];
+
+  const useCases = [
+    {
+      title: "Freelancers",
+      description: "Streamline invoicing for individual professionals and consultants",
+      icon: <Users className="w-6 h-6" />,
+      examples: ["Time tracking", "Project billing", "Expense management"]
+    },
+    {
+      title: "Small Businesses",
+      description: "Manage client billing and payment collection efficiently",
+      icon: <Target className="w-6 h-6" />,
+      examples: ["Recurring billing", "Multi-client management", "Payment tracking"]
+    },
+    {
+      title: "Agencies",
+      description: "Handle complex billing structures and team collaboration",
+      icon: <Globe className="w-6 h-6" />,
+      examples: ["Project-based billing", "Team time tracking", "Client portals"]
+    },
+    {
+      title: "E-commerce",
+      description: "Automate order processing and customer billing",
+      icon: <CreditCard className="w-6 h-6" />,
+      examples: ["Order invoicing", "Subscription billing", "Tax calculations"]
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Invoice Generator - Automated Invoice Creation | Zion Tech Group</title>
+        <title>Zion AI Invoice Generator - Automated Invoicing & Payment Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="Automate your invoicing with Zion AI Invoice Generator. AI-powered invoice creation, payment tracking, and financial management. Start your free trial today!"
+          content="Streamline your invoicing process with Zion AI Invoice Generator. AI-powered invoice creation, automated reminders, and payment tracking. Start your free trial today!"
         />
         <meta
           name="keywords"
-          content="AI invoice generator, automated invoicing, invoice management, payment tracking, financial software, billing automation"
+          content="AI invoice generator, automated invoicing, payment management, expense tracking, client billing, invoice templates, payment reminders"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-invoice-generator" />
       </Helmet>
-      <SEOOptimizer
-        title="Zion AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
-        description="Automate your invoicing with Zion AI Invoice Generator. AI-powered invoice creation, payment tracking, and financial management. Start your free trial today!"
-      />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-        
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <FileText className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">#1 AI Invoice Automation Platform</span>
+                <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Invoicing</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
@@ -122,12 +211,12 @@ export default function ZionAIInvoiceGenerator() {
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Automate your entire invoicing process with AI. Generate professional invoices, 
-                track payments, and manage your finances with intelligent automation.
+              <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+                Transform your invoicing process with AI-powered automation. 
+                Create professional invoices, track payments, and get paid faster with intelligent features.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
@@ -140,27 +229,27 @@ export default function ZionAIInvoiceGenerator() {
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   Watch Demo
-                  <FileText className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                  <FileText className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
                 </Link>
               </div>
-              
-              {/* Key Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+
+              {/* Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">90%</div>
-                  <div className="text-gray-300 text-sm">Time Saved</div>
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">$2M+</div>
+                  <div className="text-gray-300 text-sm">Invoices Processed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">40%</div>
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">40%</div>
                   <div className="text-gray-300 text-sm">Faster Payments</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">100%</div>
-                  <div className="text-gray-300 text-sm">Tax Compliant</div>
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">150+</div>
+                  <div className="text-gray-300 text-sm">Currencies</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                  <div className="text-gray-300 text-sm">Automation</div>
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+                  <div className="text-gray-300 text-sm">Uptime</div>
                 </div>
               </div>
             </div>
@@ -168,14 +257,14 @@ export default function ZionAIInvoiceGenerator() {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Powerful Invoice Automation Features
+                Powerful Invoicing Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to automate and streamline your invoicing process
+                Everything you need to manage your invoicing and payments efficiently
               </p>
             </div>
             
@@ -185,11 +274,57 @@ export default function ZionAIInvoiceGenerator() {
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">
-                      {feature}
-                    </h3>
+                  <div
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 text-center leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Perfect for Every Business
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                From freelancers to enterprises, our AI invoice generator adapts to your needs
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {useCases.map((useCase, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                >
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    {useCase.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                    {useCase.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                    {useCase.description}
+                  </p>
+                  <div className="space-y-1">
+                    {useCase.examples.map((example, idx) => (
+                      <div key={idx} className="flex items-center text-sm text-cyan-400">
+                        <CheckCircle className="w-3 h-3 mr-2" />
+                        <span>{example}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               ))}
@@ -198,63 +333,62 @@ export default function ZionAIInvoiceGenerator() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your invoicing needs. All plans include a 14-day free trial.
+                Choose the plan that fits your business needs. All plans include our core AI features.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border ${
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${
                     plan.popular 
-                      ? 'border-cyan-400 shadow-2xl shadow-cyan-500/20' 
-                      : 'border-white/20'
-                  } hover:border-white/40 transition-all duration-300 hover:scale-105`}
+                      ? 'border-cyan-500/50 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
+                      : 'border-white/20 hover:border-cyan-500/30'
+                  }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <div className="text-center mb-8">
+                  <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
+                    <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">${plan.price}</span>
-                      <span className="text-gray-400 ml-2">/{plan.period}</span>
+                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
                   </div>
                   
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <div className="space-y-3 mb-8">
+                    {plan.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
-                      </li>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                   
                   <Link
                     to="/contact"
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
-                        : 'border border-white/20 text-white hover:bg-white/10'
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 hover:scale-105'
+                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
                     Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
               ))}
@@ -262,15 +396,15 @@ export default function ZionAIInvoiceGenerator() {
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        {/* Testimonials Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                What Our Customers Say
+                Trusted by Businesses Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of businesses using Zion AI Invoice Generator to streamline their billing
+                See what our users say about Zion AI Invoice Generator
               </p>
             </div>
             
@@ -278,25 +412,23 @@ export default function ZionAIInvoiceGenerator() {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">
                       {testimonial.avatar}
                     </div>
-                    <div className="ml-4">
+                    <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
                       <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                     </div>
                   </div>
-                  
-                  <div className="flex items-center mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  
-                  <p className="text-gray-300 italic">"{testimonial.content}"</p>
                 </div>
               ))}
             </div>
@@ -304,14 +436,13 @@ export default function ZionAIInvoiceGenerator() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Automate Your Invoicing?
+              Ready to Streamline Your Invoicing?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Start your free 14-day trial today. No credit card required. 
-              See how Zion AI Invoice Generator can transform your billing process.
+              Join thousands of businesses already using Zion AI Invoice Generator to get paid faster and manage their finances better.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -319,21 +450,16 @@ export default function ZionAIInvoiceGenerator() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Free Trial
+                Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/pricing"
+                to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                <DollarSign className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
-                View Pricing
+                Watch Demo
+                <FileText className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
-            </div>
-
-            <div className="mt-8 text-sm text-gray-400">
-              <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
-              <p className="mt-2">Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </section>

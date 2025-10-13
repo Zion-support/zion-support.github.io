@@ -27,14 +27,14 @@ import {
   Activity
 } from "lucide-react";
 
-export default function zion_ai_contract_analyzer() {
+export default function zion_ai_financial_forecaster() {
   return (
     <>
       <Helmet>
-        <title>Zion Ai Contract Analyzer - AI-Powered Solution | Zion Tech Group</title>
+        <title>Zion Ai Financial Forecaster - AI-Powered Solution | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your business with Zion Ai Contract Analyzer. AI-powered automation and intelligent solutions for modern enterprises."
+          content="Transform your business with Zion Ai Financial Forecaster. AI-powered automation and intelligent solutions for modern enterprises."
         />
         <meta
           name="keywords"
@@ -54,7 +54,7 @@ export default function zion_ai_contract_analyzer() {
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  Zion Ai Contract Analyzer
+                  Zion Ai Financial Forecaster
                 </span>
               </h1>
               
@@ -110,7 +110,7 @@ export default function zion_ai_contract_analyzer() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses already using Zion Ai Contract Analyzer to drive growth and efficiency.
+              Join thousands of businesses already using Zion Ai Financial Forecaster to drive growth and efficiency.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

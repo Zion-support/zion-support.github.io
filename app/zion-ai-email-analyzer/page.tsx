@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
+  Mail, 
   BarChart3, 
   Brain, 
   Target, 
@@ -27,18 +28,18 @@ import {
   Activity
 } from "lucide-react";
 
-export default function zion_ai_contract_analyzer() {
+export default function ZionAIEmailAnalyzer() {
   return (
     <>
       <Helmet>
-        <title>Zion Ai Contract Analyzer - AI-Powered Solution | Zion Tech Group</title>
+        <title>Zion AI Email Analyzer - Advanced Email Intelligence & Analytics | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your business with Zion Ai Contract Analyzer. AI-powered automation and intelligent solutions for modern enterprises."
+          content="Analyze email performance with Zion AI Email Analyzer. AI-powered email insights, sentiment analysis, and optimization recommendations."
         />
         <meta
           name="keywords"
-          content="AI solution, business automation, intelligent systems, enterprise software, digital transformation"
+          content="email analyzer, email analytics, email intelligence, email optimization, email performance, email insights"
         />
       </Helmet>
 
@@ -49,18 +50,18 @@ export default function zion_ai_contract_analyzer() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">AI-Powered Solution</span>
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Email Intelligence</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  Zion Ai Contract Analyzer
+                  Zion AI Email Analyzer
                 </span>
               </h1>
               
               <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your business with AI-powered automation and intelligent solutions. 
-                Boost efficiency, reduce costs, and drive growth with cutting-edge technology.
+                Transform your email marketing with AI-powered analytics and insights. 
+                Optimize your campaigns, improve deliverability, and boost engagement rates.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -83,20 +84,20 @@ export default function zion_ai_contract_analyzer() {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">50%</div>
-                  <div className="text-gray-300 text-sm">Efficiency Boost</div>
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">50M+</div>
+                  <div className="text-gray-300 text-sm">Emails Analyzed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99%</div>
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">35%</div>
+                  <div className="text-gray-300 text-sm">Open Rate Increase</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">25%</div>
+                  <div className="text-gray-300 text-sm">Click Rate Boost</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">98%</div>
                   <div className="text-gray-300 text-sm">Accuracy Rate</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-                  <div className="text-gray-300 text-sm">Availability</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">30%</div>
-                  <div className="text-gray-300 text-sm">Cost Savings</div>
                 </div>
               </div>
             </div>
@@ -107,10 +108,10 @@ export default function zion_ai_contract_analyzer() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+              Ready to Optimize Your Email Marketing?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses already using Zion Ai Contract Analyzer to drive growth and efficiency.
+              Join thousands of businesses already using Zion AI Email Analyzer to improve their email performance and ROI.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
