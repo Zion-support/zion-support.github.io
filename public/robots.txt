@@ -3,6 +3,7 @@ Allow: /
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Sitemap
 =======
 # Sitemaps
@@ -10,6 +11,9 @@ Allow: /
 =======
 # Sitemap
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
+=======
+# Sitemap
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Crawl-delay
@@ -27,6 +31,7 @@ Crawl-delay: 1
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -87,3 +92,6 @@ Allow: /case-studies
 Allow: /team
 Allow: /enterprise
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
+=======
+Disallow: /private/
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f

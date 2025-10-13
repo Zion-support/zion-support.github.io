@@ -321,6 +321,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   ChevronDown, 
   Phone, 
@@ -369,6 +370,9 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, 
     { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: <Zap className="w-4 h-4" /> }
   ], []);
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
+=======
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Star, TrendingUp, Settings, Globe, Target } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -376,9 +380,13 @@ const Navigation: React.FC = () => {
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
+=======
+  const [microSaasOpen, setMicroSaasOpen] = useState(false);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
   const [isScrolled, setIsScrolled] = useState(false);
 
 <<<<<<< HEAD
@@ -468,6 +476,7 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+<<<<<<< HEAD
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -522,6 +531,10 @@ export default function Navigation() {
 
   const toggleServices = useCallback(() => {
     setServicesOpen(!servicesOpen);
+=======
+  const closeAllMenus = () => {
+    setServicesOpen(false);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
@@ -567,6 +580,7 @@ export default function Navigation() {
 
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen);
+<<<<<<< HEAD
   };
 
 <<<<<<< HEAD
@@ -874,9 +888,35 @@ export default function Navigation() {
   ];
 >>>>>>> origin/cursor/ad-creation-and-management-f267
 =======
+=======
+    if (isOpen) {
+      closeAllMenus();
+    }
+  };
+
+  const aiServices = [
+    { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Core AI services' },
+    { name: 'AI Marketing', href: '/ai-marketing', icon: Target, description: 'AI-powered marketing' },
+    { name: 'AI Automation', href: '/ai-automation', icon: Settings, description: 'Business automation' },
+    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Users, description: 'Healthcare AI' },
+    { name: 'AI Fintech', href: '/ai-fintech', icon: TrendingUp, description: 'Financial AI' },
+    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart, description: 'Data intelligence' },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, description: 'AI security' },
+    { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Cloud AI' },
+  ];
+
+  const itServices = [
+    { name: 'IT Solutions', href: '/it-services', icon: Code, description: 'Core IT services' },
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security solutions' },
+    { name: 'Cloud Services', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Cloud infrastructure' },
+    { name: 'Mobile Development', href: '/ai-mobile-app-development', icon: Code, description: 'Mobile apps' },
+    { name: 'Web Development', href: '/services', icon: Globe, description: 'Web solutions' },
+    { name: 'DevOps', href: '/services', icon: Settings, description: 'DevOps services' },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
   ];
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
 
+<<<<<<< HEAD
 export default function Navigation() {
   return (
 <<<<<<< HEAD
@@ -1214,10 +1254,25 @@ export default function Navigation() {
 =======
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
+=======
+  const microSaasServices = [
+    { name: 'AI Code Review', href: '/micro-saas', icon: Code, description: 'Automated code analysis' },
+    { name: 'AI SEO Optimizer', href: '/micro-saas', icon: Target, description: 'SEO automation' },
+    { name: 'AI Analytics Dashboard', href: '/micro-saas', icon: BarChart, description: 'Business intelligence' },
+    { name: 'AI Marketing Tools', href: '/micro-saas', icon: TrendingUp, description: 'Marketing automation' },
+    { name: 'AI Document Processing', href: '/micro-saas', icon: Code, description: 'Document intelligence' },
+    { name: 'AI Customer Support', href: '/micro-saas', icon: Users, description: 'Support automation' },
+  ];
+
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Link href="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -1282,10 +1337,24 @@ export default function Navigation() {
               <Zap className="w-5 h-5 text-white" />
             </div>
             <span className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+=======
+          <Link 
+            to="/" 
+            className="flex items-center space-x-2" 
+            onClick={closeAllMenus}
+          >
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+              <Zap className="w-5 h-5 text-white" />
+            </div>
+            <span className={`text-xl font-bold transition-colors ${
+              isScrolled ? 'text-gray-900' : 'text-white'
+            }`}>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
               Zion Tech Group
             </span>
           </Link>
 
+<<<<<<< HEAD
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link
@@ -1293,11 +1362,19 @@ export default function Navigation() {
               className={`font-medium transition-colors hover:text-purple-600 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
+=======
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <Link
+              to="/"
+              className="text-white hover:text-cyan-400 font-medium transition-colors"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
               onClick={closeAllMenus}
             >
               Home
             </Link>
             
+<<<<<<< HEAD
             <Link 
               to="/about" 
               className={`font-medium transition-colors hover:text-purple-600 ${
@@ -1308,13 +1385,19 @@ export default function Navigation() {
               About
             </Link>
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
             {/* Services Dropdown */}
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
+<<<<<<< HEAD
                 className={`flex items-center space-x-1 font-medium transition-colors hover:text-purple-600 ${
                   isScrolled ? 'text-gray-700' : 'text-white'
                 }`}
+=======
+                className="flex items-center space-x-1 text-white hover:text-cyan-400 font-medium transition-colors"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
               >
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4" />
@@ -1323,6 +1406,7 @@ export default function Navigation() {
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
                   <div className="grid grid-cols-2 gap-6 px-6">
+<<<<<<< HEAD
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-3">
                         <div className="flex items-center space-x-2 mb-3">
@@ -1331,11 +1415,39 @@ export default function Navigation() {
                           </div>
                           <h3 className="font-semibold text-gray-900 text-sm">{category.title}</h3>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
+=======
+                    {/* AI Services */}
+                    <div>
+                      <button
+                        onClick={() => setAiServicesOpen(!aiServicesOpen)}
+                        className="flex items-center space-x-2 w-full text-left text-gray-700 hover:text-blue-600 font-medium mb-3"
+                      >
+                        <Brain className="w-4 h-4" />
+                        <span>AI Services</span>
+                        <ChevronDown className={`w-3 h-3 transition-transform ${aiServicesOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      {aiServicesOpen && (
+                        <div className="space-y-2 ml-6">
+                          {aiServices.slice(0, 4).map((service, index) => (
+                            <Link
+                              key={index}
+                              to={service.href}
+                              className="block text-sm text-gray-600 hover:text-blue-600 py-1"
+                              onClick={closeAllMenus}
+                            >
+                              <div className="font-medium">{service.name}</div>
+                              <div className="text-xs text-gray-500">
+                                {service.description}
+                              </div>
+                            </Link>
+                          ))}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
                     ))}
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   <div className="border-t border-gray-200 mt-6 pt-4 px-6">
@@ -1373,6 +1485,11 @@ export default function Navigation() {
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
                   <div className="grid grid-cols-1 gap-2">
                     {itServices.map((service) => (
+=======
+                  
+                  <div className="border-t border-gray-200 mt-6 pt-4 px-6">
+                    <div className="grid grid-cols-2 gap-4">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
                       <Link
                         key={service.name}
                         href={service.href}
@@ -1386,13 +1503,29 @@ export default function Navigation() {
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
+<<<<<<< HEAD
                     ))}
+=======
+                      <Link
+                        to="/services"
+                        className="flex items-center space-x-2 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                        onClick={closeAllMenus}
+                      >
+                        <Globe className="w-5 h-5 text-blue-600" />
+                        <div>
+                          <div className="font-medium text-gray-900">All Services</div>
+                          <div className="text-sm text-gray-500">Complete portfolio</div>
+                        </div>
+                      </Link>
+                    </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
                   </div>
                 </div>
               )}
             </div>
 
             {/* Micro SAAS Dropdown */}
+<<<<<<< HEAD
             <div className="relative group">
               <button
                 onClick={() => setMicroSaasOpen(!microSaasOpen)}
@@ -1783,6 +1916,12 @@ export default function Navigation() {
               <Link
                 to="/"
                 className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
+=======
+            <div className="relative">
+              <button
+                onClick={() => setMicroSaasOpen(!microSaasOpen)}
+                className="flex items-center space-x-1 text-white hover:text-cyan-400 font-medium transition-colors"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
               >
                 Home
               </Link>
@@ -2204,6 +2343,7 @@ export default function Navigation() {
               )}
             </div>
 
+<<<<<<< HEAD
             {/* AI Services Dropdown */}
             <div className="relative">
               <button
@@ -2334,10 +2474,23 @@ export default function Navigation() {
             <Link 
               to="/pricing" 
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+=======
+            <Link
+              to="/about"
+              className="text-white hover:text-cyan-400 font-medium transition-colors"
+              onClick={closeAllMenus}
+            >
+              About
+            </Link>
+            <Link
+              to="/blog"
+              className="text-white hover:text-cyan-400 font-medium transition-colors"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
               onClick={closeAllMenus}
             >
               Pricing
             </Link>
+<<<<<<< HEAD
             
             <Link 
               to="/contact" 
@@ -2451,6 +2604,11 @@ export default function Navigation() {
               className={`font-medium transition-colors hover:text-purple-600 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
+=======
+            <Link
+              to="/contact"
+              className="text-white hover:text-cyan-400 font-medium transition-colors"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
               onClick={closeAllMenus}
             >
               Contact
@@ -2815,12 +2973,17 @@ export default function Navigation() {
             <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 border border-cyan-500/20">
               <Link
                 to="/"
+<<<<<<< HEAD
                 className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+=======
+                className="block text-white hover:text-cyan-400 transition-colors font-medium py-2"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
               
+<<<<<<< HEAD
               <Link
                 to="/about"
                 className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
@@ -2872,6 +3035,69 @@ export default function Navigation() {
               <Link
                 to="/consultation"
                 className="block px-3 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-medium text-center mt-4"
+=======
+              {/* Mobile Services */}
+              <div className="space-y-2">
+                <div className="text-cyan-300 font-semibold text-lg">Services</div>
+                <div className="ml-4 space-y-2">
+                  <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    All Services
+                  </Link>
+                  <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    Micro SAAS Solutions
+                  </Link>
+                  <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    AI Services
+                  </Link>
+                  <Link to="/it-services" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    IT Services
+                  </Link>
+                  <Link to="/quantum-computing" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    Quantum Computing
+                  </Link>
+                  <Link to="/autonomous-systems" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    Autonomous Systems
+                  </Link>
+                  <Link to="/blockchain" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    Blockchain & Web3
+                  </Link>
+                  <Link to="/cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    Cybersecurity
+                  </Link>
+                </div>
+              </div>
+              
+              <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors font-medium py-2">
+                About
+              </Link>
+              <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors font-medium py-2">
+                Blog
+              </Link>
+              <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors font-medium py-2">
+                Contact
+              </Link>
+              
+              {/* Mobile Contact Info */}
+              <div className="pt-4 border-t border-gray-700">
+                <div className="flex items-center space-x-2 text-sm text-cyan-300 py-2">
+                  <Phone className="w-4 h-4" />
+                  <span>+1 302 464 0950</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-cyan-300 py-2">
+                  <Mail className="w-4 h-4" />
+                  <span>kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-cyan-300 py-2">
+                  <MapPin className="w-4 h-4" />
+                  <span>Middletown, DE</span>
+                </div>
+              </div>
+              
+              {/* Mobile CTA */}
+              <Link
+                to="/contact"
+                className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 mt-4"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
                 onClick={closeAllMenus}
               >
                 Get Started
@@ -3095,6 +3321,7 @@ Navigation.displayName = 'Navigation';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         {isOpen && (
@@ -3442,3 +3669,6 @@ export default Navigation;
 
 export default Navigation;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
+=======
+export default Navigation;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
