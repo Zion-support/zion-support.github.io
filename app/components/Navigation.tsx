@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
   Network,
@@ -16,6 +17,23 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, Zap, Cloud, Globe, Code, Smartphone, Brain, Wifi, Shield, Database, Users, BarChart, Settings, Mail, MessageSquare, FileText, Phone, MapPin, ArrowRight, Sparkles, Cpu, Target, Lock, TrendingUp, Calendar, CheckSquare, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, CheckCircle, ShoppingCart } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
+
+export default function Navigation() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
+
+  const toggleServices = () => {
+    setIsServicesOpen(!isServicesOpen)
+  }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f49
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -259,6 +277,7 @@ export default function Navigation() {
     { name: 'AI Voice Assistant Platform', href: '/ai-voice-assistant', icon: Mic, description: 'Enterprise voice AI' },
     { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', icon: FileText, description: 'Advanced content creation' }
   ]
+<<<<<<< HEAD
 
   const itServices = [
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
@@ -362,6 +381,8 @@ export default function Navigation() {
   ]
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f49
   return (
     <nav className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
@@ -381,6 +402,7 @@ export default function Navigation() {
             <Link to="/contact" className="text-gray-600 hover:text-gray-800">
               Contact
             </Link>
+<<<<<<< HEAD
           <div className="hidden md:flex items-center space-x-8">
                   className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive(item.path)
@@ -390,6 +412,28 @@ export default function Navigation() {
                     <ChevronDown className="w-4 h-4" />
                   )}
                 </Link>
+=======
+          </div>
+
+          <div className="hidden lg:block">
+            <div className="ml-10 flex items-baseline space-x-1">
+              <Link to="/" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Home
+              </Link>
+              <Link to="/about" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                About
+              </Link>
+              
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={toggleServices}
+                  className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                >
+                  Services
+                  <ChevronDown className="w-4 h-4 ml-1" />
+                </button>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f49
                 
                 {/* Services Dropdown */}
                 {item.hasDropdown && (
@@ -856,7 +900,18 @@ const Navigation: React.FC = () => {
                   </div>
                 )}
               </div>
+<<<<<<< HEAD
             ))}
+=======
+              
+              <Link to="/ai-services" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                AI Services
+              </Link>
+              <Link to="/contact" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Contact
+              </Link>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f49
           </div>
 
           {/* CTA Button */}
@@ -874,6 +929,7 @@ const Navigation: React.FC = () => {
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
+<<<<<<< HEAD
 <<<<<<< HEAD
               onClick={toggleMenu}
               className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
@@ -1046,6 +1102,49 @@ const Navigation: React.FC = () => {
               to="/contact" 
               className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
             >
+=======
+              onClick={toggleMenu}
+              className="text-white hover:text-purple-300 focus:outline-none focus:text-purple-300"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {isOpen && (
+        <div className="lg:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/10 backdrop-blur-lg border-t border-white/20">
+            <Link to="/" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
+              Home
+            </Link>
+            <Link to="/about" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
+              About
+            </Link>
+            
+            {/* Mobile Services Section */}
+            <div className="px-3 py-2">
+              <div className="text-white font-medium text-base mb-2">Services</div>
+              <div className="pl-4 space-y-1">
+                {services.map((service, index) => (
+                  <Link
+                    key={index}
+                    to={service.path}
+                    className="flex items-center text-gray-300 hover:text-purple-300 block px-3 py-2 rounded-md text-sm transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {service.icon}
+                    <span className="ml-3">{service.name}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+            
+            <Link to="/ai-services" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
+              AI Services
+            </Link>
+            <Link to="/contact" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f49
               Contact
             </Link>
 

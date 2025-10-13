@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -257,6 +258,20 @@ const ConsultationPage = lazy(() => import('./app/consultation/page'));
 
 // Loading component
 const AppLoadingSpinner = () => <LoadingSpinner />;
+=======
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navigation from './app/components/Navigation'
+import Footer from './app/components/Footer'
+import HomePage from './app/page'
+import AboutPage from './app/about/page'
+import ServicesPage from './app/services/page'
+import ContactPage from './app/contact/page'
+import AIServicesPage from './app/ai-services/page'
+import FiveGImplementationPage from './app/5g-implementation/page'
+import ITServicesPage from './app/it-services/page'
+import MicroSAASServicesPage from './app/micro-saas-services/page'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f49
 
 function App() {
   return (

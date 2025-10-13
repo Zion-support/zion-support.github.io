@@ -282,6 +282,7 @@ export default function Footer() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
@@ -311,6 +312,12 @@ export default function Footer() {
     <footer className="bg-gray-900/50 backdrop-blur-lg border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+=======
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f49
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
@@ -398,6 +405,7 @@ export default function Footer() {
           </div>
 
           {/* AI Services */}
+<<<<<<< HEAD
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400">AI Services</h3>
             <ul className="space-y-3">
@@ -423,6 +431,12 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-6 text-purple-400">IT Services</h3>
             <ul className="space-y-3">
               {itServices.map((service, index) => (
+=======
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Our Services</h3>
+            <ul className="space-y-2">
+              {services.slice(0, 6).map((service, index) => (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f49
                 <li key={index}>
                   <Link 
                     to={service.url}
@@ -437,6 +451,7 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+<<<<<<< HEAD
             </ul>
           </div>
 <<<<<<< HEAD
@@ -588,6 +603,14 @@ export default function Footer() {
               </a>
               <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Resources</h3>
+=======
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Resources</h3>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f49
             <ul className="space-y-2">
               {resourcesLinks.map((link, index) => (
                 <li key={index}>
@@ -682,6 +705,7 @@ export default function Footer() {
           </div>
         </div>
 
+<<<<<<< HEAD
 =======
         </div>
 
@@ -727,6 +751,18 @@ export default function Footer() {
                     Middletown, DE 19709
                   </span>
                 </div>
+=======
+        {/* Contact Info Section */}
+        <div className="bg-gray-800/50 rounded-lg p-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-center space-x-3">
+              <div className="bg-blue-600/20 p-2 rounded-lg">
+                <Mail className="w-5 h-5 text-blue-400" />
+              </div>
+              <div>
+                <p className="text-sm text-gray-400">Email</p>
+                <p className="text-white font-medium">kleber@ziontechgroup.com</p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f49
               </div>
             </div>
 
@@ -748,7 +784,24 @@ export default function Footer() {
                   ))}
                 </ul>
               </div>
+<<<<<<< HEAD
             ))}
+=======
+              <div>
+                <p className="text-sm text-gray-400">Phone</p>
+                <p className="text-white font-medium">+1 (302) 464-0950</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="bg-red-600/20 p-2 rounded-lg">
+                <MapPin className="w-5 h-5 text-red-400" />
+              </div>
+              <div>
+                <p className="text-sm text-gray-400">Location</p>
+                <p className="text-white font-medium">364 E Main St STE 1008, Middletown, DE 19709</p>
+              </div>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f49
           </div>
         </div>
 
