@@ -657,22 +657,34 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                         {isAIServicesOpen && (
                           <div className="ml-6 mt-2 space-y-1">
                             <Link to="/ai-analytics" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              AI Analytics Dashboard
+                              AI Business Intelligence Pro
                             </Link>
                             <Link to="/ai-content-generation" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              AI Content Generation
+                              AI Content Generation Studio
                             </Link>
                             <Link to="/ai-customer-support" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              AI Customer Support
+                              AI Customer Support Suite
                             </Link>
                             <Link to="/ai-cybersecurity" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              AI Cybersecurity
+                              AI Cybersecurity Defense
                             </Link>
                             <Link to="/ai-data-analytics" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              AI Data Analytics
+                              AI Data Analytics Platform
                             </Link>
                             <Link to="/ai-workflow-automation" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              AI Workflow Automation
+                              AI Workflow Automation Hub
+                            </Link>
+                            <Link to="/ai-marketing-automation" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI Marketing Automation Pro
+                            </Link>
+                            <Link to="/ai-document-processing" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI Document Intelligence
+                            </Link>
+                            <Link to="/ai-voice-assistant" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI Voice Assistant Enterprise
+                            </Link>
+                            <Link to="/ai-computer-vision" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI Computer Vision Suite
                             </Link>
                           </div>
                         )}
@@ -691,22 +703,34 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                         {isITServicesOpen && (
                           <div className="ml-6 mt-2 space-y-1">
                             <Link to="/cloud-infrastructure" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Cloud Infrastructure
+                              Cloud Infrastructure Pro
                             </Link>
                             <Link to="/cybersecurity" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Cybersecurity Solutions
+                              Advanced Cybersecurity
                             </Link>
                             <Link to="/data-management" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Data Management
+                              Enterprise Data Management
                             </Link>
                             <Link to="/network-solutions" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Network Solutions
+                              Network Infrastructure
                             </Link>
                             <Link to="/it-consulting" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              IT Consulting
+                              Strategic IT Consulting
                             </Link>
                             <Link to="/system-integration" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
                               System Integration
+                            </Link>
+                            <Link to="/ai-it-help-desk" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI-Powered IT Help Desk
+                            </Link>
+                            <Link to="/soc-services" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              Security Operations Center
+                            </Link>
+                            <Link to="/zero-trust-security" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              Zero Trust Security
+                            </Link>
+                            <Link to="/ai-it-automation" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI-Driven IT Automation
                             </Link>
                           </div>
                         )}
@@ -724,23 +748,35 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                         </button>
                         {isMicroSaasOpen && (
                           <div className="ml-6 mt-2 space-y-1">
-                            <Link to="/project-management-tool" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Project Management Tool
+                            <Link to="/zion-analytics-pro" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              Zion Analytics Pro
                             </Link>
-                            <Link to="/team-collaboration" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Team Collaboration
+                            <Link to="/zion-security-shield" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              Zion Security Shield
                             </Link>
-                            <Link to="/analytics-dashboard" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Analytics Dashboard
+                            <Link to="/zion-cloud-vault" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              Zion Cloud Vault
                             </Link>
-                            <Link to="/customer-relationship" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Customer Relationship
+                            <Link to="/zion-ai-crm-pro" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              Zion AI CRM Pro
                             </Link>
-                            <Link to="/inventory-management" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Inventory Management
+                            <Link to="/zion-ai-marketing-automation-pro" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI Marketing Automation Pro
                             </Link>
-                            <Link to="/financial-tracking" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Financial Tracking
+                            <Link to="/zion-ai-project-manager-pro" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI Project Manager Pro
+                            </Link>
+                            <Link to="/zion-ai-accounting-assistant" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI Accounting Assistant
+                            </Link>
+                            <Link to="/zion-ai-inventory-manager" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI Inventory Manager
+                            </Link>
+                            <Link to="/zion-ai-hr-assistant" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI HR Assistant
+                            </Link>
+                            <Link to="/zion-ai-customer-support-bot" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI Customer Support Bot
                             </Link>
                           </div>
                         )}
@@ -765,7 +801,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                               5G IoT Solutions
                             </Link>
                             <Link to="/5g-smart-city" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              5G Smart City
+                              5G Smart City Solutions
                             </Link>
                             <Link to="/5g-edge-computing" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
                               5G Edge Computing
@@ -775,6 +811,12 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                             </Link>
                             <Link to="/5g-data-analytics" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
                               5G Data Analytics
+                            </Link>
+                            <Link to="/5g-private-networks" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              5G Private Networks
+                            </Link>
+                            <Link to="/5g-implementation" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              5G Implementation Services
                             </Link>
                           </div>
                         )}
@@ -863,6 +905,39 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
               onClick={toggleMenu}
             >
               Services
+            </Link>
+            <Link
+              to="/ai-services"
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
+                isActive('/ai-services') 
+                  ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
+                  : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
+              }`}
+              onClick={toggleMenu}
+            >
+              AI Services
+            </Link>
+            <Link
+              to="/micro-saas"
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
+                isActive('/micro-saas') 
+                  ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
+                  : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
+              }`}
+              onClick={toggleMenu}
+            >
+              Micro SAAS
+            </Link>
+            <Link
+              to="/5g-solutions"
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
+                isActive('/5g-solutions') 
+                  ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
+                  : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
+              }`}
+              onClick={toggleMenu}
+            >
+              5G Solutions
             </Link>
             <Link
               to="/contact"

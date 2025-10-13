@@ -336,6 +336,106 @@ export default function Services() {
       originalPrice: "$299/month",
       features: ["Asset Inventory", "Lifecycle Management", "Cost Tracking", "License Management", "Depreciation Tracking", "Compliance Reporting"],
       category: "Asset Management"
+    },
+    {
+      title: "AI-Powered IT Help Desk",
+      description: "Intelligent IT support with AI-driven ticket routing, automated solutions, and predictive issue resolution. Reduce resolution time by 60%.",
+      icon: <Headphones className="w-8 h-8" />,
+      path: "/ai-it-help-desk",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $179/month",
+      originalPrice: "$359/month",
+      features: ["AI Ticket Routing", "Automated Solutions", "Predictive Resolution", "Knowledge Base", "Self-Service Portal", "Performance Analytics"],
+      category: "IT Support",
+      popular: true
+    },
+    {
+      title: "Enterprise Security Operations Center (SOC)",
+      description: "24/7 security monitoring and incident response with advanced threat hunting, forensic analysis, and compliance management.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/soc-services",
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $999/month",
+      originalPrice: "$1999/month",
+      features: ["24/7 Monitoring", "Threat Hunting", "Incident Response", "Forensic Analysis", "Compliance Management", "Security Training"],
+      category: "Security Operations"
+    },
+    {
+      title: "AI-Powered Network Optimization",
+      description: "Intelligent network performance optimization with predictive analytics, automated tuning, and proactive issue resolution.",
+      icon: <Network className="w-8 h-8" />,
+      path: "/ai-network-optimization",
+      color: "from-teal-500 to-cyan-500",
+      price: "Starting at $299/month",
+      originalPrice: "$599/month",
+      features: ["Predictive Analytics", "Automated Tuning", "Proactive Resolution", "Performance Monitoring", "Capacity Planning", "Traffic Analysis"],
+      category: "Network Services"
+    },
+    {
+      title: "Cloud-Native Application Development",
+      description: "Modern application development with microservices architecture, containerization, and cloud-native technologies for scalable solutions.",
+      icon: <Code className="w-8 h-8" />,
+      path: "/cloud-native-development",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $399/month",
+      originalPrice: "$799/month",
+      features: ["Microservices Architecture", "Containerization", "Kubernetes", "CI/CD Pipelines", "API Development", "Scalable Design"],
+      category: "Application Development"
+    },
+    {
+      title: "AI-Driven IT Automation Platform",
+      description: "Comprehensive IT automation with AI-powered decision making, self-healing systems, and intelligent resource management.",
+      icon: <Bot className="w-8 h-8" />,
+      path: "/ai-it-automation",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $249/month",
+      originalPrice: "$499/month",
+      features: ["AI Decision Making", "Self-Healing Systems", "Resource Management", "Process Automation", "Predictive Maintenance", "Cost Optimization"],
+      category: "IT Automation"
+    },
+    {
+      title: "Enterprise Data Governance Suite",
+      description: "Comprehensive data governance with data quality management, compliance monitoring, and privacy protection across all data sources.",
+      icon: <Database className="w-8 h-8" />,
+      path: "/data-governance-suite",
+      color: "from-slate-500 to-gray-500",
+      price: "Starting at $349/month",
+      originalPrice: "$699/month",
+      features: ["Data Quality Management", "Compliance Monitoring", "Privacy Protection", "Data Lineage", "Access Control", "Audit Reporting"],
+      category: "Data Governance"
+    },
+    {
+      title: "AI-Powered IT Cost Optimization",
+      description: "Intelligent cost analysis and optimization for IT infrastructure, cloud resources, and software licensing with automated recommendations.",
+      icon: <TrendingUp className="w-8 h-8" />,
+      path: "/it-cost-optimization",
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $199/month",
+      originalPrice: "$399/month",
+      features: ["Cost Analysis", "Resource Optimization", "License Management", "Cloud Cost Control", "ROI Tracking", "Automated Recommendations"],
+      category: "Cost Management"
+    },
+    {
+      title: "Zero Trust Security Architecture",
+      description: "Implement zero trust security model with identity verification, device trust, and continuous monitoring for enhanced security posture.",
+      icon: <Lock className="w-8 h-8" />,
+      path: "/zero-trust-security",
+      color: "from-red-600 to-orange-600",
+      price: "Starting at $499/month",
+      originalPrice: "$999/month",
+      features: ["Identity Verification", "Device Trust", "Continuous Monitoring", "Access Control", "Threat Detection", "Compliance Framework"],
+      category: "Security Architecture"
+    },
+    {
+      title: "AI-Enhanced IT Service Management",
+      description: "Intelligent IT service management with AI-powered incident resolution, change management, and service optimization.",
+      icon: <Settings className="w-8 h-8" />,
+      path: "/ai-itsm",
+      color: "from-purple-500 to-violet-500",
+      price: "Starting at $279/month",
+      originalPrice: "$559/month",
+      features: ["AI Incident Resolution", "Change Management", "Service Optimization", "SLA Management", "Performance Analytics", "User Experience"],
+      category: "Service Management"
     }
   ];
 
@@ -405,11 +505,11 @@ export default function Services() {
                 Discover our comprehensive suite of AI-powered services and cutting-edge technology solutions designed to transform your business.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   {service.popular && (
                     <div className="absolute top-4 right-4">

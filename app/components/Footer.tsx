@@ -541,7 +541,7 @@ const Footer = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/5 via-blue-600/5 to-purple-600/5 animate-pulse"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
@@ -609,37 +609,49 @@ const Footer = () => {
               <li>
                 <Link to="/ai-analytics" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
-                  AI Analytics Dashboard
+                  AI Business Intelligence Pro
                 </Link>
               </li>
               <li>
                 <Link to="/ai-content-generation" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
-                  AI Content Generation
+                  AI Content Generation Studio
                 </Link>
               </li>
               <li>
                 <Link to="/ai-customer-support" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
-                  AI Customer Support
+                  AI Customer Support Suite
                 </Link>
               </li>
               <li>
                 <Link to="/ai-cybersecurity" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
-                  AI Cybersecurity
+                  AI Cybersecurity Defense
                 </Link>
               </li>
               <li>
                 <Link to="/ai-data-analytics" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
-                  AI Data Analytics
+                  AI Data Analytics Platform
                 </Link>
               </li>
               <li>
                 <Link to="/ai-workflow-automation" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
-                  AI Workflow Automation
+                  AI Workflow Automation Hub
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-marketing-automation" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  AI Marketing Automation Pro
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-voice-assistant" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  AI Voice Assistant Enterprise
                 </Link>
               </li>
             </ul>
@@ -655,37 +667,49 @@ const Footer = () => {
               <li>
                 <Link to="/cloud-infrastructure" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
-                  Cloud Infrastructure
+                  Cloud Infrastructure Pro
                 </Link>
               </li>
               <li>
                 <Link to="/cybersecurity" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
-                  Cybersecurity Solutions
+                  Advanced Cybersecurity
                 </Link>
               </li>
               <li>
                 <Link to="/data-management" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
-                  Data Management
+                  Enterprise Data Management
                 </Link>
               </li>
               <li>
                 <Link to="/network-solutions" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
-                  Network Solutions
+                  Network Infrastructure
                 </Link>
               </li>
               <li>
                 <Link to="/it-consulting" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
-                  IT Consulting
+                  Strategic IT Consulting
                 </Link>
               </li>
               <li>
                 <Link to="/system-integration" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
                   System Integration
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-it-help-desk" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  AI-Powered IT Help Desk
+                </Link>
+              </li>
+              <li>
+                <Link to="/soc-services" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  Security Operations Center
                 </Link>
               </li>
             </ul>
@@ -699,21 +723,21 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/project-management-tool" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
+                <Link to="/zion-analytics-pro" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
-                  Project Management
+                  Zion Analytics Pro
                 </Link>
               </li>
               <li>
-                <Link to="/team-collaboration" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
+                <Link to="/zion-security-shield" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
-                  Team Collaboration
+                  Zion Security Shield
                 </Link>
               </li>
               <li>
-                <Link to="/analytics-dashboard" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
+                <Link to="/zion-ai-crm-pro" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
-                  Analytics Dashboard
+                  Zion AI CRM Pro
                 </Link>
               </li>
               <li>
@@ -731,7 +755,19 @@ const Footer = () => {
               <li>
                 <Link to="/5g-smart-city" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
-                  5G Smart City
+                  5G Smart City Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/5g-edge-computing" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  5G Edge Computing
+                </Link>
+              </li>
+              <li>
+                <Link to="/5g-mobile-apps" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  5G Mobile Applications
                 </Link>
               </li>
             </ul>
