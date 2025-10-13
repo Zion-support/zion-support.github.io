@@ -3,33 +3,33 @@ import React, { useEffect } from 'react';
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Skip to main content functionality
-    const addSkipLink = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50';
+    const addSkipLink = () => {'
+      const skipLink = document.createElement('a');'
+      skipLink.href = '#main-content';'
+      skipLink.textContent = 'Skip to main content';'
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50';'
       skipLink.style.zIndex = '9999';
-      document.body.insertBefore(skipLink, document.body.firstChild);
+      document.body.insertBefore(skipLink, document.body.firstChild);}
     };
 
 // Focus management for keyboard navigation
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
+    const handleKeyDown = (event: KeyboardEvent) => {'
+      if (event.key === 'Tab') {'
+        document.body.classList.add('keyboard-navigation');}
       }
     };
 
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
+    const handleMouseDown = () => {'
+      document.body.classList.remove('keyboard-navigation');}
     };
 
     // Add focus indicators for keyboard navigation
-    const addFocusStyles = () => {
+    const addFocusStyles = () => {'
       const style = document.createElement('style');
       style.textContent = `
         .keyboard-navigation *:focus {
           outline: 2px solid #8b5cf6 !important;
-          outline-offset: 2px !important;
+          outline-offset: 2px !important;}
         }
         
         .keyboard-navigation button:focus,
@@ -37,30 +37,30 @@ const AccessibilityEnhancer: React.FC = () => {
         .keyboard-navigation input:focus,
         .keyboard-navigation textarea:focus,
         .keyboard-navigation select:focus {
-          box-shadow: 0 0 0 2px #8b5cf6 !important;
+          box-shadow: 0 0 0 2px #8b5cf6 !important;}
         }
       `;
       document.head.appendChild(style);
     };
 
     // Add ARIA landmarks
-    const addAriaLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
+    const addAriaLandmarks = () => {'
+      const main = document.querySelector('main');'
+      if (main && !main.getAttribute('role')) {'
+        main.setAttribute('role', 'main');}
       }
 
     // Reduced motion mode
-    if (isReducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
+    if (isReducedMotion) {'
+      root.classList.add('reduced-motion');}
+    } else {'
+      root.classList.remove('reduced-motion');}
     }
 
-    // Font size adjustment
-    root.style.setProperty('--font-size-multiplier', 
-      fontSize === 'large' ? '1.2' : 
-      fontSize === 'extra-large' ? '1.4' : 
+    // Font size adjustment'
+    root.style.setProperty('--font-size-multiplier', '
+      fontSize === 'large' ? '1.2' : '
+      fontSize === 'extra-large' ? '1.4' : '
       fontSize === 'small' ? '0.9' : '1'
     );
   }, [isHighContrast, isReducedMotion, fontSize]);
@@ -68,25 +68,25 @@ const AccessibilityEnhancer: React.FC = () => {
   // Keyboard navigation enhancement
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content
+      // Skip to main content'
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
-        e.preventDefault();
+        e.preventDefault();'
         const mainContent = document.getElementById('main-content');
         if (mainContent) {
-          mainContent.focus();
+          mainContent.focus();}
         }
       }
 
-      // Escape key to close modals/dropdowns
+      // Escape key to close modals/dropdowns'
       if (e.key === 'Escape') {
         const activeElement = document.activeElement as HTMLElement;
         if (activeElement && activeElement.blur) {
-          activeElement.blur();
+          activeElement.blur();}
         }
       }
     };
-
-    document.addEventListener('keydown', handleKeyDown);
+'
+    document.addEventListener('keydown', handleKeyDown);'
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
@@ -94,44 +94,44 @@ const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     const handleFocusIn = (e: FocusEvent) => {
       const target = e.target as HTMLElement;
-      if (target) {
-        target.classList.add('focus-visible');
+      if (target) {'
+        target.classList.add('focus-visible');}
       }
     };
 
     const handleFocusOut = (e: FocusEvent) => {
       const target = e.target as HTMLElement;
-      if (target) {
-        target.classList.remove('focus-visible');
+      if (target) {'
+        target.classList.remove('focus-visible');}
       }
     };
-
-    document.addEventListener('focusin', handleFocusIn);
+'
+    document.addEventListener('focusin', handleFocusIn);'
     document.addEventListener('focusout', handleFocusOut);
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 
 <<<<<<< HEAD
     return () => {
 <<<<<<< HEAD
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
+      focusableElements.forEach(element => {'
+        element.removeEventListener('focus', handleFocus);'
+        element.removeEventListener('blur', handleBlur);'
+      const nav = document.querySelector('nav');'
+      if (nav && !nav.getAttribute('role')) {'
+        nav.setAttribute('role', 'navigation');}
       }
-
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
+'
+      const footer = document.querySelector('footer');'
+      if (footer && !footer.getAttribute('role')) {'
+        footer.setAttribute('role', 'contentinfo');}
       }
     };
 
     // Add alt text to images without alt attributes
-    const addAltText = () => {
+    const addAltText = () => {'
       const images = document.querySelectorAll('img:not([alt])');
-      images.forEach((img, index) => {
-        if (!img.getAttribute('alt')) {
+      images.forEach((img, index) => {'
+        if (!img.getAttribute('alt')) {'}
           img.setAttribute('alt', `Image ${index + 1}`);
         }
 
@@ -144,18 +144,18 @@ const AccessibilityEnhancer: React.FC = () => {
     addAriaLandmarks();
     addAltText();
 
-    // Add event listeners
-    document.addEventListener('keydown', handleKeyDown);
+    // Add event listeners'
+    document.addEventListener('keydown', handleKeyDown);'
     document.addEventListener('mousedown', handleMouseDown);
 
     // Cleanup
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
+    return () => {'
+      document.removeEventListener('keydown', handleKeyDown);'
+      document.removeEventListener('mousedown', handleMouseDown);}
     };
   }, []);
 
 return null;
 };
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer;'

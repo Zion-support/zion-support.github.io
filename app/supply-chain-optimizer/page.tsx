@@ -9,5 +9,6 @@ export default function SupplyChainOptimizerPage() {
         </p>;
       </div>;
     </div>;
-  );
+  );}
 }
+'

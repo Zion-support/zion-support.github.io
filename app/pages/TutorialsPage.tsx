@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react';'
+import { Helmet , Link  } from 'lucide-react';
 import { 
   PlayIcon,
   ClockIcon,
@@ -9,13 +8,13 @@ import {
   BookOpenIcon,
   CodeBracketIcon,
   ShieldCheckIcon,
-  CloudIcon
+  CloudIcon;'}
 } from '@heroicons/react/24/outline';
 
 export default function TutorialsPage() {
   const tutorials = [
     {
-      id: 1,
+      id: 1,'
       title: "Getting Started with AI: A Complete Beginner's Guide",
       description: "Learn the fundamentals of artificial intelligence and how to implement basic AI solutions in your business.",
       category: "AI & Machine Learning",
@@ -24,7 +23,7 @@ export default function TutorialsPage() {
       instructor: "AI Team",
       thumbnail: "/images/tutorials/ai-basics.jpg",
       icon: CodeBracketIcon,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500"}
     },
     {
       id: 2,
@@ -36,7 +35,7 @@ export default function TutorialsPage() {
       instructor: "Security Team",
       thumbnail: "/images/tutorials/cybersecurity-basics.jpg",
       icon: ShieldCheckIcon,
-      color: "from-cyan-500 to-blue-500"
+      color: "from-cyan-500 to-blue-500"}
     },
     {
       id: 3,
@@ -48,7 +47,7 @@ export default function TutorialsPage() {
       instructor: "Cloud Team",
       thumbnail: "/images/tutorials/cloud-migration.jpg",
       icon: CloudIcon,
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500"}
     },
     {
       id: 4,
@@ -60,7 +59,7 @@ export default function TutorialsPage() {
       instructor: "Development Team",
       thumbnail: "/images/tutorials/micro-saas.jpg",
       icon: CodeBracketIcon,
-      color: "from-pink-500 to-rose-500"
+      color: "from-pink-500 to-rose-500"}
     },
     {
       id: 5,
@@ -72,7 +71,7 @@ export default function TutorialsPage() {
       instructor: "5G Team",
       thumbnail: "/images/tutorials/5g-implementation.jpg",
       icon: CloudIcon,
-      color: "from-indigo-500 to-purple-500"
+      color: "from-indigo-500 to-purple-500"}
     },
     {
       id: 6,
@@ -84,7 +83,7 @@ export default function TutorialsPage() {
       instructor: "Strategy Team",
       thumbnail: "/images/tutorials/digital-transformation.jpg",
       icon: BookOpenIcon,
-      color: "from-yellow-500 to-orange-500"
+      color: "from-yellow-500 to-orange-500"}
     }
   ];
 
@@ -101,7 +100,7 @@ export default function TutorialsPage() {
   const difficultyColors = {
     "Beginner": "bg-green-500",
     "Intermediate": "bg-yellow-500",
-    "Advanced": "bg-red-500"
+    "Advanced": "bg-red-500"}
   };
 
   return (
@@ -135,7 +134,7 @@ export default function TutorialsPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
-              <button
+              <button}
                 key={category}
                 className="px-6 py-2 rounded-full border border-slate-600 text-gray-300 hover:border-purple-500 hover:text-purple-300 transition-colors"
               >
@@ -153,7 +152,7 @@ export default function TutorialsPage() {
             {tutorials.map((tutorial) => {
               const Icon = tutorial.icon;
               return (
-                <div 
+                <div }
                   key={tutorial.id}
                   className="group bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden"
                 >
@@ -330,4 +329,4 @@ export default function TutorialsPage() {
       </section>
     </>
   );
-}
+}'

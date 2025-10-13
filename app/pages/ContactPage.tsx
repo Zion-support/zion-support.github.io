@@ -1,42 +1,40 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-  ClockIcon,
-  ChatBubbleLeftRightIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  UserIcon,
-  BuildingOfficeIcon,
-  CalendarIcon
-} from '@heroicons/react/24/outline';
+import { Helmet , PhoneIcon, 
+  EnvelopeIcon, 
+  MapPinIcon, 
+  ClockIcon, 
+  ChatBubbleLeftRightIcon, 
+  ArrowRightIcon, 
+  CheckCircleIcon, 
+  UserIcon, 
+  BuildingOfficeIcon, 
+  CalendarIcon;'}
+ } from 'lucide-react';
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    company: '',
-    subject: '',
-    message: '',
-    service: ''
+  const [formData, setFormData] = useState({'
+    firstName: '','
+    lastName: '','
+    email: '','
+    phone: '','
+    company: '','
+    subject: '','
+    message: '','
+    service: ''}
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value}
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    // Handle form submission'
+    console.log('Form submitted:', formData);}
   };
 
   const contactMethods = [
@@ -45,28 +43,28 @@ export default function ContactPage() {
       title: "Phone",
       details: "+1-302-464-0950",
       description: "Call us for immediate assistance",
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500"}
     },
     {
       icon: EnvelopeIcon,
       title: "Email",
       details: "kleber@ziontechgroup.com",
       description: "Send us a detailed message",
-      color: "from-cyan-500 to-blue-500"
+      color: "from-cyan-500 to-blue-500"}
     },
     {
       icon: MapPinIcon,
       title: "Office",
       details: "364 E Main St STE 1008",
       description: "Middletown, DE 19709",
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500"}
     },
     {
       icon: ClockIcon,
       title: "Business Hours",
       details: "Monday - Friday",
       description: "9:00 AM - 6:00 PM EST",
-      color: "from-yellow-500 to-orange-500"
+      color: "from-yellow-500 to-orange-500"}
     }
   ];
 
@@ -122,7 +120,7 @@ export default function ContactPage() {
             {contactMethods.map((method, index) => {
               const Icon = method.icon;
               return (
-                <div 
+                <div }
                   key={method.title}
                   className="group bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 p-8 text-center"
                 >
@@ -148,7 +146,7 @@ export default function ContactPage() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Send Us a Message
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
                 Fill out the form below and we'll get back to you within 24 hours
               </p>
             </div>
@@ -238,7 +236,7 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     >
                       <option value="">Select a service</option>
-                      {services.map((service) => (
+                      {services.map((service) => (}
                         <option key={service} value={service}>{service}</option>
                       ))}
                     </select>
@@ -294,7 +292,7 @@ export default function ContactPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Contact Us?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
               Here's what you can expect when you reach out to our team
             </p>
           </div>
@@ -386,4 +384,4 @@ export default function ContactPage() {
       </section>
     </>
   );
-}
+}'

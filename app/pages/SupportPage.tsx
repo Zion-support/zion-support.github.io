@@ -1,68 +1,66 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  MagnifyingGlassIcon,
-  ChatBubbleLeftRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  ClockIcon,
-  CheckCircleIcon,
-  ExclamationTriangleIcon,
-  InformationCircleIcon,
-  ArrowRightIcon,
-  DocumentTextIcon,
-  VideoCameraIcon,
-  UserGroupIcon
-} from '@heroicons/react/24/outline';
+import { Helmet , MagnifyingGlassIcon, 
+  ChatBubbleLeftRightIcon, 
+  PhoneIcon, 
+  EnvelopeIcon, 
+  ClockIcon, 
+  CheckCircleIcon, 
+  ExclamationTriangleIcon, 
+  InformationCircleIcon, 
+  ArrowRightIcon, 
+  DocumentTextIcon, 
+  VideoCameraIcon, 
+  UserGroupIcon;'}
+ } from 'lucide-react';
 
-export default function SupportPage() {
-  const [searchQuery, setSearchQuery] = useState('');
+export default function SupportPage() {'
+  const [searchQuery, setSearchQuery] = useState('');'
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const supportCategories = [
-    { id: 'all', name: 'All Topics', icon: DocumentTextIcon },
-    { id: 'technical', name: 'Technical Support', icon: InformationCircleIcon },
-    { id: 'billing', name: 'Billing & Account', icon: CheckCircleIcon },
-    { id: 'general', name: 'General Questions', icon: ChatBubbleLeftRightIcon },
+  const supportCategories = ['}
+    { id: 'all', name: 'All Topics', icon: DocumentTextIcon },'
+    { id: 'technical', name: 'Technical Support', icon: InformationCircleIcon },'
+    { id: 'billing', name: 'Billing & Account', icon: CheckCircleIcon },'
+    { id: 'general', name: 'General Questions', icon: ChatBubbleLeftRightIcon },'
     { id: 'emergency', name: 'Emergency Support', icon: ExclamationTriangleIcon }
   ];
 
   const faqs = [
     {
       id: 1,
-      question: "How do I get started with your AI solutions?",
-      answer: "Getting started is easy! Contact our team for a free consultation where we'll assess your needs and recommend the best AI solutions for your business. We'll guide you through the entire implementation process.",
-      category: 'technical'
+      question: "How do I get started with your AI solutions?",'
+      answer: "Getting started is easy! Contact our team for a free consultation where we'll assess your needs and recommend the best AI solutions for your business. We'll guide you through the entire implementation process.",'
+      category: 'technical'}
     },
     {
       id: 2,
       question: "What is your response time for support requests?",
-      answer: "We offer different response times based on your support tier. Standard support: 24-48 hours, Priority support: 4-8 hours, Emergency support: 1-2 hours. All emergency issues are handled immediately.",
-      category: 'general'
+      answer: "We offer different response times based on your support tier. Standard support: 24-48 hours, Priority support: 4-8 hours, Emergency support: 1-2 hours. All emergency issues are handled immediately.",'
+      category: 'general'}
     },
     {
       id: 3,
       question: "How do I update my billing information?",
-      answer: "You can update your billing information through your account dashboard or by contacting our billing team directly. We accept all major credit cards and offer flexible payment options.",
-      category: 'billing'
+      answer: "You can update your billing information through your account dashboard or by contacting our billing team directly. We accept all major credit cards and offer flexible payment options.",'
+      category: 'billing'}
     },
     {
       id: 4,
       question: "What security measures do you have in place?",
-      answer: "We implement enterprise-grade security including end-to-end encryption, multi-factor authentication, regular security audits, and compliance with industry standards like SOC 2 and GDPR.",
-      category: 'technical'
+      answer: "We implement enterprise-grade security including end-to-end encryption, multi-factor authentication, regular security audits, and compliance with industry standards like SOC 2 and GDPR.",'
+      category: 'technical'}
     },
     {
       id: 5,
       question: "Can I schedule a training session for my team?",
-      answer: "Absolutely! We offer comprehensive training sessions for all our solutions. You can schedule group training, one-on-one sessions, or request custom training materials for your specific needs.",
-      category: 'general'
+      answer: "Absolutely! We offer comprehensive training sessions for all our solutions. You can schedule group training, one-on-one sessions, or request custom training materials for your specific needs.",'
+      category: 'general'}
     },
     {
       id: 6,
       question: "What happens if I experience a system outage?",
-      answer: "In case of a system outage, our emergency support team is immediately notified and works around the clock to restore services. We also provide regular updates and have backup systems in place.",
-      category: 'emergency'
+      answer: "In case of a system outage, our emergency support team is immediately notified and works around the clock to restore services. We also provide regular updates and have backup systems in place.",'
+      category: 'emergency'}
     }
   ];
 
@@ -73,7 +71,7 @@ export default function SupportPage() {
       icon: ChatBubbleLeftRightIcon,
       availability: "24/7",
       responseTime: "Immediate",
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500"}
     },
     {
       title: "Phone Support",
@@ -81,7 +79,7 @@ export default function SupportPage() {
       icon: PhoneIcon,
       availability: "Mon-Fri 9AM-6PM EST",
       responseTime: "Immediate",
-      color: "from-cyan-500 to-blue-500"
+      color: "from-cyan-500 to-blue-500"}
     },
     {
       title: "Email Support",
@@ -89,7 +87,7 @@ export default function SupportPage() {
       icon: EnvelopeIcon,
       availability: "24/7",
       responseTime: "Within 24 hours",
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500"}
     },
     {
       title: "Video Call",
@@ -97,11 +95,11 @@ export default function SupportPage() {
       icon: VideoCameraIcon,
       availability: "By appointment",
       responseTime: "Scheduled",
-      color: "from-yellow-500 to-orange-500"
+      color: "from-yellow-500 to-orange-500"}
     }
   ];
 
-  const filteredFaqs = faqs.filter(faq => 
+  const filteredFaqs = faqs.filter(faq => '
     selectedCategory === 'all' || faq.category === selectedCategory
   ).filter(faq =>
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -111,7 +109,7 @@ export default function SupportPage() {
   return (
     <>
       <Helmet>
-        <title>Support - Zion Tech Group</title>
+        <title>Support - Zion Tech Group</title>'
         <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Find answers, contact support, and access resources." />
         <meta name="keywords" content="support, help, technical support, customer service, FAQ, documentation" />
       </Helmet>
@@ -123,7 +121,7 @@ export default function SupportPage() {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Support Center
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">'
               We're here to help you succeed with our AI and IT solutions
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
@@ -155,13 +153,13 @@ export default function SupportPage() {
               {supportCategories.map((category) => {
                 const Icon = category.icon;
                 return (
-                  <button
+                  <button}
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`flex items-center gap-2 px-6 py-3 rounded-lg border transition-all duration-300 ${
-                      selectedCategory === category.id
+                      selectedCategory === category.id'
                         ? 'border-purple-500 bg-purple-500/20 text-purple-300'
-                        : 'border-slate-600 text-gray-300 hover:border-purple-400 hover:text-purple-300'
+                        : 'border-slate-600 text-gray-300 hover:border-purple-400 hover:text-purple-300'}
                     }`}
                   >
                     <Icon className="w-5 h-5" />
@@ -190,7 +188,7 @@ export default function SupportPage() {
             {supportChannels.map((channel, index) => {
               const Icon = channel.icon;
               return (
-                <div 
+                <div }
                   key={index}
                   className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105"
                 >
@@ -232,7 +230,7 @@ export default function SupportPage() {
 
           <div className="max-w-4xl mx-auto space-y-6">
             {filteredFaqs.map((faq) => (
-              <div 
+              <div }
                 key={faq.id}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 p-6"
               >
@@ -245,7 +243,7 @@ export default function SupportPage() {
           {filteredFaqs.length === 0 && (
             <div className="text-center py-12">
               <p className="text-gray-400 text-lg">No FAQs found matching your search criteria.</p>
-            </div>
+            </div>}
           )}
         </div>
       </section>
@@ -355,4 +353,4 @@ export default function SupportPage() {
       </section>
     </>
   );
-}
+}'

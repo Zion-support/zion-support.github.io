@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';'
 'use client';
 export default function AiDataMiningProPage() {
   return (
@@ -10,5 +10,6 @@ export default function AiDataMiningProPage() {
         </p>;
       </div>;
     </div>;
-  );
+  );}
 }
+'

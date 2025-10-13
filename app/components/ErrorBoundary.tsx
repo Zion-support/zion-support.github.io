@@ -1,16 +1,15 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { Component, ErrorInfo, ReactNode } from 'react';'
+import { AlertTriangle,  RefreshCw,  Home , Link  } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
+  fallback?: ReactNode;}
 }
 
 interface State {
   hasError: boolean;
 error: Error | null;
-  errorInfo: ErrorInfo | null;
+  errorInfo: ErrorInfo | null;}
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -19,7 +18,7 @@ class ErrorBoundary extends Component<Props, State> {
     this.state = {
       hasError: false,
       error: null,
-      errorInfo: null
+      errorInfo: null}
     };
   }
 
@@ -27,79 +26,28 @@ class ErrorBoundary extends Component<Props, State> {
     return {
       hasError: true,
       error,
-      errorInfo: null
+      errorInfo: null}
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {'
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-<<<<<<< HEAD
-    
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    this.setState({
-      error,
-      errorInfo
-    });
-// Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
 
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send the error to a service like Sentry
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-  }
-
-  handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null
-    });
-  };
-
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
-          <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
-            <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
-<AlertTriangle className="w-8 h-8 text-red-400" />
-            </div>
-            
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-=======
-              We're sorry, but something unexpected happened. Please try refreshing the page.
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
             </p>
-
+'
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
 Error Details (Development Only)
                 </summary>
                 <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto">
-                  <div className="mb-2">
+                  <div className="mb-2">}
                     <strong>Error:</strong> {this.state.error.message}
                   </div>
                   {this.state.errorInfo && (
                     <div>
                       <strong>Stack Trace:</strong>
-                      <pre className="mt-1 whitespace-pre-wrap">
+                      <pre className="mt-1 whitespace-pre-wrap">}
                         {this.state.errorInfo.componentStack}
                       </pre>
                     </div>
@@ -127,7 +75,7 @@ className="flex items-center justify-center gap-2 border-2 border-purple-400 tex
             </div>
 
             <div className="mt-6 pt-6 border-t border-slate-700">
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-gray-400">'
                 If this problem persists, please{' '}
                 <Link to="/contact" className="text-purple-400 hover:text-purple-300">
                   contact our support team
@@ -143,4 +91,4 @@ className="flex items-center justify-center gap-2 border-2 border-purple-400 tex
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary;'

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';'
+import { Link } from 'react-router-dom';'
 import SEOHead from '../components/SEOHead';
 import { 
   CpuChipIcon,
@@ -13,17 +13,17 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   CurrencyDollarIcon,
-  StarIcon
-} from '@heroicons/react/24/outline';
-import FuturisticBackground from '../components/FuturisticBackground';
-import NeonButton from '../components/NeonButton';
-import AnimatedCard from '../components/AnimatedCard';
+  StarIcon;'}
+} from '@heroicons/react/24/outline';'
+import FuturisticBackground from '../components/FuturisticBackground';'
+import NeonButton from '../components/NeonButton';'
+import AnimatedCard from '../components/AnimatedCard';'
 import { services, getServicesByCategory } from '../data/servicesData';
 
-export default function ServicesPage() {
-  const categories = ['AI', 'SaaS', 'IT', 'Cybersecurity', 'Cloud', '5G', 'Blockchain', 'IoT'];
+export default function ServicesPage() {'
+  const categories = ['AI', 'SaaS', 'IT', 'Cybersecurity', 'Cloud', '5G', 'Blockchain', 'IoT'];'
   const [selectedCategory, setSelectedCategory] = React.useState<string>('All');
-
+'
   const filteredServices = selectedCategory === 'All' 
     ? services 
     : getServicesByCategory(selectedCategory as any);
@@ -37,7 +37,7 @@ export default function ServicesPage() {
       />
       
       <FuturisticBackground />
-      
+      }
       {/* Hero Section */}
       <section className="relative py-20">
         <div className="container mx-auto px-4 relative z-10">
@@ -66,24 +66,24 @@ export default function ServicesPage() {
             </div>
             
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <button
+              <button'
                 onClick={() => setSelectedCategory('All')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${'
                   selectedCategory === 'All'
                     ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg shadow-purple-500/25'
-                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700 border border-slate-600'
+                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700 border border-slate-600'}
                 }`}
               >
                 All Services
               </button>
               {categories.map((category) => (
-                <button
+                <button}
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    selectedCategory === category
+                    selectedCategory === category'
                       ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg shadow-purple-500/25'
-                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700 border border-slate-600'
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700 border border-slate-600'}
                   }`}
                 >
                   {category}
@@ -98,7 +98,7 @@ export default function ServicesPage() {
       <section className="py-20 relative">
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {filteredServices.map((service) => (
+            {filteredServices.map((service) => (}
               <AnimatedCard key={service.id} glowColor={service.glowColor} className="group">
                 <div className="text-center mb-6">
                   <div className="text-6xl mb-4">{service.icon}</div>
@@ -110,7 +110,7 @@ export default function ServicesPage() {
                 </div>
                 
                 <div className="space-y-3 mb-6">
-                  {service.features.slice(0, 4).map((feature, featureIndex) => (
+                  {service.features.slice(0, 4).map((feature, featureIndex) => (}
                     <div key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-sm">{feature}</span>
@@ -280,7 +280,7 @@ export default function ServicesPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-12">
+            <p className="text-xl text-gray-300 mb-12">'
               Let's discuss your project and find the perfect solution for your business needs
             </p>
             
@@ -316,4 +316,4 @@ export default function ServicesPage() {
       </section>
     </>
   );
-}
+}'

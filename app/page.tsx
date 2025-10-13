@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from './components/SEO';
-=======
-=======
-=======
-import SEOHead from './components/SEOHead';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
+
+
 >>>>>>> origin/main
 import { 
   ArrowRightIcon, 
@@ -20,7 +10,7 @@ import {
   GlobeAltIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon
+  MapPinIcon;}
 } from '@heroicons/react/24/outline';
 
 export default function HomePage()  {
@@ -39,13 +29,13 @@ export default function HomePage()  {
       "foundingDate": "2020",
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "US"
+        "addressCountry": "US"}
       },
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-555-0123",
         "contactType": "customer service",
-        "email": "info@ziontechgroup.com"
+        "email": "info@ziontechgroup.com"}
       },
       "sameAs": [
         "https://linkedin.com/company/ziontechgroup",
@@ -57,14 +47,7 @@ export default function HomePage()  {
 
   return (
     <>
-<<<<<<< HEAD
-      <SEO 
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
-        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
-        url="/"
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
+
       />
       
       {/* Hero Section */}
@@ -75,9 +58,9 @@ export default function HomePage()  {
         </div>
         
         {/* Floating Elements with Neon Effects */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>'
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>'
+        <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}></div>'
         <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-15 floating" style={{animationDelay: '3s'}}></div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -227,7 +210,7 @@ export default function HomePage()  {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-              With over 4 years of experience in cutting-edge technology solutions, 
+              With over 4 years of experience in cutting-edge technology solutions, '
               we've helped businesses across various industries transform their operations 
               and achieve unprecedented growth.
             </p>
@@ -264,7 +247,7 @@ export default function HomePage()  {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-12">
+            <p className="text-xl text-gray-300 mb-12">'
               Let's discuss how our technology solutions can drive your business forward
             </p>
             
@@ -302,4 +285,4 @@ export default function HomePage()  {
       </section>
     </>
   );
-}
+}'

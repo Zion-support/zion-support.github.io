@@ -1,42 +1,41 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react;
+import React from 'react';'
+import { Helmet , Brain,  Bot,  BarChart3,  Shield,  Zap,  Target   } from 'lucide-react';
 const AIServicesPage: React.FC = () => {
   const services = [{
-      icon: Brain,
-      title: 'AI Strategy & Consulting',';
-      description: 'Develop comprehensive AI strategies tailored to your business objectives and industry requirements.',';
-      features: ['AI Readiness Assessment', 'Technology Roadmap', 'ROI Analysis', 'Implementation Planning']';
+      icon: Brain,'
+      title: 'AI Strategy & Consulting',';'
+      description: 'Develop comprehensive AI strategies tailored to your business objectives and industry requirements.',';'
+      features: ['AI Readiness Assessment', 'Technology Roadmap', 'ROI Analysis', 'Implementation Planning']';}
     },
     {
-      icon: Bot,
-      title: 'Conversational AI',';
-      description: 'Build intelligent chatbots and virtual assistants that enhance customer experience and automate support.',';
-      features: ['Natural Language Processing', 'Multi-channel Integration', 'Sentiment Analysis', '24/7 Availability']';
+      icon: Bot,'
+      title: 'Conversational AI',';'
+      description: 'Build intelligent chatbots and virtual assistants that enhance customer experience and automate support.',';'
+      features: ['Natural Language Processing', 'Multi-channel Integration', 'Sentiment Analysis', '24/7 Availability']';}
     },
     {
-      icon: BarChart3,
-      title: 'Predictive Analytics',';
-      description: 'Leverage machine learning to predict trends, behaviors, and outcomes for better decision making.',';
-      features: ['Data Mining', 'Pattern Recognition', 'Forecasting Models', 'Real-time Insights']';
+      icon: BarChart3,'
+      title: 'Predictive Analytics',';'
+      description: 'Leverage machine learning to predict trends, behaviors, and outcomes for better decision making.',';'
+      features: ['Data Mining', 'Pattern Recognition', 'Forecasting Models', 'Real-time Insights']';}
     },
     {
-      icon: Shield,
-      title: 'AI Security Solutions',';
-      description: 'Protect your AI systems and data with advanced security measures and compliance frameworks.',';
-      features: ['Threat Detection', 'Data Privacy', 'Model Security', 'Compliance Management']';
+      icon: Shield,'
+      title: 'AI Security Solutions',';'
+      description: 'Protect your AI systems and data with advanced security measures and compliance frameworks.',';'
+      features: ['Threat Detection', 'Data Privacy', 'Model Security', 'Compliance Management']';}
     },
     {
-      icon: Zap,
-      title: 'Process Automation',';
-      description: 'Automate repetitive tasks and workflows using AI to increase efficiency and reduce costs.',';
-      features: ['Workflow Automation', 'Document Processing', 'Data Entry Automation', 'Quality Control']';
+      icon: Zap,'
+      title: 'Process Automation',';'
+      description: 'Automate repetitive tasks and workflows using AI to increase efficiency and reduce costs.',';'
+      features: ['Workflow Automation', 'Document Processing', 'Data Entry Automation', 'Quality Control']';}
     },
     {
-      icon: Target,
-      title: 'Computer Vision',';
-      description: 'Implement visual recognition systems for quality control, security, and enhanced user experiences.',';
-      features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Quality Inspection']';
+      icon: Target,'
+      title: 'Computer Vision',';'
+      description: 'Implement visual recognition systems for quality control, security, and enhanced user experiences.',';'
+      features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Quality Inspection']';}
     }
   ];
 
@@ -62,7 +61,7 @@ const AIServicesPage: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
           {services.map((service, _index) => {
             const Icon = service.icon;
-            return (
+            return (}
               <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">;
                 <div className="flex items-center mb-4">;
                   <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mr-4">;
@@ -72,7 +71,7 @@ const AIServicesPage: React.FC = () => {
                 </div>;
                 <p className="text-gray-300 mb-4">{service.description}</p>;
                 <ul className="space-y-2">;
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="text-sm text-gray-400 flex items-center">;
                       <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>;
                       {feature}
@@ -105,4 +104,4 @@ const AIServicesPage: React.FC = () => {
   );
 };
 
-export default AIServicesPage;
+export default AIServicesPage;'

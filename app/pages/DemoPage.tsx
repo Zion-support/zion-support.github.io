@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  PlayIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  CalendarIcon,
-  ClockIcon,
-  UserIcon,
-  VideoCameraIcon,
-  PresentationChartBarIcon
-} from '@heroicons/react/24/outline';
+import { Helmet , PlayIcon, 
+  CheckCircleIcon, 
+  ArrowRightIcon, 
+  CalendarIcon, 
+  ClockIcon, 
+  UserIcon, 
+  VideoCameraIcon, 
+  PresentationChartBarIcon;'}
+ } from 'lucide-react';
 
 export default function DemoPage() {
   const [selectedDemo, setSelectedDemo] = useState(0);
@@ -27,7 +25,7 @@ export default function DemoPage() {
         "Custom reporting",
         "Automated insights"
       ],
-      thumbnail: "/images/demos/ai-analytics.jpg"
+      thumbnail: "/images/demos/ai-analytics.jpg"}
     },
     {
       id: 2,
@@ -41,7 +39,7 @@ export default function DemoPage() {
         "Security analytics",
         "Compliance reporting"
       ],
-      thumbnail: "/images/demos/cybersecurity.jpg"
+      thumbnail: "/images/demos/cybersecurity.jpg"}
     },
     {
       id: 3,
@@ -55,7 +53,7 @@ export default function DemoPage() {
         "Auto-scaling",
         "Performance monitoring"
       ],
-      thumbnail: "/images/demos/cloud-management.jpg"
+      thumbnail: "/images/demos/cloud-management.jpg"}
     },
     {
       id: 4,
@@ -69,7 +67,7 @@ export default function DemoPage() {
         "User management",
         "Payment processing"
       ],
-      thumbnail: "/images/demos/micro-saas.jpg"
+      thumbnail: "/images/demos/micro-saas.jpg"}
     }
   ];
 
@@ -77,22 +75,22 @@ export default function DemoPage() {
     {
       icon: VideoCameraIcon,
       title: "Live Demonstrations",
-      description: "See our solutions in action with real-time demonstrations"
+      description: "See our solutions in action with real-time demonstrations"}
     },
     {
       icon: UserIcon,
       title: "Expert Guidance",
-      description: "Get personalized guidance from our technology experts"
+      description: "Get personalized guidance from our technology experts"}
     },
     {
       icon: PresentationChartBarIcon,
       title: "Custom Scenarios",
-      description: "Explore solutions tailored to your specific use cases"
+      description: "Explore solutions tailored to your specific use cases"}
     },
     {
       icon: CheckCircleIcon,
       title: "Q&A Session",
-      description: "Ask questions and get immediate answers from our team"
+      description: "Ask questions and get immediate answers from our team"}
     }
   ];
 
@@ -129,20 +127,20 @@ export default function DemoPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your Demo
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
               Select the solution you'd like to explore in detail
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-12">
             {demos.map((demo, index) => (
-              <button
+              <button}
                 key={demo.id}
                 onClick={() => setSelectedDemo(index)}
                 className={`p-6 rounded-xl border-2 transition-all duration-300 ${
-                  selectedDemo === index
+                  selectedDemo === index'
                     ? 'border-purple-500 bg-gradient-to-br from-purple-900/50 to-slate-800'
-                    : 'border-slate-600 bg-gradient-to-br from-slate-800 to-slate-700 hover:border-purple-400'
+                    : 'border-slate-600 bg-gradient-to-br from-slate-800 to-slate-700 hover:border-purple-400'}
                 }`}
               >
                 <div className="aspect-video bg-gradient-to-br from-slate-700 to-slate-600 rounded-lg mb-4 relative overflow-hidden">
@@ -175,7 +173,7 @@ export default function DemoPage() {
                   </p>
                   
                   <div className="space-y-3 mb-6">
-                    {demos[selectedDemo].features.map((feature, index) => (
+                    {demos[selectedDemo].features.map((feature, index) => (}
                       <div key={index} className="flex items-center gap-3">
                         <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
@@ -219,7 +217,7 @@ export default function DemoPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
-              return (
+              return (}
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-8 h-8 text-white" />
@@ -241,7 +239,7 @@ export default function DemoPage() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Schedule Your Demo
               </h2>
-              <p className="text-xl text-gray-300">
+              <p className="text-xl text-gray-300">'
                 Fill out the form below and we'll contact you to schedule your personalized demonstration
               </p>
             </div>
@@ -299,7 +297,7 @@ export default function DemoPage() {
                   <label className="block text-white font-semibold mb-2">Preferred Demo</label>
                   <select className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                     <option value="">Select a demo</option>
-                    {demos.map((demo) => (
+                    {demos.map((demo) => (}
                       <option key={demo.id} value={demo.id}>{demo.title}</option>
                     ))}
                   </select>
@@ -333,7 +331,7 @@ export default function DemoPage() {
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">'
               Questions? We're Here to Help
             </h2>
             <p className="text-xl text-gray-300 mb-12">
@@ -370,4 +368,4 @@ export default function DemoPage() {
       </section>
     </>
   );
-}
+}'

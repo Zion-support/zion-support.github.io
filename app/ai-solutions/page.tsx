@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom;
+import React from 'react';'
+import { Helmet , Link   } from 'lucide-react';
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -18,8 +17,8 @@ import {
   CogIcon,
   EyeIcon,
   ChatBubbleLeftRightIcon,
-  DocumentTextIcon,
-  LightBulbIcon;
+  DocumentTextIcon,;
+  LightBulbIcon;'}
 } from '@heroicons/react/24/outline';
 export default function AISolutionsPage() {
   const aiServices = [{
@@ -37,7 +36,7 @@ export default function AISolutionsPage() {
       price: "Starting at $3,500/month",
       benefits: ["95% accuracy", "Real-time processing", "Custom algorithms"],
       useCases: ["Predictive analytics", "Recommendation engines", "Fraud detection"],
-      href: "/ai-machine-learning";
+      href: "/ai-machine-learning";}
     },
     {
       title: "Natural Language Processing",
@@ -54,7 +53,7 @@ export default function AISolutionsPage() {
       price: "Starting at $2,200/month",
       benefits: ["Multi-language support", "Real-time analysis", "High accuracy"],
       useCases: ["Customer feedback analysis", "Content moderation", "Chatbots"],
-      href: "/ai-nlp";
+      href: "/ai-nlp";}
     },
     {
       title: "Computer Vision",
@@ -71,7 +70,7 @@ export default function AISolutionsPage() {
       price: "Starting at $2,800/month",
       benefits: ["99.5% accuracy", "Real-time processing", "Multi-format support"],
       useCases: ["Quality control", "Security monitoring", "Medical imaging"],
-      href: "/ai-computer-vision";
+      href: "/ai-computer-vision";}
     },
     {
       title: "Predictive Analytics",
@@ -88,7 +87,7 @@ export default function AISolutionsPage() {
       price: "Starting at $2,500/month",
       benefits: ["90% forecast accuracy", "Real-time insights", "Automated alerts"],
       useCases: ["Sales forecasting", "Inventory management", "Risk management"],
-      href: "/ai-predictive-analytics";
+      href: "/ai-predictive-analytics";}
     },
     {
       title: "AI Chatbots & Virtual Assistants",
@@ -105,7 +104,7 @@ export default function AISolutionsPage() {
       price: "Starting at $1,800/month",
       benefits: ["24/7 availability", "Instant responses", "95% satisfaction"],
       useCases: ["Customer support", "Lead qualification", "Internal helpdesk"],
-      href: "/ai-chatbots";
+      href: "/ai-chatbots";}
     },
     {
       title: "AI Content Generation",
@@ -122,7 +121,7 @@ export default function AISolutionsPage() {
       price: "Starting at $1,200/month",
       benefits: ["80% time savings", "SEO optimized", "Consistent quality"],
       useCases: ["Blog content", "Marketing copy", "Product descriptions"],
-      href: "/ai-content-generation";
+      href: "/ai-content-generation";}
     },
     {
       title: "AI Data Analytics",
@@ -139,7 +138,7 @@ export default function AISolutionsPage() {
       price: "Starting at $2,000/month",
       benefits: ["Real-time insights", "Automated analysis", "Custom dashboards"],
       useCases: ["Business intelligence", "Market research", "Performance tracking"],
-      href: "/ai-data-analytics";
+      href: "/ai-data-analytics";}
     },
     {
       title: "AI Process Automation",
@@ -156,7 +155,7 @@ export default function AISolutionsPage() {
       price: "Starting at $2,500/month",
       benefits: ["70% efficiency gain", "Error reduction", "Cost savings"],
       useCases: ["Document processing", "Workflow optimization", "Data entry"],
-      href: "/ai-process-automation";
+      href: "/ai-process-automation";}
     },
     {
       title: "AI Recommendation Engines",
@@ -173,7 +172,7 @@ export default function AISolutionsPage() {
       price: "Starting at $1,800/month",
       benefits: ["30% engagement increase", "Personalized experience", "Real-time updates"],
       useCases: ["E-commerce", "Content platforms", "Streaming services"],
-      href: "/ai-recommendation-engines";
+      href: "/ai-recommendation-engines";}
     },
     {
       title: "AI Fraud Detection",
@@ -190,7 +189,7 @@ export default function AISolutionsPage() {
       price: "Starting at $3,200/month",
       benefits: ["99.9% accuracy", "Real-time detection", "Zero false positives"],
       useCases: ["Financial services", "E-commerce", "Insurance"],
-      href: "/ai-fraud-detection";
+      href: "/ai-fraud-detection";}
     },
     {
       title: "AI Voice Recognition",
@@ -207,7 +206,7 @@ export default function AISolutionsPage() {
       price: "Starting at $1,500/month",
       benefits: ["95% accuracy", "Multi-language", "Real-time processing"],
       useCases: ["Voice assistants", "Transcription services", "Accessibility"],
-      href: "/ai-voice-recognition";
+      href: "/ai-voice-recognition";}
     },
     {
       title: "AI Business Intelligence",
@@ -224,7 +223,7 @@ export default function AISolutionsPage() {
       price: "Starting at $4,000/month",
       benefits: ["Strategic insights", "Market intelligence", "ROI optimization"],
       useCases: ["Strategic planning", "Market analysis", "Competitive research"],
-      href: "/ai-business-intelligence";
+      href: "/ai-business-intelligence";}
     }
   ];
 
@@ -258,7 +257,7 @@ export default function AISolutionsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">;
             {aiServices.map((service, _index) => {
               const Icon = service.icon;
-              return (
+              return (}
                 <div key={service.title}>;
                   className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105";
                 >;
@@ -277,7 +276,7 @@ export default function AISolutionsPage() {
                   <div className="mb-6">;
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Benefits:</h4>;
                     <div className="flex flex-wrap gap-2">;
-                      {service.benefits.map((benefit, benefitIndex) => (
+                      {service.benefits.map((benefit, benefitIndex) => (}
                         <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">;
                           {benefit}
                         </span>;
@@ -288,7 +287,7 @@ export default function AISolutionsPage() {
                   <div className="mb-6">;
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect for:</h4>;
                     <div className="flex flex-wrap gap-2">;
-                      {service.useCases.map((useCase, useCaseIndex) => (
+                      {service.useCases.map((useCase, useCaseIndex) => (}
                         <span key={useCaseIndex} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded-full">;
                           {useCase}
                         </span>;
@@ -296,7 +295,7 @@ export default function AISolutionsPage() {
                     </div>;
                   </div>;
                   <ul className="space-y-2 mb-6">;
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-gray-300">;
                         <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
                         <span className="text-sm">{feature}</span>;
@@ -305,7 +304,7 @@ export default function AISolutionsPage() {
                   </ul>;
                   <div className="flex gap-2">;
                     <Link;
-                      to={service.href}
+                      to={service.href}'
                       className={`flex-1 inline-flex items-center justify-center gap-2 text-${service.color.split(' ')[1].split('-')[1]}-400 hover:text-${service.color.split(' ')[1].split('-')[1]}-300 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg`}';
                     >;
                       Learn More <ArrowRightIcon className="w-4 h-4" />;
@@ -432,7 +431,7 @@ export default function AISolutionsPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">;
               Ready to Harness the Power of AI?;
             </h2>;
-            <p className="text-xl text-gray-300 mb-12">;
+            <p className="text-xl text-gray-300 mb-12">;'
               Let's discuss how our AI solutions can transform your business and drive innovation';
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">;
@@ -466,4 +465,4 @@ export default function AISolutionsPage() {
       </section>;
     </>
   );
-}
+}'

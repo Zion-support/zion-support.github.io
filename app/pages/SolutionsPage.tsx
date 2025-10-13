@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react';'
+import { Helmet , Link  } from 'lucide-react';
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -13,7 +12,7 @@ import {
   StarIcon,
   UserGroupIcon,
   BuildingOfficeIcon,
-  AcademicCapIcon
+  AcademicCapIcon;'}
 } from '@heroicons/react/24/outline';
 
 export default function SolutionsPage() {
@@ -36,7 +35,7 @@ export default function SolutionsPage() {
       ],
       industries: ["Finance", "Retail", "Healthcare", "Manufacturing"],
       color: "from-purple-500 to-pink-500",
-      href: "/solutions/ai-business-intelligence"
+      href: "/solutions/ai-business-intelligence"}
     },
     {
       title: "Enterprise Cybersecurity Suite",
@@ -56,7 +55,7 @@ export default function SolutionsPage() {
       ],
       industries: ["Banking", "Government", "Healthcare", "Technology"],
       color: "from-cyan-500 to-blue-500",
-      href: "/solutions/enterprise-cybersecurity"
+      href: "/solutions/enterprise-cybersecurity"}
     },
     {
       title: "Cloud Infrastructure Optimization",
@@ -76,7 +75,7 @@ export default function SolutionsPage() {
       ],
       industries: ["E-commerce", "SaaS", "Media", "Gaming"],
       color: "from-green-500 to-emerald-500",
-      href: "/solutions/cloud-optimization"
+      href: "/solutions/cloud-optimization"}
     },
     {
       title: "Digital Transformation Platform",
@@ -96,7 +95,7 @@ export default function SolutionsPage() {
       ],
       industries: ["Manufacturing", "Logistics", "Real Estate", "Education"],
       color: "from-yellow-500 to-orange-500",
-      href: "/solutions/digital-transformation"
+      href: "/solutions/digital-transformation"}
     },
     {
       title: "Micro SaaS Development",
@@ -116,7 +115,7 @@ export default function SolutionsPage() {
       ],
       industries: ["Startups", "SMBs", "Consulting", "Professional Services"],
       color: "from-pink-500 to-rose-500",
-      href: "/solutions/micro-saas"
+      href: "/solutions/micro-saas"}
     },
     {
       title: "5G Technology Solutions",
@@ -136,7 +135,7 @@ export default function SolutionsPage() {
       ],
       industries: ["Telecommunications", "Smart Cities", "Automotive", "Agriculture"],
       color: "from-indigo-500 to-purple-500",
-      href: "/solutions/5g-technology"
+      href: "/solutions/5g-technology"}
     }
   ];
 
@@ -145,25 +144,25 @@ export default function SolutionsPage() {
       name: "Healthcare",
       description: "AI-powered diagnostics, patient management, and medical research solutions",
       icon: UserGroupIcon,
-      solutions: ["AI Diagnostics", "Patient Analytics", "Medical Imaging", "Drug Discovery"]
+      solutions: ["AI Diagnostics", "Patient Analytics", "Medical Imaging", "Drug Discovery"]}
     },
     {
       name: "Financial Services",
       description: "Advanced fraud detection, risk management, and algorithmic trading solutions",
       icon: BuildingOfficeIcon,
-      solutions: ["Fraud Detection", "Risk Analytics", "Algorithmic Trading", "Compliance"]
+      solutions: ["Fraud Detection", "Risk Analytics", "Algorithmic Trading", "Compliance"]}
     },
     {
       name: "Education",
       description: "Personalized learning, student analytics, and educational technology platforms",
       icon: AcademicCapIcon,
-      solutions: ["Learning Analytics", "Personalized Education", "Student Management", "Assessment Tools"]
+      solutions: ["Learning Analytics", "Personalized Education", "Student Management", "Assessment Tools"]}
     },
     {
       name: "Manufacturing",
       description: "Predictive maintenance, quality control, and supply chain optimization",
       icon: ChartBarIcon,
-      solutions: ["Predictive Maintenance", "Quality Control", "Supply Chain AI", "Process Optimization"]
+      solutions: ["Predictive Maintenance", "Quality Control", "Supply Chain AI", "Process Optimization"]}
     }
   ];
 
@@ -177,7 +176,7 @@ export default function SolutionsPage() {
         "50% decrease in stockouts",
         "25% improvement in profit margins"
       ],
-      industry: "Retail"
+      industry: "Retail"}
     },
     {
       title: "Regional Healthcare System",
@@ -188,7 +187,7 @@ export default function SolutionsPage() {
         "90% reduction in security incidents",
         "60% faster threat response time"
       ],
-      industry: "Healthcare"
+      industry: "Healthcare"}
     },
     {
       title: "Global Manufacturing Company",
@@ -199,7 +198,7 @@ export default function SolutionsPage() {
         "70% reduction in manual processes",
         "50% faster time-to-market for new products"
       ],
-      industry: "Manufacturing"
+      industry: "Manufacturing"}
     }
   ];
 
@@ -245,7 +244,7 @@ export default function SolutionsPage() {
             {solutions.map((solution, index) => {
               const Icon = solution.icon;
               return (
-                <div 
+                <div }
                   key={solution.title}
                   className="group bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 p-8"
                 >
@@ -264,7 +263,7 @@ export default function SolutionsPage() {
                   <div className="space-y-4 mb-6">
                     <h4 className="text-lg font-semibold text-white">Key Features:</h4>
                     <ul className="space-y-2">
-                      {solution.features.map((feature, featureIndex) => (
+                      {solution.features.map((feature, featureIndex) => (}
                         <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
                           <CheckCircleIcon className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span className="text-sm">{feature}</span>
@@ -276,7 +275,7 @@ export default function SolutionsPage() {
                   <div className="space-y-4 mb-6">
                     <h4 className="text-lg font-semibold text-white">Benefits:</h4>
                     <ul className="space-y-2">
-                      {solution.benefits.map((benefit, benefitIndex) => (
+                      {solution.benefits.map((benefit, benefitIndex) => (}
                         <li key={benefitIndex} className="flex items-center gap-3 text-gray-300">
                           <StarIcon className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                           <span className="text-sm">{benefit}</span>
@@ -289,7 +288,7 @@ export default function SolutionsPage() {
                     <h4 className="text-lg font-semibold text-white mb-3">Industries:</h4>
                     <div className="flex flex-wrap gap-2">
                       {solution.industries.map((industry, industryIndex) => (
-                        <span 
+                        <span }
                           key={industryIndex}
                           className="px-3 py-1 bg-slate-700 text-gray-300 text-sm rounded-full"
                         >
@@ -328,7 +327,7 @@ export default function SolutionsPage() {
             {industries.map((industry, index) => {
               const Icon = industry.icon;
               return (
-                <div 
+                <div }
                   key={industry.name}
                   className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 p-8 hover:border-purple-500 transition-all duration-300"
                 >
@@ -341,7 +340,7 @@ export default function SolutionsPage() {
                   
                   <div className="space-y-2">
                     <h4 className="text-lg font-semibold text-white">Solutions:</h4>
-                    {industry.solutions.map((solution, solutionIndex) => (
+                    {industry.solutions.map((solution, solutionIndex) => (}
                       <div key={solutionIndex} className="flex items-center gap-2 text-gray-300">
                         <CheckCircleIcon className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm">{solution}</span>
@@ -369,7 +368,7 @@ export default function SolutionsPage() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {caseStudies.map((study, index) => (
-              <div 
+              <div }
                 key={study.title}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 p-8"
               >
@@ -396,7 +395,7 @@ export default function SolutionsPage() {
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-3">Results:</h4>
                   <ul className="space-y-2">
-                    {study.results.map((result, resultIndex) => (
+                    {study.results.map((result, resultIndex) => (}
                       <li key={resultIndex} className="flex items-center gap-3 text-gray-300">
                         <StarIcon className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                         <span className="text-sm">{result}</span>
@@ -417,7 +416,7 @@ export default function SolutionsPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-12">
+            <p className="text-xl text-gray-300 mb-12">'
               Let's discuss how our solutions can address your specific challenges and drive measurable results
             </p>
             
@@ -442,4 +441,4 @@ export default function SolutionsPage() {
       </section>
     </>
   );
-}
+}'

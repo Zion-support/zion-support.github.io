@@ -1,17 +1,17 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';'
 import { Helmet } from 'react-helmet-async';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;}
 }
 
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  errorId: string;
+  errorId: string;}
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
@@ -20,15 +20,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.state = {
       hasError: false,
       error: null,
-      errorInfo: null,
-      errorId: ''
+      errorInfo: null,'
+      errorId: ''}
     };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
-      error,
+      error,}
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
@@ -36,20 +36,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo}
     });
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+    // Log error to console in development'
+    if (process.env.NODE_ENV === 'development') {'
+      console.error('Error caught by boundary:', error, errorInfo);}
     }
 
     // Call custom error handler
     this.props.onError?.(error, errorInfo);
 
-    // Log error to external service in production
+    // Log error to external service in production'
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
+      this.logErrorToService(error, errorInfo);}
     }
   }
 
@@ -64,15 +64,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         errorId: this.state.errorId,
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href}
       };
 
       // Example: Send to error tracking service
       // errorTrackingService.captureException(error, { extra: errorData });
-      
+      '
       console.error('Error logged to service:', errorData);
-    } catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError);
+    } catch (loggingError) {'
+      console.error('Failed to log error to service:', loggingError);}
     }
   };
 
@@ -80,24 +80,24 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.setState({
       hasError: false,
       error: null,
-      errorInfo: null,
-      errorId: ''
+      errorInfo: null,'
+      errorId: ''}
     });
   };
 
   private handleReload = () => {
-    window.location.reload();
+    window.location.reload();}
   };
 
-  private handleGoHome = () => {
-    window.location.href = '/';
+  private handleGoHome = () => {'
+    window.location.href = '/';}
   };
 
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback;}
       }
 
       // Default error UI
@@ -134,7 +134,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </h1>
 
               {/* Error Message */}
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-6 leading-relaxed">'
                 We're sorry, but something unexpected happened. Our team has been notified 
                 and is working to fix this issue.
               </p>
@@ -143,7 +143,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               {this.state.errorId && (
                 <div className="bg-slate-700 rounded-lg p-3 mb-6">
                   <p className="text-sm text-gray-400 mb-1">Error ID:</p>
-                  <code className="text-xs text-cyan-400 font-mono break-all">
+                  <code className="text-xs text-cyan-400 font-mono break-all">}
                     {this.state.errorId}
                   </code>
                 </div>
@@ -186,14 +186,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </div>
               </div>
 
-              {/* Development Error Details */}
+              {/* Development Error Details */}'
               {process.env.NODE_ENV === 'development' && this.state.error && (
                 <details className="mt-6 text-left">
                   <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
                     Error Details (Development)
                   </summary>
                   <div className="mt-2 p-3 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto max-h-40">
-                    <div className="mb-2">
+                    <div className="mb-2">}
                       <strong>Error:</strong> {this.state.error.message}
                     </div>
                     <div className="mb-2">
@@ -205,7 +205,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     {this.state.errorInfo && (
                       <div>
                         <strong>Component Stack:</strong>
-                        <pre className="whitespace-pre-wrap mt-1">
+                        <pre className="whitespace-pre-wrap mt-1">}
                           {this.state.errorInfo.componentStack}
                         </pre>
                       </div>
@@ -223,4 +223,4 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary;'

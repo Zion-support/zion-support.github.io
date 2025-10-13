@@ -1,6 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom;
-// Minimal working App component;
+import { BrowserRouter as Router } from 'react-router-dom';
+
+// Minimal working App component
 function App() {
   return (
     <Router>;
@@ -20,7 +21,7 @@ function App() {
         </div>;
       </div>;
     </Router>;
-  );
+  );}
 }
 
-export default App;
+export default App;'

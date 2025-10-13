@@ -1,13 +1,11 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  DocumentTextIcon,
-  ScaleIcon,
-  ShieldCheckIcon,
-  ExclamationTriangleIcon,
-  CheckCircleIcon,
-  UserIcon
-} from '@heroicons/react/24/outline';
+import { Helmet , DocumentTextIcon, 
+  ScaleIcon, 
+  ShieldCheckIcon, 
+  ExclamationTriangleIcon, 
+  CheckCircleIcon, 
+  UserIcon;'}
+ } from 'lucide-react';
 
 export default function TermsPage() {
   const lastUpdated = "January 15, 2024";
@@ -15,11 +13,11 @@ export default function TermsPage() {
   return (
     <>
       <Helmet>
-        <title>Terms of Service - Zion Tech Group</title>
+        <title>Terms of Service - Zion Tech Group</title>'
         <meta name="description" content="Read Zion Tech Group's Terms of Service to understand the terms and conditions for using our AI and IT solutions." />
         <meta name="keywords" content="terms of service, terms and conditions, user agreement, legal terms" />
       </Helmet>
-      
+      }
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4">
@@ -45,7 +43,7 @@ export default function TermsPage() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Agreement Overview
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
                 These terms govern your use of Zion Tech Group's AI and IT services and solutions.
               </p>
             </div>
@@ -93,7 +91,7 @@ export default function TermsPage() {
               <h2 className="text-3xl font-bold text-white mb-8">1. Acceptance of Terms</h2>
               
               <div className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 p-8 mb-8">
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-6">'
                   By accessing or using Zion Tech Group's services, you agree to be bound by these Terms of Service 
                   and all applicable laws and regulations. If you do not agree with any of these terms, you are 
                   prohibited from using or accessing our services.
@@ -346,4 +344,4 @@ export default function TermsPage() {
       </section>
     </>
   );
-}
+}'

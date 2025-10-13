@@ -1,62 +1,49 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { 
-  Bars3Icon, 
-  XMarkIcon,
-  HomeIcon,
-  InformationCircleIcon,
-  BriefcaseIcon,
-  PhoneIcon,
-  DocumentTextIcon,
-  AcademicCapIcon,
-  PlayIcon,
-  QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  CurrencyDollarIcon,
-  CogIcon,
-  ChevronDownIcon,
-  GlobeAltIcon
-} from '@heroicons/react/24/outline';
+import { Link,  useLocation , Bars3Icon,  
+  XMarkIcon, 
+  HomeIcon, 
+  InformationCircleIcon, 
+  BriefcaseIcon, 
+  PhoneIcon, 
+  DocumentTextIcon, 
+  AcademicCapIcon, 
+  PlayIcon, 
+  QuestionMarkCircleIcon, 
+  ShieldCheckIcon, 
+  CurrencyDollarIcon, 
+  CogIcon, 
+  ChevronDownIcon, 
+  GlobeAltIcon;'}
+ } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
 
-  const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },
+  const navigation = ['}
+    { name: 'Home', href: '/', icon: HomeIcon },'
     { name: 'About', href: '/about', icon: InformationCircleIcon },
-    { 
-      name: 'Services', 
+    { '
+      name: 'Services', '
       href: '/services', 
       icon: BriefcaseIcon,
-      submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions' },
-        { name: 'IT Solutions', href: '/it-solutions' },
-        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-        { name: 'Digital Transformation', href: '/digital-transformation' },
+      submenu: ['}
+        { name: 'AI Solutions', href: '/ai-solutions' },'
+        { name: 'IT Solutions', href: '/it-solutions' },'
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },'
+        { name: 'Cybersecurity', href: '/cybersecurity' },'
+        { name: 'Cloud Infrastructure', href: '/cloud-solutions' },'
+        { name: 'Digital Transformation', href: '/digital-transformation' },'
         { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
-<<<<<<< HEAD
-    { name: 'Solutions', href: '/solutions', icon: CogIcon },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
-    { name: 'Demo', href: '/demo', icon: PlayIcon },
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
-    { name: 'Contact', href: '/contact', icon: PhoneIcon }
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+
 >>>>>>> origin/main
   ];
 
   const isActive = (path: string) => {
-    return location.pathname === path;
+    return location.pathname === path;}
   };
 
   return (
@@ -73,76 +60,7 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
-            {navigation.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.name} className="relative group">
-                  <Link
-                    to={item.href}
-                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive(item.href)
-                        ? 'bg-purple-600 text-white'
-                        : 'text-gray-300 hover:text-white hover:bg-slate-800'
-                    }`}
-                    onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                  >
-                    <Icon className="w-4 h-4" />
-                    <span>{item.name}</span>
-                    {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}
-                  </Link>
-                  
-                  {/* Dropdown Menu */}
-                  {item.submenu && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                          onClick={() => setIsServicesOpen(false)}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-=======
-{navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  to={item.href}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                  onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.submenu && <ChevronDownIcon className="w-4 h-4" />}
-                </Link>
-                
-                {/* Dropdown Menu */}
-                {item.submenu && isServicesOpen && (
-                  <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.href}
-                        className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                        onClick={() => setIsServicesOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
->>>>>>> origin/main
+
           </div>
 
           {/* CTA Button */}
@@ -172,7 +90,7 @@ const Navigation = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
               {navigation.map((item) => {
                 const Icon = item.icon;
-                return (
+                return (}
                   <div key={item.name}>
                     <Link
                       to={item.href}
@@ -185,7 +103,7 @@ const Navigation = () => {
                     {item.submenu && (
                       <div className="ml-8 space-y-1">
                         {item.submenu.map((subItem) => (
-                          <Link
+                          <Link}
                             key={subItem.name}
                             to={subItem.href}
                             className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
@@ -216,4 +134,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Navigation;'

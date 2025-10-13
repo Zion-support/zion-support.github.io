@@ -1,55 +1,175 @@
+#!/usr/bin/env node
 
-// Function to fix common syntax errors in a file;
-function fixSyntaxErrors(filePath) {
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
+
+// Common syntax fixes
+const fixes = [
+  // Fix unterminated string literals
+  {
+    pattern: /import\s+React\s+from\s+'react';'react-helmet-async;/g,
+    replacement: "import React from 'react';\nimport { Helmet } from 'react-helmet-async';"
+  },
+  {
+    pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+'lucide-react;/g,
+    replacement: "import { $1 } from 'lucide-react';"
+  },
+  {
+    pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+'react-router-dom;/g,
+    replacement: "import { $1 } from 'react-router-dom';"
+  },
+  {
+    pattern: /import\s+([^;]+);$/gm,
+    replacement: (match, p1) => {
+      if (p1.includes("'") && !p1.endsWith("'")) {
+        return p1 + "';";
+      }
+      return match;
+    }
+  },
+  // Fix object syntax errors
+  {
+    pattern: /icon:\s*icon:\s*([^,]+),/g,
+    replacement: "icon: $1,"
+  },
+  {
+    pattern: /title:\s*'([^']+)',;/g,
+    replacement: "title: '$1',"
+  },
+  {
+    pattern: /description:\s*'([^']+)',;/g,
+    replacement: "description: '$1',"
+  },
+  {
+    pattern: /color:\s*'([^']+)',;/g,
+    replacement: "color: '$1',"
+  },
+  // Fix JSX syntax errors
+  {
+    pattern: /<([^>]+)>\s*$/gm,
+    replacement: (match, p1) => {
+      if (p1.includes('>') && !p1.endsWith('>')) {
+        return `<${p1}>`;
+      }
+      return match;
+    }
+  },
+  // Fix merge conflict markers
+  {
+    pattern: /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
+    replacement: ''
+  },
+  {
+    pattern: /=======[\s\S]*?>>>>>>> [^\n]+/g,
+    replacement: ''
+  },
+  // Fix unterminated strings in JSX
+  {
+    pattern: /className="([^"]*)$/gm,
+    replacement: (match, p1) => {
+      if (!p1.endsWith('"')) {
+        return `className="${p1}"`;
+      }
+      return match;
+    }
+  },
+  // Fix missing semicolons in imports
+  {
+    pattern: /import\s+[^;]+$/gm,
+    replacement: (match) => {
+      if (!match.endsWith(';')) {
+        return match + ';';
+      }
+      return match;
+    }
+  },
+  // Fix duplicate imports
+  {
+    pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+'[^']+';\s*import\s+{\s*([^}]+)\s*}\s+from\s+'[^']+';/g,
+    replacement: (match, p1, p2) => {
+      const combined = [...new Set([...p1.split(','), ...p2.split(',')])].join(', ');
+      return `import { ${combined} } from 'lucide-react';`;
+    }
+  }
+];
+
+function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');';
-    // Fix missing commas in object literals and arrays;
-    // Look for patterns like: key: value\n  key2: value2;
-    content = content.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*\s*:\s*[^,\n}]+)\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');';
-    // Fix missing commas in JSX props;
-    content = content.replace(/(\w+="[^"]*")\n\s*(\w+=)/g, '$1\n  $2');';
-    content = content.replace(/(\w+={[^}]*})\n\s*(\w+=)/g, '$1\n  $2');';
-    // Fix incomplete function calls - add missing closing parentheses;
-    // Look for patterns like: lazy(() => import("./path/page")\nconst;
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*const/g, 'lazy(() => import("$1")),\nconst');';
-    // Fix missing closing parentheses in lazy imports;
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*([a-zA-Z_$])/g, 'lazy(() => import("$1")),\n$2');';
-    // Fix missing commas after lazy imports;
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*\/\/ /g, 'lazy(() => import("$1")),\n// ');';
-    // Fix incomplete JSX elements;
-    content = content.replace(/(<[^>]+)\n\s*([a-zA-Z_$])/g, '$1>\n  $2');';
-    // Fix missing closing tags in JSX;
-    content = content.replace(/(<[^>]+)\n\s*<\/[^>]+>/g, '$1>\n  </div>');';
-    // Fix missing commas in array elements;
-    content = content.replace(/([^,\n])\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');';
-    // Fix missing closing brackets in objects;
-    content = content.replace(/([^}]\n\s*)([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1  $2');';
-    // Fix incomplete function declarations;
-    content = content.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*\)\s*{\s*\n\s*return\s*\(\s*\n\s*<[^>]*>\s*\n\s*\)\s*;\s*\n\s*}\s*\n\s*([a-zA-Z_$])/g, 
-      'function $1() {\n  return (\n    <div>\n      {/* Content */}\n    </div>\n  );\n}\n\n$2');';
-    // Fix missing export statements;
-    content = content.replace(/}\s*\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '}\n\nexport { $1');';
-    // Clean up multiple empty lines;
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');';
-    // Remove any remaining orphaned markers;
-    content = content.replace(/^<<<<<<<|^;
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+    
+    // Apply all fixes
+    fixes.forEach(fix => {
+      if (typeof fix.replacement === 'function') {
+        content = content.replace(fix.pattern, fix.replacement);
+      } else {
+        content = content.replace(fix.pattern, fix.replacement);
+      }
+    });
+    
+    // Additional specific fixes for common patterns
+    content = content.replace(/'([^']*)\s*$/gm, (match, p1) => {
+      if (p1 && !p1.endsWith("'")) {
+        return `'${p1}'`;
+      }
+      return match;
+    });
+    
+    // Fix missing closing braces in objects
+    content = content.replace(/(\{[^}]*)\s*$/gm, (match, p1) => {
+      if (p1 && !p1.endsWith('}')) {
+        return p1 + '}';
+      }
+      return match;
+    });
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
     return false;
-  } catch (_error) {
-    global.console._error(`  ❌ Error processing ${filePath}:`, _error.message);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-        }
+function main() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    '*.tsx',
+    '*.ts'
+  ];
+  
+  let totalFixed = 0;
+  
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, { 
+      ignore: [
+        'node_modules/**',
+        'dist/**',
+        'app-broken/**',
+        'app-disabled/**',
+        '**/*.test.*',
+        '**/*.spec.*'
+      ]
+    });
+    
+    files.forEach(file => {
+      if (fixFile(file)) {
+        totalFixed++;
       }
-    } catch (_error) {
-      // Skip directories that can't be read';
-    }
-  } else {
-    global.console.log(`File not found: ${filePath}`);
-  }
+    });
+  });
+  
+  console.log(`\nFixed ${totalFixed} files`);
+}
 
+if (require.main === module) {
+  main();
+}
+
+module.exports = { fixFile, fixes };

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';'
+import { Link } from 'react-router-dom';'
 import SEOHead from '../components/SEOHead';
 import { 
   ArrowRightIcon, 
@@ -13,11 +13,11 @@ import {
   MapPinIcon,
   RocketLaunchIcon,
   SparklesIcon,
-  BoltIcon
-} from '@heroicons/react/24/outline';
-import FuturisticBackground from '../components/FuturisticBackground';
-import NeonButton from '../components/NeonButton';
-import AnimatedCard from '../components/AnimatedCard';
+  BoltIcon;'}
+} from '@heroicons/react/24/outline';'
+import FuturisticBackground from '../components/FuturisticBackground';'
+import NeonButton from '../components/NeonButton';'
+import AnimatedCard from '../components/AnimatedCard';'
 import { services } from '../data/servicesData';
 
 export default function HomePage()  {
@@ -29,7 +29,7 @@ export default function HomePage()  {
     "url": "https://ziontechgroup.com",
     "description": "Advanced AI and IT solutions provider specializing in cybersecurity, cloud infrastructure, and digital transformation.",
     "potentialAction": {
-      "@type": "SearchAction",
+      "@type": "SearchAction",}
       "target": "https://ziontechgroup.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
@@ -97,7 +97,7 @@ export default function HomePage()  {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {featuredServices.map((service, index) => (
+            {featuredServices.map((service, index) => (}
               <AnimatedCard key={service.id} glowColor={service.glowColor} className="group">
                 <div className="text-center mb-6">
                   <div className="text-6xl mb-4">{service.icon}</div>
@@ -106,7 +106,7 @@ export default function HomePage()  {
                 </div>
                 
                 <div className="space-y-3 mb-6">
-                  {service.features.slice(0, 4).map((feature, featureIndex) => (
+                  {service.features.slice(0, 4).map((feature, featureIndex) => (}
                     <div key={featureIndex} className="flex items-center text-gray-300">
                       <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3"></div>
                       <span className="text-sm">{feature}</span>
@@ -154,7 +154,7 @@ export default function HomePage()  {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">
-                With over 4 years of experience in cutting-edge technology solutions, 
+                With over 4 years of experience in cutting-edge technology solutions, '
                 we've helped businesses across various industries transform their operations 
                 and achieve unprecedented growth.
               </p>
@@ -197,7 +197,7 @@ export default function HomePage()  {
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">'
                 Let's discuss how our technology solutions can drive your business forward
               </p>
             </div>
@@ -238,4 +238,4 @@ export default function HomePage()  {
       </section>
     </>
   );
-}
+}'

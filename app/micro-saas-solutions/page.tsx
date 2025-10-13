@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-'use client';
-=======
 
-'use client';
-
->>>>>>> origin/main
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react';'
+import { Helmet , Link  } from 'lucide-react';
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -22,7 +15,7 @@ import {
   CurrencyDollarIcon,
   ClockIcon,
   UserGroupIcon,
-  CogIcon
+  CogIcon;'}
 } from '@heroicons/react/24/outline';
 
 export default function MicroSaaSSolutionsPage()   {
@@ -44,7 +37,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,500",
       benefits: ["40% faster insights", "Real-time updates", "Custom dashboards"],
       useCases: ["E-commerce analytics", "Marketing performance", "Financial reporting"],
-      href: "/ai-analytics-dashboard"
+      href: "/ai-analytics-dashboard"}
     },
     {
       title: "AI Content Management System",
@@ -63,7 +56,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$800",
       benefits: ["80% time savings", "SEO optimized", "Multi-language"],
       useCases: ["Blog management", "E-commerce content", "Marketing campaigns"],
-      href: "/ai-content-management"
+      href: "/ai-content-management"}
     },
     {
       title: "AI Customer Support Bot",
@@ -82,7 +75,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$600",
       benefits: ["24/7 availability", "Instant responses", "95% satisfaction"],
       useCases: ["Customer service", "Lead qualification", "FAQ automation"],
-      href: "/ai-customer-support-bot"
+      href: "/ai-customer-support-bot"}
     },
     {
       title: "AI Project Management Suite",
@@ -101,7 +94,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,200",
       benefits: ["30% efficiency gain", "Predictive planning", "Risk mitigation"],
       useCases: ["Software development", "Marketing campaigns", "Event planning"],
-      href: "/ai-project-management"
+      href: "/ai-project-management"}
     },
     {
       title: "AI E-commerce Optimizer",
@@ -120,7 +113,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$2,000",
       benefits: ["25% sales increase", "Optimized pricing", "Reduced inventory costs"],
       useCases: ["Online stores", "Marketplace optimization", "Retail analytics"],
-      href: "/ai-ecommerce-optimizer"
+      href: "/ai-ecommerce-optimizer"}
     },
     {
       title: "AI HR Management System",
@@ -139,7 +132,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$900",
       benefits: ["50% faster hiring", "Reduced turnover", "Better performance"],
       useCases: ["Recruitment", "Performance management", "Employee development"],
-      href: "/ai-hr-management"
+      href: "/ai-hr-management"}
     },
     {
       title: "AI Financial Analytics",
@@ -158,7 +151,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,500",
       benefits: ["Accurate forecasting", "Risk mitigation", "Automated compliance"],
       useCases: ["Financial planning", "Investment analysis", "Risk management"],
-      href: "/ai-financial-analytics"
+      href: "/ai-financial-analytics"}
     },
     {
       title: "AI Marketing Automation",
@@ -177,7 +170,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,200",
       benefits: ["300% ROI increase", "Personalized campaigns", "Automated optimization"],
       useCases: ["Email marketing", "Social media", "Lead generation"],
-      href: "/ai-marketing-automation"
+      href: "/ai-marketing-automation"}
     },
     {
       title: "AI Inventory Management",
@@ -196,7 +189,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,000",
       benefits: ["30% cost reduction", "Zero stockouts", "Optimized inventory"],
       useCases: ["Retail management", "Manufacturing", "Supply chain"],
-      href: "/ai-inventory-management"
+      href: "/ai-inventory-management"}
     },
     {
       title: "AI Document Processing",
@@ -215,7 +208,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$700",
       benefits: ["90% accuracy", "80% time savings", "Automated workflows"],
       useCases: ["Document management", "Data entry", "Compliance processing"],
-      href: "/ai-document-processing"
+      href: "/ai-document-processing"}
     },
     {
       title: "AI Social Media Manager",
@@ -234,7 +227,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$500",
       benefits: ["200% engagement increase", "Automated posting", "Optimized timing"],
       useCases: ["Social media marketing", "Brand management", "Community building"],
-      href: "/ai-social-media-manager"
+      href: "/ai-social-media-manager"}
     },
     {
       title: "AI Email Marketing Suite",
@@ -253,7 +246,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$400",
       benefits: ["40% open rates", "Personalized content", "Optimized timing"],
       useCases: ["Email campaigns", "Newsletter management", "Lead nurturing"],
-      href: "/ai-email-marketing"
+      href: "/ai-email-marketing"}
     },
     {
       title: "AI Voice Assistant Platform",
@@ -272,7 +265,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$2,500",
       benefits: ["95% accuracy", "24/7 availability", "Multi-language"],
       useCases: ["Customer service", "Voice commands", "Accessibility"],
-      href: "/ai-voice-assistant"
+      href: "/ai-voice-assistant"}
     },
     {
       title: "AI Video Analytics Platform",
@@ -291,7 +284,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,800",
       benefits: ["Real-time insights", "Automated analysis", "Performance boost"],
       useCases: ["Video marketing", "Content optimization", "Audience analysis"],
-      href: "/ai-video-analytics"
+      href: "/ai-video-analytics"}
     },
     {
       title: "AI Legal Document Analyzer",
@@ -310,7 +303,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$3,000",
       benefits: ["90% time savings", "Risk reduction", "Compliance assurance"],
       useCases: ["Legal firms", "Contract management", "Compliance"],
-      href: "/ai-legal-analyzer"
+      href: "/ai-legal-analyzer"}
     },
     {
       title: "AI Real Estate Assistant",
@@ -329,7 +322,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,500",
       benefits: ["Accurate valuations", "Market insights", "Lead generation"],
       useCases: ["Real estate agents", "Property management", "Investment analysis"],
-      href: "/ai-real-estate"
+      href: "/ai-real-estate"}
     },
     {
       title: "AI Healthcare Analytics",
@@ -348,7 +341,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$4,000",
       benefits: ["Improved outcomes", "Risk reduction", "Cost savings"],
       useCases: ["Hospitals", "Clinics", "Health systems"],
-      href: "/ai-healthcare-analytics"
+      href: "/ai-healthcare-analytics"}
     },
     {
       title: "AI Supply Chain Optimizer",
@@ -367,7 +360,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$2,200",
       benefits: ["20% cost reduction", "Optimized routes", "Risk mitigation"],
       useCases: ["Logistics", "Manufacturing", "Retail"],
-      href: "/ai-supply-chain"
+      href: "/ai-supply-chain"}
     },
     {
       title: "AI Energy Management System",
@@ -386,7 +379,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,800",
       benefits: ["30% energy savings", "Cost reduction", "Sustainability"],
       useCases: ["Manufacturing", "Buildings", "Utilities"],
-      href: "/ai-energy-management"
+      href: "/ai-energy-management"}
     },
     {
       title: "AI Fraud Detection System",
@@ -405,7 +398,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$2,500",
       benefits: ["99.9% accuracy", "Real-time detection", "Cost savings"],
       useCases: ["Banking", "E-commerce", "Financial services"],
-      href: "/ai-fraud-detection"
+      href: "/ai-fraud-detection"}
     },
     {
       title: "AI Learning Management System",
@@ -424,7 +417,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,000",
       benefits: ["Personalized learning", "Better outcomes", "Engagement boost"],
       useCases: ["Education", "Corporate training", "Online courses"],
-      href: "/ai-learning-management"
+      href: "/ai-learning-management"}
     },
     {
       title: "AI Quality Assurance Platform",
@@ -443,7 +436,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,900",
       benefits: ["90% test coverage", "Faster delivery", "Quality improvement"],
       useCases: ["Software development", "Manufacturing", "Quality control"],
-      href: "/ai-quality-assurance"
+      href: "/ai-quality-assurance"}
     },
     {
       title: "AI Event Management Suite",
@@ -462,7 +455,7 @@ export default function MicroSaaSSolutionsPage()   {
       setupFee: "$1,200",
       benefits: ["Better engagement", "Optimized planning", "Success metrics"],
       useCases: ["Conferences", "Webinars", "Corporate events"],
-      href: "/ai-event-management"
+      href: "/ai-event-management"}
     }
   ];
 
@@ -499,7 +492,7 @@ export default function MicroSaaSSolutionsPage()   {
             {microSaaSProducts.map((product, index) => {
               const Icon = product.icon;
               return (
-                <div 
+                <div }
                   key={product.title}
                   className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105"
                 >
@@ -527,7 +520,7 @@ export default function MicroSaaSSolutionsPage()   {
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Benefits:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {product.benefits.map((benefit, benefitIndex) => (
+                      {product.benefits.map((benefit, benefitIndex) => (}
                         <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">
                           {benefit}
                         </span>
@@ -539,7 +532,7 @@ export default function MicroSaaSSolutionsPage()   {
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect for:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {product.useCases.map((useCase, useCaseIndex) => (
+                      {product.useCases.map((useCase, useCaseIndex) => (}
                         <span key={useCaseIndex} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded-full">
                           {useCase}
                         </span>
@@ -548,7 +541,7 @@ export default function MicroSaaSSolutionsPage()   {
                   </div>
                   
                   <ul className="space-y-2 mb-6">
-                    {product.features.map((feature, featureIndex) => (
+                    {product.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span className="text-sm">{feature}</span>
@@ -558,7 +551,7 @@ export default function MicroSaaSSolutionsPage()   {
                   
                   <div className="flex gap-2">
                     <Link 
-                      to={product.href}
+                      to={product.href}'
                       className={`flex-1 inline-flex items-center justify-center gap-2 text-${product.color.split(' ')[1].split('-')[1]}-400 hover:text-${product.color.split(' ')[1].split('-')[1]}-300 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg`}
                     >
                       Learn More <ArrowRightIcon className="w-4 h-4" />
@@ -783,4 +776,4 @@ export default function MicroSaaSSolutionsPage()   {
       </section>
     </>
   );
-}
+}'

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
 'use client';
 export default function NetworkInfrastructure() {
   return (
@@ -65,5 +65,6 @@ export default function NetworkInfrastructure() {
         </div>;
       </div>;
     </div>;
-  );
+  );}
 }
+'

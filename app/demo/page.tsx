@@ -1,29 +1,29 @@
-import React from 'react';'react-helmet-async;
-import { Play, Right, Circle, Star } from 'lucide-react;
+import React from 'react';'
+import { Helmet , Play,  Right,  Circle,  Star   } from 'lucide-react';
 const DemoPage: React.FC = () => {
-  const features = [{
-      icon: 'Analytics',';
-      title: 'AI-Powered Analytics',';
-      description: 'See how our AI analyzes your data in real-time',';
-      demo: 'Live Demo'';
+  const features = [{'
+      icon: 'Analytics',';'
+      title: 'AI-Powered Analytics',';'
+      description: 'See how our AI analyzes your data in real-time',';'
+      demo: 'Live Demo'';}
     },
-    {
-      icon: 'Security',';
-      title: 'Advanced Security',';
-      description: 'Experience our enterprise-grade security features',';
-      demo: 'Demo'';
+    {'
+      icon: 'Security',';'
+      title: 'Advanced Security',';'
+      description: 'Experience our enterprise-grade security features',';'
+      demo: 'Demo'';}
     },
-    {
-      icon: 'Intelligence',';
-      title: 'Business Intelligence',';
-      description: 'Explore our comprehensive BI dashboard',';
-      demo: 'BI Demo'';
+    {'
+      icon: 'Intelligence',';'
+      title: 'Business Intelligence',';'
+      description: 'Explore our comprehensive BI dashboard',';'
+      demo: 'BI Demo'';}
     },
-    {
-      icon: 'Collaboration',';
-      title: 'Team Collaboration',';
-      description: 'See how teams work together seamlessly',';
-      demo: 'Collaboration Demo'';
+    {'
+      icon: 'Collaboration',';'
+      title: 'Team Collaboration',';'
+      description: 'See how teams work together seamlessly',';'
+      demo: 'Collaboration Demo'';}
     }
   ];
 
@@ -31,19 +31,19 @@ const DemoPage: React.FC = () => {
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
       content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.",
-      rating: 5;
+      rating: 5;}
     },
     {
       name: "Michael Chen",
       company: "DataFlow Systems",
       content: "The live demonstration helped us understand the full potential of the AI solutions.",
-      rating: 5;
+      rating: 5;}
     },
     {
       name: "Emily Rodriguez",
       company: "InnovateLabs",
       content: "The demo team was knowledgeable and answered all our questions thoroughly.",
-      rating: 5;
+      rating: 5;}
     }
   ];
 
@@ -88,7 +88,7 @@ const DemoPage: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {features.map((feature, _index) => {
                 const Icon = feature.icon;
-                return (
+                return (}
                   <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">;
                     <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">;
                       <Icon className="w-8 h-8 text-white" />;
@@ -132,10 +132,10 @@ const DemoPage: React.FC = () => {
               What Say About Our Demos;
             </h2>;
             <div className="grid md:grid-cols-3 gap-8">;
-              {testimonials.map((testimonial, _index) => (
+              {testimonials.map((testimonial, _index) => (}
                 <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">;
                   <div className="flex items-center mb-4">;
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map((_, i) => (}
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
                     ))}
                   </div>;
@@ -174,4 +174,4 @@ const DemoPage: React.FC = () => {
   );
 };
 
-export default DemoPage;
+export default DemoPage;'

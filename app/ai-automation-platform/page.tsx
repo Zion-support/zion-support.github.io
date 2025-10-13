@@ -1,7 +1,7 @@
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
+import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';'
+import EnhancedSEO from '../components/EnhancedSEO';'
+import ResponsiveContainer from '../components/ResponsiveContainer';'
+import FuturisticCard from '../components/FuturisticCard';'
 import FuturisticButton from '../components/FuturisticButton';
 
 const AIAutomationPlatform = () => {
@@ -10,7 +10,7 @@ const AIAutomationPlatform = () => {
       title: "Workflow Automation",
       description: "Automate complex business processes with AI-powered workflows",
       icon: <Workflow className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500"}
     },
     {
       title: "Smart Decision Making",
@@ -18,7 +18,7 @@ const AIAutomationPlatform = () => {
 
       icon: <Brain className="w-6 h-6" />,
 
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500"}
     },
     {
       title: "Process Optimization",
@@ -26,7 +26,7 @@ const AIAutomationPlatform = () => {
 
       icon: <Settings className="w-6 h-6" />,
 
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500"}
     },
     {
       title: "Integration Hub",
@@ -34,7 +34,7 @@ const AIAutomationPlatform = () => {
 
       icon: <Zap className="w-6 h-6" />,
 
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500"}
     }
   ];
 
@@ -109,7 +109,7 @@ const AIAutomationPlatform = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <FuturisticCard key={index} className="text-center">
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center`}>
                     {feature.icon}
@@ -139,7 +139,7 @@ const AIAutomationPlatform = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                 <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
                   <Circle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-white font-medium">{benefit}</span>
@@ -175,4 +175,4 @@ const AIAutomationPlatform = () => {
   );
 };
 
-export default AIAutomationPlatform;
+export default AIAutomationPlatform;'

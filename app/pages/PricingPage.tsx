@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';'
+import { Helmet , Link  } from 'lucide-react';
 import { 
   CheckIcon,
   XMarkIcon,
@@ -8,10 +7,10 @@ import {
   StarIcon,
   PhoneIcon,
   EnvelopeIcon,
-  ChatBubbleLeftRightIcon
+  ChatBubbleLeftRightIcon;'}
 } from '@heroicons/react/24/outline';
 
-export default function PricingPage() {
+export default function PricingPage() {'
   const [billingCycle, setBillingCycle] = useState('monthly');
 
   const plans = [
@@ -20,7 +19,7 @@ export default function PricingPage() {
       description: "Perfect for small businesses getting started with AI",
       price: {
         monthly: 299,
-        yearly: 2990
+        yearly: 2990}
       },
       features: [
         "Basic AI Analytics Dashboard",
@@ -43,7 +42,7 @@ export default function PricingPage() {
       description: "Ideal for growing businesses with advanced needs",
       price: {
         monthly: 799,
-        yearly: 7990
+        yearly: 7990}
       },
       features: [
         "Advanced AI Analytics Dashboard",
@@ -67,7 +66,7 @@ export default function PricingPage() {
       description: "Comprehensive solution for large organizations",
       price: {
         monthly: 1999,
-        yearly: 19990
+        yearly: 19990}
       },
       features: [
         "Full AI Suite Access",
@@ -94,7 +93,7 @@ export default function PricingPage() {
       description: "Advanced security monitoring and threat detection",
       price: {
         monthly: 199,
-        yearly: 1990
+        yearly: 1990}
       },
       features: ["Real-time threat monitoring", "Automated incident response", "Security analytics"]
     },
@@ -103,7 +102,7 @@ export default function PricingPage() {
       description: "Scalable cloud solutions and management",
       price: {
         monthly: 299,
-        yearly: 2990
+        yearly: 2990}
       },
       features: ["Multi-cloud management", "Auto-scaling", "Cost optimization"]
     },
@@ -112,7 +111,7 @@ export default function PricingPage() {
       description: "Tailored solutions for specific business needs",
       price: {
         monthly: 499,
-        yearly: 4990
+        yearly: 4990}
       },
       features: ["Custom applications", "API development", "Integration services"]
     }
@@ -121,27 +120,27 @@ export default function PricingPage() {
   const faqs = [
     {
       question: "Can I change my plan at any time?",
-      answer: "Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle."
+      answer: "Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle."}
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept all major credit cards, bank transfers, and can accommodate enterprise payment terms for larger organizations."
+      answer: "We accept all major credit cards, bank transfers, and can accommodate enterprise payment terms for larger organizations."}
     },
     {
       question: "Is there a free trial available?",
-      answer: "Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial."
+      answer: "Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial."}
     },
     {
-      question: "What happens if I exceed my plan limits?",
-      answer: "We'll notify you when you're approaching your limits and offer options to upgrade or purchase additional capacity."
+      question: "What happens if I exceed my plan limits?",'
+      answer: "We'll notify you when you're approaching your limits and offer options to upgrade or purchase additional capacity."}
     },
     {
       question: "Do you offer custom pricing for large organizations?",
-      answer: "Yes, we offer custom enterprise pricing for organizations with specific requirements. Contact our sales team for more information."
+      answer: "Yes, we offer custom enterprise pricing for organizations with specific requirements. Contact our sales team for more information."}
     },
     {
       question: "What support is included with each plan?",
-      answer: "Starter includes email support, Professional includes priority support, and Enterprise includes 24/7 dedicated support."
+      answer: "Starter includes email support, Professional includes priority support, and Enterprise includes 24/7 dedicated support."}
     }
   ];
 
@@ -176,22 +175,22 @@ export default function PricingPage() {
         <div className="container mx-auto px-4">
           <div className="flex justify-center">
             <div className="bg-slate-800 rounded-lg p-1 flex">
-              <button
+              <button'
                 onClick={() => setBillingCycle('monthly')}
-                className={`px-6 py-2 rounded-md transition-all duration-300 ${
+                className={`px-6 py-2 rounded-md transition-all duration-300 ${'
                   billingCycle === 'monthly'
                     ? 'bg-purple-600 text-white'
-                    : 'text-gray-300 hover:text-white'
+                    : 'text-gray-300 hover:text-white'}
                 }`}
               >
                 Monthly
               </button>
-              <button
+              <button'
                 onClick={() => setBillingCycle('yearly')}
-                className={`px-6 py-2 rounded-md transition-all duration-300 ${
+                className={`px-6 py-2 rounded-md transition-all duration-300 ${'
                   billingCycle === 'yearly'
                     ? 'bg-purple-600 text-white'
-                    : 'text-gray-300 hover:text-white'
+                    : 'text-gray-300 hover:text-white'}
                 }`}
               >
                 Yearly
@@ -209,10 +208,10 @@ export default function PricingPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {plans.map((plan, index) => (
-              <div 
+              <div }
                 key={plan.name}
-                className={`relative bg-gradient-to-br ${plan.color} rounded-xl border-2 ${
-                  plan.popular ? 'border-purple-500 scale-105' : 'border-slate-600'
+                className={`relative bg-gradient-to-br ${plan.color} rounded-xl border-2 ${'
+                  plan.popular ? 'border-purple-500 scale-105' : 'border-slate-600'}
                 } p-8 transition-all duration-300 hover:scale-105`}
               >
                 {plan.popular && (
@@ -221,7 +220,7 @@ export default function PricingPage() {
                       <StarIcon className="w-4 h-4" />
                       Most Popular
                     </div>
-                  </div>
+                  </div>}
                 )}
 
                 <div className="text-center mb-8">
@@ -229,10 +228,10 @@ export default function PricingPage() {
                   <p className="text-gray-300 mb-6">{plan.description}</p>
                   
                   <div className="mb-6">
-                    <span className="text-5xl font-bold text-white">
+                    <span className="text-5xl font-bold text-white">'
                       ${billingCycle === 'monthly' ? plan.price.monthly : plan.price.yearly}
                     </span>
-                    <span className="text-gray-300 ml-2">
+                    <span className="text-gray-300 ml-2">'
                       /{billingCycle === 'monthly' ? 'month' : 'year'}
                     </span>
                   </div>
@@ -240,18 +239,18 @@ export default function PricingPage() {
                   <Link 
                     to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
+                      plan.popular'
                         ? 'bg-white text-purple-600 hover:bg-gray-100'
-                        : 'bg-purple-600 text-white hover:bg-purple-700'
+                        : 'bg-purple-600 text-white hover:bg-purple-700'}
                     }`}
                   >
                     Get Started
                   </Link>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-4">'
                   <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <div key={featureIndex} className="flex items-center gap-3">
                       <CheckIcon className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -261,7 +260,7 @@ export default function PricingPage() {
                   {plan.limitations.length > 0 && (
                     <>
                       <h4 className="text-lg font-semibold text-white mb-4 mt-6">Limitations:</h4>
-                      {plan.limitations.map((limitation, limitationIndex) => (
+                      {plan.limitations.map((limitation, limitationIndex) => (}
                         <div key={limitationIndex} className="flex items-center gap-3">
                           <XMarkIcon className="w-5 h-5 text-red-400 flex-shrink-0" />
                           <span className="text-gray-300">{limitation}</span>
@@ -290,7 +289,7 @@ export default function PricingPage() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {addOns.map((addOn, index) => (
-              <div 
+              <div }
                 key={addOn.name}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 p-8 hover:border-purple-500 transition-all duration-300"
               >
@@ -298,16 +297,16 @@ export default function PricingPage() {
                 <p className="text-gray-300 mb-6">{addOn.description}</p>
                 
                 <div className="mb-6">
-                  <span className="text-3xl font-bold text-white">
+                  <span className="text-3xl font-bold text-white">'
                     ${billingCycle === 'monthly' ? addOn.price.monthly : addOn.price.yearly}
                   </span>
-                  <span className="text-gray-300 ml-2">
+                  <span className="text-gray-300 ml-2">'
                     /{billingCycle === 'monthly' ? 'month' : 'year'}
                   </span>
                 </div>
 
                 <div className="space-y-3 mb-6">
-                  {addOn.features.map((feature, featureIndex) => (
+                  {addOn.features.map((feature, featureIndex) => (}
                     <div key={featureIndex} className="flex items-center gap-3">
                       <CheckIcon className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300 text-sm">{feature}</span>
@@ -341,7 +340,7 @@ export default function PricingPage() {
 
           <div className="max-w-4xl mx-auto space-y-6">
             {faqs.map((faq, index) => (
-              <div 
+              <div }
                 key={index}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 p-6"
               >
@@ -412,4 +411,4 @@ export default function PricingPage() {
       </section>
     </>
   );
-}
+}'

@@ -1,11 +1,10 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react';'
+import { Helmet , Link  } from 'lucide-react';
 import { 
   CalendarIcon,
   UserIcon,
   ArrowRightIcon,
-  TagIcon
+  TagIcon;'}
 } from '@heroicons/react/24/outline';
 
 export default function BlogPage() {
@@ -18,7 +17,7 @@ export default function BlogPage() {
       date: "2024-01-15",
       category: "AI & Machine Learning",
       readTime: "5 min read",
-      image: "/images/blog/ai-trends-2024.jpg"
+      image: "/images/blog/ai-trends-2024.jpg"}
     },
     {
       id: 2,
@@ -28,7 +27,7 @@ export default function BlogPage() {
       date: "2024-01-10",
       category: "Cybersecurity",
       readTime: "7 min read",
-      image: "/images/blog/cybersecurity-smb.jpg"
+      image: "/images/blog/cybersecurity-smb.jpg"}
     },
     {
       id: 3,
@@ -38,7 +37,7 @@ export default function BlogPage() {
       date: "2024-01-05",
       category: "Cloud Computing",
       readTime: "10 min read",
-      image: "/images/blog/cloud-migration.jpg"
+      image: "/images/blog/cloud-migration.jpg"}
     },
     {
       id: 4,
@@ -48,7 +47,7 @@ export default function BlogPage() {
       date: "2023-12-28",
       category: "Digital Transformation",
       readTime: "8 min read",
-      image: "/images/blog/digital-transformation.jpg"
+      image: "/images/blog/digital-transformation.jpg"}
     },
     {
       id: 5,
@@ -58,7 +57,7 @@ export default function BlogPage() {
       date: "2023-12-20",
       category: "Micro SaaS",
       readTime: "6 min read",
-      image: "/images/blog/micro-saas.jpg"
+      image: "/images/blog/micro-saas.jpg"}
     },
     {
       id: 6,
@@ -68,7 +67,7 @@ export default function BlogPage() {
       date: "2023-12-15",
       category: "5G Solutions",
       readTime: "9 min read",
-      image: "/images/blog/5g-business.jpg"
+      image: "/images/blog/5g-business.jpg"}
     }
   ];
 
@@ -113,7 +112,7 @@ export default function BlogPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
-              <button
+              <button}
                 key={category}
                 className="px-6 py-2 rounded-full border border-slate-600 text-gray-300 hover:border-purple-500 hover:text-purple-300 transition-colors"
               >
@@ -129,7 +128,7 @@ export default function BlogPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {blogPosts.map((post) => (
-              <article 
+              <article }
                 key={post.id}
                 className="group bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden"
               >
@@ -205,4 +204,4 @@ export default function BlogPage() {
       </section>
     </>
   );
-}
+}'

@@ -1,13 +1,11 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  ShieldCheckIcon,
-  EyeIcon,
-  LockClosedIcon,
-  DocumentTextIcon,
-  UserIcon,
-  CogIcon
-} from '@heroicons/react/24/outline';
+import { Helmet , ShieldCheckIcon, 
+  EyeIcon, 
+  LockClosedIcon, 
+  DocumentTextIcon, 
+  UserIcon, 
+  CogIcon;'}
+ } from 'lucide-react';
 
 export default function PrivacyPage() {
   const lastUpdated = "January 15, 2024";
@@ -19,7 +17,7 @@ export default function PrivacyPage() {
         <meta name="description" content="Learn how Zion Tech Group protects your privacy and handles your personal information in accordance with applicable laws and regulations." />
         <meta name="keywords" content="privacy policy, data protection, GDPR, personal information, privacy rights" />
       </Helmet>
-      
+      }
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4">
@@ -245,7 +243,7 @@ export default function PrivacyPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Questions About Your Privacy?
             </h2>
-            <p className="text-xl text-gray-300 mb-12">
+            <p className="text-xl text-gray-300 mb-12">'
               We're here to help you understand and exercise your privacy rights
             </p>
             
@@ -268,4 +266,4 @@ export default function PrivacyPage() {
       </section>
     </>
   );
-}
+}'
