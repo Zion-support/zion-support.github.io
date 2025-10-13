@@ -3,6 +3,7 @@ Allow: /
 
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
+<<<<<<< HEAD
 
 # Crawl-delay
 Crawl-delay: 1
@@ -25,3 +26,5 @@ Allow: /blog/
 
 # Host
 Host: https://ziontechgroup.com
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146

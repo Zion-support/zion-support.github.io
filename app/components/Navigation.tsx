@@ -22,6 +22,7 @@ import {
   ChevronDown,
   Menu,
   X,
+<<<<<<< HEAD
   SidebarIcon,
   Package,
   Heart,
@@ -36,6 +37,9 @@ import {
 import FuturisticButton from './FuturisticButton';
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
+=======
+} from 'lucide-react';
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
 
 interface NavigationProps {
   onSidebarToggle: () => void;
@@ -43,8 +47,16 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+=======
+  const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);
+  const [isItServicesOpen, setIsItServicesOpen] = useState(false);
+  const [is5GServicesOpen, setIs5GServicesOpen] = useState(false);
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
   const location = useLocation();
 
   const toggleMenu = useCallback(() => {
@@ -83,6 +95,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   }, [is5GServicesOpen]);
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
+<<<<<<< HEAD
   const isActive = useCallback((path: string) => {
     return location.pathname === path;
   }, [location.pathname]);
@@ -113,6 +126,18 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-cec7
+=======
+  const closeAllMenus = useCallback(() => {
+    setIsOpen(false);
+    setIsServicesOpen(false);
+    setIsMicroSaasOpen(false);
+    setIsItServicesOpen(false);
+    setIs5GServicesOpen(false);
+  }, []);
+
+  const navigationItems = useMemo(() => [
+    {
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
       label: 'Home',
       href: '/',
       icon: <Star className="w-4 h-4" />
@@ -161,7 +186,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
         { label: 'Zion Security Shield', href: '/zion-security-shield' },
         { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
+<<<<<<< HEAD
         { label: 'Zion Content Studio', href: '/zion-content-studio' }
+=======
+        { label: 'Zion AI CRM Pro', href: '/zion-ai-crm-pro' },
+        { label: 'Zion AI Marketing Automation Pro', href: '/zion-ai-marketing-automation-pro' },
+        { label: 'Zion AI Project Manager Pro', href: '/zion-ai-project-manager-pro' }
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
       ]
     },
     {
@@ -188,6 +219,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       label: 'Contact',
       href: '/contact',
       icon: <Mail className="w-4 h-4" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-b200
 =======
@@ -357,37 +389,68 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-cec7
+=======
+    }
+  ], []);
+
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(href);
+  };
+
+  return (
+    <nav className="bg-black bg-opacity-90 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2 text-white hover:text-blue-400 transition-colors">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <Zap className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold">Zion Tech Group</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <div key={item.label} className="relative group">
                 <Link
                   to={item.href}
+<<<<<<< HEAD
                   className={`flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors py-2 ${
                     isActive(item.href) ? 'text-cyan-400' : ''
                   }`}
                   onMouseEnter={() => item.dropdown && setActiveDropdown(item.label)}
                   onMouseLeave={() => item.dropdown && setActiveDropdown(null)}
+=======
+                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    isActive(item.href)
+                      ? 'text-blue-400 bg-blue-900 bg-opacity-50'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                  }`}
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
                 >
                   {item.icon}
                   <span>{item.label}</span>
-                  {item.dropdown && (
-                    <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
-                  )}
+                  {item.dropdown && <ChevronDown className="w-4 h-4" />}
                 </Link>
-                
+
                 {/* Dropdown Menu */}
-                {item.dropdown && activeDropdown === item.label && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm rounded-lg border border-white/10 shadow-xl z-50">
+                {item.dropdown && (
+                  <div className="absolute top-full left-0 mt-1 w-64 bg-gray-900 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="py-2">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.label}
                           to={dropdownItem.href}
-                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors"
-                          onClick={closeDropdowns}
+                          className={`flex items-center space-x-2 px-4 py-2 text-sm hover:bg-gray-800 transition-colors ${
+                            isActive(dropdownItem.href) ? 'text-blue-400' : 'text-gray-300'
+                          }`}
                         >
-                          <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                          {dropdownItem.label}
+                          <span>{dropdownItem.label}</span>
                         </Link>
                       ))}
                     </div>
@@ -397,6 +460,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             ))}
           </div>
 
+<<<<<<< HEAD
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <FuturisticButton
@@ -582,11 +646,22 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 =======
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 >>>>>>> cursor/website-audit-and-update-with-deployment-cec7
+=======
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-300 hover:text-white p-2"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
             </button>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -626,26 +701,47 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         {isMenuOpen && (
           <div className="lg:hidden border-t border-white/10 mt-4 pt-4 pb-4">
             <div className="space-y-2">
+=======
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900 rounded-lg mt-2">
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
               {navigationItems.map((item) => (
                 <div key={item.label}>
                   <Link
                     to={item.href}
+<<<<<<< HEAD
                     className={`flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors py-2 px-3 rounded-lg hover:bg-white/5 ${
                       isActive(item.href) ? 'text-cyan-400' : ''
                     }`}
                     onClick={() => setIsMenuOpen(false)}
+=======
+                    className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium ${
+                      isActive(item.href)
+                        ? 'text-blue-400 bg-blue-900 bg-opacity-50'
+                        : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                    }`}
+                    onClick={closeAllMenus}
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
                   >
                     {item.icon}
                     <span>{item.label}</span>
                   </Link>
+                  
+                  {/* Mobile Dropdown */}
                   {item.dropdown && (
-                    <div className="ml-6 space-y-1">
+                    <div className="ml-4 mt-1 space-y-1">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.label}
                           to={dropdownItem.href}
-                          className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1 px-3 rounded-lg hover:bg-white/5"
-                          onClick={() => setIsMenuOpen(false)}
+                          className={`block px-3 py-2 text-sm rounded-md ${
+                            isActive(dropdownItem.href)
+                              ? 'text-blue-400 bg-blue-900 bg-opacity-50'
+                              : 'text-gray-300 hover:text-white hover:bg-gray-800'
+                          }`}
+                          onClick={closeAllMenus}
                         >
                           {dropdownItem.label}
                         </Link>
@@ -655,6 +751,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 </div>
               ))}
             </div>
+<<<<<<< HEAD
 =======
       {/* Mobile menu */}
       {isMobileMenuOpen && (
@@ -822,11 +919,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-cec7
             </div>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
           </div>
         </div>
       )}
     </nav>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -842,5 +942,8 @@ Navigation.displayName = 'Navigation';
 =======
 };
 >>>>>>> cursor/website-audit-and-update-with-deployment-cec7
+=======
+};
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
 
 export default Navigation;

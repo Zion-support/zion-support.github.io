@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState, useCallback } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
@@ -28,7 +28,10 @@ const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
 const ServicesPage = React.lazy(() => import("./app/services/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
-const DemoPage = React.lazy(() => import("./app/demo/page"));
+const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
+const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
+const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
+const SupportPage = React.lazy(() => import("./app/support/page"));
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 

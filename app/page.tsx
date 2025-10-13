@@ -172,13 +172,21 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+<<<<<<< HEAD
       <FuturisticBackground />
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI & IT Solutions | Transform Your Business"
         description="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation. Expert technology consulting for modern businesses. Get started today!"
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, micro SAAS, 5G technology, IT services, machine learning"
+=======
+      <EnhancedSEO
+        title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
+        description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
+        keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
         canonical="https://ziontechgroup.com"
       />
+      <FuturisticBackground />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
