@@ -1,9 +1,3 @@
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
-  }
-
-<<<<<<< HEAD
 const PROD_DOMAIN = 'https://ziontechgroup.com';
 
 async function handler(req, res) {
@@ -14,59 +8,34 @@ async function handler(req, res) {
     return;
   }
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-100c
-  const { productId, userId } = req.body || {};
-
-  if (!productId) {
-    res.statusCode = 400;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Product ID is required' }));
-    return;
-  }
-
   try {
-    // Basic checkout session creation logic
-    const sessionData = {
-      productId,
-      userId: userId || null,
-      timestamp: new Date().toISOString(),
-      status: 'pending'
-<<<<<<< HEAD
-    };
+    const { amount, currency = 'usd', success_url } = req.body;
 
-    // In a real implementation, you would:
-    // 1. Create a session with your payment provider (Stripe, PayPal, etc.)
-    // 2. Store session data in your database
-    // 3. Return the session ID and checkout URL
+    if (!amount) {
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Amount is required' }));
+      return;
+    }
+
+    // This is a placeholder implementation
+    // In a real implementation, you would integrate with Stripe or another payment processor
+    const session = {
+      id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
+      url: success_url || `${PROD_DOMAIN}/success`,
+      amount: amount,
+      currency: currency
+    };
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({
-      success: true,
-      sessionId: `session_${Date.now()}`,
-      checkoutUrl: `${PROD_DOMAIN}/checkout?session=${Date.now()}`,
-      sessionData
-    }));
+    res.end(JSON.stringify({ session }));
   } catch (error) {
-    console.error('Checkout session creation error:', error);
-=======
-    res.setHeader('Content-Type', 'application/json');
-    }));
-  } catch (_error) { // eslint-disable-line no-unused-vars
-    // console.error('Checkout session creation error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-100c
+    console.error('Error creating checkout session:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      error: 'Failed to create checkout session',
-<<<<<<< HEAD
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
-=======
-      details: process.env.NODE_ENV === 'development' ? _error.message : undefined
->>>>>>> cursor/fix-errors-and-merge-to-main-100c
-    }));
+    res.end(JSON.stringify({ error: 'Internal server error' }));
   }
 }
 
-export default withErrorLogging(handler);
+export default handler;

@@ -91,21 +91,21 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
 
-    const handleFocus = (e: FocusEvent) => {
+    const handleFocus = (e: Event) => {
       const target = e.target as HTMLElement;
       target.style.outline = '2px solid #0066cc';
       target.style.outlineOffset = '2px';
     };
 
-    const handleBlur = (e: FocusEvent) => {
+    const handleBlur = (e: Event) => {
       const target = e.target as HTMLElement;
       target.style.outline = '';
       target.style.outlineOffset = '';
     };
 
     focusableElements.forEach(element => {
-      element.addEventListener('focus', handleFocus);
-      element.addEventListener('blur', handleBlur);
+      element.addEventListener('focus', handleFocus as EventListener);
+      element.addEventListener('blur', handleBlur as EventListener);
     });
 
     return () => {
