@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-=======
 const CACHE_NAME = 'zion-tech-group-v2';
-const urlsToCache = [
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
+const STATIC_CACHE_NAME = 'zion-tech-group-static-v2';
+const DYNAMIC_CACHE_NAME = 'zion-tech-group-dynamic-v2';
+const STATIC_ASSETS = [
   '/',
   '/about',
   '/contact',
@@ -11,11 +10,8 @@ const urlsToCache = [
   '/micro-saas',
   '/5g-solutions',
   '/manifest.json',
-<<<<<<< HEAD
-=======
   '/favicon.svg',
   '/robots.txt'
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 ];
 
 // Install event - cache static assets
