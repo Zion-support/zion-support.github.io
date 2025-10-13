@@ -10,13 +10,10 @@ const ImageOptimizer = ({ className = '', children }: { className?: string; chil
   );
 };
 // Mock IntersectionObserver
-global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-// Mock IntersectionObserver;
 global.IntersectionObserver = jest.fn().mockImplementation((callback) => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn(),
-global.IntersectionObserver = jest.fn().mockImplementation((callback) => ({,
     observe: jest.fn(),
     unobserve: jest.fn(),
     disconnect: jest.fn(),
@@ -65,14 +62,14 @@ describe('ImageOptimizer', () => {
 
   it('renders with correct attributes', () => {
     render(
-//       <ImageOptimizer
+      <ImageOptimizer
         src="test-image.jpg"
         alt="Test image"
         width={300}
         height={200}
         className="custom-class"
         lazy={false}
-//       />
+      />
     );
 
     const img = screen.getByRole('img', { hidden: true });
@@ -84,14 +81,14 @@ describe('ImageOptimizer', () => {
 
   it('applies correct attributes', () => {
     render(
-//       <ImageOptimizer
+      <ImageOptimizer
         src="test-image.jpg"
         alt="Test image"
         width={300}
         height={200}
         className="custom-class"
         lazy={false}
-//       />
+      />
     );
 
     const img = screen.getByRole('img', { hidden: true });
@@ -103,11 +100,11 @@ describe('ImageOptimizer', () => {
 
   it('generates optimized src with WebP format', () => {
     render(
-//       <ImageOptimizer
+      <ImageOptimizer
         src="test-image.jpg"
         alt="Test image"
         lazy={false}
-//       />
+      />
     );
 
     const img = screen.getByRole('img', { hidden: true });

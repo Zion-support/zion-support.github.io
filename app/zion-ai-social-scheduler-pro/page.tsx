@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   Calendar, 
-  Share2, 
+  // Share2, // Unused
   BarChart3, 
   ArrowRight, 
   CheckCircle, 
@@ -12,14 +12,14 @@ import {
   Users, 
   Target, 
   Sparkles,
-  TrendingUp,
-  Database,
+  // TrendingUp, // Unused
+  // Database, // Unused
   Cpu,
-  Globe,
-  Zap,
-  Heart,
-  MessageCircle,
-  ThumbsUp
+  // Globe, // Unused
+  // Zap, // Unused
+  // Heart, // Unused
+  // MessageCircle, // Unused
+  // ThumbsUp // Unused
 } from 'lucide-react';
 
 const ZionAISocialSchedulerProPage: React.FC = () => {

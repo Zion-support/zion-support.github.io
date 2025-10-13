@@ -7,7 +7,7 @@ interface FuturisticTextProps {
   as?: string;
 }
 
-export default function FuturisticText({ className = '', children, variant, as }: FuturisticTextProps) {
+export default function FuturisticText({ className = '', children, as }: FuturisticTextProps) {
   const Component = as as keyof JSX.IntrinsicElements || 'div';
   
   return (

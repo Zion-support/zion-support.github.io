@@ -24,10 +24,10 @@ export function usePerformanceMonitor() {
   };
 
   return {
-//     data,
-//     loading,
-//     error,
-//     processData,
+    data: null,
+    loading: false,
+    error: null,
+    processData: () => {},
   };
 };
 

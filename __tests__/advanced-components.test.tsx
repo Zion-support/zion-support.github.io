@@ -20,23 +20,10 @@ describe('Advanced Components', () => {
   it('renders with custom className', () => {
     const { container } = render(<AdvancedComponents className="test-class" />);
     expect(container.firstChild).toHaveClass('test-class');
-describe('AdvancedComponents', () => {
-  it('renders with default props', () => {
-    render(<AdvancedComponents />);
-    expect(screen.getByTestId('advanced-components')).toBeInTheDocument();
-  });
-
-  it('renders with custom className', () => {
-    render(<AdvancedComponents className="custom-class" />);
-    expect(screen.getByTestId('advanced-components')).toHaveClass('custom-class');
   });
 
   it('renders children', () => {
     render(<AdvancedComponents>Test content</AdvancedComponents>);
     expect(screen.getByText('Test content')).toBeInTheDocument();
-// Mock test for advanced components
-describe('Advanced Components', () => {
-  it('should render without crashing', () => {
-    expect(true).toBe(true);
   });
 });

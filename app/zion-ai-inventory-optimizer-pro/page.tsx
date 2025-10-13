@@ -9,15 +9,15 @@ import {
   CheckCircle, 
   Star, 
   Clock, 
-  Users, 
+  // Users, // Unused
   Zap, 
   Sparkles,
-  TrendingUp,
-  Database,
+  // TrendingUp, // Unused
+  // Database, // Unused
   Cpu,
   Globe,
   AlertTriangle,
-  DollarSign,
+  // DollarSign, // Unused
   ShoppingCart,
   Truck
 } from 'lucide-react';

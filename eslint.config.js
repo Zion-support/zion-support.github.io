@@ -6,21 +6,24 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
-  {,
     ignores: [
       "dist",
       ".next",
       "backup-problematic/**",
       "backup-unused-components/**",
+      "backup/**",
+      "backup-problematic-pages/**",
       "corrupted-src-backup/**",
       "src/**",
       "*.js",
+      "*.cjs",
       "scripts/**",
       "public/sw.js",
       "identify_missing_pages.js",
       "merge-with-conflict-resolution.js",
       "resolve-all-conflicts.js",
       "fix-unused-imports.cjs",
+      "cleanup-remaining-issues.cjs",
     ],
   },
   {
@@ -35,18 +38,6 @@ export default tseslint.config(
       "react-refresh": reactRefresh,
     },
     rules: {
-  {,
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
-      files: ["**/*.{ts,tsx}"],
-      languageOptions: {,
-    ecmaVersion: 2020,
-        globals: globals.browser,
-    },
-      plugins: {
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
-    },
-      rules: {
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": "off",
       "@typescript-eslint/no-unused-vars": "warn",
