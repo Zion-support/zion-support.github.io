@@ -1,15 +1,7 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon, Globe } from 'lucide-react'
-=======
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Monitor, Users, Settings, Globe, Smartphone, Mail, Phone, MapPin } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon, Globe, Smartphone, Mail, Phone, MapPin } from 'lucide-react'
 import FuturisticButton from './FuturisticButton'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
-=======
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Globe } from 'lucide-react'
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
 
 interface NavigationProps {
   onSidebarToggle?: () => void
@@ -33,11 +25,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     setIsMicroSaasOpen(!isMicroSaasOpen)
   }, [isMicroSaasOpen])
 
-<<<<<<< HEAD
   const toggleItServices = useCallback(() => {
     setIsItServicesOpen(!isItServicesOpen)
   }, [isItServicesOpen])
-
 
   const itServices = useMemo(() => [
     { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
@@ -49,13 +39,14 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
   ], [])
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
 
   const microSaasServices = useMemo(() => [
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Code Reviewer', path: '/zion-ai-code-reviewer', icon: <Code className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Data Cleaner', path: '/zion-ai-data-cleaner', icon: <Database className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Energy Manager', path: '/zion-ai-energy-manager', icon: <Zap className="w-4 h-4" />, featured: true },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
@@ -84,7 +75,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
         { name: 'AI Content Generation', path: '/ai-content-generation' },
         { name: 'AI Customer Support', path: '/ai-customer-support' },
         { name: 'AI Marketing Automation', path: '/ai-marketing-automation' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' }
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
+        { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance' },
+        { name: 'AI Infrastructure Monitoring', path: '/ai-infrastructure-monitoring' }
       ]
     },
     {
