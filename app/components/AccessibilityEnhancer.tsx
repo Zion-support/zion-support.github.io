@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Eye, EyeOff, Type, Volume2, VolumeX } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 interface AccessibilitySettings {
   highContrast: boolean;
