@@ -6,6 +6,8 @@ const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
+  const [isItServicesOpen, setIsItServicesOpen] = useState(false)
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
   
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
@@ -18,6 +20,14 @@ const Navigation = React.memo(() => {
   const toggleMicroSaas = useCallback(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen)
   }, [isMicroSaasOpen])
+
+  const toggleItServices = useCallback(() => {
+    setIsItServicesOpen(!isItServicesOpen)
+  }, [isItServicesOpen])
+
+  const toggleSolutions = useCallback(() => {
+    setIsSolutionsOpen(!isSolutionsOpen)
+  }, [isSolutionsOpen])
 
   const aiServices = useMemo(() => [
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
@@ -37,6 +47,24 @@ const Navigation = React.memo(() => {
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
     { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+  ], [])
+
+  const itServices = useMemo(() => [
+    { name: 'Cloud Services', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
+    { name: 'Mobile Development', path: '/mobile-development', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Custom Development', path: '/custom-development', icon: <Database className="w-4 h-4" /> },
+    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+  ], [])
+
+  const solutions = useMemo(() => [
+    { name: '5G Solutions', path: '/5g-solutions', icon: <Zap className="w-4 h-4" /> },
+    { name: 'AI Analytics', path: '/ai-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Automation', path: '/ai-automation', icon: <Brain className="w-4 h-4" /> },
+    { name: 'AI Content Generation', path: '/ai-content-generation', icon: <Code className="w-4 h-4" /> },
+    { name: 'AI Customer Service', path: '/ai-customer-service', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI Marketing', path: '/ai-marketing', icon: <Database className="w-4 h-4" /> }
   ], [])
 
   const mainNavItems = useMemo(() => [
@@ -151,6 +179,70 @@ const Navigation = React.memo(() => {
               )}
             </div>
 
+            {/* IT Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleItServices}
+                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
+              >
+                <span>IT Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isItServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-blue-500/20">
+                  <div className="px-4 py-2 border-b border-gray-700 mb-2">
+                    <h3 className="text-sm font-semibold text-blue-400 uppercase tracking-wider">IT Services</h3>
+                  </div>
+                  {itServices.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.path}
+                      className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-blue-500/10 hover:text-blue-400 transition-all duration-300 group"
+                      onClick={() => setIsItServicesOpen(false)}
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:from-blue-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
+                        {service.icon}
+                      </div>
+                      <span className="font-medium">{service.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Solutions Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleSolutions}
+                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
+              >
+                <span>Solutions</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isSolutionsOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isSolutionsOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-green-500/20">
+                  <div className="px-4 py-2 border-b border-gray-700 mb-2">
+                    <h3 className="text-sm font-semibold text-green-400 uppercase tracking-wider">Solutions</h3>
+                  </div>
+                  {solutions.map((solution) => (
+                    <Link
+                      key={solution.name}
+                      to={solution.path}
+                      className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 group"
+                      onClick={() => setIsSolutionsOpen(false)}
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-green-500/20 to-teal-500/20 flex items-center justify-center group-hover:from-green-500/30 group-hover:to-teal-500/30 transition-all duration-300">
+                        {solution.icon}
+                      </div>
+                      <span className="font-medium">{solution.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link
               to="/consultation"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center space-x-2 font-semibold shadow-lg hover:shadow-cyan-500/25 group"
@@ -241,6 +333,66 @@ const Navigation = React.memo(() => {
                         {service.icon}
                         <span>{service.name}</span>
                         {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile IT Services */}
+              <div>
+                <button
+                  onClick={toggleItServices}
+                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-blue-500/10 hover:text-blue-400 transition-all duration-300 font-medium"
+                >
+                  <span>IT Services</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isItServicesOpen && (
+                  <div className="ml-4 mt-2 space-y-1">
+                    {itServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-blue-400 transition-colors rounded-lg hover:bg-blue-500/10"
+                        onClick={() => {
+                          setIsItServicesOpen(false)
+                          toggleMenu()
+                        }}
+                      >
+                        {service.icon}
+                        <span>{service.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile Solutions */}
+              <div>
+                <button
+                  onClick={toggleSolutions}
+                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium"
+                >
+                  <span>Solutions</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isSolutionsOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isSolutionsOpen && (
+                  <div className="ml-4 mt-2 space-y-1">
+                    {solutions.map((solution) => (
+                      <Link
+                        key={solution.name}
+                        to={solution.path}
+                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-green-400 transition-colors rounded-lg hover:bg-green-500/10"
+                        onClick={() => {
+                          setIsSolutionsOpen(false)
+                          toggleMenu()
+                        }}
+                      >
+                        {solution.icon}
+                        <span>{solution.name}</span>
                       </Link>
                     ))}
                   </div>

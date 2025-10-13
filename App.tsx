@@ -43,6 +43,8 @@ const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
+const CloudServicesPage = React.lazy(() => import("./app/cloud-services/page"));
+const CustomDevelopmentPage = React.lazy(() => import("./app/custom-development/page"));
 
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -248,6 +250,8 @@ function App() {
                   <Route path="/terms" element={<TermsPage />} />
                   <Route path="/cookies" element={<CookiesPage />} />
                   <Route path="/sitemap" element={<SitemapPage />} />
+                  <Route path="/cloud-services" element={<CloudServicesPage />} />
+                  <Route path="/custom-development" element={<CustomDevelopmentPage />} />
 
                   {/* AI Service Routes */}
                   <Route path="/ai-analytics" element={<AiAnalyticsPage />} />

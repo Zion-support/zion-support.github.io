@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ArrowRight, Calendar, CheckCircle, Zap, Mail, Smartphone, Globe, Target, Shield, TrendingUp, Users } from "lucide-react";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
@@ -121,13 +120,6 @@ export default function Consultation() {
     console.log("Form submitted:", formData);
     setIsSubmitted(true);
   };
-=======
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function Consultation() {
->>>>>>> cursor/analyze-improve-and-deploy-application-462b
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
