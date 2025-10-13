@@ -1,23 +1,17 @@
 // advancedCaching utility functions
 
-export interface advancedCachingConfig {
+export interface AdvancedCachingConfig {
   enabled: boolean;
 }
 
-export class advancedCaching {
-  private config: advancedCachingConfig;
+export class AdvancedCaching {
+  private config: AdvancedCachingConfig;
 
-  constructor(config: Partial<advancedCachingConfig> = {}) {
+  constructor(config: Partial<AdvancedCachingConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// advancedCaching utility
-export const advancedCaching = {
-  // Utility implementation,
-    init: () => {
-    console.log('advancedCaching initialized');
   }
 
   init(): void {
@@ -27,10 +21,5 @@ export const advancedCaching = {
   }
 }
 
-export const advancedcaching = new advancedCaching();
-export default advancedcaching;
-// advancedCaching
-export const advancedCaching = () => {
-  // Utility function implementation
-  return null;
-};
+export const advancedCaching = new AdvancedCaching();
+export default advancedCaching;

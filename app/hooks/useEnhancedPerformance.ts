@@ -1,43 +1,3 @@
-// useEnhancedPerformance
-import { useState, useEffect } from 'react';
-
-export const useEnhancedPerformance = () => {
-  // Utility function implementation
-  return null;
-};
-import { useState, useEffect } from 'react';
-
-export function useEnhancedPerformance() {
-  const [data, setData] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    setLoading(true);
-    // Initialize hook logic here
-    setLoading(false);
-  }, []);
-
-  const processData = (input: any) => {
-    try {
-      setLoading(true);
-      // Process data logic here
-      setData(input);
-      setError(null);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "An error occurred");
-  const fetchData = async () => {
-    setLoading(true);
-    try {
-      // Implementation here
-      setData('performance data');
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
-    } finally {
-      setLoading(false);
-    }
-  };
-
 import { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceData {
@@ -51,6 +11,9 @@ interface UseEnhancedPerformanceReturn {
   data: PerformanceData | null;
   loading: boolean;
   error: string | null;
+  setData: (data: PerformanceData | null) => void;
+  setLoading: (loading: boolean) => void;
+  setError: (error: string | null) => void;
   refresh: () => void;
   clearError: () => void;
 }
@@ -60,103 +23,33 @@ export function useEnhancedPerformance(): UseEnhancedPerformanceReturn {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const collectPerformanceData = useCallback(() => {
-    if (typeof window === 'undefined') return null;
-
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const memory = (performance as any).memory;
-
-    return {
-      loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
-      renderTime: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart : 0,
-      memoryUsage: memory ? memory.usedJSHeapSize : 0,
-      errorCount: 0 // This would be tracked by an error monitoring service
-    };
-  }, []);
-
-  const refresh = useCallback(async () => {
+  const fetchData = useCallback(async () => {
     setLoading(true);
     setError(null);
-
+    
     try {
-      // Simulate async data collection
-      await new Promise(resolve => setTimeout(resolve, 100));
-      const performanceData = collectPerformanceData();
+      // Simulate performance data collection
+      const performanceData: PerformanceData = {
+        loadTime: performance.now(),
+        renderTime: performance.now(),
+        memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
+        errorCount: 0
+      };
+      
       setData(performanceData);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to collect performance data');
+      setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
       setLoading(false);
     }
-  }, [collectPerformanceData]);
+  }, []);
+
+  const refresh = useCallback(() => {
+    fetchData();
+  }, [fetchData]);
 
   const clearError = useCallback(() => {
     setError(null);
-  }, []);
-
-  useEffect(() => {
-    refresh();
-  }, [refresh]);
-
-  return {
-    data,
-    loading,
-    error,
-    processData,
-  };
-};
-
-export default useEnhancedPerformance;
-
-import { useState, useEffect } from 'react';
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  return { data, loading, error, refetch: fetchData };
-};
-
-import { useState, useEffect } from 'react';
-export function useEnhancedPerformance() {
-  const [state, setState] = useState<string | null>(null);
-
-  useEffect(() => {
-    setState('initialized');
-  }, []);
-
-  return { state };
-};
-
-import { useState, useEffect, useCallback } from 'react';
-
-interface PerformanceState {
-  data: any;
-  loading: boolean;
-  error: string | null;
-}
-
-export const useEnhancedPerformance = () => {
-  const [state, setState] = useState<PerformanceState>({
-    data: null,
-    loading: false,
-    error: null
-  });
-
-  const fetchData = useCallback(async () => {
-    setState(prev => ({ ...prev, loading: true, error: null }));
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setState(prev => ({ ...prev, data: 'Performance data loaded', loading: false }));
-    } catch (error) {
-      setState(prev => ({
-        ...prev,
-        error: error instanceof Error ? error.message : 'Unknown error',
-        loading: false
-      }));
-    }
   }, []);
 
   useEffect(() => {
@@ -164,80 +57,14 @@ export const useEnhancedPerformance = () => {
   }, [fetchData]);
 
   return {
-    ...state,
-    refetch: fetchData
-  };
-};
-
-export default useEnhancedPerformance;
-    // Implementation here
-    setData('initialized');
-  }, []);
-
-  return { data, loading, error, setData, setLoading, setError };
-}
-
-export default useEnhancedPerformance;
-export default useEnhancedPerformance;
+    data,
+    loading,
+    error,
+    setData,
+    setLoading,
+    setError,
     refresh,
     clearError
-  };
-}
-
-export default useEnhancedPerformance;
-import { useState, useEffect, useCallback } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  timeToInteractive: number;
-}
-
-export function useEnhancedPerformance() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-
-  const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'navigation') {
-          const navEntry = entry as PerformanceNavigationTiming;
-          setMetrics({
-            loadTime: navEntry.loadEventEnd - navEntry.loadEventStart,
-            firstContentfulPaint: 0, // Will be updated by paint observer
-            largestContentfulPaint: 0, // Will be updated by LCP observer
-            firstInputDelay: 0, // Will be updated by FID observer
-            cumulativeLayoutShift: 0, // Will be updated by CLS observer
-            timeToInteractive: navEntry.domInteractive - navEntry.navigationStart
-          });
-        }
-      });
-    });
-
-    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
-    setIsMonitoring(true);
-
-    return () => {
-      observer.disconnect();
-      setIsMonitoring(false);
-    };
-  }, []);
-
-  useEffect(() => {
-    const cleanup = measurePerformance();
-    return cleanup;
-  }, [measurePerformance]);
-
-  return {
-    metrics,
-    isMonitoring,
-    measurePerformance
   };
 }
 

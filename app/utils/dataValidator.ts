@@ -1,23 +1,17 @@
 // dataValidator utility functions
 
-export interface dataValidatorConfig {
+export interface DataValidatorConfig {
   enabled: boolean;
 }
 
-export class dataValidator {
-  private config: dataValidatorConfig;
+export class DataValidator {
+  private config: DataValidatorConfig;
 
-  constructor(config: Partial<dataValidatorConfig> = {}) {
+  constructor(config: Partial<DataValidatorConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// dataValidator utility
-export const dataValidator = {
-  // Utility implementation,
-    init: () => {
-    console.log('dataValidator initialized');
   }
 
   init(): void {
@@ -27,10 +21,5 @@ export const dataValidator = {
   }
 }
 
-export const datavalidator = new dataValidator();
-export default datavalidator;
-// dataValidator
-export const dataValidator = () => {
-  // Utility function implementation
-  return null;
-};
+export const dataValidator = new DataValidator();
+export default dataValidator;

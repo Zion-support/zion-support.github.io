@@ -1,21 +1,24 @@
-import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+import { 
+  ArrowRight, 
+  Home, 
+  Search, 
+  AlertTriangle, 
+  Users, 
+  Star, 
+  Shield, 
+  Database, 
+  CheckCircle, 
+  Brain, 
+  Lock, 
+  Activity, 
+  FileText, 
+  Eye 
+} from 'lucide-react';
 import React from 'react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Activity } from 'lucide-react';
-import { FileText } from 'lucide-react';
-import { Eye } from 'lucide-react';
 
 const CybersecuritySolutions = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];

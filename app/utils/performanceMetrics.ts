@@ -1,23 +1,17 @@
 // performanceMetrics utility functions
 
-export interface performanceMetricsConfig {
+export interface PerformanceMetricsConfig {
   enabled: boolean;
 }
 
-export class performanceMetrics {
-  private config: performanceMetricsConfig;
+export class PerformanceMetrics {
+  private config: PerformanceMetricsConfig;
 
-  constructor(config: Partial<performanceMetricsConfig> = {}) {
+  constructor(config: Partial<PerformanceMetricsConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// performanceMetrics utility
-export const performanceMetrics = {
-  // Utility implementation,
-    init: () => {
-    console.log('performanceMetrics initialized');
   }
 
   init(): void {
@@ -27,10 +21,5 @@ export const performanceMetrics = {
   }
 }
 
-export const performancemetrics = new performanceMetrics();
-export default performancemetrics;
-// performanceMetrics
-export const performanceMetrics = () => {
-  // Utility function implementation
-  return null;
-};
+export const performanceMetrics = new PerformanceMetrics();
+export default performanceMetrics;
