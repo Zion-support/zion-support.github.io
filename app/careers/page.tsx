@@ -1,11 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f2e0
+
+
 export default function Careers() {
   return (
     <>
@@ -29,10 +28,9 @@ export default function Careers() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f2e0
+
+
       </div>
     </>
   );
