@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor, act } from '@testing-library/react';
 import OptimizedImage from '../../app/components/OptimizedImage';
 
 // Mock framer-motion
@@ -44,7 +44,10 @@ describe('OptimizedImage', () => {
     render(<OptimizedImage {...defaultProps} onError={onError} />);
     
     const img = screen.getByAltText('Test image');
-    img.dispatchEvent(new Event('error'));
+    
+    await act(async () => {
+      img.dispatchEvent(new Event('error'));
+    });
     
     await waitFor(() => {
       expect(screen.getByText('Failed to load image')).toBeInTheDocument();
@@ -56,7 +59,10 @@ describe('OptimizedImage', () => {
     render(<OptimizedImage {...defaultProps} onLoad={onLoad} />);
     
     const img = screen.getByAltText('Test image');
-    img.dispatchEvent(new Event('load'));
+    
+    await act(async () => {
+      img.dispatchEvent(new Event('load'));
+    });
     
     await waitFor(() => {
       expect(onLoad).toHaveBeenCalled();
