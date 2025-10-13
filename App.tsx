@@ -14,7 +14,6 @@ import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Page Components
-<<<<<<< HEAD
 import HomePage from './app/pages/HomePage';
 import AboutPage from './app/pages/AboutPage';
 import ContactPage from './app/pages/ContactPage';
@@ -26,22 +25,7 @@ import SupportPage from './app/pages/SupportPage';
 import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
-=======
-import HomePage from './src/pages/HomePage';
-import ContactPage from './src/pages/ContactPage';
-import BlogPage from './src/pages/BlogPage';
-import SolutionsPage from './src/pages/SolutionsPage';
-
-// Placeholder components for missing pages
-const AboutPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">About Page</h1></div>;
-const ServicesPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Services Page</h1></div>;
-const TutorialsPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Tutorials Page</h1></div>;
-const DemoPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Demo Page</h1></div>;
-const SupportPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Support Page</h1></div>;
-const PrivacyPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Privacy Page</h1></div>;
-const TermsPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Terms Page</h1></div>;
-const PricingPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Pricing Page</h1></div>;
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
+import SolutionsPage from './app/pages/SolutionsPage';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -100,7 +84,7 @@ function App() {
                       <div className="min-h-screen flex items-center justify-center">
                         <div className="text-center">
                           <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                          <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
+                          <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
                           <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                             Go Home
                           </a>
