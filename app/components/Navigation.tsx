@@ -6,18 +6,17 @@ import {
   Brain, 
   Shield, 
   Zap, 
-<<<<<<< HEAD
-  Globe,
-  ChevronDown,
-=======
   Globe, 
 <<<<<<< HEAD
   ChevronDown
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-c4da
 =======
   ChevronDown,
   ChevronUp
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-6099
 } from 'lucide-react';
 
 interface NavigationProps {

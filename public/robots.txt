@@ -2,8 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml
-<<<<<<< HEAD
-=======
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
@@ -27,4 +25,3 @@ Allow: /blog
 
 # Host
 Host: https://ziontechgroup.com
->>>>>>> cursor/analyze-improve-and-deploy-application-0f46

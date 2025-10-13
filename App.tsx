@@ -14,12 +14,9 @@ import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-<<<<<<< HEAD
 import EnhancedSEO from "./app/components/EnhancedSEO";
-=======
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -35,6 +32,7 @@ const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
+const NotFoundPage = React.lazy(() => import("./app/404/page"));
 
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -223,6 +221,9 @@ function App() {
                             <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
                             <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
                             <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+                            
+                            {/* 404 Route - Must be last */}
+                            <Route path="*" element={<NotFoundPage />} />
                           </Routes>
                         </Suspense>
                           </main>

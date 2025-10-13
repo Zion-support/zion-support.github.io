@@ -1,11 +1,16 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "timestamp": "2025-10-13T09:02:12.194Z",
+=======
+  "timestamp": "2025-10-13T09:23:16.492Z",
+>>>>>>> cursor/analyze-improve-and-deploy-application-6099
   "buildStats": {
-    "totalFiles": 17,
-    "totalSize": 531352,
+    "totalFiles": 20,
+    "totalSize": 590033,
     "jsFiles": 14,
+<<<<<<< HEAD
     "jsSize": 522390,
 =======
   "timestamp": "2025-10-13T09:04:40.055Z",
@@ -23,10 +28,13 @@
     "jsFiles": 14,
     "jsSize": 600029,
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
+=======
+    "jsSize": 564892,
+>>>>>>> cursor/analyze-improve-and-deploy-application-6099
     "cssFiles": 1,
     "cssSize": 1811,
-    "imageFiles": 0,
-    "imageSize": 0
+    "imageFiles": 1,
+    "imageSize": 392
   },
   "recommendations": [
     {
