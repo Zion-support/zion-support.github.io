@@ -1,7 +1,12 @@
+import React, { lazy, Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { ErrorBoundary } from 'react-error-boundary';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
-// Lazy load pages for better performance;
+// Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
@@ -108,9 +113,10 @@ const AppLoadingSpinner = () => (
   <LoadingSpinner />
 );
 
-const App: React.FC = () => {,
-    return(<ErrorBoundary>)
-      <HelmetProvider />
+const App: React.FC = () => {
+  return (
+    <ErrorBoundary>
+      <HelmetProvider>
         <BrowserRouter>
           <div className="App">
             <PerformanceMonitor />
@@ -119,9 +125,115 @@ const App: React.FC = () => {,
               <Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/case-studies" element={<CaseStudiesPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/team" element={<TeamPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/cookies" element={<CookiesPage />} />
 
+                {/* AI Services */}
+                <Route path="/ai-services" element={<AiServicesPage />} />
+                <Route path="/ai-marketing" element={<AiMarketingPage />} />
+                <Route path="/ai-automation" element={<AiAutomationPage />} />
+                <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
+                <Route path="/ai-fintech" element={<AiFintechPage />} />
+                <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
+                <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
+                <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
+                <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
+                <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
+
+                {/* Additional AI Services */}
+                <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
+                <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
+                <Route path="/ai-crm" element={<AiCrmPage />} />
+                <Route path="/ai-computer-vision" element={<AiComputerVisionPage />} />
+                <Route path="/ai-document-processing" element={<AiDocumentProcessingPage />} />
+                <Route path="/ai-predictive-analytics" element={<AiPredictiveAnalyticsPage />} />
+                <Route path="/ai-edge-computing" element={<AiEdgeComputingPage />} />
+                <Route path="/ai-voice-assistant" element={<AiVoiceAssistantPage />} />
+                <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
+                <Route path="/ai-hr" element={<AiHrPage />} />
+                <Route path="/ai-ecommerce-solutions" element={<AiEcommerceSolutionsPage />} />
+                <Route path="/ai-financial-services" element={<AiFinancialServicesPage />} />
+                <Route path="/ai-voice-solutions" element={<AiVoiceSolutionsPage />} />
+                <Route path="/ai-hr-solutions" element={<AiHrSolutionsPage />} />
+
+                {/* IT Services */}
+                <Route path="/it-services" element={<ItServicesPage />} />
+                <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
+                <Route path="/it-support" element={<ItSupportPage />} />
+                <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                <Route path="/cybersecurity" element={<CybersecurityPage />} />
+
+                {/* Additional IT Services */}
+                <Route path="/api" element={<ApiDevelopmentPage />} />
+                <Route path="/database-management" element={<DatabaseManagementPage />} />
+                <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                <Route path="/web-development" element={<WebDevelopmentPage />} />
+                <Route path="/devops-cicd" element={<DevOpsCicdPage />} />
+                <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                <Route path="/custom-development" element={<CustomSoftwarePage />} />
+                <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                <Route path="/it-asset-management" element={<ItAssetManagementPage />} />
+                <Route path="/performance-optimization" element={<PerformanceOptimizationPage />} />
+                <Route path="/api-development" element={<ApiDevelopmentPage2 />} />
+                <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
+                <Route path="/data-analytics-bi" element={<DataAnalyticsBiPage />} />
+                <Route path="/custom-software" element={<CustomSoftwarePage2 />} />
+
+                {/* Emerging Technologies */}
+                <Route path="/blockchain" element={<BlockchainPage />} />
+                <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
+                <Route path="/ar-vr-solutions" element={<ARVRSolutionsPage />} />
+                <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+
+                {/* Additional Emerging Technologies */}
+                <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
+                <Route path="/ai-holographic-workspace" element={<AiHolographicWorkspacePage />} />
+                <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
+                <Route path="/machine-learning" element={<MachineLearningPage />} />
+                <Route path="/iot" element={<IotPage />} />
+
+                {/* Micro SaaS */}
+                <Route path="/micro-saas" element={<MicroSaasPage />} />
+
+                {/* Support Pages */}
+                <Route path="/docs" element={<DocsPage />} />
+                <Route path="/api-docs" element={<ApiDocsPage />} />
+                <Route path="/support" element={<SupportPage />} />
+                <Route path="/status" element={<StatusPage />} />
+                <Route path="/consultation" element={<ConsultationPage />} />
+
+                {/* Additional Important Pages */}
+                <Route path="/faq" element={<FaqPage />} />
+                <Route path="/demo" element={<DemoPage />} />
+                <Route path="/partners" element={<PartnersPage />} />
+                <Route path="/community" element={<CommunityPage />} />
+                <Route path="/tutorials" element={<TutorialsPage />} />
+                <Route path="/compliance" element={<CompliancePage />} />
+                <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+                <Route path="/enterprise" element={<EnterprisePage />} />
+                <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                <Route path="/edge-computing" element={<EdgeComputingPage />} />
+              </Routes>
+            </Suspense>
+          </div>
+        </BrowserRouter>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
-}
+};
 
 
 
