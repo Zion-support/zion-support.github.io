@@ -16,23 +16,11 @@
   ],
   "errors": [],
   "categories": {
-    "monitoring": [
-      "Advanced monitoring configuration"
-    ],
-    "deployment": [
-      "Deployment configuration",
-      "GitHub Actions workflow"
-    ],
-    "testing": [
-      "Enhanced testing configuration"
-    ],
-    "features": [
-      "Feature flags configuration"
-    ],
-    "security": [
-      "API rate limiting",
-      "Environment template"
-    ]
+    "monitoring": ["Advanced monitoring configuration"],
+    "deployment": ["Deployment configuration", "GitHub Actions workflow"],
+    "testing": ["Enhanced testing configuration"],
+    "features": ["Feature flags configuration"],
+    "security": ["API rate limiting", "Environment template"]
   },
   "nextSteps": [
     "Configure environment variables for each environment",

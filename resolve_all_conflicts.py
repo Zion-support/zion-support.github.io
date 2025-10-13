@@ -1,186 +1,162 @@
 #!/usr/bin/env python3
 """
-Comprehensive merge conflict resolver for the Zion Tech Group website.
-This script will automatically resolve all merge conflicts in the codebase.
+Comprehensive script to resolve all merge conflicts and merge branches into main
 """
-
 import os
-import re
 import subprocess
 import sys
+import re
 from pathlib import Path
 
-def find_files_with_conflicts():
-    """Find all files with merge conflict markers."""
-    conflict_files = []
-    
-    # Search for files with merge conflict markers
+def run_command(cmd, cwd=None):
+    """Run a command and return the result"""
     try:
-        result = subprocess.run(
-            ['grep', '-r', '-l', '<<<<<<< HEAD', '/workspace'],
-            capture_output=True, text=True, cwd='/workspace'
-        )
-        if result.returncode == 0:
-            conflict_files = result.stdout.strip().split('\n')
+        result = subprocess.run(cmd, shell=True, cwd=cwd, capture_output=True, text=True)
+        return result.returncode == 0, result.stdout, result.stderr
     except Exception as e:
-        print(f"Error finding conflict files: {e}")
-    
-    return [f for f in conflict_files if f and os.path.exists(f)]
+        return False, "", str(e)
 
-def resolve_conflict_in_file(file_path):
-    """Resolve merge conflicts in a single file."""
-    print(f"Resolving conflicts in: {file_path}")
+def get_recent_branches():
+    """Get recent branches that might be PRs"""
+    success, stdout, stderr = run_command("git branch -r --sort=-committerdate | grep 'cursor/' | head -10")
+    if not success:
+        print(f"Error getting branches: {stderr}")
+        return []
     
+    branches = []
+    for line in stdout.strip().split('\n'):
+        if line.strip() and 'origin/cursor/' in line:
+            branch = line.strip().replace('origin/', '')
+            branches.append(branch)
+    
+    return branches
+
+def resolve_merge_conflicts(file_path):
+    """Resolve merge conflicts in a file by keeping the main branch version"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Skip if no conflicts
-        if '<<<<<<< HEAD' not in content:
-            return True
+        # Remove merge conflict markers and keep main branch version
+        # Pattern: \n...\n
+        pattern = r'.*?\n
+        content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
         
-        # Resolve conflicts by keeping both versions when possible, or the newer version
-        lines = content.split('\n')
-        resolved_lines = []
-        i = 0
+        # Clean up any remaining markers
+        content = re.sub(r'\n?', '', content)
+        content = re.sub(r'
         
-        while i < len(lines):
-            line = lines[i]
-            
-            if line.strip() == '<<<<<<< HEAD':
-                # Start of conflict - find the end
-                conflict_start = i
-                i += 1
-                
-                # Find the ======= separator
-                while i < len(lines) and lines[i].strip() != '=======':
-                    i += 1
-                
-                if i < len(lines):
-                    # Found =======, now find >>>>>>> 
-                    i += 1
-                    while i < len(lines) and not lines[i].strip().startswith('>>>>>>>'):
-                        i += 1
-                    
-                    if i < len(lines):
-                        # Found the end of conflict
-                        conflict_end = i
-                        
-                        # Extract the two versions
-                        head_lines = lines[conflict_start + 1:i - 1]
-                        separator_line = lines[i - 1]
-                        main_lines = []
-                        
-                        # Find where main version starts (after =======)
-                        j = conflict_start + 1
-                        while j < len(lines) and lines[j].strip() != '=======':
-                            j += 1
-                        
-                        if j < len(lines):
-                            j += 1  # Skip the ======= line
-                            while j < i and not lines[j].strip().startswith('>>>>>>>'):
-                                main_lines.append(lines[j])
-                                j += 1
-                        
-                        # Resolve the conflict
-                        resolved_section = resolve_conflict_section(head_lines, main_lines, file_path)
-                        resolved_lines.extend(resolved_section)
-                        
-                        # Skip the >>>>>>> line
-                        i += 1
-                    else:
-                        # No end found, keep original
-                        resolved_lines.append(line)
-                        i += 1
-                else:
-                    # No separator found, keep original
-                    resolved_lines.append(line)
-                    i += 1
-            else:
-                resolved_lines.append(line)
-                i += 1
+        # Clean up multiple newlines
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
         
-        # Write the resolved content
-        resolved_content = '\n'.join(resolved_lines)
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(resolved_content)
+            f.write(content)
         
-        print(f"✓ Resolved conflicts in {file_path}")
+        print(f"Resolved conflicts in {file_path}")
         return True
-        
     except Exception as e:
-        print(f"✗ Error resolving conflicts in {file_path}: {e}")
+        print(f"Error resolving conflicts in {file_path}: {e}")
         return False
 
-def resolve_conflict_section(head_lines, main_lines, file_path):
-    """Resolve a specific conflict section."""
-    # For package.json, prefer the main version (more complete)
-    if file_path.endswith('package.json'):
-        return main_lines
+def merge_branch(branch_name):
+    """Attempt to merge a branch into main"""
+    print(f"\n=== Attempting to merge {branch_name} ===")
     
-    # For TypeScript/JavaScript files, try to merge intelligently
-    if file_path.endswith(('.ts', '.tsx', '.js', '.jsx')):
-        return merge_js_conflict(head_lines, main_lines)
+    # First, try a dry run to see conflicts
+    success, stdout, stderr = run_command(f"git merge --no-commit --no-ff origin/{branch_name}")
     
-    # For other files, prefer main version
-    return main_lines
-
-def merge_js_conflict(head_lines, main_lines):
-    """Merge JavaScript/TypeScript conflicts intelligently."""
-    # Simple strategy: prefer main version, but keep unique imports
-    result = []
-    
-    # Collect all imports from both versions
-    all_imports = set()
-    for line in head_lines + main_lines:
-        if line.strip().startswith('import ') or line.strip().startswith('export '):
-            all_imports.add(line.strip())
-    
-    # Add unique imports
-    for imp in sorted(all_imports):
-        result.append(imp)
-    
-    # Add main version content (excluding imports)
-    for line in main_lines:
-        if not (line.strip().startswith('import ') or line.strip().startswith('export ')):
-            result.append(line)
-    
-    return result
+    if success:
+        print(f"✅ {branch_name} merged successfully without conflicts")
+        run_command("git add .")
+        run_command(f"git commit -m 'Merge {branch_name} into main'")
+        return True
+    else:
+        print(f"⚠️  {branch_name} has conflicts, attempting to resolve...")
+        
+        # Get list of conflicted files
+        success, stdout, stderr = run_command("git status --porcelain | grep '^UU\\|^AA\\|^DD'")
+        if not success:
+            print(f"Could not get conflicted files: {stderr}")
+            return False
+        
+        conflicted_files = [line.split()[1] for line in stdout.strip().split('\n') if line.strip()]
+        
+        if not conflicted_files:
+            print(f"No conflicted files found for {branch_name}")
+            return False
+        
+        print(f"Found {len(conflicted_files)} conflicted files")
+        
+        # Resolve conflicts in each file
+        resolved_count = 0
+        for file_path in conflicted_files:
+            if os.path.exists(file_path):
+                if resolve_merge_conflicts(file_path):
+                    resolved_count += 1
+        
+        if resolved_count > 0:
+            # Add resolved files and commit
+            run_command("git add .")
+            success, stdout, stderr = run_command(f"git commit -m 'Merge {branch_name} into main - resolved conflicts'")
+            if success:
+                print(f"✅ Successfully merged {branch_name} after resolving conflicts")
+                return True
+            else:
+                print(f"❌ Failed to commit merge for {branch_name}: {stderr}")
+                return False
+        else:
+            print(f"❌ Could not resolve conflicts for {branch_name}")
+            return False
 
 def main():
-    """Main function to resolve all conflicts."""
-    print("🔍 Searching for files with merge conflicts...")
+    """Main function to resolve all conflicts and merge branches"""
+    print("🚀 Starting comprehensive merge conflict resolution...")
     
-    conflict_files = find_files_with_conflicts()
+    # Ensure we're on main branch
+    success, stdout, stderr = run_command("git checkout main")
+    if not success:
+        print(f"Error checking out main: {stderr}")
+        return
     
-    if not conflict_files:
-        print("✅ No merge conflicts found!")
-        return True
+    # Pull latest changes
+    print("📥 Pulling latest changes from main...")
+    success, stdout, stderr = run_command("git pull origin main")
+    if not success:
+        print(f"Warning: Could not pull latest changes: {stderr}")
     
-    print(f"Found {len(conflict_files)} files with conflicts:")
-    for file_path in conflict_files:
-        print(f"  - {file_path}")
+    # Get recent branches
+    branches = get_recent_branches()
+    print(f"Found {len(branches)} recent branches to check")
     
-    print("\n🔧 Resolving conflicts...")
+    # Try to merge each branch
+    merged_count = 0
+    failed_count = 0
     
-    success_count = 0
-    for file_path in conflict_files:
-        if resolve_conflict_in_file(file_path):
-            success_count += 1
+    for branch in branches:
+        try:
+            if merge_branch(branch):
+                merged_count += 1
+            else:
+                failed_count += 1
+                # Abort any failed merge
+                run_command("git merge --abort")
+        except Exception as e:
+            print(f"❌ Error processing {branch}: {e}")
+            failed_count += 1
+            run_command("git merge --abort")
     
-    print(f"\n✅ Resolved conflicts in {success_count}/{len(conflict_files)} files")
+    print(f"\n📊 Merge Summary:")
+    print(f"✅ Successfully merged: {merged_count} branches")
+    print(f"❌ Failed to merge: {failed_count} branches")
     
-    # Verify no conflicts remain
-    remaining_conflicts = find_files_with_conflicts()
-    if remaining_conflicts:
-        print(f"⚠️  {len(remaining_conflicts)} files still have conflicts:")
-        for file_path in remaining_conflicts:
-            print(f"  - {file_path}")
-        return False
-    else:
-        print("🎉 All merge conflicts resolved!")
-        return True
+    # Push changes
+    if merged_count > 0:
+        print("\n📤 Pushing changes to main...")
+        success, stdout, stderr = run_command("git push origin main")
+        if success:
+            print("✅ Successfully pushed changes to main")
+        else:
+            print(f"❌ Failed to push changes: {stderr}")
 
 if __name__ == "__main__":
-    success = main()
-    sys.exit(0 if success else 1)
+    main()

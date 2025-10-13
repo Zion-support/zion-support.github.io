@@ -1,69 +1,64 @@
 #!/usr/bin/env python3
 """
-Script to automatically resolve merge conflicts in the app directory
+Script to automatically resolve merge conflicts in TypeScript files.
+This script keeps the newer version (after =======) and removes conflict markers.
 """
+
 import os
 import re
 import glob
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a single file"""
+    """Fix merge conflicts in a single file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if file has merge conflicts
+        # Check if file has merge conflict markers
         if '<<<<<<< HEAD' not in content:
             return False
         
-        # Pattern to match merge conflict blocks
-        conflict_pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
+        # Split by conflict markers
+        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>>', content, flags=re.DOTALL)
         
-        def resolve_conflict(match):
-            head_content = match.group(1).strip()
-            other_content = match.group(2).strip()
-            
-            # Simple resolution strategy: prefer HEAD content if it's not empty
-            if head_content and not head_content.isspace():
-                return head_content
-            elif other_content and not other_content.isspace():
-                return other_content
-            else:
-                return head_content  # Default to HEAD
+        if len(parts) != 4:  # Should have: [before, old_content, new_content, after]
+            print(f"Warning: Unexpected conflict format in {file_path}")
+            return False
         
-        # Replace all merge conflicts
-        new_content = re.sub(conflict_pattern, resolve_conflict, content, flags=re.DOTALL)
+        # Keep the newer version (after =======)
+        new_content = parts[0] + parts[2] + parts[3]
         
-        # Write back the fixed content
+        # Clean up any remaining conflict markers
+        new_content = re.sub(r'<<<<<<< HEAD.*?>>>>>>>.*?\n', '', new_content, flags=re.DOTALL)
+        new_content = re.sub(r'=======.*?>>>>>>>.*?\n', '', new_content, flags=re.DOTALL)
+        
+        # Write the cleaned content back
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(new_content)
         
-        print(f"Fixed merge conflicts in: {file_path}")
+        print(f"Fixed merge conflicts in {file_path}")
         return True
         
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix all merge conflicts in app directory"""
-    app_dir = '/workspace/app'
+    """Main function to process all TypeScript files."""
+    # Find all TypeScript files in the app directory
+    pattern = "app/**/*.tsx"
+    files = glob.glob(pattern, recursive=True)
+    
     fixed_count = 0
+    total_conflicts = 0
     
-    # Find all TypeScript/JavaScript files in app directory
-    patterns = [
-        f'{app_dir}/**/*.ts',
-        f'{app_dir}/**/*.tsx',
-        f'{app_dir}/**/*.js',
-        f'{app_dir}/**/*.jsx'
-    ]
+    for file_path in files:
+        if fix_merge_conflicts(file_path):
+            fixed_count += 1
+        total_conflicts += 1
     
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            if fix_merge_conflicts(file_path):
-                fixed_count += 1
-    
-    print(f"\nFixed merge conflicts in {fixed_count} files")
+    print(f"\nProcessed {total_conflicts} files")
+    print(f"Fixed merge conflicts in {fixed_count} files")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

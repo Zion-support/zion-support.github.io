@@ -1,111 +1,119 @@
 import React from 'react';
-
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Brain, Shield, Users } from 'lucide-react';
 
 export default function AboutPage() {
+  const teamMembers = [
+    {
+      name: "Sarah Chen",
+      role: "CEO & Co-Founder",
+      expertise: "AI Strategy & Business Development",
+      image: "/images/team/sarah-chen.jpg",
+      bio: "15+ years in AI and machine learning, former Google AI researcher."
+    },
+    {
+      name: "Michael Rodriguez",
+      role: "CTO & Co-Founder",
+      expertise: "Full-Stack Development & Cloud Architecture",
+      image: "/images/team/michael-rodriguez.jpg",
+      bio: "Expert in scalable systems and modern web technologies."
+    },
+    {
+      name: "Dr. Emily Watson",
+      role: "Head of AI Research",
+      expertise: "Machine Learning & Neural Networks",
+      image: "/images/team/emily-watson.jpg",
+      bio: "PhD in Computer Science, specializing in deep learning applications."
+    }
+  ];
+
   return (
-    <>
-      <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-7xl mx-auto'>
-          <div className='text-center mb-12'>
-            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-              About Zion Tech Group
-            </h1>
-            <p className='text-xl text-gray-600'>
-              Leading the future of AI and IT solutions
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, team, and expertise in AI and IT solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            About Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            We are a cutting-edge technology company specializing in AI solutions, 
+            cloud infrastructure, and innovative IT services that transform businesses.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
+            <p className="text-gray-300 mb-6">
+              To democratize advanced AI and cloud technologies, making them accessible 
+              to businesses of all sizes while maintaining the highest standards of 
+              security, performance, and innovation.
             </p>
-          </div>
-
-          <div className='prose prose-lg max-w-none'>
-            <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
-              <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                Our Mission
-              </h2>
-              <p className='text-gray-600 mb-4'>
-                At Zion Tech Group, we are dedicated to transforming
-                businesses through cutting-edge AI and IT solutions. Our
-                mission is to empower organizations with the technology they
-                need to thrive in the digital age.
-              </p>
-              <p className='text-gray-600'>
-                We combine deep technical expertise with innovative thinking
-                to deliver solutions that drive real business value.
-              </p>
-            </div>
-
-            <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
-              <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                Our Expertise
-              </h2>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                <div>
-                  <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                    AI Solutions
-                  </h3>
-                  <p className='text-gray-600'>
-                    Advanced machine learning, natural language processing,
-                    and computer vision solutions.
-                  </p>
-                </div>
-                <div>
-                  <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                    Quantum Computing
-                  </h3>
-                  <p className='text-gray-600'>
-                    Next-generation quantum algorithms and quantum security
-                    implementations.
-                  </p>
-                </div>
-                <div>
-                  <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                    Autonomous Systems
-                  </h3>
-                  <p className='text-gray-600'>
-                    Self-managing and self-optimizing systems for enterprise
-                    operations.
-                  </p>
-                </div>
-                <div>
-                  <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                    Business Intelligence
-                  </h3>
-                  <p className='text-gray-600'>
-                    Data-driven insights and analytics for strategic decision
-                    making.
-                  </p>
-                </div>
+            <div className="space-y-4">
+              <div className="flex items-center text-gray-300">
+                <Brain className="w-6 h-6 text-blue-400 mr-3" />
+                <span>Advanced AI Solutions</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Shield className="w-6 h-6 text-green-400 mr-3" />
+                <span>Enterprise-Grade Security</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Users className="w-6 h-6 text-purple-400 mr-3" />
+                <span>Expert Team Support</span>
               </div>
             </div>
-
-            <div className='bg-white rounded-lg shadow-lg p-8'>
-              <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                Why Choose Us
-              </h2>
-              <ul className='space-y-3 text-gray-600'>
-                <li className='flex items-start'>
-                  <span className='w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2'></span>
-                  <span>
-                    Proven track record of successful AI implementations
-                  </span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2'></span>
-                  <span>Expert team with deep technical knowledge</span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2'></span>
-                  <span>
-                    Cutting-edge technology and innovative approaches
-                  </span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2'></span>
-                  <span>Comprehensive support and maintenance services</span>
-                </li>
-              </ul>
-            </div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <h3 className="text-2xl font-semibold text-white mb-4">Why Choose Us?</h3>
+            <ul className="space-y-3 text-gray-300">
+              <li>• 10+ years of industry experience</li>
+              <li>• 500+ successful projects delivered</li>
+              <li>• 24/7 technical support</li>
+              <li>• Cutting-edge technology stack</li>
+              <li>• Proven track record of success</li>
+            </ul>
           </div>
         </div>
+
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Meet Our Team</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-white">
+                    {member.name.split(' ').map(n => n[0]).join('')}
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
+                <p className="text-blue-400 mb-2">{member.role}</p>
+                <p className="text-sm text-gray-400 mb-3">{member.expertise}</p>
+                <p className="text-sm text-gray-300">{member.bio}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Work With Us?</h2>
+          <p className="text-gray-300 mb-8">
+            Let's discuss how we can help transform your business with our AI and IT solutions.
+          </p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Get Started Today
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
       </div>
-    </>
+    </div>
   );
 }

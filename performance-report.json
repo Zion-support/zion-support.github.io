@@ -1,21 +1,33 @@
 {
-  "timestamp": "2025-10-05T10:42:43.799Z",
+
+  "timestamp": "2025-10-13T11:04:56.278Z",
+  "buildStats": {
+    "totalFiles": 86,
+    "totalSize": 688672,
+    "jsFiles": 83,
+    "jsSize": 679569,
+
+    "cssFiles": 1,
+    "cssSize": 1770,
+    "imageFiles": 0,
+    "imageSize": 0
+  },
+  "performanceMetrics": {
+    "buildTime": 2.22,
+    "bundleSize": 658760,
+    "chunkCount": 85,
+    "largestChunk": "react-vendor-D3F3s8fL.js",
+    "largestChunkSize": 141720
+  },
   "optimizations": {
-    "images": "Completed",
-    "css": "Completed",
-    "javascript": "Completed",
-    "bundle": "Completed"
+    "codeSplitting": true,
+    "treeShaking": true,
+    "minification": true,
+    "compression": true
   },
   "recommendations": [
-    "Enable gzip compression",
-    "Implement lazy loading for images",
-    "Use CDN for static assets",
-    "Minimize third-party dependencies",
-    "Implement service worker for caching"
-  ],
-  "performance": {
-    "buildTime": "Optimized",
-    "bundleSize": "Minimized",
-    "loadTime": "Improved"
-  }
+    "Consider implementing lazy loading for non-critical components",
+    "Optimize images to reduce bundle size",
+    "Implement service worker for better caching"
+  ]
 }

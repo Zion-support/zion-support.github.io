@@ -1,79 +1,63 @@
-import React, { useState, useCallback, memo } from 'react';
+import React, { useState } from 'react';
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
+  className?: string;
   width?: number;
   height?: number;
-  className?: string;
   priority?: boolean;
-  placeholder?: string;
   onLoad?: () => void;
   onError?: () => void;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
-  src,
-  alt,
-  width,
+export default function OptimizedImage({ 
+  src, 
+  alt, 
+  className = '', 
+  width, 
   height,
-  className = '',
   priority = false,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaZWlnaHQ9IjEwMCUiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=',
   onLoad,
   onError
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+}: OptimizedImageProps) {
+  const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
-  const handleLoad = useCallback(() => {
-    setIsLoaded(true);
+  const handleLoad = () => {
+    setIsLoading(false);
     onLoad?.();
-  }, [onLoad]);
+  };
 
-  const handleError = useCallback(() => {
+  const handleError = () => {
+    setIsLoading(false);
     setHasError(true);
     onError?.();
-  }, [onError]);
+  };
+
+  if (hasError) {
+    return (
+      <div className="flex items-center justify-center bg-gray-200 text-gray-500 p-4">
+        Failed to load image
+      </div>
+    );
+  }
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
-      {!isLoaded && !hasError && (
-        <div 
-          className="absolute inset-0 bg-gray-200 animate-pulse"
-          style={{ width, height }}
-        />
+    <div className={`relative ${className}`}>
+      {isLoading && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
       )}
-      
-      {hasError ? (
-        <div 
-          className="flex items-center justify-center bg-gray-200 text-gray-500"
-          style={{ width, height }}
-        >
-          <span className="text-sm">Failed to load image</span>
-        </div>
-      ) : (
-        <img
-          src={src}
-          alt={alt}
-          width={width || 200}
-          height={height || 200}
-          onLoad={handleLoad}
-          onError={handleError}
-          className={`transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          style={{
-            width: width ? `${width}px` : 'auto',
-            height: height ? `${height}px` : 'auto'
-          }}
-          loading={priority ? 'eager' : 'lazy'}
-        />
-      )}
+      <img
+        src={src}
+        alt={alt}
+        className="optimized-image"
+        width={width}
+        height={height}
+        loading={priority ? "eager" : "lazy"}
+        onLoad={handleLoad}
+        onError={handleError}
+      />
     </div>
   );
-});
-
-OptimizedImage.displayName = 'OptimizedImage';
-
-export default OptimizedImage;
+}

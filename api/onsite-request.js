@@ -1,57 +1,64 @@
-const { withSentry } = require('./withSentry.cjs');
-const fs = require('fs');
-const path = require('path');
+import path from 'path';
+import fs from 'fs';
 
-async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+export default function handler(req, res) {
+  if (req.method !== "POST") {
+    res.statusCode = 405;
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify({ error: "Method not allowed" }));
+    return;
   }
 
-  const {
-    name,
-    email,
-    phone: _phone,
-    company: _company,
-    location,
-    details: _details,
-  } = req.body || {};
+  const { name, email, company, phone, message, location } = req.body || {};
 
-  if (!name || !email) {
-    return res.status(400).json({ error: 'Name and email are required' });
-  }
+  const dir = path.join(process.cwd(), "data");
+  const file = path.join(dir, "onsite-requests.json");
 
-  const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
-  const dir = path.dirname(file);
-  
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
 
   let existing = [];
-
   try {
-    existing = JSON.parse(fs.readFileSync(file, 'utf8'));
-    if (!Array.isArray(existing)) existing = [];
-  } catch {
-    // File doesn't exist or is invalid, use empty array
+    if (fs.existsSync(file)) {
+      const data = fs.readFileSync(file, "utf8");
+      existing = JSON.parse(data);
+      if (!Array.isArray(existing)) existing = [];
+    }
+  } catch (error) {
+    // Log error for debugging in development
+    console.error("Error reading existing requests:", error);
+    existing = [];
   }
 
   const newRequest = {
     id: Date.now().toString(),
     name,
     email,
-    phone: _phone || '',
-    company: _company || '',
-    location: location || '',
-    details: _details || '',
+    company,
+    phone,
+    message,
+    location,
     timestamp: new Date().toISOString(),
   };
 
   existing.push(newRequest);
 
-  fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-  res.statusCode = 200;
-  res.json({ success: true });
+  try {
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "application/json");
+    res.end(
+      JSON.stringify({
+        success: true,
+        id: newRequest.id,
+      }),
+    );
+  } catch (error) {
+    // Log error for debugging in development
+    console.error("Error saving onsite request:", error);
+    res.statusCode = 500;
+    res.setHeader("Content-Type", "application/json");
+    res.end(JSON.stringify({ error: "Failed to save request" }));
+  }
 }
-
-module.exports = withSentry(handler);

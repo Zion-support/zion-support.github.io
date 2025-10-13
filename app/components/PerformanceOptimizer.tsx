@@ -1,84 +1,53 @@
-import React, { useEffect, useCallback } from 'react';
-
-
+import React, { useEffect } from 'react';
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
-
-const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
-  children,
-}) => {
-  // Preload critical resources
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Preload critical fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href =
-        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-      fontLink.as = 'style';
-      document.head.appendChild(fontLink);
-
-      // Preload critical images
-      const criticalImages = [
+    // Performance optimization logic
+    const optimizePerformance = () => {
+      // Preload critical resources
+      const criticalResources = [
+        '/fonts/inter-var.woff2',
         '/images/hero-bg.jpg',
-        '/images/logo.png',
-        '/images/og-image.jpg',
+        '/icons/sprite.svg'
       ];
-
-      criticalImages.forEach(src => {
-        const img = new Image();
-        img['src'] = src;
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+        if (resource.endsWith('.woff2')) {
+          link.crossOrigin = 'anonymous';
+        }
+        document.head.appendChild(link);
       });
-    };
-
-    preloadCriticalResources();
-  }, []);
-
-  // Optimize scroll performance
-  const handleScroll = useCallback(() => {
-    // Throttle scroll events for better performance
-    let ticking = false;
-
-    const updateScrollPosition = () => {
-      // Add scroll-based optimizations here
-      ticking = false;
-    };
-
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
-
-  // Add performance monitoring
-  useEffect(() => {
-    if ('performance' in window) {
-      const observer = new PerformanceObserver(list => {
-        list.getEntries().forEach(entry => {
-          if (entry.entryType === 'navigation') {
-             
-            if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Navigation timing:', entry); } }
+      // Optimize images
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
           }
         });
       });
-
-      observer.observe({
-        entryTypes: ['navigation', 'paint', 'largest-contentful-paint'],
-      });
-
-      return () => observer.disconnect();
-    }
-
-    return undefined;
+      images.forEach(img => imageObserver.observe(img));
+      // Add performance monitoring
+      if ('performance' in window) {
+        window.addEventListener('load', () => {
+          const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart);
+        });
+      }
+    };
+    optimizePerformance();
+    return () => {
+      // Cleanup if needed
+    };
   }, []);
-
   return <>{children}</>;
 };
-
-export default PerformanceOptimizerComponent;
+export default PerformanceOptimizer;

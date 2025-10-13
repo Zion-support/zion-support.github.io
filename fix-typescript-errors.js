@@ -1,22 +1,44 @@
-const fs = require('fs');
-
-// Fix ErrorBoundary.tsx
-// console.log('Fixing ErrorBoundary.tsx...');
-let errorBoundary = fs.readFileSync('app/components/ErrorBoundary.tsx', 'utf8');
-
-// The issue is that line 112 has an extra closing div - need to check the JSX structure
-// Based on the error at line 112, column 9, it seems there's a mismatch in parentheses
-// Let's check if the return statement needs an extra closing brace
-
-// Fix enterprise/page.tsx - missing closing brace for the function
-// console.log('Fixing enterprise/page.tsx...');
-let enterprise = fs.readFileSync('app/enterprise/page.tsx', 'utf8');
-
-// Add closing brace if missing
-if (!enterprise.trim().endsWith('}')) {
-  enterprise = enterprise.trimEnd() + '\n}\n';
-  fs.writeFileSync('app/enterprise/page.tsx', enterprise);
-//   console.log('Added closing brace to enterprise/page.tsx');
 }
 
-// console.log('Fixes applied. Running type-check...');
+// Function to find all TypeScript/JSX files;
+function findFiles(dir) {
+  const files = [];
+  
+  function scanDirectory(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
+          scanDirectory(fullPath);
+        }
+      } else if (stat.isFile()) {
+        const ext = path.extname(item);
+        if (['.tsx', '.ts'].includes(ext)) {
+          files.push(fullPath);
+        }
+      }
+    }
+  }
+  
+  scanDirectory(dir);
+  return files;
+}
+
+// Main execution;
+console.log('🔧 Fixing TypeScript errors...');
+
+const allFiles = findFiles('.');
+let fixedCount = 0;
+
+for (const file of allFiles) {
+  if (fixFile(file)) {>
+  fixedCount++;
+  }
+}
+>
+  console.log(`✅ Fixed ${fixedCount} files`);>
+  console.log('🎉 TypeScript error fixing complete!');

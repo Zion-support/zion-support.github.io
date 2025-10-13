@@ -1,140 +1,52 @@
-import { lazy } from 'react';
-import React, { useCallback, useState, useEffect, Suspense, lazy } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Brain, Shield, Users } from 'lucide-react';
 
-// Dynamically import heavy components for better performance
-const ServiceCard = lazy(() => import('./components/ServiceCard'));
-
-// Loading skeleton component
-const ServiceCardSkeleton: React.FC = () => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>
-);
-
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
-  // Analytics tracking for phone clicks
-  const handlePhoneClick = useCallback(() => {
-    if (
-      typeof window !== 'undefined' &&
-      (
-        window as unknown as {
-          gtag?: (
-            command: string,
-            action: string,
-            parameters: Record<string, unknown>
-          ) => void;
-        }
-      ).gtag
-    ) {
-      (
-        window as unknown as {
-          gtag: (
-            command: string,
-            action: string,
-            parameters: Record<string, unknown>
-          ) => void;
-        }
-      ).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number',
-      });
-    }
-  }, []);
-
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
-      {/* Skip to main content for accessibility */}
-      <a 
-        href="#main-content" 
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-      >
-        Skip to main content
-      </a>
-
-      <main id="main-content" className="container mx-auto px-4 py-16" role="main">
-        {/* Hero Section */}
-        <section 
-          className={`text-center mb-16 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-          aria-labelledby="hero-heading"
-        >
-          <h1 id="hero-heading" className="text-5xl font-bold text-gray-900 mb-6">
-            Zion Tech Group
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of AI solutions, cloud infrastructure, and IT services. Transform your business with cutting-edge technology." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-white mb-6">
+            Welcome to Zion Tech Group
           </h1>
-          <p className="text-xl text-gray-600 mb-8" role="doc-subtitle">
-            Advanced AI and IT Solutions
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            We are a cutting-edge technology company specializing in AI solutions, 
+            cloud infrastructure, and innovative IT services that transform businesses.
           </p>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. 
-            Transform your business with our cutting-edge technology.
-          </p>
-        </section>
-
-        {/* Services Section */}
-        <section 
-          className="grid md:grid-cols-3 gap-8 mb-16"
-          aria-labelledby="services-heading"
-        >
-          <h2 id="services-heading" className="sr-only">Our Services</h2>
-          
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                AI Solutions
-              </h3>
-              <p className="text-gray-600">
-                Harness the power of artificial intelligence to drive innovation and efficiency in your organization.
-              </p>
-            </article>
-          </Suspense>
-
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Digital Transformation
-              </h3>
-              <p className="text-gray-600">
-                Transform your business processes with cutting-edge technology and expert consultation.
-              </p>
-            </article>
-          </Suspense>
-
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Cloud Services
-              </h3>
-              <p className="text-gray-600">
-                Scale your infrastructure with secure, reliable, and efficient cloud solutions.
-              </p>
-            </article>
-          </Suspense>
-        </section>
-
-        {/* Call to Action Section */}
-        <section className="text-center" aria-labelledby="cta-heading">
-          <h2 id="cta-heading" className="text-3xl font-bold text-gray-900 mb-6">
-            Ready to Get Started?
-          </h2>
-          <a
-            href="tel:+13026009898"
-            onClick={handlePhoneClick}
-            className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
-            aria-label="Call us at (302) 600-9898"
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
           >
-            Contact Us: (302) 600-9898
-          </a>
-        </section>
-      </main>
+            Get Started Today
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+            <Brain className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-2">AI Solutions</h3>
+            <p className="text-gray-300">Advanced artificial intelligence and machine learning solutions</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+            <Shield className="w-12 h-12 text-green-400 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-2">Cybersecurity</h3>
+            <p className="text-gray-300">Enterprise-grade security solutions and consulting</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+            <Users className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-2">IT Services</h3>
+            <p className="text-gray-300">Comprehensive IT infrastructure and support services</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
-};
-
-export default HomePage;
+}

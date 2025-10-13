@@ -1,79 +1,118 @@
 #!/usr/bin/env python3
 """
-Advanced Merge Conflict Resolver
-Resolves all types of merge conflicts including nested ones
+Comprehensive script to fix all remaining merge conflicts
 """
-
+import os
 import re
-from pathlib import Path
+import glob
 
-def resolve_all_conflicts(file_path):
-    """Resolve all merge conflicts in a file"""
+def fix_file(file_path):
+    """Fix merge conflicts and syntax errors in a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
-        max_iterations = 10
-        iteration = 0
         
-        while iteration < max_iterations:
-            # Pattern for standard conflicts
-            pattern1 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n'
+        # Remove merge conflict markers
+        content = re.sub(r'\n.*?\n\n.*?\n        content = re.sub(r'.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'        
+        # Remove any remaining conflict markers
+        content = re.sub(r'', '', content)
+        content = re.sub(r'', '', content)
+        content = re.sub(r'        
+        # Fix common syntax issues
+        # Remove extra closing braces that might be left from conflicts
+        lines = content.split('\n')
+        new_lines = []
+        brace_count = 0
+        
+        for line in lines:
+            # Count braces
+            brace_count += line.count('{') - line.count('}')
             
-            # Replace with incoming version (group 2)
-            new_content = re.sub(pattern1, r'\2\n', content, flags=re.DOTALL)
-            
-            # Check if we made any changes
-            if new_content == content:
-                break
+            # Skip lines that are just closing braces if we have too many
+            if line.strip() == '}' and brace_count < 0:
+                continue
                 
-            content = new_content
-            iteration += 1
+            new_lines.append(line)
         
-        # Remove any remaining conflict markers (in case of malformed conflicts)
-        content = re.sub(r'<<<<<<< HEAD\n', '', content)
-        content = re.sub(r'=======\n', '', content)
-        content = re.sub(r'>>>>>>> [^\n]+\n', '', content)
+        content = '\n'.join(new_lines)
         
-        # Write back if changed
+        # Clean up extra whitespace
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+        
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"✓ Fixed {file_path}")
             return True
-        else:
-            print(f"- No changes needed for {file_path}")
-            return False
             
+        return False
     except Exception as e:
-        print(f"✗ Error processing {file_path}: {e}")
+        print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    """Main function"""
-    files = [
-        'app/components/NewestContent2025Banner.tsx',
-        'app/enterprise/page.tsx',
-        'app/page-optimized.tsx',
-        'src/hooks/usePerformance.ts',
-        'src/utils/analytics.ts',
-        'src/utils/codeSplitting.ts',
-        'src/utils/errorHandler.ts',
+    # Find all TypeScript/TSX files
+    patterns = [
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'utils/**/*.ts',
+        'hooks/**/*.ts',
+        'components/**/*.tsx',
+        'components/**/*.ts'
     ]
-    
-    fixed_count = 0
-    for file_path in files:
-        full_path = Path('/workspace') / file_path
-        if full_path.exists():
-            if resolve_all_conflicts(full_path):
-                fixed_count += 1
-        else:
-            print(f"! File not found: {file_path}")
-    
-    print(f"\n{'='*60}")
-    print(f"Fixed {fixed_count} file(s)")
-    print(f"{'='*60}")
+        if '' not in content:
+            return False
+        
+        # Remove all merge conflict markers and keep the content after         # This handles various patterns of conflicts
+        lines = content.split('\n')
+        new_lines = []
+        skip_until_end = False
+        
+        for line in lines:
+            if line.strip() == '':
+                skip_until_end = True
+                continue
+            elif line.strip() == '':
+                skip_until_end = False
+                continue
+            elif line.strip().startswith('>>>>>>>'):
+                skip_until_end = False
+                continue
+            elif not skip_until_end:
+                new_lines.append(line)
+        
+        new_content = '\n'.join(new_lines)
+        
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        
+        print(f"Fixed conflicts in {file_path}")
+        return True
+        
+    except Exception as e:
+        print(f"Error processing {file_path}: {e}")
+        return False
 
-if __name__ == '__main__':
+def main():
+    """Main function to fix all remaining conflicts"""
+    # Get all files with conflicts
+    result = os.popen("grep -l '' app/**/*.{ts,tsx,js,jsx} 2>/dev/null").read().strip()
+    files_with_conflicts = result.split('\n') if result else []
+    
+    files_fixed = 0
+    total_files = 0
+    
+    for pattern in patterns:
+        for file_path in glob.glob(pattern, recursive=True):
+            total_files += 1
+            if fix_file(file_path):
+                files_fixed += 1
+                print(f"Fixed: {file_path}")
+    
+    print(f"Fixed {files_fixed} out of {total_files} files")
+
+if __name__ == "__main__":
     main()

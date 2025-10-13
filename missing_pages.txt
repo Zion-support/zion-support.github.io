@@ -1,0 +1,15 @@
+5g-solutions
+ai-translation-services
+it-security-audit
+micro-saas/contract-manager
+micro-saas/email-signature
+micro-saas/employee-directory
+micro-saas/invoice-generator
+micro-saas/lead-generation
+micro-saas/meeting-room-booker
+micro-saas/password-manager
+micro-saas/social-scheduler
+micro-saas/task-manager
+micro-saas/time-tracking
+micro-saas/website-monitor
+server-management

@@ -13,23 +13,19 @@ def resolve_merge_conflicts(filepath):
             content = f.read()
         
         # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
-        
-        # Pattern to match entire conflict block
-        # This matches: <<<<<<< HEAD\n...content...\n=======\n...content...\n>>>>>>> branch
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n?'
+        if '\n...content...\n
+        pattern = r'\n(.*?)\n
         
         # Replace with HEAD version (group 1)
         resolved_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
         
         # Also handle nested conflicts
         # Pattern for conflicts without content between markers
-        pattern2 = r'<<<<<<< HEAD\n=======\n(.*?)\n>>>>>>> [^\n]+\n?'
+        pattern2 = r'\n(.*?)\n
         resolved_content = re.sub(pattern2, '', resolved_content, flags=re.DOTALL)
         
         # Pattern for conflicts with only HEAD content
-        pattern3 = r'<<<<<<< HEAD\n(.*?)=======\n>>>>>>> [^\n]+\n?'
+        pattern3 = r'\n
         resolved_content = re.sub(pattern3, r'\1', resolved_content, flags=re.DOTALL)
         
         # Write back the resolved content
