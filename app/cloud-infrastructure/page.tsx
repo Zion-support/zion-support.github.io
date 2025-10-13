@@ -2,24 +2,15 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Cloud, 
-  Server, 
-  Database, 
   Shield, 
-  Zap, 
   CheckCircle, 
   ArrowRight,
   Globe,
-  Users,
   BarChart3,
   Settings,
-  Clock,
-  Award,
   Star,
   Activity,
-  Lock,
-  Cpu,
-  HardDrive,
-  Network
+  Lock
 } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -54,6 +45,50 @@ const CloudInfrastructure = () => {
       icon: <Activity className="w-8 h-8" />,
       features: ["Automatic scaling", "Cost optimization", "Performance monitoring", "Load balancing"],
       price: "From $999/month"
+    }
+  ];
+
+  const stats = [
+    {
+      number: "99.99%",
+      label: "Uptime Guarantee",
+      icon: <CheckCircle className="w-6 h-6 text-green-400" />
+    },
+    {
+      number: "40%",
+      label: "Cost Reduction",
+      icon: <BarChart3 className="w-6 h-6 text-blue-400" />
+    },
+    {
+      number: "0",
+      label: "Security Incidents",
+      icon: <Shield className="w-6 h-6 text-red-400" />
+    },
+    {
+      number: "<1s",
+      label: "Response Time",
+      icon: <Activity className="w-6 h-6 text-purple-400" />
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO, TechCorp",
+      content: "Zion Tech Group transformed our cloud infrastructure. We achieved 40% cost savings while improving performance.",
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "VP Engineering, DataFlow",
+      content: "Their cloud migration expertise saved us months of work. Zero downtime and seamless transition.",
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Head of IT, InnovateLab",
+      content: "The security implementation was flawless. We now have enterprise-grade protection at a fraction of the cost.",
+      avatar: "ER"
     }
   ];
 

@@ -6,13 +6,8 @@ import {
   Zap, 
   Globe, 
   ArrowRight, 
-  CheckCircle, 
   BarChart3, 
-  Database, 
-  Lock, 
-  Users, 
-  Settings, 
-  Monitor 
+  Database
 } from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {
@@ -47,6 +42,15 @@ const CloudServicesPage: React.FC = () => {
       description: "Managed database services with automated backups, scaling, and performance optimization.",
       icon: <Database className="w-6 h-6" />
     }
+  ];
+
+  const benefits = [
+    "Reduce infrastructure costs by up to 50%",
+    "Improve scalability and flexibility",
+    "Enhanced security and compliance",
+    "24/7 monitoring and support",
+    "Faster time to market",
+    "Disaster recovery and backup"
   ];
 
   return (

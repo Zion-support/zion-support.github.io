@@ -8,7 +8,10 @@ import {
   Sparkles,
   CheckCircle,
   Workflow,
-  Target
+  Target,
+  TrendingUp,
+  Settings,
+  Users
 } from 'lucide-react';
 
 const AIAutomationPlatformPage = () => {
@@ -37,6 +40,15 @@ const AIAutomationPlatformPage = () => {
       icon: <Settings className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
+  ];
+
+  const benefits = [
+    "Reduce manual work by up to 80%",
+    "Improve process accuracy by 95%",
+    "Cut operational costs by 40%",
+    "Accelerate decision-making by 60%",
+    "Enhance customer satisfaction",
+    "Ensure 24/7 process monitoring"
   ];
 
   const useCases = [

@@ -4,15 +4,10 @@ import { Link } from 'react-router-dom';
 import { 
   Package, 
   BarChart3, 
-  Zap, 
   ArrowRight,
   Sparkles,
   CheckCircle,
   Target,
-  Brain,
-  Users,
-  Globe,
-  Settings,
   Shield
 } from 'lucide-react';
 
@@ -42,6 +37,15 @@ const AssetManagementPage = () => {
       icon: <Shield className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
+  ];
+
+  const benefits = [
+    "Reduce operational costs by up to 30%",
+    "Improve asset utilization rates",
+    "Ensure compliance with regulations",
+    "Streamline procurement processes",
+    "Minimize security risks",
+    "Optimize maintenance schedules"
   ];
 
   return (
