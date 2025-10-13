@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
 import React from 'react';
 
-<<<<<<< HEAD
-export const metadata: Metadata = {
-=======
-import React from 'react'.;
-import { Metadata } from 'next'.;
-import AdDashboard from '../components/AdDashboard';
-export const metadata: Metadata = {,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
   title: 'Ad Management System | Zion Tech Group',
   description: 'Comprehensive advertising management system with campaign creation, analytics, scheduling, and template management.',
   keywords: 'ad management, advertising, campaigns, analytics, scheduling, templates, marketing',
@@ -25,10 +12,6 @@ export const metadata: Metadata = {,
 
 const AdManagementPage: React.FC = () => {
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         <AdDashboard />
@@ -38,7 +21,6 @@ const AdManagementPage: React.FC = () => {
 };
 
 export default AdManagementPage;
-=======
     <div className="min-h-screen bg-gray-50">"""
       <div className="container mx-auto px-4 py-8">
         <AdDashboard />
@@ -49,8 +31,6 @@ export default AdManagementPage;
 };
 "
 export default AdManagementPage;""
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
-=======
 export default function AdManagementPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
@@ -63,4 +43,3 @@ export default function AdManagementPage() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

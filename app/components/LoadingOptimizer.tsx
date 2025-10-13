@@ -1,63 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react'.
-
-interface LoadingOptimizerProps {
-  children: React.ReactNode.,
-  fallback?: React.ReactNode.,
-  delay?: number,;
-};
-export default function LoadingOptimizer({ 
-  children, 
-  fallback = <DefaultLoadingSpinner />,;
-  delay = 200 .;
-}: LoadingOptimizerProps) {;
-  const [isLoading, setIsLoading] = useState(true);
-  const [showFallback, setShowFallback] = useState(false);
-  useEffect(() => {
-    // Show fallback after delay to prevent flash.
-    const fallbackTimer = setTimeout(() => {
-      setShowFallback(true);
-    }, delay);
-    // Simulate loading completion.
-    const loadingTimer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-    return () => {
-      clearTimeout(fallbackTimer);
-      clearTimeout(loadingTimer);
-    };
-  }, [delay]);
-  if (isLoading && showFallback) {
-<<<<<<< HEAD
-}
-
-function DefaultLoadingSpinner() {
-  return (
-}
-
-=======
-    return <>{fallback}</>.
-  };
-  return <>{children}</>.
-};
-function DefaultLoadingSpinner() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">"""
-      <div className="text-center">"""
-        <div className="relative">"""
-          <div className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mx-auto mb-4"></div>"""
-          <div className="absolute inset-0 flex items-center justify-center">"""
-            <div className="w-8 h-8 bg-blue-600 rounded-full animate-pulse"></div>
-          </div>"
-        </div>""
-        <h2 className="text-xl font-semibold text-white mb-2">Loading Zion Tech Group</h2>"""
-        <p className="text-gray-300">Preparing your experience...</p>
-      </div>
-    </div>
-  );
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
 // Preload critical resources.
 export function PreloadResources() {;
   useEffect(() => {;
@@ -128,12 +68,6 @@ export function LazyImage({
       {!isLoaded && (""
         <div className="absolute inset-0 bg-gray-200 animate-pulse rounded">"""
           <img src={placeholder} alt="" className="w-full h-full object-cover opacity-0" />
-<<<<<<< HEAD
-      )}
-=======
-        </div>
-      )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
       {isInView && (
         <img;
           src={src};
@@ -144,17 +78,6 @@ export function LazyImage({
           onLoad={() => setIsLoaded(true)};""
           loading="lazy"
         />
-<<<<<<< HEAD
-      )}
-}
-=======
-      )};
-    </div>
-  );
-  );"
-};""`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
-=======
 'use client';
 import React from 'react';
 
@@ -170,4 +93,3 @@ export default function ComponentsPage() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

@@ -12,24 +12,3 @@ export default function ComponentsPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-  );
-}
-  }, []);
-
-  useEffect(() => {
-    // Measure Core Web Vitals
-    onCLS(reportWebVitals);
-    onINP(reportWebVitals);
-    onFCP(reportWebVitals);
-    onLCP(reportWebVitals);
-    onTTFB(reportWebVitals);
-  }, [reportWebVitals]);
-
-  return null;
-};
-
-export default CoreWebVitals;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

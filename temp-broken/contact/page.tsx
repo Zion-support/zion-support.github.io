@@ -16,4 +16,3 @@ export default function PagePage() {
 };
 
 export default ContactPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-9706:temp-broken/contact/page.tsx
