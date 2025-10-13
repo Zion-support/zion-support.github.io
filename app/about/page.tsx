@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Shield, Users, Download, ExternalLink, ChevronRight, Phone, Mail, CheckCircle } from 'lucide-react';
 
-export default function AboutPage() {
+const AboutPage: React.FC = () => {
   // Team members data (for future use)
   // const teamMembers = [
   //   {
@@ -67,8 +67,6 @@ export default function AboutPage() {
   //   { number: "99.9%", label: "Uptime Guarantee" },
   //   { number: "24/7", label: "Support Available" }
   // ];
-
-const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
