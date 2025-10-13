@@ -1,155 +1,114 @@
 import React, { useEffect, useState } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
   cls: number | null;
+  inp: number | null;
   fcp: number | null;
+  lcp: number | null;
   ttfb: number | null;
 }
 
-const PerformanceMonitor: React.FC = () => {
+interface PerformanceMonitorProps {
+  showInProduction?: boolean;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
+  showInProduction = false 
+}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    lcp: null,
-    fid: null,
     cls: null,
+    inp: null,
     fcp: null,
+    lcp: null,
     ttfb: null
   });
 
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
-    // Only run in browser
-    if (typeof window === 'undefined') return;
-
-    // Load web-vitals library dynamically
-    const loadWebVitals = async () => {
-      try {
-        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
-        
-        // Measure Core Web Vitals
-        getCLS((metric) => {
-          setMetrics(prev => ({ ...prev, cls: metric.value }));
-          console.log('CLS:', metric);
-        });
-
-        getFID((metric) => {
-          setMetrics(prev => ({ ...prev, fid: metric.value }));
-          console.log('FID:', metric);
-        });
-
-        getFCP((metric) => {
-          setMetrics(prev => ({ ...prev, fcp: metric.value }));
-          console.log('FCP:', metric);
-        });
-
-        getLCP((metric) => {
-          setMetrics(prev => ({ ...prev, lcp: metric.value }));
-          console.log('LCP:', metric);
-        });
-
-        getTTFB((metric) => {
-          setMetrics(prev => ({ ...prev, ttfb: metric.value }));
-          console.log('TTFB:', metric);
-        });
-      } catch (error) {
-        console.warn('Failed to load web-vitals:', error);
-      }
-    };
-
-    loadWebVitals();
-
-    // Monitor memory usage if available
-    const monitorMemory = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        console.log('Memory usage:', {
-          used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
-          total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
-          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
-        });
-      }
-    };
-
-    // Monitor memory every 30 seconds
-    const memoryInterval = setInterval(monitorMemory, 30000);
-
-    // Monitor page load performance
-    const measurePageLoad = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigation) {
-        console.log('Page load metrics:', {
-          domContentLoaded: Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart),
-          loadComplete: Math.round(navigation.loadEventEnd - navigation.loadEventStart),
-          totalTime: Math.round(navigation.loadEventEnd - navigation.fetchStart)
-        });
-      }
-    };
-
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePageLoad();
-    } else {
-      window.addEventListener('load', measurePageLoad);
+    // Only show in development or if explicitly enabled
+    if (process.env.NODE_ENV === 'production' && !showInProduction) {
+      return;
     }
 
-    // Monitor resource loading
-    const monitorResources = () => {
-      const resources = performance.getEntriesByType('resource');
-      const slowResources = resources.filter((resource: any) => resource.duration > 1000);
-      
-      if (slowResources.length > 0) {
-        console.warn('Slow resources detected:', slowResources.map((r: any) => ({
-          name: r.name,
-          duration: Math.round(r.duration) + 'ms'
-        })));
-      }
+    const updateMetric = (name: keyof PerformanceMetrics, value: number) => {
+      setMetrics(prev => ({ ...prev, [name]: value }));
     };
 
-    // Monitor resources after a delay
-    setTimeout(monitorResources, 5000);
+    // Measure Core Web Vitals
+    onCLS((metric) => updateMetric('cls', metric.value));
+    onINP((metric) => updateMetric('inp', metric.value));
+    onFCP((metric) => updateMetric('fcp', metric.value));
+    onLCP((metric) => updateMetric('lcp', metric.value));
+    onTTFB((metric) => updateMetric('ttfb', metric.value));
 
-    // Cleanup
-    return () => {
-      clearInterval(memoryInterval);
-      window.removeEventListener('load', measurePageLoad);
-    };
-  }, []);
+    // Show monitor after a delay
+    const timer = setTimeout(() => setIsVisible(true), 2000);
+    return () => clearTimeout(timer);
+  }, [showInProduction]);
 
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
-    return null;
-  }
+  const getScore = (value: number | null, thresholds: { good: number; poor: number }) => {
+    if (value === null) return 'pending';
+    if (value <= thresholds.good) return 'good';
+    if (value <= thresholds.poor) return 'needs-improvement';
+    return 'poor';
+  };
 
-  // Development mode - show metrics
+  const getScoreColor = (score: string) => {
+    switch (score) {
+      case 'good': return 'text-green-400';
+      case 'needs-improvement': return 'text-yellow-400';
+      case 'poor': return 'text-red-400';
+      default: return 'text-gray-400';
+    }
+  };
+
+  if (!isVisible) return null;
+
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
+    <div className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white text-xs font-mono z-50 max-w-xs">
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="text-sm font-semibold">Performance Monitor</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-white"
+        >
+          ×
+        </button>
+      </div>
+      
       <div className="space-y-1">
-        {metrics.lcp && (
-          <div className={`${metrics.lcp > 2500 ? 'text-red-400' : metrics.lcp > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>
-            LCP: {Math.round(metrics.lcp)}ms
-          </div>
-        )}
-        {metrics.fid && (
-          <div className={`${metrics.fid > 300 ? 'text-red-400' : metrics.fid > 100 ? 'text-yellow-400' : 'text-green-400'}`}>
-            FID: {Math.round(metrics.fid)}ms
-          </div>
-        )}
-        {metrics.cls && (
-          <div className={`${metrics.cls > 0.25 ? 'text-red-400' : metrics.cls > 0.1 ? 'text-yellow-400' : 'text-green-400'}`}>
-            CLS: {metrics.cls.toFixed(3)}
-          </div>
-        )}
-        {metrics.fcp && (
-          <div className={`${metrics.fcp > 3000 ? 'text-red-400' : metrics.fcp > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>
-            FCP: {Math.round(metrics.fcp)}ms
-          </div>
-        )}
-        {metrics.ttfb && (
-          <div className={`${metrics.ttfb > 800 ? 'text-red-400' : metrics.ttfb > 600 ? 'text-yellow-400' : 'text-green-400'}`}>
-            TTFB: {Math.round(metrics.ttfb)}ms
-          </div>
-        )}
+        <div className="flex justify-between">
+          <span>CLS:</span>
+          <span className={getScoreColor(getScore(metrics.cls, { good: 0.1, poor: 0.25 }))}>
+            {metrics.cls ? metrics.cls.toFixed(3) : 'pending'}
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>INP:</span>
+          <span className={getScoreColor(getScore(metrics.inp, { good: 200, poor: 500 }))}>
+            {metrics.inp ? `${metrics.inp}ms` : 'pending'}
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>FCP:</span>
+          <span className={getScoreColor(getScore(metrics.fcp, { good: 1800, poor: 3000 }))}>
+            {metrics.fcp ? `${metrics.fcp}ms` : 'pending'}
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>LCP:</span>
+          <span className={getScoreColor(getScore(metrics.lcp, { good: 2500, poor: 4000 }))}>
+            {metrics.lcp ? `${metrics.lcp}ms` : 'pending'}
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>TTFB:</span>
+          <span className={getScoreColor(getScore(metrics.ttfb, { good: 800, poor: 1800 }))}>
+            {metrics.ttfb ? `${metrics.ttfb}ms` : 'pending'}
+          </span>
+        </div>
       </div>
     </div>
   );

@@ -35,8 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
-    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
+    chunkSizeWarningLimit: 150, // Increased threshold for better chunking
+    assetsInlineLimit: 4096, // Increased for better caching
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -83,22 +83,19 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
+          // Core React libraries - keep together for better caching
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
-          // Router
+          // Router and navigation
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
-          if (id.includes('framer-motion')) {
-            return 'animations'
+          // UI libraries - group animations and icons together
+          if (id.includes('framer-motion') || id.includes('lucide-react')) {
+            return 'ui-libs'
           }
-          if (id.includes('lucide-react')) {
-            return 'icons'
-          }
-          // SEO and meta
+          // SEO and meta - lightweight
           if (id.includes('react-helmet')) {
             return 'seo'
           }
@@ -106,17 +103,9 @@ export default defineConfig({
           if (id.includes('recharts')) {
             return 'charts'
           }
-          // Utility libraries
-          if (id.includes('clsx') || id.includes('tailwind-merge')) {
+          // Utility libraries - group small utilities
+          if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('web-vitals') || id.includes('react-error-boundary')) {
             return 'utils'
-          }
-          // Performance monitoring
-          if (id.includes('web-vitals')) {
-            return 'performance'
-          }
-          // Error handling
-          if (id.includes('react-error-boundary')) {
-            return 'error-handling'
           }
           // AI service pages - group by category
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
