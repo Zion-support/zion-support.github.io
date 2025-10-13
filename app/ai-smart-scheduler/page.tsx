@@ -38,7 +38,7 @@ export default function AISmartScheduler() {
       features: [
         "Up to 5 team members",
         "Basic AI scheduling",
-        "Calendar integration",
+        "integration",
         "Email notifications",
         "Mobile app access",
       ],

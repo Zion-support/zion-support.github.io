@@ -1,26 +1,26 @@
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface AccessibilityManagerProps {
-  enableKeyboardNavigation?: boolean;
+  enableKeyboard?: boolean;
   enableScreenReader?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
-  enableVoiceNavigation?: boolean;
+  enableVoice?: boolean;
   enableReducedMotion?: boolean;
 }
 
 const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
-  enableKeyboardNavigation = true,
+  enableKeyboard= true,
   enableScreenReader = true,
   enableHighContrast = true,
   enableFocusManagement = true,
-  enableVoiceNavigation = false,
+  enableVoice= false,
   enableReducedMotion = true,
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState(16);
-  const [isVoiceNavigationActive, setIsVoiceNavigationActive] = useState(false);
+  const [isVoiceActive, setIsVoiceActive] = useState(false);
 
   // High contrast mode
   const toggleHighContrast = useCallback(() => {
@@ -53,7 +53,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
   }, []);
 
   // Voice navigation functions
-  const startVoiceNavigation = useCallback(() => {
+  const startVoice= useCallback(() => {
     if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
       return;
     }
@@ -72,7 +72,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
     recognition.onresult = (event: any) => {
       const command = event.results[event.results.length - 1][0].transcript.toLowerCase().trim();
       
-      // Navigation commands
+      // commands
       if (command.includes('go to') || command.includes('navigate to')) {
         const target = command.replace(/go to|navigate to/g, '').trim();
         const element = document.querySelector(`[aria-label*="${target}"], [title*="${target}"]`) as HTMLElement;
@@ -103,7 +103,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
     (window as any).voiceRecognition = recognition;
   }, []);
 
-  const stopVoiceNavigation = useCallback(() => {
+  const stopVoice= useCallback(() => {
     if ((window as any).voiceRecognition) {
       (window as any).voiceRecognition.stop();
       (window as any).voiceRecognition = null;
@@ -111,23 +111,23 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
   }, []);
 
   // Voice navigation toggle
-  const toggleVoiceNavigation = useCallback(() => {
-    if (!enableVoiceNavigation) return;
+  const toggleVoice= useCallback(() => {
+    if (!enableVoice) return;
     
-    setIsVoiceNavigationActive(prev => {
+    setIsVoiceActive(prev => {
       const newValue = !prev;
       if (newValue) {
-        startVoiceNavigation();
+        startVoice();
       } else {
-        stopVoiceNavigation();
+        stopVoice();
       }
       return newValue;
     });
-  }, [enableVoiceNavigation, startVoiceNavigation, stopVoiceNavigation]);
+  }, [enableVoice startVoice stopVoice]);
 
   // Keyboard navigation enhancements
-  const setupKeyboardNavigation = useCallback(() => {
-    if (!enableKeyboardNavigation) return;
+  const setupKeyboard= useCallback(() => {
+    if (!enableKeyboard) return;
 
     const handleKeyDown = (event: KeyboardEvent) => {
       // Skip to main content
@@ -168,7 +168,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [enableKeyboardNavigation]);
+  }, [enableKeyboard]);
 
   // Screen reader enhancements
   const setupScreenReaderSupport = useCallback(() => {
@@ -308,7 +308,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
     document.documentElement.style.fontSize = `${savedFontSize}px`;
 
     // Setup accessibility features
-    const cleanupKeyboard = setupKeyboardNavigation();
+    const cleanupKeyboard = setupKeyboard();
     const cleanupScreenReader = setupScreenReaderSupport();
     const cleanupFocus = setupFocusManagement();
 
@@ -317,12 +317,12 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
       cleanupScreenReader?.();
       cleanupFocus?.();
     };
-  }, [setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement]);
+  }, [setupKeyboard setupScreenReaderSupport, setupFocusManagement]);
 
   // Cleanup on unmount
   useEffect(() => {
     return () => {
-      stopVoiceNavigation();
+      stopVoice();
     };
   }, []);
 
@@ -373,15 +373,15 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
           </button>
         )}
         
-        {enableVoiceNavigation && (
+        {enableVoice&& (
           <button
-            onClick={toggleVoiceNavigation}
+            onClick={toggleVoice}
             className={`w-full px-3 py-1 text-xs rounded ${
-              isVoiceNavigationActive ? 'bg-green-600 text-white' : 'bg-gray-200 text-gray-700'
+              isVoiceActive ? 'bg-green-600 text-white' : 'bg-gray-200 text-gray-700'
             }`}
-            aria-label={`${isVoiceNavigationActive ? 'Stop' : 'Start'} voice navigation`}
+            aria-label={`${isVoiceActive ? 'Stop' : 'Start'} voice navigation`}
           >
-            {isVoiceNavigationActive ? 'Stop Voice' : 'Voice Nav'}
+            {isVoiceActive ? 'Stop Voice' : 'Voice Nav'}
           </button>
         )}
       </div>

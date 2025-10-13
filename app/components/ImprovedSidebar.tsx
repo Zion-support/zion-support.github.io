@@ -1,40 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  ChevronDown, 
-  ChevronRight,
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  BarChart3, 
-  Cloud, 
-  Settings,
-  Search,
-  Star,
-  TrendingUp,
-  Users,
-  Award,
-  Clock,
-  CheckCircle,
-  HelpCircle,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  X,
-  Menu,
-  Home,
-  BookOpen,
-  FileText,
-  MessageSquare,
-  Calendar,
-  DollarSign,
-  Play,
-  Download,
-  Share2
-} from 'lucide-react';
+import { ArrowRight, ChevronDown, ChevronRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Settings, Search, Star, TrendingUp, Users, Clock, CheckCircle, HelpCircle, Phone, Mail, MapPin, X, Home, BookOpen, FileText, MessageSquare, Calendar, DollarSign, Play } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -88,7 +54,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { label: 'AI Language Translation', href: '/ai-language-translation', icon: <Globe className="w-4 h-4" /> },
         { label: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise', icon: <MessageSquare className="w-4 h-4" /> },
         { label: 'AI Data Mining Pro', href: '/ai-data-mining-pro', icon: <BarChart3 className="w-4 h-4" /> },
-        { label: 'AI Video Analysis', href: '/ai-video-analysis', icon: <Play className="w-4 h-4" /> },
+        { label: 'AI Analysis', href: '/ai-video-analysis', icon: <Play className="w-4 h-4" /> },
         { label: 'AI Time Series Forecasting', href: '/ai-time-series-forecasting', icon: <TrendingUp className="w-4 h-4" /> },
         { label: 'AI NLP Text Analysis', href: '/ai-nlp-text-analysis', icon: <FileText className="w-4 h-4" /> }
       ]

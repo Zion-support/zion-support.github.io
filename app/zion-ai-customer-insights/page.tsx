@@ -1,18 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  BarChart3, 
-  TrendingUp, 
-  Target, 
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Brain,
-  Eye,
-  Zap
-} from 'lucide-react';
+import { Users, BarChart3, TrendingUp, ArrowRight, CheckCircle, Star, Brain, Eye } from 'lucide-react';
 
 const ZionAICustomerInsightsPage = () => {
   const features = [

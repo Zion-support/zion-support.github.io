@@ -9,12 +9,11 @@ import HomePage from "./app/page";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import CoreWebVitals from "./app/components/CoreWebVitals";
+import EnhancedAccessibilityV2 from "./app/components/EnhancedAccessibilityV2";
+import AdvancedPerformanceOptimizer from "./app/components/AdvancedPerformanceOptimizer";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-import ErrorBoundary from "./app/components/ErrorBoundary";
+import AdvancedErrorBoundary from "./app/components/AdvancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-import EnhancedSEO from "./app/components/EnhancedSEO";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -115,26 +114,22 @@ function App() {
 
   return (
     <HelmetProvider>
-      <ErrorBoundary>
+      <AdvancedErrorBoundary>
         <AnalyticsProvider>
           <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
             <WebVitalsTracker>
-              <AccessibilityEnhancer>
-                <Router>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                    {/* Skip to main content link */}
-                    <a href="#main-content" className="skip-link">
-                      Skip to main content
-                    </a>
-                    
-                    <FuturisticBackground>
-                      <Navigation onSidebarToggle={toggleSidebar} />
-                      <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                      <Breadcrumb />
-                      
-                      <main id="main-content" role="main" className="relative z-10">
-                        <Suspense fallback={<LoadingPage message="Loading Zion Tech Group..." />}>
-                          <Routes>
+              <EnhancedAccessibilityV2>
+                <AdvancedPerformanceOptimizer>
+                  <Router>
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                      <FuturisticBackground>
+                        <Navigation onSidebarToggle={toggleSidebar} />
+                        <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+                        <Breadcrumb />
+                        
+                        <main id="main-content" role="main" className="relative z-10">
+                          <Suspense fallback={<LoadingPage message="Loading Zion Tech Group..." />}>
+                            <Routes>
                             {/* Main Pages */}
                             <Route path="/" element={<HomePage />} />
                             <Route path="/about" element={<AboutPage />} />
@@ -215,18 +210,19 @@ function App() {
                             <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
                             <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
                           </Routes>
-                        </Suspense>
-                      </main>
-                      
-                      <Footer />
-                    </FuturisticBackground>
-                  </div>
-                </Router>
-              </AccessibilityEnhancer>
+                          </Suspense>
+                        </main>
+                        
+                        <Footer />
+                      </FuturisticBackground>
+                    </div>
+                  </Router>
+                </AdvancedPerformanceOptimizer>
+              </EnhancedAccessibilityV2>
             </WebVitalsTracker>
           </PerformanceMonitor>
         </AnalyticsProvider>
-      </ErrorBoundary>
+      </AdvancedErrorBoundary>
     </HelmetProvider>
   );
 }

@@ -1,23 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  BarChart3, 
-  Brain, 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Globe, 
-  Mail, 
-  Phone, 
-  TrendingUp,
-  Database,
-  Settings,
-  Monitor,
-  Sparkles,
-  Lightbulb,
-  TrendingDown
-} from "lucide-react";
+import { ArrowRight, BarChart3, Brain, CheckCircle, Star, Zap, Globe, Mail, Phone, Database, Settings, Monitor, Sparkles, Lightbulb, TrendingDown } from 'lucide-react';
 
 export default function AiAnalytics() {
   const features = [

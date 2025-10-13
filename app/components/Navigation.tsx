@@ -82,7 +82,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       description: 'AI-powered security solutions'
     },
     {
-      name: 'Cloud Migration',
+      name: 'Migration',
       path: '/cloud-migration',
       description: 'Seamless cloud transition'
     },

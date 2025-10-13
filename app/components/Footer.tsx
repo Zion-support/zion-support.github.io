@@ -1,26 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Linkedin, 
-  Twitter, 
-  Github, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  ArrowRight,
-  Brain,
-  Shield,
-  Zap,
-  Globe,
-  BarChart3,
-  Cloud,
-  Code,
-  Database,
-  Users,
-  Award,
-  Star
-} from "lucide-react";
+import { Linkedin, Twitter, Github, Mail, Phone, MapPin, Clock, ArrowRight, Brain, Shield, Cloud, Users, Award } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -72,7 +52,7 @@ const Footer: React.FC = () => {
     { name: "Zion AI CRM Pro", path: "/zion-ai-crm-pro" },
     { name: "Zion Cloud Vault", path: "/zion-cloud-vault-pro" },
     { name: "Zion AI Marketing", path: "/zion-ai-marketing-automation" },
-    { name: "Zion AI Video Generator", path: "/zion-ai-video-generator" },
+    { name: "Zion AI Generator", path: "/zion-ai-video-generator" },
   ];
 
   const fiveGServices = [

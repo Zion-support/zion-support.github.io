@@ -36,7 +36,7 @@ const ImprovedContactForm: React.FC = () => {
   const services = [
     "AI Solutions",
     "Cybersecurity",
-    "Cloud Infrastructure",
+    "Infrastructure",
     "Web Development",
     "Mobile Development",
     "Database Management",

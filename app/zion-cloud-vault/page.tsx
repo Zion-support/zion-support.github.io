@@ -39,7 +39,7 @@ export default function ZionCloudVault() {
   const storageFeatures = [
     "File Versioning & History",
     "Collaborative Workspaces",
-    "Advanced Search & Filtering",
+    "Advanced & Filtering",
     "Mobile & Desktop Apps",
     "API & SDK Access",
     "Custom Branding",
@@ -47,7 +47,7 @@ export default function ZionCloudVault() {
     "Backup & Recovery",
     "Compliance Tools (GDPR, HIPAA)",
     "Team Management",
-    "Share Links & Permissions",
+    "Links & Permissions",
     "Integration with 100+ Apps"
   ];
 
@@ -222,7 +222,7 @@ export default function ZionCloudVault() {
           </div>
         </section>
 
-        {/* Storage Features List */}
+        {/* Storage Features */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">

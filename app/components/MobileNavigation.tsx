@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ArrowRight } from 'lucide-react';
 
-const MobileNavigation: React.FC = () => {
+const Mobile: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -51,7 +51,7 @@ const MobileNavigation: React.FC = () => {
                 </button>
               </div>
 
-              {/* Navigation links */}
+              {/* links */}
               <nav className="space-y-4 mb-8">
                 <Link
                   to="/about"
@@ -128,4 +128,4 @@ const MobileNavigation: React.FC = () => {
   );
 };
 
-export default MobileNavigation;
+export default Mobile;

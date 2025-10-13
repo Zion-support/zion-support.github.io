@@ -125,8 +125,8 @@ export default function EnhancedPerformanceOptimizer() {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === "navigation") {
-            const navEntry = entry as PerformanceNavigationTiming;
-            logger.info("Navigation timing:", {
+            const navEntry = entry as PerformanceTiming;
+            logger.info("timing:", {
               domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
               loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
               totalTime: navEntry.loadEventEnd - navEntry.fetchStart,

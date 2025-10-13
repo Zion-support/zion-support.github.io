@@ -79,7 +79,7 @@ export default function AIProjectManagementPro() {
         "API Connectivity",
         "Data Synchronization",
         "Third-party Apps",
-        "Cloud Storage",
+        "Storage",
         "Version Control",
       ],
     },

@@ -74,7 +74,7 @@ export default function Contact() {
     "AI Content Generation",
     "AI Cybersecurity",
     "5G Solutions",
-    "Cloud Infrastructure",
+    "Infrastructure",
     "Data Analytics",
     "Code Assistant",
     "Marketing Automation",

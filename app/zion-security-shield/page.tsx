@@ -48,7 +48,7 @@ export default function ZionSecurityShield() {
     "Data Loss Prevention (DLP)",
     "Mobile Device Management (MDM)",
     "Email Security Gateway",
-    "Cloud Security Posture Management"
+    "Security Posture Management"
   ];
 
   const pricingPlans = [
@@ -223,7 +223,7 @@ export default function ZionSecurityShield() {
           </div>
         </section>
 
-        {/* Security Features List */}
+        {/* Security Features */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">

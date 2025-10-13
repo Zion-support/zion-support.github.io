@@ -14,7 +14,7 @@ export default function Community() {
       attendees: 500
     },
     {
-      title: "Tech Talk: Cloud Security Best Practices",
+      title: "Tech Talk: Security Best Practices",
       date: "March 22, 2024",
       time: "2:00 PM - 3:00 PM",
       location: "Online Webinar",

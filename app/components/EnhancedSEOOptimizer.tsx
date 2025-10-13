@@ -168,7 +168,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Cloud Infrastructure",
+              "name": "Infrastructure",
               "description": "Scalable cloud infrastructure solutions"
             }
           }

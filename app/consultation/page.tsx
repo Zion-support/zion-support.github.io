@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, CheckCircle, Zap, Mail, Smartphone, Globe } from "lucide-react";
+import { ArrowRight, Calendar, CheckCircle, Zap, Globe } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -47,7 +47,7 @@ export default function Consultation() {
       ]
     },
     {
-      title: "Cloud Migration",
+      title: "Migration",
       description: "Expert guidance on cloud infrastructure and migration strategies.",
       price: "Free",
       duration: "45 min",

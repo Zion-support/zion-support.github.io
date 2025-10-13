@@ -1,32 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  ChevronDown, 
-  Menu, 
-  X, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  BarChart3, 
-  Cloud, 
-  Sparkles,
-  Search,
-  User,
-  Settings,
-  HelpCircle,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Star,
-  TrendingUp,
-  Users,
-  Award,
-  Clock,
-  CheckCircle
-} from 'lucide-react';
+import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud, Sparkles, Search, User, Settings, HelpCircle, Phone, Mail, MapPin, Star, TrendingUp, Users, Award, Clock, CheckCircle } from 'lucide-react';
 
 const ImprovedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -564,8 +538,8 @@ const ImprovedNavigation = () => {
   ];
 
   const quickLinks = [
-    { label: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
-    { label: 'Demo', href: '/demo', icon: <Play className="w-4 h-4" /> },
+    { label: 'Pricing', href: '/pricing', icon: <className="w-4 h-4" /> },
+    { label: 'Demo', href: '/demo', icon: <className="w-4 h-4" /> },
     { label: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
     { label: 'Consultation', href: '/consultation', icon: <Users className="w-4 h-4" /> }
   ];

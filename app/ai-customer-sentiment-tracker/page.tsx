@@ -47,7 +47,7 @@ const AICustomerSentimentTrackerPage = () => {
     {
       icon: <Users className="w-8 h-8 text-blue-400" />,
       title: "Team Collaboration",
-      description: "Share insights across teams, assign tasks, and track resolution progress for better customer experience."
+      description: "insights across teams, assign tasks, and track resolution progress for better customer experience."
     }
   ];
 

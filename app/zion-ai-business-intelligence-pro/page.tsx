@@ -1,26 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Brain, 
-  Target, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  PieChart,
-  LineChart,
-  Activity,
-  Users,
-  DollarSign,
-  Globe,
-  Clock,
-  Award,
-  Star,
-  Database,
-  Eye,
-  Settings
-} from 'lucide-react';
+import { BarChart3, TrendingUp, Brain, Zap, CheckCircle, ArrowRight, Activity, Users, Globe, Clock, Award, Star, Database, Eye } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -143,7 +123,7 @@ const ZionAiBusinessIntelligencePro = () => {
     },
     {
       title: "Collaborative Analytics",
-      description: "Share insights and collaborate with team members through comments, annotations, and alerts",
+      description: "insights and collaborate with team members through comments, annotations, and alerts",
       icon: <Users className="w-8 h-8" />,
       features: ["Team collaboration", "Comment system", "Alert management", "Role-based access"]
     },

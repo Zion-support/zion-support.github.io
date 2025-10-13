@@ -2,21 +2,21 @@
 import React, { useEffect, useState } from 'react';
 import { Eye, Volume2, MousePointer, Keyboard, Contrast, ZoomIn } from 'lucide-react';
 
-interface AccessibilitySettings {
+interface Accessibility{
   highContrast: boolean;
   largeText: boolean;
   screenReader: boolean;
-  keyboardNavigation: boolean;
+  keyboard: boolean;
   reducedMotion: boolean;
   focusIndicator: boolean;
 }
 
 const AdvancedAccessibilityEnhancer: React.FC = () => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+  const [settings, set] = useState<Accessibility>({
     highContrast: false,
     largeText: false,
     screenReader: false,
-    keyboardNavigation: false,
+    keyboard: false,
     reducedMotion: false,
     focusIndicator: false
   });
@@ -25,50 +25,50 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
 
   useEffect(() => {
     // Load saved settings from localStorage
-    const savedSettings = localStorage.getItem('accessibilitySettings');
-    if (savedSettings) {
-      setSettings(JSON.parse(savedSettings));
+    const saved= localStorage.getItem('accessibility');
+    if (saved) {
+      set(JSON.parse(saved));
     }
   }, []);
 
   useEffect(() => {
     // Apply accessibility settings
-    applyAccessibilitySettings(settings);
+    applyAccessibility(settings);
     
     // Save settings to localStorage
-    localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
+    localStorage.setItem('accessibility', JSON.stringify(settings));
   }, [settings]);
 
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
+  const applyAccessibility= (new: Accessibility) => {
     const root = document.documentElement;
     
-    if (newSettings.highContrast) {
+    if (new.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
     
-    if (newSettings.largeText) {
+    if (new.largeText) {
       root.classList.add('large-text');
     } else {
       root.classList.remove('large-text');
     }
     
-    if (newSettings.reducedMotion) {
+    if (new.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
     
-    if (newSettings.focusIndicator) {
+    if (new.focusIndicator) {
       root.classList.add('enhanced-focus');
     } else {
       root.classList.remove('enhanced-focus');
     }
   };
 
-  const toggleSetting = (key: keyof AccessibilitySettings) => {
-    setSettings(prev => ({
+  const toggleSetting = (key: keyof Accessibility) => {
+    set(prev => ({
       ...prev,
       [key]: !prev[key]
     }));
@@ -76,37 +76,37 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
 
   const accessibilityFeatures = [
     {
-      key: 'highContrast' as keyof AccessibilitySettings,
+      key: 'highContrast' as keyof Accessibility
       icon: Contrast,
       title: 'High Contrast',
       description: 'Increase color contrast for better visibility'
     },
     {
-      key: 'largeText' as keyof AccessibilitySettings,
+      key: 'largeText' as keyof Accessibility
       icon: ZoomIn,
       title: 'Large Text',
       description: 'Increase text size for better readability'
     },
     {
-      key: 'screenReader' as keyof AccessibilitySettings,
+      key: 'screenReader' as keyof Accessibility
       icon: Volume2,
       title: 'Screen Reader',
       description: 'Optimize content for screen readers'
     },
     {
-      key: 'keyboardNavigation' as keyof AccessibilitySettings,
+      key: 'keyboard' as keyof Accessibility
       icon: Keyboard,
-      title: 'Keyboard Navigation',
+      title: 'Keyboard ',
       description: 'Enable full keyboard navigation support'
     },
     {
-      key: 'reducedMotion' as keyof AccessibilitySettings,
+      key: 'reducedMotion' as keyof Accessibility
       icon: Eye,
       title: 'Reduced Motion',
       description: 'Reduce animations and motion effects'
     },
     {
-      key: 'focusIndicator' as keyof AccessibilitySettings,
+      key: 'focusIndicator' as keyof Accessibility
       icon: MousePointer,
       title: 'Focus Indicator',
       description: 'Enhanced focus indicators for navigation'
@@ -129,8 +129,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
     <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-          Accessibility Settings
-        </h3>
+          Accessibility </h3>
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
@@ -179,11 +178,11 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
       <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
         <button
           onClick={() => {
-            setSettings({
+            set({
               highContrast: false,
               largeText: false,
               screenReader: false,
-              keyboardNavigation: false,
+              keyboard: false,
               reducedMotion: false,
               focusIndicator: false
             });

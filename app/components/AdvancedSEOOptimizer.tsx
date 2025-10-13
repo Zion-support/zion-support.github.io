@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Search, Eye } from 'lucide-react';
 
-interface SEOSettings {
+interface SEO{
   metaTags: boolean;
   structuredData: boolean;
   sitemap: boolean;
@@ -21,7 +21,7 @@ interface SEOMetrics {
 }
 
 const AdvancedSEOOptimizer: React.FC = () => {
-  const [settings, setSettings] = useState<SEOSettings>({
+  const [settings, set] = useState<SEO>({
     metaTags: false,
     structuredData: false,
     sitemap: false,
@@ -128,8 +128,8 @@ const AdvancedSEOOptimizer: React.FC = () => {
     setTimeout(analyzeSEO, 1000);
   }, [settings, analyzeSEO]);
 
-  const toggleSetting = (key: keyof SEOSettings) => {
-    setSettings(prev => ({
+  const toggleSetting = (key: keyof SEO) => {
+    set(prev => ({
       ...prev,
       [key]: !prev[key]
     }));
@@ -137,37 +137,37 @@ const AdvancedSEOOptimizer: React.FC = () => {
 
   const seoFeatures = [
     {
-      key: 'metaTags' as keyof SEOSettings,
+      key: 'metaTags' as keyof SEO
       title: 'Meta Tags',
       description: 'Optimize title, description, and other meta tags',
       impact: 'High'
     },
     {
-      key: 'structuredData' as keyof SEOSettings,
+      key: 'structuredData' as keyof SEO
       title: 'Structured Data',
       description: 'Add JSON-LD structured data for better search results',
       impact: 'High'
     },
     {
-      key: 'sitemap' as keyof SEOSettings,
+      key: 'sitemap' as keyof SEO
       title: 'Sitemap',
       description: 'Generate and submit XML sitemap to search engines',
       impact: 'Medium'
     },
     {
-      key: 'robotsTxt' as keyof SEOSettings,
+      key: 'robotsTxt' as keyof SEO
       title: 'Robots.txt',
       description: 'Create robots.txt file for search engine crawlers',
       impact: 'Medium'
     },
     {
-      key: 'canonicalUrls' as keyof SEOSettings,
+      key: 'canonicalUrls' as keyof SEO
       title: 'Canonical URLs',
       description: 'Set canonical URLs to prevent duplicate content issues',
       impact: 'High'
     },
     {
-      key: 'altTexts' as keyof SEOSettings,
+      key: 'altTexts' as keyof SEO
       title: 'Alt Texts',
       description: 'Add descriptive alt texts to all images',
       impact: 'Medium'
@@ -258,7 +258,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
         </div>
       </div>
       
-      {/* SEO Settings */}
+      {/* SEO */}
       <div className="space-y-4">
         <h4 className="text-sm font-semibold text-gray-900 dark:text-white">
           SEO Features

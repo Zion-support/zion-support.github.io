@@ -1,21 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe
-} from 'lucide-react';
+import { Mail, Shield, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe } from 'lucide-react';
 
 const AIPoweredEmailAnalyzerPage = () => {
   const features = [
@@ -47,7 +33,7 @@ const AIPoweredEmailAnalyzerPage = () => {
     {
       icon: <Users className="w-8 h-8 text-blue-400" />,
       title: "Team Collaboration",
-      description: "Share insights across teams, set up approval workflows, and maintain consistent communication standards."
+      description: "insights across teams, set up approval workflows, and maintain consistent communication standards."
     }
   ];
 

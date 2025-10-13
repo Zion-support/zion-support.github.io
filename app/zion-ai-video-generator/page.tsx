@@ -1,18 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Video, 
-  Play, 
-  Download, 
-  Upload, 
-  Sparkles, 
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Zap
-} from 'lucide-react';
+import { Video, Play, Download, Sparkles, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
 const ZionAIVideoGeneratorPage = () => {
   const features = [

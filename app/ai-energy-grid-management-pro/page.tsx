@@ -12,7 +12,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
-            Ai Energy Grid Management Pro
+            Ai Energy Management Pro
           </h1>
           <p className="text-lg text-gray-300 mb-8">
             Professional ai energy grid management pro services coming soon.

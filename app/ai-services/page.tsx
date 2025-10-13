@@ -1,20 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Cloud, 
-  Code, 
-  Database, 
-  Users, 
-  ArrowRight,
-  Sparkles,
-  Target,
-  TrendingUp
-} from 'lucide-react';
+import { Zap, Shield, BarChart3, Code, Database, Users, ArrowRight, Sparkles, Target, TrendingUp } from 'lucide-react';
 
 const AIServicesPage = () => {
   const aiServices = [
@@ -131,7 +118,7 @@ const AIServicesPage = () => {
           ))}
         </div>
 
-        {/* AI Services Grid */}
+        {/* AI Services */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {aiServices.map((service, index) => (
             <Link

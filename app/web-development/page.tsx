@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Code, Globe, Smartphone, Database, Shield, Zap, Users, Clock, DollarSign } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Code, Globe, Smartphone, Database, Shield, Zap, Clock } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const WebDevelopmentPage = () => {
@@ -111,7 +111,7 @@ const WebDevelopmentPage = () => {
           </div>
         </div>
 
-        {/* Services Grid */}
+        {/* Services */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service) => {
             const IconComponent = service.icon;

@@ -278,7 +278,7 @@ export default function AIExpenseTracker() {
           {/* Testimonials Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
-              What Our Users Say
+              What Our Say
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (

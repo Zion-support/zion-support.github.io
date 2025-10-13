@@ -1,65 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  Brain, 
-  Shield, 
-  BarChart3, 
-  Cloud, 
-  Users, 
-  Mail, 
-  Smartphone, 
-  Globe, 
-  Zap, 
-  Target, 
-  Calendar, 
-  FileText, 
-  Database, 
-  Settings, 
-  Monitor, 
-  Lock, 
-  Server, 
-  Cpu, 
-  Network, 
-  HardDrive, 
-  Phone, 
-  Laptop, 
-  Headphones, 
-  CheckCircle, 
-  Star, 
-  Award, 
-  Rocket, 
-  Sparkles,
-  TrendingUp,
-  Heart,
-  Receipt,
-  Package,
-  Clock,
-  Code,
-  Bot,
-  Wifi,
-  Cpu as Processor,
-  Database as DataIcon,
-  FileText as DocumentIcon,
-  Mail as EmailIcon,
-  Globe as WebIcon,
-  Smartphone as MobileIcon,
-  Monitor as DesktopIcon,
-  Headphones as SupportIcon,
-  Settings as ConfigIcon,
-  Lock as SecurityIcon,
-  Server as ServerIcon,
-  Network as NetworkIcon,
-  HardDrive as StorageIcon,
-  Zap as LightningIcon,
-  Target as MarketingIcon,
-  Calendar as ScheduleIcon,
-  Users as TeamIcon,
-  BarChart3 as AnalyticsIcon,
-  Cloud as CloudIcon,
-  Brain as AIIcon,
-  Shield as ProtectionIcon
-} from "lucide-react";
+import { ArrowRight, Brain, Shield, BarChart3, Cloud, Users, Mail, Smartphone, Globe, Zap, Target, Calendar, FileText, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Phone, Headphones, CheckCircle, Award, Rocket, Sparkles, TrendingUp, Heart, Receipt, Package, Code, Cpu as Processor, Database as DataIcon, FileText as DocumentIcon, Mail as EmailIcon, Globe as WebIcon, Smartphone as MobileIcon, Monitor as DesktopIcon, Headphones as SupportIcon, Settings as ConfigIcon, Lock as SecurityIcon, Server as ServerIcon, Network as NetworkIcon, HardDrive as StorageIcon, Zap as LightningIcon, Target as MarketingIcon, Calendar as ScheduleIcon, Users as TeamIcon, BarChart3 as AnalyticsIcon, Cloud as CloudIcon, Brain as AIIcon, Shield as ProtectionIcon } from 'lucide-react';
 
 export default function MicroSaasServices() {
   const microSaasServices = [
@@ -237,7 +178,7 @@ export default function MicroSaasServices() {
         "Priority Email Scoring",
         "Automated Response Suggestions",
         "Email Template Generation",
-        "Spam Detection & Filtering",
+        "Spam Detection & ing",
         "Email Analytics Dashboard",
         "Team Collaboration Features",
         "Integration with Major Email Clients"
@@ -482,7 +423,7 @@ export default function MicroSaasServices() {
           </div>
         </section>
 
-        {/* Categories Filter */}
+        {/* Categories */}
         <section className="py-8 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8">
@@ -510,7 +451,7 @@ export default function MicroSaasServices() {
           </div>
         </section>
 
-        {/* Services Grid */}
+        {/* Services */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">

@@ -31,7 +31,7 @@ const defaultSlides: Slide[] = [
   },
   {
     id: 2,
-    title: "Cloud Infrastructure",
+    title: "Infrastructure",
     description: "Scalable and secure cloud solutions for modern businesses.",
     image: "/api/placeholder/600/400",
     features: ["Scalable Architecture", "99.9% Uptime", "Global CDN"],
@@ -119,7 +119,7 @@ export default function ContentCarousel({
         </div>
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Arrows */}
       <button
         onClick={goToPrevious}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"

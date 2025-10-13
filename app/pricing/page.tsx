@@ -46,7 +46,7 @@ export default function Pricing() {
         "Brand Voice Training",
         "Multi-format Output",
         "Plagiarism Detection",
-        "Content Calendar",
+        "Content ",
         "Up to 1,000 articles/month"
       ],
       popular: false,

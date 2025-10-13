@@ -45,7 +45,7 @@ export default function AIEcommerceOptimizerPro() {
         "Smart Product Recommendations",
         "Dynamic Pricing",
         "Inventory Management",
-        "Product Search Optimization",
+        "Product Optimization",
         "Cross-selling & Upselling",
         "Product Image Enhancement",
       ],

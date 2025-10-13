@@ -1,32 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Twitter, 
-  Linkedin, 
-  Github, 
-  Facebook, 
-  Instagram,
-  Youtube,
-  Star,
-  Award,
-  Users,
-  Shield,
-  Zap,
-  Brain,
-  BarChart3,
-  Cloud,
-  Settings,
-  HelpCircle,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
-  Clock
-} from 'lucide-react';
+import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle } from 'lucide-react';
 
 const ImprovedFooter = () => {
   const currentYear = new Date().getFullYear();
@@ -58,7 +32,7 @@ const ImprovedFooter = () => {
         { label: 'AI Language Translation', href: '/ai-language-translation' },
         { label: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
         { label: 'AI Data Mining Pro', href: '/ai-data-mining-pro' },
-        { label: 'AI Video Analysis', href: '/ai-video-analysis' },
+        { label: 'AI Analysis', href: '/ai-video-analysis' },
         { label: 'AI Time Series Forecasting', href: '/ai-time-series-forecasting' },
         { label: 'AI NLP Text Analysis', href: '/ai-nlp-text-analysis' },
         { label: 'View All AI Services', href: '/ai-services', featured: true }
@@ -203,7 +177,7 @@ const ImprovedFooter = () => {
           ))}
         </div>
 
-        {/* Services Grid */}
+        {/* Services */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-16">
           {serviceCategories.map((category, index) => (
             <div key={index} className="space-y-6">

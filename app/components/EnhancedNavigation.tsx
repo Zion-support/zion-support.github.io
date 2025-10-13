@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud, Sparkles } from 'lucide-react';
+import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud } from 'lucide-react';
 
 const EnhancedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +33,7 @@ const EnhancedNavigation = () => {
         { label: 'AI Language Translation', href: '/ai-language-translation' },
         { label: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
         { label: 'AI Data Mining Pro', href: '/ai-data-mining-pro' },
-        { label: 'AI Video Analysis', href: '/ai-video-analysis' },
+        { label: 'AI Analysis', href: '/ai-video-analysis' },
         { label: 'AI Time Series Forecasting', href: '/ai-time-series-forecasting' },
         { label: 'AI NLP Text Analysis', href: '/ai-nlp-text-analysis' },
         { label: 'View All AI Services', href: '/ai-services' }
