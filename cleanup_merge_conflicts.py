@@ -12,59 +12,69 @@ def clean_merge_conflicts(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Remove merge conflict markers and keep the HEAD version
+        # Remove merge conflict markers
         # Pattern: <<<<<<< HEAD ... ======= ... >>>>>>> branch-name
-        pattern = r'<<<<<<< HEAD\s*\n(.*?)\n=======\s*\n(.*?)\n>>>>>>> [^\n]+\s*\n'
+        pattern = r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]+'
+        cleaned_content = re.sub(pattern, '', content, flags=re.DOTALL)
         
-        # Replace with just the HEAD version (first capture group)
-        cleaned_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
+        # Remove any remaining conflict markers
+        cleaned_content = re.sub(r'<<<<<<< HEAD.*?', '', cleaned_content, flags=re.DOTALL)
+        cleaned_content = re.sub(r'=======.*?', '', cleaned_content, flags=re.DOTALL)
+        cleaned_content = re.sub(r'>>>>>>> [^\n]+.*?', '', cleaned_content, flags=re.DOTALL)
         
-        # Also handle cases where there might be just conflict markers without proper structure
-        cleaned_content = re.sub(r'<<<<<<< HEAD\s*\n.*?\n=======\s*\n.*?\n>>>>>>> [^\n]+\s*\n', '', cleaned_content, flags=re.DOTALL)
+        # Clean up extra whitespace and empty lines
+        lines = cleaned_content.split('\n')
+        cleaned_lines = []
+        prev_empty = False
         
-        # Remove any remaining isolated conflict markers
-        cleaned_content = re.sub(r'^<<<<<<< HEAD\s*$', '', cleaned_content, flags=re.MULTILINE)
-        cleaned_content = re.sub(r'^=======\s*$', '', cleaned_content, flags=re.MULTILINE)
-        cleaned_content = re.sub(r'^>>>>>>> [^\n]+\s*$', '', cleaned_content, flags=re.MULTILINE)
+        for line in lines:
+            stripped = line.strip()
+            if stripped:
+                cleaned_lines.append(line)
+                prev_empty = False
+            elif not prev_empty:
+                cleaned_lines.append('')
+                prev_empty = True
         
-        # Clean up multiple consecutive empty lines
-        cleaned_content = re.sub(r'\n\s*\n\s*\n+', '\n\n', cleaned_content)
-        
+        # Write back the cleaned content
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(cleaned_content)
+            f.write('\n'.join(cleaned_lines))
         
+        print(f"Cleaned: {file_path}")
         return True
+        
     except Exception as e:
         print(f"Error cleaning {file_path}: {e}")
         return False
 
 def main():
-    # Focus on main application files first
-    main_files = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        '__tests__/**/*.tsx',
-        '__tests__/**/*.ts',
-        'hooks/**/*.ts',
-        'components/**/*.tsx',
-        'components/**/*.ts'
+    """Main function to clean all files"""
+    # File patterns to clean
+    patterns = [
+        '**/*.tsx',
+        '**/*.ts',
+        '**/*.jsx',
+        '**/*.js',
+        '**/*.md',
+        '**/*.json'
     ]
     
     cleaned_count = 0
     error_count = 0
     
-    for pattern in main_files:
+    for pattern in patterns:
         files = glob.glob(pattern, recursive=True)
         for file_path in files:
-            if os.path.isfile(file_path):
-                print(f"Cleaning {file_path}...")
-                if clean_merge_conflicts(file_path):
-                    cleaned_count += 1
-                else:
-                    error_count += 1
+            # Skip node_modules and other directories
+            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', 'build', '.next']):
+                continue
+                
+            if clean_merge_conflicts(file_path):
+                cleaned_count += 1
+            else:
+                error_count += 1
     
-    print(f"\nCleaned {cleaned_count} files successfully")
-    print(f"Errors in {error_count} files")
+    print(f"\nCleaned {cleaned_count} files, {error_count} errors")
 
 if __name__ == "__main__":
     main()

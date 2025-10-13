@@ -75,7 +75,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
       height: 1px;
       overflow: hidden;
     `;
-    
+
     document.body.insertBefore(skipLink, document.body.firstChild);
 
     // Add live region for announcements
@@ -94,7 +94,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
     const toggleHighContrast = () => {
       setIsHighContrast(!isHighContrast);
       document.documentElement.classList.toggle('high-contrast', !isHighContrast);
-      
+
       // Announce the change
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
@@ -176,12 +176,12 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
       <button onclick="resetFontSize()" aria-label="Reset font size" class="px-2 py-1 bg-gray-800 text-white rounded text-sm">A</button>
       <button onclick="increaseFontSize()" aria-label="Increase font size" class="px-2 py-1 bg-gray-800 text-white rounded text-sm">A+</button>
     `;
-    
+
     // Make functions globally available
     (window as any).increaseFontSize = increaseFontSize;
     (window as any).decreaseFontSize = decreaseFontSize;
     (window as any).resetFontSize = resetFontSize;
-    
+
     document.body.appendChild(controls);
   }, [fontSize]);
 

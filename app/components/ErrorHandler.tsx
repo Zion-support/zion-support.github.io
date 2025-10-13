@@ -60,17 +60,9 @@ class ErrorHandler extends Component<Props, State> {
         timestamp: new Date().toISOString()
       };
       // Send to your error reporting service here
-<<<<<<< HEAD
+      console.error('Error reported:', errorData);
     } catch (reportingError) {
-      console.warn('Error reporting failed:', reportingError);
-
-=======
-
-      console.log('Error data prepared for reporting:', errorData);
-    } catch (reportingError) {
-      console.error('Failed to prepare error data for reporting:', reportingError);
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
-
+      console.error('Failed to report error:', reportingError);
     }
   }
 
@@ -98,11 +90,11 @@ class ErrorHandler extends Component<Props, State> {
             <div className="flex justify-center mb-4">
               <AlertTriangle className="w-16 h-16 text-red-500" />
             </div>
-            
+
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
               Oops! Something went wrong
             </h1>
-            
+
             <p className="text-gray-600 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
             </p>
@@ -140,7 +132,7 @@ class ErrorHandler extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
-              
+
               <button
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"

@@ -38,7 +38,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
               <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-              
+
               <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div className="flex justify-between items-center py-4">

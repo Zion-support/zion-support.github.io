@@ -20,7 +20,6 @@ export default function Consultation() {
         />
       </Helmet>
 
-
       <div className="flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Consultation</h1>

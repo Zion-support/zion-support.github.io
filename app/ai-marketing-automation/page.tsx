@@ -113,7 +113,7 @@ export default function AIMarketingAutomation() {
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-cyan-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.3),transparent_50%)]"></div>
-        
+
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
@@ -169,7 +169,7 @@ export default function AIMarketingAutomation() {
                 >
                   {/* Animated background effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
+
                   <div className="relative z-10">
                     <div
                       className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
@@ -182,7 +182,7 @@ export default function AIMarketingAutomation() {
                     <p className="text-gray-300 text-center mb-4 leading-relaxed">
                       {feature.description}
                     </p>
-                    
+
                     {/* Benefits */}
                     <div className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
@@ -227,16 +227,16 @@ export default function AIMarketingAutomation() {
                       Most Popular
                     </div>
                   )}
-                  
+
                   <div className={`${plan.popular ? 'pt-8' : ''}`}>
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-6">{plan.description}</p>
-                    
+
                     <div className="mb-6">
                       <span className="text-4xl font-bold text-white">{plan.price}</span>
                       <span className="text-gray-300">{plan.period}</span>
                     </div>
-                    
+
                     <ul className="space-y-3 mb-8">
                       {plan.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-gray-300">
@@ -247,7 +247,7 @@ export default function AIMarketingAutomation() {
                         </li>
                       ))}
                     </ul>
-                    
+
                     <Link
                       to="/contact"
                       className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
@@ -275,7 +275,7 @@ export default function AIMarketingAutomation() {
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of businesses already using our AI marketing automation platform to drive growth and increase conversions.
               </p>
-              
+
               {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
@@ -300,7 +300,7 @@ export default function AIMarketingAutomation() {
                   <p className="text-pink-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"

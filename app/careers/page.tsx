@@ -1,4 +1,4 @@
-import { ArrowRight, Users, Zap, Shield, Globe, Code, Mail, MapPin, Clock, CheckCircle, Star, Award } from "lucide-react";
+import { ArrowRight, Users, Zap, Shield, Globe, Mail, MapPin, Clock, CheckCircle, Star, Award } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -204,7 +204,7 @@ export default function Careers() {
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-        
+
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
@@ -307,7 +307,7 @@ export default function Careers() {
                     </div>
                   )}
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
+
                   <div className="relative z-10">
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                       <div>
@@ -344,7 +344,7 @@ export default function Careers() {
                         </Link>
                       </div>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                       <div>
                         <h4 className="text-lg font-semibold text-cyan-400 mb-3">Requirements:</h4>

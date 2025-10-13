@@ -102,7 +102,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
         onClick={onClose}
       />
-      
+
       {/* Sidebar */}
       <div className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl z-50 overflow-y-auto">
         <div className="p-6">
@@ -159,7 +159,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <ChevronRight className="w-4 h-4" />
               )}
             </button>
-            
+
             {expandedSections.has('ai-services') && (
               <div className="ml-6 mt-2 space-y-1">
                 {aiServices.map((service) => (
@@ -197,7 +197,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <ChevronRight className="w-4 h-4" />
               )}
             </button>
-            
+
             {expandedSections.has('it-services') && (
               <div className="ml-6 mt-2 space-y-1">
                 {itServices.map((service) => (
@@ -235,7 +235,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <ChevronRight className="w-4 h-4" />
               )}
             </button>
-            
+
             {expandedSections.has('micro-saas') && (
               <div className="ml-6 mt-2 space-y-1">
                 {microSaasServices.map((service) => (

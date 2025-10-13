@@ -64,7 +64,7 @@ describe('ErrorBoundary', () => {
 
   it('renders custom fallback when provided', () => {
     const customFallback = <div>Custom error message</div>;
-    
+
     render(
       <BrowserRouter>
         <ErrorBoundary fallback={customFallback}>

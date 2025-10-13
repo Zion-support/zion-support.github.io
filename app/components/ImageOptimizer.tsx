@@ -74,7 +74,7 @@ const ImageOptimizer = React.memo<ImageOptimizerProps>(({
           <Loader2 className="w-6 h-6 animate-spin text-gray-400" />
         </div>
       )}
-      
+
       <img
         src={optimizedSrc}
         alt={alt}

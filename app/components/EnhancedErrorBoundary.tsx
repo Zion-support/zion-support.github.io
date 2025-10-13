@@ -83,7 +83,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   handleRetry = () => {
     this.setState({ isRetrying: true });
-    
+
     // Simulate retry delay
     this.retryTimeout = setTimeout(() => {
       this.setState({

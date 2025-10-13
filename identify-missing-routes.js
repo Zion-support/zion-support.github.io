@@ -14,7 +14,7 @@ function findPages(dir) {
   for (const item of items) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-    
+
     if (stat.isDirectory()) {
       const pagePath = path.join(fullPath, 'page.tsx');
       if (fs.existsSync(pagePath)) {
@@ -90,31 +90,31 @@ console.log('Other Pages:', otherPages.length);
 // Generate route additions
 const generateRouteAddition = (routes, category) => {
   if (routes.length === 0) return '';
-  
+
   let result = `\n  // ${category} Routes\n`;
   routes.forEach(route => {
     const componentName = route.split('-').map(word => 
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join('') + 'Page';
-    
+
     result += `  const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`;
   });
-  
+
   return result;
 };
 
 const generateRouteElements = (routes) => {
   if (routes.length === 0) return '';
-  
+
   let result = '';
   routes.forEach(route => {
     const componentName = route.split('-').map(word => 
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join('') + 'Page';
-    
+
     result += `                  <Route path="/${route}" element={<${componentName} />} />\n`;
   });
-  
+
   return result;
 };
 

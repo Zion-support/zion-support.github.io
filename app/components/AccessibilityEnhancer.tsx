@@ -121,7 +121,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
+
     // High contrast mode
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
@@ -174,14 +174,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   // Removed unused functions - functionality is handled by updateSetting directly
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
   return (
     <>
       {children}
-      
+
       {/* Accessibility Toggle Button */}
       <button
         onClick={() => setIsVisible(!isVisible)}
@@ -324,7 +320,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           left: 6px;
           z-index: 1000;
         }
-        
+
         .skip-link {
           position: absolute;
           top: -40px;
@@ -337,43 +333,43 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           z-index: 1000;
           transition: top 0.3s;
         }
-        
+
         .skip-link:focus {
           top: 6px;
         }
-        
+
         .keyboard-navigation *:focus {
           outline: 2px solid #3b82f6 !important;
           outline-offset: 2px !important;
         }
-        
+
         .high-contrast {
           filter: contrast(150%) brightness(1.2);
         }
-        
+
         .high-contrast * {
           background-color: white !important;
           color: black !important;
           border-color: black !important;
         }
-        
+
         .large-text {
           font-size: 1.125rem;
         }
-        
+
         .large-text h1 { font-size: 2.5rem; }
         .large-text h2 { font-size: 2rem; }
         .large-text h3 { font-size: 1.75rem; }
         .large-text h4 { font-size: 1.5rem; }
         .large-text h5 { font-size: 1.25rem; }
         .large-text h6 { font-size: 1.125rem; }
-        
+
         .reduced-motion * {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
         }
-        
+
         .focus-visible *:focus {
           outline: 2px solid #8b5cf6 !important;
           outline-offset: 2px !important;

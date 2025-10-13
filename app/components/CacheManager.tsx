@@ -8,19 +8,12 @@ const CacheManager = () => {
       if ('serviceWorker' in navigator) {
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
-=======
           console.log('Service Worker registered:', registration);
 
         } catch (error) {
           console.error('Service Worker registration failed:', error);
 
-
-
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
         }
       }
     }
@@ -42,19 +35,12 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
-=======
           console.log('Static assets cached successfully');
 
         } catch (error) {
           console.error('Failed to cache static assets:', error);
 
-
-
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
         }
       }
 
@@ -63,21 +49,14 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME)
           const response = await fetch(request)
-          
+
           if (response.ok) {
             cache.put(request, response.clone())
           }
-          
+
           return response
-<<<<<<< HEAD
-=======
-
         } catch (error) {
-          console.error('Cache API error:', error);
-
-
-
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
+          console.error('Cache error:', error);
           return fetch(request);
         }
       }
@@ -89,12 +68,12 @@ const CacheManager = () => {
       const originalFetch = window.fetch
       window.fetch = async (input, init) => {
         const request = new Request(input, init)
-        
+
         // Check if request should be cached
         if (request.url.includes('/api/') || request.url.includes('/data/')) {
           return cacheAPIResponses(request)
         }
-        
+
         return originalFetch(input, init)
       }
     }
@@ -106,7 +85,7 @@ const CacheManager = () => {
         if ((performance as any).memory) {
           const memoryInfo = (performance as any).memory
           const usedMemory = memoryInfo.usedJSHeapSize / memoryInfo.totalJSHeapSize
-          
+
           // If memory usage is high, trigger garbage collection
           if (usedMemory > 0.8) {
             // Force garbage collection if available

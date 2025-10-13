@@ -34,7 +34,7 @@ export default function EnhancedPerformanceOptimizer() {
 
   const optimizeImages = useCallback(() => {
     const images = document.querySelectorAll("img[data-src]");
-    
+
     if (images.length === 0) return;
 
     const imageObserver = new IntersectionObserver(

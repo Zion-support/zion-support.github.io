@@ -34,7 +34,7 @@ const EnhancedErrorFeedback: React.FC<ErrorFeedbackProps> = ({
 
   const handleRetry = useCallback(async () => {
     if (!onRetry) return;
-    
+
     setIsRetrying(true);
     try {
       await onRetry();
@@ -48,7 +48,7 @@ const EnhancedErrorFeedback: React.FC<ErrorFeedbackProps> = ({
 
   const handleReport = useCallback(async () => {
     if (!error || !onReport) return;
-    
+
     setIsReporting(true);
     try {
       await onReport(error);
@@ -128,7 +128,7 @@ const EnhancedErrorFeedback: React.FC<ErrorFeedbackProps> = ({
               {isRetrying ? 'Retrying...' : 'Try Again'}
             </button>
           )}
-          
+
           {onReport && (
             <button
               onClick={handleReport}
@@ -185,7 +185,7 @@ export class GlobalErrorBoundary extends React.Component<
   handleReport = async (error: Error) => {
     // In production, you would send this to your error reporting service
     console.log('Error reported:', error);
-    
+
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
   };

@@ -15,38 +15,38 @@ const generateComponentName = (route) => {
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join('')
   ).join('');
-  
+
   // Handle routes starting with numbers
   if (/^\d/.test(componentName)) {
     componentName = 'FiveG' + componentName.substring(1);
   }
-  
+
   return componentName + 'Page';
 };
 
 // Generate lazy imports for a category
 const generateLazyImports = (routes, category) => {
   if (routes.length === 0) return '';
-  
+
   let result = `\n// ${category} Routes\n`;
   routes.forEach(route => {
     const componentName = generateComponentName(route);
     result += `const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`;
   });
-  
+
   return result;
 };
 
 // Generate route elements for a category
 const generateRouteElements = (routes) => {
   if (routes.length === 0) return '';
-  
+
   let result = '';
   routes.forEach(route => {
     const componentName = generateComponentName(route);
     result += `                  <Route path="/${route}" element={<${componentName} />} />\n`;
   });
-  
+
   return result;
 };
 

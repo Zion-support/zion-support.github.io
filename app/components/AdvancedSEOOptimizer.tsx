@@ -68,7 +68,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
     const links = document.querySelectorAll('a[href]');
     let internalLinks = 0;
     let externalLinks = 0;
-    
+
     links.forEach(link => {
       const href = link.getAttribute('href');
       if (href) {
@@ -79,7 +79,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
         }
       }
     });
-    
+
     setMetrics(prev => ({ 
       ...prev, 
       internalLinks, 
@@ -93,37 +93,37 @@ const AdvancedSEOOptimizer: React.FC = () => {
 
   const optimizeSEO = useCallback(async () => {
     setIsOptimizing(true);
-    
+
     // Simulate optimization process
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     // Apply optimizations based on settings
     if (settings.metaTags) {
       // Optimizing meta tags...
     }
-    
+
     if (settings.structuredData) {
       // Adding structured data...
     }
-    
+
     if (settings.sitemap) {
       // Generating sitemap...
     }
-    
+
     if (settings.robotsTxt) {
       // Updating robots.txt...
     }
-    
+
     if (settings.canonicalUrls) {
       // Setting canonical URLs...
     }
-    
+
     if (settings.altTexts) {
       // Adding alt texts to images...
     }
-    
+
     setIsOptimizing(false);
-    
+
     // Re-analyze SEO after optimization
     setTimeout(analyzeSEO, 1000);
   }, [settings, analyzeSEO]);
@@ -217,7 +217,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
           ×
         </button>
       </div>
-      
+
       {/* SEO Metrics */}
       <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
         <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
@@ -257,7 +257,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
           </div>
         </div>
       </div>
-      
+
       {/* SEO Settings */}
       <div className="space-y-4">
         <h4 className="text-sm font-semibold text-gray-900 dark:text-white">
@@ -296,7 +296,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
           </div>
         ))}
       </div>
-      
+
       {/* Optimize Button */}
       <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
         <button

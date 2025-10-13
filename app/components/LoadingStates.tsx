@@ -139,7 +139,7 @@ export const LoadingCard: React.FC<LoadingCardProps> = ({
         </div>
         <LoadingSpinner size="sm" className="text-cyan-400" />
       </div>
-      
+
       <div className="space-y-2">
         <div className="h-2 bg-white/10 rounded-full"></div>
         <div className="h-2 bg-white/10 rounded-full w-3/4"></div>
@@ -159,7 +159,7 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
   title = 'Loading services...'
 }) => {
   const icons = [Zap, Brain, Shield, Globe, Zap, Brain];
-  
+
   return (
     <div className="space-y-8">
       <div className="text-center">
@@ -170,7 +170,7 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
           <LoadingSpinner size="md" className="text-cyan-400" />
         </div>
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {Array.from({ length: count }).map((_, index) => (
           <LoadingCard

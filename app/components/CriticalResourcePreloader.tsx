@@ -120,7 +120,7 @@ const CriticalResourcePreloader = () => {
     // Preload next page resources on hover
     const preloadOnHover = () => {
       const links = document.querySelectorAll('a[href^="/"]')
-      
+
       links.forEach(link => {
         link.addEventListener('mouseenter', () => {
           const href = link.getAttribute('href')

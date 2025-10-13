@@ -23,12 +23,12 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
       }
-      
+
       // Add decoding="async" for better performance
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async');
       }
-      
+
       // Add fetchpriority="auto" for above-the-fold images
       if (img.getBoundingClientRect().top < window.innerHeight) {
         img.setAttribute('fetchpriority', 'high');
@@ -86,7 +86,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     window.fetch = async (input, init = {}) => {
       const headers = new Headers(init.headers);
       headers.set('Accept-Encoding', 'gzip, deflate, br');
-      
+
       return originalFetch(input, {
         ...init,
         headers
@@ -185,7 +185,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
           }
         }
       };
-      
+
       setInterval(checkMemory, 30000); // Check every 30 seconds
     }
   }, []);

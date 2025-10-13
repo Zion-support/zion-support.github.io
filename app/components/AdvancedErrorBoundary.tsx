@@ -62,19 +62,9 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       url: window.location.href,
     };
 
-
-<<<<<<< HEAD
-=======
-    console.error('Error data:', errorData);
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
-=======
     // Log the error data for debugging
     console.error('Error data:', errorData);
 
-
-
-
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
     // Example: Send to your error reporting service
     // You could send this to your backend:
     // fetch('/api/error-report', {
@@ -82,7 +72,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     //   headers: { 'Content-Type': 'application/json' },
     //   body: JSON.stringify(errorData)
     // });
-    
+
     // For now, just log to console
     // Error data logged
   };
@@ -100,7 +90,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     const { error, errorId } = this.state;
     const subject = `Error Report - ${errorId}`;
     const body = `Error: ${error?.message}\n\nStack: ${error?.stack}\n\nPlease describe what you were doing when this error occurred:`;
-    
+
     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoLink);
   };
@@ -117,11 +107,11 @@ class AdvancedErrorBoundary extends Component<Props, State> {
             <div className="flex justify-center mb-6">
               <AlertTriangle className="h-20 w-20 text-red-500" />
             </div>
-            
+
             <h1 className="text-3xl font-bold text-gray-900 mb-4">
               Oops! Something went wrong
             </h1>
-            
+
             <p className="text-gray-600 mb-6 text-lg">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
@@ -166,7 +156,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="h-4 w-4 mr-2" />
                 Try Again
               </button>
-              
+
               <button
                 onClick={() => window.location.href = '/'}
                 className="flex items-center justify-center px-6 py-3 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"

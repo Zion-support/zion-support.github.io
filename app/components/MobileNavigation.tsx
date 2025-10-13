@@ -33,7 +33,7 @@ const MobileNavigation: React.FC = () => {
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={closeMenu}
           />
-          
+
           {/* Menu panel */}
           <div className="absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-slate-900/95 backdrop-blur-sm border-l border-white/20 shadow-2xl">
             <div className="p-6">
@@ -61,7 +61,7 @@ const MobileNavigation: React.FC = () => {
                   <span className="font-medium">About Us</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                
+
                 <Link
                   to="/services"
                   onClick={closeMenu}
@@ -70,7 +70,7 @@ const MobileNavigation: React.FC = () => {
                   <span className="font-medium">Our Services</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                
+
                 <Link
                   to="/contact"
                   onClick={closeMenu}

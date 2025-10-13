@@ -1,5 +1,5 @@
 
-import { ArrowRight, TrendingUp, Users, Zap, Shield, BarChart3, Clock, CheckCircle } from "lucide-react";
+import { ArrowRight, TrendingUp, Zap, BarChart3, Clock, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -140,7 +140,7 @@ export default function CaseStudies() {
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-        
+
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
@@ -282,7 +282,7 @@ export default function CaseStudies() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
+
                   <div className="relative z-10">
                     <div className="flex items-center gap-3 mb-4">
                       <span className="bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full text-xs font-medium">
@@ -293,15 +293,15 @@ export default function CaseStudies() {
                         {caseStudy.duration}
                       </div>
                     </div>
-                    
+
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                       {caseStudy.title}
                     </h3>
-                    
+
                     <p className="text-gray-300 mb-4 text-sm">
                       <strong>Challenge:</strong> {caseStudy.challenge}
                     </p>
-                    
+
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Results:</h4>
                       <ul className="space-y-1">
@@ -313,7 +313,7 @@ export default function CaseStudies() {
                         ))}
                       </ul>
                     </div>
-                    
+
                     <div className="flex flex-wrap gap-2 mb-4">
                       {caseStudy.services.map((service, index) => (
                         <span
@@ -324,7 +324,7 @@ export default function CaseStudies() {
                         </span>
                       ))}
                     </div>
-                    
+
                     <Link
                       to="/contact"
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
@@ -370,4 +370,3 @@ export default function CaseStudies() {
     </>
   );
 }
-

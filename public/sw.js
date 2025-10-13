@@ -24,7 +24,7 @@ const CACHE_PATTERNS = [
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
   console.log('Service Worker: Installing...');
-  
+
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
@@ -44,7 +44,7 @@ self.addEventListener('install', (event) => {
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   console.log('Service Worker: Activating...');
-  
+
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
@@ -103,7 +103,7 @@ self.addEventListener('fetch', (event) => {
 
             if (shouldCache) {
               const responseToCache = response.clone();
-              
+
               caches.open(DYNAMIC_CACHE)
                 .then((cache) => {
                   console.log('Service Worker: Caching dynamic asset', request.url);
@@ -115,7 +115,7 @@ self.addEventListener('fetch', (event) => {
           })
           .catch((error) => {
             console.error('Service Worker: Fetch failed', error);
-            
+
             // Return offline page for navigation requests
             if (request.mode === 'navigate') {
               return caches.match('/') || new Response('Offline', {
@@ -126,7 +126,7 @@ self.addEventListener('fetch', (event) => {
                 }),
               });
             }
-            
+
             throw error;
           });
       })

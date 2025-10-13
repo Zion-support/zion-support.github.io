@@ -48,7 +48,7 @@ export const EnhancedLoadingPage: React.FC = () => (
       <h2 className="text-2xl font-bold text-white mb-4 animate-pulse">
         Loading Zion Tech Group
       </h2>
-      
+
       {/* Progress bar */}
       <div className="w-64 h-2 bg-gray-700 rounded-full mx-auto mb-4 overflow-hidden">
         <div className="h-full bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full animate-pulse"></div>
@@ -203,7 +203,7 @@ export const LoadingPage: React.FC = () => (
       <h1 className="text-4xl font-bold text-white mb-4 animate-pulse">
         Zion Tech Group
       </h1>
-      
+
       <div className="w-80 h-3 bg-gray-700 rounded-full mx-auto mb-6 overflow-hidden">
         <div className="h-full bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full animate-pulse"></div>
       </div>

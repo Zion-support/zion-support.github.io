@@ -1,10 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon } from 'lucide-react'
-=======
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Globe } from 'lucide-react'
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
 
 interface NavigationProps {
   onSidebarToggle?: () => void
@@ -15,7 +10,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
   const [isItServicesOpen, setIsItServicesOpen] = useState(false)
-  
+
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
   }, [isOpen])
@@ -32,16 +27,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     setIsItServicesOpen(!isItServicesOpen)
   }, [isItServicesOpen])
 
-  const aiServices = useMemo(() => [
-    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
-    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
-    { name: 'AI Marketing Automation', path: '/ai-marketing', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
-  ], [])
 
   const itServices = useMemo(() => [
     { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
@@ -142,7 +127,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             >
               <SidebarIcon className="w-5 h-5" />
             </button>
-            
+
             {mainNavItems.map((item) => (
               <Link
                 key={item.name}
@@ -153,7 +138,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
-            
+
             {/* Services Dropdown */}
             <div className="relative">
               <button
@@ -163,7 +148,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {isServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
@@ -213,7 +198,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                 <span>IT Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {isItServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-green-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
@@ -245,7 +230,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                 <span>Micro SAAS</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {isMicroSaasOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
@@ -312,7 +297,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                   {item.name}
                 </Link>
               ))}
-              
+
               {/* Mobile Services */}
               <div>
                 <button
@@ -322,7 +307,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                   <span>Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
-                
+
                 {isServicesOpen && (
                   <div className="ml-4 mt-2 space-y-4">
                     {serviceCategories.map((category) => (
@@ -373,7 +358,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                   <span>IT Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
-                
+
                 {isItServicesOpen && (
                   <div className="ml-4 mt-2 space-y-1">
                     {itServices.map((service) => (
@@ -403,7 +388,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                   <span>Micro SAAS</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
                 </button>
-                
+
                 {isMicroSaasOpen && (
                   <div className="ml-4 mt-2 space-y-1">
                     {microSaasServices.map((service) => (

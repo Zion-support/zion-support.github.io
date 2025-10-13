@@ -72,7 +72,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
           {placeholder}
         </div>
       )}
-      
+
       {isInView && (
         <img
           src={src}

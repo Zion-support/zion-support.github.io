@@ -20,10 +20,10 @@ const PerformanceEnhancer: React.FC = () => {
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
-      
+
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
-      
+
       const metrics: PerformanceMetrics = {
         fcp: fcp ? fcp.startTime : 0,
         lcp: lcp ? lcp.startTime : 0,
@@ -109,7 +109,7 @@ const PerformanceEnhancer: React.FC = () => {
       >
         Performance
       </button>
-      
+
       {isVisible && (
         <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">
           <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>

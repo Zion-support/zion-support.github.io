@@ -5,10 +5,10 @@ import path from 'path';
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
+
     // Check if file has merge conflicts
-    if (!content.includes('.*?\n    content = content.replace(/=======.*?\n>>>>>>> [^\n]+/g, '');
-    
+    if (!content.includes('.*?\n    content = content.replace(/.*?\n
+
     // Clean up any remaining conflict markers
     content = content.replace(/.*?    
     // Write the cleaned content back
@@ -24,11 +24,11 @@ function fixMergeConflicts(filePath) {
 function fixAllMergeConflicts(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
-  
+
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
+
     if (stat.isDirectory()) {
       fixedCount += fixAllMergeConflicts(filePath);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
@@ -37,7 +37,7 @@ function fixAllMergeConflicts(dir) {
       }
     }
   }
-  
+
   return fixedCount;
 }
 

@@ -6,20 +6,12 @@ import LoadingSpinner from '../app/components/LoadingSpinner';
 describe('LoadingSpinner', () => {
   it('renders with default props', () => {
     render(<LoadingSpinner />);
-<<<<<<< HEAD
-=======
-    
-
-    // Should render the spinner icon but no text by default
-    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
-    expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
 
   });
 
   it('renders with custom text', () => {
     render(<LoadingSpinner text="Please wait..." />);
-    
+
     expect(screen.getByText('Please wait...')).toBeInTheDocument();
   });
 
@@ -37,7 +29,7 @@ describe('LoadingSpinner', () => {
 
   it('renders without text when text is empty', () => {
     render(<LoadingSpinner text="" />);
-    
+
     // Check that the spinner icon is rendered but no text
     const spinner = screen.getByTestId('loading-spinner');
     expect(spinner).toBeInTheDocument();
@@ -46,7 +38,7 @@ describe('LoadingSpinner', () => {
 
   it('applies custom className', () => {
     render(<LoadingSpinner className="custom-class" />);
-    
+
     const container = screen.getByTestId('loading-spinner').parentElement;
     expect(container).toHaveClass('custom-class');
   });

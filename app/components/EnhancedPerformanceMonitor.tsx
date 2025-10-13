@@ -58,9 +58,9 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         // Measure additional metrics
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paintEntries = performance.getEntriesByType('paint');
-        
+
         const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-        
+
         // Calculate Total Blocking Time
         const longTasks = performance.getEntriesByType('longtask');
         const totalBlockingTime = longTasks.reduce((total, task) => {
@@ -139,7 +139,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         <div className={`w-2 h-2 rounded-full ${isLoading ? 'bg-yellow-400 animate-pulse' : 'bg-green-400'}`}></div>
         <span>Performance</span>
       </button>
-      
+
       {isVisible && (
         <div className="absolute bottom-14 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-xl shadow-2xl p-6 w-80 max-h-96 overflow-y-auto">
           <div className="flex items-center justify-between mb-4">
@@ -151,7 +151,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               ✕
             </button>
           </div>
-          
+
           <div className="space-y-4 text-sm">
             {/* LCP */}
             <div className="space-y-1">

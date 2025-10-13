@@ -77,43 +77,43 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
 
   const optimizePerformance = useCallback(async () => {
     setIsOptimizing(true);
-    
+
     // Simulate optimization process
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     // Apply optimizations based on settings
     if (settings.imageOptimization) {
       // Simulate image optimization
       // Optimizing images...
     }
-    
+
     if (settings.codeSplitting) {
       // Simulate code splitting
       // Implementing code splitting...
     }
-    
+
     if (settings.lazyLoading) {
       // Simulate lazy loading implementation
       // Implementing lazy loading...
     }
-    
+
     if (settings.compression) {
       // Simulate compression
       // Enabling compression...
     }
-    
+
     if (settings.caching) {
       // Simulate caching setup
       // Setting up caching...
     }
-    
+
     if (settings.minification) {
       // Simulate minification
       // Minifying assets...
     }
-    
+
     setIsOptimizing(false);
-    
+
     // Re-measure performance after optimization
     setTimeout(measurePerformance, 1000);
   }, [settings, measurePerformance]);
@@ -200,7 +200,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           ×
         </button>
       </div>
-      
+
       {/* Performance Metrics */}
       <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
         <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
@@ -234,7 +234,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Optimization Settings */}
       <div className="space-y-4">
         <h4 className="text-sm font-semibold text-gray-900 dark:text-white">
@@ -273,7 +273,7 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           </div>
         ))}
       </div>
-      
+
       {/* Optimize Button */}
       <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
         <button

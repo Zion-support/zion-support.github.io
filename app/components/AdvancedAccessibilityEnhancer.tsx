@@ -34,32 +34,32 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Apply accessibility settings
     applyAccessibilitySettings(settings);
-    
+
     // Save settings to localStorage
     localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
   }, [settings]);
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
+
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
-    
+
     if (newSettings.largeText) {
       root.classList.add('large-text');
     } else {
       root.classList.remove('large-text');
     }
-    
+
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
-    
+
     if (newSettings.focusIndicator) {
       root.classList.add('enhanced-focus');
     } else {
@@ -139,7 +139,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
           ×
         </button>
       </div>
-      
+
       <div className="space-y-4">
         {accessibilityFeatures.map((feature) => {
           const Icon = feature.icon;
@@ -175,7 +175,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
           );
         })}
       </div>
-      
+
       <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
         <button
           onClick={() => {

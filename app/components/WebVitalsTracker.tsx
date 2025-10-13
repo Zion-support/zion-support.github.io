@@ -40,7 +40,7 @@ const WebVitalsTracker: React.FC = () => {
     const trackAdditionalMetrics = () => {
       if (typeof window !== 'undefined' && 'performance' in window) {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
+
         if (navigation) {
           const metrics = {
             'DOM Content Loaded': navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,

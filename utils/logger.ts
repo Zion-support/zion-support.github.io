@@ -48,7 +48,7 @@ class Logger {
   error(message: string, ...args: any[]): void {
     // Always log errors, even in production
     console.error(this.formatMessage('error', message), ...args);
-    
+
     // Send to remote logging service in production
     if (process.env.NODE_ENV === 'production' && this.config.enableRemote && this.config.remoteEndpoint) {
       this.sendToRemote('error', message, args);
